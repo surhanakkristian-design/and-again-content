@@ -1,0 +1,17 @@
+--- validate_part.py	(running copy, ~/.claude/skills/ugc-vocab-sheet-fill-level-ab/scripts)
++++ validate_part.py	(proposed, NOT applied — ruling 5a, 10 Sep 2026)
+@@ docstring, after E16 @@
++  E17 glued blank: '...' must not touch a word character on either side, in intro_text
++      or in a two-blank correct_answer. A blank glued to a stem ("boksz...", "erkély...")
++      is a malformed exercise: the four-step derivation glues the answer to the stem and
++      the sentence is wrong either way (31 live rows, held out for a whole-row repair).
+@@ constants @@
++GLUED_BLANK = re.compile(r"\w\.\.\.|\.\.\.\w")   # \w is Unicode-aware in Python 3
+@@ inside the per-language loop, right after the E14 blank-invariant check @@
++            # ruling 5a (BRIEF 9.9.2026 v7): a blank glued to a word character is a
++            # design defect, not a spacing defect -- reject the row, never "fix" the sentence.
++            if t not in NO_INTRO_TYPES and t not in STEM_TYPES:
++                for field, val in (("intro_text", intro), ("correct_answer", ca)):
++                    if GLUED_BLANK.search(val):
++                        err("E17", f"exercise {eid}/{lang}: blank glued to a word in "
++                                   f"{field}: {val!r}")

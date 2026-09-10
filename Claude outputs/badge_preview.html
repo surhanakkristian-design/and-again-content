@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Star badge — shipped</title>
+<style>
+  :root{ --accent:#AC3C72; --ink:#141414; }
+  *{box-sizing:border-box}
+  body{margin:0;font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       background:#101014;color:#e8e8ea;padding:28px 20px 60px}
+  h1{font-size:19px;margin:0 0 4px;font-weight:600}
+  .sub{color:#9a9aa2;margin:0 0 28px;font-size:13px}
+  h2{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#8f8f98;
+     margin:30px 0 10px;font-weight:600}
+  .panel{background:linear-gradient(160deg,#6f6f78,#3d3d45);border-radius:18px;padding:20px 14px;max-width:520px}
+  .row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;padding-top:8px}
+  .wrap{position:relative}
+  .pill{background:#fff;color:var(--ink);border:0;border-radius:999px;
+        padding:11px 20px;font-size:16px;font-weight:500;cursor:pointer;font-family:inherit}
+  .pill.sel{background:var(--accent);color:#fff}
+  .badge{position:absolute;top:-6px;right:-4px;width:20px;height:20px;border-radius:50%;
+         background:var(--accent);color:#fff;border:1.5px solid #fff;display:flex;
+         align-items:center;justify-content:center;font-size:10px;line-height:1;
+         box-shadow:0 1px 2px rgba(0,0,0,.25);pointer-events:none}
+  .sel + .badge{background:#fff;color:var(--accent)}
+  .cls{color:#c9c9d0;font-size:12.5px;margin:0 0 6px;padding-left:2px}
+  .cls b{color:#fff;font-weight:600}
+  .variants{display:flex;gap:26px;flex-wrap:wrap;margin-top:8px}
+  .v{text-align:center}
+  .v .cap{font-size:11.5px;color:#8f8f98;margin-top:12px}
+  .note{max-width:520px;color:#a8a8b0;font-size:12.5px;border-left:2px solid #3a3a44;
+        padding-left:12px;margin-top:26px}
+</style></head><body>
+
+<h1>Star badge — as shipped in the app</h1>
+<p class="sub">Real accent #AC3C72, the five styles that exist today. With only five styles each class gets exactly one star; when Nerd, Gossip, Flirt and Low IQ land it becomes two.</p>
+
+<h2>Class 1 — object</h2>
+<p class="cls"><b>a hoe · a bottle of cooking oil</b> — Business is the star today; Nerd joins it later</p>
+<div class="panel"><div class="row">
+  <div class="wrap"><button class="pill">Neutral</button></div>
+  <div class="wrap"><button class="pill">Ironic</button></div>
+  <div class="wrap"><button class="pill">Slang</button></div>
+  <div class="wrap"><button class="pill sel">Business</button><span class="badge">★</span></div>
+  <div class="wrap"><button class="pill">Dramatic</button></div>
+</div></div>
+
+<h2>Class 2 — creature</h2>
+<p class="cls"><b>the cartoon spider · the turkey</b> — Dramatic wins — a character in frame means a crisis</p>
+<div class="panel"><div class="row">
+  <div class="wrap"><button class="pill">Neutral</button></div>
+  <div class="wrap"><button class="pill">Ironic</button></div>
+  <div class="wrap"><button class="pill">Slang</button></div>
+  <div class="wrap"><button class="pill">Business</button></div>
+  <div class="wrap"><button class="pill sel">Dramatic</button><span class="badge">★</span></div>
+</div></div>
+
+<h2>Class 3 — one person</h2>
+<p class="cls"><b>a girl on a beach</b> — Ironic: one person doing one thing is the driest setup</p>
+<div class="panel"><div class="row">
+  <div class="wrap"><button class="pill">Neutral</button></div>
+  <div class="wrap"><button class="pill">Ironic</button><span class="badge">★</span></div>
+  <div class="wrap"><button class="pill">Slang</button></div>
+  <div class="wrap"><button class="pill">Business</button></div>
+  <div class="wrap"><button class="pill">Dramatic</button></div>
+</div></div>
+
+<h2>Class 0 — abstract</h2>
+<p class="cls"><b>a texture, a gradient</b> — Ironic and Dramatic are hidden — nothing to be ironic about</p>
+<div class="panel"><div class="row">
+  <div class="wrap"><button class="pill">Neutral</button><span class="badge">★</span></div>
+  <div class="wrap"><button class="pill">Slang</button></div>
+  <div class="wrap"><button class="pill">Business</button></div>
+</div>
+<p style="color:#e6e6ea;font-size:12.5px;text-align:center;margin:14px 0 2px;opacity:.85">
+  This picture doesn’t show enough for grammar exercises.</p>
+</div>
+
+<p class="note">One star per class with the five styles that exist today; two once the new styles land. The badge never takes a tap (pointer events off),
+so the whole pill stays one target; long-press on a badged pill shows the reason.</p>
+
+</body></html>
