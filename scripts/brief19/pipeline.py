@@ -11,7 +11,7 @@ job) and skips rows already handed out to a pending batch (runs/job_<id>/pending
 """
 import json, os, subprocess, sys, urllib.request, datetime
 HERE = os.path.dirname(os.path.abspath(__file__))
-APP = os.path.abspath(os.path.join(HERE, "..", ".."))
+APP = os.environ.get("AND_AGAIN_APP", os.path.expanduser("~/Projects/and-again"))  # the app checkout that holds the Supabase link (db query --linked)
 URL = "https://abyrutykpvmzkfbesire.supabase.co/functions/v1/chunk-sentences"
 KEY = "sb_publishable_OaVs6yUd1S4_53THo4cH4w_iYNdhmdD"  # public app key (supabase.ts)
 
@@ -154,8 +154,14 @@ def cmd_submit():
 
 def cmd_submit_deferred():
     """Post runs/job_<id>/deferred.json (valid 3-piece splits) once the edge function accepts them."""
-    job = int(arg("--job")); d = run_dir(job); dp = os.path.join(d, "deferred.json"); rows = load(dp, [])
+    job = int(arg("--job")); d = run_dir(job); dp = os.path.join(d, arg("--file", "deferred.json")); rows = load(dp, [])
     token = dbq(f"select run_token from sentence_chunk_jobs where id = {job}")[0]["run_token"]
+    # Part 14: --file gap.json posts the parked matcher-gap rows; rows that already carry chunks on the table are skipped
+    if rows and arg("--file") and "--overwrite" not in sys.argv:
+        ids = ",".join(str(x["id"]) for x in rows)
+        done = {r["id"] for r in dbq(f"select id from exercise_localizations where id in ({ids}) and chunks is not null and jsonb_array_length(chunks) > 0")}
+        skipped = [x for x in rows if x["id"] in done]; rows = [x for x in rows if x["id"] not in done]
+        print(json.dumps({"file": arg("--file"), "to_post": len(rows), "skipped_already_chunked": len(skipped)}))
     for b in range(0, len(rows), 200):
         part = rows[b:b+200]
         payload = {"jobId": job, "runToken": token, "rows": [{"id": x["id"], "chunks": x["chunks"], "alternatives": x.get("alternatives", [])} for x in part]}
@@ -176,6 +182,21 @@ def exemption_totals(job):
         srv = j.get("server") or {}
         for k, v in (srv.get("exemptions") or {}).items(): tot[k] = tot.get(k, 0) + v
     return tot
+
+def cmd_batch_ids():
+    """Part 15: build batches from an explicit id list (--ids <json list>) for re-runs; rows come from the table."""
+    job = int(arg("--job")); d = run_dir(job); ids = json.load(open(arg("--ids"))); size = int(arg("--size", 50))
+    lang = dbq(f"select language_code from sentence_chunk_jobs where id = {job}")[0]["language_code"]
+    rows = dbq("select el.id, e.exercise_type_id, el.full_sentence, el.correct_answer from exercise_localizations el join exercises e on e.id = el.exercise_id "
+               f"where el.language_code = '{lang}' and el.id in ({','.join(str(i) for i in ids)}) order by el.id")
+    pending = load(os.path.join(d, "pending.json"), {}); seq = load(os.path.join(d, "seq.json"), 0); made = []
+    for b in range(0, len(rows), size):
+        part = rows[b:b+size]; seq += 1
+        json.dump(part, open(os.path.join(d, f"rows_{seq}.json"), "w"), ensure_ascii=False)
+        json.dump([{"id": r["id"], "sentence": r["full_sentence"], "answer": r["correct_answer"]} for r in part], open(os.path.join(d, f"batch_{seq}.json"), "w"), ensure_ascii=False, indent=0)
+        pending[str(seq)] = [r["id"] for r in part]; made.append(seq)
+    json.dump(seq, open(os.path.join(d, "seq.json"), "w")); json.dump(pending, open(os.path.join(d, "pending.json"), "w"))
+    log(job, {"batch_ids": made, "rows": len(rows), "missing": len(ids) - len(rows)}); print(json.dumps({"batches": made, "rows": len(rows), "missing": len(ids) - len(rows)}))
 
 def cmd_status():
     job = int(arg("--job"))
@@ -222,7 +243,7 @@ def cmd_census():
     print(json.dumps({"language": lang, "rows": len(rows), "exemptions_by_name": ex, "exemption_share": {k: round(v / max(1, len(rows)), 4) for k, v in ex.items()}, "rule_failures": bad}))
     json.dump(ex_ids, open(os.path.join(HERE, "runs", f"census_{lang}_exemptions.json"), "w"))
 
-{"next": cmd_next, "submit": cmd_submit, "submit-deferred": cmd_submit_deferred, "status": cmd_status, "pass2": cmd_pass2, "pass2db": cmd_pass2db, "census": cmd_census}[sys.argv[1]]()
+{"next": cmd_next, "submit": cmd_submit, "submit-deferred": cmd_submit_deferred, "status": cmd_status, "pass2": cmd_pass2, "pass2db": cmd_pass2db, "census": cmd_census, "batch-ids": cmd_batch_ids}[sys.argv[1]]()
 
 # ---------------------------------------------------------------------------
 # Brief 20 Part 1: second pass for rows whose largest piece holds > 40% of the words.

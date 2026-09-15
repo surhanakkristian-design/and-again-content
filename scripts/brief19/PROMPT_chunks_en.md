@@ -106,4 +106,15 @@ Input:  { "id": 8, "sentence": "The coach gives her an old swimming cap.", "answ
 Output: { "id": 8, "chunks": ["The coach", "gives her", "an old swimming cap."], "alternatives": [] }
 (Seven words, answer = the whole noun phrase, full stop included: three pieces. Never split the answer.)
 
+
+FIXED GROUPS (Part 15): the existential group "there is", "there are", "there was", "there were", "there isn't",
+"there aren't", "there's" (and the question form "is there", "are there") is ONE unit and is never cut inside —
+"There | is" and "There | are not" are rejected by the validator. A quantifier and its "of" stay together with the
+noun phrase: "one of the boys", "half of the cake", "all of the sand", "some of the water", "most of the time",
+"none of the cars", "plenty of room", "a lot of sand" are one piece — never "a lot | of sand", never "one | of the
+boys". A numeral (eleven … nineteen, thirty … ninety) never ends a piece whose noun starts the next piece, and
+"than", "since", "until" open a phrase like a preposition: "than the other one", "until the end". On a short
+sentence stay at three pieces rather than cut a fixed group; reach the floor elsewhere (a subject pronoun, a lone
+verb, a lone "not" or "and" may stand alone).
+
 Return ONLY the JSON array. No commentary, no markdown fences.

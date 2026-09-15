@@ -1,7 +1,7 @@
 #!/bin/zsh
 # usage: NB=12 [DEFER_EX=1] round.sh <job> <seq...>   -> submits the given batches (compact summary), then hands out NB (default 8) new ones
 #   DEFER_EX=1 parks rows accepted only via a Part 8 exemption in deferred.json (local validator ahead of the deployed one)
-cd "/Users/kristiansurhanak/Meine Ablage/And Again/Cursor App/and-again" || exit 1
+cd "$(cd "$(dirname "$0")/../.." && pwd)" || exit 1   # the and-again-content checkout, wherever it lives
 job=$1; shift
 args=(); for s in "$@"; do args+=(--seq $s); done
 python3 scripts/brief19/pipeline.py submit --job $job --hold ${HOLD:-0.40} ${DEFER_EX:+--defer-exemptions} "${args[@]}" 2>&1 | python3 -c "

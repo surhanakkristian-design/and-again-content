@@ -18,21 +18,22 @@ DET = {
           r"ihre|ihren|ihrem|ihrer|unser|unsere|unseren|unserem|unserer|eure|euren|eurem|eurer|"
           r"dieser|diese|dieses|diesen|diesem|jener|jene|jenes|jenen|jenem|jeder|jede|jedes|jeden|jedem|"
           r"welcher|welche|welches|welchen|welchem|im|am|ans|ins|zum|zur|vom|beim|"
-          r"zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|hundert|tausend",
+          r"zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|hundert|tausend|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig",  # Part 15
     "en": r"the|a|an|my|your|his|its|our|their|these|those|each|every|"
-          r"two|three|four|five|six|seven|eight|nine|ten|twenty|hundred|thousand",
+          r"two|three|four|five|six|seven|eight|nine|ten|twenty|hundred|thousand|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|thirty|forty|fifty|sixty|seventy|eighty|ninety",  # Part 15
     "es": r"el|la|los|las|un|una|unos|unas|del|al|ese|esa|esos|esas|este|esta|estos|estas|aquel|aquella|aquellos|aquellas|"
           r"mi|tu|su|mis|tus|sus|nuestro|nuestra|nuestros|nuestras|cada|otro|otra|otros|otras|mismo|misma|mismos|mismas|"
-          r"dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|veinte|treinta|cien|mil",
+          r"dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|veinte|treinta|cien|mil|once|doce|trece|catorce|quince|dieciséis|diecisiete|dieciocho|diecinueve|cuarenta|cincuenta|sesenta|setenta|ochenta|noventa|ciento",  # Part 15
     "fr": r"le|la|les|un|une|des|du|au|aux|ce|cet|cette|ces|mon|ma|mes|ton|ta|tes|son|sa|ses|notre|nos|votre|vos|leur|leurs|chaque|"
-          r"deux|trois|quatre|cinq|six|sept|huit|neuf|dix|vingt|cent|mille",
+          r"deux|trois|quatre|cinq|six|sept|huit|neuf|dix|vingt|cent|mille|"
+          r"onze|douze|treize|quatorze|quinze|seize|dix-sept|dix-huit|dix-neuf|trente|quarante|cinquante|soixante|soixante-dix|quatre-vingts|quatre-vingt-dix|quatre-vingt",  # Part 14: 11-19 and the tens
 }
 NUM = r"[0-9]+"
 NUMWORDS = {
-    "de": r"zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|hundert|tausend",
-    "en": r"one|two|three|four|five|six|seven|eight|nine|ten|twenty|hundred|thousand",
-    "es": r"dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|veinte|treinta|cien|mil",
-    "fr": r"deux|trois|quatre|cinq|six|sept|huit|neuf|dix|vingt|cent|mille",
+    "de": r"zwei|drei|vier|fünf|sechs|sieben|acht|neun|zehn|elf|zwölf|zwanzig|dreißig|hundert|tausend|dreizehn|vierzehn|fünfzehn|sechzehn|siebzehn|achtzehn|neunzehn|vierzig|fünfzig|sechzig|siebzig|achtzig|neunzig",
+    "en": r"one|two|three|four|five|six|seven|eight|nine|ten|twenty|hundred|thousand|eleven|twelve|thirteen|fourteen|fifteen|sixteen|seventeen|eighteen|nineteen|thirty|forty|fifty|sixty|seventy|eighty|ninety",
+    "es": r"dos|tres|cuatro|cinco|seis|siete|ocho|nueve|diez|veinte|treinta|cien|mil|once|doce|trece|catorce|quince|dieciséis|diecisiete|dieciocho|diecinueve|cuarenta|cincuenta|sesenta|setenta|ochenta|noventa|ciento",
+    "fr": r"deux|trois|quatre|cinq|six|sept|huit|neuf|dix|vingt|cent|mille|onze|douze|treize|quatorze|quinze|seize|dix-sept|dix-huit|dix-neuf|trente|quarante|cinquante|soixante|soixante-dix|quatre-vingts|quatre-vingt-dix|quatre-vingt",
 }
 # word before a numeral that makes it a clock time, an arithmetic term or a pronoun ("the two")
 TIME_OR_PRONOUN = {
@@ -88,10 +89,11 @@ STOP = {
 # a piece that is ONLY a preposition (not the last piece) whose noun phrase starts the next piece:
 # "auf | dem Tablett", "in | the kitchen" — the same stranding one word earlier
 PREP = {
-    "de": r"an|auf|in|mit|nach|von|vor|zu|über|unter|hinter|neben|zwischen|durch|für|gegen|ohne|um|aus|bei|seit|bis|ab|entlang|gegenüber|während|wegen|trotz|innerhalb|außerhalb",
-    "en": r"at|in|on|of|to|for|with|from|by|about|into|onto|over|under|through|across|along|around|between|behind|before|after|during|without|within|near|past|towards|toward|against|among|beneath|beside|inside|outside|underneath|above|below",
-    "es": r"a|ante|bajo|con|contra|de|desde|en|entre|hacia|hasta|para|por|según|sin|sobre|tras|durante|mediante",
-    "fr": r"à|dans|sur|sous|par|pour|avec|sans|chez|vers|entre|derrière|devant|après|avant|depuis|pendant|contre|de|en|parmi|malgré|selon",
+    "de": r"an|auf|in|mit|nach|von|vor|zu|über|unter|hinter|neben|zwischen|durch|für|gegen|ohne|um|aus|bei|seit|bis|ab|entlang|gegenüber|während|wegen|trotz|innerhalb|außerhalb|statt|außer",  # Part 15 ("laut" is phrase-only, see PREP_PHRASE_ONLY)
+    "en": r"at|in|on|of|to|for|with|from|by|about|into|onto|over|under|through|across|along|around|between|behind|before|after|during|without|within|near|past|towards|toward|against|among|beneath|beside|inside|outside|underneath|above|below|than|since|until",  # Part 15 ("like" is phrase-only, see PREP_PHRASE_ONLY)
+    "es": r"a|ante|bajo|con|contra|de|desde|en|entre|hacia|hasta|para|por|según|sin|sobre|tras|durante|mediante|incluso|salvo",  # Part 15
+    "fr": r"à|dans|sur|sous|par|pour|avec|sans|chez|vers|entre|derrière|devant|après|avant|depuis|pendant|contre|de|en|parmi|malgré|selon|"
+          r"jusqu'à|jusqu'au|jusqu'aux|jusqu'en",  # Part 14
 }
 def _first_word(piece):
     w = piece.strip().split()[0] if piece.strip() else ""
@@ -122,6 +124,9 @@ def is_bare_preposition(piece, nxt, lang):
     # determiner words in STOP (there for the pronoun case "das | die Seide") do not exempt it here
     if re.fullmatch(r"(?:" + PREP[lang] + r")", piece.strip(), re.I) is None: return False
     return re.fullmatch(r"(?:" + DET[lang] + r")", _first_word(nxt), re.I) is not None or _opens_noun_phrase(nxt, lang)
+# Part 15: prepositions that are also a verb or an adverb ("I like", "laut rufen"): they may OPEN a whole phrase
+# ("like a cat", "laut dem Plan") but a lone piece of that word is not a stranded preposition
+PREP_PHRASE_ONLY = {"en": r"like", "de": r"laut"}
 # a compound preposition ("detrás de", "antes de", "près de", "à côté de") is never cut before its "de":
 # the locative/temporal head at the end of a piece with de/del (es) or de/du/des/d' (fr) opening the next piece
 COMPOUND_HEAD = {
@@ -143,6 +148,9 @@ def determiner_faults(chunks, lang):
     if any(strands(a, b, lang) for a, b in pairs): out.append("piece_ends_on_determiner")
     if any(is_bare_determiner(a, b, lang) for a, b in pairs): out.append("bare_determiner_piece")
     if any(is_bare_preposition(a, b, lang) for a, b in pairs): out.append("bare_preposition_piece")
+    joins = [a.strip() + " | " + b.strip() for a, b in pairs]
+    if lang in GROUP_CUT and any(GROUP_CUT[lang].search(j) for j in joins): out.append("verb_group_cut")     # Part 15
+    if lang in QUANT_CUT and any(QUANT_CUT[lang].search(j) for j in joins): out.append("quantifier_cut")     # Part 15
     return out
 
 
@@ -157,7 +165,7 @@ LEAD_ADV = {  # an adverb that may open a prepositional phrase: "all along the t
     "de": r"ganz|direkt|genau|gleich|kurz|tief|weit|mitten|hoch|dicht|oben|unten|vorn|hinten|links|rechts|innen|außen",
     "en": r"all|right|just|straight|even|way|deep|far|high|halfway|inside|outside|instead|ahead|next|close|near|because|out|up|down|off",
     "es": r"justo|muy|encima|debajo|delante|detrás|dentro|fuera|cerca|lejos|alrededor|antes|después|enfrente|junto|frente|arriba|abajo|además|acerca|través|como",
-    "fr": r"juste|tout|très|au-dessus|au-dessous|devant|derrière|dedans|dehors|près|loin|autour|avant|après|face|côté|lors|hors|comme",
+    "fr": r"juste|tout|très|au-dessus|au-dessous|devant|derrière|dedans|dehors|près|loin|autour|avant|après|face|côté|lors|hors|comme|travers",  # Part 14: "à travers"
 }
 # a preposition or conjunction INSIDE a noun phrase ("manta de picnic", "un deporte duro y rápido"); it must be
 # followed by determiners/numerals and then content again, never close the phrase
@@ -173,7 +181,38 @@ PHRASE_DET = {
     "de": r"sein|ihr|alle|viele|einige|wenige|mehrere|manche|solche|beide|welch|lauter",
     "en": r"her|that|this|some|any|no|several|many|few|much|more|most|all|both|half|such|what|which|whose|another|either|neither",
     "es": r"algún|alguna|algunos|algunas|ningún|ninguna|muchos|muchas|mucho|mucha|pocos|pocas|poco|poca|varios|varias|todos|todas|todo|toda|tanto|tanta|tantos|tantas|cuántos|cuántas|cuánto|cuánta|qué|cuyo|cuya|ambos|ambas|más|menos|bastante|bastantes|demasiado|demasiada|demasiados|demasiadas",
-    "fr": r"quel|quelle|quels|quelles|plusieurs|quelques|tout|toute|tous|toutes|aucun|aucune|certains|certaines|chaque|nul|nulle|plus|moins|beaucoup|peu|trop|assez|tant",
+    "fr": r"quel|quelle|quels|quelles|plusieurs|quelques|tout|toute|tous|toutes|aucun|aucune|certains|certaines|chaque|nul|nulle|plus|moins|beaucoup|peu|trop|assez|tant|autant|combien",
+}
+# Part 14 (fr) / Part 15 (en, es): after one of these quantifiers the partitive (de/d', of) belongs to the determiner
+# group ("beaucoup de sable", "one of the boys", "un poco de sal"); it is not a stranded preposition. QUANT_EXTRA are
+# quantifier words that are in no determiner table but may sit in the determiner run ("a lot of", "plenty of", "algo de").
+QUANTIFIER = {
+    "fr": r"beaucoup|peu|trop|assez|tant|autant|plus|moins|combien",
+    "en": r"one|half|all|some|most|none|plenty|lot|lots",
+    "es": r"poco|poca|pocos|pocas|más|menos|mucho|mucha|muchos|muchas|algo",
+}
+QUANT_EXTRA = {"en": r"plenty|lot|lots|none", "es": r"algo"}
+PARTITIVE = {"fr": "de", "en": "of", "es": "de"}
+# Part 14 (fr) / Part 15 (en, de, es): the existential verb group is one unit for the exemption test; a negation particle
+# (pas, not, kein-) may follow; the inverted question form counts too ("y a-t-il", "is there", "gibt es")
+VERB_GROUP = {
+    "fr": re.compile(r"(?:qu['’]est-ce\s+)?(?:qu['’]\s*)?(?:il y a|il n['’]y a|y a-t-il|il y avait|il n['’]y avait)(?:\s+(?:pas|plus|jamais|rien))?", re.I),
+    "en": re.compile(r"(?:there(?:'s|’s| is| are| was| were| isn't| aren't| wasn't| weren't)|(?:is|are|was|were) there)(?: not)?", re.I),
+    "de": re.compile(r"(?:es (?:gibt|gab)|(?:gibt|gab) es)(?: (?:kein|keine|keinen|keinem|keiner|nicht))?", re.I),
+    "es": re.compile(r"(?:no hay que|no hay|hay que)", re.I),
+}
+# Part 15: a cut INSIDE one of these groups is a fault (the run must reject it, not route around it): the boundary is
+# tested on "piece | next piece"
+GROUP_CUT = {
+    "fr": re.compile(r"(?:^|\s)il \| y a|(?:^|\s)il n['’] ?\| ?y a|(?:^|\s)il y \| a\b|(?:^|\s)y \| a-t-il|(?:^|\s)il \| n['’]y a", re.I),
+    "en": re.compile(r"(?:^|\s)there \| (?:is|are|was|were|isn't|aren't|wasn't|weren't)\b|^(?:is|are|was|were) \| there\b", re.I),   # inverted form only when the piece IS the verb ("Is | there"), not "I were | there"
+    "de": re.compile(r"(?:^|\s)es \| (?:gibt|gab)\b|(?:^|\s)(?:gibt|gab) \| es\b", re.I),
+    "es": re.compile(r"(?:^|\s)no \| hay\b|(?:^|\s)hay \| que\b", re.I),
+}
+QUANT_CUT = {
+    "fr": re.compile(r"(?:^|\s)(?:beaucoup|peu|trop|assez|tant|autant|plus|moins|combien) \| d(?:e\b|')", re.I),
+    "en": re.compile(r"(?:^|\s)(?:one|half|all|some|most|none|plenty|lot|lots) \| of\b", re.I),
+    "es": re.compile(r"(?:^|\s)(?:poco|poca|pocos|pocas|más|menos|mucho|mucha|muchos|muchas|algo) \| de\b", re.I),
 }
 # degree adverbs that sit INSIDE a noun phrase ("una cama muy grande", "ein sehr freundlicher Hund", "a very old house");
 # they are stop words for the strand rule but content for the whole-phrase test
@@ -200,11 +239,20 @@ def is_whole_phrase(piece, lang):
     if not w: return False
     i = 0
     # "por encima de la mesa", "hasta dentro del aro": a preposition may precede the lead adverb
-    if _is(w[i], PREP[lang]) and len(w) > 2 and _is(w[i + 1], LEAD_ADV[lang]): i += 1
+    prep = PREP[lang] + ("|" + PREP_PHRASE_ONLY[lang] if lang in PREP_PHRASE_ONLY else "")
+    if _is(w[i], prep) and len(w) > 2 and _is(w[i + 1], LEAD_ADV[lang]): i += 1
     if _is(w[i], LEAD_ADV[lang]) and len(w) > i + 1: i += 1
-    if i < len(w) and _is(w[i], PREP[lang]): i += 1
+    if i < len(w) and _is(w[i], prep): i += 1
     dn = DET[lang] + "|" + PHRASE_DET[lang] + "|" + NUMWORDS[lang] + "|" + NUM
-    while i < len(w) and _is(w[i], dn): i += 1
+    dq = dn + ("|" + QUANT_EXTRA[lang] if lang in QUANT_EXTRA else "")
+    while i < len(w) and _is(w[i], dq): i += 1
+    if lang in QUANTIFIER and 0 < i < len(w) and _is(w[i - 1], QUANTIFIER[lang]):
+        # Part 14/15: the partitive after a quantifier ("beaucoup de", "one of", "un poco de") is part of the determiner group
+        if w[i] == PARTITIVE[lang]:
+            i += 1
+            while i < len(w) and _is(w[i], dq): i += 1   # "plus de deux chaises", "one of the two boys"
+        elif lang == "fr" and re.match(r"d['’]\S", w[i]):
+            w[i] = w[i][2:]                               # "d'espace" -> "espace"
     if i == 0: return False                      # no preposition/determiner at the front: not a phrase we can vouch for
     rest = w[i:]
     if not rest: return False
@@ -235,6 +283,7 @@ def is_uncuttable(piece, lang, answer_parts=()):
     if len(ws) <= 1: return True
     core = re.sub(r"^[^\w¿¡„“\"']+|[^\w.!?,;:\"“”']+$", "", piece.strip())
     if core in answer_parts or re.sub(r"[.!?,;:]+$", "", core) in answer_parts: return True
+    if lang in VERB_GROUP and VERB_GROUP[lang].fullmatch(re.sub(r"[.!?,;:\s]+$", "", core)): return True   # Part 14/15: "il y a", "there is", "es gibt", "no hay"
     if is_whole_phrase(piece, lang): return True
     # every internal cut strands a determiner or a preposition
     return all(determiner_faults([" ".join(ws[:k]), " ".join(ws[k:])], lang) for k in range(1, len(ws)))

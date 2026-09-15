@@ -132,4 +132,14 @@ Input:  { "id": 8, "sentence": "No le dijo nada a su hermana sobre el regalo.", 
 Output: { "id": 8, "chunks": ["No le dijo", "nada", "a su hermana", "sobre el regalo."], "alternatives": [] }
 (Two-part answer: "No" and "nada" each stay whole, in different pieces.)
 
+
+GRUPOS FIJOS (Part 15): "no hay" y "hay que" son UNA unidad y nunca se cortan por dentro — "No | hay" y "hay |
+que" son rechazados por el validador ("hay" solo es una palabra y no necesita regla). Un cuantificador y su "de"
+van con el sintagma nominal: "un poco de sal", "más de dos horas", "menos de la mitad", "mucho de eso", "algo de
+agua" son una pieza — nunca "un poco | de sal", nunca "más | de dos horas". Un numeral (once … diecinueve, cuarenta
+… noventa, ciento) nunca cierra una pieza cuyo sustantivo empieza en la siguiente, e "incluso" y "salvo" abren una
+frase como una preposición ("incluso la abuela", "salvo el perro"). En una frase corta es mejor quedarse en tres
+piezas que cortar un grupo fijo; el suelo se alcanza en otro sitio (un pronombre sujeto, un verbo solo, "no" o "y"
+pueden ir solos).
+
 Return ONLY the JSON array. No commentary, no markdown fences.

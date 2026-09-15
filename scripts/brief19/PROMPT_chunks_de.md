@@ -117,4 +117,13 @@ Input:  { "id": 7, "sentence": "Sie sucht einen ruhigen Platz.", "answer": "such
 Output: { "id": 7, "chunks": ["Sie", "sucht", "einen ruhigen Platz."], "alternatives": [] }
 (Five words: three pieces, the noun phrase whole. Never "einen" | "ruhigen Platz.")
 
+
+FESTE GRUPPEN (Part 15): "es gibt", "gibt es", "es gab", "gab es" (auch mit "kein/keine/keinen" oder "nicht"
+dahinter) sind EINE Einheit und werden nie getrennt — "gibt | es" und "es | gibt" werden vom Validator
+abgelehnt. Ein Zahlwort (dreizehn … neunzehn, vierzig … neunzig) endet nie ein Stück, dessen Nomen im nächsten
+Stück beginnt ("vierzig | ganze Minuten" ist falsch). "statt", "außer" und "laut" eröffnen eine Phrase wie eine
+Präposition ("statt der Suppe", "laut dem Plan"); ein Stück nur aus "statt" oder "außer" ist ein abgetrennter
+Präpositionsrest. Auf einem kurzen Satz lieber bei drei Stücken bleiben, als eine feste Gruppe zu zerschneiden;
+den Boden anderswo erreichen (Subjektpronomen, alleinstehendes Verb, "nicht" oder "und" dürfen allein stehen).
+
 Return ONLY the JSON array. No commentary, no markdown fences.
