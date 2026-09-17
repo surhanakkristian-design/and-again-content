@@ -1,0 +1,166 @@
+{
+ "exercise_id": 32141,
+ "type_id": 16,
+ "topic": "Future with WILL",
+ "level": "A2",
+ "reference": "This is a catastrophe! The bowl will be empty again tomorrow!",
+ "sk": "Toto je katastrofa! Miska bude zajtra zase prázdna!",
+ "cz": "Tohle je katastrofa! Miska bude zítra zase prázdná!",
+ "acceptable": [
+  {
+   "text": "This is a disaster! The bowl will be empty again tomorrow!",
+   "normalized": "this is a disaster the bowl will be empty again tomorrow"
+  },
+  {
+   "text": "It is a catastrophe! The bowl will be empty again tomorrow!",
+   "normalized": "it is a catastrophe the bowl will be empty again tomorrow"
+  },
+  {
+   "text": "It is a disaster! The bowl will be empty again tomorrow!",
+   "normalized": "it is a disaster the bowl will be empty again tomorrow"
+  },
+  {
+   "text": "What a catastrophe! The bowl will be empty again tomorrow!",
+   "normalized": "what a catastrophe the bowl will be empty again tomorrow"
+  },
+  {
+   "text": "What a disaster! The bowl will be empty again tomorrow!",
+   "normalized": "what a disaster the bowl will be empty again tomorrow"
+  },
+  {
+   "text": "This is a catastrophe! Tomorrow the bowl will be empty again!",
+   "normalized": "this is a catastrophe tomorrow the bowl will be empty again"
+  },
+  {
+   "text": "This is a disaster! Tomorrow the bowl will be empty again!",
+   "normalized": "this is a disaster tomorrow the bowl will be empty again"
+  },
+  {
+   "text": "It is a catastrophe! Tomorrow the bowl will be empty again!",
+   "normalized": "it is a catastrophe tomorrow the bowl will be empty again"
+  },
+  {
+   "text": "It is a disaster! Tomorrow the bowl will be empty again!",
+   "normalized": "it is a disaster tomorrow the bowl will be empty again"
+  },
+  {
+   "text": "What a catastrophe! Tomorrow the bowl will be empty again!",
+   "normalized": "what a catastrophe tomorrow the bowl will be empty again"
+  },
+  {
+   "text": "What a disaster! Tomorrow the bowl will be empty again!",
+   "normalized": "what a disaster tomorrow the bowl will be empty again"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "This is a catastrophe! The bowl will empty again tomorrow!",
+   "normalized": "this is a catastrophe the bowl will empty again tomorrow",
+   "kind": "missing be",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „be“: „will be empty“.",
+   "feedback_cz": "Chybí „be“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a disaster! The bowl will empty again tomorrow!",
+   "normalized": "this is a disaster the bowl will empty again tomorrow",
+   "kind": "missing be",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „be“: „will be empty“.",
+   "feedback_cz": "Chybí „be“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a catastrophe! The bowl is empty again tomorrow!",
+   "normalized": "this is a catastrophe the bowl is empty again tomorrow",
+   "kind": "is instead of will be",
+   "verdict": "wrong",
+   "feedback_sk": "Pre zajtrajšok patrí „will be“: „will be empty“.",
+   "feedback_cz": "Pro zítřek patří „will be“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a disaster! The bowl is empty again tomorrow!",
+   "normalized": "this is a disaster the bowl is empty again tomorrow",
+   "kind": "is instead of will be",
+   "verdict": "wrong",
+   "feedback_sk": "Pre zajtrajšok patrí „will be“: „will be empty“.",
+   "feedback_cz": "Pro zítřek patří „will be“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a catastrophe! The bowl will is empty again tomorrow!",
+   "normalized": "this is a catastrophe the bowl will is empty again tomorrow",
+   "kind": "is after will",
+   "verdict": "wrong",
+   "feedback_sk": "Po „will“ patrí „be“, nie „is“.",
+   "feedback_cz": "Po „will“ patří „be“, ne „is“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a disaster! The bowl will is empty again tomorrow!",
+   "normalized": "this is a disaster the bowl will is empty again tomorrow",
+   "kind": "is after will",
+   "verdict": "wrong",
+   "feedback_sk": "Po „will“ patrí „be“, nie „is“.",
+   "feedback_cz": "Po „will“ patří „be“, ne „is“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a catastrophe! The bowl will be again empty tomorrow!",
+   "normalized": "this is a catastrophe the bowl will be again empty tomorrow",
+   "kind": "wrong position of again",
+   "verdict": "wrong",
+   "feedback_sk": "„again“ patrí za „empty“: „empty again“.",
+   "feedback_cz": "„again“ patří za „empty“: „empty again“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a disaster! The bowl will be again empty tomorrow!",
+   "normalized": "this is a disaster the bowl will be again empty tomorrow",
+   "kind": "wrong position of again",
+   "verdict": "wrong",
+   "feedback_sk": "„again“ patrí za „empty“: „empty again“.",
+   "feedback_cz": "„again“ patří za „empty“: „empty again“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a catastrophe! The bowl is going to be empty again tomorrow!",
+   "normalized": "this is a catastrophe the bowl is going to be empty again tomorrow",
+   "kind": "going to instead of will",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu patrí „will“: „will be empty“.",
+   "feedback_cz": "Sem patří „will“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is a disaster! The bowl is going to be empty again tomorrow!",
+   "normalized": "this is a disaster the bowl is going to be empty again tomorrow",
+   "kind": "going to instead of will",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu patrí „will“: „will be empty“.",
+   "feedback_cz": "Sem patří „will“: „will be empty“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is catastrophe! The bowl will be empty again tomorrow!",
+   "normalized": "this is catastrophe the bowl will be empty again tomorrow",
+   "kind": "missing article a",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „a“: „This is a …“.",
+   "feedback_cz": "Chybí „a“: „This is a …“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This is disaster! The bowl will be empty again tomorrow!",
+   "normalized": "this is disaster the bowl will be empty again tomorrow",
+   "kind": "missing article a",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „a“: „This is a …“.",
+   "feedback_cz": "Chybí „a“: „This is a …“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

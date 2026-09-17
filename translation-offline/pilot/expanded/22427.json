@@ -1,0 +1,107 @@
+{
+ "exercise_id": 22427,
+ "type_id": 20,
+ "topic": "Much, Many, Some...",
+ "level": "A2",
+ "reference": "There are not many customers in the salon, only one.",
+ "sk": "V salóne nie je veľa zákazníkov, iba jedna.",
+ "cz": "V salonu není moc zákazníků, jen jedna.",
+ "acceptable": [
+  {
+   "text": "There are not many customers in the salon, just one.",
+   "normalized": "there are not many customers in the salon just one"
+  },
+  {
+   "text": "There are not many clients in the salon, only one.",
+   "normalized": "there are not many clients in the salon only one"
+  },
+  {
+   "text": "There are not many clients in the salon, just one.",
+   "normalized": "there are not many clients in the salon just one"
+  },
+  {
+   "text": "In the salon there are not many customers, only one.",
+   "normalized": "in the salon there are not many customers only one"
+  },
+  {
+   "text": "In the salon there are not many customers, just one.",
+   "normalized": "in the salon there are not many customers just one"
+  },
+  {
+   "text": "In the salon there are not many clients, only one.",
+   "normalized": "in the salon there are not many clients only one"
+  },
+  {
+   "text": "In the salon there are not many clients, just one.",
+   "normalized": "in the salon there are not many clients just one"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "There are not much customers in the salon, only one.",
+   "normalized": "there are not much customers in the salon only one",
+   "kind": "much with countable",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „customers“ patrí „many“, nie „much“.",
+   "feedback_cz": "U „customers“ patří „many“, ne „much“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There is not many customers in the salon, only one.",
+   "normalized": "there is not many customers in the salon only one",
+   "kind": "is with plural",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „customers“ patrí „There are“.",
+   "feedback_cz": "U „customers“ patří „There are“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are not many customer in the salon, only one.",
+   "normalized": "there are not many customer in the salon only one",
+   "kind": "singular after many",
+   "verdict": "wrong",
+   "feedback_sk": "Po „many“ patrí „customers“ s -s.",
+   "feedback_cz": "Po „many“ patří „customers“ s -s.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are no many customers in the salon, only one.",
+   "normalized": "there are no many customers in the salon only one",
+   "kind": "no instead of not",
+   "verdict": "wrong",
+   "feedback_sk": "Zápor je „not many“, nie „no many“.",
+   "feedback_cz": "Zápor je „not many“, ne „no many“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are not a lot of customers in the salon, only one.",
+   "normalized": "there are not a lot of customers in the salon only one",
+   "kind": "avoids many",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Precvič tu „many“: „not many customers“.",
+   "feedback_cz": "Procvič tady „many“: „not many customers“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are not lots of customers in the salon, only one.",
+   "normalized": "there are not lots of customers in the salon only one",
+   "kind": "avoids many",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Precvič tu „many“: „not many customers“.",
+   "feedback_cz": "Procvič tady „many“: „not many customers“.",
+   "feedback_en": null
+  },
+  {
+   "text": "In the salon are not many customers, only one.",
+   "normalized": "in the salon are not many customers only one",
+   "kind": "missing there",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „there“: „there are not many…“.",
+   "feedback_cz": "Chybí „there“: „there are not many…“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": [
+  "Native 'iba jedna/jen jedna' is feminine (one female customer); English 'only one' fits."
+ ]
+}

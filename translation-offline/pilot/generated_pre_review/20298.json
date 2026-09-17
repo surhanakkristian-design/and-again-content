@@ -1,0 +1,58 @@
+{
+  "exercise_id": 20298,
+  "type_id": 6,
+  "topic": "A, AN, THE",
+  "level": "A1",
+  "reference": "He needs a pill for his bad headache.",
+  "sk": "Na tú silnú bolesť hlavy potrebuje jednu tabletku.",
+  "cz": "Na tu silnou bolest hlavy potřebuje jednu tabletu.",
+  "acceptable": [
+    "He needs {a|one} {pill|tablet} for {his|the|this|that} {bad|terrible|awful|severe} headache.",
+    "For {his|the|this|that} {bad|terrible|awful|severe} headache, he needs {a|one} {pill|tablet}."
+  ],
+  "mistakes": [
+    {
+      "text": "He needs {pill|tablet} for his bad headache.",
+      "kind": "missing article a",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba člen „a“ pred tabletkou.",
+      "feedback_cz": "Chybí člen „a“ před tabletou.",
+      "feedback_en": null
+    },
+    {
+      "text": "He needs an pill for his bad headache.",
+      "kind": "an instead of a",
+      "verdict": "wrong",
+      "feedback_sk": "Tu patrí „a“, nie „an“: „a pill“.",
+      "feedback_cz": "Sem patří „a“, ne „an“: „a pill“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He need a {pill|tablet} for his bad headache.",
+      "kind": "missing third person -s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „he“ patrí „needs“ s „-s“.",
+      "feedback_cz": "U „he“ patří „needs“ s „-s“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He needs a {pill|tablet} on his bad headache.",
+      "kind": "on instead of for",
+      "verdict": "wrong",
+      "feedback_sk": "Tu patrí „for“, nie „on“: „for his headache“.",
+      "feedback_cz": "Sem patří „for“, ne „on“: „for his headache“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He needs a {pill|tablet} for his strong headache.",
+      "kind": "calque strong headache",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Po anglicky sa hovorí „bad headache“, nie „strong headache“.",
+      "feedback_cz": "Anglicky se říká „bad headache“, ne „strong headache“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ add 'jednu' (one) and 'tú/tu' (that); 'one pill' and 'this/that headache' accepted."
+  ]
+}

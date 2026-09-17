@@ -1,0 +1,105 @@
+{
+ "exercise_id": 10959,
+ "type_id": 54,
+ "topic": "Mixed Conditional",
+ "level": "B2",
+ "reference": "If she had bought thicker paper, the bouquet would be perfect now.",
+ "sk": "Keby bola kúpila hrubší papier, kytica by bola teraz dokonalá.",
+ "cz": "Kdyby byla koupila silnější papír, kytice by byla teď dokonalá.",
+ "acceptable": [
+  {
+   "text": "If she had bought thicker paper, the bouquet would now be perfect.",
+   "normalized": "if she had bought thicker paper the bouquet would now be perfect"
+  },
+  {
+   "text": "If she had bought heavier paper, the bouquet would be perfect now.",
+   "normalized": "if she had bought heavier paper the bouquet would be perfect now"
+  },
+  {
+   "text": "If she had bought heavier paper, the bouquet would now be perfect.",
+   "normalized": "if she had bought heavier paper the bouquet would now be perfect"
+  },
+  {
+   "text": "The bouquet would be perfect now if she had bought thicker paper.",
+   "normalized": "the bouquet would be perfect now if she had bought thicker paper"
+  },
+  {
+   "text": "The bouquet would be perfect now if she had bought heavier paper.",
+   "normalized": "the bouquet would be perfect now if she had bought heavier paper"
+  },
+  {
+   "text": "The bouquet would now be perfect if she had bought thicker paper.",
+   "normalized": "the bouquet would now be perfect if she had bought thicker paper"
+  },
+  {
+   "text": "The bouquet would now be perfect if she had bought heavier paper.",
+   "normalized": "the bouquet would now be perfect if she had bought heavier paper"
+  },
+  {
+   "text": "Had she bought thicker paper, the bouquet would be perfect now.",
+   "normalized": "had she bought thicker paper the bouquet would be perfect now"
+  },
+  {
+   "text": "Had she bought thicker paper, the bouquet would now be perfect.",
+   "normalized": "had she bought thicker paper the bouquet would now be perfect"
+  },
+  {
+   "text": "Had she bought heavier paper, the bouquet would be perfect now.",
+   "normalized": "had she bought heavier paper the bouquet would be perfect now"
+  },
+  {
+   "text": "Had she bought heavier paper, the bouquet would now be perfect.",
+   "normalized": "had she bought heavier paper the bouquet would now be perfect"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "If she had bought thicker paper, the bouquet would have been perfect now.",
+   "normalized": "if she had bought thicker paper the bouquet would have been perfect now",
+   "kind": "Third Conditional result with now",
+   "verdict": "wrong",
+   "feedback_sk": "Následok platí teraz („now“), preto v Mixed Conditional: „would be perfect“.",
+   "feedback_cz": "Následek platí teď („now“), proto v Mixed Conditional: „would be perfect“.",
+   "feedback_en": "The result is about now, so the Mixed Conditional needs “would be perfect”, not “would have been”."
+  },
+  {
+   "text": "If she bought thicker paper, the bouquet would be perfect now.",
+   "normalized": "if she bought thicker paper the bouquet would be perfect now",
+   "kind": "Past Simple in if-clause",
+   "verdict": "wrong",
+   "feedback_sk": "Nákup bol v minulosti, preto po „if“ patrí Past Perfect: „had bought“.",
+   "feedback_cz": "Nákup byl v minulosti, proto po „if“ patří Past Perfect: „had bought“.",
+   "feedback_en": "The buying was in the past, so the if-clause needs the Past Perfect: “had bought”."
+  },
+  {
+   "text": "If she would have bought thicker paper, the bouquet would be perfect now.",
+   "normalized": "if she would have bought thicker paper the bouquet would be perfect now",
+   "kind": "would in if-clause",
+   "verdict": "wrong",
+   "feedback_sk": "Po „if“ nepatrí „would“; správne je Past Perfect: „if she had bought“.",
+   "feedback_cz": "Po „if“ nepatří „would“; správně je Past Perfect: „if she had bought“.",
+   "feedback_en": "No “would” after “if”; use the Past Perfect: “if she had bought”."
+  },
+  {
+   "text": "If she had bought more thick paper, the bouquet would be perfect now.",
+   "normalized": "if she had bought more thick paper the bouquet would be perfect now",
+   "kind": "more thick instead of thicker",
+   "verdict": "wrong",
+   "feedback_sk": "Krátke prídavné meno stupňujeme príponou: „thicker“, nie „more thick“.",
+   "feedback_cz": "Krátké přídavné jméno stupňujeme příponou: „thicker“, ne „more thick“.",
+   "feedback_en": "Short adjectives take -er: “thicker”, not “more thick”."
+  },
+  {
+   "text": "If she had bought a thicker paper, the bouquet would be perfect now.",
+   "normalized": "if she had bought a thicker paper the bouquet would be perfect now",
+   "kind": "article with uncountable noun",
+   "verdict": "wrong",
+   "feedback_sk": "„Paper“ ako materiál je nepočítateľné, preto bez „a“: „thicker paper“.",
+   "feedback_cz": "„Paper“ jako materiál je nepočitatelné, proto bez „a“: „thicker paper“.",
+   "feedback_en": "“Paper” as a material is uncountable, so no “a”: “thicker paper”."
+  }
+ ],
+ "source_issues": [
+  "CZ 'silnější papír' can also be read as 'stronger paper'; only thicker/heavier accepted, matching SK 'hrubší'."
+ ]
+}

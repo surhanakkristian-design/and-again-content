@@ -1,0 +1,50 @@
+{
+  "exercise_id": 8017,
+  "type_id": 31,
+  "topic": "Past Continuous",
+  "level": "B1",
+  "reference": "The keeper was standing on his line when the referee pointed to the spot.",
+  "sk": "Brankár práve stál na čiare, keď rozhodca ukázal na biely bod.",
+  "cz": "Brankář zrovna stál na čáře, když rozhodčí ukázal na značku.",
+  "acceptable": [
+    "The {keeper|goalkeeper|goalie} was {just |}standing on {his|the} {line|goal line} when the referee pointed {to|at} the {spot|penalty spot}.",
+    "When the referee pointed {to|at} the {spot|penalty spot}, the {keeper|goalkeeper|goalie} was {just |}standing on {his|the} {line|goal line}."
+  ],
+  "mistakes": [
+    {
+      "text": "The {keeper|goalkeeper} stood on {his|the} line when the referee pointed to the spot.",
+      "kind": "Past Simple instead of continuous",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Pre dej, ktorý práve prebiehal, keď prišla iná udalosť, je lepší Past Continuous: „was standing“.",
+      "feedback_cz": "Pro děj, který právě probíhal, když přišla jiná událost, je lepší Past Continuous: „was standing“.",
+      "feedback_en": "For an action in progress when another event happened, Past Continuous is better: “was standing”."
+    },
+    {
+      "text": "The {keeper|goalkeeper} was stand on {his|the} line when the referee pointed to the spot.",
+      "kind": "base form after was",
+      "verdict": "wrong",
+      "feedback_sk": "Po „was“ v Past Continuous patrí tvar s -ing: „was standing“, nie „was stand“.",
+      "feedback_cz": "Po „was“ v Past Continuous patří tvar s -ing: „was standing“, ne „was stand“.",
+      "feedback_en": "After “was” in Past Continuous, use the -ing form: “was standing”, not “was stand”."
+    },
+    {
+      "text": "The {keeper|goalkeeper} standing on {his|the} line when the referee pointed to the spot.",
+      "kind": "missing auxiliary was",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „was“: Past Continuous sa tvorí „was“ + -ing, teda „was standing“.",
+      "feedback_cz": "Chybí „was“: Past Continuous se tvoří „was“ + -ing, tedy „was standing“.",
+      "feedback_en": "“was” is missing: Past Continuous is “was” + -ing, so “was standing”."
+    },
+    {
+      "text": "The {keeper|goalkeeper} was standing on {his|the} line when the referee was pointing to the spot.",
+      "kind": "both clauses continuous",
+      "verdict": "wrong",
+      "feedback_sk": "Krátky dej, ktorý preruší prebiehajúci dej, patrí do Past Simple: „pointed“, nie „was pointing“.",
+      "feedback_cz": "Krátký děj, který přeruší probíhající děj, patří do Past Simple: „pointed“, ne „was pointing“.",
+      "feedback_en": "The short action that interrupts the longer one takes Past Simple: “pointed”, not “was pointing”."
+    }
+  ],
+  "source_issues": [
+    "SK/CZ add 'práve/zrovna' (just) and have no possessive 'his'; CZ says 'značku' (the mark) for the penalty spot."
+  ]
+}

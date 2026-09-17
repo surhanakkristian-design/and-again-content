@@ -1,0 +1,50 @@
+{
+  "exercise_id": 25921,
+  "type_id": 6,
+  "topic": "A, AN, THE",
+  "level": "A1",
+  "reference": "They watch a volcano from the grassy ridge.",
+  "sk": "Z trávnatého hrebeňa pozorujú sopku",
+  "cz": "Z travnatého hřebene pozorují sopku",
+  "acceptable": [
+    "They {watch|observe|are watching} {a|the} volcano from {the|a} grassy ridge.",
+    "From {the|a} grassy ridge, they {watch|observe|are watching} {a|the} volcano."
+  ],
+  "mistakes": [
+    {
+      "text": "They {watch|observe} volcano from the grassy ridge.",
+      "kind": "missing article a",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba člen: „a volcano“.",
+      "feedback_cz": "Chybí člen: „a volcano“.",
+      "feedback_en": null
+    },
+    {
+      "text": "They {watch|observe} an volcano from the grassy ridge.",
+      "kind": "an instead of a",
+      "verdict": "wrong",
+      "feedback_sk": "Pred „volcano“ patrí „a“, nie „an“.",
+      "feedback_cz": "Před „volcano“ patří „a“, ne „an“.",
+      "feedback_en": null
+    },
+    {
+      "text": "They {watch|observe} a volcano from grassy ridge.",
+      "kind": "missing article before ridge",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba člen: „the grassy ridge“.",
+      "feedback_cz": "Chybí člen: „the grassy ridge“.",
+      "feedback_en": null
+    },
+    {
+      "text": "From the grassy ridge {watch|observe} a volcano.",
+      "kind": "missing subject they",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba podmet „they“: „they watch“.",
+      "feedback_cz": "Chybí podmět „they“: „they watch“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ sentences lack the final full stop."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+ "exercise_id": 18966,
+ "type_id": 21,
+ "topic": "There is, are",
+ "level": "A2",
+ "reference": "There are two people in the empty meadow.",
+ "sk": "Na prázdnej lúke sú dvaja ľudia.",
+ "cz": "Na prázdné louce jsou dva lidé.",
+ "acceptable": [
+  {
+   "text": "There are two people in the empty field.",
+   "normalized": "there are two people in the empty field"
+  },
+  {
+   "text": "In the empty meadow there are two people.",
+   "normalized": "in the empty meadow there are two people"
+  },
+  {
+   "text": "In the empty field there are two people.",
+   "normalized": "in the empty field there are two people"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "There is two people in the empty meadow.",
+   "normalized": "there is two people in the empty meadow",
+   "kind": "is with plural",
+   "verdict": "wrong",
+   "feedback_sk": "Pri dvoch ľuďoch patrí „There are“.",
+   "feedback_cz": "U dvou lidí patří „There are“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are two peoples in the empty meadow.",
+   "normalized": "there are two peoples in the empty meadow",
+   "kind": "peoples instead of people",
+   "verdict": "wrong",
+   "feedback_sk": "„People“ je už množné číslo, bez -s.",
+   "feedback_cz": "„People“ je už množné číslo, bez -s.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are two people on the empty meadow.",
+   "normalized": "there are two people on the empty meadow",
+   "kind": "on instead of in",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Pri lúke sa hovorí „in the meadow“.",
+   "feedback_cz": "U louky se říká „in the meadow“.",
+   "feedback_en": null
+  },
+  {
+   "text": "In the empty meadow are two people.",
+   "normalized": "in the empty meadow are two people",
+   "kind": "missing there",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Precvičuje sa „there are“: „In the empty meadow there are…“.",
+   "feedback_cz": "Procvičuje se „there are“: „In the empty meadow there are…“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There are two persons in the empty meadow.",
+   "normalized": "there are two persons in the empty meadow",
+   "kind": "persons instead of people",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Bežne sa hovorí „two people“, nie „persons“.",
+   "feedback_cz": "Běžně se říká „two people“, ne „persons“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

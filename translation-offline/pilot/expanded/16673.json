@@ -1,0 +1,98 @@
+{
+ "exercise_id": 16673,
+ "type_id": 8,
+ "topic": "My, Your, His,...",
+ "level": "A1",
+ "reference": "The host takes her wet coat at the door.",
+ "sk": "Hostiteľ jej pri dverách vezme jej mokrý kabát.",
+ "cz": "Hostitel jí u dveří vezme její mokrý kabát.",
+ "acceptable": [
+  {
+   "text": "The host takes her wet coat from her at the door.",
+   "normalized": "the host takes her wet coat from her at the door"
+  },
+  {
+   "text": "The host will take her wet coat from her at the door.",
+   "normalized": "the host will take her wet coat from her at the door"
+  },
+  {
+   "text": "The host will take her wet coat at the door.",
+   "normalized": "the host will take her wet coat at the door"
+  },
+  {
+   "text": "At the door, the host takes her wet coat from her.",
+   "normalized": "at the door the host takes her wet coat from her"
+  },
+  {
+   "text": "At the door, the host takes her wet coat.",
+   "normalized": "at the door the host takes her wet coat"
+  },
+  {
+   "text": "At the door, the host will take her wet coat from her.",
+   "normalized": "at the door the host will take her wet coat from her"
+  },
+  {
+   "text": "At the door, the host will take her wet coat.",
+   "normalized": "at the door the host will take her wet coat"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The host takes she wet coat at the door.",
+   "normalized": "the host takes she wet coat at the door",
+   "kind": "she instead of her",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „wet coat“ patrí „her“, nie „she“.",
+   "feedback_cz": "Před „wet coat“ patří „her“, ne „she“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The host takes his wet coat at the door.",
+   "normalized": "the host takes his wet coat at the door",
+   "kind": "his instead of her",
+   "verdict": "wrong",
+   "feedback_sk": "Kabát je jej, preto „her“, nie „his“.",
+   "feedback_cz": "Kabát je její, proto „her“, ne „his“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The host takes the wet coat at the door.",
+   "normalized": "the host takes the wet coat at the door",
+   "kind": "article instead of her",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "„Jej kabát“ je „her coat“.",
+   "feedback_cz": "„Její kabát“ je „her coat“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The host takes her her wet coat at the door.",
+   "normalized": "the host takes her her wet coat at the door",
+   "kind": "doubled her",
+   "verdict": "wrong",
+   "feedback_sk": "Stačí jedno „her“: „takes her wet coat“.",
+   "feedback_cz": "Stačí jedno „her“: „takes her wet coat“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The host take her wet coat at the door.",
+   "normalized": "the host take her wet coat at the door",
+   "kind": "missing third person -s",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „the host“ patrí „takes“ s „-s“.",
+   "feedback_cz": "U „the host“ patří „takes“ s „-s“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The host takes her wet coat on the door.",
+   "normalized": "the host takes her wet coat on the door",
+   "kind": "on instead of at",
+   "verdict": "wrong",
+   "feedback_sk": "Pri dverách je „at the door“, nie „on the door“.",
+   "feedback_cz": "U dveří je „at the door“, ne „on the door“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": [
+  "SK/CZ perfective 'vezme' can read as future; 'will take' accepted."
+ ]
+}

@@ -1,0 +1,49 @@
+{
+  "exercise_id": 2783,
+  "type_id": 44,
+  "topic": "Relative clauses",
+  "level": "B1",
+  "reference": "The ball which the dog fetched is now completely covered in mud.",
+  "sk": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+  "cz": "Míček, který pes přinesl, je teď úplně od bláta.",
+  "acceptable": [
+    "The ball {which|that|} the dog {fetched|brought back|brought} is {now |}{completely|totally} covered {in|with} mud.",
+    "The ball {which|that|} the dog {fetched|brought back|brought} is {completely|totally} covered {in|with} mud now.",
+    "The ball {which|that|} the dog {fetched|brought back|brought} is {now |}{completely|totally} muddy."
+  ],
+  "mistakes": [
+    {
+      "text": "The ball {which|that} the dog {fetched|brought} it is now completely covered in mud.",
+      "kind": "extra pronoun in clause",
+      "verdict": "wrong",
+      "feedback_sk": "V Relative clause sa predmet neopakuje: bez „it“.",
+      "feedback_cz": "V Relative clause se předmět neopakuje: bez „it“.",
+      "feedback_en": "Don't repeat the object in a Relative clause: “which/that” already replaces “it”."
+    },
+    {
+      "text": "The ball {who|what} the dog {fetched|brought} is now completely covered in mud.",
+      "kind": "who or what for things",
+      "verdict": "wrong",
+      "feedback_sk": "Pre veci patrí „which“ alebo „that“; „who“ je pre ľudí a „what“ sem nepatrí.",
+      "feedback_cz": "Pro věci se používá „which“ nebo „that“; „who“ je pro lidi a „what“ sem nepatří.",
+      "feedback_en": "For things use “which” or “that”; “who” is for people and “what” doesn't work here."
+    },
+    {
+      "text": "The ball {which|that} {fetched|brought} the dog is now completely covered in mud.",
+      "kind": "subject and object swapped",
+      "verdict": "wrong",
+      "feedback_sk": "Takto lopta priniesla psa. Podmet ide pred sloveso: „which the dog fetched“.",
+      "feedback_cz": "Takhle míček přinesl psa. Podmět jde před sloveso: „which the dog fetched“.",
+      "feedback_en": "This means the ball fetched the dog. Put the subject before the verb: “which the dog fetched”."
+    },
+    {
+      "text": "The ball {which|that|} the dog {fetched|brought} is now completely from mud.",
+      "kind": "literal from mud",
+      "verdict": "wrong",
+      "feedback_sk": "„Od blata“ sa neprekladá doslova: povedz „covered in mud“ alebo „muddy“.",
+      "feedback_cz": "„Od bláta“ se nepřekládá doslova: řekni „covered in mud“ nebo „muddy“.",
+      "feedback_en": "Don't translate word for word: say “covered in mud” or “muddy”."
+    }
+  ],
+  "source_issues": []
+}

@@ -1,0 +1,58 @@
+{
+  "exercise_id": 14697,
+  "type_id": 19,
+  "topic": "Countable and uncountable",
+  "level": "A2",
+  "reference": "There is juice on the stones after the drop.",
+  "sk": "Po dopade je na kameňoch trochu šťavy",
+  "cz": "Po dopadu je na kamenech trochu šťávy",
+  "acceptable": [
+    "There is {|some|a little|a bit of} juice on the {stones|rocks} after the {drop|fall|impact}.",
+    "After the {drop|fall|impact} there is {|some|a little|a bit of} juice on the {stones|rocks}."
+  ],
+  "mistakes": [
+    {
+      "text": "There are {some |}{juice|juices} on the stones after the drop.",
+      "kind": "juice treated as countable",
+      "verdict": "wrong",
+      "feedback_sk": "„Juice“ tu nepočítame: „There is some juice“.",
+      "feedback_cz": "„Juice“ tu nepočítáme: „There is some juice“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is a juice on the stones after the drop.",
+      "kind": "a with uncountable",
+      "verdict": "wrong",
+      "feedback_sk": "Pred „juice“ tu nepatrí „a“: „some juice“.",
+      "feedback_cz": "Před „juice“ tady nepatří „a“: „some juice“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is a few juice on the stones after the drop.",
+      "kind": "a few with uncountable",
+      "verdict": "wrong",
+      "feedback_sk": "„A few“ je pre veci, ktoré sa dajú spočítať. Pri „juice“ patrí „a little“.",
+      "feedback_cz": "„A few“ je pro věci, které se dají spočítat. U „juice“ patří „a little“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is little juice on the stones after the drop.",
+      "kind": "little instead of a little",
+      "verdict": "wrong",
+      "feedback_sk": "„Little“ znamená „skoro nič“. „Trochu“ je „a little“.",
+      "feedback_cz": "„Little“ znamená „skoro nic“. „Trochu“ je „a little“.",
+      "feedback_en": null
+    },
+    {
+      "text": "After the drop is {some |}juice on the stones.",
+      "kind": "missing there",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „there“: „there is some juice“.",
+      "feedback_cz": "Chybí „there“: „there is some juice“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "Native sentences add 'trochu' (a little/some); translations with and without it accepted."
+  ]
+}

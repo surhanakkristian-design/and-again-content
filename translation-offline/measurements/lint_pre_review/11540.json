@@ -1,0 +1,79 @@
+{
+ "exercise_id": 11540,
+ "type_id": 9,
+ "topic": "Wh- questions",
+ "level": "A1",
+ "reference": "Why do they wait? Because the bread must rise.",
+ "sk": "Prečo čakajú? Lebo chlieb musí vykysnúť.",
+ "cz": "Proč čekají? Protože chleba musí vykynout.",
+ "acceptable": [
+  {
+   "text": "Why do they wait? Because the bread has to rise.",
+   "normalized": "why do they wait because the bread has to rise"
+  },
+  {
+   "text": "Why do they wait? Because the bread needs to rise.",
+   "normalized": "why do they wait because the bread needs to rise"
+  },
+  {
+   "text": "Why are they waiting? Because the bread must rise.",
+   "normalized": "why are they waiting because the bread must rise"
+  },
+  {
+   "text": "Why are they waiting? Because the bread has to rise.",
+   "normalized": "why are they waiting because the bread has to rise"
+  },
+  {
+   "text": "Why are they waiting? Because the bread needs to rise.",
+   "normalized": "why are they waiting because the bread needs to rise"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "Why they wait? Because the bread must rise.",
+   "normalized": "why they wait because the bread must rise",
+   "kind": "missing do",
+   "verdict": "wrong",
+   "feedback_sk": "V otázke chýba „do“: „Why do they wait?“.",
+   "feedback_cz": "V otázce chybí „do“: „Why do they wait?“.",
+   "feedback_en": null
+  },
+  {
+   "text": "Why does they wait? Because the bread must rise.",
+   "normalized": "why does they wait because the bread must rise",
+   "kind": "does instead of do",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „they“ patrí „do“, nie „does“.",
+   "feedback_cz": "U „they“ patří „do“, ne „does“.",
+   "feedback_en": null
+  },
+  {
+   "text": "Why do they waiting? Because the bread must rise.",
+   "normalized": "why do they waiting because the bread must rise",
+   "kind": "waiting after do",
+   "verdict": "wrong",
+   "feedback_sk": "Po „do“ patrí „wait“, nie „waiting“.",
+   "feedback_cz": "Po „do“ patří „wait“, ne „waiting“.",
+   "feedback_en": null
+  },
+  {
+   "text": "Why do they wait? Because the bread must to rise.",
+   "normalized": "why do they wait because the bread must to rise",
+   "kind": "to after must",
+   "verdict": "wrong",
+   "feedback_sk": "Po „must“ nie je „to“: „must rise“.",
+   "feedback_cz": "Po „must“ není „to“: „must rise“.",
+   "feedback_en": null
+  },
+  {
+   "text": "Why do they wait? Because the bread must raise.",
+   "normalized": "why do they wait because the bread must raise",
+   "kind": "raise instead of rise",
+   "verdict": "wrong",
+   "feedback_sk": "Chlieb kysne, to je „rise“, nie „raise“.",
+   "feedback_cz": "Chleba kyne, to je „rise“, ne „raise“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

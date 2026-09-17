@@ -1,0 +1,63 @@
+{
+  "exercise_id": 29143,
+  "type_id": 8,
+  "topic": "My, Your, His,...",
+  "level": "A1",
+  "reference": "Nah bro, he's gonna buy it with his own money.",
+  "sk": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+  "cz": "Ale kdepak, kámo, on to koupí za své vlastní peníze.",
+  "acceptable": [
+    "{Nah|No|Nope} {bro|dude|man|mate}, he {is gonna|is going to|will} buy it with his own {money|cash}."
+  ],
+  "mistakes": [
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it with him own money.",
+      "kind": "him instead of his",
+      "verdict": "wrong",
+      "feedback_sk": "Pred „own money“ patrí „his“, nie „him“.",
+      "feedback_cz": "Před „own money“ patří „his“, ne „him“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it with her own money.",
+      "kind": "her instead of his",
+      "verdict": "wrong",
+      "feedback_sk": "Kúpi to on, preto „his“, nie „her“.",
+      "feedback_cz": "Koupí to on, proto „his“, ne „her“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it with own money.",
+      "kind": "missing possessive his",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „his“: „with his own money“.",
+      "feedback_cz": "Chybí „his“: „with his own money“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it with his money.",
+      "kind": "missing own",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Chýba „own“ pre „vlastné“: „his own money“.",
+      "feedback_cz": "Chybí „own“ pro „vlastní“: „his own money“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it for his own money.",
+      "kind": "for instead of with",
+      "verdict": "wrong",
+      "feedback_sk": "„Za peniaze“ je „with money“, nie „for money“.",
+      "feedback_cz": "„Za peníze“ je „with money“, ne „for money“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Nah|No} {bro|dude}, he's gonna buy it with his own moneys.",
+      "kind": "plural -s on money",
+      "verdict": "wrong",
+      "feedback_sk": "„Money“ nemá „-s“.",
+      "feedback_cz": "„Money“ nemá „-s“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": []
+}

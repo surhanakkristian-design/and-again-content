@@ -1,0 +1,49 @@
+{
+  "exercise_id": 7910,
+  "type_id": 63,
+  "topic": "Advanced linkers",
+  "level": "B2",
+  "reference": "Despite the fan on full, the clipped pile didn't move at all.",
+  "sk": "Napriek ventilátoru na plný výkon sa zopnutá kopa vôbec nepohla.",
+  "cz": "Navzdory ventilátoru na plný výkon se sepnutá hromada vůbec nepohnula.",
+  "acceptable": [
+    "{Despite|In spite of} the fan {on full|at full power|on full power|running at full power|on full blast|at full blast}, the clipped {pile|heap|stack} didn't {move|budge} at all.",
+    "The clipped {pile|heap|stack} didn't {move|budge} at all {despite|in spite of} the fan {on full|at full power|on full blast}.",
+    "{Despite|In spite of} the fan being {on full|at full power|on full blast}, the clipped {pile|heap|stack} didn't {move|budge} at all."
+  ],
+  "mistakes": [
+    {
+      "text": "Despite of the fan on full, the clipped pile didn't move at all.",
+      "kind": "despite of",
+      "verdict": "wrong",
+      "feedback_sk": "„Despite“ sa používa bez „of“: „despite the fan“. S „of“ je len „in spite of“.",
+      "feedback_cz": "„Despite“ se používá bez „of“: „despite the fan“. S „of“ je jen „in spite of“.",
+      "feedback_en": "“Despite” takes no “of”: “despite the fan”. Only “in spite of” has “of”."
+    },
+    {
+      "text": "{Although|Even though} the fan on full, the clipped pile didn't move at all.",
+      "kind": "although before noun phrase",
+      "verdict": "wrong",
+      "feedback_sk": "Po „although“ musí nasledovať veta so slovesom; pred podstatným menom patrí „despite“.",
+      "feedback_cz": "Po „although“ musí následovat věta se slovesem; před podstatným jménem patří „despite“.",
+      "feedback_en": "“Although” needs a full clause with a verb; before a noun phrase use “despite”."
+    },
+    {
+      "text": "{Despite|In spite of} the fan was on full, the clipped pile didn't move at all.",
+      "kind": "despite before clause",
+      "verdict": "wrong",
+      "feedback_sk": "Po „despite/in spite of“ nemôže nasledovať veta so slovesom, preto vynechaj „was“.",
+      "feedback_cz": "Po „despite/in spite of“ nemůže následovat věta se slovesem, proto vynech „was“.",
+      "feedback_en": "“Despite/In spite of” can't be followed by a clause with a verb, so leave out “was”."
+    },
+    {
+      "text": "{Although|Even though} the fan was on full, the clipped pile didn't move at all.",
+      "kind": "although instead of despite",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Tu sa precvičuje „despite“ s podstatným menom: „Despite the fan on full, …“.",
+      "feedback_cz": "Tady se procvičuje „despite“ s podstatným jménem: „Despite the fan on full, …“.",
+      "feedback_en": "Here practise “despite” + noun phrase: “Despite the fan on full, …”."
+    }
+  ],
+  "source_issues": []
+}

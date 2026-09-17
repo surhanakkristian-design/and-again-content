@@ -1,0 +1,57 @@
+{
+  "exercise_id": 27863,
+  "type_id": 2,
+  "topic": "HAVE GOT",
+  "level": "A1",
+  "reference": "The basket has got 12 souvenirs, all inside budget.",
+  "sk": "Kôš má 12 suvenírov, všetko v rámci rozpočtu.",
+  "cz": "Košík má 12 suvenýrů, všechno v rámci rozpočtu.",
+  "acceptable": [
+    "The basket has got 12 souvenirs, {all|all of them} within {the |}budget."
+  ],
+  "mistakes": [
+    {
+      "text": "The basket has 12 souvenirs, {all|all of them} within budget.",
+      "kind": "has instead of has got",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Precvičuje sa „has got“: „The basket has got…“.",
+      "feedback_cz": "Procvičuje se „has got“: „The basket has got…“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The basket have got 12 souvenirs, all within budget.",
+      "kind": "have got instead of has",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „basket“ patrí „has got“, nie „have got“.",
+      "feedback_cz": "U „basket“ patří „has got“, ne „have got“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The basket got 12 souvenirs, all within budget.",
+      "kind": "missing has",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „has“: „has got“.",
+      "feedback_cz": "Chybí „has“: „has got“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The basket has got 12 souvenir, all within budget.",
+      "kind": "missing plural s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri 12 patrí množné číslo: „souvenirs“.",
+      "feedback_cz": "U 12 patří množné číslo: „souvenirs“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The basket has got 12 souvenirs, everything {within|inside} {the |}budget.",
+      "kind": "everything instead of all",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Prirodzenejšie je „all“ namiesto „everything“.",
+      "feedback_cz": "Přirozenější je „all“ místo „everything“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "Reference 'all inside budget' is unnatural; 'all within budget' is the natural phrase."
+  ]
+}

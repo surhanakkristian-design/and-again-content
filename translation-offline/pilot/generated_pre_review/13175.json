@@ -1,0 +1,64 @@
+{
+  "exercise_id": 13175,
+  "type_id": 19,
+  "topic": "Countable and uncountable",
+  "level": "A2",
+  "reference": "There is a lot of yellow cheese on the board.",
+  "sk": "Na doske je veľa žltého syra",
+  "cz": "Na prkénku je hodně žlutého sýra",
+  "acceptable": [
+    "There is {a lot of|lots of|plenty of} yellow cheese on the {board|cutting board|chopping board}.",
+    "On the {board|cutting board|chopping board} there is {a lot of|lots of} yellow cheese."
+  ],
+  "mistakes": [
+    {
+      "text": "There are a lot of yellow {cheese|cheeses} on the board.",
+      "kind": "cheese treated as countable",
+      "verdict": "wrong",
+      "feedback_sk": "„Cheese“ tu nepočítame: „There is a lot of cheese“.",
+      "feedback_cz": "„Cheese“ tu nepočítáme: „There is a lot of cheese“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is a lot of yellow cheeses on the board.",
+      "kind": "plural of uncountable noun",
+      "verdict": "wrong",
+      "feedback_sk": "„Cheese“ je tu bez -s: „a lot of yellow cheese“.",
+      "feedback_cz": "„Cheese“ je tady bez -s: „a lot of yellow cheese“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is many yellow cheese on the board.",
+      "kind": "many with uncountable",
+      "verdict": "wrong",
+      "feedback_sk": "„Many“ je pre veci, ktoré sa dajú spočítať. Tu patrí „a lot of“.",
+      "feedback_cz": "„Many“ je pro věci, které se dají spočítat. Tady patří „a lot of“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is much yellow cheese on the board.",
+      "kind": "much in positive sentence",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "V kladnej vete znie lepšie „a lot of“ ako „much“.",
+      "feedback_cz": "V kladné větě zní lépe „a lot of“ než „much“.",
+      "feedback_en": null
+    },
+    {
+      "text": "There is a lot yellow cheese on the board.",
+      "kind": "missing of",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „of“: „a lot of cheese“.",
+      "feedback_cz": "Chybí „of“: „a lot of cheese“.",
+      "feedback_en": null
+    },
+    {
+      "text": "On the board is a lot of yellow cheese.",
+      "kind": "missing there",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „there“: „There is a lot of cheese…“.",
+      "feedback_cz": "Chybí „there“: „There is a lot of cheese…“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": []
+}

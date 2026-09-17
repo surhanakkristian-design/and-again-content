@@ -1,0 +1,60 @@
+{
+  "exercise_id": 29691,
+  "type_id": 8,
+  "topic": "My, Your, His,...",
+  "level": "A1",
+  "reference": "He drops his guidebook on the church steps! Total disaster!",
+  "sk": "Pustí svojho sprievodcu na kostolné schody! Úplná katastrofa!",
+  "cz": "Upustí svého průvodce na kostelní schody! Úplná katastrofa!",
+  "acceptable": [
+    "He {drops|will drop} his {guidebook|guide|travel guide} {on|onto} the church steps! {Total|A total|Complete|A complete|Absolute|An absolute} disaster!",
+    "He {drops|will drop} his {guidebook|guide|travel guide} {on|onto} the church steps! {Total|A total|Complete|A complete|Absolute|An absolute} catastrophe!",
+    "She {drops|will drop} her {guidebook|guide|travel guide} {on|onto} the church steps! {Total|A total|Complete|A complete|Absolute|An absolute} disaster!",
+    "She {drops|will drop} her {guidebook|guide|travel guide} {on|onto} the church steps! {Total|A total|Complete|A complete|Absolute|An absolute} catastrophe!"
+  ],
+  "mistakes": [
+    {
+      "text": "He drops her {guidebook|guide} on the church steps! Total disaster!",
+      "kind": "her instead of his",
+      "verdict": "wrong",
+      "feedback_sk": "Je to jeho sprievodca, preto „his“, nie „her“.",
+      "feedback_cz": "Je to jeho průvodce, proto „his“, ne „her“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He drops him {guidebook|guide} on the church steps! Total disaster!",
+      "kind": "him instead of his",
+      "verdict": "wrong",
+      "feedback_sk": "Pred vecou patrí „his“, nie „him“.",
+      "feedback_cz": "Před věcí patří „his“, ne „him“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He drops the {guidebook|guide} on the church steps! Total disaster!",
+      "kind": "article instead of his",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "„Svojho“ tu znamená „his“: „his guidebook“.",
+      "feedback_cz": "„Svého“ tu znamená „his“: „his guidebook“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He drops {guidebook|guide} on the church steps! Total disaster!",
+      "kind": "missing possessive his",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „his“: „his guidebook“.",
+      "feedback_cz": "Chybí „his“: „his guidebook“.",
+      "feedback_en": null
+    },
+    {
+      "text": "He drop his {guidebook|guide} on the church steps! Total disaster!",
+      "kind": "missing third person -s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „he“ patrí „drops“ s „-s“.",
+      "feedback_cz": "U „he“ patří „drops“ s „-s“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ perfective 'Pustí/Upustí' can read as future; 'will drop' accepted."
+  ]
+}

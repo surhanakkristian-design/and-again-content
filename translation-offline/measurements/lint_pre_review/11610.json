@@ -1,0 +1,71 @@
+{
+ "exercise_id": 11610,
+ "type_id": 21,
+ "topic": "There is, are",
+ "level": "A2",
+ "reference": "There is one long bandage on the bench.",
+ "sk": "Na lavičke je jeden dlhý obväz.",
+ "cz": "Na lavičce je jeden dlouhý obvaz.",
+ "acceptable": [
+  {
+   "text": "There is a long bandage on the bench.",
+   "normalized": "there is a long bandage on the bench"
+  },
+  {
+   "text": "On the bench there is one long bandage.",
+   "normalized": "on the bench there is one long bandage"
+  },
+  {
+   "text": "On the bench there is a long bandage.",
+   "normalized": "on the bench there is a long bandage"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "There are one long bandage on the bench.",
+   "normalized": "there are one long bandage on the bench",
+   "kind": "are with singular",
+   "verdict": "wrong",
+   "feedback_sk": "Pri jednej veci patrí „There is“.",
+   "feedback_cz": "U jedné věci patří „There is“.",
+   "feedback_en": null
+  },
+  {
+   "text": "On the bench is one long bandage.",
+   "normalized": "on the bench is one long bandage",
+   "kind": "missing there",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „there“: „there is one long bandage“.",
+   "feedback_cz": "Chybí „there“: „there is one long bandage“.",
+   "feedback_en": null
+  },
+  {
+   "text": "It is one long bandage on the bench.",
+   "normalized": "it is one long bandage on the bench",
+   "kind": "it is instead of there is",
+   "verdict": "wrong",
+   "feedback_sk": "Tu patrí „There is“, nie „It is“.",
+   "feedback_cz": "Tady patří „There is“, ne „It is“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There is one long bandage at the bench.",
+   "normalized": "there is one long bandage at the bench",
+   "kind": "wrong preposition",
+   "verdict": "wrong",
+   "feedback_sk": "Na lavičke = „on the bench“.",
+   "feedback_cz": "Na lavičce = „on the bench“.",
+   "feedback_en": null
+  },
+  {
+   "text": "There is long bandage on the bench.",
+   "normalized": "there is long bandage on the bench",
+   "kind": "missing article",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „long bandage“ chýba „one“ alebo „a“.",
+   "feedback_cz": "Před „long bandage“ chybí „one“ nebo „a“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

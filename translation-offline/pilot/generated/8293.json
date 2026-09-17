@@ -1,0 +1,65 @@
+{
+  "exercise_id": 8293,
+  "type_id": 43,
+  "topic": "Modal verbs Probability",
+  "level": "B1",
+  "reference": "She never shares food, so this one must be special.",
+  "sk": "Jedlo nikdy nedelí, takže tento croissant musí byť výnimočný.",
+  "cz": "Jídlo nikdy nedělí, takže tenhle croissant musí být výjimečný.",
+  "acceptable": [
+    "She never shares {food|her food}, so this {one|croissant} must be {special|exceptional|something special}."
+  ],
+  "mistakes": [
+    {
+      "text": "She never shares food, so this {one|croissant} {can|could|might} be {special|exceptional}.",
+      "kind": "possibility instead of certainty",
+      "verdict": "wrong",
+      "feedback_sk": "„Can/could/might“ vyjadruje len možnosť. Istý záver z dôkazu vyjadruje „must be“.",
+      "feedback_cz": "„Can/could/might“ vyjadřuje jen možnost. Jistý závěr z důkazu vyjadřuje „must be“.",
+      "feedback_en": "“Can/could/might” only show possibility. For a confident conclusion from evidence, use “must be”."
+    },
+    {
+      "text": "She never shares food, so this {one|croissant} must {to be|is} {special|exceptional}.",
+      "kind": "must plus to or is",
+      "verdict": "wrong",
+      "feedback_sk": "Po „must“ patrí holý tvar slovesa: „must be“.",
+      "feedback_cz": "Po „must“ následuje holý tvar slovesa: „must be“.",
+      "feedback_en": "After “must” use the bare verb: “must be”."
+    },
+    {
+      "text": "She never shares food, so this {one|croissant} has to be {special|exceptional}.",
+      "kind": "has to instead of must",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Pri logickom závere je tu bežnejšie „must be“.",
+      "feedback_cz": "Pro logický závěr je tady běžnější „must be“.",
+      "feedback_en": "For a logical conclusion, “must be” is the more usual choice here."
+    },
+    {
+      "text": "She never shares food, so this {one|croissant} is {special|exceptional}.",
+      "kind": "no modal of deduction",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "„Musí byť“ je záver z dôkazu, nie istý fakt; vyjadri ho cez „must be“.",
+      "feedback_cz": "„Musí být“ je závěr z důkazu, ne jistý fakt; vyjádři ho pomocí „must be“.",
+      "feedback_en": "This is a conclusion from evidence, not a known fact, so use “must be”."
+    },
+    {
+      "text": "She {doesn't never share|never doesn't share} food, so this {one|croissant} must be special.",
+      "kind": "double negation",
+      "verdict": "wrong",
+      "feedback_sk": "„Never“ je už zápor, preto bez „doesn't“: „She never shares“.",
+      "feedback_cz": "„Never“ už je zápor, proto bez „doesn't“: „She never shares“.",
+      "feedback_en": "“Never” is already negative, so don't add “doesn't”: “She never shares”."
+    },
+    {
+      "text": "She never share food, so this {one|croissant} must be special.",
+      "kind": "missing third person -s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „she“ v Present Simple treba koncovku „-s“: „shares“.",
+      "feedback_cz": "U „she“ v Present Simple je potřeba koncovka „-s“: „shares“.",
+      "feedback_en": "With “she” in the Present Simple, add “-s”: “shares”."
+    }
+  ],
+  "source_issues": [
+    "SK/CZ say 'this croissant' where EN has 'this one'; both accepted."
+  ]
+}

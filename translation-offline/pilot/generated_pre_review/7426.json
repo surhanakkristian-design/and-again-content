@@ -1,0 +1,57 @@
+{
+  "exercise_id": 7426,
+  "type_id": 61,
+  "topic": "Relative clauses",
+  "level": "B2",
+  "reference": "The manager, whose clipboard never leaves her hand, knows every task.",
+  "sk": "Manažérka, ktorej zoznam nikdy neopustí ruku, pozná každú úlohu.",
+  "cz": "Manažerka, jejíž seznam nikdy neopustí ruku, zná každý úkol.",
+  "acceptable": [
+    "The manager, whose {clipboard|list} never leaves her hand, knows {every|each} task."
+  ],
+  "mistakes": [
+    {
+      "text": "The manager, which {clipboard|list} never leaves her hand, knows every task.",
+      "kind": "which instead of whose",
+      "verdict": "wrong",
+      "feedback_sk": "Vlastníctvo vyjadruje „whose“: „whose clipboard“, nie „which“.",
+      "feedback_cz": "Vlastnictví vyjadřuje „whose“: „whose clipboard“, ne „which“.",
+      "feedback_en": "Possession needs “whose”: “whose clipboard”, not “which”."
+    },
+    {
+      "text": "The manager, who {clipboard|list} never leaves her hand, knows every task.",
+      "kind": "who instead of whose",
+      "verdict": "wrong",
+      "feedback_sk": "„Ktorej zoznam“ vyjadruje vlastníctvo, preto „whose“, nie „who“.",
+      "feedback_cz": "„Jejíž seznam“ vyjadřuje vlastnictví, proto „whose“, ne „who“.",
+      "feedback_en": "The clipboard belongs to her, so use “whose”, not “who”."
+    },
+    {
+      "text": "The manager, whose her {clipboard|list} never leaves her hand, knows every task.",
+      "kind": "double possessive",
+      "verdict": "wrong",
+      "feedback_sk": "„Whose“ už znamená „jej“, „her“ za ním je navyše.",
+      "feedback_cz": "„Whose“ už znamená „její“, „her“ za ním je navíc.",
+      "feedback_en": "“Whose” already means “her”, so drop the extra “her”."
+    },
+    {
+      "text": "The manager, whose {clipboard|list} never leave her hand, knows every task.",
+      "kind": "missing -s on leaves",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „clipboard“ (it) patrí v Present Simple „leaves“.",
+      "feedback_cz": "U „clipboard“ (it) patří v Present Simple „leaves“.",
+      "feedback_en": "With a singular subject like “clipboard” the Present Simple form is “leaves”."
+    },
+    {
+      "text": "The manager, whose {clipboard|list} never leaves the hand, knows every task.",
+      "kind": "article instead of possessive",
+      "verdict": "wrong",
+      "feedback_sk": "Pri častiach tela treba privlastňovacie zámeno: „her hand“.",
+      "feedback_cz": "U částí těla je potřeba přivlastňovací zájmeno: „her hand“.",
+      "feedback_en": "English uses a possessive with body parts: “her hand”."
+    }
+  ],
+  "source_issues": [
+    "Slovak 'zoznam' and Czech 'seznam' mean 'list', the English says 'clipboard'; both accepted."
+  ]
+}

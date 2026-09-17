@@ -1,0 +1,61 @@
+{
+  "exercise_id": 10124,
+  "type_id": 39,
+  "topic": "1. Conditional",
+  "level": "B1",
+  "reference": "If she books another hour, the therapy will continue next week.",
+  "sk": "Ak si zapíše ďalšiu hodinu, terapia bude pokračovať aj budúci týždeň.",
+  "cz": "Jestli si zapíše další hodinu, terapie bude pokračovat i příští týden.",
+  "acceptable": [
+    "If {she|he} {books|schedules|signs up for} {another|one more|an extra} {hour|session}, the therapy will {also |}continue next week.",
+    "If {she|he} {books|schedules|signs up for} {another|one more|an extra} {hour|session}, the therapy will continue next week {too|as well}.",
+    "If {she|he} {books|schedules} {another|one more} {hour|session}, therapy will {also |}continue next week.",
+    "The therapy will {also |}continue next week if {she|he} {books|schedules} {another|one more} {hour|session}."
+  ],
+  "mistakes": [
+    {
+      "text": "If {she|he} will book another hour, the therapy will continue next week.",
+      "kind": "will after if",
+      "verdict": "wrong",
+      "feedback_sk": "Po „if“ patrí v First Conditional Present Simple: „books“, nie „will book“.",
+      "feedback_cz": "Po „if“ patří ve First Conditional Present Simple: „books“, ne „will book“.",
+      "feedback_en": "In First Conditional use Present Simple after “if”: “books”, not “will book”."
+    },
+    {
+      "text": "If {she|he} books another hour, the therapy continues next week.",
+      "kind": "Present Simple in result",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "V First Conditional patrí do hlavnej vety „will“, lebo ide o budúci následok: „will continue“.",
+      "feedback_cz": "Ve First Conditional patří do hlavní věty „will“, protože jde o budoucí následek: „will continue“.",
+      "feedback_en": "First Conditional uses “will” for the future result: “will continue”."
+    },
+    {
+      "text": "If {she|he} books another hour, the therapy will continues next week.",
+      "kind": "-s after will",
+      "verdict": "wrong",
+      "feedback_sk": "Po „will“ patrí vždy základný tvar slovesa bez -s: „will continue“.",
+      "feedback_cz": "Po „will“ patří vždy základní tvar slovesa bez -s: „will continue“.",
+      "feedback_en": "After “will” always use the base verb without -s: “will continue”."
+    },
+    {
+      "text": "If {she|he} books another hour, the therapy will continue the next week.",
+      "kind": "article before next week",
+      "verdict": "wrong",
+      "feedback_sk": "„Budúci týždeň“ je „next week“ bez „the“; „the next week“ znamená nasledujúcich sedem dní.",
+      "feedback_cz": "„Příští týden“ je „next week“ bez „the“; „the next week“ znamená následujících sedm dní.",
+      "feedback_en": "Say “next week” without “the”; “the next week” means the following seven days."
+    },
+    {
+      "text": "If {she|he} books other hour, the therapy will continue next week.",
+      "kind": "other instead of another",
+      "verdict": "wrong",
+      "feedback_sk": "„Ďalšiu hodinu“ je „another hour“; „other“ sa pred jednotným číslom samo nepoužíva.",
+      "feedback_cz": "„Další hodinu“ je „another hour“; „other“ se před jednotným číslem samo nepoužívá.",
+      "feedback_en": "“One more hour” is “another hour”; “other” is not used alone before a singular noun."
+    }
+  ],
+  "source_issues": [
+    "Slovak “aj” / Czech “i” (also) has no equivalent in the English reference; versions with “also/too/as well” are accepted.",
+    "Slovak and Czech drop the subject pronoun, so “she” is not given; “he” is accepted too."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "exercise_id": 8020,
+  "type_id": 34,
+  "topic": "Present Perfect Simple or Continuos",
+  "level": "B1",
+  "reference": "She has scored three penalties this season and she has missed none.",
+  "sk": "Túto sezónu premenila tri penalty a ani jednu nezahodila.",
+  "cz": "Tuhle sezonu proměnila tři penalty a ani jednu nezahodila.",
+  "acceptable": [
+    "She has {scored|converted} three penalties this season and {she has missed none|has missed none|she hasn't missed any|hasn't missed any|she hasn't missed a single one|hasn't missed a single one|she hasn't missed one|hasn't missed one}.",
+    "This season she has {scored|converted} three penalties and {she has missed none|has missed none|she hasn't missed any|hasn't missed any|she hasn't missed a single one|hasn't missed a single one|she hasn't missed one|hasn't missed one}."
+  ],
+  "mistakes": [
+    {
+      "text": "She scored three penalties this season and {she missed none|she didn't miss any}.",
+      "kind": "Past Simple for unfinished period",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Obdobie „this season“ ešte neskončilo, preto je lepší Present Perfect: „has scored“.",
+      "feedback_cz": "Období „this season“ ještě neskončilo, proto je lepší Present Perfect: „has scored“.",
+      "feedback_en": "“this season” is not over yet, so Present Perfect is better: “has scored”."
+    },
+    {
+      "text": "She has been scoring three penalties this season and she has missed none.",
+      "kind": "continuous with a number",
+      "verdict": "wrong",
+      "feedback_sk": "Pri počte hotových dejov („three penalties“) patrí Present Perfect Simple: „has scored“, nie „has been scoring“.",
+      "feedback_cz": "U počtu hotových dějů („three penalties“) patří Present Perfect Simple: „has scored“, ne „has been scoring“.",
+      "feedback_en": "When you count finished actions (“three penalties”), use Present Perfect Simple: “has scored”, not “has been scoring”."
+    },
+    {
+      "text": "She has scored three penalties this season and she {hasn't missed none|has not missed none}.",
+      "kind": "double negation",
+      "verdict": "wrong",
+      "feedback_sk": "V angličtine je len jeden zápor: „hasn't missed any“ alebo „has missed none“.",
+      "feedback_cz": "V angličtině je jen jeden zápor: „hasn't missed any“ nebo „has missed none“.",
+      "feedback_en": "English uses only one negative: “hasn't missed any” or “has missed none”."
+    },
+    {
+      "text": "She have scored three penalties this season and she has missed none.",
+      "kind": "have with she",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „she“ patrí „has“: „she has scored“.",
+      "feedback_cz": "U „she“ patří „has“: „she has scored“.",
+      "feedback_en": "With “she”, use “has”: “she has scored”."
+    }
+  ],
+  "source_issues": [
+    "SK/CZ 'premenila/proměnila' = converted (scored); 'converted' accepted."
+  ]
+}

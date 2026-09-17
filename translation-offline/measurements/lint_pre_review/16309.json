@@ -1,0 +1,134 @@
+{
+ "exercise_id": 16309,
+ "type_id": 7,
+ "topic": "This, That, These...",
+ "level": "A1",
+ "reference": "This girl in the chalk grid has yellow ribbons.",
+ "sk": "Toto dievča v kriedovom štvorci má žlté stužky.",
+ "cz": "Tahle holka v křídovém čtverci má žluté stužky.",
+ "acceptable": [
+  {
+   "text": "This girl in the chalk grid has got yellow ribbons.",
+   "normalized": "this girl in the chalk grid has got yellow ribbons"
+  },
+  {
+   "text": "This girl in the chalk square has yellow ribbons.",
+   "normalized": "this girl in the chalk square has yellow ribbons"
+  },
+  {
+   "text": "This girl in the chalk square has got yellow ribbons.",
+   "normalized": "this girl in the chalk square has got yellow ribbons"
+  },
+  {
+   "text": "This girl in a chalk grid has yellow ribbons.",
+   "normalized": "this girl in a chalk grid has yellow ribbons"
+  },
+  {
+   "text": "This girl in a chalk grid has got yellow ribbons.",
+   "normalized": "this girl in a chalk grid has got yellow ribbons"
+  },
+  {
+   "text": "This girl in a chalk square has yellow ribbons.",
+   "normalized": "this girl in a chalk square has yellow ribbons"
+  },
+  {
+   "text": "This girl in a chalk square has got yellow ribbons.",
+   "normalized": "this girl in a chalk square has got yellow ribbons"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "That girl in the chalk grid has yellow ribbons.",
+   "normalized": "that girl in the chalk grid has yellow ribbons",
+   "kind": "that instead of this",
+   "verdict": "wrong",
+   "feedback_sk": "„Toto“ je „This“, nie „That“.",
+   "feedback_cz": "„Tahle“ je „This“, ne „That“.",
+   "feedback_en": null
+  },
+  {
+   "text": "That girl in the chalk square has yellow ribbons.",
+   "normalized": "that girl in the chalk square has yellow ribbons",
+   "kind": "that instead of this",
+   "verdict": "wrong",
+   "feedback_sk": "„Toto“ je „This“, nie „That“.",
+   "feedback_cz": "„Tahle“ je „This“, ne „That“.",
+   "feedback_en": null
+  },
+  {
+   "text": "These girl in the chalk grid has yellow ribbons.",
+   "normalized": "these girl in the chalk grid has yellow ribbons",
+   "kind": "these with singular noun",
+   "verdict": "wrong",
+   "feedback_sk": "Pre jedno dievča patrí „This“, „These“ je pre viac.",
+   "feedback_cz": "Pro jednu holku patří „This“, „These“ je pro víc.",
+   "feedback_en": null
+  },
+  {
+   "text": "These girl in the chalk square has yellow ribbons.",
+   "normalized": "these girl in the chalk square has yellow ribbons",
+   "kind": "these with singular noun",
+   "verdict": "wrong",
+   "feedback_sk": "Pre jedno dievča patrí „This“, „These“ je pre viac.",
+   "feedback_cz": "Pro jednu holku patří „This“, „These“ je pro víc.",
+   "feedback_en": null
+  },
+  {
+   "text": "The girl in the chalk grid has yellow ribbons.",
+   "normalized": "the girl in the chalk grid has yellow ribbons",
+   "kind": "the instead of this",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "„Toto“ ukazuje na dievča, preto „This girl“.",
+   "feedback_cz": "„Tahle“ ukazuje na holku, proto „This girl“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The girl in the chalk square has yellow ribbons.",
+   "normalized": "the girl in the chalk square has yellow ribbons",
+   "kind": "the instead of this",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "„Toto“ ukazuje na dievča, preto „This girl“.",
+   "feedback_cz": "„Tahle“ ukazuje na holku, proto „This girl“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This girl in the chalk grid have yellow ribbons.",
+   "normalized": "this girl in the chalk grid have yellow ribbons",
+   "kind": "have instead of has",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „this girl“ patrí „has“, nie „have“.",
+   "feedback_cz": "U „this girl“ patří „has“, ne „have“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This girl in the chalk square have yellow ribbons.",
+   "normalized": "this girl in the chalk square have yellow ribbons",
+   "kind": "have instead of has",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „this girl“ patrí „has“, nie „have“.",
+   "feedback_cz": "U „this girl“ patří „has“, ne „have“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This girl in the chalk grid has yellows ribbons.",
+   "normalized": "this girl in the chalk grid has yellows ribbons",
+   "kind": "plural -s on adjective",
+   "verdict": "wrong",
+   "feedback_sk": "„Yellow“ nemá „-s“, aj keď je stužiek viac.",
+   "feedback_cz": "„Yellow“ nemá „-s“, i když je stužek víc.",
+   "feedback_en": null
+  },
+  {
+   "text": "This girl in the chalk square has yellows ribbons.",
+   "normalized": "this girl in the chalk square has yellows ribbons",
+   "kind": "plural -s on adjective",
+   "verdict": "wrong",
+   "feedback_sk": "„Yellow“ nemá „-s“, aj keď je stužiek viac.",
+   "feedback_cz": "„Yellow“ nemá „-s“, i když je stužek víc.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": [
+  "SK/CZ 'štvorec/čtverec' means square; 'chalk square' accepted."
+ ]
+}

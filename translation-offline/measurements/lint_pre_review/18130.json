@@ -1,0 +1,103 @@
+{
+ "exercise_id": 18130,
+ "type_id": 23,
+ "topic": "Must, Have to...",
+ "level": "A2",
+ "reference": "The lemon is very sour. You must add sugar!",
+ "sk": "Citrón je veľmi kyslý. Musíš pridať cukor!",
+ "cz": "Citron je hodně kyselý. Musíš přidat cukr!",
+ "acceptable": [
+  {
+   "text": "The lemon is very sour. You must add some sugar!",
+   "normalized": "the lemon is very sour you must add some sugar"
+  },
+  {
+   "text": "The lemon is very sour. You have to add sugar!",
+   "normalized": "the lemon is very sour you have to add sugar"
+  },
+  {
+   "text": "The lemon is very sour. You have to add some sugar!",
+   "normalized": "the lemon is very sour you have to add some sugar"
+  },
+  {
+   "text": "The lemon is really sour. You must add sugar!",
+   "normalized": "the lemon is really sour you must add sugar"
+  },
+  {
+   "text": "The lemon is really sour. You must add some sugar!",
+   "normalized": "the lemon is really sour you must add some sugar"
+  },
+  {
+   "text": "The lemon is really sour. You have to add sugar!",
+   "normalized": "the lemon is really sour you have to add sugar"
+  },
+  {
+   "text": "The lemon is really sour. You have to add some sugar!",
+   "normalized": "the lemon is really sour you have to add some sugar"
+  },
+  {
+   "text": "The lemon is so sour. You must add sugar!",
+   "normalized": "the lemon is so sour you must add sugar"
+  },
+  {
+   "text": "The lemon is so sour. You must add some sugar!",
+   "normalized": "the lemon is so sour you must add some sugar"
+  },
+  {
+   "text": "The lemon is so sour. You have to add sugar!",
+   "normalized": "the lemon is so sour you have to add sugar"
+  },
+  {
+   "text": "The lemon is so sour. You have to add some sugar!",
+   "normalized": "the lemon is so sour you have to add some sugar"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The lemon is very sour. You must to add sugar!",
+   "normalized": "the lemon is very sour you must to add sugar",
+   "kind": "to after must",
+   "verdict": "wrong",
+   "feedback_sk": "Po „must“ nepatrí „to“: „must add“.",
+   "feedback_cz": "Po „must“ nepatří „to“: „must add“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The lemon is very sour. You must add a sugar!",
+   "normalized": "the lemon is very sour you must add a sugar",
+   "kind": "a with uncountable",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „sugar“ nepatrí „a“.",
+   "feedback_cz": "Před „sugar“ nepatří „a“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The lemon is very sour. You must adding sugar!",
+   "normalized": "the lemon is very sour you must adding sugar",
+   "kind": "-ing after must",
+   "verdict": "wrong",
+   "feedback_sk": "Po „must“ patrí „add“ bez -ing.",
+   "feedback_cz": "Po „must“ patří „add“ bez -ing.",
+   "feedback_en": null
+  },
+  {
+   "text": "The lemon is very sour. You should add sugar!",
+   "normalized": "the lemon is very sour you should add sugar",
+   "kind": "should instead of must",
+   "verdict": "wrong",
+   "feedback_sk": "„Should“ je len rada. „Musíš“ je „must“.",
+   "feedback_cz": "„Should“ je jen rada. „Musíš“ je „must“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The lemon is much sour. You must add sugar!",
+   "normalized": "the lemon is much sour you must add sugar",
+   "kind": "much instead of very",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „sour“ patrí „very“, nie „much“.",
+   "feedback_cz": "Před „sour“ patří „very“, ne „much“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

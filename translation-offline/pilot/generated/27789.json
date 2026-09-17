@@ -1,0 +1,55 @@
+{
+  "exercise_id": 27789,
+  "type_id": 9,
+  "topic": "Wh- questions",
+  "level": "A1",
+  "reference": "Where is her bank card? Inside the machine, forever!",
+  "sk": "Kde je jej banková karta? V automate, navždy!",
+  "cz": "Kde je její bankovní karta? V automatu, navždy!",
+  "acceptable": [
+    "Where is her {bank card|card}? {Inside|In} the {machine|cash machine|ATM}, forever!"
+  ],
+  "mistakes": [
+    {
+      "text": "Where her {bank card|card} is? Inside the machine, forever!",
+      "kind": "statement word order in question",
+      "verdict": "wrong",
+      "feedback_sk": "V otázke je „is“ pred „her“: „Where is her…“.",
+      "feedback_cz": "V otázce je „is“ před „her“: „Where is her…“.",
+      "feedback_en": null
+    },
+    {
+      "text": "Where her {bank card|card}? Inside the machine, forever!",
+      "kind": "missing is",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „is“: „Where is her…“.",
+      "feedback_cz": "Chybí „is“: „Where is her…“.",
+      "feedback_en": null
+    },
+    {
+      "text": "What is her {bank card|card}? Inside the machine, forever!",
+      "kind": "what instead of where",
+      "verdict": "wrong",
+      "feedback_sk": "„Kde“ je „Where“, nie „What“.",
+      "feedback_cz": "„Kde“ je „Where“, ne „What“.",
+      "feedback_en": null
+    },
+    {
+      "text": "Where are her {bank card|card}? Inside the machine, forever!",
+      "kind": "are instead of is",
+      "verdict": "wrong",
+      "feedback_sk": "Karta je jedna, preto „is“, nie „are“.",
+      "feedback_cz": "Karta je jedna, proto „is“, ne „are“.",
+      "feedback_en": null
+    },
+    {
+      "text": "Where is her {bank card|card}? {Inside|In} the automat, forever!",
+      "kind": "false friend automat",
+      "verdict": "wrong",
+      "feedback_sk": "„Automat“ je po anglicky „machine“ alebo „ATM“.",
+      "feedback_cz": "„Automat“ je anglicky „machine“ nebo „ATM“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": []
+}

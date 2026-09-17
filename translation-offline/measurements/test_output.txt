@@ -1,0 +1,72 @@
+▶ word list
+  ✔ has inflected forms and no abbreviations that mask typos (0.449125ms)
+✔ word list (1.021ms)
+▶ feedback language (decision 4)
+  ✔ sk and cz at every level (0.098166ms)
+  ✔ other native languages: English at B1/B2, nothing at A1/A2 (0.043625ms)
+✔ feedback language (decision 4) (0.207042ms)
+▶ slot expansion (build time)
+  ✔ every combination, empty option, whitespace collapsed (0.875916ms)
+  ✔ space before punctuation removed, duplicates removed (0.076ms)
+  ✔ nested braces throw (0.146042ms)
+✔ slot expansion (build time) (1.197125ms)
+▶ step 1 – reference and acceptable translations
+  ✔ reference with case, punctuation and whitespace differences (0.58075ms)
+  ✔ acceptable translation (0.116333ms)
+  ✔ contractions and number words both ways (0.145042ms)
+  ✔ curly apostrophe and diacritics (0.1845ms)
+  ✔ 1b British / American spelling counts as correct (0.349166ms)
+  ✔ spelling rules never pair unrelated words (0.064ms)
+  ✔ empty answer is wrong without feedback (0.040083ms)
+✔ step 1 – reference and acceptable translations (1.632209ms)
+▶ step 2 – typical mistakes
+  ✔ stored mistake → its verdict and the Slovak feedback (0.19775ms)
+  ✔ Czech feedback for cz (0.1425ms)
+  ✔ other native language at A1: verdict without feedback text (0.150625ms)
+  ✔ other native language at B2: English feedback (0.219666ms)
+  ✔ a mistake is only checked after the acceptable list (0.113417ms)
+✔ step 2 – typical mistakes (0.893625ms)
+▶ step 3 – one typo
+  ✔ swapped letters in one word ≥ 4 letters → correct_with_tip with the spelling (1.126084ms)
+  ✔ insert, delete and substitute are typos too (0.05875ms)
+  ✔ typo against an acceptable translation, feedback language rules (0.207208ms)
+  ✔ NOT a typo: another real English word (sled/sleds, give/gave, their/there, then/than) (0.051625ms)
+  ✔ NOT a typo: another form of the same word even when it is no real word (0.038292ms)
+  ✔ the sled answer is wrong, not a typo (without a stored mistake) (0.394334ms)
+  ✔ NOT a typo: word shorter than 4 letters (0.157708ms)
+  ✔ NOT a typo: two edits in one word, or typos in two words (0.211667ms)
+  ✔ osa distance (0.04475ms)
+✔ step 3 – one typo (2.384875ms)
+▶ step 4 – wrong with an alignment tip
+  ✔ missing words (0.192417ms)
+  ✔ extra word (Czech) (0.128458ms)
+  ✔ wrong word (English at B1) (0.123042ms)
+  ✔ neighbouring edits are one place: "will give" → "have given" (0.236375ms)
+  ✔ word order (0.1765ms)
+  ✔ word order wins over a closer sentence with other words (0.167167ms)
+  ✔ adjacent swap (0.096042ms)
+  ✔ "I" and names keep their capital in the tip (0.157625ms)
+  ✔ closest accepted sentence is used for the tip (0.195166ms)
+  ✔ too many differences → a generic line, never the whole reference (0.108041ms)
+  ✔ no feedback text for other native languages at A1/A2 (0.067917ms)
+  ✔ tips stay within 150 characters (0.065917ms)
+✔ step 4 – wrong with an alignment tip (1.847625ms)
+▶ normalisation gaps closed in the offline checker
+  ✔ typographic double quotes, dashes and brackets are punctuation (0.103792ms)
+  ✔ noun + 's reads as is / has as well as the possessive (0.157083ms)
+  ✔ number words are shown as words in a tip (0.134375ms)
+✔ normalisation gaps closed in the offline checker (0.434583ms)
+▶ readings
+  ✔ 'd has two readings (0.073083ms)
+✔ readings (0.097667ms)
+▶ typedAnswer.ts is the app file, byte for byte
+  ✔ copy is identical (0.562458ms)
+✔ typedAnswer.ts is the app file, byte for byte (0.608875ms)
+ℹ tests 44
+ℹ suites 10
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167.443375

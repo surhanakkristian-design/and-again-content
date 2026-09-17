@@ -1,0 +1,64 @@
+{
+  "exercise_id": 32141,
+  "type_id": 16,
+  "topic": "Future with WILL",
+  "level": "A2",
+  "reference": "This is a catastrophe! The bowl will be empty again tomorrow!",
+  "sk": "Toto je katastrofa! Miska bude zajtra zase prázdna!",
+  "cz": "Tohle je katastrofa! Miska bude zítra zase prázdná!",
+  "acceptable": [
+    "{This is|It is|What} a {catastrophe|disaster}! The bowl will be empty again tomorrow!",
+    "{This is|It is|What} a {catastrophe|disaster}! Tomorrow the bowl will be empty again!"
+  ],
+  "mistakes": [
+    {
+      "text": "This is a {catastrophe|disaster}! The bowl will empty again tomorrow!",
+      "kind": "missing be",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „be“: „will be empty“.",
+      "feedback_cz": "Chybí „be“: „will be empty“.",
+      "feedback_en": null
+    },
+    {
+      "text": "This is a {catastrophe|disaster}! The bowl is empty again tomorrow!",
+      "kind": "is instead of will be",
+      "verdict": "wrong",
+      "feedback_sk": "Pre zajtrajšok patrí „will be“: „will be empty“.",
+      "feedback_cz": "Pro zítřek patří „will be“: „will be empty“.",
+      "feedback_en": null
+    },
+    {
+      "text": "This is a {catastrophe|disaster}! The bowl will is empty again tomorrow!",
+      "kind": "is after will",
+      "verdict": "wrong",
+      "feedback_sk": "Po „will“ patrí „be“, nie „is“.",
+      "feedback_cz": "Po „will“ patří „be“, ne „is“.",
+      "feedback_en": null
+    },
+    {
+      "text": "This is a {catastrophe|disaster}! The bowl will be again empty tomorrow!",
+      "kind": "wrong position of again",
+      "verdict": "wrong",
+      "feedback_sk": "„again“ patrí za „empty“: „empty again“.",
+      "feedback_cz": "„again“ patří za „empty“: „empty again“.",
+      "feedback_en": null
+    },
+    {
+      "text": "This is a {catastrophe|disaster}! The bowl is going to be empty again tomorrow!",
+      "kind": "going to instead of will",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Tu patrí „will“: „will be empty“.",
+      "feedback_cz": "Sem patří „will“: „will be empty“.",
+      "feedback_en": null
+    },
+    {
+      "text": "This is {catastrophe|disaster}! The bowl will be empty again tomorrow!",
+      "kind": "missing article a",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „a“: „This is a …“.",
+      "feedback_cz": "Chybí „a“: „This is a …“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": []
+}

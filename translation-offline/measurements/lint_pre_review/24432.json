@@ -1,0 +1,71 @@
+{
+ "exercise_id": 24432,
+ "type_id": 18,
+ "topic": "Going to or Will",
+ "level": "A2",
+ "reference": "The wedding is in June. I think I will buy a suit.",
+ "sk": "Svadba je v júni. Myslím, že si kúpim oblek.",
+ "cz": "Svatba je v červnu. Myslím, že si koupím oblek.",
+ "acceptable": [
+  {
+   "text": "The wedding is in June. I think I will buy myself a suit.",
+   "normalized": "the wedding is in june i think i will buy myself a suit"
+  },
+  {
+   "text": "The wedding is in June. I think I will get a suit.",
+   "normalized": "the wedding is in june i think i will get a suit"
+  },
+  {
+   "text": "The wedding is in June. I think I will get myself a suit.",
+   "normalized": "the wedding is in june i think i will get myself a suit"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The wedding is in June. I think I am going to buy a suit.",
+   "normalized": "the wedding is in june i think i am going to buy a suit",
+   "kind": "going to for sudden decision",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Pri rozhodnutí, ktoré padne teraz, sa hodí „will“: „I will buy“.",
+   "feedback_cz": "U rozhodnutí, které padne teď, se hodí „will“: „I will buy“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The wedding is in June. I think I buy a suit.",
+   "normalized": "the wedding is in june i think i buy a suit",
+   "kind": "missing will",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „will“: „I think I will buy…“.",
+   "feedback_cz": "Chybí „will“: „I think I will buy…“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The wedding is in June. I think I will to buy a suit.",
+   "normalized": "the wedding is in june i think i will to buy a suit",
+   "kind": "to after will",
+   "verdict": "wrong",
+   "feedback_sk": "Po „will“ nepatrí „to“: „will buy“.",
+   "feedback_cz": "Po „will“ nepatří „to“: „will buy“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The wedding is on June. I think I will buy a suit.",
+   "normalized": "the wedding is on june i think i will buy a suit",
+   "kind": "wrong preposition with month",
+   "verdict": "wrong",
+   "feedback_sk": "Pri mesiacoch patrí „in“: „in June“.",
+   "feedback_cz": "U měsíců patří „in“: „in June“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The wedding is in June. I think I will buy suit.",
+   "normalized": "the wedding is in june i think i will buy suit",
+   "kind": "missing article",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „suit“ chýba „a“: „a suit“.",
+   "feedback_cz": "Před „suit“ chybí „a“: „a suit“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

@@ -1,0 +1,170 @@
+{
+ "exercise_id": 7853,
+ "type_id": 49,
+ "topic": "So, Neither, Nor",
+ "level": "B1",
+ "reference": "The river isn't moving fast, and neither is the canoe.",
+ "sk": "Rieka sa nehýbe rýchlo a kanoe sa tiež nehýbe",
+ "cz": "Řeka neteče rychle a kánoe se taky nehýbe",
+ "acceptable": [
+  {
+   "text": "The river isn't moving fast, and nor is the canoe.",
+   "normalized": "the river isn't moving fast and nor is the canoe"
+  },
+  {
+   "text": "The river isn't moving quickly, and neither is the canoe.",
+   "normalized": "the river isn't moving quickly and neither is the canoe"
+  },
+  {
+   "text": "The river isn't moving quickly, and nor is the canoe.",
+   "normalized": "the river isn't moving quickly and nor is the canoe"
+  },
+  {
+   "text": "The river isn't flowing fast, and neither is the canoe.",
+   "normalized": "the river isn't flowing fast and neither is the canoe"
+  },
+  {
+   "text": "The river isn't flowing fast, and nor is the canoe.",
+   "normalized": "the river isn't flowing fast and nor is the canoe"
+  },
+  {
+   "text": "The river isn't flowing quickly, and neither is the canoe.",
+   "normalized": "the river isn't flowing quickly and neither is the canoe"
+  },
+  {
+   "text": "The river isn't flowing quickly, and nor is the canoe.",
+   "normalized": "the river isn't flowing quickly and nor is the canoe"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The river isn't moving fast, and neither the canoe is.",
+   "normalized": "the river isn't moving fast and neither the canoe is",
+   "kind": "no inversion after neither",
+   "verdict": "wrong",
+   "feedback_sk": "Po „neither“ nasleduje inverzia, najprv sloveso a potom podmet: „neither is the canoe“.",
+   "feedback_cz": "Po „neither“ následuje inverze, nejdřív sloveso a pak podmět: „neither is the canoe“.",
+   "feedback_en": "After “neither”, put the verb before the subject: “neither is the canoe”."
+  },
+  {
+   "text": "The river isn't flowing fast, and neither the canoe is.",
+   "normalized": "the river isn't flowing fast and neither the canoe is",
+   "kind": "no inversion after neither",
+   "verdict": "wrong",
+   "feedback_sk": "Po „neither“ nasleduje inverzia, najprv sloveso a potom podmet: „neither is the canoe“.",
+   "feedback_cz": "Po „neither“ následuje inverze, nejdřív sloveso a pak podmět: „neither is the canoe“.",
+   "feedback_en": "After “neither”, put the verb before the subject: “neither is the canoe”."
+  },
+  {
+   "text": "The river isn't moving fast, and neither isn't the canoe.",
+   "normalized": "the river isn't moving fast and neither isn't the canoe",
+   "kind": "double negation",
+   "verdict": "wrong",
+   "feedback_sk": "„Neither“ je už zápor, preto „neither is“, nie „neither isn't“.",
+   "feedback_cz": "„Neither“ už je zápor, proto „neither is“, ne „neither isn't“.",
+   "feedback_en": "“Neither” is already negative, so use “neither is”, not “neither isn't”."
+  },
+  {
+   "text": "The river isn't flowing fast, and neither isn't the canoe.",
+   "normalized": "the river isn't flowing fast and neither isn't the canoe",
+   "kind": "double negation",
+   "verdict": "wrong",
+   "feedback_sk": "„Neither“ je už zápor, preto „neither is“, nie „neither isn't“.",
+   "feedback_cz": "„Neither“ už je zápor, proto „neither is“, ne „neither isn't“.",
+   "feedback_en": "“Neither” is already negative, so use “neither is”, not “neither isn't”."
+  },
+  {
+   "text": "The river isn't moving fast, and so is the canoe.",
+   "normalized": "the river isn't moving fast and so is the canoe",
+   "kind": "so after negative",
+   "verdict": "wrong",
+   "feedback_sk": "„So is“ patrí po kladnej vete; po zápornej treba „neither is“.",
+   "feedback_cz": "„So is“ patří po kladné větě; po záporné je potřeba „neither is“.",
+   "feedback_en": "“So is” follows a positive sentence; after a negative one use “neither is”."
+  },
+  {
+   "text": "The river isn't flowing fast, and so is the canoe.",
+   "normalized": "the river isn't flowing fast and so is the canoe",
+   "kind": "so after negative",
+   "verdict": "wrong",
+   "feedback_sk": "„So is“ patrí po kladnej vete; po zápornej treba „neither is“.",
+   "feedback_cz": "„So is“ patří po kladné větě; po záporné je potřeba „neither is“.",
+   "feedback_en": "“So is” follows a positive sentence; after a negative one use “neither is”."
+  },
+  {
+   "text": "The river isn't moving fast, and neither does the canoe.",
+   "normalized": "the river isn't moving fast and neither does the canoe",
+   "kind": "wrong auxiliary",
+   "verdict": "wrong",
+   "feedback_sk": "„Neither“ opakuje pomocné sloveso z prvej časti: „isn't“ → „neither is“.",
+   "feedback_cz": "„Neither“ opakuje pomocné sloveso z první části: „isn't“ → „neither is“.",
+   "feedback_en": "“Neither” repeats the auxiliary from the first part: “isn't” → “neither is”."
+  },
+  {
+   "text": "The river isn't flowing fast, and neither does the canoe.",
+   "normalized": "the river isn't flowing fast and neither does the canoe",
+   "kind": "wrong auxiliary",
+   "verdict": "wrong",
+   "feedback_sk": "„Neither“ opakuje pomocné sloveso z prvej časti: „isn't“ → „neither is“.",
+   "feedback_cz": "„Neither“ opakuje pomocné sloveso z první části: „isn't“ → „neither is“.",
+   "feedback_en": "“Neither” repeats the auxiliary from the first part: “isn't” → “neither is”."
+  },
+  {
+   "text": "The river isn't moving fast, and the canoe isn't either.",
+   "normalized": "the river isn't moving fast and the canoe isn't either",
+   "kind": "avoids neither",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu sa cvičí skrátená veta s „neither“: „neither is the canoe“.",
+   "feedback_cz": "Tady se procvičuje zkrácená věta s „neither“: „neither is the canoe“.",
+   "feedback_en": "This exercise practises the short form with “neither”: “neither is the canoe”."
+  },
+  {
+   "text": "The river isn't moving fast, and the canoe isn't moving either.",
+   "normalized": "the river isn't moving fast and the canoe isn't moving either",
+   "kind": "avoids neither",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu sa cvičí skrátená veta s „neither“: „neither is the canoe“.",
+   "feedback_cz": "Tady se procvičuje zkrácená věta s „neither“: „neither is the canoe“.",
+   "feedback_en": "This exercise practises the short form with “neither”: “neither is the canoe”."
+  },
+  {
+   "text": "The river isn't flowing fast, and the canoe isn't either.",
+   "normalized": "the river isn't flowing fast and the canoe isn't either",
+   "kind": "avoids neither",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu sa cvičí skrátená veta s „neither“: „neither is the canoe“.",
+   "feedback_cz": "Tady se procvičuje zkrácená věta s „neither“: „neither is the canoe“.",
+   "feedback_en": "This exercise practises the short form with “neither”: “neither is the canoe”."
+  },
+  {
+   "text": "The river isn't flowing fast, and the canoe isn't moving either.",
+   "normalized": "the river isn't flowing fast and the canoe isn't moving either",
+   "kind": "avoids neither",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Tu sa cvičí skrátená veta s „neither“: „neither is the canoe“.",
+   "feedback_cz": "Tady se procvičuje zkrácená věta s „neither“: „neither is the canoe“.",
+   "feedback_en": "This exercise practises the short form with “neither”: “neither is the canoe”."
+  },
+  {
+   "text": "The river doesn't move fast, and neither does the canoe.",
+   "normalized": "the river doesn't move fast and neither does the canoe",
+   "kind": "Present Simple for now",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Pre dej, ktorý prebieha práve teraz, je prirodzenejší Present Continuous s „neither is“.",
+   "feedback_cz": "Pro děj, který probíhá právě teď, je přirozenější Present Continuous s „neither is“.",
+   "feedback_en": "For something happening right now, the Present Continuous with “neither is” is more natural."
+  },
+  {
+   "text": "The river doesn't flow fast, and neither does the canoe.",
+   "normalized": "the river doesn't flow fast and neither does the canoe",
+   "kind": "Present Simple for now",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Pre dej, ktorý prebieha práve teraz, je prirodzenejší Present Continuous s „neither is“.",
+   "feedback_cz": "Pro děj, který probíhá právě teď, je přirozenější Present Continuous s „neither is“.",
+   "feedback_en": "For something happening right now, the Present Continuous with “neither is” is more natural."
+  }
+ ],
+ "source_issues": [
+  "SK/CZ second clause says the canoe isn't moving at all (no 'fast'), CZ first clause 'neteče' = isn't flowing; 'flowing' accepted. SK/CZ lack the final full stop."
+ ]
+}

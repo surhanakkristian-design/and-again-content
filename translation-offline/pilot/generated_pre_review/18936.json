@@ -1,0 +1,57 @@
+{
+  "exercise_id": 18936,
+  "type_id": 18,
+  "topic": "Going to or Will",
+  "level": "A2",
+  "reference": "The mirror is dusty. She says: I will clean it.",
+  "sk": "Zrkadlo je zaprášené. Hovorí: Umyjem ho.",
+  "cz": "Zrcadlo je zaprášené. Říká: Umyju ho.",
+  "acceptable": [
+    "The mirror is {dusty|covered in dust|full of dust}. She says: I will {clean|wipe|wash} it."
+  ],
+  "mistakes": [
+    {
+      "text": "The mirror is dusty. She says: I am going to clean it.",
+      "kind": "going to for sudden decision",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Pri rýchlom rozhodnutí patrí „will“: „I will clean it“.",
+      "feedback_cz": "U rychlého rozhodnutí patří „will“: „I will clean it“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The mirror is dusty. She says: I clean it.",
+      "kind": "missing will",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „will“: „I will clean it“.",
+      "feedback_cz": "Chybí „will“: „I will clean it“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The mirror is dusty. She say: I will clean it.",
+      "kind": "missing -s on says",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „she“ patrí „says“.",
+      "feedback_cz": "U „she“ patří „says“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The mirror is dusty. She says: I will cleaning it.",
+      "kind": "-ing after will",
+      "verdict": "wrong",
+      "feedback_sk": "Po „will“ patrí „clean“ bez -ing.",
+      "feedback_cz": "Po „will“ patří „clean“ bez -ing.",
+      "feedback_en": null
+    },
+    {
+      "text": "The mirror is dusty. She says: I will clean {him|her}.",
+      "kind": "wrong object pronoun",
+      "verdict": "wrong",
+      "feedback_sk": "Zrkadlo je vec, preto „it“: „clean it“.",
+      "feedback_cz": "Zrcadlo je věc, proto „it“: „clean it“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "Native 'Umyjem/Umyju' literally means 'wash'; clean/wipe/wash accepted."
+  ]
+}

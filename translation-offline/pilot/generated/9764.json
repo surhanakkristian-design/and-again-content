@@ -1,0 +1,56 @@
+{
+  "exercise_id": 9764,
+  "type_id": 63,
+  "topic": "Advanced linkers",
+  "level": "B2",
+  "reference": "The chain was rusted through; nevertheless, the bike rolled by noon.",
+  "sk": "Reťaz bola úplne zhrdzavená; napriek tomu bicykel do obeda jazdil.",
+  "cz": "Řetěz byl úplně zrezivělý; přesto kolo do oběda jezdilo.",
+  "acceptable": [
+    "The chain was {rusted through|completely rusted|completely rusty}; {nevertheless|nonetheless}, the {bike|bicycle} {rolled|was rolling} by {noon|midday|lunch|lunchtime}.",
+    "The chain was {rusted through|completely rusted|completely rusty}; {nevertheless|nonetheless}, the {bike|bicycle} was {working|running} by {noon|lunchtime}."
+  ],
+  "mistakes": [
+    {
+      "text": "The chain was rusted through; {despite|in spite of}, the {bike|bicycle} rolled by noon.",
+      "kind": "despite used as linker",
+      "verdict": "wrong",
+      "feedback_sk": "„Despite“ a „in spite of“ potrebujú podstatné meno; samostatne na začiatku vety patrí „nevertheless“.",
+      "feedback_cz": "„Despite“ a „in spite of“ potřebují podstatné jméno; samostatně na začátku věty patří „nevertheless“.",
+      "feedback_en": "“Despite” and “in spite of” need a noun after them; as a sentence linker use “nevertheless”."
+    },
+    {
+      "text": "The chain was rusted through; {although|even though}, the {bike|bicycle} rolled by noon.",
+      "kind": "although used as adverb",
+      "verdict": "wrong",
+      "feedback_sk": "„Although“ aj „even though“ uvádzajú vedľajšiu vetu, nestoja samy za bodkočiarkou. Treba „nevertheless“.",
+      "feedback_cz": "„Although“ i „even though“ uvádějí vedlejší větu, nestojí samy za středníkem. Je potřeba „nevertheless“.",
+      "feedback_en": "“Although” and “even though” start a clause and can't stand alone after a semicolon; use “nevertheless”."
+    },
+    {
+      "text": "The chain was rusted through; however, the {bike|bicycle} rolled by noon.",
+      "kind": "however instead of nevertheless",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "„However“ vyjadrí len kontrast; „napriek tomu“ presnejšie zodpovedá „nevertheless“.",
+      "feedback_cz": "„However“ vyjádří jen kontrast; „přesto“ přesněji odpovídá „nevertheless“.",
+      "feedback_en": "“However” only contrasts; “nevertheless” better means “in spite of this”."
+    },
+    {
+      "text": "The chain was rusted through, but the {bike|bicycle} rolled by noon.",
+      "kind": "but instead of nevertheless",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Namiesto „but“ sa tu precvičuje formálnejšie „nevertheless“.",
+      "feedback_cz": "Místo „but“ se tu procvičuje formálnější „nevertheless“.",
+      "feedback_en": "Here practise the more formal linker “nevertheless” instead of “but”."
+    },
+    {
+      "text": "The chain was rusted through; nevertheless, the {bike|bicycle} rolled until noon.",
+      "kind": "until instead of by",
+      "verdict": "wrong",
+      "feedback_sk": "„Until“ znamená „až do“ (dej trval); „do obeda“ ako termín je „by noon“.",
+      "feedback_cz": "„Until“ znamená „až do“ (děj trval); „do oběda“ jako termín je „by noon“.",
+      "feedback_en": "“Until” means the action lasted up to noon; for a deadline use “by noon”."
+    }
+  ],
+  "source_issues": []
+}

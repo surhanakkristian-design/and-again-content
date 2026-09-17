@@ -1,0 +1,129 @@
+{
+ "exercise_id": 8920,
+ "type_id": 41,
+ "topic": "Passive",
+ "level": "B1",
+ "reference": "The fastest sequence is shown in slow motion at the end.",
+ "sk": "Najrýchlejšia akcia je ukázaná na konci v spomalenom zábere.",
+ "cz": "Nejrychlejší akce je ukázána na konci ve zpomaleném záběru.",
+ "acceptable": [
+  {
+   "text": "The fastest sequence is played in slow motion at the end.",
+   "normalized": "the fastest sequence is played in slow motion at the end"
+  },
+  {
+   "text": "The fastest action is shown in slow motion at the end.",
+   "normalized": "the fastest action is shown in slow motion at the end"
+  },
+  {
+   "text": "The fastest action is played in slow motion at the end.",
+   "normalized": "the fastest action is played in slow motion at the end"
+  },
+  {
+   "text": "The fastest scene is shown in slow motion at the end.",
+   "normalized": "the fastest scene is shown in slow motion at the end"
+  },
+  {
+   "text": "The fastest scene is played in slow motion at the end.",
+   "normalized": "the fastest scene is played in slow motion at the end"
+  },
+  {
+   "text": "At the end, the fastest sequence is shown in slow motion.",
+   "normalized": "at the end the fastest sequence is shown in slow motion"
+  },
+  {
+   "text": "At the end, the fastest sequence is played in slow motion.",
+   "normalized": "at the end the fastest sequence is played in slow motion"
+  },
+  {
+   "text": "At the end, the fastest action is shown in slow motion.",
+   "normalized": "at the end the fastest action is shown in slow motion"
+  },
+  {
+   "text": "At the end, the fastest action is played in slow motion.",
+   "normalized": "at the end the fastest action is played in slow motion"
+  },
+  {
+   "text": "At the end, the fastest scene is shown in slow motion.",
+   "normalized": "at the end the fastest scene is shown in slow motion"
+  },
+  {
+   "text": "At the end, the fastest scene is played in slow motion.",
+   "normalized": "at the end the fastest scene is played in slow motion"
+  },
+  {
+   "text": "The fastest sequence is shown at the end in slow motion.",
+   "normalized": "the fastest sequence is shown at the end in slow motion"
+  },
+  {
+   "text": "The fastest sequence is played at the end in slow motion.",
+   "normalized": "the fastest sequence is played at the end in slow motion"
+  },
+  {
+   "text": "The fastest action is shown at the end in slow motion.",
+   "normalized": "the fastest action is shown at the end in slow motion"
+  },
+  {
+   "text": "The fastest action is played at the end in slow motion.",
+   "normalized": "the fastest action is played at the end in slow motion"
+  },
+  {
+   "text": "The fastest scene is shown at the end in slow motion.",
+   "normalized": "the fastest scene is shown at the end in slow motion"
+  },
+  {
+   "text": "The fastest scene is played at the end in slow motion.",
+   "normalized": "the fastest scene is played at the end in slow motion"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The fastest sequence shows in slow motion at the end.",
+   "normalized": "the fastest sequence shows in slow motion at the end",
+   "kind": "missing is in Passive",
+   "verdict": "wrong",
+   "feedback_sk": "Akciu niekto ukazuje, sama sa neukazuje, preto Passive: „is shown“.",
+   "feedback_cz": "Akci někdo ukazuje, sama se neukazuje, proto Passive: „is shown“.",
+   "feedback_en": "The sequence doesn't show itself, so use the Passive: “is shown”."
+  },
+  {
+   "text": "The fastest sequence is showed in slow motion at the end.",
+   "normalized": "the fastest sequence is showed in slow motion at the end",
+   "kind": "wrong past participle",
+   "verdict": "wrong",
+   "feedback_sk": "Past participle slovesa „show“ je „shown“, preto „is shown“.",
+   "feedback_cz": "Past participle slovesa „show“ je „shown“, proto „is shown“.",
+   "feedback_en": "The past participle of “show” is “shown”, so say “is shown”."
+  },
+  {
+   "text": "The fastest sequence was shown in slow motion at the end.",
+   "normalized": "the fastest sequence was shown in slow motion at the end",
+   "kind": "past instead of present",
+   "verdict": "wrong",
+   "feedback_sk": "Opisuje sa, ako video prebieha teraz, preto „is shown“, nie „was shown“.",
+   "feedback_cz": "Popisuje se, jak video probíhá teď, proto „is shown“, ne „was shown“.",
+   "feedback_en": "It describes how the video goes now, so use “is shown”, not “was shown”."
+  },
+  {
+   "text": "They show the fastest sequence in slow motion at the end.",
+   "normalized": "they show the fastest sequence in slow motion at the end",
+   "kind": "active instead of Passive",
+   "verdict": "correct_with_tip",
+   "feedback_sk": "Cvičenie precvičuje Passive: podmetom je akcia, teda „the fastest sequence is shown“.",
+   "feedback_cz": "Cvičení procvičuje Passive: podmětem je akce, tedy „the fastest sequence is shown“.",
+   "feedback_en": "This exercise practises the Passive: “the fastest sequence is shown”."
+  },
+  {
+   "text": "The fastest sequence is shown in slow motion on the end.",
+   "normalized": "the fastest sequence is shown in slow motion on the end",
+   "kind": "on instead of at the end",
+   "verdict": "wrong",
+   "feedback_sk": "„Na konci“ je po anglicky „at the end“, nie „on the end“.",
+   "feedback_cz": "„Na konci“ je anglicky „at the end“, ne „on the end“.",
+   "feedback_en": "Use “at the end”, not “on the end”."
+  }
+ ],
+ "source_issues": [
+  "Slovak “akcia” / Czech “akce” mean “action”, the English reference says “sequence”; both are accepted."
+ ]
+}

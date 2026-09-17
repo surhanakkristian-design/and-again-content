@@ -1,0 +1,63 @@
+{
+ "exercise_id": 17684,
+ "type_id": 22,
+ "topic": "Adjective comparison",
+ "level": "A2",
+ "reference": "This ketchup is thicker than the sauce in the fridge.",
+ "sk": "Tento kečup je hustejší ako omáčka v chladničke.",
+ "cz": "Tenhle kečup je hustší než omáčka v lednici.",
+ "acceptable": [
+  {
+   "text": "This ketchup is thicker than the sauce in the refrigerator.",
+   "normalized": "this ketchup is thicker than the sauce in the refrigerator"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "This ketchup is more thick than the sauce in the fridge.",
+   "normalized": "this ketchup is more thick than the sauce in the fridge",
+   "kind": "more with short adjective",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „thick“ patrí „thicker“, nie „more thick“.",
+   "feedback_cz": "U „thick“ patří „thicker“, ne „more thick“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This ketchup is more thicker than the sauce in the fridge.",
+   "normalized": "this ketchup is more thicker than the sauce in the fridge",
+   "kind": "double comparative",
+   "verdict": "wrong",
+   "feedback_sk": "Bez „more“: stačí „thicker“.",
+   "feedback_cz": "Bez „more“: stačí „thicker“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This ketchup is thicker as the sauce in the fridge.",
+   "normalized": "this ketchup is thicker as the sauce in the fridge",
+   "kind": "as instead of than",
+   "verdict": "wrong",
+   "feedback_sk": "Pri porovnaní patrí „than“, nie „as“.",
+   "feedback_cz": "Při srovnání patří „than“, ne „as“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This ketchup is thicker then the sauce in the fridge.",
+   "normalized": "this ketchup is thicker then the sauce in the fridge",
+   "kind": "then instead of than",
+   "verdict": "wrong",
+   "feedback_sk": "„Then“ znamená „potom“. Pri porovnaní patrí „than“.",
+   "feedback_cz": "„Then“ znamená „potom“. Při srovnání patří „than“.",
+   "feedback_en": null
+  },
+  {
+   "text": "This ketchup is thicker than sauce in the fridge.",
+   "normalized": "this ketchup is thicker than sauce in the fridge",
+   "kind": "missing article",
+   "verdict": "wrong",
+   "feedback_sk": "Pred „sauce“ chýba „the“.",
+   "feedback_cz": "Před „sauce“ chybí „the“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

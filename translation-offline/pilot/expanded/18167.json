@@ -1,0 +1,71 @@
+{
+ "exercise_id": 18167,
+ "type_id": 5,
+ "topic": "Singular and plural",
+ "level": "A1",
+ "reference": "The round tower is full of old books.",
+ "sk": "Okrúhla veža je plná starých kníh.",
+ "cz": "Kulatá věž je plná starých knih.",
+ "acceptable": [
+  {
+   "text": "The round tower is filled with old books.",
+   "normalized": "the round tower is filled with old books"
+  },
+  {
+   "text": "The circular tower is full of old books.",
+   "normalized": "the circular tower is full of old books"
+  },
+  {
+   "text": "The circular tower is filled with old books.",
+   "normalized": "the circular tower is filled with old books"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "The round tower is full of old book.",
+   "normalized": "the round tower is full of old book",
+   "kind": "missing plural s",
+   "verdict": "wrong",
+   "feedback_sk": "Kníh je veľa, preto „books“ s -s.",
+   "feedback_cz": "Knih je hodně, proto „books“ s -s.",
+   "feedback_en": null
+  },
+  {
+   "text": "The round tower is full with old books.",
+   "normalized": "the round tower is full with old books",
+   "kind": "full with",
+   "verdict": "wrong",
+   "feedback_sk": "Po „full“ patrí „of“, nie „with“.",
+   "feedback_cz": "Po „full“ patří „of“, ne „with“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The round tower is full old books.",
+   "normalized": "the round tower is full old books",
+   "kind": "missing of",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „of“: „full of“.",
+   "feedback_cz": "Chybí „of“: „full of“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The round tower are full of old books.",
+   "normalized": "the round tower are full of old books",
+   "kind": "are instead of is",
+   "verdict": "wrong",
+   "feedback_sk": "Veža je jedna, preto „is“, nie „are“.",
+   "feedback_cz": "Věž je jedna, proto „is“, ne „are“.",
+   "feedback_en": null
+  },
+  {
+   "text": "The round tower is full of olds books.",
+   "normalized": "the round tower is full of olds books",
+   "kind": "plural s on adjective",
+   "verdict": "wrong",
+   "feedback_sk": "„old“ nemá -s: „old books“.",
+   "feedback_cz": "„old“ nemá -s: „old books“.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": []
+}

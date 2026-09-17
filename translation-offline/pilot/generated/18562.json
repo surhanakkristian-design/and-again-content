@@ -1,0 +1,57 @@
+{
+  "exercise_id": 18562,
+  "type_id": 6,
+  "topic": "A, AN, THE",
+  "level": "A1",
+  "reference": "The man in the suit hugs him.",
+  "sk": "Ten muž v obleku ho objíme.",
+  "cz": "Ten muž v obleku ho obejme.",
+  "acceptable": [
+    "{The|That|This} man in {the|a} suit {hugs|will hug} him."
+  ],
+  "mistakes": [
+    {
+      "text": "Man in the suit hugs him.",
+      "kind": "missing article the",
+      "verdict": "wrong",
+      "feedback_sk": "Na začiatku chýba „The“: „The man“.",
+      "feedback_cz": "Na začátku chybí „The“: „The man“.",
+      "feedback_en": null
+    },
+    {
+      "text": "A man in the suit hugs him.",
+      "kind": "a instead of the",
+      "verdict": "wrong",
+      "feedback_sk": "„Ten muž“ je konkrétny muž, preto „The man“.",
+      "feedback_cz": "„Ten muž“ je konkrétní muž, proto „The man“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The man in suit hugs him.",
+      "kind": "missing article before suit",
+      "verdict": "wrong",
+      "feedback_sk": "Pred „suit“ chýba člen: „the suit“ alebo „a suit“.",
+      "feedback_cz": "Před „suit“ chybí člen: „the suit“ nebo „a suit“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The man in the suit hug him.",
+      "kind": "missing third person -s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „the man“ patrí „hugs“ s „-s“.",
+      "feedback_cz": "U „the man“ patří „hugs“ s „-s“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The man in the suit hugs he.",
+      "kind": "he instead of him",
+      "verdict": "wrong",
+      "feedback_sk": "Po slovese patrí „him“, nie „he“.",
+      "feedback_cz": "Po slovesu patří „him“, ne „he“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ perfective 'objíme/obejme' can read as future; 'will hug' accepted."
+  ]
+}

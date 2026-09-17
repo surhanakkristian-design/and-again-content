@@ -1,0 +1,57 @@
+{
+  "exercise_id": 13752,
+  "type_id": 2,
+  "topic": "HAVE GOT",
+  "level": "A1",
+  "reference": "She has got one huge instruction sheet and ten boards.",
+  "sk": "Dievča má jeden obrovský návod a desať dosiek.",
+  "cz": "Holka má jeden obrovský návod a deset desek.",
+  "acceptable": [
+    "{She|The girl} has got {one|a} {huge|enormous|giant} {instruction sheet|instruction manual|manual|set of instructions} and ten {boards|planks}."
+  ],
+  "mistakes": [
+    {
+      "text": "{She|The girl} have got one huge instruction sheet and ten boards.",
+      "kind": "have got instead of has",
+      "verdict": "wrong",
+      "feedback_sk": "Tu patrí „has got“, nie „have got“.",
+      "feedback_cz": "Sem patří „has got“, ne „have got“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{She|The girl} has one huge instruction sheet and ten boards.",
+      "kind": "has instead of has got",
+      "verdict": "correct_with_tip",
+      "feedback_sk": "Precvičuje sa „has got“, nielen „has“.",
+      "feedback_cz": "Procvičuje se „has got“, nejen „has“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{She|The girl} got one huge instruction sheet and ten boards.",
+      "kind": "missing has",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba „has“: „has got“.",
+      "feedback_cz": "Chybí „has“: „has got“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{She|The girl} has got one huge instruction sheet and ten board.",
+      "kind": "missing plural s",
+      "verdict": "wrong",
+      "feedback_sk": "Pri „ten“ patrí množné číslo: „boards“.",
+      "feedback_cz": "U „ten“ patří množné číslo: „boards“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{She|The girl} has got one huge instruction and ten boards.",
+      "kind": "instruction for manual",
+      "verdict": "wrong",
+      "feedback_sk": "Návod je „instructions“ alebo „instruction sheet“.",
+      "feedback_cz": "Návod je „instructions“ nebo „instruction sheet“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ subject is 'the girl' (Dievča/Holka); reference has 'She'."
+  ]
+}

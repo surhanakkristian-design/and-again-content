@@ -1,0 +1,49 @@
+{
+  "exercise_id": 20435,
+  "type_id": 1,
+  "topic": "TO BE",
+  "level": "A1",
+  "reference": "The big plate is white and very clean.",
+  "sk": "Ten veľký tanier je biely a úplne čistý.",
+  "cz": "Ten velký talíř je bílý a úplně čistý.",
+  "acceptable": [
+    "{The|This} {big|large} plate is white and {very|completely|totally|really|perfectly} clean."
+  ],
+  "mistakes": [
+    {
+      "text": "The {big|large} plate white and {very|completely} clean.",
+      "kind": "missing to be",
+      "verdict": "wrong",
+      "feedback_sk": "Chýba sloveso „is“: „The plate is white…“.",
+      "feedback_cz": "Chybí sloveso „is“: „The plate is white…“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The {big|large} plate are white and {very|completely} clean.",
+      "kind": "are instead of is",
+      "verdict": "wrong",
+      "feedback_sk": "Tanier je jeden, preto patrí „is“, nie „are“.",
+      "feedback_cz": "Talíř je jeden, proto sem patří „is“, ne „are“.",
+      "feedback_en": null
+    },
+    {
+      "text": "The {big|large} plate be white and {very|completely} clean.",
+      "kind": "be instead of is",
+      "verdict": "wrong",
+      "feedback_sk": "Namiesto „be“ patrí „is“.",
+      "feedback_cz": "Místo „be“ sem patří „is“.",
+      "feedback_en": null
+    },
+    {
+      "text": "{Big|Large} plate is white and {very|completely} clean.",
+      "kind": "missing article",
+      "verdict": "wrong",
+      "feedback_sk": "Na začiatku chýba „The“.",
+      "feedback_cz": "Na začátku chybí „The“.",
+      "feedback_en": null
+    }
+  ],
+  "source_issues": [
+    "SK/CZ 'úplne/úplně' means 'completely'; reference has 'very'."
+  ]
+}

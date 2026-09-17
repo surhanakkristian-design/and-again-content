@@ -1,0 +1,86 @@
+{
+ "exercise_id": 13100,
+ "type_id": 26,
+ "topic": "Basic conjunctions",
+ "level": "A2",
+ "reference": "They close the gate and they shake hands.",
+ "sk": "Zavrú bránu a podajú si ruky.",
+ "cz": "Zavřou bránu a podají si ruce.",
+ "acceptable": [
+  {
+   "text": "They close the gate and shake hands.",
+   "normalized": "they close the gate and shake hands"
+  },
+  {
+   "text": "They will close the gate and shake hands.",
+   "normalized": "they will close the gate and shake hands"
+  },
+  {
+   "text": "They will close the gate and they will shake hands.",
+   "normalized": "they will close the gate and they will shake hands"
+  },
+  {
+   "text": "They will close the gate and will shake hands.",
+   "normalized": "they will close the gate and will shake hands"
+  }
+ ],
+ "mistakes": [
+  {
+   "text": "They close the gate but they shake hands.",
+   "normalized": "they close the gate but they shake hands",
+   "kind": "but instead of and",
+   "verdict": "wrong",
+   "feedback_sk": "„A“ je „and“, nie „but“.",
+   "feedback_cz": "„A“ je „and“, ne „but“.",
+   "feedback_en": null
+  },
+  {
+   "text": "They close the gate and they give hands.",
+   "normalized": "they close the gate and they give hands",
+   "kind": "calque give hands",
+   "verdict": "wrong",
+   "feedback_sk": "Podať si ruky = „shake hands“.",
+   "feedback_cz": "Podat si ruce = „shake hands“.",
+   "feedback_en": null
+  },
+  {
+   "text": "They close the gate and they shake their hands.",
+   "normalized": "they close the gate and they shake their hands",
+   "kind": "their before hands",
+   "verdict": "wrong",
+   "feedback_sk": "Bez „their“: „shake hands“.",
+   "feedback_cz": "Bez „their“: „shake hands“.",
+   "feedback_en": null
+  },
+  {
+   "text": "They close the gate, they shake hands.",
+   "normalized": "they close the gate they shake hands",
+   "kind": "missing and",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „and“: „the gate and they shake…“.",
+   "feedback_cz": "Chybí „and“: „the gate and they shake…“.",
+   "feedback_en": null
+  },
+  {
+   "text": "They close the gate, shake hands.",
+   "normalized": "they close the gate shake hands",
+   "kind": "missing and",
+   "verdict": "wrong",
+   "feedback_sk": "Chýba „and“: „the gate and they shake…“.",
+   "feedback_cz": "Chybí „and“: „the gate and they shake…“.",
+   "feedback_en": null
+  },
+  {
+   "text": "They closes the gate and they shakes hands.",
+   "normalized": "they closes the gate and they shakes hands",
+   "kind": "-s after they",
+   "verdict": "wrong",
+   "feedback_sk": "Pri „they“ patrí „close“ a „shake“ bez -s.",
+   "feedback_cz": "U „they“ patří „close“ a „shake“ bez -s.",
+   "feedback_en": null
+  }
+ ],
+ "source_issues": [
+  "Native perfective verbs 'zavrú/podajú, zavřou/podají' can read as future; will-versions accepted."
+ ]
+}
