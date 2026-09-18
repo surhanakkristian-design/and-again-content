@@ -1,0 +1,997 @@
+{
+ "note": "DEV only. Guards evaluated offline, before the model layer; 0 model calls.",
+ "checks": {
+  "dev_correct_n": 203,
+  "dev_wrong_n": 260,
+  "dev_wrong_judged_correct_n": 4,
+  "coverage_base_tip_accept": 160,
+  "fa_base_tip_accept": 30,
+  "fa_base_matches_dev_file": true,
+  "coverage_base_tip_reject": 149,
+  "fa_base_tip_reject": 8
+ },
+ "configs": {
+  "F5t": {
+   "guards": [
+    "F5t"
+   ],
+   "TIP_accept": {
+    "fa_before": 30,
+    "fa_after": 24,
+    "fa_removed": 6,
+    "fa_removed_by_type": {
+     "M": 6
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:1452:3813004317",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) finger"
+     },
+     {
+      "id": "W:2121:4138132892",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb just"
+     },
+     {
+      "id": "W:3494:2755518720",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) empty pockets"
+     },
+     {
+      "id": "W:3937:1213271894",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb again"
+     },
+     {
+      "id": "W:4449:722373448",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) altogether"
+     },
+     {
+      "id": "W:9495:890576878",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb twice"
+     }
+    ],
+    "fa_rate_before": [
+     30,
+     260,
+     [
+      0.079218,
+      0.160607
+     ]
+    ],
+    "fa_rate_after": [
+     24,
+     260,
+     [
+      0.060041,
+      0.134231
+     ]
+    ],
+    "coverage_before": 160,
+    "coverage_after": 158,
+    "correct_lost": 2,
+    "correct_lost_items": [
+     {
+      "id": "C:14779:4064141330",
+      "guard": "F5t",
+      "answer": "She's going to wipe dust from the top of the door.",
+      "reference": "She is going to wipe the dust off the top edge of the door.",
+      "reason": "content word(s) edge"
+     },
+     {
+      "id": "C:9584:294078585",
+      "guard": "F5t",
+      "answer": "She's been sprinting at full speed since she took off.",
+      "reference": "She has been sprinting flat out since the moment she started.",
+      "reason": "content word(s) moment"
+     }
+    ],
+    "coverage_rate_before": [
+     160,
+     203,
+     [
+      0.725477,
+      0.842258
+     ]
+    ],
+    "coverage_rate_after": [
+     158,
+     203,
+     [
+      0.714856,
+      0.833476
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:10366:1314252953",
+     "W:11980:2419738346",
+     "W:1452:3230512291",
+     "W:14697:2532470414",
+     "W:14697:567072060",
+     "W:15437:338816939",
+     "W:20702:2829002765",
+     "W:2121:832651865",
+     "W:23360:711319744",
+     "W:23878:71189755",
+     "W:2389:1402963517",
+     "W:28006:2654956435",
+     "W:5959:2145732155",
+     "W:5971:3700802525",
+     "W:7037:3489763949",
+     "W:7037:3615298556",
+     "W:7444:2683969038",
+     "W:7533:3503567680",
+     "W:7998:52962874",
+     "W:8039:516493581",
+     "W:8491:3020598369",
+     "W:9007:2829648222",
+     "W:9907:1778280655"
+    ]
+   },
+   "TIP_reject": {
+    "fa_before": 8,
+    "fa_after": 8,
+    "fa_removed": 0,
+    "fa_removed_by_type": {},
+    "fa_removed_items": [],
+    "fa_rate_before": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "fa_rate_after": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "coverage_before": 149,
+    "coverage_after": 148,
+    "correct_lost": 1,
+    "correct_lost_items": [
+     {
+      "id": "C:9584:294078585",
+      "guard": "F5t",
+      "answer": "She's been sprinting at full speed since she took off.",
+      "reference": "She has been sprinting flat out since the moment she started.",
+      "reason": "content word(s) moment"
+     }
+    ],
+    "coverage_rate_before": [
+     149,
+     203,
+     [
+      0.667599,
+      0.79341
+     ]
+    ],
+    "coverage_rate_after": [
+     148,
+     203,
+     [
+      0.662397,
+      0.788908
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:10366:1314252953",
+     "W:14697:567072060",
+     "W:5959:2145732155",
+     "W:5971:3700802525",
+     "W:7444:2683969038",
+     "W:7998:52962874",
+     "W:9907:1778280655"
+    ]
+   }
+  },
+  "F6": {
+   "guards": [
+    "F6"
+   ],
+   "TIP_accept": {
+    "fa_before": 30,
+    "fa_after": 29,
+    "fa_removed": 1,
+    "fa_removed_by_type": {
+     "M": 1
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:11980:2419738346",
+      "type": "M",
+      "guard": "F6",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "added content word(s) pot"
+     }
+    ],
+    "fa_rate_before": [
+     30,
+     260,
+     [
+      0.079218,
+      0.160607
+     ]
+    ],
+    "fa_rate_after": [
+     29,
+     260,
+     [
+      0.075984,
+      0.156248
+     ]
+    ],
+    "coverage_before": 160,
+    "coverage_after": 159,
+    "correct_lost": 1,
+    "correct_lost_items": [
+     {
+      "id": "C:7910:1495359972",
+      "guard": "F6",
+      "answer": "Despite the fan being at full power, the clamped stack didn't move in the slightest.",
+      "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+      "reason": "added content word(s) slightest"
+     }
+    ],
+    "coverage_rate_before": [
+     160,
+     203,
+     [
+      0.725477,
+      0.842258
+     ]
+    ],
+    "coverage_rate_after": [
+     159,
+     203,
+     [
+      0.720161,
+      0.837873
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:10366:1314252953",
+     "W:1452:3230512291",
+     "W:1452:3813004317",
+     "W:14697:2532470414",
+     "W:14697:567072060",
+     "W:15437:338816939",
+     "W:20702:2829002765",
+     "W:2121:4138132892",
+     "W:2121:832651865",
+     "W:23360:711319744",
+     "W:23878:71189755",
+     "W:2389:1402963517",
+     "W:28006:2654956435",
+     "W:3494:2755518720",
+     "W:3937:1213271894",
+     "W:4449:722373448",
+     "W:5959:2145732155",
+     "W:5971:3700802525",
+     "W:7037:3489763949",
+     "W:7037:3615298556",
+     "W:7444:2683969038",
+     "W:7533:3503567680",
+     "W:7998:52962874",
+     "W:8039:516493581",
+     "W:8491:3020598369",
+     "W:9007:2829648222",
+     "W:9495:890576878",
+     "W:9907:1778280655"
+    ]
+   },
+   "TIP_reject": {
+    "fa_before": 8,
+    "fa_after": 8,
+    "fa_removed": 0,
+    "fa_removed_by_type": {},
+    "fa_removed_items": [],
+    "fa_rate_before": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "fa_rate_after": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "coverage_before": 149,
+    "coverage_after": 148,
+    "correct_lost": 1,
+    "correct_lost_items": [
+     {
+      "id": "C:7910:1495359972",
+      "guard": "F6",
+      "answer": "Despite the fan being at full power, the clamped stack didn't move in the slightest.",
+      "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+      "reason": "added content word(s) slightest"
+     }
+    ],
+    "coverage_rate_before": [
+     149,
+     203,
+     [
+      0.667599,
+      0.79341
+     ]
+    ],
+    "coverage_rate_after": [
+     148,
+     203,
+     [
+      0.662397,
+      0.788908
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:10366:1314252953",
+     "W:14697:567072060",
+     "W:5959:2145732155",
+     "W:5971:3700802525",
+     "W:7444:2683969038",
+     "W:7998:52962874",
+     "W:9907:1778280655"
+    ]
+   }
+  },
+  "F4v3": {
+   "guards": [
+    "F4v3"
+   ],
+   "TIP_accept": {
+    "fa_before": 30,
+    "fa_after": 28,
+    "fa_removed": 2,
+    "fa_removed_by_type": {
+     "S": 2
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:10366:1314252953",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     },
+     {
+      "id": "W:5971:3700802525",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     }
+    ],
+    "fa_rate_before": [
+     30,
+     260,
+     [
+      0.079218,
+      0.160607
+     ]
+    ],
+    "fa_rate_after": [
+     28,
+     260,
+     [
+      0.072763,
+      0.151875
+     ]
+    ],
+    "coverage_before": 160,
+    "coverage_after": 160,
+    "correct_lost": 0,
+    "correct_lost_items": [],
+    "coverage_rate_before": [
+     160,
+     203,
+     [
+      0.725477,
+      0.842258
+     ]
+    ],
+    "coverage_rate_after": [
+     160,
+     203,
+     [
+      0.725477,
+      0.842258
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:11980:2419738346",
+     "W:1452:3230512291",
+     "W:1452:3813004317",
+     "W:14697:2532470414",
+     "W:14697:567072060",
+     "W:15437:338816939",
+     "W:20702:2829002765",
+     "W:2121:4138132892",
+     "W:2121:832651865",
+     "W:23360:711319744",
+     "W:23878:71189755",
+     "W:2389:1402963517",
+     "W:28006:2654956435",
+     "W:3494:2755518720",
+     "W:3937:1213271894",
+     "W:4449:722373448",
+     "W:5959:2145732155",
+     "W:7037:3489763949",
+     "W:7037:3615298556",
+     "W:7444:2683969038",
+     "W:7533:3503567680",
+     "W:7998:52962874",
+     "W:8039:516493581",
+     "W:8491:3020598369",
+     "W:9007:2829648222",
+     "W:9495:890576878",
+     "W:9907:1778280655"
+    ]
+   },
+   "TIP_reject": {
+    "fa_before": 8,
+    "fa_after": 6,
+    "fa_removed": 2,
+    "fa_removed_by_type": {
+     "S": 2
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:10366:1314252953",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     },
+     {
+      "id": "W:5971:3700802525",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     }
+    ],
+    "fa_rate_before": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "fa_rate_after": [
+     6,
+     260,
+     [
+      0.008515,
+      0.049549
+     ]
+    ],
+    "coverage_before": 149,
+    "coverage_after": 149,
+    "correct_lost": 0,
+    "correct_lost_items": [],
+    "coverage_rate_before": [
+     149,
+     203,
+     [
+      0.667599,
+      0.79341
+     ]
+    ],
+    "coverage_rate_after": [
+     149,
+     203,
+     [
+      0.667599,
+      0.79341
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:14697:567072060",
+     "W:5959:2145732155",
+     "W:7444:2683969038",
+     "W:7998:52962874",
+     "W:9907:1778280655"
+    ]
+   }
+  },
+  "F5t+F6+F4v3": {
+   "guards": [
+    "F5t",
+    "F6",
+    "F4v3"
+   ],
+   "TIP_accept": {
+    "fa_before": 30,
+    "fa_after": 21,
+    "fa_removed": 9,
+    "fa_removed_by_type": {
+     "S": 2,
+     "M": 7
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:10366:1314252953",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     },
+     {
+      "id": "W:11980:2419738346",
+      "type": "M",
+      "guard": "F6",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "added content word(s) pot"
+     },
+     {
+      "id": "W:1452:3813004317",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) finger"
+     },
+     {
+      "id": "W:2121:4138132892",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb just"
+     },
+     {
+      "id": "W:3494:2755518720",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) empty pockets"
+     },
+     {
+      "id": "W:3937:1213271894",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb again"
+     },
+     {
+      "id": "W:4449:722373448",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "content word(s) altogether"
+     },
+     {
+      "id": "W:5971:3700802525",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     },
+     {
+      "id": "W:9495:890576878",
+      "type": "M",
+      "guard": "F5t",
+      "layer": "L3",
+      "model": "TIP",
+      "why": "adjunct adverb twice"
+     }
+    ],
+    "fa_rate_before": [
+     30,
+     260,
+     [
+      0.079218,
+      0.160607
+     ]
+    ],
+    "fa_rate_after": [
+     21,
+     260,
+     [
+      0.050692,
+      0.120815
+     ]
+    ],
+    "coverage_before": 160,
+    "coverage_after": 157,
+    "correct_lost": 3,
+    "correct_lost_items": [
+     {
+      "id": "C:14779:4064141330",
+      "guard": "F5t",
+      "answer": "She's going to wipe dust from the top of the door.",
+      "reference": "She is going to wipe the dust off the top edge of the door.",
+      "reason": "content word(s) edge"
+     },
+     {
+      "id": "C:7910:1495359972",
+      "guard": "F6",
+      "answer": "Despite the fan being at full power, the clamped stack didn't move in the slightest.",
+      "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+      "reason": "added content word(s) slightest"
+     },
+     {
+      "id": "C:9584:294078585",
+      "guard": "F5t",
+      "answer": "She's been sprinting at full speed since she took off.",
+      "reference": "She has been sprinting flat out since the moment she started.",
+      "reason": "content word(s) moment"
+     }
+    ],
+    "coverage_rate_before": [
+     160,
+     203,
+     [
+      0.725477,
+      0.842258
+     ]
+    ],
+    "coverage_rate_after": [
+     157,
+     203,
+     [
+      0.709563,
+      0.829067
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:1452:3230512291",
+     "W:14697:2532470414",
+     "W:14697:567072060",
+     "W:15437:338816939",
+     "W:20702:2829002765",
+     "W:2121:832651865",
+     "W:23360:711319744",
+     "W:23878:71189755",
+     "W:2389:1402963517",
+     "W:28006:2654956435",
+     "W:5959:2145732155",
+     "W:7037:3489763949",
+     "W:7037:3615298556",
+     "W:7444:2683969038",
+     "W:7533:3503567680",
+     "W:7998:52962874",
+     "W:8039:516493581",
+     "W:8491:3020598369",
+     "W:9007:2829648222",
+     "W:9907:1778280655"
+    ]
+   },
+   "TIP_reject": {
+    "fa_before": 8,
+    "fa_after": 6,
+    "fa_removed": 2,
+    "fa_removed_by_type": {
+     "S": 2
+    },
+    "fa_removed_items": [
+     {
+      "id": "W:10366:1314252953",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     },
+     {
+      "id": "W:5971:3700802525",
+      "type": "S",
+      "guard": "F4v3",
+      "layer": "L3",
+      "model": "SAME",
+      "why": "number"
+     }
+    ],
+    "fa_rate_before": [
+     8,
+     260,
+     [
+      0.013376,
+      0.059725
+     ]
+    ],
+    "fa_rate_after": [
+     6,
+     260,
+     [
+      0.008515,
+      0.049549
+     ]
+    ],
+    "coverage_before": 149,
+    "coverage_after": 147,
+    "correct_lost": 2,
+    "correct_lost_items": [
+     {
+      "id": "C:7910:1495359972",
+      "guard": "F6",
+      "answer": "Despite the fan being at full power, the clamped stack didn't move in the slightest.",
+      "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+      "reason": "added content word(s) slightest"
+     },
+     {
+      "id": "C:9584:294078585",
+      "guard": "F5t",
+      "answer": "She's been sprinting at full speed since she took off.",
+      "reference": "She has been sprinting flat out since the moment she started.",
+      "reason": "content word(s) moment"
+     }
+    ],
+    "coverage_rate_before": [
+     149,
+     203,
+     [
+      0.667599,
+      0.79341
+     ]
+    ],
+    "coverage_rate_after": [
+     147,
+     203,
+     [
+      0.657206,
+      0.784396
+     ]
+    ],
+    "residue_ids": [
+     "W:10013:1594646351",
+     "W:14697:567072060",
+     "W:5959:2145732155",
+     "W:7444:2683969038",
+     "W:7998:52962874",
+     "W:9907:1778280655"
+    ]
+   }
+  }
+ },
+ "residue_after_all_guards_tip_accept": [
+  {
+   "id": "W:10013:1594646351",
+   "type": "W",
+   "layer": "L3",
+   "model": "SAME",
+   "tip_reject_still_accepted": true,
+   "why": "substitution only (he->she; holding->pressing; ice pack against lump->compress on bruise): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:1452:3230512291",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (spines->thorns; finger->hand): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:14697:2532470414",
+   "type": "S",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (is little->are few drops of; stones->rocks): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:14697:567072060",
+   "type": "M",
+   "layer": "L3",
+   "model": "SAME",
+   "tip_reject_still_accepted": true,
+   "why": "diff is {\"sub\": [\"little->bit of\", \"stones->rocks\"], \"ins\": [], \"del\": [\"after impact\"]}"
+  },
+  {
+   "id": "W:15437:338816939",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (path->road): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:20702:2829002765",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (jug->bucket): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:2121:832651865",
+   "type": "T",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (flatmate->his roommate; spent->spends): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:23360:711319744",
+   "type": "S",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (his->their): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:23878:71189755",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (pitch in this huge stadium->court): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:2389:1402963517",
+   "type": "S",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "diff is {\"sub\": [\"strongly->strong\"], \"ins\": [\"officer\"], \"del\": []}"
+  },
+  {
+   "id": "W:28006:2654956435",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "inserted function words only (will)"
+  },
+  {
+   "id": "W:5959:2145732155",
+   "type": "S",
+   "layer": "L3",
+   "model": "SAME",
+   "tip_reject_still_accepted": true,
+   "why": "substitution only (he turns->they turn; she->he; drop->lower): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:7037:3489763949",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (stag->deer; leaves->branches): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:7037:3615298556",
+   "type": "S",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (stag->elk): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:7444:2683969038",
+   "type": "M",
+   "layer": "L3",
+   "model": "SAME",
+   "tip_reject_still_accepted": true,
+   "why": "substitution only (coats->layers; lashes->eyelashes): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:7533:3503567680",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "inserted function words only (in)"
+  },
+  {
+   "id": "W:7998:52962874",
+   "type": "M",
+   "layer": "L3",
+   "model": "SAME",
+   "tip_reject_still_accepted": true,
+   "why": "diff is {\"sub\": [\"veranda->porch\"], \"ins\": [], \"del\": [\"now\"]}"
+  },
+  {
+   "id": "W:8039:516493581",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (penalty->foul): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:8491:3020598369",
+   "type": "S",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "substitution only (skin->peel; pomegranate opens->pomegranates open): word choice, no addition and no deletion to catch"
+  },
+  {
+   "id": "W:9007:2829648222",
+   "type": "W",
+   "layer": "L3",
+   "model": "TIP",
+   "tip_reject_still_accepted": false,
+   "why": "inserted function words only (already)"
+  },
+  {
+   "id": "W:9907:1778280655",
+   "type": "S",
+   "layer": "L1",
+   "model": null,
+   "tip_reject_still_accepted": true,
+   "why": "no diff against the reference (tense/form or writer artefact)"
+  }
+ ],
+ "residue_by_type": {
+  "M": 3,
+  "S": 7,
+  "T": 1,
+  "W": 10
+ },
+ "residue_tip_reject_count": 6,
+ "c3_si_diagnosis": {
+  "n_items_with_si": 41,
+  "person_none": 41,
+  "person_set": 0,
+  "examples": []
+ },
+ "c3_extra_signal_items": [
+  2955,
+  5971,
+  6275,
+  8209,
+  9966,
+  10366,
+  13034,
+  14266,
+  18251,
+  20298,
+  23669,
+  25921,
+  32141,
+  32539
+ ]
+}

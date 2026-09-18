@@ -1,0 +1,121 @@
+{
+ "phase": "1i",
+ "decided_on": "DEV (467 items; 203 correct / 260 really-wrong)",
+ "selection_rule_step": 2,
+ "prompt_variant": "P-E4b",
+ "tip_scoring": "tip_reject",
+ "b_flags": {
+  "backfill_s_ids": true,
+  "lock_fix": {
+   "syn": true,
+   "gender": true,
+   "contraction": true
+  }
+ },
+ "c_guards": [
+  "F4v3"
+ ],
+ "model": "gemini-3.1-flash-lite",
+ "generationConfig": {
+  "temperature": 0,
+  "maxOutputTokens": 24,
+  "thinkingConfig": {
+   "thinkingBudget": 0
+  }
+ },
+ "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+ "prompt_template": {
+  "base": "lib_prev.prompt(it, \"P-B\") — Slovak / Reference English / Learner / Practised grammar … / question line",
+  "inserted_before_the_question_line": {
+   "gender_line_when_the_annotation_has_g": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+   "information_line": null,
+   "ground_truth_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+   "alt_refs_line": null,
+   "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF."
+  },
+  "question_line": "SAME, TIP or DIFF?",
+  "rendered_example": "Slovak: Práve teraz tlačí modrý obklad na hrču.\nReference English: Right now he is holding a blue ice pack against the lump.\nLearner: She's pressing a blue compress onto the bump at this moment.\nPractised grammar: All Present Tenses — ALREADY VERIFIED as correct in this answer; judge meaning and vocabulary only.\nGender: the Slovak does not fix the gender here — the reference's \"he\" may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.\nThe SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.\nA synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.\nSAME, TIP or DIFF?"
+ },
+ "dev_numbers": {
+  "coverage": {
+   "k": 175,
+   "n": 203,
+   "pct": 86.21,
+   "ci": [
+    80.69,
+    90.63
+   ]
+  },
+  "fa": {
+   "k": 10,
+   "n": 260,
+   "pct": 3.85,
+   "ci": [
+    1.86,
+    6.96
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 67,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.36
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 69,
+    "pct": 2.9,
+    "ci": [
+     0.35,
+     10.08
+    ]
+   },
+   "M": {
+    "k": 4,
+    "n": 56,
+    "pct": 7.14,
+    "ci": [
+     1.98,
+     17.29
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 68,
+    "pct": 5.88,
+    "ci": [
+     1.63,
+     14.38
+    ]
+   }
+  },
+  "failed_rate_pct": 0.0
+ },
+ "runner_up": {
+  "variant": "P-E4b",
+  "scoring": "tip_reject",
+  "guards": "F4v3+F5t+F6",
+  "coverage": {
+   "k": 172,
+   "n": 203,
+   "pct": 84.73,
+   "ci": [
+    79.03,
+    89.38
+   ]
+  },
+  "fa": {
+   "k": 9,
+   "n": 260,
+   "pct": 3.46,
+   "ci": [
+    1.59,
+    6.47
+   ]
+  }
+ }
+}
