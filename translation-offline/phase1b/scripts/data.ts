@@ -7,6 +7,12 @@ import type { SynGroup } from '../../checker/v2/forms.ts';
 
 export const P1B = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const ROOT = join(P1B, '..');
+/** Annotation directory; Phase 1c points it at phase1c/annotated with ANN_DIR=… (default phase1b/annotated). */
+export const ANN_DIR = process.env.ANN_DIR ?? join(P1B, 'annotated');
+/** Synonym directory (table/annotator/ng + forms.json); Phase 1c AFTER state: SYN_DIR=phase1c/synonyms (default phase1b/synonyms). */
+export const SYN_DIR = process.env.SYN_DIR ?? join(P1B, 'synonyms');
+/** Optional library overlay {items:{libId: item|null}, added:[{type_id, item}]} (Phase 1c reviews): LIB_OVERLAY=phase1c/overlay/library.json */
+export const LIB_OVERLAY = process.env.LIB_OVERLAY ?? '';
 
 export const readJson = <T = any>(path: string, fallback?: T): T => {
   if (!existsSync(path)) {
@@ -22,7 +28,7 @@ export const loadWords = (): Set<string> =>
 
 /** synonyms/*.json except forms.json, table.json first */
 export const synonymFiles = (): { file: string; groups: SynGroup[] }[] => {
-  const dir = join(P1B, 'synonyms');
+  const dir = SYN_DIR;
   if (!existsSync(dir)) return [];
   const files = readdirSync(dir).filter((f) => f.endsWith('.json') && f !== 'forms.json')
     .sort((a, b) => (a === 'table.json' ? -1 : b === 'table.json' ? 1 : a.localeCompare(b)));
@@ -33,7 +39,7 @@ export const synonymFiles = (): { file: string; groups: SynGroup[] }[] => {
   return out;
 };
 
-export const loadForms = (): SynForms => readJson(join(P1B, 'synonyms', 'forms.json'), { groups: {} });
+export const loadForms = (): SynForms => readJson(join(SYN_DIR, 'forms.json'), { groups: {} });
 
 export interface LibraryFile { type_id: number; topic?: string; level?: string; items: LibraryItem[]; file: string }
 export const libraryFiles = (): LibraryFile[] => {
@@ -43,17 +49,22 @@ export const libraryFiles = (): LibraryFile[] => {
   for (const f of readdirSync(dir).filter((x) => /^\d+\.json$/.test(x)).sort((a, b) => parseInt(a) - parseInt(b))) {
     try { out.push({ ...readJson(join(dir, f)), file: f }); } catch (e) { console.error(`skip mistakes/${f}: ${(e as Error).message}`); }
   }
+  if (LIB_OVERLAY) {
+    const ov = readJson<any>(LIB_OVERLAY, { items: {}, added: [] });
+    for (const lf of out) lf.items = lf.items.flatMap((it) => (it.id in (ov.items ?? {}) ? (ov.items[it.id] ? [ov.items[it.id]] : []) : [it]));
+    for (const a of ov.added ?? []) { const lf = out.find((x) => x.type_id === a.type_id); if (lf) lf.items.push(a.item); }
+  }
   return out;
 };
 export const loadLibrary = (): Library => libraryIndex(libraryFiles());
 
 export const annotationIds = (): number[] => {
-  const dir = join(P1B, 'annotated');
+  const dir = ANN_DIR;
   if (!existsSync(dir)) return [];
   return readdirSync(dir).filter((f) => /^\d+\.json$/.test(f)).map((f) => parseInt(f)).sort((a, b) => a - b);
 };
 export const loadAnnotation = (id: number): Annotation | null => {
-  const path = join(P1B, 'annotated', `${id}.json`);
+  const path = join(ANN_DIR, `${id}.json`);
   if (!existsSync(path)) return null;
   try { return readJson(path); } catch { return null; }
 };

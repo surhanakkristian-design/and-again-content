@@ -1,0 +1,2725 @@
+{
+ "note": "§6 AFTER all four reviews (syn_1/2, lib_1..6, sample, supp) applied to phase1c copies; checker v2 unchanged. Same split and denominator as measure_before.json (held-out cov_heldout.json 240 − 5 excluded = 235; FA fa.json 105).",
+ "coverage_before": {
+  "all": {
+   "accepted": 95,
+   "n": 235,
+   "pct": 40.4
+  },
+  "batch:L": {
+   "accepted": 73,
+   "n": 176,
+   "pct": 41.5
+  },
+  "batch:S": {
+   "accepted": 22,
+   "n": 59,
+   "pct": 37.3
+  },
+  "long": {
+   "accepted": 13,
+   "n": 31,
+   "pct": 41.9
+  },
+  "lv:A1": {
+   "accepted": 18,
+   "n": 36,
+   "pct": 50.0
+  },
+  "lv:A1/short": {
+   "accepted": 18,
+   "n": 36,
+   "pct": 50.0
+  },
+  "lv:A2": {
+   "accepted": 22,
+   "n": 48,
+   "pct": 45.8
+  },
+  "lv:A2/short": {
+   "accepted": 22,
+   "n": 48,
+   "pct": 45.8
+  },
+  "lv:B1": {
+   "accepted": 35,
+   "n": 82,
+   "pct": 42.7
+  },
+  "lv:B1/long": {
+   "accepted": 9,
+   "n": 19,
+   "pct": 47.4
+  },
+  "lv:B1/short": {
+   "accepted": 26,
+   "n": 63,
+   "pct": 41.3
+  },
+  "lv:B2": {
+   "accepted": 20,
+   "n": 69,
+   "pct": 29.0
+  },
+  "lv:B2/long": {
+   "accepted": 4,
+   "n": 12,
+   "pct": 33.3
+  },
+  "lv:B2/short": {
+   "accepted": 16,
+   "n": 57,
+   "pct": 28.1
+  },
+  "short": {
+   "accepted": 82,
+   "n": 204,
+   "pct": 40.2
+  }
+ },
+ "coverage_after": {
+  "all": {
+   "accepted": 100,
+   "n": 235,
+   "pct": 42.6
+  },
+  "batch:L": {
+   "accepted": 78,
+   "n": 176,
+   "pct": 44.3
+  },
+  "batch:S": {
+   "accepted": 22,
+   "n": 59,
+   "pct": 37.3
+  },
+  "long": {
+   "accepted": 13,
+   "n": 31,
+   "pct": 41.9
+  },
+  "lv:A1": {
+   "accepted": 17,
+   "n": 36,
+   "pct": 47.2
+  },
+  "lv:A1/short": {
+   "accepted": 17,
+   "n": 36,
+   "pct": 47.2
+  },
+  "lv:A2": {
+   "accepted": 23,
+   "n": 48,
+   "pct": 47.9
+  },
+  "lv:A2/short": {
+   "accepted": 23,
+   "n": 48,
+   "pct": 47.9
+  },
+  "lv:B1": {
+   "accepted": 34,
+   "n": 82,
+   "pct": 41.5
+  },
+  "lv:B1/long": {
+   "accepted": 9,
+   "n": 19,
+   "pct": 47.4
+  },
+  "lv:B1/short": {
+   "accepted": 25,
+   "n": 63,
+   "pct": 39.7
+  },
+  "lv:B2": {
+   "accepted": 26,
+   "n": 69,
+   "pct": 37.7
+  },
+  "lv:B2/long": {
+   "accepted": 4,
+   "n": 12,
+   "pct": 33.3
+  },
+  "lv:B2/short": {
+   "accepted": 22,
+   "n": 57,
+   "pct": 38.6
+  },
+  "short": {
+   "accepted": 87,
+   "n": 204,
+   "pct": 42.6
+  }
+ },
+ "false_acceptance": {
+  "total_wrong": 105,
+  "accepted": 9,
+  "silent_correct": 3,
+  "tip_accepts": 6,
+  "new_vs_before": 0,
+  "real": 0,
+  "real_note": "same 9 rows as before, same judgements: 3 silent = valid readings of the Slovak, 6 tip-accepts via library soft items; 0 real (1b convention), 6/105 if tip-accepts count",
+  "list": [
+   {
+    "id": 16403,
+    "verdict": "correct_with_tip",
+    "reference": "Say bye now and she will come back in an hour.",
+    "answer": "Say bye now and she comes back in an hour.",
+    "feedback": "Pre budúcnosť tu patrí „will“: „will“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   },
+   {
+    "id": 1018,
+    "verdict": "correct_with_tip",
+    "reference": "He has poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "answer": "He poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "feedback": "Výsledok je vidieť teraz, preto je lepší Present Perfect: „has poured“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   },
+   {
+    "id": 14266,
+    "verdict": "correct",
+    "reference": "What do they dance? — Salsa.",
+    "answer": "What are they dancing? — Salsa.",
+    "feedback": null,
+    "judgement": "annotation variant v1 (sk \"Čo tancujú?\" allows both) — not real",
+    "class": "valid reading"
+   },
+   {
+    "id": 1452,
+    "verdict": "correct",
+    "reference": "If he touches that cactus, he will spend the evening pulling spines out of his finger.",
+    "answer": "If she touches that cactus, she will spend the evening pulling spines out of her finger.",
+    "feedback": null,
+    "judgement": "sk genderless (dotkne/strávi) — not real",
+    "class": "valid reading"
+   },
+   {
+    "id": 5595,
+    "verdict": "correct_with_tip",
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He stamped the document at last, so she can finally go home.",
+    "feedback": "Výsledok je vidieť teraz, preto je lepší Present Perfect: „has stamped“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   },
+   {
+    "id": 5595,
+    "verdict": "correct",
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He has stamped the document, so she can finally go home.",
+    "feedback": null,
+    "judgement": "sk has one \"Konečne\"; dropping \"at last\" keeps meaning — not real",
+    "class": "valid reading"
+   },
+   {
+    "id": 9244,
+    "verdict": "correct_with_tip",
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "answer": "While the waves rolled in, the black cat did not move a whisker.",
+    "feedback": "Pri „while“ je pre dlhší prebiehajúci dej prirodzenejší Past Continuous: „were rolling“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   },
+   {
+    "id": 8824,
+    "verdict": "correct_with_tip",
+    "reference": "While the chain was swinging, he pushed the bag into place.",
+    "answer": "While the chain swung, he pushed the bag into place.",
+    "feedback": "Pri „while“ je pre dlhší prebiehajúci dej prirodzenejší Past Continuous: „was swinging“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   },
+   {
+    "id": 10366,
+    "verdict": "correct_with_tip",
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "answer": "By ten he will have reheated noodles for two hours straight.",
+    "feedback": "Dôraz je na trvaní, preto je lepší Future Perfect Continuous: „will have been reheating“.",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "class": "tip-accept"
+   }
+  ]
+ },
+ "false_rejections": {
+  "count": 135,
+  "by_category": {
+   "synonym_missing": 37,
+   "paraphrase": 26,
+   "extra_word": 16,
+   "determiner": 12,
+   "tense_aspect": 11,
+   "dropped_word": 8,
+   "clause_reorder": 5,
+   "word_order": 4,
+   "review_regression": 4,
+   "gender_pronoun": 4,
+   "lock_blocks_swap": 4,
+   "optional_that": 3,
+   "library_false_hit": 1
+  },
+  "all_issue_categories": {
+   "synonym_missing": 48,
+   "paraphrase": 34,
+   "extra_word": 26,
+   "determiner": 22,
+   "tense_aspect": 16,
+   "dropped_word": 14,
+   "gender_pronoun": 7,
+   "lock_blocks_swap": 6,
+   "clause_reorder": 5,
+   "word_order": 4,
+   "optional_that": 4,
+   "library_false_hit": 1
+  },
+  "regressions_vs_before": [
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "answer": "He said that the puck flies faster on cold ice.",
+    "feedback": "„that“ tu nepatrí. Namiesto „flies“ patrí „travelled“.",
+    "category": "review_regression",
+    "categories": [
+     "optional_that",
+     "synonym_missing"
+    ],
+    "cause": "supp fix set lock to \"said\" and anchored travelled→sp_travel_fly (form-kept): present \"flies\" + optional \"that\" now rejected",
+    "regression": true
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "answer": "He needs one pill for that bad headache.",
+    "feedback": "Namiesto „one“ patrí „a“.",
+    "category": "review_regression",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "supp fix narrowed lock to \"a\": Slovak \"jednu\" makes \"one pill\" valid, now rejected",
+    "regression": true
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "answer": "If you don't like the answer, you shouldn't ask the cards.",
+    "feedback": "„do“ tu nepatrí.",
+    "category": "review_regression",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "review-syn merged ng1c_48 into hate_dislike, which lacks \"don't like\" (Slovak \"nepáči\" = don't like)",
+    "regression": true
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "answer": "The counter that he's standing behind is older than the whole school.",
+    "feedback": "Namiesto „counter“ patrí „podium“.",
+    "category": "review_regression",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "review-syn merged ng1c_67 into podium_lectern and dropped counter/desk, but Slovak \"pult\" = counter",
+    "regression": true
+   }
+  ],
+  "list": [
+   {
+    "id": 23026,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "She wears the skirt in the park every Sunday.",
+    "answer": "She wears this skirt to the park each Sunday.",
+    "feedback": "Namiesto „each“ patrí „every“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "each ≠ every: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "answer": "He drops his guide on the church steps! A complete disaster!",
+    "feedback": "„a“ tu nepatrí.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "extra \"a\"",
+    "regression": false
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "answer": "He will drop his guidebook on the church steps! A complete catastrophe!",
+    "feedback": "Namiesto „will drop“ patrí „drops“. „a“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "determiner"
+    ],
+    "cause": "will drop vs drops: multi-word paraphrase not in any variant/group; extra \"a\"",
+    "regression": false
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "answer": "He's going to drop his guide on the church steps! A total catastrophe!",
+    "feedback": "Namiesto „is going to drop“ patrí „drops“. „a“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "determiner"
+    ],
+    "cause": "is going to drop vs drops: multi-word paraphrase not in any variant/group; extra \"a\"",
+    "regression": false
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "answer": "They watch the volcano from the grassy ridge.",
+    "feedback": "Namiesto „the“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "answer": "From the grassy ridge, they watch the volcano.",
+    "feedback": "Namiesto „the“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "answer": "They observe the volcano from the grassy ridge.",
+    "feedback": "Namiesto „the“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 16261,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "He has a plan. He is going to walk her home.",
+    "answer": "He's got a plan. He is going to walk her home.",
+    "feedback": "„got“ tu nepatrí.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "extra auxiliary \"got\" (valid alternative form)",
+    "regression": false
+   },
+   {
+    "id": 16261,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "He has a plan. He is going to walk her home.",
+    "answer": "She's got a plan. She is going to accompany her home.",
+    "feedback": "„got“ tu nepatrí. Namiesto „accompany“ patrí „walk“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect",
+     "synonym_missing"
+    ],
+    "cause": "extra auxiliary \"got\" (valid alternative form); accompany ≠ walk: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 27097,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "Of course this square has many advertisements, exactly what we needed.",
+    "answer": "Oh sure, there are loads of ads on this square, exactly what we needed.",
+    "feedback": "„oh“ tu nepatrí. Namiesto „there are loads of“ patrí „this square has many“.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word",
+     "tense_aspect"
+    ],
+    "cause": "optional word \"oh\" not allowed (o/p missing); there are loads of vs this square has many: alternative tense/aspect the Slovak allows",
+    "regression": false
+   },
+   {
+    "id": 16403,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "Say bye now and she will come back in an hour.",
+    "answer": "Say goodbye - he will return in an hour.",
+    "feedback": "Chýba „and“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"and\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 13175,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "There is a lot of yellow cheese on the board.",
+    "answer": "On the board there's a lot of yellow cheese.",
+    "feedback": "Pozor na poradie slov.",
+    "category": "word_order",
+    "categories": [
+     "word_order"
+    ],
+    "cause": "adverbial/word placement differs from all variants",
+    "regression": false
+   },
+   {
+    "id": 1018,
+    "batch": "S",
+    "level": "B1",
+    "long": true,
+    "reference": "He has poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "answer": "He has poured the smoothie into a tall glass, so the blender is now completely empty.",
+    "feedback": "„now“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"now\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 3603,
+    "batch": "S",
+    "level": "B1",
+    "long": true,
+    "reference": "The engineer asked him when he was bringing the race car back into the garage.",
+    "answer": "The engineer asked him when he would return the race car to the garage.",
+    "feedback": "Namiesto „return“ patrí „bring“. Chýba „back“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "dropped_word"
+    ],
+    "cause": "return ≠ bring: no group links them for this sentence; \"back\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "answer": "She kept throwing the same combination until it went smoothly.",
+    "feedback": "Namiesto „went smoothly“ patrí „felt smooth“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "went smoothly vs felt smooth: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "answer": "She continued throwing the same combination until it worked smoothly.",
+    "feedback": "Namiesto „continued“ patrí „kept“. Namiesto „worked smoothly“ patrí „felt smooth“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "paraphrase"
+    ],
+    "cause": "continued ≠ kept: no group links them for this sentence; worked smoothly vs felt smooth: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "answer": "She kept throwing the same combo until it went smoothly.",
+    "feedback": "Namiesto „went smoothly“ patrí „felt smooth“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "went smoothly vs felt smooth: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 4612,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "If he held the screwdriver, that shelf would be on the floor by now.",
+    "answer": "If he were holding the screwdriver, the shelf would already be lying on the ground.",
+    "feedback": "Namiesto „were holding“ patrí „held“. „lying“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "extra_word"
+    ],
+    "cause": "were holding vs held: multi-word paraphrase not in any variant/group; optional word \"lying\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 4612,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "If he held the screwdriver, that shelf would be on the floor by now.",
+    "answer": "If it were him holding the screwdriver, that shelf would already be on the ground.",
+    "feedback": "Namiesto „it were him holding“ patrí „he held“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "it were him holding vs he held: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 9992,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "The ankle that swelled up was the left one.",
+    "answer": "It was the left ankle that swelled up.",
+    "feedback": "„it was“ tu nepatrí. „left“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word",
+     "extra_word"
+    ],
+    "cause": "optional word \"it was\" not allowed (o/p missing); optional word \"left\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 7716,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She managed to stay completely still until the dragonfly settled.",
+    "answer": "She succeeded in staying totally still until the dragonfly settled down.",
+    "feedback": "Namiesto „succeeded in staying“ patrí „managed to stay“. „down“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "extra_word"
+    ],
+    "cause": "succeeded in staying vs managed to stay: multi-word paraphrase not in any variant/group; optional word \"down\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 7716,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She managed to stay completely still until the dragonfly settled.",
+    "answer": "She managed to hold completely still until the dragonfly had settled.",
+    "feedback": "Namiesto „hold“ patrí „stay“. „had“ tu nepatrí.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "tense_aspect"
+    ],
+    "cause": "hold ≠ stay: no group links them for this sentence; extra auxiliary \"had\" (valid alternative form)",
+    "regression": false
+   },
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "answer": "He said that the puck flies faster on cold ice.",
+    "feedback": "„that“ tu nepatrí. Namiesto „flies“ patrí „travelled“.",
+    "category": "review_regression",
+    "categories": [
+     "optional_that",
+     "synonym_missing"
+    ],
+    "cause": "supp fix set lock to \"said\" and anchored travelled→sp_travel_fly (form-kept): present \"flies\" + optional \"that\" now rejected",
+    "regression": true
+   },
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "answer": "He said that a puck travels faster on cold ice.",
+    "feedback": "Namiesto „that a“ patrí „the“. Namiesto „travels“ patrí „travelled“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "synonym_missing"
+    ],
+    "cause": "that a vs the: multi-word paraphrase not in any variant/group; travels ≠ travelled: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "answer": "He said that the puck went faster on cold ice.",
+    "feedback": "„that“ tu nepatrí. Namiesto „went“ patrí „travelled“.",
+    "category": "optional_that",
+    "categories": [
+     "optional_that",
+     "synonym_missing"
+    ],
+    "cause": "optional complementiser \"that\" not allowed; went ≠ travelled: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 9907,
+    "batch": "S",
+    "level": "B2",
+    "long": true,
+    "reference": "If she had taken the beige jacket, this look would never have happened.",
+    "answer": "If she had worn the beige jacket, this look would never have come about.",
+    "feedback": "Namiesto „worn“ patrí „taken“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "worn ≠ taken: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 9907,
+    "batch": "S",
+    "level": "B2",
+    "long": true,
+    "reference": "If she had taken the beige jacket, this look would never have happened.",
+    "answer": "If she'd taken the beige jacket, this look would never have existed.",
+    "feedback": "Namiesto „existed“ patrí „happened“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "existed ≠ happened: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 7558,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "Never had we seen a group this quiet at sunset.",
+    "answer": "Never before have we seen such a quiet group at sunset.",
+    "feedback": "Čas pomocného slovesa nesedí: „had we seen“, nie „have we seen“.",
+    "category": "library_false_hit",
+    "categories": [
+     "library_false_hit"
+    ],
+    "cause": "library mistake item matched a valid answer: Čas pomocného slovesa nesedí: „had we seen“, nie „have we seen“.",
+    "regression": false
+   },
+   {
+    "id": 7558,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "Never had we seen a group this quiet at sunset.",
+    "answer": "Never had we seen such a quiet group at sunset before.",
+    "feedback": "„before“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"before\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 10959,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "If she had bought thicker paper, the bouquet would be perfect now.",
+    "answer": "Had she bought stronger paper, the bouquet would be perfect now.",
+    "feedback": "Namiesto „had she“ patrí „if she had“. Namiesto „stronger“ patrí „thicker“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect",
+     "synonym_missing"
+    ],
+    "cause": "had she vs if she had: alternative tense/aspect the Slovak allows; stronger ≠ thicker: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 10959,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "If she had bought thicker paper, the bouquet would be perfect now.",
+    "answer": "If she had bought heavier paper, the bouquet would be perfect now.",
+    "feedback": "Namiesto „heavier“ patrí „thicker“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "heavier ≠ thicker: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "answer": "They had the kitchen filmed while they were assembling that rainbow plate.",
+    "feedback": "Namiesto „were assembling“ patrí „built“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "were assembling vs built: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "answer": "They had someone film the kitchen while they were arranging that rainbow plate.",
+    "feedback": "„someone film“ tu nepatrí. Chýba „filmed“.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word",
+     "dropped_word"
+    ],
+    "cause": "optional word \"someone film\" not allowed (o/p missing); \"filmed\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "answer": "While they were assembling the rainbow plate, they had the kitchen filmed.",
+    "feedback": "Porovnaj svoju vetu so správnym prekladom.",
+    "category": "clause_reorder",
+    "categories": [
+     "clause_reorder"
+    ],
+    "cause": "clause moved; no alignment to any variant",
+    "regression": false
+   },
+   {
+    "id": 9607,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "She is said to have trained at altitude all winter.",
+    "answer": "It's said that she spent the whole winter training at altitude.",
+    "feedback": "Namiesto „spent“ patrí „trained at altitude“. „training at altitude“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "extra_word"
+    ],
+    "cause": "spent vs trained at altitude: multi-word paraphrase not in any variant/group; optional word \"training at altitude\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 10043,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "He asked how long the swelling had been sitting on her foot.",
+    "answer": "He asked how long she had had that swelling on her leg.",
+    "feedback": "Namiesto „she had“ patrí „the swelling“. Namiesto „that swelling“ patrí „been sitting“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect",
+     "tense_aspect"
+    ],
+    "cause": "she had vs the swelling: alternative tense/aspect the Slovak allows; that swelling vs been sitting: alternative tense/aspect the Slovak allows",
+    "regression": false
+   },
+   {
+    "id": 10043,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "He asked how long the swelling had been sitting on her foot.",
+    "answer": "He asked for how long the swelling on her leg had been there.",
+    "feedback": "„for“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"for\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 14266,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "What do they dance? — Salsa.",
+    "answer": "What do they dance? — The salsa.",
+    "feedback": "„the“ tu nepatrí.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "extra \"the\"",
+    "regression": false
+   },
+   {
+    "id": 27628,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The children awake at seven in the morning.",
+    "answer": "The children will wake up at seven o'clock in the morning.",
+    "feedback": "„will“ tu nepatrí.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "extra auxiliary \"will\" (valid alternative form)",
+    "regression": false
+   },
+   {
+    "id": 27628,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The children awake at seven in the morning.",
+    "answer": "The children will wake up at seven in the morning.",
+    "feedback": "„will“ tu nepatrí.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "extra auxiliary \"will\" (valid alternative form)",
+    "regression": false
+   },
+   {
+    "id": 32342,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The evidence is on the cork board.",
+    "answer": "The proof is on the cork noticeboard.",
+    "feedback": "„cork“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"cork\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "answer": "He needs one pill for that bad headache.",
+    "feedback": "Namiesto „one“ patrí „a“.",
+    "category": "review_regression",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "supp fix narrowed lock to \"a\": Slovak \"jednu\" makes \"one pill\" valid, now rejected",
+    "regression": true
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "answer": "He needs one tablet for that terrible headache.",
+    "feedback": "Namiesto „one“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "one vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "answer": "For that bad headache, he needs one tablet.",
+    "feedback": "Porovnaj svoju vetu so správnym prekladom.",
+    "category": "clause_reorder",
+    "categories": [
+     "clause_reorder"
+    ],
+    "cause": "clause moved; no alignment to any variant",
+    "regression": false
+   },
+   {
+    "id": 25981,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The waiter carries ten hot plates at once.",
+    "answer": "The waiter is carrying ten hot dishes all at once.",
+    "feedback": "Namiesto „dishes all“ patrí „plates“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "dishes all vs plates: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "answer": "He can find her before he gets home.",
+    "feedback": "Namiesto „he“ patrí „she“.",
+    "category": "gender_pronoun",
+    "categories": [
+     "gender_pronoun"
+    ],
+    "cause": "he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it",
+    "regression": false
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "answer": "He is able to find her before he arrives home.",
+    "feedback": "Namiesto „is able to“ patrí „can“. Namiesto „he“ patrí „she“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "gender_pronoun"
+    ],
+    "cause": "is able to vs can: multi-word paraphrase not in any variant/group; he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it",
+    "regression": false
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "answer": "He can find it before he comes home.",
+    "feedback": "Namiesto „it“ patrí „her“. Namiesto „he“ patrí „she“.",
+    "category": "gender_pronoun",
+    "categories": [
+     "gender_pronoun",
+     "gender_pronoun"
+    ],
+    "cause": "it vs her: Slovak leaves the gender/referent open, annotation has no g/d for it; he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it",
+    "regression": false
+   },
+   {
+    "id": 23669,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The galaxy moves slowly above their heads.",
+    "answer": "The galaxy is moving slowly over their heads.",
+    "feedback": "Namiesto „is moving“ patrí „moves“. Namiesto „over“ patrí „above“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "synonym_missing"
+    ],
+    "cause": "is moving vs moves: multi-word paraphrase not in any variant/group; over ≠ above: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 13034,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Right now the girl is blowing out the candles.",
+    "answer": "Right now, the girl is blowing out candles.",
+    "feedback": "Chýba „the“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"the\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 14806,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "A moment ago she stopped the globe with her hand.",
+    "answer": "Just a moment ago she stopped the globe with her hand.",
+    "feedback": "„just“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"just\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "answer": "The cup is hot, so you have to hold it carefully.",
+    "feedback": "Namiesto „cup“ patrí „glass“. Namiesto „have to“ patrí „must“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "paraphrase"
+    ],
+    "cause": "cup ≠ glass: no group links them for this sentence; have to vs must: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "answer": "The little glass is hot, so you must hold it carefully.",
+    "feedback": "„little“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"little\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "answer": "The cup is hot, so you need to hold it carefully.",
+    "feedback": "Namiesto „cup“ patrí „glass“. Namiesto „need to“ patrí „must“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "paraphrase"
+    ],
+    "cause": "cup ≠ glass: no group links them for this sentence; need to vs must: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 11348,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Look! The assistant is holding the reflector up now.",
+    "answer": "Look! The assistant is holding the reflector board up.",
+    "feedback": "Chýba „now“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"now\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 11348,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Look! The assistant is holding the reflector up now.",
+    "answer": "Look! The assistant is holding the reflector up.",
+    "feedback": "Chýba „now“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"now\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "answer": "She usually stays under the roof, but today she's dancing in the rain.",
+    "feedback": "Namiesto „the“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "answer": "He usually stays under the roof, but today he is dancing in the rain.",
+    "feedback": "Namiesto „the“ patrí „a“. Namiesto „he“ patrí „she“.",
+    "category": "determiner",
+    "categories": [
+     "determiner",
+     "gender_pronoun"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free; he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it",
+    "regression": false
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "answer": "She usually stays indoors under the roof, but today she is dancing in the rain.",
+    "feedback": "„indoors“ tu nepatrí. Namiesto „the“ patrí „a“.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word",
+     "determiner"
+    ],
+    "cause": "optional word \"indoors\" not allowed (o/p missing); the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 11980,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Wait a minute and the water will boil!",
+    "answer": "Wait a bit and the water will boil!",
+    "feedback": "Namiesto „bit“ patrí „second“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "bit ≠ second: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "answer": "If you don't like the answer, you shouldn't ask the cards.",
+    "feedback": "„do“ tu nepatrí.",
+    "category": "review_regression",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "review-syn merged ng1c_48 into hate_dislike, which lacks \"don't like\" (Slovak \"nepáči\" = don't like)",
+    "regression": true
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "answer": "You shouldn't ask the cards if you don't like the answer.",
+    "feedback": "Porovnaj svoju vetu so správnym prekladom.",
+    "category": "clause_reorder",
+    "categories": [
+     "clause_reorder"
+    ],
+    "cause": "clause moved; no alignment to any variant",
+    "regression": false
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "answer": "If you don't like the reply, you shouldn't ask the cards.",
+    "feedback": "„do“ tu nepatrí. Namiesto „reply“ patrí „answer“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect",
+     "synonym_missing"
+    ],
+    "cause": "extra auxiliary \"do\" (valid alternative form); reply ≠ answer: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 13395,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually draws hearts, but today she drew a circle.",
+    "answer": "She normally draws hearts, but she drew a circle today.",
+    "feedback": "Namiesto „normally“ patrí „usually“. Chýba „today“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "dropped_word"
+    ],
+    "cause": "normally ≠ usually: no group links them for this sentence; \"today\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 13395,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually draws hearts, but today she drew a circle.",
+    "answer": "She generally draws hearts, but today she drew a circle.",
+    "feedback": "Namiesto „generally“ patrí „usually“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "generally ≠ usually: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 16009,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "It usually sits still, but now it is croaking loudly.",
+    "answer": "Usually it sits quietly, but at the moment it is croaking loudly.",
+    "feedback": "Pozor na poradie slov: „it usually“. Namiesto „at the moment“ patrí „now“.",
+    "category": "word_order",
+    "categories": [
+     "word_order",
+     "lock_blocks_swap"
+    ],
+    "cause": "adverbial/word placement differs from all variants; at the moment vs now: time marker is inside the practised lock",
+    "regression": false
+   },
+   {
+    "id": 16009,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "It usually sits still, but now it is croaking loudly.",
+    "answer": "It normally sits quietly, but now it is croaking loudly.",
+    "feedback": "Namiesto „normally“ patrí „usually“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "normally ≠ usually: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 21467,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The water is cold, so you should wear boots.",
+    "answer": "The water is cold; you should put your rubber boots on.",
+    "feedback": "Namiesto „your“ patrí „on“. „on“ tu nepatrí.",
+    "category": "determiner",
+    "categories": [
+     "determiner",
+     "determiner"
+    ],
+    "cause": "your vs on: Slovak has no articles/determiner is free; extra \"on\"",
+    "regression": false
+   },
+   {
+    "id": 21467,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The water is cold, so you should wear boots.",
+    "answer": "The water is cold, you should put your boots on.",
+    "feedback": "Namiesto „your boots on“ patrí „on boots“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "your boots on vs on boots: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 3084,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "The moment her friend made her laugh, her hand slipped and the line went crooked.",
+    "answer": "At the moment her friend made her laugh, her hand slipped and the line came out crooked.",
+    "feedback": "„at“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"at\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 3084,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "The moment her friend made her laugh, her hand slipped and the line went crooked.",
+    "answer": "Just as her friend made her laugh, her hand slipped and the line went askew.",
+    "feedback": "Namiesto „askew“ patrí „crooked“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "askew ≠ crooked: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 4449,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "Altogether she lowered the basket three times before the man had all his oranges.",
+    "answer": "She lowered the basket three times in total, until the man got all his oranges.",
+    "feedback": "Chýba „altogether“. „in total“ tu nepatrí.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word",
+     "extra_word"
+    ],
+    "cause": "\"altogether\" omitted/rephrased, not optional in the annotation; optional word \"in total\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 1452,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "If he touches that cactus, he will spend the evening pulling spines out of his finger.",
+    "answer": "If he touches that cactus, he's going to spend the evening pulling thorns from his finger.",
+    "feedback": "Namiesto „is going to“ patrí „will“. Namiesto „from“ patrí „out of“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect",
+     "paraphrase"
+    ],
+    "cause": "is going to vs will: alternative tense/aspect the Slovak allows; from vs out of: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 5595,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He has finally stamped the document, so he can go home.",
+    "feedback": "Pozor na poradie slov.",
+    "category": "word_order",
+    "categories": [
+     "word_order"
+    ],
+    "cause": "adverbial/word placement differs from all variants",
+    "regression": false
+   },
+   {
+    "id": 5595,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He has finally put a stamp on the document, so he can go home.",
+    "feedback": "Namiesto „finally put a stamp on“ patrí „stamped“. Chýba „finally“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "dropped_word"
+    ],
+    "cause": "finally put a stamp on vs stamped: multi-word paraphrase not in any variant/group; \"finally\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 9244,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "answer": "While the waves rolled in, the black cat didn't move a single whisker.",
+    "feedback": "Namiesto „rolled“ patrí „were rolling“. „single“ tu nepatrí.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "extra_word"
+    ],
+    "cause": "rolled vs were rolling: multi-word paraphrase not in any variant/group; optional word \"single\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 9244,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "answer": "As the waves were rolling, the black cat didn't budge a whisker.",
+    "feedback": "Namiesto „as“ patrí „while“. Namiesto „budge“ patrí „twitch“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "synonym_missing"
+    ],
+    "cause": "as ≠ while: no group links them for this sentence; budge ≠ twitch: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "answer": "The director said that they would shoot the office scene before lunch.",
+    "feedback": "Namiesto „shoot“ patrí „film“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "shoot ≠ film: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "answer": "The director said that they were going to shoot the office scene before lunch.",
+    "feedback": "Namiesto „were going to shoot“ patrí „would film“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "were going to shoot vs would film: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "answer": "The director said that they would film the office scene before lunchtime.",
+    "feedback": "Namiesto „lunchtime“ patrí „lunch“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "lunchtime ≠ lunch: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 7238,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If you step exactly where Mira steps, your feet stay completely dry.",
+    "answer": "Whenever you step exactly where Mira steps, your feet stay completely dry.",
+    "feedback": "Namiesto „whenever“ patrí „if“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "whenever ≠ if: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "answer": "The counter he is standing behind is older than the whole school.",
+    "feedback": "Namiesto „counter“ patrí „podium that“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "counter vs podium that: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "answer": "The counter that he's standing behind is older than the whole school.",
+    "feedback": "Namiesto „counter“ patrí „podium“.",
+    "category": "review_regression",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "review-syn merged ng1c_67 into podium_lectern and dropped counter/desk, but Slovak \"pult\" = counter",
+    "regression": true
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "answer": "The counter he stands behind is older than the entire school.",
+    "feedback": "Namiesto „counter“ patrí „podium that“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "counter vs podium that: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 9495,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "Her speech was rewritten twice before she ever walked onto that stage.",
+    "answer": "Her speech was rewritten two times before she even stepped onto the stage.",
+    "feedback": "Namiesto „two times“ patrí „twice“. Namiesto „the“ patrí „that“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "determiner"
+    ],
+    "cause": "two times vs twice: multi-word paraphrase not in any variant/group; the vs that: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 9495,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "Her speech was rewritten twice before she ever walked onto that stage.",
+    "answer": "Her speech got rewritten twice before she had even walked onto that stage.",
+    "feedback": "Namiesto „got“ patrí „was“. „had“ tu nepatrí.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "tense_aspect"
+    ],
+    "cause": "got ≠ was: no group links them for this sentence; extra auxiliary \"had\" (valid alternative form)",
+    "regression": false
+   },
+   {
+    "id": 8824,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "While the chain was swinging, he pushed the bag into place.",
+    "answer": "As the chain was swinging, he pushed the bag into place.",
+    "feedback": "Namiesto „as“ patrí „while“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "as ≠ while: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 2929,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The eerie light has faded completely, and the yard is dark again.",
+    "answer": "The frightening light has completely gone out and the station is dark once more.",
+    "feedback": "Namiesto „frightening“ patrí „eerie“. „completely“ tu nepatrí.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "extra_word"
+    ],
+    "cause": "frightening ≠ eerie: no group links them for this sentence; optional word \"completely\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 6830,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "As kids they would buy dried herbs in a jar.",
+    "answer": "When they were children, they used to buy dried herbs in a jar.",
+    "feedback": "Namiesto „when they were“ patrí „as“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "when they were vs as: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 8017,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The keeper was standing on his line when the referee pointed to the spot.",
+    "answer": "The keeper was standing on the line when the ref pointed to the spot.",
+    "feedback": "Namiesto „ref“ patrí „referee“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "ref ≠ referee: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 8017,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The keeper was standing on his line when the referee pointed to the spot.",
+    "answer": "When the referee pointed to the white spot, the goalkeeper was standing on the line.",
+    "feedback": "Porovnaj svoju vetu so správnym prekladom.",
+    "category": "clause_reorder",
+    "categories": [
+     "clause_reorder"
+    ],
+    "cause": "clause moved; no alignment to any variant",
+    "regression": false
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "answer": "How long has he been holding that card up to the wrong door?",
+    "feedback": "Namiesto „he“ patrí „she“. Namiesto „holding“ patrí „tapping“.",
+    "category": "gender_pronoun",
+    "categories": [
+     "gender_pronoun",
+     "synonym_missing"
+    ],
+    "cause": "he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it; holding ≠ tapping: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "answer": "How long has she been holding that card up to the wrong door?",
+    "feedback": "Namiesto „holding“ patrí „tapping“. „up“ tu nepatrí.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "extra_word"
+    ],
+    "cause": "holding ≠ tapping: no group links them for this sentence; optional word \"up\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "answer": "How long has he been tapping that card on the wrong door?",
+    "feedback": "Namiesto „he“ patrí „she“.",
+    "category": "gender_pronoun",
+    "categories": [
+     "gender_pronoun"
+    ],
+    "cause": "he vs she: Slovak leaves the gender/referent open, annotation has no g/d for it",
+    "regression": false
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "answer": "If he turns the ring once more, he will lower the price again.",
+    "feedback": "Namiesto „lower“ patrí „drop“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "lower ≠ drop: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "answer": "If she turns the ring one more time, she'll lower the price again.",
+    "feedback": "Namiesto „lower“ patrí „drop“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "lower ≠ drop: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "answer": "If he turns the ring again, he will reduce the price once more.",
+    "feedback": "Namiesto „reduce“ patrí „drop“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "reduce ≠ drop: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 8920,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The fastest sequence is shown in slow motion at the end.",
+    "answer": "The fastest action is shown at the end in a slow-motion shot.",
+    "feedback": "„a“ tu nepatrí. „shot“ tu nepatrí.",
+    "category": "determiner",
+    "categories": [
+     "determiner",
+     "extra_word"
+    ],
+    "cause": "extra \"a\"; optional word \"shot\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 8062,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She moved to the drum kit while the camera was still rolling.",
+    "answer": "She walked over to the drums while the camera was still running.",
+    "feedback": "Namiesto „walked“ patrí „went“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "walked ≠ went: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 8062,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She moved to the drum kit while the camera was still rolling.",
+    "answer": "She crossed to the drums while the camera was still rolling.",
+    "feedback": "Namiesto „crossed“ patrí „moved“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "crossed ≠ moved: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 10167,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "His mouth is that dry, so the thirst must be real.",
+    "answer": "His mouth is so dry, his thirst must be real.",
+    "feedback": "Chýba „so“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"so\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 10167,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "His mouth is that dry, so the thirst must be real.",
+    "answer": "Her mouth is so dry the thirst must be real.",
+    "feedback": "Chýba „so“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word"
+    ],
+    "cause": "\"so\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 8293,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She never shares food, so this one must be special.",
+    "answer": "He never shares his food, so this croissant must be something special.",
+    "feedback": "„his“ tu nepatrí. „something“ tu nepatrí.",
+    "category": "determiner",
+    "categories": [
+     "determiner",
+     "extra_word"
+    ],
+    "cause": "extra \"his\"; optional word \"something\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 8293,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She never shares food, so this one must be special.",
+    "answer": "He never shares food, so this particular croissant must be exceptional.",
+    "feedback": "„particular“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"particular\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 3494,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "If the ball had landed in black, she would have gone home with empty pockets.",
+    "answer": "If the ball had fallen on black, she would have gone home empty-handed.",
+    "feedback": "Namiesto „fallen“ patrí „landed“. Chýba „with“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "dropped_word"
+    ],
+    "cause": "fallen ≠ landed: no group links them for this sentence; \"with\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "answer": "The guard regrets it - he wishes he had turned the camera toward the horizon a minute earlier.",
+    "feedback": "„regrets it he“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"regrets it he\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "answer": "The security guard is sorry - he wishes he'd turned the camera toward the horizon a minute sooner.",
+    "feedback": "„is sorry he“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"is sorry he\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "answer": "The guard regrets it - if only he had turned the camera toward the horizon a minute earlier.",
+    "feedback": "Namiesto „regrets it if only“ patrí „wishes“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "regrets it if only vs wishes: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 2874,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "He should have seen a doctor days ago, but he waited until he could hardly stand.",
+    "answer": "He should have gone to the doctor a few days ago, but he waited until he could barely stand.",
+    "feedback": "Namiesto „the“ patrí „a“.",
+    "category": "determiner",
+    "categories": [
+     "determiner"
+    ],
+    "cause": "the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 2874,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "He should have seen a doctor days ago, but he waited until he could hardly stand.",
+    "answer": "He ought to have gone to the doctor a few days ago, but he waited until he could barely stand up.",
+    "feedback": "Namiesto „ought to“ patrí „should“. Namiesto „the“ patrí „a“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "determiner"
+    ],
+    "cause": "ought to vs should: multi-word paraphrase not in any variant/group; the vs a: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 8812,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Her trainer wishes his pads were a bit thicker.",
+    "answer": "The coach wishes that his pads were slightly thicker.",
+    "feedback": "„that“ tu nepatrí.",
+    "category": "optional_that",
+    "categories": [
+     "optional_that"
+    ],
+    "cause": "optional complementiser \"that\" not allowed",
+    "regression": false
+   },
+   {
+    "id": 8812,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Her trainer wishes his pads were a bit thicker.",
+    "answer": "The coach wishes that his mitts were a bit thicker.",
+    "feedback": "„that“ tu nepatrí.",
+    "category": "optional_that",
+    "categories": [
+     "optional_that"
+    ],
+    "cause": "optional complementiser \"that\" not allowed",
+    "regression": false
+   },
+   {
+    "id": 8209,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By Friday she will have booked a fifth appointment at the studio.",
+    "answer": "By Friday he will have reserved the fifth appointment at the studio.",
+    "feedback": "Namiesto „reserved“ patrí „booked“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "reserved ≠ booked: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 8209,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By Friday she will have booked a fifth appointment at the studio.",
+    "answer": "She will have booked the fifth studio slot by Friday.",
+    "feedback": "Chýba „by Friday“. Namiesto „studio slot by Friday“ patrí „appointment at the studio“.",
+    "category": "dropped_word",
+    "categories": [
+     "dropped_word",
+     "paraphrase"
+    ],
+    "cause": "\"by Friday\" omitted/rephrased, not optional in the annotation; studio slot by friday vs appointment at the studio: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 10013,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is holding a blue ice pack against the lump.",
+    "answer": "At the moment he is pushing a blue compress against the bump.",
+    "feedback": "Namiesto „at the moment“ patrí „right now“. Namiesto „pushing“ patrí „holding“.",
+    "category": "lock_blocks_swap",
+    "categories": [
+     "lock_blocks_swap",
+     "synonym_missing"
+    ],
+    "cause": "at the moment vs right now: time marker is inside the practised lock; pushing ≠ holding: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 10013,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is holding a blue ice pack against the lump.",
+    "answer": "He is pressing a blue compress on the bump at this very moment.",
+    "feedback": "Namiesto „at this very moment“ patrí „right now“.",
+    "category": "lock_blocks_swap",
+    "categories": [
+     "lock_blocks_swap"
+    ],
+    "cause": "at this very moment vs right now: time marker is inside the practised lock",
+    "regression": false
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "answer": "By ten o'clock, he will have been heating the noodles for two hours straight.",
+    "feedback": "Namiesto „heating“ patrí „reheating“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "heating ≠ reheating: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "answer": "By ten, she will have been warming up the noodles for two hours in a row.",
+    "feedback": "Namiesto „warming up“ patrí „reheating“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "warming up vs reheating: alternative tense/aspect the Slovak allows",
+    "regression": false
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "answer": "By ten o'clock he will have been reheating the noodles for two straight hours.",
+    "feedback": "Pozor na poradie slov: „hours straight“.",
+    "category": "word_order",
+    "categories": [
+     "word_order"
+    ],
+    "cause": "adverbial/word placement differs from all variants",
+    "regression": false
+   },
+   {
+    "id": 10866,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been waiting for two hours before his number finally appeared.",
+    "answer": "He had been waiting for two hours before his number at last appeared.",
+    "feedback": "Namiesto „at last“ patrí „finally“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase"
+    ],
+    "cause": "at last vs finally: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 3937,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She will buy another charm when she comes to this market again.",
+    "answer": "She's going to buy another pendant when she comes to this market again.",
+    "feedback": "Namiesto „is going to“ patrí „will“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "is going to vs will: alternative tense/aspect the Slovak allows",
+    "regression": false
+   },
+   {
+    "id": 3937,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She will buy another charm when she comes to this market again.",
+    "answer": "She'll buy another pendant the next time she comes to this market.",
+    "feedback": "Namiesto „the next time“ patrí „when“. Chýba „again“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "dropped_word"
+    ],
+    "cause": "the next time vs when: multi-word paraphrase not in any variant/group; \"again\" omitted/rephrased, not optional in the annotation",
+    "regression": false
+   },
+   {
+    "id": 7998,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The veranda, where she now spends every morning, faces the sunrise.",
+    "answer": "The veranda that she now spends every morning on faces the sunrise.",
+    "feedback": "Namiesto „that“ patrí „where“. „on“ tu nepatrí.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "determiner"
+    ],
+    "cause": "that ≠ where: no group links them for this sentence; extra \"on\"",
+    "regression": false
+   },
+   {
+    "id": 7998,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The veranda, where she now spends every morning, faces the sunrise.",
+    "answer": "The veranda where she now spends every single morning faces the sunrise.",
+    "feedback": "„single“ tu nepatrí.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word"
+    ],
+    "cause": "optional word \"single\" not allowed (o/p missing)",
+    "regression": false
+   },
+   {
+    "id": 10574,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been training for hours before the light was finally right.",
+    "answer": "He had been rehearsing for hours before the light finally looked right.",
+    "feedback": "Namiesto „rehearsing“ patrí „training“. Namiesto „finally looked“ patrí „was finally“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "paraphrase"
+    ],
+    "cause": "rehearsing ≠ training: no group links them for this sentence; finally looked vs was finally: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 9038,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is scribbling a note while the laptop screen glows.",
+    "answer": "At the moment he is scribbling a note while his laptop screen is glowing.",
+    "feedback": "Namiesto „at the moment“ patrí „right now“. Namiesto „his“ patrí „the“.",
+    "category": "lock_blocks_swap",
+    "categories": [
+     "lock_blocks_swap",
+     "determiner"
+    ],
+    "cause": "at the moment vs right now: time marker is inside the practised lock; his vs the: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 9038,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is scribbling a note while the laptop screen glows.",
+    "answer": "Right now he is scribbling a note as the laptop screen shines.",
+    "feedback": "Namiesto „as“ patrí „while“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "as ≠ while: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 10107,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The terminal was empty; even so, she felt watched.",
+    "answer": "The terminal was empty; nevertheless, she felt as if somebody was watching her.",
+    "feedback": "Namiesto „nevertheless“ patrí „even so“. Namiesto „as if somebody“ patrí „like someone“.",
+    "category": "paraphrase",
+    "categories": [
+     "paraphrase",
+     "paraphrase"
+    ],
+    "cause": "nevertheless vs even so: multi-word paraphrase not in any variant/group; as if somebody vs like someone: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 10107,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The terminal was empty; even so, she felt watched.",
+    "answer": "Although the terminal was empty, she had the feeling that someone was watching her.",
+    "feedback": "„although“ tu nepatrí. Namiesto „she had the feeling“ patrí „even so she felt“.",
+    "category": "extra_word",
+    "categories": [
+     "extra_word",
+     "paraphrase"
+    ],
+    "cause": "optional word \"although\" not allowed (o/p missing); she had the feeling vs even so she felt: multi-word paraphrase not in any variant/group",
+    "regression": false
+   },
+   {
+    "id": 9913,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She had her boots dyed purple last summer.",
+    "answer": "Last year she got her boots dyed purple.",
+    "feedback": "Namiesto „got“ patrí „had“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "got ≠ had: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 9913,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She had her boots dyed purple last summer.",
+    "answer": "Last year, she had her boots dyed violet.",
+    "feedback": "Namiesto „violet“ patrí „purple“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing"
+    ],
+    "cause": "violet ≠ purple: no group links them for this sentence",
+    "regression": false
+   },
+   {
+    "id": 9966,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now they are shaking hands on the sunny rooftop.",
+    "answer": "At the moment they are shaking hands on a sunny roof.",
+    "feedback": "Namiesto „at the moment“ patrí „right now“. Namiesto „a“ patrí „the“.",
+    "category": "lock_blocks_swap",
+    "categories": [
+     "lock_blocks_swap",
+     "determiner"
+    ],
+    "cause": "at the moment vs right now: time marker is inside the practised lock; a vs the: Slovak has no articles/determiner is free",
+    "regression": false
+   },
+   {
+    "id": 9966,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now they are shaking hands on the sunny rooftop.",
+    "answer": "They are shaking hands on the sunlit roof at this very moment.",
+    "feedback": "Namiesto „sunlit“ patrí „sunny“. Namiesto „at this very moment“ patrí „right now“.",
+    "category": "synonym_missing",
+    "categories": [
+     "synonym_missing",
+     "lock_blocks_swap"
+    ],
+    "cause": "sunlit ≠ sunny: no group links them for this sentence; at this very moment vs right now: time marker is inside the practised lock",
+    "regression": false
+   },
+   {
+    "id": 6884,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "If he had started earlier, he would have missed the mist.",
+    "answer": "Had he set off earlier, he would have missed the fog.",
+    "feedback": "Namiesto „had he“ patrí „if he had“.",
+    "category": "tense_aspect",
+    "categories": [
+     "tense_aspect"
+    ],
+    "cause": "had he vs if he had: alternative tense/aspect the Slovak allows",
+    "regression": false
+   },
+   {
+    "id": 6884,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "If he had started earlier, he would have missed the mist.",
+    "answer": "He would have missed the fog if he had set out earlier.",
+    "feedback": "Porovnaj svoju vetu so správnym prekladom.",
+    "category": "clause_reorder",
+    "categories": [
+     "clause_reorder"
+    ],
+    "cause": "clause moved; no alignment to any variant",
+    "regression": false
+   }
+  ]
+ },
+ "supp_fix_split": {
+  "label": "IN-SAMPLE — the fix-pass translations (inputs/supp_fix.json, 90) were shown to the supp agent; not a coverage figure",
+  "translations": 90,
+  "judged_wrong_by_supp": 13,
+  "correct_pool": 77,
+  "accepted_before": 25,
+  "accepted_after": 64,
+  "pct_before": 32.5,
+  "pct_after": 83.1,
+  "targeted_rejections_fixed": "41/52",
+  "wrong_accepted_after": 0,
+  "regressed_from_accepted": [
+   [
+    11216,
+    "If you do not like the answer, you should not ask the cards.",
+    "„do“ tu nepatrí."
+   ],
+   [
+    9498,
+    "The desk which she is standing behind is older than the whole school.",
+    "Namiesto „desk“ patrí „podium“."
+   ]
+  ],
+  "still_rejected": [
+   {
+    "r": "R1",
+    "id": 29691,
+    "fix_type": "annotation",
+    "answer": "She drops her guidebook on the church stairs! Total disaster!",
+    "feedback": "Rozhoduje majiteľ: jeho je „his“, jej „her“: „his“."
+   },
+   {
+    "r": "R2",
+    "id": 29691,
+    "fix_type": "annotation",
+    "answer": "She drops her guide onto the church steps! An absolute disaster!",
+    "feedback": "Namiesto „her“ patrí „his“. „an“ tu nepatrí."
+   },
+   {
+    "r": "R10",
+    "id": 8756,
+    "fix_type": "synonym_table",
+    "answer": "He said the puck flew faster on cold ice.",
+    "feedback": "Namiesto „flew“ patrí „travelled“."
+   },
+   {
+    "r": "R14",
+    "id": 7687,
+    "fix_type": "synonym_table",
+    "answer": "They got the kitchen filmed while they were putting together the rainbow plate.",
+    "feedback": "Namiesto „were putting“ patrí „put“."
+   },
+   {
+    "r": "R20",
+    "id": 20298,
+    "fix_type": "synonym_table",
+    "answer": "She needs a tablet for that strong headache.",
+    "feedback": "Namiesto „she“ patrí „he“. Namiesto „strong“ patrí „bad“."
+   },
+   {
+    "r": "R31",
+    "id": 16009,
+    "fix_type": "annotation",
+    "answer": "He usually sits quietly, but right now he is croaking loudly.",
+    "feedback": "Namiesto „he“ patrí „it“."
+   },
+   {
+    "r": "R32",
+    "id": 16009,
+    "fix_type": "annotation",
+    "answer": "She usually sits in silence, but now she's croaking loudly.",
+    "feedback": "Namiesto „she“ patrí „it“."
+   },
+   {
+    "r": "R36",
+    "id": 9498,
+    "fix_type": "annotation",
+    "answer": "The counter behind which she stands is older than the entire school.",
+    "feedback": "Namiesto „counter“ patrí „podium“."
+   },
+   {
+    "r": "R41",
+    "id": 8017,
+    "fix_type": "annotation",
+    "answer": "The goalie was just standing on the line when the referee pointed at the penalty spot.",
+    "feedback": "„just“ tu nepatrí."
+   },
+   {
+    "r": "R42",
+    "id": 8017,
+    "fix_type": "annotation",
+    "answer": "The goalkeeper was standing right on the line when the referee pointed to the white mark.",
+    "feedback": "„right“ tu nepatrí."
+   },
+   {
+    "r": "R58",
+    "id": 9038,
+    "fix_type": "new_variant",
+    "answer": "She is scribbling a note right now while the laptop screen is shining.",
+    "feedback": "Namiesto „is shining“ patrí „glows“."
+   }
+  ]
+ },
+ "apply_log": {
+  "by_target_op": {
+   "syn.remove_members": 6,
+   "syn.set": 93,
+   "syn.add_members": 14,
+   "syn.merge_into": 14,
+   "syn.remove_group": 6,
+   "syn.add_group": 20,
+   "lib.set_item": 26,
+   "lib.remove_item": 1,
+   "ann.delete": 4,
+   "ann.merge": 28,
+   "ann.add_variant": 15,
+   "ann.append": 6,
+   "ann.set": 9
+  },
+  "errors": [
+   {
+    "file": "sample.json",
+    "change": {
+     "target": "syn",
+     "op": "remove_group",
+     "group": "ng1c_35",
+     "reason": "members carries/is carrying are not lemmas, and a tense change is not a synonym swap"
+    },
+    "error": "unknown group"
+   },
+   {
+    "file": "sample.json",
+    "change": {
+     "target": "syn",
+     "op": "remove_members",
+     "group": "ng1c_39",
+     "members": [
+      "just now"
+     ],
+     "reason": "'just now' usually means a moment ago, not 'right now' (false acceptance)"
+    },
+    "error": "unknown group"
+   },
+   {
+    "file": "supp.json",
+    "change": {
+     "target": "syn",
+     "op": "add_members",
+     "group": "ng1c_27",
+     "members": [
+      "were putting together",
+      "were assembling",
+      "were making"
+     ],
+     "reason": "progressive forms like 'were building'"
+    },
+    "error": "unknown group"
+   },
+   {
+    "file": "supp.json",
+    "change": {
+     "target": "syn",
+     "op": "set",
+     "group": "ng1c_71",
+     "set": {
+      "m": [
+       "walk onto",
+       "go onto",
+       "step onto",
+       "get onto",
+       "go up on"
+      ]
+     },
+     "reason": "typo 'steppe onto' (not tied to a rejection)"
+    },
+    "error": "unknown group"
+   }
+  ],
+  "irr_normalised": [
+   "ng1c_3:let go of:dropped(built-in table)",
+   "ng1c_8:see:dropped(built-in table)",
+   "ng1c_15:keep:dropped(built-in table)",
+   "ng1c_15:keep on:dropped(built-in table)",
+   "ng1c_23:come about:dropped(built-in table)",
+   "ng1c_30:wake up:dropped(built-in table)",
+   "ng1c_30:wake:dropped(built-in table)",
+   "ng1c_30:awake:dropped(built-in table)",
+   "ng1c_37:find:dropped(built-in table)",
+   "ng1c_42:hold:dropped(built-in table)",
+   "ng1c_56:have:dropped(built-in table)",
+   "ng1c_56:get:dropped(built-in table)",
+   "ng1c_59:take:dropped(built-in table)",
+   "ng1c_59:get:dropped(built-in table)",
+   "ng1c_91:stand:dropped(built-in table)",
+   "ng1c_91:stand up:dropped(built-in table)",
+   "ng1c_91:keep on his feet:dropped(built-in table)",
+   "ng1c_93:come down:dropped(built-in table)",
+   "ng1c_93:fall:dropped(built-in table)"
+  ],
+  "groups": {
+   "table.json": 863,
+   "annotator.json": 0,
+   "ng_phase1c.json": 88,
+   "review_added.json": 20
+  }
+ },
+ "effect_split": {
+  "note": "syn+lib+sample reviews only (no supp.json) vs all four; held-out coverage and in-sample fix split",
+  "heldout_review_only": {
+   "accepted": 94,
+   "n": 235,
+   "pct": 40.0
+  },
+  "heldout_all_four": {
+   "accepted": 100,
+   "n": 235,
+   "pct": 42.6
+  },
+  "heldout_before": {
+   "accepted": 95,
+   "n": 235,
+   "pct": 40.4
+  },
+  "fix_split_review_only": 24,
+  "fix_split_all_four": 64,
+  "fix_split_before": 25,
+  "fa_accepted_review_only": 9
+ },
+ "timing": {
+  "exercises": 80,
+  "answers_per_exercise": 600,
+  "runs": 5,
+  "checks": 242850,
+  "ms_all": {
+   "n": 242850,
+   "mean": 0.254,
+   "p50": 0.132,
+   "p99": 1.161,
+   "max": 11.325
+  },
+  "ms_warm_runs": {
+   "n": 194280,
+   "mean": 0.253,
+   "p50": 0.131,
+   "p99": 1.158,
+   "max": 9.633
+  },
+  "compile_ms": {
+   "n": 80,
+   "mean": 2.448,
+   "p50": 2.467,
+   "p99": 4.929,
+   "max": 4.929
+  },
+  "worst": {
+   "ms": 11.325,
+   "id": 9038,
+   "kind": "long",
+   "text": "right now she is scribbling a note while the notebook screen glows note shines right while down laptop's screen now while laptop a laptop he note scribbling a i"
+  },
+  "largest_graph": {
+   "id": 5959,
+   "graph_size": 2248,
+   "answers": 606,
+   "n": 3030,
+   "mean": 0.415,
+   "p50": 0.219,
+   "p99": 1.147,
+   "max": 1.238
+  },
+  "script": "phase1c/scripts/timing_all.ts"
+ },
+ "download_per_exercise": {
+  "raw": {
+   "n": 80,
+   "mean": 3231.6,
+   "p50": 3189,
+   "p99": 4639,
+   "max": 4639
+  },
+  "gzip": {
+   "n": 80,
+   "mean": 969.5,
+   "p50": 966,
+   "p99": 1329,
+   "max": 1329
+  },
+  "parts_mean": {
+   "annotation": 521.6,
+   "library_sk": 802.9,
+   "forms": 213.4,
+   "neighbours": 1106.5
+  },
+  "note": "bytes of {annotation, library_sk items, forms of used groups, neighbours} per exercise (measure.ts sizes, AFTER data)"
+ },
+ "raw_files": [
+  "phase1c/measure/cov_after.json",
+  "phase1c/measure/fa_after.json",
+  "phase1c/measure/supp_fix_after.json",
+  "phase1c/measure/timing_after.json",
+  "phase1c/measure/sizes_after.json"
+ ]
+}

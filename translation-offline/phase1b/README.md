@@ -29,7 +29,7 @@ typo, BrE/AmE, tip-template and feedback-language helpers.
 ## How to run (from `translation-offline/`)
 
 ```sh
-node --test checker/v2/v2.test.ts                    # unit tests
+node --test checker/offlineCheck.test.ts checker/v2/v2.test.ts   # full suite (Phase 1c: 78 tests, 78 pass)
 node phase1b/scripts/merge_batches.ts                # batches → annotated/<id>.json, ng → synonyms/annotator.json (idempotent)
 node phase1b/scripts/build_forms.ts                  # synonyms → synonyms/forms.json (+ forms_dropped.txt)
 node phase1b/scripts/lint.ts                         # → review/lint.json, one summary line per error class
@@ -55,7 +55,9 @@ costs 0.5, so a single typo is found on the best path), so the tip never asks to
 
 ## Known limits
 
-- An anchor whose surface is several forms at once (`cut` = base/past/pp) accepts the members in all those forms.
-- `her` flipped to masculine becomes `his` or `him` when a content word follows (possessive vs object is not parsed).
+- (Phase 1c) A multi-form verb anchor is narrowed by the preceding words only (no parser): with no auxiliary before it, `cut`
+  still accepts the members in base AND past form (never pp).
+- (Phase 1c) `her` flipped to masculine: `his` before a word, `him` before a non-noun or after a listed object verb
+  (give/show/tell/let/make/help/see/…); "had her car" style exceptions outside that list are read as possessive.
 - The closest-path search ignores the "optional word at most once" bit; an answer that only repeats an optional word gets the
   generic tip.

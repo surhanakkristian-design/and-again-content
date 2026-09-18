@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
-import { compile, libraryIndex, type Annotation, type Library } from './match.ts';
+import { compile, flipPronoun, libraryIndex, type Annotation, type Library } from './match.ts';
 import { check } from './check.ts';
 import { buildForms } from './forms.ts';
 
@@ -19,6 +19,7 @@ const SYN = buildForms([{ groups: [
   { id: 'go_leave', kind: 'contextual', pos: 'v', m: ['go', 'leave'], ok: 'She went early.', bad: 'She left the book.' },
   { id: 'barely_hardly', kind: 'contextual', pos: 'x', m: ['barely', 'hardly'], ok: '…', bad: '…' },
   { id: 'big_large', kind: 'contextual', pos: 'a', m: ['big', 'large'], ok: '…', bad: '…' },
+  { id: 'cut_chop', kind: 'contextual', pos: 'v', m: ['cut', 'chop'], ok: '…', bad: '…' },
 ] }], WORDS);
 const FORMS = SYN.forms;
 
@@ -231,5 +232,42 @@ describe('BrE / AmE (step 1b)', () => {
     const r = check('What color is it?', c, { native: 'sk' });
     assert.equal(r.verdict, 'correct');
     assert.equal(r.step, 'spelling_variant');
+  });
+});
+
+describe('Phase 1c patches (Phase 1b §10.3)', () => {
+  test('1 BrE/AmE is a normal substitution, also next to other differences', () => {
+    const c = C(ann({ v: ['The friend who cancelled their plans is happy.'], lk: ['is'] }));
+    assert.equal(check('The friend who canceled their plans is happy.', c, { native: 'sk' }).step, 'spelling_variant');
+    const t = check('The friend who canceled their plans is hapy.', c, { native: 'sk' });
+    assert.equal(t.verdict, 'correct_with_tip');
+    assert.equal(t.step, 'typo');
+    const w = check('The friend who canceled their plan is happy.', c, { native: 'en' });
+    assert.equal(w.verdict, 'wrong');
+    assert.ok(w.feedback && !/cancel/.test(w.feedback), w.feedback ?? '');
+  });
+  test('2 a number word the learner typed is not shown as a digit in the tip', () => {
+    const c = C(ann({ v: ['If she turns the ring once more, she will drop the price again.'], lk: ['she will drop'] }));
+    const r = check('If she turns the ring one more time, she will drop the price again.', c, { native: 'sk' });
+    assert.equal(r.verdict, 'wrong');
+    assert.ok(r.feedback && !r.feedback.includes('„1“') && !/\b1\b/.test(r.feedback), r.feedback ?? '');
+  });
+  test('3 a multi-form anchor ("cut") takes the form its context allows', () => {
+    const pp = C(ann({ v: ['He has cut the rope.'], lk: ['He'], s: { cut: 'cut_chop' } }));
+    assert.equal(verdict(pp, 'He has chopped the rope.'), 'correct');
+    assert.notEqual(verdict(pp, 'He has chop the rope.'), 'correct');
+    const base = C(ann({ v: ['They will cut the rope.'], lk: ['They'], s: { cut: 'cut_chop' } }));
+    assert.equal(verdict(base, 'They will chop the rope.'), 'correct');
+    assert.notEqual(verdict(base, 'They will chopped the rope.'), 'correct');
+    const fin = C(ann({ v: ['They cut the rope yesterday.'], lk: ['yesterday'], s: { cut: 'cut_chop' } }));
+    assert.equal(verdict(fin, 'They chopped the rope yesterday.'), 'correct');
+  });
+  test('4 "her" flipped to masculine is his OR him, never both', () => {
+    assert.deepEqual(flipPronoun('her', 'hand', 'took'), ['his']);
+    assert.deepEqual(flipPronoun('her', 'flowers', 'gave'), ['him']);
+    assert.deepEqual(flipPronoun('her', 'yesterday', 'saw'), ['him']);
+    const c = C(ann({ v: ['She took her bag.'], lk: ['took'], g: [['She', 'her']] }));
+    assert.equal(verdict(c, 'He took his bag.'), 'correct');
+    assert.notEqual(verdict(c, 'He took him bag.'), 'correct');
   });
 });

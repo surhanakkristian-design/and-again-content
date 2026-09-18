@@ -94,6 +94,33 @@ export const fillFeedback = (m: CompiledMistake, language: FeedbackLanguage | nu
   return missing ? null : text;
 };
 
+const spellingTokens = new WeakMap<Compiled, string[]>();
+/** Answer readings with BrE/AmE spelling variants replaced by the pattern's token; the input array when nothing changes. */
+export const spellingReadings = (rs: string[][], compiled: Compiled, words: WordLookup): string[][] => {
+  let tokens = spellingTokens.get(compiled);
+  if (!tokens) {
+    const set = new Set<string>();
+    for (const v of compiled.variants) for (const g of v.graphs) for (const t of g.tokens) set.add(t);
+    for (const m of compiled.mistakes) for (const g of m.graphs) for (const t of g.tokens) set.add(t);
+    tokens = [...set].filter((t) => /^[a-z]+$/.test(t));
+    spellingTokens.set(compiled, tokens);
+  }
+  const known = new Set(tokens);
+  const cache = new Map<string, string>();
+  const canon = (tok: string): string => {
+    if (known.has(tok) || !/^[a-z]+$/.test(tok)) return tok;
+    let c = cache.get(tok);
+    if (c === undefined) {
+      c = tokens!.find((t) => isSpellingVariant(tok, t, words)) ?? tok;
+      cache.set(tok, c);
+    }
+    return c;
+  };
+  let changed = false;
+  const out = rs.map((r) => r.map((t) => { const c = canon(t); if (c !== t) changed = true; return c; }));
+  return changed ? out : rs;
+};
+
 export const check = (answer: string, compiled: Compiled, options: CheckOptions): CheckResultV2 => {
   const level = options.level ?? compiled.level;
   const language = feedbackLanguage(options.native, level);
@@ -102,19 +129,23 @@ export const check = (answer: string, compiled: Compiled, options: CheckOptions)
   if (normalizeBasic(preNormalize(answer)).length === 0) {
     return { verdict: 'wrong', step: 'auto', feedback: null, unmatched: false, closest: reference };
   }
-  const answerReadings = readings(answer);
+  const rawReadings = readings(answer);
 
   // 1. any variant with all freedoms
   for (const v of compiled.variants) {
-    for (const g of v.graphs) for (const r of answerReadings) {
+    for (const g of v.graphs) for (const r of rawReadings) {
       if (matchGraph(g, r)) return { verdict: 'correct', step: 'match', feedback: null, unmatched: false, closest: v.text, variant: v.index };
     }
   }
-  // 1b. British / American spelling
-  const spelling = (a: string, t: string) => isSpellingVariant(a, t, words);
-  for (const v of compiled.variants) {
-    for (const g of v.graphs) for (const r of answerReadings) {
-      if (matchGraph(g, r, spelling)) return { verdict: 'correct', step: 'spelling_variant', feedback: null, unmatched: false, closest: v.text, variant: v.index };
+  // 1b. British / American spelling as a normal substitution: every answer token that is a spelling variant of a
+  // pattern token is read as that token, and steps 1b–4 all use these readings (so a spelling difference is never
+  // an error, also next to other differences, typos and library mistakes).
+  const answerReadings = spellingReadings(rawReadings, compiled, words);
+  if (answerReadings !== rawReadings) {
+    for (const v of compiled.variants) {
+      for (const g of v.graphs) for (const r of answerReadings) {
+        if (matchGraph(g, r)) return { verdict: 'correct', step: 'spelling_variant', feedback: null, unmatched: false, closest: v.text, variant: v.index };
+      }
     }
   }
 
@@ -147,7 +178,8 @@ export const check = (answer: string, compiled: Compiled, options: CheckOptions)
     // cost 0 = only an optional word used twice (the edit search does not count bits);
     // Phase 1 buildTip needs a difference, so describe it generically
     if (b.answer.join(' ') === b.path.join(' ')) return TEMPLATES[language].generic;
-    return buildTip(b.answer, b.path, b.text, language);
+    // the answer text is appended so a number word the learner typed ("one") is shown as typed, never as "1"
+    return buildTip(b.answer, b.path, `${b.text} ${answer.toLowerCase()}`, language);
   };
 
   // 2. library mistakes

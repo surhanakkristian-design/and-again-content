@@ -1,0 +1,1769 @@
+{
+ "note": "§6.1 coverage BEFORE supplementary fixes. Checker v2 (patched), ANN_DIR=phase1c/annotated, synonyms table+annotator+ng_phase1c (ng ok/bad unreviewed). Inputs phase1c/inputs/cov_heldout.json (240) and fa.json (105). Accepted = correct|correct_with_tip. Denominator = translations judged correct by hand: 240 − 3 (id 103, sk≠en) − 2 judged wrong = 235. Raw: 95/240 = 39.6%.",
+ "coverage": {
+  "all": {
+   "accepted": 95,
+   "n": 235,
+   "pct": 40.4
+  },
+  "batch:L": {
+   "accepted": 73,
+   "n": 176,
+   "pct": 41.5
+  },
+  "batch:S": {
+   "accepted": 22,
+   "n": 59,
+   "pct": 37.3
+  },
+  "long": {
+   "accepted": 13,
+   "n": 31,
+   "pct": 41.9
+  },
+  "lv:A1": {
+   "accepted": 18,
+   "n": 36,
+   "pct": 50.0
+  },
+  "lv:A1/short": {
+   "accepted": 18,
+   "n": 36,
+   "pct": 50.0
+  },
+  "lv:A2": {
+   "accepted": 22,
+   "n": 48,
+   "pct": 45.8
+  },
+  "lv:A2/short": {
+   "accepted": 22,
+   "n": 48,
+   "pct": 45.8
+  },
+  "lv:B1": {
+   "accepted": 35,
+   "n": 82,
+   "pct": 42.7
+  },
+  "lv:B1/long": {
+   "accepted": 9,
+   "n": 19,
+   "pct": 47.4
+  },
+  "lv:B1/short": {
+   "accepted": 26,
+   "n": 63,
+   "pct": 41.3
+  },
+  "lv:B2": {
+   "accepted": 20,
+   "n": 69,
+   "pct": 29.0
+  },
+  "lv:B2/long": {
+   "accepted": 4,
+   "n": 12,
+   "pct": 33.3
+  },
+  "lv:B2/short": {
+   "accepted": 16,
+   "n": 57,
+   "pct": 28.1
+  },
+  "short": {
+   "accepted": 82,
+   "n": 204,
+   "pct": 40.2
+  }
+ },
+ "excluded_from_denominator": [
+  {
+   "id": 1018,
+   "answer": "She's poured the smoothie into a tall glass, so the blender is now totally empty.",
+   "why": "judged wrong: sk 'prelial' is masculine; she is wrong"
+  },
+  {
+   "id": 5595,
+   "answer": "She's finally stamped the document, so she can go home.",
+   "why": "judged wrong: sk 'opečiatkoval' is masculine; she is wrong"
+  },
+  {
+   "id": 103,
+   "answer": "His graduation is said to have been the loudest in the university's history.",
+   "why": "Slovak text does not match the English (flagged by batch-L annotator); annotation covers the English only"
+  },
+  {
+   "id": 103,
+   "answer": "It is said that his graduation was the loudest in the university's history.",
+   "why": "Slovak text does not match the English (flagged by batch-L annotator); annotation covers the English only"
+  },
+  {
+   "id": 103,
+   "answer": "His graduation is rumored to have been the loudest in the university's history.",
+   "why": "Slovak text does not match the English (flagged by batch-L annotator); annotation covers the English only"
+  }
+ ],
+ "false_acceptance": {
+  "total_wrong": 105,
+  "accepted": 9,
+  "accepted_silently_correct": 3,
+  "accepted_with_tip": 6,
+  "real": 0,
+  "real_note": "0 real by Phase 1b convention: 3 silent accepts are legitimate readings of the Slovak; 6 are tip-accepts via library soft-mistake items (tense nuance, dropped will) — if tip-accepts count as FA, the figure is 6/105",
+  "list": [
+   {
+    "id": 16403,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "Say bye now and she will come back in an hour.",
+    "answer": "Say bye now and she comes back in an hour.",
+    "writer_type": "M",
+    "writer_why": "dropped \"will\"",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Pre budúcnosť tu patrí „will“: „will“."
+   },
+   {
+    "id": 1018,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "He has poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "answer": "He poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs present perfect",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Výsledok je vidieť teraz, preto je lepší Present Perfect: „has poured“."
+   },
+   {
+    "id": 14266,
+    "verdict": "correct",
+    "step": "match",
+    "reference": "What do they dance? — Salsa.",
+    "answer": "What are they dancing? — Salsa.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs present simple",
+    "judgement": "annotation variant v1 (sk \"Čo tancujú?\" allows both) — not real",
+    "feedback": null
+   },
+   {
+    "id": 1452,
+    "verdict": "correct",
+    "step": "match",
+    "reference": "If he touches that cactus, he will spend the evening pulling spines out of his finger.",
+    "answer": "If she touches that cactus, she will spend the evening pulling spines out of her finger.",
+    "writer_type": "S",
+    "writer_why": "wrong subject, should be \"he\"",
+    "judgement": "sk genderless (dotkne/strávi) — not real",
+    "feedback": null
+   },
+   {
+    "id": 5595,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He stamped the document at last, so she can finally go home.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs present perfect",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Výsledok je vidieť teraz, preto je lepší Present Perfect: „has stamped“."
+   },
+   {
+    "id": 5595,
+    "verdict": "correct",
+    "step": "match",
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "answer": "He has stamped the document, so she can finally go home.",
+    "writer_type": "M",
+    "writer_why": "dropped \"at last\"",
+    "judgement": "sk has one \"Konečne\"; dropping \"at last\" keeps meaning — not real",
+    "feedback": null
+   },
+   {
+    "id": 9244,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "answer": "While the waves rolled in, the black cat did not move a whisker.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs past continuous",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Pri „while“ je pre dlhší prebiehajúci dej prirodzenejší Past Continuous: „were rolling“."
+   },
+   {
+    "id": 8824,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "While the chain was swinging, he pushed the bag into place.",
+    "answer": "While the chain swung, he pushed the bag into place.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs past continuous",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Pri „while“ je pre dlhší prebiehajúci dej prirodzenejší Past Continuous: „was swinging“."
+   },
+   {
+    "id": 10366,
+    "verdict": "correct_with_tip",
+    "step": "mistake",
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "answer": "By ten he will have reheated noodles for two hours straight.",
+    "writer_type": "T",
+    "writer_why": "wrong tense, needs future perfect continuous",
+    "judgement": "library soft mistake: accepted WITH tip (verdict correct_with_tip) — tip names the error; not a silent acceptance",
+    "feedback": "Dôraz je na trvaní, preto je lepší Future Perfect Continuous: „will have been reheating“."
+   }
+  ]
+ },
+ "false_rejections": {
+  "count": 140,
+  "by_step": {
+   "auto": 139,
+   "mistake": 1
+  },
+  "list": [
+   {
+    "id": 23026,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "She wears the skirt in the park every Sunday.",
+    "sk": "Túto sukňu nosí do parku každú nedeľu.",
+    "answer": "She wears this skirt to the park each Sunday.",
+    "step": "auto",
+    "reason": "Namiesto „each“ patrí „every“."
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "sk": "Pustí svojho sprievodcu na kostolné schody! Úplná katastrofa!",
+    "answer": "He drops his guide on the church steps! A complete disaster!",
+    "step": "auto",
+    "reason": "„a“ tu nepatrí."
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "sk": "Pustí svojho sprievodcu na kostolné schody! Úplná katastrofa!",
+    "answer": "He will drop his guidebook on the church steps! A complete catastrophe!",
+    "step": "auto",
+    "reason": "Namiesto „will drop“ patrí „drops“. „a“ tu nepatrí."
+   },
+   {
+    "id": 29691,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "He drops his guidebook on the church steps! Total disaster!",
+    "sk": "Pustí svojho sprievodcu na kostolné schody! Úplná katastrofa!",
+    "answer": "He's going to drop his guide on the church steps! A total catastrophe!",
+    "step": "auto",
+    "reason": "Namiesto „is going to drop“ patrí „drops“. „a“ tu nepatrí."
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "sk": "Z trávnatého hrebeňa pozorujú sopku",
+    "answer": "They watch the volcano from the grassy ridge.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "sk": "Z trávnatého hrebeňa pozorujú sopku",
+    "answer": "From the grassy ridge, they watch the volcano.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 25921,
+    "batch": "S",
+    "level": "A1",
+    "long": false,
+    "reference": "They watch a volcano from the grassy ridge.",
+    "sk": "Z trávnatého hrebeňa pozorujú sopku",
+    "answer": "They observe the volcano from the grassy ridge.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 16261,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "He has a plan. He is going to walk her home.",
+    "sk": "Má plán. Chystá sa odprevadiť ju domov.",
+    "answer": "He's got a plan. He is going to walk her home.",
+    "step": "auto",
+    "reason": "„got“ tu nepatrí."
+   },
+   {
+    "id": 16261,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "He has a plan. He is going to walk her home.",
+    "sk": "Má plán. Chystá sa odprevadiť ju domov.",
+    "answer": "She's got a plan. She is going to accompany her home.",
+    "step": "auto",
+    "reason": "„got“ tu nepatrí. Namiesto „accompany“ patrí „walk“."
+   },
+   {
+    "id": 27097,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "Of course this square has many advertisements, exactly what we needed.",
+    "sk": "Jasné, toto námestie má veľa reklám, presne to sme potrebovali.",
+    "answer": "Oh sure, there are loads of ads on this square, exactly what we needed.",
+    "step": "auto",
+    "reason": "„oh“ tu nepatrí. Namiesto „there are loads of“ patrí „this square has many“."
+   },
+   {
+    "id": 16403,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "Say bye now and she will come back in an hour.",
+    "sk": "Rozlúč sa a o hodinu sa vráti naspäť.",
+    "answer": "Say goodbye - he will return in an hour.",
+    "step": "auto",
+    "reason": "Chýba „and“."
+   },
+   {
+    "id": 13175,
+    "batch": "S",
+    "level": "A2",
+    "long": false,
+    "reference": "There is a lot of yellow cheese on the board.",
+    "sk": "Na doske je veľa žltého syra",
+    "answer": "On the board there's a lot of yellow cheese.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov."
+   },
+   {
+    "id": 1018,
+    "batch": "S",
+    "level": "B1",
+    "long": true,
+    "reference": "He has poured the smoothie into the tall glass, so the blender is completely empty now.",
+    "sk": "Smoothie prelial do vysokého pohára, takže mixér je teraz úplne prázdny.",
+    "answer": "He has poured the smoothie into a tall glass, so the blender is now completely empty.",
+    "step": "auto",
+    "reason": "„now“ tu nepatrí."
+   },
+   {
+    "id": 3603,
+    "batch": "S",
+    "level": "B1",
+    "long": true,
+    "reference": "The engineer asked him when he was bringing the race car back into the garage.",
+    "sk": "Inžinier sa ho spýtal, kedy privezie pretekárske auto späť do garáže.",
+    "answer": "The engineer asked him when he would return the race car to the garage.",
+    "step": "auto",
+    "reason": "Namiesto „return“ patrí „bring“. Chýba „back“."
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "sk": "Stále hádzala tú istú kombináciu, kým nešla hladko.",
+    "answer": "She kept throwing the same combination until it went smoothly.",
+    "step": "auto",
+    "reason": "Namiesto „went smoothly“ patrí „felt smooth“."
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "sk": "Stále hádzala tú istú kombináciu, kým nešla hladko.",
+    "answer": "She continued throwing the same combination until it worked smoothly.",
+    "step": "auto",
+    "reason": "Namiesto „continued“ patrí „kept“. Namiesto „worked smoothly“ patrí „felt smooth“."
+   },
+   {
+    "id": 8799,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She kept throwing the same combination until it felt smooth.",
+    "sk": "Stále hádzala tú istú kombináciu, kým nešla hladko.",
+    "answer": "She kept throwing the same combo until it went smoothly.",
+    "step": "auto",
+    "reason": "Namiesto „went smoothly“ patrí „felt smooth“."
+   },
+   {
+    "id": 4612,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "If he held the screwdriver, that shelf would be on the floor by now.",
+    "sk": "Keby skrutkovač držal on, tá polica by už dávno bola na zemi.",
+    "answer": "If he were holding the screwdriver, the shelf would already be lying on the ground.",
+    "step": "auto",
+    "reason": "Namiesto „were holding“ patrí „held“. „lying“ tu nepatrí."
+   },
+   {
+    "id": 4612,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "If he held the screwdriver, that shelf would be on the floor by now.",
+    "sk": "Keby skrutkovač držal on, tá polica by už dávno bola na zemi.",
+    "answer": "If it were him holding the screwdriver, that shelf would already be on the ground.",
+    "step": "auto",
+    "reason": "Namiesto „it were him holding“ patrí „he held“."
+   },
+   {
+    "id": 9992,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "The ankle that swelled up was the left one.",
+    "sk": "Členok, ktorý opuchol, bol ten ľavý.",
+    "answer": "It was the left ankle that swelled up.",
+    "step": "auto",
+    "reason": "„it was“ tu nepatrí. „left“ tu nepatrí."
+   },
+   {
+    "id": 7716,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She managed to stay completely still until the dragonfly settled.",
+    "sk": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+    "answer": "She succeeded in staying totally still until the dragonfly settled down.",
+    "step": "auto",
+    "reason": "Namiesto „succeeded in staying“ patrí „managed to stay“."
+   },
+   {
+    "id": 7716,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "She managed to stay completely still until the dragonfly settled.",
+    "sk": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+    "answer": "She managed to hold completely still until the dragonfly had settled.",
+    "step": "auto",
+    "reason": "Namiesto „hold“ patrí „stay“. „had“ tu nepatrí."
+   },
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "sk": "Povedal, že puk letí rýchlejšie na studenom ľade.",
+    "answer": "He said that a puck travels faster on cold ice.",
+    "step": "auto",
+    "reason": "Namiesto „a“ patrí „the“. Namiesto „travels“ patrí „travelled“."
+   },
+   {
+    "id": 8756,
+    "batch": "S",
+    "level": "B1",
+    "long": false,
+    "reference": "He said the puck travelled faster on cold ice.",
+    "sk": "Povedal, že puk letí rýchlejšie na studenom ľade.",
+    "answer": "He said that the puck went faster on cold ice.",
+    "step": "auto",
+    "reason": "Namiesto „went“ patrí „travelled“."
+   },
+   {
+    "id": 9907,
+    "batch": "S",
+    "level": "B2",
+    "long": true,
+    "reference": "If she had taken the beige jacket, this look would never have happened.",
+    "sk": "Keby si bola vzala béžovú bundu, tento look by nikdy nevznikol.",
+    "answer": "If she had worn the beige jacket, this look would never have come about.",
+    "step": "auto",
+    "reason": "Namiesto „worn“ patrí „taken“."
+   },
+   {
+    "id": 9907,
+    "batch": "S",
+    "level": "B2",
+    "long": true,
+    "reference": "If she had taken the beige jacket, this look would never have happened.",
+    "sk": "Keby si bola vzala béžovú bundu, tento look by nikdy nevznikol.",
+    "answer": "If she'd taken the beige jacket, this look would never have existed.",
+    "step": "auto",
+    "reason": "Namiesto „existed“ patrí „happened“."
+   },
+   {
+    "id": 7558,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "Never had we seen a group this quiet at sunset.",
+    "sk": "Nikdy predtým sme nevideli takú tichú skupinu pri západe slnka.",
+    "answer": "Never before have we seen such a quiet group at sunset.",
+    "step": "mistake",
+    "reason": "Čas pomocného slovesa nesedí: „had we seen“, nie „have we seen“."
+   },
+   {
+    "id": 7558,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "Never had we seen a group this quiet at sunset.",
+    "sk": "Nikdy predtým sme nevideli takú tichú skupinu pri západe slnka.",
+    "answer": "Never had we seen such a quiet group at sunset before.",
+    "step": "auto",
+    "reason": "„before“ tu nepatrí."
+   },
+   {
+    "id": 10959,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "If she had bought thicker paper, the bouquet would be perfect now.",
+    "sk": "Keby bola kúpila hrubší papier, kytica by bola teraz dokonalá.",
+    "answer": "Had she bought stronger paper, the bouquet would be perfect now.",
+    "step": "auto",
+    "reason": "Namiesto „had she“ patrí „if she had“. Namiesto „stronger“ patrí „thicker“."
+   },
+   {
+    "id": 10959,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "If she had bought thicker paper, the bouquet would be perfect now.",
+    "sk": "Keby bola kúpila hrubší papier, kytica by bola teraz dokonalá.",
+    "answer": "If she had bought heavier paper, the bouquet would be perfect now.",
+    "step": "auto",
+    "reason": "Namiesto „heavier“ patrí „thicker“."
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "sk": "Kuchyňu si dali natočiť, kým skladali ten dúhový tanier.",
+    "answer": "They had the kitchen filmed while they were assembling that rainbow plate.",
+    "step": "auto",
+    "reason": "Namiesto „assembling“ patrí „building“."
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "sk": "Kuchyňu si dali natočiť, kým skladali ten dúhový tanier.",
+    "answer": "They had someone film the kitchen while they were arranging that rainbow plate.",
+    "step": "auto",
+    "reason": "„someone film“ tu nepatrí. Chýba „filmed“."
+   },
+   {
+    "id": 7687,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "They had the kitchen filmed while they built the rainbow plate.",
+    "sk": "Kuchyňu si dali natočiť, kým skladali ten dúhový tanier.",
+    "answer": "While they were assembling the rainbow plate, they had the kitchen filmed.",
+    "step": "auto",
+    "reason": "Porovnaj svoju vetu so správnym prekladom."
+   },
+   {
+    "id": 9607,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "She is said to have trained at altitude all winter.",
+    "sk": "Hovorí sa, že celú zimu trénovala vo výške.",
+    "answer": "It's said that she spent the whole winter training at altitude.",
+    "step": "auto",
+    "reason": "Namiesto „spent“ patrí „trained at altitude“. „training at altitude“ tu nepatrí."
+   },
+   {
+    "id": 10043,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "He asked how long the swelling had been sitting on her foot.",
+    "sk": "Spýtal sa, ako dlho ten opuch na jej nohe je",
+    "answer": "He asked how long she had had that swelling on her leg.",
+    "step": "auto",
+    "reason": "Namiesto „she had“ patrí „the swelling“. Namiesto „that swelling“ patrí „been sitting“."
+   },
+   {
+    "id": 10043,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "He asked how long the swelling had been sitting on her foot.",
+    "sk": "Spýtal sa, ako dlho ten opuch na jej nohe je",
+    "answer": "He asked how long that swelling on her foot had been there.",
+    "step": "auto",
+    "reason": "Chýba „had been“. „had been there“ tu nepatrí."
+   },
+   {
+    "id": 10043,
+    "batch": "S",
+    "level": "B2",
+    "long": false,
+    "reference": "He asked how long the swelling had been sitting on her foot.",
+    "sk": "Spýtal sa, ako dlho ten opuch na jej nohe je",
+    "answer": "He asked for how long the swelling on her leg had been there.",
+    "step": "auto",
+    "reason": "„for“ tu nepatrí. Chýba „had been“."
+   },
+   {
+    "id": 14266,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "What do they dance? — Salsa.",
+    "sk": "Čo tancujú? — Salsu.",
+    "answer": "What do they dance? — The salsa.",
+    "step": "auto",
+    "reason": "„the“ tu nepatrí."
+   },
+   {
+    "id": 27628,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The children awake at seven in the morning.",
+    "sk": "Deti sa zobudia o siedmej ráno.",
+    "answer": "The children will wake up at seven o'clock in the morning.",
+    "step": "auto",
+    "reason": "„will“ tu nepatrí."
+   },
+   {
+    "id": 27628,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The children awake at seven in the morning.",
+    "sk": "Deti sa zobudia o siedmej ráno.",
+    "answer": "The children will wake up at seven in the morning.",
+    "step": "auto",
+    "reason": "„will“ tu nepatrí."
+   },
+   {
+    "id": 32342,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The evidence is on the cork board.",
+    "sk": "Dôkaz je na korkovej tabuli.",
+    "answer": "The proof is on the cork noticeboard.",
+    "step": "auto",
+    "reason": "„cork“ tu nepatrí."
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "sk": "Na tú silnú bolesť hlavy potrebuje jednu tabletku.",
+    "answer": "He needs one tablet for that terrible headache.",
+    "step": "auto",
+    "reason": "Namiesto „one tablet“ patrí „a pill“."
+   },
+   {
+    "id": 20298,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He needs a pill for his bad headache.",
+    "sk": "Na tú silnú bolesť hlavy potrebuje jednu tabletku.",
+    "answer": "For that bad headache, he needs one tablet.",
+    "step": "auto",
+    "reason": "Porovnaj svoju vetu so správnym prekladom."
+   },
+   {
+    "id": 25981,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The waiter carries ten hot plates at once.",
+    "sk": "Čašník nesie naraz desať horúcich tanierov.",
+    "answer": "The waiter is carrying ten hot dishes all at once.",
+    "step": "auto",
+    "reason": "Namiesto „dishes all“ patrí „plates“."
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "sk": "Dokáže ju nájsť skôr, než príde domov.",
+    "answer": "He can find her before he gets home.",
+    "step": "auto",
+    "reason": "Namiesto „he“ patrí „she“."
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "sk": "Dokáže ju nájsť skôr, než príde domov.",
+    "answer": "He is able to find her before he arrives home.",
+    "step": "auto",
+    "reason": "Namiesto „is able to“ patrí „can“. Namiesto „he“ patrí „she“."
+   },
+   {
+    "id": 26084,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "He can find her before she gets home.",
+    "sk": "Dokáže ju nájsť skôr, než príde domov.",
+    "answer": "He can find it before he comes home.",
+    "step": "auto",
+    "reason": "Namiesto „it“ patrí „her“. Namiesto „he“ patrí „she“."
+   },
+   {
+    "id": 23669,
+    "batch": "L",
+    "level": "A1",
+    "long": false,
+    "reference": "The galaxy moves slowly above their heads.",
+    "sk": "Galaxia sa pomaly pohybuje nad ich hlavami.",
+    "answer": "The galaxy is moving slowly over their heads.",
+    "step": "auto",
+    "reason": "Namiesto „over“ patrí „above“."
+   },
+   {
+    "id": 13034,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Right now the girl is blowing out the candles.",
+    "sk": "Práve teraz dievča sfukuje sviečky.",
+    "answer": "Right now, the girl is blowing out candles.",
+    "step": "auto",
+    "reason": "Chýba „the“."
+   },
+   {
+    "id": 14806,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "A moment ago she stopped the globe with her hand.",
+    "sk": "Pred chvíľou zastavila glóbus rukou.",
+    "answer": "Just a moment ago she stopped the globe with her hand.",
+    "step": "auto",
+    "reason": "„just“ tu nepatrí."
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "sk": "Pohárik je horúci, tak ho musíš držať opatrne.",
+    "answer": "The cup is hot, so you have to hold it carefully.",
+    "step": "auto",
+    "reason": "Namiesto „have to“ patrí „must“."
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "sk": "Pohárik je horúci, tak ho musíš držať opatrne.",
+    "answer": "The little glass is hot, so you must hold it carefully.",
+    "step": "auto",
+    "reason": "„little“ tu nepatrí."
+   },
+   {
+    "id": 24733,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The glass is hot, so you must hold it carefully.",
+    "sk": "Pohárik je horúci, tak ho musíš držať opatrne.",
+    "answer": "The cup is hot, so you need to hold it carefully.",
+    "step": "auto",
+    "reason": "Namiesto „need to“ patrí „must“."
+   },
+   {
+    "id": 11348,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Look! The assistant is holding the reflector up now.",
+    "sk": "Pozri! Asistent práve drží odrazovú dosku hore.",
+    "answer": "Look! The assistant is holding the reflector board up.",
+    "step": "auto",
+    "reason": "Chýba „now“."
+   },
+   {
+    "id": 11348,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Look! The assistant is holding the reflector up now.",
+    "sk": "Pozri! Asistent práve drží odrazovú dosku hore.",
+    "answer": "Look! The assistant is holding the reflector up.",
+    "step": "auto",
+    "reason": "Chýba „now“."
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "sk": "Zvyčajne ostáva pod strechou, ale dnes tancuje v daždi.",
+    "answer": "She usually stays under the roof, but today she's dancing in the rain.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "sk": "Zvyčajne ostáva pod strechou, ale dnes tancuje v daždi.",
+    "answer": "He usually stays under the roof, but today he is dancing in the rain.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“. Namiesto „he“ patrí „she“."
+   },
+   {
+    "id": 21124,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually stays dry, but today she is dancing in the rain.",
+    "sk": "Zvyčajne ostáva pod strechou, ale dnes tancuje v daždi.",
+    "answer": "She usually stays indoors under the roof, but today she is dancing in the rain.",
+    "step": "auto",
+    "reason": "„indoors“ tu nepatrí. Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 20702,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Look! He is lifting the jug higher and higher now.",
+    "sk": "Pozri! Teraz dvíha džbán vyššie a vyššie.",
+    "answer": "Look! Right now he is raising the jug higher and higher.",
+    "step": "auto",
+    "reason": "Namiesto „raising“ patrí „lifting“."
+   },
+   {
+    "id": 11980,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "Wait a minute and the water will boil!",
+    "sk": "Počkaj chvíľu a voda zovrie!",
+    "answer": "Wait a bit and the water will boil!",
+    "step": "auto",
+    "reason": "Namiesto „bit“ patrí „second“."
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "sk": "Ak sa ti odpoveď nepáči, nemal by si sa kariet pýtať.",
+    "answer": "You shouldn't ask the cards if you don't like the answer.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov."
+   },
+   {
+    "id": 11216,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "If you hate the answer, you should not ask the cards.",
+    "sk": "Ak sa ti odpoveď nepáči, nemal by si sa kariet pýtať.",
+    "answer": "If you don't like the reply, you shouldn't ask the cards.",
+    "step": "auto",
+    "reason": "Namiesto „reply“ patrí „answer“."
+   },
+   {
+    "id": 13395,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually draws hearts, but today she drew a circle.",
+    "sk": "Zvyčajne kreslí srdcia, ale dnes nakreslila kruh.",
+    "answer": "She normally draws hearts, but she drew a circle today.",
+    "step": "auto",
+    "reason": "Namiesto „normally“ patrí „usually“. Chýba „today“."
+   },
+   {
+    "id": 13395,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "She usually draws hearts, but today she drew a circle.",
+    "sk": "Zvyčajne kreslí srdcia, ale dnes nakreslila kruh.",
+    "answer": "She generally draws hearts, but today she drew a circle.",
+    "step": "auto",
+    "reason": "Namiesto „generally“ patrí „usually“."
+   },
+   {
+    "id": 16009,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "It usually sits still, but now it is croaking loudly.",
+    "sk": "Zvyčajne sedí ticho, ale teraz hlasno kváka",
+    "answer": "Usually it sits quietly, but at the moment it is croaking loudly.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov: „it usually“. Namiesto „at the moment“ patrí „now“."
+   },
+   {
+    "id": 16009,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "It usually sits still, but now it is croaking loudly.",
+    "sk": "Zvyčajne sedí ticho, ale teraz hlasno kváka",
+    "answer": "It normally sits quietly, but now it is croaking loudly.",
+    "step": "auto",
+    "reason": "Namiesto „normally“ patrí „usually“."
+   },
+   {
+    "id": 21467,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The water is cold, so you should wear boots.",
+    "sk": "Voda je studená, mal by si si obuť čižmy.",
+    "answer": "The water is cold, you should put on your boots.",
+    "step": "auto",
+    "reason": "Chýba „so“."
+   },
+   {
+    "id": 21467,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The water is cold, so you should wear boots.",
+    "sk": "Voda je studená, mal by si si obuť čižmy.",
+    "answer": "The water is cold; you should put your rubber boots on.",
+    "step": "auto",
+    "reason": "Chýba „so“. Namiesto „your“ patrí „on“."
+   },
+   {
+    "id": 21467,
+    "batch": "L",
+    "level": "A2",
+    "long": false,
+    "reference": "The water is cold, so you should wear boots.",
+    "sk": "Voda je studená, mal by si si obuť čižmy.",
+    "answer": "The water is cold, you should put your boots on.",
+    "step": "auto",
+    "reason": "Chýba „so“. Namiesto „your boots on“ patrí „on boots“."
+   },
+   {
+    "id": 3084,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "The moment her friend made her laugh, her hand slipped and the line went crooked.",
+    "sk": "V momente, keď ju kamarátka rozosmiala, jej ruka sa šmykla a čiara išla nakrivo.",
+    "answer": "At the moment her friend made her laugh, her hand slipped and the line came out crooked.",
+    "step": "auto",
+    "reason": "„at“ tu nepatrí."
+   },
+   {
+    "id": 3084,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "The moment her friend made her laugh, her hand slipped and the line went crooked.",
+    "sk": "V momente, keď ju kamarátka rozosmiala, jej ruka sa šmykla a čiara išla nakrivo.",
+    "answer": "Just as her friend made her laugh, her hand slipped and the line went askew.",
+    "step": "auto",
+    "reason": "Namiesto „askew“ patrí „crooked“."
+   },
+   {
+    "id": 4449,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "Altogether she lowered the basket three times before the man had all his oranges.",
+    "sk": "Celkovo spustila kôš trikrát, kým mal muž všetky svoje pomaranče.",
+    "answer": "She lowered the basket three times in total, until the man got all his oranges.",
+    "step": "auto",
+    "reason": "Chýba „altogether“. „in total“ tu nepatrí."
+   },
+   {
+    "id": 1452,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "If he touches that cactus, he will spend the evening pulling spines out of his finger.",
+    "sk": "Ak sa dotkne toho kaktusa, strávi večer vyťahovaním tŕňov z prsta.",
+    "answer": "If he touches that cactus, he's going to spend the evening pulling thorns from his finger.",
+    "step": "auto",
+    "reason": "Namiesto „is going to“ patrí „will“. Namiesto „from“ patrí „out of“."
+   },
+   {
+    "id": 5595,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "sk": "Konečne dokument opečiatkoval, takže môže ísť domov.",
+    "answer": "He has finally stamped the document, so he can go home.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov."
+   },
+   {
+    "id": 5595,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "He has stamped the document at last, so she can finally go home.",
+    "sk": "Konečne dokument opečiatkoval, takže môže ísť domov.",
+    "answer": "He has finally put a stamp on the document, so he can go home.",
+    "step": "auto",
+    "reason": "Namiesto „finally put a stamp on“ patrí „stamped“. Chýba „finally“."
+   },
+   {
+    "id": 9244,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "sk": "Kým sa vlny valili, čierna mačka nepohla ani fúzom.",
+    "answer": "While the waves rolled in, the black cat didn't move a single whisker.",
+    "step": "auto",
+    "reason": "Namiesto „rolled“ patrí „were rolling“. „single“ tu nepatrí."
+   },
+   {
+    "id": 9244,
+    "batch": "L",
+    "level": "B1",
+    "long": true,
+    "reference": "While the waves were rolling in, the black cat did not move a whisker.",
+    "sk": "Kým sa vlny valili, čierna mačka nepohla ani fúzom.",
+    "answer": "As the waves were rolling, the black cat didn't budge a whisker.",
+    "step": "auto",
+    "reason": "Namiesto „as“ patrí „while“. Namiesto „budge“ patrí „twitch“."
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "sk": "Režisér povedal, že kancelársku scénu natočia pred obedom.",
+    "answer": "The director said that they would shoot the office scene before lunch.",
+    "step": "auto",
+    "reason": "Namiesto „shoot“ patrí „film“."
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "sk": "Režisér povedal, že kancelársku scénu natočia pred obedom.",
+    "answer": "The director said that they were going to shoot the office scene before lunch.",
+    "step": "auto",
+    "reason": "Namiesto „were going to shoot“ patrí „would film“."
+   },
+   {
+    "id": 6365,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The director said they would film the office scene before lunch.",
+    "sk": "Režisér povedal, že kancelársku scénu natočia pred obedom.",
+    "answer": "The director said that they would film the office scene before lunchtime.",
+    "step": "auto",
+    "reason": "Namiesto „lunchtime“ patrí „lunch“."
+   },
+   {
+    "id": 7238,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If you step exactly where Mira steps, your feet stay completely dry.",
+    "sk": "Ak stúpaš presne tam, kam stúpa Mira, nohy ti zostanú úplne suché.",
+    "answer": "Whenever you step exactly where Mira steps, your feet stay completely dry.",
+    "step": "auto",
+    "reason": "Namiesto „whenever“ patrí „if“."
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "sk": "Pult, za ktorým stojí, je starší než celá škola.",
+    "answer": "The counter he is standing behind is older than the whole school.",
+    "step": "auto",
+    "reason": "Chýba „that“."
+   },
+   {
+    "id": 9498,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The podium that she is standing behind is older than the school.",
+    "sk": "Pult, za ktorým stojí, je starší než celá škola.",
+    "answer": "The counter he stands behind is older than the entire school.",
+    "step": "auto",
+    "reason": "Chýba „that“. „entire“ tu nepatrí."
+   },
+   {
+    "id": 9495,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "Her speech was rewritten twice before she ever walked onto that stage.",
+    "sk": "Jej prejav bol prepísaný dvakrát, ešte než vôbec vyšla na to pódium.",
+    "answer": "Her speech was rewritten two times before she even stepped onto the stage.",
+    "step": "auto",
+    "reason": "Namiesto „two times“ patrí „twice“. Namiesto „the“ patrí „that“."
+   },
+   {
+    "id": 9495,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "Her speech was rewritten twice before she ever walked onto that stage.",
+    "sk": "Jej prejav bol prepísaný dvakrát, ešte než vôbec vyšla na to pódium.",
+    "answer": "Her speech got rewritten twice before she had even walked onto that stage.",
+    "step": "auto",
+    "reason": "Namiesto „got“ patrí „was“. „had“ tu nepatrí."
+   },
+   {
+    "id": 8824,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "While the chain was swinging, he pushed the bag into place.",
+    "sk": "Kým sa reťaz kývala, dotlačil vrece na miesto.",
+    "answer": "As the chain was swinging, he pushed the bag into place.",
+    "step": "auto",
+    "reason": "Namiesto „as“ patrí „while“."
+   },
+   {
+    "id": 2929,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The eerie light has faded completely, and the yard is dark again.",
+    "sk": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+    "answer": "The frightening light has completely gone out and the station is dark once more.",
+    "step": "auto",
+    "reason": "Namiesto „frightening“ patrí „eerie“. „completely“ tu nepatrí."
+   },
+   {
+    "id": 6830,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "As kids they would buy dried herbs in a jar.",
+    "sk": "Ako deti kupovali sušené bylinky v pohári.",
+    "answer": "When they were children, they used to buy dried herbs in a jar.",
+    "step": "auto",
+    "reason": "Namiesto „when they were“ patrí „as“."
+   },
+   {
+    "id": 8017,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The keeper was standing on his line when the referee pointed to the spot.",
+    "sk": "Brankár práve stál na čiare, keď rozhodca ukázal na biely bod.",
+    "answer": "The keeper was standing on the line when the ref pointed to the spot.",
+    "step": "auto",
+    "reason": "Namiesto „ref“ patrí „referee“."
+   },
+   {
+    "id": 8017,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The keeper was standing on his line when the referee pointed to the spot.",
+    "sk": "Brankár práve stál na čiare, keď rozhodca ukázal na biely bod.",
+    "answer": "When the referee pointed to the white spot, the goalkeeper was standing on the line.",
+    "step": "auto",
+    "reason": "Porovnaj svoju vetu so správnym prekladom."
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "sk": "Ako dlho prikladá tou kartou na nesprávne dvere?",
+    "answer": "How long has he been holding that card up to the wrong door?",
+    "step": "auto",
+    "reason": "Namiesto „he“ patrí „she“. Namiesto „holding“ patrí „tapping“."
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "sk": "Ako dlho prikladá tou kartou na nesprávne dvere?",
+    "answer": "How long has she been holding that card up to the wrong door?",
+    "step": "auto",
+    "reason": "Namiesto „holding“ patrí „tapping“. „up“ tu nepatrí."
+   },
+   {
+    "id": 119,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "How long has she been tapping that keycard on the wrong door?",
+    "sk": "Ako dlho prikladá tou kartou na nesprávne dvere?",
+    "answer": "How long has he been tapping that card on the wrong door?",
+    "step": "auto",
+    "reason": "Namiesto „he“ patrí „she“."
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "sk": "Ak prsteň otočí ešte raz, zníži cenu znova.",
+    "answer": "If he turns the ring once more, he will lower the price again.",
+    "step": "auto",
+    "reason": "Namiesto „lower“ patrí „drop“."
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "sk": "Ak prsteň otočí ešte raz, zníži cenu znova.",
+    "answer": "If she turns the ring one more time, she'll lower the price again.",
+    "step": "auto",
+    "reason": "Namiesto „lower“ patrí „drop“."
+   },
+   {
+    "id": 5959,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "If he turns the ring once more, she will drop the price again.",
+    "sk": "Ak prsteň otočí ešte raz, zníži cenu znova.",
+    "answer": "If he turns the ring again, he will reduce the price once more.",
+    "step": "auto",
+    "reason": "Namiesto „reduce“ patrí „drop“. Namiesto „more“ patrí „again“."
+   },
+   {
+    "id": 8920,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The fastest sequence is shown in slow motion at the end.",
+    "sk": "Najrýchlejšia akcia je ukázaná na konci v spomalenom zábere.",
+    "answer": "The fastest action is shown at the end in slow motion.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov: „in slow motion at the end“."
+   },
+   {
+    "id": 8920,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "The fastest sequence is shown in slow motion at the end.",
+    "sk": "Najrýchlejšia akcia je ukázaná na konci v spomalenom zábere.",
+    "answer": "The fastest action is shown at the end in a slow-motion shot.",
+    "step": "auto",
+    "reason": "„at the end“ tu nepatrí. „a“ tu nepatrí."
+   },
+   {
+    "id": 8062,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She moved to the drum kit while the camera was still rolling.",
+    "sk": "K bicím prešla, kým kamera ešte bežala.",
+    "answer": "She walked over to the drums while the camera was still running.",
+    "step": "auto",
+    "reason": "Namiesto „walked over“ patrí „moved“."
+   },
+   {
+    "id": 8062,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She moved to the drum kit while the camera was still rolling.",
+    "sk": "K bicím prešla, kým kamera ešte bežala.",
+    "answer": "She crossed to the drums while the camera was still rolling.",
+    "step": "auto",
+    "reason": "Namiesto „crossed“ patrí „moved“."
+   },
+   {
+    "id": 10167,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "His mouth is that dry, so the thirst must be real.",
+    "sk": "Ústa má také suché, že smäd musí byť skutočný.",
+    "answer": "His mouth is so dry, his thirst must be real.",
+    "step": "auto",
+    "reason": "Namiesto „his“ patrí „so the“."
+   },
+   {
+    "id": 10167,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "His mouth is that dry, so the thirst must be real.",
+    "sk": "Ústa má také suché, že smäd musí byť skutočný.",
+    "answer": "Her mouth is so dry the thirst must be real.",
+    "step": "auto",
+    "reason": "Chýba „so“."
+   },
+   {
+    "id": 8293,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She never shares food, so this one must be special.",
+    "sk": "Jedlo nikdy nedelí, takže tento croissant musí byť výnimočný.",
+    "answer": "He never shares his food, so this croissant must be something special.",
+    "step": "auto",
+    "reason": "„his“ tu nepatrí. „something“ tu nepatrí."
+   },
+   {
+    "id": 8293,
+    "batch": "L",
+    "level": "B1",
+    "long": false,
+    "reference": "She never shares food, so this one must be special.",
+    "sk": "Jedlo nikdy nedelí, takže tento croissant musí byť výnimočný.",
+    "answer": "He never shares food, so this particular croissant must be exceptional.",
+    "step": "auto",
+    "reason": "„particular“ tu nepatrí."
+   },
+   {
+    "id": 3494,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "If the ball had landed in black, she would have gone home with empty pockets.",
+    "sk": "Keby bola guľôčka padla na čiernej, išla by domov s prázdnymi vreckami.",
+    "answer": "If the ball had fallen on black, she would have gone home empty-handed.",
+    "step": "auto",
+    "reason": "Namiesto „fallen“ patrí „landed“. Chýba „with“."
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "sk": "Strážnik ľutuje - kiežby bol otočil kameru k obzoru o minútu skôr.",
+    "answer": "The guard regrets it - he wishes he had turned the camera toward the horizon a minute earlier.",
+    "step": "auto",
+    "reason": "„regrets it he“ tu nepatrí."
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "sk": "Strážnik ľutuje - kiežby bol otočil kameru k obzoru o minútu skôr.",
+    "answer": "The security guard is sorry - he wishes he'd turned the camera toward the horizon a minute sooner.",
+    "step": "auto",
+    "reason": "„is sorry he“ tu nepatrí."
+   },
+   {
+    "id": 2955,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "The guard wishes he had turned the camera towards the horizon a minute earlier.",
+    "sk": "Strážnik ľutuje - kiežby bol otočil kameru k obzoru o minútu skôr.",
+    "answer": "The guard regrets it - if only he had turned the camera toward the horizon a minute earlier.",
+    "step": "auto",
+    "reason": "Namiesto „regrets it if only“ patrí „wishes“."
+   },
+   {
+    "id": 2874,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "He should have seen a doctor days ago, but he waited until he could hardly stand.",
+    "sk": "Mal ísť k lekárovi už pred pár dňami, ale čakal, kým sa sotva udržal na nohách.",
+    "answer": "He should have gone to the doctor a few days ago, but he waited until he could barely stand.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 2874,
+    "batch": "L",
+    "level": "B2",
+    "long": true,
+    "reference": "He should have seen a doctor days ago, but he waited until he could hardly stand.",
+    "sk": "Mal ísť k lekárovi už pred pár dňami, ale čakal, kým sa sotva udržal na nohách.",
+    "answer": "He ought to have gone to the doctor a few days ago, but he waited until he could barely stand up.",
+    "step": "auto",
+    "reason": "Namiesto „ought to“ patrí „should“. Namiesto „the“ patrí „a“."
+   },
+   {
+    "id": 8812,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Her trainer wishes his pads were a bit thicker.",
+    "sk": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+    "answer": "The coach wishes his pads were a little thicker.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „her“."
+   },
+   {
+    "id": 8812,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Her trainer wishes his pads were a bit thicker.",
+    "sk": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+    "answer": "The coach wishes that his pads were slightly thicker.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „her“. „that“ tu nepatrí."
+   },
+   {
+    "id": 8812,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Her trainer wishes his pads were a bit thicker.",
+    "sk": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+    "answer": "The coach wishes that his mitts were a bit thicker.",
+    "step": "auto",
+    "reason": "Namiesto „the“ patrí „her“. „that“ tu nepatrí."
+   },
+   {
+    "id": 8209,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By Friday she will have booked a fifth appointment at the studio.",
+    "sk": "Do piatku si zarezervuje piaty termín v štúdiu.",
+    "answer": "By Friday he will have reserved the fifth appointment at the studio.",
+    "step": "auto",
+    "reason": "Namiesto „reserved“ patrí „booked“."
+   },
+   {
+    "id": 8209,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By Friday she will have booked a fifth appointment at the studio.",
+    "sk": "Do piatku si zarezervuje piaty termín v štúdiu.",
+    "answer": "She will have booked the fifth studio slot by Friday.",
+    "step": "auto",
+    "reason": "Chýba „by Friday“. Namiesto „studio slot by Friday“ patrí „appointment at the studio“."
+   },
+   {
+    "id": 10013,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is holding a blue ice pack against the lump.",
+    "sk": "Práve teraz tlačí modrý obklad na hrču.",
+    "answer": "Right now he's pressing a blue compress onto the bump.",
+    "step": "auto",
+    "reason": "Namiesto „onto“ patrí „against“."
+   },
+   {
+    "id": 10013,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is holding a blue ice pack against the lump.",
+    "sk": "Práve teraz tlačí modrý obklad na hrču.",
+    "answer": "At the moment he is pushing a blue compress against the bump.",
+    "step": "auto",
+    "reason": "Namiesto „at the moment“ patrí „right now“. Namiesto „pushing“ patrí „holding“."
+   },
+   {
+    "id": 10013,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is holding a blue ice pack against the lump.",
+    "sk": "Práve teraz tlačí modrý obklad na hrču.",
+    "answer": "He is pressing a blue compress on the bump at this very moment.",
+    "step": "auto",
+    "reason": "Chýba „right now“. „at this very moment“ tu nepatrí."
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "sk": "Do desiatej už bude zohrievať rezance dve hodiny v kuse.",
+    "answer": "By ten o'clock, he will have been heating the noodles for two hours straight.",
+    "step": "auto",
+    "reason": "Namiesto „heating“ patrí „reheating“."
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "sk": "Do desiatej už bude zohrievať rezance dve hodiny v kuse.",
+    "answer": "By ten, she will have been warming up the noodles for two hours in a row.",
+    "step": "auto",
+    "reason": "Namiesto „warming up“ patrí „reheating“."
+   },
+   {
+    "id": 10366,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "By ten he will have been reheating noodles for two hours straight.",
+    "sk": "Do desiatej už bude zohrievať rezance dve hodiny v kuse.",
+    "answer": "By ten o'clock he will have been reheating the noodles for two straight hours.",
+    "step": "auto",
+    "reason": "Pozor na poradie slov: „hours straight“."
+   },
+   {
+    "id": 10866,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been waiting for two hours before his number finally appeared.",
+    "sk": "Čakal dve hodiny, kým sa konečne objavilo jeho číslo.",
+    "answer": "He had been waiting for two hours before his number at last appeared.",
+    "step": "auto",
+    "reason": "Namiesto „at last“ patrí „finally“."
+   },
+   {
+    "id": 3937,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She will buy another charm when she comes to this market again.",
+    "sk": "Kúpi si ďalší prívesok, keď príde na tento trh znova.",
+    "answer": "She's going to buy another pendant when she comes to this market again.",
+    "step": "auto",
+    "reason": "Namiesto „is going to“ patrí „will“."
+   },
+   {
+    "id": 3937,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She will buy another charm when she comes to this market again.",
+    "sk": "Kúpi si ďalší prívesok, keď príde na tento trh znova.",
+    "answer": "She'll buy another pendant the next time she comes to this market.",
+    "step": "auto",
+    "reason": "Namiesto „the next time“ patrí „when“. Chýba „again“."
+   },
+   {
+    "id": 7998,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The veranda, where she now spends every morning, faces the sunrise.",
+    "sk": "Veranda, na ktorej teraz trávi každé ráno, je otočená na východ slnka.",
+    "answer": "The veranda that she now spends every morning on faces the sunrise.",
+    "step": "auto",
+    "reason": "Namiesto „that“ patrí „where“. „on“ tu nepatrí."
+   },
+   {
+    "id": 7998,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The veranda, where she now spends every morning, faces the sunrise.",
+    "sk": "Veranda, na ktorej teraz trávi každé ráno, je otočená na východ slnka.",
+    "answer": "The veranda where she now spends every single morning faces the sunrise.",
+    "step": "auto",
+    "reason": "„single“ tu nepatrí."
+   },
+   {
+    "id": 10574,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been training for hours before the light was finally right.",
+    "sk": "Trénoval hodiny, kým bolo svetlo konečne správne.",
+    "answer": "He had been practising for hours before the light was finally right.",
+    "step": "auto",
+    "reason": "Namiesto „practising“ patrí „training“."
+   },
+   {
+    "id": 10574,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been training for hours before the light was finally right.",
+    "sk": "Trénoval hodiny, kým bolo svetlo konečne správne.",
+    "answer": "He had been training for hours before the light was finally correct.",
+    "step": "auto",
+    "reason": "Namiesto „correct“ patrí „right“."
+   },
+   {
+    "id": 10574,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "He had been training for hours before the light was finally right.",
+    "sk": "Trénoval hodiny, kým bolo svetlo konečne správne.",
+    "answer": "He had been rehearsing for hours before the light finally looked right.",
+    "step": "auto",
+    "reason": "Namiesto „rehearsing“ patrí „training“. Namiesto „finally looked“ patrí „was finally“."
+   },
+   {
+    "id": 9038,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is scribbling a note while the laptop screen glows.",
+    "sk": "Práve teraz čmára poznámku, kým obrazovka notebooku svieti.",
+    "answer": "At the moment he is scribbling a note while his laptop screen is glowing.",
+    "step": "auto",
+    "reason": "Namiesto „at the moment“ patrí „right now“. Namiesto „his“ patrí „the“."
+   },
+   {
+    "id": 9038,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now he is scribbling a note while the laptop screen glows.",
+    "sk": "Práve teraz čmára poznámku, kým obrazovka notebooku svieti.",
+    "answer": "Right now he is scribbling a note as the laptop screen shines.",
+    "step": "auto",
+    "reason": "Namiesto „as“ patrí „while“."
+   },
+   {
+    "id": 10107,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The terminal was empty; even so, she felt watched.",
+    "sk": "Terminál bol prázdny; aj tak mala pocit, že ju niekto sleduje.",
+    "answer": "The terminal was empty; nevertheless, she felt as if somebody was watching her.",
+    "step": "auto",
+    "reason": "Namiesto „nevertheless“ patrí „even so“. Namiesto „as if somebody“ patrí „like someone“."
+   },
+   {
+    "id": 10107,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "The terminal was empty; even so, she felt watched.",
+    "sk": "Terminál bol prázdny; aj tak mala pocit, že ju niekto sleduje.",
+    "answer": "Although the terminal was empty, she had the feeling that someone was watching her.",
+    "step": "auto",
+    "reason": "„although“ tu nepatrí. Namiesto „she had the feeling“ patrí „even so she felt“."
+   },
+   {
+    "id": 9913,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She had her boots dyed purple last summer.",
+    "sk": "Vlani si dala čižmy zafarbiť na fialovo.",
+    "answer": "Last year she got her boots dyed purple.",
+    "step": "auto",
+    "reason": "Namiesto „got“ patrí „had“."
+   },
+   {
+    "id": 9913,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "She had her boots dyed purple last summer.",
+    "sk": "Vlani si dala čižmy zafarbiť na fialovo.",
+    "answer": "Last year, she had her boots dyed violet.",
+    "step": "auto",
+    "reason": "Namiesto „violet“ patrí „purple“."
+   },
+   {
+    "id": 9966,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now they are shaking hands on the sunny rooftop.",
+    "sk": "Práve teraz si na slnečnej streche podávajú ruky.",
+    "answer": "At the moment they are shaking hands on a sunny roof.",
+    "step": "auto",
+    "reason": "Namiesto „at the moment“ patrí „right now“. Namiesto „a“ patrí „the“."
+   },
+   {
+    "id": 9966,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "Right now they are shaking hands on the sunny rooftop.",
+    "sk": "Práve teraz si na slnečnej streche podávajú ruky.",
+    "answer": "They are shaking hands on the sunlit roof at this very moment.",
+    "step": "auto",
+    "reason": "Namiesto „sunlit“ patrí „sunny“. Namiesto „at this very moment“ patrí „right now“."
+   },
+   {
+    "id": 6884,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "If he had started earlier, he would have missed the mist.",
+    "sk": "Keby vyrazil skôr, hmlu by bol minul.",
+    "answer": "If he had set off earlier, he would have missed the fog.",
+    "step": "auto",
+    "reason": "Namiesto „fog“ patrí „mist“."
+   },
+   {
+    "id": 6884,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "If he had started earlier, he would have missed the mist.",
+    "sk": "Keby vyrazil skôr, hmlu by bol minul.",
+    "answer": "Had he set off earlier, he would have missed the fog.",
+    "step": "auto",
+    "reason": "Namiesto „had he“ patrí „if he had“. Namiesto „fog“ patrí „mist“."
+   },
+   {
+    "id": 6884,
+    "batch": "L",
+    "level": "B2",
+    "long": false,
+    "reference": "If he had started earlier, he would have missed the mist.",
+    "sk": "Keby vyrazil skôr, hmlu by bol minul.",
+    "answer": "He would have missed the fog if he had set out earlier.",
+    "step": "auto",
+    "reason": "Porovnaj svoju vetu so správnym prekladom."
+   }
+  ]
+ },
+ "raw_files": [
+  "phase1c/measure/cov_before.json",
+  "phase1c/measure/fa_before.json"
+ ]
+}

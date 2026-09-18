@@ -1,0 +1,12 @@
+{"changes":[
+{"target":"ann","op":"add_variant","id":25921,"variant":"They are watching a volcano from the grassy ridge.","lock":"a volcano","reason":"pozorujú also allows Present Continuous; a correct learner answer is rejected now"},
+{"target":"ann","op":"delete","id":25981,"key":"s","entry":"carries","reason":"ng1c_35 pairs a tense form with a verb form (not lemmas); handle the tense as a variant instead"},
+{"target":"syn","op":"remove_group","group":"ng1c_35","reason":"members carries/is carrying are not lemmas, and a tense change is not a synonym swap"},
+{"target":"ann","op":"add_variant","id":25981,"variant":"The waiter is carrying ten hot plates at once.","lock":"ten","reason":"nesie allows Present Continuous; replaces the invalid ng1c_35 group"},
+{"target":"ann","op":"merge","id":25981,"key":"d","value":{"The waiter":"A"},"reason":"Čašník has no article/demonstrative, so 'A waiter' is a correct answer"},
+{"target":"syn","op":"remove_members","group":"ng1c_39","members":["just now"],"reason":"'just now' usually means a moment ago, not 'right now' (false acceptance)"},
+{"target":"ann","op":"merge","id":13034,"key":"d","value":{"the girl":"A","the candles":"Z"},"reason":"dievča and sviečky have no article in the Slovak"},
+{"target":"ann","op":"delete","id":8293,"key":"s","entry":"shares","reason":"'She never splits food' changes the meaning; share_split gives a false acceptance here"},
+{"target":"ann","op":"append","id":2955,"key":"p","value":["+that"],"reason":"'wishes that he had turned' is correct and means the same"},
+{"target":"ann","op":"append","id":119,"key":"g","value":[["she"]],"reason":"prikladá does not fix gender; 'has he been tapping' is a correct answer"}
+],"unchanged":2,"notes":"7716 and 7037 unchanged; the 119 g chain falls inside the locked span, so the checker must allow a gender swap inside lk"}

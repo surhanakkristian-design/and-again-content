@@ -233,8 +233,21 @@ const NOT_A_NOUN = new Set([
   'alone', 'already', 'still', 'yet', 'soon', 'later', 'once', 'twice', 'is', 'was', 'will', 'would', 'can', 'could',
 ]);
 
-/** The other gender of a pronoun, given the next word (her → his before a noun, him otherwise). */
-export const flipPronoun = (word: string, next: string | undefined): string[] | null => {
+/** Verbs after which "her" + word is an object (→ him): double-object and verb + object + infinitive
+ *  ("gave her flowers", "let her go"). Elsewhere "her" before a word is read as the possessive (→ his). */
+const HER_OBJECT_AFTER = new Set([
+  'give', 'gives', 'gave', 'given', 'giving', 'show', 'shows', 'showed', 'shown', 'showing', 'tell', 'tells', 'told', 'telling',
+  'send', 'sends', 'sent', 'sending', 'bring', 'brings', 'brought', 'bringing', 'buy', 'buys', 'bought', 'buying',
+  'offer', 'offers', 'offered', 'offering', 'hand', 'hands', 'handed', 'handing', 'pass', 'passes', 'passed', 'passing',
+  'lend', 'lends', 'lent', 'lending', 'teach', 'teaches', 'taught', 'teaching', 'ask', 'asks', 'asked', 'asking',
+  'owe', 'owes', 'owed', 'promise', 'promises', 'promised', 'pay', 'pays', 'paid', 'sell', 'sells', 'sold',
+  'let', 'lets', 'letting', 'make', 'makes', 'made', 'making', 'help', 'helps', 'helped', 'helping',
+  'watch', 'watches', 'watched', 'see', 'sees', 'saw', 'seen', 'hear', 'hears', 'heard', 'wish', 'wished',
+]);
+
+/** The other gender of a pronoun, given the next and previous word. "her" before a word → his (possessive),
+ *  or him after a HER_OBJECT_AFTER verb; "her" before a non-noun → him. Exactly one reading, never both. */
+export const flipPronoun = (word: string, next: string | undefined, prev?: string): string[] | null => {
   const nounFollows = next !== undefined && !NOT_A_NOUN.has(next);
   switch (word) {
     case 'he': return ['she'];
@@ -244,20 +257,47 @@ export const flipPronoun = (word: string, next: string | undefined): string[] | 
     case 'herself': return ['himself'];
     case 'hers': return ['his'];
     case 'his': return nounFollows ? ['her'] : ['hers'];
-    case 'her': return nounFollows ? ['his', 'him'] : ['him'];
+    case 'her': return nounFollows && !(prev !== undefined && HER_OBJECT_AFTER.has(prev)) ? ['his'] : ['him'];
     default: return null;
   }
 };
 
-/** Surfaces of a group in the anchor's form(s); null when the anchor is not a form of a member. */
-export const groupAlternatives = (syn: SynForms, gid: string, anchorText: string): string[] | null => {
+/** Verb form context of a slot from the words before it (skipping adverbs/negation):
+ *  'pp' after have/be/get, 'base' after to/modals/do, 'pp_base' after an ambiguous 'd, null otherwise. */
+const SKIP_BEFORE_VERB = new Set(['not', 'never', 'just', 'already', 'also', 'really', 'even', 'ever', 'still', 'barely', 'hardly', 'only', 'always', 'often', 'finally', 'almost', 'nearly', 'recently', 'probably', 'actually', 'suddenly', 'quickly', 'carefully', 'slowly', 'completely', 'accidentally']);
+const PP_BEFORE = new Set(['have', 'has', 'had', 'having', "haven't", "hasn't", "hadn't", 'was', 'were', 'been', 'be', 'is', 'are', 'am', 'being',
+  "wasn't", "weren't", "isn't", "aren't", 'get', 'gets', 'got', 'gotten', 'getting']);
+const BASE_BEFORE = new Set(['to', 'will', 'would', 'can', 'could', 'shall', 'should', 'must', 'might', 'may', 'do', 'does', 'did',
+  "don't", "doesn't", "didn't", "won't", "wouldn't", "can't", 'cannot', "couldn't", "shouldn't", "mustn't", 'let', "let's"]);
+export const verbContext = (before: string[]): 'pp' | 'base' | 'pp_base' | null => {
+  for (let k = before.length - 1; k >= 0; k--) {
+    const w = before[k];
+    if (SKIP_BEFORE_VERB.has(w)) continue;
+    if (PP_BEFORE.has(w) || /'(s|ve|re|m)$/.test(w)) return 'pp';
+    if (BASE_BEFORE.has(w) || /'ll$/.test(w)) return 'base';
+    if (/'d$/.test(w)) return 'pp_base';
+    return null;
+  }
+  return null;
+};
+
+/** Surfaces of a group in the anchor's form; null when the anchor is not a form of a member.
+ *  An anchor that is several verb forms at once ("cut" = base/past/pp, "dropped" = past/pp) is narrowed by the
+ *  words before it (verbContext): pp after have/be/get, base after to/modals/do, otherwise the finite forms
+ *  (base + past, never pp). */
+export const groupAlternatives = (syn: SynForms, gid: string, anchorText: string, before?: string[]): string[] | null => {
   const group = syn.groups[gid];
   if (!group) return null;
   const key = normPhrase(anchorText);
-  const out = new Set<string>();
-  for (const list of Object.values(group.forms)) {
-    if (list.some((s) => normPhrase(s) === key)) for (const s of list) out.add(s);
+  let tags = Object.keys(group.forms).filter((tag) => group.forms[tag].some((s) => normPhrase(s) === key));
+  if (tags.length > 1 && group.pos === 'v' && before !== undefined) {
+    const ctx = verbContext(before);
+    const want = ctx === 'pp' ? ['pp'] : ctx === 'base' ? ['base'] : ctx === 'pp_base' ? ['pp', 'base'] : tags.filter((t) => t !== 'pp');
+    const keep = tags.filter((t) => want.includes(t));
+    if (keep.length) tags = keep;
   }
+  const out = new Set<string>();
+  for (const tag of tags) for (const s of group.forms[tag]) out.add(s);
   return out.size ? [...out] : null;
 };
 
@@ -378,7 +418,7 @@ export const sentenceGraph = (sent: Sentence, ann: Annotation, syn: SynForms, fl
     const r = anchorAt(anchor, 's');
     if (!r) continue;
     notes.groups.add(gid);
-    const alts = groupAlternatives(syn, gid, textOf(r));
+    const alts = groupAlternatives(syn, gid, textOf(r), raw.slice(Math.max(0, r[0] - 3), r[0]));
     if (!alts) note(notes, syn.groups[gid] ? `s_anchor_not_a_form:${anchor}->${gid}` : `s_unknown_group:${gid}`);
     if (!claim(r, [textOf(r), ...(alts ?? [])])) note(notes, `s_overlap:${anchor}`);
   }
@@ -388,7 +428,7 @@ export const sentenceGraph = (sent: Sentence, ann: Annotation, syn: SynForms, fl
     for (const anchor of chain) {
       const r = anchorAt(anchor, 'g');
       if (!r) continue;
-      const alts = r[1] - r[0] === 1 ? flipPronoun(raw[r[0]], raw[r[0] + 1]) : null;
+      const alts = r[1] - r[0] === 1 ? flipPronoun(raw[r[0]], raw[r[0] + 1], raw[r[0] - 1]) : null;
       if (!alts) { note(notes, `g_not_a_pronoun:${anchor}`); continue; }
       if (!claim(r, alts)) note(notes, `g_overlap:${anchor}`);
     }

@@ -173,9 +173,10 @@ for (const id of annotationIds()) {
   }
 }
 
-mkdirSync(join(P1B, 'review'), { recursive: true });
+const LINT_DIR = process.env.LINT_DIR ?? join(P1B, 'review');
+mkdirSync(LINT_DIR, { recursive: true });
 const summary: Record<string, number> = {};
 for (const i of issues) summary[i.cls] = (summary[i.cls] ?? 0) + 1;
-writeFileSync(join(P1B, 'review', 'lint.json'), JSON.stringify({ annotations, library_topics: libFiles.length, synonym_groups: synGroups.size, summary, issues }, null, 1));
+writeFileSync(join(LINT_DIR, 'lint.json'), JSON.stringify({ annotations, library_topics: libFiles.length, synonym_groups: synGroups.size, summary, issues }, null, 1));
 console.log(`lint: ${annotations} annotations, ${libFiles.length} library topics, ${synGroups.size} synonym groups, ${issues.length} issues`);
 for (const [cls, n] of Object.entries(summary).sort((a, b) => b[1] - a[1])) console.log(`${cls}: ${n}`);
