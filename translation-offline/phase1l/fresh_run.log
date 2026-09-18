@@ -1,0 +1,13 @@
+[FREEZE] 6 python files identical to commit 994e045d01dc0930df0415581ca29449c093bfa1
+[PREFLIGHT FRESH/before-hygiene] L2 lock firings/rejections under BASE: 150   L3-eligible under LOCKTIP: 460
+[PREFLIGHT FRESH/before-hygiene] (DEV reference: 65 lock rejections / 318 L3-eligible; 1j replay 310/336)
+[PREFLIGHT FRESH/after-hygiene] L2 lock firings/rejections under BASE: 150   L3-eligible under LOCKTIP: 460
+[PREFLIGHT FRESH/after-hygiene] (DEV reference: 65 lock rejections / 318 L3-eligible; 1j replay 310/336)
+[FRESH] L3-eligible before 460 / after 460   unique requests 460   reused 0   NEW 460
+[FRESH] calls made: http200 460  transport-dead 0
+(a) all 600, after hygiene  coverage 191/217 = 88.02% [82.94, 92.02]  FA 15/383 = 3.92% [2.21, 6.38]  FA T 3/130 = 2.31% [0.48, 6.60]
+(b) excl. sid 140006, after hygiene  coverage 188/214 = 87.85% [82.71, 91.91]  FA 14/377 = 3.71% [2.04, 6.15]  FA T 3/128 = 2.34% [0.49, 6.70]
+(c) all 600, BEFORE hygiene  coverage 191/217 = 88.02% [82.94, 92.02]  FA 15/383 = 3.92% [2.21, 6.38]  FA T 3/130 = 2.31% [0.48, 6.60]
+(d) excl. sid 140006, before hygiene  coverage 188/214 = 87.85% [82.71, 91.91]  FA 14/377 = 3.71% [2.04, 6.15]  FA T 3/128 = 2.34% [0.49, 6.70]
+calls {"counted_calls_http200": 460, "failed_empty_200": 0, "non200_attempts": 0, "tokens_in": 99509, "tokens_out": 460, "spend_usd": 0.02557, "phase_budget_remaining_estimate": 873, "caveat": "billed versus free-tier is NOT detectable from the response body; these are list-price figures for the tokens the API reported.", "planned_new": 460, "made": {"ok": 460, "bad": 0}, "reused": 0, "unique_requests": 460}
+FINAL_RUN_DONE written — the fresh side is closed.

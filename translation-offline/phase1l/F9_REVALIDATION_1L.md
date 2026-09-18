@@ -33,3 +33,10 @@ errors: 0
 ## Sentences whose F9 frame moved because of the 2.2 fix
 
 none
+
+
+## Out-of-sample: the 70 FRESH sentences vs the stored `tf_gold` (Phase 1L final run)
+
+agree 51 / conservative 19 / error 0 of 70 — error rate 0/70 = 0.00% [0.00, 5.13]
+
+No errors: F9 never named a time frame the hand-check contradicts.
