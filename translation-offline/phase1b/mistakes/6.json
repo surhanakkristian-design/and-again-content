@@ -1,0 +1,251 @@
+{
+ "type_id": 6,
+ "topic": "A, AN, THE",
+ "level": "A1",
+ "items": [
+  {
+   "id": "6.01",
+   "kind": "missing a",
+   "verdict": "wrong",
+   "pattern": "drop a/an before a singular countable noun",
+   "slots": [
+    "right"
+   ],
+   "sk": "Chýba člen „a“: „{right}“.",
+   "cz": "Chybí člen „a“: „{right}“.",
+   "en": "“a” is missing: “{right}”."
+  },
+  {
+   "id": "6.02",
+   "kind": "missing the",
+   "verdict": "wrong",
+   "pattern": "drop the before a known or specific noun",
+   "slots": [
+    "right"
+   ],
+   "sk": "Chýba člen „the“: „{right}“.",
+   "cz": "Chybí člen „the“: „{right}“.",
+   "en": "“the” is missing: “{right}”."
+  },
+  {
+   "id": "6.03",
+   "kind": "a/an mixed up",
+   "verdict": "wrong",
+   "pattern": "a before a vowel sound or an before a consonant sound",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Podľa výslovnosti patrí „{right}“, nie „{wrong}“.",
+   "cz": "Podle výslovnosti patří „{right}“, ne „{wrong}“.",
+   "en": "By sound, it is “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "6.04",
+   "kind": "a instead of the",
+   "verdict": "wrong",
+   "pattern": "a/an where the thing is specific or already known",
+   "slots": [
+    "right"
+   ],
+   "sk": "Je to konkrétna vec, preto „{right}“.",
+   "cz": "Je to konkrétní věc, proto „{right}“.",
+   "en": "It is a specific thing, so “{right}”."
+  },
+  {
+   "id": "6.05",
+   "kind": "the instead of a",
+   "verdict": "wrong",
+   "pattern": "the where the thing is mentioned for the first time",
+   "slots": [
+    "right"
+   ],
+   "sk": "Vec sa spomína prvýkrát, preto „{right}“.",
+   "cz": "Věc se zmiňuje poprvé, proto „{right}“.",
+   "en": "First mention, so “{right}”."
+  },
+  {
+   "id": "6.06",
+   "kind": "a with plural noun",
+   "verdict": "wrong",
+   "pattern": "a/an before a plural noun (a books)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pred množným číslom nepatrí „a“: „{right}“.",
+   "cz": "Před množným číslem nepatří „a“: „{right}“.",
+   "en": "No “a” before a plural: “{right}”."
+  },
+  {
+   "id": "6.07",
+   "kind": "a with uncountable noun",
+   "verdict": "wrong",
+   "pattern": "a/an before an uncountable noun (a sugar, a water)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Toto slovo sa nepočíta, bez „a“: „{right}“.",
+   "cz": "Toto slovo se nepočítá, bez „a“: „{right}“.",
+   "en": "This noun is uncountable, so no “a”: “{right}”."
+  },
+  {
+   "id": "6.08",
+   "kind": "the for things in general",
+   "verdict": "wrong",
+   "pattern": "the before a plural or uncountable noun meant in general (I like the cats)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Keď ide o všeobecnosť, bez „the“: „{right}“.",
+   "cz": "Když jde o obecnost, bez „the“: „{right}“.",
+   "en": "Speaking in general, no “the”: “{right}”."
+  },
+  {
+   "id": "6.09",
+   "kind": "the with sport, meal or language",
+   "verdict": "wrong",
+   "pattern": "play the football, have the breakfast, speak the English",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pred športom, jedlom dňa či jazykom nie je „the“: „{right}“.",
+   "cz": "Před sportem, jídlem dne či jazykem není „the“: „{right}“.",
+   "en": "No “the” before sports, meals or languages: “{right}”."
+  },
+  {
+   "id": "6.10",
+   "kind": "missing the with unique thing",
+   "verdict": "wrong",
+   "pattern": "sun, moon, sky, world without the",
+   "slots": [
+    "right"
+   ],
+   "sk": "Jediná vec na svete má „the“: „{right}“.",
+   "cz": "Jediná věc na světě má „the“: „{right}“.",
+   "en": "Unique things take “the”: “{right}”."
+  },
+  {
+   "id": "6.11",
+   "kind": "missing a with job",
+   "verdict": "wrong",
+   "pattern": "She is doctor / He works as teacher",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pri povolaní patrí „a/an“: „{right}“.",
+   "cz": "U povolání patří „a/an“: „{right}“.",
+   "en": "Jobs need “a/an”: “{right}”."
+  },
+  {
+   "id": "6.12",
+   "kind": "the with name or country",
+   "verdict": "wrong",
+   "pattern": "the before a person's name or most countries/cities",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pred menom či krajinou nie je „the“: „{right}“.",
+   "cz": "Před jménem či zemí není „the“: „{right}“.",
+   "en": "No “the” before names or most countries: “{right}”."
+  },
+  {
+   "id": "6.13",
+   "kind": "one instead of a",
+   "verdict": "correct_with_tip",
+   "pattern": "one where plain a/an is meant",
+   "slots": [
+    "right"
+   ],
+   "sk": "Prirodzenejšie je „{right}“.",
+   "cz": "Přirozenější je „{right}“.",
+   "en": "More natural: “{right}”."
+  },
+  {
+   "id": "6.14",
+   "kind": "article with possessive",
+   "verdict": "wrong",
+   "pattern": "the/a together with my/his/her (the my bag)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pred „my/his/her…“ nepatrí člen: „{right}“.",
+   "cz": "Před „my/his/her…“ nepatří člen: „{right}“.",
+   "en": "No article before “my/his/her…”: “{right}”."
+  },
+  {
+   "id": "6.15",
+   "kind": "the with body part",
+   "verdict": "wrong",
+   "pattern": "the instead of my/his/her/its before a body part",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pri časti tela patrí „my/his/her/its“: „{right}“.",
+   "cz": "U části těla patří „my/his/her/its“: „{right}“.",
+   "en": "Body parts take “my/his/her/its”: “{right}”."
+  },
+  {
+   "id": "6.16",
+   "kind": "missing 3rd person -s",
+   "verdict": "wrong",
+   "pattern": "drop -s/-es from a he/she/it verb",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pri „he/she/it“ chýba -s: „{right}“.",
+   "cz": "U „he/she/it“ chybí -s: „{right}“.",
+   "en": "With he/she/it, add -s: “{right}”."
+  },
+  {
+   "id": "6.17",
+   "kind": "wrong pronoun form",
+   "verdict": "wrong",
+   "pattern": "subject form instead of object form or vice versa (he/him, she/her)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Tu patrí „{right}“, nie „{wrong}“.",
+   "cz": "Tady patří „{right}“, ne „{wrong}“.",
+   "en": "Use “{right}” here, not “{wrong}”."
+  },
+  {
+   "id": "6.18",
+   "kind": "less natural wording",
+   "verdict": "correct_with_tip",
+   "pattern": "grammatical, same meaning, but a clumsy calque (strong headache, on the meadow)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Prirodzenejšie je „{right}“.",
+   "cz": "Přirozenější je „{right}“.",
+   "en": "More natural: “{right}”."
+  },
+  {
+   "id": "6.19",
+   "kind": "wrong preposition",
+   "verdict": "wrong",
+   "pattern": "replace the preposition with a typical SK/CZ calque (in/on/at/to/for)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Zlá predložka: „{right}“, nie „{wrong}“.",
+   "cz": "Špatná předložka: „{right}“, ne „{wrong}“.",
+   "en": "Wrong preposition: “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "6.20",
+   "kind": "wrong word",
+   "verdict": "wrong",
+   "pattern": "a different word whose meaning does not fit (carry for wear, listen for hear)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Toto slovo tu nesedí: „{right}“, nie „{wrong}“.",
+   "cz": "Toto slovo sem nesedí: „{right}“, ne „{wrong}“.",
+   "en": "Wrong word here: “{right}”, not “{wrong}”."
+  }
+ ]
+}

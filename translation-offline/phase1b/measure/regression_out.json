@@ -1,0 +1,558 @@
+{
+ "summary": {
+  "bench": {
+   "total": 20,
+   "annotated": 5,
+   "changed": 1,
+   "agree_gemini_v2": 4,
+   "agree_gemini_phase1": 17
+  },
+  "phase1_mistakes": {
+   "total": 497,
+   "changed": 27
+  }
+ },
+ "bench_changes": [
+  {
+   "id": 1,
+   "exercise_id": 20435,
+   "answer": "The large plate is white and completely clean.",
+   "phase1": "correct",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 2,
+   "exercise_id": 26556,
+   "answer": "He sled down this slope every winter.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 3,
+   "exercise_id": 26084,
+   "answer": "He is able to find her before she comes home.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 4,
+   "exercise_id": 18251,
+   "answer": "They watch storm from porch.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 5,
+   "exercise_id": 21510,
+   "answer": "The man sits in a wooden bench.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 6,
+   "exercise_id": 16034,
+   "answer": "Yesterday she bought a big mango.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 7,
+   "exercise_id": 11348,
+   "answer": "Look! The assistant holds the reflector up now.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 8,
+   "exercise_id": 11980,
+   "answer": "Wait a minute and the water will biol!",
+   "phase1": "correct_with_tip",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 9,
+   "exercise_id": 11610,
+   "answer": "On the bench is one long bandage.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 10,
+   "exercise_id": 17684,
+   "answer": "This ketchup is more thick than the sauce in the fridge.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 11,
+   "exercise_id": 8017,
+   "answer": "The goalkeeper was standing on the line when the referee pointed to the penalty spot.",
+   "phase1": "correct",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 15,
+   "exercise_id": 7845,
+   "category": "correct but avoids the practised grammar (active)",
+   "answer": "They dipped the wooden paddle into the green water on both sides.",
+   "phase1": "correct_with_tip",
+   "phase1_step": "mistake",
+   "gemini_37": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "feedback_sk": "„they dipped“ tu nepatrí. Chýba „was dipped“.",
+   "changed": true,
+   "agrees_gemini": false
+  },
+  {
+   "id": 17,
+   "exercise_id": 7716,
+   "answer": "She managed staying completely still until the dragonfly settled.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 18,
+   "exercise_id": 9552,
+   "answer": "If he had added a whole fork, the dish would have been too hot to eat.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 19,
+   "exercise_id": 10330,
+   "answer": "She could laugh, but she just raised her eyebrows.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 20,
+   "exercise_id": 381,
+   "answer": "I wish my cat was as calm as that ginger one in her arms.",
+   "phase1": "correct_with_tip",
+   "v2": "no_annotation"
+  }
+ ],
+ "phase1_mistake_changes": [
+  {
+   "exercise_id": 4571,
+   "kind": "will in Zero Conditional",
+   "text": "When you leave one screw loose, the whole chair will wobble.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 5740,
+   "kind": "missing article the",
+   "text": "Don't panic, I will change water while you find a pan.",
+   "phase1": "wrong",
+   "v2": "correct",
+   "v2_step": "match",
+   "changed": true
+  },
+  {
+   "exercise_id": 5872,
+   "kind": "Passive instead of Active",
+   "text": "Both arms were raised above his head while the hall roared.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 6173,
+   "kind": "no backshift",
+   "text": "She said that she wants one exactly like it.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 6206,
+   "kind": "going to instead of will",
+   "text": "Be careful, that handle is going to burn your fingers if you grab it now.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 6206,
+   "kind": "going to instead of will",
+   "text": "Be careful, the handle is going to burn your fingers if you grab it now.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 7238,
+   "kind": "will in Zero Conditional",
+   "text": "When you step exactly where Mira steps, your feet will stay completely dry.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 7238,
+   "kind": "legs instead of feet",
+   "text": "When you step exactly where Mira steps, your legs stay completely dry.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 7845,
+   "kind": "from instead of on",
+   "text": "The wooden paddle was dipped into the green water from both sides.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "mistake",
+   "changed": true
+  },
+  {
+   "exercise_id": 7845,
+   "kind": "active instead of Passive",
+   "text": "They dipped the wooden paddle into the green water on both sides.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8020,
+   "kind": "Past Simple for unfinished period",
+   "text": "She scored three penalties this season and she didn't miss any.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "has to instead of must",
+   "text": "She never shares food, so this croissant has to be special.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "has to instead of must",
+   "text": "She never shares food, so this croissant has to be exceptional.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "no modal of deduction",
+   "text": "She never shares food, so this one is special.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "no modal of deduction",
+   "text": "She never shares food, so this one is exceptional.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "no modal of deduction",
+   "text": "She never shares food, so this croissant is special.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8293,
+   "kind": "no modal of deduction",
+   "text": "She never shares food, so this croissant is exceptional.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8491,
+   "kind": "will in Zero Conditional",
+   "text": "If you score the skin first, the pomegranate will open easily.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8491,
+   "kind": "will in Zero Conditional",
+   "text": "When you score the skin first, the pomegranate will open easily.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 8495,
+   "kind": "active instead of Passive",
+   "text": "They placed the crate under the open fruit.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 9007,
+   "kind": "Past Simple for unfinished period",
+   "text": "He verified six sources tonight, and the pile is still growing.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 9495,
+   "kind": "active instead of Passive",
+   "text": "They rewrote her speech twice before she ever walked onto that stage.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 10167,
+   "kind": "has to instead of must",
+   "text": "His mouth is that dry, so his thirst has to be real.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 10167,
+   "kind": "has to instead of must",
+   "text": "His mouth is so dry that the thirst has to be real.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 10167,
+   "kind": "has to instead of must",
+   "text": "His mouth is so dry that his thirst has to be real.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 10167,
+   "kind": "no modal of deduction",
+   "text": "His mouth is so dry that the thirst is real.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  },
+  {
+   "exercise_id": 10612,
+   "kind": "active instead of Passive",
+   "text": "They checked the knot twice before she leaned back into the rope.",
+   "phase1": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "changed": true
+  }
+ ],
+ "bench": [
+  {
+   "id": 1,
+   "exercise_id": 20435,
+   "answer": "The large plate is white and completely clean.",
+   "phase1": "correct",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 2,
+   "exercise_id": 26556,
+   "answer": "He sled down this slope every winter.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 3,
+   "exercise_id": 26084,
+   "answer": "He is able to find her before she comes home.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 4,
+   "exercise_id": 18251,
+   "answer": "They watch storm from porch.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 5,
+   "exercise_id": 21510,
+   "answer": "The man sits in a wooden bench.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 6,
+   "exercise_id": 16034,
+   "answer": "Yesterday she bought a big mango.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 7,
+   "exercise_id": 11348,
+   "answer": "Look! The assistant holds the reflector up now.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 8,
+   "exercise_id": 11980,
+   "answer": "Wait a minute and the water will biol!",
+   "phase1": "correct_with_tip",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 9,
+   "exercise_id": 11610,
+   "answer": "On the bench is one long bandage.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 10,
+   "exercise_id": 17684,
+   "answer": "This ketchup is more thick than the sauce in the fridge.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 11,
+   "exercise_id": 8017,
+   "answer": "The goalkeeper was standing on the line when the referee pointed to the penalty spot.",
+   "phase1": "correct",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 12,
+   "exercise_id": 1994,
+   "category": "missing part",
+   "answer": "By the time the couple got their straws, he had put the umbrella on top.",
+   "phase1": "wrong",
+   "phase1_step": "auto",
+   "gemini_37": "wrong",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "feedback_sk": "Chýba „and the cherry“.",
+   "changed": false,
+   "agrees_gemini": true
+  },
+  {
+   "id": 13,
+   "exercise_id": 5959,
+   "category": "grammar error (will in the if-clause)",
+   "answer": "If he will turn the ring once more, she will drop the price again.",
+   "phase1": "wrong",
+   "phase1_step": "mistake",
+   "gemini_37": "wrong",
+   "v2": "wrong",
+   "v2_step": "mistake",
+   "feedback_sk": "Po „if“ patrí v First Conditional Present Simple: „turns“, nie „will turn“.",
+   "changed": false,
+   "agrees_gemini": true
+  },
+  {
+   "id": 14,
+   "exercise_id": 4612,
+   "category": "word order error",
+   "answer": "If he held the screwdriver, that shelf would by now on the floor be.",
+   "phase1": "wrong",
+   "phase1_step": "auto",
+   "gemini_37": "wrong",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "feedback_sk": "Pozor na poradie slov: „be on the floor by now“.",
+   "changed": false,
+   "agrees_gemini": true
+  },
+  {
+   "id": 15,
+   "exercise_id": 7845,
+   "category": "correct but avoids the practised grammar (active)",
+   "answer": "They dipped the wooden paddle into the green water on both sides.",
+   "phase1": "correct_with_tip",
+   "phase1_step": "mistake",
+   "gemini_37": "correct_with_tip",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "feedback_sk": "„they dipped“ tu nepatrí. Chýba „was dipped“.",
+   "changed": true,
+   "agrees_gemini": false
+  },
+  {
+   "id": 16,
+   "exercise_id": 2121,
+   "category": "word order error (question order in a reported question)",
+   "answer": "His flatmate asked him why did he spend two hours a day just to sit at a desk.",
+   "phase1": "wrong",
+   "phase1_step": "mistake",
+   "gemini_37": "wrong",
+   "v2": "wrong",
+   "v2_step": "auto",
+   "feedback_sk": "„did“ tu nepatrí. Namiesto „spend“ patrí „spent“.",
+   "changed": false,
+   "agrees_gemini": true
+  },
+  {
+   "id": 17,
+   "exercise_id": 7716,
+   "answer": "She managed staying completely still until the dragonfly settled.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 18,
+   "exercise_id": 9552,
+   "answer": "If he had added a whole fork, the dish would have been too hot to eat.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 19,
+   "exercise_id": 10330,
+   "answer": "She could laugh, but she just raised her eyebrows.",
+   "phase1": "wrong",
+   "v2": "no_annotation"
+  },
+  {
+   "id": 20,
+   "exercise_id": 381,
+   "answer": "I wish my cat was as calm as that ginger one in her arms.",
+   "phase1": "correct_with_tip",
+   "v2": "no_annotation"
+  }
+ ]
+}

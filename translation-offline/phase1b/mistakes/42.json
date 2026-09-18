@@ -1,0 +1,249 @@
+{
+ "type_id": 42,
+ "topic": "Passive or Active",
+ "level": "B1",
+ "items": [
+  {
+   "id": "42.01",
+   "kind": "Active instead of Passive",
+   "verdict": "correct_with_tip",
+   "pattern": "sentence made active where the focus is on the thing (An electrician fixed that pipe)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Dôraz je na veci, nie na tom, kto dej robí, preto sa hodí Passive: „{right}“.",
+   "cz": "Důraz je na věci, ne na tom, kdo děj dělá, proto se hodí Passive: „{right}“.",
+   "en": "The focus is on the thing, not the doer, so Passive fits: “{right}”."
+  },
+  {
+   "id": "42.02",
+   "kind": "Passive instead of Active",
+   "verdict": "correct_with_tip",
+   "pattern": "sentence made passive where the subject does the action (Both arms were raised above his head)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Dej robí podmet sám, preto patrí Active: „{right}“.",
+   "cz": "Děj dělá podmět sám, proto patří Active: „{right}“.",
+   "en": "The subject does the action, so use Active: “{right}”."
+  },
+  {
+   "id": "42.03",
+   "kind": "calqued Passive word order",
+   "verdict": "wrong",
+   "pattern": "object first with an active verb, copying Slovak/Czech order (That pipe fixed an electrician)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Takto by vec dej robila sama; treba Passive: „{right}“.",
+   "cz": "Takto by věc děj dělala sama; je potřeba Passive: „{right}“.",
+   "en": "This means the thing did it; use Passive: “{right}”."
+  },
+  {
+   "id": "42.04",
+   "kind": "was plus active object",
+   "verdict": "wrong",
+   "pattern": "was + verb with an object where the subject acts (He was raised both arms)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Dej robí podmet sám, preto Active „{right}“, nie Passive „{wrong}“.",
+   "cz": "Děj dělá podmět sám, proto Active „{right}“, ne Passive „{wrong}“.",
+   "en": "The subject does it, so Active “{right}”, not Passive “{wrong}”."
+  },
+  {
+   "id": "42.05",
+   "kind": "agent with from or of",
+   "verdict": "wrong",
+   "pattern": "from/of instead of by for the doer (fixed from an electrician)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Pôvodcu deja v Passive uvádza „by“: „{right}“, nie „{wrong}“.",
+   "cz": "Původce děje v Passive uvádí „by“: „{right}“, ne „{wrong}“.",
+   "en": "Passive introduces the doer with “by”: “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.06",
+   "kind": "instrument with by",
+   "verdict": "wrong",
+   "pattern": "by for a tool instead of with (opened by a knife)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Nástroj uvádza „with“, pôvodcu „by“: „{right}“, nie „{wrong}“.",
+   "cz": "Nástroj uvádí „with“, původce „by“: „{right}“, ne „{wrong}“.",
+   "en": "A tool takes “with”, the doer “by”: “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.07",
+   "kind": "missing be in Passive",
+   "verdict": "wrong",
+   "pattern": "past participle without was/is (The crate placed under the fruit)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Podmet dej nerobí, preto Passive s „was/is“: „{right}“, nie „{wrong}“.",
+   "cz": "Podmět děj nedělá, proto Passive s „was/is“: „{right}“, ne „{wrong}“.",
+   "en": "The subject doesn't do the action, so Passive with “was/is”: “{right}”."
+  },
+  {
+   "id": "42.08",
+   "kind": "base form instead of participle",
+   "verdict": "wrong",
+   "pattern": "be + base verb (was place)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "V Passive patrí za „be“ past participle: „{right}“, nie „{wrong}“.",
+   "cz": "V Passive patří za „be“ past participle: „{right}“, ne „{wrong}“.",
+   "en": "Passive needs the past participle after “be”: “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.09",
+   "kind": "Passive of intransitive verb",
+   "verdict": "wrong",
+   "pattern": "be + participle of a verb with no object (was happened, is arrived, was died)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Sloveso „{right}“ nemá Passive, nie „{wrong}“.",
+   "cz": "Sloveso „{right}“ nemá Passive, ne „{wrong}“.",
+   "en": "“{right}” has no Passive form; not “{wrong}”."
+  },
+  {
+   "id": "42.10",
+   "kind": "rise/raise confusion",
+   "verdict": "wrong",
+   "pattern": "intransitive verb used with an object or vice versa (rised both arms, raised up from the chair)",
+   "slots": [
+    "right"
+   ],
+   "sk": "S predmetom patrí „raise/lay“, bez predmetu „rise/lie“: „{right}“.",
+   "cz": "S předmětem patří „raise/lay“, bez předmětu „rise/lie“: „{right}“.",
+   "en": "With an object use “raise/lay”, without one “rise/lie”: “{right}”."
+  },
+  {
+   "id": "42.11",
+   "kind": "wrong tense of be",
+   "verdict": "wrong",
+   "pattern": "is/are for a past event or was/were for a present one",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Čas vyjadruje tvar „be“: tu patrí „{right}“, nie „{wrong}“.",
+   "cz": "Čas vyjadřuje tvar „be“: sem patří „{right}“, ne „{wrong}“.",
+   "en": "The form of “be” shows the tense: use “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.12",
+   "kind": "Present Perfect in past story",
+   "verdict": "wrong",
+   "pattern": "has/have + participle for a finished past action (He has raised both arms … while the hall went loud)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Príbeh je v minulosti, preto Past Simple „{right}“, nie „{wrong}“.",
+   "cz": "Příběh je v minulosti, proto Past Simple „{right}“, ne „{wrong}“.",
+   "en": "The story is in the past, so Past Simple “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.13",
+   "kind": "unnecessary agent",
+   "verdict": "correct_with_tip",
+   "pattern": "by them/by people/by someone added to a passive",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "„{wrong}“ sa v Passive vynecháva, stačí „{right}“.",
+   "cz": "„{wrong}“ se v Passive vynechává, stačí „{right}“.",
+   "en": "Leave out “{wrong}”; “{right}” is enough."
+  },
+  {
+   "id": "42.14",
+   "kind": "reflexive verb as Passive",
+   "verdict": "wrong",
+   "pattern": "Slovak/Czech reflexive verb (sa/se) turned into be + participle (was started, is opened)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Zvratné sloveso („sa“) tu nie je Passive: patrí „{right}“, nie „{wrong}“.",
+   "cz": "Zvratné sloveso („se“) tu není Passive: patří „{right}“, ne „{wrong}“.",
+   "en": "This is not Passive in English: use “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.15",
+   "kind": "regular form of irregular verb",
+   "verdict": "wrong",
+   "pattern": "-ed added to an irregular verb (striked, bursted, flied)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Nepravidelné sloveso: správny tvar je „{right}“, nie „{wrong}“.",
+   "cz": "Nepravidelné sloveso: správný tvar je „{right}“, ne „{wrong}“.",
+   "en": "Irregular verb: the correct form is “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.16",
+   "kind": "article or dative with body part",
+   "verdict": "wrong",
+   "pattern": "the/you instead of a possessive with a body part (burn you the fingers, above the head)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Pri častiach tela patrí privlastňovacie zámeno: „{right}“, nie „{wrong}“.",
+   "cz": "U částí těla patří přivlastňovací zájmeno: „{right}“, ne „{wrong}“.",
+   "en": "Body parts take a possessive: “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.17",
+   "kind": "word-for-word calque",
+   "verdict": "wrong",
+   "pattern": "phrase translated word for word from Slovak/Czech (today morning, this night, there where)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Doslovný preklad nesedí, po anglicky je to „{right}“, nie „{wrong}“.",
+   "cz": "Doslovný překlad nesedí, anglicky je to „{right}“, ne „{wrong}“.",
+   "en": "A word-for-word translation doesn't work: say “{right}”, not “{wrong}”."
+  },
+  {
+   "id": "42.18",
+   "kind": "missing article",
+   "verdict": "wrong",
+   "pattern": "article dropped before a singular countable noun (pillow for a pillow)",
+   "slots": [
+    "right"
+   ],
+   "sk": "Pred počítateľným podstatným menom v jednotnom čísle chýba člen: „{right}“.",
+   "cz": "Před počitatelným podstatným jménem v jednotném čísle chybí člen: „{right}“.",
+   "en": "A singular countable noun needs an article: “{right}”."
+  },
+  {
+   "id": "42.19",
+   "kind": "calqued preposition",
+   "verdict": "wrong",
+   "pattern": "wrong, extra or missing preposition copied from Slovak/Czech (struck into, on place)",
+   "slots": [
+    "right",
+    "wrong"
+   ],
+   "sk": "Správne spojenie je „{right}“, nie „{wrong}“.",
+   "cz": "Správné spojení je „{right}“, ne „{wrong}“.",
+   "en": "The correct phrase is “{right}”, not “{wrong}”."
+  }
+ ]
+}

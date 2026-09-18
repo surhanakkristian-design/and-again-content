@@ -1,0 +1,60 @@
+▶ forms
+  ✔ regular forms by rule, kept only when in the word list; irregular from the table (1.139916ms)
+✔ forms (1.729792ms)
+▶ s – contextual synonyms keep the form
+  ✔ lifted for raised, hardly for barely (0.450208ms)
+  ✔ base form "lift"/"raise" for the past tense is rejected (2.213375ms)
+  ✔ irregular forms: went → left, never leaved (0.857042ms)
+✔ s – contextual synonyms keep the form (3.627333ms)
+▶ lock
+  ✔ no contextual synonym inside the lock (anchor ignored + noted) (0.229333ms)
+  ✔ no safe synonym inside the lock, safe synonyms outside it (0.315125ms)
+  ✔ safe multi-word group applies everywhere outside the lock (1.127708ms)
+  ✔ contractions are normalisation, not a freedom (0.480916ms)
+✔ lock (2.378917ms)
+▶ g – gender chains flip together
+  ✔ consistent flip (0.135125ms)
+  ✔ half flip rejected (0.405834ms)
+✔ g – gender chains flip together (0.616375ms)
+▶ o – pronoun alternatives
+  ✔ her | it (0.621209ms)
+✔ o – pronoun alternatives (0.662083ms)
+▶ d – determiners
+  ✔ code A on the determiner (0.991708ms)
+  ✔ code P allows ∅ (1.066917ms)
+  ✔ code Z on a bare noun inserts the article (0.427625ms)
+  ✔ explicit list, a ≡ an (0.744291ms)
+✔ d – determiners (3.307209ms)
+▶ p – optional words
+  ✔ +w anywhere outside the lock, at most once (0.9395ms)
+  ✔ +w@anchor only right after the anchor (0.663417ms)
+  ✔ -anchor may be dropped (numbers normalised) (0.498042ms)
+  ✔ discontinuous lock: words may go between the pieces (0.83425ms)
+✔ p – optional words (3.002166ms)
+▶ typo (step 3)
+  ✔ one typo → correct_with_tip (0.192417ms)
+  ✔ real-word exclusion (0.123125ms)
+  ✔ word-form exclusion (0.094ms)
+  ✔ typo against an allowed alternative names that alternative (0.51275ms)
+✔ typo (step 3) (0.982375ms)
+▶ library mistakes (step 2)
+  ✔ pattern with freedoms, {right}/{wrong} filled, per language (0.300792ms)
+  ✔ extra per-sentence slot (0.058292ms)
+  ✔ 150-character cap → automatic tip instead (0.168334ms)
+  ✔ a mistake beats step 4 (0.207167ms)
+✔ library mistakes (step 2) (0.782875ms)
+▶ automatic tip (step 4)
+  ✔ never names an allowed alternative (0.251666ms)
+  ✔ closest path is shown with the learner's allowed choice (0.193792ms)
+✔ automatic tip (step 4) (0.492958ms)
+▶ BrE / AmE (step 1b)
+  ✔ pair list and -our rule (0.672125ms)
+✔ BrE / AmE (step 1b) (0.695583ms)
+ℹ tests 30
+ℹ suites 11
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 194.271417
