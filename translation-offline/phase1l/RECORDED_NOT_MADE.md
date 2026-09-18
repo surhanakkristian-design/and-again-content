@@ -24,3 +24,27 @@ plumbing — made). Everything below is recorded and deliberately NOT changed.
    No new gold was invented.
 6. **No re-selection, re-tuning, re-weighting or re-tie-breaking** of any configuration was done,
    and no new sentence, answer or judge label was created. The Phase 1k blind-judge labels stand.
+
+7. **The 2.1 builder reproduces only the OFFLINE-decidable part of `chk`.** `compute_chk()` is the
+   checker's own L1 test (`checker_1i.refs_of` = `[reference] + annotation v` + the 2.3 gender
+   variants, compared under `lib_prev.norm`) plus the annotation mistake patterns. The production
+   checker's `spelling_variant` step (1 DEV item) and its fuzzy tolerances are NOT reproducible
+   offline and are therefore never produced. Calibration on the 490 DEV records (printed by
+   `runner_1l.py dev`): 25 stored `match` reproduce as `match`, 42 stored `match` come out `auto`,
+   7 `mistake` and 1 `spelling_variant` come out `auto`, all 415 `auto` agree — 46 accept-level
+   disagreements. The 42 are an artefact of arm B: the stored DEV `chk` was produced by the live
+   checker against the ORIGINAL Slovak/reference pair, while arm B measures against the rewritten
+   Slovak and its realigned references. The direction of the difference is CONSERVATIVE: the
+   computed `chk` accepts strictly fewer items at L1, so more fresh items reach L2/L3 and are
+   judged by the frozen stack rather than waved through. **DEV `chk` is NOT recomputed** — the DEV
+   and replay1j regressions reproduce Phase 1k exactly (182/189, 12/301; 90.82 / 5.10 / 3.39).
+   No attempt was made to "improve" the agreement.
+8. **Reference-hygiene removal of the DISPLAYED reference.** A patch may remove the string that is
+   also `r['reference']`, which the prompt has to show. The deterministic rule applied is: promote
+   the first surviving `v` entry to reference; if nothing survives, keep the original reference and
+   report the sid under `reference_kept_because_nothing_survived`. No reference is invented.
+9. **F9's fix is inert on DEV and on the 1j replay** (0 readouts move, guard bug 2 of §5.4 again).
+   Nothing was tuned to make it fire; its effect, if any, will show only on the fresh side.
+10. **Free-tier versus billed is not detectable from the response body.** The spend figures are
+   list-price figures for the tokens the API reported; no attempt was made to infer the tier.
+

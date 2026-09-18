@@ -1,0 +1,604 @@
+{
+ "mode": "dev",
+ "builder_calibration": {
+  "n": 490,
+  "step_transitions": {
+   "match->auto": 42,
+   "auto->auto": 415,
+   "match->match": 25,
+   "mistake->auto": 7,
+   "spelling_variant->auto": 1
+  },
+  "accept_disagreements": 46,
+  "examples": [
+   {
+    "id": "C:10013:204106987",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10013:3738588218",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10043:1230424249",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10043:1932415991",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10138:885817230",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10167:2659945156",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10167:3007534590",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10167:4253535192",
+    "stored": {
+     "verdict": "correct_with_tip",
+     "step": "mistake",
+     "feedback": "Pri logickom závere je bežnejšie „must“ ako „has to“."
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10574:1487671608",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   },
+   {
+    "id": "C:10574:3132949874",
+    "stored": {
+     "verdict": "correct",
+     "step": "match",
+     "feedback": ""
+    },
+    "computed": {
+     "verdict": "wrong",
+     "step": "auto",
+     "feedback": ""
+    }
+   }
+  ]
+ },
+ "sides": {
+  "dev": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3": 5,
+    "L3:TIPrej": 2
+   },
+   "lock_rejections_BASE": 65,
+   "l3_eligible": 318,
+   "cache_misses_not_called": 0,
+   "delta_vs_phase1k": {
+    "coverage_phase1k": "182/189",
+    "fa_phase1k": "12/301",
+    "coverage_delta_k": 0,
+    "fa_delta_k": 0
+   },
+   "f9_fix_effect": {
+    "items_whose_F9_readout_moved": 0,
+    "ids": [],
+    "coverage_with_phase1k_F9": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "fa_with_phase1k_F9": {
+     "k": 12,
+     "n": 301,
+     "pct": 3.99,
+     "ci": [
+      2.08,
+      6.86
+     ]
+    },
+    "faT_with_phase1k_F9": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    }
+   }
+  },
+  "replay1j": {
+   "coverage": {
+    "k": 178,
+    "n": 196,
+    "pct": 90.82,
+    "ci": [
+     85.87,
+     94.47
+    ]
+   },
+   "fa": {
+    "k": 15,
+    "n": 294,
+    "pct": 5.1,
+    "ci": [
+     2.88,
+     8.28
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 2,
+     "n": 59,
+     "pct": 3.39,
+     "ci": [
+      0.41,
+      11.71
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 68,
+     "pct": 5.88,
+     "ci": [
+      1.63,
+      14.38
+     ]
+    },
+    "M": {
+     "k": 8,
+     "n": 64,
+     "pct": 12.5,
+     "ci": [
+      5.55,
+      23.15
+     ]
+    },
+    "S": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      3.55
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 1,
+     "pct": 100.0,
+     "ci": [
+      2.5,
+      100.0
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 0,
+     "pct": null,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 15
+   },
+   "fr_by_layer": {
+    "F5": 1,
+    "F8": 1,
+    "F9": 3,
+    "L2": 2,
+    "L3": 6,
+    "L3:TIPrej": 5
+   },
+   "lock_rejections_BASE": 93,
+   "l3_eligible": 336,
+   "cache_misses_not_called": 0,
+   "delta_vs_phase1k": {
+    "coverage_phase1k_pct": 90.82,
+    "fa_phase1k_pct": 5.1,
+    "faT_phase1k_pct": 3.39,
+    "coverage_delta_pct": 0.0,
+    "fa_delta_pct": 0.0,
+    "faT_delta_pct": 0.0
+   },
+   "f9_fix_effect": {
+    "items_whose_F9_readout_moved": 0,
+    "ids": [],
+    "coverage_with_phase1k_F9": {
+     "k": 178,
+     "n": 196,
+     "pct": 90.82,
+     "ci": [
+      85.87,
+      94.47
+     ]
+    },
+    "fa_with_phase1k_F9": {
+     "k": 15,
+     "n": 294,
+     "pct": 5.1,
+     "ci": [
+      2.88,
+      8.28
+     ]
+    },
+    "faT_with_phase1k_F9": {
+     "k": 2,
+     "n": 59,
+     "pct": 3.39,
+     "ci": [
+      0.41,
+      11.71
+     ]
+    }
+   }
+  }
+ },
+ "dev_hygiene": {
+  "files": [
+   "out_dev_1.json"
+  ],
+  "before": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   }
+  },
+  "after": {
+   "coverage": {
+    "k": 172,
+    "n": 189,
+    "pct": 91.01,
+    "ci": [
+     85.99,
+     94.67
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 301,
+    "pct": 2.99,
+    "ci": [
+     1.38,
+     5.6
+    ]
+   }
+  },
+  "would_need_a_call": [
+   "C:10013:3738588218",
+   "C:21124:1598034179",
+   "C:21124:3846512962",
+   "C:23360:1881410199",
+   "C:27628:1242167241",
+   "C:27628:3250724313",
+   "C:27628:3492027817",
+   "C:6365:14293238",
+   "C:6365:1746610732",
+   "C:8293:928114441",
+   "C:8812:183208396",
+   "C:8812:3556845063",
+   "C:8812:820119678",
+   "C:9913:2883974382",
+   "W:21124:1131076775",
+   "W:21124:3223048237",
+   "W:21124:3581513374",
+   "W:27628:2174774236",
+   "W:27628:2260598924",
+   "W:27628:615122884",
+   "W:8812:105017199",
+   "W:8812:1228442502",
+   "W:8812:384802316",
+   "W:8812:768163775",
+   "W:9913:3365519217",
+   "W:9913:4036947474"
+  ],
+  "hygiene_stats": {
+   "sids_touched": [
+    6365,
+    8293,
+    8812,
+    9913,
+    10013,
+    21124,
+    23360,
+    27628
+   ],
+   "removed": 4,
+   "replaced": 12,
+   "ref_changed": 6,
+   "ref_kept": [],
+   "examples": [
+    {
+     "sid": 6365,
+     "reference_before": "The director said they would film the office scene before lunch.",
+     "reference_after": "The director said they would film the office scene before lunch.",
+     "v_before": [
+      "The director said they would film the office scene before lunch.",
+      "The director said the office scene would be filmed before lunch."
+     ],
+     "v_after": [
+      "The director said they would film the office scene before lunch."
+     ],
+     "reason": "Slovak is active with an explicit subject (oni natocia); the variant turns it into an agentless passive."
+    },
+    {
+     "sid": 8293,
+     "reference_before": "She never shares food, so this one must be special.",
+     "reference_after": "She never shares food, so this croissant must be special.",
+     "v_before": [
+      "She never shares food, so this one must be special."
+     ],
+     "v_after": [
+      "She never shares food, so this croissant must be special."
+     ],
+     "reason": "Omits the noun 'croissant' (tento croissant), leaving the referent unexpressed."
+    },
+    {
+     "sid": 8812,
+     "reference_before": "Her trainer wishes his pads were a bit thicker.",
+     "reference_after": "The trainer wishes his pads were a bit thicker.",
+     "v_before": [
+      "Her trainer wishes his pads were a bit thicker."
+     ],
+     "v_after": [
+      "The trainer wishes his pads were a bit thicker."
+     ],
+     "reason": "Adds a possessor 'her' that the Slovak 'Trener' does not have."
+    },
+    {
+     "sid": 9913,
+     "reference_before": "She had her boots dyed purple last summer.",
+     "reference_after": "She had her boots dyed purple last year.",
+     "v_before": [
+      "She had her boots dyed purple last summer.",
+      "Last summer she had her boots dyed purple.",
+      "She got her boots dyed purple last summer."
+     ],
+     "v_after": [
+      "She had her boots dyed purple last year.",
+      "Last year she had her boots dyed purple.",
+      "She got her boots dyed purple last year."
+     ],
+     "reason": "'Vlani' means last year, not last summer; the time adverbial is wrong in all three variants."
+    },
+    {
+     "sid": 10013,
+     "reference_before": "Right now he is holding a blue ice pack against the lump.",
+     "reference_after": "Right now he is pressing a blue ice pack against the lump.",
+     "v_before": [
+      "Right now he is holding a blue ice pack against the lump.",
+      "Right now he is pressing a blue ice pack against the lump.",
+      "He is pressing a blue ice pack against the lump right now."
+     ],
+     "v_after": [
+      "He is pressing a blue ice pack against the lump right now."
+     ],
+     "reason": "'tlaci' means presses/pushes; 'holding' drops the pressing action and the correct 'pressing' variants are already stored."
+    },
+    {
+     "sid": 21124,
+     "reference_before": "She usually stays dry, but today she is dancing in the rain.",
+     "reference_after": "She usually stays under the roof, but today she is dancing in the rain.",
+     "v_before": [
+      "She usually stays dry, but today she is dancing in the rain."
+     ],
+     "v_after": [
+      "She usually stays under the roof, but today she is dancing in the rain."
+     ],
+     "reason": "'ostava pod strechou' states staying under the roof; 'stays dry' replaces the stated content with an inference."
+    },
+    {
+     "sid": 23360,
+     "reference_before": "You can hear his huge sneeze across the whole meadow.",
+     "reference_after": "You can hear his huge sneeze across the whole meadow.",
+     "v_before": [
+      "You can hear his huge sneeze across the whole meadow.",
+      "His huge sneeze can be heard across the whole meadow."
+     ],
+     "v_after": [
+      "You can hear his huge sneeze across the whole meadow."
+     ],
+     "reason": "Slovak fixes an active clause with the explicit subject 'ty mozes pocut'; the variant is passive and drops the hearer."
+    },
+    {
+     "sid": 27628,
+     "reference_before": "The children awake at seven in the morning.",
+     "reference_after": "The children will wake up at seven in the morning.",
+     "v_before": [
+      "The children awake at seven in the morning."
+     ],
+     "v_after": [
+      "The children will wake up at seven in the morning."
+     ],
+     "reason": "Perfective 'zobudia sa' is future, not present, and the literary verb 'awake' is the wrong register."
+    }
+   ],
+   "dev_chk_recomputed": [
+    "C:10013:204106987",
+    "C:10013:3738588218",
+    "C:23360:1881410199",
+    "C:6365:14293238",
+    "C:6365:1746610732",
+    "C:8293:1138473516"
+   ]
+  }
+ }
+}
