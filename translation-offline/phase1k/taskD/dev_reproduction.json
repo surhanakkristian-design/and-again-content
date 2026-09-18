@@ -1,0 +1,562 @@
+{
+ "side": "dev",
+ "frozen": {
+  "phase": "1k",
+  "side_measured": "dev",
+  "model": "gemini-3.1-flash-lite",
+  "generationConfig": {
+   "temperature": 0,
+   "maxOutputTokens": 24,
+   "thinkingConfig": {
+    "thinkingBudget": 0
+   }
+  },
+  "selected": {
+   "name": "LOCKTIP",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 1
+  },
+  "prompt_id": "P-FROZEN",
+  "prompt_template_sha256": "def440d1a75c3094231db81de78327ef35c2b579a6de5784d43c39b1737e929c",
+  "prompt": {
+   "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+   "extra_lines_in_order": [
+    "gender line (only when the annotation still has g)",
+    "ground line",
+    "wording line"
+   ],
+   "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+   "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+   "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+   "new_rules_verbatim": [],
+   "tail": "SAME, TIP or DIFF?"
+  },
+  "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+  "switches": {
+   "l2_lock_rejects": false,
+   "lock_mismatch_becomes_tip": true,
+   "F8": false,
+   "F9": false,
+   "f9_REPORTED_STRICT": false,
+   "tip_as_rejection": true,
+   "old_guards": [
+    "F3",
+    "F5",
+    "F4v2",
+    "F4v3",
+    "F2B"
+   ],
+   "F2B_not_applied_to_lock_released_items": true
+  },
+  "guard_sha256": {
+   "f8.py": "bb4662b5a0f74da7",
+   "f9.py": "0aa46d60cc9c64b0"
+  },
+  "label_conventions": {
+   "labels": "the blind judge's §0 verdicts adopted IN FULL (label AND type) for all 490 DEV items",
+   "coverage_denominator": "ALL items judged correct (any id kind); the kind-C-only figure is printed as a secondary line for continuity with 1j",
+   "fa_denominator": "all items judged wrong",
+   "types": "T / W / M / S / V (voice, new) / E"
+  },
+  "selection_trace": [
+   "candidates: 36 rows (9 configurations x 2 prompts x TIP on/off)",
+   "gate FA < 5% AND type-T FA < 5%: 18 rows pass",
+   "top 5 by coverage among the survivors: ['LOCKTIP/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8+F9 (ALL)/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9 strict/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00']",
+   "-> highest coverage (ties: fewer moving parts, then P-FROZEN): LOCKTIP / P-FROZEN / tip=True"
+  ],
+  "selected_dev_numbers": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 13,
+    "n": 301,
+    "pct": 4.32,
+    "ci": [
+     2.32,
+     7.27
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   }
+  },
+  "data": "Phase 1j arm-B Slovak/refs/annotations for dev+replay1j; phase1k/fresh/* for fresh"
+ },
+ "coverage": {
+  "k": 182,
+  "n": 189,
+  "pct": 96.3,
+  "ci": [
+   92.52,
+   98.5
+  ]
+ },
+ "coverage_kindC": {
+  "k": 176,
+  "n": 180,
+  "pct": 97.78,
+  "ci": [
+   94.41,
+   99.39
+  ]
+ },
+ "fa": {
+  "k": 13,
+  "n": 301,
+  "pct": 4.32,
+  "ci": [
+   2.32,
+   7.27
+  ]
+ },
+ "fa_by_type": {
+  "T": {
+   "k": 0,
+   "n": 54,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    6.6
+   ]
+  },
+  "W": {
+   "k": 2,
+   "n": 76,
+   "pct": 2.63,
+   "ci": [
+    0.32,
+    9.18
+   ]
+  },
+  "M": {
+   "k": 3,
+   "n": 66,
+   "pct": 4.55,
+   "ci": [
+    0.95,
+    12.71
+   ]
+  },
+  "S": {
+   "k": 6,
+   "n": 98,
+   "pct": 6.12,
+   "ci": [
+    2.28,
+    12.85
+   ]
+  },
+  "V": {
+   "k": 2,
+   "n": 6,
+   "pct": 33.33,
+   "ci": [
+    4.33,
+    77.72
+   ]
+  },
+  "E": {
+   "k": 0,
+   "n": 1,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    97.5
+   ]
+  }
+ },
+ "fa_by_layer": {
+  "L1": 5,
+  "L3": 8
+ },
+ "fr_by_layer": {
+  "L3:TIPrej": 2,
+  "L3": 5
+ },
+ "false_acceptances": [
+  {
+   "id": "C:10167:2659945156",
+   "layer": "L1",
+   "model_reply": "",
+   "model": null,
+   "slovak": "On má ústa také suché, že smäd musí byť skutočný.",
+   "answer": "Her mouth is so dry that the thirst must be real.",
+   "reference": "His mouth is that dry, so the thirst must be real.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:10167:3007534590",
+   "layer": "L1",
+   "model_reply": "",
+   "model": null,
+   "slovak": "On má ústa také suché, že smäd musí byť skutočný.",
+   "answer": "Her mouth's so dry that the thirst must be real.",
+   "reference": "His mouth is that dry, so the thirst must be real.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:23360:1881410199",
+   "layer": "L1",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Jeho obrovské kýchnutie ty môžeš počuť po celej lúke.",
+   "answer": "His huge sneeze can be heard across the whole meadow.",
+   "reference": "You can hear his huge sneeze across the whole meadow.",
+   "judge_label": "wrong",
+   "judge_type": "V",
+   "intent": null,
+   "f8": "reject",
+   "f9": "accept"
+  },
+  {
+   "id": "C:26084:39201327",
+   "layer": "L1",
+   "model_reply": "",
+   "model": null,
+   "slovak": "On ju dokáže nájsť skôr, než ona príde domov.",
+   "answer": "She can find her before she comes home.",
+   "reference": "He can find her before she gets home.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:6365:1746610732",
+   "layer": "L1",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Režisér povedal, že oni kancelársku scénu natočia pred obedom.",
+   "answer": "The director said that the office scene would be filmed before lunch.",
+   "reference": "The director said they would film the office scene before lunch.",
+   "judge_label": "wrong",
+   "judge_type": "V",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:21124:1753932823",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Zvyčajne ona ostáva pod strechou, ale dnes tancuje v daždi.",
+   "answer": "She stays under the roof, but today she is dancing in the rain.",
+   "reference": "She usually stays dry, but today she is dancing in the rain.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:2783:2540506102",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+   "answer": "The ball that the dog brought is covered in mud.",
+   "reference": "The ball that the dog fetched is now completely muddy.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:31648:250135833",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Zlatko, on vraj opustil misku včera, nie dnes.",
+   "answer": "Honey, apparently he left the plate yesterday, not today.",
+   "reference": "Honey, apparently he left the bowl yesterday, not today.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:7910:2914297793",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Napriek ventilátoru na plný výkon sa zopnutá kopa vôbec nepohla.",
+   "answer": "Despite the fan being at full power, the clipped piles didn't move at all.",
+   "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "abstain",
+   "f9": "accept"
+  },
+  {
+   "id": "W:8812:384802316",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+   "answer": "The coach wishes his gloves were thicker.",
+   "reference": "Her trainer wishes his pads were a bit thicker.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:8824:3690697119",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Kým sa reťaz kývala, on dotlačil vrece na miesto.",
+   "answer": "While the chains were swinging, he pushed the sack into place.",
+   "reference": "While the chain was swinging, he pushed the bag into place.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:9007:2829648222",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Dnes v noci on preveril už šesť zdrojov a kopa stále rastie.",
+   "answer": "Tonight he has already checked six sources and the list is still growing.",
+   "reference": "He has checked six sources tonight and the pile is still growing.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:9687:2008862971",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Ak oba štáty podpíšu zmluvu, hranica sa budúci mesiac otvorí.",
+   "answer": "If both countries sign the treaty, the borders will open next month.",
+   "reference": "If both states sign the treaty, the border will open next month.",
+   "judge_label": "wrong",
+   "judge_type": "S",
+   "intent": null,
+   "f8": "abstain",
+   "f9": "accept"
+  }
+ ],
+ "false_rejections": [
+  {
+   "id": "C:11610:415761804",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Na lavičke je jeden dlhý obväz.",
+   "answer": "There's a long bandage on the bench.",
+   "reference": "There is one long bandage on the bench.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:15954:580487827",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Pozri! Predavač práve spúšťa kôš do oleja.",
+   "answer": "Look, the seller is dropping the basket into the oil right now.",
+   "reference": "Look! The vendor is lowering the basket into the oil.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:27628:1242167241",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Deti sa zobudia o siedmej ráno.",
+   "answer": "At seven in the morning, the children will wake up.",
+   "reference": "The children awake at seven in the morning.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "abstain",
+   "f9": "accept"
+  },
+  {
+   "id": "C:27628:3492027817",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Deti sa zobudia o siedmej ráno.",
+   "answer": "The children will wake up at seven in the morning.",
+   "reference": "The children awake at seven in the morning.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "abstain",
+   "f9": "accept"
+  },
+  {
+   "id": "W:2389:2222473907",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby duriány nesmrdeli tak silno, colnica by ich asi pustila.",
+   "answer": "If durians hadn't smelled so strong, customs would probably have let them through.",
+   "reference": "If durians didn't smell so strongly, customs would probably let them through.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:27628:3397554170",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Deti sa zobudia o siedmej ráno.",
+   "answer": "The children will wake up at seven.",
+   "reference": "The children awake at seven in the morning.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "abstain",
+   "f9": "accept"
+  },
+  {
+   "id": "W:6971:4268819537",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby ona bola robot, žiadosti by jej neprekážali.",
+   "answer": "If she had been a robot, the requests wouldn't have bothered her.",
+   "reference": "If she were a robot, the requests would not bother her.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  }
+ ],
+ "b3": {
+  "tip": {
+   "n": 168,
+   "judged_correct": 66,
+   "judged_wrong": 102,
+   "cost_type_T_wrong_accepted": 0
+  },
+  "abstain": {
+   "n": 35,
+   "judged_correct": 19,
+   "judged_wrong": 16,
+   "cost_type_T_wrong_accepted": 0
+  }
+ },
+ "calls": {
+  "counted_calls_http200": 466,
+  "failed_empty_200": 0,
+  "non200_attempts": 0,
+  "tokens_in": 163561,
+  "tokens_out": 466,
+  "spend_usd": 0.04159,
+  "phase_budget_remaining": 1534
+ },
+ "reused_prompts": 318,
+ "new_this_run": 0,
+ "no_verdict_items": {
+  "P-FROZEN": []
+ }
+}

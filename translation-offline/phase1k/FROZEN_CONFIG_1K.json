@@ -1,0 +1,156 @@
+{
+ "phase": "1k",
+ "side_measured": "dev",
+ "model": "gemini-3.1-flash-lite",
+ "generationConfig": {
+  "temperature": 0,
+  "maxOutputTokens": 24,
+  "thinkingConfig": {
+   "thinkingBudget": 0
+  }
+ },
+ "selected": {
+  "name": "LOCKTIP",
+  "prompt": "P-FROZEN",
+  "locktip": true,
+  "f8": false,
+  "f9": false,
+  "f9_strict": false,
+  "tip_reject": true,
+  "moving_parts": 1
+ },
+ "prompt_id": "P-FROZEN",
+ "prompt_template_sha256": "def440d1a75c3094231db81de78327ef35c2b579a6de5784d43c39b1737e929c",
+ "prompt": {
+  "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+  "extra_lines_in_order": [
+   "gender line (only when the annotation still has g)",
+   "ground line",
+   "wording line"
+  ],
+  "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+  "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+  "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+  "new_rules_verbatim": [],
+  "tail": "SAME, TIP or DIFF?"
+ },
+ "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+ "switches": {
+  "l2_lock_rejects": false,
+  "lock_mismatch_becomes_tip": true,
+  "F8": false,
+  "F9": false,
+  "f9_REPORTED_STRICT": false,
+  "tip_as_rejection": true,
+  "old_guards": [
+   "F3",
+   "F5",
+   "F4v2",
+   "F4v3",
+   "F2B"
+  ],
+  "F2B_not_applied_to_lock_released_items": true
+ },
+ "guard_sha256": {
+  "f8.py": "bb4662b5a0f74da7",
+  "f9.py": "0aa46d60cc9c64b0"
+ },
+ "label_conventions": {
+  "labels": "the blind judge's §0 verdicts adopted IN FULL (label AND type) for all 490 DEV items",
+  "coverage_denominator": "ALL items judged correct (any id kind); the kind-C-only figure is printed as a secondary line for continuity with 1j",
+  "fa_denominator": "all items judged wrong",
+  "types": "T / W / M / S / V (voice, new) / E"
+ },
+ "selection_trace": [
+  "candidates: 36 rows (9 configurations x 2 prompts x TIP on/off)",
+  "gate FA < 5% AND type-T FA < 5%: 18 rows pass",
+  "top 5 by coverage among the survivors: ['LOCKTIP/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8+F9 (ALL)/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9 strict/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00']",
+  "-> highest coverage (ties: fewer moving parts, then P-FROZEN): LOCKTIP / P-FROZEN / tip=True"
+ ],
+ "selected_dev_numbers": {
+  "coverage": {
+   "k": 182,
+   "n": 189,
+   "pct": 96.3,
+   "ci": [
+    92.52,
+    98.5
+   ]
+  },
+  "coverage_kindC": {
+   "k": 176,
+   "n": 180,
+   "pct": 97.78,
+   "ci": [
+    94.41,
+    99.39
+   ]
+  },
+  "fa": {
+   "k": 13,
+   "n": 301,
+   "pct": 4.32,
+   "ci": [
+    2.32,
+    7.27
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 54,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     6.6
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 76,
+    "pct": 2.63,
+    "ci": [
+     0.32,
+     9.18
+    ]
+   },
+   "M": {
+    "k": 3,
+    "n": 66,
+    "pct": 4.55,
+    "ci": [
+     0.95,
+     12.71
+    ]
+   },
+   "S": {
+    "k": 6,
+    "n": 98,
+    "pct": 6.12,
+    "ci": [
+     2.28,
+     12.85
+    ]
+   },
+   "V": {
+    "k": 2,
+    "n": 6,
+    "pct": 33.33,
+    "ci": [
+     4.33,
+     77.72
+    ]
+   },
+   "E": {
+    "k": 0,
+    "n": 1,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     97.5
+    ]
+   }
+  }
+ },
+ "data": "Phase 1j arm-B Slovak/refs/annotations for dev+replay1j; phase1k/fresh/* for fresh"
+}

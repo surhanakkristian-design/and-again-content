@@ -1,0 +1,8366 @@
+{
+ "conventions": {
+  "labels": "the blind judge's §0 verdicts adopted IN FULL (label AND type) for all 490 DEV items",
+  "coverage_denominator": "ALL items judged correct (any id kind); the kind-C-only figure is printed as a secondary line for continuity with 1j",
+  "fa_denominator": "all items judged wrong",
+  "types": "T / W / M / S / V (voice, new) / E"
+ },
+ "task_a": {
+  "movement": {
+   "n": 490,
+   "unchanged": 452,
+   "correct_to_wrong": {
+    "M": 1,
+    "V": 3,
+    "W": 1
+   },
+   "wrong_to_correct_by_old_type": {
+    "S": 1,
+    "T": 2,
+    "M": 2
+   },
+   "wrong_to_correct_by_1j_layer": {
+    "accepted": 2,
+    "L2 lock": 2,
+    "L3": 1
+   },
+   "wrong_to_wrong_matrix": {
+    "S->W": 7,
+    "S->M": 5,
+    "T->W": 5,
+    "T->M": 2,
+    "T->V": 1,
+    "S->V": 1,
+    "M->V": 1,
+    "W->T": 1,
+    "S->T": 1,
+    "M->T": 1,
+    "T->E": 1,
+    "T->S": 2
+   },
+   "missing_judge_label": 0
+  },
+  "old_cells_1j_primary": {
+   "wrong:S": 111,
+   "correct": 189,
+   "wrong:T": 64,
+   "wrong:W": 64,
+   "wrong:M": 62
+  },
+  "new_cells_1k_judge": {
+   "wrong:S": 98,
+   "correct": 189,
+   "wrong:M": 66,
+   "wrong:V": 6,
+   "wrong:W": 76,
+   "wrong:T": 54,
+   "wrong:E": 1
+  },
+  "conventions": {
+   "labels": "the blind judge's §0 verdicts adopted IN FULL (label AND type) for all 490 DEV items",
+   "coverage_denominator": "ALL items judged correct (any id kind); the kind-C-only figure is printed as a secondary line for continuity with 1j",
+   "fa_denominator": "all items judged wrong",
+   "types": "T / W / M / S / V (voice, new) / E"
+  }
+ },
+ "rows": [
+  {
+   "name": "BASE",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 0,
+   "coverage": {
+    "k": 175,
+    "n": 189,
+    "pct": 92.59,
+    "ci": [
+     87.88,
+     95.89
+    ]
+   },
+   "coverage_kindC": {
+    "k": 169,
+    "n": 180,
+    "pct": 93.89,
+    "ci": [
+     89.33,
+     96.91
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 2,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 0,
+   "coverage": {
+    "k": 177,
+    "n": 189,
+    "pct": 93.65,
+    "ci": [
+     89.17,
+     96.68
+    ]
+   },
+   "coverage_kindC": {
+    "k": 171,
+    "n": 180,
+    "pct": 95.0,
+    "ci": [
+     90.72,
+     97.69
+    ]
+   },
+   "fa": {
+    "k": 26,
+    "n": 301,
+    "pct": 8.64,
+    "ci": [
+     5.72,
+     12.4
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 5,
+     "n": 76,
+     "pct": 6.58,
+     "ci": [
+      2.17,
+      14.69
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 21,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F8",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 175,
+    "n": 189,
+    "pct": 92.59,
+    "ci": [
+     87.88,
+     95.89
+    ]
+   },
+   "coverage_kindC": {
+    "k": 169,
+    "n": 180,
+    "pct": 93.89,
+    "ci": [
+     89.33,
+     96.91
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 2,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F8",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 177,
+    "n": 189,
+    "pct": 93.65,
+    "ci": [
+     89.17,
+     96.68
+    ]
+   },
+   "coverage_kindC": {
+    "k": 171,
+    "n": 180,
+    "pct": 95.0,
+    "ci": [
+     90.72,
+     97.69
+    ]
+   },
+   "fa": {
+    "k": 25,
+    "n": 301,
+    "pct": 8.31,
+    "ci": [
+     5.45,
+     12.02
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 5,
+     "n": 76,
+     "pct": 6.58,
+     "ci": [
+      2.17,
+      14.69
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 21,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F9",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 175,
+    "n": 189,
+    "pct": 92.59,
+    "ci": [
+     87.88,
+     95.89
+    ]
+   },
+   "coverage_kindC": {
+    "k": 169,
+    "n": 180,
+    "pct": 93.89,
+    "ci": [
+     89.33,
+     96.91
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 2,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F9",
+   "prompt": "P-FROZEN",
+   "locktip": false,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 177,
+    "n": 189,
+    "pct": 93.65,
+    "ci": [
+     89.17,
+     96.68
+    ]
+   },
+   "coverage_kindC": {
+    "k": 171,
+    "n": 180,
+    "pct": 95.0,
+    "ci": [
+     90.72,
+     97.69
+    ]
+   },
+   "fa": {
+    "k": 26,
+    "n": 301,
+    "pct": 8.64,
+    "ci": [
+     5.72,
+     12.4
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 5,
+     "n": 76,
+     "pct": 6.58,
+     "ci": [
+      2.17,
+      14.69
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 21,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 3
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 13,
+    "n": 301,
+    "pct": 4.32,
+    "ci": [
+     2.32,
+     7.27
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 30,
+    "n": 301,
+    "pct": 9.97,
+    "ci": [
+     6.83,
+     13.92
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 29,
+    "n": 301,
+    "pct": 9.63,
+    "ci": [
+     6.55,
+     13.54
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 13,
+    "n": 301,
+    "pct": 4.32,
+    "ci": [
+     2.32,
+     7.27
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 30,
+    "n": 301,
+    "pct": 9.97,
+    "ci": [
+     6.83,
+     13.92
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 (ALL)",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 (ALL)",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 29,
+    "n": 301,
+    "pct": 9.63,
+    "ci": [
+     6.55,
+     13.54
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9 strict",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": true,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 13,
+    "n": 301,
+    "pct": 4.32,
+    "ci": [
+     2.32,
+     7.27
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9 strict",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": false,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 30,
+    "n": 301,
+    "pct": 9.97,
+    "ci": [
+     6.83,
+     13.92
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 strict (ALL)",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": true,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 2,
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 strict (ALL)",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": false,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 184,
+    "n": 189,
+    "pct": 97.35,
+    "ci": [
+     93.93,
+     99.14
+    ]
+   },
+   "coverage_kindC": {
+    "k": 178,
+    "n": 180,
+    "pct": 98.89,
+    "ci": [
+     96.04,
+     99.87
+    ]
+   },
+   "fa": {
+    "k": 29,
+    "n": 301,
+    "pct": 9.63,
+    "ci": [
+     6.55,
+     13.54
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 6,
+     "n": 76,
+     "pct": 7.89,
+     "ci": [
+      2.95,
+      16.4
+     ]
+    },
+    "M": {
+     "k": 14,
+     "n": 66,
+     "pct": 21.21,
+     "ci": [
+      12.11,
+      33.02
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 25,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 5
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:14266:2219481358",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:21467:759405230",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:3937:1213271894",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:3503567680",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8020:4215651911",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8920:1441170666",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9495:890576878",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 173,
+    "n": 189,
+    "pct": 91.53,
+    "ci": [
+     86.62,
+     95.08
+    ]
+   },
+   "coverage_kindC": {
+    "k": 168,
+    "n": 180,
+    "pct": 93.33,
+    "ci": [
+     88.64,
+     96.51
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 3,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 1,
+   "coverage": {
+    "k": 176,
+    "n": 189,
+    "pct": 93.12,
+    "ci": [
+     88.53,
+     96.29
+    ]
+   },
+   "coverage_kindC": {
+    "k": 170,
+    "n": 180,
+    "pct": 94.44,
+    "ci": [
+     90.02,
+     97.3
+    ]
+   },
+   "fa": {
+    "k": 21,
+    "n": 301,
+    "pct": 6.98,
+    "ci": [
+     4.37,
+     10.47
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 16,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F8",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 173,
+    "n": 189,
+    "pct": 91.53,
+    "ci": [
+     86.62,
+     95.08
+    ]
+   },
+   "coverage_kindC": {
+    "k": 168,
+    "n": 180,
+    "pct": 93.33,
+    "ci": [
+     88.64,
+     96.51
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 3,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F8",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 176,
+    "n": 189,
+    "pct": 93.12,
+    "ci": [
+     88.53,
+     96.29
+    ]
+   },
+   "coverage_kindC": {
+    "k": 170,
+    "n": 180,
+    "pct": 94.44,
+    "ci": [
+     90.02,
+     97.3
+    ]
+   },
+   "fa": {
+    "k": 20,
+    "n": 301,
+    "pct": 6.64,
+    "ci": [
+     4.11,
+     10.08
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 16,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F9",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 173,
+    "n": 189,
+    "pct": 91.53,
+    "ci": [
+     86.62,
+     95.08
+    ]
+   },
+   "coverage_kindC": {
+    "k": 168,
+    "n": 180,
+    "pct": 93.33,
+    "ci": [
+     88.64,
+     96.51
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3:TIPrej": 3,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "BASE+F9",
+   "prompt": "P-1K",
+   "locktip": false,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 176,
+    "n": 189,
+    "pct": 93.12,
+    "ci": [
+     88.53,
+     96.29
+    ]
+   },
+   "coverage_kindC": {
+    "k": 170,
+    "n": 180,
+    "pct": 94.44,
+    "ci": [
+     90.02,
+     97.3
+    ]
+   },
+   "fa": {
+    "k": 21,
+    "n": 301,
+    "pct": 6.98,
+    "ci": [
+     4.37,
+     10.47
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 16,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L2": 9,
+    "L3": 4
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 2,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 24,
+    "n": 301,
+    "pct": 7.97,
+    "ci": [
+     5.18,
+     11.63
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": false,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 23,
+    "n": 301,
+    "pct": 7.64,
+    "ci": [
+     4.91,
+     11.25
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 3,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 24,
+    "n": 301,
+    "pct": 7.97,
+    "ci": [
+     5.18,
+     11.63
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 (ALL)",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 (ALL)",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": false,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 23,
+    "n": 301,
+    "pct": 7.64,
+    "ci": [
+     4.91,
+     11.25
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9 strict",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": true,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 5,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F9 strict",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": false,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": false,
+   "moving_parts": 4,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 24,
+    "n": 301,
+    "pct": 7.97,
+    "ci": [
+     5.18,
+     11.63
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 2,
+     "n": 6,
+     "pct": 33.33,
+     "ci": [
+      4.33,
+      77.72
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 5
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:23360:1881410199",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 strict (ALL)",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": true,
+   "moving_parts": 5,
+   "coverage": {
+    "k": 180,
+    "n": 189,
+    "pct": 95.24,
+    "ci": [
+     91.15,
+     97.8
+    ]
+   },
+   "coverage_kindC": {
+    "k": 175,
+    "n": 180,
+    "pct": 97.22,
+    "ci": [
+     93.64,
+     99.09
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 76,
+     "pct": 1.32,
+     "ci": [
+      0.03,
+      7.11
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 66,
+     "pct": 6.06,
+     "ci": [
+      1.68,
+      14.8
+     ]
+    },
+    "S": {
+     "k": 5,
+     "n": 98,
+     "pct": 5.1,
+     "ci": [
+      1.68,
+      11.51
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 7
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  },
+  {
+   "name": "LOCKTIP+F8+F9 strict (ALL)",
+   "prompt": "P-1K",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": true,
+   "tip_reject": false,
+   "moving_parts": 5,
+   "coverage": {
+    "k": 183,
+    "n": 189,
+    "pct": 96.83,
+    "ci": [
+     93.22,
+     98.83
+    ]
+   },
+   "coverage_kindC": {
+    "k": 177,
+    "n": 180,
+    "pct": 98.33,
+    "ci": [
+     95.21,
+     99.65
+    ]
+   },
+   "fa": {
+    "k": 23,
+    "n": 301,
+    "pct": 7.64,
+    "ci": [
+     4.91,
+     11.25
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 76,
+     "pct": 5.26,
+     "ci": [
+      1.45,
+      12.93
+     ]
+    },
+    "M": {
+     "k": 10,
+     "n": 66,
+     "pct": 15.15,
+     "ci": [
+      7.51,
+      26.1
+     ]
+    },
+    "S": {
+     "k": 7,
+     "n": 98,
+     "pct": 7.14,
+     "ci": [
+      2.92,
+      14.16
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 19,
+    "L1": 4
+   },
+   "fr_by_layer": {
+    "L3": 6
+   },
+   "fa_items": [
+    {
+     "id": "C:10116:2635817258",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "C:6365:1746610732",
+     "type": "V",
+     "layer": "L1",
+     "model": null
+    },
+    {
+     "id": "W:1452:3230512291",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:1452:3813004317",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:15437:338816939",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:2389:4045922663",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:24733:190778272",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:4449:722373448",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:5971:382170004",
+     "type": "T",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:6830:2612740669",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:381125886",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7533:781018839",
+     "type": "M",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "model": "SAME"
+    },
+    {
+     "id": "W:8824:3690697119",
+     "type": "S",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "model": "TIP"
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "model": "SAME"
+    }
+   ]
+  }
+ ],
+ "selection": [
+  "candidates: 36 rows (9 configurations x 2 prompts x TIP on/off)",
+  "gate FA < 5% AND type-T FA < 5%: 18 rows pass",
+  "top 5 by coverage among the survivors: ['LOCKTIP/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8+F9 (ALL)/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9 strict/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00']",
+  "-> highest coverage (ties: fewer moving parts, then P-FROZEN): LOCKTIP / P-FROZEN / tip=True"
+ ],
+ "selected": {
+  "name": "LOCKTIP",
+  "prompt": "P-FROZEN",
+  "locktip": true,
+  "f8": false,
+  "f9": false,
+  "f9_strict": false,
+  "tip_reject": true,
+  "moving_parts": 1
+ },
+ "selected_numbers": {
+  "coverage": {
+   "k": 182,
+   "n": 189,
+   "pct": 96.3,
+   "ci": [
+    92.52,
+    98.5
+   ]
+  },
+  "coverage_kindC": {
+   "k": 176,
+   "n": 180,
+   "pct": 97.78,
+   "ci": [
+    94.41,
+    99.39
+   ]
+  },
+  "fa": {
+   "k": 13,
+   "n": 301,
+   "pct": 4.32,
+   "ci": [
+    2.32,
+    7.27
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 54,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     6.6
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 76,
+    "pct": 2.63,
+    "ci": [
+     0.32,
+     9.18
+    ]
+   },
+   "M": {
+    "k": 3,
+    "n": 66,
+    "pct": 4.55,
+    "ci": [
+     0.95,
+     12.71
+    ]
+   },
+   "S": {
+    "k": 6,
+    "n": 98,
+    "pct": 6.12,
+    "ci": [
+     2.28,
+     12.85
+    ]
+   },
+   "V": {
+    "k": 2,
+    "n": 6,
+    "pct": 33.33,
+    "ci": [
+     4.33,
+     77.72
+    ]
+   },
+   "E": {
+    "k": 0,
+    "n": 1,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     97.5
+    ]
+   }
+  },
+  "fa_by_layer": {
+   "L1": 5,
+   "L3": 8
+  },
+  "fr_by_layer": {
+   "L3:TIPrej": 2,
+   "L3": 5
+  }
+ },
+ "extras": {
+  "lock_released": {
+   "lock_rejected_total": 65,
+   "released_correct_now_accepted": 7,
+   "released_wrong_now_accepted_by_type": {
+    "S": 1
+   },
+   "released_total": 8,
+   "still_rejected_after_release": 57
+  },
+  "guards": {
+   "LOCKTIP|P-FROZEN|tip=True|F8": {
+    "caught_wrong": 1,
+    "caught_wrong_only_this_guard": 1,
+    "cost_correct_rejected": 0,
+    "cost_ids": [],
+    "caught_ids": [
+     "C:23360:1881410199"
+    ]
+   },
+   "LOCKTIP|P-FROZEN|tip=True|F9": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 0,
+    "cost_ids": [],
+    "caught_ids": []
+   },
+   "BASE|P-FROZEN|tip=True|F8": {
+    "caught_wrong": 1,
+    "caught_wrong_only_this_guard": 1,
+    "cost_correct_rejected": 0,
+    "cost_ids": [],
+    "caught_ids": [
+     "C:23360:1881410199"
+    ]
+   },
+   "BASE|P-FROZEN|tip=True|F9": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 0,
+    "cost_ids": [],
+    "caught_ids": []
+   }
+  },
+  "b3": {
+   "tip": {
+    "n": 168,
+    "judged_correct": 66,
+    "judged_wrong": 102,
+    "cost_type_T_wrong_accepted_by_selected": 0
+   },
+   "abstain": {
+    "n": 35,
+    "judged_correct": 19,
+    "judged_wrong": 16,
+    "cost_type_T_wrong_accepted_by_selected": 0
+   },
+   "f9_distribution": {
+    "tip": 168,
+    "accept": 253,
+    "abstain": 35,
+    "reject": 34
+   },
+   "f8_distribution": {
+    "accept": 460,
+    "reject": 1,
+    "abstain": 29
+   }
+  }
+ },
+ "task_c": {
+  "items_with_both_verdicts": 318,
+  "discordant": {
+   "SAME->DIFF": 1,
+   "TIP->DIFF": 8,
+   "SAME->TIP": 3,
+   "TIP->SAME": 1,
+   "DIFF->TIP": 1
+  },
+  "examples": [
+   {
+    "id": "C:27628:3250724313",
+    "frozen": "SAME",
+    "p1k": "DIFF",
+    "label": "correct",
+    "type": null,
+    "sk": "Deti sa zobudia o siedmej ráno.",
+    "answer": "The kids will wake up at seven a.m."
+   },
+   {
+    "id": "W:14266:2219481358",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Čo oni tancujú? — Salsu.",
+    "answer": "What are they dancing at the party? — Salsa."
+   },
+   {
+    "id": "W:21467:759405230",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "W",
+    "sk": "Voda je studená, ty by si si mal obuť čižmy.",
+    "answer": "The water is cold, you have to put on your boots."
+   },
+   {
+    "id": "W:23878:655520666",
+    "frozen": "SAME",
+    "p1k": "TIP",
+    "label": "correct",
+    "type": null,
+    "sk": "Na tomto obrovskom štadióne je jedno zelené ihrisko.",
+    "answer": "In this huge stadium there is a green field."
+   },
+   {
+    "id": "W:2783:1525102123",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "T",
+    "sk": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+    "answer": "The ball that the dog brought was now completely covered in mud."
+   },
+   {
+    "id": "W:3937:1213271894",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Ona si kúpi ďalší prívesok, keď príde na tento trh znova.",
+    "answer": "She'll buy another pendant when she comes to this market."
+   },
+   {
+    "id": "W:4449:722373448",
+    "frozen": "TIP",
+    "p1k": "SAME",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Celkovo ona spustila kôš trikrát, kým mal muž všetky svoje pomaranče.",
+    "answer": "She lowered the basket three times until the man had all his oranges."
+   },
+   {
+    "id": "W:6830:2612740669",
+    "frozen": "DIFF",
+    "p1k": "TIP",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Oni ako deti kupovali sušené bylinky v pohári.",
+    "answer": "As children, they used to buy herbs in a jar."
+   },
+   {
+    "id": "W:7533:3503567680",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "W",
+    "sk": "Kým sa skupina usádzala, niekto udrel do spievajúcej misy.",
+    "answer": "While the group was settling in, someone struck the singing gong."
+   },
+   {
+    "id": "W:8020:4215651911",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Túto sezónu ona premenila tri penalty a ani jednu nezahodila.",
+    "answer": "This season she has converted three penalties."
+   },
+   {
+    "id": "W:8824:3690697119",
+    "frozen": "SAME",
+    "p1k": "TIP",
+    "label": "wrong",
+    "type": "S",
+    "sk": "Kým sa reťaz kývala, on dotlačil vrece na miesto.",
+    "answer": "While the chains were swinging, he pushed the sack into place."
+   },
+   {
+    "id": "W:8920:1441170666",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Najrýchlejšia akcia je ukázaná na konci v spomalenom zábere.",
+    "answer": "The fastest action is shown at the end."
+   },
+   {
+    "id": "W:9007:2829648222",
+    "frozen": "SAME",
+    "p1k": "TIP",
+    "label": "wrong",
+    "type": "W",
+    "sk": "Dnes v noci on preveril už šesť zdrojov a kopa stále rastie.",
+    "answer": "Tonight he has already checked six sources and the list is still growing."
+   },
+   {
+    "id": "W:9495:890576878",
+    "frozen": "TIP",
+    "p1k": "DIFF",
+    "label": "wrong",
+    "type": "M",
+    "sk": "Jej prejav bol prepísaný dvakrát, ešte než ona vôbec vyšla na to pódium.",
+    "answer": "Her speech was rewritten before she even went up on that stage."
+   }
+  ],
+  "tip_switch": {
+   "LOCKTIP|P-FROZEN|tip=True": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "fa": {
+     "k": 13,
+     "n": 301,
+     "pct": 4.32,
+     "ci": [
+      2.32,
+      7.27
+     ]
+    },
+    "fa_T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    }
+   },
+   "LOCKTIP|P-FROZEN|tip=False": {
+    "coverage": {
+     "k": 184,
+     "n": 189,
+     "pct": 97.35,
+     "ci": [
+      93.93,
+      99.14
+     ]
+    },
+    "fa": {
+     "k": 30,
+     "n": 301,
+     "pct": 9.97,
+     "ci": [
+      6.83,
+      13.92
+     ]
+    },
+    "fa_T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    }
+   },
+   "LOCKTIP+F8+F9 (ALL)|P-FROZEN|tip=True": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "fa": {
+     "k": 12,
+     "n": 301,
+     "pct": 3.99,
+     "ci": [
+      2.08,
+      6.86
+     ]
+    },
+    "fa_T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    }
+   },
+   "LOCKTIP+F8+F9 (ALL)|P-FROZEN|tip=False": {
+    "coverage": {
+     "k": 184,
+     "n": 189,
+     "pct": 97.35,
+     "ci": [
+      93.93,
+      99.14
+     ]
+    },
+    "fa": {
+     "k": 29,
+     "n": 301,
+     "pct": 9.63,
+     "ci": [
+      6.55,
+      13.54
+     ]
+    },
+    "fa_T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    }
+   },
+   "LOCKTIP|P-1K|tip=True": {
+    "coverage": {
+     "k": 180,
+     "n": 189,
+     "pct": 95.24,
+     "ci": [
+      91.15,
+      97.8
+     ]
+    },
+    "fa": {
+     "k": 12,
+     "n": 301,
+     "pct": 3.99,
+     "ci": [
+      2.08,
+      6.86
+     ]
+    },
+    "fa_T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    }
+   },
+   "LOCKTIP|P-1K|tip=False": {
+    "coverage": {
+     "k": 183,
+     "n": 189,
+     "pct": 96.83,
+     "ci": [
+      93.22,
+      98.83
+     ]
+    },
+    "fa": {
+     "k": 24,
+     "n": 301,
+     "pct": 7.97,
+     "ci": [
+      5.18,
+      11.63
+     ]
+    },
+    "fa_T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    }
+   },
+   "LOCKTIP+F8+F9 (ALL)|P-1K|tip=True": {
+    "coverage": {
+     "k": 180,
+     "n": 189,
+     "pct": 95.24,
+     "ci": [
+      91.15,
+      97.8
+     ]
+    },
+    "fa": {
+     "k": 11,
+     "n": 301,
+     "pct": 3.65,
+     "ci": [
+      1.84,
+      6.44
+     ]
+    },
+    "fa_T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    }
+   },
+   "LOCKTIP+F8+F9 (ALL)|P-1K|tip=False": {
+    "coverage": {
+     "k": 183,
+     "n": 189,
+     "pct": 96.83,
+     "ci": [
+      93.22,
+      98.83
+     ]
+    },
+    "fa": {
+     "k": 23,
+     "n": 301,
+     "pct": 7.64,
+     "ci": [
+      4.91,
+      11.25
+     ]
+    },
+    "fa_T": {
+     "k": 1,
+     "n": 54,
+     "pct": 1.85,
+     "ci": [
+      0.05,
+      9.89
+     ]
+    }
+   }
+  }
+ },
+ "calls": {
+  "counted_calls_http200": 466,
+  "failed_empty_200": 0,
+  "non200_attempts": 0,
+  "tokens_in": 163561,
+  "tokens_out": 466,
+  "spend_usd": 0.04159,
+  "reused_prompts": 170,
+  "new_this_run": 466,
+  "no_verdict_items": {
+   "P-FROZEN": 0,
+   "P-1K": 0
+  },
+  "phase_budget_remaining": 1534
+ },
+ "prompt_shas": {
+  "P-FROZEN": "def440d1a75c3094231db81de78327ef35c2b579a6de5784d43c39b1737e929c",
+  "P-1K": "ebd1f77c46d55eac8236a99cef197c92e24db5f2204c6098c88259845c0e4bec"
+ }
+}
