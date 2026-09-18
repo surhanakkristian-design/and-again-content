@@ -1,0 +1,246 @@
+{
+ "hand_check": {
+  "agree": 44,
+  "conservative": 26,
+  "error": 0
+ },
+ "hand_check_errors": [],
+ "ambiguous_reasons": {
+  "2783": "no readable person/number morphology in the main clause",
+  "3937": "no readable person/number morphology in the main clause",
+  "7444": "no readable person/number morphology in the main clause",
+  "7752": "no readable person/number morphology in the main clause",
+  "7910": "no readable person/number morphology in the main clause",
+  "8920": "no readable person/number morphology in the main clause",
+  "9495": "no readable person/number morphology in the main clause",
+  "9607": "no readable person/number morphology in the main clause",
+  "10013": "no readable person/number morphology in the main clause",
+  "10179": "no readable person/number morphology in the main clause",
+  "11610": "no readable person/number morphology in the main clause",
+  "13175": "no readable person/number morphology in the main clause",
+  "15954": "no readable person/number morphology in the main clause",
+  "20702": "no readable person/number morphology in the main clause",
+  "21467": "no readable person/number morphology in the main clause",
+  "22427": "no readable person/number morphology in the main clause",
+  "23878": "no readable person/number morphology in the main clause",
+  "26084": "no readable person/number morphology in the main clause",
+  "27628": "no readable person/number morphology in the main clause"
+ },
+ "baseline": {
+  "coverage": {
+   "k": 191,
+   "n": 210,
+   "pct": 90.95,
+   "ci": [
+    86.23,
+    94.46
+   ]
+  },
+  "fa": {
+   "k": 15,
+   "n": 275,
+   "pct": 5.45,
+   "ci": [
+    3.08,
+    8.84
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 69,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.21
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 70,
+    "pct": 2.86,
+    "ci": [
+     0.35,
+     9.94
+    ]
+   },
+   "M": {
+    "k": 5,
+    "n": 66,
+    "pct": 7.58,
+    "ci": [
+     2.51,
+     16.8
+    ]
+   },
+   "S": {
+    "k": 8,
+    "n": 70,
+    "pct": 11.43,
+    "ci": [
+     5.07,
+     21.28
+    ]
+   }
+  }
+ },
+ "p_chain": {
+  "dev_sentences": 70,
+  "with_chain": 51,
+  "ambiguous": 19,
+  "ambiguous_sids": [
+   "2783",
+   "3937",
+   "7444",
+   "7752",
+   "7910",
+   "8920",
+   "9495",
+   "9607",
+   "10013",
+   "10179",
+   "11610",
+   "13175",
+   "15954",
+   "20702",
+   "21467",
+   "22427",
+   "23878",
+   "26084",
+   "27628"
+  ]
+ },
+ "f4p_on_dev": {
+  "fa_caught": 4,
+  "fa_caught_by_type": {
+   "S": 4
+  },
+  "correct_wrongly_rejected": 0,
+  "coverage_after": "191/210 = 90.95 %",
+  "fa_after": "11/275 = 4.00 %"
+ },
+ "caught_items": [
+  {
+   "id": "W:10574:2448666810",
+   "sid": 10574,
+   "type": "S",
+   "sk": "Trénoval hodiny, kým bolo svetlo konečne správne.",
+   "answer": "They had been training for hours until the light was finally right.",
+   "p": {
+    "person": 3,
+    "number": "sg",
+    "gender": "m",
+    "subject": "dropped"
+   },
+   "evidence": "l-participle trénoval -> person 3, number sg, gender m",
+   "reason": "answer subject \"they\" contradicts the Slovak number (person 3, number sg; l-participle trénoval)",
+   "layer": "L3"
+  },
+  {
+   "id": "W:1452:315243162",
+   "sid": 1452,
+   "type": "S",
+   "sk": "Ak sa dotkne toho kaktusa, strávi večer vyťahovaním tŕňov z prsta.",
+   "answer": "If they touch that cactus, they'll spend the evening pulling thorns out of their finger.",
+   "p": {
+    "person": 3,
+    "number": "sg",
+    "gender": null,
+    "subject": "dropped"
+   },
+   "evidence": "present 3sg strávi -> person 3, number sg, gender open",
+   "reason": "answer subject \"they\" contradicts the Slovak number (person 3, number sg; present 3sg strávi)",
+   "layer": "L3"
+  },
+  {
+   "id": "W:16403:1306885234",
+   "sid": 16403,
+   "type": "S",
+   "sk": "Rozlúč sa a o hodinu sa vráti naspäť.",
+   "answer": "Say goodbye, and in an hour they'll come back.",
+   "p": {
+    "person": 3,
+    "number": "sg",
+    "gender": null,
+    "subject": "dropped"
+   },
+   "evidence": "present 3sg vráti -> person 3, number sg, gender open",
+   "reason": "answer subject \"they\" contradicts the Slovak number (person 3, number sg; present 3sg vráti)",
+   "layer": "L3"
+  },
+  {
+   "id": "W:8293:1283962081",
+   "sid": 8293,
+   "type": "S",
+   "sk": "Jedlo nikdy nedelí, takže tento croissant musí byť výnimočný.",
+   "answer": "They never share food, so this croissant must be special.",
+   "p": {
+    "person": 3,
+    "number": "sg",
+    "gender": null,
+    "subject": "dropped"
+   },
+   "evidence": "present 3sg nedelí -> person 3, number sg, gender open",
+   "reason": "answer subject \"they\" contradicts the Slovak number (person 3, number sg; present 3sg nedelí)",
+   "layer": "L3"
+  }
+ ],
+ "wrongly_rejected_items": [],
+ "fa_not_caught": [
+  {
+   "id": "W:10013:1594646351",
+   "type": "W",
+   "reason": "no p chain"
+  },
+  {
+   "id": "W:10013:4174637227",
+   "type": "M",
+   "reason": "no p chain"
+  },
+  {
+   "id": "W:21124:1753932823",
+   "type": "M",
+   "reason": "a main-clause pronoun (she,she) is compatible with the Slovak"
+  },
+  {
+   "id": "W:2389:1402963517",
+   "type": "S",
+   "reason": "no main-clause subject pronoun in the answer"
+  },
+  {
+   "id": "W:2783:2540506102",
+   "type": "M",
+   "reason": "no p chain"
+  },
+  {
+   "id": "W:31648:250135833",
+   "type": "W",
+   "reason": "a main-clause pronoun (he) is compatible with the Slovak"
+  },
+  {
+   "id": "W:7444:2683969038",
+   "type": "M",
+   "reason": "no p chain"
+  },
+  {
+   "id": "W:7910:2914297793",
+   "type": "S",
+   "reason": "no p chain"
+  },
+  {
+   "id": "W:8799:1222448868",
+   "type": "S",
+   "reason": "a main-clause pronoun (it) is compatible with the Slovak"
+  },
+  {
+   "id": "W:8812:384802316",
+   "type": "M",
+   "reason": "no main-clause subject pronoun in the answer"
+  },
+  {
+   "id": "W:9687:2008862971",
+   "type": "S",
+   "reason": "no main-clause subject pronoun in the answer"
+  }
+ ]
+}

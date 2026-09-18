@@ -1,0 +1,160 @@
+{
+ "plan": {
+  "BASE": {
+   "l3": 294,
+   "unique_prompts": 294,
+   "already_have": 294,
+   "new_after_dedupe": 0
+  },
+  "A": {
+   "l3": 294,
+   "unique_prompts": 294,
+   "already_have": 76,
+   "new_after_dedupe": 218
+  },
+  "A:f4p-only": {
+   "l3": 294,
+   "unique_prompts": 294,
+   "already_have": 294,
+   "new_after_dedupe": 0
+  },
+  "A:p_prompt-only": {
+   "l3": 294,
+   "unique_prompts": 294,
+   "already_have": 76,
+   "new_after_dedupe": 0
+  },
+  "B": {
+   "l3": 256,
+   "unique_prompts": 256,
+   "already_have": 86,
+   "new_after_dedupe": 170
+  },
+  "A+B": {
+   "l3": 256,
+   "unique_prompts": 256,
+   "already_have": 49,
+   "new_after_dedupe": 170
+  },
+  "C": {
+   "l3": 256,
+   "unique_prompts": 256,
+   "already_have": 0,
+   "new_after_dedupe": 256
+  }
+ },
+ "new_total": 814,
+ "counted_before": 0,
+ "subsample": "none",
+ "relabel": {
+  "dev": {
+   "n_rejudged": 357,
+   "unchanged": 299,
+   "correct_to_wrong_subject": 26,
+   "wrong_to_wrong_type_change": 29,
+   "wrong_to_correct": 3
+  },
+  "both_sides": {
+   "n_rejudged": 637,
+   "unchanged": 529,
+   "correct_to_wrong_subject": 48,
+   "wrong_to_wrong_type_change": 49,
+   "wrong_to_correct": 10,
+   "correct_to_wrong_other": 1
+  },
+  "control_dev": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "control_both": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "primary_overrides_dev": 41,
+  "sensitivity_overrides_dev": 59,
+  "primary_override_examples": [
+   {
+    "id": "C:29691:2714964500",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:10013:204106987",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:8293:1138473516",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:10167:2659945156",
+    "old": "correct",
+    "note": "her mouth for on"
+   },
+   {
+    "id": "C:9498:1459978336",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:26084:39201327",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:9498:240581227",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:5971:514811941",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:8293:516692352",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:21124:463685230",
+    "old": "correct",
+    "note": "he for ona"
+   }
+  ],
+  "control_noise": {
+   "n": 60,
+   "correct_to_wrong": {
+    "k": 0,
+    "n": 60,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.96
+    ]
+   },
+   "wrong_to_correct": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   },
+   "any_flip": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   }
+  }
+ }
+}

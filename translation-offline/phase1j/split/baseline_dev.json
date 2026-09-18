@@ -1,0 +1,310 @@
+{
+ "side": "phase1j DEV (70 sentences)",
+ "config": {
+  "prompt_variant": "P-E4b",
+  "tip_scoring": "tip_reject",
+  "c_guards": [
+   "F4v3"
+  ],
+  "b_flags": {
+   "backfill_s_ids": true,
+   "lock_fix": {
+    "syn": true,
+    "gender": true,
+    "contraction": true
+   }
+  },
+  "model": "gemini-3.1-flash-lite",
+  "generationConfig": {
+   "temperature": 0,
+   "maxOutputTokens": 24,
+   "thinkingConfig": {
+    "thinkingBudget": 0
+   }
+  }
+ },
+ "n_items": 490,
+ "l3_items": 294,
+ "model_calls_made": 0,
+ "cache_misses_l3_without_stored_verdict": 0,
+ "cache_miss_ids": [],
+ "stored_failed_calls_at_l3": 0,
+ "verdict_source_rows": {
+  "calls.jsonl": 270,
+  "holdout_calls.jsonl": 306
+ },
+ "coverage": {
+  "k": 191,
+  "n": 210,
+  "pct": 90.95,
+  "ci": [
+   86.23,
+   94.46
+  ]
+ },
+ "fa": {
+  "k": 15,
+  "n": 275,
+  "pct": 5.45,
+  "ci": [
+   3.08,
+   8.84
+  ]
+ },
+ "fa_by_type": {
+  "T": {
+   "k": 0,
+   "n": 69,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    5.21
+   ]
+  },
+  "W": {
+   "k": 2,
+   "n": 70,
+   "pct": 2.86,
+   "ci": [
+    0.35,
+    9.94
+   ]
+  },
+  "M": {
+   "k": 5,
+   "n": 66,
+   "pct": 7.58,
+   "ci": [
+    2.51,
+    16.8
+   ]
+  },
+  "S": {
+   "k": 8,
+   "n": 70,
+   "pct": 11.43,
+   "ci": [
+    5.07,
+    21.28
+   ]
+  }
+ },
+ "fa_by_layer": {
+  "L3": 15
+ },
+ "fa_by_half": {
+  "OLD": {
+   "k": 9,
+   "n": 150,
+   "pct": 6.0,
+   "ci": [
+    2.78,
+    11.08
+   ]
+  },
+  "NEW": {
+   "k": 6,
+   "n": 125,
+   "pct": 4.8,
+   "ci": [
+    1.78,
+    10.15
+   ]
+  }
+ },
+ "model_verdict_split_at_l3": {
+  "SAME": 142,
+  "TIP": 18,
+  "DIFF": 134
+ },
+ "failed_items_no_verdict": [],
+ "false_acceptances": [
+  {
+   "id": "W:10013:1594646351",
+   "type": "W",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:10013:4174637227",
+   "type": "M",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:10574:2448666810",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:1452:315243162",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:16403:1306885234",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:21124:1753932823",
+   "type": "M",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:2389:1402963517",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  },
+  {
+   "id": "W:2783:2540506102",
+   "type": "M",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  },
+  {
+   "id": "W:31648:250135833",
+   "type": "W",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  },
+  {
+   "id": "W:7444:2683969038",
+   "type": "M",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  },
+  {
+   "id": "W:7910:2914297793",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  },
+  {
+   "id": "W:8293:1283962081",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:8799:1222448868",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:8812:384802316",
+   "type": "M",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "OLD"
+  },
+  {
+   "id": "W:9687:2008862971",
+   "type": "S",
+   "layer": "L3",
+   "verdict": "correct",
+   "model": "SAME",
+   "half": "NEW"
+  }
+ ],
+ "fr_by_layer": {
+  "F4v2": 3,
+  "L2": 7,
+  "L3:TIPrej": 2,
+  "F5": 1,
+  "L3": 6
+ },
+ "items_from_1i_dev": 238,
+ "phase1i_dev_reference": {
+  "coverage": {
+   "k": 175,
+   "n": 203,
+   "pct": 86.21,
+   "ci": [
+    80.69,
+    90.63
+   ]
+  },
+  "fa": {
+   "k": 10,
+   "n": 260,
+   "pct": 3.85,
+   "ci": [
+    1.86,
+    6.96
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 67,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.36
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 69,
+    "pct": 2.9,
+    "ci": [
+     0.35,
+     10.08
+    ]
+   },
+   "M": {
+    "k": 4,
+    "n": 56,
+    "pct": 7.14,
+    "ci": [
+     1.98,
+     17.29
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 68,
+    "pct": 5.88,
+    "ci": [
+     1.63,
+     14.38
+    ]
+   }
+  },
+  "failed_rate_pct": 0.0
+ }
+}

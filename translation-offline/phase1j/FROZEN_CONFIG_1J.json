@@ -1,0 +1,106 @@
+{
+ "phase": "1j",
+ "side_measured": "dev",
+ "arm": "B",
+ "switch": "on",
+ "model": "gemini-3.1-flash-lite",
+ "generationConfig": {
+  "temperature": 0,
+  "maxOutputTokens": 24,
+  "thinkingConfig": {
+   "thinkingBudget": 0
+  }
+ },
+ "flags": {
+  "data": "b",
+  "p_prompt": false,
+  "f4p": false,
+  "contract": false,
+  "labels": "b"
+ },
+ "guards": [
+  "F4v3"
+ ],
+ "b_fix": true,
+ "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+ "prompt": {
+  "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+  "extra_lines_in_order": [
+   "gender line (only when the annotation still has g)",
+   "p line (p_chain.p_prompt_line) when p_prompt is on",
+   "ground line",
+   "wording line"
+  ],
+  "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+  "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+  "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+  "tail": "SAME, TIP or DIFF?"
+ },
+ "verdict_rule": "one word SAME/TIP/DIFF; TIP -> rejected",
+ "label_rule": {
+  "arm_A_and_BASE": "existing labels on the original Slovak (items.jsonl judged / wrong_type)",
+  "arms_B_A+B_C_primary": "existing label/type, overridden to (wrong, type S) exactly where the blind judge says label=wrong AND subj_ok=false, for items of REWRITTEN sentences only; every other judge disagreement counted, not adopted",
+  "arms_B_A+B_C_sensitivity": "judge label AND type adopted for every rewritten-sentence item",
+  "controls": "the 60 CONTROL items (unchanged Slovak) never change a label; they measure judge noise only"
+ },
+ "data": "Task B rewritten Slovak (taskB/sk_new.json), refs_new, annotations_b_<side>.json (g=null on rewritten sids)",
+ "p_chain": "not used",
+ "selected_dev_numbers": {
+  "coverage": {
+   "k": 171,
+   "n": 185,
+   "pct": 92.43,
+   "ci": [
+    87.63,
+    95.8
+   ]
+  },
+  "fa": {
+   "k": 12,
+   "n": 301,
+   "pct": 3.99,
+   "ci": [
+    2.08,
+    6.86
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 64,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.6
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 64,
+    "pct": 3.12,
+    "ci": [
+     0.38,
+     10.84
+    ]
+   },
+   "M": {
+    "k": 4,
+    "n": 62,
+    "pct": 6.45,
+    "ci": [
+     1.79,
+     15.7
+    ]
+   },
+   "S": {
+    "k": 6,
+    "n": 111,
+    "pct": 5.41,
+    "ci": [
+     2.01,
+     11.39
+    ]
+   }
+  }
+ }
+}

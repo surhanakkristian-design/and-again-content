@@ -1,0 +1,889 @@
+{
+ "side": "dev",
+ "frozen": {
+  "phase": "1j",
+  "side_measured": "dev",
+  "arm": "B",
+  "switch": "on",
+  "model": "gemini-3.1-flash-lite",
+  "generationConfig": {
+   "temperature": 0,
+   "maxOutputTokens": 24,
+   "thinkingConfig": {
+    "thinkingBudget": 0
+   }
+  },
+  "flags": {
+   "data": "b",
+   "p_prompt": false,
+   "f4p": false,
+   "contract": false,
+   "labels": "b"
+  },
+  "guards": [
+   "F4v3"
+  ],
+  "b_fix": true,
+  "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+  "prompt": {
+   "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+   "extra_lines_in_order": [
+    "gender line (only when the annotation still has g)",
+    "p line (p_chain.p_prompt_line) when p_prompt is on",
+    "ground line",
+    "wording line"
+   ],
+   "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+   "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+   "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+   "tail": "SAME, TIP or DIFF?"
+  },
+  "verdict_rule": "one word SAME/TIP/DIFF; TIP -> rejected",
+  "label_rule": {
+   "arm_A_and_BASE": "existing labels on the original Slovak (items.jsonl judged / wrong_type)",
+   "arms_B_A+B_C_primary": "existing label/type, overridden to (wrong, type S) exactly where the blind judge says label=wrong AND subj_ok=false, for items of REWRITTEN sentences only; every other judge disagreement counted, not adopted",
+   "arms_B_A+B_C_sensitivity": "judge label AND type adopted for every rewritten-sentence item",
+   "controls": "the 60 CONTROL items (unchanged Slovak) never change a label; they measure judge noise only"
+  },
+  "data": "Task B rewritten Slovak (taskB/sk_new.json), refs_new, annotations_b_<side>.json (g=null on rewritten sids)",
+  "p_chain": "not used",
+  "selected_dev_numbers": {
+   "coverage": {
+    "k": 171,
+    "n": 185,
+    "pct": 92.43,
+    "ci": [
+     87.63,
+     95.8
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 64,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      5.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 64,
+     "pct": 3.12,
+     "ci": [
+      0.38,
+      10.84
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 62,
+     "pct": 6.45,
+     "ci": [
+      1.79,
+      15.7
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 111,
+     "pct": 5.41,
+     "ci": [
+      2.01,
+      11.39
+     ]
+    }
+   }
+  }
+ },
+ "relabel": {
+  "dev": {
+   "n_rejudged": 357,
+   "unchanged": 299,
+   "correct_to_wrong_subject": 26,
+   "wrong_to_wrong_type_change": 29,
+   "wrong_to_correct": 3
+  },
+  "both_sides": {
+   "n_rejudged": 637,
+   "unchanged": 529,
+   "correct_to_wrong_subject": 48,
+   "wrong_to_wrong_type_change": 49,
+   "wrong_to_correct": 10,
+   "correct_to_wrong_other": 1
+  },
+  "control_dev": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "control_both": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "primary_overrides_dev": 41,
+  "sensitivity_overrides_dev": 59,
+  "primary_override_examples": [
+   {
+    "id": "C:29691:2714964500",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:10013:204106987",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:8293:1138473516",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:10167:2659945156",
+    "old": "correct",
+    "note": "her mouth for on"
+   },
+   {
+    "id": "C:9498:1459978336",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:26084:39201327",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:9498:240581227",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:5971:514811941",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:8293:516692352",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:21124:463685230",
+    "old": "correct",
+    "note": "he for ona"
+   }
+  ],
+  "control_noise": {
+   "n": 60,
+   "correct_to_wrong": {
+    "k": 0,
+    "n": 60,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.96
+    ]
+   },
+   "wrong_to_correct": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   },
+   "any_flip": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   }
+  }
+ },
+ "rows": {
+  "primary": {
+   "coverage": {
+    "k": 171,
+    "n": 185,
+    "pct": 92.43,
+    "ci": [
+     87.63,
+     95.8
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 64,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      5.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 64,
+     "pct": 3.12,
+     "ci": [
+      0.38,
+      10.84
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 62,
+     "pct": 6.45,
+     "ci": [
+      1.79,
+      15.7
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 111,
+     "pct": 5.41,
+     "ci": [
+      2.01,
+      11.39
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 3,
+    "L3": 9
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L2": 7,
+    "L3": 4
+   },
+   "false_rejections": [
+    {
+     "id": "C:10116:2635817258",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:10734:2394971369",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:11610:415761804",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:15954:580487827",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:23878:1748591315",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:27628:1242167241",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:27628:3492027817",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:29691:2119858295",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:6265:241916334",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:7533:3411610792",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:8465:1630787538",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:8812:183208396",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:8824:3821792841",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9495:2507633220",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    }
+   ],
+   "false_acceptances": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On má ústa také suché, že smäd musí byť skutočný.",
+     "reference": "His mouth is that dry, so the thirst must be real.",
+     "answer": "Her mouth is so dry that the thirst must be real."
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On má ústa také suché, že smäd musí byť skutočný.",
+     "reference": "His mouth is that dry, so the thirst must be real.",
+     "answer": "Her mouth's so dry that the thirst must be real."
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On ju dokáže nájsť skôr, než ona príde domov.",
+     "reference": "He can find her before she gets home.",
+     "answer": "She can find her before she comes home."
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "SAME",
+     "slovak_used": "Zvyčajne ona ostáva pod strechou, ale dnes tancuje v daždi.",
+     "reference": "She usually stays dry, but today she is dancing in the rain.",
+     "answer": "She stays under the roof, but today she is dancing in the rain."
+    },
+    {
+     "id": "W:2389:1402963517",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Keby duriány nesmrdeli tak silno, colnica by ich asi pustila.",
+     "reference": "If durians didn't smell so strongly, customs would probably let them through.",
+     "answer": "If durians didn't smell so strong, the customs officer would probably let them through."
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+     "reference": "The ball that the dog fetched is now completely muddy.",
+     "answer": "The ball that the dog brought is covered in mud."
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Zlatko, on vraj opustil misku včera, nie dnes.",
+     "reference": "Honey, apparently he left the bowl yesterday, not today.",
+     "answer": "Honey, apparently he left the plate yesterday, not today."
+    },
+    {
+     "id": "W:7444:2683969038",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Ona si naniesla už tri vrstvy, takže jej riasy vyzerajú obrovské.",
+     "reference": "She has already applied three coats, so her lashes look huge.",
+     "answer": "She has applied three layers, so her eyelashes look huge."
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Napriek ventilátoru na plný výkon sa zopnutá kopa vôbec nepohla.",
+     "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+     "answer": "Despite the fan being at full power, the clipped piles didn't move at all."
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+     "reference": "Her trainer wishes his pads were a bit thicker.",
+     "answer": "The coach wishes his gloves were thicker."
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Dnes v noci on preveril už šesť zdrojov a kopa stále rastie.",
+     "reference": "He has checked six sources tonight and the pile is still growing.",
+     "answer": "Tonight he has already checked six sources and the list is still growing."
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Ak oba štáty podpíšu zmluvu, hranica sa budúci mesiac otvorí.",
+     "reference": "If both states sign the treaty, the border will open next month.",
+     "answer": "If both countries sign the treaty, the borders will open next month."
+    }
+   ],
+   "no_verdict_items": []
+  },
+  "sensitivity": {
+   "coverage": {
+    "k": 171,
+    "n": 185,
+    "pct": 92.43,
+    "ci": [
+     87.63,
+     95.8
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 298,
+    "pct": 3.69,
+    "ci": [
+     1.86,
+     6.51
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 53,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.72
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 74,
+     "pct": 2.7,
+     "ci": [
+      0.33,
+      9.42
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 64,
+     "pct": 4.69,
+     "ci": [
+      0.98,
+      13.09
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 107,
+     "pct": 5.61,
+     "ci": [
+      2.09,
+      11.81
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 3,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3:TIPrej": 3,
+    "L2": 7,
+    "L3": 4
+   },
+   "false_rejections": [
+    {
+     "id": "C:10116:2635817258",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:10734:2394971369",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:11610:415761804",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:15954:580487827",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:23878:1748591315",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:27628:1242167241",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:27628:3492027817",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:29691:2119858295",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:6265:241916334",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:7533:3411610792",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:8465:1630787538",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:8812:183208396",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:8824:3821792841",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9495:2507633220",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    }
+   ],
+   "false_acceptances": [
+    {
+     "id": "C:10167:2659945156",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On má ústa také suché, že smäd musí byť skutočný.",
+     "reference": "His mouth is that dry, so the thirst must be real.",
+     "answer": "Her mouth is so dry that the thirst must be real."
+    },
+    {
+     "id": "C:10167:3007534590",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On má ústa také suché, že smäd musí byť skutočný.",
+     "reference": "His mouth is that dry, so the thirst must be real.",
+     "answer": "Her mouth's so dry that the thirst must be real."
+    },
+    {
+     "id": "C:26084:39201327",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "On ju dokáže nájsť skôr, než ona príde domov.",
+     "reference": "He can find her before she gets home.",
+     "answer": "She can find her before she comes home."
+    },
+    {
+     "id": "W:21124:1753932823",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "SAME",
+     "slovak_used": "Zvyčajne ona ostáva pod strechou, ale dnes tancuje v daždi.",
+     "reference": "She usually stays dry, but today she is dancing in the rain.",
+     "answer": "She stays under the roof, but today she is dancing in the rain."
+    },
+    {
+     "id": "W:2389:1402963517",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Keby duriány nesmrdeli tak silno, colnica by ich asi pustila.",
+     "reference": "If durians didn't smell so strongly, customs would probably let them through.",
+     "answer": "If durians didn't smell so strong, the customs officer would probably let them through."
+    },
+    {
+     "id": "W:2783:2540506102",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+     "reference": "The ball that the dog fetched is now completely muddy.",
+     "answer": "The ball that the dog brought is covered in mud."
+    },
+    {
+     "id": "W:31648:250135833",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Zlatko, on vraj opustil misku včera, nie dnes.",
+     "reference": "Honey, apparently he left the bowl yesterday, not today.",
+     "answer": "Honey, apparently he left the plate yesterday, not today."
+    },
+    {
+     "id": "W:7910:2914297793",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Napriek ventilátoru na plný výkon sa zopnutá kopa vôbec nepohla.",
+     "reference": "Despite the fan at full power, the clipped pile did not move at all.",
+     "answer": "Despite the fan being at full power, the clipped piles didn't move at all."
+    },
+    {
+     "id": "W:8812:384802316",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+     "reference": "Her trainer wishes his pads were a bit thicker.",
+     "answer": "The coach wishes his gloves were thicker."
+    },
+    {
+     "id": "W:9007:2829648222",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Dnes v noci on preveril už šesť zdrojov a kopa stále rastie.",
+     "reference": "He has checked six sources tonight and the pile is still growing.",
+     "answer": "Tonight he has already checked six sources and the list is still growing."
+    },
+    {
+     "id": "W:9687:2008862971",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Ak oba štáty podpíšu zmluvu, hranica sa budúci mesiac otvorí.",
+     "reference": "If both states sign the treaty, the border will open next month.",
+     "answer": "If both countries sign the treaty, the borders will open next month."
+    }
+   ],
+   "no_verdict_items": []
+  }
+ },
+ "base_1i_replay_same_items": {
+  "coverage": {
+   "k": 191,
+   "n": 210,
+   "pct": 90.95,
+   "ci": [
+    86.23,
+    94.46
+   ]
+  },
+  "fa": {
+   "k": 15,
+   "n": 275,
+   "pct": 5.45,
+   "ci": [
+    3.08,
+    8.84
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 0,
+    "n": 69,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.21
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 70,
+    "pct": 2.86,
+    "ci": [
+     0.35,
+     9.94
+    ]
+   },
+   "M": {
+    "k": 5,
+    "n": 66,
+    "pct": 7.58,
+    "ci": [
+     2.51,
+     16.8
+    ]
+   },
+   "S": {
+    "k": 8,
+    "n": 70,
+    "pct": 11.43,
+    "ci": [
+     5.07,
+     21.28
+    ]
+   }
+  },
+  "fa_by_layer": {
+   "L3": 15
+  },
+  "fr_by_layer": {
+   "F4v2": 3,
+   "L2": 9,
+   "L3:TIPrej": 2,
+   "L3": 5
+  },
+  "new_calls": 0
+ },
+ "calls": {
+  "counted_calls_http200": 814,
+  "failed_calls_parse": 0,
+  "transport_rows_not_counted": 298,
+  "tokens_in": 241424,
+  "tokens_out": 1795,
+  "spend_usd": 0.06305,
+  "transport_retries": 298,
+  "reused_prompts": 256,
+  "new_this_run": 0
+ }
+}
