@@ -836,6 +836,60 @@ def final(side, max_calls):
                   for v in ('tip', 'abstain')},
            'calls': token_spend(), 'reused_prompts': cstat['reused'], 'new_this_run': cstat['new'],
            'no_verdict_items': cstat['no_verdict']}
+    # ---- SECONDARY READOUT (not the frozen configuration) — zero extra model calls
+    sec_res = {}
+    for nm, lk, f8o, f9o in (('LOCKTIP', True, False, False), ('LOCKTIP+F8', True, True, False),
+                             ('LOCKTIP+F9', True, False, True),
+                             ('BASE (lock rejects)', False, False, False)):
+        sec_res[nm] = configure_row(st, recs, vms[sel['prompt']], lk, guards, f8o, f9o,
+                                    sel['tip_reject'])
+    sec = {}
+    for nm, r2 in sec_res.items():
+        m2 = score(recs, r2, labels)
+        sec[nm] = {'coverage': m2['coverage'], 'coverage_kindC': m2['coverage_kindC'],
+                   'fa': m2['fa'], 'fa_by_type': m2['fa_by_type'],
+                   'fa_by_layer': m2['fa_by_layer'], 'fr_by_layer': m2['fr_by_layer']}
+
+    def _guard_cost(res0, gname):
+        other = 'f9' if gname == 'f8' else 'f8'
+        caught, uniq, cost = [], [], []
+        for i in by:
+            if not res0[i]['accepted']:
+                continue
+            if (guards[i][gname] or {}).get('verdict') != 'reject':
+                continue
+            if lab[i][0] == 'wrong':
+                caught.append(i)
+                if (guards[i][other] or {}).get('verdict') != 'reject':
+                    uniq.append(i)
+            else:
+                cost.append(i)
+        return {'caught_wrong': len(caught), 'caught_wrong_only_this_guard': len(uniq),
+                'cost_correct_rejected': len(cost), 'caught_items': itemise(caught),
+                'cost_items': itemise(cost)}
+    gcost = {}
+    for bnm in ('LOCKTIP', 'BASE (lock rejects)'):
+        for g in ('f8', 'f9'):
+            gcost['%s|%s' % (bnm, g.upper())] = _guard_cost(sec_res[bnm], g)
+    base_r, lock_r = sec_res['BASE (lock rejects)'], sec_res['LOCKTIP']
+    wr = collections.Counter()
+    rel = {'rejected_in_BASE': sum(1 for i in by if not base_r[i]['accepted']),
+           'rejected_in_BASE_by_layer': dict(collections.Counter(
+               base_r[i]['layer'] for i in by if not base_r[i]['accepted'])),
+           'released_by_LOCKTIP_total': 0, 'released_judged_correct': 0}
+    for i in by:
+        if lock_r[i]['accepted'] and not base_r[i]['accepted']:
+            rel['released_by_LOCKTIP_total'] += 1
+            if lab[i][0] == 'correct':
+                rel['released_judged_correct'] += 1
+            else:
+                wr[lab[i][1] or '?'] += 1
+    rel['released_judged_wrong_by_type'] = dict(wr)
+    out['secondary_readout'] = {'note': 'secondary readout, not the frozen configuration',
+                                'rows': sec, 'guard_cost': gcost, 'lock_released': rel}
+    out['guards_distribution'] = {
+        'f8': dict(collections.Counter((guards[i]['f8'] or {}).get('verdict') for i in by)),
+        'f9': dict(collections.Counter((guards[i]['f9'] or {}).get('verdict') for i in by))}
     out['calls']['phase_budget_remaining'] = PHASE_CAP - out['calls']['counted_calls_http200']
 
     if side == 'fresh':
@@ -904,6 +958,11 @@ def final(side, max_calls):
               '## Writer intent x judge label', '', '```', json.dumps(out['intent_x_label'], indent=1),
               '```', '', '## F9 out-of-sample time-frame check (reporting only)', '', '```',
               json.dumps(out['f9_out_of_sample_tf_check'], indent=1), '```']
+    T += ['', '## Secondary readout (NOT the frozen configuration)', '', '```',
+          json.dumps(out['secondary_readout']['rows'], indent=1), '```', '', '```',
+          json.dumps(out['secondary_readout']['guard_cost'], indent=1, ensure_ascii=False)[:12000],
+          '```', '', '```', json.dumps(out['secondary_readout']['lock_released'], indent=1), '```',
+          '', '```', json.dumps(out['guards_distribution'], indent=1), '```']
     T += ['', '## B3 line', '', '```', json.dumps(out['b3'], indent=1), '```', '',
           '## Every false acceptance', ''] + ['- `%s`' % json.dumps(x, ensure_ascii=False)
                                               for x in out['false_acceptances']] + \

@@ -12,14 +12,14 @@
    }
   },
   "selected": {
-   "name": "LOCKTIP",
+   "name": "LOCKTIP+F8+F9 (ALL)",
    "prompt": "P-FROZEN",
    "locktip": true,
-   "f8": false,
-   "f9": false,
+   "f8": true,
+   "f9": true,
    "f9_strict": false,
    "tip_reject": true,
-   "moving_parts": 1
+   "moving_parts": 3
   },
   "prompt_id": "P-FROZEN",
   "prompt_template_sha256": "def440d1a75c3094231db81de78327ef35c2b579a6de5784d43c39b1737e929c",
@@ -40,8 +40,8 @@
   "switches": {
    "l2_lock_rejects": false,
    "lock_mismatch_becomes_tip": true,
-   "F8": false,
-   "F9": false,
+   "F8": true,
+   "F9": true,
    "f9_REPORTED_STRICT": false,
    "tip_as_rejection": true,
    "old_guards": [
@@ -89,12 +89,12 @@
     ]
    },
    "fa": {
-    "k": 13,
+    "k": 12,
     "n": 301,
-    "pct": 4.32,
+    "pct": 3.99,
     "ci": [
-     2.32,
-     7.27
+     2.08,
+     6.86
     ]
    },
    "fa_by_type": {
@@ -135,12 +135,12 @@
      ]
     },
     "V": {
-     "k": 2,
+     "k": 1,
      "n": 6,
-     "pct": 33.33,
+     "pct": 16.67,
      "ci": [
-      4.33,
-      77.72
+      0.42,
+      64.12
      ]
     },
     "E": {
@@ -154,7 +154,49 @@
     }
    }
   },
-  "data": "Phase 1j arm-B Slovak/refs/annotations for dev+replay1j; phase1k/fresh/* for fresh"
+  "data": "Phase 1j arm-B Slovak/refs/annotations for dev+replay1j; phase1k/fresh/* for fresh",
+  "tie_break_override": {
+   "decided_by": "main session, before the fresh holdout was opened",
+   "freeze_commit_before_override": "9e3bfb5",
+   "previous_selection": {
+    "name": "LOCKTIP",
+    "prompt": "P-FROZEN",
+    "locktip": true,
+    "f8": false,
+    "f9": false,
+    "f9_strict": false,
+    "tip_reject": true,
+    "moving_parts": 1
+   },
+   "previous_dev_numbers": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "fa": {
+     "k": 13,
+     "n": 301,
+     "pct": 4.32,
+     "ci": [
+      2.32,
+      7.27
+     ]
+    }
+   },
+   "new_selection": "LOCKTIP+F8+F9 (ALL) / P-FROZEN / TIP-as-rejection ON, f9.REPORTED_STRICT False",
+   "reasoning": [
+    "The owner's selection rule (highest coverage whose FA point estimate is under 5 % AND whose type-T FA is under 5 %) produced a FOUR-WAY TIE on DEV coverage 96.30 %: LOCKTIP (FA 4.32 %), LOCKTIP+F8 (3.99 %), LOCKTIP+F9 (4.32 %), LOCKTIP+F8+F9 = ALL (3.99 %).",
+    "Agent R broke the tie with 'fewer moving parts', which was the main session's own addition, not the owner's rule; it drops F9.",
+    "The tie is re-broken by the rule's own second criterion (lowest FA: 3.99 % beats 4.32 %, leaving LOCKTIP+F8 and ALL) and then by the brief's requirement that the tense check stays: F9 must replace what the lock was doing and the 5 % tolerance is not permission to drop the check. ALL is therefore frozen.",
+    "Zero new model calls: guards are readouts on stored verdicts; the DEV ALL row is already measured."
+   ],
+   "reported_as": "deviation from agent R’s recorded freeze, taken BEFORE the fresh holdout was opened"
+  }
  },
  "coverage": {
   "k": 182,
@@ -175,12 +217,12 @@
   ]
  },
  "fa": {
-  "k": 13,
+  "k": 12,
   "n": 301,
-  "pct": 4.32,
+  "pct": 3.99,
   "ci": [
-   2.32,
-   7.27
+   2.08,
+   6.86
   ]
  },
  "fa_by_type": {
@@ -221,12 +263,12 @@
    ]
   },
   "V": {
-   "k": 2,
+   "k": 1,
    "n": 6,
-   "pct": 33.33,
+   "pct": 16.67,
    "ci": [
-    4.33,
-    77.72
+    0.42,
+    64.12
    ]
   },
   "E": {
@@ -240,7 +282,7 @@
   }
  },
  "fa_by_layer": {
-  "L1": 5,
+  "L1": 4,
   "L3": 8
  },
  "fr_by_layer": {
@@ -274,20 +316,6 @@
    "judge_type": "S",
    "intent": null,
    "f8": "accept",
-   "f9": "accept"
-  },
-  {
-   "id": "C:23360:1881410199",
-   "layer": "L1",
-   "model_reply": "",
-   "model": null,
-   "slovak": "Jeho obrovské kýchnutie ty môžeš počuť po celej lúke.",
-   "answer": "His huge sneeze can be heard across the whole meadow.",
-   "reference": "You can hear his huge sneeze across the whole meadow.",
-   "judge_label": "wrong",
-   "judge_type": "V",
-   "intent": null,
-   "f8": "reject",
    "f9": "accept"
   },
   {
@@ -558,5 +586,473 @@
  "new_this_run": 0,
  "no_verdict_items": {
   "P-FROZEN": []
+ },
+ "secondary_readout": {
+  "note": "secondary readout, not the frozen configuration",
+  "rows": {
+   "LOCKTIP": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "coverage_kindC": {
+     "k": 176,
+     "n": 180,
+     "pct": 97.78,
+     "ci": [
+      94.41,
+      99.39
+     ]
+    },
+    "fa": {
+     "k": 13,
+     "n": 301,
+     "pct": 4.32,
+     "ci": [
+      2.32,
+      7.27
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 0,
+      "n": 54,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       6.6
+      ]
+     },
+     "W": {
+      "k": 2,
+      "n": 76,
+      "pct": 2.63,
+      "ci": [
+       0.32,
+       9.18
+      ]
+     },
+     "M": {
+      "k": 3,
+      "n": 66,
+      "pct": 4.55,
+      "ci": [
+       0.95,
+       12.71
+      ]
+     },
+     "S": {
+      "k": 6,
+      "n": 98,
+      "pct": 6.12,
+      "ci": [
+       2.28,
+       12.85
+      ]
+     },
+     "V": {
+      "k": 2,
+      "n": 6,
+      "pct": 33.33,
+      "ci": [
+       4.33,
+       77.72
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 1,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       97.5
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L1": 5,
+     "L3": 8
+    },
+    "fr_by_layer": {
+     "L3:TIPrej": 2,
+     "L3": 5
+    }
+   },
+   "LOCKTIP+F8": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "coverage_kindC": {
+     "k": 176,
+     "n": 180,
+     "pct": 97.78,
+     "ci": [
+      94.41,
+      99.39
+     ]
+    },
+    "fa": {
+     "k": 12,
+     "n": 301,
+     "pct": 3.99,
+     "ci": [
+      2.08,
+      6.86
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 0,
+      "n": 54,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       6.6
+      ]
+     },
+     "W": {
+      "k": 2,
+      "n": 76,
+      "pct": 2.63,
+      "ci": [
+       0.32,
+       9.18
+      ]
+     },
+     "M": {
+      "k": 3,
+      "n": 66,
+      "pct": 4.55,
+      "ci": [
+       0.95,
+       12.71
+      ]
+     },
+     "S": {
+      "k": 6,
+      "n": 98,
+      "pct": 6.12,
+      "ci": [
+       2.28,
+       12.85
+      ]
+     },
+     "V": {
+      "k": 1,
+      "n": 6,
+      "pct": 16.67,
+      "ci": [
+       0.42,
+       64.12
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 1,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       97.5
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L1": 4,
+     "L3": 8
+    },
+    "fr_by_layer": {
+     "L3:TIPrej": 2,
+     "L3": 5
+    }
+   },
+   "LOCKTIP+F9": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "coverage_kindC": {
+     "k": 176,
+     "n": 180,
+     "pct": 97.78,
+     "ci": [
+      94.41,
+      99.39
+     ]
+    },
+    "fa": {
+     "k": 13,
+     "n": 301,
+     "pct": 4.32,
+     "ci": [
+      2.32,
+      7.27
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 0,
+      "n": 54,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       6.6
+      ]
+     },
+     "W": {
+      "k": 2,
+      "n": 76,
+      "pct": 2.63,
+      "ci": [
+       0.32,
+       9.18
+      ]
+     },
+     "M": {
+      "k": 3,
+      "n": 66,
+      "pct": 4.55,
+      "ci": [
+       0.95,
+       12.71
+      ]
+     },
+     "S": {
+      "k": 6,
+      "n": 98,
+      "pct": 6.12,
+      "ci": [
+       2.28,
+       12.85
+      ]
+     },
+     "V": {
+      "k": 2,
+      "n": 6,
+      "pct": 33.33,
+      "ci": [
+       4.33,
+       77.72
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 1,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       97.5
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L1": 5,
+     "L3": 8
+    },
+    "fr_by_layer": {
+     "L3:TIPrej": 2,
+     "L3": 5
+    }
+   },
+   "BASE (lock rejects)": {
+    "coverage": {
+     "k": 175,
+     "n": 189,
+     "pct": 92.59,
+     "ci": [
+      87.88,
+      95.89
+     ]
+    },
+    "coverage_kindC": {
+     "k": 169,
+     "n": 180,
+     "pct": 93.89,
+     "ci": [
+      89.33,
+      96.91
+     ]
+    },
+    "fa": {
+     "k": 12,
+     "n": 301,
+     "pct": 3.99,
+     "ci": [
+      2.08,
+      6.86
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 0,
+      "n": 54,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       6.6
+      ]
+     },
+     "W": {
+      "k": 2,
+      "n": 76,
+      "pct": 2.63,
+      "ci": [
+       0.32,
+       9.18
+      ]
+     },
+     "M": {
+      "k": 3,
+      "n": 66,
+      "pct": 4.55,
+      "ci": [
+       0.95,
+       12.71
+      ]
+     },
+     "S": {
+      "k": 5,
+      "n": 98,
+      "pct": 5.1,
+      "ci": [
+       1.68,
+       11.51
+      ]
+     },
+     "V": {
+      "k": 2,
+      "n": 6,
+      "pct": 33.33,
+      "ci": [
+       4.33,
+       77.72
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 1,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       97.5
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L1": 5,
+     "L3": 7
+    },
+    "fr_by_layer": {
+     "L2": 9,
+     "L3:TIPrej": 2,
+     "L3": 3
+    }
+   }
+  },
+  "guard_cost": {
+   "LOCKTIP|F8": {
+    "caught_wrong": 1,
+    "caught_wrong_only_this_guard": 1,
+    "cost_correct_rejected": 0,
+    "caught_items": [
+     {
+      "id": "C:23360:1881410199",
+      "layer": "F8",
+      "model_reply": "",
+      "model": null,
+      "slovak": "Jeho obrovské kýchnutie ty môžeš počuť po celej lúke.",
+      "answer": "His huge sneeze can be heard across the whole meadow.",
+      "reference": "You can hear his huge sneeze across the whole meadow.",
+      "judge_label": "wrong",
+      "judge_type": "V",
+      "intent": null,
+      "f8": "reject",
+      "f9": "accept"
+     }
+    ],
+    "cost_items": []
+   },
+   "LOCKTIP|F9": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 0,
+    "caught_items": [],
+    "cost_items": []
+   },
+   "BASE (lock rejects)|F8": {
+    "caught_wrong": 1,
+    "caught_wrong_only_this_guard": 1,
+    "cost_correct_rejected": 0,
+    "caught_items": [
+     {
+      "id": "C:23360:1881410199",
+      "layer": "F8",
+      "model_reply": "",
+      "model": null,
+      "slovak": "Jeho obrovské kýchnutie ty môžeš počuť po celej lúke.",
+      "answer": "His huge sneeze can be heard across the whole meadow.",
+      "reference": "You can hear his huge sneeze across the whole meadow.",
+      "judge_label": "wrong",
+      "judge_type": "V",
+      "intent": null,
+      "f8": "reject",
+      "f9": "accept"
+     }
+    ],
+    "cost_items": []
+   },
+   "BASE (lock rejects)|F9": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 0,
+    "caught_items": [],
+    "cost_items": []
+   }
+  },
+  "lock_released": {
+   "rejected_in_BASE": 303,
+   "rejected_in_BASE_by_layer": {
+    "F4v2": 74,
+    "L3:TIPrej": 16,
+    "L2": 65,
+    "L3": 118,
+    "F5": 14,
+    "F3": 14,
+    "F2B": 2
+   },
+   "released_by_LOCKTIP_total": 8,
+   "released_judged_correct": 7,
+   "released_judged_wrong_by_type": {
+    "S": 1
+   }
+  }
+ },
+ "guards_distribution": {
+  "f8": {
+   "accept": 460,
+   "reject": 1,
+   "abstain": 29
+  },
+  "f9": {
+   "tip": 168,
+   "accept": 253,
+   "abstain": 35,
+   "reject": 34
+  }
  }
 }
