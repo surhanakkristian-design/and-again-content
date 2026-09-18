@@ -1,0 +1,1408 @@
+{
+ "side": "replay1j",
+ "frozen": {
+  "phase": "1k",
+  "side_measured": "dev",
+  "model": "gemini-3.1-flash-lite",
+  "generationConfig": {
+   "temperature": 0,
+   "maxOutputTokens": 24,
+   "thinkingConfig": {
+    "thinkingBudget": 0
+   }
+  },
+  "selected": {
+   "name": "LOCKTIP+F8+F9 (ALL)",
+   "prompt": "P-FROZEN",
+   "locktip": true,
+   "f8": true,
+   "f9": true,
+   "f9_strict": false,
+   "tip_reject": true,
+   "moving_parts": 3
+  },
+  "prompt_id": "P-FROZEN",
+  "prompt_template_sha256": "def440d1a75c3094231db81de78327ef35c2b579a6de5784d43c39b1737e929c",
+  "prompt": {
+   "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+   "extra_lines_in_order": [
+    "gender line (only when the annotation still has g)",
+    "ground line",
+    "wording line"
+   ],
+   "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+   "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+   "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+   "new_rules_verbatim": [],
+   "tail": "SAME, TIP or DIFF?"
+  },
+  "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+  "switches": {
+   "l2_lock_rejects": false,
+   "lock_mismatch_becomes_tip": true,
+   "F8": true,
+   "F9": true,
+   "f9_REPORTED_STRICT": false,
+   "tip_as_rejection": true,
+   "old_guards": [
+    "F3",
+    "F5",
+    "F4v2",
+    "F4v3",
+    "F2B"
+   ],
+   "F2B_not_applied_to_lock_released_items": true
+  },
+  "guard_sha256": {
+   "f8.py": "bb4662b5a0f74da7",
+   "f9.py": "0aa46d60cc9c64b0"
+  },
+  "label_conventions": {
+   "labels": "the blind judge's §0 verdicts adopted IN FULL (label AND type) for all 490 DEV items",
+   "coverage_denominator": "ALL items judged correct (any id kind); the kind-C-only figure is printed as a secondary line for continuity with 1j",
+   "fa_denominator": "all items judged wrong",
+   "types": "T / W / M / S / V (voice, new) / E"
+  },
+  "selection_trace": [
+   "candidates: 36 rows (9 configurations x 2 prompts x TIP on/off)",
+   "gate FA < 5% AND type-T FA < 5%: 18 rows pass",
+   "top 5 by coverage among the survivors: ['LOCKTIP/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00', 'LOCKTIP+F8+F9 (ALL)/P-FROZEN/tip=True cov 96.30 FA 3.99 T 0.00', 'LOCKTIP+F9 strict/P-FROZEN/tip=True cov 96.30 FA 4.32 T 0.00']",
+   "-> highest coverage (ties: fewer moving parts, then P-FROZEN): LOCKTIP / P-FROZEN / tip=True"
+  ],
+  "selected_dev_numbers": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "coverage_kindC": {
+    "k": 176,
+    "n": 180,
+    "pct": 97.78,
+    "ci": [
+     94.41,
+     99.39
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   }
+  },
+  "data": "Phase 1j arm-B Slovak/refs/annotations for dev+replay1j; phase1k/fresh/* for fresh",
+  "tie_break_override": {
+   "decided_by": "main session, before the fresh holdout was opened",
+   "freeze_commit_before_override": "9e3bfb5",
+   "previous_selection": {
+    "name": "LOCKTIP",
+    "prompt": "P-FROZEN",
+    "locktip": true,
+    "f8": false,
+    "f9": false,
+    "f9_strict": false,
+    "tip_reject": true,
+    "moving_parts": 1
+   },
+   "previous_dev_numbers": {
+    "coverage": {
+     "k": 182,
+     "n": 189,
+     "pct": 96.3,
+     "ci": [
+      92.52,
+      98.5
+     ]
+    },
+    "fa": {
+     "k": 13,
+     "n": 301,
+     "pct": 4.32,
+     "ci": [
+      2.32,
+      7.27
+     ]
+    }
+   },
+   "new_selection": "LOCKTIP+F8+F9 (ALL) / P-FROZEN / TIP-as-rejection ON, f9.REPORTED_STRICT False",
+   "reasoning": [
+    "The owner's selection rule (highest coverage whose FA point estimate is under 5 % AND whose type-T FA is under 5 %) produced a FOUR-WAY TIE on DEV coverage 96.30 %: LOCKTIP (FA 4.32 %), LOCKTIP+F8 (3.99 %), LOCKTIP+F9 (4.32 %), LOCKTIP+F8+F9 = ALL (3.99 %).",
+    "Agent R broke the tie with 'fewer moving parts', which was the main session's own addition, not the owner's rule; it drops F9.",
+    "The tie is re-broken by the rule's own second criterion (lowest FA: 3.99 % beats 4.32 %, leaving LOCKTIP+F8 and ALL) and then by the brief's requirement that the tense check stays: F9 must replace what the lock was doing and the 5 % tolerance is not permission to drop the check. ALL is therefore frozen.",
+    "Zero new model calls: guards are readouts on stored verdicts; the DEV ALL row is already measured."
+   ],
+   "reported_as": "deviation from agent R’s recorded freeze, taken BEFORE the fresh holdout was opened"
+  }
+ },
+ "coverage": {
+  "k": 178,
+  "n": 196,
+  "pct": 90.82,
+  "ci": [
+   85.87,
+   94.47
+  ]
+ },
+ "coverage_kindC": {
+  "k": 172,
+  "n": 186,
+  "pct": 92.47,
+  "ci": [
+   87.69,
+   95.82
+  ]
+ },
+ "fa": {
+  "k": 15,
+  "n": 294,
+  "pct": 5.1,
+  "ci": [
+   2.88,
+   8.28
+  ]
+ },
+ "fa_by_type": {
+  "T": {
+   "k": 2,
+   "n": 59,
+   "pct": 3.39,
+   "ci": [
+    0.41,
+    11.71
+   ]
+  },
+  "W": {
+   "k": 4,
+   "n": 68,
+   "pct": 5.88,
+   "ci": [
+    1.63,
+    14.38
+   ]
+  },
+  "M": {
+   "k": 8,
+   "n": 64,
+   "pct": 12.5,
+   "ci": [
+    5.55,
+    23.15
+   ]
+  },
+  "S": {
+   "k": 0,
+   "n": 102,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    3.55
+   ]
+  },
+  "V": {
+   "k": 1,
+   "n": 1,
+   "pct": 100.0,
+   "ci": [
+    2.5,
+    100.0
+   ]
+  },
+  "E": {
+   "k": 0,
+   "n": 0,
+   "pct": null,
+   "ci": [
+    0.0,
+    0.0
+   ]
+  }
+ },
+ "fa_by_layer": {
+  "L3": 15
+ },
+ "fr_by_layer": {
+  "F8": 1,
+  "L3:TIPrej": 5,
+  "L3": 6,
+  "F9": 3,
+  "F5": 1,
+  "L2": 2
+ },
+ "false_acceptances": [
+  {
+   "id": "C:4571:3137414672",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Keď ty necháš jednu skrutku uvoľnenú, celá stolička sa kýve.",
+   "answer": "If one screw is left loose, the whole chair rocks.",
+   "reference": "If you leave one screw loose, the whole chair wobbles.",
+   "judge_label": "wrong",
+   "judge_type": "V",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:10107:2868656440",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+   "answer": "The terminal was empty. She felt like someone was watching her.",
+   "reference": "The terminal was empty; even so, she felt watched.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:103:1596877565",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "O jeho promócii sa hovorí, že bola najhlučnejšia v histórii univerzity.",
+   "answer": "His graduation is said to be the loudest in the university's history.",
+   "reference": "He was handed his diploma in front of the whole stadium, and the confetti came down.",
+   "judge_label": "wrong",
+   "judge_type": "T",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:14697:2532470414",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Po dopade je na kameňoch trochu šťavy",
+   "answer": "After the impact, there are a few drops of juice on the rocks.",
+   "reference": "After the impact there is a little juice on the stones.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:14697:567072060",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Po dopade je na kameňoch trochu šťavy",
+   "answer": "There is a bit of juice on the rocks.",
+   "reference": "After the impact there is a little juice on the stones.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:2121:4138132892",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Spolubývajúci sa ho spýtal, prečo on trávi dve hodiny denne len na to, aby sedel za stolom.",
+   "answer": "His roommate asked him why he spent two hours a day sitting at the desk.",
+   "reference": "The flatmate asked him why he spent two hours a day just sitting at the desk.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:2121:832651865",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Spolubývajúci sa ho spýtal, prečo on trávi dve hodiny denne len na to, aby sedel za stolom.",
+   "answer": "His roommate asked him why he spends two hours a day just sitting at the desk.",
+   "reference": "The flatmate asked him why he spent two hours a day just sitting at the desk.",
+   "judge_label": "wrong",
+   "judge_type": "T",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:28006:2654956435",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Každú loď v zálive ty spozoruješ skôr než ktokoľvek iný. Klobúk dole.",
+   "answer": "You'll spot every boat in the harbor before anyone else. Hats off.",
+   "reference": "You spot every boat in the bay before anyone else. Hats off.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:2929:120435637",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+   "answer": "The light has completely gone out and the station is dark again.",
+   "reference": "The eerie light has faded completely, and the yard is dark again.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:3603:2904065335",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Inžinier sa ho spýtal, kedy on privezie pretekárske auto späť do garáže.",
+   "answer": "The engineer asked him when he would bring the race car back to the shop.",
+   "reference": "The engineer asked him when he was bringing the race car back into the garage.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:381:1258629268",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Kiež by môj kocúr bol taký pokojný ako ten ryšavý v jej náručí.",
+   "answer": "I wish my cat were as calm as that ginger one in her lap.",
+   "reference": "I wish my cat were as calm as the ginger one in her arms.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:7458:64129800",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Tú grimasu robí každý, však?",
+   "answer": "Everyone makes a grimace, don't they?",
+   "reference": "Everyone makes that face, don't they?",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:7716:2835019848",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+   "answer": "She managed to stay still until the dragonfly landed.",
+   "reference": "She managed to stay completely still until the dragonfly settled.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:8491:1647062954",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+   "answer": "If you score the peel, the pomegranate opens easily.",
+   "reference": "If you score the skin first, the pomegranate opens easily.",
+   "judge_label": "wrong",
+   "judge_type": "M",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "W:8491:2663489786",
+   "layer": "L3",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+   "answer": "If you score the peel first, the pomegranate opens quickly.",
+   "reference": "If you score the skin first, the pomegranate opens easily.",
+   "judge_label": "wrong",
+   "judge_type": "W",
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  }
+ ],
+ "false_rejections": [
+  {
+   "id": "C:10107:3602000965",
+   "layer": "F8",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+   "answer": "The terminal was deserted; nevertheless, she had the feeling someone was watching her.",
+   "reference": "The terminal was empty; even so, she felt watched.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "reject",
+   "f9": "tip"
+  },
+  {
+   "id": "C:12831:1316976507",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Mrkva v záhone je neuveriteľne veľká.",
+   "answer": "The carrot in the flower bed's incredibly big.",
+   "reference": "The carrot in the bed is incredibly big.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:16009:4024372226",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Zvyčajne sedí ticho, ale teraz hlasno kváka",
+   "answer": "Usually it sits quietly, but now it quacks loudly.",
+   "reference": "It usually sits still, but now it is croaking loudly.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:16009:646770511",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Zvyčajne sedí ticho, ale teraz hlasno kváka",
+   "answer": "It usually sits quietly, but now it's quacking loudly.",
+   "reference": "It usually sits still, but now it is croaking loudly.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:21750:486141418",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Ona balí každú knihu do kartónovej krabice.",
+   "answer": "She puts every book into a cardboard box.",
+   "reference": "She packs every book into a cardboard box.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "C:27097:1143309800",
+   "layer": "F9",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+   "answer": "Sure, this square has a lot of ads, exactly what we needed.",
+   "reference": "Of course this square has many advertisements, exactly what we needed.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "reject"
+  },
+  {
+   "id": "C:27097:308292309",
+   "layer": "F9",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+   "answer": "Of course, this square has plenty of ads, exactly what we needed.",
+   "reference": "Of course this square has many advertisements, exactly what we needed.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "reject"
+  },
+  {
+   "id": "C:29143:1356951784",
+   "layer": "F9",
+   "model_reply": "SAME",
+   "model": "SAME",
+   "slovak": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+   "answer": "Oh come on, mate, he's going to buy it with his own money.",
+   "reference": "No way, dude, he will buy it with his own money.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "reject"
+  },
+  {
+   "id": "C:29143:1366479064",
+   "layer": "F5",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+   "answer": "No, dude, he will buy it with his own money.",
+   "reference": "No way, dude, he will buy it with his own money.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:3332:2920962177",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Ona odmietla opustiť obchod bez toho zeleného overalu.",
+   "answer": "She refused to leave the store without that green overall.",
+   "reference": "She refused to leave the shop without the green jumpsuit.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:7928:2593205770",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby lúč bol slabší, on by ešte mohol žmurkať.",
+   "answer": "Were the beam weaker, it could still be flickering.",
+   "reference": "If the beam were weaker, he could still blink.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "abstain"
+  },
+  {
+   "id": "C:7928:2607238276",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby lúč bol slabší, on by ešte mohol žmurkať.",
+   "answer": "If the beam were weaker, it could still flicker.",
+   "reference": "If the beam were weaker, he could still blink.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:7928:3435921201",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby lúč bol slabší, on by ešte mohol žmurkať.",
+   "answer": "If the ray were weaker, it might still blink.",
+   "reference": "If the beam were weaker, he could still blink.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  },
+  {
+   "id": "C:9584:3775863914",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Naplno ona šprintuje od chvíle, keď vyštartovala.",
+   "answer": "She has been running full speed ahead since the moment she launched.",
+   "reference": "She has been sprinting flat out since the moment she started.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:18251:1577769256",
+   "layer": "L2",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Z verandy oni sledujú tú búrku.",
+   "answer": "From the porch they watch a storm.",
+   "reference": "They watch the storm from the porch.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:7558:2926388663",
+   "layer": "L2",
+   "model_reply": "",
+   "model": null,
+   "slovak": "Nikdy predtým sme my nevideli takú tichú skupinu pri západe slnka.",
+   "answer": "Never before have we seen such a quiet group at sunset.",
+   "reference": "Never had we seen a group this quiet at sunset.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:7928:1079961112",
+   "layer": "L3",
+   "model_reply": "DIFF",
+   "model": "DIFF",
+   "slovak": "Keby lúč bol slabší, on by ešte mohol žmurkať.",
+   "answer": "If the beam had been weaker, it could still have blinked.",
+   "reference": "If the beam were weaker, he could still blink.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "tip"
+  },
+  {
+   "id": "W:8491:3020598369",
+   "layer": "L3:TIPrej",
+   "model_reply": "TIP",
+   "model": "TIP",
+   "slovak": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+   "answer": "If you score the peel first, the pomegranates open easily.",
+   "reference": "If you score the skin first, the pomegranate opens easily.",
+   "judge_label": "correct",
+   "judge_type": null,
+   "intent": null,
+   "f8": "accept",
+   "f9": "accept"
+  }
+ ],
+ "b3": {
+  "tip": {
+   "n": 161,
+   "judged_correct": 66,
+   "judged_wrong": 95,
+   "cost_type_T_wrong_accepted": 2
+  },
+  "abstain": {
+   "n": 27,
+   "judged_correct": 13,
+   "judged_wrong": 14,
+   "cost_type_T_wrong_accepted": 0
+  }
+ },
+ "calls": {
+  "counted_calls_http200": 667,
+  "failed_empty_200": 0,
+  "non200_attempts": 0,
+  "tokens_in": 208077,
+  "tokens_out": 667,
+  "spend_usd": 0.05302,
+  "phase_budget_remaining": 1333
+ },
+ "reused_prompts": 135,
+ "new_this_run": 201,
+ "no_verdict_items": {
+  "P-FROZEN": []
+ },
+ "secondary_readout": {
+  "note": "secondary readout, not the frozen configuration",
+  "rows": {
+   "LOCKTIP": {
+    "coverage": {
+     "k": 182,
+     "n": 196,
+     "pct": 92.86,
+     "ci": [
+      88.31,
+      96.04
+     ]
+    },
+    "coverage_kindC": {
+     "k": 176,
+     "n": 186,
+     "pct": 94.62,
+     "ci": [
+      90.34,
+      97.39
+     ]
+    },
+    "fa": {
+     "k": 18,
+     "n": 294,
+     "pct": 6.12,
+     "ci": [
+      3.67,
+      9.5
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 3,
+      "n": 59,
+      "pct": 5.08,
+      "ci": [
+       1.06,
+       14.15
+      ]
+     },
+     "W": {
+      "k": 4,
+      "n": 68,
+      "pct": 5.88,
+      "ci": [
+       1.63,
+       14.38
+      ]
+     },
+     "M": {
+      "k": 9,
+      "n": 64,
+      "pct": 14.06,
+      "ci": [
+       6.64,
+       25.02
+      ]
+     },
+     "S": {
+      "k": 1,
+      "n": 102,
+      "pct": 0.98,
+      "ci": [
+       0.02,
+       5.34
+      ]
+     },
+     "V": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "ci": [
+       2.5,
+       100.0
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 0,
+      "pct": null,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L3": 18
+    },
+    "fr_by_layer": {
+     "L3:TIPrej": 5,
+     "L3": 6,
+     "F5": 1,
+     "L2": 2
+    }
+   },
+   "LOCKTIP+F8": {
+    "coverage": {
+     "k": 181,
+     "n": 196,
+     "pct": 92.35,
+     "ci": [
+      87.69,
+      95.65
+     ]
+    },
+    "coverage_kindC": {
+     "k": 175,
+     "n": 186,
+     "pct": 94.09,
+     "ci": [
+      89.66,
+      97.01
+     ]
+    },
+    "fa": {
+     "k": 18,
+     "n": 294,
+     "pct": 6.12,
+     "ci": [
+      3.67,
+      9.5
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 3,
+      "n": 59,
+      "pct": 5.08,
+      "ci": [
+       1.06,
+       14.15
+      ]
+     },
+     "W": {
+      "k": 4,
+      "n": 68,
+      "pct": 5.88,
+      "ci": [
+       1.63,
+       14.38
+      ]
+     },
+     "M": {
+      "k": 9,
+      "n": 64,
+      "pct": 14.06,
+      "ci": [
+       6.64,
+       25.02
+      ]
+     },
+     "S": {
+      "k": 1,
+      "n": 102,
+      "pct": 0.98,
+      "ci": [
+       0.02,
+       5.34
+      ]
+     },
+     "V": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "ci": [
+       2.5,
+       100.0
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 0,
+      "pct": null,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L3": 18
+    },
+    "fr_by_layer": {
+     "F8": 1,
+     "L3:TIPrej": 5,
+     "L3": 6,
+     "F5": 1,
+     "L2": 2
+    }
+   },
+   "LOCKTIP+F9": {
+    "coverage": {
+     "k": 179,
+     "n": 196,
+     "pct": 91.33,
+     "ci": [
+      86.48,
+      94.87
+     ]
+    },
+    "coverage_kindC": {
+     "k": 173,
+     "n": 186,
+     "pct": 93.01,
+     "ci": [
+      88.34,
+      96.23
+     ]
+    },
+    "fa": {
+     "k": 15,
+     "n": 294,
+     "pct": 5.1,
+     "ci": [
+      2.88,
+      8.28
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 2,
+      "n": 59,
+      "pct": 3.39,
+      "ci": [
+       0.41,
+       11.71
+      ]
+     },
+     "W": {
+      "k": 4,
+      "n": 68,
+      "pct": 5.88,
+      "ci": [
+       1.63,
+       14.38
+      ]
+     },
+     "M": {
+      "k": 8,
+      "n": 64,
+      "pct": 12.5,
+      "ci": [
+       5.55,
+       23.15
+      ]
+     },
+     "S": {
+      "k": 0,
+      "n": 102,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       3.55
+      ]
+     },
+     "V": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "ci": [
+       2.5,
+       100.0
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 0,
+      "pct": null,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L3": 15
+    },
+    "fr_by_layer": {
+     "L3:TIPrej": 5,
+     "L3": 6,
+     "F9": 3,
+     "F5": 1,
+     "L2": 2
+    }
+   },
+   "BASE (lock rejects)": {
+    "coverage": {
+     "k": 166,
+     "n": 196,
+     "pct": 84.69,
+     "ci": [
+      78.88,
+      89.43
+     ]
+    },
+    "coverage_kindC": {
+     "k": 161,
+     "n": 186,
+     "pct": 86.56,
+     "ci": [
+      80.8,
+      91.11
+     ]
+    },
+    "fa": {
+     "k": 14,
+     "n": 294,
+     "pct": 4.76,
+     "ci": [
+      2.63,
+      7.86
+     ]
+    },
+    "fa_by_type": {
+     "T": {
+      "k": 2,
+      "n": 59,
+      "pct": 3.39,
+      "ci": [
+       0.41,
+       11.71
+      ]
+     },
+     "W": {
+      "k": 4,
+      "n": 68,
+      "pct": 5.88,
+      "ci": [
+       1.63,
+       14.38
+      ]
+     },
+     "M": {
+      "k": 7,
+      "n": 64,
+      "pct": 10.94,
+      "ci": [
+       4.51,
+       21.25
+      ]
+     },
+     "S": {
+      "k": 0,
+      "n": 102,
+      "pct": 0.0,
+      "ci": [
+       0.0,
+       3.55
+      ]
+     },
+     "V": {
+      "k": 1,
+      "n": 1,
+      "pct": 100.0,
+      "ci": [
+       2.5,
+       100.0
+      ]
+     },
+     "E": {
+      "k": 0,
+      "n": 0,
+      "pct": null,
+      "ci": [
+       0.0,
+       0.0
+      ]
+     }
+    },
+    "fa_by_layer": {
+     "L3": 14
+    },
+    "fr_by_layer": {
+     "L2": 20,
+     "L3:TIPrej": 5,
+     "L3": 4,
+     "F5": 1
+    }
+   }
+  },
+  "guard_cost": {
+   "LOCKTIP|F8": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 1,
+    "caught_items": [],
+    "cost_items": [
+     {
+      "id": "C:10107:3602000965",
+      "layer": "F8",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+      "answer": "The terminal was deserted; nevertheless, she had the feeling someone was watching her.",
+      "reference": "The terminal was empty; even so, she felt watched.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "reject",
+      "f9": "tip"
+     }
+    ]
+   },
+   "LOCKTIP|F9": {
+    "caught_wrong": 3,
+    "caught_wrong_only_this_guard": 3,
+    "cost_correct_rejected": 3,
+    "caught_items": [
+     {
+      "id": "W:14697:2838322367",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Po dopade je na kameňoch trochu šťavy",
+      "answer": "After the impact, there was a bit of juice on the rocks.",
+      "reference": "After the impact there is a little juice on the stones.",
+      "judge_label": "wrong",
+      "judge_type": "T",
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "W:27097:1375088029",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+      "answer": "Sure, this square has ads, exactly what we needed.",
+      "reference": "Of course this square has many advertisements, exactly what we needed.",
+      "judge_label": "wrong",
+      "judge_type": "M",
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "W:2929:1302909327",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+      "answer": "The scary lights have completely gone out and the station is dark again.",
+      "reference": "The eerie light has faded completely, and the yard is dark again.",
+      "judge_label": "wrong",
+      "judge_type": "S",
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     }
+    ],
+    "cost_items": [
+     {
+      "id": "C:27097:1143309800",
+      "layer": "F9",
+      "model_reply": "",
+      "model": null,
+      "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+      "answer": "Sure, this square has a lot of ads, exactly what we needed.",
+      "reference": "Of course this square has many advertisements, exactly what we needed.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "C:27097:308292309",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+      "answer": "Of course, this square has plenty of ads, exactly what we needed.",
+      "reference": "Of course this square has many advertisements, exactly what we needed.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "C:29143:1356951784",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+      "answer": "Oh come on, mate, he's going to buy it with his own money.",
+      "reference": "No way, dude, he will buy it with his own money.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     }
+    ]
+   },
+   "BASE (lock rejects)|F8": {
+    "caught_wrong": 0,
+    "caught_wrong_only_this_guard": 0,
+    "cost_correct_rejected": 1,
+    "caught_items": [],
+    "cost_items": [
+     {
+      "id": "C:10107:3602000965",
+      "layer": "F8",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+      "answer": "The terminal was deserted; nevertheless, she had the feeling someone was watching her.",
+      "reference": "The terminal was empty; even so, she felt watched.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "reject",
+      "f9": "tip"
+     }
+    ]
+   },
+   "BASE (lock rejects)|F9": {
+    "caught_wrong": 1,
+    "caught_wrong_only_this_guard": 1,
+    "cost_correct_rejected": 3,
+    "caught_items": [
+     {
+      "id": "W:14697:2838322367",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Po dopade je na kameňoch trochu šťavy",
+      "answer": "After the impact, there was a bit of juice on the rocks.",
+      "reference": "After the impact there is a little juice on the stones.",
+      "judge_label": "wrong",
+      "judge_type": "T",
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     }
+    ],
+    "cost_items": [
+     {
+      "id": "C:27097:1143309800",
+      "layer": "F9",
+      "model_reply": "",
+      "model": null,
+      "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+      "answer": "Sure, this square has a lot of ads, exactly what we needed.",
+      "reference": "Of course this square has many advertisements, exactly what we needed.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "C:27097:308292309",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+      "answer": "Of course, this square has plenty of ads, exactly what we needed.",
+      "reference": "Of course this square has many advertisements, exactly what we needed.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     },
+     {
+      "id": "C:29143:1356951784",
+      "layer": "F9",
+      "model_reply": "SAME",
+      "model": "SAME",
+      "slovak": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+      "answer": "Oh come on, mate, he's going to buy it with his own money.",
+      "reference": "No way, dude, he will buy it with his own money.",
+      "judge_label": "correct",
+      "judge_type": null,
+      "intent": null,
+      "f8": "accept",
+      "f9": "reject"
+     }
+    ]
+   }
+  },
+  "lock_released": {
+   "rejected_in_BASE": 310,
+   "rejected_in_BASE_by_layer": {
+    "L2": 93,
+    "F4v2": 55,
+    "L3:TIPrej": 17,
+    "L3": 116,
+    "F5": 13,
+    "F3": 14,
+    "F2B": 2
+   },
+   "released_by_LOCKTIP_total": 20,
+   "released_judged_correct": 16,
+   "released_judged_wrong_by_type": {
+    "M": 2,
+    "T": 1,
+    "S": 1
+   }
+  }
+ },
+ "guards_distribution": {
+  "f8": {
+   "accept": 454,
+   "reject": 1,
+   "abstain": 35
+  },
+  "f9": {
+   "tip": 161,
+   "accept": 248,
+   "abstain": 27,
+   "reject": 54
+  }
+ }
+}
