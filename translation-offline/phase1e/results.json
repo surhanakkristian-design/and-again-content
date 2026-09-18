@@ -1,0 +1,129 @@
+{
+ "plan": {
+  "N": 144,
+  "L3_correct": 87,
+  "L3_wrong": 57,
+  "ledger_used": 4,
+  "remaining": 496,
+  "mode": "full",
+  "stage1": {
+   "items": 144,
+   "calls": 288,
+   "note": "Flash-Lite x P-A and x P-B on all N"
+  },
+  "stage2": {
+   "budget": 208,
+   "wrong_items": 57,
+   "correct_sample": 87,
+   "note": "3.7 Flash, better Stage-1 prompt only; all L3 wrong first, then seed-1 sample of rejected-correct items"
+  },
+  "cut": "4th variant (3.7 Flash x the other prompt) is CUT — not enough budget under the 500 cap."
+ },
+ "ids": {
+  "lite": "gemini-3.1-flash-lite",
+  "flash": "gemini-3.7-flash"
+ },
+ "sanity_ok": true,
+ "routing": {
+  "correct": {
+   "L1": 100,
+   "L3": 87,
+   "L2": 48
+  },
+  "wrong": {
+   "L2": 39,
+   "L3": 57,
+   "L1": 9
+  }
+ },
+ "metrics": [
+  {
+   "tag": "gemini-3.1-flash-lite x P-A",
+   "sent": 144,
+   "incomplete": null,
+   "n_correct_sent": 87,
+   "n_wrong_sent": 57,
+   "correct_accepted": 80,
+   "wrong_accepted": 15,
+   "parse_fail": 0,
+   "coverage_measured": 0.7659574468085106,
+   "coverage_extrapolated": 0.7659574468085106,
+   "sampled": false,
+   "fa_by_type": {
+    "S": 3,
+    "T": 1,
+    "M": 11
+   },
+   "fa_total_end_to_end": 24,
+   "lat_median": 815,
+   "lat_p95": 1104,
+   "lat_cold": [
+    908
+   ],
+   "tok": {
+    "in": 122.96527777777777,
+    "out": 1.0,
+    "thoughts": 0.0,
+    "cached": 0.0
+   }
+  },
+  {
+   "tag": "gemini-3.1-flash-lite x P-B",
+   "sent": 144,
+   "incomplete": null,
+   "n_correct_sent": 87,
+   "n_wrong_sent": 57,
+   "correct_accepted": 77,
+   "wrong_accepted": 13,
+   "parse_fail": 0,
+   "coverage_measured": 0.7531914893617021,
+   "coverage_extrapolated": 0.7531914893617021,
+   "sampled": false,
+   "fa_by_type": {
+    "M": 11,
+    "S": 2
+   },
+   "fa_total_end_to_end": 22,
+   "lat_median": 875,
+   "lat_p95": 1239,
+   "lat_cold": [],
+   "tok": {
+    "in": 148.50694444444446,
+    "out": 1.0,
+    "thoughts": 0.0,
+    "cached": 0.0
+   }
+  },
+  {
+   "tag": "gemini-3.7-flash x P-B",
+   "sent": 144,
+   "incomplete": null,
+   "n_correct_sent": 87,
+   "n_wrong_sent": 57,
+   "correct_accepted": 55,
+   "wrong_accepted": 2,
+   "parse_fail": 38,
+   "coverage_measured": 0.6595744680851063,
+   "coverage_extrapolated": 0.6595744680851063,
+   "sampled": false,
+   "fa_by_type": {
+    "T": 1,
+    "M": 1
+   },
+   "fa_total_end_to_end": 11,
+   "lat_median": 2362,
+   "lat_p95": 9178,
+   "lat_cold": [
+    2076
+   ],
+   "tok": {
+    "in": 148.50694444444446,
+    "out": 1.1388888888888888,
+    "thoughts": 46.326388888888886,
+    "cached": 0.0
+   }
+  }
+ ],
+ "calls_used": 436,
+ "r429": 0
+}
