@@ -1,0 +1,1083 @@
+{
+ "side": "holdout",
+ "frozen": {
+  "phase": "1j",
+  "side_measured": "dev",
+  "arm": "B",
+  "switch": "on",
+  "model": "gemini-3.1-flash-lite",
+  "generationConfig": {
+   "temperature": 0,
+   "maxOutputTokens": 24,
+   "thinkingConfig": {
+    "thinkingBudget": 0
+   }
+  },
+  "flags": {
+   "data": "b",
+   "p_prompt": false,
+   "f4p": false,
+   "contract": false,
+   "labels": "b"
+  },
+  "guards": [
+   "F4v3"
+  ],
+  "b_fix": true,
+  "system_instruction": "You judge English translations. Reply with exactly one word: SAME, TIP or DIFF. SAME = the learner sentence means the same as the reference and is correct English. TIP = same meaning and acceptable, but with a small slip. DIFF = different meaning, or not correct English. No explanation.",
+  "prompt": {
+   "base": "the frozen P-B lines of checker_1i.prompt(it, \"P-B\")",
+   "extra_lines_in_order": [
+    "gender line (only when the annotation still has g)",
+    "p line (p_chain.p_prompt_line) when p_prompt is on",
+    "ground line",
+    "wording line"
+   ],
+   "gender_template": "Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.",
+   "ground_line": "The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.",
+   "wording_line": "A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.",
+   "tail": "SAME, TIP or DIFF?"
+  },
+  "verdict_rule": "one word SAME/TIP/DIFF; TIP -> rejected",
+  "label_rule": {
+   "arm_A_and_BASE": "existing labels on the original Slovak (items.jsonl judged / wrong_type)",
+   "arms_B_A+B_C_primary": "existing label/type, overridden to (wrong, type S) exactly where the blind judge says label=wrong AND subj_ok=false, for items of REWRITTEN sentences only; every other judge disagreement counted, not adopted",
+   "arms_B_A+B_C_sensitivity": "judge label AND type adopted for every rewritten-sentence item",
+   "controls": "the 60 CONTROL items (unchanged Slovak) never change a label; they measure judge noise only"
+  },
+  "data": "Task B rewritten Slovak (taskB/sk_new.json), refs_new, annotations_b_<side>.json (g=null on rewritten sids)",
+  "p_chain": "not used",
+  "selected_dev_numbers": {
+   "coverage": {
+    "k": 171,
+    "n": 185,
+    "pct": 92.43,
+    "ci": [
+     87.63,
+     95.8
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 64,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      5.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 64,
+     "pct": 3.12,
+     "ci": [
+      0.38,
+      10.84
+     ]
+    },
+    "M": {
+     "k": 4,
+     "n": 62,
+     "pct": 6.45,
+     "ci": [
+      1.79,
+      15.7
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 111,
+     "pct": 5.41,
+     "ci": [
+      2.01,
+      11.39
+     ]
+    }
+   }
+  }
+ },
+ "relabel": {
+  "dev": {
+   "n_rejudged": 357,
+   "unchanged": 299,
+   "correct_to_wrong_subject": 26,
+   "wrong_to_wrong_type_change": 29,
+   "wrong_to_correct": 3
+  },
+  "both_sides": {
+   "n_rejudged": 637,
+   "unchanged": 529,
+   "correct_to_wrong_subject": 48,
+   "wrong_to_wrong_type_change": 49,
+   "wrong_to_correct": 10,
+   "correct_to_wrong_other": 1
+  },
+  "control_dev": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "control_both": {
+   "n": 60,
+   "agree": 59,
+   "wrong_to_correct": 1
+  },
+  "primary_overrides_dev": 39,
+  "sensitivity_overrides_dev": 52,
+  "primary_override_examples": [
+   {
+    "id": "C:6883:3640075222",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:9038:530797891",
+    "old": "correct",
+    "note": "she for on"
+   },
+   {
+    "id": "C:6790:2611743791",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:5595:561100618",
+    "old": "correct",
+    "note": "he can go for ona"
+   },
+   {
+    "id": "C:5595:1512723632",
+    "old": "correct",
+    "note": "she stamped for on"
+   },
+   {
+    "id": "C:9907:2336650878",
+    "old": "correct",
+    "note": "you for ona"
+   },
+   {
+    "id": "C:5959:3670383000",
+    "old": "correct",
+    "note": "he lowers for ona"
+   },
+   {
+    "id": "C:8209:4202158844",
+    "old": "correct",
+    "note": "he for ona"
+   },
+   {
+    "id": "C:9907:3590124615",
+    "old": "correct",
+    "note": "you for ona"
+   },
+   {
+    "id": "C:119:1797996295",
+    "old": "correct",
+    "note": "he for ona"
+   }
+  ],
+  "control_noise": {
+   "n": 60,
+   "correct_to_wrong": {
+    "k": 0,
+    "n": 60,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     5.96
+    ]
+   },
+   "wrong_to_correct": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   },
+   "any_flip": {
+    "k": 1,
+    "n": 60,
+    "pct": 1.67,
+    "ci": [
+     0.04,
+     8.94
+    ]
+   }
+  }
+ },
+ "rows": {
+  "primary": {
+   "coverage": {
+    "k": 162,
+    "n": 188,
+    "pct": 86.17,
+    "ci": [
+     80.4,
+     90.76
+    ]
+   },
+   "fa": {
+    "k": 15,
+    "n": 297,
+    "pct": 5.05,
+    "ci": [
+     2.85,
+     8.19
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 2,
+     "n": 62,
+     "pct": 3.23,
+     "ci": [
+      0.39,
+      11.17
+     ]
+    },
+    "W": {
+     "k": 5,
+     "n": 62,
+     "pct": 8.06,
+     "ci": [
+      2.67,
+      17.83
+     ]
+    },
+    "M": {
+     "k": 6,
+     "n": 64,
+     "pct": 9.38,
+     "ci": [
+      3.52,
+      19.3
+     ]
+    },
+    "S": {
+     "k": 2,
+     "n": 109,
+     "pct": 1.83,
+     "ci": [
+      0.22,
+      6.47
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 14,
+    "L1": 1
+   },
+   "fr_by_layer": {
+    "L2": 17,
+    "L3:TIPrej": 4,
+    "L3": 4,
+    "F5": 1
+   },
+   "false_rejections": [
+    {
+     "id": "C:103:1864687227",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:103:470167683",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:103:670219981",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:12831:1316976507",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:16009:4024372226",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:16009:646770511",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:18789:1094472200",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:18789:220464344",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:21750:486141418",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:2874:2357937954",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:29143:1366479064",
+     "layer": "F5",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:3332:2424557827",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:3332:2920962177",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:381:677006685",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:4612:3488329309",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:5966:3079825519",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:6353:3679092359",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:6883:1317999482",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:7458:1622126333",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:7558:358541305",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:7928:2593205770",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:7928:2607238276",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:7928:3435921201",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:9244:1251214671",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9244:1598262661",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9584:3775863914",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    }
+   ],
+   "false_acceptances": [
+    {
+     "id": "W:10107:2605305070",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "SAME",
+     "slovak_used": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+     "reference": "The terminal was empty; even so, she felt watched.",
+     "answer": "The terminal was empty; even so, she felt like someone was following her."
+    },
+    {
+     "id": "W:14697:2532470414",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "After the impact, there are a few drops of juice on the rocks."
+    },
+    {
+     "id": "W:14697:2838322367",
+     "type": "T",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "After the impact, there was a bit of juice on the rocks."
+    },
+    {
+     "id": "W:14697:567072060",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "There is a bit of juice on the rocks."
+    },
+    {
+     "id": "W:2121:4138132892",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Spolubývajúci sa ho spýtal, prečo on trávi dve hodiny denne len na to, aby sedel za stolom.",
+     "reference": "The flatmate asked him why he spent two hours a day just sitting at the desk.",
+     "answer": "His roommate asked him why he spent two hours a day sitting at the desk."
+    },
+    {
+     "id": "W:2121:832651865",
+     "type": "T",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Spolubývajúci sa ho spýtal, prečo on trávi dve hodiny denne len na to, aby sedel za stolom.",
+     "reference": "The flatmate asked him why he spent two hours a day just sitting at the desk.",
+     "answer": "His roommate asked him why he spends two hours a day just sitting at the desk."
+    },
+    {
+     "id": "W:28006:2654956435",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Každú loď v zálive ty spozoruješ skôr než ktokoľvek iný. Klobúk dole.",
+     "reference": "You spot every boat in the bay before anyone else. Hats off.",
+     "answer": "You'll spot every boat in the harbor before anyone else. Hats off."
+    },
+    {
+     "id": "W:2929:120435637",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+     "reference": "The eerie light has faded completely, and the yard is dark again.",
+     "answer": "The light has completely gone out and the station is dark again."
+    },
+    {
+     "id": "W:3603:2904065335",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "SAME",
+     "slovak_used": "Inžinier sa ho spýtal, kedy on privezie pretekárske auto späť do garáže.",
+     "reference": "The engineer asked him when he was bringing the race car back into the garage.",
+     "answer": "The engineer asked him when he would bring the race car back to the shop."
+    },
+    {
+     "id": "W:381:1258629268",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Kiež by môj kocúr bol taký pokojný ako ten ryšavý v jej náručí.",
+     "reference": "I wish my cat were as calm as the ginger one in her arms.",
+     "answer": "I wish my cat were as calm as that ginger one in her lap."
+    },
+    {
+     "id": "W:7458:64129800",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Tú grimasu robí každý, však?",
+     "reference": "Everyone makes that face, don't they?",
+     "answer": "Everyone makes a grimace, don't they?"
+    },
+    {
+     "id": "W:7716:2835019848",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+     "reference": "She managed to stay completely still until the dragonfly settled.",
+     "answer": "She managed to stay still until the dragonfly landed."
+    },
+    {
+     "id": "W:8491:1647062954",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+     "reference": "If you score the skin first, the pomegranate opens easily.",
+     "answer": "If you score the peel, the pomegranate opens easily."
+    },
+    {
+     "id": "W:8491:2663489786",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+     "reference": "If you score the skin first, the pomegranate opens easily.",
+     "answer": "If you score the peel first, the pomegranate opens quickly."
+    },
+    {
+     "id": "W:9907:1778280655",
+     "type": "S",
+     "layer": "L1",
+     "verdict": "correct",
+     "model": null,
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Keby si ona bola vzala béžovú bundu, tento look by nikdy nevznikol.",
+     "reference": "If she had taken the beige jacket, this look would never have happened.",
+     "answer": "If she had taken the beige jacket, this look would never have happened."
+    }
+   ],
+   "no_verdict_items": []
+  },
+  "sensitivity": {
+   "coverage": {
+    "k": 162,
+    "n": 188,
+    "pct": 86.17,
+    "ci": [
+     80.4,
+     90.76
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 291,
+    "pct": 4.12,
+    "ci": [
+     2.15,
+     7.09
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 1,
+     "n": 58,
+     "pct": 1.72,
+     "ci": [
+      0.04,
+      9.24
+     ]
+    },
+    "W": {
+     "k": 5,
+     "n": 65,
+     "pct": 7.69,
+     "ci": [
+      2.54,
+      17.05
+     ]
+    },
+    "M": {
+     "k": 5,
+     "n": 62,
+     "pct": 8.06,
+     "ci": [
+      2.67,
+      17.83
+     ]
+    },
+    "S": {
+     "k": 1,
+     "n": 106,
+     "pct": 0.94,
+     "ci": [
+      0.02,
+      5.14
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 12
+   },
+   "fr_by_layer": {
+    "L2": 17,
+    "L3:TIPrej": 4,
+    "L3": 4,
+    "F5": 1
+   },
+   "false_rejections": [
+    {
+     "id": "C:103:1864687227",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:103:470167683",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:103:670219981",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:12831:1316976507",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:16009:4024372226",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:16009:646770511",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "OLD"
+    },
+    {
+     "id": "C:18789:1094472200",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:18789:220464344",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:21750:486141418",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:2874:2357937954",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:29143:1366479064",
+     "layer": "F5",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:3332:2424557827",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:3332:2920962177",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    },
+    {
+     "id": "C:381:677006685",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:4612:3488329309",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:5966:3079825519",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:6353:3679092359",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:6883:1317999482",
+     "layer": "L2",
+     "model": null,
+     "half": "NEW"
+    },
+    {
+     "id": "C:7458:1622126333",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:7558:358541305",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:7928:2593205770",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:7928:2607238276",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:7928:3435921201",
+     "layer": "L3",
+     "model": "DIFF",
+     "half": "NEW"
+    },
+    {
+     "id": "C:9244:1251214671",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9244:1598262661",
+     "layer": "L2",
+     "model": null,
+     "half": "OLD"
+    },
+    {
+     "id": "C:9584:3775863914",
+     "layer": "L3:TIPrej",
+     "model": "TIP",
+     "half": "NEW"
+    }
+   ],
+   "false_acceptances": [
+    {
+     "id": "W:14697:2532470414",
+     "type": "S",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "After the impact, there are a few drops of juice on the rocks."
+    },
+    {
+     "id": "W:14697:2838322367",
+     "type": "T",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "After the impact, there was a bit of juice on the rocks."
+    },
+    {
+     "id": "W:14697:567072060",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Po dopade je na kameňoch trochu šťavy",
+     "reference": "After the impact there is a little juice on the stones.",
+     "answer": "There is a bit of juice on the rocks."
+    },
+    {
+     "id": "W:28006:2654956435",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Každú loď v zálive ty spozoruješ skôr než ktokoľvek iný. Klobúk dole.",
+     "reference": "You spot every boat in the bay before anyone else. Hats off.",
+     "answer": "You'll spot every boat in the harbor before anyone else. Hats off."
+    },
+    {
+     "id": "W:2929:120435637",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+     "reference": "The eerie light has faded completely, and the yard is dark again.",
+     "answer": "The light has completely gone out and the station is dark again."
+    },
+    {
+     "id": "W:32539:3809762516",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Kam oni padajú? Do penovej jamy.",
+     "reference": "Where do they fall? — Into the foam pit.",
+     "answer": "Where are they falling? Into the foam pool."
+    },
+    {
+     "id": "W:3603:2904065335",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "SAME",
+     "slovak_used": "Inžinier sa ho spýtal, kedy on privezie pretekárske auto späť do garáže.",
+     "reference": "The engineer asked him when he was bringing the race car back into the garage.",
+     "answer": "The engineer asked him when he would bring the race car back to the shop."
+    },
+    {
+     "id": "W:381:1258629268",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "",
+     "slovak_used": "Kiež by môj kocúr bol taký pokojný ako ten ryšavý v jej náručí.",
+     "reference": "I wish my cat were as calm as the ginger one in her arms.",
+     "answer": "I wish my cat were as calm as that ginger one in her lap."
+    },
+    {
+     "id": "W:7458:64129800",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Tú grimasu robí každý, však?",
+     "reference": "Everyone makes that face, don't they?",
+     "answer": "Everyone makes a grimace, don't they?"
+    },
+    {
+     "id": "W:7716:2835019848",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "OLD",
+     "model_reply": "",
+     "slovak_used": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+     "reference": "She managed to stay completely still until the dragonfly settled.",
+     "answer": "She managed to stay still until the dragonfly landed."
+    },
+    {
+     "id": "W:8491:1647062954",
+     "type": "M",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+     "reference": "If you score the skin first, the pomegranate opens easily.",
+     "answer": "If you score the peel, the pomegranate opens easily."
+    },
+    {
+     "id": "W:8491:2663489786",
+     "type": "W",
+     "layer": "L3",
+     "verdict": "correct",
+     "model": "SAME",
+     "half": "NEW",
+     "model_reply": "SAME",
+     "slovak_used": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+     "reference": "If you score the skin first, the pomegranate opens easily.",
+     "answer": "If you score the peel first, the pomegranate opens quickly."
+    }
+   ],
+   "no_verdict_items": []
+  }
+ },
+ "base_1i_replay_same_items": {
+  "coverage": {
+   "k": 181,
+   "n": 210,
+   "pct": 86.19,
+   "ci": [
+    80.77,
+    90.55
+   ]
+  },
+  "fa": {
+   "k": 18,
+   "n": 275,
+   "pct": 6.55,
+   "ci": [
+    3.93,
+    10.15
+   ]
+  },
+  "fa_by_type": {
+   "T": {
+    "k": 1,
+    "n": 68,
+    "pct": 1.47,
+    "ci": [
+     0.04,
+     7.92
+    ]
+   },
+   "W": {
+    "k": 4,
+    "n": 68,
+    "pct": 5.88,
+    "ci": [
+     1.63,
+     14.38
+    ]
+   },
+   "M": {
+    "k": 7,
+    "n": 69,
+    "pct": 10.14,
+    "ci": [
+     4.18,
+     19.79
+    ]
+   },
+   "S": {
+    "k": 6,
+    "n": 70,
+    "pct": 8.57,
+    "ci": [
+     3.21,
+     17.73
+    ]
+   }
+  },
+  "fa_by_layer": {
+   "L3": 17,
+   "L1": 1
+  },
+  "fr_by_layer": {
+   "L2": 17,
+   "L3:TIPrej": 5,
+   "L3": 6,
+   "F5": 1
+  },
+  "new_calls": 0
+ },
+ "calls": {
+  "counted_calls_http200": 949,
+  "failed_calls_parse": 0,
+  "transport_rows_not_counted": 298,
+  "tokens_in": 272083,
+  "tokens_out": 1930,
+  "spend_usd": 0.07092,
+  "transport_retries": 298,
+  "reused_prompts": 116,
+  "new_this_run": 135
+ }
+}
