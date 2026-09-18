@@ -1,0 +1,101 @@
+{
+ "disputed": {
+  "W:16403:624976382": {
+   "sk": "Rozlúč sa a o hodinu sa vráti naspäť.",
+   "reference": "Say bye now and she will come back in an hour.",
+   "answer": "Say bye now and she comes back in an hour.",
+   "level": "A2",
+   "topic": "Future with WILL",
+   "wrong_type": "M",
+   "fa_class_1e": "tip-accept",
+   "boundary_fires": false,
+   "trace": {
+    "fired": false,
+    "reason": "span/ongoingness still expressed",
+    "slovak_markers": [
+     "duration noun in the accusative"
+    ],
+    "slovak_ongoing": [],
+    "answer_span_tokens": [
+     "hour"
+    ],
+    "continuous": false,
+    "topic": "Future with WILL"
+   },
+   "decision_without_boundary": {
+    "layer": "L1",
+    "accepted": true,
+    "verdict": "correct_with_tip",
+    "why": "checker verdict correct_with_tip"
+   },
+   "decision_with_boundary": {
+    "layer": "L1",
+    "accepted": true,
+    "verdict": "correct_with_tip",
+    "why": "checker verdict correct_with_tip"
+   },
+   "comes_out_as": "correct_with_tip"
+  },
+  "W:10366:3357618811": {
+   "sk": "Do desiatej už bude zohrievať rezance dve hodiny v kuse.",
+   "reference": "By ten he will have been reheating noodles for two hours straight.",
+   "answer": "By ten he will have reheated noodles for two hours straight.",
+   "level": "B2",
+   "topic": "Future Perfect Continuous",
+   "wrong_type": "T",
+   "fa_class_1e": "tip-accept",
+   "boundary_fires": true,
+   "trace": {
+    "fired": true,
+    "clash": "ongoingness dropped (no continuous form in the answer)",
+    "slovak_markers": [
+     "v kuse (in a row / straight)",
+     "už (already / for)",
+     "explicit time span"
+    ],
+    "slovak_ongoing": [
+     "v kuse",
+     "už"
+    ],
+    "answer_span_tokens": [
+     "for",
+     "hours",
+     "straight",
+     "ten",
+     "two"
+    ],
+    "topic": "Future Perfect Continuous"
+   },
+   "decision_without_boundary": {
+    "layer": "L1",
+    "accepted": true,
+    "verdict": "correct_with_tip",
+    "why": "checker verdict correct_with_tip"
+   },
+   "decision_with_boundary": {
+    "layer": "F2B",
+    "accepted": false,
+    "verdict": "wrong",
+    "why": "tip withdrawn: ongoingness dropped (no continuous form in the answer) (v kuse (in a row / straight), už (already / for), explicit time span); accepted at L1 before the boundary"
+   },
+   "comes_out_as": "wrong"
+  }
+ },
+ "kills_on_235_total": 0,
+ "kills_on_235": [],
+ "kills_on_105_total": 2,
+ "kills_on_105": [
+  {
+   "item_id": "W:4612:586139873",
+   "type": "M",
+   "answer": "If he held the screwdriver, that shelf would be on the floor.",
+   "why": "tip withdrawn: stated span dropped (už (already / for)); accepted at L3 before the boundary"
+  },
+  {
+   "item_id": "W:10366:3357618811",
+   "type": "T",
+   "answer": "By ten he will have reheated noodles for two hours straight.",
+   "why": "tip withdrawn: ongoingness dropped (no continuous form in the answer) (v kuse (in a row / straight), už (already / for), explicit time span); accepted at L1 before the boundary"
+  }
+ ]
+}

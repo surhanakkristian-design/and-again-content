@@ -1,0 +1,46 @@
+loaded 235 correct, 105 wrong
+routing correct {'L1': 100, 'L3': 87, 'L2': 48} wrong {'L2': 39, 'L3': 57, 'L1': 9} (1e: C 100/48/87, W 9/39/57)
+  P-B: needed 198, cached 198, to call 0
+  P-C: needed 198, cached 198, to call 0
+F4v2 required cases:
+  ok   C:9498:3533979063 fires=False want=False {"fired": false, "reason": "Slovak underdetermined", "features": {"person": null, "number": null, "gender": null}, "signals": []}
+  ok   C:9498:362699013 fires=False want=False {"fired": false, "reason": "Slovak underdetermined", "features": {"person": null, "number": null, "gender": null}, "signals": []}
+  ok   C:9498:582627860 fires=False want=False {"fired": false, "reason": "Slovak underdetermined", "features": {"person": null, "number": null, "gender": null}, "signals": []}
+  ok   W:4571:4142535241 fires=True want=True {"fired": true, "clash": "person", "answer_subject": "i", "features": {"person": "2", "number": "sg", "gender": null}, "signals": ["present -š necháš"], "pronouns": ["i"]}
+  ok   W:3494:4150910632 fires=True want=True {"fired": true, "clash": "number", "answer_subject": "they", "features": {"person": "3", "number": "sg", "gender": "f"}, "signals": ["l-participle bola"], "pronouns": ["they"]}
+F5 on the ids named in 1f §8.4 / §5.1:
+  W:4612:586139873 fires=True {"fired": true, "variant": "If he held the screwdriver, that shelf would be on the floor by now.", "spans": [{"deleted": "by now", "why": "prepositional phrase by now", "position": 9, "ref_len": 11}], "deleted": "by now", "why": "prepositio
+  W:11348:2987233244 fires=True {"fired": true, "variant": "Look! The assistant is holding the reflector up now.", "spans": [{"deleted": "up now", "why": "prepositional phrase up now", "position": 5, "ref_len": 7}], "deleted": "up now", "why": "prepositional phrase up now
+  W:7238:1943930546 fires=True {"fired": true, "variant": "If you step exactly where Mira steps, your feet stay completely dry.", "spans": [{"deleted": "completely", "why": "adjunct adverb completely", "position": 10, "ref_len": 12}], "deleted": "completely", "why": "adj
+  W:8824:1740944184 fires=True {"fired": true, "variant": "While the chain was swinging, he pushed the bag into place.", "spans": [{"deleted": "into place", "why": "content word(s) place", "position": 7, "ref_len": 9}], "deleted": "into place", "why": "content word(s) pl
+  W:9907:325819033 fires=True {"fired": true, "variant": "If she had taken the beige jacket, this look would never have happened.", "spans": [{"deleted": "look", "why": "content word(s) look", "position": 7, "ref_len": 12}], "deleted": "look", "why": "content word(s) lo
+  W:14266:2043261128 fires=True {"fired": true, "variant": "What do they dance? — Salsa.", "spans": [{"deleted": "salsa", "why": "clause after the dash dropped (salsa)", "position": 4, "ref_len": 5}], "deleted": "salsa", "why": "clause after the dash dropped (salsa)"}
+F2 boundary on the disputed items:
+  W:16403:624976382 fires=False {"fired": false, "reason": "span/ongoingness still expressed", "slovak_markers": ["duration noun in the accusative"], "slovak_ongoing": [], "answer_span_tokens": ["hour"], "continuous": false, "topic": "Future with WILL"}
+     sk  = Rozlúč sa a o hodinu sa vráti naspäť.
+     ref = Say bye now and she will come back in an hour.
+     ans = Say bye now and she comes back in an hour.
+  W:10366:3357618811 fires=True {"fired": true, "clash": "ongoingness dropped (no continuous form in the answer)", "slovak_markers": ["v kuse (in a row / straight)", "už (already / for)", "explicit time span"], "slovak_ongoing": ["v kuse", "už"], "answer_span_tokens": ["for", "hours", "straight", "ten", "two"],
+     sk  = Do desiatej už bude zohrievať rezance dve hodiny v kuse.
+     ref = By ten he will have been reheating noodles for two hours straight.
+     ans = By ten he will have reheated noodles for two hours straight.
+CP check: 2/105 -> (0.002315, 0.067116) ; 6/105 -> (0.021257, 0.120234)
+SELFTEST PASS
+selftest exit=0
+===== ALL =====
+needed 198 items x 2 variants; new calls required: 0 (cap 1200, spent in 1g so far 0)
+nothing to call: every needed verdict is in the 1e/1f ledgers with a byte-identical prompt.
+row 0 reproduces Phase 1f exactly: coverage 214/235, FA raw 15, FA real (lenient) 6, 193 correct / 21 with tip.
+[0] Phase 1f all four (F1F2F3F4)   P-B cov 214 (91.1 %)  raw 15  lenient  6 [2.1–12.0]  strict  8 [3.4–14.5]
+[1] +F5 only                       P-B cov 211 (89.8 %)  raw 10  lenient  1 [0.0–5.2]  strict  3 [0.6–8.1]
+[2] F4v2 replaces F4 only          P-B cov 214 (91.1 %)  raw 15  lenient  6 [2.1–12.0]  strict  8 [3.4–14.5]
+[3] +F2 boundary only              P-B cov 214 (91.1 %)  raw 13  lenient  5 [1.6–10.8]  strict  6 [2.1–12.0]
+[4] F5 + F4v2                      P-B cov 211 (89.8 %)  raw 10  lenient  1 [0.0–5.2]  strict  3 [0.6–8.1]
+[5] F5 + F2 boundary               P-B cov 211 (89.8 %)  raw  9  lenient  1 [0.0–5.2]  strict  2 [0.2–6.7]
+[6] F4v2 + F2 boundary             P-B cov 213 (90.6 %)  raw 13  lenient  5 [1.6–10.8]  strict  6 [2.1–12.0]
+[7] all three new x P-B            P-B cov 210 (89.4 %)  raw  9  lenient  1 [0.0–5.2]  strict  2 [0.2–6.7]
+[8] all three new x P-C            P-C cov 215 (91.5 %)  raw 10  lenient  2 [0.2–6.7]  strict  3 [0.6–8.1]
+F5 cost on the 235: 3 (accepted before: 3) | F4v2 PASS | boundary kills 235: 0 / 105: 2
+calls: new 0, reused 396, failed 0, cap 1200
+wrote results_20260918T152028Z.json and results_20260918T152028Z.md
+all exit=0

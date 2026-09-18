@@ -1,0 +1,141 @@
+{
+ "requirement": "all C:9498 answers abstain; W:4571:4142535241 and W:3494:4150910632 still fire",
+ "c9498": [
+  {
+   "item_id": "C:9498:3533979063",
+   "sk": "Pult, za ktorým stojí, je starší než celá škola.",
+   "reference": "The podium that she is standing behind is older than the school.",
+   "answer": "The counter he is standing behind is older than the whole school.",
+   "f4v2_fires": false,
+   "trace": {
+    "fired": false,
+    "reason": "Slovak underdetermined",
+    "features": {
+     "person": null,
+     "number": null,
+     "gender": null
+    },
+    "signals": []
+   },
+   "f4_1f_fired": true
+  },
+  {
+   "item_id": "C:9498:362699013",
+   "sk": "Pult, za ktorým stojí, je starší než celá škola.",
+   "reference": "The podium that she is standing behind is older than the school.",
+   "answer": "The counter that he's standing behind is older than the whole school.",
+   "f4v2_fires": false,
+   "trace": {
+    "fired": false,
+    "reason": "Slovak underdetermined",
+    "features": {
+     "person": null,
+     "number": null,
+     "gender": null
+    },
+    "signals": []
+   },
+   "f4_1f_fired": true
+  },
+  {
+   "item_id": "C:9498:582627860",
+   "sk": "Pult, za ktorým stojí, je starší než celá škola.",
+   "reference": "The podium that she is standing behind is older than the school.",
+   "answer": "The counter he stands behind is older than the entire school.",
+   "f4v2_fires": false,
+   "trace": {
+    "fired": false,
+    "reason": "Slovak underdetermined",
+    "features": {
+     "person": null,
+     "number": null,
+     "gender": null
+    },
+    "signals": []
+   },
+   "f4_1f_fired": true
+  }
+ ],
+ "must_fire": [
+  {
+   "item_id": "W:4571:4142535241",
+   "sk": "Keď necháš jednu skrutku uvoľnenú, celá stolička sa kýve.",
+   "reference": "If you leave one screw loose, the whole chair wobbles.",
+   "answer": "If I leave one screw loose, the whole chair wobbles.",
+   "f4v2_fires": true,
+   "trace": {
+    "fired": true,
+    "clash": "person",
+    "answer_subject": "i",
+    "features": {
+     "person": "2",
+     "number": "sg",
+     "gender": null
+    },
+    "signals": [
+     "present -š necháš"
+    ],
+    "pronouns": [
+     "i"
+    ]
+   },
+   "f4_1f_fired": true
+  },
+  {
+   "item_id": "W:3494:4150910632",
+   "sk": "Keby bola guľôčka padla na čiernej, išla by domov s prázdnymi vreckami.",
+   "reference": "If the ball had landed in black, she would have gone home with empty pockets.",
+   "answer": "If the ball had landed in black, they would have gone home with empty pockets.",
+   "f4v2_fires": true,
+   "trace": {
+    "fired": true,
+    "clash": "number",
+    "answer_subject": "they",
+    "features": {
+     "person": "3",
+     "number": "sg",
+     "gender": "f"
+    },
+    "signals": [
+     "l-participle bola"
+    ],
+    "pronouns": [
+     "they"
+    ]
+   },
+   "f4_1f_fired": true
+  }
+ ],
+ "cost_on_235": [],
+ "kills_on_105": [
+  {
+   "item_id": "W:24733:1241921530",
+   "type": "S",
+   "was_accepted": false,
+   "why": "wrong subject: person clash, answer \"i\", Slovak {'person': '2', 'number': 'sg', 'gender': None}"
+  },
+  {
+   "item_id": "W:4571:4142535241",
+   "type": "S",
+   "was_accepted": true,
+   "why": "wrong subject: person clash, answer \"i\", Slovak {'person': '2', 'number': 'sg', 'gender': None}"
+  },
+  {
+   "item_id": "W:7238:1682434805",
+   "type": "S",
+   "was_accepted": false,
+   "why": "wrong subject: person clash, answer \"she\", Slovak {'person': '2', 'number': 'sg', 'gender': None}"
+  },
+  {
+   "item_id": "W:3494:4150910632",
+   "type": "S",
+   "was_accepted": true,
+   "why": "wrong subject: number clash, answer \"they\", Slovak {'person': '3', 'number': 'sg', 'gender': 'f'}"
+  }
+ ],
+ "c9498_all_abstain": true,
+ "must_fire_all_fire": true,
+ "cost_on_235_total": 0,
+ "kills_on_105_total": 4,
+ "verdict": "PASS"
+}
