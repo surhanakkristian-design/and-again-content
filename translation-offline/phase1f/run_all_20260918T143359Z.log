@@ -1,0 +1,17 @@
+stage calls_b: 198 needed, 144 cached (144 reused from 1e), 54 to call
+wrote results_calls_P-B_20260918T143449Z.json and results_calls_P-B_20260918T143449Z.md
+{"stage": "calls_P-B", "variant": "P-B", "needed": 198, "called": 54, "parsed": 54, "attempts_after": 54, "r429": 0, "reused_from_1e": 144, "cap": 1200}
+stage calls_c: 198 needed, 0 cached (144 reused from 1e), 198 to call
+wrote results_calls_P-C_20260918T143747Z.json and results_calls_P-C_20260918T143747Z.md
+{"stage": "calls_P-C", "variant": "P-C", "needed": 198, "called": 198, "parsed": 198, "attempts_after": 252, "r429": 0, "reused_from_1e": 144, "cap": 1200}
+baseline OK: P-B no flags = 177/235 = 75.3 % reproduces 1e §1 (the brief's 180/235 = 76.6 % is 1e's P-A row, not P-B)
+wrote results_tabulate_20260918T143748Z.json and results_tabulate_20260918T143748Z.md
+Phase 1e baseline (P-B, no flags)              P-B -    cov 177 (75.3 %)  FA raw 22 real 13  failed 0
++F1                                            P-B F1   cov 203 (86.4 %)  FA raw 24 real 15  failed 0
++F2                                            P-B F2   cov 193 (82.1 %)  FA raw 22 real 13  failed 0
++F3                                            P-B F3   cov 177 (75.3 %)  FA raw 15 real  7  failed 0
++F4                                            P-B F4   cov 176 (74.9 %)  FA raw 20 real 11  failed 0
+F1+F2                                          P-B F1F2 cov 217 (92.3 %)  FA raw 24 real 15  failed 0
+all four                                       P-B F1F2F3F4 cov 214 (91.1 %)  FA raw 15 real  7  failed 0
+all four with P-C                              P-C F1F2F3F4 cov 219 (93.2 %)  FA raw 17 real  9  failed 0
+best found (NONE qualifies at <=2 real FA; lowest-FA row shown) P-B F2F3F4 cov 190 (80.9 %)  FA raw 13 real  5  failed 0
