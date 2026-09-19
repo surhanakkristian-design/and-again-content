@@ -1,0 +1,5051 @@
+{
+ "model_calls": 0,
+ "gold_returned": 200,
+ "caveat": "gold = same model family (Opus) as every model-authored field: self-consistency, not independent accuracy",
+ "gold_meta": {
+  "sk": {
+   "fragment": 0,
+   "multi_sentence_src": 17,
+   "main_sentence_index_gt0": 6,
+   "voice": {
+    "active_agent": 56,
+    "active_prodrop": 43,
+    "impersonal": 1
+   },
+   "missing": []
+  },
+  "cz": {
+   "fragment": 2,
+   "multi_sentence_src": 13,
+   "main_sentence_index_gt0": 4,
+   "voice": {
+    "active_agent": 60,
+    "active_prodrop": 35,
+    "passive": 2,
+    "impersonal": 3
+   },
+   "missing": []
+  }
+ },
+ "2.1_lk": {
+  "judge": {
+   "pooled": {
+    "exact": 159,
+    "adjust": 41
+   },
+   "sk": {
+    "exact": 81,
+    "adjust": 19
+   },
+   "cz": {
+    "exact": 78,
+    "adjust": 22
+   }
+  },
+  "mechanical": {
+   "pooled": {
+    "substring": 200
+   },
+   "sk": {
+    "substring": 100
+   },
+   "cz": {
+    "substring": 100
+   }
+  },
+  "cross": {
+   "exact|substring": 159,
+   "adjust|substring": 41
+  },
+  "by_level": {
+   "A1": {
+    "exact": 46,
+    "adjust": 4
+   },
+   "A2": {
+    "exact": 39,
+    "adjust": 11
+   },
+   "B1": {
+    "adjust": 18,
+    "exact": 32
+   },
+   "B2": {
+    "exact": 42,
+    "adjust": 8
+   }
+  },
+  "missing": [],
+  "judge_rates": {
+   "pooled": {
+    "exact": {
+     "k": 159,
+     "n": 200,
+     "pct": 79.5,
+     "cp95": [
+      73.23,
+      84.87
+     ]
+    },
+    "adjust": {
+     "k": 41,
+     "n": 200,
+     "pct": 20.5,
+     "cp95": [
+      15.13,
+      26.77
+     ]
+    }
+   },
+   "sk": {
+    "exact": {
+     "k": 81,
+     "n": 100,
+     "pct": 81.0,
+     "cp95": [
+      71.93,
+      88.16
+     ]
+    },
+    "adjust": {
+     "k": 19,
+     "n": 100,
+     "pct": 19.0,
+     "cp95": [
+      11.84,
+      28.07
+     ]
+    }
+   },
+   "cz": {
+    "exact": {
+     "k": 78,
+     "n": 100,
+     "pct": 78.0,
+     "cp95": [
+      68.61,
+      85.67
+     ]
+    },
+    "adjust": {
+     "k": 22,
+     "n": 100,
+     "pct": 22.0,
+     "cp95": [
+      14.33,
+      31.39
+     ]
+    }
+   }
+  },
+  "examples_non_exact": [
+   [
+    23,
+    "The woman sits still and the optician checks her eye.",
+    "her eye.",
+    "adjust",
+    "her eye"
+   ],
+   [
+    37,
+    "He has a plan: he is going to find his phone in this room.",
+    "is going to",
+    "adjust",
+    "is going to find"
+   ],
+   [
+    40,
+    "Guess what, I heard they are going to hide behind the sofa for her birthday.",
+    "are going to",
+    "adjust",
+    "are going to hide"
+   ],
+   [
+    47,
+    "How many slices of bread does he cut?",
+    "many",
+    "adjust",
+    "How many"
+   ],
+   [
+    48,
+    "Honestly, you enter that low Ferrari very smoothly.",
+    "smoothly.",
+    "adjust",
+    "smoothly"
+   ],
+   [
+    50,
+    "There is a huge jet engine behind him.",
+    "is",
+    "adjust",
+    "There is"
+   ],
+   [
+    51,
+    "Girl, apparently she loves berries, and so does her friend.",
+    "so does her friend.",
+    "adjust",
+    "so does her friend"
+   ],
+   [
+    52,
+    "Bestie, apparently the house is just rubble now, isn't it?",
+    "isn't it?",
+    "adjust",
+    "isn't it"
+   ],
+   [
+    56,
+    "Disaster! The man shouted until his voice was gone, and so did the fans.",
+    "so did the fans.",
+    "adjust",
+    "so did the fans"
+   ],
+   [
+    58,
+    "Honestly, you picked the perfect clifftop to watch the sea turn gold, didn't you",
+    "didn't you?",
+    "adjust",
+    "didn't you"
+   ],
+   [
+    59,
+    "She tipped the bucket of apples over, and so did the man on the beach.",
+    "so did the man on the beach.",
+    "adjust",
+    "so did the man on the beach"
+   ],
+   [
+    63,
+    "He pressed the switch and the lights came on, because the switch is for the ligh",
+    "came",
+    "adjust",
+    "came on"
+   ]
+  ]
+ },
+ "2.2_topic_level": {
+  "rows": 200,
+  "type_missing": 0,
+  "level_missing": 0,
+  "types_covered_in_sample": 61,
+  "selection_topics": {
+   "A1": {
+    "selected": 1181,
+    "distinct_topics_hit": 11,
+    "topics_available": 11,
+    "min_per_topic": 80,
+    "max_per_topic": 134
+   },
+   "A2": {
+    "selected": 1224,
+    "distinct_topics_hit": 15,
+    "topics_available": 15,
+    "min_per_topic": 62,
+    "max_per_topic": 104
+   },
+   "B1": {
+    "selected": 898,
+    "distinct_topics_hit": 19,
+    "topics_available": 19,
+    "min_per_topic": 36,
+    "max_per_topic": 79
+   },
+   "B2": {
+    "selected": 806,
+    "distinct_topics_hit": 18,
+    "topics_available": 18,
+    "min_per_topic": 16,
+    "max_per_topic": 106
+   }
+  }
+ },
+ "2.3_fields": {
+  "voice_sk": {
+   "pooled": {
+    "counts": {
+     "AGREE": 82,
+     "CONSERVATIVE": 101,
+     "ERROR": 17
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 17,
+     "n": 200,
+     "pct": 8.5,
+     "cp95": [
+      5.03,
+      13.26
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 17,
+     "n": 99,
+     "pct": 17.17,
+     "cp95": [
+      10.33,
+      26.06
+     ]
+    },
+    "coverage_decided": {
+     "k": 99,
+     "n": 200,
+     "pct": 49.5,
+     "cp95": [
+      42.37,
+      56.64
+     ]
+    },
+    "ERROR_multi_sentence": 4
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 42,
+     "CONSERVATIVE": 49,
+     "ERROR": 9
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 9,
+     "n": 100,
+     "pct": 9.0,
+     "cp95": [
+      4.2,
+      16.4
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 9,
+     "n": 51,
+     "pct": 17.65,
+     "cp95": [
+      8.4,
+      30.87
+     ]
+    },
+    "coverage_decided": {
+     "k": 51,
+     "n": 100,
+     "pct": 51.0,
+     "cp95": [
+      40.8,
+      61.14
+     ]
+    },
+    "ERROR_multi_sentence": 3
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 40,
+     "CONSERVATIVE": 52,
+     "ERROR": 8
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 8,
+     "n": 100,
+     "pct": 8.0,
+     "cp95": [
+      3.52,
+      15.16
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 8,
+     "n": 48,
+     "pct": 16.67,
+     "cp95": [
+      7.48,
+      30.22
+     ]
+    },
+    "coverage_decided": {
+     "k": 48,
+     "n": 100,
+     "pct": 48.0,
+     "cp95": [
+      37.9,
+      58.22
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   }
+  },
+  "agent_nom": {
+   "pooled": {
+    "counts": {
+     "AGREE": 65,
+     "CONSERVATIVE": 112,
+     "ERROR": 23
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 23,
+     "n": 200,
+     "pct": 11.5,
+     "cp95": [
+      7.43,
+      16.75
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 23,
+     "n": 88,
+     "pct": 26.14,
+     "cp95": [
+      17.34,
+      36.59
+     ]
+    },
+    "coverage_decided": {
+     "k": 88,
+     "n": 200,
+     "pct": 44.0,
+     "cp95": [
+      37.01,
+      51.17
+     ]
+    },
+    "ERROR_multi_sentence": 2
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 37,
+     "CONSERVATIVE": 55,
+     "ERROR": 8
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 8,
+     "n": 100,
+     "pct": 8.0,
+     "cp95": [
+      3.52,
+      15.16
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 8,
+     "n": 45,
+     "pct": 17.78,
+     "cp95": [
+      8.0,
+      32.05
+     ]
+    },
+    "coverage_decided": {
+     "k": 45,
+     "n": 100,
+     "pct": 45.0,
+     "cp95": [
+      35.03,
+      55.27
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "cz": {
+    "counts": {
+     "ERROR": 15,
+     "AGREE": 28,
+     "CONSERVATIVE": 57
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 15,
+     "n": 100,
+     "pct": 15.0,
+     "cp95": [
+      8.65,
+      23.53
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 15,
+     "n": 43,
+     "pct": 34.88,
+     "cp95": [
+      21.01,
+      50.93
+     ]
+    },
+    "coverage_decided": {
+     "k": 43,
+     "n": 100,
+     "pct": 43.0,
+     "cp95": [
+      33.14,
+      53.29
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   }
+  },
+  "person": {
+   "pooled": {
+    "counts": {
+     "AGREE": 127,
+     "CONSERVATIVE": 61,
+     "ERROR": 12
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 12,
+     "n": 200,
+     "pct": 6.0,
+     "cp95": [
+      3.14,
+      10.25
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 12,
+     "n": 139,
+     "pct": 8.63,
+     "cp95": [
+      4.54,
+      14.59
+     ]
+    },
+    "coverage_decided": {
+     "k": 139,
+     "n": 200,
+     "pct": 69.5,
+     "cp95": [
+      62.61,
+      75.8
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 67,
+     "CONSERVATIVE": 29,
+     "ERROR": 4
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 4,
+     "n": 100,
+     "pct": 4.0,
+     "cp95": [
+      1.1,
+      9.93
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 4,
+     "n": 71,
+     "pct": 5.63,
+     "cp95": [
+      1.56,
+      13.8
+     ]
+    },
+    "coverage_decided": {
+     "k": 71,
+     "n": 100,
+     "pct": 71.0,
+     "cp95": [
+      61.07,
+      79.64
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 60,
+     "CONSERVATIVE": 32,
+     "ERROR": 8
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 8,
+     "n": 100,
+     "pct": 8.0,
+     "cp95": [
+      3.52,
+      15.16
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 8,
+     "n": 68,
+     "pct": 11.76,
+     "cp95": [
+      5.22,
+      21.87
+     ]
+    },
+    "coverage_decided": {
+     "k": 68,
+     "n": 100,
+     "pct": 68.0,
+     "cp95": [
+      57.92,
+      76.98
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   }
+  },
+  "number": {
+   "pooled": {
+    "counts": {
+     "AGREE": 137,
+     "CONSERVATIVE": 58,
+     "ERROR": 5
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 5,
+     "n": 200,
+     "pct": 2.5,
+     "cp95": [
+      0.82,
+      5.74
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 5,
+     "n": 142,
+     "pct": 3.52,
+     "cp95": [
+      1.15,
+      8.03
+     ]
+    },
+    "coverage_decided": {
+     "k": 142,
+     "n": 200,
+     "pct": 71.0,
+     "cp95": [
+      64.18,
+      77.18
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 72,
+     "CONSERVATIVE": 26,
+     "ERROR": 2
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 2,
+     "n": 100,
+     "pct": 2.0,
+     "cp95": [
+      0.24,
+      7.04
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 2,
+     "n": 74,
+     "pct": 2.7,
+     "cp95": [
+      0.33,
+      9.42
+     ]
+    },
+    "coverage_decided": {
+     "k": 74,
+     "n": 100,
+     "pct": 74.0,
+     "cp95": [
+      64.27,
+      82.26
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 65,
+     "CONSERVATIVE": 32,
+     "ERROR": 3
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 3,
+     "n": 100,
+     "pct": 3.0,
+     "cp95": [
+      0.62,
+      8.52
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 3,
+     "n": 68,
+     "pct": 4.41,
+     "cp95": [
+      0.92,
+      12.36
+     ]
+    },
+    "coverage_decided": {
+     "k": 68,
+     "n": 100,
+     "pct": 68.0,
+     "cp95": [
+      57.92,
+      76.98
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   }
+  },
+  "gender": {
+   "pooled": {
+    "counts": {
+     "CONSERVATIVE": 133,
+     "AGREE": 57,
+     "ERROR": 10
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 10,
+     "n": 200,
+     "pct": 5.0,
+     "cp95": [
+      2.42,
+      9.0
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 10,
+     "n": 67,
+     "pct": 14.93,
+     "cp95": [
+      7.4,
+      25.74
+     ]
+    },
+    "coverage_decided": {
+     "k": 67,
+     "n": 200,
+     "pct": 33.5,
+     "cp95": [
+      27.0,
+      40.5
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "sk": {
+    "counts": {
+     "CONSERVATIVE": 57,
+     "AGREE": 38,
+     "ERROR": 5
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 5,
+     "n": 100,
+     "pct": 5.0,
+     "cp95": [
+      1.64,
+      11.28
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 5,
+     "n": 43,
+     "pct": 11.63,
+     "cp95": [
+      3.89,
+      25.08
+     ]
+    },
+    "coverage_decided": {
+     "k": 43,
+     "n": 100,
+     "pct": 43.0,
+     "cp95": [
+      33.14,
+      53.29
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "cz": {
+    "counts": {
+     "CONSERVATIVE": 76,
+     "AGREE": 19,
+     "ERROR": 5
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 5,
+     "n": 100,
+     "pct": 5.0,
+     "cp95": [
+      1.64,
+      11.28
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 5,
+     "n": 24,
+     "pct": 20.83,
+     "cp95": [
+      7.13,
+      42.15
+     ]
+    },
+    "coverage_decided": {
+     "k": 24,
+     "n": 100,
+     "pct": 24.0,
+     "cp95": [
+      16.02,
+      33.57
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   }
+  },
+  "tf": {
+   "pooled": {
+    "counts": {
+     "AGREE": 104,
+     "CONSERVATIVE": 79,
+     "ERROR": 17
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 17,
+     "n": 200,
+     "pct": 8.5,
+     "cp95": [
+      5.03,
+      13.26
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 17,
+     "n": 121,
+     "pct": 14.05,
+     "cp95": [
+      8.4,
+      21.54
+     ]
+    },
+    "coverage_decided": {
+     "k": 121,
+     "n": 200,
+     "pct": 60.5,
+     "cp95": [
+      53.36,
+      67.32
+     ]
+    },
+    "ERROR_multi_sentence": 4
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 66,
+     "CONSERVATIVE": 25,
+     "ERROR": 9
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 9,
+     "n": 100,
+     "pct": 9.0,
+     "cp95": [
+      4.2,
+      16.4
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 9,
+     "n": 75,
+     "pct": 12.0,
+     "cp95": [
+      5.64,
+      21.56
+     ]
+    },
+    "coverage_decided": {
+     "k": 75,
+     "n": 100,
+     "pct": 75.0,
+     "cp95": [
+      65.34,
+      83.12
+     ]
+    },
+    "ERROR_multi_sentence": 3
+   },
+   "cz": {
+    "counts": {
+     "ERROR": 8,
+     "CONSERVATIVE": 54,
+     "AGREE": 38
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 8,
+     "n": 100,
+     "pct": 8.0,
+     "cp95": [
+      3.52,
+      15.16
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 8,
+     "n": 46,
+     "pct": 17.39,
+     "cp95": [
+      7.82,
+      31.42
+     ]
+    },
+    "coverage_decided": {
+     "k": 46,
+     "n": 100,
+     "pct": 46.0,
+     "cp95": [
+      35.98,
+      56.26
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   }
+  },
+  "tense_open": {
+   "pooled": {
+    "counts": {
+     "AGREE": 121,
+     "CONSERVATIVE": 21,
+     "ERROR": 58
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 58,
+     "n": 200,
+     "pct": 29.0,
+     "cp95": [
+      22.82,
+      35.82
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 58,
+     "n": 179,
+     "pct": 32.4,
+     "cp95": [
+      25.61,
+      39.79
+     ]
+    },
+    "coverage_decided": {
+     "k": 179,
+     "n": 200,
+     "pct": 89.5,
+     "cp95": [
+      84.4,
+      93.38
+     ]
+    },
+    "ERROR_multi_sentence": 9
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 71,
+     "CONSERVATIVE": 8,
+     "ERROR": 21
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 21,
+     "n": 100,
+     "pct": 21.0,
+     "cp95": [
+      13.49,
+      30.29
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 21,
+     "n": 92,
+     "pct": 22.83,
+     "cp95": [
+      14.72,
+      32.75
+     ]
+    },
+    "coverage_decided": {
+     "k": 92,
+     "n": 100,
+     "pct": 92.0,
+     "cp95": [
+      84.84,
+      96.48
+     ]
+    },
+    "ERROR_multi_sentence": 4
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 50,
+     "CONSERVATIVE": 13,
+     "ERROR": 37
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 37,
+     "n": 100,
+     "pct": 37.0,
+     "cp95": [
+      27.56,
+      47.24
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 37,
+     "n": 87,
+     "pct": 42.53,
+     "cp95": [
+      31.99,
+      53.59
+     ]
+    },
+    "coverage_decided": {
+     "k": 87,
+     "n": 100,
+     "pct": 87.0,
+     "cp95": [
+      78.8,
+      92.89
+     ]
+    },
+    "ERROR_multi_sentence": 5
+   }
+  },
+  "perfective_present": {
+   "pooled": {
+    "counts": {
+     "AGREE": 126,
+     "CONSERVATIVE": 66,
+     "ERROR": 8
+    },
+    "n": 200,
+    "ERROR_of_all": {
+     "k": 8,
+     "n": 200,
+     "pct": 4.0,
+     "cp95": [
+      1.74,
+      7.73
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 8,
+     "n": 134,
+     "pct": 5.97,
+     "cp95": [
+      2.61,
+      11.42
+     ]
+    },
+    "coverage_decided": {
+     "k": 134,
+     "n": 200,
+     "pct": 67.0,
+     "cp95": [
+      60.02,
+      73.47
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 75,
+     "CONSERVATIVE": 19,
+     "ERROR": 6
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 6,
+     "n": 100,
+     "pct": 6.0,
+     "cp95": [
+      2.23,
+      12.6
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 6,
+     "n": 81,
+     "pct": 7.41,
+     "cp95": [
+      2.77,
+      15.43
+     ]
+    },
+    "coverage_decided": {
+     "k": 81,
+     "n": 100,
+     "pct": 81.0,
+     "cp95": [
+      71.93,
+      88.16
+     ]
+    },
+    "ERROR_multi_sentence": 1
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 51,
+     "CONSERVATIVE": 47,
+     "ERROR": 2
+    },
+    "n": 100,
+    "ERROR_of_all": {
+     "k": 2,
+     "n": 100,
+     "pct": 2.0,
+     "cp95": [
+      0.24,
+      7.04
+     ]
+    },
+    "ERROR_of_decided": {
+     "k": 2,
+     "n": 53,
+     "pct": 3.77,
+     "cp95": [
+      0.46,
+      12.98
+     ]
+    },
+    "coverage_decided": {
+     "k": 53,
+     "n": 100,
+     "pct": 53.0,
+     "cp95": [
+      42.76,
+      63.06
+     ]
+    },
+    "ERROR_multi_sentence": 0
+   }
+  }
+ },
+ "2.3_errors": {
+  "voice_sk": [
+   [
+    26,
+    "Zvyčajne je sám, ale dnes je šalát s kamarátom.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    30,
+    "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+    "impersonal",
+    "active_prodrop",
+    "multi"
+   ],
+   [
+    32,
+    "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    35,
+    "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+    "active_agent",
+    "active_prodrop",
+    "multi"
+   ],
+   [
+    42,
+    "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    44,
+    "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+    "active_prodrop",
+    "active_agent",
+    ""
+   ],
+   [
+    54,
+    "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    66,
+    "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+    "passive",
+    "active_agent",
+    "multi"
+   ],
+   [
+    80,
+    "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    106,
+    "Můžeš vidět ty rybky v jezírku?",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    113,
+    "Vchod je zablokovaný a stovky lidí křičí!",
+    "active_agent",
+    "passive",
+    ""
+   ],
+   [
+    137,
+    "Posilovna se zavírá. Musíš přestat pózovat.",
+    "active_prodrop",
+    "active_agent",
+    "multi"
+   ],
+   [
+    164,
+    "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+    "active_prodrop",
+    "active_agent",
+    ""
+   ],
+   [
+    165,
+    "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ],
+   [
+    176,
+    "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+    "active_agent",
+    "active_prodrop",
+    ""
+   ]
+  ],
+  "agent_nom": [
+   [
+    26,
+    "Zvyčajne je sám, ale dnes je šalát s kamarátom.",
+    "Zvyčajne",
+    null,
+    ""
+   ],
+   [
+    32,
+    "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+    "Zvyčajne",
+    null,
+    ""
+   ],
+   [
+    35,
+    "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+    "on",
+    null,
+    "multi"
+   ],
+   [
+    42,
+    "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+    "ja",
+    null,
+    ""
+   ],
+   [
+    46,
+    "Chladnička je na jedlo, tak zajtra ona do nej dá jedlo.",
+    "ona",
+    "Chladnička",
+    ""
+   ],
+   [
+    52,
+    "Kámoška, vraj je z domu teraz len hromada sutín, však?",
+    "vraj",
+    "hromada sutín",
+    ""
+   ],
+   [
+    54,
+    "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+    "Takto",
+    null,
+    ""
+   ],
+   [
+    80,
+    "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+    "zábere",
+    null,
+    ""
+   ],
+   [
+    101,
+    "Nikdo nejede dolů po těchhle schodech! Je to noční můra!",
+    "noční můra",
+    "Nikdo",
+    "multi"
+   ],
+   [
+    106,
+    "Můžeš vidět ty rybky v jezírku?",
+    "ty",
+    null,
+    ""
+   ],
+   [
+    128,
+    "Bolí to, ale on křičí: Já musím hrát finále!",
+    "on",
+    "to",
+    ""
+   ],
+   [
+    138,
+    "Poslouchej, prý v prázdné misce je jedna tabletka.",
+    "prý",
+    "jedna tabletka",
+    ""
+   ],
+   [
+    149,
+    "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+    "dort",
+    "to",
+    ""
+   ],
+   [
+    151,
+    "Točité schodiště není moc široké a ani to betonové.",
+    "široké",
+    "Točité schodiště",
+    ""
+   ],
+   [
+    159,
+    "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+    "úžasný",
+    "model",
+    ""
+   ]
+  ],
+  "person": [
+   [
+    10,
+    "Stena reproduktorov robí na koncerte obrovský zvuk.",
+    "2pl",
+    "3sg",
+    ""
+   ],
+   [
+    34,
+    "Stan by si mal postaviť na rovnú zem.",
+    "3sg",
+    "2sg",
+    ""
+   ],
+   [
+    42,
+    "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+    "1sg",
+    "3sg",
+    ""
+   ],
+   [
+    44,
+    "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+    "2pl",
+    "3sg",
+    ""
+   ],
+   [
+    137,
+    "Posilovna se zavírá. Musíš přestat pózovat.",
+    "2sg",
+    "3sg",
+    "multi"
+   ],
+   [
+    146,
+    "Na jednacím stole je hodně notebooků.",
+    "1sg",
+    "3sg",
+    ""
+   ],
+   [
+    155,
+    "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+    "3pl",
+    "3sg",
+    ""
+   ],
+   [
+    163,
+    "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+    "3sg",
+    "2sg",
+    ""
+   ],
+   [
+    164,
+    "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+    "2sg",
+    "3sg",
+    ""
+   ],
+   [
+    165,
+    "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+    "3sg",
+    "1sg",
+    ""
+   ],
+   [
+    170,
+    "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+    "3sg",
+    "3pl",
+    ""
+   ],
+   [
+    177,
+    "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+    "1sg",
+    null,
+    ""
+   ]
+  ],
+  "number": [
+   [
+    10,
+    "Stena reproduktorov robí na koncerte obrovský zvuk.",
+    "pl",
+    "sg",
+    ""
+   ],
+   [
+    44,
+    "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+    "pl",
+    "sg",
+    ""
+   ],
+   [
+    155,
+    "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+    "pl",
+    "sg",
+    ""
+   ],
+   [
+    170,
+    "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+    "sg",
+    "pl",
+    ""
+   ],
+   [
+    177,
+    "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+    "sg",
+    null,
+    ""
+   ]
+  ],
+  "gender": [
+   [
+    35,
+    "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+    "m",
+    null,
+    "multi"
+   ],
+   [
+    64,
+    "Kým kráčala po obývačkovom móle, kamarátky všetko natáčali.",
+    "m",
+    "f",
+    ""
+   ],
+   [
+    79,
+    "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+    "m",
+    null,
+    ""
+   ],
+   [
+    85,
+    "Kamoška, Soul, ktorého neónové nápisy sa nikdy nevypínajú, je jej obľú",
+    "m",
+    "f",
+    ""
+   ],
+   [
+    93,
+    "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+    "m",
+    null,
+    ""
+   ],
+   [
+    128,
+    "Bolí to, ale on křičí: Já musím hrát finále!",
+    "m",
+    "n",
+    ""
+   ],
+   [
+    155,
+    "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+    "m",
+    null,
+    ""
+   ],
+   [
+    157,
+    "„Mohla bych zůstat na tomhle poli celý den.“ - „Já taky,“ řekl natažen",
+    "f",
+    "m",
+    ""
+   ],
+   [
+    163,
+    "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+    "f",
+    null,
+    ""
+   ],
+   [
+    170,
+    "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+    "f",
+    "m",
+    ""
+   ]
+  ],
+  "tf": [
+   [
+    20,
+    "Kámo, ona má toľko cereálií. Supermarket bude prázdny!",
+    "future",
+    "present",
+    "multi"
+   ],
+   [
+    30,
+    "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+    "conditional",
+    "present",
+    "multi"
+   ],
+   [
+    34,
+    "Stan by si mal postaviť na rovnú zem.",
+    "conditional",
+    "present",
+    ""
+   ],
+   [
+    35,
+    "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+    "past",
+    "present",
+    "multi"
+   ],
+   [
+    41,
+    "Vraj vždy skrýva dôkazy, ale včera ukázala všetko, zlatko.",
+    "past",
+    "present",
+    ""
+   ],
+   [
+    76,
+    "Počúvaj, počula som, že do piatku roztrhá každú zmluvu v tej kancelári",
+    "present",
+    "past",
+    ""
+   ],
+   [
+    79,
+    "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+    "conditional",
+    "past",
+    ""
+   ],
+   [
+    84,
+    "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký p",
+    "conditional",
+    "past",
+    ""
+   ],
+   [
+    97,
+    "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+    "present",
+    "future",
+    ""
+   ],
+   [
+    101,
+    "Nikdo nejede dolů po těchhle schodech! Je to noční můra!",
+    "past",
+    "present",
+    "multi"
+   ],
+   [
+    129,
+    "Osel je malý, ale jeho hlas je obrovský.",
+    "past",
+    "present",
+    ""
+   ],
+   [
+    159,
+    "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+    "past",
+    "present",
+    ""
+   ],
+   [
+    165,
+    "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+    "past",
+    "present",
+    ""
+   ],
+   [
+    170,
+    "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+    "past",
+    "present",
+    ""
+   ],
+   [
+    184,
+    "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+    "past",
+    "present",
+    ""
+   ]
+  ],
+  "tense_open": [
+   [
+    5,
+    "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+    true,
+    false,
+    ""
+   ],
+   [
+    6,
+    "Komu sa nová žena predstavuje? Celému tímu.",
+    true,
+    false,
+    "multi"
+   ],
+   [
+    7,
+    "V záhrade v noci oslavujú traja kamaráti",
+    true,
+    false,
+    ""
+   ],
+   [
+    32,
+    "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+    true,
+    false,
+    ""
+   ],
+   [
+    39,
+    "Ale no tak, brácho, chyť ma za ruku. Ja ťa vytiahnem hore, fakt.",
+    true,
+    false,
+    "multi"
+   ],
+   [
+    48,
+    "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+    true,
+    false,
+    ""
+   ],
+   [
+    57,
+    "Ak aj tento sveter vyperie na šesťdesiatke, celá skriňa skončí vo veľk",
+    true,
+    false,
+    ""
+   ],
+   [
+    58,
+    "Úprimne, vybral si si dokonalý útes, aby si sledoval, ako sa more farb",
+    false,
+    true,
+    ""
+   ],
+   [
+    60,
+    "Herec od začiatku porady dostal pochvalu od 5 členov štábu.",
+    false,
+    true,
+    ""
+   ],
+   [
+    61,
+    "Ak tento sliz stlačíš dosť silno, guľôčky ti praskajú medzi prstami.",
+    true,
+    false,
+    ""
+   ],
+   [
+    66,
+    "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+    false,
+    true,
+    "multi"
+   ],
+   [
+    73,
+    "Kámo, plánuje túto romantickú žiadosť o ruku už mesiace, vážne.",
+    false,
+    true,
+    ""
+   ],
+   [
+    77,
+    "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+    true,
+    false,
+    ""
+   ],
+   [
+    78,
+    "Kým ten malinký džbán naplní bazén, leto skončí navždy!",
+    true,
+    false,
+    ""
+   ],
+   [
+    79,
+    "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+    false,
+    true,
+    ""
+   ]
+  ],
+  "perfective_present": [
+   [
+    5,
+    "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+    true,
+    false,
+    ""
+   ],
+   [
+    6,
+    "Komu sa nová žena predstavuje? Celému tímu.",
+    true,
+    false,
+    "multi"
+   ],
+   [
+    32,
+    "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+    true,
+    false,
+    ""
+   ],
+   [
+    48,
+    "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+    true,
+    false,
+    ""
+   ],
+   [
+    77,
+    "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+    true,
+    false,
+    ""
+   ],
+   [
+    97,
+    "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+    false,
+    true,
+    ""
+   ],
+   [
+    110,
+    "Matka objímá své děti u školní brány.",
+    true,
+    false,
+    ""
+   ],
+   [
+    149,
+    "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+    true,
+    false,
+    ""
+   ]
+  ]
+ },
+ "2.3_reference": "1W §2.2 blind Slovak reader error 1.67 %; 2A §3 reader_nom 3-4 %",
+ "2.4_alt": {
+  "overall": {
+   "mapped": 692,
+   "unmapped": 491,
+   "propose_new": 31
+  },
+  "by_level": {
+   "A1": {
+    "mapped": 135,
+    "unmapped": 100,
+    "propose_new": 3
+   },
+   "A2": {
+    "mapped": 172,
+    "propose_new": 9,
+    "unmapped": 84
+   },
+   "B1": {
+    "propose_new": 8,
+    "mapped": 189,
+    "unmapped": 139
+   },
+   "B2": {
+    "propose_new": 11,
+    "mapped": 196,
+    "unmapped": 168
+   }
+  },
+  "by_lang": {
+   "sk": {
+    "mapped": 362,
+    "unmapped": 242,
+    "propose_new": 19
+   },
+   "cz": {
+    "mapped": 330,
+    "unmapped": 249,
+    "propose_new": 12
+   }
+  },
+  "rows_with_any_mapped": 198,
+  "note": "rough match: surface word/lemma in a group, sense not checked"
+ },
+ "2.5_v": {
+  "sessions": [
+   "v_sk"
+  ],
+  "per_sent_all_N100": 476.7,
+  "per_sent_excl_cache_read_N100": 252.1,
+  "per_sent_output_N100": 71.4,
+  "N30_per_sent_all_ESTIMATE": 1221.9,
+  "N30_per_sent_excl_cache_read_ESTIMATE": 473.2,
+  "share_of_2A_1611.8": 0.296,
+  "share_of_2A_713.3_excl": 0.353,
+  "N30_share_of_2A_1611.8_ESTIMATE": 0.758,
+  "N30_share_of_2A_713.3_ESTIMATE": 0.663,
+  "fit": {
+   "a_fixed_creation_tokens": 9411,
+   "b_tokens_per_char": 0.365,
+   "points": [
+    [
+     24007,
+     17782
+    ],
+    [
+     9328,
+     12895
+    ],
+    [
+     22651,
+     18066
+    ],
+    [
+     9377,
+     12679
+    ],
+    [
+     16697,
+     15580
+    ]
+   ]
+  },
+  "v0_is_reference": 100,
+  "returned": 100,
+  "two_variants": 76,
+  "lk0_equals_supplied": 100
+ },
+ "session_decomposition": {
+  "lk_judge": {
+   "N": 200,
+   "all": 49126,
+   "per_sent_all": 245.6,
+   "per_sent_excl_cache_read": 133.3,
+   "per_sent_output": 44.4,
+   "cache_read": 22462,
+   "cache_creation": 17780,
+   "output": 8882,
+   "duration_s": 62.3,
+   "usd": 0.411091,
+   "fixed_all_est": 32185,
+   "fixed_excl_cache_read_est": 9723,
+   "marginal_per_sent_est": 86.7,
+   "N30_per_sent_all_ESTIMATE": 1159.5,
+   "N30_per_sent_excl_cache_read_ESTIMATE": 410.8,
+   "N30_s_per_sent_ESTIMATE": 0.31
+  },
+  "gold_sk": {
+   "N": 100,
+   "all": 50888,
+   "per_sent_all": 508.9,
+   "per_sent_excl_cache_read": 284.3,
+   "per_sent_output": 155.3,
+   "cache_read": 22462,
+   "cache_creation": 12893,
+   "output": 15531,
+   "duration_s": 107.6,
+   "usd": 0.528446,
+   "fixed_all_est": 32524,
+   "fixed_excl_cache_read_est": 10062,
+   "marginal_per_sent_est": 182.8,
+   "N30_per_sent_all_ESTIMATE": 1267.0,
+   "N30_per_sent_excl_cache_read_ESTIMATE": 518.2,
+   "N30_s_per_sent_ESTIMATE": 1.08
+  },
+  "v_sk": {
+   "N": 100,
+   "all": 47670,
+   "per_sent_all": 476.7,
+   "per_sent_excl_cache_read": 252.1,
+   "per_sent_output": 71.4,
+   "cache_read": 22462,
+   "cache_creation": 18064,
+   "output": 7142,
+   "duration_s": 48.4,
+   "usd": 0.37043099999999995,
+   "fixed_all_est": 32103,
+   "fixed_excl_cache_read_est": 9641,
+   "marginal_per_sent_est": 151.8,
+   "N30_per_sent_all_ESTIMATE": 1221.9,
+   "N30_per_sent_excl_cache_read_ESTIMATE": 473.2,
+   "N30_s_per_sent_ESTIMATE": 0.48
+  },
+  "gold_cz": {
+   "N": 100,
+   "all": 52031,
+   "per_sent_all": 520.3,
+   "per_sent_excl_cache_read": 295.7,
+   "per_sent_output": 168.9,
+   "cache_read": 22462,
+   "cache_creation": 12677,
+   "output": 16890,
+   "duration_s": 119.6,
+   "usd": 0.5602609999999999,
+   "fixed_all_est": 32523,
+   "fixed_excl_cache_read_est": 10061,
+   "marginal_per_sent_est": 196.6,
+   "N30_per_sent_all_ESTIMATE": 1280.7,
+   "N30_per_sent_excl_cache_read_ESTIMATE": 532.0,
+   "N30_s_per_sent_ESTIMATE": 1.2
+  },
+  "rewrite_fallback": {
+   "N": 97,
+   "all": 53695,
+   "per_sent_all": 553.6,
+   "per_sent_excl_cache_read": 322.0,
+   "per_sent_output": 161.4,
+   "cache_read": 22462,
+   "cache_creation": 15578,
+   "output": 15653,
+   "duration_s": 120.2,
+   "usd": 0.558346,
+   "fixed_all_est": 32284,
+   "fixed_excl_cache_read_est": 9822,
+   "marginal_per_sent_est": 220.0,
+   "N30_per_sent_all_ESTIMATE": 1296.1,
+   "N30_per_sent_excl_cache_read_ESTIMATE": 547.3,
+   "N30_s_per_sent_ESTIMATE": 1.24
+  }
+ },
+ "2.6_rewrite": {
+  "script": {
+   "pooled": {
+    "U:AGREE": 77,
+    "U:ERROR": 12,
+    "R:AGREE": 13,
+    "R:ERROR": 1
+   },
+   "sk": {
+    "U:AGREE": 39,
+    "U:ERROR": 7,
+    "R:AGREE": 8
+   },
+   "cz": {
+    "U:AGREE": 38,
+    "U:ERROR": 5,
+    "R:AGREE": 5,
+    "R:ERROR": 1
+   }
+  },
+  "model": {
+   "pooled": {
+    "U:AGREE": 38,
+    "R_main:AGREE": 50,
+    "R_embedded:AGREE": 5,
+    "U:ERROR": 2,
+    "R_embedded:ERROR": 1,
+    "R_main:ERROR": 1
+   },
+   "pooled_machine_check_fail": {
+    "ok": 97
+   },
+   "sk": {
+    "U:AGREE": 15,
+    "R_main:AGREE": 26,
+    "R_embedded:AGREE": 3,
+    "U:ERROR": 1,
+    "R_embedded:ERROR": 1
+   },
+   "sk_machine_check_fail": {
+    "ok": 46
+   },
+   "cz": {
+    "U:AGREE": 23,
+    "R_main:AGREE": 24,
+    "R_main:ERROR": 1,
+    "R_embedded:AGREE": 2,
+    "U:ERROR": 1
+   },
+   "cz_machine_check_fail": {
+    "ok": 51
+   }
+  },
+  "errors_script": [
+   [
+    26,
+    "U",
+    "Zvyčajne je sám, ale dnes je šalát s kamarátom.",
+    null,
+    "active_prodrop",
+    "3sg",
+    "m"
+   ],
+   [
+    30,
+    "U",
+    "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+    null,
+    "active_prodrop",
+    "3sg",
+    "f"
+   ],
+   [
+    32,
+    "U",
+    "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+    null,
+    "active_prodrop",
+    "3sg",
+    null
+   ],
+   [
+    35,
+    "U",
+    "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+    null,
+    "active_prodrop",
+    "3sg",
+    null
+   ],
+   [
+    42,
+    "U",
+    "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+    null,
+    "active_prodrop",
+    "3sg",
+    null
+   ],
+   [
+    54,
+    "U",
+    "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+    null,
+    "active_prodrop",
+    "3sg",
+    null
+   ],
+   [
+    80,
+    "U",
+    "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+    null,
+    "active_prodrop",
+    "3pl",
+    null
+   ],
+   [
+    106,
+    "U",
+    "Můžeš vidět ty rybky v jezírku?",
+    null,
+    "active_prodrop",
+    "2sg",
+    null
+   ],
+   [
+    137,
+    "R",
+    "Posilovna se zavírá. Musíš přestat pózovat.",
+    "ty",
+    "active_agent",
+    "3sg",
+    "f"
+   ],
+   [
+    165,
+    "U",
+    "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+    null,
+    "active_prodrop",
+    "1sg",
+    "m"
+   ],
+   [
+    176,
+    "U",
+    "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+    null,
+    "active_prodrop",
+    "3sg",
+    "m"
+   ],
+   [
+    184,
+    "U",
+    "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+    null,
+    "active_prodrop",
+    "3sg",
+    "m"
+   ],
+   [
+    186,
+    "U",
+    "Do konce měsíce bude mít odbojováno s deseti soupeři v tomhle tréninko",
+    null,
+    "active_prodrop",
+    "3sg",
+    null
+   ]
+  ],
+  "errors_model": [
+   [
+    38,
+    "U",
+    null,
+    "Sadni si na minútu a bolesť prejde",
+    null,
+    "active_prodrop",
+    "2sg"
+   ],
+   [
+    79,
+    "R",
+    "embedded",
+    "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+    "ona",
+    "active_prodrop",
+    "3pl"
+   ],
+   [
+    131,
+    "R",
+    "main",
+    "Hodnocení za čtvrtý kvartál se blíží. Nejdřív upraví jeho kravatu.",
+    "ona",
+    "active_agent",
+    "3sg"
+   ],
+   [
+    163,
+    "U",
+    null,
+    "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+    null,
+    "active_prodrop",
+    "2sg"
+   ]
+  ],
+  "script_acc": {
+   "pooled": {
+    "ERROR": {
+     "k": 13,
+     "n": 103,
+     "pct": 12.62,
+     "cp95": [
+      6.89,
+      20.62
+     ]
+    },
+    "AGREE": {
+     "k": 90,
+     "n": 103,
+     "pct": 87.38,
+     "cp95": [
+      79.38,
+      93.11
+     ]
+    }
+   },
+   "sk": {
+    "ERROR": {
+     "k": 7,
+     "n": 54,
+     "pct": 12.96,
+     "cp95": [
+      5.37,
+      24.9
+     ]
+    },
+    "AGREE": {
+     "k": 47,
+     "n": 54,
+     "pct": 87.04,
+     "cp95": [
+      75.1,
+      94.63
+     ]
+    }
+   },
+   "cz": {
+    "ERROR": {
+     "k": 6,
+     "n": 49,
+     "pct": 12.24,
+     "cp95": [
+      4.63,
+      24.77
+     ]
+    },
+    "AGREE": {
+     "k": 43,
+     "n": 49,
+     "pct": 87.76,
+     "cp95": [
+      75.23,
+      95.37
+     ]
+    }
+   }
+  },
+  "model_acc": {
+   "pooled": {
+    "ERROR": {
+     "k": 4,
+     "n": 97,
+     "pct": 4.12,
+     "cp95": [
+      1.13,
+      10.22
+     ]
+    },
+    "AGREE": {
+     "k": 93,
+     "n": 97,
+     "pct": 95.88,
+     "cp95": [
+      89.78,
+      98.87
+     ]
+    }
+   },
+   "sk": {
+    "ERROR": {
+     "k": 2,
+     "n": 46,
+     "pct": 4.35,
+     "cp95": [
+      0.53,
+      14.84
+     ]
+    },
+    "AGREE": {
+     "k": 44,
+     "n": 46,
+     "pct": 95.65,
+     "cp95": [
+      85.16,
+      99.47
+     ]
+    }
+   },
+   "cz": {
+    "ERROR": {
+     "k": 2,
+     "n": 51,
+     "pct": 3.92,
+     "cp95": [
+      0.48,
+      13.46
+     ]
+    },
+    "AGREE": {
+     "k": 49,
+     "n": 51,
+     "pct": 96.08,
+     "cp95": [
+      86.54,
+      99.52
+     ]
+    }
+   }
+  },
+  "handled": {
+   "sk": {
+    "U": 46,
+    "ABSTAIN": 46,
+    "R": 8
+   },
+   "cz": {
+    "U": 43,
+    "ABSTAIN": 51,
+    "R": 6
+   }
+  },
+  "fallback_tokens": 53695,
+  "tokens_per_sent_over_200": 268.5,
+  "tokens_per_fallback_row": 553.6,
+  "N30_per_fallback_row_ESTIMATE": 1296.1,
+  "N30_per_sent_over_all_ESTIMATE": 628.6,
+  "vs_2A_1264.5": 0.212,
+  "model_R_applied": 57,
+  "model_R_machine_fail": []
+ },
+ "3_guards": {
+  "before:g4_v2": {
+   "pooled": {
+    "counts": {
+     "AGREE": 177,
+     "ERROR": 23
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 23,
+     "n": 200,
+     "pct": 11.5,
+     "cp95": [
+      7.43,
+      16.75
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 20,
+     "other": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 20,
+     "ERROR_as_active": 3
+    }
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 91,
+     "ERROR": 9
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 9,
+     "n": 100,
+     "pct": 9.0,
+     "cp95": [
+      4.2,
+      16.4
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 9
+    },
+    "error_classes": {
+     "ERROR_as_passive": 9
+    }
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 86,
+     "ERROR": 14
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 14,
+     "n": 100,
+     "pct": 14.0,
+     "cp95": [
+      7.87,
+      22.37
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 11,
+     "other": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 11,
+     "ERROR_as_active": 3
+    }
+   }
+  },
+  "before:g4_v3": {
+   "pooled": {
+    "counts": {
+     "AGREE": 172,
+     "ERROR": 28
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 28,
+     "n": 200,
+     "pct": 14.0,
+     "cp95": [
+      9.51,
+      19.59
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 20,
+     "other": 6,
+     "multi_sentence": 2
+    },
+    "error_classes": {
+     "ERROR_as_passive": 26,
+     "ERROR_as_active": 2
+    }
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 88,
+     "ERROR": 12
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 12,
+     "n": 100,
+     "pct": 12.0,
+     "cp95": [
+      6.36,
+      20.02
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 9,
+     "other": 2,
+     "multi_sentence": 1
+    },
+    "error_classes": {
+     "ERROR_as_passive": 12
+    }
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 84,
+     "ERROR": 16
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 16,
+     "n": 100,
+     "pct": 16.0,
+     "cp95": [
+      9.43,
+      24.68
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 11,
+     "other": 4,
+     "multi_sentence": 1
+    },
+    "error_classes": {
+     "ERROR_as_passive": 14,
+     "ERROR_as_active": 2
+    }
+   }
+  },
+  "after:g4_v2": {
+   "pooled": {
+    "counts": {
+     "AGREE": 154,
+     "ERROR": 46
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 46,
+     "n": 200,
+     "pct": 23.0,
+     "cp95": [
+      17.36,
+      29.46
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 43,
+     "other": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 43,
+     "ERROR_as_active": 3
+    }
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 78,
+     "ERROR": 22
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 22,
+     "n": 100,
+     "pct": 22.0,
+     "cp95": [
+      14.33,
+      31.39
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 22
+    },
+    "error_classes": {
+     "ERROR_as_passive": 22
+    }
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 76,
+     "ERROR": 24
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 24,
+     "n": 100,
+     "pct": 24.0,
+     "cp95": [
+      16.02,
+      33.57
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 21,
+     "other": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 21,
+     "ERROR_as_active": 3
+    }
+   }
+  },
+  "after:g4_v3": {
+   "pooled": {
+    "counts": {
+     "AGREE": 148,
+     "ERROR": 52
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 52,
+     "n": 200,
+     "pct": 26.0,
+     "cp95": [
+      20.07,
+      32.66
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 43,
+     "other": 7,
+     "multi_sentence": 2
+    },
+    "error_classes": {
+     "ERROR_as_passive": 50,
+     "ERROR_as_active": 2
+    }
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 74,
+     "ERROR": 26
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 26,
+     "n": 100,
+     "pct": 26.0,
+     "cp95": [
+      17.74,
+      35.73
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 22,
+     "other": 3,
+     "multi_sentence": 1
+    },
+    "error_classes": {
+     "ERROR_as_passive": 26
+    }
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 74,
+     "ERROR": 26
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 26,
+     "n": 100,
+     "pct": 26.0,
+     "cp95": [
+      17.74,
+      35.73
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 21,
+     "other": 4,
+     "multi_sentence": 1
+    },
+    "error_classes": {
+     "ERROR_as_passive": 24,
+     "ERROR_as_active": 2
+    }
+   }
+  },
+  "before:agv4": {
+   "pooled": {
+    "counts": {
+     "AGREE": 186,
+     "ERROR": 14
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 14,
+     "n": 200,
+     "pct": 7.0,
+     "cp95": [
+      3.88,
+      11.47
+     ]
+    },
+    "error_causes": {
+     "other": 9,
+     "multi_sentence": 2,
+     "reflexive_si_sa_se_with_overt_nominative": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 12,
+     "ERROR_as_active": 2
+    }
+   },
+   "sk": {
+    "counts": {
+     "AGREE": 91,
+     "ERROR": 9
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 9,
+     "n": 100,
+     "pct": 9.0,
+     "cp95": [
+      4.2,
+      16.4
+     ]
+    },
+    "error_causes": {
+     "other": 6,
+     "multi_sentence": 2,
+     "reflexive_si_sa_se_with_overt_nominative": 1
+    },
+    "error_classes": {
+     "ERROR_as_passive": 9
+    }
+   },
+   "cz": {
+    "counts": {
+     "AGREE": 95,
+     "ERROR": 5
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 5,
+     "n": 100,
+     "pct": 5.0,
+     "cp95": [
+      1.64,
+      11.28
+     ]
+    },
+    "error_causes": {
+     "reflexive_si_sa_se_with_overt_nominative": 2,
+     "other": 3
+    },
+    "error_classes": {
+     "ERROR_as_passive": 3,
+     "ERROR_as_active": 2
+    }
+   }
+  },
+  "before:reader_nom_full": {
+   "pooled": {
+    "counts": {
+     "CONSERVATIVE": 77,
+     "AGREE": 112,
+     "ERROR": 11
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 11,
+     "n": 200,
+     "pct": 5.5,
+     "cp95": [
+      2.78,
+      9.63
+     ]
+    },
+    "error_causes": {
+     "multi_sentence": 1,
+     "other": 9,
+     "reflexive_si_sa_se_with_overt_nominative": 1
+    },
+    "error_classes": {
+     "ERROR": 11
+    }
+   },
+   "sk": {
+    "counts": {
+     "CONSERVATIVE": 32,
+     "AGREE": 65,
+     "ERROR": 3
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 3,
+     "n": 100,
+     "pct": 3.0,
+     "cp95": [
+      0.62,
+      8.52
+     ]
+    },
+    "error_causes": {
+     "multi_sentence": 1,
+     "other": 2
+    },
+    "error_classes": {
+     "ERROR": 3
+    }
+   },
+   "cz": {
+    "counts": {
+     "CONSERVATIVE": 45,
+     "AGREE": 47,
+     "ERROR": 8
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 8,
+     "n": 100,
+     "pct": 8.0,
+     "cp95": [
+      3.52,
+      15.16
+     ]
+    },
+    "error_causes": {
+     "other": 7,
+     "reflexive_si_sa_se_with_overt_nominative": 1
+    },
+    "error_classes": {
+     "ERROR": 8
+    }
+   }
+  },
+  "after:reader_nom_full": {
+   "pooled": {
+    "counts": {
+     "CONSERVATIVE": 77,
+     "AGREE": 107,
+     "ERROR": 16
+    },
+    "n": 200,
+    "ERROR": {
+     "k": 16,
+     "n": 200,
+     "pct": 8.0,
+     "cp95": [
+      4.64,
+      12.67
+     ]
+    },
+    "error_causes": {
+     "other": 10,
+     "multi_sentence": 1,
+     "reflexive_si_sa_se_with_overt_nominative": 5
+    },
+    "error_classes": {
+     "ERROR": 16
+    }
+   },
+   "sk": {
+    "counts": {
+     "CONSERVATIVE": 32,
+     "AGREE": 63,
+     "ERROR": 5
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 5,
+     "n": 100,
+     "pct": 5.0,
+     "cp95": [
+      1.64,
+      11.28
+     ]
+    },
+    "error_causes": {
+     "other": 3,
+     "multi_sentence": 1,
+     "reflexive_si_sa_se_with_overt_nominative": 1
+    },
+    "error_classes": {
+     "ERROR": 5
+    }
+   },
+   "cz": {
+    "counts": {
+     "CONSERVATIVE": 45,
+     "AGREE": 44,
+     "ERROR": 11
+    },
+    "n": 100,
+    "ERROR": {
+     "k": 11,
+     "n": 100,
+     "pct": 11.0,
+     "cp95": [
+      5.62,
+      18.83
+     ]
+    },
+    "error_causes": {
+     "other": 7,
+     "reflexive_si_sa_se_with_overt_nominative": 4
+    },
+    "error_classes": {
+     "ERROR": 11
+    }
+   }
+  }
+ },
+ "3_errors": [
+  {
+   "n": 6,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Komu sa nová žena predstavuje? Celému tímu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "nová žena"
+  },
+  {
+   "n": 6,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Komu sa nová žena predstavuje? Celému tímu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "nová žena"
+  },
+  {
+   "n": 6,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Komu sa nová žena predstavuje? Celému tímu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "nová žena"
+  },
+  {
+   "n": 6,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Komu sa nová žena predstavuje? Celému tímu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "nová žena"
+  },
+  {
+   "n": 16,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Tá žena je zaneprázdnená veľkou kopou bielizne.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Tá žena"
+  },
+  {
+   "n": 16,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Tá žena je zaneprázdnená veľkou kopou bielizne.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Tá žena"
+  },
+  {
+   "n": 18,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Malý chlapec sa skrýva za stromom v parku.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Malý chlapec"
+  },
+  {
+   "n": 18,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Malý chlapec sa skrýva za stromom v parku.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Malý chlapec"
+  },
+  {
+   "n": 18,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Malý chlapec sa skrýva za stromom v parku.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Malý chlapec"
+  },
+  {
+   "n": 18,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Malý chlapec sa skrýva za stromom v parku.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Malý chlapec"
+  },
+  {
+   "n": 22,
+   "lang": "sk",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Krabica je ľahká, tak ju ona môže rýchlo otvoriť.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Krabica"
+  },
+  {
+   "n": 34,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Stan by si ty mal postaviť na rovnú zem.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 34,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Stan by si ty mal postaviť na rovnú zem.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 34,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Stan by si mal postaviť na rovnú zem.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 35,
+   "lang": "sk",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 35,
+   "lang": "sk",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 36,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Narazí on do kamaráta, takže sa obaja smejú.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 36,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Narazí on do kamaráta, takže sa obaja smejú.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 37,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On má plán: on sa chystá nájsť svoj telefón v tejto izbe.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 37,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On má plán: on sa chystá nájsť svoj telefón v tejto izbe.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 37,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On má plán: on sa chystá nájsť svoj telefón v tejto izbe.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 37,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On má plán: on sa chystá nájsť svoj telefón v tejto izbe.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 40,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Hádaj čo, počula som ja, že oni sa chystajú skryť za gauč na jej narodeniny.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 40,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Hádaj čo, počula som ja, že oni sa chystajú skryť za gauč na jej narodeniny.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 42,
+   "lang": "sk",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 42,
+   "lang": "sk",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 46,
+   "lang": "sk",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Chladnička je na jedlo, tak zajtra ona do nej dá jedlo.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Chladnička"
+  },
+  {
+   "n": 46,
+   "lang": "sk",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Chladnička je na jedlo, tak zajtra ona do nej dá jedlo.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Chladnička"
+  },
+  {
+   "n": 53,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Nemohla sa ona dočkať, kedy sa znova chytí kruhov.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 53,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Nemohla sa ona dočkať, kedy sa znova chytí kruhov.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 53,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Nemohla sa dočkať, kedy sa znova chytí kruhov.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 55,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ten zvitok si on tlačí na hruď, takže tento deň pre neho určite znamená všetko.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 55,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ten zvitok si on tlačí na hruď, takže tento deň pre neho určite znamená všetko.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 58,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Úprimne, vybral si si ty dokonalý útes, aby si sledoval, ako sa more farbí do zlata, nevyb",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 58,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Úprimne, vybral si si ty dokonalý útes, aby si sledoval, ako sa more farbí do zlata, nevyb",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 58,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Úprimne, vybral si si dokonalý útes, aby si sledoval, ako sa more farbí do zlata, nevybral",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 63,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Stlačil on vypínač a svetlá sa rozsvietili, lebo vypínač je na svetlá.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 63,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Stlačil on vypínač a svetlá sa rozsvietili, lebo vypínač je na svetlá.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 63,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Stlačil vypínač a svetlá sa rozsvietili, lebo vypínač je na svetlá.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 65,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona preskúmala breh trikrát, takže sa naň pozrela trikrát.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 65,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona preskúmala breh trikrát, takže sa naň pozrela trikrát.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 65,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona preskúmala breh trikrát, takže sa naň pozrela trikrát.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 65,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona preskúmala breh trikrát, takže sa naň pozrela trikrát.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 66,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Chlapec"
+  },
+  {
+   "n": 66,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Chlapec"
+  },
+  {
+   "n": 66,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Chlapec"
+  },
+  {
+   "n": 70,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Vyšla ona hore na prvý pokus a ani sa nezakývala, takže to doma musela robiť stokrát.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 70,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Vyšla ona hore na prvý pokus a ani sa nezakývala, takže to doma musela robiť stokrát.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 70,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Vyšla hore na prvý pokus a ani sa nezakývala, takže to doma musela robiť stokrát.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 72,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Lano, na ktorom sa hojdá, sa môže každú chvíľu pretrhnúť! Katastrofa!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Lano"
+  },
+  {
+   "n": 72,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Lano, na ktorom sa hojdá, sa môže každú chvíľu pretrhnúť! Katastrofa!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Lano"
+  },
+  {
+   "n": 72,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Lano, na ktorom sa ona hojdá, sa môže každú chvíľu pretrhnúť! Katastrofa!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Lano"
+  },
+  {
+   "n": 72,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Lano, na ktorom sa ona hojdá, sa môže každú chvíľu pretrhnúť! Katastrofa!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Lano"
+  },
+  {
+   "n": 72,
+   "lang": "sk",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Lano, na ktorom sa ona hojdá, sa môže každú chvíľu pretrhnúť! Katastrofa!",
+   "gold_voice": "active_agent",
+   "gold_subject": "Lano"
+  },
+  {
+   "n": 75,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Úprimne, už desať minút ty sleduješ, ako sa bazén zväčšuje, a tvoja trpezlivosť je pôsobiv",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 75,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Úprimne, už desať minút ty sleduješ, ako sa bazén zväčšuje, a tvoja trpezlivosť je pôsobiv",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 84,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký pokojný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "chlapec"
+  },
+  {
+   "n": 84,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký pokojný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "chlapec"
+  },
+  {
+   "n": 84,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký pokojný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "chlapec"
+  },
+  {
+   "n": 84,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký pokojný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "chlapec"
+  },
+  {
+   "n": 85,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kamoška, Soul, ktorého neónové nápisy sa nikdy nevypínajú, je jej obľúbené mesto, povedala",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 85,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kamoška, Soul, ktorého neónové nápisy sa nikdy nevypínajú, je jej obľúbené mesto, povedala",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 87,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Pes plával chvíľu v jazere, takže jeho srsť bola premočená.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Pes"
+  },
+  {
+   "n": 87,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Pes plával chvíľu v jazere, takže jeho srsť bola premočená.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Pes"
+  },
+  {
+   "n": 91,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Minulú jar si ona dala celú záhradu prekopať a odvtedy je zem mäkká.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 91,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Minulú jar si ona dala celú záhradu prekopať a odvtedy je zem mäkká.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 91,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Minulú jar si dala celú záhradu prekopať a odvtedy je zem mäkká.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 93,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 93,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 93,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 93,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 94,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "On poprel, že bol vystrašený, keď mu netopier prefrčal tesne popri pleci.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 96,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Morka"
+  },
+  {
+   "n": 96,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Morka"
+  },
+  {
+   "n": 96,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Morka"
+  },
+  {
+   "n": 96,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Morka"
+  },
+  {
+   "n": 96,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Morka"
+  },
+  {
+   "n": 97,
+   "lang": "sk",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ľadová doska"
+  },
+  {
+   "n": 97,
+   "lang": "sk",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ľadová doska"
+  },
+  {
+   "n": 97,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ľadová doska"
+  },
+  {
+   "n": 97,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ľadová doska"
+  },
+  {
+   "n": 99,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Tú tvrdú lavicu si on dá potiahnuť mäkkou žltou látkou.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 99,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Tú tvrdú lavicu si on dá potiahnuť mäkkou žltou látkou.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 100,
+   "lang": "sk",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Zízal si ty na ten pás celú večnosť, kým sa objavil tvoj ruksak. Rešpekt.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 100,
+   "lang": "sk",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Zízal si ty na ten pás celú večnosť, kým sa objavil tvoj ruksak. Rešpekt.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 100,
+   "lang": "sk",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Zízal si na ten pás celú večnosť, kým sa objavil tvoj ruksak. Rešpekt.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 102,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona se umí smát a skákat zároveň.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 102,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona se umí smát a skákat zároveň.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 102,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona se umí smát a skákat zároveň.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 102,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona se umí smát a skákat zároveň.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 102,
+   "lang": "cz",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ona se umí smát a skákat zároveň.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Ona"
+  },
+  {
+   "n": 106,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Můžeš vidět ty rybky v jezírku?",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 106,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Můžeš vidět ty rybky v jezírku?",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 113,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Vchod je zablokovaný a stovky lidí křičí!",
+   "gold_voice": "passive",
+   "gold_subject": "Vchod"
+  },
+  {
+   "n": 113,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Vchod je zablokovaný a stovky lidí křičí!",
+   "gold_voice": "passive",
+   "gold_subject": "Vchod"
+  },
+  {
+   "n": 113,
+   "lang": "cz",
+   "guard": "before:agv4",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Vchod je zablokovaný a stovky lidí křičí!",
+   "gold_voice": "passive",
+   "gold_subject": "Vchod"
+  },
+  {
+   "n": 118,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Jedna zlatá trofej a spousta zablácených bot.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 118,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Jedna zlatá trofej a spousta zablácených bot.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 118,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Jedna zlatá trofej a spousta zablácených bot.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 118,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Jedna zlatá trofej a spousta zablácených bot.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 123,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "O své prkénko se on dělí s kamarádkou.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 123,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "O své prkénko se on dělí s kamarádkou.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 128,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Bolí to, ale on křičí: Já musím hrát finále!",
+   "gold_voice": "active_agent",
+   "gold_subject": "to"
+  },
+  {
+   "n": 128,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Bolí to, ale on křičí: Já musím hrát finále!",
+   "gold_voice": "active_agent",
+   "gold_subject": "to"
+  },
+  {
+   "n": 131,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Hodnocení za čtvrtý kvartál se blíží. Nejdřív upraví jeho kravatu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Hodnocení za čtvrtý kvartál"
+  },
+  {
+   "n": 131,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Hodnocení za čtvrtý kvartál se blíží. Nejdřív upraví jeho kravatu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Hodnocení za čtvrtý kvartál"
+  },
+  {
+   "n": 131,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Hodnocení za čtvrtý kvartál se blíží. Nejdřív ona upraví jeho kravatu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Hodnocení za čtvrtý kvartál"
+  },
+  {
+   "n": 131,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Hodnocení za čtvrtý kvartál se blíží. Nejdřív ona upraví jeho kravatu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Hodnocení za čtvrtý kvartál"
+  },
+  {
+   "n": 131,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Hodnocení za čtvrtý kvartál se blíží. Nejdřív ona upraví jeho kravatu.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Hodnocení za čtvrtý kvartál"
+  },
+  {
+   "n": 135,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "V černé misce jsou dvě točící se hračky.",
+   "gold_voice": "active_agent",
+   "gold_subject": "dvě točící se hračky"
+  },
+  {
+   "n": 135,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "V černé misce jsou dvě točící se hračky.",
+   "gold_voice": "active_agent",
+   "gold_subject": "dvě točící se hračky"
+  },
+  {
+   "n": 135,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "V černé misce jsou dvě točící se hračky.",
+   "gold_voice": "active_agent",
+   "gold_subject": "dvě točící se hračky"
+  },
+  {
+   "n": 135,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "V černé misce jsou dvě točící se hračky.",
+   "gold_voice": "active_agent",
+   "gold_subject": "dvě točící se hračky"
+  },
+  {
+   "n": 137,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Posilovna se zavírá. Musíš přestat pózovat.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Posilovna"
+  },
+  {
+   "n": 137,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Posilovna se zavírá. Musíš přestat pózovat.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Posilovna"
+  },
+  {
+   "n": 137,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Posilovna se zavírá. Ty musíš přestat pózovat.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Posilovna"
+  },
+  {
+   "n": 137,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Posilovna se zavírá. Ty musíš přestat pózovat.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Posilovna"
+  },
+  {
+   "n": 137,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Posilovna se zavírá. Ty musíš přestat pózovat.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Posilovna"
+  },
+  {
+   "n": 139,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Mají oni plán. Chystají se tu zůstat, dokud sníh nepřestane.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 139,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": true,
+   "text": "Mají oni plán. Chystají se tu zůstat, dokud sníh nepřestane.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 140,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Dívají se oni na televizi a na gauči jedí hodně popcornu.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 140,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Dívají se oni na televizi a na gauči jedí hodně popcornu.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 142,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Postaví se on — jde si setřást vodu!",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 142,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Postaví se on — jde si setřást vodu!",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 148,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Chybí mu telefon, takže se chystá začít hledání.",
+   "gold_voice": "active_agent",
+   "gold_subject": "telefon"
+  },
+  {
+   "n": 148,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Chybí mu telefon, takže se chystá začít hledání.",
+   "gold_voice": "active_agent",
+   "gold_subject": "telefon"
+  },
+  {
+   "n": 148,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Chybí mu telefon, takže se on chystá začít hledání.",
+   "gold_voice": "active_agent",
+   "gold_subject": "telefon"
+  },
+  {
+   "n": 148,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Chybí mu telefon, takže se on chystá začít hledání.",
+   "gold_voice": "active_agent",
+   "gold_subject": "telefon"
+  },
+  {
+   "n": 148,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Chybí mu telefon, takže se on chystá začít hledání.",
+   "gold_voice": "active_agent",
+   "gold_subject": "telefon"
+  },
+  {
+   "n": 152,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On se té misky nemůže dotknout a ona taky ne — pořád se z ní kouří.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 152,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On se té misky nemůže dotknout a ona taky ne — pořád se z ní kouří.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 152,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On se té misky nemůže dotknout a ona taky ne — pořád se z ní kouří.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 152,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On se té misky nemůže dotknout a ona taky ne — pořád se z ní kouří.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 152,
+   "lang": "cz",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On se té misky nemůže dotknout a ona taky ne — pořád se z ní kouří.",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 154,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Než se kino ve sklepě otevřelo, on utratil celý rozpočet 5 000 eur.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 154,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Než se kino ve sklepě otevřelo, on utratil celý rozpočet 5 000 eur.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 159,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "model"
+  },
+  {
+   "n": 159,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "model"
+  },
+  {
+   "n": 160,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Vyhýbala se ona tomu, aby kamarádku odsuzovala, i když se historka zhoršovala.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 160,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Vyhýbala se ona tomu, aby kamarádku odsuzovala, i když se historka zhoršovala.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 160,
+   "lang": "cz",
+   "guard": "before:agv4",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Vyhýbala se tomu, aby kamarádku odsuzovala, i když se historka zhoršovala.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 165,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 165,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 167,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ve chvíli, kdy se její prsty dotkly okraje, ona ztuhla úplně nehybně.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 167,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Ve chvíli, kdy se její prsty dotkly okraje, ona ztuhla úplně nehybně.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 170,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé by si stěžovali.",
+   "gold_voice": "active_agent",
+   "gold_subject": "sousedé"
+  },
+  {
+   "n": 172,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Když přikáže ještě jeden sprint, někdo v té řadě se rozbrečí.",
+   "gold_voice": "active_agent",
+   "gold_subject": "někdo v té řadě"
+  },
+  {
+   "n": 172,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Když přikáže ještě jeden sprint, někdo v té řadě se rozbrečí.",
+   "gold_voice": "active_agent",
+   "gold_subject": "někdo v té řadě"
+  },
+  {
+   "n": 172,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Když ona přikáže ještě jeden sprint, někdo v té řadě se rozbrečí.",
+   "gold_voice": "active_agent",
+   "gold_subject": "někdo v té řadě"
+  },
+  {
+   "n": 172,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Když ona přikáže ještě jeden sprint, někdo v té řadě se rozbrečí.",
+   "gold_voice": "active_agent",
+   "gold_subject": "někdo v té řadě"
+  },
+  {
+   "n": 176,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 176,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 177,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 177,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 177,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 177,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+   "gold_voice": "impersonal",
+   "gold_subject": null
+  },
+  {
+   "n": 178,
+   "lang": "cz",
+   "guard": "before:agv4",
+   "class": "ERROR_as_active",
+   "cause": "other",
+   "multi": false,
+   "text": "Předpokládá se, že opevněné město pod ní bylo před staletími hlavním městem země.",
+   "gold_voice": "passive",
+   "gold_subject": null
+  },
+  {
+   "n": 181,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Potápěč se už mnohokrát ponořil do téhle hloubky, takže zůstává klidný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Potápěč"
+  },
+  {
+   "n": 181,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Potápěč se už mnohokrát ponořil do téhle hloubky, takže zůstává klidný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Potápěč"
+  },
+  {
+   "n": 181,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Potápěč se už mnohokrát ponořil do téhle hloubky, takže zůstává klidný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Potápěč"
+  },
+  {
+   "n": 181,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Potápěč se už mnohokrát ponořil do téhle hloubky, takže zůstává klidný.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Potápěč"
+  },
+  {
+   "n": 183,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Popřel on, že se jí vůbec dotkl, i když to viděla celá hala.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 183,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Popřel on, že se jí vůbec dotkl, i když to viděla celá hala.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 184,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 184,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 190,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Právě teď oni uzavírají tajný obchod nad kolečkem plným peněz. Tohle je úplně šílené!",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 190,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "multi_sentence",
+   "multi": true,
+   "text": "Právě teď oni uzavírají tajný obchod nad kolečkem plným peněz. Tohle je úplně šílené!",
+   "gold_voice": "active_agent",
+   "gold_subject": "oni"
+  },
+  {
+   "n": 191,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Podívej se mu teď na obličej - zase si on přitlačuje studený obklad na čelist.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 191,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Podívej se mu teď na obličej - zase si on přitlačuje studený obklad na čelist.",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 192,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Její konev zalévá 20 květináčů na jedno naplnění, což překračuje cíl.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Její konev"
+  },
+  {
+   "n": 192,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Její konev zalévá 20 květináčů na jedno naplnění, což překračuje cíl.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Její konev"
+  },
+  {
+   "n": 194,
+   "lang": "cz",
+   "guard": "before:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Jejich manželství, které začalo polibkem pod květinovým obloukem, oslavoval každý host.",
+   "gold_voice": "active_agent",
+   "gold_subject": "každý host"
+  },
+  {
+   "n": 194,
+   "lang": "cz",
+   "guard": "after:reader_nom_full",
+   "class": "ERROR",
+   "cause": "other",
+   "multi": false,
+   "text": "Jejich manželství, které začalo polibkem pod květinovým obloukem, oslavoval každý host.",
+   "gold_voice": "active_agent",
+   "gold_subject": "každý host"
+  },
+  {
+   "n": 195,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Přeje si on, aby ta pískovišťová jáma byla o metr delší - skok mu málem přeletěl za její k",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 195,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Přeje si on, aby ta pískovišťová jáma byla o metr delší - skok mu málem přeletěl za její k",
+   "gold_voice": "active_prodrop",
+   "gold_subject": null
+  },
+  {
+   "n": 196,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si před lety poškodil.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Kuřák"
+  },
+  {
+   "n": 196,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si před lety poškodil.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Kuřák"
+  },
+  {
+   "n": 196,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si před lety poškodil.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Kuřák"
+  },
+  {
+   "n": 196,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si před lety poškodil.",
+   "gold_voice": "active_agent",
+   "gold_subject": "Kuřák"
+  },
+  {
+   "n": 198,
+   "lang": "cz",
+   "guard": "before:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On mačkal tu prázdnou tubu celou věčnost, než se navždy vzdal spirály!",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 198,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On mačkal tu prázdnou tubu celou věčnost, než se navždy vzdal spirály!",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 198,
+   "lang": "cz",
+   "guard": "after:g4_v2",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On mačkal tu prázdnou tubu celou věčnost, než se navždy vzdal spirály!",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 198,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "reflexive_si_sa_se_with_overt_nominative",
+   "multi": false,
+   "text": "On mačkal tu prázdnou tubu celou věčnost, než se navždy vzdal spirály!",
+   "gold_voice": "active_agent",
+   "gold_subject": "On"
+  },
+  {
+   "n": 199,
+   "lang": "cz",
+   "guard": "before:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Právě teď mu pot leje po obličeji a tenhle výstup je absolutní noční můra!",
+   "gold_voice": "active_agent",
+   "gold_subject": "pot"
+  },
+  {
+   "n": 199,
+   "lang": "cz",
+   "guard": "after:g4_v3",
+   "class": "ERROR_as_passive",
+   "cause": "other",
+   "multi": false,
+   "text": "Právě teď mu pot leje po obličeji a tenhle výstup je absolutní noční můra!",
+   "gold_voice": "active_agent",
+   "gold_subject": "pot"
+  }
+ ],
+ "3_reference": {
+  "2A_before": {
+   "g4_v2": 15.0,
+   "g4_v3": 16.0,
+   "reader_nom_full": 3.0
+  },
+  "2A_after": {
+   "g4_v2": 24.0,
+   "g4_v3": 25.0,
+   "reader_nom_full": 4.0
+  },
+  "1W": {
+   "SKP_coverage": 97.22,
+   "by_passive_coverage": 98.75
+  },
+  "agv4_after": "not computed (derived voice path read on raw text only)"
+ },
+ "residual_nulls": {
+  "per_field": {
+   "voice_sk": 101,
+   "agent_nom": 112,
+   "person": 61,
+   "number": 58,
+   "gender": 133,
+   "tf": 79,
+   "tense_open": 21,
+   "perfective_present": 66
+  },
+  "per_sentence_avg": 3.15,
+  "gold_output_tokens_per_field_ESTIMATE": 13.5,
+  "ride_in_v_output_per_sentence_ESTIMATE": 42.6
+ },
+ "headless": {
+  "tokens_total": 253410,
+  "sessions": [
+   [
+    "lk_judge",
+    1,
+    0,
+    49126
+   ],
+   [
+    "gold_sk",
+    1,
+    0,
+    50888
+   ],
+   [
+    "v_sk",
+    1,
+    0,
+    47670
+   ],
+   [
+    "gold_cz",
+    1,
+    0,
+    52031
+   ],
+   [
+    "rewrite_fallback",
+    1,
+    0,
+    53695
+   ]
+  ],
+  "refused": [
+   "v_cz"
+  ],
+  "stop": null
+ }
+}
