@@ -1,0 +1,200 @@
+== Phase 1N DEV re-score — LOCKTIP+F8V2 (TIP-as-rejection on) (F8 f8v2, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       11/301 = 3.65% [1.84, 6.44]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "11/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       17/294 = 5.78% [3.40, 9.10]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "17/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       12/383 = 3.13% [1.63, 5.41]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 547/614 = 89.09% [86.35, 91.44]
+[FRESH1M] FA       69/646 = 10.68% [8.41, 13.32]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "547/614", "fa": "69/646"}   -> MATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: True (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_f8v2.json (0 new model calls)
+== Phase 1N DEV re-score — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) (F8 none, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       13/301 = 4.32% [2.32, 7.27]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "13/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       18/294 = 6.12% [3.67, 9.50]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "18/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       26/383 = 6.79% [4.48, 9.79]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 553/614 = 90.07% [87.42, 92.32]
+[FRESH1M] FA       94/646 = 14.55% [11.92, 17.51]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "553/614", "fa": "94/646"}   -> MISMATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: False (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_none.json (0 new model calls)
+== Phase 1N SELFTEST-FINAL — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) / P-FROZEN-1N (0 calls, fresh1m data + stored verdicts)
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[PREFLIGHT SELFTEST/fresh1m] (reference numbers: DEV 65/318, 1j replay 310/336, 1M fresh 249/1115)
+[SELFTEST] verdicts reused 1115 of 1115 L3-eligible; labels 1260; judge passive tags 0
+[SELFTEST] coverage 553/614 = 90.07% [87.42, 92.32]
+[SELFTEST] FA       94/646 = 14.55% [11.92, 17.51]
+[SELFTEST] FA T     11/242 = 4.55% [2.29, 7.99]
+[§5.1] released (fixed counter) 249 of 249 L2 lock rejections; old inert counter 0
+[§2.1 limit] 29 L1 near-misses, 11 judged correct, 0 of those rejected downstream
+-- written selftest/results_selftest.json and results_selftest.md
+== SELFTEST done: coverage 553/614 = 90.07% [87.42, 92.32], FA 94/646 = 14.55% [11.92, 17.51]. The 1M headline is NOT expected here — F8 decides nothing under the 1N config. Every post-transport block executed.
+== Phase 1N DRY RUN — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) / P-FROZEN-1N
+== Phase 1N DEV re-score — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) (F8 none, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       13/301 = 4.32% [2.32, 7.27]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "13/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       18/294 = 6.12% [3.67, 9.50]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "18/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       26/383 = 6.79% [4.48, 9.79]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 553/614 = 90.07% [87.42, 92.32]
+[FRESH1M] FA       94/646 = 14.55% [11.92, 17.51]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "553/614", "fa": "94/646"}   -> MISMATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: False (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_none.json (0 new model calls)
+== Phase 1N DEV re-score — LOCKTIP+F8V2 (TIP-as-rejection on) (F8 f8v2, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       11/301 = 3.65% [1.84, 6.44]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "11/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       17/294 = 5.78% [3.40, 9.10]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "17/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       12/383 = 3.13% [1.63, 5.41]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 547/614 = 89.09% [86.35, 91.44]
+[FRESH1M] FA       69/646 = 10.68% [8.41, 13.32]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "547/614", "fa": "69/646"}   -> MATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: True (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_f8v2.json (0 new model calls)
+== Phase 1N SELFTEST-FINAL — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) / P-FROZEN-1N (0 calls, fresh1m data + stored verdicts)
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[PREFLIGHT SELFTEST/fresh1m] (reference numbers: DEV 65/318, 1j replay 310/336, 1M fresh 249/1115)
+[SELFTEST] verdicts reused 1115 of 1115 L3-eligible; labels 1260; judge passive tags 0
+[SELFTEST] coverage 553/614 = 90.07% [87.42, 92.32]
+[SELFTEST] FA       94/646 = 14.55% [11.92, 17.51]
+[SELFTEST] FA T     11/242 = 4.55% [2.29, 7.99]
+[§5.1] released (fixed counter) 249 of 249 L2 lock rejections; old inert counter 0
+[§2.1 limit] 29 L1 near-misses, 11 judged correct, 0 of those rejected downstream
+-- written selftest/results_selftest.json and results_selftest.md
+== SELFTEST done: coverage 553/614 = 90.07% [87.42, 92.32], FA 94/646 = 14.55% [11.92, 17.51]. The 1M headline is NOT expected here — F8 decides nothing under the 1N config. Every post-transport block executed.
+== Phase 1N DEV re-score — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) (F8 none, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       13/301 = 4.32% [2.32, 7.27]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] F8v1-on  COST 0  CATCHES 1  UNIQUE 1  rejects 1  -> cov 182/189 = 96.30% [92.52, 98.50] FA 12/301 = 3.99% [2.08, 6.86] (readout only)
+[DEV] F8v2-on  COST 0  CATCHES 25  UNIQUE 2  rejects 25  -> cov 182/189 = 96.30% [92.52, 98.50] FA 11/301 = 3.65% [1.84, 6.44] (readout only)
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "13/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       18/294 = 6.12% [3.67, 9.50]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] F8v1-on  COST 1  CATCHES 0  UNIQUE 0  rejects 1  -> cov 181/196 = 92.35% [87.69, 95.65] FA 18/294 = 6.12% [3.67, 9.50] (readout only)
+[REPLAY1J] F8v2-on  COST 0  CATCHES 20  UNIQUE 1  rejects 20  -> cov 182/196 = 92.86% [88.31, 96.04] FA 17/294 = 5.78% [3.40, 9.10] (readout only)
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "18/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       26/383 = 6.79% [4.48, 9.79]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[FRESH1L] F8v1-on  COST 0  CATCHES 23  UNIQUE 11  rejects 23  -> cov 194/217 = 89.40% [84.52, 93.16] FA 15/383 = 3.92% [2.21, 6.38] (readout only)
+[FRESH1L] F8v2-on  COST 0  CATCHES 46  UNIQUE 14  rejects 46  -> cov 194/217 = 89.40% [84.52, 93.16] FA 12/383 = 3.13% [1.63, 5.41] (readout only)
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 553/614 = 90.07% [87.42, 92.32]
+[FRESH1M] FA       94/646 = 14.55% [11.92, 17.51]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] F8v1-on  COST 0  CATCHES 69  UNIQUE 33  rejects 69  -> cov 553/614 = 90.07% [87.42, 92.32] FA 61/646 = 9.44% [7.30, 11.96] (readout only)
+[FRESH1M] F8v2-on  COST 20  CATCHES 78  UNIQUE 25  rejects 98  -> cov 547/614 = 89.09% [86.35, 91.44] FA 69/646 = 10.68% [8.41, 13.32] (readout only)
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "553/614", "fa": "94/646"}   -> MISMATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: False (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_none.json (0 new model calls)
+== Phase 1N DEV re-score — LOCKTIP+F8V2 (TIP-as-rejection on) (F8 f8v2, F9 off, TIP-as-rejection on), prompt P-FROZEN, 0 new calls
+[DEV] L2 lock firings under BASE: 65   L3-eligible under LOCKTIP: 318
+[DEV] coverage 182/189 = 96.30% [92.52, 98.50]
+[DEV] FA       11/301 = 3.65% [1.84, 6.44]
+[DEV] FA T     0/54 = 0.00% [0.00, 6.60]
+[DEV] F8v1-on  COST 0  CATCHES 1  UNIQUE 0  rejects 1  -> cov 182/189 = 96.30% [92.52, 98.50] FA 12/301 = 3.99% [2.08, 6.86] (readout only)
+[DEV] F8v2-on  COST 0  CATCHES 25  UNIQUE 0  rejects 25  -> cov 182/189 = 96.30% [92.52, 98.50] FA 11/301 = 3.65% [1.84, 6.44] (readout only)
+[DEV] expected {"coverage": "182/189", "fa": "12/301"}   observed {"coverage": "182/189", "fa": "11/301"}   -> MISMATCH
+[REPLAY1J] L2 lock firings under BASE: 93   L3-eligible under LOCKTIP: 336
+[REPLAY1J] coverage 182/196 = 92.86% [88.31, 96.04]
+[REPLAY1J] FA       17/294 = 5.78% [3.40, 9.10]
+[REPLAY1J] FA T     3/59 = 5.08% [1.06, 14.15]
+[REPLAY1J] F8v1-on  COST 1  CATCHES 0  UNIQUE 0  rejects 1  -> cov 181/196 = 92.35% [87.69, 95.65] FA 18/294 = 6.12% [3.67, 9.50] (readout only)
+[REPLAY1J] F8v2-on  COST 0  CATCHES 20  UNIQUE 0  rejects 20  -> cov 182/196 = 92.86% [88.31, 96.04] FA 17/294 = 5.78% [3.40, 9.10] (readout only)
+[REPLAY1J] expected {"coverage": "178/196", "fa": "15/294", "fa_T": "2/59"}   observed {"coverage": "182/196", "fa": "17/294", "fa_T": "3/59"}   -> MISMATCH
+[FRESH1L] L2 lock firings under BASE: 150   L3-eligible under LOCKTIP: 460
+[FRESH1L] coverage 194/217 = 89.40% [84.52, 93.16]
+[FRESH1L] FA       12/383 = 3.13% [1.63, 5.41]
+[FRESH1L] FA T     3/130 = 2.31% [0.48, 6.60]
+[FRESH1L] F8v1-on  COST 0  CATCHES 23  UNIQUE 5  rejects 23  -> cov 194/217 = 89.40% [84.52, 93.16] FA 15/383 = 3.92% [2.21, 6.38] (readout only)
+[FRESH1L] F8v2-on  COST 0  CATCHES 46  UNIQUE 0  rejects 46  -> cov 194/217 = 89.40% [84.52, 93.16] FA 12/383 = 3.13% [1.63, 5.41] (readout only)
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+[FRESH1M] L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[FRESH1M] coverage 547/614 = 89.09% [86.35, 91.44]
+[FRESH1M] FA       69/646 = 10.68% [8.41, 13.32]
+[FRESH1M] FA T     11/242 = 4.55% [2.29, 7.99]
+[FRESH1M] F8v1-on  COST 0  CATCHES 69  UNIQUE 19  rejects 69  -> cov 553/614 = 90.07% [87.42, 92.32] FA 61/646 = 9.44% [7.30, 11.96] (readout only)
+[FRESH1M] F8v2-on  COST 20  CATCHES 78  UNIQUE 0  rejects 98  -> cov 547/614 = 89.09% [86.35, 91.44] FA 69/646 = 10.68% [8.41, 13.32] (readout only)
+[FRESH1M] expected {"coverage": "547/614", "fa": "69/646"}   observed {"coverage": "547/614", "fa": "69/646"}   -> MATCH
+== PHASE 1L REPRODUCED: False   PHASE 1M REPRODUCED: True (1L is valid only with --f8 f8 --f9 on --tip reject; 1M is valid only with --f8 f8v2 (the 1M frozen config))
+-- written phase1n/dev_regression_1n_f8v2.json (0 new model calls)
+== Phase 1N SELFTEST-FINAL — LOCKTIP+F8-READOUT-ONLY (TIP-as-rejection on) / P-FROZEN-1N (0 calls, fresh1m data + stored verdicts)
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[PREFLIGHT SELFTEST/fresh1m] (reference numbers: DEV 65/318, 1j replay 310/336, 1M fresh 249/1115)
+[SELFTEST] verdicts reused 1115 of 1115 L3-eligible; labels 1260; judge passive tags 0
+[SELFTEST] coverage 553/614 = 90.07% [87.42, 92.32]
+[SELFTEST] FA       94/646 = 14.55% [11.92, 17.51]
+[SELFTEST] FA T     11/242 = 4.55% [2.29, 7.99]
+[§5.1] released (fixed counter) 249 of 249 L2 lock rejections; old inert counter 0
+[§2.1 limit] 29 L1 near-misses, 11 judged correct, 0 of those rejected downstream
+-- written selftest/results_selftest.json and results_selftest.md
+== SELFTEST done: coverage 553/614 = 90.07% [87.42, 92.32], FA 94/646 = 14.55% [11.92, 17.51]. The 1M headline is NOT expected here — F8 decides nothing under the 1N config. Every post-transport block executed.
+== Phase 1N PROBE — P-FROZEN-1N on <=120 1M intent-V items
+[BUILD fresh1m] 1260 items / 140 sentences   chk distribution {"correct/match": 110, "wrong/auto": 1150}   passive tags {"None": 1260}
+L2 lock firings under BASE: 249   L3-eligible under LOCKTIP: 1115
+[PREFLIGHT PROBE/fresh1m] (reference numbers: DEV 65/318, 1j replay 310/336, 1M fresh 249/1115)
+[PROBE] intent-V L3-eligible 191; sampled 120
+[PROBE] unique 120   reused 0   NEW 120   counted so far 0   cap 1200
+[CALLS] http200 120 (empty replies 0)  transport-dead 0  skipped after the wall 0
+[PROBE] transitions {"DIFF->DIFF": 54, "DIFF->SAME": 6, "SAME->SAME": 53, "SAME->TIP": 1, "TIP->DIFF": 2, "TIP->SAME": 3, "TIP->TIP": 1}
+-- written phase1n/probe_1n.json
