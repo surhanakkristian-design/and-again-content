@@ -30,7 +30,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Zuzana will be polishing those copper handles all afternoon. | Zuzana will polish those copper handles all afternoon.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160012:2176442930", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A2", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "leštiť", "voice_sk": "active", "reason": "noun \"leštiť\" before the active verb \"popoludnie\""}, "en": {"passive": true, `, F8v2 `{"sk": {"agent_nom": true, "agent": "leštiť", "voice_sk": "active", "reason": "noun \"leštiť\" before the active verb \"popoludnie\""}, "en": {"passive": true, `, F9 `{"verdict": "tip", "sk": {"frames": ["future"], "verdict": "future", "reported": false, "main": "Zuzana bude tie medené kľučky leštiť celé popoludnie.", "reason`
 
@@ -41,7 +41,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): When we arrived, Janka had already set up the whole stall. | By the time we arrived, Janka had already put up the entire stand. | When we got there, Janka had already assembled the whole stall.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160020:3352119485", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"been set\"`, F8v2 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"been set\"`, F9 `{"verdict": "tip", "sk": {"frames": ["past"], "verdict": "past", "reported": false, "main": "Janka už rozložila celý stánok.", "reason": "l-participle \"rozloži`
 
@@ -52,7 +52,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Klára told us that she had brought that old viola to the rehearsal herself. | Klára told us that she brought the old viola to the rehearsal herself.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok True
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160024:2621707485", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "ona", "voice_sk": "active", "reason": "explicit nominative pronoun \"ona\""}, "en": {"passive": false, "reason": "no passiv`, F8v2 `{"sk": {"agent_nom": true, "agent": "ona", "voice_sk": "active", "reason": "explicit nominative pronoun \"ona\""}, "en": {"passive": false, "reason": "no passiv`, F9 `{"verdict": "accept", "sk": {"frames": ["past"], "verdict": "past", "reported": true, "main": "Klára nám povedala", "reason": "l-participle \"povedala\"", "clau`
 
@@ -63,7 +63,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): She should have reinforced that frame before the transport to the gallery. | She was supposed to reinforce the frame before the move to the gallery. | She ought to have strengthened that frame before transporting it to the gallery.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160036:2901324230", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B2", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "ona", "voice_sk": "active", "reason": "explicit nominative pronoun \"ona\""}, "en": {"passive": true, "reason": "\"was supp`, F8v2 `{"sk": {"agent_nom": true, "agent": "ona", "voice_sk": "active", "reason": "explicit nominative pronoun \"ona\""}, "en": {"passive": true, "reason": "\"was supp`, F9 `{"verdict": "tip", "sk": {"frames": ["past"], "verdict": "past", "reported": false, "main": "Ona mala ten rám vystužiť ešte pred prevozom do galérie.", "reason"`
 
@@ -74,7 +74,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): When the bell rang, Emma was still putting the instruments into the cupboard. | Emma was still putting those tools away in the locker when the bell rang.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160040:3346784148", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "keď", "voice_sk": "active", "reason": "noun \"keď\" before the active verb \"zazvonil\""}, "en": {"passive": true, "reason"`, F8v2 `{"sk": {"agent_nom": true, "agent": "keď", "voice_sk": "active", "reason": "noun \"keď\" before the active verb \"zazvonil\""}, "en": {"passive": true, "reason"`, F9 `{"verdict": "tip", "sk": {"frames": ["past"], "verdict": "past", "reported": false, "main": "Emma ešte ukladala tie nástroje do skrinky.", "reason": "l-particip`
 
@@ -85,7 +85,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Tomorrow he will be taking his tools to the new workshop all day. | He will be carrying his tools to the new workshop all day tomorrow.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok True
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160044:1984378852", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": true, "reason": "\"be carried`, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": true, "reason": "\"be carried`, F9 `{"verdict": "accept", "sk": {"frames": ["future"], "verdict": "future", "reported": false, "main": "On bude zajtra celý deň voziť svoje náradie do novej dielne.`
 
@@ -96,9 +96,9 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): The seamstress always shortens trousers on Wednesday afternoons. | The dressmaker always takes up trousers on Wednesday afternoons. | The seamstress shortens the trousers every Wednesday afternoon.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160048:2251836920", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F8v2 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "Krajčírka skracuje nohavice vždy v st`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F8v2 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "Krajčírka skracuje nohavice vždy v st`
 
 ### C:160052:1176203340
 
@@ -107,7 +107,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): You sanded down the wooden bench on the terrace on Saturday. | On Saturday you sanded that wooden bench on the terrace. | You sanded down the wooden bench on the patio on Saturday.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok True
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160052:1176203340", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A2", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "ty", "voice_sk": "active", "reason": "explicit nominative pronoun \"ty\""}, "en": {"passive": true, "reason": "\"was sanded`, F8v2 `{"sk": {"agent_nom": true, "agent": "ty", "voice_sk": "active", "reason": "explicit nominative pronoun \"ty\""}, "en": {"passive": true, "reason": "\"was sanded`, F9 `{"verdict": "abstain", "sk": {"frames": [], "verdict": null, "reported": false, "main": null, "reason": "no finite verb signal found -> abstain", "clauses": [{"`
 
@@ -118,7 +118,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): While the train was standing in the station, the driver topped up the water in the tank. | While the train stood at the station, the engine driver filled the tank with water. | The driver topped up the water in the tank while the train was waiting at the station.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok True
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160060:4058632457", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "vlak", "voice_sk": "active", "reason": "noun \"vlak\" before the active verb \"stál\""}, "en": {"passive": true, "reason": `, F8v2 `{"sk": {"agent_nom": true, "agent": "vlak", "voice_sk": "active", "reason": "noun \"vlak\" before the active verb \"stál\""}, "en": {"passive": true, "reason": `, F9 `{"verdict": "accept", "sk": {"frames": ["past"], "verdict": "past", "reported": false, "main": "rušňovodič doplnil vodu do nádrže.", "reason": "l-participle \"d`
 
@@ -129,7 +129,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): My aunt knits thick woollen socks for the children every winter. | Every winter my aunt knits the children thick woollen socks.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160064:489138833", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": null, "agent": null, "voice_sk": null, "reason": "no clear finite verb / subject signal"}, "en": {"passive": true, "reason": "\"are knitted`, F8v2 `{"sk": {"agent_nom": null, "agent": null, "voice_sk": null, "reason": "no clear finite verb / subject signal"}, "en": {"passive": true, "reason": "\"are knitted`, F9 `{"verdict": "abstain", "sk": {"frames": [], "verdict": null, "reported": false, "main": null, "reason": "no finite verb signal found -> abstain", "clauses": [{"`
 
@@ -140,9 +140,9 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Do not worry, he will pump up the front wheel for you this evening. | Do not worry, he will inflate your front tyre tonight.
 * rejecting layer (1N): **F4v2**; L3-eligible: False; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict None, raw `None`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict None, raw `None` -> rejected at F4v2
 * pipeline row (1N): `{"item_id": "C:160076:1794710932", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A2", "accepted": false, "verdict": "wrong", "layer": "F4v2", "model": null, "tip": false, "model_tip": false, "reached_l3": false}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "on ti to predné koleso nafúka ešte dn`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "on ti to predné koleso nafúka ešte dn`
 
 ### C:160080:488008841
 
@@ -151,7 +151,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): I wish he had not cut down that old walnut tree so soon. | If only he had not felled the old walnut tree so early.
 * rejecting layer (1N): **F4v2**; L3-eligible: False; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict None, raw `None`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict None, raw `None` -> rejected at F4v2
 * pipeline row (1N): `{"item_id": "C:160080:488008841", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B2", "accepted": false, "verdict": "wrong", "layer": "F4v2", "model": null, "tip": false, "model_tip": false, "reached_l3": false}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F9 `{"verdict": "tip", "sk": {"frames": ["conditional"], "verdict": "conditional", "reported": false, "main": "Kiežby on ten starý orech nebol vyrúbal tak skoro.", `
 
@@ -162,7 +162,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): They say that he has been varnishing that boat for two weeks now. | They say he has been varnishing the boat for the second week already. | They are saying that he has been lacquering that boat for two weeks.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160084:2484737775", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "oni", "voice_sk": "active", "reason": "explicit nominative pronoun \"oni\""}, "en": {"passive": true, "reason": "\"being va`, F8v2 `{"sk": {"agent_nom": true, "agent": "oni", "voice_sk": "active", "reason": "explicit nominative pronoun \"oni\""}, "en": {"passive": true, "reason": "\"being va`, F9 `{"verdict": "tip", "sk": {"frames": ["present"], "verdict": "present", "reported": false, "main": "Oni hovoria", "reason": "imperfective present \"hovoria\"", "`
 
@@ -173,7 +173,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Our uncle carves wooden whistles for the children every summer. | Every summer our uncle whittles wooden whistles for the kids.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160088:2020139039", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": null, "agent": null, "voice_sk": null, "reason": "no clear finite verb / subject signal"}, "en": {"passive": true, "reason": "\"are carved\`, F8v2 `{"sk": {"agent_nom": null, "agent": null, "voice_sk": null, "reason": "no clear finite verb / subject signal"}, "en": {"passive": true, "reason": "\"are carved\`, F9 `{"verdict": "abstain", "sk": {"frames": [], "verdict": null, "reported": false, "main": null, "reason": "no finite verb signal found -> abstain", "clauses": [{"`
 
@@ -184,9 +184,9 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): If we get a longer ladder, we will fix the aerial on the roof ourselves. | If we find a longer ladder, we will secure the antenna on the roof ourselves.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160096:4258255142", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F8v2 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "tú anténu na streche upevníme sami.",`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F8v2 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "tú anténu na streche upevníme sami.",`
 
 ### C:160100:3987111647
 
@@ -195,6 +195,6 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * reference(s): Next season he will be running that workshop and training two new apprentices. | Next season he will run the workshop and train two new apprentices.
 * rejecting layer (1N): **L3**; L3-eligible: True; chk `{"verdict": "wrong", "step": "auto", "feedback": ""}`; lock_ok False
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
-* model reply under `P-FROZEN`: not run
+* model reply under `P-FROZEN`: verdict DIFF, raw `DIFF` -> rejected at L3
 * pipeline row (1N): `{"item_id": "C:160100:3987111647", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B2", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
 * readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": true, "reason": "\"be run\"",`, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": true, "reason": "\"be run\"",`, F9 `{"verdict": "tip", "sk": {"frames": ["future"], "verdict": "future", "reported": false, "main": "Budúcu sezónu on bude viesť tú dielňu", "reason": "future auxil`

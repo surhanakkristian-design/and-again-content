@@ -1,0 +1,494 @@
+{
+ "sanity_1n_prompt": {
+  "prompt": "P-FROZEN-1N",
+  "coverage_old_labels": {
+   "k": 350,
+   "n": 426,
+   "pct": 82.16,
+   "ci": [
+    78.19,
+    85.68
+   ]
+  },
+  "fa_old_labels": {
+   "k": 14,
+   "n": 474,
+   "pct": 2.95,
+   "ci": [
+    1.62,
+    4.91
+   ]
+  },
+  "coverage_new_labels": {
+   "k": 347,
+   "n": 415,
+   "pct": 83.61,
+   "ci": [
+    79.7,
+    87.05
+   ]
+  },
+  "fa_new_labels": {
+   "k": 17,
+   "n": 485,
+   "pct": 3.51,
+   "ci": [
+    2.05,
+    5.55
+   ]
+  }
+ },
+ "judged_wrong_1n_by_layer": {
+  "old_labels": {
+   "L3:TIPrej": 67,
+   "L3": 379,
+   "ACCEPTED": 14,
+   "F5": 12,
+   "F2B": 1,
+   "F3": 1
+  },
+  "new_labels": {
+   "L3:TIPrej": 67,
+   "L3": 382,
+   "F5": 17,
+   "ACCEPTED": 17,
+   "F2B": 1,
+   "F3": 1
+  }
+ },
+ "judged_wrong_by_judge_passive_tag": {
+  "agentless": {
+   "n_judged_wrong": 0,
+   "accepted": 0,
+   "layers": {},
+   "types": {},
+   "n_judged_correct": 22,
+   "correct_accepted": 6
+  },
+  "by": {
+   "n_judged_wrong": 1,
+   "accepted": 0,
+   "layers": {
+    "L3": 1
+   },
+   "types": {
+    "S": 1
+   },
+   "n_judged_correct": 83,
+   "correct_accepted": 78
+  }
+ },
+ "tip_off_1n_prompt": {
+  "coverage_old_labels (1N report: 366/426)": {
+   "k": 366,
+   "n": 426,
+   "pct": 85.92,
+   "ci": [
+    82.25,
+    89.08
+   ]
+  },
+  "fa_old_labels (1N report: 81/474)": {
+   "k": 81,
+   "n": 474,
+   "pct": 17.09,
+   "ci": [
+    13.81,
+    20.79
+   ]
+  },
+  "coverage_new_labels": {
+   "k": 363,
+   "n": 415,
+   "pct": 87.47,
+   "ci": [
+    83.89,
+    90.5
+   ]
+  },
+  "fa_new_labels": {
+   "k": 84,
+   "n": 485,
+   "pct": 17.32,
+   "ci": [
+    14.06,
+    20.99
+   ]
+  },
+  "rescued_correct": 16,
+  "rescued_correct_with_agentless_tag": 0,
+  "new_false_accepts": 67,
+  "new_false_accepts_by_type": {
+   "S": 48,
+   "M": 13,
+   "W": 3,
+   "T": 3
+  }
+ },
+ "old_prompt": {
+  "coverage_old_labels": {
+   "k": 345,
+   "n": 426,
+   "pct": 80.99,
+   "ci": [
+    76.93,
+    84.6
+   ]
+  },
+  "coverage_both_correct": {
+   "k": 342,
+   "n": 414,
+   "pct": 82.61,
+   "ci": [
+    78.61,
+    86.14
+   ]
+  },
+  "coverage_new_labels_(the 1 wrong->correct item(s) had no old-prompt call: counted as the stack left them)": {
+   "k": 342,
+   "n": 415,
+   "pct": 82.41,
+   "ci": [
+    78.4,
+    85.95
+   ]
+  },
+  "coverage_nonpassive_old_labels": {
+   "k": 268,
+   "n": 321,
+   "pct": 83.49,
+   "ci": [
+    78.97,
+    87.38
+   ]
+  },
+  "flips_vs_1n_prompt (reject->accept, accept->reject)": [
+   5,
+   10
+  ],
+  "flips_nonpassive": [
+   5,
+   3
+  ]
+ },
+ "old_prompt_tip_off_coverage_only": {
+  "coverage_old_labels": {
+   "k": 362,
+   "n": 426,
+   "pct": 84.98,
+   "ci": [
+    81.22,
+    88.23
+   ]
+  },
+  "coverage_new_labels": {
+   "k": 358,
+   "n": 415,
+   "pct": 86.27,
+   "ci": [
+    82.57,
+    89.43
+   ]
+  }
+ },
+ "false_rejections_by_taskC_cause": {
+  "cause:DET": {
+   "n": 15,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 2,
+   "writer_prefix": {
+    "C": 13,
+    "W": 2
+   }
+  },
+  "layer:L3": {
+   "n": 39,
+   "rejudged_wrong": 3,
+   "accepted_by_old_prompt": 1,
+   "writer_prefix": {
+    "C": 33,
+    "W": 6
+   }
+  },
+  "E:E3": {
+   "n": 18,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 2,
+   "writer_prefix": {
+    "C": 16,
+    "W": 2
+   }
+  },
+  "cause:PASS_BY": {
+   "n": 5,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 5
+   }
+  },
+  "layer:F4v2": {
+   "n": 7,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 7
+   }
+  },
+  "E:E2": {
+   "n": 35,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 2,
+   "writer_prefix": {
+    "C": 35
+   }
+  },
+  "layer:L3:TIPrej": {
+   "n": 16,
+   "rejudged_wrong": 1,
+   "accepted_by_old_prompt": 4,
+   "writer_prefix": {
+    "C": 11,
+    "W": 5
+   }
+  },
+  "cause:TENSE": {
+   "n": 9,
+   "rejudged_wrong": 4,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 2,
+    "W": 7
+   }
+  },
+  "cause:PASS_AGENTLESS": {
+   "n": 16,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 16
+   }
+  },
+  "cause:DROP": {
+   "n": 14,
+   "rejudged_wrong": 5,
+   "accepted_by_old_prompt": 1,
+   "writer_prefix": {
+    "C": 10,
+    "W": 4
+   }
+  },
+  "layer:F5": {
+   "n": 13,
+   "rejudged_wrong": 5,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 9,
+    "W": 4
+   }
+  },
+  "E:E5": {
+   "n": 9,
+   "rejudged_wrong": 3,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 5,
+    "W": 4
+   }
+  },
+  "cause:STRUCT": {
+   "n": 7,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 1,
+   "writer_prefix": {
+    "C": 7
+   }
+  },
+  "cause:LEX": {
+   "n": 9,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 1,
+   "writer_prefix": {
+    "W": 2,
+    "C": 7
+   }
+  },
+  "E:E4": {
+   "n": 11,
+   "rejudged_wrong": 6,
+   "accepted_by_old_prompt": 1,
+   "writer_prefix": {
+    "W": 9,
+    "C": 2
+   }
+  },
+  "E:E1": {
+   "n": 3,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 3
+   }
+  },
+  "layer:F2B": {
+   "n": 1,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 1
+   }
+  },
+  "cause:CLEFT": {
+   "n": 1,
+   "rejudged_wrong": 0,
+   "accepted_by_old_prompt": 0,
+   "writer_prefix": {
+    "C": 1
+   }
+  }
+ },
+ "pooled": {
+  "1M+1N headline (547+350)/(614+426)": {
+   "k": 897,
+   "n": 1040,
+   "pct": 86.25,
+   "ci": [
+    84.01,
+    88.29
+   ]
+  },
+  "1M + 1N re-judged labels (547+347)/(614+415)": {
+   "k": 894,
+   "n": 1029,
+   "pct": 86.88,
+   "ci": [
+    84.66,
+    88.88
+   ]
+  },
+  "non-passive non-cleft 1M 536/571": {
+   "k": 536,
+   "n": 571,
+   "pct": 93.87,
+   "ci": [
+    91.58,
+    95.69
+   ]
+  },
+  "non-passive non-cleft 1N 266/320": {
+   "k": 266,
+   "n": 320,
+   "pct": 83.12,
+   "ci": [
+    78.56,
+    87.06
+   ]
+  },
+  "non-passive non-cleft pooled": {
+   "k": 802,
+   "n": 891,
+   "pct": 90.01,
+   "ci": [
+    87.85,
+    91.9
+   ]
+  },
+  "1M": {
+   "k": 547,
+   "n": 614,
+   "pct": 89.09,
+   "ci": [
+    86.35,
+    91.44
+   ]
+  },
+  "1N": {
+   "k": 350,
+   "n": 426,
+   "pct": 82.16,
+   "ci": [
+    78.19,
+    85.68
+   ]
+  },
+  "E_b_central 361/426": {
+   "k": 361,
+   "n": 426,
+   "pct": 84.74,
+   "ci": [
+    80.97,
+    88.02
+   ]
+  },
+  "E_union_opt 378/426": {
+   "k": 378,
+   "n": 426,
+   "pct": 88.73,
+   "ci": [
+    85.34,
+    91.57
+   ]
+  },
+  "E_union_cons 361/426": {
+   "k": 361,
+   "n": 426,
+   "pct": 84.74,
+   "ci": [
+    80.97,
+    88.02
+   ]
+  },
+  "plus16 366/426": {
+   "k": 366,
+   "n": 426,
+   "pct": 85.92,
+   "ci": [
+    82.25,
+    89.08
+   ]
+  },
+  "plus13 363/426": {
+   "k": 363,
+   "n": 426,
+   "pct": 85.21,
+   "ci": [
+    81.48,
+    88.45
+   ]
+  },
+  "plus11 361/426": {
+   "k": 361,
+   "n": 426,
+   "pct": 84.74,
+   "ci": [
+    80.97,
+    88.02
+   ]
+  },
+  "plus14 364/426": {
+   "k": 364,
+   "n": 426,
+   "pct": 85.45,
+   "ci": [
+    81.73,
+    88.66
+   ]
+  }
+ },
+ "prompt_flip_sign_test": {
+  "reject_to_accept": 5,
+  "accept_to_reject": 10,
+  "p_two_sided_exact": 0.3018
+ },
+ "gap_by_cause_points (1N minus 1M, TASK_CE table C.1)": {
+  "PASS_AGENTLESS": 3.76,
+  "PASS_BY": 1.17,
+  "DET": 3.19,
+  "DROP": 2.15,
+  "STRUCT": 0.83,
+  "LEX": 0.64,
+  "TENSE": 0.16,
+  "CLEFT": -4.98,
+  "sum": 6.92
+ }
+}
