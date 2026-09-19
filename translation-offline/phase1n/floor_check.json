@@ -1,0 +1,204 @@
+{
+ "phase": "1N",
+ "label": "floor-check-1",
+ "when": "2026-09-19T09:26:34.243343+00:00",
+ "model_calls": 0,
+ "floors_ok": true,
+ "bad_parts": [],
+ "bad_reasons": {},
+ "parts_required": [
+  "part1",
+  "part2",
+  "part3",
+  "part4",
+  "part5"
+ ],
+ "parts_absent_by_design": [
+  "part6",
+  "part7",
+  "part8",
+  "part9"
+ ],
+ "coverage": {
+  "jids_in_blind_map": 900,
+  "jids_judged": 900,
+  "missing_jids": [],
+  "n_missing": 0,
+  "items_merged": 900,
+  "coverage_ok": true
+ },
+ "judged_correct": 426,
+ "judged_wrong": 474,
+ "judged_correct_rate": 0.47333333333333333,
+ "intent_x_judged": {
+  "C|correct": 399,
+  "C|wrong": 1,
+  "TF|correct": 5,
+  "TF|wrong": 170,
+  "T|correct": 7,
+  "T|wrong": 18,
+  "W|correct": 7,
+  "W|wrong": 93,
+  "M|correct": 5,
+  "M|wrong": 95,
+  "S|correct": 3,
+  "S|wrong": 97
+ },
+ "judged_type_distribution": {
+  "M": 95,
+  "S": 97,
+  "T": 188,
+  "W": 94
+ },
+ "tf_floor": {
+  "required": 150,
+  "n_tf_items": 175,
+  "tf_judged_wrong": 170,
+  "tf_wrong_and_type_T": 170,
+  "ok": true,
+  "margin": 20
+ },
+ "tf_judged_wrong": 170,
+ "passive_floor": {
+  "required": 60,
+  "n_passive_items": 105,
+  "by_total": 83,
+  "agentless_total": 22,
+  "by_correct": 83,
+  "agentless_correct": 22,
+  "passives_judged_correct": 105,
+  "ok": true,
+  "margin": 45
+ },
+ "passives_judged_correct": 105,
+ "by_correct": 83,
+ "agentless_correct": 22,
+ "passive_cross_tab_writer_x_judge": {
+  "by|by": 83,
+  "by|agentless": 0,
+  "by|null": 0,
+  "agentless|by": 0,
+  "agentless|agentless": 22,
+  "agentless|null": 0,
+  "null|by": 1,
+  "null|agentless": 0,
+  "null|null": 794
+ },
+ "writer_vs_judge": {
+  "verdict_disagreements": 28,
+  "writer_C_judged_wrong": 1,
+  "writer_wrong_judged_correct": 27,
+  "type_disagreements": 0,
+  "type_disagreement_cells": {},
+  "examples_C_judged_wrong": [
+   "C:160063:786654740"
+  ],
+  "examples_wrong_judged_correct": [
+   "W:160015:3861351230",
+   "W:160066:3107568222",
+   "W:160089:4106768492",
+   "W:160066:1892443557",
+   "W:160096:962295857",
+   "W:160092:1633768663",
+   "W:160088:148507747",
+   "W:160020:81015253",
+   "W:160035:3468432598",
+   "W:160086:22552553"
+  ]
+ },
+ "control_noise": {
+  "n": 80,
+  "judged_mismatch": 3,
+  "judged_rate": 0.0375,
+  "judged_ci95": [
+   0.007801187265716783,
+   0.10570198501650813
+  ],
+  "type_mismatch": 5,
+  "type_rate": 0.0625,
+  "type_ci95": [
+   0.020603072302010313,
+   0.1398570752976384
+  ],
+  "both_wrong_pairs": 40,
+  "type_mismatch_both_wrong": 2,
+  "type_both_wrong_rate": 0.05,
+  "type_both_wrong_ci95": [
+   0.006113646599350838,
+   0.1691968639594174
+  ],
+  "mismatch_pairs": [
+   {
+    "kid": "K007",
+    "item": "W:160066:3107568222",
+    "control": [
+     "wrong",
+     "T"
+    ],
+    "main": [
+     "correct",
+     null
+    ],
+    "judged_mismatch": true,
+    "type_mismatch": true
+   },
+   {
+    "kid": "K048",
+    "item": "W:160012:1057727893",
+    "control": [
+     "wrong",
+     "M"
+    ],
+    "main": [
+     "wrong",
+     "W"
+    ],
+    "judged_mismatch": false,
+    "type_mismatch": true
+   },
+   {
+    "kid": "K053",
+    "item": "W:160008:1985746104",
+    "control": [
+     "wrong",
+     "S"
+    ],
+    "main": [
+     "wrong",
+     "T"
+    ],
+    "judged_mismatch": false,
+    "type_mismatch": true
+   },
+   {
+    "kid": "K065",
+    "item": "W:160088:1164202144",
+    "control": [
+     "correct",
+     null
+    ],
+    "main": [
+     "wrong",
+     "T"
+    ],
+    "judged_mismatch": true,
+    "type_mismatch": true
+   },
+   {
+    "kid": "K035",
+    "item": "W:160088:148507747",
+    "control": [
+     "wrong",
+     "W"
+    ],
+    "main": [
+     "correct",
+     null
+    ],
+    "judged_mismatch": true,
+    "type_mismatch": true
+   }
+  ]
+ },
+ "topup_request_written": false
+}
