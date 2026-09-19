@@ -517,6 +517,14 @@ def check_freeze():
     return h
 
 
+def _json_default(o):
+    """Phase 1R serialisation fix (results writing only; no verdict logic touched):
+    sets/frozensets are written as sorted lists, every other unsupported type still raises."""
+    if isinstance(o, (set, frozenset)):
+        return sorted(o)
+    raise TypeError('Object of type %s is not JSON serializable' % o.__class__.__name__)
+
+
 def run_final(a):
     if os.path.exists(DONE):
         raise SystemExit('REFUSED: %s exists — the new side is measured once.' % DONE)
@@ -566,7 +574,7 @@ def run_final(a):
                      'new_main': len(need)},
            'rows': list(rows.values())}
     json.dump(out, open(os.path.join(HERE, 'results_1p.json'), 'w', encoding='utf-8'), indent=1,
-              ensure_ascii=False)
+              ensure_ascii=False, default=_json_default)
     md = ['# Phase 1P — the new set under P-FROZEN-1P (levers 1-3), measured once', '',
           '* coverage **%s %%** %s (k/n %s)' % (met['coverage_pct'], met['coverage_ci'], met['coverage_kn']),
           '* false accepts **%s %%** %s (k/n %s)' % (met['fa_pct'], met['fa_ci'], met['fa_kn']), '',

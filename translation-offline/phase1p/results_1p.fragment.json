@@ -1,0 +1,294 @@
+{
+ "phase": "1P",
+ "side": "fresh1p",
+ "freeze_commit": "255ef142625a14434f82758ea733cc5cf7c2fe79",
+ "frozen_config": {
+  "f8_module": "none",
+  "f8_decides": false,
+  "f9_decides": false,
+  "tip_reject": true,
+  "locktip": true,
+  "arm": "B",
+  "prompt": "P-FROZEN-1P",
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0,
+  "levers": [
+   1,
+   2,
+   3
+  ],
+  "prompt_note": "P-FROZEN-1P = P-FROZEN-1N (P-FROZEN + VOICE_SAME_LINE after WORDING_LINE) plus, per item, the lever-2 'the Slovak does not fix X' lines and the lever-3 'Also accepted English' line, inserted at the same place the gender chain is.",
+  "lever1_note": "deterministic detect -> rewrite ('by <agent>' after the participle) -> the normal stack on the REWRITTEN answer; pass = ACCEPT with a tip (NOT a TIP-rejection); F4v2/F4 suppressed for the rewritten record only; the unrewritten verdict is kept as a shadow readout",
+  "lever2_note": "definiteness / aspect-within-the-frame / number on mass+collective nouns; the aspect line NAMES the frame and says a different frame is DIFF, and never fires on a Slovak perfective present",
+  "lever3_note": "up to 2 further STORED renderings beside the main reference, with a mandatory deterministic time-frame filter (lever3.time_frame)",
+  "pipeline_note": "F2B / F3 / F4v2 / F5 untouched; hygiene deliberately absent (phase1p/hygiene does not exist); TIP-as-rejection stays ON; the TIME FRAME rule is untouched",
+  "caps": {
+   "phase_cap_counted_calls": 1400,
+   "dev_cap": 300,
+   "preflight_stop_at": 1390
+  }
+ },
+ "prompt": "P-FROZEN-1P",
+ "model": {
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0
+ },
+ "preflight": {
+  "l2": 272,
+  "l3_eligible": 925
+ },
+ "build": {
+  "side": "fresh1p",
+  "data_dir": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/data",
+  "chk_computed": {
+   "match": 83,
+   "auto": 997
+  },
+  "chk_distribution": {
+   "correct/match": 83,
+   "wrong/auto": 997
+  },
+  "n_items": 1080,
+  "n_sentences": 120,
+  "passive_tags": {
+   "None": 768,
+   "agentless": 270,
+   "by": 42
+  },
+  "writer_tags": {
+   "plain": 416,
+   "determiner": 127,
+   "agentless": 270,
+   "by-passive": 42,
+   "timeframe": 224,
+   "aspect": 50,
+   "number": 14
+  },
+  "levers": {
+   "l2:definiteness": 1000,
+   "l2:aspect": 828,
+   "l3:shown": 1080,
+   "l3:removed": 72,
+   "l3:items_with_a_variant": 1026,
+   "l1:fired": 239,
+   "l1:answer_is_agentless_passive": 276,
+   "l2:number": 207
+  }
+ },
+ "metrics": {
+  "coverage": {
+   "k": 436,
+   "n": 599,
+   "pct": 72.79,
+   "ci": [
+    69.03,
+    76.32
+   ]
+  },
+  "fa": {
+   "k": 8,
+   "n": 481,
+   "pct": 1.66,
+   "ci": [
+    0.72,
+    3.25
+   ]
+  },
+  "coverage_kn": [
+   436,
+   599
+  ],
+  "fa_kn": [
+   8,
+   481
+  ],
+  "coverage_pct": 72.79,
+  "coverage_ci": [
+   69.03,
+   76.32
+  ],
+  "fa_pct": 1.66,
+  "fa_ci": [
+   0.72,
+   3.25
+  ],
+  "accept_table": {
+   "accept/correct": 436,
+   "reject/wrong": 473,
+   "reject/correct": 163,
+   "accept/wrong": 8
+  }
+ },
+ "cells": {
+  "agentless": {
+   "judged_correct": 116,
+   "accepted": 84,
+   "judged_wrong": 154,
+   "false_accepts": 2
+  },
+  "by-passive": {
+   "judged_correct": 42,
+   "accepted": 42,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "determiner": {
+   "judged_correct": 120,
+   "accepted": 95,
+   "judged_wrong": 7,
+   "false_accepts": 0
+  },
+  "aspect": {
+   "judged_correct": 50,
+   "accepted": 46,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "timeframe": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 224,
+   "false_accepts": 3
+  },
+  "number": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 14,
+   "false_accepts": 1
+  },
+  "plain": {
+   "judged_correct": 271,
+   "accepted": 169,
+   "judged_wrong": 145,
+   "false_accepts": 4
+  },
+  "half:P1": {
+   "coverage_kn": [
+    221,
+    300
+   ],
+   "fa_kn": [
+    3,
+    240
+   ]
+  },
+  "half:P2": {
+   "coverage_kn": [
+    215,
+    299
+   ],
+   "fa_kn": [
+    5,
+    241
+   ]
+  },
+  "lever1": {
+   "fired": 239,
+   "gain": 33,
+   "fa_cost": 1,
+   "shadow_accept": 49
+  },
+  "lever3": {
+   "variants_shown": 1080,
+   "variants_removed_by_the_tense_filter": 72
+  }
+ },
+ "judge_noise": {
+  "controls_compared": 80,
+  "judged_disagreements": {
+   "k": 0,
+   "n": 80,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    4.51
+   ]
+  },
+  "type_comparisons": 43,
+  "type_disagreements": {
+   "k": 0,
+   "n": 43,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    8.22
+   ]
+  },
+  "judged_disagreement_ids": [],
+  "type_disagreement_ids": [],
+  "caveat": "same-session duplicates bound within-session inconsistency only"
+ },
+ "label_meta": {
+  "parts": [
+   "out_part1.json"
+  ],
+  "rows_read": 1080,
+  "items_labelled": 1080,
+  "controls": 80,
+  "judge_dir": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/judge",
+  "types_accepted": [
+   "T",
+   "W",
+   "M",
+   "S"
+  ],
+  "passive_tags_read": 1080,
+  "hidden_duplicate_rows": [],
+  "rejected_rows": []
+ },
+ "calls": {
+  "counted_total_phase1p": 1382,
+  "unique_main": 925,
+  "new_main": 925
+ },
+ "rows": [
+  {
+   "sid": 170001,
+   "item_id": "C:170001:c0",
+   "half": "P1",
+   "level": "A1",
+   "judged": "correct",
+   "judged_type": null,
+   "tags": [
+    "plain"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "layers": {
+    "main_layer": "L1",
+    "main_verdict": "correct",
+    "model": null,
+    "model_tip": false,
+    "reached_l3": false
+   },
+   "lever1": {
+    "fired": false,
+    "agent": null,
+    "reason": "the answer is not a be-passive without a by-agent",
+    "rewritten": null,
+    "rewritten_layer": null,
+    "rewritten_accept": false,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L1"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "accept",
+    "sk": {
+     "frames": [
+      "future",
+      "present"
+     ],
+     "verdict": 

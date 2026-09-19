@@ -1,0 +1,13 @@
+{
+ "phase": "1P",
+ "written": "Phase 1R, 2026-09-19, AFTER an offline regeneration — this marker was NOT written by the 1Q run itself",
+ "honest_note": "The Phase 1Q final run on 2026-09-19 made all 1,157 model calls (925 main + 232 lever-1 side, on top of 225 dev calls; 1,382 counted in phase1p/calls.jsonl) and then crashed in json.dump while writing results_1p.json (TypeError: Object of type set is not JSON serializable, rows[*].f9_readout.sk.verdict). Phase 1R fixed the serialisation only (json.dump default=) and rebuilt results_1p.json from the STORED verdicts in phase1p/calls.jsonl: 0 NEW model calls, calls.jsonl byte-identical before and after (sha256 e08b2c3bfff6e860dfd15850e1979ec253244cd90bf925c91ef65273b989f436, 1384 lines).",
+ "freeze_commit": "255ef142625a14434f82758ea733cc5cf7c2fe79",
+ "run_commit": "d7505d0a8b36b20384bff8ce289bea1579e0b456",
+ "coverage": [436, 599],
+ "fa": [8, 481],
+ "counted_calls": 1382,
+ "new_calls_in_phase1r": 0,
+ "regenerated_by": "translation-offline/phase1r/taskD/regenerate_results.py",
+ "fragment_kept_as": "translation-offline/phase1p/results_1p.fragment.json"
+}
