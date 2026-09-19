@@ -1,0 +1,37 @@
+{
+ "meta": {
+  "session": "gold_b4",
+  "attempt": 1,
+  "exit": 0,
+  "wall_s": 22.4,
+  "t_start": 425.4,
+  "duration_ms": 18758,
+  "num_turns": 1,
+  "total_cost_usd": 0.137311,
+  "is_error": false,
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 8757,
+  "cache_read_input_tokens": 22462,
+  "output_tokens": 1540,
+  "modelUsage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1540,
+    "cacheReadInputTokens": 22462,
+    "cacheCreationInputTokens": 8757,
+    "webSearchRequests": 0,
+    "costUSD": 0.137311,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 995,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "parse_error": null,
+  "stderr": null
+ },
+ "prompt": "You are a blind gold annotator. You see ONLY Slovak sentences. For each, write the gold label:\n{\"n\": int, \"tf\": str, \"person\": str, \"subject\": str|null, \"voice\": str, \"embedded_agents\": [str], \"fragment\": bool}\nDefinitions (Slovak): tf = time frame of the MAIN clause: past / present / future (a perfective verb in\npresent form = future). person = person+number of the main-clause finite verb: 1sg 2sg 3sg 1pl 2pl 3pl.\nsubject = the overt NOMINATIVE subject NP of the main-clause finite verb, copied verbatim from the Slovak\n(it may stand anywhere in the clause, not only first), or null if the subject is dropped (pro-drop) or absent.\nvoice = active_agent (overt nominative subject) / active_prodrop (subject dropped, recoverable from the verb) /\nimpersonal (no subject possible, e.g. \"je známe\", \"prší\") / passive (byť + passive participle, or reflexive passive).\nagent_nom = true iff voice == active_agent. embedded_agents = overt nominative subjects of subordinate clauses (verbatim list).\nfragment = true iff the sentence has no finite main verb. Reply with ONLY a JSON array, no prose, no fences.\nSentences:\n{\"n\": 100, \"sk\": \"Nohy jej stuhli v momente, keď sa pozrela dole - na tú lesnú zem sa vôbec nemala pozerať\"}\n{\"n\": 102, \"sk\": \"Pozri! Práve strieka závit do téglika.\"}\n{\"n\": 107, \"sk\": \"Kámo, ty by si mal hádzať nižšie, tá lopta je celkom v háji.\"}\n{\"n\": 108, \"sk\": \"On kúpil ten luxusný, lebo bol luxusný.\"}\n{\"n\": 112, \"sk\": \"Kamene boli klzké; napriek tomu, nikomu v skupine nenamokli nohy.\"}\n{\"n\": 118, \"sk\": \"Kým začal tlieskať, ona stála na rukách odvtedy, čo si založil ruky.\"}\n{\"n\": 121, \"sk\": \"Ľutoval, že za jednu jedinú lyžicu jedla zaplatil toľko peňazí.\"}\n{\"n\": 124, \"sk\": \"Želá si, aby v krabici boli dve skrutky navyše, ako to bývalo pri starom nábytku.\"}\n{\"n\": 125, \"sk\": \"Kým zapadne slnko, vystrieľa do toho slameného terča úplne každý šíp.\"}\n{\"n\": 126, \"sk\": \"Do konca mesiaca vyberie hotovosť z toho bankomatu aspoň desaťkrát.\"}",
+ "result": "[{\"n\":100,\"tf\":\"past\",\"person\":\"3pl\",\"subject\":\"Nohy\",\"voice\":\"active_agent\",\"embedded_agents\":[],\"fragment\":false},{\"n\":102,\"tf\":\"present\",\"person\":\"3sg\",\"subject\":null,\"voice\":\"active_prodrop\",\"embedded_agents\":[],\"fragment\":false},{\"n\":107,\"tf\":\"present\",\"person\":\"2sg\",\"subject\":\"ty\",\"voice\":\"active_agent\",\"embedded_agents\":[],\"fragment\":false},{\"n\":108,\"tf\":\"past\",\"person\":\"3sg\",\"subject\":\"On\",\"voice\":\"active_agent\",\"embedded_agents\":[],\"fragment\":false},{\"n\":112,\"tf\":\"past\",\"person\":\"3pl\",\"subject\":\"Kamene\",\"voice\":\"active_agent\",\"embedded_agents\":[],\"fragment\":false},{\"n\":118,\"tf\":\"past\",\"person\":\"3sg\",\"subject\":\"ona\",\"voice\":\"active_agent\",\"embedded_agents\":[],\"fragment\":false},{\"n\":121,\"tf\":\"past\",\"person\":\"3sg\",\"subject\":null,\"voice\":\"active_prodrop\",\"embedded_agents\":[],\"fragment\":false},{\"n\":124,\"tf\":\"present\",\"person\":\"3sg\",\"subject\":null,\"voice\":\"active_prodrop\",\"embedded_agents\":[\"dve skrutky\",\"to\"],\"fragment\":false},{\"n\":125,\"tf\":\"future\",\"person\":\"3sg\",\"subject\":null,\"voice\":\"active_prodrop\",\"embedded_agents\":[\"slnko\"],\"fragment\":false},{\"n\":126,\"tf\":\"future\",\"person\":\"3sg\",\"subject\":null,\"voice\":\"active_prodrop\",\"embedded_agents\":[],\"fragment\":false}]"
+}
