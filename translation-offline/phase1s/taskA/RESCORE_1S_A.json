@@ -1,0 +1,2880 @@
+{
+ "what": "Phase 1S Task A - lever 1 removed, rule AG added; re-score of the closed 1Q set",
+ "date": "2026-09-19",
+ "model_calls": 0,
+ "network_calls": 0,
+ "A1_lever1": {
+  "lever1_fired_items": 239,
+  "lever1_gain": 33,
+  "lever1_fa_cost": 1,
+  "lever1_shadow_accept": 49,
+  "answer_is_agentless_passive": 276
+ },
+ "A2_preflight": {
+  "ok": true,
+  "lines": [
+   "PASS furniture example (owner)                     primary=True  (want True )  noun=True  (want True )",
+   "PASS by-passive keeps the agent                    primary=False (want False)  noun=False (want False)",
+   "PASS active answer                                 primary=False (want False)  noun=False (want False)",
+   "PASS Slovak reflexive passive, no agent            primary=False (want False)  noun=False (want False)",
+   "PASS Slovak passive, no agent                      primary=False (want False)  noun=False (want False)",
+   "PASS was/is + adjective is no passive              primary=False (want False)  noun=False (want False)",
+   "PASS agent rendered as the answer subject          primary=False (want False)  noun=False (want False)",
+   "PASS get-passive fires                             primary=True  (want True )  noun=True  (want True )",
+   "PASS perfect passive fires                         primary=True  (want True )  noun=True  (want True )",
+   "PASS pronoun agent: primary fires, AG-noun abstains primary=True  (want True )  noun=False (want False)",
+   "PASS impersonal source                             primary=False (want False)  noun=False (want False)",
+   "PASS pronoun agent rendered in the answer subject  primary=False (want False)  noun=False (want False)"
+  ]
+ },
+ "A4_reproduction_checks": {
+  "pooled": true,
+  "P1": true,
+  "P2": true,
+  "fa_by_wrongtype": true,
+  "layers_reject_correct": true,
+  "layers_reject_wrong": true,
+  "layers_accept_wrong_FA": true,
+  "cell:agentless_cov": true,
+  "cell:agentless_fa": true,
+  "cell:bypassive_cov": true,
+  "cell:plain_cov": true,
+  "cell:timeframe_fa": true,
+  "headline_425_483": true,
+  "headline_19_597": true,
+  "agentless_75_98": true,
+  "agentless_11_172": true
+ },
+ "BEFORE_primary": {
+  "pooled": {
+   "coverage": {
+    "k": 425,
+    "n": 483,
+    "pct": 87.99,
+    "ci": [
+     84.75,
+     90.75
+    ]
+   },
+   "fa": {
+    "k": 19,
+    "n": 597,
+    "pct": 3.18,
+    "ci": [
+     1.93,
+     4.93
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 215,
+    "n": 241,
+    "pct": 89.21,
+    "ci": [
+     84.59,
+     92.83
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 299,
+    "pct": 3.01,
+    "ci": [
+     1.39,
+     5.64
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 210,
+    "n": 242,
+    "pct": 86.78,
+    "ci": [
+     81.85,
+     90.78
+    ]
+   },
+   "fa": {
+    "k": 10,
+    "n": 298,
+    "pct": 3.36,
+    "ci": [
+     1.62,
+     6.08
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 11,
+    "n": 126,
+    "pct": 8.73,
+    "ci": [
+     4.44,
+     15.08
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 75,
+    "n": 98,
+    "pct": 76.53,
+    "ci": [
+     66.89,
+     84.5
+    ]
+   },
+   "agentless_fa": {
+    "k": 11,
+    "n": 172,
+    "pct": 6.4,
+    "ci": [
+     3.24,
+     11.15
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "determiner_cov": {
+    "k": 95,
+    "n": 120,
+    "pct": 79.17,
+    "ci": [
+     70.8,
+     86.04
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 167,
+    "n": 173,
+    "pct": 96.53,
+    "ci": [
+     92.6,
+     98.72
+    ]
+   },
+   "plain_fa": {
+    "k": 6,
+    "n": 243,
+    "pct": 2.47,
+    "ci": [
+     0.91,
+     5.3
+    ]
+   },
+   "aspect_cov": {
+    "k": 46,
+    "n": 50,
+    "pct": 92.0,
+    "ci": [
+     80.77,
+     97.78
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "L3:TIPrej": 22,
+   "L3": 30,
+   "F5": 4,
+   "F2B": 2
+  },
+  "layers_reject_wrong": {
+   "L3": 416,
+   "F5": 63,
+   "L3:TIPrej": 93,
+   "F3": 5,
+   "F2B": 1
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 19
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 340,
+   "L3:TIPrej": 2
+  },
+  "n_correct": 483,
+  "n_wrong": 597,
+  "agreement": {
+   "cov_diff_points": 2.43,
+   "cov_fisher_p": 0.4843,
+   "fa_diff_points": -0.35,
+   "fa_fisher_p": 0.8208
+  }
+ },
+ "AFTER_primary": {
+  "pooled": {
+   "coverage": {
+    "k": 359,
+    "n": 483,
+    "pct": 74.33,
+    "ci": [
+     70.19,
+     78.17
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 597,
+    "pct": 1.51,
+    "ci": [
+     0.69,
+     2.84
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 183,
+    "n": 241,
+    "pct": 75.93,
+    "ci": [
+     70.03,
+     81.19
+    ]
+   },
+   "fa": {
+    "k": 4,
+    "n": 299,
+    "pct": 1.34,
+    "ci": [
+     0.37,
+     3.39
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 176,
+    "n": 242,
+    "pct": 72.73,
+    "ci": [
+     66.65,
+     78.24
+    ]
+   },
+   "fa": {
+    "k": 5,
+    "n": 298,
+    "pct": 1.68,
+    "ci": [
+     0.55,
+     3.87
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 2,
+    "n": 126,
+    "pct": 1.59,
+    "ci": [
+     0.19,
+     5.62
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 12,
+    "n": 98,
+    "pct": 12.24,
+    "ci": [
+     6.49,
+     20.41
+    ]
+   },
+   "agentless_fa": {
+    "k": 1,
+    "n": 172,
+    "pct": 0.58,
+    "ci": [
+     0.01,
+     3.2
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "determiner_cov": {
+    "k": 94,
+    "n": 120,
+    "pct": 78.33,
+    "ci": [
+     69.89,
+     85.33
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 166,
+    "n": 173,
+    "pct": 95.95,
+    "ci": [
+     91.84,
+     98.36
+    ]
+   },
+   "plain_fa": {
+    "k": 6,
+    "n": 243,
+    "pct": 2.47,
+    "ci": [
+     0.91,
+     5.3
+    ]
+   },
+   "aspect_cov": {
+    "k": 45,
+    "n": 50,
+    "pct": 90.0,
+    "ci": [
+     78.19,
+     96.67
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "AG": 81,
+   "L3:TIPrej": 22,
+   "L3": 15,
+   "F5": 4,
+   "F2B": 2
+  },
+  "layers_reject_wrong": {
+   "L3": 285,
+   "AG": 142,
+   "F5": 63,
+   "L3:TIPrej": 92,
+   "F3": 5,
+   "F2B": 1
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 9
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 276
+  },
+  "n_correct": 483,
+  "n_wrong": 597,
+  "agreement": {
+   "cov_diff_points": 3.2,
+   "cov_fisher_p": 0.4662,
+   "fa_diff_points": -0.34,
+   "fa_fisher_p": 0.7518
+  }
+ },
+ "BEFORE_S2": {
+  "pooled": {
+   "coverage": {
+    "k": 426,
+    "n": 490,
+    "pct": 86.94,
+    "ci": [
+     83.63,
+     89.79
+    ]
+   },
+   "fa": {
+    "k": 18,
+    "n": 590,
+    "pct": 3.05,
+    "ci": [
+     1.82,
+     4.78
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 216,
+    "n": 247,
+    "pct": 87.45,
+    "ci": [
+     82.66,
+     91.31
+    ]
+   },
+   "fa": {
+    "k": 8,
+    "n": 293,
+    "pct": 2.73,
+    "ci": [
+     1.19,
+     5.31
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 210,
+    "n": 243,
+    "pct": 86.42,
+    "ci": [
+     81.46,
+     90.46
+    ]
+   },
+   "fa": {
+    "k": 10,
+    "n": 297,
+    "pct": 3.37,
+    "ci": [
+     1.63,
+     6.1
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 10,
+    "n": 119,
+    "pct": 8.4,
+    "ci": [
+     4.1,
+     14.91
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 75,
+    "n": 98,
+    "pct": 76.53,
+    "ci": [
+     66.89,
+     84.5
+    ]
+   },
+   "agentless_fa": {
+    "k": 11,
+    "n": 172,
+    "pct": 6.4,
+    "ci": [
+     3.24,
+     11.15
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "determiner_cov": {
+    "k": 95,
+    "n": 120,
+    "pct": 79.17,
+    "ci": [
+     70.8,
+     86.04
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 168,
+    "n": 180,
+    "pct": 93.33,
+    "ci": [
+     88.64,
+     96.51
+    ]
+   },
+   "plain_fa": {
+    "k": 5,
+    "n": 236,
+    "pct": 2.12,
+    "ci": [
+     0.69,
+     4.87
+    ]
+   },
+   "aspect_cov": {
+    "k": 46,
+    "n": 50,
+    "pct": 92.0,
+    "ci": [
+     80.77,
+     97.78
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "L3:TIPrej": 22,
+   "L3": 30,
+   "F3": 1,
+   "F2B": 3,
+   "F5": 8
+  },
+  "layers_reject_wrong": {
+   "L3": 416,
+   "F5": 59,
+   "L3:TIPrej": 93,
+   "F3": 4
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 18
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 341,
+   "L3:TIPrej": 2
+  },
+  "n_correct": 490,
+  "n_wrong": 590,
+  "agreement": {
+   "cov_diff_points": 1.03,
+   "cov_fisher_p": 0.7892,
+   "fa_diff_points": -0.64,
+   "fa_fisher_p": 0.8117
+  }
+ },
+ "AFTER_S2": {
+  "pooled": {
+   "coverage": {
+    "k": 360,
+    "n": 490,
+    "pct": 73.47,
+    "ci": [
+     69.32,
+     77.33
+    ]
+   },
+   "fa": {
+    "k": 8,
+    "n": 590,
+    "pct": 1.36,
+    "ci": [
+     0.59,
+     2.65
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 184,
+    "n": 247,
+    "pct": 74.49,
+    "ci": [
+     68.58,
+     79.81
+    ]
+   },
+   "fa": {
+    "k": 3,
+    "n": 293,
+    "pct": 1.02,
+    "ci": [
+     0.21,
+     2.96
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 176,
+    "n": 243,
+    "pct": 72.43,
+    "ci": [
+     66.35,
+     77.95
+    ]
+   },
+   "fa": {
+    "k": 5,
+    "n": 297,
+    "pct": 1.68,
+    "ci": [
+     0.55,
+     3.88
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 1,
+    "n": 119,
+    "pct": 0.84,
+    "ci": [
+     0.02,
+     4.59
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 12,
+    "n": 98,
+    "pct": 12.24,
+    "ci": [
+     6.49,
+     20.41
+    ]
+   },
+   "agentless_fa": {
+    "k": 1,
+    "n": 172,
+    "pct": 0.58,
+    "ci": [
+     0.01,
+     3.2
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "determiner_cov": {
+    "k": 94,
+    "n": 120,
+    "pct": 78.33,
+    "ci": [
+     69.89,
+     85.33
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 167,
+    "n": 180,
+    "pct": 92.78,
+    "ci": [
+     87.97,
+     96.1
+    ]
+   },
+   "plain_fa": {
+    "k": 5,
+    "n": 236,
+    "pct": 2.12,
+    "ci": [
+     0.69,
+     4.87
+    ]
+   },
+   "aspect_cov": {
+    "k": 45,
+    "n": 50,
+    "pct": 90.0,
+    "ci": [
+     78.19,
+     96.67
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "AG": 81,
+   "L3:TIPrej": 22,
+   "L3": 15,
+   "F3": 1,
+   "F2B": 3,
+   "F5": 8
+  },
+  "layers_reject_wrong": {
+   "L3": 285,
+   "AG": 142,
+   "F5": 59,
+   "L3:TIPrej": 92,
+   "F3": 4
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 8
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 277
+  },
+  "n_correct": 490,
+  "n_wrong": 590,
+  "agreement": {
+   "cov_diff_points": 2.06,
+   "cov_fisher_p": 0.6106,
+   "fa_diff_points": -0.66,
+   "fa_fisher_p": 0.7247
+  }
+ },
+ "AFTER_lever1_off_only_primary": {
+  "pooled": {
+   "coverage": {
+    "k": 401,
+    "n": 483,
+    "pct": 83.02,
+    "ci": [
+     79.37,
+     86.26
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 597,
+    "pct": 1.51,
+    "ci": [
+     0.69,
+     2.84
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 203,
+    "n": 241,
+    "pct": 84.23,
+    "ci": [
+     79.01,
+     88.59
+    ]
+   },
+   "fa": {
+    "k": 4,
+    "n": 299,
+    "pct": 1.34,
+    "ci": [
+     0.37,
+     3.39
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 198,
+    "n": 242,
+    "pct": 81.82,
+    "ci": [
+     76.37,
+     86.47
+    ]
+   },
+   "fa": {
+    "k": 5,
+    "n": 298,
+    "pct": 1.68,
+    "ci": [
+     0.55,
+     3.87
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 2,
+    "n": 126,
+    "pct": 1.59,
+    "ci": [
+     0.19,
+     5.62
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 51,
+    "n": 98,
+    "pct": 52.04,
+    "ci": [
+     41.71,
+     62.24
+    ]
+   },
+   "agentless_fa": {
+    "k": 1,
+    "n": 172,
+    "pct": 0.58,
+    "ci": [
+     0.01,
+     3.2
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "determiner_cov": {
+    "k": 95,
+    "n": 120,
+    "pct": 79.17,
+    "ci": [
+     70.8,
+     86.04
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 167,
+    "n": 173,
+    "pct": 96.53,
+    "ci": [
+     92.6,
+     98.72
+    ]
+   },
+   "plain_fa": {
+    "k": 6,
+    "n": 243,
+    "pct": 2.47,
+    "ci": [
+     0.91,
+     5.3
+    ]
+   },
+   "aspect_cov": {
+    "k": 46,
+    "n": 50,
+    "pct": 92.0,
+    "ci": [
+     80.77,
+     97.78
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "L3": 52,
+   "L3:TIPrej": 24,
+   "F5": 4,
+   "F2B": 2
+  },
+  "layers_reject_wrong": {
+   "L3": 426,
+   "F5": 63,
+   "L3:TIPrej": 93,
+   "F3": 5,
+   "F2B": 1
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 9
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 318
+  },
+  "n_correct": 483,
+  "n_wrong": 597,
+  "agreement": {
+   "cov_diff_points": 2.41,
+   "cov_fisher_p": 0.5448,
+   "fa_diff_points": -0.34,
+   "fa_fisher_p": 0.7518
+  }
+ },
+ "AFTER_AGnoun_primary": {
+  "pooled": {
+   "coverage": {
+    "k": 371,
+    "n": 483,
+    "pct": 76.81,
+    "ci": [
+     72.79,
+     80.5
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 597,
+    "pct": 1.51,
+    "ci": [
+     0.69,
+     2.84
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 190,
+    "n": 241,
+    "pct": 78.84,
+    "ci": [
+     73.13,
+     83.82
+    ]
+   },
+   "fa": {
+    "k": 4,
+    "n": 299,
+    "pct": 1.34,
+    "ci": [
+     0.37,
+     3.39
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 181,
+    "n": 242,
+    "pct": 74.79,
+    "ci": [
+     68.83,
+     80.14
+    ]
+   },
+   "fa": {
+    "k": 5,
+    "n": 298,
+    "pct": 1.68,
+    "ci": [
+     0.55,
+     3.87
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 2,
+    "n": 126,
+    "pct": 1.59,
+    "ci": [
+     0.19,
+     5.62
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 24,
+    "n": 98,
+    "pct": 24.49,
+    "ci": [
+     16.36,
+     34.21
+    ]
+   },
+   "agentless_fa": {
+    "k": 1,
+    "n": 172,
+    "pct": 0.58,
+    "ci": [
+     0.01,
+     3.2
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 2,
+    "n": 224,
+    "pct": 0.89,
+    "ci": [
+     0.11,
+     3.19
+    ]
+   },
+   "determiner_cov": {
+    "k": 94,
+    "n": 120,
+    "pct": 78.33,
+    "ci": [
+     69.89,
+     85.33
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 166,
+    "n": 173,
+    "pct": 95.95,
+    "ci": [
+     91.84,
+     98.36
+    ]
+   },
+   "plain_fa": {
+    "k": 6,
+    "n": 243,
+    "pct": 2.47,
+    "ci": [
+     0.91,
+     5.3
+    ]
+   },
+   "aspect_cov": {
+    "k": 45,
+    "n": 50,
+    "pct": 90.0,
+    "ci": [
+     78.19,
+     96.67
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "AG": 69,
+   "L3:TIPrej": 22,
+   "L3": 15,
+   "F5": 4,
+   "F2B": 2
+  },
+  "layers_reject_wrong": {
+   "L3": 285,
+   "AG": 142,
+   "F5": 63,
+   "L3:TIPrej": 92,
+   "F3": 5,
+   "F2B": 1
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 9
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 276,
+   "AG": 12
+  },
+  "n_correct": 483,
+  "n_wrong": 597,
+  "agreement": {
+   "cov_diff_points": 4.05,
+   "cov_fisher_p": 0.332,
+   "fa_diff_points": -0.34,
+   "fa_fisher_p": 0.7518
+  }
+ },
+ "ag_firings_total": 223,
+ "ag_noun_firings_total": 153,
+ "detector_vs_tag": {
+  "ag_fired & tag agentless": 217,
+  "ag_fired & tag NOT agentless": 6,
+  "ag_abstain & tag agentless": 53,
+  "ag_abstain & tag NOT agentless": 804,
+  "tag by-passive & ag_fired": 0
+ },
+ "needs_new_call": {
+  "n": 0,
+  "iids": [],
+  "lever1_fired_rows_scored_from_the_stored_lever1_OFF_verdict": 239
+ },
+ "A5_cost_all_ag_fired_judged_correct_agentless": [
+  {
+   "iid": "C:170001:c2",
+   "sid": 170001,
+   "slovak": "Marek každý večer zamyká bránu do záhrady.",
+   "answer": "The garden gate is locked every evening.",
+   "reference": "Marek locks the garden gate every evening.",
+   "agent": "Marek",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170002:c2",
+   "sid": 170002,
+   "slovak": "Ona včera upiekla jablkový koláč pre susedov.",
+   "answer": "An apple pie was baked for the neighbours yesterday.",
+   "reference": "Yesterday she baked an apple cake for the neighbours.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170003:c2",
+   "sid": 170003,
+   "slovak": "Môj brat zajtra umyje naše auto pred domom.",
+   "answer": "Our car will be washed in front of the house tomorrow.",
+   "reference": "My brother will wash our car in front of the house tomorrow.",
+   "agent": "môj brat",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170004:c2",
+   "sid": 170004,
+   "slovak": "Učiteľka teraz opravuje naše písomky v triede.",
+   "answer": "Our tests are being corrected in the classroom now.",
+   "reference": "The teacher is marking our tests in the classroom now.",
+   "agent": "učiteľka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170006:c2",
+   "sid": 170006,
+   "slovak": "Otec minulý týždeň natrel plot na zeleno.",
+   "answer": "The fence was painted green last week.",
+   "reference": "Last week Dad painted the fence green.",
+   "agent": "otec",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170007:c2",
+   "sid": 170007,
+   "slovak": "Ona každé ráno varí čaj pre celú rodinu.",
+   "answer": "Tea is made for the whole family every morning.",
+   "reference": "Every morning she makes tea for the whole family.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170008:c2",
+   "sid": 170008,
+   "slovak": "My zajtra uvaríme polievku pre celú rodinu.",
+   "answer": "Soup will be cooked for the whole family tomorrow.",
+   "reference": "Tomorrow we will cook soup for the whole family.",
+   "agent": "my",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170009:c2",
+   "sid": 170009,
+   "slovak": "Deti včera nakreslili veľký obrázok na chodník.",
+   "answer": "A big picture was drawn on the pavement yesterday.",
+   "reference": "Yesterday the children drew a big picture on the pavement.",
+   "agent": "deti",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170011:c2",
+   "sid": 170011,
+   "slovak": "Sused opravil môj bicykel v garáži.",
+   "answer": "My bike was repaired in the garage.",
+   "reference": "The neighbour repaired my bike in the garage.",
+   "agent": "sused",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170012:c2",
+   "sid": 170012,
+   "slovak": "Ja teraz čítam novú knihu o zvieratách.",
+   "answer": "A new book about animals is being read now.",
+   "reference": "I am reading a new book about animals now.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170013:c2",
+   "sid": 170013,
+   "slovak": "Mama zajtra kúpi chlieb v novej pekárni.",
+   "answer": "Bread will be bought at the new bakery tomorrow.",
+   "reference": "Tomorrow Mum will buy bread at the new bakery.",
+   "agent": "mama",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170016:c2",
+   "sid": 170016,
+   "slovak": "Ona napísala dlhý list svojej babke.",
+   "answer": "A long letter was written to her grandmother.",
+   "reference": "She wrote a long letter to her grandmother.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170017:c2",
+   "sid": 170017,
+   "slovak": "Chlapec nesie ťažkú tašku po schodoch.",
+   "answer": "A heavy bag is being carried up the stairs.",
+   "reference": "The boy is carrying a heavy bag up the stairs.",
+   "agent": "chlapec",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170018:c2",
+   "sid": 170018,
+   "slovak": "Ja zajtra pošlem ten balík svojej sestre.",
+   "answer": "The parcel will be sent to my sister tomorrow.",
+   "reference": "Tomorrow I will send that parcel to my sister.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170021:c2",
+   "sid": 170021,
+   "slovak": "Môj dedko pestuje paradajky v skleníku.",
+   "answer": "Tomatoes are grown in the greenhouse.",
+   "reference": "My grandfather grows tomatoes in the greenhouse.",
+   "agent": "môj dedko",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170022:c2",
+   "sid": 170022,
+   "slovak": "Ty si včera stratil kľúče od bytu.",
+   "answer": "The keys to the flat were lost yesterday.",
+   "reference": "You lost the keys to the flat yesterday.",
+   "agent": "ty",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170023:c2",
+   "sid": 170023,
+   "slovak": "Ona zajtra upratá celú kuchyňu.",
+   "answer": "The whole kitchen will be cleaned tomorrow.",
+   "reference": "Tomorrow she will tidy up the whole kitchen.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170024:c2",
+   "sid": 170024,
+   "slovak": "Pes zjedol moju večeru zo stola.",
+   "answer": "My dinner was eaten off the table.",
+   "reference": "The dog ate my dinner off the table.",
+   "agent": "pes",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170026:c2",
+   "sid": 170026,
+   "slovak": "Sestra fotí kvety v záhrade.",
+   "answer": "The flowers in the garden are being photographed.",
+   "reference": "My sister is photographing the flowers in the garden.",
+   "agent": "sestra",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170027:c2",
+   "sid": 170027,
+   "slovak": "Oni postavili nový most cez rieku.",
+   "answer": "A new bridge was built over the river.",
+   "reference": "They built a new bridge across the river.",
+   "agent": "oni",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170028:c2",
+   "sid": 170028,
+   "slovak": "Ja zajtra prinesiem koláč do školy.",
+   "answer": "A cake will be brought to school tomorrow.",
+   "reference": "Tomorrow I will bring a cake to school.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170029:c2",
+   "sid": 170029,
+   "slovak": "Babka uvarila veľký hrniec polievky.",
+   "answer": "A big pot of soup was cooked.",
+   "reference": "Grandma cooked a big pot of soup.",
+   "agent": "babka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170031:c2",
+   "sid": 170031,
+   "slovak": "Môj kolega včera preložil celý dokument do angličtiny.",
+   "answer": "The whole document was translated into English yesterday.",
+   "reference": "Yesterday my colleague translated the whole document into English.",
+   "agent": "môj kolega",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170032:c2",
+   "sid": 170032,
+   "slovak": "Ona každý mesiac platí nájom za ten malý byt.",
+   "answer": "The rent for that small flat is paid every month.",
+   "reference": "She pays the rent for that small flat every month.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170033:c2",
+   "sid": 170033,
+   "slovak": "Robotníci budúci týždeň opravia cestu pred školou.",
+   "answer": "The road in front of the school will be repaired next week.",
+   "reference": "Next week the workers will repair the road in front of the school.",
+   "agent": "robotníci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170034:c2",
+   "sid": 170034,
+   "slovak": "Ja som minulý rok predal svoj starý bicykel cez internet.",
+   "answer": "My old bike was sold online last year.",
+   "reference": "Last year I sold my old bike online.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170036:c2",
+   "sid": 170036,
+   "slovak": "Riaditeľ práve podpisuje tie nové zmluvy v kancelárii.",
+   "answer": "The new contracts are being signed in the office right now.",
+   "reference": "The director is just signing those new contracts in the office.",
+   "agent": "riaditeľ",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170037:c2",
+   "sid": 170037,
+   "slovak": "Ona zajtra odovzdá svoju seminárnu prácu profesorovi.",
+   "answer": "Her term paper will be handed in to the professor tomorrow.",
+   "reference": "Tomorrow she will hand in her term paper to the professor.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170038:c2",
+   "sid": 170038,
+   "slovak": "Zlodej minulú noc ukradol susedovi bicykel z dvora.",
+   "answer": "The neighbour's bike was stolen from the yard last night.",
+   "reference": "Last night a thief stole the neighbour's bike from the yard.",
+   "agent": "zlodej",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170039:c2",
+   "sid": 170039,
+   "slovak": "Kuchár pripravuje obed pre tridsať hostí.",
+   "answer": "Lunch is being prepared for thirty guests.",
+   "reference": "The cook is preparing lunch for thirty guests.",
+   "agent": "kuchár",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170041:c2",
+   "sid": 170041,
+   "slovak": "Moja teta upratala celý dom pred návštevou.",
+   "answer": "The whole house was cleaned before the visit.",
+   "reference": "My aunt cleaned the whole house before the visit.",
+   "agent": "moja teta",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170042:c2",
+   "sid": 170042,
+   "slovak": "Technik zajtra vymení pokazenú práčku v kúpeľni.",
+   "answer": "The broken washing machine in the bathroom will be replaced tomorrow.",
+   "reference": "Tomorrow the technician will replace the broken washing machine in the bathroom.",
+   "agent": "technik",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170043:c2",
+   "sid": 170043,
+   "slovak": "Ona číta deťom rozprávku každý večer pred spaním.",
+   "answer": "A fairy tale is read to the children every evening before bed.",
+   "reference": "She reads the children a fairy tale every evening before bed.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170044:c2",
+   "sid": 170044,
+   "slovak": "Študenti minulý semester preštudovali tri hrubé knihy.",
+   "answer": "Three thick books were studied last semester.",
+   "reference": "Last semester the students studied three thick books.",
+   "agent": "študenti",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170046:c2",
+   "sid": 170046,
+   "slovak": "Firma budúci mesiac otvorí novú pobočku v Košiciach.",
+   "answer": "A new branch will be opened in Košice next month.",
+   "reference": "Next month the company will open a new branch in Kosice.",
+   "agent": "firma",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170047:c2",
+   "sid": 170047,
+   "slovak": "On si každé ráno čistí topánky pred odchodom do práce.",
+   "answer": "His shoes are cleaned every morning before he leaves for work.",
+   "reference": "Every morning he cleans his shoes before leaving for work.",
+   "agent": "on",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170048:c2",
+   "sid": 170048,
+   "slovak": "Záhradník pokosil trávnik pred naším domom.",
+   "answer": "The lawn in front of our house was mowed.",
+   "reference": "The gardener mowed the lawn in front of our house.",
+   "agent": "záhradník",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3:TIPrej",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170049:c2",
+   "sid": 170049,
+   "slovak": "Ona zajtra pozve celú rodinu na obed.",
+   "answer": "The whole family will be invited to lunch tomorrow.",
+   "reference": "Tomorrow she will invite the whole family to lunch.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170051:c2",
+   "sid": 170051,
+   "slovak": "Môj otec opravuje starý nábytok vo svojej dielni.",
+   "answer": "Old furniture is repaired in his workshop.",
+   "reference": "My father repairs old furniture in his workshop.",
+   "agent": "môj otec",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170052:c2",
+   "sid": 170052,
+   "slovak": "Poštár doručil ten balík až v piatok popoludní.",
+   "answer": "The parcel was delivered only on Friday afternoon.",
+   "reference": "The postman only delivered that parcel on Friday afternoon.",
+   "agent": "poštár",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170053:c2",
+   "sid": 170053,
+   "slovak": "Ja zajtra zaplatím účet za elektrinu cez internet.",
+   "answer": "The electricity bill will be paid online tomorrow.",
+   "reference": "Tomorrow I will pay the electricity bill online.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170054:c2",
+   "sid": 170054,
+   "slovak": "Ona si kúpila nový kabát v zľave.",
+   "answer": "A new coat was bought on sale.",
+   "reference": "She bought a new coat in the sale.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170056:c2",
+   "sid": 170056,
+   "slovak": "Susedia budúci rok postavia malý bazén za domom.",
+   "answer": "A small pool will be built behind the house next year.",
+   "reference": "Next year the neighbours will build a small swimming pool behind the house.",
+   "agent": "susedia",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170058:c2",
+   "sid": 170058,
+   "slovak": "Naša škola organizuje výlet do hlavného mesta každú jar.",
+   "answer": "A trip to the capital is organised every spring.",
+   "reference": "Our school organises a trip to the capital every spring.",
+   "agent": "naša škola",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170059:c2",
+   "sid": 170059,
+   "slovak": "Ty si zabudol svoj mobil na stole v kuchyni.",
+   "answer": "Your mobile phone was left on the table in the kitchen.",
+   "reference": "You left your mobile on the kitchen table.",
+   "agent": "ty",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170064:c3",
+   "sid": 170064,
+   "slovak": "Keď zazvonil telefón, on práve krájal cibuľu na večeru.",
+   "answer": "When the phone rang, onions were just being chopped for dinner.",
+   "reference": "When the phone rang, he was just cutting onions for dinner.",
+   "agent": "on",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170066:c3",
+   "sid": 170066,
+   "slovak": "Ona práve dokončila prihlášku na ten jazykový kurz.",
+   "answer": "The application for that language course has just been finished.",
+   "reference": "She has just finished the application for that language course.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170067:c3",
+   "sid": 170067,
+   "slovak": "Budúci mesiac oni otvoria novú pobočku na hlavnej ulici.",
+   "answer": "Next month a new branch will be opened on the main street.",
+   "reference": "Next month they will open a new branch on the main street.",
+   "agent": "oni",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170068:c3",
+   "sid": 170068,
+   "slovak": "Susedov syn rozbil naše kuchynské okno futbalovou loptou.",
+   "answer": "Our kitchen window was broken with a football.",
+   "reference": "The neighbour's son broke our kitchen window with a football.",
+   "agent": "susedov syn",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170069:c3",
+   "sid": 170069,
+   "slovak": "Naša učiteľka opravuje písomky vždy až v nedeľu večer.",
+   "answer": "The tests are always marked on Sunday evening.",
+   "reference": "Our teacher always marks the tests on Sunday evening.",
+   "agent": "naša učiteľka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170072:c3",
+   "sid": 170072,
+   "slovak": "Susedia minulý rok vymenili staré okná za nové.",
+   "answer": "Last year the old windows were replaced with new ones.",
+   "reference": "Last year the neighbours replaced the old windows with new ones.",
+   "agent": "susedia",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170073:c3",
+   "sid": 170073,
+   "slovak": "Ona teraz píše referát o slovenských hradoch.",
+   "answer": "A paper about Slovak castles is being written right now.",
+   "reference": "She is writing a paper about Slovak castles now.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170076:c3",
+   "sid": 170076,
+   "slovak": "Oni každý večer zamykajú bránu do dvora o desiatej.",
+   "answer": "The gate to the courtyard is locked at ten every evening.",
+   "reference": "Every evening they lock the gate to the yard at ten.",
+   "agent": "oni",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170078:c3",
+   "sid": 170078,
+   "slovak": "Kedysi moja stará mama piekla koláče každú sobotu.",
+   "answer": "Cakes used to be baked every Saturday.",
+   "reference": "My grandmother used to bake cakes every Saturday.",
+   "agent": "moja stará mama",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170079:c3",
+   "sid": 170079,
+   "slovak": "Väčšina študentov odovzdáva tie eseje na poslednú chvíľu.",
+   "answer": "Those essays are handed in at the last minute.",
+   "reference": "Most students hand in those essays at the last minute.",
+   "agent": "väčšina študentov",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170082:c3",
+   "sid": 170082,
+   "slovak": "Technik vymenil batériu v mojom notebooku za dvadsať minút.",
+   "answer": "The battery in my laptop was replaced in twenty minutes.",
+   "reference": "The technician replaced the battery in my laptop in twenty minutes.",
+   "agent": "technik",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3:TIPrej",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170084:c3",
+   "sid": 170084,
+   "slovak": "Policajt zastavil naše auto hneď za mostom a skontroloval doklady.",
+   "answer": "Our car was stopped just past the bridge and the documents were checked.",
+   "reference": "A policeman stopped our car just after the bridge and checked the documents.",
+   "agent": "policajt",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170087:c3",
+   "sid": 170087,
+   "slovak": "Riaditeľka nepodpísala tie zmluvy, lebo chýbali dve prílohy.",
+   "answer": "Those contracts were not signed because two attachments were missing.",
+   "reference": "The director did not sign those contracts because two attachments were missing.",
+   "agent": "riaditeľka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170091:c3",
+   "sid": 170091,
+   "slovak": "Keby si Lucia bola prečítala pokyny, nebola by pokazila celú tabuľku.",
+   "answer": "If the instructions had been read, the whole spreadsheet would not have been ruined.",
+   "reference": "If Lucia had read the instructions, she would not have ruined the whole table.",
+   "agent": "Lucia",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170092:c3",
+   "sid": 170092,
+   "slovak": "Zjavne niekto prehodil tie štítky, pretože všetky škatule sú pomiešané.",
+   "answer": "Those labels have obviously been swapped, because all the boxes are mixed up.",
+   "reference": "Someone has obviously swapped the labels, because all the boxes are mixed up.",
+   "agent": "niekto",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170096:c3",
+   "sid": 170096,
+   "slovak": "Architektka prepracovala celý projekt po pripomienkach z úradu.",
+   "answer": "The whole project was reworked after the comments from the authority.",
+   "reference": "The architect reworked the whole project after the comments from the office.",
+   "agent": "architektka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170097:c3",
+   "sid": 170097,
+   "slovak": "Hoci firma sľubuje rýchle dodanie, zákazníci čakajú na objednávky aj tri týždne.",
+   "answer": "Although fast delivery is promised, customers wait up to three weeks for their orders.",
+   "reference": "Although the company promises fast delivery, customers wait up to three weeks for their orders.",
+   "agent": "firma",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170098:c3",
+   "sid": 170098,
+   "slovak": "Do konca roka tím dokončí druhú etapu rekonštrukcie mosta.",
+   "answer": "By the end of the year the second stage of the bridge reconstruction will have been finished.",
+   "reference": "By the end of the year the team will have finished the second stage of the bridge reconstruction.",
+   "agent": "tím",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170101:c3",
+   "sid": 170101,
+   "slovak": "Pokiaľ komisia schváli rozpočet, mesto obnoví detské ihriská už na jar.",
+   "answer": "If the budget is approved, the playgrounds will be renovated as early as spring.",
+   "reference": "If the committee approves the budget, the city will renovate the children's playgrounds as early as in the spring.",
+   "agent": "mesto",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170102:c3",
+   "sid": 170102,
+   "slovak": "Prekladateľka, ktorú nám odporučili kolegovia, odovzdala hotový text o deň skôr.",
+   "answer": "The finished text was delivered a day early.",
+   "reference": "The translator whom our colleagues recommended to us handed in the finished text a day early.",
+   "agent": "prekladateľka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170103:c3",
+   "sid": 170103,
+   "slovak": "Redakcia zverejňuje opravy chýb vždy na konci mesiaca.",
+   "answer": "Corrections of mistakes are always published at the end of the month.",
+   "reference": "The editorial office always publishes corrections at the end of the month.",
+   "agent": "redakcia",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170106:c3",
+   "sid": 170106,
+   "slovak": "Vedenie spoločnosti prepustí desať zamestnancov ešte pred koncom roka.",
+   "answer": "Ten employees will be laid off before the end of the year.",
+   "reference": "The company management will lay off ten employees before the end of the year.",
+   "agent": "vedenie spoločnosti",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170107:c3",
+   "sid": 170107,
+   "slovak": "Až keď technici vymenili server, stránka konečne prestala padať.",
+   "answer": "Only when the server was replaced did the website finally stop crashing.",
+   "reference": "Only when the technicians replaced the server did the website finally stop crashing.",
+   "agent": "technici",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170108:c3",
+   "sid": 170108,
+   "slovak": "Zahraniční kritici chvália tohtoročný program festivalu.",
+   "answer": "This year's festival programme is being praised.",
+   "reference": "Foreign critics are praising this year's festival programme.",
+   "agent": "zahraniční kritici",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170109:c3",
+   "sid": 170109,
+   "slovak": "Hneď ako komisia vyhodnotí prihlášky, organizátori pošlú uchádzačom výsledky.",
+   "answer": "As soon as the applications are evaluated, the results will be sent to the applicants.",
+   "reference": "As soon as the committee evaluates the applications, the organisers will send the results to the applicants.",
+   "agent": "organizátori",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170111:c3",
+   "sid": 170111,
+   "slovak": "Táto aplikácia zbiera príliš veľa údajov o svojich používateľoch.",
+   "answer": "Too much data about users is collected.",
+   "reference": "This app collects too much data about its users.",
+   "agent": "táto aplikácia",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170112:c3",
+   "sid": 170112,
+   "slovak": "Kurátorka presunula najcennejšie obrazy do vedľajšej sály ešte pred otvorením.",
+   "answer": "The most valuable paintings were moved to the next room before the opening.",
+   "reference": "The curator moved the most valuable paintings to the next room before the opening.",
+   "agent": "kurátorka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170113:c3",
+   "sid": 170113,
+   "slovak": "Ak vláda schváli tú novelu, úrady zrušia poplatky za výpisy.",
+   "answer": "If that amendment is approved, the fees for extracts will be abolished.",
+   "reference": "If the government approves that amendment, the authorities will abolish the fees for extracts.",
+   "agent": "úrady",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170114:c3",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Since the new system was introduced, far fewer errors have been reported.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170115:c3",
+   "sid": 170115,
+   "slovak": "Napriek zlému počasiu organizátori nezrušili sobotný koncert.",
+   "answer": "Despite the bad weather, the Saturday concert was not cancelled.",
+   "reference": "Despite the bad weather the organisers did not cancel the Saturday concert.",
+   "agent": "organizátori",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170116:c3",
+   "sid": 170116,
+   "slovak": "Práve táto poisťovňa pokrýva aj škody spôsobené vetrom.",
+   "answer": "Damage caused by wind is covered as well.",
+   "reference": "It is this insurance company that also covers damage caused by wind.",
+   "agent": "táto poisťovňa",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170119:c3",
+   "sid": 170119,
+   "slovak": "Mnohé školy dnes nahrádzajú tlačené učebnice tabletmi.",
+   "answer": "Printed textbooks are being replaced with tablets today.",
+   "reference": "Many schools today are replacing printed textbooks with tablets.",
+   "agent": "mnohé školy",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": true
+  },
+  {
+   "iid": "C:170120:c3",
+   "sid": 170120,
+   "slovak": "Búrka minulý týždeň poškodila strechu telocvične a vyvrátila dva stromy.",
+   "answer": "Last week the roof of the gym was damaged and two trees were uprooted.",
+   "reference": "Last week a storm damaged the roof of the gym and uprooted two trees.",
+   "agent": "búrka",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  }
+ ],
+ "A5_cost_newly_lost_were_accepted": 62,
+ "A5_fa_caught": [
+  {
+   "iid": "W:170003:w2",
+   "sid": 170003,
+   "slovak": "Môj brat zajtra umyje naše auto pred domom.",
+   "answer": "Our car will be washed tomorrow.",
+   "reference": "My brother will wash our car in front of the house tomorrow.",
+   "agent": "môj brat",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170012:w2",
+   "sid": 170012,
+   "slovak": "Ja teraz čítam novú knihu o zvieratách.",
+   "answer": "A new book is being read now.",
+   "reference": "I am reading a new book about animals now.",
+   "agent": "ja",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170021:w2",
+   "sid": 170021,
+   "slovak": "Môj dedko pestuje paradajky v skleníku.",
+   "answer": "Tomatoes are grown.",
+   "reference": "My grandfather grows tomatoes in the greenhouse.",
+   "agent": "môj dedko",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170027:w2",
+   "sid": 170027,
+   "slovak": "Oni postavili nový most cez rieku.",
+   "answer": "A new bridge was built.",
+   "reference": "They built a new bridge across the river.",
+   "agent": "oni",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170036:w2",
+   "sid": 170036,
+   "slovak": "Riaditeľ práve podpisuje tie nové zmluvy v kancelárii.",
+   "answer": "The new contracts are being signed right now.",
+   "reference": "The director is just signing those new contracts in the office.",
+   "agent": "riaditeľ",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170039:w2",
+   "sid": 170039,
+   "slovak": "Kuchár pripravuje obed pre tridsať hostí.",
+   "answer": "Lunch is being prepared.",
+   "reference": "The cook is preparing lunch for thirty guests.",
+   "agent": "kuchár",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170048:w2",
+   "sid": 170048,
+   "slovak": "Záhradník pokosil trávnik pred naším domom.",
+   "answer": "The lawn was mowed.",
+   "reference": "The gardener mowed the lawn in front of our house.",
+   "agent": "záhradník",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170051:w2",
+   "sid": 170051,
+   "slovak": "Môj otec opravuje starý nábytok vo svojej dielni.",
+   "answer": "Old furniture is repaired.",
+   "reference": "My father repairs old furniture in his workshop.",
+   "agent": "môj otec",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170054:w2",
+   "sid": 170054,
+   "slovak": "Ona si kúpila nový kabát v zľave.",
+   "answer": "A new coat was bought.",
+   "reference": "She bought a new coat in the sale.",
+   "agent": "ona",
+   "agent_kind": "pronoun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170058:w1",
+   "sid": 170058,
+   "slovak": "Naša škola organizuje výlet do hlavného mesta každú jar.",
+   "answer": "A trip to the capital will be organised every spring.",
+   "reference": "Our school organises a trip to the capital every spring.",
+   "agent": "naša škola",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  }
+ ],
+ "A5_fa_missed": [
+  {
+   "iid": "W:170088:w2",
+   "sid": 170088,
+   "slovak": "Knižnica požičiava tieto učebnice iba na jeden semester.",
+   "answer": "These textbooks will be lent for one semester only.",
+   "reference": "The library lends these textbooks for one semester only.",
+   "agent": null,
+   "agent_kind": null,
+   "agent_source": null,
+   "was_accepted_in_1R": true,
+   "lever1_fired": false,
+   "layer_1q": "L3",
+   "agent_elsewhere": false,
+   "why_missed": "the answer is not a marked passive without a by-agent"
+  }
+ ],
+ "A5_ag_outside_agentless": [
+  {
+   "iid": "C:170092:c4",
+   "sid": 170092,
+   "slovak": "Zjavne niekto prehodil tie štítky, pretože všetky škatule sú pomiešané.",
+   "answer": "Obviously somebody swapped those labels, because all the boxes are mixed up.",
+   "reference": "Someone has obviously swapped the labels, because all the boxes are mixed up.",
+   "agent": "niekto",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170114:c1",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Since the new system was introduced, employees have been reporting far fewer errors.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "C:170114:c2",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Since a new system was introduced, the employees report far fewer errors.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": true,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170114:w1",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Once the new system is introduced, employees will report far fewer errors.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170114:w2",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Since the new system was introduced, employees will report far fewer errors.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3",
+   "agent_elsewhere": false
+  },
+  {
+   "iid": "W:170114:w5",
+   "sid": 170114,
+   "slovak": "Odkedy zaviedli nový systém, zamestnanci hlásia oveľa menej chýb.",
+   "answer": "Since the new system was introduced, employees have been reporting far less errors.",
+   "reference": "Since they introduced the new system, the employees have been reporting far fewer errors.",
+   "agent": "zamestnanci",
+   "agent_kind": "noun",
+   "agent_source": "writer_tags.agent",
+   "was_accepted_in_1R": false,
+   "lever1_fired": true,
+   "layer_1q": "L3:TIPrej",
+   "agent_elsewhere": false
+  }
+ ],
+ "movers": {
+  "n": 116,
+  "borderline": 7,
+  "s2_flip": 109
+ }
+}
