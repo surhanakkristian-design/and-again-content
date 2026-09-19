@@ -5,6 +5,7 @@
 `retest_2b.py`, `retest_2b.json` and `DEFECTS_*.md`. Every file was committed as it was produced. Nothing was pushed. 0 Gemini calls, DB SELECT only, no migration, no app code, no checker rule changed.
 
 **Headline:**
+- **Phase budget BREACHED: 934,067 harness tokens against 800,000 (+134,067), main session not included.** The brief said STOP rather than exceed; the runner's accidental re-run made that impossible to honour (§6, S1, §7).
 - **Headless hard cap BREACHED:** 505,884 tokens against 330,000. A resume command failed and re-ran the five finished sessions a second time (§6, S1). The second run was not planned, but it did give a free run-1 vs run-2 retest.
 - **Model-authored cost for sk + cz is about 1,033 tokens per sentence at N = 100** (v 476.7 + rewrite fallback 268.5 + lk 245.6 measured, plus 42.6 estimated for residual nulls). That is **36 % of 2A's 2,876.3** (rewrite 1,264.5 + annotation 1,611.8).
 - **The derived fields are not production grade.** Error rates on the rows they decide: voice 17.2 %, agent_nom 26.1 %, tf 14.1 %, gender 14.9 %, tense_open 32.4 %. Compare 1.67 % (1W) and 3–4 % (2A).
@@ -147,7 +148,7 @@ The gold is a blind Opus session per language that sees only the source sentence
 | **attainable now, sk + cz** (4,109 × 2) | 8,218 | **8.49 M** | 4.80 M | 83 v + 40 fb + 42 lk = 165 | 3.2 h | **0.8 h** |
 | sk + cz target (7,200 × 2) | 14,400 | **14.88 M** | 8.41 M | 144 + 70 + 72 = 286 | 5.6 h | **1.4 h** |
 | variant 2: sk + cz + 1,000 concepts × 6 natives | 20,400 | **32.14 M** (14.88 + 17.26) | – | 286 + 400 = 686 | 12.8 h | **3.2 h** |
-| variant 1, reference only (v for 7,200 × 8) | 57,600 | **27.46 M** (+14.15 M if lk is judged) | 14.52 M | 576 (+288) | 8.6 h | **2.1 h** |
+| variant 1, reference only: sk + cz as above + 6 natives × 7,200 at 2A cost | 57,600 | **139.14 M** (14.88 + 124.26) | – | 286 + 2,880 = 3,166 | 57.7 h | **14.4 h** |
 
 - **Assumptions:**
   - Linear in sentences.
@@ -159,7 +160,7 @@ The gold is a blind Opus session per language that sees only the source sentence
 - **What remains model-authored:**
   - sk + cz: v (with lk corrections and the residual nulls) and the rewrite for about half the rows.
   - Natives: everything. No reader, rewrite script or guard exists for them.
-  - Variant 1: only v. This is the only scenario with no derived fields to trust.
+  - Variant 1: as variant 2, but 43,200 native rows are fully model-authored (rewrite + annotation) with no guard. (Corrected by the main session: the agent's first draft costed variant 1 as v-only, 27.46 M, which was not comparable with variant 2.)
 - **Guards for a non-Slavic native** (ua / es / tr / hu / fr / de):
   - Each would need its own nominative/agent reader, a voice path and a tense-frame table, then a blind-gold validation like this one. 1T showed that Czech alone, a close Slavic sibling, needed its own reader to fix four named bugs, and ua has none despite being Slavic.
   - es/tr/hu are pro-drop, so they also need a rewrite rule and a pronoun table. fr/de are not pro-drop, but their passive and reflexive (se/sich) patterns would reproduce g4's failure.
@@ -219,9 +220,9 @@ The gold is a blind Opus session per language that sees only the source sentence
 - **Sub-agents:**
   - DATA: 121,191 tokens, 9 calls.
   - DERIVE: 137,140 tokens, 11 calls.
-  - RUN + SCORE + REPORT: "<filled by main session>" tokens, 11 calls of 12.
-- Main session: 8 tool calls of 16.
-- PHASE_TOTAL_PLACEHOLDER
+  - RUN + SCORE + REPORT: 169,852 tokens, 11 calls of 12.
+- Main session: 10 tool calls of 16 (3 reads, plan, 3 agent spawns, 2 report checks, this correction + commit).
+- **Phase total: 934,067 harness tokens** = headless 505,884 + sub-agents 428,183 (121,191 + 137,140 + 169,852), against the 800,000 budget: **BREACHED by 134,067** (without the unplanned re-run, 253,410, it would have been 680,657). The main session's own tokens are not exposed by the harness and are not included.
 - Gemini calls 0. DB SELECT only (DATA agent). Nothing pushed, no migration, no app code, no checker rule changed.
 
 ## 8. Judgement
