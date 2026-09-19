@@ -53,12 +53,14 @@ LK_ADJUST_FLOOR = 5.0            # diagnostic only
 
 # ---------------------------------------------------------------- argv (nothing is ignored)
 def parse_argv(argv):
-    a = {"all": False, "batches": [], "only": [], "dry": False, "cap": CAP, "par": PAR, "max_sessions": None}
+    a = {"all": False, "batches": [], "only": [], "dry": False, "cap": CAP, "par": PAR, "max_sessions": None,
+         "ignore_stop": False}
     i = 0
     while i < len(argv):
         x = argv[i]
         if x == "--all": a["all"] = True
         elif x == "--dry-run": a["dry"] = True
+        elif x == "--ignore-stop-file": a["ignore_stop"] = True
         elif x == "--batch": i += 1; a["batches"].append(argv[i])
         elif x == "--only": i += 1; a["only"].append(argv[i])
         elif x == "--cap": i += 1; a["cap"] = int(argv[i])
@@ -75,10 +77,11 @@ A = parse_argv(sys.argv[1:])
 OUT = os.path.join(H, "out_dry" if A["dry"] else "out")
 SESSDIR = os.path.join(OUT, "sessions")
 os.makedirs(SESSDIR, exist_ok=True)
-LEDGER = os.path.join(H, "ledger_2c.json")
-GATES = os.path.join(H, "gates_2c.json")
-LOGP = os.path.join(H, "run_2c.log")
-DEFECTS = os.path.join(H, "DEFECTS_run_2c.md")
+DRY = "_dry" if A["dry"] else ""
+LEDGER = os.path.join(H, "ledger_2c%s.json" % DRY)
+GATES = os.path.join(H, "gates_2c%s.json" % DRY)
+LOGP = os.path.join(H, "run_2c%s.log" % DRY)
+DEFECTS = os.path.join(H, "DEFECTS_run_2c%s.md" % DRY)
 
 LOG = open(LOGP, "a", buffering=1, encoding="utf-8")
 PRINTLOCK = threading.Lock()
@@ -109,7 +112,7 @@ def commit(paths, msg):
             log("GIT-NOTE", rel[:3], (r.stdout or r.stderr)[-160:].replace("\n", " "))
 
 def stop(reason, detail):
-    fn = os.path.join(H, "STOP_%s.md" % reason)
+    fn = os.path.join(H, "STOP%s_%s.md" % (DRY, reason))
     open(fn, "w", encoding="utf-8").write(
         "# Phase 2C STOP: %s\n\n%s\n\nWritten %s.\nSpent so far: %s headless tokens, %.1f s wall.\n"
         % (reason, detail, time.strftime("%Y-%m-%d %H:%M:%S"), STATE["tok"], time.time() - STATE["t0"]))
@@ -718,6 +721,12 @@ def run_batch(bid, lang, rows):
 
 # ---------------------------------------------------------------- main
 def main():
+    import glob as _g
+    sf = [f for f in _g.glob(os.path.join(H, "STOP%s_*.md" % DRY))]
+    if sf and not A["ignore_stop"]:
+        sys.stderr.write("FATAL: an unresolved stop file exists (%s). A stop is a decision, not a hiccup: read it, "
+                         "then re-run with --ignore-stop-file to continue.\n" % ", ".join(os.path.basename(x) for x in sf))
+        sys.exit(2)
     load_ledger()
     if not A["dry"]:
         load_token()
