@@ -1,0 +1,2410 @@
+{
+ "phase": "1U",
+ "prompt": "P-FROZEN-1U",
+ "freeze_commit": "3bc177fe0dca216bc7389c2fa3b1be6affd946aa",
+ "stub_model": false,
+ "n_rows": 900,
+ "n_labelled": 900,
+ "preflight": {
+  "l2": 144,
+  "l3_eligible": 739,
+  "ag_rejected_before_l3": 137,
+  "reach_l3": 602
+ },
+ "floors": {
+  "F1_agent_drops_wrong": [
+   159,
+   120
+  ],
+  "F1a_fronted_wrong": [
+   63,
+   40
+  ],
+  "F1b_misaligned_wrong": [
+   48,
+   30
+  ],
+  "F2_time_frame_wrong": [
+   120,
+   100
+  ],
+  "F3_by_passive_correct": [
+   80,
+   60
+  ],
+  "F4_skp_correct": [
+   63,
+   40
+  ],
+  "F5_missing_article_wrong": [
+   97,
+   40
+  ]
+ },
+ "prompt_assertion": {
+  "ok": true,
+  "item_id": "C:190001:c1",
+  "prompt_1t": "P-FROZEN-1P",
+  "prompt_1u": "P-FROZEN-1U",
+  "lines_1t": 11,
+  "lines_1u": 12,
+  "added_at_line": 10,
+  "added_line": "Articles: the previous point is about the CHOICE of article. An article that English grammar REQUIRES and the learner sentence simply leaves out (\"Dad will buy new fridge.\", \"It is cold in kitchen today.\") is not acceptable English and is DIFF. An English article is a grammatical requirement of the target language, and Slovak has no article to omit in the first place, so nothing was dropped in translation: the sentence is simply not grammatical English. Where more than one determiner is grammatical (a / the / a possessive / no article where English allows it), the choice stays free and is SAME on that point.",
+  "line_before": "Also accepted English: \"When Mum bakes a cake, the children are going to make te",
+  "line_after": "SAME, TIP or DIFF?",
+  "sys_identical": true,
+  "req_hash_1t": "1f7cc411b3e6",
+  "req_hash_1u": "673b28c9ae2b",
+  "article_line_check": {
+   "ok": true,
+   "sha_line": "92c454a7e21a49f99ac8bc295a821ab925bbc522074c2f4116ebc3178cfa566c",
+   "sha_ruling": "de84a1da0810b7016b5f72fe6d47e44cf048f154215fb17d280d515280238dfd",
+   "chars": 615
+  },
+  "user_sha_1u": "5ad0efc3399c04dd88c12078f4d3b2d0285d68fc17a795d3ffbbaec49eddd7b0",
+  "user_sha_1t": "e7a327a5fe270313e08620dd2b9591ed948363436b6275a920ea461c542ea106"
+ },
+ "model": {
+  "model_replies": {
+   "SAME": 241,
+   "DIFF": 331,
+   "TIP": 30
+  },
+  "failed_calls": 0,
+  "counted_calls": 602,
+  "tokens_in": 323895,
+  "tokens_out": 0,
+  "latency_ms_total": 414264,
+  "latency_ms_mean": 688.1,
+  "spend_usd_upper_bound": 0.0324,
+  "price_note": "UPPER BOUND at the published flash-lite list price ($0.10/1M in, $0.40/1M out); free-tier calls cost 0"
+ },
+ "failed_call_rule": "an empty or unparsable HTTP 200 reply is a FAILED call: it is counted against the cap, never guessed and never silently retried; the item keeps the stack decision it gets without a model verdict (a rejection), stays in its own denominator and is listed under detail.failed_calls",
+ "headline": {
+  "pooled": {
+   "coverage": {
+    "k": 382,
+    "n": 402,
+    "pct": 95.02,
+    "ci": [
+     92.42,
+     96.93
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 16,
+    "n": 498,
+    "pct": 3.21,
+    "ci": [
+     1.85,
+     5.17
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 189,
+    "n": 201,
+    "pct": 94.03,
+    "ci": [
+     89.8,
+     96.88
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 7,
+    "n": 249,
+    "pct": 2.81,
+    "ci": [
+     1.14,
+     5.71
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 193,
+    "n": 201,
+    "pct": 96.02,
+    "ci": [
+     92.31,
+     98.27
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 9,
+    "n": 249,
+    "pct": 3.61,
+    "ci": [
+     1.67,
+     6.75
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.4923,
+   "fa": 0.8004
+  },
+  "n_rows": 900,
+  "definition": "the judge labels on every labelled item",
+  "n_moved": 0,
+  "moved_items": []
+ },
+ "S1_writer_intent": {
+  "pooled": {
+   "coverage": {
+    "k": 382,
+    "n": 400,
+    "pct": 95.5,
+    "ci": [
+     92.98,
+     97.31
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 16,
+    "n": 500,
+    "pct": 3.2,
+    "ci": [
+     1.84,
+     5.14
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 189,
+    "n": 200,
+    "pct": 94.5,
+    "ci": [
+     90.37,
+     97.22
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 7,
+    "n": 250,
+    "pct": 2.8,
+    "ci": [
+     1.13,
+     5.68
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 193,
+    "n": 200,
+    "pct": 96.5,
+    "ci": [
+     92.92,
+     98.58
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 9,
+    "n": 250,
+    "pct": 3.6,
+    "ci": [
+     1.66,
+     6.72
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.4704,
+   "fa": 0.8004
+  },
+  "n_rows": 900,
+  "definition": "scored by the writer kind C/W instead of the judge label",
+  "n_moved": 2,
+  "moved_items": [
+   "W:190081:w2",
+   "W:190088:w4"
+  ]
+ },
+ "S2_wrong_borderline_correct": {
+  "pooled": {
+   "coverage": {
+    "k": 387,
+    "n": 422,
+    "pct": 91.71,
+    "ci": [
+     88.65,
+     94.16
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 11,
+    "n": 478,
+    "pct": 2.3,
+    "ci": [
+     1.15,
+     4.08
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 191,
+    "n": 214,
+    "pct": 89.25,
+    "ci": [
+     84.31,
+     93.06
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 236,
+    "pct": 2.12,
+    "ci": [
+     0.69,
+     4.87
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 196,
+    "n": 208,
+    "pct": 94.23,
+    "ci": [
+     90.14,
+     96.98
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 242,
+    "pct": 2.48,
+    "ci": [
+     0.92,
+     5.32
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.0774,
+   "fa": 1.0
+  },
+  "n_rows": 900,
+  "definition": "judged-wrong borderline (topped up to n>=20 by lowest confidence, ties by packet position) scored correct",
+  "n_moved": 20,
+  "moved_items": [
+   "W:190003:w2",
+   "W:190017:w5",
+   "W:190024:w2",
+   "W:190025:w2",
+   "W:190044:w5",
+   "W:190054:w2",
+   "W:190059:w4",
+   "W:190062:w3",
+   "W:190073:w1",
+   "W:190073:w2",
+   "W:190075:w1",
+   "W:190078:w4",
+   "W:190079:w2",
+   "W:190083:w2",
+   "W:190084:w4",
+   "W:190085:w2",
+   "W:190085:w4",
+   "W:190086:w2",
+   "W:190095:w4",
+   "W:190097:w1"
+  ]
+ },
+ "S3_correct_borderline_wrong": {
+  "pooled": {
+   "coverage": {
+    "k": 367,
+    "n": 382,
+    "pct": 96.07,
+    "ci": [
+     93.61,
+     97.79
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 31,
+    "n": 518,
+    "pct": 5.98,
+    "ci": [
+     4.1,
+     8.39
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 181,
+    "n": 189,
+    "pct": 95.77,
+    "ci": [
+     91.83,
+     98.16
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 15,
+    "n": 261,
+    "pct": 5.75,
+    "ci": [
+     3.25,
+     9.3
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 186,
+    "n": 193,
+    "pct": 96.37,
+    "ci": [
+     92.67,
+     98.53
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 16,
+    "n": 257,
+    "pct": 6.23,
+    "ci": [
+     3.6,
+     9.91
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.7979,
+   "fa": 0.8548
+  },
+  "n_rows": 900,
+  "definition": "judged-correct borderline (same top-up) scored wrong",
+  "n_moved": 20,
+  "moved_items": [
+   "C:190001:c2",
+   "C:190007:c3",
+   "C:190010:c3",
+   "C:190013:c4",
+   "C:190015:c3",
+   "C:190022:c4",
+   "C:190025:c1",
+   "C:190025:c2",
+   "C:190037:c2",
+   "C:190039:c4",
+   "C:190041:c4",
+   "C:190043:c2",
+   "C:190046:c3",
+   "C:190052:c4",
+   "C:190065:c2",
+   "C:190074:c3",
+   "C:190087:c2",
+   "C:190088:c2",
+   "C:190096:c3",
+   "W:190088:w4"
+  ]
+ },
+ "S4_exclude_S2_S3": {
+  "pooled": {
+   "coverage": {
+    "k": 367,
+    "n": 382,
+    "pct": 96.07,
+    "ci": [
+     93.61,
+     97.79
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 11,
+    "n": 478,
+    "pct": 2.3,
+    "ci": [
+     1.15,
+     4.08
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 181,
+    "n": 189,
+    "pct": 95.77,
+    "ci": [
+     91.83,
+     98.16
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 236,
+    "pct": 2.12,
+    "ci": [
+     0.69,
+     4.87
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 186,
+    "n": 193,
+    "pct": 96.37,
+    "ci": [
+     92.67,
+     98.53
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 242,
+    "pct": 2.48,
+    "ci": [
+     0.92,
+     5.32
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.7979,
+   "fa": 1.0
+  },
+  "n_rows": 860,
+  "definition": "the S2 and S3 item sets excluded from the denominator",
+  "n_moved": 40,
+  "moved_items": [
+   "C:190001:c2",
+   "C:190007:c3",
+   "C:190010:c3",
+   "C:190013:c4",
+   "C:190015:c3",
+   "C:190022:c4",
+   "C:190025:c1",
+   "C:190025:c2",
+   "C:190037:c2",
+   "C:190039:c4",
+   "C:190041:c4",
+   "C:190043:c2",
+   "C:190046:c3",
+   "C:190052:c4",
+   "C:190065:c2",
+   "C:190074:c3",
+   "C:190087:c2",
+   "C:190088:c2",
+   "C:190096:c3",
+   "W:190003:w2",
+   "W:190017:w5",
+   "W:190024:w2",
+   "W:190025:w2",
+   "W:190044:w5",
+   "W:190054:w2",
+   "W:190059:w4",
+   "W:190062:w3",
+   "W:190073:w1",
+   "W:190073:w2",
+   "W:190075:w1",
+   "W:190078:w4",
+   "W:190079:w2",
+   "W:190083:w2",
+   "W:190084:w4",
+   "W:190085:w2",
+   "W:190085:w4",
+   "W:190086:w2",
+   "W:190088:w4",
+   "W:190095:w4",
+   "W:190097:w1"
+  ]
+ },
+ "S5_article_pre_ruling": {
+  "pooled": {
+   "coverage": {
+    "k": 384,
+    "n": 499,
+    "pct": 76.95,
+    "ci": [
+     73.0,
+     80.58
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 14,
+    "n": 401,
+    "pct": 3.49,
+    "ci": [
+     1.92,
+     5.79
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 190,
+    "n": 250,
+    "pct": 76.0,
+    "ci": [
+     70.21,
+     81.16
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 200,
+    "pct": 3.0,
+    "ci": [
+     1.11,
+     6.42
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 194,
+    "n": 249,
+    "pct": 77.91,
+    "ci": [
+     72.24,
+     82.91
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 8,
+    "n": 201,
+    "pct": 3.98,
+    "ci": [
+     1.73,
+     7.69
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.6709,
+   "fa": 0.7868
+  },
+  "n_rows": 900,
+  "definition": "every missing-article item the judge called wrong scored correct (the 1T M1 reading)",
+  "n_moved": 97,
+  "moved_items": [
+   "W:190001:w4",
+   "W:190002:w4",
+   "W:190003:w4",
+   "W:190004:w4",
+   "W:190005:w4",
+   "W:190006:w4",
+   "W:190007:w4",
+   "W:190008:w4",
+   "W:190009:w4",
+   "W:190010:w4",
+   "W:190011:w4",
+   "W:190012:w4",
+   "W:190013:w4",
+   "W:190014:w4",
+   "W:190015:w4",
+   "W:190016:w4",
+   "W:190017:w4",
+   "W:190018:w4",
+   "W:190020:w4",
+   "W:190021:w3",
+   "W:190022:w3",
+   "W:190023:w3",
+   "W:190024:w3",
+   "W:190025:w3",
+   "W:190026:w4",
+   "W:190027:w4",
+   "W:190028:w4",
+   "W:190029:w4",
+   "W:190030:w4",
+   "W:190031:w4",
+   "W:190032:w4",
+   "W:190033:w4",
+   "W:190034:w4",
+   "W:190035:w4",
+   "W:190036:w4",
+   "W:190037:w4",
+   "W:190038:w4",
+   "W:190039:w4",
+   "W:190040:w4",
+   "W:190041:w4",
+   "W:190042:w4",
+   "W:190043:w4",
+   "W:190044:w4",
+   "W:190045:w4",
+   "W:190046:w3",
+   "W:190047:w3",
+   "W:190048:w3",
+   "W:190049:w3",
+   "W:190050:w3",
+   "W:190051:w4"
+  ]
+ },
+ "S6_leave_out_A1": {
+  "pooled": {
+   "coverage": {
+    "k": 288,
+    "n": 302,
+    "pct": 95.36,
+    "ci": [
+     92.34,
+     97.44
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 14,
+    "n": 373,
+    "pct": 3.75,
+    "ci": [
+     2.07,
+     6.22
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 142,
+    "n": 149,
+    "pct": 95.3,
+    "ci": [
+     90.56,
+     98.09
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 184,
+    "pct": 3.26,
+    "ci": [
+     1.21,
+     6.96
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 146,
+    "n": 153,
+    "pct": 95.42,
+    "ci": [
+     90.8,
+     98.14
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 8,
+    "n": 189,
+    "pct": 4.23,
+    "ci": [
+     1.84,
+     8.17
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 1.0,
+   "fa": 0.7868
+  },
+  "n_rows": 675,
+  "definition": "leave-one-level-out: A1 dropped",
+  "n_moved": 225,
+  "moved_items": [
+   "C:190001:c1",
+   "C:190001:c2",
+   "C:190001:c3",
+   "C:190001:c4",
+   "C:190002:c1",
+   "C:190002:c2",
+   "C:190002:c3",
+   "C:190002:c4",
+   "C:190003:c1",
+   "C:190003:c2",
+   "C:190003:c3",
+   "C:190003:c4",
+   "C:190004:c1",
+   "C:190004:c2",
+   "C:190004:c3",
+   "C:190004:c4",
+   "C:190005:c1",
+   "C:190005:c2",
+   "C:190005:c3",
+   "C:190005:c4",
+   "C:190006:c1",
+   "C:190006:c2",
+   "C:190006:c3",
+   "C:190006:c4",
+   "C:190007:c1",
+   "C:190007:c2",
+   "C:190007:c3",
+   "C:190007:c4",
+   "C:190008:c1",
+   "C:190008:c2",
+   "C:190008:c3",
+   "C:190008:c4",
+   "C:190009:c1",
+   "C:190009:c2",
+   "C:190009:c3",
+   "C:190009:c4",
+   "C:190010:c1",
+   "C:190010:c2",
+   "C:190010:c3",
+   "C:190010:c4",
+   "C:190011:c1",
+   "C:190011:c2",
+   "C:190011:c3",
+   "C:190011:c4",
+   "C:190012:c1",
+   "C:190012:c2",
+   "C:190012:c3",
+   "C:190012:c4",
+   "C:190013:c1",
+   "C:190013:c2"
+  ]
+ },
+ "S6_leave_out_A2": {
+  "pooled": {
+   "coverage": {
+    "k": 289,
+    "n": 302,
+    "pct": 95.7,
+    "ci": [
+     92.75,
+     97.69
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 14,
+    "n": 373,
+    "pct": 3.75,
+    "ci": [
+     2.07,
+     6.22
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 144,
+    "n": 153,
+    "pct": 94.12,
+    "ci": [
+     89.13,
+     97.28
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 7,
+    "n": 189,
+    "pct": 3.7,
+    "ci": [
+     1.5,
+     7.48
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 145,
+    "n": 149,
+    "pct": 97.32,
+    "ci": [
+     93.27,
+     99.26
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 7,
+    "n": 184,
+    "pct": 3.8,
+    "ci": [
+     1.54,
+     7.68
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.2568,
+   "fa": 1.0
+  },
+  "n_rows": 675,
+  "definition": "leave-one-level-out: A2 dropped",
+  "n_moved": 225,
+  "moved_items": [
+   "C:190026:c1",
+   "C:190026:c2",
+   "C:190026:c3",
+   "C:190026:c4",
+   "C:190027:c1",
+   "C:190027:c2",
+   "C:190027:c3",
+   "C:190027:c4",
+   "C:190028:c1",
+   "C:190028:c2",
+   "C:190028:c3",
+   "C:190028:c4",
+   "C:190029:c1",
+   "C:190029:c2",
+   "C:190029:c3",
+   "C:190029:c4",
+   "C:190030:c1",
+   "C:190030:c2",
+   "C:190030:c3",
+   "C:190030:c4",
+   "C:190031:c1",
+   "C:190031:c2",
+   "C:190031:c3",
+   "C:190031:c4",
+   "C:190032:c1",
+   "C:190032:c2",
+   "C:190032:c3",
+   "C:190032:c4",
+   "C:190033:c1",
+   "C:190033:c2",
+   "C:190033:c3",
+   "C:190033:c4",
+   "C:190034:c1",
+   "C:190034:c2",
+   "C:190034:c3",
+   "C:190034:c4",
+   "C:190035:c1",
+   "C:190035:c2",
+   "C:190035:c3",
+   "C:190035:c4",
+   "C:190036:c1",
+   "C:190036:c2",
+   "C:190036:c3",
+   "C:190036:c4",
+   "C:190037:c1",
+   "C:190037:c2",
+   "C:190037:c3",
+   "C:190037:c4",
+   "C:190038:c1",
+   "C:190038:c2"
+  ]
+ },
+ "S6_leave_out_B1": {
+  "pooled": {
+   "coverage": {
+    "k": 285,
+    "n": 302,
+    "pct": 94.37,
+    "ci": [
+     91.14,
+     96.69
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 9,
+    "n": 373,
+    "pct": 2.41,
+    "ci": [
+     1.11,
+     4.53
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 140,
+    "n": 149,
+    "pct": 93.96,
+    "ci": [
+     88.84,
+     97.2
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 3,
+    "n": 184,
+    "pct": 1.63,
+    "ci": [
+     0.34,
+     4.69
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 145,
+    "n": 153,
+    "pct": 94.77,
+    "ci": [
+     89.96,
+     97.72
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 189,
+    "pct": 3.17,
+    "ci": [
+     1.17,
+     6.78
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.807,
+   "fa": 0.5028
+  },
+  "n_rows": 675,
+  "definition": "leave-one-level-out: B1 dropped",
+  "n_moved": 225,
+  "moved_items": [
+   "C:190051:c1",
+   "C:190051:c2",
+   "C:190051:c3",
+   "C:190051:c4",
+   "C:190052:c1",
+   "C:190052:c2",
+   "C:190052:c3",
+   "C:190052:c4",
+   "C:190053:c1",
+   "C:190053:c2",
+   "C:190053:c3",
+   "C:190053:c4",
+   "C:190054:c1",
+   "C:190054:c2",
+   "C:190054:c3",
+   "C:190054:c4",
+   "C:190055:c1",
+   "C:190055:c2",
+   "C:190055:c3",
+   "C:190055:c4",
+   "C:190056:c1",
+   "C:190056:c2",
+   "C:190056:c3",
+   "C:190056:c4",
+   "C:190057:c1",
+   "C:190057:c2",
+   "C:190057:c3",
+   "C:190057:c4",
+   "C:190058:c1",
+   "C:190058:c2",
+   "C:190058:c3",
+   "C:190058:c4",
+   "C:190059:c1",
+   "C:190059:c2",
+   "C:190059:c3",
+   "C:190059:c4",
+   "C:190060:c1",
+   "C:190060:c2",
+   "C:190060:c3",
+   "C:190060:c4",
+   "C:190061:c1",
+   "C:190061:c2",
+   "C:190061:c3",
+   "C:190061:c4",
+   "C:190062:c1",
+   "C:190062:c2",
+   "C:190062:c3",
+   "C:190062:c4",
+   "C:190063:c1",
+   "C:190063:c2"
+  ]
+ },
+ "S6_leave_out_B2": {
+  "pooled": {
+   "coverage": {
+    "k": 284,
+    "n": 300,
+    "pct": 94.67,
+    "ci": [
+     91.48,
+     96.92
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 11,
+    "n": 375,
+    "pct": 2.93,
+    "ci": [
+     1.47,
+     5.19
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 141,
+    "n": 152,
+    "pct": 92.76,
+    "ci": [
+     87.42,
+     96.33
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 190,
+    "pct": 2.63,
+    "ci": [
+     0.86,
+     6.03
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 143,
+    "n": 148,
+    "pct": 96.62,
+    "ci": [
+     92.29,
+     98.89
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MET",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 6,
+    "n": 185,
+    "pct": 3.24,
+    "ci": [
+     1.2,
+     6.93
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.1983,
+   "fa": 0.7684
+  },
+  "n_rows": 675,
+  "definition": "leave-one-level-out: B2 dropped",
+  "n_moved": 225,
+  "moved_items": [
+   "C:190076:c1",
+   "C:190076:c2",
+   "C:190076:c3",
+   "C:190076:c4",
+   "C:190077:c1",
+   "C:190077:c2",
+   "C:190077:c3",
+   "C:190077:c4",
+   "C:190078:c1",
+   "C:190078:c2",
+   "C:190078:c3",
+   "C:190078:c4",
+   "C:190079:c1",
+   "C:190079:c2",
+   "C:190079:c3",
+   "C:190079:c4",
+   "C:190080:c1",
+   "C:190080:c2",
+   "C:190080:c3",
+   "C:190080:c4",
+   "C:190081:c1",
+   "C:190081:c2",
+   "C:190081:c3",
+   "C:190081:c4",
+   "C:190082:c1",
+   "C:190082:c2",
+   "C:190082:c3",
+   "C:190082:c4",
+   "C:190083:c1",
+   "C:190083:c2",
+   "C:190083:c3",
+   "C:190083:c4",
+   "C:190084:c1",
+   "C:190084:c2",
+   "C:190084:c3",
+   "C:190084:c4",
+   "C:190085:c1",
+   "C:190085:c2",
+   "C:190085:c3",
+   "C:190085:c4",
+   "C:190086:c1",
+   "C:190086:c2",
+   "C:190086:c3",
+   "C:190086:c4",
+   "C:190087:c1",
+   "C:190087:c2",
+   "C:190087:c3",
+   "C:190087:c4",
+   "C:190088:c1",
+   "C:190088:c2"
+  ]
+ },
+ "cells": {
+  "missing_article": {
+   "judged_wrong_n": 97,
+   "fa": {
+    "k": 2,
+    "n": 97,
+    "pct": 2.06,
+    "ci": [
+     0.25,
+     7.25
+    ]
+   },
+   "rejected_by_layer": {
+    "L3:TIPrej": 16,
+    "L3": 78,
+    "F2B": 1
+   },
+   "judged_correct_n": 1,
+   "coverage": {
+    "k": 0,
+    "n": 1,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     97.5
+    ]
+   }
+  },
+  "agent_drop_fa": {
+   "all": {
+    "k": 9,
+    "n": 159,
+    "pct": 5.66,
+    "ci": [
+     2.62,
+     10.47
+    ],
+    "ag_fired": 137
+   },
+   "main": {
+    "k": 3,
+    "n": 48,
+    "pct": 6.25,
+    "ci": [
+     1.31,
+     17.2
+    ],
+    "ag_fired": 45
+   },
+   "fronted": {
+    "k": 3,
+    "n": 63,
+    "pct": 4.76,
+    "ci": [
+     0.99,
+     13.29
+    ],
+    "ag_fired": 53
+   },
+   "misaligned": {
+    "k": 3,
+    "n": 48,
+    "pct": 6.25,
+    "ci": [
+     1.31,
+     17.2
+    ],
+    "ag_fired": 39
+   },
+   "other": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "ag_fired": 0
+   }
+  },
+  "by_passive_coverage": {
+   "k": 79,
+   "n": 80,
+   "pct": 98.75,
+   "ci": [
+    93.23,
+    99.97
+   ],
+   "expectation": "100 %",
+   "rejected": [
+    "C:190007:c3"
+   ]
+  },
+  "skp_coverage": {
+   "k": 59,
+   "n": 63,
+   "pct": 93.65,
+   "ci": [
+    84.53,
+    98.24
+   ],
+   "ag_fired": []
+  },
+  "time_frame_fa": {
+   "k": 4,
+   "n": 120,
+   "pct": 3.33,
+   "ci": [
+    0.92,
+    8.31
+   ]
+  }
+ },
+ "ag": {
+  "primary_v4": {
+   "fired": 139,
+   "catches_judged_wrong": 138,
+   "measured_cost_judged_correct": 1,
+   "cost_items": [
+    {
+     "item_id": "W:190081:w2",
+     "sid": 190081,
+     "tags": [
+      "drop-fronted"
+     ],
+     "level": "B2",
+     "answer": "The pharmaceutical company will apply for registration of the drug once the clinical trial has been completed.",
+     "reason": "agentless passive in clause 0 against the Slovak clause 'farmaceutická firma požiada o registráciu lieku.' that names the agent: vedci (inherited)"
+    }
+   ]
+  },
+  "shadows_offline": {
+   "v2": {
+    "fired": 73,
+    "catches_judged_wrong": 73,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 66
+   },
+   "v3": {
+    "fired": 117,
+    "catches_judged_wrong": 117,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 22
+   },
+   "guarded_union": {
+    "fired": 117,
+    "catches_judged_wrong": 117,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 22
+   },
+   "v4_full": {
+    "fired": 139,
+    "catches_judged_wrong": 138,
+    "cost_judged_correct": 1,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 0
+   }
+  }
+ },
+ "detail": {
+  "by_level": {
+   "A1": {
+    "coverage": {
+     "k": 94,
+     "n": 100,
+     "pct": 94.0,
+     "ci": [
+      87.4,
+      97.77
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 2,
+     "n": 125,
+     "pct": 1.6,
+     "ci": [
+      0.19,
+      5.66
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "A2": {
+    "coverage": {
+     "k": 93,
+     "n": 100,
+     "pct": 93.0,
+     "ci": [
+      86.11,
+      97.14
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 2,
+     "n": 125,
+     "pct": 1.6,
+     "ci": [
+      0.19,
+      5.66
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "B1": {
+    "coverage": {
+     "k": 97,
+     "n": 100,
+     "pct": 97.0,
+     "ci": [
+      91.48,
+      99.38
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MET",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 7,
+     "n": 125,
+     "pct": 5.6,
+     "ci": [
+      2.28,
+      11.2
+     ],
+     "target": {
+      "point": "MISSED",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "B2": {
+    "coverage": {
+     "k": 98,
+     "n": 102,
+     "pct": 96.08,
+     "ci": [
+      90.26,
+      98.92
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MET",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 5,
+     "n": 123,
+     "pct": 4.07,
+     "ci": [
+      1.33,
+      9.23
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   }
+  },
+  "fa_by_judged_type": {
+   "T": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 120,
+    "pct": 0.83,
+    "ci": [
+     0.02,
+     4.56
+    ]
+   },
+   "M": {
+    "k": 9,
+    "n": 159,
+    "pct": 5.66,
+    "ci": [
+     2.62,
+     10.47
+    ]
+   },
+   "S": {
+    "k": 2,
+    "n": 99,
+    "pct": 2.02,
+    "ci": [
+     0.25,
+     7.11
+    ]
+   }
+  },
+  "false_accepts_by_layer": {
+   "L3": 16
+  },
+  "false_rejections_by_layer": {
+   "L3": 7,
+   "L3:TIPrej": 12,
+   "AG": 1
+  },
+  "true_rejections_by_layer": {
+   "AG": 136,
+   "L3": 324,
+   "L3:TIPrej": 17,
+   "F5": 4,
+   "F2B": 1
+  },
+  "false_accepts": [
+   {
+    "item_id": "W:190008:w4",
+    "sid": 190008,
+    "slovak": "Zatiaľ čo Marek vozí deti autobusom, mama upratuje dom.",
+    "answer": "While Marek is taking the children by bus, Mum is cleaning house.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "wrong",
+    "type": "S",
+    "level": "A1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190017:w5",
+    "sid": 190017,
+    "slovak": "Chlapec odomkol malú skrinku.",
+    "answer": "The boy unlocked the small box.",
+    "layer": "L3",
+    "tags": [
+     "wrong-word"
+    ],
+    "judged": "wrong",
+    "type": "W",
+    "level": "A1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190036:w2",
+    "sid": 190036,
+    "slovak": "Sused tvrdí, že mechanik opraví auto už zajtra.",
+    "answer": "The neighbour says the car is getting repaired tomorrow.",
+    "layer": "L3",
+    "tags": [
+     "drop-misaligned"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "A2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190038:w2",
+    "sid": 190038,
+    "slovak": "Na stene visí obraz, ktorý moja teta namaľovala pri rieke.",
+    "answer": "A picture painted by the river is hanging on the wall.",
+    "layer": "L3",
+    "tags": [
+     "drop-misaligned"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "A2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190052:w2",
+    "sid": 190052,
+    "slovak": "Kým sprievodca vysvetľoval históriu hradu, turisti fotili nádvorie.",
+    "answer": "During the explanation of the castle's history, the tourists were photographing the courtyard.",
+    "layer": "L3",
+    "tags": [
+     "drop-fronted"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190054:w2",
+    "sid": 190054,
+    "slovak": "Pretože učiteľka zrušila písomku, žiaci si mohli cez víkend konečne oddýchnuť.",
+    "answer": "Because of the cancellation of the test, the pupils could finally rest at the weekend.",
+    "layer": "L3",
+    "tags": [
+     "drop-fronted"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190057:w1",
+    "sid": 190057,
+    "slovak": "Len čo technik poslal e-mailom podrobnú správu, klient okamžite odpovedal.",
+    "answer": "As soon as the detailed report was sent by email, the client replied immediately.",
+    "layer": "L3",
+    "tags": [
+     "drop-fronted"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190059:w3",
+    "sid": 190059,
+    "slovak": "Riaditeľka na porade oznámila, že údržbár opraví strechu telocvične cez prázdniny.",
+    "answer": "At the meeting the headmistress announces that the caretaker will repair the gym roof during the holidays.",
+    "layer": "L3",
+    "tags": [
+     "time-frame"
+    ],
+    "judged": "wrong",
+    "type": "T",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190061:w4",
+    "sid": 190061,
+    "slovak": "Deti sa celé popoludnie hrali pri rieke a moja mama zatiaľ pripravovala grilovanú večeru.",
+    "answer": "The children played by the river all afternoon and my mum was preparing barbecue dinner in the meantime.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "wrong",
+    "type": "S",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190062:w3",
+    "sid": 190062,
+    "slovak": "Noviny píšu, že mesto postaví novú cyklotrasu pozdĺž rieky už na budúci rok.",
+    "answer": "The newspapers wrote that the city would build a new cycle path along the river as early as next year.",
+    "layer": "L3",
+    "tags": [
+     "time-frame"
+    ],
+    "judged": "wrong",
+    "type": "T",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190073:w2",
+    "sid": 190073,
+    "slovak": "Treba čo najskôr opraviť tú starú strechu na chate.",
+    "answer": "The old roof on the cottage will have to be repaired as soon as possible.",
+    "layer": "L3",
+    "tags": [
+     "time-frame"
+    ],
+    "judged": "wrong",
+    "type": "T",
+    "level": "B1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190084:w3",
+    "sid": 190084,
+    "slovak": "Hovorkyňa oznámila, že mesto obnoví historickú radnicu ešte pred koncom budúceho roka.",
+    "answer": "The spokeswoman announces that the city will restore the historic town hall before the end of next year.",
+    "layer": "L3",
+    "tags": [
+     "time-frame"
+    ],
+    "judged": "wrong",
+    "type": "T",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190086:w2",
+    "sid": 190086,
+    "slovak": "Učitelia sa dozvedeli, že ministerstvo zrušilo dotáciu na školské výlety už v marci.",
+    "answer": "The teachers found out about the cancellation of the subsidy for school trips back in March.",
+    "layer": "L3",
+    "tags": [
+     "drop-misaligned"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190090:w1",
+    "sid": 190090,
+    "slovak": "Archeológovia objavili rozsiahlu keltskú osadu pri jazere počas letného výskumu.",
+    "answer": "A large Celtic settlement was discovered by the lake during the summer research.",
+    "layer": "L3",
+    "tags": [
+     "drop-main"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190091:w1",
+    "sid": 190091,
+    "slovak": "My pravidelne zverejňujeme výsledky klinických testov na webovej stránke univerzity.",
+    "answer": "The results of the clinical tests are regularly published on the university website.",
+    "layer": "L3",
+    "tags": [
+     "drop-main"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190091:w2",
+    "sid": 190091,
+    "slovak": "My pravidelne zverejňujeme výsledky klinických testov na webovej stránke univerzity.",
+    "answer": "On the university website the results of the clinical tests get published regularly.",
+    "layer": "L3",
+    "tags": [
+     "drop-main"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   }
+  ],
+  "false_rejections": [
+   {
+    "item_id": "C:190007:c3",
+    "sid": 190007,
+    "slovak": "Odkedy sused predáva zeleninu, my nechodíme do obchodu.",
+    "answer": "Since vegetables have been sold by the neighbour, we do not go to the shop.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190009:c2",
+    "sid": 190009,
+    "slovak": "Učiteľka povedala, že školník opraví dvere.",
+    "answer": "The teacher said the caretaker would fix that door.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190022:c2",
+    "sid": 190022,
+    "slovak": "Raňajky sa podávajú v kuchyni.",
+    "answer": "Breakfast is served in our kitchen.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "skp-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190023:c2",
+    "sid": 190023,
+    "slovak": "Dnes je v triede veľmi chladno.",
+    "answer": "It's very cold in our classroom today.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "skp-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190025:c2",
+    "sid": 190025,
+    "slovak": "Obchod sa zatvára o šiestej.",
+    "answer": "This shop is closed at six o'clock.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "skp-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190025:c3",
+    "sid": 190025,
+    "slovak": "Obchod sa zatvára o šiestej.",
+    "answer": "The shop gets closed at six o'clock.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "skp-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190028:c2",
+    "sid": 190028,
+    "slovak": "Keďže šéf číta všetky e-maily, kolegovia píšu veľmi opatrne.",
+    "answer": "Since the boss reads all the emails, my colleagues write very carefully.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190034:c2",
+    "sid": 190034,
+    "slovak": "Učiteľka oznámi, že žiaci prepíšu test budúci týždeň.",
+    "answer": "The teacher will announce that the pupils will rewrite that test next week.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190039:c2",
+    "sid": 190039,
+    "slovak": "Tréner verí, že Marek vyhrá preteky v nedeľu.",
+    "answer": "The coach believes that Marek will win that race on Sunday.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190039:c4",
+    "sid": 190039,
+    "slovak": "Tréner verí, že Marek vyhrá preteky v nedeľu.",
+    "answer": "The coach is sure Marek is going to win the race on Sunday.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "paraphrase"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190042:c2",
+    "sid": 190042,
+    "slovak": "My pozveme celú triedu na výlet do Tatier.",
+    "answer": "We will invite the whole class on the trip to the Tatras.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190043:c2",
+    "sid": 190043,
+    "slovak": "Veterinár vyšetril našu chorú mačku v sobotu ráno.",
+    "answer": "The vet examined the sick cat on Saturday morning.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190044:c2",
+    "sid": 190044,
+    "slovak": "Náš sused poleje záhradu dnes večer.",
+    "answer": "Our neighbour will water his garden this evening.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190055:c2",
+    "sid": 190055,
+    "slovak": "Hoci tréner vymení brankára, náš tím podľa mňa zápas nevyhrá.",
+    "answer": "Although the coach will replace our goalkeeper, I think our team will not win the match.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190059:c2",
+    "sid": 190059,
+    "slovak": "Riaditeľka na porade oznámila, že údržbár opraví strechu telocvične cez prázdniny.",
+    "answer": "At the meeting the headmistress announced that our caretaker would repair the gym roof during the holidays.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190067:c2",
+    "sid": 190067,
+    "slovak": "Náš vedúci pošle všetky vzorky do laboratória vo Viedni vlakom zajtra ráno.",
+    "answer": "Our manager will send all of those samples to the laboratory in Vienna by train tomorrow morning.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190084:c2",
+    "sid": 190084,
+    "slovak": "Hovorkyňa oznámila, že mesto obnoví historickú radnicu ešte pred koncom budúceho roka.",
+    "answer": "The spokeswoman announced that the city would restore that historic town hall before the end of next year.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:190094:c2",
+    "sid": 190094,
+    "slovak": "Kuriér prepravuje krvné vzorky do mestského laboratória vlakom každé ráno.",
+    "answer": "The courier transports the blood samples to that city laboratory by train every morning.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190081:w2",
+    "sid": 190081,
+    "slovak": "Len čo vedci dokončia klinickú štúdiu, farmaceutická firma požiada o registráciu lieku.",
+    "answer": "The pharmaceutical company will apply for registration of the drug once the clinical trial has been completed.",
+    "layer": "AG",
+    "tags": [
+     "drop-fronted"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": null,
+    "ag_fired": true,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:190088:w4",
+    "sid": 190088,
+    "slovak": "Zasadnutie sa skončilo neskoro, a preto tajomníčka poslala zápisnicu všetkým členom komisie emailom.",
+    "answer": "The meeting ended late, so the secretary sent minutes to all the members of the committee by email.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   }
+  ],
+  "failed_calls": []
+ },
+ "judge_noise_duplicates": {
+  "join_labels_1u.json": null,
+  "assemble_1u.json": null
+ },
+ "selftest_statistics": [
+  {
+   "check": "cp(8,481)",
+   "got": [
+    0.72,
+    3.25
+   ],
+   "want": [
+    0.72,
+    3.25
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(348,385)",
+   "got": [
+    87.0,
+    93.14
+   ],
+   "want": [
+    87.0,
+    93.14
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(0,10)",
+   "got": [
+    0.0,
+    30.85
+   ],
+   "want": [
+    0.0,
+    30.85
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(10,10)",
+   "got": [
+    69.15,
+    100.0
+   ],
+   "want": [
+    69.15,
+    100.0
+   ],
+   "ok": true
+  },
+  {
+   "check": "fisher_exact(1,9,11,3)",
+   "got": 0.002759,
+   "want": 0.0027,
+   "ok": true
+  },
+  {
+   "check": "fisher_exact(5,5,5,5)",
+   "got": 1.0,
+   "want": 1.0,
+   "ok": true
+  }
+ ]
+}
