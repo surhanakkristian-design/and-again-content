@@ -124,3 +124,24 @@ needs no edit. No earlier-phase file was read, so `DEPENDENCY_READS.md` is uncha
   **1080**.
 * Selection rule recorded in `DEV_READOUT_1N.md` §3 (TASK B): guards are chosen on measured COST
   and measured catches; gold-assertion accuracy is a report-only diagnostic and never a gate.
+
+---
+
+## `dry-run` (the first run against the new data) — 19 Sept 2026
+
+`python3 runner_1n.py --dry`, twice, exit 0 both times, 0 model calls (`calls.jsonl` stays at 120),
+0 judge-label reads (the run's only `access_log` rows are `data/{sentences,annotations,items}.json`).
+The second run reproduced `DRY_RUN_1N.md` byte-identically.
+
+**Fixes made under this label: NONE.** The data side's `annotations.json` / `items.json` loaded and
+the whole build + preflight + plan path ran on the first attempt, so no loader or runner bug was hit,
+nothing was patched pre-freeze, and no `--selftest-final` re-run was owed (the task ties the re-run to
+"after any fix"). `runner_1n.py` and `loader_1n.py` are unchanged from `dev-readout`; `FREEZE_FILES`
+and `FROZEN_CONFIG_1N.json` need no edit; `DEPENDENCY_READS.md` unchanged (no earlier-phase read).
+
+Plan: chk `{"correct/match": 33, "wrong/auto": 867}`, L2 205, L3-eligible 834, unique requests 834,
+counted 120, **834 + 120 = 954 <= 1200**, headroom 246. Preflight passes (L2 > 0, L3-eligible > 0);
+no STOP / RUN_PAUSED file exists. Full readout in `DRY_RUN.md`.
+
+Next: commit phase1n, write `FREEZE_HASH` with that commit, then `--final` ONCE (needs 834 of the
+1080 remaining).
