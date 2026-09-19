@@ -49,3 +49,19 @@
 [DRY-RUN] lever1 {"fired": 2, "gain": 0, "fa_cost": 0, "shadow_accept": 2}
 [DRY-RUN] written selftest/dry_run_1p.json — 0 model calls
 [BUILD fresh1p] 1080 items / 120 sentences   chk {"correct/match": 83, "wrong/auto": 997}   passive {"None": 768, "agentless": 270, "by": 42}   levers {"l1:answer_is_agentless_passive": 276, "l1:fired": 239, "l2:aspect": 828, "l2:definiteness": 1000, "l2:number": 207, "l3:items_with_a_variant": 1026, "l3:removed": 72, "l3:shown": 1080}
+[FREEZE] 10 python files identical to commit 255ef142625a14434f82758ea733cc5cf7c2fe79
+[BUILD fresh1p] 1080 items / 120 sentences   chk {"correct/match": 83, "wrong/auto": 997}   passive {"None": 768, "agentless": 270, "by": 42}   levers {"l1:answer_is_agentless_passive": 276, "l1:fired": 239, "l2:aspect": 828, "l2:definiteness": 1000, "l2:number": 207, "l3:items_with_a_variant": 1026, "l3:removed": 72, "l3:shown": 1080}
+L2 lock firings under BASE: 272   L3-eligible under LOCKTIP: 925
+[PREFLIGHT] unique requests 925   reusable 0   PLANNED NEW CALLS 925   counted so far 225
+[PREFLIGHT] dev_used + planned = 225 + 925 = 1150   (stop threshold 1390, phase cap 1400)
+[PREFLIGHT] PASS
+[BUILD synthetic] 6 items / 2 sentences   chk {"correct/match": 1, "wrong/auto": 5}   passive {"None": 6}   levers {"l1:answer_is_agentless_passive": 2, "l1:fired": 2, "l2:aspect": 6, "l2:definiteness": 6, "l2:number": 3, "l3:items_with_a_variant": 3, "l3:removed": 6, "l3:shown": 3}
+[DRY-RUN] L2 0   L3-eligible 5
+[DRY-RUN] {"n_items": 6, "unique_requests": 5, "l2": 0, "l3_eligible": 5}
+[DRY-RUN] levers {"l1:answer_is_agentless_passive": 2, "l1:fired": 2, "l2:aspect": 6, "l2:definiteness": 6, "l2:number": 3, "l3:items_with_a_variant": 3, "l3:removed": 6, "l3:shown": 3}
+[DRY-RUN] lever1 {"fired": 2, "gain": 0, "fa_cost": 0, "shadow_accept": 2}
+[DRY-RUN] written selftest/dry_run_1p.json — 0 model calls
+[BUILD fresh1p] 1080 items / 120 sentences   chk {"correct/match": 83, "wrong/auto": 997}   passive {"None": 768, "agentless": 270, "by": 42}   levers {"l1:answer_is_agentless_passive": 276, "l1:fired": 239, "l2:aspect": 828, "l2:definiteness": 1000, "l2:number": 207, "l3:items_with_a_variant": 1026, "l3:removed": 72, "l3:shown": 1080}
+L2 lock firings under BASE: 272   L3-eligible under LOCKTIP: 925
+[PREFLIGHT] unique requests 925   reusable 0   PLANNED NEW CALLS 925   counted so far 225
+[PREFLIGHT] dev_used + planned = 225 + 925 = 1150   (stop threshold 1390, phase cap 1400)
