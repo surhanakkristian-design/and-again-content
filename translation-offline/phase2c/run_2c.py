@@ -78,6 +78,7 @@ OUT = os.path.join(H, "out_dry" if A["dry"] else "out")
 SESSDIR = os.path.join(OUT, "sessions")
 os.makedirs(SESSDIR, exist_ok=True)
 DRY = "_dry" if A["dry"] else ""
+STOPPFX = "STOPDRY" if A["dry"] else "STOP"
 LEDGER = os.path.join(H, "ledger_2c%s.json" % DRY)
 GATES = os.path.join(H, "gates_2c%s.json" % DRY)
 LOGP = os.path.join(H, "run_2c%s.log" % DRY)
@@ -112,7 +113,7 @@ def commit(paths, msg):
             log("GIT-NOTE", rel[:3], (r.stdout or r.stderr)[-160:].replace("\n", " "))
 
 def stop(reason, detail):
-    fn = os.path.join(H, "STOP%s_%s.md" % (DRY, reason))
+    fn = os.path.join(H, "%s_%s.md" % (STOPPFX, reason))
     open(fn, "w", encoding="utf-8").write(
         "# Phase 2C STOP: %s\n\n%s\n\nWritten %s.\nSpent so far: %s headless tokens, %.1f s wall.\n"
         % (reason, detail, time.strftime("%Y-%m-%d %H:%M:%S"), STATE["tok"], time.time() - STATE["t0"]))
@@ -722,7 +723,7 @@ def run_batch(bid, lang, rows):
 # ---------------------------------------------------------------- main
 def main():
     import glob as _g
-    sf = [f for f in _g.glob(os.path.join(H, "STOP%s_*.md" % DRY))]
+    sf = [f for f in _g.glob(os.path.join(H, "%s_*.md" % STOPPFX))]
     if sf and not A["ignore_stop"]:
         sys.stderr.write("FATAL: an unresolved stop file exists (%s). A stop is a decision, not a hiccup: read it, "
                          "then re-run with --ignore-stop-file to continue.\n" % ", ".join(os.path.basename(x) for x in sf))
