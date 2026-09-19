@@ -19,7 +19,7 @@ Read from the routing code the runner executes (`pipeline_1i.run_pipeline`, `run
 
 ## What this means for the owner's expectation
 
-The owner expected: agentless passive = dropped agent = type M, tolerated with a tip. The stack does neither. The 1N voice line tells the model that dropping the agent "is SAME, provided the meaning is preserved", and the model still answers DIFF on 14 of 20 L3-eligible agentless items judged correct (6 accepted) — while the `by`-passives, which keep the agent, pass 78 of 83 with 0 L3 rejections. The model is treating the lost agent as lost meaning (DIFF), which is the prompt's own wording line at work ("a word that changes which thing, person ... the Slovak names is DIFF"), and no layer downstream can turn a DIFF into an accept-with-tip. The reply under `P-FROZEN` is in the per-item list once Task A has run; until then it reads "not run".
+The owner expected: agentless passive = dropped agent = type M, tolerated with a tip. The stack does neither. The 1N voice line tells the model that dropping the agent "is SAME, provided the meaning is preserved", and the model still answers DIFF on 14 of the 22 agentless items judged correct (6 accepted, 2 stopped earlier by F4v2) — while the `by`-passives, which keep the agent, pass 78 of 83 with 0 L3 rejections. The model is treating the lost agent as lost meaning (DIFF), which is the prompt's own wording line at work ("a word that changes which thing, person ... the Slovak names is DIFF"), and no layer downstream can turn a DIFF into an accept-with-tip. The reply under `P-FROZEN` is in the per-item list once Task A has run; until then it reads "not run".
 
 ## The 16 rejected items
 
@@ -98,7 +98,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
 * model reply under `P-FROZEN`: not run
 * pipeline row (1N): `{"item_id": "C:160048:2251836920", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F8v2 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "Krajčírka skracuje nohavice vždy v st`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F8v2 `{"sk": {"agent_nom": true, "agent": "krajčírka", "voice_sk": "active", "reason": "noun \"krajčírka\" before the active verb \"skracuje\""}, "en": {"passive": fa`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "Krajčírka skracuje nohavice vždy v st`
 
 ### C:160052:1176203340
 
@@ -142,7 +142,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * model reply under `P-FROZEN-1N`: verdict None, raw `None`
 * model reply under `P-FROZEN`: not run
 * pipeline row (1N): `{"item_id": "C:160076:1794710932", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "A2", "accepted": false, "verdict": "wrong", "layer": "F4v2", "model": null, "tip": false, "model_tip": false, "reached_l3": false}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "on ti to predné koleso nafúka ešte dn`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F8v2 `{"sk": {"agent_nom": true, "agent": "on", "voice_sk": "active", "reason": "explicit nominative pronoun \"on\""}, "en": {"passive": false, "reason": "no passive `, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "on ti to predné koleso nafúka ešte dn`
 
 ### C:160080:488008841
 
@@ -186,7 +186,7 @@ The owner expected: agentless passive = dropped agent = type M, tolerated with a
 * model reply under `P-FROZEN-1N`: verdict DIFF, raw `DIFF`
 * model reply under `P-FROZEN`: not run
 * pipeline row (1N): `{"item_id": "C:160096:4258255142", "kind": "C", "judged": "correct", "wrong_type": null, "half": "NEW", "level": "B1", "accepted": false, "verdict": "wrong", "layer": "L3", "model": "DIFF", "tip": false, "model_tip": false, "reached_l3": true}`
-* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F8v2 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'present', 'future'}", "reported": false, "main": "tú anténu na streche upevníme sami.",`
+* readouts (decide nothing): F8v1 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F8v2 `{"sk": {"agent_nom": true, "agent": "my", "voice_sk": "active", "reason": "explicit nominative pronoun \"my\""}, "en": {"passive": true, "reason": "\"be fixed\"`, F9 `{"verdict": "tip", "sk": {"frames": ["future", "present"], "verdict": "{'future', 'present'}", "reported": false, "main": "tú anténu na streche upevníme sami.",`
 
 ### C:160100:3987111647
 
