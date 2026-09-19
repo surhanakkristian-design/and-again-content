@@ -1,0 +1,25 @@
+# Phase 1M freeze list. check_freeze_1m() refuses if any .py in phase1m is missing here,
+# so the list is exhaustive; the first block is what actually executes at run time.
+# --- executed at run time (--final) ---
+runner_1m.py
+runner_1l.py
+loader_1m.py
+loader_1l.py
+f8v2.py
+f8.py
+f9.py
+# --- present in phase1m at freeze time, NOT executed by --final ---
+assemble_1m.py
+eval_f8u.py
+f8u.py
+validate_f8u_gold.py
+eval_f8v2.py
+export_existing_210.py
+export_hygiene.py
+f8v2_v0.py
+hygiene_null_check.py
+l1_nearmiss_calibration.py
+make_annotations_part2.py
+tip_readout_1m.py
+validate_f8v2.py
+validate_f9_1l.py

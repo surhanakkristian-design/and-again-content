@@ -1,0 +1,3655 @@
+{
+ "table": {
+  "v1/DEV": {
+   "n": 70,
+   "agree": 19,
+   "cons": 44,
+   "err": 7,
+   "rate": 10.0,
+   "ci": [
+    4.12,
+    19.52
+   ]
+  },
+  "v1/HOLDOUT": {
+   "n": 70,
+   "agree": 21,
+   "cons": 38,
+   "err": 11,
+   "rate": 15.71,
+   "ci": [
+    8.11,
+    26.38
+   ]
+  },
+  "v1/FRESH1K": {
+   "n": 70,
+   "agree": 46,
+   "cons": 22,
+   "err": 2,
+   "rate": 2.86,
+   "ci": [
+    0.35,
+    9.94
+   ]
+  },
+  "v1/ALL": {
+   "n": 210,
+   "agree": 86,
+   "cons": 104,
+   "err": 20,
+   "rate": 9.52,
+   "ci": [
+    5.91,
+    14.33
+   ]
+  },
+  "v2/DEV": {
+   "n": 70,
+   "agree": 34,
+   "cons": 36,
+   "err": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    5.13
+   ]
+  },
+  "v2/HOLDOUT": {
+   "n": 70,
+   "agree": 30,
+   "cons": 40,
+   "err": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    5.13
+   ]
+  },
+  "v2/FRESH1K": {
+   "n": 70,
+   "agree": 43,
+   "cons": 27,
+   "err": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    5.13
+   ]
+  },
+  "v2/ALL": {
+   "n": 210,
+   "agree": 107,
+   "cons": 103,
+   "err": 0,
+   "rate": 0.0,
+   "ci": [
+    0.0,
+    1.74
+   ]
+  },
+  "union/DEV": {
+   "n": 70,
+   "agree": 38,
+   "cons": 25,
+   "err": 7,
+   "rate": 10.0,
+   "ci": [
+    4.12,
+    19.52
+   ]
+  },
+  "union/HOLDOUT": {
+   "n": 70,
+   "agree": 32,
+   "cons": 27,
+   "err": 11,
+   "rate": 15.71,
+   "ci": [
+    8.11,
+    26.38
+   ]
+  },
+  "union/FRESH1K": {
+   "n": 70,
+   "agree": 54,
+   "cons": 14,
+   "err": 2,
+   "rate": 2.86,
+   "ci": [
+    0.35,
+    9.94
+   ]
+  },
+  "union/ALL": {
+   "n": 210,
+   "agree": 124,
+   "cons": 66,
+   "err": 20,
+   "rate": 9.52,
+   "ci": [
+    5.91,
+    14.33
+   ]
+  }
+ },
+ "rows": [
+  {
+   "sid": 224,
+   "side": "dev",
+   "sk": "Slajdy si ona dala skontrolovať od staršieho brata deň predtým.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 1018,
+   "side": "dev",
+   "sk": "Smoothie on prelial do vysokého pohára, takže mixér je teraz úplne prázdny.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 1452,
+   "side": "dev",
+   "sk": "Ak sa on dotkne toho kaktusa, strávi večer vyťahovaním tŕňov z prsta.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 2389,
+   "side": "dev",
+   "sk": "Keby duriány nesmrdeli tak silno, colnica by ich asi pustila.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"duriány\" before the active verb \"nesmrdeli\"",
+   "v1_voice": "active",
+   "v1_agent": "duriány",
+   "gold": [
+    "[0/sub] noun=durians(\"duriany\")",
+    "[1/main] noun=customs(\"colnica\")"
+   ]
+  },
+  {
+   "sid": 2783,
+   "side": "dev",
+   "sk": "Lopta, ktorú pes priniesol, je teraz úplne od blata.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"pes\" before the active verb \"priniesol\"",
+   "v1_voice": "active",
+   "v1_agent": "pes",
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/sub] noun=dog(\"pes\")"
+   ]
+  },
+  {
+   "sid": 3937,
+   "side": "dev",
+   "sk": "Ona si kúpi ďalší prívesok, keď príde na tento trh znova.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/sub] pronoun=she(\"(elided: ona)\")"
+   ]
+  },
+  {
+   "sid": 4449,
+   "side": "dev",
+   "sk": "Celkovo ona spustila kôš trikrát, kým mal muž všetky svoje pomaranče.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/sub] noun=man(\"muz\")"
+   ]
+  },
+  {
+   "sid": 5971,
+   "side": "dev",
+   "sk": "Do zatvárania ona skontroluje každý prsteň na tom stole.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 6265,
+   "side": "dev",
+   "sk": "Nikto nemá rád, keď ho na takomto výlete naháňajú.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=nikto, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"nikto\" before the active verb \"nemá\"",
+   "v1_voice": "active",
+   "v1_agent": "nikto",
+   "gold": [
+    "[0/main] pronoun=nobody(\"Nikto\")",
+    "[1/sub] no-agent (impersonal)"
+   ]
+  },
+  {
+   "sid": 6275,
+   "side": "dev",
+   "sk": "Pozri — práve teraz oni pózujú pred vodopádom.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 6365,
+   "side": "dev",
+   "sk": "Režisér povedal, že oni kancelársku scénu natočia pred obedom.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] noun=director(\"Reziser\")",
+    "[1/sub] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 6830,
+   "side": "dev",
+   "sk": "Oni ako deti kupovali sušené bylinky v pohári.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 6884,
+   "side": "dev",
+   "sk": "Keby on vyrazil skôr, hmlu by bol minul.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 6971,
+   "side": "dev",
+   "sk": "Keby ona bola robot, žiadosti by jej neprekážali.",
+   "v1": "ERROR",
+   "v2": "AGREE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts pron=she, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] no-agent (copular-state)",
+    "[1/main] no-agent (dative-experiencer)"
+   ]
+  },
+  {
+   "sid": 6985,
+   "side": "dev",
+   "sk": "Keby ich ona všetkých nepozvala, teraz by nebola taká nahnevaná.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 7037,
+   "side": "dev",
+   "sk": "Jeleň, ktorého parohy boli obrovské, stál medzi lístím.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=parohy, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"parohy\" before the active verb \"boli\"",
+   "v1_voice": "active",
+   "v1_agent": "parohy",
+   "gold": [
+    "[0/main] noun=deer(\"Jelen\")",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 7444,
+   "side": "dev",
+   "sk": "Ona si naniesla už tri vrstvy, takže jej riasy vyzerajú obrovské.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 7533,
+   "side": "dev",
+   "sk": "Kým sa skupina usádzala, niekto udrel do spievajúcej misy.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/sub] noun=group(\"skupina\")",
+    "[1/main] pronoun=someone(\"niekto\")"
+   ]
+  },
+  {
+   "sid": 7687,
+   "side": "dev",
+   "sk": "Kuchyňu si oni dali natočiť, kým skladali ten dúhový tanier.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")",
+    "[1/sub] pronoun=they(\"(elided: oni)\")"
+   ]
+  },
+  {
+   "sid": 7752,
+   "side": "dev",
+   "sk": "Vydra ma dnes ráno šťuchla do rukáva už trikrát.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=ráno vs gold noun=otter(\"Vydra\")"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"ráno\" before the active verb \"šťuchla\"",
+   "v1_voice": "active",
+   "v1_agent": "ráno",
+   "gold": [
+    "[0/main] noun=otter(\"Vydra\")"
+   ]
+  },
+  {
+   "sid": 7910,
+   "side": "dev",
+   "sk": "Napriek ventilátoru na plný výkon sa zopnutá kopa vôbec nepohla.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] noun=pile(\"zopnuta kopa\")"
+   ]
+  },
+  {
+   "sid": 8017,
+   "side": "dev",
+   "sk": "Brankár práve stál na čiare, keď rozhodca ukázal na biely bod.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=práve, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"práve\" before the active verb \"stál\"",
+   "v1_voice": "active",
+   "v1_agent": "práve",
+   "gold": [
+    "[0/main] noun=goalkeeper(\"Brankar\")",
+    "[1/sub] noun=referee(\"rozhodca\")"
+   ]
+  },
+  {
+   "sid": 8020,
+   "side": "dev",
+   "sk": "Túto sezónu ona premenila tri penalty a ani jednu nezahodila.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/main] pronoun=she(\"(elided: ona)\")"
+   ]
+  },
+  {
+   "sid": 8293,
+   "side": "dev",
+   "sk": "Ona jedlo nikdy nedelí, takže tento croissant musí byť výnimočný.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 8465,
+   "side": "dev",
+   "sk": "Keby on ten sud nebol prevrátil, ryby by tu ešte boli.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 8756,
+   "side": "dev",
+   "sk": "On povedal, že puk letí rýchlejšie na studenom ľade.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] noun=puck(\"puk\")"
+   ]
+  },
+  {
+   "sid": 8799,
+   "side": "dev",
+   "sk": "Ona stále hádzala tú istú kombináciu, kým nešla hladko.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/sub] noun=it(\"(elided: kombinacia)\")"
+   ]
+  },
+  {
+   "sid": 8812,
+   "side": "dev",
+   "sk": "Tréner by si prial, aby jeho lapy boli trochu hrubšie.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"tréner\" before the active verb \"prial\"",
+   "v1_voice": "active",
+   "v1_agent": "tréner",
+   "gold": [
+    "[0/main] noun=coach(\"Trener\")",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 8824,
+   "side": "dev",
+   "sk": "Kým sa reťaz kývala, on dotlačil vrece na miesto.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] noun=chain(\"retaz\")",
+    "[1/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 8920,
+   "side": "dev",
+   "sk": "Najrýchlejšia akcia je ukázaná na konci v spomalenom zábere.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"je ukázaná\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)"
+   ]
+  },
+  {
+   "sid": 9007,
+   "side": "dev",
+   "sk": "Dnes v noci on preveril už šesť zdrojov a kopa stále rastie.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")",
+    "[1/main] noun=pile(\"kopa\")"
+   ]
+  },
+  {
+   "sid": 9495,
+   "side": "dev",
+   "sk": "Jej prejav bol prepísaný dvakrát, ešte než ona vôbec vyšla na to pódium.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bol prepísaný\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 9498,
+   "side": "dev",
+   "sk": "Pult, za ktorým ona stojí, je starší než celá škola.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 9552,
+   "side": "dev",
+   "sk": "Keby on pridal celú lyžicu, jedlo by bolo príliš pálivé na jedenie.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 9602,
+   "side": "dev",
+   "sk": "Pred tým finále ona šprintovala každé ráno celé mesiace.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 9607,
+   "side": "dev",
+   "sk": "Hovorí sa, že ona celú zimu trénovala vo výške.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 9687,
+   "side": "dev",
+   "sk": "Ak oba štáty podpíšu zmluvu, hranica sa budúci mesiac otvorí.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/sub] noun=states(\"oba staty\")",
+    "[1/main] no-agent (reflexive-passive)"
+   ]
+  },
+  {
+   "sid": 9913,
+   "side": "dev",
+   "sk": "Vlani si ona dala čižmy zafarbiť na fialovo.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 10013,
+   "side": "dev",
+   "sk": "Práve teraz on tlačí modrý obklad na hrču.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 10043,
+   "side": "dev",
+   "sk": "On sa spýtal, ako dlho ten opuch na jej nohe je",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 10116,
+   "side": "dev",
+   "sk": "Keď sa terapia začala, ona objímala vankúš.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] noun=therapy(\"terapia\")",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 10124,
+   "side": "dev",
+   "sk": "Ak si ona zapíše ďalšiu hodinu, terapia bude pokračovať aj budúci týždeň.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] noun=therapy(\"terapia\")"
+   ]
+  },
+  {
+   "sid": 10138,
+   "side": "dev",
+   "sk": "Keby ona nebola našla túto izbu, stále by plakala sama.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] pronoun=she(\"(elided: ona)\")"
+   ]
+  },
+  {
+   "sid": 10167,
+   "side": "dev",
+   "sk": "On má ústa také suché, že smäd musí byť skutočný.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 10179,
+   "side": "dev",
+   "sk": "O smäde sa hovorí, že je na dlhej jazde horší než hlad.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 10366,
+   "side": "dev",
+   "sk": "Do desiatej on už bude zohrievať rezance dve hodiny v kuse.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 10574,
+   "side": "dev",
+   "sk": "On trénoval hodiny, kým bolo svetlo konečne správne.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 10734,
+   "side": "dev",
+   "sk": "Ona to mala nakresliť ďalej od vody.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 11610,
+   "side": "dev",
+   "sk": "Na lavičke je jeden dlhý obväz.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "existential \"je/sú\" with a locative phrase",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 13175,
+   "side": "dev",
+   "sk": "Na doske je veľa žltého syra",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "existential \"je/sú\" with a locative phrase",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 13395,
+   "side": "dev",
+   "sk": "Zvyčajne ona kreslí srdcia, ale dnes nakreslila kruh.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/main] pronoun=she(\"(elided: ona)\")"
+   ]
+  },
+  {
+   "sid": 14266,
+   "side": "dev",
+   "sk": "Čo oni tancujú? — Salsu.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 14779,
+   "side": "dev",
+   "sk": "Ona ide utrieť prach z hornej hrany dverí.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 15437,
+   "side": "dev",
+   "sk": "Pole je súkromné. My musíme zostať na cestičke.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"je súkromné\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 15954,
+   "side": "dev",
+   "sk": "Pozri! Predavač práve spúšťa kôš do oleja.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=práve, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"práve\" before the active verb \"spúšťa\"",
+   "v1_voice": "active",
+   "v1_agent": "práve",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] noun=vendor(\"Predavac\")"
+   ]
+  },
+  {
+   "sid": 16261,
+   "side": "dev",
+   "sk": "On má plán. Chystá sa odprevadiť ju domov.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/main] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 16403,
+   "side": "dev",
+   "sk": "Rozlúč sa a ona sa o hodinu vráti naspäť.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 20702,
+   "side": "dev",
+   "sk": "Pozri! Teraz on dvíha džbán vyššie a vyššie.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 21124,
+   "side": "dev",
+   "sk": "Zvyčajne ona ostáva pod strechou, ale dnes tancuje v daždi.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/main] pronoun=she(\"(elided: ona)\")"
+   ]
+  },
+  {
+   "sid": 21467,
+   "side": "dev",
+   "sk": "Voda je studená, ty by si si mal obuť čižmy.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"je studená\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/main] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 22427,
+   "side": "dev",
+   "sk": "V salóne nie je veľa zákazníkov, iba jedna.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "existential \"je/sú\" with a locative phrase",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 23360,
+   "side": "dev",
+   "sk": "Jeho obrovské kýchnutie ty môžeš počuť po celej lúke.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 23878,
+   "side": "dev",
+   "sk": "Na tomto obrovskom štadióne je jedno zelené ihrisko.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"je zelené\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 24101,
+   "side": "dev",
+   "sk": "Pri tejto vtipnej červenej značke zastaví veľa ľudí.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=značke vs gold noun=people(\"vela ludi\")"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"značke\" before the active verb \"zastaví\"",
+   "v1_voice": "active",
+   "v1_agent": "značke",
+   "gold": [
+    "[0/main] noun=people(\"vela ludi\")"
+   ]
+  },
+  {
+   "sid": 24733,
+   "side": "dev",
+   "sk": "Pohárik je horúci, tak ty ho musíš držať opatrne.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/main] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 25921,
+   "side": "dev",
+   "sk": "Z trávnatého hrebeňa oni pozorujú sopku",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 26084,
+   "side": "dev",
+   "sk": "On ju dokáže nájsť skôr, než ona príde domov.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 27628,
+   "side": "dev",
+   "sk": "Deti sa zobudia o siedmej ráno.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] noun=children(\"Deti\")"
+   ]
+  },
+  {
+   "sid": 29691,
+   "side": "dev",
+   "sk": "On pustí svojho sprievodcu na kostolné schody! Úplná katastrofa!",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 31648,
+   "side": "dev",
+   "sk": "Zlatko, on vraj opustil misku včera, nie dnes.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 103,
+   "side": "holdout",
+   "sk": "O jeho promócii sa hovorí, že bola najhlučnejšia v histórii univerzity.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)",
+    "[1/sub] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 119,
+   "side": "holdout",
+   "sk": "Ako dlho ona prikladá tou kartou na nesprávne dvere?",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 381,
+   "side": "holdout",
+   "sk": "Kiež by môj kocúr bol taký pokojný ako ten ryšavý v jej náručí.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bol pokojný\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 2121,
+   "side": "holdout",
+   "sk": "Spolubývajúci sa ho spýtal, prečo on trávi dve hodiny denne len na to, aby sedel za stolom.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] noun=roommate(\"Spolubyvajuci\")",
+    "[1/sub] pronoun=he(\"on\")",
+    "[2/sub] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 2874,
+   "side": "holdout",
+   "sk": "On mal ísť k lekárovi už pred pár dňami, ale čakal, kým sa sotva udržal na nohách.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/main] pronoun=he(\"(elided: on)\")",
+    "[2/sub] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 2929,
+   "side": "holdout",
+   "sk": "Desivé svetlo úplne zhaslo a nádražie je zase tmavé.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=úplne, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"úplne\" before the active verb \"zhaslo\"",
+   "v1_voice": "active",
+   "v1_agent": "úplne",
+   "gold": [
+    "[0/main] noun=light(\"Desive svetlo\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 2955,
+   "side": "holdout",
+   "sk": "Strážnik ľutuje - kiežby bol otočil kameru k obzoru o minútu skôr.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"strážnik\" before the active verb \"ľutuje\"",
+   "v1_voice": "active",
+   "v1_agent": "strážnik",
+   "gold": [
+    "[0/main] noun=guard(\"Strażnik\")",
+    "[1/main] noun=he(\"(elided: straznik)\")"
+   ]
+  },
+  {
+   "sid": 3084,
+   "side": "holdout",
+   "sk": "V momente, keď ju kamarátka rozosmiala, jej ruka sa šmykla a čiara išla nakrivo.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/sub] noun=friend(\"kamaratka\")",
+    "[1/main] noun=hand(\"jej ruka\")",
+    "[2/main] noun=line(\"ciara\")"
+   ]
+  },
+  {
+   "sid": 3332,
+   "side": "holdout",
+   "sk": "Ona odmietla opustiť obchod bez toho zeleného overalu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 3494,
+   "side": "holdout",
+   "sk": "Keby bola guľôčka padla na čiernej, ona by išla domov s prázdnymi vreckami.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] noun=ball(\"gulocka\")",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 3603,
+   "side": "holdout",
+   "sk": "Inžinier sa ho spýtal, kedy on privezie pretekárske auto späť do garáže.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] noun=engineer(\"Inzinier\")",
+    "[1/sub] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 4571,
+   "side": "holdout",
+   "sk": "Keď ty necháš jednu skrutku uvoľnenú, celá stolička sa kýve.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/sub] pronoun=you(\"ty\")",
+    "[1/main] noun=chair(\"cela stolicka\")"
+   ]
+  },
+  {
+   "sid": 4612,
+   "side": "holdout",
+   "sk": "Keby skrutkovač držal on, tá polica by už dávno bola na zemi.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 5595,
+   "side": "holdout",
+   "sk": "Konečne on dokument opečiatkoval, takže ona môže ísť domov.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 5959,
+   "side": "holdout",
+   "sk": "Ak on prsteň otočí ešte raz, ona zníži cenu znova.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 5966,
+   "side": "holdout",
+   "sk": "Pred týmto trhom on veril každému predavačovi jeho príbeh.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 6353,
+   "side": "holdout",
+   "sk": "Svetlá sa ešte len rozohrievali, keď režisér zakričal „akciu“.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] noun=lights(\"Svetla\")",
+    "[1/sub] noun=director(\"reziser\")"
+   ]
+  },
+  {
+   "sid": 6790,
+   "side": "holdout",
+   "sk": "Do piatku ona dokončí všetky cviky na kruhoch.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 6883,
+   "side": "holdout",
+   "sk": "V auguste to už bude desať rokov, čo ona chodí po týchto chodníkoch.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] no-agent (impersonal)",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 7238,
+   "side": "holdout",
+   "sk": "Ak ty stúpaš presne tam, kam stúpa Mira, nohy ti zostanú úplne suché.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/sub] pronoun=you(\"ty\")",
+    "[1/sub] name=Mira(\"Mira\")",
+    "[2/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 7458,
+   "side": "holdout",
+   "sk": "Tú grimasu robí každý, však?",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=grimasu vs gold pronoun=everyone(\"kazdy\")"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"grimasu\" before the active verb \"robí\"",
+   "v1_voice": "active",
+   "v1_agent": "grimasu",
+   "gold": [
+    "[0/main] pronoun=everyone(\"kazdy\")"
+   ]
+  },
+  {
+   "sid": 7465,
+   "side": "holdout",
+   "sk": "O tejto riasenke sa hovorí, že zdvojnásobí dĺžku rias.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)",
+    "[1/sub] noun=it(\"(elided: riasenka)\")"
+   ]
+  },
+  {
+   "sid": 7558,
+   "side": "holdout",
+   "sk": "Nikdy predtým sme my nevideli takú tichú skupinu pri západe slnka.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"my\")"
+   ]
+  },
+  {
+   "sid": 7708,
+   "side": "holdout",
+   "sk": "Ak on vydrží nehybne, vážka zostane na trstine.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] noun=dragonfly(\"vazka\")"
+   ]
+  },
+  {
+   "sid": 7716,
+   "side": "holdout",
+   "sk": "Podarilo sa jej vydržať úplne nehybne, kým sa vážka usadila.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "subjectless / impersonal verb",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (dative-experiencer)",
+    "[1/sub] noun=dragonfly(\"vazka\")"
+   ]
+  },
+  {
+   "sid": 7928,
+   "side": "holdout",
+   "sk": "Keby lúč bol slabší, on by ešte mohol žmurkať.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] no-agent (copular-state)",
+    "[1/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 7998,
+   "side": "holdout",
+   "sk": "Veranda, na ktorej ona teraz trávi každé ráno, je otočená na východ slnka.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"je otočená\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)",
+    "[1/sub] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 8039,
+   "side": "holdout",
+   "sk": "Keby ju obranca nezrazil, žiadna penalta by nebola.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"obranca\" before the active verb \"nezrazil\"",
+   "v1_voice": "active",
+   "v1_agent": "obranca",
+   "gold": [
+    "[0/sub] noun=defender(\"obranca\")",
+    "[1/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 8062,
+   "side": "holdout",
+   "sk": "K bicím ona prešla, kým kamera ešte bežala.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/sub] noun=camera(\"kamera\")"
+   ]
+  },
+  {
+   "sid": 8209,
+   "side": "holdout",
+   "sk": "Do piatku si ona zarezervuje piaty termín v štúdiu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 8491,
+   "side": "holdout",
+   "sk": "Ak ty šupku najprv narežeš, granátové jablko sa otvára ľahko.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/sub] pronoun=you(\"ty\")",
+    "[1/main] no-agent (reflexive-passive)"
+   ]
+  },
+  {
+   "sid": 8507,
+   "side": "holdout",
+   "sk": "Keby on nebol taký opatrný, plod by už zničil",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] no-agent (copular-state)",
+    "[1/main] pronoun=he(\"(elided: on)\")"
+   ]
+  },
+  {
+   "sid": 8618,
+   "side": "holdout",
+   "sk": "Na tej starej motorke on robí od jari.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 9038,
+   "side": "holdout",
+   "sk": "Práve teraz on čmára poznámku, kým obrazovka notebooku svieti.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")",
+    "[1/sub] noun=screen(\"obrazovka notebooku\")"
+   ]
+  },
+  {
+   "sid": 9244,
+   "side": "holdout",
+   "sk": "Kým sa vlny valili, čierna mačka nepohla ani fúzom.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/sub] noun=waves(\"vlny\")",
+    "[1/main] noun=cat(\"cierna macka\")"
+   ]
+  },
+  {
+   "sid": 9584,
+   "side": "holdout",
+   "sk": "Naplno ona šprintuje od chvíle, keď vyštartovala.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")",
+    "[1/sub] pronoun=she(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 9907,
+   "side": "holdout",
+   "sk": "Keby si ona bola vzala béžovú bundu, tento look by nikdy nevznikol.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] noun=look(\"tento look\")"
+   ]
+  },
+  {
+   "sid": 9966,
+   "side": "holdout",
+   "sk": "Práve teraz si oni na slnečnej streche podávajú ruky.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 9992,
+   "side": "holdout",
+   "sk": "Členok, ktorý opuchol, bol ten ľavý.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=opuchol, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"opuchol\" before the active verb \"bol\"",
+   "v1_voice": "active",
+   "v1_agent": "opuchol",
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/sub] pronoun=ankle(\"ktorý\")"
+   ]
+  },
+  {
+   "sid": 10107,
+   "side": "holdout",
+   "sk": "Terminál bol prázdny; aj tak ona mala pocit, že ju niekto sleduje.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/main] pronoun=she(\"ona\")",
+    "[2/sub] pronoun=someone(\"niekto\")"
+   ]
+  },
+  {
+   "sid": 10243,
+   "side": "holdout",
+   "sk": "Keď slnko prešlo cez poludnie, ona nakláňala slnečník.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] noun=sun(\"slnko\")",
+    "[1/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 10866,
+   "side": "holdout",
+   "sk": "On čakal dve hodiny, kým sa konečne objavilo jeho číslo.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/sub] noun=number(\"jeho číslo\")"
+   ]
+  },
+  {
+   "sid": 10959,
+   "side": "holdout",
+   "sk": "Keby ona bola kúpila hrubší papier, kytica by bola teraz dokonalá.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 11216,
+   "side": "holdout",
+   "sk": "Ak sa ti odpoveď nepáči, ty by si sa kariet nemal pýtať.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/sub] no-agent (dative-experiencer)",
+    "[1/main] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 11348,
+   "side": "holdout",
+   "sk": "Pozri! Asistent práve drží odrazovú dosku hore.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=práve, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"práve\" before the active verb \"drží\"",
+   "v1_voice": "active",
+   "v1_agent": "práve",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] noun=assistant(\"Asistent\")"
+   ]
+  },
+  {
+   "sid": 11540,
+   "side": "holdout",
+   "sk": "Prečo oni čakajú? Lebo chlieb musí vykysnúť.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")",
+    "[1/main] noun=bread(\"chlieb\")"
+   ]
+  },
+  {
+   "sid": 11980,
+   "side": "holdout",
+   "sk": "Počkaj chvíľu a voda zovrie!",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"voda\" before the active verb \"zovrie\"",
+   "v1_voice": "active",
+   "v1_agent": "voda",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] noun=water(\"voda\")"
+   ]
+  },
+  {
+   "sid": 12831,
+   "side": "holdout",
+   "sk": "Mrkva v záhone je neuveriteľne veľká.",
+   "v1": "ERROR",
+   "v2": "AGREE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=záhone, gold has NO agent (copular-state)"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"záhone\" before the active verb \"je\"",
+   "v1_voice": "active",
+   "v1_agent": "záhone",
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 13034,
+   "side": "holdout",
+   "sk": "Práve teraz dievča sfukuje sviečky.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"dievča\" before the active verb \"sfukuje\"",
+   "v1_voice": "active",
+   "v1_agent": "dievča",
+   "gold": [
+    "[0/main] noun=girl(\"dievča\")"
+   ]
+  },
+  {
+   "sid": 14182,
+   "side": "holdout",
+   "sk": "Pozri, mačka práve vyplazuje jazyk!",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=práve, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"práve\" before the active verb \"vyplazuje\"",
+   "v1_voice": "active",
+   "v1_agent": "práve",
+   "gold": [
+    "[0/main] no-agent (imperative)",
+    "[1/main] noun=cat(\"mačka\")"
+   ]
+  },
+  {
+   "sid": 14697,
+   "side": "holdout",
+   "sk": "Po dopade je na kameňoch trochu šťavy",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "existential \"je/sú\" with a locative phrase",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)",
+    "[1/sub] no-agent (other)"
+   ]
+  },
+  {
+   "sid": 14806,
+   "side": "holdout",
+   "sk": "Pred chvíľou ona zastavila glóbus rukou.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 16009,
+   "side": "holdout",
+   "sk": "Zvyčajne sedí ticho, ale teraz hlasno kváka",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=zvyčajne, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"zvyčajne\" before the active verb \"sedí\"",
+   "v1_voice": "active",
+   "v1_agent": "zvyčajne",
+   "gold": [
+    "[0/main] pronoun=it(\"(pro-drop)\")",
+    "[1/main] pronoun=it(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 18251,
+   "side": "holdout",
+   "sk": "Z verandy oni sledujú tú búrku.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 18789,
+   "side": "holdout",
+   "sk": "Včera ona bola v tých istých pretekoch druhá.",
+   "v1": "ERROR",
+   "v2": "AGREE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts pron=she, gold has NO agent (copular-state)"
+   ],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 18966,
+   "side": "holdout",
+   "sk": "Na prázdnej lúke sú dvaja ľudia.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "existential \"je/sú\" with a locative phrase",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (existential)"
+   ]
+  },
+  {
+   "sid": 20298,
+   "side": "holdout",
+   "sk": "Na tú silnú bolesť hlavy on potrebuje jednu tabletku.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 20435,
+   "side": "holdout",
+   "sk": "Ten veľký tanier je biely a úplne čistý.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=tanier, gold has NO agent (copular-state)"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"tanier\" before the active verb \"je\"",
+   "v1_voice": "active",
+   "v1_agent": "tanier",
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 21510,
+   "side": "holdout",
+   "sk": "Muž sedí na drevenej lavičke.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"muž\" before the active verb \"sedí\"",
+   "v1_voice": "active",
+   "v1_agent": "muž",
+   "gold": [
+    "[0/main] noun=man(\"Muž\")"
+   ]
+  },
+  {
+   "sid": 21750,
+   "side": "holdout",
+   "sk": "Ona balí každú knihu do kartónovej krabice.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 23026,
+   "side": "holdout",
+   "sk": "Túto sukňu ona nosí do parku každú nedeľu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 23669,
+   "side": "holdout",
+   "sk": "Galaxia sa pomaly pohybuje nad ich hlavami.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] noun=galaxy(\"Galaxia\")"
+   ]
+  },
+  {
+   "sid": 24741,
+   "side": "holdout",
+   "sk": "Veslársky tím je rýchly a veľmi silný.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=tím, gold has NO agent (copular-state)"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"tím\" before the active verb \"je\"",
+   "v1_voice": "active",
+   "v1_agent": "tím",
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 25981,
+   "side": "holdout",
+   "sk": "Čašník nesie naraz desať horúcich tanierov.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"čašník\" before the active verb \"nesie\"",
+   "v1_voice": "active",
+   "v1_agent": "čašník",
+   "gold": [
+    "[0/main] noun=waiter(\"Čašník\")"
+   ]
+  },
+  {
+   "sid": 27097,
+   "side": "holdout",
+   "sk": "Jasné, toto námestie má veľa reklám, presne to sme my potrebovali.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] noun=square(\"toto námestie\")",
+    "[1/main] pronoun=we(\"my\")"
+   ]
+  },
+  {
+   "sid": 28006,
+   "side": "holdout",
+   "sk": "Každú loď v zálive ty spozoruješ skôr než ktokoľvek iný. Klobúk dole.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 29143,
+   "side": "holdout",
+   "sk": "Ale kdeže, kámo, on to kúpi za svoje vlastné peniaze.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 32141,
+   "side": "holdout",
+   "sk": "Toto je katastrofa! Miska bude zajtra zase prázdna!",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (copular-state)",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 32342,
+   "side": "holdout",
+   "sk": "Dôkaz je na korkovej tabuli.",
+   "v1": "ERROR",
+   "v2": "AGREE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=dôkaz, gold has NO agent (copular-state)"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"dôkaz\" before the active verb \"je\"",
+   "v1_voice": "active",
+   "v1_agent": "dôkaz",
+   "gold": [
+    "[0/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 32539,
+   "side": "holdout",
+   "sk": "Kam oni padajú? Do penovej jamy.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"oni\")"
+   ]
+  },
+  {
+   "sid": 140001,
+   "side": "fresh1k",
+   "sk": "Ona každé ráno pije zelený čaj s medom.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140002,
+   "side": "fresh1k",
+   "sk": "On práve teraz umýva staré tenisky v dreze.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140003,
+   "side": "fresh1k",
+   "sk": "Moja sestra nosí okuliare iba pri čítaní.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"sestra\" before the active verb \"nosí\"",
+   "v1_voice": "active",
+   "v1_agent": "sestra",
+   "gold": [
+    "[0/main] noun=sister(\"Moja sestra\")"
+   ]
+  },
+  {
+   "sid": 140004,
+   "side": "fresh1k",
+   "sk": "My chodíme do tej pekárne každú sobotu ráno.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 140005,
+   "side": "fresh1k",
+   "sk": "Ty teraz držíš môj dáždnik a ja mrznem.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] pronoun=you(\"Ty\")",
+    "[1/main] pronoun=I(\"ja\")"
+   ]
+  },
+  {
+   "sid": 140006,
+   "side": "fresh1k",
+   "sk": "Ona nikdy neposiela e-maily po desiatej večer.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140007,
+   "side": "fresh1k",
+   "sk": "Oni už dve hodiny čakajú na autobus pred knižnicou.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140008,
+   "side": "fresh1k",
+   "sk": "Tento vlak zastavuje v každej malej dedine.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"vlak\" before the active verb \"zastavuje\"",
+   "v1_voice": "active",
+   "v1_agent": "vlak",
+   "gold": [
+    "[0/main] noun=train(\"Tento vlak\")"
+   ]
+  },
+  {
+   "sid": 140009,
+   "side": "fresh1k",
+   "sk": "Ty musíš odovzdať ten formulár ešte dnes popoludní.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] pronoun=you(\"Ty\")"
+   ]
+  },
+  {
+   "sid": 140010,
+   "side": "fresh1k",
+   "sk": "Ona vždy zabudne kľúče, keď sa ponáhľa do práce.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/sub] pronoun=she(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140011,
+   "side": "fresh1k",
+   "sk": "Ja rád varím cestoviny pre celú rodinu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=I(\"Ja\")"
+   ]
+  },
+  {
+   "sid": 140012,
+   "side": "fresh1k",
+   "sk": "Sused, ktorý býva nad nami, opravuje bicykle v garáži.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"sused\" before the active verb \"býva\"",
+   "v1_voice": "active",
+   "v1_agent": "sused",
+   "gold": [
+    "[0/main] noun=neighbour(\"Sused\")",
+    "[1/sub] pronoun=neighbour(\"ktorý\")"
+   ]
+  },
+  {
+   "sid": 140013,
+   "side": "fresh1k",
+   "sk": "Oni práve natierajú plot na zeleno.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140014,
+   "side": "fresh1k",
+   "sk": "Ona pracuje na tej diplomovke už tri mesiace.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140015,
+   "side": "fresh1k",
+   "sk": "V tejto časti nemocnice sa nefajčí ani na balkóne.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (impersonal)"
+   ]
+  },
+  {
+   "sid": 140016,
+   "side": "fresh1k",
+   "sk": "Hovorí sa, že tá kaviareň na rohu mení majiteľa.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)",
+    "[1/sub] noun=café(\"tá kaviareň\")"
+   ]
+  },
+  {
+   "sid": 140017,
+   "side": "fresh1k",
+   "sk": "On trénoval hodiny pred tým dôležitým zápasom.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140018,
+   "side": "fresh1k",
+   "sk": "Ona celý večer písala poznámky do modrého zošita.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140019,
+   "side": "fresh1k",
+   "sk": "Oni minulý rok predávali med na trhu pri rieke.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140020,
+   "side": "fresh1k",
+   "sk": "Ja som ako dieťa zbieral staré mince.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=I(\"Ja\")"
+   ]
+  },
+  {
+   "sid": 140021,
+   "side": "fresh1k",
+   "sk": "Moja babka nám každú nedeľu piekla jablkový koláč.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0: asserts noun=nedeľu vs gold noun=grandmother(\"Moja babka\")"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"nedeľu\" before the active verb \"piekla\"",
+   "v1_voice": "active",
+   "v1_agent": "nedeľu",
+   "gold": [
+    "[0/main] noun=grandmother(\"Moja babka\")"
+   ]
+  },
+  {
+   "sid": 140022,
+   "side": "fresh1k",
+   "sk": "Ty si čakal na peróne, keď začalo pršať.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/main] pronoun=you(\"Ty\")",
+    "[1/sub] no-agent (impersonal)"
+   ]
+  },
+  {
+   "sid": 140023,
+   "side": "fresh1k",
+   "sk": "My sme minulé leto chodili k jazeru takmer denne.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 140024,
+   "side": "fresh1k",
+   "sk": "On opravoval tú kosačku celé popoludnie a nakoniec to vzdal.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/main] pronoun=he(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140025,
+   "side": "fresh1k",
+   "sk": "Ona vtedy učila na základnej škole v malom meste.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140026,
+   "side": "fresh1k",
+   "sk": "Oni sa vlani učili po španielsky cez víkendy.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140027,
+   "side": "fresh1k",
+   "sk": "Ona včera stratila peňaženku v autobuse.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140028,
+   "side": "fresh1k",
+   "sk": "On rozbil pohár a hneď to upratal.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")",
+    "[1/main] pronoun=he(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140029,
+   "side": "fresh1k",
+   "sk": "Keď sme prišli, on už zjedol celú polievku.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=we(\"(pro-drop)\")",
+    "[1/main] pronoun=he(\"on\")"
+   ]
+  },
+  {
+   "sid": 140030,
+   "side": "fresh1k",
+   "sk": "Ona odišla skôr, než jej stihli poďakovať.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")",
+    "[1/sub] pronoun=they(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140031,
+   "side": "fresh1k",
+   "sk": "Povedal nám, že ten balík odoslal už v pondelok.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] pronoun=he(\"(pro-drop)\")",
+    "[1/sub] pronoun=he(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140032,
+   "side": "fresh1k",
+   "sk": "Spýtala sa ma, či ja ovládam ten program.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=she(\"(pro-drop)\")",
+    "[1/sub] pronoun=I(\"ja\")"
+   ]
+  },
+  {
+   "sid": 140033,
+   "side": "fresh1k",
+   "sk": "Ten most bol postavený ešte pred vojnou.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bol postavený\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)"
+   ]
+  },
+  {
+   "sid": 140034,
+   "side": "fresh1k",
+   "sk": "Dom na kopci bol predaný minulý mesiac.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bol predaný\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)"
+   ]
+  },
+  {
+   "sid": 140035,
+   "side": "fresh1k",
+   "sk": "Bolo mi povedané, že termín sa už nedá zmeniť.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bolo povedané\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)",
+    "[1/sub] no-agent (reflexive-passive)"
+   ]
+  },
+  {
+   "sid": 140036,
+   "side": "fresh1k",
+   "sk": "Deti našli pod schodmi malú korytnačku.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"deti\" before the active verb \"našli\"",
+   "v1_voice": "active",
+   "v1_agent": "deti",
+   "gold": [
+    "[0/main] noun=children(\"Deti\")"
+   ]
+  },
+  {
+   "sid": 140037,
+   "side": "fresh1k",
+   "sk": "My sme ten nábytok zložili za dve hodiny.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 140038,
+   "side": "fresh1k",
+   "sk": "Do stredy ona pripraví podklady pre nového klienta.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 140039,
+   "side": "fresh1k",
+   "sk": "On ti zajtra pošle nové heslo.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140040,
+   "side": "fresh1k",
+   "sk": "Ona to kreslo prenesie do vedľajšej izby.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140041,
+   "side": "fresh1k",
+   "sk": "My tú zmluvu podpíšeme bez akýchkoľvek zmien.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 140042,
+   "side": "fresh1k",
+   "sk": "Ja ti kúpim tú knihu o vtákoch, ktorú si chcela.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=I(\"Ja\")",
+    "[1/sub] pronoun=you(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140043,
+   "side": "fresh1k",
+   "sk": "Ak ona stihne ten vlak, bude doma pred obedom.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 140044,
+   "side": "fresh1k",
+   "sk": "Keď on dopíše ten list, hneď ho odnesie na poštu.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/sub] pronoun=he(\"on\")",
+    "[1/main] pronoun=he(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140045,
+   "side": "fresh1k",
+   "sk": "Oni ten starý plot rozoberú ešte pred zimou.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140046,
+   "side": "fresh1k",
+   "sk": "Vy nám o tom poviete zajtra na stretnutí.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"vy\"",
+   "v1_voice": "active",
+   "v1_agent": "vy",
+   "gold": [
+    "[0/main] pronoun=you(\"Vy\")"
+   ]
+  },
+  {
+   "sid": 140047,
+   "side": "fresh1k",
+   "sk": "Do konca mesiaca ona prečíta všetky tie správy.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"ona\")"
+   ]
+  },
+  {
+   "sid": 140048,
+   "side": "fresh1k",
+   "sk": "Ten technik vymení rozbité sklo na displeji.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "noun \"technik\" before the active verb \"vymení\"",
+   "v1_voice": "active",
+   "v1_agent": "technik",
+   "gold": [
+    "[0/main] noun=technician(\"Ten technik\")"
+   ]
+  },
+  {
+   "sid": 140049,
+   "side": "fresh1k",
+   "sk": "On ti to vysvetlí cestou domov.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140050,
+   "side": "fresh1k",
+   "sk": "Ak my odložíme ten výlet, sprievodca nám vráti peniaze.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/sub] pronoun=we(\"my\")",
+    "[1/main] noun=guide(\"sprievodca\")"
+   ]
+  },
+  {
+   "sid": 140051,
+   "side": "fresh1k",
+   "sk": "Ona bude celý budúci týždeň pracovať z domu.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140052,
+   "side": "fresh1k",
+   "sk": "Oni budú opravovať tú cestu až do jesene.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140053,
+   "side": "fresh1k",
+   "sk": "Ja budem variť večeru, kým ty upraceš kuchyňu.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=I(\"Ja\")",
+    "[1/sub] pronoun=you(\"ty\")"
+   ]
+  },
+  {
+   "sid": 140054,
+   "side": "fresh1k",
+   "sk": "On bude čakať pred kinom asi o siedmej.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140055,
+   "side": "fresh1k",
+   "sk": "My budeme sledovať ten zápas u susedov.",
+   "v1": "AGREE",
+   "v2": "CONSERVATIVE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")"
+   ]
+  },
+  {
+   "sid": 140056,
+   "side": "fresh1k",
+   "sk": "Vy budete dostávať tie správy každé ráno.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"vy\"",
+   "v1_voice": "active",
+   "v1_agent": "vy",
+   "gold": [
+    "[0/main] pronoun=you(\"Vy\")"
+   ]
+  },
+  {
+   "sid": 140057,
+   "side": "fresh1k",
+   "sk": "Keby ona mala viac času, naučila by sa hrať na gitare.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/sub] pronoun=she(\"ona\")",
+    "[1/main] pronoun=she(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140058,
+   "side": "fresh1k",
+   "sk": "Keby sme boli odišli skôr, neboli by sme zmeškali ten let.",
+   "v1": "ERROR",
+   "v2": "CONSERVATIVE",
+   "union": "ERROR",
+   "e1": [
+    "clause 0 (split mismatch): asserts noun=keby, no gold clause of the sentence has it"
+   ],
+   "e2": [],
+   "v1_reason": "noun \"keby\" before the active verb \"sme\"",
+   "v1_voice": "active",
+   "v1_agent": "keby",
+   "gold": [
+    "[0/sub] pronoun=we(\"(pro-drop)\")",
+    "[1/main] pronoun=we(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140059,
+   "side": "fresh1k",
+   "sk": "Ja by som ti požičal auto, ale je v servise.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ja\"",
+   "v1_voice": "active",
+   "v1_agent": "ja",
+   "gold": [
+    "[0/main] pronoun=I(\"Ja\")",
+    "[1/main] no-agent (copular-state)"
+   ]
+  },
+  {
+   "sid": 140060,
+   "side": "fresh1k",
+   "sk": "On by ten problém vyriešil za jediné popoludnie.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"on\"",
+   "v1_voice": "active",
+   "v1_agent": "on",
+   "gold": [
+    "[0/main] pronoun=he(\"On\")"
+   ]
+  },
+  {
+   "sid": 140061,
+   "side": "fresh1k",
+   "sk": "Oni by radi pozvali celú triedu na záhradu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"oni\"",
+   "v1_voice": "active",
+   "v1_agent": "oni",
+   "gold": [
+    "[0/main] pronoun=they(\"Oni\")"
+   ]
+  },
+  {
+   "sid": 140062,
+   "side": "fresh1k",
+   "sk": "Keby si ty povedal pravdu hneď, nikto by sa nehneval.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ty\"",
+   "v1_voice": "active",
+   "v1_agent": "ty",
+   "gold": [
+    "[0/sub] pronoun=you(\"ty\")",
+    "[1/main] pronoun=nobody(\"nikto\")"
+   ]
+  },
+  {
+   "sid": 140063,
+   "side": "fresh1k",
+   "sk": "My by sme tam išli pešo, keby nepršalo.",
+   "v1": "CONSERVATIVE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"my\"",
+   "v1_voice": "active",
+   "v1_agent": "my",
+   "gold": [
+    "[0/main] pronoun=we(\"My\")",
+    "[1/sub] no-agent (impersonal)"
+   ]
+  },
+  {
+   "sid": 140064,
+   "side": "fresh1k",
+   "sk": "Ona by tú skriňu presunula bližšie k oknu.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "explicit nominative pronoun \"ona\"",
+   "v1_voice": "active",
+   "v1_agent": "ona",
+   "gold": [
+    "[0/main] pronoun=she(\"Ona\")"
+   ]
+  },
+  {
+   "sid": 140065,
+   "side": "fresh1k",
+   "sk": "O tom novom moste sa píše vo všetkých novinách.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "reflexive impersonal main clause (\"sa\" + speech verb)",
+   "v1_voice": "impersonal",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)"
+   ]
+  },
+  {
+   "sid": 140066,
+   "side": "fresh1k",
+   "sk": "Tie dvere budú natreté do soboty.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "no clear finite verb / subject signal",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)"
+   ]
+  },
+  {
+   "sid": 140067,
+   "side": "fresh1k",
+   "sk": "V nedeľu sa tu nepredáva čerstvý chlieb.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (reflexive-passive)"
+   ]
+  },
+  {
+   "sid": 140068,
+   "side": "fresh1k",
+   "sk": "Oznámili nám, že letisko zatvoria kvôli hmle.",
+   "v1": "CONSERVATIVE",
+   "v2": "CONSERVATIVE",
+   "union": "CONSERVATIVE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] pronoun=they(\"(pro-drop)\")",
+    "[1/sub] pronoun=they(\"(pro-drop)\")"
+   ]
+  },
+  {
+   "sid": 140069,
+   "side": "fresh1k",
+   "sk": "Na tej ulici sa parkuje len za poplatok.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "finite verb found but the subject is not clearly nominative",
+   "v1_voice": null,
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (impersonal)"
+   ]
+  },
+  {
+   "sid": 140070,
+   "side": "fresh1k",
+   "sk": "Tá socha bola odhalená pred dvoma rokmi.",
+   "v1": "AGREE",
+   "v2": "AGREE",
+   "union": "AGREE",
+   "e1": [],
+   "e2": [],
+   "v1_reason": "participial passive \"bola odhalená\"",
+   "v1_voice": "passive",
+   "v1_agent": null,
+   "gold": [
+    "[0/main] no-agent (passive)"
+   ]
+  }
+ ]
+}

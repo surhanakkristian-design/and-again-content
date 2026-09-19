@@ -1,0 +1,307 @@
+{
+ "mode": "dev",
+ "config": {
+  "prompt": "P-FROZEN",
+  "locktip": true,
+  "f8": true,
+  "f9_strict": false,
+  "f8_module": "f8v2",
+  "f9": false,
+  "tip_reject": true,
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0,
+  "name": "LOCKTIP+F8V2 (TIP-as-rejection on)"
+ },
+ "sides": {
+  "dev": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "fa": {
+    "k": 11,
+    "n": 301,
+    "pct": 3.65,
+    "ci": [
+     1.84,
+     6.44
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 0,
+     "n": 6,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      45.93
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 3,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3": 5,
+    "L3:TIPrej": 2
+   },
+   "lock_rejections_BASE": 65,
+   "l3_eligible": 318,
+   "cache_misses_not_called": 0,
+   "n_items": 490,
+   "expected_1l": {
+    "coverage": "182/189",
+    "fa": "12/301"
+   },
+   "observed": {
+    "coverage": "182/189",
+    "fa": "11/301",
+    "fa_T": "0/54"
+   },
+   "matches_1l": false
+  },
+  "replay1j": {
+   "coverage": {
+    "k": 182,
+    "n": 196,
+    "pct": 92.86,
+    "ci": [
+     88.31,
+     96.04
+    ]
+   },
+   "fa": {
+    "k": 17,
+    "n": 294,
+    "pct": 5.78,
+    "ci": [
+     3.4,
+     9.1
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 3,
+     "n": 59,
+     "pct": 5.08,
+     "ci": [
+      1.06,
+      14.15
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 68,
+     "pct": 5.88,
+     "ci": [
+      1.63,
+      14.38
+     ]
+    },
+    "M": {
+     "k": 9,
+     "n": 64,
+     "pct": 14.06,
+     "ci": [
+      6.64,
+      25.02
+     ]
+    },
+    "S": {
+     "k": 1,
+     "n": 102,
+     "pct": 0.98,
+     "ci": [
+      0.02,
+      5.34
+     ]
+    },
+    "V": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 0,
+     "pct": null,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 17
+   },
+   "fr_by_layer": {
+    "F5": 1,
+    "L2": 2,
+    "L3": 6,
+    "L3:TIPrej": 5
+   },
+   "lock_rejections_BASE": 93,
+   "l3_eligible": 336,
+   "cache_misses_not_called": 0,
+   "n_items": 490,
+   "expected_1l": {
+    "coverage": "178/196",
+    "fa": "15/294",
+    "fa_T": "2/59"
+   },
+   "observed": {
+    "coverage": "182/196",
+    "fa": "17/294",
+    "fa_T": "3/59"
+   },
+   "matches_1l": false
+  },
+  "fresh1l": {
+   "coverage": {
+    "k": 194,
+    "n": 217,
+    "pct": 89.4,
+    "ci": [
+     84.52,
+     93.16
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 383,
+    "pct": 3.13,
+    "ci": [
+     1.63,
+     5.41
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 3,
+     "n": 130,
+     "pct": 2.31,
+     "ci": [
+      0.48,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 70,
+     "pct": 1.43,
+     "ci": [
+      0.04,
+      7.7
+     ]
+    },
+    "M": {
+     "k": 2,
+     "n": 68,
+     "pct": 2.94,
+     "ci": [
+      0.36,
+      10.22
+     ]
+    },
+    "S": {
+     "k": 1,
+     "n": 70,
+     "pct": 1.43,
+     "ci": [
+      0.04,
+      7.7
+     ]
+    },
+    "V": {
+     "k": 5,
+     "n": 44,
+     "pct": 11.36,
+     "ci": [
+      3.79,
+      24.56
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 12
+   },
+   "fr_by_layer": {
+    "F2B": 2,
+    "F4v2": 1,
+    "L3": 11,
+    "L3:TIPrej": 9
+   },
+   "lock_rejections_BASE": 150,
+   "l3_eligible": 460,
+   "cache_misses_not_called": 0,
+   "n_items": 600
+  }
+ },
+ "reproduces_phase1l": false,
+ "reproduction_scope": "NOT the 1L configuration — the comparison is informational"
+}
