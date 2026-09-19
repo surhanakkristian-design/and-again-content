@@ -11,6 +11,7 @@
 | F2_agentdrop_embedded_wrong | 60 | 96 | yes |
 | F3_timeframe_wrong | 100 | 119 | yes |
 | F4_by_passive_correct | 60 | 80 | yes |
+| F4_bypassive_correct | 60 | 80 | yes |
 | F5_skp_correct | 40 | 81 | yes |
 
 ## judged-wrong types (T/W/M/S)

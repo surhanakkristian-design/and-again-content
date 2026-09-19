@@ -101,6 +101,11 @@ def run(data_dir=None, judge_dir=None, out_dir=None):
            'floors_by_scope': {k: dict(v) for k, v in sorted(per.items())},
            'levels': dict(collections.Counter(s['level'] for s in sents.values())),
            'halves': dict(collections.Counter(s['tags'].get('half') for s in sents.values()))}
+    # 1T run gate: runner_1t.py (frozen at b1c85b1) spells floor 4 'F4_bypassive_correct'; this tool
+    # spells it 'F4_by_passive_correct'. The alias below is the SAME number under the runner's key,
+    # added so the frozen runner need not be edited (0 calls had been made when this was found).
+    rep['floors_required'] = dict(rep['floors_required'], F4_bypassive_correct=rep['floors_required']['F4_by_passive_correct'])
+    rep['floors_got'] = dict(rep['floors_got'], F4_bypassive_correct=rep['floors_got']['F4_by_passive_correct'])
     safe_dump(rep, os.path.join(out_dir, 'FLOOR_CHECK_1T.json'))
     write_md(rep, out_dir)
     stop = os.path.join(out_dir, 'STOP_FLOOR.txt')

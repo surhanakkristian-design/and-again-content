@@ -7,3 +7,10 @@
 [PREFLIGHT] call_cap is null in FROZEN_CONFIG_1T.json — --final REFUSES until the owner fixes it.  Planned calls 570.
 [PREFLIGHT] PASS — 0 model calls; PREFLIGHT_1T.json + MODULES_1T.txt written
 [DRY-RUN] 13/13 checks passed — DRY_RUN_1T.json written, 0 model calls
+[BUILD fresh1t] 900 items / 100 sentences   chk {"correct/match": 154, "wrong/auto": 746}   passive {"None": 659, "agentless": 161, "by": 80}   levers {"l2:aspect": 675, "l2:definiteness": 804, "l2:number": 153, "l3:items_with_a_variant": 801, "l3:removed": 99, "l3:shown": 801}
+[AG v3] {"abstain_agentless_passive": 161, "errors": 0, "fired_v2": 67, "fired_v2_not_v3": 15, "fired_v3": 128, "fired_v3_by": 67, "fired_v3_clause": 125, "fired_v3_not_v2": 76, "fired_v3_subj": 94, "items": 900}
+[PREFLIGHT] L2 lock firings under BASE: 120   L3-eligible under LOCKTIP: 698   AG v3 rejects before L3: 128   reach L3: 570
+[PREFLIGHT] unique requests 570   reusable 0   PLANNED NEW CALLS 570   counted so far 0
+[PREFLIGHT] counted + planned = 0 + 570 = 570   (cap 700, stop threshold 690)
+[PREFLIGHT] PASS — 0 model calls; PREFLIGHT_1T.json + MODULES_1T.txt written
+[FREEZE] 29 python files identical to commit b1c85b16a045ad0b5b74e00f9280b1fbd20d2c26

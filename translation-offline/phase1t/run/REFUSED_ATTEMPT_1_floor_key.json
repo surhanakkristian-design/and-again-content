@@ -1,0 +1,14 @@
+{
+ "status": "CRASHED",
+ "written_utc": "2026-09-19T16:51:52Z",
+ "pid": 41980,
+ "meta": {
+  "status": null,
+  "rows": 0
+ },
+ "error": {
+  "type": "SystemExit",
+  "msg": "REFUSED: FLOOR_CHECK_1T.json does not report the five floors: ['F4_bypassive_correct']",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1s/safe_json.py\", line 210, in guarded_run\n    result = fn()\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 749, in <lambda>\n    r = guarded_run(lambda: run_final(a), DONE + '.attempt',\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 479, in run_final\n    out = guarded_run(lambda: final_core(HERE, a.data_dir or None), DONE + '.attempt',\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1s/safe_json.py\", line 210, in guarded_run\n    result = fn()\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 479, in <lambda>\n    out = guarded_run(lambda: final_core(HERE, a.data_dir or None), DONE + '.attempt',\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 381, in final_core\n    floors = check_floors()\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 364, in check_floors\n    raise SystemExit('REFUSED: FLOOR_CHECK_1T.json does not report the five floors: %s' % miss)\nSystemExit: REFUSED: FLOOR_CHECK_1T.json does not report the five floors: ['F4_bypassive_correct']\n"
+ }
+}
