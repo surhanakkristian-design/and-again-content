@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Phase 1N — structural validation of data/sentences.json (label: sentence-check).
+"""Phase 1N — validation of data/sentences.json (label: sentence-recheck-1).
 
-Checks, all mechanical (the linguistic read is done by hand in data/SENTENCES_CHECK.md):
+Mechanical checks:
   1. exactly 100 rows
   2. sids are 160001..160100, unique
   3. every field present (sid, slovak, level, topic, tf_gold, tags{...})
@@ -11,7 +11,15 @@ Checks, all mechanical (the linguistic read is done by hand in data/SENTENCES_CH
   7. no sentence string identical to one in existing_350.json
   8. max token-Jaccard new-vs-existing < 0.80 and new-vs-new < 0.60
 
+Linguistic half: the 100 sentences were read by hand (natural Slovak, arm-B convention,
+tf_gold correctness, passivizable vs. an English by-passive). The findings of that read are
+frozen in MANUAL_PROBLEMS below and written up in data/SENTENCES_CHECK.md. They are counted
+here so the JSON verdict carries "ok" and "n_problems".
+
+  ok = mechanical checks pass AND no manual blocker is open.
+
 Usage: python3 check_sentences.py            (prints a JSON report to stdout)
+Exit code 0 iff ok.
 """
 import json
 import re
@@ -28,6 +36,23 @@ REQ_TAGS = ["nom_agent", "agent", "passivizable", "reported_speech",
             "perfective_future", "impersonal_or_passive"]
 LEVELS = {"A1": 13, "A2": 21, "B1": 36, "B2": 30}
 FRAMES = {"past", "present", "future"}
+
+# --- findings of the manual read (see data/SENTENCES_CHECK.md) -----------------
+# (sid, severity, kind, one-line required fix)
+MANUAL_PROBLEMS = [
+    (160020, "blocker", "arm-B",
+     'subordinate 1pl subject dropped -> "Keď sme my dorazili, Janka už rozložila celý stánok."'),
+    (160013, "minor", "passivizable",
+     "present perfect continuous has no by-passive -> set tags.passivizable = false"),
+    (160026, "minor", "passivizable",
+     "past perfect continuous has no by-passive -> set tags.passivizable = false"),
+    (160087, "minor", "slovak",
+     'subject-coreferent possessive -> "...ako ktorýkoľvek zo svojich spolužiakov."'),
+    (160022, "minor", "slovak",
+     'clitic+pronoun doubling "sme my" -> "Kiežby ona bola tú zmluvu prečítala pozornejšie." (agent "ona")'),
+    (160038, "minor", "passivizable",
+     "by-passive of a wh-question is marginal -> set tags.passivizable = false or accept as-is"),
+]
 
 WORD = re.compile(r"[^\W\d_]+", re.UNICODE)
 
@@ -99,8 +124,10 @@ def main():
 
     # 7 identity vs existing
     exset = set(s.strip() for s in ex_sent)
+    n_ident = 0
     for r in rows:
         if r["slovak"].strip() in exset:
+            n_ident += 1
             fail.append(f"sid {r['sid']}: identical to an existing_350 sentence")
 
     # 8 jaccard
@@ -122,6 +149,9 @@ def main():
     if max_nn >= 0.60:
         fail.append(f"new-vs-new jaccard {max_nn:.3f} >= 0.60 at {arg_nn}")
 
+    blockers = [p for p in MANUAL_PROBLEMS if p[1] == "blocker"]
+    ok = (not fail) and (not blockers)
+
     rep = {
         "rows": len(rows),
         "sids_ok": sorted(sids) == list(range(160001, 160101)),
@@ -132,16 +162,23 @@ def main():
         "perfective_future": sum(1 for r in rows if r["tags"].get("perfective_future")),
         "impersonal_or_passive": sum(1 for r in rows if r["tags"].get("impersonal_or_passive")),
         "nom_agent": sum(1 for r in rows if r["tags"].get("nom_agent")),
-        "identical_to_existing": 0,
+        "identical_to_existing": n_ident,
         "max_jaccard_new_vs_existing": round(max_ne, 4),
         "argmax_new_vs_existing": arg_ne,
         "max_jaccard_new_vs_new": round(max_nn, 4),
         "argmax_new_vs_new": arg_nn,
         "mechanical_failures": fail,
         "mechanical_ok": not fail,
+        "manual_problems": [
+            {"sid": s, "severity": sev, "kind": kind, "fix": fix}
+            for s, sev, kind, fix in MANUAL_PROBLEMS
+        ],
+        "n_blockers": len(blockers),
+        "n_problems": len(MANUAL_PROBLEMS),
+        "ok": ok,
     }
     print(json.dumps(rep, ensure_ascii=False, indent=1))
-    return 0 if not fail else 1
+    return 0 if ok else 1
 
 
 if __name__ == "__main__":
