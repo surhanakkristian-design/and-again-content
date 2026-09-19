@@ -1,0 +1,1030 @@
+{
+ "what": "Re-score of the closed 1Q set (1,080 items) against corrected labels - NOT a new measurement",
+ "date": "2026-09-19",
+ "model_calls": 0,
+ "inputs": {
+  "rows": "phase1q/rows_1q.json",
+  "old_aggregates": "phase1q/RESULTS_1Q.json",
+  "triage": "phase1q/taskA/triage.json",
+  "verdicts": "phase1r/taskA/judge/verdicts.json",
+  "key": "phase1r/taskA/_key.json",
+  "halves": "phase1p/data/sentences.json tags.half"
+ },
+ "step0_preflight": {
+  "pooled": {
+   "ok": true
+  },
+  "P1": {
+   "ok": true
+  },
+  "P2": {
+   "ok": true
+  },
+  "fa_by_wrongtype": {
+   "ok": true
+  },
+  "layers_reject_correct": {
+   "ok": true
+  },
+  "layers_reject_wrong": {
+   "ok": true
+  },
+  "cells": {
+   "ok": true
+  },
+  "M_buckets": {
+   "ok": true
+  },
+  "ci_selftest": {
+   "ok": true,
+   "got": [
+    0.72,
+    3.25
+   ],
+   "expected": [
+    0.72,
+    3.25
+   ]
+  },
+  "f5_readoff": {
+   "ok": true
+  }
+ },
+ "step0_preflight_detail_failures": {},
+ "step1_taskA": {
+  "n_judged": 119,
+  "n_M2": 116,
+  "n_M1_controls": 3,
+  "movers": 116,
+  "stayers": 0,
+  "class_counts": {
+   "content": 118,
+   "function": 1
+  },
+  "verdict_counts": {
+   "wrong": 118,
+   "correct": 1
+  },
+  "borderline_total": 10,
+  "borderline_movers": 7,
+  "M1_controls": [
+   {
+    "jid": "J020",
+    "iid": "W:170116:w4",
+    "verdict": "correct",
+    "class": "function",
+    "borderline": true,
+    "dropped": [
+     "Práve = this very (emphatic)",
+     "aj = also/even"
+    ],
+    "slovak": "Práve táto poisťovňa pokrýva aj škody spôsobené vetrom.",
+    "answer": "This insurance company covers damage caused by wind."
+   },
+   {
+    "jid": "J039",
+    "iid": "W:170107:w4",
+    "verdict": "wrong",
+    "class": "content",
+    "borderline": true,
+    "dropped": [
+     "Až = only when",
+     "konečne = finally"
+    ],
+    "slovak": "Až keď technici vymenili server, stránka konečne prestala padať.",
+    "answer": "When the technicians replaced the server, the website stopped crashing."
+   },
+   {
+    "jid": "J063",
+    "iid": "W:170110:w4",
+    "verdict": "wrong",
+    "class": "content",
+    "borderline": true,
+    "dropped": [
+     "Vtedy = back then"
+    ],
+    "slovak": "Vtedy sme si my ani neuvedomili, ako veľmi nám tá zmena pomohla.",
+    "answer": "We did not even realise how much that change had helped us."
+   }
+  ],
+  "M1_control_disagreements": 2,
+  "stayer_list": [],
+  "mover_examples": [
+   {
+    "jid": "J001",
+    "iid": "W:170010:w3",
+    "slovak": "On beží každý deň okolo jazera.",
+    "answer": "He runs every day.",
+    "dropped": [
+     "okolo jazera = around the lake"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J002",
+    "iid": "W:170120:w4",
+    "slovak": "Búrka minulý týždeň poškodila strechu telocvične a vyvrátila dva stromy.",
+    "answer": "Last week the storm damaged the roof of the gym.",
+    "dropped": [
+     "a vyvrátila dva stromy = and knocked down two trees"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J003",
+    "iid": "W:170051:w2",
+    "slovak": "Môj otec opravuje starý nábytok vo svojej dielni.",
+    "answer": "Old furniture is repaired.",
+    "dropped": [
+     "Môj otec = my father",
+     "vo svojej dielni = in his workshop"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J004",
+    "iid": "W:170097:w4",
+    "slovak": "Hoci firma sľubuje rýchle dodanie, zákazníci čakajú na objednávky aj tri týždne.",
+    "answer": "Customers wait up to three weeks for their orders.",
+    "dropped": [
+     "Hoci firma sľubuje rýchle dodanie = although the company promises fast delivery"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J005",
+    "iid": "W:170113:w4",
+    "slovak": "Ak vláda schváli tú novelu, úrady zrušia poplatky za výpisy.",
+    "answer": "The authorities will abolish the fees for extracts.",
+    "dropped": [
+     "Ak vláda schváli tú novelu = if the government approves that amendment"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J006",
+    "iid": "W:170074:w4",
+    "slovak": "Otec mi povedal, že on zamkol garáž ešte pred obedom.",
+    "answer": "My father told me that he had locked the garage.",
+    "dropped": [
+     "ešte pred obedom = before lunch"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J007",
+    "iid": "W:170091:w4",
+    "slovak": "Keby si Lucia bola prečítala pokyny, nebola by pokazila celú tabuľku.",
+    "answer": "If Lucia had read the instructions, she would not have ruined the spreadsheet.",
+    "dropped": [
+     "celú = whole"
+    ],
+    "borderline": true
+   },
+   {
+    "jid": "J008",
+    "iid": "W:170026:w3",
+    "slovak": "Sestra fotí kvety v záhrade.",
+    "answer": "My sister is photographing the flowers.",
+    "dropped": [
+     "v záhrade = in the garden"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J009",
+    "iid": "W:170118:w4",
+    "slovak": "Manažér priznal, že tím podcenil prípravu na tú prezentáciu.",
+    "answer": "The manager admitted that the team had underestimated the preparation.",
+    "dropped": [
+     "na tú prezentáciu = for that presentation"
+    ],
+    "borderline": false
+   },
+   {
+    "jid": "J010",
+    "iid": "W:170014:w3",
+    "slovak": "Oni zavreli obchod o šiestej večer.",
+    "answer": "They closed the shop.",
+    "dropped": [
+     "o šiestej večer = at six in the evening"
+    ],
+    "borderline": false
+   }
+  ]
+ },
+ "step2_old": {
+  "pooled": {
+   "coverage": {
+    "k": 436,
+    "n": 599,
+    "pct": 72.79,
+    "ci": [
+     69.03,
+     76.32
+    ]
+   },
+   "fa": {
+    "k": 8,
+    "n": 481,
+    "pct": 1.66,
+    "ci": [
+     0.72,
+     3.25
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 221,
+    "n": 300,
+    "pct": 73.67,
+    "ci": [
+     68.3,
+     78.56
+    ]
+   },
+   "fa": {
+    "k": 3,
+    "n": 240,
+    "pct": 1.25,
+    "ci": [
+     0.26,
+     3.61
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 215,
+    "n": 299,
+    "pct": 71.91,
+    "ci": [
+     66.44,
+     76.93
+    ]
+   },
+   "fa": {
+    "k": 5,
+    "n": 241,
+    "pct": 2.07,
+    "ci": [
+     0.68,
+     4.77
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 0,
+    "n": 10,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     30.85
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 84,
+    "n": 116,
+    "pct": 72.41,
+    "ci": [
+     63.34,
+     80.3
+    ]
+   },
+   "agentless_fa": {
+    "k": 2,
+    "n": 154,
+    "pct": 1.3,
+    "ci": [
+     0.16,
+     4.61
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "determiner_cov": {
+    "k": 95,
+    "n": 120,
+    "pct": 79.17,
+    "ci": [
+     70.8,
+     86.04
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 169,
+    "n": 271,
+    "pct": 62.36,
+    "ci": [
+     56.3,
+     68.15
+    ]
+   },
+   "plain_fa": {
+    "k": 4,
+    "n": 145,
+    "pct": 2.76,
+    "ci": [
+     0.76,
+     6.91
+    ]
+   },
+   "aspect_cov": {
+    "k": 46,
+    "n": 50,
+    "pct": 92.0,
+    "ci": [
+     80.77,
+     97.78
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "F5": 65,
+   "L3": 53,
+   "L3:TIPrej": 37,
+   "F3": 5,
+   "F2B": 3
+  },
+  "layers_reject_wrong": {
+   "L3": 393,
+   "L3:TIPrej": 78,
+   "F5": 2
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 8
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 351,
+   "L3:TIPrej": 2
+  },
+  "M_buckets": {
+   "M1": {
+    "n": 3,
+    "accepted": 0,
+    "rejected": 3,
+    "layers": {
+     "L3": 1,
+     "F5": 2
+    }
+   },
+   "M2": {
+    "n": 116,
+    "accepted": 11,
+    "rejected": 105,
+    "layers": {
+     "F5": 61,
+     "L3": 23,
+     "L3:TIPrej": 15,
+     "F3": 5,
+     "F2B": 1
+    }
+   },
+   "M3": {
+    "n": 9,
+    "accepted": 0,
+    "rejected": 9,
+    "layers": {
+     "L3": 7,
+     "L3:TIPrej": 2
+    }
+   },
+   "M4": {
+    "n": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "layers": {
+     "F5": 1
+    }
+   }
+  },
+  "n_correct": 599,
+  "n_wrong": 481,
+  "agreement": {
+   "cov_diff_points": 1.76,
+   "cov_fisher_p": 0.647,
+   "cov_overlap": true,
+   "fa_diff_points": -0.82,
+   "fa_fisher_p": 0.7243,
+   "fa_overlap": true
+  }
+ },
+ "step2_new_primary": {
+  "pooled": {
+   "coverage": {
+    "k": 425,
+    "n": 483,
+    "pct": 87.99,
+    "ci": [
+     84.75,
+     90.75
+    ]
+   },
+   "fa": {
+    "k": 19,
+    "n": 597,
+    "pct": 3.18,
+    "ci": [
+     1.93,
+     4.93
+    ]
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 215,
+    "n": 241,
+    "pct": 89.21,
+    "ci": [
+     84.59,
+     92.83
+    ]
+   },
+   "fa": {
+    "k": 9,
+    "n": 299,
+    "pct": 3.01,
+    "ci": [
+     1.39,
+     5.64
+    ]
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 210,
+    "n": 242,
+    "pct": 86.78,
+    "ci": [
+     81.85,
+     90.78
+    ]
+   },
+   "fa": {
+    "k": 10,
+    "n": 298,
+    "pct": 3.36,
+    "ci": [
+     1.62,
+     6.08
+    ]
+   }
+  },
+  "fa_by_wrongtype": {
+   "T": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 127,
+    "pct": 0.79,
+    "ci": [
+     0.02,
+     4.31
+    ]
+   },
+   "M": {
+    "k": 11,
+    "n": 126,
+    "pct": 8.73,
+    "ci": [
+     4.44,
+     15.08
+    ]
+   },
+   "S": {
+    "k": 4,
+    "n": 120,
+    "pct": 3.33,
+    "ci": [
+     0.92,
+     8.31
+    ]
+   }
+  },
+  "cells": {
+   "agentless_cov": {
+    "k": 75,
+    "n": 98,
+    "pct": 76.53,
+    "ci": [
+     66.89,
+     84.5
+    ]
+   },
+   "agentless_fa": {
+    "k": 11,
+    "n": 172,
+    "pct": 6.4,
+    "ci": [
+     3.24,
+     11.15
+    ]
+   },
+   "timeframe_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "timeframe_fa": {
+    "k": 3,
+    "n": 224,
+    "pct": 1.34,
+    "ci": [
+     0.28,
+     3.86
+    ]
+   },
+   "determiner_cov": {
+    "k": 95,
+    "n": 120,
+    "pct": 79.17,
+    "ci": [
+     70.8,
+     86.04
+    ]
+   },
+   "determiner_fa": {
+    "k": 0,
+    "n": 7,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     40.96
+    ]
+   },
+   "bypassive_cov": {
+    "k": 42,
+    "n": 42,
+    "pct": 100.0,
+    "ci": [
+     91.59,
+     100.0
+    ]
+   },
+   "bypassive_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "plain_cov": {
+    "k": 167,
+    "n": 173,
+    "pct": 96.53,
+    "ci": [
+     92.6,
+     98.72
+    ]
+   },
+   "plain_fa": {
+    "k": 6,
+    "n": 243,
+    "pct": 2.47,
+    "ci": [
+     0.91,
+     5.3
+    ]
+   },
+   "aspect_cov": {
+    "k": 46,
+    "n": 50,
+    "pct": 92.0,
+    "ci": [
+     80.77,
+     97.78
+    ]
+   },
+   "aspect_fa": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_cov": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": null
+   },
+   "number_fa": {
+    "k": 1,
+    "n": 14,
+    "pct": 7.14,
+    "ci": [
+     0.18,
+     33.87
+    ]
+   }
+  },
+  "layers_reject_correct": {
+   "L3:TIPrej": 22,
+   "L3": 30,
+   "F5": 4,
+   "F2B": 2
+  },
+  "layers_reject_wrong": {
+   "L3": 416,
+   "F5": 63,
+   "L3:TIPrej": 93,
+   "F3": 5,
+   "F2B": 1
+  },
+  "layers_accept_wrong_FA": {
+   "L3": 19
+  },
+  "layers_accept_correct": {
+   "L1": 83,
+   "L3": 340,
+   "L3:TIPrej": 2
+  },
+  "M_buckets": {
+   "M1": {
+    "n": 3,
+    "accepted": 0,
+    "rejected": 3,
+    "layers": {
+     "L3": 1,
+     "F5": 2
+    }
+   },
+   "M2": {
+    "n": 116,
+    "accepted": 11,
+    "rejected": 105,
+    "layers": {
+     "F5": 61,
+     "L3": 23,
+     "L3:TIPrej": 15,
+     "F3": 5,
+     "F2B": 1
+    }
+   },
+   "M3": {
+    "n": 9,
+    "accepted": 0,
+    "rejected": 9,
+    "layers": {
+     "L3": 7,
+     "L3:TIPrej": 2
+    }
+   },
+   "M4": {
+    "n": 1,
+    "accepted": 0,
+    "rejected": 1,
+    "layers": {
+     "F5": 1
+    }
+   }
+  },
+  "n_correct": 483,
+  "n_wrong": 597,
+  "agreement": {
+   "cov_diff_points": 2.43,
+   "cov_fisher_p": 0.4843,
+   "cov_overlap": true,
+   "fa_diff_points": -0.35,
+   "fa_fisher_p": 0.8208,
+   "fa_overlap": true
+  }
+ },
+ "step2_mover_treatment": {
+  "n": 116,
+  "accepted": 11,
+  "accepted_layers": {
+   "L3": 11
+  },
+  "rejected": 105,
+  "rejected_layers": {
+   "F5": 61,
+   "L3:TIPrej": 15,
+   "L3": 23,
+   "F3": 5,
+   "F2B": 1
+  },
+  "accepted_are_new_false_accepts": 11,
+  "rejected_stop_being_false_rejections": 105,
+  "by_half": {
+   "P2": 57,
+   "P1": 59
+  },
+  "accepted_items": [
+   {
+    "iid": "W:170039:w2",
+    "layer": "L3",
+    "half": "P1"
+   },
+   {
+    "iid": "W:170021:w2",
+    "layer": "L3",
+    "half": "P1"
+   },
+   {
+    "iid": "W:170054:w2",
+    "layer": "L3",
+    "half": "P2"
+   },
+   {
+    "iid": "W:170027:w2",
+    "layer": "L3",
+    "half": "P1"
+   },
+   {
+    "iid": "W:170036:w2",
+    "layer": "L3",
+    "half": "P2"
+   },
+   {
+    "iid": "W:170051:w2",
+    "layer": "L3",
+    "half": "P1"
+   },
+   {
+    "iid": "W:170091:w4",
+    "layer": "L3",
+    "half": "P1"
+   },
+   {
+    "iid": "W:170048:w2",
+    "layer": "L3",
+    "half": "P2"
+   },
+   {
+    "iid": "W:170080:w4",
+    "layer": "L3",
+    "half": "P2"
+   },
+   {
+    "iid": "W:170012:w2",
+    "layer": "L3",
+    "half": "P2"
+   },
+   {
+    "iid": "W:170003:w2",
+    "layer": "L3",
+    "half": "P1"
+   }
+  ]
+ },
+ "step2_M_cells": {
+  "M1": {
+   "n": 3,
+   "accepted": 0
+  },
+  "M2_movers": {
+   "n": 116,
+   "accepted": 11
+  },
+  "M2_stayers": {
+   "n": 0,
+   "accepted": 0
+  },
+  "M3": {
+   "n": 9,
+   "accepted": 0,
+   "rejected": 9,
+   "layers": {
+    "L3": 7,
+    "L3:TIPrej": 2
+   }
+  },
+  "M4": {
+   "n": 1,
+   "accepted": 0,
+   "rejected": 1,
+   "layers": {
+    "F5": 1
+   }
+  }
+ },
+ "step2_sensitivity": {
+  "A_judge_on_all_119": {
+   "pooled": {
+    "coverage": {
+     "k": 425,
+     "n": 481,
+     "pct": 88.36,
+     "ci": [
+      85.15,
+      91.08
+     ]
+    },
+    "fa": {
+     "k": 19,
+     "n": 599,
+     "pct": 3.17,
+     "ci": [
+      1.92,
+      4.91
+     ]
+    }
+   },
+   "n_flipped": 118
+  },
+  "B_borderline_movers_stay_correct": {
+   "pooled": {
+    "coverage": {
+     "k": 426,
+     "n": 490,
+     "pct": 86.94,
+     "ci": [
+      83.63,
+      89.79
+     ]
+    },
+    "fa": {
+     "k": 18,
+     "n": 590,
+     "pct": 3.05,
+     "ci": [
+      1.82,
+      4.78
+     ]
+    }
+   },
+   "n_flipped": 109
+  }
+ },
+ "step3_f5": {
+  "old": {
+   "cost_correct": 65,
+   "catches_wrong": 2
+  },
+  "of_the_65_rejected_correct_how_many_are_movers": 61,
+  "new": {
+   "cost_correct": 4,
+   "catches_wrong": 63
+  },
+  "coverage_if_F5_off_old": {
+   "k": 501,
+   "n": 599,
+   "pct": 83.64,
+   "ci": [
+    80.43,
+    86.51
+   ]
+  },
+  "coverage_if_F5_off_new": {
+   "k": 429,
+   "n": 483,
+   "pct": 88.82,
+   "ci": [
+    85.67,
+    91.49
+   ]
+  },
+  "coverage_F5_on_new": {
+   "k": 425,
+   "n": 483,
+   "pct": 87.99,
+   "ci": [
+    84.75,
+    90.75
+   ]
+  }
+ },
+ "step3_f6": {
+  "per_item_available": false,
+  "note": "F6 per-item verdicts are NOT stored: rows_1q.json has no F6 field, the F6 layer never appears in the `layer` column (layers seen: L1/L3/L3:TIPrej/F5/F3/F2B), and phase1p/results_1p.json rows carry only sid/item_id/half/level/judged/judged_type/tags/writer_passive/intent/layers/lever1/lever2_fired/lever3/final_accept/tip/f9_readout - no F6 readout. RESULTS_1Q f6 holds aggregates only (rej_correct_all=4, rej_wrong_all=12, m3 catches 0). Which 4 judged-correct items F6 rejected is therefore not recoverable from the read-allowed files, so the F6 recomputation under corrected labels is NOT done and NOT estimated.",
+  "old_aggregates": {
+   "rej_correct_all": 4,
+   "n_correct": 599,
+   "rej_correct_accepted_cost": 4,
+   "rej_wrong_all": 12,
+   "n_wrong": 481,
+   "rej_wrong_accepted_catches": 0,
+   "m3_n": 9,
+   "m3_stack_accepted": 0,
+   "m3_f6_rejects": 0,
+   "m3_f6_catches_among_accepted": 0,
+   "stackF6_coverage": {
+    "k": 432,
+    "n": 599,
+    "pct": 72.12,
+    "ci": [
+     68.34,
+     75.68
+    ]
+   },
+   "stackF6_fa": {
+    "k": 8,
+    "n": 481,
+    "pct": 1.66,
+    "ci": [
+     0.72,
+     3.25
+    ]
+   }
+  },
+  "module_functions": {
+   "_tok": "(s)",
+   "_irr": "(w)",
+   "canon": "(w)",
+   "_ann": "(annotation)",
+   "licensed_vocab": "(annotation)",
+   "_groups": "(idx, toks, extra_idx)",
+   "_anchored": "(g, toks, lic, strict=False)",
+   "_modifier_only": "(g, toks, lic)",
+   "check": "(slovak, annotation, answer, variant=None)",
+   "selftest": "()"
+  }
+ }
+}
