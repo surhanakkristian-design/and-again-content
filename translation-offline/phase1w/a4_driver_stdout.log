@@ -1,0 +1,24 @@
+[21:44:01] setup: 1V A4 tooling copied to /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set (md paths repointed phase1v/trackA_set -> phase1w/a4/set; .py byte-identical)
+[21:44:01] setup: 1U runner/loader/scorer copied to /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run; runner patched (TASKA path, stack, cap 800), scorer patched (S7)
+[21:44:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/_selftest_tmp/set/selftest_1v.py -> exit 0
+[21:44:01] spawned headless session writer_A1_try1 (pid 50746)
+[21:44:01] spawned headless session writer_A2_try1 (pid 50747)
+[21:44:01] spawned headless session writer_B1_try1 (pid 50748)
+[21:44:01] spawned headless session writer_B2_try1 (pid 50749)
+[21:44:27] spawned headless session writer_A1_try1 (pid 50918)
+[21:44:27] spawned headless session writer_A2_try1 (pid 50919)
+[21:44:27] spawned headless session writer_B1_try1 (pid 50920)
+[21:44:27] spawned headless session writer_B2_try1 (pid 50921)
+[21:53:14] session writer_A1_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 124670, "output_tokens": 58846}
+[21:53:42] session writer_A2_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 125421, "output_tokens": 60814}
+[21:53:54] session writer_B1_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 133924, "output_tokens": 63437}
+[21:54:38] session writer_B2_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 126614, "output_tokens": 63755}
+[21:54:39] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/assemble_1v.py -> exit 0
+[21:54:39] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/build_packets_1v.py -> exit 0
+[21:54:39] spawned headless session judge_s1 (pid 51343)
+[22:09:01] session judge_s1 done: {"exit": 0, "is_error": false, "num_turns": 10, "input_tokens": 20, "cache_read_input_tokens": 835390, "output_tokens": 107871}
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/join_labels_1v.py -> exit 0
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/floors_1v.py -> exit 0
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py --preflight --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/data -> exit 1
+[22:09:01] STOP: preflight refused/stopped (0 model calls): ["ModuleNotFoundError: No module named 'runner_1t'"]
+[22:09:01] S4_RESULT.md written

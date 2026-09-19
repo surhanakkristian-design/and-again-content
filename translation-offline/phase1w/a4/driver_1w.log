@@ -1,0 +1,693 @@
+[21:44:01] setup: 1V A4 tooling copied to /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set (md paths repointed phase1v/trackA_set -> phase1w/a4/set; .py byte-identical)
+[21:44:01] setup: 1U runner/loader/scorer copied to /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run; runner patched (TASKA path, stack, cap 800), scorer patched (S7)
+[21:44:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/_selftest_tmp/set/selftest_1v.py -> exit 0
+{
+ "borderline": 0,
+ "confidence": {
+  "4": 900
+ },
+ "duplicate_controls": 80,
+ "duplicate_controls_judged": 80,
+ "file_errors": [],
+ "items_labelled": 900,
+ "judge_noise_pct": 0.0,
+ "judged": {
+  "correct": 400,
+  "wrong": 500
+ },
+ "key_entries": 980,
+ "label_disagreements": 0,
+ "out_dirs": [
+  "/var/folders/t1/4tx0v8bs6jl7ztb1lh1l6gd00000gn/T/selftest_1v_s6rmpcw5/data"
+ ],
+ "type_only_disagreements": 0,
+ "types": {
+  "M": 500
+ },
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_files": 4,
+ "verdict_rows": 980,
+ "written": true
+}
+PASS  join accepts a complete set — rc=0
+PASS  join writes 900 labels — 900
+PASS  join sees 80 duplicate controls
+PASS  join keeps confidence + packet position
+{
+ "F1_agent_drops_wrong": {
+  "n": 160,
+  "min": 120,
+  "pass": true
+ },
+ "F1a_fronted_wrong": {
+  "n": 64,
+  "min": 40,
+  "pass": true
+ },
+ "F1b_misaligned_wrong": {
+  "n": 48,
+  "min": 30,
+  "pass": true
+ },
+ "F2_time_frame_wrong": {
+  "n": 120,
+  "min": 100,
+  "pass": true
+ },
+ "F3_by_passive_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "F4_skp_correct": {
+  "n": 60,
+  "min": 40,
+  "pass": true
+ },
+ "F5_missing_article_wrong": {
+  "n": 100,
+  "min": 40,
+  "pass": true
+ },
+ "F6_determiner_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "missing_article_judged_correct": 0,
+ "determiner_judged_wrong": 0,
+ "T_W_M_S_wrong": {
+  "T": 0,
+  "W": 0,
+  "M": 500,
+  "S": 0
+ },
+ "judged_correct": 400,
+ "judged_wrong": 500,
+ "all_pass": true,
+ "items": 900,
+ "items_labelled": 900,
+ "drop_cells": {
+  "drop-fronted": {
+   "wrong": 64,
+   "correct": 0
+  },
+  "drop-misaligned": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-main": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-other": {
+   "wrong": 0,
+   "correct": 0
+  }
+ }
+}
+PASS  floors pass on a healthy set
+PASS  floors keys exact
+PASS  F1=160 F1a=64 F1b=48 F2=120 F3=80 F4=60 F5=100 — {"F1_agent_drops_wrong": 160, "F1a_fronted_wrong": 64, "F1b_misaligned_wrong": 48, "F2_time_frame_wrong": 120, "F3_by_passive_correct": 80, "F4_skp_correct": 60, "F5_missing_article_wrong": 100, "F6_determiner_correct": 80}
+PASS  FLOOR_CHECK_1V.json written too
+{
+ "borderline": 0,
+ "confidence": {
+  "4": 900
+ },
+ "duplicate_controls": 80,
+ "duplicate_controls_judged": 80,
+ "file_errors": [],
+ "items_labelled": 900,
+ "judge_noise_pct": 5.0,
+ "judged": {
+  "correct": 400,
+  "wrong": 500
+ },
+ "key_entries": 980,
+ "label_disagreements": 4,
+ "out_dirs": [
+  "/var/folders/t1/4tx0v8bs6jl7ztb1lh1l6gd00000gn/T/selftest_1v_s6rmpcw5/data"
+ ],
+ "type_only_disagreements": 0,
+ "types": {
+  "M": 500
+ },
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_files": 4,
+ "verdict_rows": 980,
+ "written": true
+}
+PASS  join reports duplicate disagreements — 4 label, 0 type
+{
+ "file_errors": [],
+ "items_labelled": 899,
+ "key_entries": 980,
+ "unknown_ids": [],
+ "unlabelled_items": 1,
+ "verdict_rows": 979
+}
+MISSING VERDICTS (1): Q0007
+REFUSED: 1 missing, 0 malformed, 0 file errors, 1 items unlabelled
+PASS  join refuses a missing verdict
+{
+ "file_errors": [],
+ "items_labelled": 900,
+ "key_entries": 980,
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_rows": 980
+}
+MISSING VERDICTS (0): 
+MALFORMED Q0009: confidence None
+REFUSED: 0 missing, 1 malformed, 0 file errors, 0 items unlabelled
+PASS  join refuses a missing confidence
+{
+ "file_errors": [],
+ "items_labelled": 900,
+ "key_entries": 980,
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_rows": 980
+}
+MISSING VERDICTS (0): 
+MALFORMED Q0005: type None on a wrong answer
+REFUSED: 0 missing, 1 malformed, 0 file errors, 0 items unlabelled
+PASS  join refuses a wrong answer without a type
+{
+ "file_errors": [],
+ "items_labelled": 900,
+ "key_entries": 980,
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_rows": 980
+}
+MISSING VERDICTS (0): 
+MALFORMED Q0011: confidence 9
+REFUSED: 0 missing, 1 malformed, 0 file errors, 0 items unlabelled
+PASS  join refuses confidence out of 1-5
+{
+ "borderline": 0,
+ "confidence": {
+  "4": 900
+ },
+ "duplicate_controls": 80,
+ "duplicate_controls_judged": 80,
+ "file_errors": [],
+ "items_labelled": 900,
+ "judge_noise_pct": 0.0,
+ "judged": {
+  "correct": 500,
+  "wrong": 400
+ },
+ "key_entries": 980,
+ "label_disagreements": 0,
+ "out_dirs": [
+  "/var/folders/t1/4tx0v8bs6jl7ztb1lh1l6gd00000gn/T/selftest_1v_s6rmpcw5/data"
+ ],
+ "type_only_disagreements": 0,
+ "types": {
+  "M": 400
+ },
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_files": 4,
+ "verdict_rows": 980,
+ "written": true
+}
+{
+ "F1_agent_drops_wrong": {
+  "n": 160,
+  "min": 120,
+  "pass": true
+ },
+ "F1a_fronted_wrong": {
+  "n": 64,
+  "min": 40,
+  "pass": true
+ },
+ "F1b_misaligned_wrong": {
+  "n": 48,
+  "min": 30,
+  "pass": true
+ },
+ "F2_time_frame_wrong": {
+  "n": 120,
+  "min": 100,
+  "pass": true
+ },
+ "F3_by_passive_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "F4_skp_correct": {
+  "n": 60,
+  "min": 40,
+  "pass": true
+ },
+ "F5_missing_article_wrong": {
+  "n": 0,
+  "min": 40,
+  "pass": false
+ },
+ "F6_determiner_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "missing_article_judged_correct": 100,
+ "determiner_judged_wrong": 0,
+ "T_W_M_S_wrong": {
+  "T": 0,
+  "W": 0,
+  "M": 400,
+  "S": 0
+ },
+ "judged_correct": 500,
+ "judged_wrong": 400,
+ "all_pass": false,
+ "items": 900,
+ "items_labelled": 900,
+ "drop_cells": {
+  "drop-fronted": {
+   "wrong": 64,
+   "correct": 0
+  },
+  "drop-misaligned": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-main": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-other": {
+   "wrong": 0,
+   "correct": 0
+  }
+ }
+}
+FLOORS NOT MET: F5_missing_article_wrong 0 < 40
+PASS  floors refuse when F5 collapses
+PASS  missing_article_judged_correct reports the other side — 100
+
+SELFTEST OK — 0 failure(s)
+
+[21:44:01] spawned headless session writer_A1_try1 (pid 50746)
+[21:44:01] spawned headless session writer_A2_try1 (pid 50747)
+[21:44:01] spawned headless session writer_B1_try1 (pid 50748)
+[21:44:01] spawned headless session writer_B2_try1 (pid 50749)
+[relaunch] Sat Sep 19 21:44:27 CEST 2026 driver relaunched detached (start_new_session) so it survives the worker's exit; writer sessions restarted
+[21:44:27] spawned headless session writer_A1_try1 (pid 50918)
+[21:44:27] spawned headless session writer_A2_try1 (pid 50919)
+[21:44:27] spawned headless session writer_B1_try1 (pid 50920)
+[21:44:27] spawned headless session writer_B2_try1 (pid 50921)
+[21:53:14] session writer_A1_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 124670, "output_tokens": 58846}
+[21:53:42] session writer_A2_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 125421, "output_tokens": 60814}
+[21:53:54] session writer_B1_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 133924, "output_tokens": 63437}
+[21:54:38] session writer_B2_try1 done: {"exit": 0, "is_error": false, "num_turns": 4, "input_tokens": 8, "cache_read_input_tokens": 126614, "output_tokens": 63755}
+[21:54:39] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/assemble_1v.py -> exit 0
+{
+ "answer_kinds": {
+  "C": 400,
+  "W": 500
+ },
+ "answer_tags": {
+  "agreement": 2,
+  "by-passive": 80,
+  "determiner": 94,
+  "drop-fronted": 64,
+  "drop-main": 48,
+  "drop-misaligned": 48,
+  "missing-article": 97,
+  "paraphrase": 98,
+  "plain": 80,
+  "preposition": 1,
+  "skp-passive": 72,
+  "time-frame": 120,
+  "wrong-word": 120
+ },
+ "answer_tags_by_level": {
+  "A1": {
+   "agreement": 1,
+   "by-passive": 20,
+   "determiner": 24,
+   "drop-fronted": 16,
+   "drop-main": 12,
+   "drop-misaligned": 12,
+   "missing-article": 24,
+   "paraphrase": 31,
+   "plain": 20,
+   "skp-passive": 19,
+   "time-frame": 30,
+   "wrong-word": 30
+  },
+  "A2": {
+   "by-passive": 20,
+   "determiner": 24,
+   "drop-fronted": 16,
+   "drop-main": 12,
+   "drop-misaligned": 12,
+   "missing-article": 24,
+   "paraphrase": 22,
+   "plain": 20,
+   "preposition": 1,
+   "skp-passive": 18,
+   "time-frame": 30,
+   "wrong-word": 30
+  },
+  "B1": {
+   "by-passive": 20,
+   "determiner": 23,
+   "drop-fronted": 16,
+   "drop-main": 12,
+   "drop-misaligned": 12,
+   "missing-article": 25,
+   "paraphrase": 22,
+   "plain": 20,
+   "skp-passive": 18,
+   "time-frame": 30,
+   "wrong-word": 30
+  },
+  "B2": {
+   "agreement": 1,
+   "by-passive": 20,
+   "determiner": 23,
+   "drop-fronted": 16,
+   "drop-main": 12,
+   "drop-misaligned": 12,
+   "missing-article": 24,
+   "paraphrase": 23,
+   "plain": 20,
+   "skp-passive": 17,
+   "time-frame": 30,
+   "wrong-word": 30
+  }
+ },
+ "data_dirs": [
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/data",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/data"
+ ],
+ "earlier_sentences_checked_against": 0,
+ "floor_counts_by_construction": {
+  "F1_agent_drops": 160,
+  "F1a_drop_fronted": 64,
+  "F1b_drop_misaligned": 48,
+  "F2_time_frame": 120,
+  "F3_by_passive": 80,
+  "F4_skp_passive": 72,
+  "F5_missing_article": 97,
+  "F6_determiner": 94
+ },
+ "halves": {
+  "P1": 50,
+  "P2": 50
+ },
+ "hard_violations": 0,
+ "hard_violations_by_kind": {},
+ "items": 900,
+ "kind_by_half": {
+  "P1": {
+   "FR": 16,
+   "MC": 12,
+   "MN": 12,
+   "SKP": 10
+  },
+  "P2": {
+   "FR": 16,
+   "MC": 12,
+   "MN": 12,
+   "SKP": 10
+  }
+ },
+ "kinds": {
+  "FR": 32,
+  "MC": 24,
+  "MN": 24,
+  "SKP": 20
+ },
+ "level_by_half": {
+  "P1": {
+   "A1": 13,
+   "A2": 12,
+   "B1": 13,
+   "B2": 12
+  },
+  "P2": {
+   "A1": 12,
+   "A2": 13,
+   "B1": 12,
+   "B2": 13
+  }
+ },
+ "levels": {
+  "A1": 25,
+  "A2": 25,
+  "B1": 25,
+  "B2": 25
+ },
+ "loud": [],
+ "outputs_written": true,
+ "overlaps": [
+  {
+   "detail": "J=0.75 with A1/s10 (this set)",
+   "kind": "internal_jaccard",
+   "level": "A2",
+   "lid": "s10"
+  }
+ ],
+ "overlaps_total": 1,
+ "sentences_kept": 100,
+ "sentences_read": 116,
+ "tf_gold": {
+  "future": 23,
+  "past": 40,
+  "present": 37
+ },
+ "violations_by_kind": {},
+ "violations_total": 0,
+ "writer_files_read": 8,
+ "wrong_types": {
+  "M": 160,
+  "S": 100,
+  "T": 120,
+  "W": 120
+ },
+ "ze_clause_sentences": 11
+}
+
+[21:54:39] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/build_packets_1v.py -> exit 0
+{
+ "duplicate_controls": 80,
+ "duplicates_per_level": {
+  "A1": 20,
+  "A2": 20,
+  "B1": 20,
+  "B2": 20
+ },
+ "items": 900,
+ "judge_task": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/JUDGE_TASK_1V.md",
+ "key_path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/packet_key_1v.json",
+ "levels_per_part": [
+  {
+   "A1": 64,
+   "A2": 62,
+   "B1": 54,
+   "B2": 65
+  },
+  {
+   "A1": 60,
+   "A2": 67,
+   "B1": 61,
+   "B2": 57
+  },
+  {
+   "A1": 59,
+   "A2": 55,
+   "B1": 71,
+   "B2": 60
+  },
+  {
+   "A1": 62,
+   "A2": 61,
+   "B1": 59,
+   "B2": 63
+  }
+ ],
+ "packet_fields_clean": true,
+ "part_sizes": [
+  {
+   "bytes": 44069,
+   "est_tokens": 14411,
+   "items": 245,
+   "part": 1,
+   "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/packet_part1.jsonl"
+  },
+  {
+   "bytes": 43181,
+   "est_tokens": 14142,
+   "items": 245,
+   "part": 2,
+   "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/packet_part2.jsonl"
+  },
+  {
+   "bytes": 44364,
+   "est_tokens": 14507,
+   "items": 245,
+   "part": 3,
+   "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/packet_part3.jsonl"
+  },
+  {
+   "bytes": 44410,
+   "est_tokens": 14528,
+   "items": 245,
+   "part": 4,
+   "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/packet_part4.jsonl"
+  }
+ ],
+ "parts": 4,
+ "seed": 20260923,
+ "total_qids": 980
+}
+
+[21:54:39] spawned headless session judge_s1 (pid 51343)
+[22:09:01] session judge_s1 done: {"exit": 0, "is_error": false, "num_turns": 10, "input_tokens": 20, "cache_read_input_tokens": 835390, "output_tokens": 107871}
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/join_labels_1v.py -> exit 0
+{
+ "borderline": 12,
+ "confidence": {
+  "3": 10,
+  "4": 97,
+  "5": 793
+ },
+ "duplicate_controls": 80,
+ "duplicate_controls_judged": 80,
+ "file_errors": [],
+ "items_labelled": 900,
+ "judge_noise_pct": 0.0,
+ "judged": {
+  "correct": 401,
+  "wrong": 499
+ },
+ "key_entries": 980,
+ "label_disagreements": 0,
+ "out_dirs": [
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/data",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/data"
+ ],
+ "type_only_disagreements": 0,
+ "types": {
+  "M": 160,
+  "S": 100,
+  "T": 119,
+  "W": 120
+ },
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_files": 4,
+ "verdict_rows": 980,
+ "written": true
+}
+
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/floors_1v.py -> exit 0
+{
+ "F1_agent_drops_wrong": {
+  "n": 160,
+  "min": 120,
+  "pass": true
+ },
+ "F1a_fronted_wrong": {
+  "n": 64,
+  "min": 40,
+  "pass": true
+ },
+ "F1b_misaligned_wrong": {
+  "n": 48,
+  "min": 30,
+  "pass": true
+ },
+ "F2_time_frame_wrong": {
+  "n": 119,
+  "min": 100,
+  "pass": true
+ },
+ "F3_by_passive_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "F4_skp_correct": {
+  "n": 72,
+  "min": 40,
+  "pass": true
+ },
+ "F5_missing_article_wrong": {
+  "n": 97,
+  "min": 40,
+  "pass": true
+ },
+ "F6_determiner_correct": {
+  "n": 94,
+  "min": 60,
+  "pass": true
+ },
+ "missing_article_judged_correct": 0,
+ "determiner_judged_wrong": 0,
+ "T_W_M_S_wrong": {
+  "T": 119,
+  "W": 120,
+  "M": 160,
+  "S": 100
+ },
+ "judged_correct": 401,
+ "judged_wrong": 499,
+ "all_pass": true,
+ "items": 900,
+ "items_labelled": 900,
+ "drop_cells": {
+  "drop-fronted": {
+   "wrong": 64,
+   "correct": 0
+  },
+  "drop-misaligned": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-main": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-other": {
+   "wrong": 0,
+   "correct": 0
+  }
+ }
+}
+
+[22:09:01] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py --preflight --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/data -> exit 1
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py", line 42, in <module>
+    import runner_1t as R1T                                                        # noqa: E402
+ModuleNotFoundError: No module named 'runner_1t'
+
+[22:09:01] STOP: preflight refused/stopped (0 model calls): ["ModuleNotFoundError: No module named 'runner_1t'"]
+[22:09:01] S4_RESULT.md written
+[22:11:39] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py --preflight --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/data -> exit 1
+REFUSED: sid 200001 outside the agreed range 190001..190100
+
+[22:11:39] STOP: preflight refused/stopped (0 model calls): ['REFUSED: sid 200001 outside the agreed range 190001..190100']
+[22:11:39] S4_RESULT.md written
+[22:16:02] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py --preflight --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/data -> exit 0
+[BUILD fresh1u] 900 items / 100 sentences   chk {"correct/match": 155, "wrong/auto": 745}   passive {"None": 660, "agentless": 160, "by": 80}   levers {"l2:aspect": 630, "l2:definiteness": 900, "l2:number": 153, "l3:items_with_a_variant": 837, "l3:removed": 63, "l3:shown": 837}
+[AG v3] {"abstain_agentless_passive": 119, "errors": 0, "fired_guarded_union": 115, "fired_primary": 144, "fired_v2": 92, "fired_v3": 110, "fired_v3_not_v4": 0, "fired_v4_full": 142, "fired_v4_not_v3": 34, "items": 900}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash 81a21eff8840 -> 77c3cd5246d9
+[PREFLIGHT] L2 lock firings under BASE: 137   L3-eligible under LOCKTIP: 743   AG v4 rejects before L3: 143   reach L3: 600
+[PREFLIGHT] unique requests 600   reusable 0   PLANNED NEW CALLS 600   counted here 0   failed(200, unparsable) 0
+[CAP] preflight: counted in ledger_dev 0 + planned 600 = 600   (hard cap 800)
+[PREFLIGHT] PASS - 0 model calls; PREFLIGHT_1U.json + MODULES_1U.txt written
+
+[22:16:02] $ git add translation-offline/phase1w -> exit 0
+

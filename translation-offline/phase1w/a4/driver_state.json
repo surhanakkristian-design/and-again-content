@@ -1,0 +1,323 @@
+{
+ "status": null,
+ "notes": [
+  "pre-run fix (0 calls, set unopened): the copied runner/scorer computed TOFF one level short (P1U = phase1w/a4), so runner_1t was not on sys.path; TOFF fixed in runner_1u.py + score_1u.py, and article_line_1u.py repointed to read phase1u/stack + phase1u/RULING_ARTICLE.txt in place; dry import of every module OK; stage A NOT re-run (writers/judge/assemble/join/floors untouched); stage B resumed",
+  "pre-run fix (0 calls, set unopened): the copied runner/scorer computed TOFF one level short (P1U = phase1w/a4), so runner_1t was not on sys.path; TOFF fixed in runner_1u.py + score_1u.py, and article_line_1u.py repointed to read phase1u/stack + phase1u/RULING_ARTICLE.txt in place; dry import of every module OK; stage A NOT re-run (writers/judge/assemble/join/floors untouched); stage B resumed"
+ ],
+ "sessions": [
+  {
+   "session": "writer_A1_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 4,
+   "duration_ms": 524563,
+   "total_cost_usd": 2.195495,
+   "input_tokens": 8,
+   "cache_creation_input_tokens": 66197,
+   "cache_read_input_tokens": 124670,
+   "output_tokens": 58846,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0,
+   "result_head": "A1 written: part1 s01–s15, part2 s16–s29.\n\nSentences: FR 9, MC 7, MN 7, SKP 6 (29 total).\nAgent drops: drop-fronted 18, drop-misaligned 14, drop-main 14, drop-other 0.\ntime-frame 35, missing-article 26, by-passive 23, skp-passive 23, determiner 27.\nmissing-article w4 in 20 of the 23 FR/MC/MN sentences; the other three are s07 `agreement`, s09 `preposition`, s13 `word-order`.\nDeterminer variants: c2 in all 23 FR/MC/MN plus c4 in 4 SKP (s24, s25, s27, s28) — none carries a wrong tag.\nEight agent drops keep a locative/instrument by-phrase with no agent (s09, s13, s19, s21 — by the lake / by email"
+  },
+  {
+   "session": "writer_A2_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 4,
+   "duration_ms": 552937,
+   "total_cost_usd": 2.2647305,
+   "input_tokens": 8,
+   "cache_creation_input_tokens": 68163,
+   "cache_read_input_tokens": 125421,
+   "output_tokens": 60814,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0,
+   "result_head": "A2 written: part1 s01–s15, part2 s16–s29 (29 sentences, 261 answers).\n\nSentences: FR 9 · MC 7 (3 že-clauses) · MN 7 (2 pronoun agents) · SKP 6.\nAgent drops: drop-fronted 18 · drop-misaligned 14 · drop-main 14 · drop-other 0.\nOther wrong tags: time-frame 35 · missing-article 26 · wrong-word 29 · preposition 1 · agreement 1 · word-order 1.\nCorrect tags: by-passive 23 · skp-passive 21 · determiner 26 · plain 23 · paraphrase 25.\nFR/MC/MN sentences whose w4 is `missing-article`: 20 of 23 (s04 preposition, s09 agreement, s20 word-order).\nFive agent drops carry a locative/instrument by-phrase with no"
+  },
+  {
+   "session": "writer_B1_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 4,
+   "duration_ms": 565352,
+   "total_cost_usd": 2.283757,
+   "input_tokens": 8,
+   "cache_creation_input_tokens": 63083,
+   "cache_read_input_tokens": 133924,
+   "output_tokens": 63437,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0,
+   "result_head": "Both files written: part1 = s01–s15, part2 = s16–s29.\n\nSentences: FR 9 (s01–s09), MC 7 (s10–s16), MN 7 (s17–s23), SKP 6 (s24–s29).\nAgent drops: `drop-fronted` 18, `drop-misaligned` 14, `drop-main` 14, `drop-other` 0.\n`time-frame` 35 (23 FR/MC/MN w3 + 12 SKP w1/w2) · `missing-article` 26 (20 + 6 SKP w3) · `by-passive` 23 · `skp-passive` 21.\nFR/MC/MN with a `missing-article` w4: 20 of 23; the other three are `preposition` (s09), `agreement` (s15), `word-order` (s20).\n`determiner` answers: 26 — 23 c2 in FR/MC/MN plus SKP c4 in s24, s26, s27 tagged `[\"skp-passive\",\"determiner\"]`.\nLocative/instrume"
+  },
+  {
+   "session": "writer_B2_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 4,
+   "duration_ms": 609726,
+   "total_cost_usd": 2.367102,
+   "input_tokens": 8,
+   "cache_creation_input_tokens": 70988,
+   "cache_read_input_tokens": 126614,
+   "output_tokens": 63755,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0,
+   "result_head": "B2 written: 29 sentences — FR 9 (s01–s09), MC 7 (s10–s16, three že-clauses: s10/s12/s14), MN 7 (s17–s23, three pronoun agents: my/ona/oni), SKP 6 (s24–s29).\nAgent drops: `drop-fronted` 18, `drop-misaligned` 14, `drop-main` 14, `drop-other` 0.\n`time-frame` 35 (23 FR/MC/MN w3 + 12 SKP w1/w2); `missing-article` 26 (20 FR/MC/MN w4 + 6 SKP w3).\n`by-passive` 23 (one per FR/MC/MN); `skp-passive` 20 across the six SKP items.\n20 of my 23 FR/MC/MN sentences have a `missing-article` w4; the other three carry `agreement` (s04), `preposition` (s09), `word-order` (s21).\n`determiner` answers: 26 — c2 in all "
+  },
+  {
+   "session": "judge_s1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 10,
+   "duration_ms": 860760,
+   "total_cost_usd": 5.0539499999999995,
+   "input_tokens": 20,
+   "cache_creation_input_tokens": 193938,
+   "cache_read_input_tokens": 835390,
+   "output_tokens": 107871,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0,
+   "result_head": "All four parts judged and written — 980 verdicts, one per packet item, in packet order.\n\n- `verdicts_part1.json` — Q0001–Q0245\n- `verdicts_part2.json` — Q0246–Q0490\n- `verdicts_part3.json` — Q0491–Q0735\n- `verdicts_part4.json` — Q0736–Q0980\n\nEvery item carries `id`, `label`, `type` (non-null only when wrong), `borderline`, an integer `confidence` 1–5, `dropped`, `passive` and `agent_drop`. Used 9 tool calls total (1 brief + 4 reads + 4 writes), within the 12-call budget.\n\nHow the rules were applied, in short:\n- **Agent drops (type M)** — any Slovak-named agent absent from the English rendering"
+  }
+ ],
+ "selftest_1v": {
+  "exit": 0,
+  "tail": [
+   "SELFTEST OK — 0 failure(s)"
+  ]
+ },
+ "assemble": {
+  "sentences_read": 116,
+  "sentences_kept": 100,
+  "items": 900,
+  "levels": {
+   "A1": 25,
+   "A2": 25,
+   "B1": 25,
+   "B2": 25
+  },
+  "halves": {
+   "P1": 50,
+   "P2": 50
+  },
+  "kinds": {
+   "FR": 32,
+   "MC": 24,
+   "MN": 24,
+   "SKP": 20
+  },
+  "earlier_sentences_checked_against": 0,
+  "overlaps_total": 1,
+  "violations_total": 0,
+  "hard_violations": 0,
+  "hard_violations_by_kind": {},
+  "floor_counts_by_construction": {
+   "F1_agent_drops": 160,
+   "F1a_drop_fronted": 64,
+   "F1b_drop_misaligned": 48,
+   "F2_time_frame": 120,
+   "F3_by_passive": 80,
+   "F4_skp_passive": 72,
+   "F5_missing_article": 97,
+   "F6_determiner": 94
+  },
+  "loud": [],
+  "answer_kinds": {
+   "C": 400,
+   "W": 500
+  },
+  "wrong_types": {
+   "M": 160,
+   "T": 120,
+   "S": 100,
+   "W": 120
+  },
+  "exit": 0
+ },
+ "packets": {
+  "items": 900,
+  "duplicate_controls": 80,
+  "duplicates_per_level": {
+   "A1": 20,
+   "A2": 20,
+   "B1": 20,
+   "B2": 20
+  },
+  "total_qids": 980,
+  "parts": 4,
+  "seed": 20260923,
+  "packet_fields_clean": true,
+  "levels_per_part": [
+   {
+    "A2": 62,
+    "B1": 54,
+    "B2": 65,
+    "A1": 64
+   },
+   {
+    "B1": 61,
+    "A1": 60,
+    "A2": 67,
+    "B2": 57
+   },
+   {
+    "A2": 55,
+    "B2": 60,
+    "A1": 59,
+    "B1": 71
+   },
+   {
+    "B2": 63,
+    "A1": 62,
+    "A2": 61,
+    "B1": 59
+   }
+  ]
+ },
+ "join": {
+  "key_entries": 980,
+  "verdict_rows": 980,
+  "items_labelled": 900,
+  "unlabelled_items": 0,
+  "judged": {
+   "wrong": 499,
+   "correct": 401
+  },
+  "types": {
+   "T": 119,
+   "M": 160,
+   "W": 120,
+   "S": 100
+  },
+  "confidence": {
+   "5": 793,
+   "4": 97,
+   "3": 10
+  },
+  "borderline": 12,
+  "duplicate_controls": 80,
+  "duplicate_controls_judged": 80,
+  "label_disagreements": 0,
+  "judge_noise_pct": 0.0,
+  "type_only_disagreements": 0,
+  "REFUSED": null,
+  "exit": 0
+ },
+ "floors": {
+  "F1_agent_drops_wrong": {
+   "n": 160,
+   "min": 120,
+   "pass": true
+  },
+  "F1a_fronted_wrong": {
+   "n": 64,
+   "min": 40,
+   "pass": true
+  },
+  "F1b_misaligned_wrong": {
+   "n": 48,
+   "min": 30,
+   "pass": true
+  },
+  "F2_time_frame_wrong": {
+   "n": 119,
+   "min": 100,
+   "pass": true
+  },
+  "F3_by_passive_correct": {
+   "n": 80,
+   "min": 60,
+   "pass": true
+  },
+  "F4_skp_correct": {
+   "n": 72,
+   "min": 40,
+   "pass": true
+  },
+  "F5_missing_article_wrong": {
+   "n": 97,
+   "min": 40,
+   "pass": true
+  },
+  "F6_determiner_correct": {
+   "n": 94,
+   "min": 60,
+   "pass": true
+  },
+  "missing_article_judged_correct": 0,
+  "determiner_judged_wrong": 0,
+  "T_W_M_S_wrong": {
+   "T": 119,
+   "W": 120,
+   "M": 160,
+   "S": 100
+  },
+  "judged_correct": 401,
+  "judged_wrong": 499,
+  "all_pass": true,
+  "items": 900,
+  "items_labelled": 900,
+  "drop_cells": {
+   "drop-fronted": {
+    "wrong": 64,
+    "correct": 0
+   },
+   "drop-misaligned": {
+    "wrong": 48,
+    "correct": 0
+   },
+   "drop-main": {
+    "wrong": 48,
+    "correct": 0
+   },
+   "drop-other": {
+    "wrong": 0,
+    "correct": 0
+   }
+  }
+ },
+ "floors_exit": 0,
+ "chmod": {
+  "dirs": 20,
+  "stat": [
+   "dr-xr-xr-x phase1b",
+   "dr-xr-xr-x phase1c",
+   "dr-xr-xr-x phase1e",
+   "dr-xr-xr-x phase1f",
+   "dr-xr-xr-x phase1g",
+   "dr-xr-xr-x phase1h",
+   "dr-xr-xr-x phase1i",
+   "dr-xr-xr-x phase1j",
+   "dr-xr-xr-x phase1k",
+   "dr-xr-xr-x phase1l",
+   "dr-xr-xr-x phase1m",
+   "dr-xr-xr-x phase1n",
+   "dr-xr-xr-x phase1o",
+   "dr-xr-xr-x phase1p",
+   "dr-xr-xr-x phase1q",
+   "dr-xr-xr-x phase1r",
+   "dr-xr-xr-x phase1s",
+   "dr-xr-xr-x phase1t",
+   "dr-xr-xr-x phase1u",
+   "dr-xr-xr-x phase1v"
+  ],
+  "write_test": "write test into phase1v refused: PermissionError"
+ },
+ "preflight_stop": "REFUSED: sid 200001 outside the agreed range 190001..190100\n"
+}

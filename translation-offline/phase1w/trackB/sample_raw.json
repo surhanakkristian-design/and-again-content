@@ -1,0 +1,428 @@
+{
+ "seed": "md5(exercise_id||'phase1w-B')",
+ "excluded_1v_ids": [
+  12449,
+  17163,
+  32590,
+  29082,
+  22140,
+  24605,
+  16816,
+  34777,
+  17130,
+  19260,
+  28577,
+  34948,
+  35822,
+  15588,
+  15672,
+  24680,
+  20857,
+  15870,
+  14871,
+  13318,
+  14283,
+  35542,
+  12124,
+  18259,
+  22229,
+  34203,
+  11634,
+  12407,
+  17993,
+  32685,
+  3524,
+  9130,
+  6572,
+  7172,
+  93,
+  38955,
+  4966,
+  39944,
+  37485,
+  7896,
+  38423,
+  37778,
+  10318,
+  38000,
+  37944,
+  8038,
+  2556,
+  535,
+  37937,
+  44347,
+  44249,
+  41010,
+  2180,
+  42599,
+  4271,
+  39349,
+  39022,
+  3424,
+  37457,
+  10830
+ ],
+ "sql": "with b as (select sk.exercise_id, t.level, sk.full_sentence sk, en.full_sentence en,\n row_number() over (partition by t.level order by md5(sk.exercise_id::text||'phase1w-B')) rn\n from exercise_localizations sk join exercise_localizations en on en.exercise_id=sk.exercise_id and en.language_code='en'\n join exercises e on e.id=sk.exercise_id join exercise_types t on t.id=e.exercise_type_id\n where sk.language_code='sk' and t.level in ('A1','A2','B1','B2') and coalesce(sk.full_sentence,'')<>''\n and sk.exercise_id not in (12449,17163,32590,29082,22140,24605,16816,34777,17130,19260,28577,34948,35822,15588,15672,24680,20857,15870,14871,13318,14283,35542,12124,18259,22229,34203,11634,12407,17993,32685,3524,9130,6572,7172,93,38955,4966,39944,37485,7896,38423,37778,10318,38000,37944,8038,2556,535,37937,44347,44249,41010,2180,42599,4271,39349,39022,3424,37457,10830))\n select exercise_id,level,sk,en from b where rn<=15 order by level,rn",
+ "rows": [
+  {
+   "en": "They have got nine screens, and the bright light destroys everything!",
+   "exercise_id": 28839,
+   "level": "A1",
+   "sk": "Oni majú deväť obrazoviek a to jasné svetlo ničí všetko!"
+  },
+  {
+   "en": "She has got a very excited dog on her bed.",
+   "exercise_id": 26000,
+   "level": "A1",
+   "sk": "Na posteli má veľmi natešeného psa."
+  },
+  {
+   "en": "Ten papers fall on the wet street.",
+   "exercise_id": 24202,
+   "level": "A1",
+   "sk": "Desať papierov spadne na mokrú ulicu."
+  },
+  {
+   "en": "She can free the zipper with one hard pull.",
+   "exercise_id": 26837,
+   "level": "A1",
+   "sk": "Ona vie zips uvoľniť jedným silným trhnutím."
+  },
+  {
+   "en": "One jump per continent: Can she hit the target today?",
+   "exercise_id": 30392,
+   "level": "A1",
+   "sk": "Jeden skok na kontinent: Môže ona dnes trafiť cieľ?"
+  },
+  {
+   "en": "He walks up the stairs into the stadium.",
+   "exercise_id": 23860,
+   "level": "A1",
+   "sk": "On ide po schodoch hore na štadión."
+  },
+  {
+   "en": "He kicks the ball into the goal every Sunday.",
+   "exercise_id": 16417,
+   "level": "A1",
+   "sk": "Každú nedeľu kope loptu do bránky."
+  },
+  {
+   "en": "The coach puts the bandage around the ankle.",
+   "exercise_id": 30037,
+   "level": "A1",
+   "sk": "Trénerka dáva obväz okolo členka."
+  },
+  {
+   "en": "The garden trampoline is very big and round.",
+   "exercise_id": 25360,
+   "level": "A1",
+   "sk": "Záhradná trampolína je veľmi veľká a okrúhla."
+  },
+  {
+   "en": "This ring on her hand is her wedding ring.",
+   "exercise_id": 26447,
+   "level": "A1",
+   "sk": "Tento prsteň na jej ruke je svadobný."
+  },
+  {
+   "en": "Man, he's gonna close three locks before dinner.",
+   "exercise_id": 29883,
+   "level": "A1",
+   "sk": "Kámo, on zavrie tri zámky pred večerou."
+  },
+  {
+   "en": "In the garage there is one light and six concrete pillars.",
+   "exercise_id": 22079,
+   "level": "A1",
+   "sk": "V garáži je jedno svetlo a šesť betónových stĺpov"
+  },
+  {
+   "en": "The red ketchup falls onto the plate of fries.",
+   "exercise_id": 17672,
+   "level": "A1",
+   "sk": "Červený kečup padá na tanier s hranolkami."
+  },
+  {
+   "en": "He waits ten minutes, and his stomach is empty for ten minutes.",
+   "exercise_id": 35525,
+   "level": "A1",
+   "sk": "On čaká desať minút a jeho žalúdok je prázdny desať minút."
+  },
+  {
+   "en": "This sea is turquoise, clear and very salty.",
+   "exercise_id": 22268,
+   "level": "A1",
+   "sk": "Toto more je tyrkysové, čisté a veľmi slané."
+  },
+  {
+   "en": "He does not need many towels for one dog.",
+   "exercise_id": 25292,
+   "level": "A2",
+   "sk": "Na jedného psa nepotrebuje veľa uterákov."
+  },
+  {
+   "en": "There are two bowls on the kitchen table.",
+   "exercise_id": 13068,
+   "level": "A2",
+   "sk": "Na kuchynskom stole sú dve misky."
+  },
+  {
+   "en": "The band usually plays outside, but today it is marching in a column.",
+   "exercise_id": 30240,
+   "level": "A2",
+   "sk": "Kapela zvyčajne hrá vonku, ale dnes pochoduje v kolóne."
+  },
+  {
+   "en": "They eat fish often, but yesterday they had pizza.",
+   "exercise_id": 15512,
+   "level": "A2",
+   "sk": "Ryby jedia často, ale včera mali pizzu."
+  },
+  {
+   "en": "She opens the fridge every day, but now she is finding a gift.",
+   "exercise_id": 24068,
+   "level": "A2",
+   "sk": "Chladničku otvára každý deň, ale teraz v nej nachádza darček."
+  },
+  {
+   "en": "How many cats are on the tower?",
+   "exercise_id": 12905,
+   "level": "A2",
+   "sk": "Koľko mačiek je na veži?"
+  },
+  {
+   "en": "Look! She is talking on the phone right now.",
+   "exercise_id": 20220,
+   "level": "A2",
+   "sk": "Pozri! Práve teraz hovorí do telefónu."
+  },
+  {
+   "en": "She usually washes hair quietly, but now she is laughing.",
+   "exercise_id": 22422,
+   "level": "A2",
+   "sk": "Zvyčajne umýva vlasy potichu, ale teraz sa smeje"
+  },
+  {
+   "en": "Girl, he told me he is going to fly a kite on every rooftop in the city.",
+   "exercise_id": 33609,
+   "level": "A2",
+   "sk": "Počuj, povedal mi, že on sa chystá púšťať šarkana na každej streche v meste."
+  },
+  {
+   "en": "Last night she felt sleepy on the same train.",
+   "exercise_id": 23119,
+   "level": "A2",
+   "sk": "Včera v noci bola v tom istom vlaku rovnako ospalá"
+  },
+  {
+   "en": "He ran quietly through the city. Nobody noticed, obviously.",
+   "exercise_id": 29722,
+   "level": "A2",
+   "sk": "Bežal potichu cez mesto. Nikto si to, jasné, nevšimol."
+  },
+  {
+   "en": "The basket will cost 30 euros, according to the budget.",
+   "exercise_id": 27877,
+   "level": "A2",
+   "sk": "Kôš bude stáť 30 eur, podľa rozpočtu."
+  },
+  {
+   "en": "She went out of the blue door and waved goodbye.",
+   "exercise_id": 16399,
+   "level": "A2",
+   "sk": "Vyšla z modrých dverí a zamávala na rozlúčku."
+  },
+  {
+   "en": "Wait five minutes and the floor will be dry.",
+   "exercise_id": 19046,
+   "level": "A2",
+   "sk": "Počkaj päť minút a podlaha bude suchá."
+  },
+  {
+   "en": "The light is red. You should wait on the pavement.",
+   "exercise_id": 14080,
+   "level": "A2",
+   "sk": "Svieti červená. Mal by si počkať na chodníku."
+  },
+  {
+   "en": "If you stand under a running shower, you get soaked because the water is wet.",
+   "exercise_id": 43224,
+   "level": "B1",
+   "sk": "Keď stojíš pod pustenou sprchou, premokneš, lebo voda je mokrá."
+  },
+  {
+   "en": "His car used to look completely standard until he changed the rims and the exhaust.",
+   "exercise_id": 2200,
+   "level": "B1",
+   "sk": "Jeho auto kedysi vyzeralo úplne sériovo, kým nevymenil disky a výfuk."
+  },
+  {
+   "en": "He's defrosted a fish like this before, hasn't he?",
+   "exercise_id": 5751,
+   "level": "B1",
+   "sk": "Už raz takto rozmrazoval rybu, však?"
+  },
+  {
+   "en": "Too many berries have completely destroyed the batter, haven't they?",
+   "exercise_id": 37159,
+   "level": "B1",
+   "sk": "Priveľa bobúľ úplne zničilo cesto, však?"
+  },
+  {
+   "en": "Her arms are aching because she has been squeezing that bar of soap since the church bell rang.",
+   "exercise_id": 4801,
+   "level": "B1",
+   "sk": "Bolia ju ruky, lebo tú kocku mydla stláča odkedy zazvonil kostolný zvon."
+  },
+  {
+   "en": "This blush is made in a tiny factory in Italy, which is why it costs so much.",
+   "exercise_id": 1104,
+   "level": "B1",
+   "sk": "Táto lícenka sa vyrába v malinkej továrni v Taliansku, preto stojí toľko."
+  },
+  {
+   "en": "The desk lamp was left on for the whole night by him.",
+   "exercise_id": 9015,
+   "level": "B1",
+   "sk": "Stolná lampa bola nechaná zapnutá celú noc."
+  },
+  {
+   "en": "If you drop spice into hot oil, it opens into a red star.",
+   "exercise_id": 9537,
+   "level": "B1",
+   "sk": "Keď hodíš korenie do horúceho oleja, rozkvitne do červenej hviezdy."
+  },
+  {
+   "en": "She knows every worker's name — she must have run this team for years.",
+   "exercise_id": 7408,
+   "level": "B1",
+   "sk": "Pozná meno každého pracovníka — ten tím musí viesť už roky."
+  },
+  {
+   "en": "She supported her the whole time, didn't she?",
+   "exercise_id": 9949,
+   "level": "B1",
+   "sk": "Podporila ju celý čas, však?"
+  },
+  {
+   "en": "I promise I will never drop another block. Those bubbles were a total disaster!",
+   "exercise_id": 37397,
+   "level": "B1",
+   "sk": "Sľubujem, že už nikdy nehodím ďalší blok. Tie bubliny boli totálna katastrofa!"
+  },
+  {
+   "en": "Girl, the woman who lounged in the hammock at sunset quit her job, apparently.",
+   "exercise_id": 40741,
+   "level": "B1",
+   "sk": "Zlato, žena, ktorá sa pri západe slnka vyvaľovala v hojdacej sieti, vraj dala výpoveď."
+  },
+  {
+   "en": "He has covered both hands in coal dust, hasn't he?",
+   "exercise_id": 1968,
+   "level": "B1",
+   "sk": "Obe ruky si zamazal uhoľným prachom, však nie?"
+  },
+  {
+   "en": "The first drumstick was pulled off the bird by the man in the apron.",
+   "exercise_id": 1728,
+   "level": "B1",
+   "sk": "Prvé stehno bolo odtrhnuté z kurčaťa mužom v zástere."
+  },
+  {
+   "en": "The banknotes were counted by a machine at the counter before she walked into the lobby.",
+   "exercise_id": 40671,
+   "level": "B1",
+   "sk": "Bankovky boli spočítané strojom pri priehradke predtým, než vošla do vstupnej haly."
+  },
+  {
+   "en": "Her friend wishes she had brought a book with her to that fitting room.",
+   "exercise_id": 3345,
+   "level": "B2",
+   "sk": "Kamarátka ľutuje, že si do tej kabínky nezobrala knihu."
+  },
+  {
+   "en": "They had the banner printed before the march started.",
+   "exercise_id": 8729,
+   "level": "B2",
+   "sk": "Pred začiatkom sprievodu si dali vytlačiť veľký transparent."
+  },
+  {
+   "en": "We had been riding in the dark for what felt like forever before the exit appeared!",
+   "exercise_id": 39054,
+   "level": "B2",
+   "sk": "My sme jazdili v tme celú večnosť, kým sa objavil východ!"
+  },
+  {
+   "en": "I wish I could make cocktails that look like a sunset in a glass.",
+   "exercise_id": 2019,
+   "level": "B2",
+   "sk": "Kiežby som vedela robiť koktaily, ktoré vyzerajú ako západ slnka v pohári."
+  },
+  {
+   "en": "By this time next year that chubby cat will have grown into an even bigger orange cushion.",
+   "exercise_id": 388,
+   "level": "B2",
+   "sk": "O rok o takomto čase vyrastie z toho bacuľatého kocúra ešte väčší ryšavý vankúš."
+  },
+  {
+   "en": "By the end of the month they will have turned every old plate in the house into a mosaic.",
+   "exercise_id": 1402,
+   "level": "B2",
+   "sk": "Do konca mesiaca premenia každý starý tanier v dome na mozaiku."
+  },
+  {
+   "en": "By sunset, you will have been hiking this trail for ten hours, treatment and all, honestly iconic.",
+   "exercise_id": 44287,
+   "level": "B2",
+   "sk": "Do západu slnka budeš ísť po tejto trase desať hodín, aj s ošetrením, úprimne ikonické."
+  },
+  {
+   "en": "Lost in awe, he nearly bumped into a pillar; he should have looked where he was going.",
+   "exercise_id": 36953,
+   "level": "B2",
+   "sk": "Stratený v úžase takmer narazil do stĺpa; mal sa pozerať, kam ide."
+  },
+  {
+   "en": "The hammock is said to be the most photographed spot in the whole hotel.",
+   "exercise_id": 1195,
+   "level": "B2",
+   "sk": "O tej hojdacej sieti sa hovorí, že je najfotografovanejšie miesto v celom hoteli."
+  },
+  {
+   "en": "She told her coach she would take the top step this time.",
+   "exercise_id": 8388,
+   "level": "B2",
+   "sk": "Trénerke povedala, že tentoraz obsadí najvyšší stupienok."
+  },
+  {
+   "en": "She knew the birch bark would come away in one clean curl before she even touched it.",
+   "exercise_id": 853,
+   "level": "B2",
+   "sk": "Vedela, že brezová kôra sa odlúpi v jednom čistom zvitku, ešte než sa jej vôbec dotkla."
+  },
+  {
+   "en": "Half of them come here straight from bed, still half asleep.",
+   "exercise_id": 3035,
+   "level": "B2",
+   "sk": "Polovica z nich sem chodí rovno z postele, ešte v polospánku."
+  },
+  {
+   "en": "Nobody has crossed this corridor without a disaster since the bike arrived!",
+   "exercise_id": 38128,
+   "level": "B2",
+   "sk": "Odkedy prišiel bicykel, nikto neprešiel touto chodbou bez katastrofy!"
+  },
+  {
+   "en": "She dipped the paddle, pulled hard and glided past the bamboo.",
+   "exercise_id": 7870,
+   "level": "B2",
+   "sk": "Ponorila pádlo, silno zabrala a prekĺzla popri bambuse."
+  },
+  {
+   "en": "The evening, which nobody mentions any more, ended with a warm smile.",
+   "exercise_id": 10334,
+   "level": "B2",
+   "sk": "Ten večer, ktorý už nikto nespomína, sa skončil vrelým úsmevom."
+  }
+ ]
+}
