@@ -1,0 +1,69 @@
+{
+ "phase": "1V candidate stack (NOT frozen, NOT committed - the run agent freezes)",
+ "base": "Phase 1U frozen stack, RUN commit 3bc177fe0dca216bc7389c2fa3b1be6affd946aa, module list phase1u/run/MODULES_1U.txt (verbatim below)",
+ "base_modules_1u": [
+  "translation-offline/phase1i/checker_1i.py",
+  "translation-offline/phase1i/lib_prev.py",
+  "translation-offline/phase1i/pipeline_1i.py",
+  "translation-offline/phase1i/reference_hygiene.py",
+  "translation-offline/phase1i/taskB/backfill_s_ids.py",
+  "translation-offline/phase1i/taskB/lock_fix.py",
+  "translation-offline/phase1i/taskC/guards_c.py",
+  "translation-offline/phase1j/loader_1j.py",
+  "translation-offline/phase1j/taskA/p_chain.py",
+  "translation-offline/phase1j/taskC/runner_1j.py",
+  "translation-offline/phase1k/loader_1k.py",
+  "translation-offline/phase1k/runner_1k.py",
+  "translation-offline/phase1n/f8.py",
+  "translation-offline/phase1n/f9.py",
+  "translation-offline/phase1n/loader_1l.py",
+  "translation-offline/phase1n/loader_1n.py",
+  "translation-offline/phase1n/runner_1l.py",
+  "translation-offline/phase1n/runner_1n.py",
+  "translation-offline/phase1p/lever1.py",
+  "translation-offline/phase1p/lever2.py",
+  "translation-offline/phase1p/lever3.py",
+  "translation-offline/phase1p/loader_1p.py",
+  "translation-offline/phase1p/runner_1p.py",
+  "translation-offline/phase1s/safe_json.py",
+  "translation-offline/phase1s/taskC/agent_drop_v2.py",
+  "translation-offline/phase1t/run/loader_1t.py",
+  "translation-offline/phase1t/run/runner_1t.py",
+  "translation-offline/phase1t/taskA/agent_drop_v3.py",
+  "translation-offline/phase1u/run/article_line_1u.py",
+  "translation-offline/phase1u/run/loader_1u.py",
+  "translation-offline/phase1u/run/runner_1u.py",
+  "translation-offline/phase1u/taskA/agent_drop_v4.py"
+ ],
+ "prompt": {
+  "file": "phase1u/stack/L3_PROMPT_1U.txt",
+  "sha256": "1057a0e2db075b8abc4f86e9a709ab0444febf8453b24e95e39afaa00a040ee6",
+  "change": "none (A2(a) prompt line NOT built/measured; the L3 prompt is the 1U prompt unchanged)"
+ },
+ "added": [
+  {
+   "file": "phase1v/trackA_loop/stack_1v.py",
+   "sha256": "a21de3b565f3686def3c32dfcecf9e10239b8323d7da25f0fd8c6406cf340481",
+   "components": {
+    "agent_drop_v5": "stack_1v.decide(sk, ann, wtags, answer, reference, variant, flags=None, extra=(\"rs_nom\",)) = AG v4 full, then refsubj rs_nom only",
+    "tip_det_rule": "stack_1v.tip_det_rule(sk, answer, reference, layer) - overturns L3:TIPrej when the only difference is a determiner swap and the Slovak has no demonstrative"
+   }
+  }
+ ],
+ "selected_config": {
+  "ag_v5_extra": [
+   "rs_nom"
+  ],
+  "tip_det_rule": true,
+  "rejected": {
+   "rs_pass": "1T measured cost 2 (C:180063:c2, C:180068:c3) > v4 cost 0 extra",
+   "rs_pass+rs_nom": "same cost 2"
+  }
+ },
+ "scoring_entry_point": {
+  "python": "import sys; sys.path.insert(0, TO+\"/phase1v/trackA_loop\"); import stack_1v; acc, layer = stack_1v.final_accept(row, extra=(\"rs_nom\",), tip=True)",
+  "cli": "python3 phase1v/trackA_loop/stack_1v.py --results <results.json> --extra rs_nom --tip",
+  "row_contract": "row = 1U-runner row: sk, answer, reference, ag (stored AG v4 decision), final_accept, final_layer. Applied AFTER the 1U runner: AGv5 can only turn an accept into a reject (layer AGv5), TIPdet can only turn an L3:TIPrej reject into an accept.",
+  "model_calls": 0
+ }
+}

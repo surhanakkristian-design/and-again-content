@@ -1,0 +1,6795 @@
+{
+ "summary": {
+  "n": 60,
+  "levels": {
+   "A1": 15,
+   "A2": 15,
+   "B1": 15,
+   "B2": 15
+  },
+  "gemini_calls": {
+   "planned": 0,
+   "counted": 0,
+   "failed": 0,
+   "retried": 0,
+   "spend_usd": 0.0
+  },
+  "B1": {
+   "needed_rewrite": 30,
+   "of": 60,
+   "pct": 50.0,
+   "cp95": [
+    36.81,
+    63.19
+   ],
+   "1J": "91/140 = 65.0 %",
+   "fisher_p_vs_1J": 0.0582,
+   "tokenizer": "utf8 bytes / 4",
+   "rewrite_tok_per_sentence_all60": 28.3,
+   "rewrite_tok_per_rewritten_sentence": 34.7,
+   "annotation_tok_per_sentence": 84.0,
+   "gold_tok_per_sentence": 50.0,
+   "rewrite_tok_total": 1699,
+   "annotation_tok_total": 5039,
+   "by_level_ann_tok": {
+    "A1": 81.0,
+    "A2": 78.1,
+    "B1": 85.5,
+    "B2": 91.3
+   },
+   "by_level_rewrites": {
+    "A1": 3,
+    "A2": 6,
+    "B1": 10,
+    "B2": 11
+   }
+  },
+  "B2": {
+   "before": {
+    "g1": [
+     2,
+     3.33,
+     [
+      0.41,
+      11.53
+     ]
+    ],
+    "g2": [
+     2,
+     3.33,
+     [
+      0.41,
+      11.53
+     ]
+    ],
+    "g3_v2": [
+     30,
+     50.0,
+     [
+      36.81,
+      63.19
+     ]
+    ],
+    "g3_v3": [
+     30,
+     50.0,
+     [
+      36.81,
+      63.19
+     ]
+    ],
+    "g4_v2": [
+     8,
+     13.33,
+     [
+      5.94,
+      24.59
+     ]
+    ],
+    "g4_v3": [
+     10,
+     16.67,
+     [
+      8.29,
+      28.52
+     ]
+    ]
+   },
+   "after": {
+    "g1": [
+     3,
+     5.0,
+     [
+      1.04,
+      13.92
+     ]
+    ],
+    "g2": [
+     2,
+     3.33,
+     [
+      0.41,
+      11.53
+     ]
+    ],
+    "g3_v2": [
+     20,
+     33.33,
+     [
+      21.69,
+      46.69
+     ]
+    ],
+    "g3_v3": [
+     20,
+     33.33,
+     [
+      21.69,
+      46.69
+     ]
+    ],
+    "g4_v2": [
+     15,
+     25.0,
+     [
+      14.72,
+      37.86
+     ]
+    ],
+    "g4_v3": [
+     19,
+     31.67,
+     [
+      20.26,
+      44.96
+     ]
+    ]
+   }
+  },
+  "B2_counts": {
+   "before": {
+    "g1": {
+     "AGREE": 41,
+     "CONSERVATIVE": 17,
+     "ERROR": 2
+    },
+    "g2": {
+     "CONSERVATIVE": 46,
+     "AGREE": 12,
+     "ERROR": 2
+    },
+    "g3_v2": {
+     "ERROR": 30,
+     "AGREE": 23,
+     "CONSERVATIVE": 7
+    },
+    "g3_v3": {
+     "ERROR": 30,
+     "AGREE": 23,
+     "CONSERVATIVE": 7
+    },
+    "g4_v2": {
+     "AGREE": 52,
+     "ERROR": 8
+    },
+    "g4_v3": {
+     "AGREE": 50,
+     "ERROR": 10
+    }
+   },
+   "after": {
+    "g1": {
+     "AGREE": 41,
+     "CONSERVATIVE": 16,
+     "ERROR": 3
+    },
+    "g2": {
+     "CONSERVATIVE": 22,
+     "AGREE": 36,
+     "ERROR": 2
+    },
+    "g3_v2": {
+     "ERROR": 20,
+     "AGREE": 26,
+     "CONSERVATIVE": 14
+    },
+    "g3_v3": {
+     "ERROR": 20,
+     "AGREE": 26,
+     "CONSERVATIVE": 14
+    },
+    "g4_v2": {
+     "AGREE": 45,
+     "ERROR": 15
+    },
+    "g4_v3": {
+     "AGREE": 41,
+     "ERROR": 19
+    }
+   }
+  },
+  "B2_AG_vs_1T": {
+   "this_raw": "30/60 = 50.00 % [36.81, 63.19]",
+   "1T_sk_raw": "47/120 = 39.17 % [30.4, 48.5]",
+   "fisher_p": 0.2015
+  },
+  "e2e": {
+   "before": {
+    "ann_empty": 0,
+    "ann_used": 0
+   },
+   "after": {
+    "ann_empty": 0,
+    "ann_used": 0
+   }
+  },
+  "B3": {
+   "n": 5895,
+   "model": "linear",
+   "rewrite_tok": 166927,
+   "annotation_tok": 495082,
+   "gold_tok_if_gold_needed": 294750,
+   "total_authored_tok": 662008,
+   "rewrites_expected": 2948,
+   "rewrites_cp95": [
+    2170,
+    3725
+   ],
+   "gemini_checking_calls": 0
+  }
+ },
+ "results": {
+  "before": {
+   "per_guard": {
+    "g1": {
+     "ERROR": 2,
+     "rate_pct": 3.33,
+     "cp95": [
+      0.41,
+      11.53
+     ],
+     "counts": {
+      "AGREE": 41,
+      "CONSERVATIVE": 17,
+      "ERROR": 2
+     }
+    },
+    "g2": {
+     "ERROR": 2,
+     "rate_pct": 3.33,
+     "cp95": [
+      0.41,
+      11.53
+     ],
+     "counts": {
+      "CONSERVATIVE": 46,
+      "AGREE": 12,
+      "ERROR": 2
+     }
+    },
+    "g3_v2": {
+     "ERROR": 30,
+     "rate_pct": 50.0,
+     "cp95": [
+      36.81,
+      63.19
+     ],
+     "counts": {
+      "ERROR": 30,
+      "AGREE": 23,
+      "CONSERVATIVE": 7
+     }
+    },
+    "g3_v3": {
+     "ERROR": 30,
+     "rate_pct": 50.0,
+     "cp95": [
+      36.81,
+      63.19
+     ],
+     "counts": {
+      "ERROR": 30,
+      "AGREE": 23,
+      "CONSERVATIVE": 7
+     }
+    },
+    "g4_v2": {
+     "ERROR": 8,
+     "rate_pct": 13.33,
+     "cp95": [
+      5.94,
+      24.59
+     ],
+     "counts": {
+      "AGREE": 52,
+      "ERROR": 8
+     }
+    },
+    "g4_v3": {
+     "ERROR": 10,
+     "rate_pct": 16.67,
+     "cp95": [
+      8.29,
+      28.52
+     ],
+     "counts": {
+      "AGREE": 50,
+      "ERROR": 10
+     }
+    }
+   },
+   "errors": {
+    "g1": [
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. Všetkým povedal, že to je deň jeho promócie.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      47,
+      "Dnes do deviatej zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      ""
+     ]
+    ],
+    "g2": [
+     [
+      54,
+      "Poprel, že vypílil medveďovi nohy príliš tenké.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ]
+    ],
+    "g3_v2": [
+     [
+      1,
+      "Pod malým prístreškom čakajú traja pasažieri",
+      "ERROR",
+      "traja pasažieri",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pod"
+     ],
+     [
+      7,
+      "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+      "ERROR",
+      "dve fľaštičky dezinfekcie na ruky",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      9,
+      "Majú pohár medu a drevenú naberačku.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3pl",
+      "Majú"
+     ],
+     [
+      10,
+      "Je to tá stará reštaurácia, nie nová.",
+      "ERROR",
+      "to",
+      "active_agent",
+      "present",
+      "3sg",
+      "Je"
+     ],
+     [
+      11,
+      "Ide držať dve veľké kosti, kámo.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Ide"
+     ],
+     [
+      12,
+      "Kam padá skúter? Do vysokého tŕstia.",
+      "ERROR",
+      "skúter",
+      "active_agent",
+      "present",
+      "3sg",
+      "Kam"
+     ],
+     [
+      15,
+      "V lete sú v kuchyni vždy muchy.",
+      "ERROR",
+      "muchy",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      18,
+      "Do Ríma chodí často, ale včera večer prišla sama.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Do"
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pri"
+     ],
+     [
+      20,
+      "Na stole sú dve misky jahôd.",
+      "ERROR",
+      "dve misky jahôd",
+      "active_agent",
+      "present",
+      "3pl",
+      "Na"
+     ],
+     [
+      22,
+      "Hádaj čo, počula som, že za tamtým kamenným mostom je vodopád.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "1sg",
+      "Hádaj"
+     ],
+     [
+      23,
+      "Na malom stole je modrá miska.",
+      "ERROR",
+      "modrá miska",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      24,
+      "Pozri! Blesk práve šľahá nad morom.",
+      "ERROR",
+      "Blesk",
+      "active_agent",
+      "present",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      25,
+      "Pozri na tie nožnice! Hneď cvakne",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      28,
+      "Na placku dáva veľa syra",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      32,
+      "Toto už robila — tú otočku musela nacvičovať aspoň stokrát.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Toto"
+     ],
+     [
+      33,
+      "Pritlačila pečať na dekrét a v miestnosti stíchlo.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Pritlačila"
+     ],
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. Všetkým povedal, že to je deň jeho promócie.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "„Dnes"
+     ],
+     [
+      36,
+      "Z toho zápasu je veľmi nadšená, však?",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Z"
+     ],
+     [
+      42,
+      "Ak zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+      "ERROR",
+      "viac úlomkov",
+      "active_agent",
+      "future",
+      "3sg",
+      "Ak"
+     ],
+     [
+      43,
+      "Povedala, že kamarátku za to neodsudzuje",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Povedala"
+     ],
+     [
+      45,
+      "Súťažia pred veľkým davom, však?",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3pl",
+      "Súťažia"
+     ],
+     [
+      46,
+      "Do záverečného hvizdu budú behať v tej horúčave deväťdesiat minút.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3pl",
+      "Do"
+     ],
+     [
+      47,
+      "Dnes do deviatej zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Dnes"
+     ],
+     [
+      48,
+      "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+      "ERROR",
+      "šíp",
+      "active_agent",
+      "future",
+      "3sg",
+      "V"
+     ],
+     [
+      49,
+      "Do západu slnka skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "2sg",
+      "Do"
+     ],
+     [
+      50,
+      "Do večera bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavne s",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Do"
+     ],
+     [
+      54,
+      "Poprel, že vypílil medveďovi nohy príliš tenké.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Poprel"
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      "O"
+     ],
+     [
+      57,
+      "Priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Priznal"
+     ]
+    ],
+    "g3_v3": [
+     [
+      1,
+      "Pod malým prístreškom čakajú traja pasažieri",
+      "ERROR",
+      "traja pasažieri",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pod"
+     ],
+     [
+      7,
+      "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+      "ERROR",
+      "dve fľaštičky dezinfekcie na ruky",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      9,
+      "Majú pohár medu a drevenú naberačku.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3pl",
+      "Majú"
+     ],
+     [
+      10,
+      "Je to tá stará reštaurácia, nie nová.",
+      "ERROR",
+      "to",
+      "active_agent",
+      "present",
+      "3sg",
+      "Je"
+     ],
+     [
+      11,
+      "Ide držať dve veľké kosti, kámo.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Ide"
+     ],
+     [
+      12,
+      "Kam padá skúter? Do vysokého tŕstia.",
+      "ERROR",
+      "skúter",
+      "active_agent",
+      "present",
+      "3sg",
+      "Kam"
+     ],
+     [
+      15,
+      "V lete sú v kuchyni vždy muchy.",
+      "ERROR",
+      "muchy",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      18,
+      "Do Ríma chodí často, ale včera večer prišla sama.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Do"
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pri"
+     ],
+     [
+      20,
+      "Na stole sú dve misky jahôd.",
+      "ERROR",
+      "dve misky jahôd",
+      "active_agent",
+      "present",
+      "3pl",
+      "Na"
+     ],
+     [
+      22,
+      "Hádaj čo, počula som, že za tamtým kamenným mostom je vodopád.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "1sg",
+      "Hádaj"
+     ],
+     [
+      23,
+      "Na malom stole je modrá miska.",
+      "ERROR",
+      "modrá miska",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      24,
+      "Pozri! Blesk práve šľahá nad morom.",
+      "ERROR",
+      "Blesk",
+      "active_agent",
+      "present",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      25,
+      "Pozri na tie nožnice! Hneď cvakne",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      28,
+      "Na placku dáva veľa syra",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      32,
+      "Toto už robila — tú otočku musela nacvičovať aspoň stokrát.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Toto"
+     ],
+     [
+      33,
+      "Pritlačila pečať na dekrét a v miestnosti stíchlo.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Pritlačila"
+     ],
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. Všetkým povedal, že to je deň jeho promócie.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "„Dnes"
+     ],
+     [
+      36,
+      "Z toho zápasu je veľmi nadšená, však?",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3sg",
+      "Z"
+     ],
+     [
+      42,
+      "Ak zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+      "ERROR",
+      "viac úlomkov",
+      "active_agent",
+      "future",
+      "3sg",
+      "Ak"
+     ],
+     [
+      43,
+      "Povedala, že kamarátku za to neodsudzuje",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Povedala"
+     ],
+     [
+      45,
+      "Súťažia pred veľkým davom, však?",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "present",
+      "3pl",
+      "Súťažia"
+     ],
+     [
+      46,
+      "Do záverečného hvizdu budú behať v tej horúčave deväťdesiat minút.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3pl",
+      "Do"
+     ],
+     [
+      47,
+      "Dnes do deviatej zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Dnes"
+     ],
+     [
+      48,
+      "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+      "ERROR",
+      "šíp",
+      "active_agent",
+      "future",
+      "3sg",
+      "V"
+     ],
+     [
+      49,
+      "Do západu slnka skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "2sg",
+      "Do"
+     ],
+     [
+      50,
+      "Do večera bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavne s",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "future",
+      "3sg",
+      "Do"
+     ],
+     [
+      54,
+      "Poprel, že vypílil medveďovi nohy príliš tenké.",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Poprel"
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      "O"
+     ],
+     [
+      57,
+      "Priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+      "ERROR",
+      null,
+      "active_prodrop",
+      "past",
+      "3sg",
+      "Priznal"
+     ]
+    ],
+    "g4_v2": [
+     [
+      14,
+      "Sadol si naňho vták! Je to ten úžasný moment.",
+      "ERROR_as_passive",
+      "vták",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      26,
+      "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+      "ERROR_as_passive",
+      "On",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      37,
+      "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne ",
+      "ERROR_as_passive",
+      "Koliesko",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      38,
+      "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+      "ERROR_as_passive",
+      "Ona",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      40,
+      "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+      "ERROR_as_passive",
+      "Zopnutá kopa",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      44,
+      "Ak zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+      "ERROR_as_passive",
+      "monitor",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR_as_active",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      59,
+      "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazn",
+      "ERROR_as_passive",
+      "mäsiar",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ]
+    ],
+    "g4_v3": [
+     [
+      14,
+      "Sadol si naňho vták! Je to ten úžasný moment.",
+      "ERROR_as_passive",
+      "vták",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR_as_passive",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      ""
+     ],
+     [
+      26,
+      "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+      "ERROR_as_passive",
+      "On",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      34,
+      "Tom povedal, že beží pomaly naschvál, nie preto, že by bol unavený.",
+      "ERROR_as_passive",
+      "Tom",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      37,
+      "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne ",
+      "ERROR_as_passive",
+      "Koliesko",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      38,
+      "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+      "ERROR_as_passive",
+      "Ona",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      40,
+      "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+      "ERROR_as_passive",
+      "Zopnutá kopa",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      44,
+      "Ak zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+      "ERROR_as_passive",
+      "monitor",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR_as_active",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      59,
+      "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazn",
+      "ERROR_as_passive",
+      "mäsiar",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ]
+    ]
+   },
+   "e2e_ag_v3_rejects_en_reference": {
+    "ann_empty": [],
+    "ann_used": []
+   }
+  },
+  "after": {
+   "per_guard": {
+    "g1": {
+     "ERROR": 3,
+     "rate_pct": 5.0,
+     "cp95": [
+      1.04,
+      13.92
+     ],
+     "counts": {
+      "AGREE": 41,
+      "CONSERVATIVE": 16,
+      "ERROR": 3
+     }
+    },
+    "g2": {
+     "ERROR": 2,
+     "rate_pct": 3.33,
+     "cp95": [
+      0.41,
+      11.53
+     ],
+     "counts": {
+      "CONSERVATIVE": 22,
+      "AGREE": 36,
+      "ERROR": 2
+     }
+    },
+    "g3_v2": {
+     "ERROR": 20,
+     "rate_pct": 33.33,
+     "cp95": [
+      21.69,
+      46.69
+     ],
+     "counts": {
+      "ERROR": 20,
+      "AGREE": 26,
+      "CONSERVATIVE": 14
+     }
+    },
+    "g3_v3": {
+     "ERROR": 20,
+     "rate_pct": 33.33,
+     "cp95": [
+      21.69,
+      46.69
+     ],
+     "counts": {
+      "ERROR": 20,
+      "AGREE": 26,
+      "CONSERVATIVE": 14
+     }
+    },
+    "g4_v2": {
+     "ERROR": 15,
+     "rate_pct": 25.0,
+     "cp95": [
+      14.72,
+      37.86
+     ],
+     "counts": {
+      "AGREE": 45,
+      "ERROR": 15
+     }
+    },
+    "g4_v3": {
+     "ERROR": 19,
+     "rate_pct": 31.67,
+     "cp95": [
+      20.26,
+      44.96
+     ],
+     "counts": {
+      "AGREE": 41,
+      "ERROR": 19
+     }
+    }
+   },
+   "errors": {
+    "g1": [
+     [
+      31,
+      "Krúžok, ktorý ona schytila z dlaždíc, jej teraz kvapká nad hlavou.",
+      "ERROR",
+      "Krúžok",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. On všetkým povedal, že to je deň jeho promócie",
+      "ERROR",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      47,
+      "Dnes do deviatej on zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ]
+    ],
+    "g2": [
+     [
+      21,
+      "Jedlo je stále na sporáku, ale oni tancujú ďalej.",
+      "ERROR",
+      "Jedlo",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ]
+    ],
+    "g3_v2": [
+     [
+      1,
+      "Pod malým prístreškom čakajú traja pasažieri",
+      "ERROR",
+      "traja pasažieri",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pod"
+     ],
+     [
+      7,
+      "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+      "ERROR",
+      "dve fľaštičky dezinfekcie na ruky",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      10,
+      "Je to tá stará reštaurácia, nie nová.",
+      "ERROR",
+      "to",
+      "active_agent",
+      "present",
+      "3sg",
+      "Je"
+     ],
+     [
+      12,
+      "Kam padá skúter? Do vysokého tŕstia.",
+      "ERROR",
+      "skúter",
+      "active_agent",
+      "present",
+      "3sg",
+      "Kam"
+     ],
+     [
+      15,
+      "V lete sú v kuchyni vždy muchy.",
+      "ERROR",
+      "muchy",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pri"
+     ],
+     [
+      20,
+      "Na stole sú dve misky jahôd.",
+      "ERROR",
+      "dve misky jahôd",
+      "active_agent",
+      "present",
+      "3pl",
+      "Na"
+     ],
+     [
+      22,
+      "Hádaj čo, ja som počula, že za tamtým kamenným mostom je vodopád.",
+      "ERROR",
+      "ja",
+      "active_agent",
+      "past",
+      "1sg",
+      "Hádaj"
+     ],
+     [
+      23,
+      "Na malom stole je modrá miska.",
+      "ERROR",
+      "modrá miska",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      24,
+      "Pozri! Blesk práve šľahá nad morom.",
+      "ERROR",
+      "Blesk",
+      "active_agent",
+      "present",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      25,
+      "Pozri na tie nožnice! Ona hneď cvakne",
+      "ERROR",
+      "ona",
+      "active_agent",
+      "future",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      28,
+      "Na placku on dáva veľa syra",
+      "ERROR",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. On všetkým povedal, že to je deň jeho promócie",
+      "ERROR",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      "„Dnes"
+     ],
+     [
+      42,
+      "Ak on zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+      "ERROR",
+      "viac úlomkov",
+      "active_agent",
+      "future",
+      "3sg",
+      "Ak"
+     ],
+     [
+      46,
+      "Do záverečného hvizdu oni budú behať v tej horúčave deväťdesiat minút.",
+      "ERROR",
+      "oni",
+      "active_agent",
+      "future",
+      "3pl",
+      "Do"
+     ],
+     [
+      47,
+      "Dnes do deviatej on zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      "Dnes"
+     ],
+     [
+      48,
+      "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+      "ERROR",
+      "šíp",
+      "active_agent",
+      "future",
+      "3sg",
+      "V"
+     ],
+     [
+      49,
+      "Do západu slnka ty skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+      "ERROR",
+      "ty",
+      "active_agent",
+      "future",
+      "2sg",
+      "Do"
+     ],
+     [
+      50,
+      "Do večera on bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavn",
+      "ERROR",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      "Do"
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      "O"
+     ]
+    ],
+    "g3_v3": [
+     [
+      1,
+      "Pod malým prístreškom čakajú traja pasažieri",
+      "ERROR",
+      "traja pasažieri",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pod"
+     ],
+     [
+      7,
+      "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+      "ERROR",
+      "dve fľaštičky dezinfekcie na ruky",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      10,
+      "Je to tá stará reštaurácia, nie nová.",
+      "ERROR",
+      "to",
+      "active_agent",
+      "present",
+      "3sg",
+      "Je"
+     ],
+     [
+      12,
+      "Kam padá skúter? Do vysokého tŕstia.",
+      "ERROR",
+      "skúter",
+      "active_agent",
+      "present",
+      "3sg",
+      "Kam"
+     ],
+     [
+      15,
+      "V lete sú v kuchyni vždy muchy.",
+      "ERROR",
+      "muchy",
+      "active_agent",
+      "present",
+      "3pl",
+      "V"
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      "Pri"
+     ],
+     [
+      20,
+      "Na stole sú dve misky jahôd.",
+      "ERROR",
+      "dve misky jahôd",
+      "active_agent",
+      "present",
+      "3pl",
+      "Na"
+     ],
+     [
+      22,
+      "Hádaj čo, ja som počula, že za tamtým kamenným mostom je vodopád.",
+      "ERROR",
+      "ja",
+      "active_agent",
+      "past",
+      "1sg",
+      "Hádaj"
+     ],
+     [
+      23,
+      "Na malom stole je modrá miska.",
+      "ERROR",
+      "modrá miska",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      24,
+      "Pozri! Blesk práve šľahá nad morom.",
+      "ERROR",
+      "Blesk",
+      "active_agent",
+      "present",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      25,
+      "Pozri na tie nožnice! Ona hneď cvakne",
+      "ERROR",
+      "ona",
+      "active_agent",
+      "future",
+      "3sg",
+      "Pozri"
+     ],
+     [
+      28,
+      "Na placku on dáva veľa syra",
+      "ERROR",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      "Na"
+     ],
+     [
+      35,
+      "„Dnes je moja promócia,“ povedal. On všetkým povedal, že to je deň jeho promócie",
+      "ERROR",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      "„Dnes"
+     ],
+     [
+      42,
+      "Ak on zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+      "ERROR",
+      "viac úlomkov",
+      "active_agent",
+      "future",
+      "3sg",
+      "Ak"
+     ],
+     [
+      46,
+      "Do záverečného hvizdu oni budú behať v tej horúčave deväťdesiat minút.",
+      "ERROR",
+      "oni",
+      "active_agent",
+      "future",
+      "3pl",
+      "Do"
+     ],
+     [
+      47,
+      "Dnes do deviatej on zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+      "ERROR",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      "Dnes"
+     ],
+     [
+      48,
+      "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+      "ERROR",
+      "šíp",
+      "active_agent",
+      "future",
+      "3sg",
+      "V"
+     ],
+     [
+      49,
+      "Do západu slnka ty skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+      "ERROR",
+      "ty",
+      "active_agent",
+      "future",
+      "2sg",
+      "Do"
+     ],
+     [
+      50,
+      "Do večera on bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavn",
+      "ERROR",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      "Do"
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      "O"
+     ]
+    ],
+    "g4_v2": [
+     [
+      6,
+      "On si skúsi štyri tričká, kým si jedno vyberie.",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      14,
+      "Sadol si naňho vták! Je to ten úžasný moment.",
+      "ERROR_as_passive",
+      "vták",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      17,
+      "Ona si sadne na stoličku a tá sa ani nepohne.",
+      "ERROR_as_passive",
+      "ona",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      26,
+      "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+      "ERROR_as_passive",
+      "On",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      37,
+      "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne ",
+      "ERROR_as_passive",
+      "Koliesko",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      38,
+      "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+      "ERROR_as_passive",
+      "Ona",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      39,
+      "On šprintoval za loptou, keď sa zrazu chytil za lýtko. Katastrofa!",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      40,
+      "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+      "ERROR_as_passive",
+      "Zopnutá kopa",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      44,
+      "Ak on zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+      "ERROR_as_passive",
+      "monitor",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      51,
+      "On si želá, aby bol odišiel z domu skôr! Každý jeden presun je úplná nočná mora!",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      53,
+      "Pozri sa naňho - on číta tú istú stranu už tretíkrát a dúfa, že sa slová zmenia.",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      55,
+      "On mal ponožky premočené, lebo celú minútu stál v tej mláke bez toho, aby si to ",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR_as_active",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      59,
+      "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazn",
+      "ERROR_as_passive",
+      "mäsiar",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      60,
+      "Paradajky si oni v to ráno dali natrhať v gazdovskom obchode.",
+      "ERROR_as_passive",
+      "oni",
+      "active_agent",
+      "past",
+      "3pl",
+      ""
+     ]
+    ],
+    "g4_v3": [
+     [
+      6,
+      "On si skúsi štyri tričká, kým si jedno vyberie.",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      14,
+      "Sadol si naňho vták! Je to ten úžasný moment.",
+      "ERROR_as_passive",
+      "vták",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      17,
+      "Ona si sadne na stoličku a tá sa ani nepohne.",
+      "ERROR_as_passive",
+      "ona",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      19,
+      "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+      "ERROR_as_passive",
+      "dvaja šťastní ľudia",
+      "active_agent",
+      "present",
+      "3pl",
+      ""
+     ],
+     [
+      26,
+      "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+      "ERROR_as_passive",
+      "On",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      34,
+      "Tom povedal, že beží pomaly naschvál, nie preto, že by bol unavený.",
+      "ERROR_as_passive",
+      "Tom",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      37,
+      "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne ",
+      "ERROR_as_passive",
+      "Koliesko",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      38,
+      "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+      "ERROR_as_passive",
+      "Ona",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      39,
+      "On šprintoval za loptou, keď sa zrazu chytil za lýtko. Katastrofa!",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      40,
+      "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+      "ERROR_as_passive",
+      "Zopnutá kopa",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      44,
+      "Ak on zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+      "ERROR_as_passive",
+      "monitor",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      50,
+      "Do večera on bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavn",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "future",
+      "3sg",
+      ""
+     ],
+     [
+      51,
+      "On si želá, aby bol odišiel z domu skôr! Každý jeden presun je úplná nočná mora!",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      53,
+      "Pozri sa naňho - on číta tú istú stranu už tretíkrát a dúfa, že sa slová zmenia.",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      55,
+      "On mal ponožky premočené, lebo celú minútu stál v tej mláke bez toho, aby si to ",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      56,
+      "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+      "ERROR_as_active",
+      null,
+      "impersonal",
+      "present",
+      "3sg",
+      ""
+     ],
+     [
+      57,
+      "On priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+      "ERROR_as_passive",
+      "on",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      59,
+      "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazn",
+      "ERROR_as_passive",
+      "mäsiar",
+      "active_agent",
+      "past",
+      "3sg",
+      ""
+     ],
+     [
+      60,
+      "Paradajky si oni v to ráno dali natrhať v gazdovskom obchode.",
+      "ERROR_as_passive",
+      "oni",
+      "active_agent",
+      "past",
+      "3pl",
+      ""
+     ]
+    ]
+   },
+   "e2e_ag_v3_rejects_en_reference": {
+    "ann_empty": [],
+    "ann_used": []
+   }
+  }
+ },
+ "rows": [
+  {
+   "n": 1,
+   "exercise_id": 12449,
+   "level": "A1",
+   "en": "Three passengers wait under the small shelter.",
+   "sk_raw": "Pod malým prístreškom čakajú traja pasažieri",
+   "sk_new": "Pod malým prístreškom čakajú traja pasažieri",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 1,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "traja pasažieri",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 1,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "traja pasažieri",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 12449,
+    "t": 9001,
+    "lv": "A1",
+    "v": [
+     "Three passengers are waiting under the small shelter.",
+     "Three passengers wait under the small shelter."
+    ],
+    "lk": [
+     "are waiting",
+     "wait"
+    ],
+    "alt": {
+     "shelter": [
+      "canopy",
+      "roof"
+     ],
+     "passengers": [
+      "travellers"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 2,
+   "exercise_id": 17163,
+   "level": "A1",
+   "en": "This hoodie is too big for me!",
+   "sk_raw": "Táto mikina s kapucňou je na mňa priveľká!",
+   "sk_new": "Táto mikina s kapucňou je na mňa priveľká!",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 2,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Táto mikina s kapucňou",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 2,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Táto mikina s kapucňou",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 17163,
+    "t": 9002,
+    "lv": "A1",
+    "v": [
+     "This hoodie is too big for me!"
+    ],
+    "lk": [
+     "is"
+    ],
+    "alt": {
+     "hoodie": [
+      "hooded sweatshirt"
+     ],
+     "too big": [
+      "way too big"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 3,
+   "exercise_id": 32590,
+   "level": "A1",
+   "en": "Every cow has got a big brass bell.",
+   "sk_raw": "Každá krava má veľký mosadzný zvonec.",
+   "sk_new": "Každá krava má veľký mosadzný zvonec.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 3,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Každá krava",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 3,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Každá krava",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 32590,
+    "t": 9003,
+    "lv": "A1",
+    "v": [
+     "Every cow has a big brass bell.",
+     "Every cow has got a big brass bell."
+    ],
+    "lk": [
+     "has",
+     "has got"
+    ],
+    "alt": {
+     "big": [
+      "large"
+     ],
+     "Every": [
+      "Each"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 4,
+   "exercise_id": 29082,
+   "level": "A1",
+   "en": "The man in the suit is a businessman.",
+   "sk_raw": "Muž v obleku je podnikateľ.",
+   "sk_new": "Muž v obleku je podnikateľ.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 4,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Muž v obleku",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 4,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Muž v obleku",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 29082,
+    "t": 9004,
+    "lv": "A1",
+    "v": [
+     "The man in the suit is a businessman."
+    ],
+    "lk": [
+     "is"
+    ],
+    "alt": {
+     "businessman": [
+      "entrepreneur"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 5,
+   "exercise_id": 22140,
+   "level": "A1",
+   "en": "The lockers are in the long hallway next to the classrooms.",
+   "sk_raw": "Skrinky sú na dlhej chodbe pri triedach.",
+   "sk_new": "Skrinky sú na dlhej chodbe pri triedach.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 5,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Skrinky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 5,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Skrinky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 22140,
+    "t": 9005,
+    "lv": "A1",
+    "v": [
+     "The lockers are in the long corridor by the classrooms.",
+     "The lockers are in the long hallway next to the classrooms."
+    ],
+    "lk": [
+     "are",
+     "are"
+    ],
+    "alt": {
+     "corridor": [
+      "hallway"
+     ],
+     "by": [
+      "next to",
+      "near"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 6,
+   "exercise_id": 24605,
+   "level": "A1",
+   "en": "He tries four T-shirts before he chooses one.",
+   "sk_raw": "Skúsi si štyri tričká, kým si jedno vyberie.",
+   "sk_new": "On si skúsi štyri tričká, kým si jedno vyberie.",
+   "rewrite": [
+    "R",
+    "On si skúsi štyri tričká, kým si jedno vyberie.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 6,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 6,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 24605,
+    "t": 9006,
+    "lv": "A1",
+    "v": [
+     "He will try on four T-shirts before he chooses one.",
+     "He tries on four T-shirts before he picks one."
+    ],
+    "lk": [
+     "will try",
+     "tries"
+    ],
+    "alt": {
+     "chooses": [
+      "picks"
+     ],
+     "T-shirts": [
+      "tees"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 7,
+   "exercise_id": 16816,
+   "level": "A1",
+   "en": "Two bottles of hand sanitizer are in her bag.",
+   "sk_raw": "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+   "sk_new": "V jej taške sú dve fľaštičky dezinfekcie na ruky.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 7,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dve fľaštičky dezinfekcie na ruky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 7,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dve fľaštičky dezinfekcie na ruky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 16816,
+    "t": 9007,
+    "lv": "A1",
+    "v": [
+     "There are two little bottles of hand sanitizer in her bag.",
+     "Two bottles of hand sanitizer are in her bag."
+    ],
+    "lk": [
+     "are",
+     "are"
+    ],
+    "alt": {
+     "hand sanitizer": [
+      "hand sanitiser"
+     ],
+     "bag": [
+      "handbag"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 8,
+   "exercise_id": 34777,
+   "level": "A1",
+   "en": "He pours lentils onto this bowl of rice.",
+   "sk_raw": "On sype šošovicu na túto misku ryže.",
+   "sk_new": "On sype šošovicu na túto misku ryže.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 8,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "On",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 8,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "On",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 34777,
+    "t": 9008,
+    "lv": "A1",
+    "v": [
+     "He is pouring lentils onto this bowl of rice.",
+     "He pours lentils onto this bowl of rice."
+    ],
+    "lk": [
+     "is pouring",
+     "pours"
+    ],
+    "alt": {
+     "onto": [
+      "on"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 9,
+   "exercise_id": 17130,
+   "level": "A1",
+   "en": "They have got a jar of honey and a wooden dipper.",
+   "sk_raw": "Majú pohár medu a drevenú naberačku.",
+   "sk_new": "Oni majú pohár medu a drevenú naberačku.",
+   "rewrite": [
+    "R",
+    "Oni majú pohár medu a drevenú naberačku.",
+    "oni",
+    "main"
+   ],
+   "gold_before": {
+    "n": 9,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 9,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "oni",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 17130,
+    "t": 9009,
+    "lv": "A1",
+    "v": [
+     "They have a jar of honey and a wooden dipper.",
+     "They have got a jar of honey and a wooden dipper."
+    ],
+    "lk": [
+     "have",
+     "have got"
+    ],
+    "alt": {
+     "dipper": [
+      "honey dipper",
+      "ladle"
+     ],
+     "jar": [
+      "pot"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 10,
+   "exercise_id": 19260,
+   "level": "A1",
+   "en": "It is an old restaurant, not a new one.",
+   "sk_raw": "Je to tá stará reštaurácia, nie nová.",
+   "sk_new": "Je to tá stará reštaurácia, nie nová.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 10,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "to",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 10,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "to",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 19260,
+    "t": 9010,
+    "lv": "A1",
+    "v": [
+     "It is that old restaurant, not the new one.",
+     "It's the old restaurant, not a new one."
+    ],
+    "lk": [
+     "is",
+     "is"
+    ],
+    "alt": {},
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 11,
+   "exercise_id": 28577,
+   "level": "A1",
+   "en": "She's gonna hold two big bones, bro.",
+   "sk_raw": "Ide držať dve veľké kosti, kámo.",
+   "sk_new": "Ona ide držať dve veľké kosti, kámo.",
+   "rewrite": [
+    "R",
+    "Ona ide držať dve veľké kosti, kámo.",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 11,
+    "tf": "present",
+    "tf_note": "ísť + infinitive, prospective",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 11,
+    "tf": "present",
+    "tf_note": "ísť + infinitive, prospective",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 28577,
+    "t": 9011,
+    "lv": "A1",
+    "v": [
+     "She is going to hold two big bones, mate.",
+     "She's gonna hold two big bones, bro."
+    ],
+    "lk": [
+     "is going to",
+     "is going to"
+    ],
+    "alt": {
+     "mate": [
+      "bro",
+      "dude"
+     ],
+     "big": [
+      "large"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 12,
+   "exercise_id": 34948,
+   "level": "A1",
+   "en": "Where does the scooter fall? Into the tall reeds.",
+   "sk_raw": "Kam padá skúter? Do vysokého tŕstia.",
+   "sk_new": "Kam padá skúter? Do vysokého tŕstia.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 12,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "skúter",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 12,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "skúter",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 34948,
+    "t": 9012,
+    "lv": "A1",
+    "v": [
+     "Where is the scooter falling? Into the tall reeds.",
+     "Where does the scooter fall? Into the tall reeds."
+    ],
+    "lk": [
+     "is falling",
+     "does fall"
+    ],
+    "alt": {
+     "tall": [
+      "high"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 13,
+   "exercise_id": 35822,
+   "level": "A1",
+   "en": "The teenagers play a game on the big TV.",
+   "sk_raw": "Tínedžeri hrajú hru na veľkom televízore.",
+   "sk_new": "Tínedžeri hrajú hru na veľkom televízore.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 13,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Tínedžeri",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 13,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Tínedžeri",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 35822,
+    "t": 9013,
+    "lv": "A1",
+    "v": [
+     "The teenagers are playing a game on the big TV.",
+     "The teenagers play a game on the big TV."
+    ],
+    "lk": [
+     "are playing",
+     "play"
+    ],
+    "alt": {
+     "TV": [
+      "television"
+     ],
+     "big": [
+      "large"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 14,
+   "exercise_id": 15588,
+   "level": "A1",
+   "en": "A bird lands on him! It is an amazing moment.",
+   "sk_raw": "Sadol si naňho vták! Je to ten úžasný moment.",
+   "sk_new": "Sadol si naňho vták! Je to ten úžasný moment.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 14,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "vták",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "to"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 14,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "vták",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "to"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 15588,
+    "t": 9014,
+    "lv": "A1",
+    "v": [
+     "A bird has landed on him! It is that amazing moment.",
+     "A bird landed on him! It is an amazing moment."
+    ],
+    "lk": [
+     "has landed",
+     "landed"
+    ],
+    "alt": {
+     "amazing": [
+      "incredible"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 15,
+   "exercise_id": 15672,
+   "level": "A1",
+   "en": "In summer there are always flies in the kitchen.",
+   "sk_raw": "V lete sú v kuchyni vždy muchy.",
+   "sk_new": "V lete sú v kuchyni vždy muchy.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 15,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "muchy",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 15,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "muchy",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 15672,
+    "t": 9015,
+    "lv": "A1",
+    "v": [
+     "In summer there are always flies in the kitchen."
+    ],
+    "lk": [
+     "are"
+    ],
+    "alt": {
+     "In summer": [
+      "In the summer"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 16,
+   "exercise_id": 24680,
+   "level": "A2",
+   "en": "The artist peels the film very slowly.",
+   "sk_raw": "Tatér strháva fóliu veľmi pomaly",
+   "sk_new": "Tatér strháva fóliu veľmi pomaly",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 16,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tatér",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 16,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tatér",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 24680,
+    "t": 9016,
+    "lv": "A2",
+    "v": [
+     "The tattoo artist is peeling off the film very slowly.",
+     "The tattooist peels the film very slowly."
+    ],
+    "lk": [
+     "is peeling",
+     "peels"
+    ],
+    "alt": {
+     "film": [
+      "foil",
+      "wrap"
+     ],
+     "tattoo artist": [
+      "tattooist"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 17,
+   "exercise_id": 20857,
+   "level": "A2",
+   "en": "She sits down on the chair, and it does not move.",
+   "sk_raw": "Sadne si na stoličku a tá sa ani nepohne.",
+   "sk_new": "Ona si sadne na stoličku a tá sa ani nepohne.",
+   "rewrite": [
+    "R",
+    "Ona si sadne na stoličku a tá sa ani nepohne.",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 17,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [
+     "tá"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 17,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "tá"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 20857,
+    "t": 9017,
+    "lv": "A2",
+    "v": [
+     "She will sit down on the chair and it will not even move.",
+     "She sits down on the chair and it does not even move."
+    ],
+    "lk": [
+     "will sit",
+     "sits"
+    ],
+    "alt": {
+     "chair": [
+      "seat"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 18,
+   "exercise_id": 15870,
+   "level": "A2",
+   "en": "She visits Rome often, but last night she came alone.",
+   "sk_raw": "Do Ríma chodí často, ale včera večer prišla sama.",
+   "sk_new": "Ona do Ríma chodí často, ale včera večer prišla sama.",
+   "rewrite": [
+    "R",
+    "Ona do Ríma chodí často, ale včera večer prišla sama.",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 18,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 18,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 15870,
+    "t": 9018,
+    "lv": "A2",
+    "v": [
+     "She often goes to Rome, but last night she came alone.",
+     "She visits Rome often, but last night she came on her own."
+    ],
+    "lk": [
+     "goes + came",
+     "visits + came"
+    ],
+    "alt": {
+     "alone": [
+      "on her own",
+      "by herself"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 19,
+   "exercise_id": 14871,
+   "level": "A2",
+   "en": "There are two happy people at this tiny table.",
+   "sk_raw": "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+   "sk_new": "Pri tomto malinkom stole sú dvaja šťastní ľudia.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 19,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dvaja šťastní ľudia",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 19,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dvaja šťastní ľudia",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 14871,
+    "t": 9019,
+    "lv": "A2",
+    "v": [
+     "There are two happy people at this tiny table."
+    ],
+    "lk": [
+     "are"
+    ],
+    "alt": {
+     "tiny": [
+      "very small",
+      "little"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 20,
+   "exercise_id": 13318,
+   "level": "A2",
+   "en": "There are two bowls of strawberries on the table.",
+   "sk_raw": "Na stole sú dve misky jahôd.",
+   "sk_new": "Na stole sú dve misky jahôd.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 20,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dve misky jahôd",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 20,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "dve misky jahôd",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 13318,
+    "t": 9020,
+    "lv": "A2",
+    "v": [
+     "There are two bowls of strawberries on the table."
+    ],
+    "lk": [
+     "are"
+    ],
+    "alt": {},
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 21,
+   "exercise_id": 14283,
+   "level": "A2",
+   "en": "The food is still on the stove, but they keep dancing.",
+   "sk_raw": "Jedlo je stále na sporáku, ale tancujú ďalej.",
+   "sk_new": "Jedlo je stále na sporáku, ale oni tancujú ďalej.",
+   "rewrite": [
+    "R",
+    "Jedlo je stále na sporáku, ale oni tancujú ďalej.",
+    "oni",
+    "embedded"
+   ],
+   "gold_before": {
+    "n": 21,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Jedlo",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 21,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Jedlo",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "oni"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 14283,
+    "t": 9021,
+    "lv": "A2",
+    "v": [
+     "The food is still on the stove, but they keep dancing.",
+     "The food is still on the cooker, but they are dancing on."
+    ],
+    "lk": [
+     "is + keep",
+     "is + are dancing"
+    ],
+    "alt": {
+     "stove": [
+      "cooker"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "ERROR",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 22,
+   "exercise_id": 35542,
+   "level": "A2",
+   "en": "Guess what, I heard there is a waterfall behind that stone bridge.",
+   "sk_raw": "Hádaj čo, počula som, že za tamtým kamenným mostom je vodopád.",
+   "sk_new": "Hádaj čo, ja som počula, že za tamtým kamenným mostom je vodopád.",
+   "rewrite": [
+    "R",
+    "Hádaj čo, ja som počula, že za tamtým kamenným mostom je vodopád.",
+    "ja",
+    "main"
+   ],
+   "gold_before": {
+    "n": 22,
+    "tf": "past",
+    "tf_note": "main = počula som",
+    "person": "1sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [
+     "vodopád"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 22,
+    "tf": "past",
+    "tf_note": "main = počula som",
+    "person": "1sg",
+    "subject_explicit": true,
+    "subject": "ja",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "vodopád"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 35542,
+    "t": 9022,
+    "lv": "A2",
+    "v": [
+     "Guess what, I heard that there is a waterfall behind that stone bridge.",
+     "Guess what, I've heard there's a waterfall behind that stone bridge."
+    ],
+    "lk": [
+     "heard",
+     "have heard"
+    ],
+    "alt": {
+     "that": [
+      "the"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 23,
+   "exercise_id": 12124,
+   "level": "A2",
+   "en": "There is a blue bowl on the small table.",
+   "sk_raw": "Na malom stole je modrá miska.",
+   "sk_new": "Na malom stole je modrá miska.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 23,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "modrá miska",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 23,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "modrá miska",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 12124,
+    "t": 9023,
+    "lv": "A2",
+    "v": [
+     "There is a blue bowl on the small table."
+    ],
+    "lk": [
+     "is"
+    ],
+    "alt": {
+     "small": [
+      "little"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 24,
+   "exercise_id": 18259,
+   "level": "A2",
+   "en": "Look! The lightning is flashing over the sea right now.",
+   "sk_raw": "Pozri! Blesk práve šľahá nad morom.",
+   "sk_new": "Pozri! Blesk práve šľahá nad morom.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 24,
+    "tf": "present",
+    "tf_note": "main = šľahá",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Blesk",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 24,
+    "tf": "present",
+    "tf_note": "main = šľahá",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Blesk",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 18259,
+    "t": 9024,
+    "lv": "A2",
+    "v": [
+     "Look! Lightning is flashing over the sea right now."
+    ],
+    "lk": [
+     "is flashing"
+    ],
+    "alt": {
+     "flashing": [
+      "striking"
+     ],
+     "right now": [
+      "just now"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 25,
+   "exercise_id": 22229,
+   "level": "A2",
+   "en": "Look at those scissors! She is going to cut again in a second.",
+   "sk_raw": "Pozri na tie nožnice! Hneď cvakne",
+   "sk_new": "Pozri na tie nožnice! Ona hneď cvakne",
+   "rewrite": [
+    "R",
+    "Pozri na tie nožnice! Ona hneď cvakne",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 25,
+    "tf": "future",
+    "tf_note": "perfective present; main = cvakne",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 25,
+    "tf": "future",
+    "tf_note": "perfective present; main = cvakne",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 22229,
+    "t": 9025,
+    "lv": "A2",
+    "v": [
+     "Look at those scissors! She is going to snip in a second.",
+     "Look at those scissors! She'll snip right away."
+    ],
+    "lk": [
+     "is going to",
+     "will"
+    ],
+    "alt": {
+     "snip": [
+      "cut",
+      "click"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 26,
+   "exercise_id": 34203,
+   "level": "A2",
+   "en": "He has got blue paint too. He is going to use it for the sky.",
+   "sk_raw": "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+   "sk_new": "On má aj modrú farbu. On sa ju chystá použiť na oblohu.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 26,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "On",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 26,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "On",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 34203,
+    "t": 9026,
+    "lv": "A2",
+    "v": [
+     "He also has blue paint. He is going to use it for the sky.",
+     "He has got blue paint too. He is about to use it for the sky."
+    ],
+    "lk": [
+     "has + is going to",
+     "has got + is about to"
+    ],
+    "alt": {
+     "paint": [
+      "colour"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 27,
+   "exercise_id": 11634,
+   "level": "A2",
+   "en": "The team plays on this court every Friday.",
+   "sk_raw": "Tím hrá na tomto ihrisku každý piatok.",
+   "sk_new": "Tím hrá na tomto ihrisku každý piatok.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 27,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tím",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 27,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tím",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 11634,
+    "t": 9027,
+    "lv": "A2",
+    "v": [
+     "The team plays on this court every Friday."
+    ],
+    "lk": [
+     "plays"
+    ],
+    "alt": {
+     "court": [
+      "pitch",
+      "field"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 28,
+   "exercise_id": 12407,
+   "level": "A2",
+   "en": "He puts a lot of cheese on the patty.",
+   "sk_raw": "Na placku dáva veľa syra",
+   "sk_new": "Na placku on dáva veľa syra",
+   "rewrite": [
+    "R",
+    "Na placku on dáva veľa syra",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 28,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 28,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 12407,
+    "t": 9028,
+    "lv": "A2",
+    "v": [
+     "He is putting a lot of cheese on the patty.",
+     "He puts a lot of cheese on the patty."
+    ],
+    "lk": [
+     "is putting",
+     "puts"
+    ],
+    "alt": {
+     "a lot of": [
+      "lots of",
+      "plenty of"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 29,
+   "exercise_id": 17993,
+   "level": "A2",
+   "en": "This guy is lazier than my cat.",
+   "sk_raw": "Tento chalan je lenivejší ako moja mačka.",
+   "sk_new": "Tento chalan je lenivejší ako moja mačka.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 29,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tento chalan",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 29,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tento chalan",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 17993,
+    "t": 9029,
+    "lv": "A2",
+    "v": [
+     "This guy is lazier than my cat."
+    ],
+    "lk": [
+     "is"
+    ],
+    "alt": {
+     "guy": [
+      "lad",
+      "boy"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 30,
+   "exercise_id": 32685,
+   "level": "A2",
+   "en": "The horses usually eat feed, but now they are eating hay.",
+   "sk_raw": "Kone zvyčajne jedia krmivo, ale teraz oni jedia seno.",
+   "sk_new": "Kone zvyčajne jedia krmivo, ale teraz oni jedia seno.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 30,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Kone",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "oni"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 30,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Kone",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "oni"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 32685,
+    "t": 9030,
+    "lv": "A2",
+    "v": [
+     "Horses usually eat feed, but now they are eating hay."
+    ],
+    "lk": [
+     "eat + are eating"
+    ],
+    "alt": {
+     "feed": [
+      "fodder"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 31,
+   "exercise_id": 3524,
+   "level": "B1",
+   "en": "The ring that she grabbed off the tiles is now dripping above her head.",
+   "sk_raw": "Krúžok, ktorý schytila z dlaždíc, jej teraz kvapká nad hlavou.",
+   "sk_new": "Krúžok, ktorý ona schytila z dlaždíc, jej teraz kvapká nad hlavou.",
+   "rewrite": [
+    "R",
+    "Krúžok, ktorý ona schytila z dlaždíc, jej teraz kvapká nad hlavou.",
+    "ona",
+    "embedded"
+   ],
+   "gold_before": {
+    "n": 31,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Krúžok",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 31,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Krúžok",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "ona"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 3524,
+    "t": 9031,
+    "lv": "B1",
+    "v": [
+     "The ring she grabbed off the tiles is now dripping above her head."
+    ],
+    "lk": [
+     "grabbed + is dripping"
+    ],
+    "alt": {
+     "grabbed": [
+      "snatched"
+     ],
+     "ring": [
+      "hoop"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "ERROR",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 32,
+   "exercise_id": 9130,
+   "level": "B1",
+   "en": "She has done this before — she must have practised that turn a hundred times.",
+   "sk_raw": "Toto už robila — tú otočku musela nacvičovať aspoň stokrát.",
+   "sk_new": "Ona toto už robila — tú otočku musela nacvičovať aspoň stokrát.",
+   "rewrite": [
+    "R",
+    "Ona toto už robila — tú otočku musela nacvičovať aspoň stokrát.",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 32,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 32,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 9130,
+    "t": 9032,
+    "lv": "B1",
+    "v": [
+     "She has done this before — she must have practised that turn at least a hundred times.",
+     "She did this before — she had to practise that spin at least a hundred times."
+    ],
+    "lk": [
+     "has done + must have practised",
+     "did + had to practise"
+    ],
+    "alt": {
+     "turn": [
+      "spin"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 33,
+   "exercise_id": 6572,
+   "level": "B1",
+   "en": "She pressed the seal onto the decree and the room went quiet.",
+   "sk_raw": "Pritlačila pečať na dekrét a v miestnosti stíchlo.",
+   "sk_new": "Ona pritlačila pečať na dekrét a v miestnosti stíchlo.",
+   "rewrite": [
+    "R",
+    "Ona pritlačila pečať na dekrét a v miestnosti stíchlo.",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 33,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 33,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 6572,
+    "t": 9033,
+    "lv": "B1",
+    "v": [
+     "She pressed the seal onto the decree and the room fell silent.",
+     "She pressed the seal onto the decree and the room went quiet."
+    ],
+    "lk": [
+     "pressed",
+     "pressed"
+    ],
+    "alt": {
+     "fell silent": [
+      "went quiet"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 34,
+   "exercise_id": 7172,
+   "level": "B1",
+   "en": "Tom said he was jogging slowly on purpose, not because he was tired.",
+   "sk_raw": "Tom povedal, že beží pomaly naschvál, nie preto, že by bol unavený.",
+   "sk_new": "Tom povedal, že beží pomaly naschvál, nie preto, že by bol unavený.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 34,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tom",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 34,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Tom",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 7172,
+    "t": 9034,
+    "lv": "B1",
+    "v": [
+     "Tom said he was running slowly on purpose, not because he was tired.",
+     "Tom said that he was jogging slowly deliberately, not because he was tired."
+    ],
+    "lk": [
+     "said + was running",
+     "said + was jogging"
+    ],
+    "alt": {
+     "on purpose": [
+      "deliberately"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 35,
+   "exercise_id": 93,
+   "level": "B1",
+   "en": "“Today is my graduation,” he said. He told everyone that it was his graduation day.",
+   "sk_raw": "„Dnes je moja promócia,“ povedal. Všetkým povedal, že to je deň jeho promócie.",
+   "sk_new": "„Dnes je moja promócia,“ povedal. On všetkým povedal, že to je deň jeho promócie.",
+   "rewrite": [
+    "R",
+    "„Dnes je moja promócia,“ povedal. On všetkým povedal, že to je deň jeho promócie.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 35,
+    "tf": "past",
+    "tf_note": "main = Všetkým povedal",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [
+     "moja promócia",
+     "to"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 35,
+    "tf": "past",
+    "tf_note": "main = Všetkým povedal",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "moja promócia",
+     "to"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 93,
+    "t": 9035,
+    "lv": "B1",
+    "v": [
+     "\"Today is my graduation,\" he said. He told everyone that it was his graduation day."
+    ],
+    "lk": [
+     "said + told"
+    ],
+    "alt": {
+     "graduation": [
+      "graduation ceremony"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "ERROR",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "ERROR",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 36,
+   "exercise_id": 38955,
+   "level": "B1",
+   "en": "She is very enthusiastic about the match, isn't she?",
+   "sk_raw": "Z toho zápasu je veľmi nadšená, však?",
+   "sk_new": "Ona je z toho zápasu veľmi nadšená, však?",
+   "rewrite": [
+    "R",
+    "Ona je z toho zápasu veľmi nadšená, však?",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 36,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 36,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 38955,
+    "t": 9036,
+    "lv": "B1",
+    "v": [
+     "She is very excited about the match, isn't she?",
+     "She is really enthusiastic about that match, isn't she?"
+    ],
+    "lk": [
+     "is",
+     "is"
+    ],
+    "alt": {
+     "excited": [
+      "enthusiastic",
+      "thrilled"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 37,
+   "exercise_id": 4966,
+   "level": "B1",
+   "en": "The wheel is rolling across it without a single wobble, so the surface must be perfectly flat.",
+   "sk_raw": "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne rovný.",
+   "sk_new": "Koliesko sa po ňom kotúľa bez jediného zakolísania, takže povrch musí byť úplne rovný.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 37,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Koliesko",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "povrch"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 37,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Koliesko",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "povrch"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 4966,
+    "t": 9037,
+    "lv": "B1",
+    "v": [
+     "The little wheel rolls across it without a single wobble, so the surface must be perfectly flat.",
+     "The wheel is rolling over it without a single wobble, so the surface must be completely flat."
+    ],
+    "lk": [
+     "rolls",
+     "is rolling"
+    ],
+    "alt": {
+     "perfectly": [
+      "completely"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 38,
+   "exercise_id": 39944,
+   "level": "B1",
+   "en": "She was hauling the trunk across the attic floor when the dust sheet tore.",
+   "sk_raw": "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+   "sk_new": "Ona ťahala truhlicu po podlahe podkrovia, keď sa prachová plachta roztrhla.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 38,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "prachová plachta"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 38,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "prachová plachta"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 39944,
+    "t": 9038,
+    "lv": "B1",
+    "v": [
+     "She was dragging the chest across the attic floor when the dust sheet tore."
+    ],
+    "lk": [
+     "was dragging + tore"
+    ],
+    "alt": {
+     "chest": [
+      "trunk"
+     ],
+     "dragging": [
+      "hauling",
+      "pulling"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 39,
+   "exercise_id": 37485,
+   "level": "B1",
+   "en": "He was sprinting for the ball when he suddenly grabbed his calf. Disaster!",
+   "sk_raw": "Šprintoval za loptou, keď sa zrazu chytil za lýtko. Katastrofa!",
+   "sk_new": "On šprintoval za loptou, keď sa zrazu chytil za lýtko. Katastrofa!",
+   "rewrite": [
+    "R",
+    "On šprintoval za loptou, keď sa zrazu chytil za lýtko. Katastrofa!",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 39,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 39,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 37485,
+    "t": 9039,
+    "lv": "B1",
+    "v": [
+     "He was sprinting after the ball when he suddenly grabbed his calf. Disaster!"
+    ],
+    "lk": [
+     "was sprinting + grabbed"
+    ],
+    "alt": {
+     "after": [
+      "for"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 40,
+   "exercise_id": 7896,
+   "level": "B1",
+   "en": "The clipped pile isn't moving, and neither is the dish beside it.",
+   "sk_raw": "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+   "sk_new": "Zopnutá kopa sa nehýbe a miska vedľa nej sa tiež nehýbe",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 40,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Zopnutá kopa",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "miska vedľa nej"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 40,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Zopnutá kopa",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "miska vedľa nej"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 7896,
+    "t": 9040,
+    "lv": "B1",
+    "v": [
+     "The clipped pile is not moving, and the bowl next to it is not moving either."
+    ],
+    "lk": [
+     "is not moving"
+    ],
+    "alt": {
+     "bowl": [
+      "dish"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 41,
+   "exercise_id": 38423,
+   "level": "B1",
+   "en": "The debris is still smoking, so the damage must be very recent.",
+   "sk_raw": "Trosky ešte stále dymia, takže škody musia byť veľmi čerstvé.",
+   "sk_new": "Trosky ešte stále dymia, takže škody musia byť veľmi čerstvé.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 41,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Trosky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "škody"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 41,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "Trosky",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "škody"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 38423,
+    "t": 9041,
+    "lv": "B1",
+    "v": [
+     "The wreckage is still smoking, so the damage must be very recent."
+    ],
+    "lk": [
+     "is smoking + must be"
+    ],
+    "alt": {
+     "wreckage": [
+      "debris"
+     ],
+     "recent": [
+      "fresh"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 42,
+   "exercise_id": 37778,
+   "level": "B1",
+   "en": "If he scrapes more paint, more chips will fall off, because scraping makes chips.",
+   "sk_raw": "Ak zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+   "sk_new": "Ak on zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+   "rewrite": [
+    "R",
+    "Ak on zoškrabe viac farby, viac úlomkov odpadne, lebo škrabanie robí úlomky.",
+    "on",
+    "embedded"
+   ],
+   "gold_before": {
+    "n": 42,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "viac úlomkov",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "škrabanie"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 42,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "viac úlomkov",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "škrabanie",
+     "on"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 37778,
+    "t": 9042,
+    "lv": "B1",
+    "v": [
+     "If he scrapes off more paint, more chips will fall off, because scraping makes chips."
+    ],
+    "lk": [
+     "scrapes + will fall"
+    ],
+    "alt": {
+     "chips": [
+      "flakes"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 43,
+   "exercise_id": 10318,
+   "level": "B1",
+   "en": "She said she didn't judge her friend for that.",
+   "sk_raw": "Povedala, že kamarátku za to neodsudzuje",
+   "sk_new": "Ona povedala, že kamarátku za to neodsudzuje",
+   "rewrite": [
+    "R",
+    "Ona povedala, že kamarátku za to neodsudzuje",
+    "ona",
+    "main"
+   ],
+   "gold_before": {
+    "n": 43,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 43,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "ona",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 10318,
+    "t": 9043,
+    "lv": "B1",
+    "v": [
+     "She said that she didn't judge her friend for it.",
+     "She said she does not judge her friend for that."
+    ],
+    "lk": [
+     "said + didn't judge",
+     "said + does not judge"
+    ],
+    "alt": {
+     "friend": [
+      "girlfriend"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 44,
+   "exercise_id": 38000,
+   "level": "B1",
+   "en": "If he connects the last plug, the monitor will turn on. A true visionary, clearly.",
+   "sk_raw": "Ak zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+   "sk_new": "Ak on zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+   "rewrite": [
+    "R",
+    "Ak on zapojí poslednú zástrčku, zapne sa monitor. Skutočný vizionár, jasne.",
+    "on",
+    "embedded"
+   ],
+   "gold_before": {
+    "n": 44,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "monitor",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 44,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "monitor",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "on"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 38000,
+    "t": 9044,
+    "lv": "B1",
+    "v": [
+     "If he plugs in the last plug, the monitor will turn on. A true visionary, clearly."
+    ],
+    "lk": [
+     "plugs + will turn on"
+    ],
+    "alt": {
+     "turn on": [
+      "switch on",
+      "come on"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 45,
+   "exercise_id": 37944,
+   "level": "B1",
+   "en": "They are competing in front of a big crowd, aren't they?",
+   "sk_raw": "Súťažia pred veľkým davom, však?",
+   "sk_new": "Oni súťažia pred veľkým davom, však?",
+   "rewrite": [
+    "R",
+    "Oni súťažia pred veľkým davom, však?",
+    "oni",
+    "main"
+   ],
+   "gold_before": {
+    "n": 45,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 45,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "oni",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 37944,
+    "t": 9045,
+    "lv": "B1",
+    "v": [
+     "They are competing in front of a big crowd, aren't they?"
+    ],
+    "lk": [
+     "are competing"
+    ],
+    "alt": {
+     "big": [
+      "large",
+      "huge"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 46,
+   "exercise_id": 8038,
+   "level": "B2",
+   "en": "By the final whistle they will have been running for ninety minutes in this heat.",
+   "sk_raw": "Do záverečného hvizdu budú behať v tej horúčave deväťdesiat minút.",
+   "sk_new": "Do záverečného hvizdu oni budú behať v tej horúčave deväťdesiat minút.",
+   "rewrite": [
+    "R",
+    "Do záverečného hvizdu oni budú behať v tej horúčave deväťdesiat minút.",
+    "oni",
+    "main"
+   ],
+   "gold_before": {
+    "n": 46,
+    "tf": "future",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 46,
+    "tf": "future",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "oni",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 8038,
+    "t": 9046,
+    "lv": "B2",
+    "v": [
+     "By the final whistle they will have been running in that heat for ninety minutes."
+    ],
+    "lk": [
+     "will have been running"
+    ],
+    "alt": {
+     "heat": [
+      "hot weather"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 47,
+   "exercise_id": 2556,
+   "level": "B2",
+   "en": "By nine o'clock tonight he will have played every song he knows at least three times.",
+   "sk_raw": "Dnes do deviatej zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+   "sk_new": "Dnes do deviatej on zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+   "rewrite": [
+    "R",
+    "Dnes do deviatej on zahrá každú pieseň, ktorú pozná, aspoň trikrát.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 47,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 47,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 2556,
+    "t": 9047,
+    "lv": "B2",
+    "v": [
+     "By nine tonight he will have played every song he knows at least three times.",
+     "By nine today he will play every song he knows at least three times."
+    ],
+    "lk": [
+     "will have played",
+     "will play"
+    ],
+    "alt": {
+     "tonight": [
+      "today"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "ERROR",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "ERROR",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 48,
+   "exercise_id": 535,
+   "level": "B2",
+   "en": "Rarely does an arrow hit the bullseye that cleanly in weather like this.",
+   "sk_raw": "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+   "sk_new": "V takomto počasí len zriedkakedy zasiahne šíp stred terča tak čisto.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 48,
+    "tf": "future",
+    "tf_note": "perfective present (gnomic)",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "šíp",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 48,
+    "tf": "future",
+    "tf_note": "perfective present (gnomic)",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "šíp",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 535,
+    "t": 9048,
+    "lv": "B2",
+    "v": [
+     "In weather like this an arrow rarely hits the centre of the target so cleanly.",
+     "Rarely does an arrow hit the bullseye that cleanly in weather like this."
+    ],
+    "lk": [
+     "hits",
+     "does hit"
+    ],
+    "alt": {
+     "centre of the target": [
+      "bullseye"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 49,
+   "exercise_id": 37937,
+   "level": "B2",
+   "en": "By sunset, you will have checked the compass a hundred times, captain. Respect.",
+   "sk_raw": "Do západu slnka skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+   "sk_new": "Do západu slnka ty skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+   "rewrite": [
+    "R",
+    "Do západu slnka ty skontroluješ kompas stokrát, kapitánka. Rešpekt.",
+    "ty",
+    "main"
+   ],
+   "gold_before": {
+    "n": 49,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "2sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 49,
+    "tf": "future",
+    "tf_note": "perfective present",
+    "person": "2sg",
+    "subject_explicit": true,
+    "subject": "ty",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 37937,
+    "t": 9049,
+    "lv": "B2",
+    "v": [
+     "By sunset you will have checked the compass a hundred times, captain. Respect."
+    ],
+    "lk": [
+     "will have checked"
+    ],
+    "alt": {},
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": true,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "CONSERVATIVE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 50,
+   "exercise_id": 44347,
+   "level": "B2",
+   "en": "By tonight he will have sent his tunnel video to everyone he knows. Clearly a humble traveller.",
+   "sk_raw": "Do večera bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavne skromný cestovateľ.",
+   "sk_new": "Do večera on bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavne skromný cestovateľ.",
+   "rewrite": [
+    "R",
+    "Do večera on bude mať poslané svoje video z tunela všetkým, ktorých pozná. Zjavne skromný cestovateľ.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 50,
+    "tf": "future",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 50,
+    "tf": "future",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 44347,
+    "t": 9050,
+    "lv": "B2",
+    "v": [
+     "By tonight he will have sent his tunnel video to everyone he knows. Clearly a modest traveller."
+    ],
+    "lk": [
+     "will have sent"
+    ],
+    "alt": {
+     "modest": [
+      "humble"
+     ]
+    },
+    "tf_gold": "future",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 51,
+   "exercise_id": 44249,
+   "level": "B2",
+   "en": "He wishes he had left home earlier! Every single transfer is a complete nightmare!",
+   "sk_raw": "Želá si, aby bol odišiel z domu skôr! Každý jeden presun je úplná nočná mora!",
+   "sk_new": "On si želá, aby bol odišiel z domu skôr! Každý jeden presun je úplná nočná mora!",
+   "rewrite": [
+    "R",
+    "On si želá, aby bol odišiel z domu skôr! Každý jeden presun je úplná nočná mora!",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 51,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 51,
+    "tf": "present",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 44249,
+    "t": 9051,
+    "lv": "B2",
+    "v": [
+     "He wishes he had left home earlier! Every single transfer is a complete nightmare!"
+    ],
+    "lk": [
+     "wishes + had left"
+    ],
+    "alt": {
+     "transfer": [
+      "connection",
+      "change"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 52,
+   "exercise_id": 41010,
+   "level": "B2",
+   "en": "The lake had been mirroring the trees perfectly until he jumped and destroyed everything!",
+   "sk_raw": "Jazero zrkadlilo stromy dokonale, kým neskočil a všetko nezničil!",
+   "sk_new": "Jazero zrkadlilo stromy dokonale, kým on neskočil a všetko nezničil!",
+   "rewrite": [
+    "R",
+    "Jazero zrkadlilo stromy dokonale, kým on neskočil a všetko nezničil!",
+    "on",
+    "embedded"
+   ],
+   "gold_before": {
+    "n": 52,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Jazero",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 52,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Jazero",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "on"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 41010,
+    "t": 9052,
+    "lv": "B2",
+    "v": [
+     "The lake had been mirroring the trees perfectly until he jumped in and ruined everything!",
+     "The lake was reflecting the trees perfectly until he jumped and destroyed everything!"
+    ],
+    "lk": [
+     "had been mirroring",
+     "was reflecting"
+    ],
+    "alt": {
+     "mirroring": [
+      "reflecting"
+     ],
+     "ruined": [
+      "destroyed",
+      "spoiled"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 53,
+   "exercise_id": 2180,
+   "level": "B2",
+   "en": "Look at him now - he is reading the same page for the third time, hoping the words change.",
+   "sk_raw": "Pozri sa naňho - číta tú istú stranu už tretíkrát a dúfa, že sa slová zmenia.",
+   "sk_new": "Pozri sa naňho - on číta tú istú stranu už tretíkrát a dúfa, že sa slová zmenia.",
+   "rewrite": [
+    "R",
+    "Pozri sa naňho - on číta tú istú stranu už tretíkrát a dúfa, že sa slová zmenia.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 53,
+    "tf": "present",
+    "tf_note": "main = číta",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [
+     "slová"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 53,
+    "tf": "present",
+    "tf_note": "main = číta",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "slová"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 2180,
+    "t": 9053,
+    "lv": "B2",
+    "v": [
+     "Look at him - he is reading the same page for the third time already, hoping the words will change."
+    ],
+    "lk": [
+     "is reading"
+    ],
+    "alt": {},
+    "tf_gold": "present",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 54,
+   "exercise_id": 42599,
+   "level": "B2",
+   "en": "He denied having sawn the bear's legs too thin.",
+   "sk_raw": "Poprel, že vypílil medveďovi nohy príliš tenké.",
+   "sk_new": "On poprel, že vypílil medveďovi nohy príliš tenké.",
+   "rewrite": [
+    "R",
+    "On poprel, že vypílil medveďovi nohy príliš tenké.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 54,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 54,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 42599,
+    "t": 9054,
+    "lv": "B2",
+    "v": [
+     "He denied that he had sawn the bear's legs too thin.",
+     "He denied having sawn the bear's legs too thin."
+    ],
+    "lk": [
+     "denied + had sawn",
+     "denied + having sawn"
+    ],
+    "alt": {
+     "sawn": [
+      "cut"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "ERROR",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 55,
+   "exercise_id": 4271,
+   "level": "B2",
+   "en": "His socks were soaked because he had been standing in that puddle for a whole minute without noticing.",
+   "sk_raw": "Ponožky mal premočené, lebo celú minútu stál v tej mláke bez toho, aby si to všimol.",
+   "sk_new": "On mal ponožky premočené, lebo celú minútu stál v tej mláke bez toho, aby si to všimol.",
+   "rewrite": [
+    "R",
+    "On mal ponožky premočené, lebo celú minútu stál v tej mláke bez toho, aby si to všimol.",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 55,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 55,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 4271,
+    "t": 9055,
+    "lv": "B2",
+    "v": [
+     "His socks were soaked because he had been standing in that puddle for a whole minute without noticing.",
+     "His socks were soaking wet, because he stood in that puddle for a whole minute without noticing it."
+    ],
+    "lk": [
+     "were + had been standing",
+     "were + stood"
+    ],
+    "alt": {
+     "soaked": [
+      "soaking wet",
+      "drenched"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 56,
+   "exercise_id": 39349,
+   "level": "B2",
+   "en": "This species, the flamingo, is known to get its pink colour from its food.",
+   "sk_raw": "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+   "sk_new": "O tomto druhu, plameniakovi, je známe, že získava svoju ružovú farbu z potravy.",
+   "rewrite": [
+    "U",
+    "impersonal"
+   ],
+   "gold_before": {
+    "n": 56,
+    "tf": "present",
+    "tf_note": "je známe",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "impersonal",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 56,
+    "tf": "present",
+    "tf_note": "je známe",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "impersonal",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 39349,
+    "t": 9056,
+    "lv": "B2",
+    "v": [
+     "About this species, the flamingo, it is known that it gets its pink colour from its food.",
+     "This species, the flamingo, is known to get its pink colour from its food."
+    ],
+    "lk": [
+     "is known",
+     "is known"
+    ],
+    "alt": {
+     "colour": [
+      "color"
+     ],
+     "food": [
+      "diet"
+     ]
+    },
+    "tf_gold": "present",
+    "voice_sk": "impersonal",
+    "agent_nom": false,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "ERROR",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "ERROR_as_active",
+     "g4_v3": "ERROR_as_active"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "ERROR",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "ERROR_as_active",
+     "g4_v3": "ERROR_as_active"
+    }
+   }
+  },
+  {
+   "n": 57,
+   "exercise_id": 39022,
+   "level": "B2",
+   "en": "He admitted being completely exhausted after the worst week of his life!",
+   "sk_raw": "Priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+   "sk_new": "On priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+   "rewrite": [
+    "R",
+    "On priznal, že bol úplne vyčerpaný po najhoršom týždni svojho života!",
+    "on",
+    "main"
+   ],
+   "gold_before": {
+    "n": 57,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 57,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "on",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 39022,
+    "t": 9057,
+    "lv": "B2",
+    "v": [
+     "He admitted that he had been completely exhausted after the worst week of his life!",
+     "He admitted being completely exhausted after the worst week of his life!"
+    ],
+    "lk": [
+     "admitted + had been",
+     "admitted + being"
+    ],
+    "alt": {
+     "exhausted": [
+      "worn out"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "ERROR",
+     "g3_v3": "ERROR",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 58,
+   "exercise_id": 3424,
+   "level": "B2",
+   "en": "The free kick, which nobody in the wall even saw, ended up in the top corner.",
+   "sk_raw": "Voľný kop, ktorý nikto v múre ani nevidel, skončil v hornom rohu.",
+   "sk_new": "Voľný kop, ktorý nikto v múre ani nevidel, skončil v hornom rohu.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 58,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Voľný kop",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "nikto v múre"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 58,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "Voľný kop",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "nikto v múre"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 3424,
+    "t": 9058,
+    "lv": "B2",
+    "v": [
+     "The free kick, which nobody in the wall even saw, ended up in the top corner."
+    ],
+    "lk": [
+     "ended up"
+    ],
+    "alt": {
+     "ended up": [
+      "finished"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "CONSERVATIVE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    }
+   }
+  },
+  {
+   "n": 59,
+   "exercise_id": 37457,
+   "level": "B2",
+   "en": "Bestie, the butcher told me he wishes his shop had more customers today.",
+   "sk_raw": "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazníkov.",
+   "sk_new": "Kámoška, mäsiar mi povedal, že by si prial, aby jeho obchod dnes mal viac zákazníkov.",
+   "rewrite": [
+    "U",
+    "explicit_subject"
+   ],
+   "gold_before": {
+    "n": 59,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "mäsiar",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "jeho obchod"
+    ],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 59,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3sg",
+    "subject_explicit": true,
+    "subject": "mäsiar",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [
+     "jeho obchod"
+    ],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 37457,
+    "t": 9059,
+    "lv": "B2",
+    "v": [
+     "Bestie, the butcher told me he wishes his shop had more customers today.",
+     "Girl, the butcher told me he would like his shop to have more customers today."
+    ],
+    "lk": [
+     "told + wishes",
+     "told + would like"
+    ],
+    "alt": {
+     "Bestie": [
+      "Girl",
+      "Mate"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": true
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  },
+  {
+   "n": 60,
+   "exercise_id": 10830,
+   "level": "B2",
+   "en": "They had the tomatoes picked at the farm shop that morning.",
+   "sk_raw": "Paradajky si v to ráno dali natrhať v gazdovskom obchode.",
+   "sk_new": "Paradajky si oni v to ráno dali natrhať v gazdovskom obchode.",
+   "rewrite": [
+    "R",
+    "Paradajky si oni v to ráno dali natrhať v gazdovskom obchode.",
+    "oni",
+    "main"
+   ],
+   "gold_before": {
+    "n": 60,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": false,
+    "subject": null,
+    "voice": "active_prodrop",
+    "agent_nom": false,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "gold_after": {
+    "n": 60,
+    "tf": "past",
+    "tf_note": "",
+    "person": "3pl",
+    "subject_explicit": true,
+    "subject": "oni",
+    "voice": "active_agent",
+    "agent_nom": true,
+    "embedded_agents": [],
+    "fragment": false
+   },
+   "annotation": {
+    "id": 10830,
+    "t": 9060,
+    "lv": "B2",
+    "v": [
+     "They had the tomatoes picked at the farm shop that morning.",
+     "That morning they had tomatoes picked for them at the farm shop."
+    ],
+    "lk": [
+     "had picked",
+     "had picked"
+    ],
+    "alt": {
+     "farm shop": [
+      "farmers' shop"
+     ]
+    },
+    "tf_gold": "past",
+    "voice_sk": "active_agent",
+    "agent_nom": true,
+    "perfective_present": false,
+    "tense_open": false
+   },
+   "guards": {
+    "before": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "AGREE",
+     "g3_v3": "AGREE",
+     "g4_v2": "AGREE",
+     "g4_v3": "AGREE"
+    },
+    "after": {
+     "g1": "AGREE",
+     "g2": "AGREE",
+     "g3_v2": "CONSERVATIVE",
+     "g3_v3": "CONSERVATIVE",
+     "g4_v2": "ERROR_as_passive",
+     "g4_v3": "ERROR_as_passive"
+    }
+   }
+  }
+ ]
+}

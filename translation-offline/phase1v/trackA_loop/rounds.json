@@ -1,0 +1,1457 @@
+{
+ "model_calls": 0,
+ "sets": {
+  "1U": 900,
+  "1T": 900
+ },
+ "t_notes": {
+  "v4_rejects_stored_accept": 7
+ },
+ "t_row_keys": [
+  "ag",
+  "ag_shadow",
+  "borderline",
+  "dropped",
+  "final_accept",
+  "final_layer",
+  "form",
+  "half",
+  "intent",
+  "item_id",
+  "judge_passive",
+  "judged",
+  "judged_type",
+  "kind",
+  "layers",
+  "level",
+  "lever2_fired",
+  "lever3",
+  "sid",
+  "tags",
+  "writer_passive"
+ ],
+ "A1_candidates": {
+  "rs_pass": {
+   "gate_pass": true,
+   "packet": {
+    "agent drops (judged wrong)": {
+     "n": 97,
+     "fired": 97
+    },
+    "by-passive controls": {
+     "n": 42,
+     "fired": 0
+    },
+    "plain controls (judged correct)": {
+     "n": 39,
+     "fired": 0
+    },
+    "v2 misfires (judged correct)": {
+     "n": 3,
+     "fired": 1
+    },
+    "agentless judged CORRECT": {
+     "n": 1,
+     "fired": 1
+    },
+    "plain control judged wrong": {
+     "n": 1,
+     "fired": 0
+    }
+   },
+   "closed": {
+    "1U": {
+     "fires": 9,
+     "catches": 9,
+     "cost": [],
+     "cost_detail": []
+    },
+    "1T": {
+     "fires": 8,
+     "catches": 6,
+     "cost": [
+      "C:180063:c2",
+      "C:180068:c3"
+     ],
+     "cost_detail": [
+      [
+       "C:180063:c2",
+       "In this office, smoking is forbidden, even during the lunch break."
+      ],
+      [
+       "C:180068:c3",
+       "Even though the boss checks every account, invoices are sent to the clients by us every Friday."
+      ]
+     ]
+    }
+   }
+  },
+  "rs_nom": {
+   "gate_pass": true,
+   "packet": {
+    "agent drops (judged wrong)": {
+     "n": 97,
+     "fired": 97
+    },
+    "by-passive controls": {
+     "n": 42,
+     "fired": 0
+    },
+    "plain controls (judged correct)": {
+     "n": 39,
+     "fired": 0
+    },
+    "v2 misfires (judged correct)": {
+     "n": 3,
+     "fired": 0
+    },
+    "agentless judged CORRECT": {
+     "n": 1,
+     "fired": 1
+    },
+    "plain control judged wrong": {
+     "n": 1,
+     "fired": 0
+    }
+   },
+   "closed": {
+    "1U": {
+     "fires": 4,
+     "catches": 4,
+     "cost": [],
+     "cost_detail": []
+    },
+    "1T": {
+     "fires": 0,
+     "catches": 0,
+     "cost": [],
+     "cost_detail": []
+    }
+   }
+  },
+  "rs_pass+rs_nom": {
+   "gate_pass": true,
+   "packet": {
+    "agent drops (judged wrong)": {
+     "n": 97,
+     "fired": 97
+    },
+    "by-passive controls": {
+     "n": 42,
+     "fired": 0
+    },
+    "plain controls (judged correct)": {
+     "n": 39,
+     "fired": 0
+    },
+    "v2 misfires (judged correct)": {
+     "n": 3,
+     "fired": 1
+    },
+    "agentless judged CORRECT": {
+     "n": 1,
+     "fired": 1
+    },
+    "plain control judged wrong": {
+     "n": 1,
+     "fired": 0
+    }
+   },
+   "closed": {
+    "1U": {
+     "fires": 13,
+     "catches": 13,
+     "cost": [],
+     "cost_detail": []
+    },
+    "1T": {
+     "fires": 8,
+     "catches": 6,
+     "cost": [
+      "C:180063:c2",
+      "C:180068:c3"
+     ],
+     "cost_detail": [
+      [
+       "C:180063:c2",
+       "In this office, smoking is forbidden, even during the lunch break."
+      ],
+      [
+       "C:180068:c3",
+       "Even though the boss checks every account, invoices are sent to the clients by us every Friday."
+      ]
+     ]
+    }
+   }
+  }
+ },
+ "A1_chosen": "rs_nom",
+ "A2b_tip_rule": {
+  "1U": {
+   "overturned": 8,
+   "gain_correct": [
+    "C:190022:c2",
+    "C:190023:c2",
+    "C:190025:c2",
+    "C:190034:c2",
+    "C:190042:c2",
+    "C:190043:c2",
+    "C:190044:c2",
+    "C:190055:c2"
+   ],
+   "cost_wrong": [],
+   "TIPrej_total": 29,
+   "TIPrej_correct_det": 6
+  },
+  "1T": {
+   "overturned": 5,
+   "gain_correct": [
+    "C:180002:c2",
+    "C:180020:c2",
+    "C:180054:c2",
+    "C:180057:c2",
+    "C:180075:c2"
+   ],
+   "cost_wrong": [],
+   "TIPrej_total": 77,
+   "TIPrej_correct_det": 8
+  }
+ },
+ "rounds": [
+  {
+   "round": 0,
+   "fix": "baseline (1U stored stack; 1T stored + AG v4)",
+   "metrics": {
+    "1U": {
+     "coverage": {
+      "k": 382,
+      "n": 402,
+      "pct": 95.02,
+      "ci": [
+       92.42,
+       96.93
+      ]
+     },
+     "FA": {
+      "k": 16,
+      "n": 498,
+      "pct": 3.21,
+      "ci": [
+       1.85,
+       5.17
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 9,
+       "n": 159,
+       "pct": 5.66,
+       "ci": [
+        2.62,
+        10.47
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 99,
+       "pct": 2.02,
+       "ci": [
+        0.25,
+        7.11
+       ]
+      },
+      "T": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "W": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     },
+     "cells": {
+      "FA:agreement": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:aspect": {
+       "k": 27,
+       "n": 27,
+       "pct": 100.0,
+       "ci": [
+        87.23,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 79,
+       "n": 80,
+       "pct": 98.75,
+       "ci": [
+        93.23,
+        99.97
+       ]
+      },
+      "cov:determiner": {
+       "k": 47,
+       "n": 59,
+       "pct": 79.66,
+       "ci": [
+        67.17,
+        89.02
+       ]
+      },
+      "cov:drop-fronted": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:drop-fronted": {
+       "k": 3,
+       "n": 63,
+       "pct": 4.76,
+       "ci": [
+        0.99,
+        13.29
+       ]
+      },
+      "FA:drop-main": {
+       "k": 3,
+       "n": 48,
+       "pct": 6.25,
+       "ci": [
+        1.31,
+        17.2
+       ]
+      },
+      "FA:drop-misaligned": {
+       "k": 3,
+       "n": 48,
+       "pct": 6.25,
+       "ci": [
+        1.31,
+        17.2
+       ]
+      },
+      "cov:missing-article": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:missing-article": {
+       "k": 2,
+       "n": 97,
+       "pct": 2.06,
+       "ci": [
+        0.25,
+        7.25
+       ]
+      },
+      "cov:paraphrase": {
+       "k": 102,
+       "n": 103,
+       "pct": 99.03,
+       "ci": [
+        94.71,
+        99.98
+       ]
+      },
+      "cov:plain": {
+       "k": 80,
+       "n": 80,
+       "pct": 100.0,
+       "ci": [
+        95.49,
+        100.0
+       ]
+      },
+      "FA:preposition": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 59,
+       "n": 63,
+       "pct": 93.65,
+       "ci": [
+        84.53,
+        98.24
+       ]
+      },
+      "FA:time-frame": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "FA:wrong-word": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     }
+    },
+    "1T": {
+     "coverage": {
+      "k": 389,
+      "n": 421,
+      "pct": 92.4,
+      "ci": [
+       89.44,
+       94.74
+      ]
+     },
+     "FA": {
+      "k": 9,
+      "n": 479,
+      "pct": 1.88,
+      "ci": [
+       0.86,
+       3.54
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 6,
+       "n": 209,
+       "pct": 2.87,
+       "ci": [
+        1.06,
+        6.14
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 79,
+       "pct": 2.53,
+       "ci": [
+        0.31,
+        8.85
+       ]
+      },
+      "T": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      },
+      "W": {
+       "k": 0,
+       "n": 72,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        4.99
+       ]
+      }
+     },
+     "cells": {
+      "FA:agentdrop-embedded": {
+       "k": 5,
+       "n": 96,
+       "pct": 5.21,
+       "ci": [
+        1.71,
+        11.74
+       ]
+      },
+      "FA:agentdrop-main": {
+       "k": 1,
+       "n": 65,
+       "pct": 1.54,
+       "ci": [
+        0.04,
+        8.28
+       ]
+      },
+      "cov:aspect": {
+       "k": 59,
+       "n": 61,
+       "pct": 96.72,
+       "ci": [
+        88.65,
+        99.6
+       ]
+      },
+      "FA:aspect": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 47,
+       "n": 47,
+       "pct": 100.0,
+       "ci": [
+        92.45,
+        100.0
+       ]
+      },
+      "cov:by-passive-embedded": {
+       "k": 33,
+       "n": 33,
+       "pct": 100.0,
+       "ci": [
+        89.42,
+        100.0
+       ]
+      },
+      "cov:determiner": {
+       "k": 67,
+       "n": 79,
+       "pct": 84.81,
+       "ci": [
+        74.97,
+        91.9
+       ]
+      },
+      "FA:number": {
+       "k": 0,
+       "n": 12,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        26.46
+       ]
+      },
+      "cov:plain": {
+       "k": 176,
+       "n": 195,
+       "pct": 90.26,
+       "ci": [
+        85.2,
+        94.03
+       ]
+      },
+      "FA:plain": {
+       "k": 1,
+       "n": 186,
+       "pct": 0.54,
+       "ci": [
+        0.01,
+        2.96
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 72,
+       "n": 72,
+       "pct": 100.0,
+       "ci": [
+        95.01,
+        100.0
+       ]
+      },
+      "FA:skp-passive": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:timeframe": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:timeframe": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      }
+     }
+    }
+   },
+   "calls": 0
+  },
+  {
+   "round": 1,
+   "fix": "AG v5 rs_nom",
+   "metric_attacked": "FA",
+   "gain_points": {
+    "1U": 0.6,
+    "1T": -0.0
+   },
+   "metrics": {
+    "1U": {
+     "coverage": {
+      "k": 382,
+      "n": 402,
+      "pct": 95.02,
+      "ci": [
+       92.42,
+       96.93
+      ]
+     },
+     "FA": {
+      "k": 13,
+      "n": 498,
+      "pct": 2.61,
+      "ci": [
+       1.4,
+       4.42
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 6,
+       "n": 159,
+       "pct": 3.77,
+       "ci": [
+        1.4,
+        8.03
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 99,
+       "pct": 2.02,
+       "ci": [
+        0.25,
+        7.11
+       ]
+      },
+      "T": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "W": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     },
+     "cells": {
+      "FA:agreement": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:aspect": {
+       "k": 27,
+       "n": 27,
+       "pct": 100.0,
+       "ci": [
+        87.23,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 79,
+       "n": 80,
+       "pct": 98.75,
+       "ci": [
+        93.23,
+        99.97
+       ]
+      },
+      "cov:determiner": {
+       "k": 47,
+       "n": 59,
+       "pct": 79.66,
+       "ci": [
+        67.17,
+        89.02
+       ]
+      },
+      "cov:drop-fronted": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:drop-fronted": {
+       "k": 1,
+       "n": 63,
+       "pct": 1.59,
+       "ci": [
+        0.04,
+        8.53
+       ]
+      },
+      "FA:drop-main": {
+       "k": 3,
+       "n": 48,
+       "pct": 6.25,
+       "ci": [
+        1.31,
+        17.2
+       ]
+      },
+      "FA:drop-misaligned": {
+       "k": 2,
+       "n": 48,
+       "pct": 4.17,
+       "ci": [
+        0.51,
+        14.25
+       ]
+      },
+      "cov:missing-article": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:missing-article": {
+       "k": 2,
+       "n": 97,
+       "pct": 2.06,
+       "ci": [
+        0.25,
+        7.25
+       ]
+      },
+      "cov:paraphrase": {
+       "k": 102,
+       "n": 103,
+       "pct": 99.03,
+       "ci": [
+        94.71,
+        99.98
+       ]
+      },
+      "cov:plain": {
+       "k": 80,
+       "n": 80,
+       "pct": 100.0,
+       "ci": [
+        95.49,
+        100.0
+       ]
+      },
+      "FA:preposition": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 59,
+       "n": 63,
+       "pct": 93.65,
+       "ci": [
+        84.53,
+        98.24
+       ]
+      },
+      "FA:time-frame": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "FA:wrong-word": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     }
+    },
+    "1T": {
+     "coverage": {
+      "k": 389,
+      "n": 421,
+      "pct": 92.4,
+      "ci": [
+       89.44,
+       94.74
+      ]
+     },
+     "FA": {
+      "k": 9,
+      "n": 479,
+      "pct": 1.88,
+      "ci": [
+       0.86,
+       3.54
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 6,
+       "n": 209,
+       "pct": 2.87,
+       "ci": [
+        1.06,
+        6.14
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 79,
+       "pct": 2.53,
+       "ci": [
+        0.31,
+        8.85
+       ]
+      },
+      "T": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      },
+      "W": {
+       "k": 0,
+       "n": 72,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        4.99
+       ]
+      }
+     },
+     "cells": {
+      "FA:agentdrop-embedded": {
+       "k": 5,
+       "n": 96,
+       "pct": 5.21,
+       "ci": [
+        1.71,
+        11.74
+       ]
+      },
+      "FA:agentdrop-main": {
+       "k": 1,
+       "n": 65,
+       "pct": 1.54,
+       "ci": [
+        0.04,
+        8.28
+       ]
+      },
+      "cov:aspect": {
+       "k": 59,
+       "n": 61,
+       "pct": 96.72,
+       "ci": [
+        88.65,
+        99.6
+       ]
+      },
+      "FA:aspect": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 47,
+       "n": 47,
+       "pct": 100.0,
+       "ci": [
+        92.45,
+        100.0
+       ]
+      },
+      "cov:by-passive-embedded": {
+       "k": 33,
+       "n": 33,
+       "pct": 100.0,
+       "ci": [
+        89.42,
+        100.0
+       ]
+      },
+      "cov:determiner": {
+       "k": 67,
+       "n": 79,
+       "pct": 84.81,
+       "ci": [
+        74.97,
+        91.9
+       ]
+      },
+      "FA:number": {
+       "k": 0,
+       "n": 12,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        26.46
+       ]
+      },
+      "cov:plain": {
+       "k": 176,
+       "n": 195,
+       "pct": 90.26,
+       "ci": [
+        85.2,
+        94.03
+       ]
+      },
+      "FA:plain": {
+       "k": 1,
+       "n": 186,
+       "pct": 0.54,
+       "ci": [
+        0.01,
+        2.96
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 72,
+       "n": 72,
+       "pct": 100.0,
+       "ci": [
+        95.01,
+        100.0
+       ]
+      },
+      "FA:skp-passive": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:timeframe": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:timeframe": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      }
+     }
+    }
+   },
+   "worse_cells": {
+    "1U": [],
+    "1T": []
+   },
+   "ag_v5_cost_vs_v4": {
+    "1U": 0,
+    "1T": 0
+   },
+   "tip_cost_wrong_accepted": {
+    "1U": 0,
+    "1T": 0
+   },
+   "calls": 0,
+   "status": "kept"
+  },
+  {
+   "round": 2,
+   "fix": "TIP determiner rule",
+   "metric_attacked": "coverage",
+   "gain_points": {
+    "1U": 1.99,
+    "1T": 1.19
+   },
+   "metrics": {
+    "1U": {
+     "coverage": {
+      "k": 390,
+      "n": 402,
+      "pct": 97.01,
+      "ci": [
+       94.84,
+       98.45
+      ]
+     },
+     "FA": {
+      "k": 13,
+      "n": 498,
+      "pct": 2.61,
+      "ci": [
+       1.4,
+       4.42
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 6,
+       "n": 159,
+       "pct": 3.77,
+       "ci": [
+        1.4,
+        8.03
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 99,
+       "pct": 2.02,
+       "ci": [
+        0.25,
+        7.11
+       ]
+      },
+      "T": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "W": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     },
+     "cells": {
+      "FA:agreement": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:aspect": {
+       "k": 27,
+       "n": 27,
+       "pct": 100.0,
+       "ci": [
+        87.23,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 79,
+       "n": 80,
+       "pct": 98.75,
+       "ci": [
+        93.23,
+        99.97
+       ]
+      },
+      "cov:determiner": {
+       "k": 52,
+       "n": 59,
+       "pct": 88.14,
+       "ci": [
+        77.07,
+        95.09
+       ]
+      },
+      "cov:drop-fronted": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:drop-fronted": {
+       "k": 1,
+       "n": 63,
+       "pct": 1.59,
+       "ci": [
+        0.04,
+        8.53
+       ]
+      },
+      "FA:drop-main": {
+       "k": 3,
+       "n": 48,
+       "pct": 6.25,
+       "ci": [
+        1.31,
+        17.2
+       ]
+      },
+      "FA:drop-misaligned": {
+       "k": 2,
+       "n": 48,
+       "pct": 4.17,
+       "ci": [
+        0.51,
+        14.25
+       ]
+      },
+      "cov:missing-article": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:missing-article": {
+       "k": 2,
+       "n": 97,
+       "pct": 2.06,
+       "ci": [
+        0.25,
+        7.25
+       ]
+      },
+      "cov:paraphrase": {
+       "k": 102,
+       "n": 103,
+       "pct": 99.03,
+       "ci": [
+        94.71,
+        99.98
+       ]
+      },
+      "cov:plain": {
+       "k": 80,
+       "n": 80,
+       "pct": 100.0,
+       "ci": [
+        95.49,
+        100.0
+       ]
+      },
+      "FA:preposition": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 62,
+       "n": 63,
+       "pct": 98.41,
+       "ci": [
+        91.47,
+        99.96
+       ]
+      },
+      "FA:time-frame": {
+       "k": 4,
+       "n": 120,
+       "pct": 3.33,
+       "ci": [
+        0.92,
+        8.31
+       ]
+      },
+      "FA:wrong-word": {
+       "k": 1,
+       "n": 120,
+       "pct": 0.83,
+       "ci": [
+        0.02,
+        4.56
+       ]
+      }
+     }
+    },
+    "1T": {
+     "coverage": {
+      "k": 394,
+      "n": 421,
+      "pct": 93.59,
+      "ci": [
+       90.81,
+       95.73
+      ]
+     },
+     "FA": {
+      "k": 9,
+      "n": 479,
+      "pct": 1.88,
+      "ci": [
+       0.86,
+       3.54
+      ]
+     },
+     "FA_by_type": {
+      "M": {
+       "k": 6,
+       "n": 209,
+       "pct": 2.87,
+       "ci": [
+        1.06,
+        6.14
+       ]
+      },
+      "S": {
+       "k": 2,
+       "n": 79,
+       "pct": 2.53,
+       "ci": [
+        0.31,
+        8.85
+       ]
+      },
+      "T": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      },
+      "W": {
+       "k": 0,
+       "n": 72,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        4.99
+       ]
+      }
+     },
+     "cells": {
+      "FA:agentdrop-embedded": {
+       "k": 5,
+       "n": 96,
+       "pct": 5.21,
+       "ci": [
+        1.71,
+        11.74
+       ]
+      },
+      "FA:agentdrop-main": {
+       "k": 1,
+       "n": 65,
+       "pct": 1.54,
+       "ci": [
+        0.04,
+        8.28
+       ]
+      },
+      "cov:aspect": {
+       "k": 59,
+       "n": 61,
+       "pct": 96.72,
+       "ci": [
+        88.65,
+        99.6
+       ]
+      },
+      "FA:aspect": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:by-passive": {
+       "k": 47,
+       "n": 47,
+       "pct": 100.0,
+       "ci": [
+        92.45,
+        100.0
+       ]
+      },
+      "cov:by-passive-embedded": {
+       "k": 33,
+       "n": 33,
+       "pct": 100.0,
+       "ci": [
+        89.42,
+        100.0
+       ]
+      },
+      "cov:determiner": {
+       "k": 72,
+       "n": 79,
+       "pct": 91.14,
+       "ci": [
+        82.59,
+        96.36
+       ]
+      },
+      "FA:number": {
+       "k": 0,
+       "n": 12,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        26.46
+       ]
+      },
+      "cov:plain": {
+       "k": 176,
+       "n": 195,
+       "pct": 90.26,
+       "ci": [
+        85.2,
+        94.03
+       ]
+      },
+      "FA:plain": {
+       "k": 1,
+       "n": 186,
+       "pct": 0.54,
+       "ci": [
+        0.01,
+        2.96
+       ]
+      },
+      "cov:skp-passive": {
+       "k": 72,
+       "n": 72,
+       "pct": 100.0,
+       "ci": [
+        95.01,
+        100.0
+       ]
+      },
+      "FA:skp-passive": {
+       "k": 1,
+       "n": 1,
+       "pct": 100.0,
+       "ci": [
+        2.5,
+        100.0
+       ]
+      },
+      "cov:timeframe": {
+       "k": 0,
+       "n": 1,
+       "pct": 0.0,
+       "ci": [
+        0.0,
+        97.5
+       ]
+      },
+      "FA:timeframe": {
+       "k": 1,
+       "n": 119,
+       "pct": 0.84,
+       "ci": [
+        0.02,
+        4.59
+       ]
+      }
+     }
+    }
+   },
+   "worse_cells": {
+    "1U": [],
+    "1T": []
+   },
+   "ag_v5_cost_vs_v4": {
+    "1U": 0,
+    "1T": 0
+   },
+   "tip_cost_wrong_accepted": {
+    "1U": 0,
+    "1T": 0
+   },
+   "calls": 0,
+   "status": "kept"
+  },
+  {
+   "round": 3,
+   "fix": "A2(a) L3 determiner PROMPT line",
+   "status": "NOT RUN",
+   "calls": 0,
+   "why": "not run in this track (0 of 200 loop calls spent)"
+  }
+ ],
+ "stop": null
+}
