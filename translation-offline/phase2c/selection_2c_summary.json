@@ -1,0 +1,749 @@
+{
+ "rule": "2B verbatim: concepts ranked by md5(concept_id||'phase2b-concept') (cut 3,600 = all concepts); A-concept -> one A1 + one A2, B-concept -> one B1 + one B2 grammar-topic exercise; within (concept, level) lowest md5(concept_id::text||exercise_id::text||'phase2b'), ties by exercise_id; excluded ids skipped, next-lowest taken; slot dropped if none remains",
+ "sentence_table": "exercise_localizations",
+ "czech_code": "cz",
+ "exclusions": {
+  "phase2a_test_sets_and_trackB": 470,
+  "phase2a_selected": 1000,
+  "file_scan_ids": 488,
+  "file_scan_json_files": 1961,
+  "phase2b_sample": 200,
+  "union": 1687,
+  "hit_the_2b_picks": 326
+ },
+ "concepts_total": 3057,
+ "concepts_with_a_selected_exercise": 2263,
+ "concepts_2_sentences": 1801,
+ "concepts_1_sentence": 462,
+ "concepts_0_sentences": 794,
+ "concepts_without_any_grammar_sentence": 771,
+ "selected_exercises": 4064,
+ "expected_2b": 4109,
+ "delta_vs_2b": -45,
+ "rows_jsonl": 8128,
+ "source_sentences": 8128,
+ "per_level": {
+  "B1": 885,
+  "B2": 785,
+  "A1": 1174,
+  "A2": 1220
+ },
+ "per_language_level": {
+  "cz": 4064,
+  "cz_A1": 1174,
+  "cz_A2": 1220,
+  "cz_B1": 885,
+  "cz_B2": 785,
+  "cz_runnable": 4064,
+  "sk": 4064,
+  "sk_A1": 1174,
+  "sk_A2": 1220,
+  "sk_B1": 885,
+  "sk_B2": 785,
+  "sk_runnable": 4064
+ },
+ "slots": {
+  "partitions_in_2b": 4109,
+  "same_pick": 3783,
+  "repicked_after_exclusion": 281,
+  "dropped_no_candidate_left": 45,
+  "dropped_slots": [
+   {
+    "concept_id": 1,
+    "level": "B1"
+   },
+   {
+    "concept_id": 1,
+    "level": "B2"
+   },
+   {
+    "concept_id": 2,
+    "level": "B1"
+   },
+   {
+    "concept_id": 216,
+    "level": "B2"
+   },
+   {
+    "concept_id": 246,
+    "level": "B1"
+   },
+   {
+    "concept_id": 424,
+    "level": "B2"
+   },
+   {
+    "concept_id": 431,
+    "level": "B2"
+   },
+   {
+    "concept_id": 804,
+    "level": "B1"
+   },
+   {
+    "concept_id": 848,
+    "level": "B2"
+   },
+   {
+    "concept_id": 981,
+    "level": "A1"
+   },
+   {
+    "concept_id": 981,
+    "level": "A2"
+   },
+   {
+    "concept_id": 982,
+    "level": "A1"
+   },
+   {
+    "concept_id": 1433,
+    "level": "A1"
+   },
+   {
+    "concept_id": 1858,
+    "level": "A1"
+   },
+   {
+    "concept_id": 1958,
+    "level": "B2"
+   },
+   {
+    "concept_id": 2067,
+    "level": "B2"
+   },
+   {
+    "concept_id": 2112,
+    "level": "A2"
+   },
+   {
+    "concept_id": 2231,
+    "level": "A1"
+   },
+   {
+    "concept_id": 2490,
+    "level": "A2"
+   },
+   {
+    "concept_id": 2495,
+    "level": "A1"
+   },
+   {
+    "concept_id": 2611,
+    "level": "A1"
+   },
+   {
+    "concept_id": 2817,
+    "level": "A2"
+   },
+   {
+    "concept_id": 2919,
+    "level": "B2"
+   },
+   {
+    "concept_id": 2921,
+    "level": "B2"
+   },
+   {
+    "concept_id": 2954,
+    "level": "B1"
+   },
+   {
+    "concept_id": 2980,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3025,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3050,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3077,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3086,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3137,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3206,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3214,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3303,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3305,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3313,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3329,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3343,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3357,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3418,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3455,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3527,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3528,
+    "level": "B1"
+   },
+   {
+    "concept_id": 3579,
+    "level": "B2"
+   },
+   {
+    "concept_id": 3583,
+    "level": "B2"
+   }
+  ],
+  "new_slots_not_in_2b": []
+ },
+ "field_gaps": {
+  "rows_with_any_gap": 56,
+  "by_field": {
+   "ca_sk": 56,
+   "ca_cz": 56
+  },
+  "rows": [
+   {
+    "exercise_id": 28680,
+    "concept_id": 2253,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35900,
+    "concept_id": 2010,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35476,
+    "concept_id": 1915,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36250,
+    "concept_id": 2128,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 27840,
+    "concept_id": 1029,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34078,
+    "concept_id": 1610,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 27245,
+    "concept_id": 989,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35333,
+    "concept_id": 1884,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33838,
+    "concept_id": 567,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34219,
+    "concept_id": 2619,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36357,
+    "concept_id": 2146,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34851,
+    "concept_id": 1762,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 27678,
+    "concept_id": 2213,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 28545,
+    "concept_id": 1064,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35629,
+    "concept_id": 1946,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33683,
+    "concept_id": 1507,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 29114,
+    "concept_id": 2271,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 28491,
+    "concept_id": 2246,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 30557,
+    "concept_id": 2336,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36064,
+    "concept_id": 2846,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34318,
+    "concept_id": 2631,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36476,
+    "concept_id": 2168,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 31182,
+    "concept_id": 2363,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35974,
+    "concept_id": 2835,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33851,
+    "concept_id": 2576,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 32696,
+    "concept_id": 1315,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33741,
+    "concept_id": 2563,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 42211,
+    "concept_id": 3420,
+    "level": "B2",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33981,
+    "concept_id": 1582,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 41279,
+    "concept_id": 3341,
+    "level": "B1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 39783,
+    "concept_id": 3197,
+    "level": "B2",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33551,
+    "concept_id": 1487,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 38934,
+    "concept_id": 3124,
+    "level": "B2",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 31073,
+    "concept_id": 2358,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 39713,
+    "concept_id": 3191,
+    "level": "B2",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 29607,
+    "concept_id": 1140,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35934,
+    "concept_id": 2831,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36082,
+    "concept_id": 2848,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34179,
+    "concept_id": 2614,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33034,
+    "concept_id": 1389,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36167,
+    "concept_id": 2112,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 31695,
+    "concept_id": 2382,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 27596,
+    "concept_id": 179,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35738,
+    "concept_id": 1971,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 30094,
+    "concept_id": 1177,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 32320,
+    "concept_id": 2409,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34236,
+    "concept_id": 1641,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 36185,
+    "concept_id": 2114,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35811,
+    "concept_id": 1986,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 34560,
+    "concept_id": 2662,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 32621,
+    "concept_id": 2420,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 41194,
+    "concept_id": 3332,
+    "level": "B2",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 33495,
+    "concept_id": 1469,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 35085,
+    "concept_id": 2725,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 30910,
+    "concept_id": 2351,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   },
+   {
+    "exercise_id": 32742,
+    "concept_id": 1321,
+    "level": "A1",
+    "missing": [
+     "ca_sk",
+     "ca_cz"
+    ]
+   }
+  ]
+ },
+ "both_sk_and_cz": 4064,
+ "order": "language (sk, cz), then concept rank md5(concept_id||'phase2b-concept'), then level"
+}
