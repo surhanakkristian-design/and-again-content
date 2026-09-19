@@ -1,114 +1,117 @@
-# Phase 1N — sentence-set check (`data/sentences.json`)
+# Phase 1N — check of `data/sentences.json`
 
-Label: **sentence-recheck-1** · date 19.9.2026 · script `phase1n/check_sentences.py`
-(`python3 check_sentences.py`; exit 0 iff `ok`).
+Label: **sentence-recheck-2** · 19 Sep 2026 · script: `check_sentences.py`
+(run `python3 check_sentences.py`, exit 0 iff `ok`).
 
-This is a **re-check of the revised file** (sentences.json rewritten after the first
-`sentence-check` pass). The three blockers of that pass were applied and verified here:
-160022 got its 1pl auxiliary, 160043 is now `passivizable: false`, 160073 uses `znášate`.
-Seven of the eight minor items were applied too (160086 `skatalogizujú`, 160011 / 160062
-past-conditional apodosis, 160046 transitive first clause, 160038 verb added, 160002 verb
-order, 160093 `agent: "Knihovník"`); 160047 was knowingly kept.
+This is the second, independent check of the file. It was run against the
+version of `data/sentences.json` as of 11:04 (i.e. after the recheck-1 repairs
+to 160020 / 160022 / 160087 and the `passivizable = false` corrections on
+160013 / 160026 / 160038). Those earlier findings are confirmed as fixed and
+are **not** repeated below.
 
-`ok` = mechanical checks pass AND no blocker open. Mechanical passes; **one new blocker**
-was found in the manual read, so **ok = false**, **n_problems = 6** (1 blocker + 5 minor).
-
-## 1. Mechanical checks — 10/10 PASS
+## 1. Mechanical checks — all pass
 
 | check | required | measured | verdict |
 |---|---|---|---|
-| rows | exactly 100 | 100 | PASS |
-| sids | 160001..160100, unique | complete, no dup, no extra | PASS |
-| fields | sid, slovak, level, topic, tf_gold + tags{nom_agent, agent, passivizable, reported_speech, perfective_future, impersonal_or_passive} | present on all 100 rows | PASS |
-| level counts | A1 13 / A2 21 / B1 36 / B2 30 | A1 13 / A2 21 / B1 36 / B2 30 | PASS |
-| passivizable true | >= 80 | 83 | PASS |
-| tf_gold domain | {past, present, future} | no other value | PASS |
-| tf_gold per frame | each >= 20 | past 40 / present 35 / future 25 | PASS |
-| identical to existing_350 | 0 | 0 | PASS |
-| max token-Jaccard new-vs-existing | < 0.80 | 0.3529 (160053 vs existing #45) | PASS |
-| max token-Jaccard new-vs-new | < 0.60 | 0.3333 (160016 vs 160097) | PASS |
+| rows | exactly 100 | 100 | pass |
+| sids | 160001..160100, unique | complete, 0 duplicates | pass |
+| fields | `sid, slovak, level, topic, tf_gold, tags{nom_agent, agent, passivizable, reported_speech, perfective_future, impersonal_or_passive}` | 0 missing, no empty `slovak` | pass |
+| level counts | A1 13 / A2 21 / B1 36 / B2 30 | A1 13 / A2 21 / B1 36 / B2 30 | pass |
+| `passivizable: true` | >= 80 | 83 | pass |
+| `tf_gold` domain | {past, present, future} | no other value | pass |
+| frame balance | each >= 20 | past 40 / present 35 / future 25 | pass |
+| identical to `existing_350.json` | none | 0 | pass |
+| max token-Jaccard new vs existing | < 0.80 | **0.353** (160053 vs existing #45) | pass |
+| max token-Jaccard new vs new | < 0.60 | **0.250** (160005 vs 160083) | pass |
 
-Secondary counts (not gated): nom_agent 86, reported_speech 15, perfective_future 11,
-impersonal_or_passive 6.
-
-Headroom: applying the two `passivizable` demotions below (160013, 160026) moves the count
-83 -> 81, and adding 160038 -> 80. All still satisfy `>= 80`.
+Secondary tag counts (informational, no target): `reported_speech` 15,
+`perfective_future` 11, `impersonal_or_passive` 6, `nom_agent` 89.
 
 ## 2. Manual read of all 100 sentences
 
-Read against four questions: (a) correct, natural Slovak; (b) the arm-B convention as stated
-in `tasks/ARM_B.md` (explicit subject pronoun wherever Slovak would drop it; noun subjects
-untouched; nothing inserted into genuinely impersonal/passive sentences; one pronoun per
-subject, so a following same-subject clause keeps it implicit — `…a zhasnem lampu` 160094,
-`…tú anténu upevníme sami` 160096, `…vyloží ten materiál` 160057 are all correct);
-(c) tf_gold vs. the real time frame; (d) `passivizable: true` only where an English by-passive
-is grammatical.
+Read against four questions: (a) correct, natural Slovak; (b) the arm-B
+convention (explicit subject pronoun wherever Slovak would drop it; noun
+subjects untouched; nothing inserted into genuinely impersonal/passive clauses
+or into imperatives; one pronoun per subject, so a following **same-subject**
+clause keeps it implicit); (c) `tf_gold` vs. the real time frame;
+(d) `passivizable: true` only where an English *by*-passive is grammatical.
 
-**tf_gold: correct on all 100 rows.** The tricky classes are consistent: BE GOING TO with the
-Slovak present `chystá sa` is `future` (160003, 160089); present perfect is split by event
-status — ongoing `leští … už od rána` -> present (160013), completed `vymenil už všetky` ->
-past (160054, 160093); third conditional and past wishes -> past (160011, 160022, 160062,
-160080); the mixed conditional with `dnes` -> present (160018); zero conditional with the
-perfective form `ohneš` -> present (160027); `musel vymeniť` = "must have changed" -> past
-(160074); `mala vystužiť` = "should have reinforced" -> past (160036).
+**Blockers: 0. Problems found: 2 (both minor).**
 
-### Blocker (1) — must be fixed before the set is used
+### P1 · sid 160084 · `passivizable: true` but the English has no by-passive
 
-**P1 · sid 160020 · arm-B convention broken (dropped 1pl subject)**
-Now: `Keď sme dorazili, Janka už rozložila celý stánok.`
-The subordinate clause has a pro-dropped 1pl subject **that is not the main-clause subject**
-(`Janka`), so the "one pronoun per subject" reading does not cover it; arm-B requires the
-pronoun. This is the only row in the set with an unstated pronominal subject.
+Now: `Oni hovoria, že on ten čln lakuje už druhý týždeň.` — tags `passivizable: true`.
+The duration adverbial `už druhý týždeň` with a present-tense verb forces an
+English **present perfect continuous** ("…that he has been varnishing the boat
+for the second week"). `*the boat has been being varnished by him` is
+ungrammatical, exactly like the three rows that were already corrected
+(160013 present perfect continuous, 160026 past perfect continuous,
+160053 future perfect continuous).
+
+Required fix — in row 160084 set `tags.passivizable = false`.
+After the fix the true count is **82**, still `>= 80`, so the set stays valid.
+(`tf_gold: present` and all other tags on this row are correct.)
+
+### P2 · sid 160027 · arm-B: dropped subject in a switch-reference clause
+
+Now: `Ak ty ohneš ten drôt príliš rýchlo, vždy praskne.`
+The second clause has a pro-dropped 3sg subject (the wire) which is **not** the
+subject of the first clause (`ty`), so the "same subject stays implicit"
+exemption does not cover it; the English gold needs an overt *it*. An inanimate
+pronoun (`ono` / `ten`) standing alone would be unnatural Slovak, so the repair
+repeats the noun.
+
 Required fix — replace the `slovak` value with:
-`Keď sme my dorazili, Janka už rozložila celý stánok.`
-(clitic `sme` stays in second position, the pronoun follows it). Tags unchanged.
+`Ak ty ohneš ten drôt príliš rýchlo, ten drôt vždy praskne.`
+Tags unchanged (`tf_gold: present`, `passivizable: true` — "if the wire is bent
+too fast by you" is grammatical).
 
-### Minor problems (5) — recommended, none blocks the run
+### Checked and found correct (no action)
 
-**P2 · sid 160013 · `passivizable: true` but the by-passive is ungrammatical.**
-`Klampiar leští ten medený kotol už od skorého rána.` = "has been polishing"; the by-passive
-"The cauldron has been being polished by the tinsmith" is not grammatical English. Note that
-160053 (future perfect continuous) is already tagged `false` for exactly this reason, so the
-set is internally inconsistent. Fix: set `"passivizable": false` in `tags` of 160013.
+* **Time frames.** All 100 `tf_gold` values match the sentence. The two
+  systematic cases are consistent: a completed event in Slovak past tense is
+  `past` even where English would use the present perfect (160054, 160093,
+  160071, 160075), while an event still running at speech time is `present`
+  (160013, 160084). Going-to futures with a present-form `chystá sa` are
+  `future` (160003, 160089); perfective presents in conditional apodoses are
+  `future` with `perfective_future: true` (160057, 160072, 160096, 160069,
+  160094). Counterfactuals: past ones `past` (160011, 160062, 160022, 160080),
+  the mixed conditional 160018 `present` because its main clause is `dnes by
+  … hrala`.
+* **Arm-B.** Apart from P2, every clause with a pronominal subject carries the
+  pronoun. Correctly left implicit: same-subject continuations (160046, 160057,
+  160067, 160072, 160094, 160096, 160100, 160011, 160018, 160026, 160062,
+  160068), imperatives (160035 `Pozri!`, 160076 `Neboj sa`), genuinely
+  impersonal or passive rows (160004, 160032, 160039, 160051, 160058, 160098)
+  and the indefinite 3pl relative clause `ktorého nám odporučili` (160059).
+* **Passivizable.** The remaining 17 `false` rows are right: already passive or
+  impersonal (160004, 160032, 160039, 160051, 160058, 160098), existential /
+  copular (160008, 160025, 160055, 160070, 160097), causative `dať + inf.`
+  (160029), `odmietol podpísať` (160043), the wh-question (160038) and the three
+  perfect-continuous rows (160013, 160026, 160053). The `true` rows all take a
+  well-formed *by*-passive, including the modal ones (160023, 160036, 160066,
+  160074) and the comparatives (160041, 160087).
+* **Slovak.** No agreement, case, aspect or clitic error found. Clitic
+  placement in `Portrét si ona dala zarámovať…` (160029) and `Keby si ona vlani
+  nebola zlomila…` (160018) follows the same pattern as the existing 350 set
+  (`Slajdy si ona dala skontrolovať…`), and `Keď sme my dorazili…` (160020)
+  keeps `sme` in second position — all acceptable.
 
-**P3 · sid 160026 · same class.** `Oni prekladali ten slovník celé mesiace…` = "had been
-translating"; "had been being translated by them" is ungrammatical.
-Fix: set `"passivizable": false` in `tags` of 160026.
+### Systematic stylistic note (not counted as a problem)
 
-**P4 · sid 160087 · possessive should be reflexive.**
-`Nina brúsi tie hrany presnejšie ako ktorýkoľvek z jej spolužiakov.` `jej` is coreferent with
-the subject, which Slovak marks with `svoj`; as written it reads as *someone else's* classmates.
-Fix: `Nina brúsi tie hrany presnejšie ako ktorýkoľvek zo svojich spolužiakov.`
-
-**P5 · sid 160022 · grammatical but stilted clitic+pronoun doubling.**
-`Kiežby sme my boli tú zmluvu prečítali pozornejšie.` `sme my` is well-formed (clitic second,
-emphatic pronoun third) but marked; it is the price of arm-B in the 1pl past conditional.
-Fix (optional): move the row to 3sg — `Kiežby ona bola tú zmluvu prečítala pozornejšie.` with
-`tags.agent` = `"ona"`. Otherwise keep and do not score it as a translation error.
-
-**P6 · sid 160038 · by-passive of a wh-question is marginal.**
-`Čo ty práve kreslíš na ten veľký papier?` — "What is being drawn by you…?" is possible but
-stilted; it is the only interrogative in the set.
-Fix: either set `"passivizable": false` (count then 80, still at the floor) or accept as-is.
-
-### Recorded, not problems
-
-* Arm-B word-order artifacts after a fronted adverbial — 160030, 160047, 160083 (`Len zriedka
-  on púšťa…`): Slovak would prefer inversion, but the pronoun placement is the frozen arm-B
-  behaviour. The judge must not score these as translation errors.
-* Fronted object + clitic in the causative row 160029 (`Portrét si ona dala zarámovať…`)
-  mirrors the existing_350 pattern (`Slajdy si ona dala skontrolovať…`) — intended.
-* `ktorého nám odporučili` (160059) is an indefinite-3pl impersonal; arm-B explicitly does not
-  insert a subject there.
-* The 6 impersonal/passive rows (160004, 160032, 160039, 160051, 160058, 160098) correctly
-  carry no forced subject.
-* Plain future-continuous rows (160012, 160021, 160049, 160061, 160091, 160099) keep
-  `passivizable: true`: their natural English passive is the simple `will be polished`, which
-  is grammatical — unlike the perfect-continuous class P2/P3.
+Eight rows front an adverbial and then place the subject pronoun before the
+verb: 160007, 160030, 160047, 160053, 160083, 160086, 160100 (`Do soboty ona
+zdigitalizuje…`, `Len zriedka on púšťa…`). This is grammatical Slovak with a
+mildly contrastive reading; the neutral order would put the pronoun first
+(`Ona do soboty zdigitalizuje…`). It is consistent across the set and is a
+direct consequence of the arm-B pronoun insertion, so it is reported once here
+rather than as eight row problems. Likewise, the overt coreferent `on/ona` in
+the 15 reported-speech complements (`Lodník nám povedal, že on…`) is
+pragmatically marked in Slovak (it invites a disjoint-reference reading) but is
+required by arm-B and is applied consistently; the `agent` tag always names the
+real performer, so no row is ambiguous for scoring.
 
 ## 3. Verdict
 
-Mechanical PASS (10/10). Manual: 6 flagged sids — **1 blocker (160020)**, 5 minor
-(160013, 160026, 160087, 160022, 160038). **ok = false**, **n_problems = 6**.
-After applying P1, re-run `check_sentences.py` (drop the blocker entry from
-`MANUAL_PROBLEMS`); it must print `"mechanical_ok": true` and then `"ok": true`.
+`ok: true`, `n_problems: 2`, `n_blockers: 0` — the set is usable as it stands;
+applying P1 and P2 is recommended before the run and neither breaks any count.
