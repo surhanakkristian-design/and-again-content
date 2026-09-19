@@ -1,0 +1,194 @@
+#!/usr/bin/env python3
+import json, os, re, random, sys, collections
+
+SCR = os.path.dirname(os.path.abspath(__file__))
+C = os.path.expanduser("~/Projects/and-again-content/translation-offline")
+P = os.path.join(C, "phase1p")
+os.makedirs(os.path.join(P, "data"), exist_ok=True)
+os.makedirs(os.path.join(P, "judge"), exist_ok=True)
+
+sents = []
+for f in ("p1.json", "p2.json", "p3.json"):
+    sents += json.load(open(os.path.join(SCR, f), encoding="utf-8"))
+
+errs = []
+def chk(cond, msg):
+    if not cond:
+        errs.append(msg)
+
+# ---------- structural validation ----------
+chk(len(sents) == 60, f"sentence count {len(sents)} != 60")
+expect_sids = ["1P%03d" % i for i in range(1, 61)]
+chk([s["sid"] for s in sents] == expect_sids, "sid sequence wrong")
+ALLOWED = {"agentless", "by-passive", "determiner", "aspect", "timeframe", "number", "plain"}
+TYPES = {"T", "W", "M", "S"}
+for s in sents:
+    sid = s["sid"]
+    for k in ("sid", "slovak", "level", "topic", "tf_gold", "tags", "correct", "wrong"):
+        chk(k in s, f"{sid}: missing field {k}")
+    chk(s["level"] == ("A1" if int(sid[2:]) <= 30 else "A2"), f"{sid}: wrong level")
+    chk(s["tf_gold"] in ("past", "present", "future"), f"{sid}: tf_gold")
+    for k in ("nom_agent", "agent", "passivizable", "reported_speech", "perfective_future", "impersonal_or_passive"):
+        chk(k in s["tags"], f"{sid}: sentence tags missing {k}")
+    chk(len(s["correct"]) == 4, f"{sid}: {len(s['correct'])} correct")
+    chk(len(s["wrong"]) == 5, f"{sid}: {len(s['wrong'])} wrong")
+    seen = set()
+    for a in s["correct"]:
+        chk(set(a.keys()) == {"answer", "passive", "tags"}, f"{sid}: correct field names {sorted(a.keys())}")
+        chk(a["passive"] in (None, "by", "agentless"), f"{sid}: passive value")
+        chk(set(a["tags"]) <= ALLOWED and a["tags"], f"{sid}: bad correct tags {a['tags']}")
+        chk("timeframe" not in a["tags"], f"{sid}: timeframe tag on a correct answer")
+        n = a["answer"].strip().lower()
+        chk(n not in seen, f"{sid}: duplicate answer within sentence: {a['answer']}")
+        seen.add(n)
+    for a in s["wrong"]:
+        chk(set(a.keys()) == {"intent", "form", "answer", "tags"}, f"{sid}: wrong field names {sorted(a.keys())}")
+        chk(a["intent"] in TYPES, f"{sid}: intent {a['intent']}")
+        chk(set(a["tags"]) <= ALLOWED and a["tags"], f"{sid}: bad wrong tags {a['tags']}")
+        n = a["answer"].strip().lower()
+        chk(n not in seen, f"{sid}: duplicate answer within sentence: {a['answer']}")
+        seen.add(n)
+    for a in s["wrong"]:
+        if "timeframe" in a["tags"]:
+            chk(a["intent"] == "T", f"{sid}: timeframe tag but intent {a['intent']}")
+
+# ---------- overlap with the existing 450 ----------
+def norm(t):
+    t = t.lower().replace("’", "'")
+    t = re.sub(r"[^\w\s']", " ", t, flags=re.UNICODE)
+    return re.sub(r"\s+", " ", t).strip()
+
+existing = []
+def harvest(o):
+    if isinstance(o, dict):
+        for k, v in o.items():
+            if k in ("slovak", "sk", "sentence", "source") and isinstance(v, str):
+                existing.append(v)
+            else:
+                harvest(v)
+    elif isinstance(o, list):
+        for v in o:
+            harvest(v)
+
+harvest(json.load(open(os.path.join(C, "phase1n", "existing_350.json"), encoding="utf-8")))
+harvest(json.load(open(os.path.join(C, "phase1n", "data", "sentences.json"), encoding="utf-8")))
+existing = [e for e in existing if e.strip()]
+ex_norm = {norm(e) for e in existing}
+ex_tok = [set(norm(e).split()) for e in existing]
+
+mine_norm = [norm(s["slovak"]) for s in sents]
+for i, s in enumerate(sents):
+    chk(mine_norm[i] not in ex_norm, f"{s['sid']}: exact duplicate of an existing sentence")
+    chk(mine_norm.count(mine_norm[i]) == 1, f"{s['sid']}: duplicate within writer A")
+    mt = set(mine_norm[i].split())
+    for j, et in enumerate(ex_tok):
+        u = len(mt | et)
+        if u and len(mt & et) / u >= 0.8:
+            errs.append(f"{s['sid']}: near-duplicate of existing: {existing[j]}")
+    for j in range(i + 1, 60):
+        ot = set(mine_norm[j].split())
+        u = len(mt | ot)
+        if u and len(mt & ot) / u >= 0.8:
+            errs.append(f"{s['sid']}: near-duplicate of {sents[j]['sid']}")
+
+# ---------- required counts ----------
+cc = collections.Counter(); wc = collections.Counter()
+cc_par = {0: collections.Counter(), 1: collections.Counter()}
+wc_par = {0: collections.Counter(), 1: collections.Counter()}
+intents = collections.Counter(); intents_par = {0: collections.Counter(), 1: collections.Counter()}
+ag_wrong = ag_wrong_nontf = 0
+ag_wrong_par = collections.Counter(); tf_par = collections.Counter()
+for s in sents:
+    par = int(s["sid"][2:]) % 2
+    for a in s["correct"]:
+        for t in a["tags"]:
+            cc[t] += 1; cc_par[par][t] += 1
+    for a in s["wrong"]:
+        intents[a["intent"]] += 1; intents_par[par][a["intent"]] += 1
+        for t in a["tags"]:
+            wc[t] += 1; wc_par[par][t] += 1
+        if "timeframe" in a["tags"]:
+            tf_par[par] += 1
+        if "agentless" in a["tags"]:
+            ag_wrong += 1; ag_wrong_par[par] += 1
+            if "timeframe" not in a["tags"]:
+                ag_wrong_nontf += 1
+
+chk(cc["agentless"] >= 42, f"correct agentless {cc['agentless']} < 42")
+chk(cc["determiner"] >= 52, f"correct determiner {cc['determiner']} < 52")
+chk(cc["by-passive"] >= 1 and cc["aspect"] >= 1, "need some by-passive and aspect corrects")
+chk(wc["timeframe"] >= 82, f"wrong timeframe {wc['timeframe']} < 82")
+chk(ag_wrong >= 42, f"wrong agentless {ag_wrong} < 42")
+chk(ag_wrong_nontf >= 25, f"wrong agentless non-timeframe {ag_wrong_nontf} < 25")
+for t in TYPES:
+    chk(intents[t] >= 40, f"intent {t} only {intents[t]}")
+# parity balance of the special items
+for label, d in (("correct agentless", cc_par), ("correct determiner", cc_par)):
+    pass
+def bal(name, odd, even, tol=0.35):
+    tot = odd + even
+    if tot:
+        chk(abs(odd - even) <= tol * tot, f"{name} parity skew odd={odd} even={even}")
+bal("correct agentless", cc_par[1]["agentless"], cc_par[0]["agentless"])
+bal("correct determiner", cc_par[1]["determiner"], cc_par[0]["determiner"])
+bal("wrong timeframe", tf_par[1], tf_par[0])
+bal("wrong agentless", ag_wrong_par[1], ag_wrong_par[0])
+
+# ---------- write writer_A.json ----------
+out = os.path.join(P, "data", "writer_A.json")
+json.dump(sents, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+# ---------- blind judge packets ----------
+rng = random.Random(1601)
+base = []
+for s in sents:
+    for i, a in enumerate(s["correct"]):
+        base.append({"sid": s["sid"], "aid": f"c{i}", "slovak": s["slovak"], "level": s["level"],
+                     "answer": a["answer"], "topic": s["topic"]})
+    for i, a in enumerate(s["wrong"]):
+        base.append({"sid": s["sid"], "aid": f"w{i}", "slovak": s["slovak"], "level": s["level"],
+                     "answer": a["answer"], "topic": s["topic"]})
+chk(len(base) == 540, f"base items {len(base)} != 540")
+
+dups = rng.sample(base, 40)
+items = [dict(b, dup=None) for b in base] + [dict(d, dup=True) for d in dups]
+rng.shuffle(items)
+key = {}
+pk = {"A1": [], "A2": []}
+seen_orig = {}
+for n, it in enumerate(items, 1):
+    jid = "JA%04d" % n
+    if it["dup"] is None:
+        seen_orig.setdefault((it["sid"], it["aid"]), jid)
+for n, it in enumerate(items, 1):
+    jid = "JA%04d" % n
+    orig = seen_orig[(it["sid"], it["aid"])]
+    key[jid] = {"sid": it["sid"], "aid": it["aid"],
+                "is_duplicate_of": (orig if jid != orig else None)}
+    pk[it["level"]].append({"jid": jid, "slovak": it["slovak"], "level": it["level"],
+                            "answer": it["answer"], "topic": it["topic"]})
+
+chk(sum(1 for v in key.values() if v["is_duplicate_of"]) == 40,
+    "duplicate count in key != 40")
+json.dump(pk["A1"], open(os.path.join(P, "judge", "packets_A1.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(pk["A2"], open(os.path.join(P, "judge", "packets_A2.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+json.dump(key, open(os.path.join(P, "judge", "_key_A.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+# ---------- report ----------
+print("sentences:", len(sents), " per-sentence 4 correct / 5 wrong: ok" if not any("correct" in e for e in errs) else "")
+print("existing Slovak sentences compared against:", len(existing))
+print("CORRECT tags:", dict(sorted(cc.items())))
+print("  odd sids:", dict(sorted(cc_par[1].items())), " even sids:", dict(sorted(cc_par[0].items())))
+print("WRONG tags:", dict(sorted(wc.items())))
+print("  odd sids:", dict(sorted(wc_par[1].items())), " even sids:", dict(sorted(wc_par[0].items())))
+print("wrong agentless total:", ag_wrong, " of which non-timeframe:", ag_wrong_nontf)
+print("wrong intents:", dict(sorted(intents.items())), " odd:", dict(sorted(intents_par[1].items())), " even:", dict(sorted(intents_par[0].items())))
+print("tf_gold:", dict(collections.Counter(s["tf_gold"] for s in sents)))
+print("levels:", dict(collections.Counter(s["level"] for s in sents)))
+print("packets: A1", len(pk["A1"]), " A2", len(pk["A2"]), " total", len(pk["A1"]) + len(pk["A2"]), " duplicates 40")
+if errs:
+    print("FAIL (%d):" % len(errs))
+    for e in errs[:40]:
+        print("  -", e)
+    sys.exit(1)
+print("OK")

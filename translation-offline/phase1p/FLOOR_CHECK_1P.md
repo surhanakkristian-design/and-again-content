@@ -113,3 +113,47 @@ scope, which the brief forbids.  It was not done.
    floors; it needs the owner's explicit decision, not the runner's.
 
 The phase-cap ledger is untouched: 225 of 1,400 counted calls used, 1,175 left.
+
+
+---
+
+# Recovery agent, 19 Sept 2026 — label-side floor pre-check (0 calls) and the second STOP
+
+`data/writer_A.json` is restored (`RECOVERY_1P.md`), so the writers' tags and intents exist again and the four
+floors can be counted on the JUDGED labels (`normalise_1p.py` -> `normalise_1p.json`; the frozen `loader_1p.load_labels`
+reads the adapter output with 1,080 labels, 0 rejected rows, 80 controls).
+
+| floor (judged label x writers' tag) | required | got | P1 | P2 | |
+|---|---|---|---|---|---|
+| judged-wrong time-frame | 120 | 224 | 112 | 112 | pass |
+| judged-wrong carrying the `agentless` tag | 60 | 154 | 78 | 76 | pass |
+| judged-correct agentless passives | 60 | 116 | 57 | 59 | pass |
+| judged-correct determiner-variant | 80 | 120 | 60 | 60 | pass |
+
+Alternative readings on the judge's own columns: judged-wrong type T 224; judge `passive=agentless` on judged-wrong 157, on judged-correct 117.
+
+* judged: correct 599 / wrong 481 (writers intended 480 / 600). By half: {"P1/correct": 300, "P1/wrong": 240, "P2/correct": 299, "P2/wrong": 241}.
+* T/W/M/S among judged-wrong: {"M": 10, "S": 120, "T": 224, "W": 127}. **M is nearly empty**: of the writers' 129 type-M wrong answers the judges accepted 119
+  ("a dropped meaning is accepted with a tip"), rejected 10. Writer intent x judged: {"C->correct": 480, "M->correct": 119, "M->wrong:M": 10, "S->wrong:S": 120, "T->wrong:T": 224, "W->wrong:W": 127}.
+* All 480 writer-intended-correct answers were judged correct (0 overturned). Judged-correct carrying a tip: 252 of 599.
+* judge noise: 80 hidden duplicate pairs, 0 disagree on judged, 0 on type (identical strings only; two judge agents: A side / B side).
+* second judge's unsure jids -> items: {"JB0122": "C:170100:c3", "JB0274": "W:170079:w4", "JB0296": "W:170095:w2", "JB0399": "W:170105:w4", "JB0421": "W:170119:w4", "JB0481": "W:170103:w5", "JB0509": "W:170095:w2", "JB0527": "W:170105:w4"}.
+* lever-1 detector agreement with the writers' tag: **not computed** — `lever1.detect()` needs the sentence annotation
+  (`voice_sk` / `agent_nom`) and the reference; neither exists (below). `floor_check_1p.py` itself cannot run for the same reason.
+
+## Second blocker: the set has no reference annotation
+
+`runner_1p.build_side()` needs, per sentence, `annotations.json` with `hygienised.v` (the stored English renderings; `v[0]` is the
+reference the model sees, the rest are what lever 3 shows and tense-filters), `lk` (locks), `alt` (accepted synonyms) and
+`voice_sk / agent_nom / tf_gold / tense_open / perfective_present` (levers 1 and 2). In Phase 1N these came from a separate
+annotation delivery (`phase1n/data/annotations_part{1,2}.json`, mean 2.37 renderings per sentence). In 1P nobody was asked for it:
+the writer files hold `tf_gold` and agent flags but **no `v`, no `lk`, no `alt`**.
+
+Building it inside this agent was rejected:
+* taking the writer's first correct answer as `v[0]` makes 120 of the 599 judged-correct test items identical to the reference
+  (1N: 29 of 400) — coverage inflated by construction, or the denominator changed after the labels were seen;
+* one rendering per sentence leaves lever 3 with nothing to show or remove — the lever would be unmeasured while burning the set;
+* `lk` and `alt` would be authored by the runner — data authorship, not a tooling reconciliation;
+* the set can be opened exactly once; an improvised annotation would spend it.
+
+`python3 runner_1p.py --preflight` -> `REFUSED: .../data/annotations.json does not exist`. 0 calls. No freeze, no `RUN_COMMIT`.

@@ -1,1 +1,4 @@
-STOP: data/writer_A.json missing (A side unassemblable). See FLOOR_CHECK_1P.md. 0 model calls in the run session.
+STOP (second, recovery agent, 19 Sept 2026): data/writer_A.json is RESTORED and the four label-side floors PASS,
+but the set carries NO reference annotation (no v / lk / alt / voice_sk per sentence): neither blind writer was asked for one,
+so data/annotations.json cannot be built and runner_1p.py --preflight REFUSES. 0 final calls, set still UNOPENED.
+Remedy: REMEDY_1P.md.  (First STOP, 2e62b1f: data/writer_A.json missing - resolved, see RECOVERY_1P.md.)
