@@ -1,0 +1,68 @@
+PHASE 1U — L3 PROMPT (prompt id: P-FROZEN-1U, = P-FROZEN-1P + one line)
+=======================================================================
+This file reproduces the L3 prompt the Phase 1T run actually sent, line by line, in the order the
+code builds it, and marks the ONE line Phase 1U adds. Everything below the rulers is prompt text.
+Lines shown as {{...}} are placeholders the code interpolates at call time and are reproduced here
+byte-identically with their source: do NOT re-word them, do NOT re-order them.
+
+Source of the assembly (read to produce this file):
+  translation-offline/phase1t/run/runner_1t.py   line 57   PROMPT = R1P.PROMPT_1P
+  translation-offline/phase1p/runner_1p.py       lines 66-81  build_req_1p()   <- the insertion point
+  translation-offline/phase1n/runner_1n.py       lines 78-82  VOICE_SAME_LINE
+  translation-offline/phase1k/runner_1k.py       lines 76-90  build_req()  (head/extra/tail layout)
+  translation-offline/phase1i/pipeline_1i.py     lines 40-51  GENDER_TMPL / GROUND_LINE / WORDING_LINE
+                                                 lines 154-179 pb_lines() and sys_text()
+  translation-offline/phase1p/lever2.py          DEF_LINE / ASPECT_TMPL / NUMBER_TMPL
+  translation-offline/phase1p/lever3.py          ALT_TMPL   (CAP = 2)
+
+------------------------------------------------------------------- SYSTEM
+{{SYS}}
+  = pipeline_1i.sys_text(st, 'P-E4b')  ->  lib_prev.SYS, returned UNCHANGED (the variant is not
+    'P-E2', so sys_text returns lib_prev.SYS verbatim). It is the frozen three-way system text whose
+    verdict vocabulary is SAME / TIP / DIFF. Phase 1U does NOT touch the system text.
+
+------------------------------------------------------------------- USER
+{{PB_HEAD_LINES}}
+  = pipeline_1i.pb_lines(st, it)[:-1] — the frozen P-B body taken from the checker itself
+    (C.prompt(it, 'P-B'), fallback lib_prev.prompt(it, 'P-B')), all lines EXCEPT the last.
+    Line 0 starts with "Slovak:"; the body interpolates the Slovak sentence, the English reference
+    and the learner answer. Unchanged in 1U.
+
+{{GENDER_LINE}}   (present only when pipeline_1i.gender_chain(st, sid) is non-empty)
+Gender: the Slovak does not fix the gender here — the reference's {words} may equally be the other gender (he/she, him/her, his/her, himself/herself). An answer that keeps the meaning but picks the other gender is SAME on that point.
+
+The SLOVAK sentence is the ground truth and the English reference is only one valid rendering of it; judge the learner against the Slovak, not against the reference wording.
+
+A synonym, a different word order or a different phrasing that keeps the Slovak meaning is SAME; a word that changes which thing, person, place, time or quantity the Slovak names is DIFF.
+
+Voice: if the Slovak names an agent in the nominative and the learner sentence moves that agent out of subject position or drops it (an active Slovak sentence turned into an English passive), that is SAME, provided the meaning is preserved. Where the Slovak is itself impersonal or passive, an English passive is SAME.
+
+{{LEVER_LINES}}   (0-4 lines, per record, in this fixed order; lever 1 is gone in 1T/1U)
+Definiteness: Slovak has no articles, so the Slovak does not fix the English article here — "the", "a"/"an" and no article at all can all render it. An answer that keeps the meaning but chooses a different article is SAME on that point.
+Aspect: the Slovak does not fix which English aspect is used inside its own time frame. The time frame here is the {frame}; any grammatically possible English {frame} form of the same event (simple, continuous or perfect) is SAME. A form that moves the event into a different time frame is DIFF.
+Number: the Slovak does not fix the English number on {words} — the singular and the plural of the same idea are SAME on that point.
+Also accepted English: {alts}
+
+>>> THE ONE LINE PHASE 1U ADDS — ARTICLE_LINE_1U, inserted AFTER the lever lines and BEFORE the
+>>> tail, so that it qualifies the Definiteness lever line whenever that line fires:
+
+Articles: the previous point is about the CHOICE of article. An article that English grammar REQUIRES and the learner sentence simply leaves out ("Dad will buy new fridge.", "It is cold in kitchen today.") is not acceptable English and is DIFF. An English article is a grammatical requirement of the target language, and Slovak has no article to omit in the first place, so nothing was dropped in translation: the sentence is simply not grammatical English. Where more than one determiner is grammatical (a / the / a possessive / no article where English allows it), the choice stays free and is SAME on that point.
+
+SAME, TIP or DIFF?
+
+------------------------------------------------------------------- END OF PROMPT
+The last line above is the frozen tail (pipeline_1i.pb_lines()[-1], asserted to start with "SAME").
+Generation config: pipeline_1i.GEN_CFG, unchanged (temperature 0, thinkingBudget 0).
+Output vocabulary: unchanged — SAME / TIP / DIFF. No new output token is introduced. A missing
+obligatory article must come back as DIFF, the verdict that leads to rejection in this prompt.
+
+
+OWNER'S RULING ON ARTICLES (Phase 1U)
+
+A missing obligatory article is an ERROR. An answer that lacks an article English grammar requires ("Dad will buy new fridge.", "It is cold in kitchen today.") is WRONG. M1 (a dropped function word is correct, accepted with a tip) covers words like *just* and *already* — optional material. An English article is a grammatical requirement of the target language, and Slovak has no article to omit in the first place, so nothing was "dropped in translation": the sentence is simply not grammatical English.
+
+Clarification (orchestrator, not the owner's words): The CHOICE of determiner where more than one is grammatical (a / the / a possessive / zero article where English allows it) stays free, as before; only a MISSING OBLIGATORY article is an error.
+
+(The ruling is the owner's decision; ARTICLE_LINE_1U above is its rendering in this prompt's own
+SAME / TIP / DIFF vocabulary. The prompt line is what the model sees; the ruling block is what the
+judge and the writers see, so that all three layers are measured against one rule.)

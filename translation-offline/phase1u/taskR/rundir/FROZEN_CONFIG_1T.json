@@ -1,0 +1,32 @@
+{
+ "phase": "1T",
+ "stack": "the frozen 1Q/1P stack: LOCKTIP, TIP-as-rejection ON, F2B, F3, F4v2, F5, arm B, prompt P-FROZEN-1P, hygiene absent, F8 and F9 do not decide",
+ "prompt": "P-FROZEN-1P",
+ "model": "gemini-3.1-flash-lite",
+ "temperature": 0,
+ "thinkingBudget": 0,
+ "locktip": true,
+ "tip_reject": true,
+ "f8_module": "none",
+ "f8_decides": false,
+ "f9_decides": false,
+ "arm": "B",
+ "levers": [
+  2,
+  3
+ ],
+ "lever1": "REMOVED (difference 1): no rewritten side, no second request set, no extra call",
+ "ag_rule": "v3",
+ "ag_module": "phase1t/taskA/agent_drop_v3.py",
+ "ag_flags": [
+  "clause",
+  "subj",
+  "by"
+ ],
+ "ag_placement": "with the deterministic guards, BEFORE L3: an AG rejection is final, costs 0 calls, and the item never reaches L3; AG v2 and each v3 flag alone are recorded as 0-call shadows",
+ "ag_attribution": "rescore_1s_c.build() K3: an item a non-L3 deterministic layer had already rejected keeps that layer, otherwise the layer is 'AG'",
+ "data": "phase1t/set/data",
+ "split": "SPLIT_1T.md — numeric sid 180000+n, odd sid -> P1, even -> P2",
+ "call_cap": 700,
+ "call_cap_note": "owner, brief tail 19 Sept 2026: 700; free tier first, paid fallback pre-approved up to $1.00"
+}

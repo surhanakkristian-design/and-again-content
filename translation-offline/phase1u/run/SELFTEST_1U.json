@@ -1,0 +1,188 @@
+{
+ "mode": "self-test - synthetic rows, stubbed model, 0 model calls, 0 network",
+ "ts": "2026-09-19T20:24:30",
+ "checks": [
+  {
+   "check": "prompt = 1T prompt + EXACTLY one line, after the levers, before the tail",
+   "ok": true,
+   "detail": "added at line 9; before: 'Aspect: the Slovak does not fix which En'; after: 'SAME, TIP or DIFF?'"
+  },
+  {
+   "check": "the ruling text matches phase1u/RULING_ARTICLE.txt",
+   "ok": true,
+   "detail": "{\"ok\": true, \"sha_line\": \"92c454a7e21a49f99ac8bc295a821ab925bbc522074c2f4116ebc3178cfa566c\", \"sha_ruling\": \"de84a1da0810b7016b5f72fe6d47e44cf048f154215fb17d280d515280238dfd\", \"chars\": 615}"
+  },
+  {
+   "check": "a tampered line is caught (literal vs L3_PROMPT_1U.txt)",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: ARTICLE_LINE_1U differs from L3_PROMPT_1U.txt\nfile: 'Articles: the previous point is about the CHOICE of article. An article that English grammar REQUIRES and the learner sentence simply leaves out (\"Dad will buy new fridge.\", \"It is cold in kitchen today.\") is not acceptable En"
+  },
+  {
+   "check": "the assertion still holds shape-wise on a tampered line (one added line only)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "floors gate: correct keys + all_pass -> runs",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "floors gate: a failing floor REFUSES",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: the floors do not hold: [{\"floor\": \"F5_missing_article_wrong\", \"n\": 3, \"min\": 40}] (all_pass=False)"
+  },
+  {
+   "check": "floors gate: a misspelt key REFUSES (the 1T trap)",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: floors_misspelt.json does not report the seven floors under their agreed names (missing or malformed: ['F1_agent_drops_wrong']); expected ['F1_agent_drops_wrong', 'F1a_fronted_wrong', 'F1b_misaligned_wrong', 'F2_time_frame_wrong', 'F3_by_passive_correct', 'F4_skp_correct', 'F5_m"
+  },
+  {
+   "check": "counted = HTTP 200 only (429/5xx/0 are not counted)",
+   "ok": true,
+   "detail": "counted_dev=5 of 8 rows"
+  },
+  {
+   "check": "hard cap: 895 + 10 > 900 STOPS and prints the numbers",
+   "ok": true,
+   "detail": "SystemExit: STOP: 895 + 10 = 905 > cap 900 - /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/STOP_PLAN.txt written, 0 calls made"
+  },
+  {
+   "check": "hard cap: 899 + 1 = 900 is allowed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "chk_degenerate(): one accepting class is degenerate",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "degenerate chk STOPS with 0 calls",
+   "ok": true,
+   "detail": "SystemExit: STOP: degenerate chk, /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_degenerate/STOP_CHK.txt written, 0 model calls made"
+  },
+  {
+   "check": "AG v4 rejects before L3 (0 calls for those items)",
+   "ok": true,
+   "detail": "2 AG rejections, layers ['AG']"
+  },
+  {
+   "check": "L3 reached and an item accepted there",
+   "ok": true,
+   "detail": "7 planned calls"
+  },
+  {
+   "check": "TIP is a rejection",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "AG shadows recorded (v2 / v3 / guarded union / full v4)",
+   "ok": true,
+   "detail": "{\"abstain_agentless_passive\": 1, \"errors\": 0, \"fired_guarded_union\": 2, \"fired_primary\": 2, \"fired_v2\": 2, \"fired_v3\": 2, \"fired_v3_not_v4\": 0, \"fired_v4_full\": 2, \"fired_v4_not_v3\": 0, \"items\": 9}"
+  },
+  {
+   "check": "labels.json is read LAST, after every verdict",
+   "ok": true,
+   "detail": "label read at [3] of 4"
+  },
+  {
+   "check": "a second --final on a finished dir REFUSES",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_clean/FINAL_RUN_DONE exists - the fresh set is measured once."
+  },
+  {
+   "check": "--final REFUSES when a verdict file already exists",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_verdicts_exist/calls.jsonl already holds verdicts - a second --final is refused.  Use --resume after a documented pause, or score_1u.py --recover to recompute from the stored verdicts"
+  },
+  {
+   "check": "an empty 200 reply is a FAILED call: counted, not retried, item flagged",
+   "ok": true,
+   "detail": "failed=['W:190002:diff'] counted=7 accepted=False"
+  },
+  {
+   "check": "crash -> recompute from the stored verdicts, 0 new calls, identical rows",
+   "ok": true,
+   "detail": "calls 7/7, rows identical True"
+  },
+  {
+   "check": "scorer: pooled coverage 5/6, FA 1/6 (hand-computed)",
+   "ok": true,
+   "detail": "cov 5/6 = 83.33 % [35.88, 99.58] fa 1/6 = 16.67 % [0.42, 64.12]"
+  },
+  {
+   "check": "scorer: P1 = odd sid, P2 = even sid, never averaged",
+   "ok": true,
+   "detail": "P1 cov 2/3 = 66.67 % [9.43, 99.16] / P2 cov 3/3 = 100.00 % [29.24, 100.00]"
+  },
+  {
+   "check": "scorer: targets on the point AND the interval",
+   "ok": true,
+   "detail": "cov MISSED on the point, MISSED on the interval; fa MISSED on the point, MISSED on the interval"
+  },
+  {
+   "check": "S1 writer intent: the mislabelled item moves (5 C / 7 W by kind)",
+   "ok": true,
+   "detail": "moved ['W:190003:a']"
+  },
+  {
+   "check": "S2: judged-wrong borderline + top-up to n>=20 (toy set: all 6 wrong move)",
+   "ok": true,
+   "detail": "moved 6"
+  },
+  {
+   "check": "S3 mirror: judged-correct borderline + top-up (toy set: all 6 correct move)",
+   "ok": true,
+   "detail": "moved 6"
+  },
+  {
+   "check": "S4: the S2 and S3 sets excluded from the denominator",
+   "ok": true,
+   "detail": "excluded 12, left 0"
+  },
+  {
+   "check": "S5: missing-article judged wrong scored correct",
+   "ok": true,
+   "detail": "moved ['W:190007:a']"
+  },
+  {
+   "check": "S6: leave-one-level-out x4 (A1 dropped)",
+   "ok": true,
+   "detail": "left 9 rows"
+  },
+  {
+   "check": "no pre-declared sensitivity is empty",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "check": "cells: missing-article FA 1/1, agent-drop split, by-passive / SKP / time-frame",
+   "ok": true,
+   "detail": "article FA 1/1 = 100.00 % [2.50, 100.00], drops {'all': 4, 'main': 1, 'fronted': 1, 'misaligned': 1, 'other': 1}"
+  },
+  {
+   "check": "AG cost / catches and the four offline shadows",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "check": "layers: FA / false rejections / true rejections split by layer",
+   "ok": true,
+   "detail": "{\"AG\": 3, \"L2\": 1, \"L3\": 1}"
+  },
+  {
+   "check": "spend is an upper bound at the published price",
+   "ok": true,
+   "detail": "UPPER BOUND at the published flash-lite list price ($0.10/1M in, $0.40/1M out); free-tier calls cost 0"
+  },
+  {
+   "check": "S2/S3 top-up order: lowest confidence, ties by packet position",
+   "ok": true,
+   "detail": "['x3', 'x1', 'x2', 'x4']"
+  }
+ ],
+ "passed": 36,
+ "of": 36
+}

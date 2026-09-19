@@ -1,0 +1,238 @@
+{
+ "borderline": 17,
+ "confidence": {
+  "2": 2,
+  "3": 14,
+  "4": 135,
+  "5": 749
+ },
+ "duplicate_controls": 80,
+ "duplicate_controls_judged": 80,
+ "file_errors": [],
+ "items_labelled": 900,
+ "judge_noise_pct": 0.0,
+ "judged": {
+  "correct": 402,
+  "wrong": 498
+ },
+ "key_entries": 980,
+ "label_disagreements": 0,
+ "out_dirs": [
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/set/data",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/data"
+ ],
+ "type_only_disagreements": 0,
+ "types": {
+  "M": 159,
+  "S": 99,
+  "T": 120,
+  "W": 120
+ },
+ "unknown_ids": [],
+ "unlabelled_items": 0,
+ "verdict_files": 4,
+ "verdict_rows": 980,
+ "written": true
+}
+{
+ "F1_agent_drops_wrong": {
+  "n": 159,
+  "min": 120,
+  "pass": true
+ },
+ "F1a_fronted_wrong": {
+  "n": 63,
+  "min": 40,
+  "pass": true
+ },
+ "F1b_misaligned_wrong": {
+  "n": 48,
+  "min": 30,
+  "pass": true
+ },
+ "F2_time_frame_wrong": {
+  "n": 120,
+  "min": 100,
+  "pass": true
+ },
+ "F3_by_passive_correct": {
+  "n": 80,
+  "min": 60,
+  "pass": true
+ },
+ "F4_skp_correct": {
+  "n": 63,
+  "min": 40,
+  "pass": true
+ },
+ "F5_missing_article_wrong": {
+  "n": 97,
+  "min": 40,
+  "pass": true
+ },
+ "missing_article_judged_correct": 1,
+ "T_W_M_S_wrong": {
+  "T": 120,
+  "W": 120,
+  "M": 159,
+  "S": 99
+ },
+ "judged_correct": 402,
+ "judged_wrong": 498,
+ "all_pass": true,
+ "items": 900,
+ "items_labelled": 900,
+ "drop_cells": {
+  "drop-fronted": {
+   "wrong": 63,
+   "correct": 1
+  },
+  "drop-misaligned": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-main": {
+   "wrong": 48,
+   "correct": 0
+  },
+  "drop-other": {
+   "wrong": 0,
+   "correct": 0
+  }
+ }
+}
+PASS furniture example (owner)                                          primary=True  (want True )  noun=True  (want True )
+PASS by-passive keeps the agent                                         primary=False (want False)  noun=False (want False)
+PASS active answer                                                      primary=False (want False)  noun=False (want False)
+PASS Slovak reflexive passive, no agent                                 primary=False (want False)  noun=False (want False)
+PASS Slovak passive, no agent                                           primary=False (want False)  noun=False (want False)
+PASS was/is + adjective is no passive                                   primary=False (want False)  noun=False (want False)
+PASS agent rendered as the answer subject                               primary=False (want False)  noun=False (want False)
+PASS get-passive fires                                                  primary=True  (want True )  noun=True  (want True )
+PASS perfect passive fires                                              primary=True  (want True )  noun=True  (want True )
+PASS pronoun agent: primary fires, AG-noun abstains                     primary=True  (want True )  noun=False (want False)
+PASS impersonal source                                                  primary=False (want False)  noun=False (want False)
+PASS pronoun agent rendered in the answer subject                       primary=False (want False)  noun=False (want False)
+PASS lent: v1 gap (will be lent)                                        primary=True  (want True )  noun=True  (want True )
+PASS NEW embedded-clause agent drop                                     primary=True  (want True )  noun=True  (want True )
+PASS NEW embedded clause, agent kept with by                            primary=False (want False)  noun=False (want False)
+PASS NEW passive over a subjectless SK clause (agent lives in the other clause) primary=False (want False)  noun=False (want False)
+PASS NEW "by bike" is no by-agent                                       primary=True  (want True )  noun=False (want False)
+PASS NEW proper-name agent                                              primary=True  (want True )  noun=True  (want True )
+PASS NEW pronoun agent in a ze-clause                                   primary=True  (want True )  noun=False (want False)
+PASS NEW by-passive control (proper name)                               primary=False (want False)  noun=False (want False)
+PASS NEW plain active control                                           primary=False (want False)  noun=False (want False)
+PASS V4 closed + SK active transitive = passive                         primary=True  (want True )  noun=False (want False)
+PASS V4 "The garden gate is closed every evening" is NOT a passive      primary=False (want False)  noun=False (want False)
+PASS V4 rewritten (prefixed irregular participle)                       primary=True  (want True )  noun=True  (want True )
+PASS V4 reduced passive relative                                        primary=True  (want True )  noun=True  (want True )
+PASS V4 locative by-phrase does not block AG                            primary=True  (want True )  noun=False (want False)
+PASS V4 instrument by-phrase does not block AG                          primary=True  (want True )  noun=False (want False)
+PASS V4 agent by-phrase blocks AG                                       primary=False (want False)  noun=False (want False)
+PASS V4 fronted keď-clause: the clause-local agent is dropped           primary=True  (want True )  noun=True  (want True )
+PASS V4 fronted ja-clause: overt Slovak pronoun agent dropped           primary=True  (want True )  noun=False (want False)
+PASS V4 class-B alignment: another clause subject is not the agent      primary=True  (want True )  noun=True  (want True )
+PASS V4 class-B control: the agent is kept                              primary=False (want False)  noun=False (want False)
+PASS flags=() reproduces AG v3 bit for bit on all 32 rows
+PRE-FLIGHT PASS (33 rows)
+AG v2                    catches 79/97 | by-passive 0/42 | plain 0/39 | v2-misfire 3/3
+AG v3 (= v4 flags=())    catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+AG v4 (full)             catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+GATE PASS for AG v4 (full)
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[SELFTEST] prompt = 1T prompt + EXACTLY one line, after the levers, before the tail PASS  added at line 9; before: 'Aspect: the Slovak does not fix which En'; after: 'SAME, TIP or DIFF?'
+[SELFTEST] the ruling text matches phase1u/RULING_ARTICLE.txt PASS  {"ok": true, "sha_line": "92c454a7e21a49f99ac8bc295a821ab925bbc522074c2f4116ebc3178cfa566c", "sha_ruling": "de84a1da0810b7016b5f72fe6d47e44cf048f154215fb17d280d
+[SELFTEST] a tampered line is caught (literal vs L3_PROMPT_1U.txt) PASS  SystemExit: REFUSED: ARTICLE_LINE_1U differs from L3_PROMPT_1U.txt
+file: 'Articles: the previous point is about the CHOICE of article. An article that English g
+[SELFTEST] the assertion still holds shape-wise on a tampered line (one added line only) PASS  
+[FLOORS] all seven hold: {"F1_agent_drops_wrong": 999, "F1a_fronted_wrong": 999, "F1b_misaligned_wrong": 999, "F2_time_frame_wrong": 999, "F3_by_passive_correct": 999, "F4_skp_correct": 999, "F5_missing_article_wrong": 999}
+[SELFTEST] floors gate: correct keys + all_pass -> runs   PASS  
+[SELFTEST] floors gate: a failing floor REFUSES           PASS  SystemExit: REFUSED: the floors do not hold: [{"floor": "F5_missing_article_wrong", "n": 3, "min": 40}] (all_pass=False)
+[SELFTEST] floors gate: a misspelt key REFUSES (the 1T trap) PASS  SystemExit: REFUSED: floors_misspelt.json does not report the seven floors under their agreed names (missing or malformed: ['F1_agent_drops_wrong']); expected [
+[SELFTEST] counted = HTTP 200 only (429/5xx/0 are not counted) PASS  counted_dev=5 of 8 rows
+[CAP] selftest:cap: counted in ledger_dev 895 + planned 10 = 905   (hard cap 900)
+[SELFTEST] hard cap: 895 + 10 > 900 STOPS and prints the numbers PASS  SystemExit: STOP: 895 + 10 = 905 > cap 900 - /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/STOP_PLAN.txt written, 0 calls m
+[CAP] selftest:cap: counted in ledger_dev 899 + planned 1 = 900   (hard cap 900)
+[SELFTEST] hard cap: 899 + 1 = 900 is allowed             PASS  
+[SELFTEST] chk_degenerate(): one accepting class is degenerate PASS  
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash db7273c4b8c5 -> 7d2a1e56ed27
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 9   AG v4 rejects before L3: 2   reach L3: 7
+[SELFTEST] degenerate chk STOPS with 0 calls              PASS  SystemExit: STOP: degenerate chk, /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_degenerate/STOP_CHK.txt writte
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash db7273c4b8c5 -> 7d2a1e56ed27
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 9   AG v4 rejects before L3: 2   reach L3: 7
+[PREFLIGHT] unique requests 7   reusable 0   PLANNED NEW CALLS 7   counted here 0   failed(200, unparsable) 0
+[FINAL] NOTE: 9 items, 900 expected
+-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_clean/FINAL_RUN_DONE
+[SELFTEST] AG v4 rejects before L3 (0 calls for those items) PASS  2 AG rejections, layers ['AG']
+[SELFTEST] L3 reached and an item accepted there          PASS  7 planned calls
+[SELFTEST] TIP is a rejection                             PASS  
+[SELFTEST] AG shadows recorded (v2 / v3 / guarded union / full v4) PASS  {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full":
+[SELFTEST] labels.json is read LAST, after every verdict  PASS  label read at [3] of 4
+[SELFTEST] a second --final on a finished dir REFUSES     PASS  SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_clean/FINAL_RUN_DONE exists - the fresh set
+[SELFTEST] --final REFUSES when a verdict file already exists PASS  SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_verdicts_exist/calls.jsonl already holds ve
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash db7273c4b8c5 -> 7d2a1e56ed27
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 9   AG v4 rejects before L3: 2   reach L3: 7
+[PREFLIGHT] unique requests 7   reusable 0   PLANNED NEW CALLS 7   counted here 0   failed(200, unparsable) 0
+[FINAL] NOTE: 9 items, 900 expected
+-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_failed/FINAL_RUN_DONE
+[SELFTEST] an empty 200 reply is a FAILED call: counted, not retried, item flagged PASS  failed=['W:190002:diff'] counted=7 accepted=False
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash db7273c4b8c5 -> 7d2a1e56ed27
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 9   AG v4 rejects before L3: 2   reach L3: 7
+[PREFLIGHT] unique requests 7   reusable 0   PLANNED NEW CALLS 7   counted here 0   failed(200, unparsable) 0
+[FINAL] NOTE: 9 items, 900 expected
+[BUILD synthetic] 9 items / 3 sentences   chk {"wrong/auto": 9}   passive {"None": 5, "agentless": 4}   levers {"l2:aspect": 9, "l2:definiteness": 9, "l3:items_with_a_variant": 3, "l3:removed": 4, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_guarded_union": 2, "fired_primary": 2, "fired_v2": 2, "fired_v3": 2, "fired_v3_not_v4": 0, "fired_v4_full": 2, "fired_v4_not_v3": 0, "items": 9}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash db7273c4b8c5 -> 7d2a1e56ed27
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 9   AG v4 rejects before L3: 2   reach L3: 7
+[PREFLIGHT] unique requests 7   reusable 7   PLANNED NEW CALLS 0   counted here 7   failed(200, unparsable) 0
+[FINAL] NOTE: 9 items, 900 expected
+-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_crash/FINAL_RUN_DONE
+[SELFTEST] crash -> recompute from the stored verdicts, 0 new calls, identical rows PASS  calls 7/7, rows identical True
+[SELFTEST] scorer: pooled coverage 5/6, FA 1/6 (hand-computed) PASS  cov 5/6 = 83.33 % [35.88, 99.58] fa 1/6 = 16.67 % [0.42, 64.12]
+[SELFTEST] scorer: P1 = odd sid, P2 = even sid, never averaged PASS  P1 cov 2/3 = 66.67 % [9.43, 99.16] / P2 cov 3/3 = 100.00 % [29.24, 100.00]
+[SELFTEST] scorer: targets on the point AND the interval  PASS  cov MISSED on the point, MISSED on the interval; fa MISSED on the point, MISSED on the interval
+[SELFTEST] S1 writer intent: the mislabelled item moves (5 C / 7 W by kind) PASS  moved ['W:190003:a']
+[SELFTEST] S2: judged-wrong borderline + top-up to n>=20 (toy set: all 6 wrong move) PASS  moved 6
+[SELFTEST] S3 mirror: judged-correct borderline + top-up (toy set: all 6 correct move) PASS  moved 6
+[SELFTEST] S4: the S2 and S3 sets excluded from the denominator PASS  excluded 12, left 0
+[SELFTEST] S5: missing-article judged wrong scored correct PASS  moved ['W:190007:a']
+[SELFTEST] S6: leave-one-level-out x4 (A1 dropped)        PASS  left 9 rows
+[SELFTEST] no pre-declared sensitivity is empty           PASS  []
+[SELFTEST] cells: missing-article FA 1/1, agent-drop split, by-passive / SKP / time-frame PASS  article FA 1/1 = 100.00 % [2.50, 100.00], drops {'all': 4, 'main': 1, 'fronted': 1, 'misaligned': 1, 'other': 1}
+[SELFTEST] AG cost / catches and the four offline shadows PASS  
+[SELFTEST] layers: FA / false rejections / true rejections split by layer PASS  {"AG": 3, "L2": 1, "L3": 1}
+[SELFTEST] spend is an upper bound at the published price PASS  UPPER BOUND at the published flash-lite list price ($0.10/1M in, $0.40/1M out); free-tier calls cost 0
+[SELFTEST] S2/S3 top-up order: lowest confidence, ties by packet position PASS  ['x3', 'x1', 'x2', 'x4']
+[SELFTEST] 36/36 passed - SELFTEST_1U.json written, 0 model calls
+[SELFTEST] scorer: pooled coverage 5/6, FA 1/6 (hand-computed) PASS  cov 5/6 = 83.33 % [35.88, 99.58] fa 1/6 = 16.67 % [0.42, 64.12]
+[SELFTEST] scorer: P1 = odd sid, P2 = even sid, never averaged PASS  P1 cov 2/3 = 66.67 % [9.43, 99.16] / P2 cov 3/3 = 100.00 % [29.24, 100.00]
+[SELFTEST] scorer: targets on the point AND the interval  PASS  cov MISSED on the point, MISSED on the interval; fa MISSED on the point, MISSED on the interval
+[SELFTEST] S1 writer intent: the mislabelled item moves (5 C / 7 W by kind) PASS  moved ['W:190003:a']
+[SELFTEST] S2: judged-wrong borderline + top-up to n>=20 (toy set: all 6 wrong move) PASS  moved 6
+[SELFTEST] S3 mirror: judged-correct borderline + top-up (toy set: all 6 correct move) PASS  moved 6
+[SELFTEST] S4: the S2 and S3 sets excluded from the denominator PASS  excluded 12, left 0
+[SELFTEST] S5: missing-article judged wrong scored correct PASS  moved ['W:190007:a']
+[SELFTEST] S6: leave-one-level-out x4 (A1 dropped)        PASS  left 9 rows
+[SELFTEST] no pre-declared sensitivity is empty           PASS  []
+[SELFTEST] cells: missing-article FA 1/1, agent-drop split, by-passive / SKP / time-frame PASS  article FA 1/1 = 100.00 % [2.50, 100.00], drops {'all': 4, 'main': 1, 'fronted': 1, 'misaligned': 1, 'other': 1}
+[SELFTEST] AG cost / catches and the four offline shadows PASS  
+[SELFTEST] layers: FA / false rejections / true rejections split by layer PASS  {"AG": 3, "L2": 1, "L3": 1}
+[SELFTEST] spend is an upper bound at the published price PASS  UPPER BOUND at the published flash-lite list price ($0.10/1M in, $0.40/1M out); free-tier calls cost 0
+[SELFTEST] S2/S3 top-up order: lowest confidence, ties by packet position PASS  ['x3', 'x1', 'x2', 'x4']
+[BUILD fresh1u] 900 items / 100 sentences   chk {"correct/match": 157, "wrong/auto": 743}   passive {"None": 660, "agentless": 160, "by": 80}   levers {"l2:aspect": 603, "l2:definiteness": 900, "l2:number": 135, "l3:items_with_a_variant": 810, "l3:removed": 90, "l3:shown": 810}
+[AG v3] {"abstain_agentless_passive": 107, "errors": 0, "fired_guarded_union": 117, "fired_primary": 139, "fired_v2": 73, "fired_v3": 117, "fired_v3_not_v4": 0, "fired_v4_full": 139, "fired_v4_not_v3": 22, "items": 900}
+[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 10; sys identical; hash 1f7cc411b3e6 -> 673b28c9ae2b
+[PREFLIGHT] L2 lock firings under BASE: 144   L3-eligible under LOCKTIP: 739   AG v4 rejects before L3: 137   reach L3: 602
+[PREFLIGHT] unique requests 602   reusable 0   PLANNED NEW CALLS 602   counted here 0   failed(200, unparsable) 0
+[CAP] preflight: counted in ledger_dev 18 + planned 602 = 620   (hard cap 900)
+[PREFLIGHT] PASS - 0 model calls; PREFLIGHT_1U.json + MODULES_1U.txt written
+STAGE1 OK - 0 model calls.  Read PREFLIGHT_1U.json (PLANNED_CALLS) before stage2.

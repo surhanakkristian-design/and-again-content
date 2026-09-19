@@ -1,0 +1,242 @@
+[
+  {
+    "sid": "1T068",
+    "level": "B1",
+    "topic": "present habitual + concessive clause (aj keď) fronted, pronoun agent",
+    "slovak": "Aj keď šéf kontroluje každý účet, my posielame faktúry klientom každý piatok.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "my", "emb_agent": "šéf", "emb_type": "aj keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Even though the boss checks every account, we send invoices to the clients every Friday.", "Although the boss checks every account, we are sending the invoices to our clients every Friday."],
+      "lk": ["send", "are sending"],
+      "alt": {"Even though": ["Although", "Though"], "the boss": ["the manager", "the chief"], "checks": ["inspects", "goes through", "is checking"], "every account": ["each account", "every bill"], "we send": ["we're sending", "we mail"], "every Friday": ["each Friday", "on Fridays"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Even though the boss checks every account, we send invoices to the clients every Friday."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "Even though the boss checks every account, we send the invoices to our clients every Friday."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "Even though the boss checks every account, invoices are sent to the clients by us every Friday."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We send invoices to the clients every Friday, although the boss checks every account."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Even though the boss checked every account, we sent invoices to the clients every Friday."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Even though the boss checks every account, invoices are sent to the clients every Friday."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Even though every account is checked, we send invoices to the clients every Friday."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Even though the boss checks every account, we send invoices to the clients."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Even though the boss check every account, we send invoices to the clients every Friday."}
+    ]
+  },
+  {
+    "sid": "1T069",
+    "level": "B1",
+    "topic": "future true passive, no agent",
+    "slovak": "Tá stará plaváreň bude na jar zatvorená kvôli rekonštrukcii.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["That old swimming pool will be closed in the spring because of the renovation.", "The old swimming pool is going to be closed in spring due to the renovation."],
+      "lk": ["will be closed", "is going to be closed"],
+      "alt": {"That old swimming pool": ["The old swimming pool", "That old pool", "The old baths"], "will be closed": ["is going to be closed", "will be shut"], "in the spring": ["in spring", "in the springtime"], "because of": ["due to", "owing to"], "the renovation": ["the reconstruction", "the refurbishment"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain", "skp-passive"], "answer": "That old swimming pool will be closed in the spring because of the renovation."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect", "skp-passive"], "answer": "The old swimming pool is going to be closed in spring due to the renovation."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "In the spring, that old pool will be closed for the renovation."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "That old swimming pool will be shut in the spring because of the reconstruction."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "That old swimming pool was closed in the spring because of the renovation."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "That old swimming pool is closed in the spring because of the renovation."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "That old swimming pool will be closed in the autumn because of the renovation."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "That old swimming pool will be closed in the spring."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "That old swimming pool will be closed on the spring because of the renovation."}
+    ]
+  },
+  {
+    "sid": "1T070",
+    "level": "B1",
+    "topic": "past perfective + time clause (keď)",
+    "slovak": "Susedka zavolala inštalatéra, keď nájomníčka rozbila starý kohútik v kúpeľni.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Susedka", "emb_agent": "nájomníčka", "emb_type": "keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The neighbour called a plumber when the tenant broke the old tap in the bathroom.", "The neighbour rang a plumber when the tenant broke the old bathroom tap."],
+      "lk": ["called", "rang"],
+      "alt": {"The neighbour": ["The woman next door", "The neighbor"], "called": ["rang", "phoned", "called out"], "a plumber": ["the plumber"], "when": ["after", "once"], "the tenant": ["the lodger", "the renter"], "the old tap": ["that old tap", "the old faucet"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The neighbour called a plumber when the tenant broke the old tap in the bathroom."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "The neighbour called the plumber when the tenant broke that old tap in the bathroom."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The neighbour called a plumber when the old tap in the bathroom was broken by the tenant."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "When the tenant broke the old bathroom tap, the neighbour rang a plumber."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The neighbour will call a plumber when the tenant breaks the old tap in the bathroom."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A plumber was called when the tenant broke the old tap in the bathroom."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The neighbour called a plumber when the old tap in the bathroom was broken."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The neighbour called an electrician when the tenant broke the old tap in the bathroom."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The neighbour called a plumber when the tenant breaked the old tap in the bathroom."}
+    ]
+  },
+  {
+    "sid": "1T071",
+    "level": "B1",
+    "topic": "present emotive predicate (je rada) + že-clause with a completed event",
+    "slovak": "Majiteľka je rada, že murári konečne dokončili tú novú kúpeľňu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Majiteľka", "emb_agent": "murári", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The owner is glad that the builders have finally finished that new bathroom.", "The owner is happy that the builders have at last completed that new bathroom."],
+      "lk": ["is glad", "is happy"],
+      "alt": {"The owner": ["The landlady", "The woman who owns it"], "is glad": ["is happy", "is pleased", "is relieved"], "the builders": ["the bricklayers", "the workmen"], "have finally finished": ["finally finished", "have at last completed"], "that new bathroom": ["the new bathroom", "this new bathroom"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The owner is glad that the builders have finally finished that new bathroom."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect", "determiner"], "answer": "The owner is glad that the builders finally finished the new bathroom."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The owner is glad that the new bathroom has finally been finished by the builders."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The owner is happy that the builders have at last completed that new bathroom."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The owner was glad that the builders had finally finished that new bathroom."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The owner is glad that the new bathroom was finally finished."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The owner is glad that the new bathroom has finally been finished."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The owner is glad that the builders have finished that new bathroom."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The owner is glad that the builders has finally finished that new bathroom."}
+    ]
+  },
+  {
+    "sid": "1T072",
+    "level": "B1",
+    "topic": "first conditional (ak) fronted, perfective present as future",
+    "slovak": "Ak firma schváli ten rozpočet, náš tím vyvinie novú mobilnú aplikáciu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "náš tím", "emb_agent": "firma", "emb_type": "ak", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["If the company approves that budget, our team will develop a new mobile app.", "If the firm approves that budget, our team is going to build a new mobile application."],
+      "lk": ["will develop", "is going to build"],
+      "alt": {"If": ["Provided that", "As long as"], "the company": ["the firm", "the business"], "approves": ["passes", "signs off", "has approved"], "that budget": ["the budget", "this budget"], "our team": ["our group", "our department"], "a new mobile app": ["a new mobile application", "a new phone app"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "If the company approves that budget, our team will develop a new mobile app."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "If the company approves the budget, our team will develop a new mobile app."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "If that budget is approved by the company, our team will develop a new mobile app."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Our team is going to build a new mobile application if the company approves that budget."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "If the company approved that budget, our team developed a new mobile app."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "If the company approves that budget, a new mobile app will be developed."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "If that budget is approved, our team will develop a new mobile app."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "If the company approves that budget, our team will develop a new mobile game."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "If the company approves that budget, our team will develop new mobile app."}
+    ]
+  },
+  {
+    "sid": "1T073",
+    "level": "B1",
+    "topic": "past perfective + relative clause (ktorý)",
+    "slovak": "Mesto zaplatilo ten ohňostroj, ktorý firma pripravila na novoročnú oslavu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Mesto", "emb_agent": "firma", "emb_type": "relative", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The city paid for the fireworks that a company prepared for the New Year celebration.", "The town covered the cost of the fireworks which a company had prepared for the New Year party."],
+      "lk": ["paid for", "covered"],
+      "alt": {"The city": ["The town", "The council"], "paid for": ["covered the cost of", "has paid for"], "the fireworks": ["those fireworks", "the firework display"], "that": ["which"], "a company": ["the company", "a firm"], "the New Year celebration": ["the New Year party", "the New Year's celebration"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The city paid for the fireworks that a company prepared for the New Year celebration."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "The city paid for those fireworks which the company prepared for the New Year celebration."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The fireworks that a company prepared for the New Year celebration were paid for by the city."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The town covered the cost of the fireworks that a company had prepared for the New Year party."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The city will pay for the fireworks that a company prepares for the New Year celebration."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The fireworks that a company prepared for the New Year celebration were paid for."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The city paid for the fireworks that were prepared for the New Year celebration."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The city paid for the fireworks that a company prepared."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The city paid the fireworks that a company prepared for the New Year celebration."}
+    ]
+  },
+  {
+    "sid": "1T074",
+    "level": "B1",
+    "topic": "reflexive passive in the past",
+    "slovak": "Minulý rok sa v tejto budove otvorila nová jazyková škola.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["Last year a new language school was opened in this building.", "A new language school opened in this building last year."],
+      "lk": ["was opened", "opened"],
+      "alt": {"Last year": ["A year ago", "In the last year"], "a new language school": ["a new school of languages", "a new language college"], "was opened": ["opened", "got opened", "was set up"], "in this building": ["in this house", "inside this building"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain", "skp-passive"], "answer": "Last year a new language school was opened in this building."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "A new language school opened in this building last year."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "In this building, a new language school was opened last year."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "Last year a new language school got opened in this building."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Last year a new language school is being opened in this building."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Last year a new language school will be opened in this building."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Last year a new music school was opened in this building."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Last year a new language school was opened."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["number"], "answer": "Last year a new language school was opened in this buildings."}
+    ]
+  },
+  {
+    "sid": "1T075",
+    "level": "B1",
+    "topic": "present thinking verb (predpokladá) + že-clause with a future event, pronoun agent",
+    "slovak": "On predpokladá, že sponzori zaplatia celý koncert na námestí.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "On", "emb_agent": "sponzori", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["He assumes that the sponsors will pay for the whole concert in the square.", "He supposes the sponsors are going to cover the cost of the entire concert in the square."],
+      "lk": ["assumes", "supposes"],
+      "alt": {"He assumes": ["He supposes", "He expects", "He presumes"], "the sponsors": ["the backers", "the sponsoring firms"], "will pay for": ["are going to pay for", "will cover the cost of"], "the whole concert": ["the entire concert", "that whole concert"], "in the square": ["on the square", "in the town square"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "He assumes that the sponsors will pay for the whole concert in the square."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "He assumes that the sponsors will pay for that whole concert in the square."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "He assumes that the whole concert in the square will be paid for by the sponsors."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "He supposes the sponsors are going to cover the cost of the entire concert in the square."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "He assumed that the sponsors would pay for the whole concert in the square."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "He assumes that the whole concert in the square is going to be paid for."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "He assumes that the whole concert in the square will be paid for."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "He assumes that the sponsors will pay for the whole concert in the park."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "He assumes that the sponsors will pay the whole concert in the square."}
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+PASS furniture example (owner)                                          primary=True  (want True )  noun=True  (want True )
+PASS by-passive keeps the agent                                         primary=False (want False)  noun=False (want False)
+PASS active answer                                                      primary=False (want False)  noun=False (want False)
+PASS Slovak reflexive passive, no agent                                 primary=False (want False)  noun=False (want False)
+PASS Slovak passive, no agent                                           primary=False (want False)  noun=False (want False)
+PASS was/is + adjective is no passive                                   primary=False (want False)  noun=False (want False)
+PASS agent rendered as the answer subject                               primary=False (want False)  noun=False (want False)
+PASS get-passive fires                                                  primary=True  (want True )  noun=True  (want True )
+PASS perfect passive fires                                              primary=True  (want True )  noun=True  (want True )
+PASS pronoun agent: primary fires, AG-noun abstains                     primary=True  (want True )  noun=False (want False)
+PASS impersonal source                                                  primary=False (want False)  noun=False (want False)
+PASS pronoun agent rendered in the answer subject                       primary=False (want False)  noun=False (want False)
+PASS lent: v1 gap (will be lent)                                        primary=True  (want True )  noun=True  (want True )
+PASS NEW embedded-clause agent drop                                     primary=True  (want True )  noun=True  (want True )
+PASS NEW embedded clause, agent kept with by                            primary=False (want False)  noun=False (want False)
+PASS NEW passive over a subjectless SK clause (agent lives in the other clause) primary=False (want False)  noun=False (want False)
+PASS NEW "by bike" is no by-agent                                       primary=True  (want True )  noun=False (want False)
+PASS NEW proper-name agent                                              primary=True  (want True )  noun=True  (want True )
+PASS NEW pronoun agent in a ze-clause                                   primary=True  (want True )  noun=False (want False)
+PASS NEW by-passive control (proper name)                               primary=False (want False)  noun=False (want False)
+PASS NEW plain active control                                           primary=False (want False)  noun=False (want False)
+PASS V4 closed + SK active transitive = passive                         primary=True  (want True )  noun=False (want False)
+PASS V4 "The garden gate is closed every evening" is NOT a passive      primary=False (want False)  noun=False (want False)
+PASS V4 rewritten (prefixed irregular participle)                       primary=True  (want True )  noun=True  (want True )
+PASS V4 reduced passive relative                                        primary=True  (want True )  noun=True  (want True )
+PASS V4 locative by-phrase does not block AG                            primary=True  (want True )  noun=False (want False)
+PASS V4 instrument by-phrase does not block AG                          primary=True  (want True )  noun=False (want False)
+PASS V4 agent by-phrase blocks AG                                       primary=False (want False)  noun=False (want False)
+PASS V4 fronted keď-clause: the clause-local agent is dropped           primary=True  (want True )  noun=True  (want True )
+PASS V4 fronted ja-clause: overt Slovak pronoun agent dropped           primary=True  (want True )  noun=False (want False)
+PASS V4 class-B alignment: another clause subject is not the agent      primary=True  (want True )  noun=True  (want True )
+PASS V4 class-B control: the agent is kept                              primary=False (want False)  noun=False (want False)
+PASS flags=() reproduces AG v3 bit for bit on all 32 rows
+PRE-FLIGHT PASS (33 rows)
+AG v2                    catches 79/97 | by-passive 0/42 | plain 0/39 | v2-misfire 3/3
+AG v3 (= v4 flags=())    catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+v3+union                 catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+v3+unionx (raw)          catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 3/3
+v3+lex                   catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+v3+align                 catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+v3+local                 catches 96/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+union+lex                catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+union+lex+align          catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+AG v4 (full)             catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 0/3
+AG v4 with raw union     catches 97/97 | by-passive 0/42 | plain 0/39 | v2-misfire 3/3
+GATE PASS for AG v4 (full)
+1T wiring self-check: v4(flags=()) disagrees with the stored v3 verdict on 0 of 900 rows
+1T tags: {'plain': 381, 'determiner': 79, 'by-passive': 47, 'skp-passive': 73, 'aspect': 62, 'by-passive-embedded': 33, 'timeframe': 120, 'agentdrop-main': 65, 'number': 12, 'agentdrop-embedded': 96}

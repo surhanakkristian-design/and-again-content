@@ -1,0 +1,242 @@
+[
+  {
+    "sid": "1T060",
+    "level": "B1",
+    "topic": "present progressive + relative clause (ktorú)",
+    "slovak": "Náš kolega testuje novú aplikáciu, ktorú programátor stále upravuje.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Náš kolega", "emb_agent": "programátor", "emb_type": "relative", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Our colleague is testing a new app which the programmer is still modifying.", "Our colleague tests a new application that the programmer keeps changing."],
+      "lk": ["is testing", "tests"],
+      "alt": {"Our colleague": ["Our co-worker", "A colleague of ours"], "is testing": ["tests", "is trying out"], "a new app": ["the new app", "a new application"], "which": ["that", "who"], "the programmer": ["the developer", "the coder"], "is still modifying": ["keeps modifying", "is still changing", "still keeps editing"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Our colleague is testing a new app which the programmer is still modifying."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "Our colleague tests the new app which the programmer is still modifying."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "Our colleague is testing a new app which is still being modified by the programmer."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Our colleague is testing a new application that the programmer keeps changing."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Our colleague tested a new app which the programmer was still modifying."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A new app which the programmer is still modifying is being tested."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Our colleague is testing a new app which is still being modified."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Our colleague is testing a new app that still gets modified."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Our colleague is testing a new app which the programmer is still modify."}
+    ]
+  },
+  {
+    "sid": "1T061",
+    "level": "B1",
+    "topic": "future (perfective present) + keď clause fronted, pronoun agent",
+    "slovak": "Keď starosta otvorí ten nový park, my zorganizujeme veľký detský festival.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "my", "emb_agent": "starosta", "emb_type": "keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["When the mayor opens that new park, we will organise a big children's festival.", "Once the mayor opens the new park, we are going to put on a big children's festival."],
+      "lk": ["will organise", "are going to put on"],
+      "alt": {"When": ["Once", "As soon as"], "the mayor": ["the town mayor"], "opens": ["has opened", "officially opens"], "that new park": ["the new park", "this new park"], "we will organise": ["we'll organize", "we are going to put on"], "a big children's festival": ["a large children's festival", "a big festival for children"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "When the mayor opens that new park, we will organise a big children's festival."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "When the mayor opens the new park, we will organise a big children's festival."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "When the mayor opens that new park, a big children's festival will be organised by us."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We're going to put on a big children's festival once the mayor opens that new park."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "When the mayor opened that new park, we organised a big children's festival."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "When the mayor opens that new park, a big children's festival will be organised."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "When that new park is opened, we will organise a big children's festival."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "We will organise a big children's festival once that new park gets opened."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "When the mayor opens that new park, we will organise a big childrens festival."}
+    ]
+  },
+  {
+    "sid": "1T062",
+    "level": "B1",
+    "topic": "present reporting verb (píše) + že-clause with a future event, pronoun agent in the že-clause",
+    "slovak": "Hovorkyňa mesta píše, že oni zajtra uzavrú hlavnú ulicu pri trhu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Hovorkyňa mesta", "emb_agent": "oni", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The city spokeswoman writes that they will close the main street by the market tomorrow.", "The town's spokeswoman writes that tomorrow they are going to shut the main street next to the market."],
+      "lk": ["writes", "writes"],
+      "alt": {"The city spokeswoman": ["The town's spokeswoman", "The spokeswoman of the city"], "writes": ["is writing", "reports"], "they will close": ["they are going to close", "they'll shut"], "the main street": ["that main street", "the high street"], "by the market": ["next to the market", "near the market"], "tomorrow": ["the next day"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The city spokeswoman writes that they will close the main street by the market tomorrow."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "The city spokeswoman writes that they will close that main street by the market tomorrow."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The city spokeswoman writes that the main street by the market will be closed by them tomorrow."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The town's spokeswoman writes that tomorrow they are going to shut the main street next to the market."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The city spokeswoman wrote that they would close the main street by the market tomorrow."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The city spokeswoman writes that the main street by the market is going to be closed tomorrow."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The city spokeswoman writes that the main street by the market will be closed tomorrow."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The city spokeswoman writes that tomorrow the main street by the market will get closed."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The city spokeswoman writes that they will closed the main street by the market tomorrow."}
+    ]
+  },
+  {
+    "sid": "1T063",
+    "level": "B1",
+    "topic": "impersonal reflexive with a modal (nesmie sa)",
+    "slovak": "V tejto kancelárii sa nesmie fajčiť ani cez obedňajšiu prestávku.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["Smoking is not allowed in this office, not even during the lunch break.", "It is not permitted to smoke in this office, not even during the lunch break."],
+      "lk": ["is not allowed", "is not permitted"],
+      "alt": {"Smoking": ["To smoke"], "is not allowed": ["is forbidden", "is not permitted", "isn't allowed"], "in this office": ["in this room", "here in this office"], "not even": ["even not", "not even once"], "during the lunch break": ["in the lunch break", "over the lunch break"]},
+      "voice_sk": "impersonal",
+      "agent_nom": false,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain", "skp-passive"], "answer": "Smoking is not allowed in this office, not even during the lunch break."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "In this office, smoking is forbidden, even during the lunch break."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "It is not permitted to smoke in this office, not even during the lunch break."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "You mustn't smoke in this office, not even during the lunch break."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Smoking was not allowed in this office, not even during the lunch break."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Smoking will not be allowed in this office, not even during the lunch break."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Smoking is not allowed in this office, not even during the coffee break."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Smoking is not allowed in this office."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Smoking is not allowed in this office, not even during the lunch brake."}
+    ]
+  },
+  {
+    "sid": "1T064",
+    "level": "B1",
+    "topic": "present imperfective + kým clause, pronoun agent",
+    "slovak": "Oni prenajímajú ten malý byt študentom, kým majiteľ rekonštruuje celé podkrovie.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Oni", "emb_agent": "majiteľ", "emb_type": "kým", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["They rent that small flat to students while the owner is renovating the whole attic.", "They are renting that small flat out to students while the owner renovates the entire loft."],
+      "lk": ["rent", "are renting"],
+      "alt": {"They rent": ["They are renting", "They let"], "that small flat": ["the small flat", "that small apartment"], "to students": ["out to students"], "while": ["as long as", "for as long as"], "the owner": ["the landlord", "the proprietor"], "the whole attic": ["the entire attic", "the whole loft"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "They rent that small flat to students while the owner is renovating the whole attic."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "They are renting that small flat to students while the owner renovates the whole attic."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "That small flat is rented to students by them while the owner is renovating the whole attic."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "While the owner is doing up the entire loft, they let that small flat to students."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "They rented that small flat to students while the owner was renovating the whole attic."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "That small flat is rented to students while the owner is renovating the whole attic."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "They rent that small flat to students while the whole attic is being renovated."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "While the whole attic gets renovated, they rent that small flat to students."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "They rent that small flat for students while the owner is renovating the whole attic."}
+    ]
+  },
+  {
+    "sid": "1T065",
+    "level": "B1",
+    "topic": "past perfective + causal clause (keďže) fronted",
+    "slovak": "Keďže knižnica kúpila nové učebnice, náš lektor zmenil celý rozvrh skúšok.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "náš lektor", "emb_agent": "knižnica", "emb_type": "keďže", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Since the library bought new textbooks, our tutor changed the whole exam schedule.", "Because the library had bought new textbooks, our tutor changed the entire exam timetable."],
+      "lk": ["changed", "changed"],
+      "alt": {"Since": ["Because", "As"], "the library": ["the school library"], "bought": ["had bought", "purchased"], "new textbooks": ["the new textbooks", "new coursebooks"], "our tutor": ["our lecturer", "our teacher"], "the whole exam schedule": ["the entire exam timetable", "the whole examination schedule"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Since the library bought new textbooks, our tutor changed the whole exam schedule."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "Since the library bought the new textbooks, our tutor changed the whole exam schedule."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "Since new textbooks were bought by the library, our tutor changed the whole exam schedule."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Our tutor changed the entire exam timetable, because the library had bought new textbooks."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Since the library buys new textbooks, our tutor is changing the whole exam schedule."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Since the library bought new textbooks, the whole exam schedule was changed."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Since new textbooks were bought, our tutor changed the whole exam schedule."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Our tutor changed the whole exam schedule, since new textbooks had been bought."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Since the library bought new textbooks, our tutor changed whole exam schedule."}
+    ]
+  },
+  {
+    "sid": "1T066",
+    "level": "B1",
+    "topic": "present thinking verb (myslím si) + že-clause with a future event, pronoun agent",
+    "slovak": "Ja si myslím, že náš technik pozajtra vymení ten pokazený router.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Ja", "emb_agent": "náš technik", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["I think that our technician will replace that broken router the day after tomorrow.", "I believe our technician is going to change that faulty router the day after tomorrow."],
+      "lk": ["think", "believe"],
+      "alt": {"I think": ["I believe", "I reckon", "I suppose"], "our technician": ["our engineer", "our repairman"], "will replace": ["is going to replace", "will change"], "that broken router": ["the broken router", "that faulty router"], "the day after tomorrow": ["in two days", "two days from now"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I think that our technician will replace that broken router the day after tomorrow."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "I think that our technician will replace the broken router the day after tomorrow."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "I think that the broken router will be replaced by our technician the day after tomorrow."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I believe our technician is going to change that faulty router the day after tomorrow."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "I thought that our technician would replace that broken router the day after tomorrow."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "I think that the day after tomorrow the broken router is going to be replaced."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "I think that the broken router will be replaced the day after tomorrow."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "I think that our technician will replace that router the day after tomorrow."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "I think that our technician will replaces that broken router the day after tomorrow."}
+    ]
+  },
+  {
+    "sid": "1T067",
+    "level": "B1",
+    "topic": "past perfective + concessive clause with už (hoci)",
+    "slovak": "Kapela zrušila ten koncert, hoci fanúšikovia už kúpili tisíc lístkov.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Kapela", "emb_agent": "fanúšikovia", "emb_type": "hoci", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The band cancelled that concert, although the fans had already bought a thousand tickets.", "The band called off that concert, even though the fans already bought a thousand tickets."],
+      "lk": ["cancelled", "called off"],
+      "alt": {"The band": ["The group"], "cancelled": ["called off", "has cancelled", "canceled"], "that concert": ["the concert", "this concert"], "although": ["even though", "though"], "had already bought": ["already bought", "had already purchased"], "a thousand tickets": ["one thousand tickets", "1000 tickets"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The band cancelled that concert, although the fans had already bought a thousand tickets."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "The band cancelled the concert, although the fans had already bought a thousand tickets."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The band cancelled that concert, although a thousand tickets had already been bought by the fans."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Even though the fans had already bought a thousand tickets, the band called off that concert."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The band will cancel that concert, although the fans have already bought a thousand tickets."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "That concert was cancelled, although the fans had already bought a thousand tickets."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The band cancelled that concert, although a thousand tickets had already been bought."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["number"], "answer": "The band cancelled that concert, although the fans had already bought a hundred tickets."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The band cancelled that concert, although the fans had already bought thousand tickets."}
+    ]
+  }
+]

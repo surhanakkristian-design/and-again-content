@@ -1,0 +1,242 @@
+[
+  {
+    "sid": "1T043",
+    "level": "A2",
+    "topic": "trpný rod v minulom čase + príčina",
+    "slovak": "Zápas bol zrušený pre silný dážď.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["The match was cancelled because of heavy rain.", "Because of heavy rain, the match was called off."],
+      "lk": ["was cancelled", "was called off"],
+      "alt": {"The match": ["The game"], "was cancelled": ["has been cancelled", "was called off", "got cancelled"], "because of": ["due to", "owing to"], "heavy rain": ["strong rain", "the heavy rain"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "The match was cancelled because of heavy rain."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "The game was cancelled due to heavy rain."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect", "determiner"], "answer": "The match has been cancelled because of the heavy rain."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "Because of heavy rain, the match was called off."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The match will be cancelled because of heavy rain."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The match is cancelled because of heavy rain."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The match was cancelled because of heavy snow."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The match was cancelled."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The match was cancel because of heavy rain."}
+    ]
+  },
+  {
+    "sid": "1T044",
+    "level": "A2",
+    "topic": "veta s 'že' po slovese vedomosti v prítomnom čase",
+    "slovak": "On vie, že Zuzana zajtra prinesie výsledky z nemocnice.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "On", "emb_agent": "Zuzana", "emb_type": "že", "passivizable": false, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["He knows that Zuzana will bring the results from the hospital tomorrow.", "He is aware that Zuzana is going to bring the results from the hospital tomorrow."],
+      "lk": ["knows", "is aware"],
+      "alt": {"knows": ["is aware", "knows well"], "will bring": ["is going to bring", "'ll bring"], "the results": ["those results", "the test results"], "from the hospital": ["from hospital"], "tomorrow": ["the next day"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "He knows that Zuzana will bring the results from the hospital tomorrow."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "He knows that Zuzana is going to bring those results from the hospital tomorrow."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "He knows that the results will be brought from the hospital by Zuzana tomorrow."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "He is aware that Zuzana will bring the hospital results tomorrow."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "He knew that Zuzana will bring the results from the hospital tomorrow."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "He knows that tomorrow the results are going to get brought from the hospital."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "He knows that the results will be brought from the hospital tomorrow."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "He knows that Zuzana will bring the results tomorrow."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "He know that Zuzana will bring the results from the hospital tomorrow."}
+    ]
+  },
+  {
+    "sid": "1T045",
+    "level": "A2",
+    "topic": "prítomný čas + zámeno 'oni'",
+    "slovak": "Oni upratujú veľkú telocvičňu po každom večernom tréningu.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Oni", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["They clean the big gym after every evening training session.", "After every evening practice, they tidy up the big gym."],
+      "lk": ["clean", "tidy up"],
+      "alt": {"clean": ["tidy up", "clean up"], "the big gym": ["that big gym", "the large gym"], "after every": ["after each"], "evening training session": ["evening practice", "evening training"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "They clean the big gym after every evening training session."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "They clean that big gym after each evening training session."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The big gym is cleaned by them after every evening training session."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "After every evening practice, they tidy up the big gym."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "They cleaned the big gym after every evening training session."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The big gym is cleaned after every evening training session."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "They clean the big gym after every morning training session."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "They clean the small gym after every evening training session."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "They cleans the big gym after every evening training session."}
+    ]
+  },
+  {
+    "sid": "1T046",
+    "level": "A2",
+    "topic": "vzťažná veta s 'ktorú', minulý čas",
+    "slovak": "Sprievodkyňa ukázala turistom starú vežu, ktorú mesto opravilo minulú jeseň.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Sprievodkyňa", "emb_agent": "mesto", "emb_type": "relative", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The guide showed the tourists the old tower, which the town repaired last autumn.", "The guide pointed out the old tower to the tourists; the town had renovated it last autumn."],
+      "lk": ["showed", "pointed out"],
+      "alt": {"The guide": ["The tour guide", "The guide woman"], "showed": ["pointed out", "had shown"], "the tourists": ["the visitors"], "repaired": ["had repaired", "renovated", "fixed up"], "last autumn": ["last fall"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The guide showed the tourists the old tower, which the town repaired last autumn."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The guide showed the tourists that old tower, which the town had repaired last autumn."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The guide showed the tourists the old tower, which had been repaired by the town last autumn."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The guide pointed out the old tower to the tourists; the town had renovated it last autumn."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The guide shows the tourists the old tower, which the town repaired last autumn."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The old tower, which the town repaired last autumn, was shown to the tourists."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The guide showed the tourists the old tower, which had been repaired last autumn."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The guide showed the tourists the old tower, which the town repaired."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The guide showed the tourists the old tower, which the town repaired on last autumn."}
+    ]
+  },
+  {
+    "sid": "1T047",
+    "level": "A2",
+    "topic": "podmienková veta s 'ak' v prítomnom čase",
+    "slovak": "Ona vždy zatvára okná, ak vietor prináša dážď z hôr.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Ona", "emb_agent": "vietor", "emb_type": "ak", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["She always closes the windows if the wind brings rain from the mountains.", "Whenever the wind brings rain from the mountains, she always closes the windows."],
+      "lk": ["closes", "closes"],
+      "alt": {"always closes": ["always shuts"], "the windows": ["those windows"], "if": ["when", "whenever"], "brings": ["is bringing", "carries"], "from the mountains": ["from the hills"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "She always closes the windows if the wind brings rain from the mountains."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "She always closes those windows if the wind brings rain from the mountains."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The windows are always closed by her if the wind brings rain from the mountains."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Whenever the wind brings rain from the mountains, she always shuts the windows."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "She always closed the windows if the wind brought rain from the mountains."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The windows are always closed if the wind brings rain from the mountains."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "She always closes the windows if rain is brought from the mountains."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "She always closes the doors if the wind brings rain from the mountains."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "She always closes the windows if the wind bring rain from the mountains."}
+    ]
+  },
+  {
+    "sid": "1T048",
+    "level": "A2",
+    "topic": "zvratný trpný rod v budúcom čase",
+    "slovak": "Nový bazén sa otvorí v sobotu ráno.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["The new swimming pool will be opened on Saturday morning.", "On Saturday morning the new pool will open."],
+      "lk": ["will be opened", "will open"],
+      "alt": {"The new swimming pool": ["The new pool"], "will be opened": ["is going to be opened", "will open", "opens"], "on Saturday morning": ["Saturday morning"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "The new swimming pool will be opened on Saturday morning."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "The new pool will open on Saturday morning."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect"], "answer": "The new swimming pool is going to be opened on Saturday morning."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "On Saturday morning the new swimming pool will be opened."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new swimming pool was opened on Saturday morning."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new swimming pool is opened on Saturday morning."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The new swimming pool will be opened on Sunday morning."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The swimming pool will be opened on Saturday morning."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The new swimming pool will be opened in Saturday morning."}
+    ]
+  },
+  {
+    "sid": "1T049",
+    "level": "A2",
+    "topic": "minulý čas + zámeno 'ja'",
+    "slovak": "Ja som kúpil tie dve lacné letenky do Ríma cez internet.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Ja", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["I bought those two cheap plane tickets to Rome on the internet.", "I got those two cheap flight tickets to Rome online."],
+      "lk": ["bought", "got"],
+      "alt": {"bought": ["got", "purchased", "have bought"], "those two": ["the two"], "cheap plane tickets": ["cheap flight tickets", "cheap air tickets"], "to Rome": ["for Rome"], "on the internet": ["online", "over the internet"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I bought those two cheap plane tickets to Rome on the internet."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "I bought the two cheap plane tickets to Rome on the internet."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "Those two cheap plane tickets to Rome were bought by me on the internet."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I got those two cheap flight tickets to Rome online."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "I will buy those two cheap plane tickets to Rome on the internet."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Those two cheap plane tickets to Rome were bought on the internet."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "I bought those two cheap plane tickets to Milan on the internet."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "I bought those two plane tickets to Rome on the internet."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "I bought those two cheap plane tickets to Rome in the internet."}
+    ]
+  },
+  {
+    "sid": "1T050",
+    "level": "A2",
+    "topic": "veta s 'že' po slovese tvrdenia v prítomnom čase",
+    "slovak": "Martina tvrdí, že oni rezervovali stôl v tej novej reštaurácii.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Martina", "emb_agent": "oni", "emb_type": "že", "passivizable": false, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Martina claims that they booked a table at that new restaurant.", "Martina says that they have reserved a table in that new restaurant."],
+      "lk": ["claims", "says"],
+      "alt": {"claims": ["says", "is claiming", "insists"], "booked": ["have booked", "reserved"], "a table": ["the table"], "at that new restaurant": ["in that new restaurant", "at the new restaurant"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Martina claims that they booked a table at that new restaurant."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "Martina claims that they have booked the table in the new restaurant."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "Martina claims that a table was booked by them at that new restaurant."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Martina says that they reserved a table in that new restaurant."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Martina claims that they will book a table at that new restaurant."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Martina claims that at that new restaurant a table got booked."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Martina claims that a table was booked at that new restaurant."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Martina claims that they booked a table at that new hotel."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Martina claims that they booked table at that new restaurant."}
+    ]
+  }
+]
