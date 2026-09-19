@@ -1,0 +1,37 @@
+{
+ "meta": {
+  "session": "rewrite_b34",
+  "attempt": 1,
+  "exit": 0,
+  "wall_s": 18.7,
+  "t_start": 372.1,
+  "duration_ms": 15141,
+  "num_turns": 1,
+  "total_cost_usd": 0.132711,
+  "is_error": false,
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 8922,
+  "cache_read_input_tokens": 22462,
+  "output_tokens": 1290,
+  "modelUsage": {
+   "claude-opus-5": {
+    "inputTokens": 2,
+    "outputTokens": 1290,
+    "cacheReadInputTokens": 22462,
+    "cacheCreationInputTokens": 8922,
+    "webSearchRequests": 0,
+    "costUSD": 0.132711,
+    "contextWindow": 1000000,
+    "maxOutputTokens": 64000,
+    "thinkingTokens": 465,
+    "canonicalModel": "claude-opus-5",
+    "provider": "firstParty",
+    "costBasis": "list"
+   }
+  },
+  "parse_error": null,
+  "stderr": null
+ },
+ "prompt": "You are the arm-B rewrite agent (1J rule) of a Slovak->English translation-checking pipeline.\nFor each Slovak sentence: if the MAIN clause has a dropped (pro-drop) subject, insert exactly ONE nominative\npersonal pronoun (ja, ty, on, ona, ono, my, vy, oni, ony) agreeing with the finite verb, at the natural\nposition; change NOTHING else (no other word added, removed or altered). If the main clause already has an\novert subject but a subordinate clause has a dropped subject, you may insert the pronoun there (where=\"embedded\").\nIf the subject is overt or the clause is impersonal, leave the sentence untouched. Use the English reference\nonly to choose gender/person. Machine check afterwards: new tokens = old tokens + exactly the pronoun.\nReply with ONLY a JSON array, one object per sentence:\n{\"n\": int, \"action\": \"R\"|\"U\", \"sk_new\": str, \"pronoun\": str|null, \"where\": \"main\"|\"embedded\"|null, \"reason\": str}\n(reason for U: explicit_subject | impersonal | other). No prose, no code fences.\nSentences:\n{\"n\": 991, \"sk\": \"Pláž, ktorej piesok je čierny, pohltí každú jej čiaru.\", \"en\": \"The beach, whose sand is black, swallows every line she draws.\"}\n{\"n\": 992, \"sk\": \"Korenie bolo nabraté rovno z kopy do malého papierového kornútika.\", \"en\": \"The spice was scooped straight from the mound into a small paper cone.\"}\n{\"n\": 993, \"sk\": \"Pozri na ten dym — ide sa to spáliť!\", \"en\": \"Look at the smoke — it is going to burn!\"}\n{\"n\": 994, \"sk\": \"Kandidát, ktorý nosí zelenú rozetu, prehral o desať hlasov.\", \"en\": \"The candidate who wears the green rosette lost by ten votes.\"}\n{\"n\": 995, \"sk\": \"Reštaurácia, ktorej personál nikdy nezastane, je každý večer plná.\", \"en\": \"The restaurant, whose staff never stops, is full every night.\"}\n{\"n\": 996, \"sk\": \"Budúci jún bude jazdiť na pretekárskych autách presne desať rokov.\", \"en\": \"Next June he will have been driving race cars for exactly ten years.\"}\n{\"n\": 997, \"sk\": \"Ak sa ti to páči, nakreslím aj tebe obrázok.\", \"en\": \"If you like it, I will draw you a picture too.\"}\n{\"n\": 998, \"sk\": \"Jej nevoľnosť bola spôsobená nekonečným hojdaním trajektu! Absolútna nočná mora!\", \"en\": \"Her nausea was caused by the endless rocking of the ferry! Absolute nightmare!\"}\n{\"n\": 999, \"sk\": \"Na stole na nádvorí stoja dve malé fľaštičky\", \"en\": \"Two small bottles stand on the courtyard table.\"}\n{\"n\": 1000, \"sk\": \"Zvyčajne tancuje balet, ale dnes tancuje hip-hop.\", \"en\": \"She usually dances ballet, but today she is dancing hip-hop.\"}",
+ "result": "[{\"n\": 991, \"action\": \"U\", \"sk_new\": \"Pláž, ktorej piesok je čierny, pohltí každú jej čiaru.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 992, \"action\": \"U\", \"sk_new\": \"Korenie bolo nabraté rovno z kopy do malého papierového kornútika.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 993, \"action\": \"U\", \"sk_new\": \"Pozri na ten dym — ide sa to spáliť!\", \"pronoun\": null, \"where\": null, \"reason\": \"other\"},\n{\"n\": 994, \"action\": \"U\", \"sk_new\": \"Kandidát, ktorý nosí zelenú rozetu, prehral o desať hlasov.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 995, \"action\": \"U\", \"sk_new\": \"Reštaurácia, ktorej personál nikdy nezastane, je každý večer plná.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 996, \"action\": \"R\", \"sk_new\": \"Budúci jún on bude jazdiť na pretekárskych autách presne desať rokov.\", \"pronoun\": \"on\", \"where\": \"main\", \"reason\": \"dropped 3sg masculine subject (EN: he)\"},\n{\"n\": 997, \"action\": \"R\", \"sk_new\": \"Ak sa ti to páči, ja nakreslím aj tebe obrázok.\", \"pronoun\": \"ja\", \"where\": \"main\", \"reason\": \"dropped 1sg subject of nakreslím (EN: I)\"},\n{\"n\": 998, \"action\": \"U\", \"sk_new\": \"Jej nevoľnosť bola spôsobená nekonečným hojdaním trajektu! Absolútna nočná mora!\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 999, \"action\": \"U\", \"sk_new\": \"Na stole na nádvorí stoja dve malé fľaštičky\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 1000, \"action\": \"R\", \"sk_new\": \"Ona zvyčajne tancuje balet, ale dnes tancuje hip-hop.\", \"pronoun\": \"ona\", \"where\": \"main\", \"reason\": \"dropped 3sg feminine subject (EN: she)\"}]"
+}
