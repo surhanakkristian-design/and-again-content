@@ -1,0 +1,272 @@
+[
+  {
+    "sid": "1T026",
+    "level": "A2",
+    "topic": "minulý čas + vedľajšia veta s 'lebo'",
+    "slovak": "Môj brat rezervoval hotel, lebo my sme kúpili letenky už v januári.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Môj brat", "emb_agent": "my", "emb_type": "lebo", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["My brother booked the hotel, because we already bought the plane tickets in January.", "My brother had booked the hotel, since we had already bought the flight tickets in January."],
+      "lk": ["booked", "had booked"],
+      "alt": {"booked": ["reserved", "had booked"], "the hotel": ["a hotel", "that hotel"], "bought": ["had bought", "purchased"], "plane tickets": ["flight tickets", "air tickets", "tickets for the flight"], "because": ["since", "as"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "My brother booked the hotel, because we already bought the plane tickets in January."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect", "determiner"], "answer": "My brother had booked that hotel, because we had already bought the plane tickets in January."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The hotel was booked by my brother, because we already bought the plane tickets in January."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "My brother reserved the hotel, since we'd already purchased the flight tickets in January."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "My brother will book the hotel, because we will buy the plane tickets in January."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The hotel was booked, because we already bought the plane tickets in January."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "My brother booked the hotel, because the plane tickets had already been bought in January."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "My brother booked the hotel, because we already bought the plane tickets."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "My brother booked hotel, because we already bought the plane tickets in January."}
+    ]
+  },
+  {
+    "sid": "1T027",
+    "level": "A2",
+    "topic": "prítomný čas + príslovkové určenie frekvencie",
+    "slovak": "Ona kupuje čerstvý chlieb v tej malej pekárni každé ráno.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Ona", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["She buys fresh bread at that small bakery every morning.", "Every morning she gets fresh bread from that little bakery."],
+      "lk": ["buys", "gets"],
+      "alt": {"buys": ["gets", "picks up"], "fresh bread": ["freshly baked bread"], "at that small bakery": ["in that small bakery", "at that little bakery"], "every morning": ["each morning"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "She buys fresh bread at that small bakery every morning."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "She buys fresh bread in the small bakery every morning."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "Fresh bread is bought by her at that small bakery every morning."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Every morning she gets fresh bread from that little bakery."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "She bought fresh bread at that small bakery every morning."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Fresh bread is bought at that small bakery every morning."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "She buys fresh milk at that small bakery every morning."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "She buys fresh bread at that small bakery every evening."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "She buy fresh bread at that small bakery every morning."}
+    ]
+  },
+  {
+    "sid": "1T028",
+    "level": "A2",
+    "topic": "trpný rod v minulom čase",
+    "slovak": "Tá nová cesta bola postavená veľmi rýchlo.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["The new road was built very quickly.", "That new road got built very fast."],
+      "lk": ["was built", "got built"],
+      "alt": {"The new road": ["That new road"], "was built": ["got built", "has been built", "was constructed"], "very quickly": ["very fast", "really quickly"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "The new road was built very quickly."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "determiner"], "answer": "That new road was built very quickly."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect"], "answer": "The new road has been built very quickly."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "The new road got built very fast."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new road will be built very quickly."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new road is being built very quickly."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The new bridge was built very quickly."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The new road was built."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The new road was built very quick."}
+    ]
+  },
+  {
+    "sid": "1T029",
+    "level": "A2",
+    "topic": "budúci čas + časová veta s 'keď' na začiatku",
+    "slovak": "Keď tréner vyberie tím, my kúpime nové dresy pre všetkých hráčov.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "my", "emb_agent": "tréner", "emb_type": "keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["When the coach picks the team, we will buy new jerseys for all the players.", "We'll buy new jerseys for all the players once the coach selects the team."],
+      "lk": ["will buy", "will buy"],
+      "alt": {"picks": ["chooses", "selects"], "the team": ["that team"], "will buy": ["are going to buy", "'ll buy"], "new jerseys": ["new shirts", "new kit shirts"], "for all the players": ["for all of the players"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "When the coach picks the team, we will buy new jerseys for all the players."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "When the coach picks the team, we are going to buy new jerseys for all the players."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "When the team is picked by the coach, we will buy new jerseys for all the players."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We'll buy new jerseys for all the players once the coach selects the team."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "When the coach picked the team, we bought new jerseys for all the players."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "When the coach picks the team, new jerseys will be bought for all the players."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "When the team is picked, we will buy new jerseys for all the players."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "When the coach picks the team, we will buy new jerseys."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "When the coach picks the team, we will buy new jerseys for all the player."}
+    ]
+  },
+  {
+    "sid": "1T030",
+    "level": "A2",
+    "topic": "veta s 'že' po slovese hovorenia v prítomnom čase",
+    "slovak": "Lekárka hovorí, že sestra dnes pripraví nové lieky pre pacientov.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Lekárka", "emb_agent": "sestra", "emb_type": "že", "passivizable": false, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The doctor says that the nurse will prepare new medicines for the patients today.", "The doctor is saying that the nurse will get new medicines ready for the patients today."],
+      "lk": ["says", "is saying"],
+      "alt": {"The doctor": ["The lady doctor", "The physician"], "says": ["is saying", "tells us"], "will prepare": ["is going to prepare", "will get ready"], "new medicines": ["new medicine", "new drugs"], "for the patients": ["for patients"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The doctor says that the nurse will prepare new medicines for the patients today."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The doctor says that the nurse is going to prepare the new medicines for the patients today."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The doctor says that new medicines will be prepared by the nurse for the patients today."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The doctor is saying that the nurse will get new medicines ready for the patients today."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The doctor says that the nurse prepared new medicines for the patients today."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The doctor says that new medicines are going to get prepared for the patients today."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The doctor says that new medicines will be prepared for the patients today."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The doctor says that the nurse will prepare new medicines for the patients tomorrow."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The doctor says that the nurse will prepares new medicines for the patients today."}
+    ]
+  },
+  {
+    "sid": "1T031",
+    "level": "A2",
+    "topic": "prítomný čas + pravidelná činnosť",
+    "slovak": "My každú sobotu umývame to staré auto pred garážou.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "My", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["We wash the old car in front of the garage every Saturday.", "Every Saturday we give the old car a wash in front of the garage."],
+      "lk": ["wash", "give"],
+      "alt": {"We wash": ["We clean"], "the old car": ["that old car"], "in front of the garage": ["outside the garage"], "every Saturday": ["each Saturday", "on Saturdays"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We wash the old car in front of the garage every Saturday."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "We wash that old car in front of the garage every Saturday."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The old car is washed by us in front of the garage every Saturday."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Every Saturday we give the old car a wash in front of the garage."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "We washed the old car in front of the garage every Saturday."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The old car is washed in front of the garage every Saturday."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "We wash the old car in front of the garage every Sunday."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "We wash the car in front of the garage every Saturday."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "We wash the old car in front of garage every Saturday."}
+    ]
+  },
+  {
+    "sid": "1T032",
+    "level": "A2",
+    "topic": "vzťažná veta s 'ktorý' v minulom čase",
+    "slovak": "Predavačka zabalila darček, ktorý moja sestra vybrala pre babičku.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Predavačka", "emb_agent": "moja sestra", "emb_type": "relative", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The shop assistant wrapped the present that my sister chose for grandma.", "The saleswoman wrapped up the present my sister picked for grandma."],
+      "lk": ["wrapped", "wrapped up"],
+      "alt": {"The shop assistant": ["The saleswoman", "The shop girl"], "wrapped": ["wrapped up", "had wrapped"], "the present": ["that present", "the gift"], "chose": ["had chosen", "picked", "picked out"], "for grandma": ["for granny", "for grandmother"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The shop assistant wrapped the present that my sister chose for grandma."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The shop assistant wrapped that present which my sister had chosen for grandma."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The shop assistant wrapped the present that had been chosen by my sister for grandma."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The saleswoman wrapped up the present my sister picked for grandma."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The shop assistant will wrap the present that my sister chooses for grandma."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The present that my sister chose for grandma was wrapped."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The shop assistant wrapped the present that had been chosen for grandma."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The shop assistant wrapped the present that my sister chose for mum."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The shop assistant wrapped the present who my sister chose for grandma."}
+    ]
+  },
+  {
+    "sid": "1T033",
+    "level": "A2",
+    "topic": "zvratný trpný rod v prítomnom čase",
+    "slovak": "V tomto obchode sa predávajú lacné turistické topánky.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["Cheap hiking boots are sold in this shop.", "This shop sells cheap hiking boots."],
+      "lk": ["are sold", "sells"],
+      "alt": {"Cheap hiking boots": ["Cheap walking boots", "Cheap hiking shoes"], "are sold": ["get sold", "are on sale"], "in this shop": ["at this shop", "in this store"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "Cheap hiking boots are sold in this shop."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "In this shop, cheap hiking boots are sold."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "determiner"], "answer": "Cheap hiking boots are sold at this store."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "This shop sells cheap hiking boots."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Cheap hiking boots were sold in this shop."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Cheap hiking boots will be sold in this shop."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Cheap ski boots are sold in this shop."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Hiking boots are sold in this shop."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Cheap hiking boots is sold in this shop."}
+    ]
+  },
+  {
+    "sid": "1T034",
+    "level": "A2",
+    "topic": "podmienková veta s 'ak' + budúci čas",
+    "slovak": "My zorganizujeme veľký piknik pri jazere, ak Peter prinesie gril.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "My", "emb_agent": "Peter", "emb_type": "ak", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["We will organize a big picnic by the lake if Peter brings the grill.", "If Peter brings the grill, we'll put on a big picnic at the lake."],
+      "lk": ["will organize", "'ll put on"],
+      "alt": {"will organize": ["are going to organize", "will arrange", "'ll organise"], "a big picnic": ["a large picnic"], "by the lake": ["at the lake", "next to the lake"], "brings": ["takes along", "brings along"], "the grill": ["the barbecue", "the BBQ"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We will organize a big picnic by the lake if Peter brings the grill."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "We are going to organize a big picnic by that lake if Peter brings the grill."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "A big picnic by the lake will be organized by us if Peter brings the grill."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "If Peter brings the barbecue, we'll put on a big picnic at the lake."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "We organized a big picnic by the lake if Peter brought the grill."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A big picnic will be organized by the lake if Peter brings the grill."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "We will organize a big picnic by the lake if the grill is brought."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "We will organize a big picnic if Peter brings the grill."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "We will organize a big picnic by the lake if Peter bring the grill."}
+    ]
+  }
+]

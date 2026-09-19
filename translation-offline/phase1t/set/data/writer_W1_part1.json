@@ -1,0 +1,272 @@
+[
+  {
+    "sid": "1T001",
+    "level": "A1",
+    "topic": "past tense, perfective transitive verb",
+    "slovak": "Mama upiekla veľkú tortu.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Mama", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Mum baked a big cake.", "Mother has baked a large cake."],
+      "lk": ["baked", "has baked"],
+      "alt": {"Mum": ["Mother", "Mom", "My mum"], "baked": ["has baked", "made"], "a big": ["a large", "a huge"], "cake": ["gateau"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Mum baked a big cake."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "Mum baked the big cake."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "A big cake was baked by Mum."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Mother made a large cake."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Mum bakes a big cake."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A big cake was baked."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Mum baked a big pie."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Mum baked a cake."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["number"], "answer": "Mum baked a big cakes."}
+    ]
+  },
+  {
+    "sid": "1T002",
+    "level": "A1",
+    "topic": "present tense, habitual action with time adverbial",
+    "slovak": "Ja umývam riad každý večer.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Ja", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["I wash the dishes every evening.", "I do the dishes every evening."],
+      "lk": ["wash", "do"],
+      "alt": {"I": ["I"], "wash": ["do", "clean", "am washing"], "the dishes": ["the washing-up", "the plates"], "every evening": ["each evening", "every night"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I wash the dishes every evening."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "I wash my dishes every evening."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The dishes are washed by me every evening."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Every evening I do the washing-up."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "I washed the dishes every evening."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The dishes are washed every evening."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "I wash the dishes every morning."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "I wash the floor every evening."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "I wash the dishes in every evening."}
+    ]
+  },
+  {
+    "sid": "1T003",
+    "level": "A1",
+    "topic": "reflexive passive in the present",
+    "slovak": "Tu sa predáva čerstvý chlieb.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["Fresh bread is sold here.", "They sell fresh bread here."],
+      "lk": ["is sold", "sell"],
+      "alt": {"Fresh": ["Freshly baked", "New"], "bread": ["bread"], "is sold": ["is being sold", "gets sold"], "here": ["in this place", "at this shop"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "Fresh bread is sold here."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect"], "answer": "Fresh bread is being sold here."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "Here fresh bread is sold."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "They sell fresh bread here."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Fresh bread was sold here."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Fresh bread will be sold here."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Fresh milk is sold here."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Bread is sold here."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Fresh bread are sold here."}
+    ]
+  },
+  {
+    "sid": "1T004",
+    "level": "A1",
+    "topic": "future expressed by a perfective present form",
+    "slovak": "Otec kúpi novú chladničku.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Otec", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["Dad will buy a new fridge.", "Father is going to buy a new refrigerator."],
+      "lk": ["will buy", "is going to buy"],
+      "alt": {"Dad": ["Father", "My dad"], "will buy": ["is going to buy", "will get"], "a new": ["a brand-new"], "fridge": ["refrigerator"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Dad will buy a new fridge."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "Dad will buy the new fridge."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "A new fridge will be bought by Dad."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "Father is going to buy a new refrigerator."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "Dad bought a new fridge."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A new fridge will be bought."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "Dad will buy a new freezer."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "Dad will buy a new fridge tomorrow."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "Dad will buy new fridge."}
+    ]
+  },
+  {
+    "sid": "1T005",
+    "level": "A1",
+    "topic": "keď-clause in front position, future",
+    "slovak": "Keď ja upracem kuchyňu, mama uvarí večeru.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "mama", "emb_agent": "ja", "emb_type": "keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["When I tidy up the kitchen, Mum will cook dinner.", "Once I have cleaned the kitchen, Mother will make supper."],
+      "lk": ["will cook", "will make"],
+      "alt": {"When": ["Once", "After"], "tidy up": ["clean", "tidy"], "Mum": ["Mother", "Mom"], "will cook": ["will make", "is going to cook"], "dinner": ["supper"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "When I tidy up the kitchen, Mum will cook dinner."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "When I have tidied the kitchen, Mum will cook the dinner."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "When I tidy up the kitchen, dinner will be cooked by Mum."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Mother will make supper once I have cleaned the kitchen."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "When I tidied the kitchen, Mum cooked dinner."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "When I tidy up the kitchen, dinner will be cooked."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "When the kitchen is tidied up, Mum will cook dinner."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "When I tidy up the kitchen, Mum will cook breakfast."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "When I tidy up the kitchen, Mum will cooks dinner."}
+    ]
+  },
+  {
+    "sid": "1T006",
+    "level": "A1",
+    "topic": "past imperfective with a pronoun subject",
+    "slovak": "My sme kŕmili susedovho psa.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "My", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["We fed the neighbour's dog.", "We were feeding the neighbour's dog."],
+      "lk": ["fed", "were feeding"],
+      "alt": {"We": ["We"], "fed": ["were feeding", "used to feed"], "the neighbour's dog": ["the neighbor's dog", "our neighbour's dog"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We fed the neighbour's dog."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "We were feeding the neighbour's dog."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The neighbour's dog was fed by us."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "We used to feed our neighbour's dog."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "We feed the neighbour's dog."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The neighbour's dog was fed."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "We fed the neighbour's cat."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "We fed the dog."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "We fed the neighbours dog."}
+    ]
+  },
+  {
+    "sid": "1T007",
+    "level": "A1",
+    "topic": "present tense with a possessive object phrase",
+    "slovak": "Učiteľ kontroluje naše domáce úlohy.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Učiteľ", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The teacher checks our homework.", "The teacher is checking our homework."],
+      "lk": ["checks", "is checking"],
+      "alt": {"The teacher": ["Our teacher"], "checks": ["is checking", "goes through"], "our homework": ["our home assignments", "our homework exercises"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The teacher checks our homework."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "The teacher is checking our homework."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "Our homework is checked by the teacher."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The teacher checks our home assignments."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The teacher checked our homework."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Our homework is checked."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The teacher checks our exams."},
+      {"aid": "w4", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The headmaster checks our homework."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The teacher check our homework."}
+    ]
+  },
+  {
+    "sid": "1T008",
+    "level": "A1",
+    "topic": "true passive with byť + past participle",
+    "slovak": "Ten dom bol postavený veľmi rýchlo.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["That house was built very quickly.", "The house was built really fast."],
+      "lk": ["was built", "was built"],
+      "alt": {"That house": ["The house", "That building"], "was built": ["got built", "had been built"], "very quickly": ["really fast", "very fast"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "That house was built very quickly."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "determiner"], "answer": "The house was built very quickly."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "That house got built very quickly."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "They built that house very quickly."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "That house is built very quickly."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "That house will be built very quickly."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "That house was painted very quickly."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "That house was built."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "That house was build very quickly."}
+    ]
+  },
+  {
+    "sid": "1T009",
+    "level": "A1",
+    "topic": "future (perfective present) with a direction phrase",
+    "slovak": "Ja odnesiem knihy do školy.",
+    "kind": "ACT",
+    "emb": false,
+    "tags": {"nom_agent": true, "agent": "Ja", "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["I will take the books to school.", "I am going to carry the books to school."],
+      "lk": ["will take", "am going to carry"],
+      "alt": {"I": ["I"], "will take": ["am going to take", "will bring"], "the books": ["those books"], "to school": ["to the school"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "I will take the books to school."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner"], "answer": "I will take those books to school."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "The books will be taken to school by me."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["aspect"], "answer": "I'm going to carry the books to school."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "I took the books to school."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "The books will be taken to school."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "I will take the books to the library."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "I will take the books."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "I will take the books at school."}
+    ]
+  }
+]

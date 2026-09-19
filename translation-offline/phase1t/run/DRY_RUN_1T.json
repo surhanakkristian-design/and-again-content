@@ -1,0 +1,137 @@
+{
+ "mode": "dry run — stubbed model, 0 model calls, 0 network",
+ "fixture": "phase1t/run/selftest/data",
+ "checks": [
+  {
+   "check": "AG reject path (0 calls, final)",
+   "ok": true,
+   "detail": "2 AG rejections, layers ['AG']"
+  },
+  {
+   "check": "L3 path reached and accepted",
+   "ok": true,
+   "detail": "6 planned calls, 3 accepted at L3"
+  },
+  {
+   "check": "TIP rejection",
+   "ok": true,
+   "detail": "2 TIP rejections"
+  },
+  {
+   "check": "AG shadows recorded (v2 + each flag)",
+   "ok": true,
+   "detail": "{\"abstain_agentless_passive\": 1, \"errors\": 0, \"fired_v2\": 2, \"fired_v2_not_v3\": 0, \"fired_v3\": 2, \"fired_v3_by\": 2, \"fired_v3_clause\": 2, \"fired_v3_not_v2\": 0, \"fired_v3_subj\": 2, \"items\": 8}"
+  },
+  {
+   "check": "exotic JSON keys/values survive the write site",
+   "ok": true,
+   "detail": "safe_dump wrote sets/tuples/NaN/bytes/tuple keys/objects"
+  },
+  {
+   "check": "labels are read after the verdicts only",
+   "ok": true,
+   "detail": "access_log.jsonl order"
+  },
+  {
+   "check": "quota wall pauses before any label read",
+   "ok": true,
+   "detail": "status=PAUSED paused_file=True label_read=False"
+  },
+  {
+   "check": "resume finishes without repeating a call",
+   "ok": true,
+   "detail": "counted after resume 6 vs clean 6"
+  },
+  {
+   "check": "crash in aggregation leaves a CRASHED marker",
+   "ok": true,
+   "detail": "marker=FINAL_RUN_DONE.attempt crashed=RuntimeError"
+  },
+  {
+   "check": "offline replay: 0 new calls, identical rows",
+   "ok": true,
+   "detail": "calls before/after 6/6, rows identical True"
+  },
+  {
+   "check": "a second --final on a finished dir refuses",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/selftest/run_clean/FINAL_RUN_DONE exists — the fresh set is measured once."
+  },
+  {
+   "check": "--final refuses unless FREEZE_HASH/floors/cap hold",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/FREEZE_HASH does not exist — freeze the code first."
+  },
+  {
+   "check": "a null call_cap refuses before any call",
+   "ok": true,
+   "detail": "SystemExit: REFUSED: FROZEN_CONFIG_1T.json has no call_cap — the owner has not fixed the cap yet; 0 calls made"
+  }
+ ],
+ "passed": 13,
+ "of": 13,
+ "clean_run": {
+  "preflight": {
+   "l2": 2,
+   "l3_eligible": 8,
+   "ag_rejected_before_l3": 2,
+   "reach_l3": 6
+  },
+  "ag": {
+   "items": 8,
+   "errors": 0,
+   "fired_v3": 2,
+   "fired_v2": 2,
+   "fired_v3_clause": 2,
+   "fired_v3_subj": 2,
+   "fired_v3_by": 2,
+   "fired_v3_not_v2": 0,
+   "fired_v2_not_v3": 0,
+   "abstain_agentless_passive": 1
+  },
+  "accept_table": {
+   "reject/wrong": 5,
+   "accept/correct": 3
+  },
+  "headline": {
+   "coverage_kn": [
+    3,
+    3
+   ],
+   "fa_kn": [
+    0,
+    5
+   ]
+  }
+ },
+ "imported_py": [
+  "translation-offline/phase1i/checker_1i.py",
+  "translation-offline/phase1i/lib_prev.py",
+  "translation-offline/phase1i/pipeline_1i.py",
+  "translation-offline/phase1i/reference_hygiene.py",
+  "translation-offline/phase1i/taskB/backfill_s_ids.py",
+  "translation-offline/phase1i/taskB/lock_fix.py",
+  "translation-offline/phase1i/taskC/guards_c.py",
+  "translation-offline/phase1j/loader_1j.py",
+  "translation-offline/phase1j/taskA/p_chain.py",
+  "translation-offline/phase1j/taskC/runner_1j.py",
+  "translation-offline/phase1k/loader_1k.py",
+  "translation-offline/phase1k/runner_1k.py",
+  "translation-offline/phase1n/f8.py",
+  "translation-offline/phase1n/f9.py",
+  "translation-offline/phase1n/loader_1l.py",
+  "translation-offline/phase1n/loader_1n.py",
+  "translation-offline/phase1n/runner_1l.py",
+  "translation-offline/phase1n/runner_1n.py",
+  "translation-offline/phase1p/lever1.py",
+  "translation-offline/phase1p/lever2.py",
+  "translation-offline/phase1p/lever3.py",
+  "translation-offline/phase1p/loader_1p.py",
+  "translation-offline/phase1p/runner_1p.py",
+  "translation-offline/phase1s/safe_json.py",
+  "translation-offline/phase1s/taskC/agent_drop_v2.py",
+  "translation-offline/phase1t/run/loader_1t.py",
+  "translation-offline/phase1t/run/runner_1t.py",
+  "translation-offline/phase1t/taskA/agent_drop_v3.py"
+ ]
+}

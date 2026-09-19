@@ -1,0 +1,242 @@
+[
+  {
+    "sid": "1T093",
+    "level": "B2",
+    "topic": "analytic future passive",
+    "slovak": "Nové bezpečnostné predpisy budú schválené bez veľkej diskusie.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["The new safety regulations will be approved without much discussion.", "The new safety rules are going to be approved without much debate."],
+      "lk": ["will be approved", "are going to be approved"],
+      "alt": {"will be approved": ["are going to be approved", "are to be approved", "will be passed"], "safety regulations": ["safety rules", "security regulations"], "without much discussion": ["without much debate", "with little discussion"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "The new safety regulations will be approved without much discussion."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect"], "answer": "The new safety rules are going to be approved without much debate."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "The new safety regulations will be passed without any great discussion."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "determiner"], "answer": "These new safety regulations are to be approved without much discussion."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new safety regulations were approved without much discussion."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The new safety regulations are being approved without much discussion."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "The new safety regulations will be approved without much delay."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The new regulations will be approved without much discussion."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The new safety regulations will be approve without much discussion."}
+    ]
+  },
+  {
+    "sid": "1T094",
+    "level": "B2",
+    "topic": "kým-clause first, simultaneous present",
+    "slovak": "Kým doktorandi spracúvajú tie vzorky, ona pripravuje záverečnú správu pre komisiu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "ona", "emb_agent": "doktorandi", "emb_type": "kým", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["While the doctoral students are processing the samples, she is preparing the final report for the committee.", "The PhD students are processing the samples while she puts together the final report for the committee."],
+      "lk": ["is preparing", "puts together"],
+      "alt": {"the doctoral students": ["the PhD students", "the doctoral candidates"], "are processing": ["process", "are working on"], "the samples": ["the specimens"], "is preparing": ["prepares", "is putting together"], "the final report": ["the closing report"], "the committee": ["the panel", "the board"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "While the doctoral students are processing the samples, she is preparing the final report for the committee."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "While the doctoral students process those samples, she prepares the final report for the committee."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "While the doctoral students are processing the samples, the final report for the committee is being prepared by her."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The PhD students are processing the samples while she puts together the final report for the committee."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "While the doctoral students were processing the samples, she was preparing the final report for the committee."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "While the doctoral students are processing the samples, the final report for the committee is being prepared."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "While the samples are being processed, she is preparing the final report for the committee."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "While the samples get processed, she is preparing the final report for the committee."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "While the doctoral students are processing the samples, she is preparing the final report to the committee."}
+    ]
+  },
+  {
+    "sid": "1T095",
+    "level": "B2",
+    "topic": "že-clause after a present reporting verb",
+    "slovak": "Kurátorka píše, že zberateľ daroval tie sochy mestskej galérii.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Kurátorka", "emb_agent": "zberateľ", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The curator writes that the collector donated the sculptures to the city gallery.", "The curator writes the collector gifted the statues to the municipal gallery."],
+      "lk": ["writes", "writes"],
+      "alt": {"The curator": ["The exhibition curator"], "writes": ["is writing", "notes"], "the collector": ["that collector"], "donated": ["gave", "gifted", "has donated"], "the sculptures": ["the statues"], "the city gallery": ["the municipal gallery", "the town gallery"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The curator writes that the collector donated the sculptures to the city gallery."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The curator writes that the collector has donated those sculptures to the city gallery."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The curator writes that the sculptures were donated by the collector to the city gallery."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The curator writes the collector gifted the statues to the municipal gallery."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The curator writes that the collector will donate the sculptures to the city gallery."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The curator writes that the sculptures have been donated to the city gallery."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The curator writes that the sculptures were donated to the city gallery."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The curator writes that the sculptures got donated to the city gallery."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The curator writes that the collector donated the sculptures for the city gallery."}
+    ]
+  },
+  {
+    "sid": "1T096",
+    "level": "B2",
+    "topic": "future main clause + causal keďže-clause in the past",
+    "slovak": "Vy zaplatíte vyššiu daň, keďže parlament schválil tú uhlíkovú reformu.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Vy", "emb_agent": "parlament", "emb_type": "keďže", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["You will pay a higher tax because parliament approved the carbon reform.", "Since parliament passed the carbon reform, you are going to pay a higher tax."],
+      "lk": ["will pay", "are going to pay"],
+      "alt": {"will pay": ["are going to pay", "will be paying"], "a higher tax": ["a bigger tax", "higher tax"], "because": ["since", "as"], "parliament": ["the parliament"], "approved": ["passed", "has approved"], "the carbon reform": ["that carbon reform"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "future",
+      "tense_open": false,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "You will pay a higher tax because parliament approved the carbon reform."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "You will pay a higher tax because parliament has approved that carbon reform."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "A higher tax will be paid by you because parliament approved the carbon reform."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Since parliament passed the carbon reform, you are going to pay a higher tax."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "You paid a higher tax because parliament approved the carbon reform."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "A higher tax will be paid because parliament approved the carbon reform."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "You will pay a higher tax because the carbon reform was approved."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "You will pay a higher tax because the carbon reform has been approved."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "You will pay a more high tax because parliament approved the carbon reform."}
+    ]
+  },
+  {
+    "sid": "1T097",
+    "level": "B2",
+    "topic": "keď-clause first, narrative past",
+    "slovak": "Keď televízia odvysielala ten dokument, diváci zahltili redakciu tisíckami správ.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "diváci", "emb_agent": "televízia", "emb_type": "keď", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["When the television station broadcast the documentary, viewers flooded the newsroom with thousands of messages.", "After the TV channel aired the documentary, viewers swamped the editorial office with thousands of messages."],
+      "lk": ["flooded", "swamped"],
+      "alt": {"the television station": ["the TV channel", "the broadcaster"], "broadcast": ["aired", "screened"], "the documentary": ["the documentary film"], "viewers": ["the viewers", "the audience"], "flooded": ["swamped", "inundated"], "the newsroom": ["the editorial office"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "past",
+      "tense_open": false,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "When the television station broadcast the documentary, viewers flooded the newsroom with thousands of messages."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "When the television station had broadcast that documentary, the viewers flooded the newsroom with thousands of messages."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "When the documentary was broadcast by the television station, viewers flooded the newsroom with thousands of messages."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "After the TV channel aired the documentary, viewers swamped the editorial office with thousands of messages."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "When the television station broadcasts the documentary, viewers will flood the newsroom with thousands of messages."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "When the television station broadcast the documentary, the newsroom was flooded with thousands of messages."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "When the documentary was broadcast, viewers flooded the newsroom with thousands of messages."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "Once the documentary had been broadcast, viewers flooded the newsroom with thousands of messages."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["number"], "answer": "When the television station broadcast the documentary, viewers flooded the newsroom with thousand of messages."}
+    ]
+  },
+  {
+    "sid": "1T098",
+    "level": "B2",
+    "topic": "reflexive passive, past imperfective",
+    "slovak": "Akcie tej firmy sa po tom škandále predávali za polovičnú cenu.",
+    "kind": "SKP",
+    "emb": false,
+    "tags": {"nom_agent": false, "agent": null, "emb_agent": null, "emb_type": null, "passivizable": true, "impersonal_or_passive": true},
+    "annotation": {
+      "v": ["After the scandal, the company's shares were sold at half price.", "Following the scandal, the firm's shares were being sold at half price."],
+      "lk": ["were sold", "were being sold"],
+      "alt": {"After": ["Following", "After that"], "the scandal": ["that scandal"], "the company's shares": ["the shares of the company", "the firm's shares"], "were sold": ["were being sold", "sold"], "at half price": ["for half the price", "at half the price"]},
+      "voice_sk": "passive",
+      "agent_nom": false,
+      "tf_gold": "past",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "plain"], "answer": "After the scandal, the company's shares were sold at half price."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive", "aspect", "determiner"], "answer": "After that scandal the shares of the company were being sold at half price."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "The company's shares were sold for half the price after the scandal."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["skp-passive"], "answer": "Following the scandal, the firm's shares were being sold at half price."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "After the scandal, the company's shares are sold at half price."},
+      {"aid": "w2", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "After the scandal, the company's shares will be sold at half price."},
+      {"aid": "w3", "kind": "W", "intent": "W", "form": null, "tags": ["plain"], "answer": "After the scandal, the company's bonds were sold at half price."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["plain"], "answer": "The company's shares were sold at half price."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "After the scandal, the company's shares were sold at the half price."}
+    ]
+  },
+  {
+    "sid": "1T099",
+    "level": "B2",
+    "topic": "concessive hoci-clause, present main clause",
+    "slovak": "Inšpektor kontroluje každú faktúru, hoci účtovníčka už tie doklady overila.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Inšpektor", "emb_agent": "účtovníčka", "emb_type": "hoci", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The inspector checks every invoice, although the accountant has already verified the documents.", "Even though the accountant has already verified the documents, the inspector goes through every invoice."],
+      "lk": ["checks", "goes through"],
+      "alt": {"checks": ["is checking", "goes through", "inspects"], "every invoice": ["each invoice", "all the invoices"], "although": ["even though", "though"], "the accountant": ["the bookkeeper"], "has already verified": ["already verified", "has already checked"], "the documents": ["the papers", "the records"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": false
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The inspector checks every invoice, although the accountant has already verified the documents."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The inspector is checking every invoice, although the accountant already verified those documents."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive"], "answer": "Every invoice is checked by the inspector, although the accountant has already verified the documents."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "Even though the accountant has already verified the documents, the inspector goes through every invoice."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The inspector checked every invoice, although the accountant had already verified the documents."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-main"], "answer": "Every invoice is checked, although the accountant has already verified the documents."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The inspector checks every invoice, although the documents have already been verified."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The inspector checks every invoice, although those documents already got verified."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["number"], "answer": "The inspector checks every invoices, although the accountant has already verified the documents."}
+    ]
+  },
+  {
+    "sid": "1T100",
+    "level": "B2",
+    "topic": "že-clause after a present thinking verb",
+    "slovak": "Starosta si myslí, že firma vyčistí ten potok ešte do konca leta.",
+    "kind": "ACT",
+    "emb": true,
+    "tags": {"nom_agent": true, "agent": "Starosta", "emb_agent": "firma", "emb_type": "že", "passivizable": true, "impersonal_or_passive": false},
+    "annotation": {
+      "v": ["The mayor thinks that the company will clean the stream before the end of the summer.", "The mayor believes the firm will clean up the stream by the end of the summer."],
+      "lk": ["thinks", "believes"],
+      "alt": {"thinks": ["believes", "reckons"], "the company": ["the firm"], "will clean": ["is going to clean", "will clean up"], "the stream": ["the brook", "the creek"], "before the end of the summer": ["by the end of the summer", "still this summer"]},
+      "voice_sk": "active_agent",
+      "agent_nom": true,
+      "tf_gold": "present",
+      "tense_open": true,
+      "perfective_present": true
+    },
+    "answers": [
+      {"aid": "c1", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The mayor thinks that the company will clean the stream before the end of the summer."},
+      {"aid": "c2", "kind": "C", "intent": "C", "form": null, "tags": ["determiner", "aspect"], "answer": "The mayor thinks that the company is going to clean that stream before the end of the summer."},
+      {"aid": "c3", "kind": "C", "intent": "C", "form": null, "tags": ["by-passive-embedded"], "answer": "The mayor thinks that the stream will be cleaned by the company before the end of the summer."},
+      {"aid": "c4", "kind": "C", "intent": "C", "form": null, "tags": ["plain"], "answer": "The mayor believes the firm will clean up the stream by the end of the summer."},
+      {"aid": "w1", "kind": "W", "intent": "T", "form": null, "tags": ["timeframe"], "answer": "The mayor thinks that the company cleaned the stream before the end of the summer."},
+      {"aid": "w2", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The mayor thinks that the stream is going to be cleaned before the end of the summer."},
+      {"aid": "w3", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The mayor thinks that the stream will be cleaned before the end of the summer."},
+      {"aid": "w4", "kind": "W", "intent": "M", "form": null, "tags": ["agentdrop-embedded"], "answer": "The mayor thinks that the stream will get cleaned before the end of the summer."},
+      {"aid": "w5", "kind": "W", "intent": "S", "form": null, "tags": ["plain"], "answer": "The mayor think that the company will clean the stream before the end of the summer."}
+    ]
+  }
+]

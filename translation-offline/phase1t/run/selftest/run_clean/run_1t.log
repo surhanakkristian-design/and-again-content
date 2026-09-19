@@ -1,0 +1,14 @@
+[BUILD synthetic] 8 items / 3 sentences   chk {"wrong/auto": 8}   passive {"None": 4, "agentless": 4}   levers {"l2:aspect": 8, "l2:definiteness": 8, "l3:items_with_a_variant": 3, "l3:removed": 3, "l3:shown": 3}
+[AG v3] {"abstain_agentless_passive": 1, "errors": 0, "fired_v2": 2, "fired_v2_not_v3": 0, "fired_v3": 2, "fired_v3_by": 2, "fired_v3_clause": 2, "fired_v3_not_v2": 0, "fired_v3_subj": 2, "items": 8}
+[PREFLIGHT] L2 lock firings under BASE: 2   L3-eligible under LOCKTIP: 8   AG v3 rejects before L3: 2   reach L3: 6
+[PREFLIGHT] unique requests 6   reusable 0   PLANNED NEW CALLS 6   counted so far 0
+[PREFLIGHT] call_cap is null in FROZEN_CONFIG_1T.json — --final REFUSES until the owner fixes it.  Planned calls 6.
+[FINAL] NOTE: 8 items, 900 expected
+-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/selftest/run_clean/FINAL_RUN_DONE
+[DRY-RUN] AG reject path (0 calls, final)        PASS  2 AG rejections, layers ['AG']
+[DRY-RUN] L3 path reached and accepted           PASS  6 planned calls, 3 accepted at L3
+[DRY-RUN] TIP rejection                          PASS  2 TIP rejections
+[DRY-RUN] AG shadows recorded (v2 + each flag)   PASS  {"abstain_agentless_passive": 1, "errors": 0, "fired_v2": 2, "fired_v2_not_v3": 0, "fired_v3": 2, "fired_v3_by": 2, "fired_v3_clause": 2, "fired_v3_not_v2": 0, "fired_v3_subj": 2, "items": 8}
+[DRY-RUN] exotic JSON keys/values survive the write site PASS  safe_dump wrote sets/tuples/NaN/bytes/tuple keys/objects
+[DRY-RUN] labels are read after the verdicts only PASS  access_log.jsonl order
+[DRY-RUN] a second --final on a finished dir refuses PASS  SystemExit: REFUSED: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/selftest/run_clean/FINAL_RUN_DONE exists — the fresh set is measured once.

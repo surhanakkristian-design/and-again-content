@@ -1,0 +1,8 @@
+# Slovak gold annotation (blind; read ONLY this file and sk_only.json in the same directory)
+For each of the 120 Slovak sentences in sk_only.json write one object, from the SLOVAK sentence alone, as a careful Slovak linguist:
+{"n": <n>, "tf": "past"|"present"|"future"|"none", "tf_note": "", "person": "1sg"|"2sg"|"3sg"|"1pl"|"2pl"|"3pl"|"none", "subject_explicit": true|false, "subject": "<nominative subject of the MAIN clause as written, or null if pro-dropped/none>", "voice": "active_agent"|"active_prodrop"|"passive"|"reflexive_passive"|"impersonal", "agent_nom": true|false, "embedded_agents": ["<explicit nominative subjects of subordinate clauses, as written>"], "fragment": true|false}
+- tf = time frame of the MAIN clause finite verb: past (bol/robil…), present, future (budem robiť; perfective present forms like urobím, príde, kúpi count as FUTURE — say "perfective present" in tf_note). Imperatives, infinitive-only or verbless strings: "none" and fragment=true where it is not a full sentence. Conditionals (by + l-participle): tf "none", tf_note "conditional".
+- person = person and number of the MAIN clause finite verb.
+- voice: active_agent = active verb with an EXPLICIT nominative subject doing the action; active_prodrop = active verb, subject only in the verb ending; passive = byť + passive participle (bol postavený, je zatvorené); reflexive_passive = sa-passive with no agent (Dom sa stavia. Tu sa predáva chlieb.) — NOT ordinary reflexive verbs (umýva sa, bojí sa, pozerá sa), which are active; impersonal = subjectless (Prší. Je zima. Treba…).
+- agent_nom = true iff voice is active_agent.
+Write the JSON list to sk_gold.json in the same directory. Final message: counts per tf and per voice, ≤ 6 lines.

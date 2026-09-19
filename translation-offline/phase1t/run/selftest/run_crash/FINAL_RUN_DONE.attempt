@@ -1,0 +1,13 @@
+{
+ "status": "CRASHED",
+ "written_utc": "2026-09-19T16:41:10Z",
+ "pid": 41213,
+ "meta": {
+  "status": null
+ },
+ "error": {
+  "type": "RuntimeError",
+  "msg": "SELFTEST: simulated crash inside aggregation, after every reply was appended to calls.jsonl",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1s/safe_json.py\", line 210, in guarded_run\n    result = fn()\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 671, in <lambda>\n    guarded_run(lambda: final_core(d3, fixture, 'synthetic', LM, stub(policy), checks=False,\n  File \"/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py\", line 402, in final_core\n    raise RuntimeError('SELFTEST: simulated crash inside aggregation, after every reply was '\nRuntimeError: SELFTEST: simulated crash inside aggregation, after every reply was appended to calls.jsonl\n"
+ }
+}

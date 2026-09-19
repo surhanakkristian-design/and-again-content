@@ -1,0 +1,834 @@
+{
+ "phase": "1T",
+ "side": "synthetic",
+ "freeze_commit": null,
+ "floors": null,
+ "frozen_config": {
+  "phase": "1T",
+  "stack": "the frozen 1Q/1P stack: LOCKTIP, TIP-as-rejection ON, F2B, F3, F4v2, F5, arm B, prompt P-FROZEN-1P, hygiene absent, F8 and F9 do not decide",
+  "prompt": "P-FROZEN-1P",
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0,
+  "locktip": true,
+  "tip_reject": true,
+  "f8_module": "none",
+  "f8_decides": false,
+  "f9_decides": false,
+  "arm": "B",
+  "levers": [
+   2,
+   3
+  ],
+  "lever1": "REMOVED (difference 1): no rewritten side, no second request set, no extra call",
+  "ag_rule": "v3",
+  "ag_module": "phase1t/taskA/agent_drop_v3.py",
+  "ag_flags": [
+   "clause",
+   "subj",
+   "by"
+  ],
+  "ag_placement": "with the deterministic guards, BEFORE L3: an AG rejection is final, costs 0 calls, and the item never reaches L3; AG v2 and each v3 flag alone are recorded as 0-call shadows",
+  "ag_attribution": "rescore_1s_c.build() K3: an item a non-L3 deterministic layer had already rejected keeps that layer, otherwise the layer is 'AG'",
+  "data": "phase1t/set/data",
+  "split": "SPLIT_1T.md — numeric sid 180000+n, odd sid -> P1, even -> P2",
+  "call_cap": null,
+  "call_cap_note": "null on purpose: the owner has not fixed the cap. While it is null --final REFUSES, --preflight still prints the plan. --preflight writes STOP_PLAN.txt when counted + planned > cap - 10."
+ },
+ "prompt": "P-FROZEN-1P",
+ "levers": [
+  2,
+  3
+ ],
+ "ag_rule": {
+  "module": "phase1t/taskA/agent_drop_v3.py",
+  "flags": [
+   "clause",
+   "subj",
+   "by"
+  ],
+  "placement": "with the deterministic guards, BEFORE L3; a rejection is final and costs 0 calls"
+ },
+ "model": {
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0
+ },
+ "stub_model": true,
+ "ts": "2026-09-19T18:41:10",
+ "preflight": {
+  "l2": 2,
+  "l3_eligible": 8,
+  "ag_rejected_before_l3": 2,
+  "reach_l3": 6
+ },
+ "build": {
+  "side": "synthetic",
+  "data_dir": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/selftest/data",
+  "chk_computed": {
+   "auto": 8
+  },
+  "chk_distribution": {
+   "wrong/auto": 8
+  },
+  "n_items": 8,
+  "n_sentences": 3,
+  "passive_tags": {
+   "agentless": 4,
+   "None": 4
+  },
+  "writer_tags": {
+   "agentdrop-main": 2,
+   "determiner": 1,
+   "timeframe": 1,
+   "plain": 2,
+   "skp-passive": 2
+  },
+  "levers": {
+   "l2:definiteness": 8,
+   "l2:aspect": 8,
+   "l3:shown": 3,
+   "l3:removed": 3,
+   "l3:items_with_a_variant": 3
+  },
+  "ag": {
+   "items": 8,
+   "errors": 0,
+   "fired_v3": 2,
+   "fired_v2": 2,
+   "fired_v3_clause": 2,
+   "fired_v3_subj": 2,
+   "fired_v3_by": 2,
+   "fired_v3_not_v2": 0,
+   "fired_v2_not_v3": 0,
+   "abstain_agentless_passive": 1
+  }
+ },
+ "label_meta": {
+  "labels_path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/selftest/data/labels.json",
+  "items_labelled": 8,
+  "rejected_rows": [],
+  "external": true,
+  "judged": {
+   "wrong": 5,
+   "correct": 3
+  },
+  "types": {
+   "M": 3,
+   "T": 1,
+   "W": 1
+  }
+ },
+ "accept_table": {
+  "reject/wrong": 5,
+  "accept/correct": 3
+ },
+ "headline": {
+  "coverage_kn": [
+   3,
+   3
+  ],
+  "fa_kn": [
+   0,
+   5
+  ]
+ },
+ "calls": {
+  "counted_total_1t": 6,
+  "unique_main": 6,
+  "new_main": 0,
+  "cap": null
+ },
+ "rows": [
+  {
+   "sid": 189001,
+   "item_id": "C:189001:same",
+   "kind": "C",
+   "half": "P1",
+   "level": "A1",
+   "tags": [
+    "determiner"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "form": null,
+   "judged": "correct",
+   "judged_type": null,
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": null,
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "the answer is not a marked passive without a by-agent",
+    "agent": "Mama",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": false,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mother has baked a large cake.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": true,
+   "final_layer": "L3"
+  },
+  {
+   "sid": 189002,
+   "item_id": "C:189002:same",
+   "kind": "C",
+   "half": "P2",
+   "level": "A2",
+   "tags": [
+    "plain"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "form": null,
+   "judged": "correct",
+   "judged_type": null,
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": null,
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "the answer is not a marked passive without a by-agent",
+    "agent": "Peter",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": false,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": true,
+   "final_layer": "L3"
+  },
+  {
+   "sid": 189003,
+   "item_id": "C:189003:same",
+   "kind": "C",
+   "half": "P1",
+   "level": "B1",
+   "tags": [
+    "skp-passive"
+   ],
+   "writer_passive": "agentless",
+   "intent": "C",
+   "form": null,
+   "judged": "correct",
+   "judged_type": null,
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": "agentless",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "the answer is not a marked passive without a by-agent",
+    "agent": "Okno",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": false,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": "Okno",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": true,
+   "final_layer": "L3"
+  },
+  {
+   "sid": 189001,
+   "item_id": "W:189001:agdrop",
+   "kind": "W",
+   "half": "P1",
+   "level": "A1",
+   "tags": [
+    "agentdrop-main"
+   ],
+   "writer_passive": "agentless",
+   "intent": "M",
+   "form": null,
+   "judged": "wrong",
+   "judged_type": "M",
+   "borderline": false,
+   "dropped": "Mama",
+   "judge_passive": "agentless",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "failed",
+    "model": null,
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": false
+   },
+   "ag": {
+    "fired": true,
+    "reason": "agentless passive in clause 0 against the Slovak clause 'Mama upiekla veľkú tortu.' that names the agent: Mama",
+    "agent": "Mama",
+    "agent_kind": "noun",
+    "clause_idx": 0,
+    "answer_is_agentless_passive": true,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Mama",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": true,
+     "reason": "agentless passive in clause 0 against the Slovak clause 'Mama upiekla veľkú tortu.' that names the agent: Mama",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": 0,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Mama",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_by": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Mama",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mother has baked a large cake.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": false,
+   "final_layer": "AG"
+  },
+  {
+   "sid": 189001,
+   "item_id": "W:189001:tip",
+   "kind": "W",
+   "half": "P1",
+   "level": "A1",
+   "tags": [
+    "timeframe"
+   ],
+   "writer_passive": null,
+   "intent": "T",
+   "form": null,
+   "judged": "wrong",
+   "judged_type": "T",
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": null,
+   "layers": {
+    "main_layer": "L3:TIPrej",
+    "main_verdict": "correct_with_tip",
+    "model": "TIP",
+    "model_tip": true,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "the answer is not a marked passive without a by-agent",
+    "agent": "Mama",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": false,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": "Mama",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mother has baked a large cake.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": false,
+   "final_layer": "L3:TIPrej"
+  },
+  {
+   "sid": 189002,
+   "item_id": "W:189002:agdrop",
+   "kind": "W",
+   "half": "P2",
+   "level": "A2",
+   "tags": [
+    "agentdrop-main"
+   ],
+   "writer_passive": "agentless",
+   "intent": "M",
+   "form": null,
+   "judged": "wrong",
+   "judged_type": "M",
+   "borderline": true,
+   "dropped": "Mama",
+   "judge_passive": "agentless",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "failed",
+    "model": null,
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": false
+   },
+   "ag": {
+    "fired": true,
+    "reason": "agentless passive in clause 0 against the Slovak clause 'Peter kontroluje schránku každé ráno.' that names the agent: Peter",
+    "agent": "Peter",
+    "agent_kind": "noun",
+    "clause_idx": 0,
+    "answer_is_agentless_passive": true,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Peter",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": true,
+     "reason": "agentless passive in clause 0 against the Slovak clause 'Peter kontroluje schránku každé ráno.' that names the agent: Peter",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": 0,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Peter",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_by": {
+     "fired": true,
+     "reason": "agentless passive against a Slovak that names the agent: Peter",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": false,
+   "final_layer": "AG"
+  },
+  {
+   "sid": 189002,
+   "item_id": "W:189002:diff",
+   "kind": "W",
+   "half": "P2",
+   "level": "A2",
+   "tags": [
+    "plain"
+   ],
+   "writer_passive": null,
+   "intent": "M",
+   "form": null,
+   "judged": "wrong",
+   "judged_type": "M",
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": null,
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "wrong",
+    "model": "DIFF",
+    "model_tip": false,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "the answer is not a marked passive without a by-agent",
+    "agent": "Peter",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": false,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": "Peter",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the answer is not a marked passive without a by-agent",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": false,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": false,
+   "final_layer": "L3"
+  },
+  {
+   "sid": 189003,
+   "item_id": "W:189003:tip",
+   "kind": "W",
+   "half": "P1",
+   "level": "B1",
+   "tags": [
+    "skp-passive"
+   ],
+   "writer_passive": "agentless",
+   "intent": "W",
+   "form": null,
+   "judged": "wrong",
+   "judged_type": "W",
+   "borderline": false,
+   "dropped": null,
+   "judge_passive": "agentless",
+   "layers": {
+    "main_layer": "L3:TIPrej",
+    "main_verdict": "correct_with_tip",
+    "model": "TIP",
+    "model_tip": true,
+    "reached_l3": true,
+    "planned_call": true
+   },
+   "ag": {
+    "fired": false,
+    "reason": "c0: the Slovak is passive (voice_sk)",
+    "agent": "Okno",
+    "agent_kind": "noun",
+    "clause_idx": null,
+    "answer_is_agentless_passive": true,
+    "error": false
+   },
+   "ag_shadow": {
+    "v2": {
+     "fired": false,
+     "reason": "the Slovak is not active with an explicit agent (voice_sk='passive')",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_clause": {
+     "fired": false,
+     "reason": "c0: the Slovak is passive (voice_sk)",
+     "agent": "Okno",
+     "agent_kind": "noun",
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_subj": {
+     "fired": false,
+     "reason": "the Slovak is passive (voice_sk)",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    },
+    "v3_by": {
+     "fired": false,
+     "reason": "the Slovak is not active with an explicit agent (voice_sk='passive')",
+     "agent": null,
+     "agent_kind": null,
+     "clause_idx": null,
+     "answer_is_agentless_passive": true,
+     "error": false
+    }
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 0,
+    "removed_detail": []
+   },
+   "final_accept": false,
+   "final_layer": "L3:TIPrej"
+  }
+ ]
+}
