@@ -1,0 +1,5824 @@
+{
+ "generated_by": "phase2c/gate1_2c.py",
+ "model_calls": 0,
+ "db_calls": 0,
+ "new_gold": 0,
+ "sample": "phase2b/sample_2b.json (200 rows: sk 1-100, cz 101-200)",
+ "gold": "phase2b/run_2b_results.json outputs.gold_sk/gold_cz (2B blind gold, run 2)",
+ "entry_point": "derive_2c.derive(row, lang=None, mode='after')",
+ "fields": [
+  "voice_sk",
+  "agent_nom",
+  "person",
+  "number",
+  "gender",
+  "tense_open",
+  "perfective_present",
+  "tf"
+ ],
+ "gate_rule": "AFTER ERROR-of-decided point estimate < 10 % on BOTH sk and cz",
+ "passed": [
+  "person",
+  "number",
+  "perfective_present"
+ ],
+ "sanity": {
+  "before_vs_derived_2b_field_mismatches": 0,
+  "examples": [],
+  "before_vs_results_2b_pooled": {
+   "voice_sk": [
+    17.17,
+    17.17
+   ],
+   "agent_nom": [
+    26.14,
+    26.14
+   ],
+   "person": [
+    8.63,
+    8.63
+   ],
+   "number": [
+    3.52,
+    3.52
+   ],
+   "gender": [
+    14.93,
+    14.93
+   ],
+   "tf": [
+    14.05,
+    14.05
+   ],
+   "tense_open": [
+    32.4,
+    32.4
+   ],
+   "perfective_present": [
+    5.97,
+    5.97
+   ]
+  },
+  "brief_quoted_pooled": {
+   "voice_sk": [
+    17.17,
+    17.2
+   ],
+   "agent_nom": [
+    26.14,
+    26.1
+   ],
+   "tf": [
+    14.05,
+    14.1
+   ],
+   "gender": [
+    14.93,
+    14.9
+   ],
+   "tense_open": [
+    32.4,
+    32.4
+   ],
+   "number": [
+    3.52,
+    3.5
+   ],
+   "perfective_present": [
+    5.97,
+    6.0
+   ]
+  },
+  "ok": true
+ },
+ "attribution_error_of_decided_pct": {
+  "voice_sk": {
+   "before": {
+    "pooled": 17.17,
+    "sk": 17.65,
+    "cz": 16.67
+   },
+   "tok": {
+    "pooled": 17.17,
+    "sk": 17.65,
+    "cz": 16.67
+   },
+   "verbish": {
+    "pooled": 17.0,
+    "sk": 17.65,
+    "cz": 16.33
+   },
+   "agent": {
+    "pooled": 13.04,
+    "sk": 14.29,
+    "cz": 11.63
+   },
+   "after": {
+    "pooled": 12.9,
+    "sk": 14.29,
+    "cz": 11.36
+   }
+  },
+  "agent_nom": {
+   "before": {
+    "pooled": 26.14,
+    "sk": 17.78,
+    "cz": 34.88
+   },
+   "tok": {
+    "pooled": 26.14,
+    "sk": 17.78,
+    "cz": 34.88
+   },
+   "verbish": {
+    "pooled": 26.97,
+    "sk": 17.78,
+    "cz": 36.36
+   },
+   "agent": {
+    "pooled": 15.0,
+    "sk": 11.63,
+    "cz": 18.92
+   },
+   "after": {
+    "pooled": 16.05,
+    "sk": 11.63,
+    "cz": 21.05
+   }
+  },
+  "person": {
+   "before": {
+    "pooled": 8.63,
+    "sk": 5.63,
+    "cz": 11.76
+   },
+   "tok": {
+    "pooled": 8.51,
+    "sk": 5.63,
+    "cz": 11.43
+   },
+   "verbish": {
+    "pooled": 6.62,
+    "sk": 4.29,
+    "cz": 9.09
+   },
+   "agent": {
+    "pooled": 8.63,
+    "sk": 5.63,
+    "cz": 11.76
+   },
+   "after": {
+    "pooled": 6.52,
+    "sk": 4.29,
+    "cz": 8.82
+   }
+  },
+  "number": {
+   "before": {
+    "pooled": 3.52,
+    "sk": 2.7,
+    "cz": 4.41
+   },
+   "tok": {
+    "pooled": 3.47,
+    "sk": 2.7,
+    "cz": 4.29
+   },
+   "verbish": {
+    "pooled": 2.16,
+    "sk": 1.37,
+    "cz": 3.03
+   },
+   "agent": {
+    "pooled": 3.52,
+    "sk": 2.7,
+    "cz": 4.41
+   },
+   "after": {
+    "pooled": 2.13,
+    "sk": 1.37,
+    "cz": 2.94
+   }
+  },
+  "gender": {
+   "before": {
+    "pooled": 14.93,
+    "sk": 11.63,
+    "cz": 20.83
+   },
+   "tok": {
+    "pooled": 14.49,
+    "sk": 11.63,
+    "cz": 19.23
+   },
+   "verbish": {
+    "pooled": 14.93,
+    "sk": 11.63,
+    "cz": 20.83
+   },
+   "agent": {
+    "pooled": 14.93,
+    "sk": 11.63,
+    "cz": 20.83
+   },
+   "after": {
+    "pooled": 14.49,
+    "sk": 11.63,
+    "cz": 19.23
+   }
+  },
+  "tense_open": {
+   "before": {
+    "pooled": 32.4,
+    "sk": 22.83,
+    "cz": 42.53
+   },
+   "tok": {
+    "pooled": 33.33,
+    "sk": 22.83,
+    "cz": 43.96
+   },
+   "verbish": {
+    "pooled": 32.4,
+    "sk": 22.83,
+    "cz": 42.53
+   },
+   "agent": {
+    "pooled": 32.4,
+    "sk": 22.83,
+    "cz": 42.53
+   },
+   "after": {
+    "pooled": 33.33,
+    "sk": 22.83,
+    "cz": 43.96
+   }
+  },
+  "perfective_present": {
+   "before": {
+    "pooled": 5.97,
+    "sk": 7.41,
+    "cz": 3.77
+   },
+   "tok": {
+    "pooled": 6.62,
+    "sk": 7.41,
+    "cz": 5.45
+   },
+   "verbish": {
+    "pooled": 5.97,
+    "sk": 7.41,
+    "cz": 3.77
+   },
+   "agent": {
+    "pooled": 5.97,
+    "sk": 7.41,
+    "cz": 3.77
+   },
+   "after": {
+    "pooled": 6.62,
+    "sk": 7.41,
+    "cz": 5.45
+   }
+  },
+  "tf": {
+   "before": {
+    "pooled": 14.05,
+    "sk": 12.0,
+    "cz": 17.39
+   },
+   "tok": {
+    "pooled": 13.11,
+    "sk": 12.0,
+    "cz": 14.89
+   },
+   "verbish": {
+    "pooled": 14.05,
+    "sk": 12.0,
+    "cz": 17.39
+   },
+   "agent": {
+    "pooled": 14.05,
+    "sk": 12.0,
+    "cz": 17.39
+   },
+   "after": {
+    "pooled": 13.11,
+    "sk": 12.0,
+    "cz": 14.89
+   }
+  }
+ },
+ "fixes_that_moved": {
+  "tok": [
+   "person",
+   "number",
+   "gender",
+   "tense_open",
+   "perfective_present",
+   "tf"
+  ],
+  "verbish": [
+   "voice_sk",
+   "agent_nom",
+   "person",
+   "number"
+  ],
+  "agent": [
+   "voice_sk",
+   "agent_nom"
+  ]
+ },
+ "caveat": "the three fixes were designed from defect examples drawn from THIS same 200-row sample; the AFTER figures are optimistic in-sample numbers, not a fresh-set measurement",
+ "results": {
+  "before": {
+   "voice_sk": {
+    "pooled": {
+     "agree": 82,
+     "conservative": 101,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 99,
+      "pct": 17.17,
+      "cp95": [
+       10.33,
+       26.06
+      ]
+     },
+     "coverage_decided": {
+      "k": 99,
+      "n": 200,
+      "pct": 49.5,
+      "cp95": [
+       42.37,
+       56.64
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 42,
+     "conservative": 49,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 51,
+      "pct": 17.65,
+      "cp95": [
+       8.4,
+       30.87
+      ]
+     },
+     "coverage_decided": {
+      "k": 51,
+      "n": 100,
+      "pct": 51.0,
+      "cp95": [
+       40.8,
+       61.14
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 40,
+     "conservative": 52,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 48,
+      "pct": 16.67,
+      "cp95": [
+       7.48,
+       30.22
+      ]
+     },
+     "coverage_decided": {
+      "k": 48,
+      "n": 100,
+      "pct": 48.0,
+      "cp95": [
+       37.9,
+       58.22
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "errors": [
+     [
+      26,
+      "sk",
+      "Zvyčajne je sám, ale dnes je šalát s kamarátom.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      30,
+      "sk",
+      "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+      "impersonal",
+      "active_prodrop"
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      54,
+      "sk",
+      "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      66,
+      "sk",
+      "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+      "passive",
+      "active_agent"
+     ],
+     [
+      80,
+      "sk",
+      "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      106,
+      "cz",
+      "Můžeš vidět ty rybky v jezírku?",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      113,
+      "cz",
+      "Vchod je zablokovaný a stovky lidí křičí!",
+      "active_agent",
+      "passive"
+     ],
+     [
+      137,
+      "cz",
+      "Posilovna se zavírá. Musíš přestat pózovat.",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      164,
+      "cz",
+      "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      176,
+      "cz",
+      "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      186,
+      "cz",
+      "Do konce měsíce bude mít odbojováno s deseti soupeři v tomhle tréninko",
+      "active_agent",
+      "active_prodrop"
+     ]
+    ]
+   },
+   "agent_nom": {
+    "pooled": {
+     "agree": 65,
+     "conservative": 112,
+     "error": 23,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 23,
+      "n": 88,
+      "pct": 26.14,
+      "cp95": [
+       17.34,
+       36.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 88,
+      "n": 200,
+      "pct": 44.0,
+      "cp95": [
+       37.01,
+       51.17
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 23,
+      "n": 200,
+      "pct": 11.5,
+      "cp95": [
+       7.43,
+       16.75
+      ]
+     }
+    },
+    "sk": {
+     "agree": 37,
+     "conservative": 55,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 45,
+      "pct": 17.78,
+      "cp95": [
+       8.0,
+       32.05
+      ]
+     },
+     "coverage_decided": {
+      "k": 45,
+      "n": 100,
+      "pct": 45.0,
+      "cp95": [
+       35.03,
+       55.27
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "cz": {
+     "agree": 28,
+     "conservative": 57,
+     "error": 15,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 15,
+      "n": 43,
+      "pct": 34.88,
+      "cp95": [
+       21.01,
+       50.93
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 15,
+      "n": 100,
+      "pct": 15.0,
+      "cp95": [
+       8.65,
+       23.53
+      ]
+     }
+    },
+    "errors": [
+     [
+      26,
+      "sk",
+      "Zvyčajne je sám, ale dnes je šalát s kamarátom.",
+      "Zvyčajne",
+      null
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      "Zvyčajne",
+      null
+     ],
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "on",
+      null
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "ja",
+      null
+     ],
+     [
+      46,
+      "sk",
+      "Chladnička je na jedlo, tak zajtra ona do nej dá jedlo.",
+      "ona",
+      "Chladnička"
+     ],
+     [
+      52,
+      "sk",
+      "Kámoška, vraj je z domu teraz len hromada sutín, však?",
+      "vraj",
+      "hromada sutín"
+     ],
+     [
+      54,
+      "sk",
+      "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+      "Takto",
+      null
+     ],
+     [
+      80,
+      "sk",
+      "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+      "zábere",
+      null
+     ],
+     [
+      101,
+      "cz",
+      "Nikdo nejede dolů po těchhle schodech! Je to noční můra!",
+      "noční můra",
+      "Nikdo"
+     ],
+     [
+      106,
+      "cz",
+      "Můžeš vidět ty rybky v jezírku?",
+      "ty",
+      null
+     ],
+     [
+      128,
+      "cz",
+      "Bolí to, ale on křičí: Já musím hrát finále!",
+      "on",
+      "to"
+     ],
+     [
+      138,
+      "cz",
+      "Poslouchej, prý v prázdné misce je jedna tabletka.",
+      "prý",
+      "jedna tabletka"
+     ],
+     [
+      149,
+      "cz",
+      "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+      "dort",
+      "to"
+     ],
+     [
+      151,
+      "cz",
+      "Točité schodiště není moc široké a ani to betonové.",
+      "široké",
+      "Točité schodiště"
+     ],
+     [
+      159,
+      "cz",
+      "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+      "úžasný",
+      "model"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "kdybych",
+      null
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "frustrace",
+      "sousedé"
+     ],
+     [
+      175,
+      "cz",
+      "Zítra touhle dobou bude Tom běhat po té samé mokré silnici ve tmě.",
+      "touhle",
+      "Tom"
+     ],
+     [
+      176,
+      "cz",
+      "Nejenže snědl celý dort, ale vyžádal si i druhý talíř.",
+      "Nejenže",
+      null
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "červené auto",
+      null
+     ]
+    ]
+   },
+   "person": {
+    "pooled": {
+     "agree": 127,
+     "conservative": 61,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 139,
+      "pct": 8.63,
+      "cp95": [
+       4.54,
+       14.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 139,
+      "n": 200,
+      "pct": 69.5,
+      "cp95": [
+       62.61,
+       75.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 67,
+     "conservative": 29,
+     "error": 4,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 4,
+      "n": 71,
+      "pct": 5.63,
+      "cp95": [
+       1.56,
+       13.8
+      ]
+     },
+     "coverage_decided": {
+      "k": 71,
+      "n": 100,
+      "pct": 71.0,
+      "cp95": [
+       61.07,
+       79.64
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 4,
+      "n": 100,
+      "pct": 4.0,
+      "cp95": [
+       1.1,
+       9.93
+      ]
+     }
+    },
+    "cz": {
+     "agree": 60,
+     "conservative": 32,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 68,
+      "pct": 11.76,
+      "cp95": [
+       5.22,
+       21.87
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "errors": [
+     [
+      10,
+      "sk",
+      "Stena reproduktorov robí na koncerte obrovský zvuk.",
+      "2pl",
+      "3sg"
+     ],
+     [
+      34,
+      "sk",
+      "Stan by si mal postaviť na rovnú zem.",
+      "3sg",
+      "2sg"
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "1sg",
+      "3sg"
+     ],
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "2pl",
+      "3sg"
+     ],
+     [
+      137,
+      "cz",
+      "Posilovna se zavírá. Musíš přestat pózovat.",
+      "2sg",
+      "3sg"
+     ],
+     [
+      146,
+      "cz",
+      "Na jednacím stole je hodně notebooků.",
+      "1sg",
+      "3sg"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "3pl",
+      "3sg"
+     ],
+     [
+      163,
+      "cz",
+      "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+      "3sg",
+      "2sg"
+     ],
+     [
+      164,
+      "cz",
+      "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+      "2sg",
+      "3sg"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "3sg",
+      "1sg"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "3sg",
+      "3pl"
+     ],
+     [
+      177,
+      "cz",
+      "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+      "1sg",
+      null
+     ]
+    ]
+   },
+   "number": {
+    "pooled": {
+     "agree": 137,
+     "conservative": 58,
+     "error": 5,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 142,
+      "pct": 3.52,
+      "cp95": [
+       1.15,
+       8.03
+      ]
+     },
+     "coverage_decided": {
+      "k": 142,
+      "n": 200,
+      "pct": 71.0,
+      "cp95": [
+       64.18,
+       77.18
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 200,
+      "pct": 2.5,
+      "cp95": [
+       0.82,
+       5.74
+      ]
+     }
+    },
+    "sk": {
+     "agree": 72,
+     "conservative": 26,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 74,
+      "pct": 2.7,
+      "cp95": [
+       0.33,
+       9.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 74,
+      "n": 100,
+      "pct": 74.0,
+      "cp95": [
+       64.27,
+       82.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    },
+    "cz": {
+     "agree": 65,
+     "conservative": 32,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 68,
+      "pct": 4.41,
+      "cp95": [
+       0.92,
+       12.36
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    },
+    "errors": [
+     [
+      10,
+      "sk",
+      "Stena reproduktorov robí na koncerte obrovský zvuk.",
+      "pl",
+      "sg"
+     ],
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "pl",
+      "sg"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "pl",
+      "sg"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "sg",
+      "pl"
+     ],
+     [
+      177,
+      "cz",
+      "Nic vážného, jen výška asi 2 000 metrů nad údolím.",
+      "sg",
+      null
+     ]
+    ]
+   },
+   "gender": {
+    "pooled": {
+     "agree": 57,
+     "conservative": 133,
+     "error": 10,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 10,
+      "n": 67,
+      "pct": 14.93,
+      "cp95": [
+       7.4,
+       25.74
+      ]
+     },
+     "coverage_decided": {
+      "k": 67,
+      "n": 200,
+      "pct": 33.5,
+      "cp95": [
+       27.0,
+       40.5
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 10,
+      "n": 200,
+      "pct": 5.0,
+      "cp95": [
+       2.42,
+       9.0
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 19,
+     "conservative": 76,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 24,
+      "pct": 20.83,
+      "cp95": [
+       7.13,
+       42.15
+      ]
+     },
+     "coverage_decided": {
+      "k": 24,
+      "n": 100,
+      "pct": 24.0,
+      "cp95": [
+       16.02,
+       33.57
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "errors": [
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "m",
+      null
+     ],
+     [
+      64,
+      "sk",
+      "Kým kráčala po obývačkovom móle, kamarátky všetko natáčali.",
+      "m",
+      "f"
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      "m",
+      null
+     ],
+     [
+      85,
+      "sk",
+      "Kamoška, Soul, ktorého neónové nápisy sa nikdy nevypínajú, je jej obľú",
+      "m",
+      "f"
+     ],
+     [
+      93,
+      "sk",
+      "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+      "m",
+      null
+     ],
+     [
+      128,
+      "cz",
+      "Bolí to, ale on křičí: Já musím hrát finále!",
+      "m",
+      "n"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "m",
+      null
+     ],
+     [
+      157,
+      "cz",
+      "„Mohla bych zůstat na tomhle poli celý den.“ - „Já taky,“ řekl natažen",
+      "f",
+      "m"
+     ],
+     [
+      163,
+      "cz",
+      "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+      "f",
+      null
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "f",
+      "m"
+     ]
+    ]
+   },
+   "tf": {
+    "pooled": {
+     "agree": 104,
+     "conservative": 79,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 121,
+      "pct": 14.05,
+      "cp95": [
+       8.4,
+       21.54
+      ]
+     },
+     "coverage_decided": {
+      "k": 121,
+      "n": 200,
+      "pct": 60.5,
+      "cp95": [
+       53.36,
+       67.32
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 66,
+     "conservative": 25,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 75,
+      "pct": 12.0,
+      "cp95": [
+       5.64,
+       21.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 75,
+      "n": 100,
+      "pct": 75.0,
+      "cp95": [
+       65.34,
+       83.12
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 38,
+     "conservative": 54,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 46,
+      "pct": 17.39,
+      "cp95": [
+       7.82,
+       31.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 46,
+      "n": 100,
+      "pct": 46.0,
+      "cp95": [
+       35.98,
+       56.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "errors": [
+     [
+      20,
+      "sk",
+      "Kámo, ona má toľko cereálií. Supermarket bude prázdny!",
+      "future",
+      "present"
+     ],
+     [
+      30,
+      "sk",
+      "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+      "conditional",
+      "present"
+     ],
+     [
+      34,
+      "sk",
+      "Stan by si mal postaviť na rovnú zem.",
+      "conditional",
+      "present"
+     ],
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "past",
+      "present"
+     ],
+     [
+      41,
+      "sk",
+      "Vraj vždy skrýva dôkazy, ale včera ukázala všetko, zlatko.",
+      "past",
+      "present"
+     ],
+     [
+      76,
+      "sk",
+      "Počúvaj, počula som, že do piatku roztrhá každú zmluvu v tej kancelári",
+      "present",
+      "past"
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      "conditional",
+      "past"
+     ],
+     [
+      84,
+      "sk",
+      "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký p",
+      "conditional",
+      "past"
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      "present",
+      "future"
+     ],
+     [
+      101,
+      "cz",
+      "Nikdo nejede dolů po těchhle schodech! Je to noční můra!",
+      "past",
+      "present"
+     ],
+     [
+      129,
+      "cz",
+      "Osel je malý, ale jeho hlas je obrovský.",
+      "past",
+      "present"
+     ],
+     [
+      159,
+      "cz",
+      "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+      "past",
+      "present"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "past",
+      "present"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "past",
+      "present"
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "past",
+      "present"
+     ],
+     [
+      195,
+      "cz",
+      "Přeje si, aby ta pískovišťová jáma byla o metr delší - skok mu málem p",
+      "past",
+      "present"
+     ],
+     [
+      196,
+      "cz",
+      "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si př",
+      "past",
+      "present"
+     ]
+    ]
+   },
+   "tense_open": {
+    "pooled": {
+     "agree": 121,
+     "conservative": 21,
+     "error": 58,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 58,
+      "n": 179,
+      "pct": 32.4,
+      "cp95": [
+       25.61,
+       39.79
+      ]
+     },
+     "coverage_decided": {
+      "k": 179,
+      "n": 200,
+      "pct": 89.5,
+      "cp95": [
+       84.4,
+       93.38
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 58,
+      "n": 200,
+      "pct": 29.0,
+      "cp95": [
+       22.82,
+       35.82
+      ]
+     }
+    },
+    "sk": {
+     "agree": 71,
+     "conservative": 8,
+     "error": 21,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 21,
+      "n": 92,
+      "pct": 22.83,
+      "cp95": [
+       14.72,
+       32.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 100,
+      "pct": 92.0,
+      "cp95": [
+       84.84,
+       96.48
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 21,
+      "n": 100,
+      "pct": 21.0,
+      "cp95": [
+       13.49,
+       30.29
+      ]
+     }
+    },
+    "cz": {
+     "agree": 50,
+     "conservative": 13,
+     "error": 37,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 37,
+      "n": 87,
+      "pct": 42.53,
+      "cp95": [
+       31.99,
+       53.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 87,
+      "n": 100,
+      "pct": 87.0,
+      "cp95": [
+       78.8,
+       92.89
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 37,
+      "n": 100,
+      "pct": 37.0,
+      "cp95": [
+       27.56,
+       47.24
+      ]
+     }
+    },
+    "errors": [
+     [
+      5,
+      "sk",
+      "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+      true,
+      false
+     ],
+     [
+      6,
+      "sk",
+      "Komu sa nová žena predstavuje? Celému tímu.",
+      true,
+      false
+     ],
+     [
+      7,
+      "sk",
+      "V záhrade v noci oslavujú traja kamaráti",
+      true,
+      false
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      true,
+      false
+     ],
+     [
+      39,
+      "sk",
+      "Ale no tak, brácho, chyť ma za ruku. Ja ťa vytiahnem hore, fakt.",
+      true,
+      false
+     ],
+     [
+      48,
+      "sk",
+      "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+      true,
+      false
+     ],
+     [
+      57,
+      "sk",
+      "Ak aj tento sveter vyperie na šesťdesiatke, celá skriňa skončí vo veľk",
+      true,
+      false
+     ],
+     [
+      58,
+      "sk",
+      "Úprimne, vybral si si dokonalý útes, aby si sledoval, ako sa more farb",
+      false,
+      true
+     ],
+     [
+      60,
+      "sk",
+      "Herec od začiatku porady dostal pochvalu od 5 členov štábu.",
+      false,
+      true
+     ],
+     [
+      61,
+      "sk",
+      "Ak tento sliz stlačíš dosť silno, guľôčky ti praskajú medzi prstami.",
+      true,
+      false
+     ],
+     [
+      66,
+      "sk",
+      "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+      false,
+      true
+     ],
+     [
+      73,
+      "sk",
+      "Kámo, plánuje túto romantickú žiadosť o ruku už mesiace, vážne.",
+      false,
+      true
+     ],
+     [
+      77,
+      "sk",
+      "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+      true,
+      false
+     ],
+     [
+      78,
+      "sk",
+      "Kým ten malinký džbán naplní bazén, leto skončí navždy!",
+      true,
+      false
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      false,
+      true
+     ],
+     [
+      88,
+      "sk",
+      "Kámo, starý pán stál v daždi celú večnosť, fakt, kým mu niekto prejavi",
+      false,
+      true
+     ],
+     [
+      93,
+      "sk",
+      "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+      false,
+      true
+     ],
+     [
+      96,
+      "sk",
+      "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+      false,
+      true
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      false,
+      true
+     ],
+     [
+      98,
+      "sk",
+      "On nakladal kufre už desať minút, keď pracovníčka konečne skontroloval",
+      false,
+      true
+     ]
+    ]
+   },
+   "perfective_present": {
+    "pooled": {
+     "agree": 126,
+     "conservative": 66,
+     "error": 8,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 134,
+      "pct": 5.97,
+      "cp95": [
+       2.61,
+       11.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 134,
+      "n": 200,
+      "pct": 67.0,
+      "cp95": [
+       60.02,
+       73.47
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 200,
+      "pct": 4.0,
+      "cp95": [
+       1.74,
+       7.73
+      ]
+     }
+    },
+    "sk": {
+     "agree": 75,
+     "conservative": 19,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 81,
+      "pct": 7.41,
+      "cp95": [
+       2.77,
+       15.43
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 100,
+      "pct": 81.0,
+      "cp95": [
+       71.93,
+       88.16
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "cz": {
+     "agree": 51,
+     "conservative": 47,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 53,
+      "pct": 3.77,
+      "cp95": [
+       0.46,
+       12.98
+      ]
+     },
+     "coverage_decided": {
+      "k": 53,
+      "n": 100,
+      "pct": 53.0,
+      "cp95": [
+       42.76,
+       63.06
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    },
+    "errors": [
+     [
+      5,
+      "sk",
+      "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+      true,
+      false
+     ],
+     [
+      6,
+      "sk",
+      "Komu sa nová žena predstavuje? Celému tímu.",
+      true,
+      false
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      true,
+      false
+     ],
+     [
+      48,
+      "sk",
+      "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+      true,
+      false
+     ],
+     [
+      77,
+      "sk",
+      "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+      true,
+      false
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      false,
+      true
+     ],
+     [
+      110,
+      "cz",
+      "Matka objímá své děti u školní brány.",
+      true,
+      false
+     ],
+     [
+      149,
+      "cz",
+      "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+      true,
+      false
+     ]
+    ]
+   }
+  },
+  "tok": {
+   "voice_sk": {
+    "pooled": {
+     "agree": 82,
+     "conservative": 101,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 99,
+      "pct": 17.17,
+      "cp95": [
+       10.33,
+       26.06
+      ]
+     },
+     "coverage_decided": {
+      "k": 99,
+      "n": 200,
+      "pct": 49.5,
+      "cp95": [
+       42.37,
+       56.64
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 42,
+     "conservative": 49,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 51,
+      "pct": 17.65,
+      "cp95": [
+       8.4,
+       30.87
+      ]
+     },
+     "coverage_decided": {
+      "k": 51,
+      "n": 100,
+      "pct": 51.0,
+      "cp95": [
+       40.8,
+       61.14
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 40,
+     "conservative": 52,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 48,
+      "pct": 16.67,
+      "cp95": [
+       7.48,
+       30.22
+      ]
+     },
+     "coverage_decided": {
+      "k": 48,
+      "n": 100,
+      "pct": 48.0,
+      "cp95": [
+       37.9,
+       58.22
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "agent_nom": {
+    "pooled": {
+     "agree": 65,
+     "conservative": 112,
+     "error": 23,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 23,
+      "n": 88,
+      "pct": 26.14,
+      "cp95": [
+       17.34,
+       36.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 88,
+      "n": 200,
+      "pct": 44.0,
+      "cp95": [
+       37.01,
+       51.17
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 23,
+      "n": 200,
+      "pct": 11.5,
+      "cp95": [
+       7.43,
+       16.75
+      ]
+     }
+    },
+    "sk": {
+     "agree": 37,
+     "conservative": 55,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 45,
+      "pct": 17.78,
+      "cp95": [
+       8.0,
+       32.05
+      ]
+     },
+     "coverage_decided": {
+      "k": 45,
+      "n": 100,
+      "pct": 45.0,
+      "cp95": [
+       35.03,
+       55.27
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "cz": {
+     "agree": 28,
+     "conservative": 57,
+     "error": 15,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 15,
+      "n": 43,
+      "pct": 34.88,
+      "cp95": [
+       21.01,
+       50.93
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 15,
+      "n": 100,
+      "pct": 15.0,
+      "cp95": [
+       8.65,
+       23.53
+      ]
+     }
+    }
+   },
+   "person": {
+    "pooled": {
+     "agree": 129,
+     "conservative": 59,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 141,
+      "pct": 8.51,
+      "cp95": [
+       4.48,
+       14.39
+      ]
+     },
+     "coverage_decided": {
+      "k": 141,
+      "n": 200,
+      "pct": 70.5,
+      "cp95": [
+       63.66,
+       76.72
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 67,
+     "conservative": 29,
+     "error": 4,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 4,
+      "n": 71,
+      "pct": 5.63,
+      "cp95": [
+       1.56,
+       13.8
+      ]
+     },
+     "coverage_decided": {
+      "k": 71,
+      "n": 100,
+      "pct": 71.0,
+      "cp95": [
+       61.07,
+       79.64
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 4,
+      "n": 100,
+      "pct": 4.0,
+      "cp95": [
+       1.1,
+       9.93
+      ]
+     }
+    },
+    "cz": {
+     "agree": 62,
+     "conservative": 30,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 70,
+      "pct": 11.43,
+      "cp95": [
+       5.07,
+       21.28
+      ]
+     },
+     "coverage_decided": {
+      "k": 70,
+      "n": 100,
+      "pct": 70.0,
+      "cp95": [
+       60.02,
+       78.76
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "number": {
+    "pooled": {
+     "agree": 139,
+     "conservative": 56,
+     "error": 5,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 144,
+      "pct": 3.47,
+      "cp95": [
+       1.14,
+       7.92
+      ]
+     },
+     "coverage_decided": {
+      "k": 144,
+      "n": 200,
+      "pct": 72.0,
+      "cp95": [
+       65.23,
+       78.1
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 200,
+      "pct": 2.5,
+      "cp95": [
+       0.82,
+       5.74
+      ]
+     }
+    },
+    "sk": {
+     "agree": 72,
+     "conservative": 26,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 74,
+      "pct": 2.7,
+      "cp95": [
+       0.33,
+       9.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 74,
+      "n": 100,
+      "pct": 74.0,
+      "cp95": [
+       64.27,
+       82.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    },
+    "cz": {
+     "agree": 67,
+     "conservative": 30,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 70,
+      "pct": 4.29,
+      "cp95": [
+       0.89,
+       12.02
+      ]
+     },
+     "coverage_decided": {
+      "k": 70,
+      "n": 100,
+      "pct": 70.0,
+      "cp95": [
+       60.02,
+       78.76
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    }
+   },
+   "gender": {
+    "pooled": {
+     "agree": 59,
+     "conservative": 131,
+     "error": 10,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 10,
+      "n": 69,
+      "pct": 14.49,
+      "cp95": [
+       7.17,
+       25.04
+      ]
+     },
+     "coverage_decided": {
+      "k": 69,
+      "n": 200,
+      "pct": 34.5,
+      "cp95": [
+       27.94,
+       41.53
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 10,
+      "n": 200,
+      "pct": 5.0,
+      "cp95": [
+       2.42,
+       9.0
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 21,
+     "conservative": 74,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 26,
+      "pct": 19.23,
+      "cp95": [
+       6.55,
+       39.35
+      ]
+     },
+     "coverage_decided": {
+      "k": 26,
+      "n": 100,
+      "pct": 26.0,
+      "cp95": [
+       17.74,
+       35.73
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    }
+   },
+   "tf": {
+    "pooled": {
+     "agree": 106,
+     "conservative": 78,
+     "error": 16,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 16,
+      "n": 122,
+      "pct": 13.11,
+      "cp95": [
+       7.69,
+       20.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 122,
+      "n": 200,
+      "pct": 61.0,
+      "cp95": [
+       53.87,
+       67.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 16,
+      "n": 200,
+      "pct": 8.0,
+      "cp95": [
+       4.64,
+       12.67
+      ]
+     }
+    },
+    "sk": {
+     "agree": 66,
+     "conservative": 25,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 75,
+      "pct": 12.0,
+      "cp95": [
+       5.64,
+       21.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 75,
+      "n": 100,
+      "pct": 75.0,
+      "cp95": [
+       65.34,
+       83.12
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 40,
+     "conservative": 53,
+     "error": 7,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 7,
+      "n": 47,
+      "pct": 14.89,
+      "cp95": [
+       6.2,
+       28.31
+      ]
+     },
+     "coverage_decided": {
+      "k": 47,
+      "n": 100,
+      "pct": 47.0,
+      "cp95": [
+       36.94,
+       57.24
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 7,
+      "n": 100,
+      "pct": 7.0,
+      "cp95": [
+       2.86,
+       13.89
+      ]
+     }
+    }
+   },
+   "tense_open": {
+    "pooled": {
+     "agree": 122,
+     "conservative": 17,
+     "error": 61,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 61,
+      "n": 183,
+      "pct": 33.33,
+      "cp95": [
+       26.55,
+       40.67
+      ]
+     },
+     "coverage_decided": {
+      "k": 183,
+      "n": 200,
+      "pct": 91.5,
+      "cp95": [
+       86.74,
+       94.97
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 61,
+      "n": 200,
+      "pct": 30.5,
+      "cp95": [
+       24.2,
+       37.39
+      ]
+     }
+    },
+    "sk": {
+     "agree": 71,
+     "conservative": 8,
+     "error": 21,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 21,
+      "n": 92,
+      "pct": 22.83,
+      "cp95": [
+       14.72,
+       32.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 100,
+      "pct": 92.0,
+      "cp95": [
+       84.84,
+       96.48
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 21,
+      "n": 100,
+      "pct": 21.0,
+      "cp95": [
+       13.49,
+       30.29
+      ]
+     }
+    },
+    "cz": {
+     "agree": 51,
+     "conservative": 9,
+     "error": 40,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 40,
+      "n": 91,
+      "pct": 43.96,
+      "cp95": [
+       33.56,
+       54.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 91,
+      "n": 100,
+      "pct": 91.0,
+      "cp95": [
+       83.6,
+       95.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 40,
+      "n": 100,
+      "pct": 40.0,
+      "cp95": [
+       30.33,
+       50.28
+      ]
+     }
+    }
+   },
+   "perfective_present": {
+    "pooled": {
+     "agree": 127,
+     "conservative": 64,
+     "error": 9,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 136,
+      "pct": 6.62,
+      "cp95": [
+       3.07,
+       12.19
+      ]
+     },
+     "coverage_decided": {
+      "k": 136,
+      "n": 200,
+      "pct": 68.0,
+      "cp95": [
+       61.05,
+       74.4
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 200,
+      "pct": 4.5,
+      "cp95": [
+       2.08,
+       8.37
+      ]
+     }
+    },
+    "sk": {
+     "agree": 75,
+     "conservative": 19,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 81,
+      "pct": 7.41,
+      "cp95": [
+       2.77,
+       15.43
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 100,
+      "pct": 81.0,
+      "cp95": [
+       71.93,
+       88.16
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "cz": {
+     "agree": 52,
+     "conservative": 45,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 55,
+      "pct": 5.45,
+      "cp95": [
+       1.14,
+       15.12
+      ]
+     },
+     "coverage_decided": {
+      "k": 55,
+      "n": 100,
+      "pct": 55.0,
+      "cp95": [
+       44.73,
+       64.97
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    }
+   }
+  },
+  "verbish": {
+   "voice_sk": {
+    "pooled": {
+     "agree": 83,
+     "conservative": 100,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 100,
+      "pct": 17.0,
+      "cp95": [
+       10.23,
+       25.82
+      ]
+     },
+     "coverage_decided": {
+      "k": 100,
+      "n": 200,
+      "pct": 50.0,
+      "cp95": [
+       42.87,
+       57.13
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 42,
+     "conservative": 49,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 51,
+      "pct": 17.65,
+      "cp95": [
+       8.4,
+       30.87
+      ]
+     },
+     "coverage_decided": {
+      "k": 51,
+      "n": 100,
+      "pct": 51.0,
+      "cp95": [
+       40.8,
+       61.14
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 41,
+     "conservative": 51,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 49,
+      "pct": 16.33,
+      "cp95": [
+       7.32,
+       29.66
+      ]
+     },
+     "coverage_decided": {
+      "k": 49,
+      "n": 100,
+      "pct": 49.0,
+      "cp95": [
+       38.86,
+       59.2
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "agent_nom": {
+    "pooled": {
+     "agree": 65,
+     "conservative": 111,
+     "error": 24,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 24,
+      "n": 89,
+      "pct": 26.97,
+      "cp95": [
+       18.1,
+       37.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 89,
+      "n": 200,
+      "pct": 44.5,
+      "cp95": [
+       37.49,
+       51.68
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 24,
+      "n": 200,
+      "pct": 12.0,
+      "cp95": [
+       7.84,
+       17.33
+      ]
+     }
+    },
+    "sk": {
+     "agree": 37,
+     "conservative": 55,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 45,
+      "pct": 17.78,
+      "cp95": [
+       8.0,
+       32.05
+      ]
+     },
+     "coverage_decided": {
+      "k": 45,
+      "n": 100,
+      "pct": 45.0,
+      "cp95": [
+       35.03,
+       55.27
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "cz": {
+     "agree": 28,
+     "conservative": 56,
+     "error": 16,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 16,
+      "n": 44,
+      "pct": 36.36,
+      "cp95": [
+       22.41,
+       52.23
+      ]
+     },
+     "coverage_decided": {
+      "k": 44,
+      "n": 100,
+      "pct": 44.0,
+      "cp95": [
+       34.08,
+       54.28
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 16,
+      "n": 100,
+      "pct": 16.0,
+      "cp95": [
+       9.43,
+       24.68
+      ]
+     }
+    }
+   },
+   "person": {
+    "pooled": {
+     "agree": 127,
+     "conservative": 64,
+     "error": 9,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 136,
+      "pct": 6.62,
+      "cp95": [
+       3.07,
+       12.19
+      ]
+     },
+     "coverage_decided": {
+      "k": 136,
+      "n": 200,
+      "pct": 68.0,
+      "cp95": [
+       61.05,
+       74.4
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 200,
+      "pct": 4.5,
+      "cp95": [
+       2.08,
+       8.37
+      ]
+     }
+    },
+    "sk": {
+     "agree": 67,
+     "conservative": 30,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 70,
+      "pct": 4.29,
+      "cp95": [
+       0.89,
+       12.02
+      ]
+     },
+     "coverage_decided": {
+      "k": 70,
+      "n": 100,
+      "pct": 70.0,
+      "cp95": [
+       60.02,
+       78.76
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    },
+    "cz": {
+     "agree": 60,
+     "conservative": 34,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 66,
+      "pct": 9.09,
+      "cp95": [
+       3.41,
+       18.74
+      ]
+     },
+     "coverage_decided": {
+      "k": 66,
+      "n": 100,
+      "pct": 66.0,
+      "cp95": [
+       55.85,
+       75.18
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    }
+   },
+   "number": {
+    "pooled": {
+     "agree": 136,
+     "conservative": 61,
+     "error": 3,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 139,
+      "pct": 2.16,
+      "cp95": [
+       0.45,
+       6.18
+      ]
+     },
+     "coverage_decided": {
+      "k": 139,
+      "n": 200,
+      "pct": 69.5,
+      "cp95": [
+       62.61,
+       75.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 200,
+      "pct": 1.5,
+      "cp95": [
+       0.31,
+       4.32
+      ]
+     }
+    },
+    "sk": {
+     "agree": 72,
+     "conservative": 27,
+     "error": 1,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 1,
+      "n": 73,
+      "pct": 1.37,
+      "cp95": [
+       0.03,
+       7.4
+      ]
+     },
+     "coverage_decided": {
+      "k": 73,
+      "n": 100,
+      "pct": 73.0,
+      "cp95": [
+       63.2,
+       81.39
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 1,
+      "n": 100,
+      "pct": 1.0,
+      "cp95": [
+       0.03,
+       5.45
+      ]
+     }
+    },
+    "cz": {
+     "agree": 64,
+     "conservative": 34,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 66,
+      "pct": 3.03,
+      "cp95": [
+       0.37,
+       10.52
+      ]
+     },
+     "coverage_decided": {
+      "k": 66,
+      "n": 100,
+      "pct": 66.0,
+      "cp95": [
+       55.85,
+       75.18
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    }
+   },
+   "gender": {
+    "pooled": {
+     "agree": 57,
+     "conservative": 133,
+     "error": 10,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 10,
+      "n": 67,
+      "pct": 14.93,
+      "cp95": [
+       7.4,
+       25.74
+      ]
+     },
+     "coverage_decided": {
+      "k": 67,
+      "n": 200,
+      "pct": 33.5,
+      "cp95": [
+       27.0,
+       40.5
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 10,
+      "n": 200,
+      "pct": 5.0,
+      "cp95": [
+       2.42,
+       9.0
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 19,
+     "conservative": 76,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 24,
+      "pct": 20.83,
+      "cp95": [
+       7.13,
+       42.15
+      ]
+     },
+     "coverage_decided": {
+      "k": 24,
+      "n": 100,
+      "pct": 24.0,
+      "cp95": [
+       16.02,
+       33.57
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    }
+   },
+   "tf": {
+    "pooled": {
+     "agree": 104,
+     "conservative": 79,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 121,
+      "pct": 14.05,
+      "cp95": [
+       8.4,
+       21.54
+      ]
+     },
+     "coverage_decided": {
+      "k": 121,
+      "n": 200,
+      "pct": 60.5,
+      "cp95": [
+       53.36,
+       67.32
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 66,
+     "conservative": 25,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 75,
+      "pct": 12.0,
+      "cp95": [
+       5.64,
+       21.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 75,
+      "n": 100,
+      "pct": 75.0,
+      "cp95": [
+       65.34,
+       83.12
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 38,
+     "conservative": 54,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 46,
+      "pct": 17.39,
+      "cp95": [
+       7.82,
+       31.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 46,
+      "n": 100,
+      "pct": 46.0,
+      "cp95": [
+       35.98,
+       56.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "tense_open": {
+    "pooled": {
+     "agree": 121,
+     "conservative": 21,
+     "error": 58,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 58,
+      "n": 179,
+      "pct": 32.4,
+      "cp95": [
+       25.61,
+       39.79
+      ]
+     },
+     "coverage_decided": {
+      "k": 179,
+      "n": 200,
+      "pct": 89.5,
+      "cp95": [
+       84.4,
+       93.38
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 58,
+      "n": 200,
+      "pct": 29.0,
+      "cp95": [
+       22.82,
+       35.82
+      ]
+     }
+    },
+    "sk": {
+     "agree": 71,
+     "conservative": 8,
+     "error": 21,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 21,
+      "n": 92,
+      "pct": 22.83,
+      "cp95": [
+       14.72,
+       32.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 100,
+      "pct": 92.0,
+      "cp95": [
+       84.84,
+       96.48
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 21,
+      "n": 100,
+      "pct": 21.0,
+      "cp95": [
+       13.49,
+       30.29
+      ]
+     }
+    },
+    "cz": {
+     "agree": 50,
+     "conservative": 13,
+     "error": 37,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 37,
+      "n": 87,
+      "pct": 42.53,
+      "cp95": [
+       31.99,
+       53.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 87,
+      "n": 100,
+      "pct": 87.0,
+      "cp95": [
+       78.8,
+       92.89
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 37,
+      "n": 100,
+      "pct": 37.0,
+      "cp95": [
+       27.56,
+       47.24
+      ]
+     }
+    }
+   },
+   "perfective_present": {
+    "pooled": {
+     "agree": 126,
+     "conservative": 66,
+     "error": 8,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 134,
+      "pct": 5.97,
+      "cp95": [
+       2.61,
+       11.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 134,
+      "n": 200,
+      "pct": 67.0,
+      "cp95": [
+       60.02,
+       73.47
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 200,
+      "pct": 4.0,
+      "cp95": [
+       1.74,
+       7.73
+      ]
+     }
+    },
+    "sk": {
+     "agree": 75,
+     "conservative": 19,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 81,
+      "pct": 7.41,
+      "cp95": [
+       2.77,
+       15.43
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 100,
+      "pct": 81.0,
+      "cp95": [
+       71.93,
+       88.16
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "cz": {
+     "agree": 51,
+     "conservative": 47,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 53,
+      "pct": 3.77,
+      "cp95": [
+       0.46,
+       12.98
+      ]
+     },
+     "coverage_decided": {
+      "k": 53,
+      "n": 100,
+      "pct": 53.0,
+      "cp95": [
+       42.76,
+       63.06
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    }
+   }
+  },
+  "agent": {
+   "voice_sk": {
+    "pooled": {
+     "agree": 80,
+     "conservative": 108,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 92,
+      "pct": 13.04,
+      "cp95": [
+       6.93,
+       21.68
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 200,
+      "pct": 46.0,
+      "cp95": [
+       38.95,
+       53.17
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 42,
+     "conservative": 51,
+     "error": 7,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 7,
+      "n": 49,
+      "pct": 14.29,
+      "cp95": [
+       5.94,
+       27.24
+      ]
+     },
+     "coverage_decided": {
+      "k": 49,
+      "n": 100,
+      "pct": 49.0,
+      "cp95": [
+       38.86,
+       59.2
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 7,
+      "n": 100,
+      "pct": 7.0,
+      "cp95": [
+       2.86,
+       13.89
+      ]
+     }
+    },
+    "cz": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    }
+   },
+   "agent_nom": {
+    "pooled": {
+     "agree": 68,
+     "conservative": 120,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 80,
+      "pct": 15.0,
+      "cp95": [
+       8.0,
+       24.74
+      ]
+     },
+     "coverage_decided": {
+      "k": 80,
+      "n": 200,
+      "pct": 40.0,
+      "cp95": [
+       33.15,
+       47.15
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 30,
+     "conservative": 63,
+     "error": 7,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 7,
+      "n": 37,
+      "pct": 18.92,
+      "cp95": [
+       7.96,
+       35.16
+      ]
+     },
+     "coverage_decided": {
+      "k": 37,
+      "n": 100,
+      "pct": 37.0,
+      "cp95": [
+       27.56,
+       47.24
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 7,
+      "n": 100,
+      "pct": 7.0,
+      "cp95": [
+       2.86,
+       13.89
+      ]
+     }
+    }
+   },
+   "person": {
+    "pooled": {
+     "agree": 127,
+     "conservative": 61,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 139,
+      "pct": 8.63,
+      "cp95": [
+       4.54,
+       14.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 139,
+      "n": 200,
+      "pct": 69.5,
+      "cp95": [
+       62.61,
+       75.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 67,
+     "conservative": 29,
+     "error": 4,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 4,
+      "n": 71,
+      "pct": 5.63,
+      "cp95": [
+       1.56,
+       13.8
+      ]
+     },
+     "coverage_decided": {
+      "k": 71,
+      "n": 100,
+      "pct": 71.0,
+      "cp95": [
+       61.07,
+       79.64
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 4,
+      "n": 100,
+      "pct": 4.0,
+      "cp95": [
+       1.1,
+       9.93
+      ]
+     }
+    },
+    "cz": {
+     "agree": 60,
+     "conservative": 32,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 68,
+      "pct": 11.76,
+      "cp95": [
+       5.22,
+       21.87
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "number": {
+    "pooled": {
+     "agree": 137,
+     "conservative": 58,
+     "error": 5,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 142,
+      "pct": 3.52,
+      "cp95": [
+       1.15,
+       8.03
+      ]
+     },
+     "coverage_decided": {
+      "k": 142,
+      "n": 200,
+      "pct": 71.0,
+      "cp95": [
+       64.18,
+       77.18
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 200,
+      "pct": 2.5,
+      "cp95": [
+       0.82,
+       5.74
+      ]
+     }
+    },
+    "sk": {
+     "agree": 72,
+     "conservative": 26,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 74,
+      "pct": 2.7,
+      "cp95": [
+       0.33,
+       9.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 74,
+      "n": 100,
+      "pct": 74.0,
+      "cp95": [
+       64.27,
+       82.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    },
+    "cz": {
+     "agree": 65,
+     "conservative": 32,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 68,
+      "pct": 4.41,
+      "cp95": [
+       0.92,
+       12.36
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    }
+   },
+   "gender": {
+    "pooled": {
+     "agree": 57,
+     "conservative": 133,
+     "error": 10,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 10,
+      "n": 67,
+      "pct": 14.93,
+      "cp95": [
+       7.4,
+       25.74
+      ]
+     },
+     "coverage_decided": {
+      "k": 67,
+      "n": 200,
+      "pct": 33.5,
+      "cp95": [
+       27.0,
+       40.5
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 10,
+      "n": 200,
+      "pct": 5.0,
+      "cp95": [
+       2.42,
+       9.0
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 19,
+     "conservative": 76,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 24,
+      "pct": 20.83,
+      "cp95": [
+       7.13,
+       42.15
+      ]
+     },
+     "coverage_decided": {
+      "k": 24,
+      "n": 100,
+      "pct": 24.0,
+      "cp95": [
+       16.02,
+       33.57
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    }
+   },
+   "tf": {
+    "pooled": {
+     "agree": 104,
+     "conservative": 79,
+     "error": 17,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 17,
+      "n": 121,
+      "pct": 14.05,
+      "cp95": [
+       8.4,
+       21.54
+      ]
+     },
+     "coverage_decided": {
+      "k": 121,
+      "n": 200,
+      "pct": 60.5,
+      "cp95": [
+       53.36,
+       67.32
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 17,
+      "n": 200,
+      "pct": 8.5,
+      "cp95": [
+       5.03,
+       13.26
+      ]
+     }
+    },
+    "sk": {
+     "agree": 66,
+     "conservative": 25,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 75,
+      "pct": 12.0,
+      "cp95": [
+       5.64,
+       21.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 75,
+      "n": 100,
+      "pct": 75.0,
+      "cp95": [
+       65.34,
+       83.12
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 38,
+     "conservative": 54,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 46,
+      "pct": 17.39,
+      "cp95": [
+       7.82,
+       31.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 46,
+      "n": 100,
+      "pct": 46.0,
+      "cp95": [
+       35.98,
+       56.26
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    }
+   },
+   "tense_open": {
+    "pooled": {
+     "agree": 121,
+     "conservative": 21,
+     "error": 58,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 58,
+      "n": 179,
+      "pct": 32.4,
+      "cp95": [
+       25.61,
+       39.79
+      ]
+     },
+     "coverage_decided": {
+      "k": 179,
+      "n": 200,
+      "pct": 89.5,
+      "cp95": [
+       84.4,
+       93.38
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 58,
+      "n": 200,
+      "pct": 29.0,
+      "cp95": [
+       22.82,
+       35.82
+      ]
+     }
+    },
+    "sk": {
+     "agree": 71,
+     "conservative": 8,
+     "error": 21,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 21,
+      "n": 92,
+      "pct": 22.83,
+      "cp95": [
+       14.72,
+       32.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 100,
+      "pct": 92.0,
+      "cp95": [
+       84.84,
+       96.48
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 21,
+      "n": 100,
+      "pct": 21.0,
+      "cp95": [
+       13.49,
+       30.29
+      ]
+     }
+    },
+    "cz": {
+     "agree": 50,
+     "conservative": 13,
+     "error": 37,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 37,
+      "n": 87,
+      "pct": 42.53,
+      "cp95": [
+       31.99,
+       53.59
+      ]
+     },
+     "coverage_decided": {
+      "k": 87,
+      "n": 100,
+      "pct": 87.0,
+      "cp95": [
+       78.8,
+       92.89
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 37,
+      "n": 100,
+      "pct": 37.0,
+      "cp95": [
+       27.56,
+       47.24
+      ]
+     }
+    }
+   },
+   "perfective_present": {
+    "pooled": {
+     "agree": 126,
+     "conservative": 66,
+     "error": 8,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 134,
+      "pct": 5.97,
+      "cp95": [
+       2.61,
+       11.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 134,
+      "n": 200,
+      "pct": 67.0,
+      "cp95": [
+       60.02,
+       73.47
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 200,
+      "pct": 4.0,
+      "cp95": [
+       1.74,
+       7.73
+      ]
+     }
+    },
+    "sk": {
+     "agree": 75,
+     "conservative": 19,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 81,
+      "pct": 7.41,
+      "cp95": [
+       2.77,
+       15.43
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 100,
+      "pct": 81.0,
+      "cp95": [
+       71.93,
+       88.16
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "cz": {
+     "agree": 51,
+     "conservative": 47,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 53,
+      "pct": 3.77,
+      "cp95": [
+       0.46,
+       12.98
+      ]
+     },
+     "coverage_decided": {
+      "k": 53,
+      "n": 100,
+      "pct": 53.0,
+      "cp95": [
+       42.76,
+       63.06
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    }
+   }
+  },
+  "after": {
+   "voice_sk": {
+    "pooled": {
+     "agree": 81,
+     "conservative": 107,
+     "error": 12,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 12,
+      "n": 93,
+      "pct": 12.9,
+      "cp95": [
+       6.85,
+       21.45
+      ]
+     },
+     "coverage_decided": {
+      "k": 93,
+      "n": 200,
+      "pct": 46.5,
+      "cp95": [
+       39.44,
+       53.67
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 12,
+      "n": 200,
+      "pct": 6.0,
+      "cp95": [
+       3.14,
+       10.25
+      ]
+     }
+    },
+    "sk": {
+     "agree": 42,
+     "conservative": 51,
+     "error": 7,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 7,
+      "n": 49,
+      "pct": 14.29,
+      "cp95": [
+       5.94,
+       27.24
+      ]
+     },
+     "coverage_decided": {
+      "k": 49,
+      "n": 100,
+      "pct": 49.0,
+      "cp95": [
+       38.86,
+       59.2
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 7,
+      "n": 100,
+      "pct": 7.0,
+      "cp95": [
+       2.86,
+       13.89
+      ]
+     }
+    },
+    "cz": {
+     "agree": 39,
+     "conservative": 56,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 44,
+      "pct": 11.36,
+      "cp95": [
+       3.79,
+       24.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 44,
+      "n": 100,
+      "pct": 44.0,
+      "cp95": [
+       34.08,
+       54.28
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "errors": [
+     [
+      30,
+      "sk",
+      "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+      "impersonal",
+      "active_prodrop"
+     ],
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      54,
+      "sk",
+      "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      66,
+      "sk",
+      "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+      "passive",
+      "active_agent"
+     ],
+     [
+      80,
+      "sk",
+      "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      113,
+      "cz",
+      "Vchod je zablokovaný a stovky lidí křičí!",
+      "active_agent",
+      "passive"
+     ],
+     [
+      137,
+      "cz",
+      "Posilovna se zavírá. Musíš přestat pózovat.",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      164,
+      "cz",
+      "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+      "active_prodrop",
+      "active_agent"
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "active_agent",
+      "active_prodrop"
+     ],
+     [
+      186,
+      "cz",
+      "Do konce měsíce bude mít odbojováno s deseti soupeři v tomhle tréninko",
+      "active_agent",
+      "active_prodrop"
+     ]
+    ]
+   },
+   "agent_nom": {
+    "pooled": {
+     "agree": 68,
+     "conservative": 119,
+     "error": 13,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 13,
+      "n": 81,
+      "pct": 16.05,
+      "cp95": [
+       8.83,
+       25.88
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 200,
+      "pct": 40.5,
+      "cp95": [
+       33.63,
+       47.65
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 13,
+      "n": 200,
+      "pct": 6.5,
+      "cp95": [
+       3.51,
+       10.86
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 30,
+     "conservative": 62,
+     "error": 8,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 8,
+      "n": 38,
+      "pct": 21.05,
+      "cp95": [
+       9.55,
+       37.32
+      ]
+     },
+     "coverage_decided": {
+      "k": 38,
+      "n": 100,
+      "pct": 38.0,
+      "cp95": [
+       28.48,
+       48.25
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 8,
+      "n": 100,
+      "pct": 8.0,
+      "cp95": [
+       3.52,
+       15.16
+      ]
+     }
+    },
+    "errors": [
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "on",
+      null
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "ja",
+      null
+     ],
+     [
+      46,
+      "sk",
+      "Chladnička je na jedlo, tak zajtra ona do nej dá jedlo.",
+      "ona",
+      "Chladnička"
+     ],
+     [
+      54,
+      "sk",
+      "Takto o týždeň bude ťahať v tom istom rohu posilňovne ešte ťažšiu čink",
+      "ťahať",
+      null
+     ],
+     [
+      80,
+      "sk",
+      "Pri poslednom zábere budú v tej kancelárii natáčať už dvanásť hodín.",
+      "zábere",
+      null
+     ],
+     [
+      101,
+      "cz",
+      "Nikdo nejede dolů po těchhle schodech! Je to noční můra!",
+      "noční můra",
+      "Nikdo"
+     ],
+     [
+      128,
+      "cz",
+      "Bolí to, ale on křičí: Já musím hrát finále!",
+      "on",
+      "to"
+     ],
+     [
+      146,
+      "cz",
+      "Na jednacím stole je hodně notebooků.",
+      "stole",
+      "hodně notebooků"
+     ],
+     [
+      149,
+      "cz",
+      "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+      "dort",
+      "to"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "frustrace",
+      "sousedé"
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "červené auto",
+      null
+     ],
+     [
+      186,
+      "cz",
+      "Do konce měsíce bude mít odbojováno s deseti soupeři v tomhle tréninko",
+      "měsíce",
+      null
+     ],
+     [
+      194,
+      "cz",
+      "Jejich manželství, které začalo polibkem pod květinovým obloukem, osla",
+      "Jejich manželství",
+      "každý host"
+     ]
+    ]
+   },
+   "person": {
+    "pooled": {
+     "agree": 129,
+     "conservative": 62,
+     "error": 9,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 138,
+      "pct": 6.52,
+      "cp95": [
+       3.03,
+       12.02
+      ]
+     },
+     "coverage_decided": {
+      "k": 138,
+      "n": 200,
+      "pct": 69.0,
+      "cp95": [
+       62.09,
+       75.33
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 200,
+      "pct": 4.5,
+      "cp95": [
+       2.08,
+       8.37
+      ]
+     }
+    },
+    "sk": {
+     "agree": 67,
+     "conservative": 30,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 70,
+      "pct": 4.29,
+      "cp95": [
+       0.89,
+       12.02
+      ]
+     },
+     "coverage_decided": {
+      "k": 70,
+      "n": 100,
+      "pct": 70.0,
+      "cp95": [
+       60.02,
+       78.76
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    },
+    "cz": {
+     "agree": 62,
+     "conservative": 32,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 68,
+      "pct": 8.82,
+      "cp95": [
+       3.31,
+       18.22
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "errors": [
+     [
+      34,
+      "sk",
+      "Stan by si mal postaviť na rovnú zem.",
+      "3sg",
+      "2sg"
+     ],
+     [
+      42,
+      "sk",
+      "„Dobre, ja vymením žiarovku, lebo tma je tmavá,“ rozhodne sa.",
+      "1sg",
+      "3sg"
+     ],
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "2pl",
+      "3sg"
+     ],
+     [
+      137,
+      "cz",
+      "Posilovna se zavírá. Musíš přestat pózovat.",
+      "2sg",
+      "3sg"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "3pl",
+      "3sg"
+     ],
+     [
+      163,
+      "cz",
+      "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+      "3sg",
+      "2sg"
+     ],
+     [
+      164,
+      "cz",
+      "Kámoš pořád hází svůj odpad do košů na recyklaci, jako by to byl baske",
+      "2sg",
+      "3sg"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "3sg",
+      "1sg"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "3sg",
+      "3pl"
+     ]
+    ]
+   },
+   "number": {
+    "pooled": {
+     "agree": 138,
+     "conservative": 59,
+     "error": 3,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 141,
+      "pct": 2.13,
+      "cp95": [
+       0.44,
+       6.09
+      ]
+     },
+     "coverage_decided": {
+      "k": 141,
+      "n": 200,
+      "pct": 70.5,
+      "cp95": [
+       63.66,
+       76.72
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 200,
+      "pct": 1.5,
+      "cp95": [
+       0.31,
+       4.32
+      ]
+     }
+    },
+    "sk": {
+     "agree": 72,
+     "conservative": 27,
+     "error": 1,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 1,
+      "n": 73,
+      "pct": 1.37,
+      "cp95": [
+       0.03,
+       7.4
+      ]
+     },
+     "coverage_decided": {
+      "k": 73,
+      "n": 100,
+      "pct": 73.0,
+      "cp95": [
+       63.2,
+       81.39
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 1,
+      "n": 100,
+      "pct": 1.0,
+      "cp95": [
+       0.03,
+       5.45
+      ]
+     }
+    },
+    "cz": {
+     "agree": 66,
+     "conservative": 32,
+     "error": 2,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 2,
+      "n": 68,
+      "pct": 2.94,
+      "cp95": [
+       0.36,
+       10.22
+      ]
+     },
+     "coverage_decided": {
+      "k": 68,
+      "n": 100,
+      "pct": 68.0,
+      "cp95": [
+       57.92,
+       76.98
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 2,
+      "n": 100,
+      "pct": 2.0,
+      "cp95": [
+       0.24,
+       7.04
+      ]
+     }
+    },
+    "errors": [
+     [
+      44,
+      "sk",
+      "Hej, dodávka práve teraz ide po pobrežnej ceste, ikonické.",
+      "pl",
+      "sg"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "pl",
+      "sg"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "sg",
+      "pl"
+     ]
+    ]
+   },
+   "gender": {
+    "pooled": {
+     "agree": 59,
+     "conservative": 131,
+     "error": 10,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 10,
+      "n": 69,
+      "pct": 14.49,
+      "cp95": [
+       7.17,
+       25.04
+      ]
+     },
+     "coverage_decided": {
+      "k": 69,
+      "n": 200,
+      "pct": 34.5,
+      "cp95": [
+       27.94,
+       41.53
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 10,
+      "n": 200,
+      "pct": 5.0,
+      "cp95": [
+       2.42,
+       9.0
+      ]
+     }
+    },
+    "sk": {
+     "agree": 38,
+     "conservative": 57,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 43,
+      "pct": 11.63,
+      "cp95": [
+       3.89,
+       25.08
+      ]
+     },
+     "coverage_decided": {
+      "k": 43,
+      "n": 100,
+      "pct": 43.0,
+      "cp95": [
+       33.14,
+       53.29
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "cz": {
+     "agree": 21,
+     "conservative": 74,
+     "error": 5,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 5,
+      "n": 26,
+      "pct": 19.23,
+      "cp95": [
+       6.55,
+       39.35
+      ]
+     },
+     "coverage_decided": {
+      "k": 26,
+      "n": 100,
+      "pct": 26.0,
+      "cp95": [
+       17.74,
+       35.73
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 5,
+      "n": 100,
+      "pct": 5.0,
+      "cp95": [
+       1.64,
+       11.28
+      ]
+     }
+    },
+    "errors": [
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "m",
+      null
+     ],
+     [
+      64,
+      "sk",
+      "Kým kráčala po obývačkovom móle, kamarátky všetko natáčali.",
+      "m",
+      "f"
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      "m",
+      null
+     ],
+     [
+      85,
+      "sk",
+      "Kamoška, Soul, ktorého neónové nápisy sa nikdy nevypínajú, je jej obľú",
+      "m",
+      "f"
+     ],
+     [
+      93,
+      "sk",
+      "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+      "m",
+      null
+     ],
+     [
+      128,
+      "cz",
+      "Bolí to, ale on křičí: Já musím hrát finále!",
+      "m",
+      "n"
+     ],
+     [
+      155,
+      "cz",
+      "Příští neděli touhle dobou bude mávat cedulkou na další venkovské aukc",
+      "m",
+      null
+     ],
+     [
+      157,
+      "cz",
+      "„Mohla bych zůstat na tomhle poli celý den.“ - „Já taky,“ řekl natažen",
+      "f",
+      "m"
+     ],
+     [
+      163,
+      "cz",
+      "Kámo, představ si hraní na kurtu takhle vysoko, docela neskutečný.",
+      "f",
+      null
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "f",
+      "m"
+     ]
+    ]
+   },
+   "tf": {
+    "pooled": {
+     "agree": 106,
+     "conservative": 78,
+     "error": 16,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 16,
+      "n": 122,
+      "pct": 13.11,
+      "cp95": [
+       7.69,
+       20.42
+      ]
+     },
+     "coverage_decided": {
+      "k": 122,
+      "n": 200,
+      "pct": 61.0,
+      "cp95": [
+       53.87,
+       67.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 16,
+      "n": 200,
+      "pct": 8.0,
+      "cp95": [
+       4.64,
+       12.67
+      ]
+     }
+    },
+    "sk": {
+     "agree": 66,
+     "conservative": 25,
+     "error": 9,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 75,
+      "pct": 12.0,
+      "cp95": [
+       5.64,
+       21.56
+      ]
+     },
+     "coverage_decided": {
+      "k": 75,
+      "n": 100,
+      "pct": 75.0,
+      "cp95": [
+       65.34,
+       83.12
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 100,
+      "pct": 9.0,
+      "cp95": [
+       4.2,
+       16.4
+      ]
+     }
+    },
+    "cz": {
+     "agree": 40,
+     "conservative": 53,
+     "error": 7,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 7,
+      "n": 47,
+      "pct": 14.89,
+      "cp95": [
+       6.2,
+       28.31
+      ]
+     },
+     "coverage_decided": {
+      "k": 47,
+      "n": 100,
+      "pct": 47.0,
+      "cp95": [
+       36.94,
+       57.24
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 7,
+      "n": 100,
+      "pct": 7.0,
+      "cp95": [
+       2.86,
+       13.89
+      ]
+     }
+    },
+    "errors": [
+     [
+      20,
+      "sk",
+      "Kámo, ona má toľko cereálií. Supermarket bude prázdny!",
+      "future",
+      "present"
+     ],
+     [
+      30,
+      "sk",
+      "Veľmi úprimné hodnotenie, samozrejme. Možno by mala najprv ochutnať je",
+      "conditional",
+      "present"
+     ],
+     [
+      34,
+      "sk",
+      "Stan by si mal postaviť na rovnú zem.",
+      "conditional",
+      "present"
+     ],
+     [
+      35,
+      "sk",
+      "Zvyčajne padá na trampolínu. Včera on pristál v pene.",
+      "past",
+      "present"
+     ],
+     [
+      41,
+      "sk",
+      "Vraj vždy skrýva dôkazy, ale včera ukázala všetko, zlatko.",
+      "past",
+      "present"
+     ],
+     [
+      76,
+      "sk",
+      "Počúvaj, počula som, že do piatku roztrhá každú zmluvu v tej kancelári",
+      "present",
+      "past"
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      "conditional",
+      "past"
+     ],
+     [
+      84,
+      "sk",
+      "Keby si nebol priniesol medvedíka, chlapec by nezostal u lekára taký p",
+      "conditional",
+      "past"
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      "present",
+      "future"
+     ],
+     [
+      129,
+      "cz",
+      "Osel je malý, ale jeho hlas je obrovský.",
+      "past",
+      "present"
+     ],
+     [
+      159,
+      "cz",
+      "Upřímně, model, který jsi postavila s malinkými věžemi, je úžasný.",
+      "past",
+      "present"
+     ],
+     [
+      165,
+      "cz",
+      "Ne, kdybych snědl její dort, taky bych svěsil hlavu studem, fakt.",
+      "past",
+      "present"
+     ],
+     [
+      170,
+      "cz",
+      "Jasně, klidná noc: kdyby její frustrace byla ještě hlasitější, sousedé",
+      "past",
+      "present"
+     ],
+     [
+      184,
+      "cz",
+      "Kdyby byl červené auto prodal, dnes by nikoho nepředjížděl",
+      "past",
+      "present"
+     ],
+     [
+      195,
+      "cz",
+      "Přeje si, aby ta pískovišťová jáma byla o metr delší - skok mu málem p",
+      "past",
+      "present"
+     ],
+     [
+      196,
+      "cz",
+      "Kuřák si přeje, aby se byl staral lépe o své plíce, orgán, který si př",
+      "past",
+      "present"
+     ]
+    ]
+   },
+   "tense_open": {
+    "pooled": {
+     "agree": 122,
+     "conservative": 17,
+     "error": 61,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 61,
+      "n": 183,
+      "pct": 33.33,
+      "cp95": [
+       26.55,
+       40.67
+      ]
+     },
+     "coverage_decided": {
+      "k": 183,
+      "n": 200,
+      "pct": 91.5,
+      "cp95": [
+       86.74,
+       94.97
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 61,
+      "n": 200,
+      "pct": 30.5,
+      "cp95": [
+       24.2,
+       37.39
+      ]
+     }
+    },
+    "sk": {
+     "agree": 71,
+     "conservative": 8,
+     "error": 21,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 21,
+      "n": 92,
+      "pct": 22.83,
+      "cp95": [
+       14.72,
+       32.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 92,
+      "n": 100,
+      "pct": 92.0,
+      "cp95": [
+       84.84,
+       96.48
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 21,
+      "n": 100,
+      "pct": 21.0,
+      "cp95": [
+       13.49,
+       30.29
+      ]
+     }
+    },
+    "cz": {
+     "agree": 51,
+     "conservative": 9,
+     "error": 40,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 40,
+      "n": 91,
+      "pct": 43.96,
+      "cp95": [
+       33.56,
+       54.75
+      ]
+     },
+     "coverage_decided": {
+      "k": 91,
+      "n": 100,
+      "pct": 91.0,
+      "cp95": [
+       83.6,
+       95.8
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 40,
+      "n": 100,
+      "pct": 40.0,
+      "cp95": [
+       30.33,
+       50.28
+      ]
+     }
+    },
+    "errors": [
+     [
+      5,
+      "sk",
+      "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+      true,
+      false
+     ],
+     [
+      6,
+      "sk",
+      "Komu sa nová žena predstavuje? Celému tímu.",
+      true,
+      false
+     ],
+     [
+      7,
+      "sk",
+      "V záhrade v noci oslavujú traja kamaráti",
+      true,
+      false
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      true,
+      false
+     ],
+     [
+      39,
+      "sk",
+      "Ale no tak, brácho, chyť ma za ruku. Ja ťa vytiahnem hore, fakt.",
+      true,
+      false
+     ],
+     [
+      48,
+      "sk",
+      "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+      true,
+      false
+     ],
+     [
+      57,
+      "sk",
+      "Ak aj tento sveter vyperie na šesťdesiatke, celá skriňa skončí vo veľk",
+      true,
+      false
+     ],
+     [
+      58,
+      "sk",
+      "Úprimne, vybral si si dokonalý útes, aby si sledoval, ako sa more farb",
+      false,
+      true
+     ],
+     [
+      60,
+      "sk",
+      "Herec od začiatku porady dostal pochvalu od 5 členov štábu.",
+      false,
+      true
+     ],
+     [
+      61,
+      "sk",
+      "Ak tento sliz stlačíš dosť silno, guľôčky ti praskajú medzi prstami.",
+      true,
+      false
+     ],
+     [
+      66,
+      "sk",
+      "Katastrofa! Chlapec už dnes vykopal dve jamy a celá pláž je zničená!",
+      false,
+      true
+     ],
+     [
+      73,
+      "sk",
+      "Kámo, plánuje túto romantickú žiadosť o ruku už mesiace, vážne.",
+      false,
+      true
+     ],
+     [
+      77,
+      "sk",
+      "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+      true,
+      false
+     ],
+     [
+      78,
+      "sk",
+      "Kým ten malinký džbán naplní bazén, leto skončí navždy!",
+      true,
+      false
+     ],
+     [
+      79,
+      "sk",
+      "Keby si bola nechala občiansky preukaz doma, nedovolili by jej voliť.",
+      false,
+      true
+     ],
+     [
+      88,
+      "sk",
+      "Kámo, starý pán stál v daždi celú večnosť, fakt, kým mu niekto prejavi",
+      false,
+      true
+     ],
+     [
+      93,
+      "sk",
+      "Predtým, ako sa začal tanec, oni robili vence celé hodiny pri jazere.",
+      false,
+      true
+     ],
+     [
+      96,
+      "sk",
+      "Morka sa piekla v rúre celé hodiny, kým muž vybral pekáč.",
+      false,
+      true
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      false,
+      true
+     ],
+     [
+      98,
+      "sk",
+      "On nakladal kufre už desať minút, keď pracovníčka konečne skontroloval",
+      false,
+      true
+     ]
+    ]
+   },
+   "perfective_present": {
+    "pooled": {
+     "agree": 127,
+     "conservative": 64,
+     "error": 9,
+     "n": 200,
+     "ERROR_of_decided": {
+      "k": 9,
+      "n": 136,
+      "pct": 6.62,
+      "cp95": [
+       3.07,
+       12.19
+      ]
+     },
+     "coverage_decided": {
+      "k": 136,
+      "n": 200,
+      "pct": 68.0,
+      "cp95": [
+       61.05,
+       74.4
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 9,
+      "n": 200,
+      "pct": 4.5,
+      "cp95": [
+       2.08,
+       8.37
+      ]
+     }
+    },
+    "sk": {
+     "agree": 75,
+     "conservative": 19,
+     "error": 6,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 6,
+      "n": 81,
+      "pct": 7.41,
+      "cp95": [
+       2.77,
+       15.43
+      ]
+     },
+     "coverage_decided": {
+      "k": 81,
+      "n": 100,
+      "pct": 81.0,
+      "cp95": [
+       71.93,
+       88.16
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 6,
+      "n": 100,
+      "pct": 6.0,
+      "cp95": [
+       2.23,
+       12.6
+      ]
+     }
+    },
+    "cz": {
+     "agree": 52,
+     "conservative": 45,
+     "error": 3,
+     "n": 100,
+     "ERROR_of_decided": {
+      "k": 3,
+      "n": 55,
+      "pct": 5.45,
+      "cp95": [
+       1.14,
+       15.12
+      ]
+     },
+     "coverage_decided": {
+      "k": 55,
+      "n": 100,
+      "pct": 55.0,
+      "cp95": [
+       44.73,
+       64.97
+      ]
+     },
+     "ERROR_of_all": {
+      "k": 3,
+      "n": 100,
+      "pct": 3.0,
+      "cp95": [
+       0.62,
+       8.52
+      ]
+     }
+    },
+    "errors": [
+     [
+      5,
+      "sk",
+      "Rôzni ľudia prechádzajú okolo nej v sivých oblekoch.",
+      true,
+      false
+     ],
+     [
+      6,
+      "sk",
+      "Komu sa nová žena predstavuje? Celému tímu.",
+      true,
+      false
+     ],
+     [
+      32,
+      "sk",
+      "Zvyčajne odskakuje preč, ale teraz mäkký lemur sedí bez pohnutia.",
+      true,
+      false
+     ],
+     [
+      48,
+      "sk",
+      "Úprimne, do toho nízkeho Ferrari nastupuješ veľmi elegantne.",
+      true,
+      false
+     ],
+     [
+      77,
+      "sk",
+      "Predpokladá sa, že olivový kabát bol kúpený s úplne rozumným rozpočtom",
+      true,
+      false
+     ],
+     [
+      97,
+      "sk",
+      "Ľadová doska, ktorej okraj má dlhé cencúle, sa rozštiepi na dve časti.",
+      false,
+      true
+     ],
+     [
+      110,
+      "cz",
+      "Matka objímá své děti u školní brány.",
+      true,
+      false
+     ],
+     [
+      149,
+      "cz",
+      "Jasně, vypadá to jako kukuřice, ale je to jen dort.",
+      true,
+      false
+     ],
+     [
+      185,
+      "cz",
+      "Právě teď odměřuje svou dávku kapku po kapce. Zjevně rychlý proces.",
+      true,
+      false
+     ]
+    ]
+   }
+  }
+ }
+}
