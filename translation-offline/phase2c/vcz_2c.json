@@ -1,0 +1,69 @@
+{
+ "n": 100,
+ "language": "cz",
+ "model": "opus",
+ "cap": 200000,
+ "est": 60000,
+ "session_ok": true,
+ "prompt_sha16": "1bb3888dbd88d8c0",
+ "prompt_construction_verified_against": "phase2b/sessions/v_sk.json (byte-identical rebuild of the v_sk prompt)",
+ "figures": {
+  "v_cz": {
+   "input": 2,
+   "output": 10804,
+   "cache_creation": 19427,
+   "cache_read": 20777,
+   "total": 51010,
+   "tok_per_sent_incl_cache_read": 510.1,
+   "tok_per_sent_excl_cache_read": 302.3,
+   "output_per_sent": 108.0,
+   "wall_s": 98.7
+  },
+  "v_sk_2b_run2": {
+   "input": 2,
+   "output": 7142,
+   "cache_creation": 18064,
+   "cache_read": 22462,
+   "total": 47670,
+   "tok_per_sent_incl_cache_read": 476.7,
+   "tok_per_sent_excl_cache_read": 252.1,
+   "output_per_sent": 71.4,
+   "wall_s": 53.6
+  }
+ },
+ "quality": {
+  "rows_returned": 100,
+  "lk0_copied_unchanged": 100,
+  "v0_is_reference": 100,
+  "two_variants": 32
+ },
+ "lk0_note": "2B SCORE #5: v copied lk[0] unchanged on 100/100 sk rows",
+ "gate2": "pass",
+ "gate2_bar": "v_cz <= 700 tok/sent incl. cache reads",
+ "reextrapolation_sk_plus_cz": {
+  "basis": "2B §4 per-sentence components, v_sk and v_cz each measured; rewrite fallback 268.5 + lk judge 245.6 + residual nulls 42.6 (E) unchanged",
+  "phase2c_selection_8128": {
+   "sentences": 8128,
+   "tok_per_sent_mean": 1050.1,
+   "tokens_all": 8535213,
+   "tokens_excl_cache_read": 4952390,
+   "tokens_all_M": 8.54
+  },
+  "brief_figure_8218": {
+   "sentences": 8218,
+   "tok_per_sent_mean": 1050.1,
+   "tokens_all": 8629722,
+   "tokens_excl_cache_read": 5007227,
+   "tokens_all_M": 8.63
+  },
+  "target_14400": {
+   "sentences": 14400,
+   "tok_per_sent_mean": 1050.1,
+   "tokens_all": 15121440,
+   "tokens_excl_cache_read": 8773920,
+   "tokens_all_M": 15.12
+  },
+  "2b_reported_8218_all_M": 8.49
+ },
+ "headless_tokens_spent": 51010
+}
