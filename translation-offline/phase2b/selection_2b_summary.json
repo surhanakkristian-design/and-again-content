@@ -1,0 +1,308 @@
+{
+ "rule": "3,600 concepts ranked by md5(concept_id||'phase2b-concept'); A-concept -> one A1 + one A2, B-concept -> one B1 + one B2 grammar-topic exercise; within (concept, level) lowest md5(concept_id::text||exercise_id::text||'phase2b'), ties by exercise_id",
+ "sentence_table": "exercise_localizations (no sentence_translations table exists live)",
+ "czech_code": "cz",
+ "concept_level_source": "no level column on word_concepts; derived from vocabulary exercise level (A/B), else grammar family, else A",
+ "concepts_total": 3057,
+ "concepts_by_level": {
+  "A": 1600,
+  "B": 1457
+ },
+ "concepts_by_level_source": {
+  "A:grammar": 80,
+  "A:tie_A": 39,
+  "A:vocab": 1481,
+  "B:grammar": 66,
+  "B:vocab": 1391
+ },
+ "concepts_with_grammar_by_clevel": {
+  "B": 1003,
+  "A": 1283
+ },
+ "concepts_2_sentences": 1823,
+ "concepts_1_sentence": 463,
+ "concepts_0_sentences": 771,
+ "per_clevel_sentences": {
+  "A": {
+   "2": 1122,
+   "1": 161
+  },
+  "B": {
+   "2": 701,
+   "1": 302
+  }
+ },
+ "selected_total": 4109,
+ "target": 7200,
+ "shortfall": 3091,
+ "topics_per_level": {
+  "A1": {
+   "selected": 1181,
+   "distinct_topics_hit": 11,
+   "topics_available": 11,
+   "min_per_topic": 80,
+   "max_per_topic": 134,
+   "per_topic": {
+    "1": 109,
+    "2": 103,
+    "3": 121,
+    "4": 116,
+    "5": 80,
+    "6": 112,
+    "7": 92,
+    "8": 92,
+    "9": 134,
+    "10": 101,
+    "11": 121
+   }
+  },
+  "A2": {
+   "selected": 1224,
+   "distinct_topics_hit": 15,
+   "topics_available": 15,
+   "min_per_topic": 62,
+   "max_per_topic": 104,
+   "per_topic": {
+    "12": 98,
+    "13": 66,
+    "14": 89,
+    "15": 77,
+    "16": 80,
+    "17": 80,
+    "18": 67,
+    "19": 104,
+    "20": 83,
+    "21": 96,
+    "22": 66,
+    "23": 92,
+    "24": 84,
+    "25": 62,
+    "26": 80
+   }
+  },
+  "B1": {
+   "selected": 898,
+   "distinct_topics_hit": 19,
+   "topics_available": 19,
+   "min_per_topic": 36,
+   "max_per_topic": 79,
+   "per_topic": {
+    "31": 79,
+    "32": 51,
+    "33": 47,
+    "34": 43,
+    "35": 41,
+    "36": 45,
+    "37": 36,
+    "38": 51,
+    "39": 38,
+    "40": 40,
+    "41": 40,
+    "42": 46,
+    "43": 41,
+    "44": 41,
+    "45": 50,
+    "46": 43,
+    "47": 53,
+    "48": 51,
+    "49": 62
+   }
+  },
+  "B2": {
+   "selected": 806,
+   "distinct_topics_hit": 18,
+   "topics_available": 18,
+   "min_per_topic": 16,
+   "max_per_topic": 106,
+   "per_topic": {
+    "50": 47,
+    "51": 44,
+    "52": 32,
+    "53": 30,
+    "54": 16,
+    "55": 23,
+    "56": 33,
+    "57": 37,
+    "58": 21,
+    "59": 39,
+    "60": 43,
+    "61": 38,
+    "62": 62,
+    "63": 41,
+    "64": 28,
+    "65": 104,
+    "66": 106,
+    "67": 62
+   }
+  }
+ },
+ "selected_with_sk_full_sentence": 4109,
+ "selected_with_cz_full_sentence": 4109,
+ "scope_39498_rerun": {
+  "by_level": [
+   {
+    "level": "A1",
+    "n": 9999
+   },
+   {
+    "level": "A2",
+    "n": 13591
+   },
+   {
+    "level": "B1",
+    "n": 8906
+   },
+   {
+    "level": "B2",
+    "n": 7002
+   }
+  ],
+  "total": 39498,
+  "selection_in_scope": 4109,
+  "selection_share_of_scope_pct": 10.4
+ },
+ "probe_5895": {
+  "exact_hits": {},
+  "nearest": [
+   [
+    "types[42..55]",
+    5876
+   ],
+   [
+    "types[22..33]",
+    5917
+   ],
+   [
+    "types[46..60]",
+    5866
+   ],
+   [
+    "types[52..66]",
+    5862
+   ],
+   [
+    "types[25..39]",
+    5931
+   ],
+   [
+    "types[21..31]",
+    5850
+   ],
+   [
+    "types[53..67]",
+    5943
+   ],
+   [
+    "types[24..37]",
+    5946
+   ]
+  ],
+  "doc_mentions": [
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_OFFLINE_PHASE1C_REPORT.md:18:| Extrapolation (production + one-off full reviews 2.76 M) | 500: 10.4 M · 1,000: 18.0 M · 2,000: 33.3 M · 5,895: **92.8 M** (§7.7) |",
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_OFFLINE_PHASE1C_REPORT.md:500:| 5,895 | 2,756,043 | 64,332,856 | 25,744,546 | **92.8 M** | 67.1 M | 862 M |",
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_OFFLINE_PHASE1C_REPORT.md:504:1. With cost as the only criterion: at ≈15,280 tokens/sentence plus 2.8 M one-off, a 10 M budget covers ≈474 sentences (≈664 if blind translations are not needed). All 5,895 need ≈93 M.",
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_PRODUCTION_PHASE2A_REPORT.md:14:- **Scope defect.** The live in-scope query is the 1W Track B SQL (sk + en `full_sentence`, A1–B2). It returns **39,498** sentences, not 5,895.",
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_PRODUCTION_PHASE2A_REPORT.md:15:  - No 1V or 1W file defines the 5,895. 1V only *assumed* equal quarters.",
+   "/Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_PRODUCTION_PHASE2A_REPORT.md:17:  - I recorded this and did not resolve it. The owner must say what \"the 5,895\" is before batch 2."
+  ],
+  "n_candidates": 2139,
+  "verdict": "unreproducible from the live DB (no probed count equals 5,895)"
+ },
+ "probe_values": {
+  "concept_media": 3667,
+  "concepts_with_grammar": 2286,
+  "distinct_concept_level_grammar": 4119,
+  "distinct_concept_type_grammar": 39461,
+  "distinct_en_fs_grammar": 39476,
+  "distinct_sk_fs_grammar": 39481,
+  "exercises_total": 48572,
+  "grammar_en_ca_multiword": 16582,
+  "grammar_image_concepts": 7929,
+  "grammar_prompt_version": {
+   "null": 39498
+  },
+  "grammar_sk_fs_ne_en_fs_len_lt_60": 22331,
+  "grammar_video_concepts": 39253,
+  "media_total": 3667,
+  "per_level_concepts": {
+   "A1": 1181,
+   "A2": 1224,
+   "B1": 903,
+   "B2": 811
+  },
+  "per_level_grammar": {
+   "A1": 9999,
+   "A2": 13591,
+   "B1": 8906,
+   "B2": 7002
+  },
+  "per_type": {
+   "1": 851,
+   "10": 914,
+   "11": 913,
+   "12": 917,
+   "13": 915,
+   "14": 915,
+   "15": 915,
+   "16": 914,
+   "17": 914,
+   "18": 914,
+   "19": 914,
+   "2": 916,
+   "20": 914,
+   "21": 913,
+   "22": 854,
+   "23": 915,
+   "24": 914,
+   "25": 848,
+   "26": 915,
+   "3": 915,
+   "31": 491,
+   "32": 490,
+   "33": 490,
+   "34": 490,
+   "35": 490,
+   "36": 409,
+   "37": 409,
+   "38": 409,
+   "39": 490,
+   "4": 915,
+   "40": 490,
+   "41": 490,
+   "42": 490,
+   "43": 491,
+   "44": 491,
+   "45": 492,
+   "46": 491,
+   "47": 489,
+   "48": 407,
+   "49": 407,
+   "5": 915,
+   "50": 326,
+   "51": 407,
+   "52": 326,
+   "53": 407,
+   "54": 326,
+   "55": 326,
+   "56": 407,
+   "57": 407,
+   "58": 326,
+   "59": 407,
+   "6": 915,
+   "60": 407,
+   "61": 407,
+   "62": 407,
+   "63": 407,
+   "64": 326,
+   "65": 488,
+   "66": 488,
+   "67": 407,
+   "7": 915,
+   "8": 915,
+   "9": 915
+  },
+  "vocab_exercises": 9074,
+  "word_localizations": 27513,
+  "word_localizations_sk": 3057
+ }
+}
