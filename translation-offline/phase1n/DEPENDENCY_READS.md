@@ -19,3 +19,5 @@ No data file of any earlier phase was opened; no model call was made; nothing wa
 * `phase1i/pipeline_1i.py` lines 25-60 / 125-200 — FORCED: `P.WORDING_LINE` is the insertion
   anchor of the 1N prompt line, and `P.run_pipeline` / `P.rate` / `P.GEN_CFG` are used directly.
 * nothing was written to either directory; both are read-only.
+
+* `phase1k/runner_1k.py` — read by `rescore-1m` (grep of `configure_row` / `guard_readouts` / `apply_guards`); forced by the import chain `runner_1n -> runner_1l -> runner_1k`, which supplies the pipeline configuration used by `rescore_1m.py`. 19 Sept 2026.
