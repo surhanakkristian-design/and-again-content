@@ -249,3 +249,7 @@
 {"ts": "2026-09-19T07:31:08Z", "side": "fresh", "what": "records+annotations (build_side)", "caller": "f8-union", "n": 600, "purpose": "F8u union guard: offline replay of the stored judge labels (0 model calls)"}
 {"ts": "2026-09-19T07:31:08Z", "side": "1k:judge", "what": "judge labels source=fresh", "caller": "eval_f8u.py", "n": 600, "purpose": "F8u union guard: offline replay of the stored judge labels (0 model calls)"}
 {"ts": "2026-09-19T07:31:08Z", "side": "fresh", "what": "judge labels (fresh)", "caller": "f8-union", "n": 600, "purpose": "F8u union guard: offline replay of the stored judge labels (0 model calls)"}
+{"ts": "2026-09-19T07:33:13Z", "side": "1m:fresh1m", "what": "data/sentences.json", "caller": "runner_1m.py", "n": 140, "purpose": "Phase 1M DRY RUN of the new side: build, chk, preflight, plan (no labels, no calls)"}
+{"ts": "2026-09-19T07:33:13Z", "side": "1m:fresh1m", "what": "data/annotations.json", "caller": "runner_1m.py", "n": 140, "purpose": "Phase 1M DRY RUN of the new side: build, chk, preflight, plan (no labels, no calls)"}
+{"ts": "2026-09-19T07:33:13Z", "side": "1m:fresh1m", "what": "data/items.json", "caller": "runner_1m.py", "n": 1260, "purpose": "Phase 1M DRY RUN of the new side: build, chk, preflight, plan (no labels, no calls)"}
+{"ts": "2026-09-19T07:33:36Z", "side": "1m:fresh1m", "what": "data/sentences.json+items.json+annotations.json (via runner_1m --dry)", "caller": "freeze", "n": 1260, "purpose": "final pre-freeze dry run with the frozen config; 0 model calls, no judge label read"}

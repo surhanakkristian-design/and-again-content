@@ -1,0 +1,310 @@
+{
+ "mode": "dev",
+ "config": {
+  "prompt": "P-FROZEN",
+  "locktip": true,
+  "f8": true,
+  "f9_strict": false,
+  "f8_module": "f8",
+  "f9": true,
+  "tip_reject": true,
+  "model": "gemini-3.1-flash-lite",
+  "temperature": 0,
+  "thinkingBudget": 0,
+  "name": "LOCKTIP+F8+F9 (TIP-as-rejection on)"
+ },
+ "sides": {
+  "dev": {
+   "coverage": {
+    "k": 182,
+    "n": 189,
+    "pct": 96.3,
+    "ci": [
+     92.52,
+     98.5
+    ]
+   },
+   "fa": {
+    "k": 12,
+    "n": 301,
+    "pct": 3.99,
+    "ci": [
+     2.08,
+     6.86
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 0,
+     "n": 54,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 2,
+     "n": 76,
+     "pct": 2.63,
+     "ci": [
+      0.32,
+      9.18
+     ]
+    },
+    "M": {
+     "k": 3,
+     "n": 66,
+     "pct": 4.55,
+     "ci": [
+      0.95,
+      12.71
+     ]
+    },
+    "S": {
+     "k": 6,
+     "n": 98,
+     "pct": 6.12,
+     "ci": [
+      2.28,
+      12.85
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 6,
+     "pct": 16.67,
+     "ci": [
+      0.42,
+      64.12
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L1": 4,
+    "L3": 8
+   },
+   "fr_by_layer": {
+    "L3": 5,
+    "L3:TIPrej": 2
+   },
+   "lock_rejections_BASE": 65,
+   "l3_eligible": 318,
+   "cache_misses_not_called": 0,
+   "n_items": 490,
+   "expected_1l": {
+    "coverage": "182/189",
+    "fa": "12/301"
+   },
+   "observed": {
+    "coverage": "182/189",
+    "fa": "12/301",
+    "fa_T": "0/54"
+   },
+   "matches_1l": true
+  },
+  "replay1j": {
+   "coverage": {
+    "k": 178,
+    "n": 196,
+    "pct": 90.82,
+    "ci": [
+     85.87,
+     94.47
+    ]
+   },
+   "fa": {
+    "k": 15,
+    "n": 294,
+    "pct": 5.1,
+    "ci": [
+     2.88,
+     8.28
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 2,
+     "n": 59,
+     "pct": 3.39,
+     "ci": [
+      0.41,
+      11.71
+     ]
+    },
+    "W": {
+     "k": 4,
+     "n": 68,
+     "pct": 5.88,
+     "ci": [
+      1.63,
+      14.38
+     ]
+    },
+    "M": {
+     "k": 8,
+     "n": 64,
+     "pct": 12.5,
+     "ci": [
+      5.55,
+      23.15
+     ]
+    },
+    "S": {
+     "k": 0,
+     "n": 102,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      3.55
+     ]
+    },
+    "V": {
+     "k": 1,
+     "n": 1,
+     "pct": 100.0,
+     "ci": [
+      2.5,
+      100.0
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 0,
+     "pct": null,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 15
+   },
+   "fr_by_layer": {
+    "F5": 1,
+    "F8": 1,
+    "F9": 3,
+    "L2": 2,
+    "L3": 6,
+    "L3:TIPrej": 5
+   },
+   "lock_rejections_BASE": 93,
+   "l3_eligible": 336,
+   "cache_misses_not_called": 0,
+   "n_items": 490,
+   "expected_1l": {
+    "coverage": "178/196",
+    "fa": "15/294",
+    "fa_T": "2/59"
+   },
+   "observed": {
+    "coverage": "178/196",
+    "fa": "15/294",
+    "fa_T": "2/59"
+   },
+   "matches_1l": true
+  },
+  "fresh1l": {
+   "coverage": {
+    "k": 191,
+    "n": 217,
+    "pct": 88.02,
+    "ci": [
+     82.94,
+     92.02
+    ]
+   },
+   "fa": {
+    "k": 15,
+    "n": 383,
+    "pct": 3.92,
+    "ci": [
+     2.21,
+     6.38
+    ]
+   },
+   "fa_by_type": {
+    "T": {
+     "k": 3,
+     "n": 130,
+     "pct": 2.31,
+     "ci": [
+      0.48,
+      6.6
+     ]
+    },
+    "W": {
+     "k": 1,
+     "n": 70,
+     "pct": 1.43,
+     "ci": [
+      0.04,
+      7.7
+     ]
+    },
+    "M": {
+     "k": 2,
+     "n": 68,
+     "pct": 2.94,
+     "ci": [
+      0.36,
+      10.22
+     ]
+    },
+    "S": {
+     "k": 1,
+     "n": 70,
+     "pct": 1.43,
+     "ci": [
+      0.04,
+      7.7
+     ]
+    },
+    "V": {
+     "k": 8,
+     "n": 44,
+     "pct": 18.18,
+     "ci": [
+      8.19,
+      32.71
+     ]
+    },
+    "E": {
+     "k": 0,
+     "n": 1,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      97.5
+     ]
+    }
+   },
+   "fa_by_layer": {
+    "L3": 15
+   },
+   "fr_by_layer": {
+    "F2B": 2,
+    "F4v2": 1,
+    "F9": 3,
+    "L3": 11,
+    "L3:TIPrej": 9
+   },
+   "lock_rejections_BASE": 150,
+   "l3_eligible": 460,
+   "cache_misses_not_called": 0,
+   "n_items": 600
+  }
+ },
+ "reproduces_phase1l": true,
+ "reproduction_scope": "valid only with --f8 f8 --f9 on --tip reject"
+}
