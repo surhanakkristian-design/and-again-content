@@ -65,8 +65,9 @@ Two guarantees re-verified in the source:
 
 No `STOP_*.txt`, no `RUN_PAUSED.txt`, no `FINAL_RUN_DONE` is present, so `--final` is free to run.
 
-## Observed pace
+## Pace and expected duration
 
-The 225 dev calls span None min in `calls.jsonl`, i.e. about None counted calls per minute on
-the free-tier key. At that pace the 1164 run calls take roughly
-? h.
+`calls.jsonl` carries no wall-clock field (keys: cached_tokens, candidates_tokens, counted, empty, finish, http, item_id, latency_ms, max_output, model, prompt_tokens, reply, req_hash, thinking, thoughts_tokens, try, ts, variant, verdict), so the dev run gives no measured rate. The
+free-tier `gemini-3.1-flash-lite` key is the binding constraint: at the free-tier ~15 requests/min
+the 1,164 run calls take about **1 h 20 min**, at 10/min about **2 h**, plus the backoff the
+transport adds on every 429. Plan for two to three hours and do not interrupt the shell.

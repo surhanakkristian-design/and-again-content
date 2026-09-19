@@ -499,3 +499,5 @@ none.
 - `phase1q/f6_gold_1n.json` - hand gold, 100 x 2 answers
 - `phase1q/f6_eval_1n.py` - re-runnable, `--data-dir` points it at another set
 - `phase1q/f6_eval_1n.json` - the raw numbers behind this file
+
+**CORRECTION:** the F5 lines above are VOID (every F5 call raised `KeyError: exercise_id`, 0 real calls) - see `F6_GOLD_1P_AND_F5_1N.md` for the measured F5 figures.
