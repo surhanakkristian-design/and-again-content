@@ -144,7 +144,7 @@ def main():
     if os.path.exists(ann_src):
         src = rd(ann_src, '1p:fresh1p'); ann = {}; bad = []
         for s in sents:
-            a = src.get('1P%03d' % (s['sid'] - 170000))
+            a = src.get('1P%03d' % (s['sid'] - 170000)) or src.get(str(s['sid'])) or src.get(s['sid'])
             if not isinstance(a, dict) or len([v for v in (a.get('v') or []) if isinstance(v, str) and v.strip()]) < 1:
                 bad.append(s['sid']); continue
             core = {k: a[k] for k in ('v', 'lk', 'alt', 'm', 'lv', 't') if k in a}; core['id'] = s['sid']
