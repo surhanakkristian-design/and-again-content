@@ -1,0 +1,624 @@
+{
+ "mode": "dry-run (synthetic, 0 model calls)",
+ "n_items": 6,
+ "unique_requests": 5,
+ "l2": 0,
+ "l3_eligible": 5,
+ "metrics": {
+  "coverage": {
+   "k": 4,
+   "n": 4,
+   "pct": 100.0,
+   "ci": [
+    39.76,
+    100.0
+   ]
+  },
+  "fa": {
+   "k": 2,
+   "n": 2,
+   "pct": 100.0,
+   "ci": [
+    15.81,
+    100.0
+   ]
+  },
+  "coverage_kn": [
+   4,
+   4
+  ],
+  "fa_kn": [
+   2,
+   2
+  ],
+  "coverage_pct": 100.0,
+  "coverage_ci": [
+   39.76,
+   100.0
+  ],
+  "fa_pct": 100.0,
+  "fa_ci": [
+   15.81,
+   100.0
+  ],
+  "accept_table": {
+   "accept/correct": 4,
+   "accept/wrong": 2
+  }
+ },
+ "cells": {
+  "agentless": {
+   "judged_correct": 2,
+   "accepted": 2,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "by-passive": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "determiner": {
+   "judged_correct": 1,
+   "accepted": 1,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "aspect": {
+   "judged_correct": 1,
+   "accepted": 1,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "timeframe": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 2,
+   "false_accepts": 2
+  },
+  "number": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "plain": {
+   "judged_correct": 0,
+   "accepted": 0,
+   "judged_wrong": 0,
+   "false_accepts": 0
+  },
+  "half:P1": {
+   "coverage_kn": [
+    2,
+    2
+   ],
+   "fa_kn": [
+    1,
+    1
+   ]
+  },
+  "half:P2": {
+   "coverage_kn": [
+    2,
+    2
+   ],
+   "fa_kn": [
+    1,
+    1
+   ]
+  },
+  "lever1": {
+   "fired": 2,
+   "gain": 0,
+   "fa_cost": 0,
+   "shadow_accept": 2
+  },
+  "lever3": {
+   "variants_shown": 3,
+   "variants_removed_by_the_tense_filter": 6
+  }
+ },
+ "levers": {
+  "l2:definiteness": 6,
+  "l2:aspect": 6,
+  "l3:shown": 3,
+  "l3:removed": 6,
+  "l3:items_with_a_variant": 3,
+  "l1:fired": 2,
+  "l1:answer_is_agentless_passive": 2,
+  "l2:number": 3
+ },
+ "rows": [
+  {
+   "sid": 170001,
+   "item_id": "C:170001:1",
+   "half": "P1",
+   "level": "A1",
+   "judged": "correct",
+   "judged_type": null,
+   "tags": [
+    "agentless"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true
+   },
+   "lever1": {
+    "fired": true,
+    "agent": "Peter",
+    "reason": "agentless passive against an active Slovak",
+    "rewritten": "The letterbox is checked by Peter every morning.",
+    "rewritten_layer": "L3",
+    "rewritten_accept": true,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L3"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Peter will check the letterbox every morning.",
+      "tf": "future",
+      "main_tf": "present"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "accept",
+    "sk": {
+     "frames": [
+      "present"
+     ],
+     "verdict": "present",
+     "reported": false,
+     "main": "Peter kontroluje schránku každé ráno.",
+     "reason": "imperfective present \"kontroluje\"",
+     "clauses": [
+      {
+       "text": "Peter kontroluje schránku každé ráno.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "present"
+       ],
+       "reason": "imperfective present \"kontroluje\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "present",
+     "perfect": false,
+     "reason": "present be \"is\"",
+     "verb": "is"
+    },
+    "reason": "time frame matches the Slovak (present)",
+    "sk_frames": [
+     "present"
+    ],
+    "en_ frame": "present"
+   }
+  },
+  {
+   "sid": 170001,
+   "item_id": "C:170001:2",
+   "half": "P1",
+   "level": "A1",
+   "judged": "correct",
+   "judged_type": null,
+   "tags": [
+    "determiner"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true
+   },
+   "lever1": {
+    "fired": false,
+    "agent": null,
+    "reason": "the answer is not a be-passive without a by-agent",
+    "rewritten": null,
+    "rewritten_layer": null,
+    "rewritten_accept": false,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L3"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Peter will check the letterbox every morning.",
+      "tf": "future",
+      "main_tf": "present"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "accept",
+    "sk": {
+     "frames": [
+      "present"
+     ],
+     "verdict": "present",
+     "reported": false,
+     "main": "Peter kontroluje schránku každé ráno.",
+     "reason": "imperfective present \"kontroluje\"",
+     "clauses": [
+      {
+       "text": "Peter kontroluje schránku každé ráno.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "present"
+       ],
+       "reason": "imperfective present \"kontroluje\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "present",
+     "perfect": false,
+     "reason": "verb+s after the subject",
+     "verb": "checks"
+    },
+    "reason": "time frame matches the Slovak (present)",
+    "sk_frames": [
+     "present"
+    ],
+    "en_ frame": "present"
+   }
+  },
+  {
+   "sid": 170001,
+   "item_id": "W:170001:3",
+   "half": "P1",
+   "level": "A1",
+   "judged": "wrong",
+   "judged_type": null,
+   "tags": [
+    "timeframe"
+   ],
+   "writer_passive": null,
+   "intent": "TF",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true
+   },
+   "lever1": {
+    "fired": false,
+    "agent": null,
+    "reason": "the answer is not a be-passive without a by-agent",
+    "rewritten": null,
+    "rewritten_layer": null,
+    "rewritten_accept": false,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L3"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect"
+   ],
+   "lever3": {
+    "variants_shown": 1,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Peter will check the letterbox every morning.",
+      "tf": "future",
+      "main_tf": "present"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "reject",
+    "sk": {
+     "frames": [
+      "present"
+     ],
+     "verdict": "present",
+     "reported": false,
+     "main": "Peter kontroluje schránku každé ráno.",
+     "reason": "imperfective present \"kontroluje\"",
+     "clauses": [
+      {
+       "text": "Peter kontroluje schránku každé ráno.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "present"
+       ],
+       "reason": "imperfective present \"kontroluje\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "past",
+     "perfect": false,
+     "reason": "regular past \"checked\"",
+     "verb": "checked"
+    },
+    "reason": "Slovak time frame is present; the answer is past",
+    "sk_frames": [
+     "present"
+    ],
+    "en_ frame": "past"
+   }
+  },
+  {
+   "sid": 170002,
+   "item_id": "C:170002:1",
+   "half": "P2",
+   "level": "A2",
+   "judged": "correct",
+   "judged_type": null,
+   "tags": [
+    "agentless"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true
+   },
+   "lever1": {
+    "fired": true,
+    "agent": "Mary",
+    "reason": "agentless passive against an active Slovak",
+    "rewritten": "Bread was baked by Mary for the guests.",
+    "rewritten_layer": "L3",
+    "rewritten_accept": true,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L3"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect",
+    "number"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mary has baked bread for the guests.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "accept",
+    "sk": {
+     "frames": [
+      "past"
+     ],
+     "verdict": "past",
+     "reported": false,
+     "main": "Mária upiekla chlieb pre hostí.",
+     "reason": "l-participle \"upiekla\"",
+     "clauses": [
+      {
+       "text": "Mária upiekla chlieb pre hostí.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "past"
+       ],
+       "reason": "l-participle \"upiekla\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "past",
+     "perfect": false,
+     "reason": "past be \"was\"",
+     "verb": "was"
+    },
+    "reason": "time frame matches the Slovak (past)",
+    "sk_frames": [
+     "past"
+    ],
+    "en_ frame": "past"
+   }
+  },
+  {
+   "sid": 170002,
+   "item_id": "C:170002:2",
+   "half": "P2",
+   "level": "A2",
+   "judged": "correct",
+   "judged_type": null,
+   "tags": [
+    "aspect"
+   ],
+   "writer_passive": null,
+   "intent": "C",
+   "layers": {
+    "main_layer": "L1",
+    "main_verdict": "correct",
+    "model": null,
+    "model_tip": false,
+    "reached_l3": false
+   },
+   "lever1": {
+    "fired": false,
+    "agent": null,
+    "reason": "the answer is not a be-passive without a by-agent",
+    "rewritten": null,
+    "rewritten_layer": null,
+    "rewritten_accept": false,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L1"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect",
+    "number"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mary has baked bread for the guests.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "accept",
+    "sk": {
+     "frames": [
+      "past"
+     ],
+     "verdict": "past",
+     "reported": false,
+     "main": "Mária upiekla chlieb pre hostí.",
+     "reason": "l-participle \"upiekla\"",
+     "clauses": [
+      {
+       "text": "Mária upiekla chlieb pre hostí.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "past"
+       ],
+       "reason": "l-participle \"upiekla\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "present",
+     "perfect": true,
+     "reason": "present perfect",
+     "verb": "has"
+    },
+    "reason": "present perfect is compatible with the Slovak frame",
+    "sk_frames": [
+     "past"
+    ],
+    "en_ frame": "present"
+   }
+  },
+  {
+   "sid": 170002,
+   "item_id": "W:170002:3",
+   "half": "P2",
+   "level": "A2",
+   "judged": "wrong",
+   "judged_type": null,
+   "tags": [
+    "timeframe"
+   ],
+   "writer_passive": null,
+   "intent": "TF",
+   "layers": {
+    "main_layer": "L3",
+    "main_verdict": "correct",
+    "model": "SAME",
+    "model_tip": false,
+    "reached_l3": true
+   },
+   "lever1": {
+    "fired": false,
+    "agent": null,
+    "reason": "the answer is not a be-passive without a by-agent",
+    "rewritten": null,
+    "rewritten_layer": null,
+    "rewritten_accept": false,
+    "shadow_unrewritten_accept": true,
+    "shadow_unrewritten_layer": "L3"
+   },
+   "lever2_fired": [
+    "definiteness",
+    "aspect",
+    "number"
+   ],
+   "lever3": {
+    "variants_shown": 0,
+    "variants_removed": 1,
+    "removed_detail": [
+     {
+      "variant": "Mary has baked bread for the guests.",
+      "tf": "present",
+      "main_tf": "past"
+     }
+    ]
+   },
+   "final_accept": true,
+   "tip": null,
+   "f9_readout": {
+    "verdict": "reject",
+    "sk": {
+     "frames": [
+      "past"
+     ],
+     "verdict": "past",
+     "reported": false,
+     "main": "Mária upiekla chlieb pre hostí.",
+     "reason": "l-participle \"upiekla\"",
+     "clauses": [
+      {
+       "text": "Mária upiekla chlieb pre hostí.",
+       "marker": null,
+       "is_sub": false,
+       "frame": [
+        "past"
+       ],
+       "reason": "l-participle \"upiekla\""
+      }
+     ]
+    },
+    "en": {
+     "frame": "future",
+     "perfect": false,
+     "reason": "modal \"will\"",
+     "verb": "will"
+    },
+    "reason": "Slovak time frame is past; the answer is future",
+    "sk_frames": [
+     "past"
+    ],
+    "en_ frame": "future"
+   }
+  }
+ ]
+}

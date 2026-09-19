@@ -1,0 +1,27 @@
+{
+ "f8_module": "none",
+ "f8_decides": false,
+ "f9_decides": false,
+ "tip_reject": true,
+ "locktip": true,
+ "arm": "B",
+ "prompt": "P-FROZEN-1P",
+ "model": "gemini-3.1-flash-lite",
+ "temperature": 0,
+ "thinkingBudget": 0,
+ "levers": [
+  1,
+  2,
+  3
+ ],
+ "prompt_note": "P-FROZEN-1P = P-FROZEN-1N (P-FROZEN + VOICE_SAME_LINE after WORDING_LINE) plus, per item, the lever-2 'the Slovak does not fix X' lines and the lever-3 'Also accepted English' line, inserted at the same place the gender chain is.",
+ "lever1_note": "deterministic detect -> rewrite ('by <agent>' after the participle) -> the normal stack on the REWRITTEN answer; pass = ACCEPT with a tip (NOT a TIP-rejection); F4v2/F4 suppressed for the rewritten record only; the unrewritten verdict is kept as a shadow readout",
+ "lever2_note": "definiteness / aspect-within-the-frame / number on mass+collective nouns; the aspect line NAMES the frame and says a different frame is DIFF, and never fires on a Slovak perfective present",
+ "lever3_note": "up to 2 further STORED renderings beside the main reference, with a mandatory deterministic time-frame filter (lever3.time_frame)",
+ "pipeline_note": "F2B / F3 / F4v2 / F5 untouched; hygiene deliberately absent (phase1p/hygiene does not exist); TIP-as-rejection stays ON; the TIME FRAME rule is untouched",
+ "caps": {
+  "phase_cap_counted_calls": 1400,
+  "dev_cap": 300,
+  "preflight_stop_at": 1390
+ }
+}
