@@ -10,3 +10,9 @@ lever3.py
 assemble_1p.py
 floor_check_1p.py
 normalise_1p.py
+
+# --- Phase 1Q additions (frozen 2026-09-19, before the 1P set was opened) ---
+data/annotations.json
+# phase1q/f6.py could NOT be listed here: check_freeze resolves an entry as
+# "<hash>:translation-offline/phase1p/<entry>" and git rev-parse does not accept "..".
+# f6.py is frozen by its committed blob sha instead, recorded in phase1q/FREEZE_COMMIT.
