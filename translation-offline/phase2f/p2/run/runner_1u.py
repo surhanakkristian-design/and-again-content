@@ -723,7 +723,7 @@ class _AG2F(object):
 
 
 AG_CFG['primary'] = (_AG2F, tuple(AG4.ALL_FLAGS))
-CAP_1U = 600
+CAP_1U = 588
 _build_rows_1u = build_rows
 
 

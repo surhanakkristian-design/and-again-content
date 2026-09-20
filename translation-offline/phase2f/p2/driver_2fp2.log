@@ -101,3 +101,245 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
 [2026-09-21 01:13:18] $ git rev-parse HEAD -> exit 0
 ce932aa4c73fc77bd831bf163091920dc73fd050
 
+[2026-09-21 01:34:20] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:34:40] production corpus: fetched 4000 rows (offset 0)
+[2026-09-21 01:34:46] production corpus: fetched 8000 rows (offset 4000)
+[2026-09-21 01:34:50] production corpus: fetched 12000 rows (offset 8000)
+[2026-09-21 01:34:53] production corpus: fetched 16000 rows (offset 12000)
+[2026-09-21 01:34:57] production corpus: fetched 20000 rows (offset 16000)
+[2026-09-21 01:35:00] production corpus: fetched 24000 rows (offset 20000)
+[2026-09-21 01:35:04] production corpus: fetched 28000 rows (offset 24000)
+[2026-09-21 01:35:07] production corpus: fetched 32000 rows (offset 28000)
+[2026-09-21 01:35:10] production corpus: fetched 36000 rows (offset 32000)
+[2026-09-21 01:35:13] production corpus: fetched 39498 rows (offset 36000)
+[2026-09-21 01:35:15] selection preview: {"corpus_total": 39498, "corpus_by_level": {"B1": 8906, "B2": 7002, "A1": 9999, "A2": 13591}, "corpus_expected": 39498, "corpus_expected_by_level": {"A1": 9999, "A2": 13591, "B1": 8906, "B2": 7002}, "ex_annotated": 4064, "ex_selection": 4064, "ex_phase1": 488, "ex_ids_union": 4552, "ex_text": 10595, "used_n": 8128, "candidates_total": 34966, "candidates_by_level": {"A1": 8733, "A2": 12269, "B1": 7874, "B2": 6090}, "reserve_available_by_level": {"A1": 8708, "A2": 12244, "B1": 7849, "B2": 6065}, "overlaps_total": 0, "violations_total": 0, "picked_exercise_ids": {"A1": [14800, 11258, 28191, 17949, 21420, 19545, 24340, 32425, 25750, 34429, 29958, 33795, 20725, 34157, 13785, 14936, 28437, 16471, 31264, 16286, 15695, 33585, 22494, 19346, 34193], "A2": [18549, 30786, 32988, 24314, 33220, 26623, 31546, 24161, 34672, 13902, 29898, 21456, 16738, 15288, 15746, 32356, 33263, 12067, 14385, 16437, 33132, 16661, 25316, 24018, 29546], "B1": [37932, 394, 4689, 867, 3840, 596, 36598, 1413, 43995, 3326, 9497, 43284, 9902, 2384, 9250, 4813, 44145, 861, 8580, 38285, 8371, 3126, 1132, 6161, 7354], "B2": [6727, 41466, 3150, 5620, 39380, 10225, 3774, 6687, 44608, 42154, 42590, 2985, 2954, 5831, 3857, 6649, 40098, 39092, 8813, 43403, 3701, 109, 10224, 2791, 42883]}, "gemini_calls": 0, "headless_tokens": 0}
+[2026-09-21 01:35:25] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 76, "paraphrase": 100, "drop-fronted": 56, "time-frame": 148, "missing-article": 100, "wrong-word": 100, "drop-misaligned": 48, "drop-main": 48, "skp-passive": 24}, "wrong_types": {"M": 152, "T": 148, "S": 100, "W": 100}}
+[2026-09-21 01:35:25] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 3, "part_sizes": [460, 460, 60], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 01:35:25] join: {"items_labelled": 900, "judged": {"correct": 406, "wrong": 494}, "types": {"T": 146, "W": 102, "S": 99, "M": 147}, "duplicate_controls_judged": 80, "label_disagreements": 4, "judge_noise_pct": 5.0}
+[2026-09-21 01:35:25] floors: {"F1_agent_drops_wrong": {"n": 147, "min": 120, "pass": true}, "F1a_fronted_wrong": {"n": 55, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 45, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 147, "min": 60, "pass": true}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": true}
+[2026-09-21 01:35:25] floors: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F1a_fronted_wrong": {"n": 0, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 0, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": false}
+[2026-09-21 01:35:25] STOP: a floor failed on JUDGED counts - the set was NOT opened, 0 Gemini calls: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}}
+[2026-09-21 01:35:25] run side: the appended Part 2 cap lowered from 600 to 588
+[2026-09-21 01:35:25] $ python3 -c import sys; sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run'); import stack_2f as S;v = S.decide("Tenhle strop v loznici byval jeho oblibenou televizi.", {"hygienised": {"v": ["This ceiling used to be his favourite TV."], "lk": ["used to be"], "alt": {}}}, {"agent": "strop"}, "This ceiling used to be his favourite TV.", "This ceiling used to be his favourite TV.");print("STACK_OK", type(v).__name__) -> exit 0
+STACK_OK dict
+
+[2026-09-21 01:35:25] $ python3 -c import py_compile,sys;py_compile.compile('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run/runner_1u.py', doraise=True); print("RUNNER_COMPILES") -> exit 0
+RUNNER_COMPILES
+
+[2026-09-21 01:35:25] selftest: synthetic end-to-end OK: {"F1_agent_drops_wrong": 147, "F1a_fronted_wrong": 55, "F1b_misaligned_wrong": 45, "F2_time_frame_wrong": 146, "F3_by_passive_correct": 76, "F4_skp_correct": 24, "F5_missing_article_wrong": 99, "F6_determiner_correct": 100, "F7_T_wrong": 146, "F7_W_wrong": 102, "F7_M_wrong": 147, "F7_S_wrong": 99}
+[2026-09-21 01:35:25] selftest: floor gate refuses a set with 0 agent drops judged wrong: OK
+[2026-09-21 01:35:25] selftest: Czech stack imports and decides: OK
+[2026-09-21 01:35:25] selftest: runner compiles: OK
+[2026-09-21 01:35:25] selftest: lk prompt sha16 5fa910459c078539 (OK)
+[2026-09-21 01:35:25] SELFTEST PASS
+[2026-09-21 01:35:46] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 76, "paraphrase": 100, "drop-fronted": 56, "time-frame": 148, "missing-article": 100, "wrong-word": 100, "drop-misaligned": 48, "drop-main": 48, "skp-passive": 24}, "wrong_types": {"M": 152, "T": 148, "S": 100, "W": 100}}
+[2026-09-21 01:35:46] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 3, "part_sizes": [460, 460, 60], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 01:35:46] join: {"items_labelled": 900, "judged": {"correct": 406, "wrong": 494}, "types": {"T": 146, "W": 102, "S": 99, "M": 147}, "duplicate_controls_judged": 80, "label_disagreements": 4, "judge_noise_pct": 5.0}
+[2026-09-21 01:35:46] floors: {"F1_agent_drops_wrong": {"n": 147, "min": 120, "pass": true}, "F1a_fronted_wrong": {"n": 55, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 45, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 147, "min": 60, "pass": true}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": true}
+[2026-09-21 01:35:46] floors: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F1a_fronted_wrong": {"n": 0, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 0, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": false}
+[2026-09-21 01:35:46] STOP: a floor failed on JUDGED counts - the set was NOT opened, 0 Gemini calls: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}}
+[2026-09-21 01:35:46] $ python3 -c import sys; sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run'); import stack_2f as S;v = S.decide("Tenhle strop v loznici byval jeho oblibenou televizi.", {"hygienised": {"v": ["This ceiling used to be his favourite TV."], "lk": ["used to be"], "alt": {}}}, {"agent": "strop"}, "This ceiling used to be his favourite TV.", "This ceiling used to be his favourite TV.");print("STACK_OK", type(v).__name__) -> exit 0
+STACK_OK dict
+
+[2026-09-21 01:35:46] $ python3 -c import py_compile,sys;py_compile.compile('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run/runner_1u.py', doraise=True); print("RUNNER_COMPILES") -> exit 0
+RUNNER_COMPILES
+
+[2026-09-21 01:35:46] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:35:46] STOP: Part 2 headless spend 0 + projected 1800001 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 01:35:46] selftest: synthetic end-to-end OK: {"F1_agent_drops_wrong": 147, "F1a_fronted_wrong": 55, "F1b_misaligned_wrong": 45, "F2_time_frame_wrong": 146, "F3_by_passive_correct": 76, "F4_skp_correct": 24, "F5_missing_article_wrong": 99, "F6_determiner_correct": 100, "F7_T_wrong": 146, "F7_W_wrong": 102, "F7_M_wrong": 147, "F7_S_wrong": 99}
+[2026-09-21 01:35:46] selftest: floor gate refuses a set with 0 agent drops judged wrong: OK
+[2026-09-21 01:35:46] selftest: Czech stack imports and decides: OK
+[2026-09-21 01:35:46] selftest: runner compiles: OK
+[2026-09-21 01:35:46] selftest: lk prompt sha16 5fa910459c078539 (OK)
+[2026-09-21 01:35:46] selftest: sql_guard accepts the production SELECT: OK
+[2026-09-21 01:35:46] selftest: sql_guard refuses INSERT/UPDATE/DELETE/DDL and multi-statement SQL: OK
+[2026-09-21 01:35:46] selftest: v prompt sha16 4f9d486477084793 (OK)
+[2026-09-21 01:35:46] selftest: annotation completeness gate refuses an incomplete record: OK
+[2026-09-21 01:35:46] selftest: headless token cap 1800000 refuses an over-cap wave (spent 0): OK
+[2026-09-21 01:35:46] SELFTEST PASS
+[2026-09-21 01:36:22] production corpus adopted from cache: 39498 rows
+[2026-09-21 01:36:22] exclusions: annotated 4064 / selection-touched 4064 / phase1 488 = 4552 ids, 10595 texts, used_n 8128
+[2026-09-21 01:36:22] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:36:22] annotation prompts asserted: v 4f9d486477084793, lk 5fa910459c078539; PAR 2, MAX_RETRY 3, token cap 1800000
+[2026-09-21 01:36:22] ANN REFUSED ann_v_A1_r0_try0 (chunk A1_r0)
+[2026-09-21 01:36:22] ANN PROJECTION v: 7000 tok over 25 paid rows = 280 tok/row, 75 unpaid rows left, projected Part 2 total 28000 of cap 1800000
+[2026-09-21 01:36:22] ANN PROJECTION v: 14000 tok over 75 paid rows = 187 tok/row, 25 unpaid rows left, projected Part 2 total 18666 of cap 1800000
+[2026-09-21 01:36:22] ANN RETRY v ladder attempt 1 of 3, back-off 71.8s, counted:false
+[2026-09-21 01:37:34] ANN REFUSED ann_v_A1_r0_try1 (chunk A1_r0)
+[2026-09-21 01:37:34] ANN PROJECTION v: 17500 tok over 75 paid rows = 233 tok/row, 25 unpaid rows left, projected Part 2 total 23333 of cap 1800000
+[2026-09-21 01:37:34] ANN RETRY v ladder attempt 2 of 3, back-off 120.6s, counted:false
+[2026-09-21 01:38:22] ANN THROUGHPUT rate 72.6 tok/s, low_streak 0, cum_tok 17500, inflight 0, measured_window_s 48, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:39:22] ANN THROUGHPUT rate 32.3 tok/s, low_streak 1, cum_tok 17500, inflight 0, measured_window_s 108, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:39:34] ANN REFUSED ann_v_A1_r0_try2 (chunk A1_r0)
+[2026-09-21 01:39:34] ANN PROJECTION v: 21000 tok over 75 paid rows = 280 tok/row, 25 unpaid rows left, projected Part 2 total 28000 of cap 1800000
+[2026-09-21 01:39:34] ANN RETRY v ladder attempt 3 of 3, back-off 263.8s, counted:false
+[2026-09-21 01:40:22] ANN THROUGHPUT rate 147.1 tok/s, low_streak 0, cum_tok 21000, inflight 0, measured_window_s 48, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:41:22] ANN THROUGHPUT rate 65.1 tok/s, low_streak 0, cum_tok 21000, inflight 0, measured_window_s 108, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:42:22] ANN THROUGHPUT rate 20.9 tok/s, low_streak 1, cum_tok 21000, inflight 0, measured_window_s 168, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:43:22] ANN THROUGHPUT rate 15.4 tok/s, low_streak 2, cum_tok 21000, inflight 0, measured_window_s 228, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:43:58] ANN REFUSED ann_v_A1_r0_try3 (chunk A1_r0)
+[2026-09-21 01:43:58] ANN PROJECTION v: 24500 tok over 75 paid rows = 327 tok/row, 25 unpaid rows left, projected Part 2 total 32666 of cap 1800000
+[2026-09-21 01:43:58] ANN PROJECTION rw: 31500 tok over 75 paid rows = 420 tok/row, 31 unpaid rows left, projected Part 2 total 44520 of cap 1800000
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 14800, drew reserve exercise 20130
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 11258, drew reserve exercise 32162
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 28191, drew reserve exercise 12337
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 17949, drew reserve exercise 29173
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 21420, drew reserve exercise 21612
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 19545, drew reserve exercise 18274
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 24340, drew reserve exercise 32431
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 32425, drew reserve exercise 15053
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 25750, drew reserve exercise 14634
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 34429, drew reserve exercise 19817
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 29958, drew reserve exercise 24137
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 33795, drew reserve exercise 24634
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 20725, drew reserve exercise 20295
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 34157, drew reserve exercise 15020
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 13785, drew reserve exercise 21364
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 14936, drew reserve exercise 30878
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 28437, drew reserve exercise 21858
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 16471, drew reserve exercise 30696
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 31264, drew reserve exercise 28219
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 16286, drew reserve exercise 11739
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 15695, drew reserve exercise 14718
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 33585, drew reserve exercise 13444
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 22494, drew reserve exercise 27837
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 19346, drew reserve exercise 18004
+[2026-09-21 01:43:58] ANN REPLACE A1: dropped exercise 34193, drew reserve exercise 16615
+[2026-09-21 01:43:58] ANN PROJECTION lk: 52500 tok over 100 paid rows = 525 tok/row, 50 unpaid rows left, projected Part 2 total 78750 of cap 1800000
+[2026-09-21 01:43:58] annotation done: {"annotated": 100, "headless_tokens_annotation": 59500, "refused_chunks": [{"kind": "v", "chunk": "A1_r0", "session": "ann_v_A1_r0_try0"}, {"kind": "v", "chunk": "A1_r0", "session": "ann_v_A1_r0_try1"}, {"kind": "v", "chunk": "A1_r0", "session": "ann_v_A1_r0_try2"}, {"kind": "v", "chunk": "A1_r0", "session": "ann_v_A1_r0_try3"}], "replacements": [{"level": "A1", "dropped": 14800, "drawn": 20130, "round": 0}, {"level": "A1", "dropped": 11258, "drawn": 32162, "round": 0}, {"level": "A1", "dropped": 28191, "drawn": 12337, "round": 0}, {"level": "A1", "dropped": 17949, "drawn": 29173, "round": 0}, {"level": "A1", "dropped": 21420, "drawn": 21612, "round": 0}, {"level": "A1", "dropped": 19545, "drawn": 18274, "round": 0}, {"level": "A1", "dropped": 24340, "drawn": 32431, "round": 0}, {"level": "A1", "dropped": 32425, "drawn": 15053, "round": 0}, {"level": "A1", "dropped": 25750, "drawn": 14634, "round": 0}, {"level": "A1", "dropped": 34429, "drawn": 19817, "round": 0}, {"level": "A1", "dropped": 29958, "drawn": 24137, "round": 0}, {"level": "A1", "dropped": 33795, "drawn": 24634, "round": 0}, {"level": "A1", "dropped": 20725, "drawn": 20295, "round": 0}, {"level": "A1", "dropped": 34157, "drawn": 15020, "round": 0}, {"level": "A1", "dropped": 13785, "drawn": 21364, "round": 0}, {"level": "A1", "dropped": 14936, "drawn": 30878, "round": 0}, {"level": "A1", "dropped": 28437, "drawn": 21858, "round": 0}, {"level": "A1", "dropped": 16471, "drawn": 30696, "round": 0}, {"level": "A1", "dropped": 31264, "drawn": 28219, "round": 0}, {"level": "A1", "dropped": 16286, "drawn": 11739, "round": 0}, {"level": "A1", "dropped": 15695, "drawn": 14718, "round": 0}, {"level": "A1", "dropped": 33585, "drawn": 13444, "round": 0}, {"level": "A1", "dropped": 22494, "drawn": 27837, "round": 0}, {"level": "A1", "dropped": 19346, "drawn": 18004, "round": 0}, {"level": "A1", "dropped": 34193, "drawn": 16615, "round": 0}], "reserve_used": {"A1": 25, "A2": 0, "B1": 0, "B2": 0}, "lk_merge": {"corrected": 100, "class_exact": 100}}
+[2026-09-21 01:43:58] selection: {"corpus_total": 39498, "corpus_by_level": {"B1": 8906, "B2": 7002, "A1": 9999, "A2": 13591}, "candidates": 34966, "candidates_by_level": {"A1": 8733, "A2": 12269, "B1": 7874, "B2": 6090}, "picked": 100, "by_level": {"A1": 25, "A2": 25, "B1": 25, "B2": 25}, "halves": {"P1": 50, "P2": 50}, "kinds": {"FR": 12, "MC": 88}, "overlaps_total": 0, "violations_total": 0, "earlier_sentences_checked_against": 10595}
+[2026-09-21 01:44:18] production corpus adopted from cache: 39498 rows
+[2026-09-21 01:44:18] exclusions: annotated 4064 / selection-touched 4064 / phase1 488 = 4552 ids, 10595 texts, used_n 8128
+[2026-09-21 01:44:18] annotation adopted from /private/tmp/claude-501/-Users-kristiansurhanak-Meine-Ablage-And-Again/dd4d6e56-a973-447c-ab9d-86c0757d96e1/scratchpad/set/annotations_2fp2.jsonl at 0 tokens (100 rows)
+[2026-09-21 01:44:18] selection: {"corpus_total": 39498, "corpus_by_level": {"B1": 8906, "B2": 7002, "A1": 9999, "A2": 13591}, "candidates": 34966, "candidates_by_level": {"A1": 8733, "A2": 12269, "B1": 7874, "B2": 6090}, "picked": 100, "by_level": {"A1": 25, "A2": 25, "B1": 25, "B2": 25}, "halves": {"P1": 50, "P2": 50}, "kinds": {"FR": 12, "MC": 88}, "overlaps_total": 0, "violations_total": 0, "earlier_sentences_checked_against": 10595}
+[2026-09-21 01:44:33] PART2_RESULT.md + part2_result.json written
+[2026-09-21 01:45:05] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 76, "paraphrase": 100, "drop-fronted": 56, "time-frame": 148, "missing-article": 100, "wrong-word": 100, "drop-misaligned": 48, "drop-main": 48, "skp-passive": 24}, "wrong_types": {"M": 152, "T": 148, "S": 100, "W": 100}}
+[2026-09-21 01:45:05] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 3, "part_sizes": [460, 460, 60], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 01:45:05] join: {"items_labelled": 900, "judged": {"correct": 406, "wrong": 494}, "types": {"T": 146, "W": 102, "S": 99, "M": 147}, "duplicate_controls_judged": 80, "label_disagreements": 4, "judge_noise_pct": 5.0}
+[2026-09-21 01:45:05] floors: {"F1_agent_drops_wrong": {"n": 147, "min": 120, "pass": true}, "F1a_fronted_wrong": {"n": 55, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 45, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 147, "min": 60, "pass": true}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": true}
+[2026-09-21 01:45:05] floors: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F1a_fronted_wrong": {"n": 0, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 0, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": false}
+[2026-09-21 01:45:05] STOP: a floor failed on JUDGED counts - the set was NOT opened, 0 Gemini calls: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}}
+[2026-09-21 01:45:05] $ python3 -c import sys; sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run'); import stack_2f as S;v = S.decide("Tenhle strop v loznici byval jeho oblibenou televizi.", {"hygienised": {"v": ["This ceiling used to be his favourite TV."], "lk": ["used to be"], "alt": {}}}, {"agent": "strop"}, "This ceiling used to be his favourite TV.", "This ceiling used to be his favourite TV.");print("STACK_OK", type(v).__name__) -> exit 0
+STACK_OK dict
+
+[2026-09-21 01:45:05] $ python3 -c import py_compile,sys;py_compile.compile('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run/runner_1u.py', doraise=True); print("RUNNER_COMPILES") -> exit 0
+RUNNER_COMPILES
+
+[2026-09-21 01:45:05] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:45:05] STOP: Part 2 headless spend 0 + projected 1800001 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 01:45:05] selftest: synthetic end-to-end OK: {"F1_agent_drops_wrong": 147, "F1a_fronted_wrong": 55, "F1b_misaligned_wrong": 45, "F2_time_frame_wrong": 146, "F3_by_passive_correct": 76, "F4_skp_correct": 24, "F5_missing_article_wrong": 99, "F6_determiner_correct": 100, "F7_T_wrong": 146, "F7_W_wrong": 102, "F7_M_wrong": 147, "F7_S_wrong": 99}
+[2026-09-21 01:45:05] selftest: floor gate refuses a set with 0 agent drops judged wrong: OK
+[2026-09-21 01:45:05] selftest: Czech stack imports and decides: OK
+[2026-09-21 01:45:05] selftest: runner compiles: OK
+[2026-09-21 01:45:05] selftest: lk prompt sha16 5fa910459c078539 (OK)
+[2026-09-21 01:45:05] selftest: sql_guard accepts the production SELECT: OK
+[2026-09-21 01:45:05] selftest: sql_guard refuses INSERT/UPDATE/DELETE/DDL and multi-statement SQL: OK
+[2026-09-21 01:45:05] selftest: v prompt sha16 4f9d486477084793 (OK)
+[2026-09-21 01:45:05] selftest: annotation completeness gate refuses an incomplete record: OK
+[2026-09-21 01:45:05] selftest: headless token cap 1800000 refuses an over-cap wave (spent 0): OK
+[2026-09-21 01:45:05] SELFTEST PASS
+[2026-09-21 01:47:01] production corpus adopted from cache: 39498 rows
+[2026-09-21 01:47:01] exclusions: annotated 4064 / selection-touched 4064 / phase1 488 = 4552 ids, 10595 texts, used_n 8128
+[2026-09-21 01:47:02] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:47:02] annotation prompts asserted: v 4f9d486477084793, lk 5fa910459c078539; PAR 2, MAX_RETRY 3, token cap 1800000
+[2026-09-21 01:47:23] production corpus adopted from cache: 39498 rows
+[2026-09-21 01:47:23] exclusions: annotated 4064 / selection-touched 4064 / phase1 488 = 4552 ids, 10595 texts, used_n 8128
+[2026-09-21 01:47:23] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:47:23] annotation prompts asserted: v 4f9d486477084793, lk 5fa910459c078539; PAR 2, MAX_RETRY 3, token cap 1800000
+[2026-09-21 01:47:23] ANN PROJECTION v: 7000 tok over 45 paid rows = 156 tok/row, 55 unpaid rows left, projected Part 2 total 15555 of cap 1800000
+[2026-09-21 01:47:23] ANN REFUSED ann_v_B2_r0_try0 (chunk B2_r0, attempt 0 of the one ladder)
+[2026-09-21 01:47:23] ANN PROJECTION v: 14000 tok over 70 paid rows = 200 tok/row, 30 unpaid rows left, projected Part 2 total 20000 of cap 1800000
+[2026-09-21 01:47:23] ANN RETRY v ladder attempt 1 of 3, back-off 65.2s, counted:false
+[2026-09-21 01:48:29] ANN REFUSED ann_v_B2_r0_try1 (chunk B2_r0, attempt 1 of the one ladder)
+[2026-09-21 01:48:29] ANN PROJECTION v: 21000 tok over 95 paid rows = 221 tok/row, 25 unpaid rows left, projected Part 2 total 26526 of cap 1800000
+[2026-09-21 01:48:29] ANN RETRY v ladder attempt 2 of 3, back-off 137.8s, counted:false
+[2026-09-21 01:49:23] ANN THROUGHPUT rate 127.7 tok/s, low_streak 0, cum_tok 21000, inflight 0, measured_window_s 55, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:50:23] ANN THROUGHPUT rate 61.0 tok/s, low_streak 0, cum_tok 21000, inflight 0, measured_window_s 115, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:50:46] ANN REFUSED ann_v_B2_r0_try2 (chunk B2_r0, attempt 2 of the one ladder)
+[2026-09-21 01:50:46] ANN PROJECTION v: 24500 tok over 95 paid rows = 258 tok/row, 25 unpaid rows left, projected Part 2 total 30947 of cap 1800000
+[2026-09-21 01:50:46] ANN RETRY v ladder attempt 3 of 3, back-off 241.8s, counted:false
+[2026-09-21 01:51:23] ANN THROUGHPUT rate 283.4 tok/s, low_streak 0, cum_tok 24500, inflight 0, measured_window_s 37, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:52:23] ANN THROUGHPUT rate 108.2 tok/s, low_streak 0, cum_tok 24500, inflight 0, measured_window_s 97, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:53:23] ANN THROUGHPUT rate 22.3 tok/s, low_streak 1, cum_tok 24500, inflight 0, measured_window_s 157, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:54:23] ANN THROUGHPUT rate 16.1 tok/s, low_streak 2, cum_tok 24500, inflight 0, measured_window_s 217, unmeasurable 0, backoff_sleep_excluded:true
+[2026-09-21 01:54:48] ANN REFUSED ann_v_B2_r0_try3 (chunk B2_r0, attempt 3 of the one ladder)
+[2026-09-21 01:54:48] ANN PROJECTION v: 28000 tok over 95 paid rows = 295 tok/row, 25 unpaid rows left, projected Part 2 total 35368 of cap 1800000
+[2026-09-21 01:54:48] ANN PROJECTION rw: 35000 tok over 95 paid rows = 368 tok/row, 31 unpaid rows left, projected Part 2 total 46421 of cap 1800000
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 6727, drew reserve exercise 10220
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 41466, drew reserve exercise 43323
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 3150, drew reserve exercise 6738
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 5620, drew reserve exercise 7555
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 39380, drew reserve exercise 9862
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 10225, drew reserve exercise 6134
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 3774, drew reserve exercise 3469
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 6687, drew reserve exercise 1503
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 44608, drew reserve exercise 6074
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 42154, drew reserve exercise 7861
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 42590, drew reserve exercise 40766
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 2985, drew reserve exercise 3688
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 2954, drew reserve exercise 1815
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 5831, drew reserve exercise 36927
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 3857, drew reserve exercise 340
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 6649, drew reserve exercise 6270
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 40098, drew reserve exercise 6596
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 39092, drew reserve exercise 9409
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 8813, drew reserve exercise 1435
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 43403, drew reserve exercise 152
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 3701, drew reserve exercise 8437
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 109, drew reserve exercise 36809
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 10224, drew reserve exercise 36796
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 2791, drew reserve exercise 40337
+[2026-09-21 01:54:48] ANN REPLACE B2: dropped exercise 42883, drew reserve exercise 40140
+[2026-09-21 01:54:48] ANN PROJECTION lk: 56000 tok over 120 paid rows = 467 tok/row, 50 unpaid rows left, projected Part 2 total 79333 of cap 1800000
+[2026-09-21 01:54:48] annotation done: {"annotated": 100, "headless_tokens_annotation": 63000, "refused_chunks": [{"kind": "v", "chunk": "B2_r0", "session": "ann_v_B2_r0_try0", "attempt": 0}, {"kind": "v", "chunk": "B2_r0", "session": "ann_v_B2_r0_try1", "attempt": 1}, {"kind": "v", "chunk": "B2_r0", "session": "ann_v_B2_r0_try2", "attempt": 2}, {"kind": "v", "chunk": "B2_r0", "session": "ann_v_B2_r0_try3", "attempt": 3}], "replacements": [{"level": "B2", "dropped": 6727, "drawn": 10220, "round": 0}, {"level": "B2", "dropped": 41466, "drawn": 43323, "round": 0}, {"level": "B2", "dropped": 3150, "drawn": 6738, "round": 0}, {"level": "B2", "dropped": 5620, "drawn": 7555, "round": 0}, {"level": "B2", "dropped": 39380, "drawn": 9862, "round": 0}, {"level": "B2", "dropped": 10225, "drawn": 6134, "round": 0}, {"level": "B2", "dropped": 3774, "drawn": 3469, "round": 0}, {"level": "B2", "dropped": 6687, "drawn": 1503, "round": 0}, {"level": "B2", "dropped": 44608, "drawn": 6074, "round": 0}, {"level": "B2", "dropped": 42154, "drawn": 7861, "round": 0}, {"level": "B2", "dropped": 42590, "drawn": 40766, "round": 0}, {"level": "B2", "dropped": 2985, "drawn": 3688, "round": 0}, {"level": "B2", "dropped": 2954, "drawn": 1815, "round": 0}, {"level": "B2", "dropped": 5831, "drawn": 36927, "round": 0}, {"level": "B2", "dropped": 3857, "drawn": 340, "round": 0}, {"level": "B2", "dropped": 6649, "drawn": 6270, "round": 0}, {"level": "B2", "dropped": 40098, "drawn": 6596, "round": 0}, {"level": "B2", "dropped": 39092, "drawn": 9409, "round": 0}, {"level": "B2", "dropped": 8813, "drawn": 1435, "round": 0}, {"level": "B2", "dropped": 43403, "drawn": 152, "round": 0}, {"level": "B2", "dropped": 3701, "drawn": 8437, "round": 0}, {"level": "B2", "dropped": 109, "drawn": 36809, "round": 0}, {"level": "B2", "dropped": 10224, "drawn": 36796, "round": 0}, {"level": "B2", "dropped": 2791, "drawn": 40337, "round": 0}, {"level": "B2", "dropped": 42883, "drawn": 40140, "round": 0}], "reserve_used": {"A1": 0, "A2": 0, "B1": 0, "B2": 25}, "lk_merge": {"corrected": 100, "class_exact": 100}}
+[2026-09-21 01:54:48] selection: {"corpus_total": 39498, "corpus_by_level": {"B1": 8906, "B2": 7002, "A1": 9999, "A2": 13591}, "candidates": 34966, "candidates_by_level": {"A1": 8733, "A2": 12269, "B1": 7874, "B2": 6090}, "picked": 100, "by_level": {"A1": 25, "A2": 25, "B1": 25, "B2": 25}, "halves": {"P1": 50, "P2": 50}, "kinds": {"MC": 90, "FR": 10}, "overlaps_total": 0, "violations_total": 0, "earlier_sentences_checked_against": 10595}
+[2026-09-21 01:55:06] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 76, "paraphrase": 100, "drop-fronted": 56, "time-frame": 148, "missing-article": 100, "wrong-word": 100, "drop-misaligned": 48, "drop-main": 48, "skp-passive": 24}, "wrong_types": {"M": 152, "T": 148, "S": 100, "W": 100}}
+[2026-09-21 01:55:06] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 3, "part_sizes": [460, 460, 60], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 01:55:06] join: {"items_labelled": 900, "judged": {"correct": 406, "wrong": 494}, "types": {"T": 146, "W": 102, "S": 99, "M": 147}, "duplicate_controls_judged": 80, "label_disagreements": 4, "judge_noise_pct": 5.0}
+[2026-09-21 01:55:06] floors: {"F1_agent_drops_wrong": {"n": 147, "min": 120, "pass": true}, "F1a_fronted_wrong": {"n": 55, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 45, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 147, "min": 60, "pass": true}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": true}
+[2026-09-21 01:55:06] floors: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F1a_fronted_wrong": {"n": 0, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 0, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": false}
+[2026-09-21 01:55:06] STOP: a floor failed on JUDGED counts - the set was NOT opened, 0 Gemini calls: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}}
+[2026-09-21 01:55:06] $ python3 -c import sys; sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run'); import stack_2f as S;v = S.decide("Tenhle strop v loznici byval jeho oblibenou televizi.", {"hygienised": {"v": ["This ceiling used to be his favourite TV."], "lk": ["used to be"], "alt": {}}}, {"agent": "strop"}, "This ceiling used to be his favourite TV.", "This ceiling used to be his favourite TV.");print("STACK_OK", type(v).__name__) -> exit 0
+STACK_OK dict
+
+[2026-09-21 01:55:06] $ python3 -c import py_compile,sys;py_compile.compile('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run/runner_1u.py', doraise=True); print("RUNNER_COMPILES") -> exit 0
+RUNNER_COMPILES
+
+[2026-09-21 01:55:07] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:55:07] STOP: Part 2 headless spend 0 + projected 1800001 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 01:55:07] selftest: synthetic end-to-end OK: {"F1_agent_drops_wrong": 147, "F1a_fronted_wrong": 55, "F1b_misaligned_wrong": 45, "F2_time_frame_wrong": 146, "F3_by_passive_correct": 76, "F4_skp_correct": 24, "F5_missing_article_wrong": 99, "F6_determiner_correct": 100, "F7_T_wrong": 146, "F7_W_wrong": 102, "F7_M_wrong": 147, "F7_S_wrong": 99}
+[2026-09-21 01:55:07] selftest: floor gate refuses a set with 0 agent drops judged wrong: OK
+[2026-09-21 01:55:07] selftest: Czech stack imports and decides: OK
+[2026-09-21 01:55:07] selftest: runner compiles: OK
+[2026-09-21 01:55:07] selftest: lk prompt sha16 5fa910459c078539 (OK)
+[2026-09-21 01:55:07] selftest: sql_guard accepts the production SELECT: OK
+[2026-09-21 01:55:07] selftest: sql_guard refuses INSERT/UPDATE/DELETE/DDL and multi-statement SQL: OK
+[2026-09-21 01:55:07] selftest: v prompt sha16 4f9d486477084793 (OK)
+[2026-09-21 01:55:07] selftest: annotation completeness gate refuses an incomplete record: OK
+[2026-09-21 01:55:07] selftest: headless token cap 1800000 refuses an over-cap wave (spent 0): OK
+[2026-09-21 01:55:07] SELFTEST PASS
+[2026-09-21 01:56:04] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 76, "paraphrase": 100, "drop-fronted": 56, "time-frame": 148, "missing-article": 100, "wrong-word": 100, "drop-misaligned": 48, "drop-main": 48, "skp-passive": 24}, "wrong_types": {"M": 152, "T": 148, "S": 100, "W": 100}}
+[2026-09-21 01:56:04] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 3, "part_sizes": [460, 460, 60], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 01:56:04] join: {"items_labelled": 900, "judged": {"correct": 406, "wrong": 494}, "types": {"T": 146, "W": 102, "S": 99, "M": 147}, "duplicate_controls_judged": 80, "label_disagreements": 4, "judge_noise_pct": 5.0}
+[2026-09-21 01:56:04] floors: {"F1_agent_drops_wrong": {"n": 147, "min": 120, "pass": true}, "F1a_fronted_wrong": {"n": 55, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 45, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 147, "min": 60, "pass": true}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": true}
+[2026-09-21 01:56:04] floors: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F1a_fronted_wrong": {"n": 0, "min": 0, "pass": true}, "F1b_misaligned_wrong": {"n": 0, "min": 0, "pass": true}, "F2_time_frame_wrong": {"n": 146, "min": 100, "pass": true}, "F3_by_passive_correct": {"n": 76, "min": 60, "pass": true}, "F4_skp_correct": {"n": 24, "min": 0, "pass": true}, "F5_missing_article_wrong": {"n": 99, "min": 40, "pass": true}, "F6_determiner_correct": {"n": 100, "min": 60, "pass": true}, "F7_T_wrong": {"n": 146, "min": 60, "pass": true}, "F7_W_wrong": {"n": 102, "min": 60, "pass": true}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}, "F7_S_wrong": {"n": 99, "min": 60, "pass": true}, "all_pass": false}
+[2026-09-21 01:56:04] STOP: a floor failed on JUDGED counts - the set was NOT opened, 0 Gemini calls: {"F1_agent_drops_wrong": {"n": 0, "min": 120, "pass": false}, "F7_M_wrong": {"n": 0, "min": 60, "pass": false}}
+[2026-09-21 01:56:04] $ python3 -c import sys; sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run'); import stack_2f as S;v = S.decide("Tenhle strop v loznici byval jeho oblibenou televizi.", {"hygienised": {"v": ["This ceiling used to be his favourite TV."], "lk": ["used to be"], "alt": {}}}, {"agent": "strop"}, "This ceiling used to be his favourite TV.", "This ceiling used to be his favourite TV.");print("STACK_OK", type(v).__name__) -> exit 0
+STACK_OK dict
+
+[2026-09-21 01:56:04] $ python3 -c import py_compile,sys;py_compile.compile('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p2/run/runner_1u.py', doraise=True); print("RUNNER_COMPILES") -> exit 0
+RUNNER_COMPILES
+
+[2026-09-21 01:56:04] run_2f_cz: ALT index 1434 members 3764 surface 975 phrases 288 candidates
+[2026-09-21 01:56:04] STOP: Part 2 headless spend 0 + projected 1800001 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 01:56:04] selftest: synthetic end-to-end OK: {"F1_agent_drops_wrong": 147, "F1a_fronted_wrong": 55, "F1b_misaligned_wrong": 45, "F2_time_frame_wrong": 146, "F3_by_passive_correct": 76, "F4_skp_correct": 24, "F5_missing_article_wrong": 99, "F6_determiner_correct": 100, "F7_T_wrong": 146, "F7_W_wrong": 102, "F7_M_wrong": 147, "F7_S_wrong": 99}
+[2026-09-21 01:56:04] selftest: floor gate refuses a set with 0 agent drops judged wrong: OK
+[2026-09-21 01:56:04] selftest: Czech stack imports and decides: OK
+[2026-09-21 01:56:04] selftest: runner compiles: OK
+[2026-09-21 01:56:04] selftest: lk prompt sha16 5fa910459c078539 (OK)
+[2026-09-21 01:56:04] selftest: sql_guard accepts the production SELECT: OK
+[2026-09-21 01:56:04] selftest: sql_guard refuses INSERT/UPDATE/DELETE/DDL and multi-statement SQL: OK
+[2026-09-21 01:56:04] selftest: v prompt sha16 4f9d486477084793 (OK)
+[2026-09-21 01:56:04] selftest: annotation completeness gate refuses an incomplete record: OK
+[2026-09-21 01:56:04] selftest: headless token cap 1800000 refuses an over-cap wave (spent 0): OK
+[2026-09-21 01:56:04] SELFTEST PASS
