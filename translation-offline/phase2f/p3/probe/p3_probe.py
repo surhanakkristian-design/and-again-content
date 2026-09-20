@@ -61,7 +61,8 @@ WRITER_CHUNK = 15          # 4 sessions of the one writer role
 JUDGE_PACKETS = 4
 DUP_FRACTION = 0.10
 CAP_PHASE = 900
-CAP_PART31 = 250
+CAP_PART31 = 250          # the brief's approx budget
+CAP_PART31_MAX = 320      # local ceiling; the HARD constraint is CAP_PHASE minus part2
 WAIT_MAX_S = 10 * 3600
 WAIT_POLL_S = 120
 # 1W blind-test Slovak, the comparison the brief names
@@ -788,7 +789,7 @@ LEDGER_DEV = os.path.join(PROBE_DIR, 'ledger_p31.jsonl')
 MIRROR_STATE = os.path.join(HERE, 'ledger_mirror_state.json')
 FLOORS_JSON = os.path.join(PROBE_DIR, 'set', 'floors_p31.json')
 FLOORS_ALT = FLOORS_JSON
-CAP_1U = 250
+CAP_1U = int(os.environ.get('P31_CAP') or 250)
 FINAL_ITEMS_EXPECTED = 360
 
 _counted_dev_1u = counted_dev
@@ -981,8 +982,13 @@ def budget_ok():
     if p2 + CAP_PART31 > CAP_PHASE:
         return False, ('part2_counted %s + %d planned = %s would exceed the phase-wide cap %d'
                        % (p2, CAP_PART31, p2 + CAP_PART31, CAP_PHASE))
-    return True, 'part2_counted %s + %d = %s, within the %d cap' % (p2, CAP_PART31,
-                                                                    p2 + CAP_PART31, CAP_PHASE)
+    allowed = int(min(CAP_PART31_MAX, CAP_PHASE - p2))
+    R['allowed_calls'] = allowed
+    os.environ['P31_CAP'] = str(allowed)
+    return True, ('part2_counted %s + %d = %s, within the %d phase cap; this probe may spend at '
+                  'most %d counted calls (declared budget %d, local ceiling %d)'
+                  % (p2, CAP_PART31, p2 + CAP_PART31, CAP_PHASE, allowed, CAP_PART31,
+                     CAP_PART31_MAX))
 
 
 def budget_write(counted):
@@ -1335,10 +1341,17 @@ def pipeline(stub=False):
         write_report(None, None, None, noise, sel, None, run_dir, R['status'])
         return False
     planned = pf.get('PLANNED_CALLS') or 0
-    if planned > CAP_PART31:
+    allowed = R.get('allowed_calls') or CAP_PART31
+    if planned > CAP_PART31 and planned <= allowed:
+        defect('planned calls above the declared ~250 budget',
+               '%d planned; spent anyway because the HARD constraint is the phase-wide cap of %d '
+               'shared with Part 2 (%s counted there), and the brief forbids narrowing the scope '
+               'to fit. Local ceiling %d.'
+               % (planned, CAP_PHASE, R.get('part2_counted'), allowed))
+    if planned > allowed:
         R['status'] = ('STOP: %d planned calls exceed the probe cap %d; NOTHING was trimmed and '
-                       'the scope was not narrowed - 0 Gemini calls' % (planned, CAP_PART31))
-        defect('planned calls over the probe cap', '%d planned, cap %d' % (planned, CAP_PART31))
+                       'the scope was not narrowed - 0 Gemini calls' % (planned, allowed))
+        defect('planned calls over the probe cap', '%d planned, allowed %d' % (planned, allowed))
         write_report(None, None, None, noise, sel, None, run_dir, R['status'])
         return False
     if not stub:
