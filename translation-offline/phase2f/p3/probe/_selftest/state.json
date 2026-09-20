@@ -1,0 +1,76 @@
+{
+ "status": null,
+ "notes": [],
+ "defects": [],
+ "sessions": [],
+ "stage": "final",
+ "gemini_counted": 148,
+ "started": "2026-09-21T00:30:10",
+ "judge_noise": {
+  "duplicate_controls_judged": 36,
+  "label_disagreements": 0,
+  "type_only_disagreements": 0,
+  "judge_noise_pct": 0.0,
+  "judge_noise_cp": {
+   "k": 0,
+   "n": 36,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    100.0
+   ]
+  },
+  "items_labelled": 360,
+  "judged": {
+   "correct": 180,
+   "wrong": 180
+  },
+  "types": {
+   "M": 180
+  },
+  "borderline": 0
+ },
+ "freeze_hash": "SELFTEST (no commit)",
+ "preflight": {
+  "n_items": 360,
+  "l2_firings": 1,
+  "l3_eligible": 148,
+  "ag_rejected_before_l3": 0,
+  "reach_l3_planned_calls": 148,
+  "unique_requests": 148,
+  "PLANNED_CALLS": 148,
+  "counted_ledger_dev": 0,
+  "cap": 250
+ },
+ "final_started": "2026-09-21T00:30:11",
+ "final_exit": 0,
+ "final_tail": [
+  "[STUB] floors gate exercised: {\"F1_agent_drops_wrong\": [60, 0], \"F1a_fronted_wrong\": [0, 0], \"F1b_misaligned_wrong\": [0, 0], \"F2_time_frame_wrong\": [60, 0], \"F3_by_passive_correct\": [0, 0], \"F4_skp_correct\": [0, 0], \"F5_missing_article_wrong\": [60, 0]}",
+  "[BUILD fresh1u] 360 items / 60 sentences   chk {\"correct/match\": 201, \"wrong/auto\": 159}   passive {\"None\": 360}   levers {\"l2:aspect\": 282, \"l2:definiteness\": 300, \"l2:number\": 66, \"l3:items_with_a_variant\": 18, \"l3:removed\": 18, \"l3:shown\": 18}",
+  "[AG v3] {\"abstain_agentless_passive\": 6, \"errors\": 0, \"fired_guarded_union\": 0, \"fired_primary\": 0, \"fired_v2\": 0, \"fired_v3\": 0, \"fired_v3_not_v4\": 0, \"fired_v4_full\": 0, \"fired_v4_not_v3\": 0, \"items\": 360}",
+  "[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash 9f0ac5189790 -> 3e31d000dcc8",
+  "[PREFLIGHT] L2 lock firings under BASE: 1   L3-eligible under LOCKTIP: 148   AG v4 rejects before L3: 0   reach L3: 148",
+  "[PREFLIGHT] unique requests 148   reusable 0   PLANNED NEW CALLS 148   counted here 0   failed(200, unparsable) 0",
+  "-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/_selftest/run/FINAL_RUN_DONE",
+  "[STUB] status DONE headline {\"coverage_kn\": [168, 180], \"fa_kn\": [106, 180], \"failed_calls\": 0}"
+ ],
+ "final_run_done": {
+  "status": "DONE",
+  "written_utc": "2026-09-20T22:30:11Z",
+  "pid": 6415,
+  "meta": {
+   "phase": "1U",
+   "freeze_commit": null,
+   "coverage": [
+    168,
+    180
+   ],
+   "fa": [
+    106,
+    180
+   ],
+   "counted_calls": 148,
+   "stub_model": true
+  }
+ }
+}

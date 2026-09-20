@@ -827,6 +827,38 @@ def build_rows(recs, res, ag, planned, labels, hmap, failed):
 '''
 
 
+STUB_FINAL = r'''#!/usr/bin/env python3
+"""Phase 2F PART 3.1 - 0-call stub of the final run, for the preflight selftest ONLY.
+Same code path as --final (final_core), with a stub L3 in place of the transport and checks off:
+it proves the set, the loader, the layers, the stack patch, the rows and the scorer all work
+before a single model call is made.  Never used by --run."""
+import json, os, random, sys
+sys.dont_write_bytecode = True
+HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+import runner_1u as RU                                                         # noqa: E402
+
+DATA = sys.argv[sys.argv.index('--data-dir') + 1]
+
+
+def stub(req, need):
+    rng = random.Random(4242)
+    with open(RU.CALLS, 'a', encoding='utf-8') as fh:
+        for h in need:
+            v = rng.choice(['SAME', 'SAME', 'SAME', 'DIFF', 'TIP'])
+            fh.write(json.dumps({'ts': 'stub', 'http': 200, 'req_hash': h, 'verdict': v,
+                                 'item_id': None, 'reply': v, 'prompt_tokens': 11,
+                                 'candidates_tokens': 2, 'latency_ms': 1}) + chr(10))
+    return {'ok': len(need), 'bad': 0, 'empty': 0, 'skipped': 0, 'wall': False}
+
+
+fl = RU.check_floors_1u()
+print('[STUB] floors gate exercised:', json.dumps(fl, sort_keys=True))
+out = RU.final_core(HERE, DATA, call_fn=stub, checks=False)
+print('[STUB] status', out.get('status'), 'headline', json.dumps(out.get('headline')))
+'''
+
+
 def insert_before_main(src, patch):
     i = src.rindex("\nif __name__ == '__main__':")
     return src[:i] + patch + src[i:]
@@ -837,14 +869,48 @@ def setup_run(run_dir):
         return
     os.makedirs(run_dir, exist_ok=True)
     for f in ('loader_1u.py', 'article_line_1u.py', 'selftest_1u_run.py', 'score_1u.py',
-              'FROZEN_CONFIG_1U.json'):
-        shutil.copy2(os.path.join(U, f), os.path.join(run_dir, f))
-    src = open(os.path.join(U, 'runner_1u.py'), encoding='utf-8').read()
+              'runner_1u.py', 'FROZEN_CONFIG_1U.json'):
+        dst = os.path.join(run_dir, f)
+        shutil.copy2(os.path.join(U, f), dst)
+        os.chmod(dst, 0o644)      # phase1u is read-only INPUT; the copies must be writable
+    # The copy lives one level deeper than phase1u/run, so the modules' own
+    # TOFF = dirname(dirname(HERE)) would point at the wrong tree.  Pin TOFF to the real
+    # translation-offline root; HERE (the run dir, where every output lands) is untouched.
+    pin = ("TOFF = %r   # probe: pinned to the real translation-offline root\n"
+           "P1U = os.path.join(TOFF, 'phase1u')" % TOFF)
+    for f in ('runner_1u.py', 'score_1u.py'):
+        t = open(os.path.join(run_dir, f), encoding='utf-8').read()
+        for a, b in (("P1U = os.path.dirname(HERE)                                  # phase1u\n"
+                      "TOFF = os.path.dirname(P1U)                                  # "
+                      "translation-offline", pin),
+                     ("P1U = os.path.dirname(HERE)\nTOFF = os.path.dirname(P1U)", pin)):
+            if a in t:
+                t = t.replace(a, b, 1)
+                break
+        else:
+            raise SystemExit('REFUSED: could not pin TOFF in %s' % f)
+        open(os.path.join(run_dir, f), 'w', encoding='utf-8').write(t)
+    # article_line_1u re-reads the frozen L3 prompt text and REFUSES unless it is byte-identical;
+    # keep that check alive by pointing it at the real phase1u/stack.
+    t = open(os.path.join(run_dir, 'article_line_1u.py'), encoding='utf-8').read()
+    a2 = 'P1U = os.path.dirname(HERE)'
+    assert a2 in t
+    open(os.path.join(run_dir, 'article_line_1u.py'), 'w', encoding='utf-8').write(
+        t.replace(a2, "P1U = os.path.join(%r, 'phase1u')   # probe: the frozen stack's home"
+                  % TOFF, 1))
+    # the loader guards the sid range; point it at the probe's own fresh sids
+    t = open(os.path.join(run_dir, 'loader_1u.py'), encoding='utf-8').read()
+    a = 'SID_LO, SID_HI = 190001, 190100'
+    assert a in t
+    open(os.path.join(run_dir, 'loader_1u.py'), 'w', encoding='utf-8').write(
+        t.replace(a, 'SID_LO, SID_HI = %d, %d   # probe: fresh sids' % (SID_LO, SID_HI), 1))
+    src = open(os.path.join(run_dir, 'runner_1u.py'), encoding='utf-8').read()
     a = "TASKA = os.path.join(P1U, 'taskA')"
     assert a in src
     src = src.replace(a, "TASKA = os.path.join(TOFF, 'phase1u', 'taskA')   # probe: AG v4 home", 1)
     open(os.path.join(run_dir, 'runner_1u.py'), 'w', encoding='utf-8').write(
         insert_before_main(src, PATCH_RUNNER))
+    open(os.path.join(run_dir, 'stub_final.py'), 'w', encoding='utf-8').write(STUB_FINAL)
     say('setup: 1U runner/loader/scorer copied to %s (runner patched: stack_1w, ledger + floors '
         'repointed, cap 250)' % run_dir)
 
@@ -1285,12 +1351,12 @@ def pipeline(stub=False):
     R['stage'] = 'final'
     R['final_started'] = datetime.datetime.now().isoformat(timespec='seconds')
     save_state()
-    args = ['python3', runner, '--dry-run' if stub else '--final', '--data-dir', data_dir]
+    args = (['python3', os.path.join(run_dir, 'stub_final.py'), '--data-dir', data_dir] if stub
+            else ['python3', runner, '--final', '--data-dir', data_dir])
     rc, out = sh(args, cwd=run_dir)
     R['final_exit'] = rc
     R['final_tail'] = out.strip().splitlines()[-8:]
-    name = 'results_dry.json' if stub else 'results_1u.json'
-    res = jload(os.path.join(run_dir, name))
+    res = jload(os.path.join(run_dir, 'results_1u.json'))
     if not res and os.path.exists(os.path.join(run_dir, 'calls.jsonl')) and rc != 3:
         R['notes'].append('the run did not finish (exit %d); rows recomputed from the stored '
                           'verdicts with score_1u.py --recover, 0 calls' % rc)
@@ -1323,6 +1389,7 @@ def pipeline(stub=False):
 
 
 def main():
+    global SET, DATA, RUN, SESS, STATE, LOG
     ap = argparse.ArgumentParser()
     ap.add_argument('--selftest', action='store_true')
     ap.add_argument('--run', action='store_true')
@@ -1333,7 +1400,6 @@ def main():
         R['status'] = None
     if a.selftest:
         # a throwaway copy of the whole probe layout; touches nothing the real run uses
-        global SET, DATA, RUN, SESS, STATE, LOG
         base = os.path.join(PROBE, '_selftest')
         shutil.rmtree(base, ignore_errors=True)
         os.makedirs(base, exist_ok=True)
@@ -1346,7 +1412,7 @@ def main():
         except Exception:
             import traceback
             say(traceback.format_exc())
-        res = jload(os.path.join(RUN, 'results_dry.json')) or {}
+        res = jload(os.path.join(RUN, 'results_1u.json')) or {}
         h = res.get('headline') or {}
         print('SELFTEST %s  headline=%s  status=%s'
               % ('PASS' if ok and h.get('coverage_kn') else 'FAIL', json.dumps(h), R.get('status')))

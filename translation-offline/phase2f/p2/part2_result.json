@@ -1,10 +1,12 @@
 {
  "status": "STOP: not enough fresh annotated Czech sentences per level {\"A1\": 0, \"A2\": 0, \"B1\": 0, \"B2\": 0} (need 25 each); the set was NOT opened, 0 Gemini calls",
- "notes": [
-  "PART 1 STOPPED EARLY (PART1_STOP.md present); Part 2 ran anyway as the brief instructs."
- ],
- "sessions": [],
- "stage": "selection",
+ "part1": {
+  "PART1_DONE": true,
+  "PART1_STOP.md": true,
+  "status": "STOPPED EARLY: ['STOP_throughput_guard.md']; 2800 rows assembled, 591139 headless tokens",
+  "waited_s": 720
+ },
+ "selection": null,
  "assemble": {
   "items": 900,
   "sentences": 100,
@@ -172,10 +174,46 @@
   },
   "sensitivity_empty": []
  },
- "part1": {
-  "PART1_DONE": true,
-  "PART1_STOP.md": true,
-  "status": "STOPPED EARLY: ['STOP_throughput_guard.md']; 2800 rows assembled, 591139 headless tokens",
-  "waited_s": 720
- }
+ "preflight": null,
+ "freeze_hash": null,
+ "run_commit": null,
+ "final_started": null,
+ "final_exit": null,
+ "FINAL_RUN_DONE": false,
+ "calls": {
+  "lines": 0,
+  "counted_http200": 0,
+  "uncounted_retries": 0,
+  "uncounted_by_http": {},
+  "failed_empty_or_unparsable_200": 0,
+  "failure_rate_pct": null,
+  "tokens_in": 0,
+  "tokens_out": 0,
+  "spend_usd_list_price": 0.0
+ },
+ "headless_tokens": 0,
+ "sessions": [],
+ "deviations": [
+  "The 100 sentences are PRODUCTION Czech (phase2c/selection_2c.jsonl) annotated by the frozen 2E pipeline and adopted from phase2f/out/annotations_cz_final.jsonl at 0 new tokens; 1V/1W had the writers invent the sentences AND the annotation.  Consequence: the assembler, packet builder, label join and floor check are written in this driver against the same contracts instead of copied byte-identically from phase1v/trackA_set.",
+  "The writers therefore write ONLY the 4 correct + 5 wrong answers per sentence, seeing only the Czech sentence, its level and its topic - never the English reference, never the annotation.  The answer-slot contract is conditional on what the writer sees (a sentence that names no doer gets time-frame shifts in w1/w2 instead of agent drops).",
+  "Floors F1a/F1b/F4 cannot be controlled on production text (the sentence shape is given, not commissioned).  They are COMPUTED and REPORTED but declared with min 0; the runner gate requires the seven 1U key names to be present, so they are present.  F7 (T/W/M/S each >= 60) is added for \"T/W/M/S otherwise balanced\".",
+  "sentences.json carries the CZECH sentence under the key \"slovak\" because loader_1u.py requires that key and phase1p/runner_1p.py reads it; a duplicate \"czech\" key carries the same string.  Renaming it would have meant editing read-only phase1p code.",
+  "The L3 prompt is P-FROZEN-1U, unchanged, including its sentence that names Slovak.  Editing it would have been a stack change and would have broken the article_line hash assertion; the brief says to tune nothing.  Recorded as a defect instead (see DEFECTS)."
+ ],
+ "defects": [],
+ "slovak_1w": {
+  "coverage": "392/401 = 97.76 % [95.78, 98.97]",
+  "fa": "16/499 = 3.21 % [1.84, 5.15]",
+  "agent_drop_fa all": "10/160 = 6.25 %",
+  "agent_drop_fa fronted": "7/64 = 10.94 %",
+  "agent_drop_fa main": "0/48 = 0.00 %",
+  "agent_drop_fa misaligned": "3/48 = 6.25 %",
+  "by_passive_coverage": "79/80 = 98.75 %",
+  "missing_article fa": "3/97 = 3.09 %",
+  "skp_coverage": "70/72 = 97.22 %",
+  "time_frame_fa": "2/119 = 1.68 %",
+  "AG primary": "fired 144 / catches 141 / cost 3",
+  "L3": "DIFF 311 SAME 252 TIP 37"
+ },
+ "score": null
 }
