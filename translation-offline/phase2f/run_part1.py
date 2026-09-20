@@ -208,7 +208,8 @@ def main():
                                                              po.get("span_k"), po.get("span_n")), "",
               "## Per session", "", "| session | non-exact % | k | n | exact 95 % CP |", "|---|---|---|---|---|"]
         for sid, v in sorted((rep.get("per_session") or {}).items()):
-            kk, nn = v.get("k"), v.get("n") or v.get("judged")
+            kk = v.get("k") if v.get("k") is not None else v.get("adjust_or_unusable")
+            nn = v.get("n") or v.get("judged")
             if kk is None or not nn:
                 md.append("| %s | %s | - | - | - |" % (sid, v.get("pct"))); continue
             p3 = L.cp(kk, nn)
