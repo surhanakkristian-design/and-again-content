@@ -1,10 +1,10 @@
 {
  "cap": 1714688,
- "spent": 285312,
+ "spent": 591139,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-20T23:52:26",
- "wall_s_this_process": 0.8,
+ "updated": "2026-09-21T00:28:37",
+ "wall_s_this_process": 2172.2,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -16,9 +16,16 @@
   "min_tok_per_s": 60.0,
   "min_minutes": 20
  },
- "retries": 0,
- "giveups": [],
- "stop_spawn": null,
+ "retries": 4,
+ "giveups": [
+  {
+   "session": "cz_0003_s04_v",
+   "why": "retries_exhausted after 3 retries (429)",
+   "tokens": 305827,
+   "wall_s": 2171.1
+  }
+ ],
+ "stop_spawn": "throughput_guard: measured throughput 0.0 tok/s stayed under 60 tok/s for 20 consecutive minutes (trailing 300 s window).\n\n2C ran five hours at 25 tok/s because nothing checked; this run stops spawning instead. In-flight sessions finish or hit the circuit breaker, everything complete is committed, resume with the same command.",
  "by_kind": {
   "v": {
    "sessions": 1,
@@ -988,6 +995,16 @@
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s06_v.json",
    "ts": "2026-09-20T23:52:25"
+  },
+  "cz_0003_s04_v": {
+   "kind": "v",
+   "tokens": 305827,
+   "wall_s": 2171.1,
+   "exit": null,
+   "rows": 0,
+   "status": "GIVEUP",
+   "why": "retries_exhausted after 3 retries (429)",
+   "ts": "2026-09-21T00:28:37"
   }
  }
 }
