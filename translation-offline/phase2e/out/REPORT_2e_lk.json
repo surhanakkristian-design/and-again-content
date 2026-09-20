@@ -3,29 +3,29 @@
  "par": 2,
  "n_per_session": 100,
  "sessions_expected": 41,
- "sessions_on_disk": 19,
+ "sessions_on_disk": 28,
  "prompt_sha16": "5fa910459c078539",
- "rows": 1900,
+ "rows": 2800,
  "pooled": {
-  "adjust_or_unusable_pct": 52.26,
+  "adjust_or_unusable_pct": 52.44,
   "ci95": [
-   49.99,
-   54.53
+   50.54,
+   54.34
   ],
-  "k": 993,
-  "n": 1900,
-  "adjust_only_pct": 26.26,
+  "k": 1416,
+  "n": 2700,
+  "adjust_only_pct": 24.96,
   "adjust_only_ci95": [
-   24.3,
-   28.3
+   23.34,
+   26.64
   ],
-  "span_adjusted_pct": 52.26,
+  "span_adjusted_pct": 51.07,
   "span_ci95": [
-   49.99,
-   54.53
+   49.2,
+   52.94
   ],
-  "span_k": 993,
-  "span_n": 1900,
+  "span_k": 1430,
+  "span_n": 2800,
   "reference_2b_pct": 20.5,
   "reference_2c_pct": 12.85,
   "reference_50pct": 50.0,
@@ -72,6 +72,23 @@
     55.2
    ],
    "span_k": 467,
+   "span_n": 900
+  },
+  "cz_0003": {
+   "rows": 900,
+   "judged": 800,
+   "adjust_or_unusable": 423,
+   "pct": 52.88,
+   "ci95": [
+    49.35,
+    56.38
+   ],
+   "span_adjusted_pct": 48.56,
+   "span_ci95": [
+    45.24,
+    51.88
+   ],
+   "span_k": 437,
    "span_n": 900
   }
  },
@@ -341,50 +358,176 @@
    "tokens": 45958,
    "exit": 0,
    "attempts": 1
+  },
+  "cz_0003_s01_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 51,
+   "pct": 51.0,
+   "ci95": [
+    40.8,
+    61.14
+   ],
+   "span_adjusted_pct": 51.0,
+   "tokens": 46073,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s02_lk": {
+   "rows": 100,
+   "judged": 0,
+   "adjust_or_unusable": 0,
+   "pct": null,
+   "ci95": [
+    null,
+    null
+   ],
+   "span_adjusted_pct": 14.0,
+   "tokens": 42224,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s03_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 47587,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s04_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 41526,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s05_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 59,
+   "pct": 59.0,
+   "ci95": [
+    48.71,
+    68.74
+   ],
+   "span_adjusted_pct": 59.0,
+   "tokens": 44750,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s06_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 49079,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s07_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 47,
+   "pct": 47.0,
+   "ci95": [
+    36.94,
+    57.24
+   ],
+   "span_adjusted_pct": 47.0,
+   "tokens": 45972,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s08_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 44,
+   "pct": 44.0,
+   "ci95": [
+    34.08,
+    54.28
+   ],
+   "span_adjusted_pct": 44.0,
+   "tokens": 46070,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s09_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 60,
+   "pct": 60.0,
+   "ci95": [
+    49.72,
+    69.67
+   ],
+   "span_adjusted_pct": 60.0,
+   "tokens": 47003,
+   "exit": 0,
+   "attempts": 1
   }
  },
- "changed_vs_2c": 822,
- "changed_vs_supplied": 993,
+ "changed_vs_2c": 1191,
+ "changed_vs_supplied": 1430,
  "unusable_span": 0,
- "model_row_missing": 0,
+ "model_row_missing": 100,
  "class_counts": {
-  "adjust": 499,
-  "exact": 907,
-  "unusable": 494
+  "adjust": 674,
+  "exact": 1284,
+  "unusable": 742
  },
- "tokens_spent": 893360,
- "tok_per_sentence": 470.2,
- "wall_s": 0.7,
- "tok_per_s": 893360.0,
+ "tokens_spent": 1303644,
+ "tok_per_sentence": 465.6,
+ "wall_s": 407.4,
+ "tok_per_s": 3199.9,
  "http_429_seen": 0,
  "backoffs": [],
  "stop": null,
  "gate3": {
   "agv4": {
    "counts": {
-    "AGREE": 219,
-    "ERROR": 31
+    "ERROR": 26,
+    "AGREE": 224
    },
    "decided": 250,
-   "ERROR_of_decided_pct": 12.4,
+   "ERROR_of_decided_pct": 10.4,
    "ci95": [
-    8.58,
-    17.14
+    6.91,
+    14.87
    ],
    "bar_pct": 12.0,
-   "verdict": "FAIL"
+   "verdict": "PASS"
   },
   "reader_nom": {
    "counts": {
-    "AGREE": 153,
-    "ERROR": 18,
-    "CONSERVATIVE": 79
+    "ERROR": 8,
+    "AGREE": 136,
+    "CONSERVATIVE": 106
    },
-   "decided": 171,
-   "ERROR_of_decided_pct": 10.53,
+   "decided": 144,
+   "ERROR_of_decided_pct": 5.56,
    "ci95": [
-    6.36,
-    16.13
+    2.43,
+    10.65
    ],
    "bar_pct": 12.0,
    "verdict": "PASS"
@@ -398,7 +541,9 @@
   "match": true,
   "mismatches": {}
  },
- "defects": [],
+ "defects": [
+  "session cz_0003_s02_lk returned no parsable rows (exit 0)"
+ ],
  "deviation_from_2b_prompt": "one extra reply field lk_fixed + one sentence instructing the model to fill it; the 2B LK text is otherwise byte-identical (asserted in code)",
- "ts": "2026-09-20T16:33:14"
+ "ts": "2026-09-20T17:59:45"
 }
