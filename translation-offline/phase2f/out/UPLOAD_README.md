@@ -77,7 +77,7 @@ a faithful container for it. If the import path can read JSONL, use the JSONL.
 
 # ADDENDUM — Czech (Phase 2E)
 
-`upload_cz_final.xlsx` — sheet **`cz`**, **2,800 rows**, the same six columns as the Slovak file
+`upload_cz_final.xlsx` — sheet **`cz`**, **2,850 rows**, the same six columns as the Slovak file
 (`exercise_id`, `language_code`, `level`, `src`, `en`, `structure_json`), the whole 34-field annotation as
 JSON in the one `structure_json` cell. Lossless; nothing was uploaded.
 
