@@ -1,10 +1,10 @@
 {
  "cap": 4900000,
- "spent": 4096914,
+ "spent": 4288311,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-20T11:39:41",
- "wall_s_this_process": 9291.9,
+ "updated": "2026-09-20T11:56:04",
+ "wall_s_this_process": 10275.2,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -16,7 +16,7 @@
   "min_tok_per_s": 60.0,
   "min_minutes": 20
  },
- "retries": 10,
+ "retries": 16,
  "giveups": [
   {
    "session": "cz_0002_s04_v",
@@ -29,6 +29,12 @@
    "why": "retries_exhausted after 3 retries (429)",
    "tokens": 279472,
    "wall_s": 2639.1
+  },
+  {
+   "session": "cz_0004_s04_rw",
+   "why": "retries_exhausted after 3 retries (429)",
+   "tokens": 191397,
+   "wall_s": 983.3
   }
  ],
  "stop_spawn": null,
@@ -849,6 +855,16 @@
    "retry_tokens": 0,
    "retries": 0,
    "ts": "2026-09-20T11:39:41"
+  },
+  "cz_0004_s04_rw": {
+   "kind": "rw",
+   "tokens": 191397,
+   "wall_s": 983.3,
+   "exit": null,
+   "rows": 0,
+   "status": "GIVEUP",
+   "why": "retries_exhausted after 3 retries (429)",
+   "ts": "2026-09-20T11:56:04"
   }
  }
 }
