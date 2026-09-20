@@ -14,3 +14,4 @@ occurrence of the same lesson: when a check fails, suspect the measuring apparat
 2026-09-20 23:26 DEFECT (recorded, NOT fixed): session() charges retry tokens to `retry_tokens_not_counted_
 as_session` only when the CLI returns; a session killed from outside leaves its tokens uncounted in
 ledger_2f_cz.json, so the tripwire under-reads real spend by that amount.
+2026-09-20 23:52 batch cz_0002 incomplete: sessions cz_0002_s04_v missing; 100 rows (5365-5464) not written, 900 rows written
