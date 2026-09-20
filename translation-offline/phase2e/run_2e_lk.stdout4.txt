@@ -1,0 +1,582 @@
+17:52:55 START rows 2800 sessions 28 PAR 2 cap 2100000 already_spent 893360 prompt_sha 5fa910459c078539
+17:52:55 SKIP-DONE cz_0001_s02_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s01_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s04_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s03_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s05_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s06_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s07_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s08_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s10_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0001_s09_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s01_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s02_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s03_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s04_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s06_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s05_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s07_lk 100 rows already on disk (0 tokens)
+17:52:55 SKIP-DONE cz_0002_s08_lk 100 rows already on disk (0 tokens)
+17:52:56 SKIP-DONE cz_0002_s09_lk 100 rows already on disk (0 tokens)
+17:53:53 DONE cz_0003_s02_lk exit 0 tok 42224 cum 935584 wall 57.2 rows 0 / 100
+17:53:53 DEFECT session cz_0003_s02_lk returned no parsable rows (exit 0)
+17:54:23 DONE cz_0003_s01_lk exit 0 tok 46073 cum 981657 wall 87.9 rows 100 / 100
+17:55:07 DONE cz_0003_s04_lk exit 0 tok 41526 cum 1023183 wall 43.9 rows 100 / 100
+17:55:40 DONE cz_0003_s03_lk exit 0 tok 47587 cum 1070770 wall 107.4 rows 100 / 100
+17:56:28 DONE cz_0003_s05_lk exit 0 tok 44750 cum 1115520 wall 80.9 rows 100 / 100
+17:57:44 DONE cz_0003_s06_lk exit 0 tok 49079 cum 1164599 wall 123.3 rows 100 / 100
+17:57:57 DONE cz_0003_s07_lk exit 0 tok 45972 cum 1210571 wall 88.1 rows 100 / 100
+17:59:16 DONE cz_0003_s08_lk exit 0 tok 46070 cum 1256641 wall 91.9 rows 100 / 100
+17:59:42 DONE cz_0003_s09_lk exit 0 tok 47003 cum 1303644 wall 105.3 rows 100 / 100
+17:59:42 MERGE corrected 2800 final 2800 {'class_adjust': 674, 'class_exact': 1284, 'class_unusable': 742, 'no_model_row': 100}
+17:59:42 GATE3 {"agv4": 10.4, "reader_nom": 5.56}
+{
+ "phase": "2d_lk",
+ "par": 2,
+ "n_per_session": 100,
+ "sessions_expected": 41,
+ "sessions_on_disk": 28,
+ "prompt_sha16": "5fa910459c078539",
+ "rows": 2800,
+ "pooled": {
+  "adjust_or_unusable_pct": 52.44,
+  "ci95": [
+   50.54,
+   54.34
+  ],
+  "k": 1416,
+  "n": 2700,
+  "adjust_only_pct": 24.96,
+  "adjust_only_ci95": [
+   23.34,
+   26.64
+  ],
+  "span_adjusted_pct": 51.07,
+  "span_ci95": [
+   49.2,
+   52.94
+  ],
+  "span_k": 1430,
+  "span_n": 2800,
+  "reference_2b_pct": 20.5,
+  "reference_2c_pct": 12.85,
+  "reference_50pct": 50.0,
+  "reference_slovak_2d_pct": 51.13,
+  "reference_slovak_2d_ci": [
+   49.58,
+   52.68
+  ]
+ },
+ "low_mode": {
+  "flagged": {},
+  "rerun": {}
+ },
+ "per_batch": {
+  "cz_0001": {
+   "rows": 1000,
+   "judged": 1000,
+   "adjust_or_unusable": 526,
+   "pct": 52.6,
+   "ci95": [
+    49.45,
+    55.73
+   ],
+   "span_adjusted_pct": 52.6,
+   "span_ci95": [
+    49.45,
+    55.73
+   ],
+   "span_k": 526,
+   "span_n": 1000
+  },
+  "cz_0002": {
+   "rows": 900,
+   "judged": 900,
+   "adjust_or_unusable": 467,
+   "pct": 51.89,
+   "ci95": [
+    48.57,
+    55.2
+   ],
+   "span_adjusted_pct": 51.89,
+   "span_ci95": [
+    48.57,
+    55.2
+   ],
+   "span_k": 467,
+   "span_n": 900
+  },
+  "cz_0003": {
+   "rows": 900,
+   "judged": 800,
+   "adjust_or_unusable": 423,
+   "pct": 52.88,
+   "ci95": [
+    49.35,
+    56.38
+   ],
+   "span_adjusted_pct": 48.56,
+   "span_ci95": [
+    45.24,
+    51.88
+   ],
+   "span_k": 437,
+   "span_n": 900
+  }
+ },
+ "per_session": {
+  "cz_0001_s01_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 46,
+   "pct": 46.0,
+   "ci95": [
+    35.98,
+    56.26
+   ],
+   "span_adjusted_pct": 46.0,
+   "tokens": 45362,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s02_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 47,
+   "pct": 47.0,
+   "ci95": [
+    36.94,
+    57.24
+   ],
+   "span_adjusted_pct": 47.0,
+   "tokens": 46729,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s03_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 50,
+   "pct": 50.0,
+   "ci95": [
+    39.83,
+    60.17
+   ],
+   "span_adjusted_pct": 50.0,
+   "tokens": 48032,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s04_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 50,
+   "pct": 50.0,
+   "ci95": [
+    39.83,
+    60.17
+   ],
+   "span_adjusted_pct": 50.0,
+   "tokens": 45891,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s05_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 61,
+   "pct": 61.0,
+   "ci95": [
+    50.73,
+    70.6
+   ],
+   "span_adjusted_pct": 61.0,
+   "tokens": 46548,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s06_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 45,
+   "pct": 45.0,
+   "ci95": [
+    35.03,
+    55.27
+   ],
+   "span_adjusted_pct": 45.0,
+   "tokens": 45547,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s07_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 49953,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s08_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 65,
+   "pct": 65.0,
+   "ci95": [
+    54.82,
+    74.27
+   ],
+   "span_adjusted_pct": 65.0,
+   "tokens": 50669,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s09_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 56,
+   "pct": 56.0,
+   "ci95": [
+    45.72,
+    65.92
+   ],
+   "span_adjusted_pct": 56.0,
+   "tokens": 47058,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0001_s10_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 52,
+   "pct": 52.0,
+   "ci95": [
+    41.78,
+    62.1
+   ],
+   "span_adjusted_pct": 52.0,
+   "tokens": 47819,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s01_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 47,
+   "pct": 47.0,
+   "ci95": [
+    36.94,
+    57.24
+   ],
+   "span_adjusted_pct": 47.0,
+   "tokens": 46366,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s02_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 58,
+   "pct": 58.0,
+   "ci95": [
+    47.71,
+    67.8
+   ],
+   "span_adjusted_pct": 58.0,
+   "tokens": 46628,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s03_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 59,
+   "pct": 59.0,
+   "ci95": [
+    48.71,
+    68.74
+   ],
+   "span_adjusted_pct": 59.0,
+   "tokens": 44814,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s04_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 50,
+   "pct": 50.0,
+   "ci95": [
+    39.83,
+    60.17
+   ],
+   "span_adjusted_pct": 50.0,
+   "tokens": 45598,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s05_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 53,
+   "pct": 53.0,
+   "ci95": [
+    42.76,
+    63.06
+   ],
+   "span_adjusted_pct": 53.0,
+   "tokens": 49797,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s06_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 49,
+   "pct": 49.0,
+   "ci95": [
+    38.86,
+    59.2
+   ],
+   "span_adjusted_pct": 49.0,
+   "tokens": 46348,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s07_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 38,
+   "pct": 38.0,
+   "ci95": [
+    28.48,
+    48.25
+   ],
+   "span_adjusted_pct": 38.0,
+   "tokens": 46389,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s08_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 61,
+   "pct": 61.0,
+   "ci95": [
+    50.73,
+    70.6
+   ],
+   "span_adjusted_pct": 61.0,
+   "tokens": 47854,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0002_s09_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 52,
+   "pct": 52.0,
+   "ci95": [
+    41.78,
+    62.1
+   ],
+   "span_adjusted_pct": 52.0,
+   "tokens": 45958,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s01_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 51,
+   "pct": 51.0,
+   "ci95": [
+    40.8,
+    61.14
+   ],
+   "span_adjusted_pct": 51.0,
+   "tokens": 46073,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s02_lk": {
+   "rows": 100,
+   "judged": 0,
+   "adjust_or_unusable": 0,
+   "pct": null,
+   "ci95": [
+    null,
+    null
+   ],
+   "span_adjusted_pct": 14.0,
+   "tokens": 42224,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s03_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 47587,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s04_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 41526,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s05_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 59,
+   "pct": 59.0,
+   "ci95": [
+    48.71,
+    68.74
+   ],
+   "span_adjusted_pct": 59.0,
+   "tokens": 44750,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s06_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 54,
+   "pct": 54.0,
+   "ci95": [
+    43.74,
+    64.02
+   ],
+   "span_adjusted_pct": 54.0,
+   "tokens": 49079,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s07_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 47,
+   "pct": 47.0,
+   "ci95": [
+    36.94,
+    57.24
+   ],
+   "span_adjusted_pct": 47.0,
+   "tokens": 45972,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s08_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 44,
+   "pct": 44.0,
+   "ci95": [
+    34.08,
+    54.28
+   ],
+   "span_adjusted_pct": 44.0,
+   "tokens": 46070,
+   "exit": 0,
+   "attempts": 1
+  },
+  "cz_0003_s09_lk": {
+   "rows": 100,
+   "judged": 100,
+   "adjust_or_unusable": 60,
+   "pct": 60.0,
+   "ci95": [
+    49.72,
+    69.67
+   ],
+   "span_adjusted_pct": 60.0,
+   "tokens": 47003,
+   "exit": 0,
+   "attempts": 1
+  }
+ },
+ "changed_vs_2c": 1191,
+ "changed_vs_supplied": 1430,
+ "unusable_span": 0,
+ "model_row_missing": 100,
+ "class_counts": {
+  "adjust": 674,
+  "exact": 1284,
+  "unusable": 742
+ },
+ "tokens_spent": 1303644,
+ "tok_per_sentence": 465.6,
+ "wall_s": 407.4,
+ "tok_per_s": 3199.9,
+ "http_429_seen": 0,
+ "backoffs": [],
+ "stop": null,
+ "gate3": {
+  "agv4": {
+   "counts": {
+    "ERROR": 26,
+    "AGREE": 224
+   },
+   "decided": 250,
+   "ERROR_of_decided_pct": 10.4,
+   "ci95": [
+    6.91,
+    14.87
+   ],
+   "bar_pct": 12.0,
+   "verdict": "PASS"
+  },
+  "reader_nom": {
+   "counts": {
+    "ERROR": 8,
+    "AGREE": 136,
+    "CONSERVATIVE": 106
+   },
+   "decided": 144,
+   "ERROR_of_decided_pct": 5.56,
+   "ci95": [
+    2.43,
+    10.65
+   ],
+   "bar_pct": 12.0,
+   "verdict": "PASS"
+  },
+  "sample": 250,
+  "seed": 20260920,
+  "bar_pct": 12.0
+ },
+ "phase2c_sha_verification": {
+  "files_checked": 224,
+  "match": true,
+  "mismatches": {}
+ },
+ "defects": [
+  "session cz_0003_s02_lk returned no parsable rows (exit 0)"
+ ],
+ "deviation_from_2b_prompt": "one extra reply field lk_fixed + one sentence instructing the model to fill it; the 2B LK text is otherwise byte-identical (asserted in code)",
+ "ts": "2026-09-20T17:59:45"
+}
+17:59:45 END tokens 1303644 wall_s 409.9
