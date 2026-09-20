@@ -32,3 +32,12 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -- translation-offline/pha
 [00:35:45] DEFECT recorded (not fixed): planned calls above the declared ~250 budget - 312 planned; spent anyway because the HARD constraint is the phase-wide cap of 900 shared with Part 2 (0 counted there), and the brief forbids narrowing the scope to fit. Local ceiling 320.
 [00:35:45] $ git add -A translation-offline/phase2f -> exit 0
 [00:35:45] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1
+[00:35:45] $ git commit -q -m Phase 2F PART 3.1: RUN commit (FREEZE_FILES, preflight, floors) - the production set is opened ONCE after this
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -- translation-offline/phase2f -> exit 0
+[00:35:45] $ git rev-parse HEAD -> exit 0
+[00:37:22] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/run/runner_1u.py --final --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/data -> exit 0
+[00:37:22] $ python3 /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/run/score_1u.py --data-dir /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/data -> exit 0
+[00:37:22] PROBE_SLOVAK_PRODUCTION.md + probe_result.json written
+[00:37:22] $ git add -A translation-offline/phase2f -> exit 0
+[00:37:22] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1

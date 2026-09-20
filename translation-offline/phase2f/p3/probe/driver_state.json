@@ -1,5 +1,5 @@
 {
- "status": null,
+ "status": "completed",
  "notes": [],
  "defects": [
   {
@@ -145,8 +145,8 @@
    "permission_denials": 0
   }
  ],
- "stage": "freeze",
- "gemini_counted": 0,
+ "stage": "final",
+ "gemini_counted": 312,
  "started": "2026-09-21T00:31:04",
  "budget_before": {
   "part2_counted": 0,
@@ -193,5 +193,63 @@
   "PLANNED_CALLS": 312,
   "counted_ledger_dev": 0,
   "cap": 320
+ },
+ "run_commit": "e99e6b9f084bd312a31527ae997f6d92ef827f54",
+ "final_started": "2026-09-21T00:35:45",
+ "final_exit": 0,
+ "final_tail": [
+  "[BUILD fresh1u] 360 items / 60 sentences   chk {\"correct/match\": 14, \"wrong/auto\": 346}   passive {\"None\": 360}   levers {\"l2:aspect\": 282, \"l2:definiteness\": 314, \"l2:number\": 66, \"l3:items_with_a_variant\": 18, \"l3:removed\": 18, \"l3:shown\": 18}",
+  "[AG v3] {\"abstain_agentless_passive\": 15, \"errors\": 0, \"fired_guarded_union\": 13, \"fired_primary\": 13, \"fired_v2\": 11, \"fired_v3\": 13, \"fired_v3_not_v4\": 0, \"fired_v4_full\": 13, \"fired_v4_not_v3\": 0, \"items\": 360}",
+  "[PROMPT] P-FROZEN-1U = P-FROZEN-1P + 1 line at index 9; sys identical; hash c5e81de44573 -> 8675518d8658",
+  "[PREFLIGHT] L2 lock firings under BASE: 96   L3-eligible under LOCKTIP: 325   AG v4 rejects before L3: 13   reach L3: 312",
+  "[PREFLIGHT] unique requests 312   reusable 0   PLANNED NEW CALLS 312   counted here 0   failed(200, unparsable) 0",
+  "[CAP] preflight: counted in ledger_dev 0 + planned 312 = 312   (hard cap 320)",
+  "[CALLS] http200 312 (empty replies 0)  transport-dead 0  skipped after the wall 0",
+  "-- FINAL_RUN_DONE written: /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2f/p3/probe/run/FINAL_RUN_DONE"
+ ],
+ "final_run_done": {
+  "status": "DONE",
+  "written_utc": "2026-09-20T22:37:22Z",
+  "pid": 7159,
+  "meta": {
+   "phase": "1U",
+   "freeze_commit": "36a00a53723b05a87ee0636ca6328bb0b121cc14",
+   "coverage": [
+    154,
+    182
+   ],
+   "fa": [
+    11,
+    178
+   ],
+   "counted_calls": 312,
+   "stub_model": false
+  }
+ },
+ "budget_after": {
+  "part2_counted": 0,
+  "part2_cap": 600,
+  "part31_counted": 312,
+  "part31_cap": 250,
+  "phase_cap": 900,
+  "part31_updated": "2026-09-21T00:37:22"
+ },
+ "coverage": {
+  "k": 154,
+  "n": 182,
+  "pct": 84.62,
+  "ci": [
+   0.0,
+   0.0
+  ]
+ },
+ "fa": {
+  "k": 11,
+  "n": 178,
+  "pct": 6.18,
+  "ci": [
+   100.0,
+   100.0
+  ]
  }
 }
