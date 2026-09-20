@@ -1,10 +1,10 @@
 {
- "cap": 1714688,
+ "cap": 1408861,
  "spent": 591139,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-21T00:28:37",
- "wall_s_this_process": 2172.4,
+ "updated": "2026-09-21T00:34:19",
+ "wall_s_this_process": 0.4,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -16,16 +16,9 @@
   "min_tok_per_s": 60.0,
   "min_minutes": 20
  },
- "retries": 4,
- "giveups": [
-  {
-   "session": "cz_0003_s04_v",
-   "why": "retries_exhausted after 3 retries (429)",
-   "tokens": 305827,
-   "wall_s": 2171.1
-  }
- ],
- "stop_spawn": "throughput_guard: measured throughput 0.0 tok/s stayed under 60 tok/s for 20 consecutive minutes (trailing 300 s window).\n\n2C ran five hours at 25 tok/s because nothing checked; this run stops spawning instead. In-flight sessions finish or hit the circuit breaker, everything complete is committed, resume with the same command.",
+ "retries": 0,
+ "giveups": [],
+ "stop_spawn": null,
  "by_kind": {
   "v": {
    "sessions": 1,
@@ -70,7 +63,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s01_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s01_v": {
    "kind": "v",
@@ -84,7 +77,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s01_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s02_rw": {
    "kind": "rw",
@@ -98,7 +91,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s02_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s02_v": {
    "kind": "v",
@@ -112,7 +105,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s02_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s03_rw": {
    "kind": "rw",
@@ -126,7 +119,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s03_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s03_v": {
    "kind": "v",
@@ -140,7 +133,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s03_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s04_rw": {
    "kind": "rw",
@@ -154,7 +147,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s04_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s04_v": {
    "kind": "v",
@@ -168,7 +161,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s04_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s05_rw": {
    "kind": "rw",
@@ -182,7 +175,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s05_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s05_v": {
    "kind": "v",
@@ -196,7 +189,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s05_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s06_rw": {
    "kind": "rw",
@@ -210,7 +203,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s06_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s06_v": {
    "kind": "v",
@@ -224,7 +217,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s06_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s07_rw": {
    "kind": "rw",
@@ -238,7 +231,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s07_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s07_v": {
    "kind": "v",
@@ -252,7 +245,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s07_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s08_rw": {
    "kind": "rw",
@@ -266,7 +259,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s08_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s08_v": {
    "kind": "v",
@@ -280,7 +273,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s08_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s09_rw": {
    "kind": "rw",
@@ -294,7 +287,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s09_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s09_v": {
    "kind": "v",
@@ -308,7 +301,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s09_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s10_rw": {
    "kind": "rw",
@@ -322,7 +315,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s10_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0001_s10_v": {
    "kind": "v",
@@ -336,7 +329,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0001_s10_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s01_rw": {
    "kind": "rw",
@@ -350,7 +343,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s01_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s01_v": {
    "kind": "v",
@@ -364,7 +357,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s01_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s02_rw": {
    "kind": "rw",
@@ -378,7 +371,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s02_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s02_v": {
    "kind": "v",
@@ -392,7 +385,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s02_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s03_rw": {
    "kind": "rw",
@@ -406,7 +399,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s03_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s03_v": {
    "kind": "v",
@@ -420,7 +413,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s03_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s04_rw": {
    "kind": "rw",
@@ -434,7 +427,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s04_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s05_rw": {
    "kind": "rw",
@@ -448,7 +441,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s05_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s05_v": {
    "kind": "v",
@@ -462,7 +455,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s05_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s06_rw": {
    "kind": "rw",
@@ -476,7 +469,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s06_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s06_v": {
    "kind": "v",
@@ -490,7 +483,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s06_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s07_rw": {
    "kind": "rw",
@@ -504,7 +497,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s07_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s07_v": {
    "kind": "v",
@@ -518,7 +511,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s07_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s08_rw": {
    "kind": "rw",
@@ -532,7 +525,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s08_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s08_v": {
    "kind": "v",
@@ -546,7 +539,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s08_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s09_rw": {
    "kind": "rw",
@@ -560,7 +553,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s09_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s09_v": {
    "kind": "v",
@@ -574,7 +567,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s09_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s10_rw": {
    "kind": "rw",
@@ -588,7 +581,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s10_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0002_s10_v": {
    "kind": "v",
@@ -602,7 +595,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0002_s10_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s01_rw": {
    "kind": "rw",
@@ -616,7 +609,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s01_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s01_v": {
    "kind": "v",
@@ -630,7 +623,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s01_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s02_rw": {
    "kind": "rw",
@@ -644,7 +637,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s02_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s02_v": {
    "kind": "v",
@@ -658,7 +651,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s02_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s03_rw": {
    "kind": "rw",
@@ -672,7 +665,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s03_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s03_v": {
    "kind": "v",
@@ -686,7 +679,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s03_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s04_rw": {
    "kind": "rw",
@@ -700,7 +693,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s04_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s05_rw": {
    "kind": "rw",
@@ -714,7 +707,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s05_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s05_v": {
    "kind": "v",
@@ -728,7 +721,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s05_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s06_rw": {
    "kind": "rw",
@@ -742,7 +735,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s06_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s06_v": {
    "kind": "v",
@@ -756,7 +749,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s06_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s07_rw": {
    "kind": "rw",
@@ -770,7 +763,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s07_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s07_v": {
    "kind": "v",
@@ -784,7 +777,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s07_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s08_rw": {
    "kind": "rw",
@@ -798,7 +791,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s08_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s08_v": {
    "kind": "v",
@@ -812,7 +805,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s08_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s09_rw": {
    "kind": "rw",
@@ -826,7 +819,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s09_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s09_v": {
    "kind": "v",
@@ -840,7 +833,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s09_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s10_rw": {
    "kind": "rw",
@@ -854,7 +847,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s10_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s10_v": {
    "kind": "v",
@@ -868,7 +861,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0003_s10_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s01_rw": {
    "kind": "rw",
@@ -882,7 +875,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s01_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s01_v": {
    "kind": "v",
@@ -896,7 +889,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s01_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s02_rw": {
    "kind": "rw",
@@ -910,7 +903,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s02_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s02_v": {
    "kind": "v",
@@ -924,7 +917,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s02_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s03_rw": {
    "kind": "rw",
@@ -938,7 +931,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s03_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s03_v": {
    "kind": "v",
@@ -952,7 +945,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s03_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s05_rw": {
    "kind": "rw",
@@ -966,7 +959,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s05_rw.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s05_v": {
    "kind": "v",
@@ -980,7 +973,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s05_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0004_s06_v": {
    "kind": "v",
@@ -994,7 +987,7 @@
    "status": "ADOPTED-PHASE2E",
    "adopted_from": "phase2e",
    "source": "translation-offline/phase2e/out/sessions/cz_0004_s06_v.json",
-   "ts": "2026-09-20T23:52:25"
+   "ts": "2026-09-21T00:34:19"
   },
   "cz_0003_s04_v": {
    "kind": "v",
@@ -1006,57 +999,5 @@
    "why": "retries_exhausted after 3 retries (429)",
    "ts": "2026-09-21T00:28:37"
   }
- },
- "part1_stages": [
-  {
-   "stage": "annotate",
-   "at": "2026-09-21T00:28:38",
-   "cumulative_headless_tokens": 591139,
-   "rows_present": 2800,
-   "new_rows_paid_for_in_2F": 0,
-   "tok_per_new_row": null,
-   "projected_part1_total_tokens": null,
-   "tripwire": 2000000
-  },
-  {
-   "stage": "lk",
-   "at": "2026-09-21T00:28:42",
-   "cumulative_headless_tokens": 591139,
-   "rows_present": 2800,
-   "new_rows_paid_for_in_2F": 0,
-   "tok_per_new_row": null,
-   "projected_part1_total_tokens": null,
-   "tripwire": 2000000
-  },
-  {
-   "stage": "upload",
-   "at": "2026-09-21T00:28:42",
-   "cumulative_headless_tokens": 591139,
-   "rows_present": 2800,
-   "new_rows_paid_for_in_2F": 0,
-   "tok_per_new_row": null,
-   "projected_part1_total_tokens": null,
-   "tripwire": 2000000
-  },
-  {
-   "stage": "adopt",
-   "at": "2026-09-21T00:34:18",
-   "cumulative_headless_tokens": 591139,
-   "rows_present": 2800,
-   "new_rows_paid_for_in_2F": 0,
-   "tok_per_new_row": null,
-   "projected_part1_total_tokens": null,
-   "tripwire": 2000000
-  },
-  {
-   "stage": "refused_chunks",
-   "at": "2026-09-21T00:34:18",
-   "cumulative_headless_tokens": 591139,
-   "rows_present": 2800,
-   "new_rows_paid_for_in_2F": 0,
-   "tok_per_new_row": null,
-   "projected_part1_total_tokens": null,
-   "tripwire": 2000000
-  }
- ]
+ }
 }
