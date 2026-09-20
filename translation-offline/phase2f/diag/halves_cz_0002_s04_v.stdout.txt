@@ -8,3 +8,48 @@
 2026-09-20 23:25:57 HALF-RESULT cz_0002_s04_v_h1 {"sid": "cz_0002_s04_v_h1", "n_range": [5365, 5414], "prompt_chars": 16572, "prompt_bytes": 16887, "result": "('cz_0002_s04_v_h1', [{'n': 5365, 'v': ['Ten paper cups stand on the water table.'], 'lk': ['cups'], 'lk_verdict': 'exact', 'lk_reason': 'plural noun is the target', 'voice': 'active_agent', 'subject': 'deset papírových kelímků', 'agent_nom': True, 'embedded_agents': [], 'gender': 'm', 'tf': 'presen", "wall_s": 0.0, "tokens": 0, "retry_attempts_429_or_nonzero": 0, "exit": 0, "session_tokens": 66724, "rows_returned": 50, "covers_its_half": true, "SUCCEEDED": true}
 2026-09-20 23:30:07 RETRY cz_0002_s04_v_h2 v attempt 1 of 3 reason 429 sleep 77.3s counted:false
 2026-09-20 23:31:06 RETRY cz_0002_s04_v_h1 v attempt 1 of 3 reason 429 sleep 79.7s counted:false
+2026-09-20 23:36:11 RETRY cz_0002_s04_v_h2 v attempt 2 of 3 reason 429 sleep 128.8s counted:false
+2026-09-20 23:43:52 RETRY cz_0002_s04_v_h2 v attempt 3 of 3 reason 429 sleep 254.3s counted:false
+2026-09-20 23:52:24 GIVEUP cz_0002_s04_v_h2 v retries_exhausted after 3 retries (429) tok 218588 wall 1586.4 - moving on, the run never hangs
+2026-09-20 23:52:24 HALF-RESULT cz_0002_s04_v_h2 {"sid": "cz_0002_s04_v_h2", "n_range": [5415, 5464], "prompt_chars": 16763, "prompt_bytes": 17073, "result": "('cz_0002_s04_v_h2', ('GIVEUP', 'cz_0002_s04_v_h2', 'retries_exhausted'))", "wall_s": 1586.4, "tokens": 218588, "retry_attempts_429_or_nonzero": 4, "exit": null, "session_tokens": null, "rows_returned": 0, "covers_its_half": false, "SUCCEEDED": false}
+{
+ "h1": {
+  "sid": "cz_0002_s04_v_h1",
+  "n_range": [
+   5365,
+   5414
+  ],
+  "prompt_chars": 16572,
+  "prompt_bytes": 16887,
+  "result": "('cz_0002_s04_v_h1', [{'n': 5365, 'v': ['Ten paper cups stand on the water table.'], 'lk': ['cups'], 'lk_verdict': 'exact', 'lk_reason': 'plural noun is the target', 'voice': 'active_agent', 'subject': 'deset papírových kelímků', 'agent_nom': True, 'embedded_agents': [], 'gender': 'm', 'tf': 'presen",
+  "wall_s": 0.0,
+  "tokens": 0,
+  "retry_attempts_429_or_nonzero": 0,
+  "exit": 0,
+  "session_tokens": 66724,
+  "rows_returned": 50,
+  "covers_its_half": true,
+  "SUCCEEDED": true
+ },
+ "h2": {
+  "sid": "cz_0002_s04_v_h2",
+  "n_range": [
+   5415,
+   5464
+  ],
+  "prompt_chars": 16763,
+  "prompt_bytes": 17073,
+  "result": "('cz_0002_s04_v_h2', ('GIVEUP', 'cz_0002_s04_v_h2', 'retries_exhausted'))",
+  "wall_s": 1586.4,
+  "tokens": 218588,
+  "retry_attempts_429_or_nonzero": 4,
+  "exit": null,
+  "session_tokens": null,
+  "rows_returned": 0,
+  "covers_its_half": false,
+  "SUCCEEDED": false
+ },
+ "both_succeeded": false,
+ "total_wall_s": 1586.4,
+ "total_tokens": 218588
+}
