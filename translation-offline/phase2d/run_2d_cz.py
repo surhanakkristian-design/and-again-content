@@ -506,7 +506,8 @@ def adopt_2c_sessions():
         os.path.relpath(SESSDIR, H), "->", ",".join(got))
     if skipped:
         defect("2C session file(s) not adoptable (unparsable or exit != 0): %s" % skipped)
-    commit([LEDGER], "Phase 2D: adopt %d finished 2C Czech sessions (copied, phase2c untouched)" % len(got))
+    commit([LEDGER] + [sess_path(x) for x in got],
+           "Phase 2D: adopt %d finished 2C Czech sessions (copied, phase2c untouched)" % len(got))
     return got
 
 DRYVP, DRYAG = {}, {}                  # dry run only: the script's own AG v4 / reader readings
@@ -983,17 +984,21 @@ def selftest():
     STATE["kind"]["v"] = [10, 1_600_000, 9000.0]               # mean 160,000 tok / 900 s
     w, t = circuit_limits("v")
     ck("cb:scales_above_floor", (w, t) == (2700.0, 480000.0), "wall=%.0f tok=%.0f" % (w, t))
+    STATE["kind"]["v"] = [10, 950_000, 3000.0]                 # 2C's healthy mean: 95,000 tok / 300 s
+    w, t = circuit_limits("v")
     ck("cb:2C_runaway_impossible", 18839 > w and 436644 > t,
-       "2C's 18,839 s / 436,644 tok session is killed at %.0f s / flagged above %.0f tok" % (w, t))
+       "2C's 18,839 s / 436,644 tok session is killed at %.0f s and is over the %.0f tok ceiling" % (w, t))
     STATE["kind"] = collections.defaultdict(lambda: [0, 0, 0.0])
     # change 4: throughput guard
     g = ThroughputGuard()
-    t0, res = 1000.0, None
-    for i in range(1, 25):                                     # 24 minutes at 0 tok/s
+    t0, res, trip_at = 1000.0, None, None
+    for i in range(1, 40):                                     # minutes at 0 tok/s
         res = g.sample(t0 + 60 * i, 0)
-        if res and i <= TP_MIN_SAMPLES:
-            break
-    ck("guard:trips_at_20_low_minutes", res is not None and g.low == TP_MIN_SAMPLES, "low=%d" % g.low)
+        if res:
+            trip_at = i; break
+    ck("guard:trips_at_20_low_minutes",
+       res is not None and g.low == TP_MIN_SAMPLES and trip_at == TP_MIN_SAMPLES + 1,
+       "low=%d, tripped at minute %s (sample 1 has no trailing window yet)" % (g.low, trip_at))
     g2 = ThroughputGuard()
     tok = 0
     for i in range(1, 60):                                     # 100 tok/s forever
