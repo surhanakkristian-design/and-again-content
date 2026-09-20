@@ -91,3 +91,10 @@
 2026-09-20 15:11:47 SOFT-STOP throughput_guard measured throughput 0.0 tok/s stayed under 60 tok/s for 20 consecutive minutes (trailing 300 s window).
 
 2C ran five hours at 25 tok/s because nothing checked; this run stops spawning instead. In-flight sessions finish or hit the circuit breaker, everything complete is committed, resume with the same command. - no further sessions will be spawned; in-flight sessions may finish
+2026-09-20 15:20:07 RETRY cz_0002_s04_v v attempt 3 of 5 reason 429 sleep 256.4s counted:false
+2026-09-20 15:32:33 RETRY cz_0002_s04_v v attempt 4 of 5 reason 429 sleep 507.0s counted:false
+2026-09-20 15:48:29 RETRY cz_0002_s04_v v attempt 5 of 5 reason 429 sleep 961.5s counted:false
+2026-09-20 16:12:28 GIVEUP cz_0002_s04_v v retries_exhausted after 5 retries (429) tok 555531 wall 4900.7 - moving on, the run never hangs
+2026-09-20 16:12:28 INCOMPLETE cz_0002 1 session(s) missing: cz_0002_s04_v | rows lost 100 ['5365-5464'] | rows written anyway 900
+2026-09-20 16:12:28 DEFECT batch cz_0002 incomplete: sessions cz_0002_s04_v missing; 100 rows (5365-5464) not written, 900 rows written
+2026-09-20 16:12:28 GATE3 cz_0002 {"agv4": {"counts": {"AGREE": 46, "ERROR": 4}, "ERROR_of_decided_pct": 8.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 36, "CONSERVATIVE": 11, "ERROR": 3}, "ERROR_of_decided_pct": 7.69, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"AGREE": 37, "ERROR": 13}, "ERROR_of_decided_pct": 26.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 16.33}
