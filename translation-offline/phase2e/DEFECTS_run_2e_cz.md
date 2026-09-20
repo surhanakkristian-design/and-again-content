@@ -17,3 +17,5 @@ attempts across two phases (2D: 4 attempts, 364,431 tok; 2E: 6 attempts, 555,531
 rows). Every other session of that batch passed first time, and 2D's give-ups were also s04 of cz_0002, cz_0003
 and cz_0004. A per-chunk cause is more likely than the rate limiter. Not retried again in 2E: its 100 rows
 (n 5365-5464) stay missing, which is precisely what the 2E assemble-what-is-complete rule exists to tolerate.
+2026-09-20 16:35 prior session NOT adoptable -> treated as MISSING and re-run: phase2d/cz_0001_s07_v (rows is not a list (unparsable result))
+2026-09-20 17:52 batch cz_0003 incomplete: sessions cz_0003_s04_v missing; 100 rows (6365-6464) not written, 900 rows written
