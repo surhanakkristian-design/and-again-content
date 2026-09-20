@@ -181,3 +181,8 @@
 2026-09-20 17:21:42 SOFT-STOP throughput_guard measured throughput 0.0 tok/s stayed under 60 tok/s for 45 consecutive minutes (trailing 300 s window).
 
 2C ran five hours at 25 tok/s because nothing checked; this run stops spawning instead. In-flight sessions finish or hit the circuit breaker, everything complete is committed, resume with the same command. - no further sessions will be spawned; in-flight sessions may finish
+2026-09-20 17:28:47 RETRY cz_0003_s04_v v attempt 5 of 5 reason 429 sleep 984.8s counted:false
+2026-09-20 17:52:35 GIVEUP cz_0003_s04_v v retries_exhausted after 5 retries (429) tok 527721 wall 4613.5 - moving on, the run never hangs
+2026-09-20 17:52:35 INCOMPLETE cz_0003 1 session(s) missing: cz_0003_s04_v | rows lost 100 ['6365-6464'] | rows written anyway 900
+2026-09-20 17:52:35 DEFECT batch cz_0003 incomplete: sessions cz_0003_s04_v missing; 100 rows (6365-6464) not written, 900 rows written
+2026-09-20 17:52:36 GATE3 cz_0003 {"agv4": {"counts": {"AGREE": 47, "ERROR": 3}, "ERROR_of_decided_pct": 6.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 28, "CONSERVATIVE": 19, "ERROR": 3}, "ERROR_of_decided_pct": 9.68, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"ERROR": 15, "AGREE": 35}, "ERROR_of_decided_pct": 30.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 10.11}
