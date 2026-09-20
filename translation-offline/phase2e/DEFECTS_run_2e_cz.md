@@ -19,3 +19,11 @@ and cz_0004. A per-chunk cause is more likely than the rate limiter. Not retried
 (n 5365-5464) stay missing, which is precisely what the 2E assemble-what-is-complete rule exists to tolerate.
 2026-09-20 16:35 prior session NOT adoptable -> treated as MISSING and re-run: phase2d/cz_0001_s07_v (rows is not a list (unparsable result))
 2026-09-20 17:52 batch cz_0003 incomplete: sessions cz_0003_s04_v missing; 100 rows (6365-6464) not written, 900 rows written
+2026-09-20 17:52 DEFECT (2E change 4 treated the symptom, NOT fixed): raising the throughput floor from 20 to
+45 minutes was not enough. Two five-step back-off ladders in one run (cz_0002_s04_v earlier, cz_0003_s04_v at
+17:21) exceed 45 consecutive minutes of zero throughput, so the guard soft-stopped a second time and cz_0004
+and cz_0005 were never attempted. The guard must ignore time spent asleep in a back-off, not try to outlast it.
+2026-09-20 17:52 DEFECT: the s04 chunk of a batch has now been refused with 429 in cz_0002, cz_0003 and cz_0004
+across two phases (2D: cz_0002_s04_v, cz_0003_s04_v, cz_0004_s04_v, cz_0004_s04_rw; 2E: cz_0002_s04_v 555,531
+tok, cz_0003_s04_v 527,721 tok). Six give-ups, all s04, ~1.45 M tokens for zero rows. This is not the rate
+limiter behaving randomly and it is not diagnosed.
