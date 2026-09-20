@@ -161,3 +161,18 @@
 2026-09-21 00:00:25 THROUGHPUT rate 0.0 tok/s low_streak 7 cum_tok 285312 inflight 1 measured_window_s 173 backoff_sleep_excluded:true
 2026-09-21 00:01:25 THROUGHPUT rate 0.0 tok/s low_streak 8 cum_tok 285312 inflight 1 measured_window_s 173 backoff_sleep_excluded:true
 2026-09-21 00:02:25 THROUGHPUT rate 0.0 tok/s low_streak 9 cum_tok 285312 inflight 1 measured_window_s 173 backoff_sleep_excluded:true
+2026-09-21 00:03:25 THROUGHPUT rate 0.0 tok/s low_streak 10 cum_tok 285312 inflight 1 measured_window_s 211 backoff_sleep_excluded:true
+2026-09-21 00:04:25 THROUGHPUT rate 0.0 tok/s low_streak 11 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:05:25 THROUGHPUT rate 0.0 tok/s low_streak 12 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:06:25 THROUGHPUT rate 0.0 tok/s low_streak 13 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:07:25 THROUGHPUT rate 0.0 tok/s low_streak 14 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:08:25 THROUGHPUT rate 0.0 tok/s low_streak 15 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:08:33 RETRY cz_0003_s04_v v attempt 2 of 3 reason 429 sleep 135.9s counted:false
+2026-09-21 00:09:25 THROUGHPUT rate 0.0 tok/s low_streak 16 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:10:25 THROUGHPUT rate 0.0 tok/s low_streak 17 cum_tok 285312 inflight 1 measured_window_s 240 backoff_sleep_excluded:true
+2026-09-21 00:11:25 THROUGHPUT rate 0.0 tok/s low_streak 18 cum_tok 285312 inflight 1 measured_window_s 104 backoff_sleep_excluded:true
+2026-09-21 00:12:25 THROUGHPUT rate 0.0 tok/s low_streak 19 cum_tok 285312 inflight 1 measured_window_s 104 backoff_sleep_excluded:true
+2026-09-21 00:13:25 THROUGHPUT rate 0.0 tok/s low_streak 20 cum_tok 285312 inflight 1 measured_window_s 156 backoff_sleep_excluded:true
+2026-09-21 00:13:25 SOFT-STOP throughput_guard measured throughput 0.0 tok/s stayed under 60 tok/s for 20 consecutive minutes (trailing 300 s window).
+
+2C ran five hours at 25 tok/s because nothing checked; this run stops spawning instead. In-flight sessions finish or hit the circuit breaker, everything complete is committed, resume with the same command. - no further sessions will be spawned; in-flight sessions may finish
