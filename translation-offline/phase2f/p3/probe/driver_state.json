@@ -70,9 +70,77 @@
     "claude-opus-5"
    ],
    "permission_denials": 0
+  },
+  {
+   "session": "judge_part1_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 111996,
+   "total_cost_usd": 0.620447,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 28069,
+   "cache_read_input_tokens": 36474,
+   "output_tokens": 12860,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0
+  },
+  {
+   "session": "judge_part2_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 127063,
+   "total_cost_usd": 0.5490745,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 26141,
+   "cache_read_input_tokens": 36639,
+   "output_tokens": 10773,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0
+  },
+  {
+   "session": "judge_part3_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 136176,
+   "total_cost_usd": 0.669307,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 29581,
+   "cache_read_input_tokens": 36654,
+   "output_tokens": 14206,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0
+  },
+  {
+   "session": "judge_part4_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 106269,
+   "total_cost_usd": 0.6090610000000001,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 28046,
+   "cache_read_input_tokens": 36912,
+   "output_tokens": 12405,
+   "models": [
+    "claude-opus-5"
+   ],
+   "permission_denials": 0
   }
  ],
- "stage": "writer",
+ "stage": "judge",
  "gemini_counted": 0,
  "started": "2026-09-21T00:31:04",
  "budget_before": {
@@ -81,5 +149,32 @@
  },
  "part2_counted": 0,
  "allowed_calls": 320,
- "budget_msg": "part2_counted 0 + 250 = 250, within the 900 phase cap; this probe may spend at most 320 counted calls (declared budget 250, local ceiling 320)"
+ "budget_msg": "part2_counted 0 + 250 = 250, within the 900 phase cap; this probe may spend at most 320 counted calls (declared budget 250, local ceiling 320)",
+ "judge_noise": {
+  "duplicate_controls_judged": 36,
+  "label_disagreements": 0,
+  "type_only_disagreements": 0,
+  "judge_noise_pct": 0.0,
+  "judge_noise_cp": {
+   "k": 0,
+   "n": 36,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    100.0
+   ]
+  },
+  "items_labelled": 360,
+  "judged": {
+   "correct": 182,
+   "wrong": 178
+  },
+  "types": {
+   "S": 31,
+   "M": 55,
+   "T": 52,
+   "W": 40
+  },
+  "borderline": 37
+ }
 }

@@ -165,3 +165,77 @@
 2026-09-21 00:28:37 BATCH-DONE cz_0003 rows_written 900 of 1000 wall_s 2171.5 cum_tok 591139 complete False
 2026-09-21 00:28:37 PROJECTION cz_0003 no rows paid for in this process (all sessions adopted); gate not applicable
 FATAL: --only id(s) ['cz_0004_s01_rw', 'cz_0004_s01_v', 'cz_0004_s02_rw', 'cz_0004_s02_v', 'cz_0004_s03_rw', 'cz_0004_s03_v', 'cz_0004_s04_rw', 'cz_0004_s04_v', 'cz_0004_s05_rw', 'cz_0004_s05_v', 'cz_0004_s06_rw', 'cz_0004_s06_v', 'cz_0004_s07_rw', 'cz_0004_s07_v', 'cz_0004_s08_rw', 'cz_0004_s08_v', 'cz_0004_s09_rw', 'cz_0004_s09_v', 'cz_0004_s10_rw', 'cz_0004_s10_v', 'cz_0005_s01_rw', 'cz_0005_s01_v'] matched no session; nothing was ignored silently
+2026-09-21 00:34:19 ADOPT 67 finished Czech sessions COPIED (read only) from {'phase2e': 67} | 0 tokens each -> cz_0001_s01_rw,cz_0001_s01_v,cz_0001_s02_rw,cz_0001_s02_v,cz_0001_s03_rw,cz_0001_s03_v,cz_0001_s04_rw,cz_0001_s04_v,cz_0001_s05_rw,cz_0001_s05_v,cz_0001_s06_rw,cz_0001_s06_v,cz_0001_s07_rw,cz_0001_s07_v,cz_0001_s08_rw,cz_0001_s08_v,cz_0001_s09_rw,cz_0001_s09_v,cz_0001_s10_rw,cz_0001_s10_v,cz_0002_s01_rw,cz_0002_s01_v,cz_0002_s02_rw,cz_0002_s02_v,cz_0002_s03_rw,cz_0002_s03_v,cz_0002_s04_rw,cz_0002_s05_rw,cz_0002_s05_v,cz_0002_s06_rw,cz_0002_s06_v,cz_0002_s07_rw,cz_0002_s07_v,cz_0002_s08_rw,cz_0002_s08_v,cz_0002_s09_rw,cz_0002_s09_v,cz_0002_s10_rw,cz_0002_s10_v,cz_0003_s01_rw,cz_0003_s01_v,cz_0003_s02_rw,cz_0003_s02_v,cz_0003_s03_rw,cz_0003_s03_v,cz_0003_s04_rw,cz_0003_s05_rw,cz_0003_s05_v,cz_0003_s06_rw,cz_0003_s06_v,cz_0003_s07_rw,cz_0003_s07_v,cz_0003_s08_rw,cz_0003_s08_v,cz_0003_s09_rw,cz_0003_s09_v,cz_0003_s10_rw,cz_0003_s10_v,cz_0004_s01_rw,cz_0004_s01_v,cz_0004_s02_rw,cz_0004_s02_v,cz_0004_s03_rw,cz_0004_s03_v,cz_0004_s05_rw,cz_0004_s05_v,cz_0004_s06_v
+2026-09-21 00:34:19 GIT-NOTE ['translation-offline/phase2f/ledger_2f_cz.json', 'translation-offline/phase2f/out/sessions/cz_0001_s01_rw.json', 'translation-offline/phase2f/out/sessions/cz_0001_s01_v.json'] _thumbs_20260917.py 	translation-offline/phase2d/run_2d_cz.stdout.txt  keine Änderungen zum Commit vorgemerkt (benutzen Sie "git add" und/oder "git commit -a") 
+2026-09-21 00:34:19 ALT index 1434 members 3764 surface 975 phrases 288 candidates
+2026-09-21 00:34:19 START LIVE batches ['cz_0001', 'cz_0002', 'cz_0003', 'cz_0004', 'cz_0005'] rows 4064 cap 1408861 already_spent 591139 par 2 prompt_sha {'v_cz': '4f9d486477084793', 'rw': 'a113461f4bdbd418'} lk_needs_dedicated_pass True adopted 67 only ['cz_0004_s01_v', 'cz_0004_s01_rw', 'cz_0004_s02_v', 'cz_0004_s02_rw', 'cz_0004_s03_v', 'cz_0004_s03_rw', 'cz_0004_s04_v', 'cz_0004_s04_rw', 'cz_0004_s05_v', 'cz_0004_s05_rw', 'cz_0004_s06_v', 'cz_0004_s06_rw', 'cz_0004_s07_v', 'cz_0004_s07_rw', 'cz_0004_s08_v', 'cz_0004_s08_rw', 'cz_0004_s09_v', 'cz_0004_s09_rw', 'cz_0004_s10_v', 'cz_0004_s10_rw', 'cz_0005_s01_v', 'cz_0005_s01_rw']
+2026-09-21 00:34:19 PLAN {"batches": [{"batch": "cz_0001", "rows": 1000, "v_sessions": 10, "v_done": 10, "rw_done": 10, "v_left": 0}, {"batch": "cz_0002", "rows": 1000, "v_sessions": 10, "v_done": 9, "rw_done": 10, "v_left": 1}, {"batch": "cz_0003", "rows": 1000, "v_sessions": 10, "v_done": 9, "rw_done": 10, "v_left": 1}, {"batch": "cz_0004", "rows": 1000, "v_sessions": 10, "v_done": 5, "rw_done": 4, "v_left": 5}, {"batch": "cz_0005", "rows": 64, "v_sessions": 1, "v_done": 0, "rw_done": 0, "v_left": 1}], "rows_left_v": 764, "v_sessions_left": 8, "adopted_sessions": 67, "cz_healthy_tok_per_sentence": 1379.0, "projected_tokens_v_rows": 1053556, "measured_2c_per_slot_tok_per_s": 239.3, "n_2c_sessions_measured": 82, "projected_wall_h_at_par_2": 0.61}
+2026-09-21 00:34:19 SKIP-BATCH cz_0001 already complete (DONE marker + annotations file)
+2026-09-21 00:34:19 BATCH cz_0002 cz 1000 rows, 20 sessions total, 19 already complete (0 tokens): cz_0002_s01_v,cz_0002_s01_rw,cz_0002_s02_v,cz_0002_s02_rw,cz_0002_s03_v,cz_0002_s03_rw,cz_0002_s04_rw,cz_0002_s05_v,cz_0002_s05_rw,cz_0002_s06_v,cz_0002_s06_rw,cz_0002_s07_v,cz_0002_s07_rw,cz_0002_s08_v,cz_0002_s08_rw,cz_0002_s09_v,cz_0002_s09_rw,cz_0002_s10_v,cz_0002_s10_rw | 0 to run now, par 2
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s01_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s01_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s02_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s02_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s03_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s03_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s04_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s05_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s05_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s06_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s06_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s07_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s07_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s08_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s08_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s09_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s09_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s10_v already complete on disk, 0 tokens
+2026-09-21 00:34:19 SKIP-DONE cz_0002_s10_rw already complete on disk, 0 tokens
+2026-09-21 00:34:19 HALF-CHUNK cz_0002_s04_v recovered 50 row(s) ['5365-5414'] | still missing 50
+2026-09-21 00:34:19 INCOMPLETE cz_0002 1 session(s) missing: cz_0002_s04_v | rows lost 50 ['5415-5464'] | rows written anyway 950
+2026-09-21 00:34:19 DEFECT batch cz_0002 incomplete: sessions cz_0002_s04_v missing; 50 rows (5415-5464) not written, 950 rows written
+2026-09-21 00:34:19 GATE3 cz_0002 {"agv4": {"counts": {"AGREE": 44, "ERROR": 6}, "ERROR_of_decided_pct": 12.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 30, "CONSERVATIVE": 17, "ERROR": 3}, "ERROR_of_decided_pct": 9.09, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"AGREE": 38, "ERROR": 12}, "ERROR_of_decided_pct": 24.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 15.89}
+2026-09-21 00:34:19 BATCH-DONE cz_0002 rows_written 950 of 1000 wall_s 0.4 cum_tok 591139 complete False
+2026-09-21 00:34:20 PROJECTION cz_0002 no rows paid for in this process (all sessions adopted); gate not applicable
+2026-09-21 00:34:20 BATCH cz_0003 cz 1000 rows, 20 sessions total, 19 already complete (0 tokens): cz_0003_s01_v,cz_0003_s01_rw,cz_0003_s02_v,cz_0003_s02_rw,cz_0003_s03_v,cz_0003_s03_rw,cz_0003_s04_rw,cz_0003_s05_v,cz_0003_s05_rw,cz_0003_s06_v,cz_0003_s06_rw,cz_0003_s07_v,cz_0003_s07_rw,cz_0003_s08_v,cz_0003_s08_rw,cz_0003_s09_v,cz_0003_s09_rw,cz_0003_s10_v,cz_0003_s10_rw | 0 to run now, par 2
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s01_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s01_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s02_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s02_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s03_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s03_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s04_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s05_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s05_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s06_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s06_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s07_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s07_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s08_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s08_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s09_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s09_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s10_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0003_s10_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 INCOMPLETE cz_0003 1 session(s) missing: cz_0003_s04_v | rows lost 100 ['6365-6464'] | rows written anyway 900
+2026-09-21 00:34:20 DEFECT batch cz_0003 incomplete: sessions cz_0003_s04_v missing; 100 rows (6365-6464) not written, 900 rows written
+2026-09-21 00:34:20 GATE3 cz_0003 {"agv4": {"counts": {"AGREE": 47, "ERROR": 3}, "ERROR_of_decided_pct": 6.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 28, "CONSERVATIVE": 19, "ERROR": 3}, "ERROR_of_decided_pct": 9.68, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"ERROR": 15, "AGREE": 35}, "ERROR_of_decided_pct": 30.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 10.11}
+2026-09-21 00:34:20 BATCH-DONE cz_0003 rows_written 900 of 1000 wall_s 0.4 cum_tok 591139 complete False
+2026-09-21 00:34:20 PROJECTION cz_0003 no rows paid for in this process (all sessions adopted); gate not applicable
+2026-09-21 00:34:20 BATCH cz_0004 cz 1000 rows, 20 sessions total, 9 already complete (0 tokens): cz_0004_s01_v,cz_0004_s01_rw,cz_0004_s02_v,cz_0004_s02_rw,cz_0004_s03_v,cz_0004_s03_rw,cz_0004_s05_v,cz_0004_s05_rw,cz_0004_s06_v | 20 to run now, par 2
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s01_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s01_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s02_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s02_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s03_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s03_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s05_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s05_rw already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s06_v already complete on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s01_v v 100 rows already on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s01_rw rw 39 rows already on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s02_v v 100 rows already on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s02_rw rw 38 rows already on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s03_v v 100 rows already on disk, 0 tokens
+2026-09-21 00:34:20 SKIP-DONE cz_0004_s03_rw rw 45 rows already on disk, 0 tokens
+2026-09-21 00:35:19 THROUGHPUT rate 0.0 tok/s low_streak 0 cum_tok 591139 inflight 2 measured_window_s 0 unmeasurable_windows 0 backoff_sleep_excluded:true
