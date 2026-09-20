@@ -489,7 +489,7 @@ def adopt_prior_sessions():
     phase2e/out/sessions/.  phase2e is searched first (it already holds 2C's own 13 copies).  A file that
     does not parse, did not exit 0, or does not cover its whole chunk is NOT adopted: it is treated as
     MISSING and re-run.  That is how cz_0001_s07_v (exit 0, unparsable, 81,602 tok in 2E) comes back."""
-    srcs = [("phase2e", os.path.join(D2, "out", "sessions")), ("phase2c", os.path.join(C2, "out", "sessions"))]
+    srcs = [("phase2d", os.path.join(D2, "out", "sessions")), ("phase2c", os.path.join(C2, "out", "sessions"))]
     got, rejected, per_src, seen = [], [], collections.Counter(), set()
     for tag, src in srcs:
         if not os.path.isdir(src):
