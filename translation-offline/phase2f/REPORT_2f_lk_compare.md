@@ -4,4 +4,4 @@
 
 Reference figures, unchanged: Czech pooled 2E 52.44 % [50.54, 54.34] (1416/2700); Slovak 1W / 2D 51.13 %.
 
-Written %Y-%m-%dT%H:%M:%S.
+Written 2026-09-21T01:13:17.

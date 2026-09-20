@@ -240,7 +240,7 @@ def main():
             "# 2F lk pass - non-exact rate with exact 95 %% Clopper-Pearson\n\n"
             "**No comparison could be computed.** %s\n\n"
             "Reference figures, unchanged: Czech pooled 2E 52.44 %% [50.54, 54.34] (1416/2700); "
-            "Slovak 1W / 2D 51.13 %%.\n\nWritten %s.\n" % (why, time.strftime("%%Y-%%m-%%dT%%H:%%M:%%S")))
+            "Slovak 1W / 2D 51.13 %%.\n\nWritten %s.\n" % (why, time.strftime("%Y-%m-%dT%H:%M:%S")))
         log("CP-COMPARE", "degraded note written to REPORT_2f_lk_compare.md")
     run([sys.executable, "build_upload_cz.py"], "build_upload_cz")
     try:

@@ -53,3 +53,24 @@ the previous run's stop file would have downgraded this run too.  `STOP_throughp
 to `archive/STOP_throughput_guard_20260921_0013.md` before the relaunch.
 2026-09-21 00:34 batch cz_0002 incomplete: sessions cz_0002_s04_v missing; 50 rows (5415-5464) not written, 950 rows written
 2026-09-21 00:34 batch cz_0003 incomplete: sessions cz_0003_s04_v missing; 100 rows (6365-6464) not written, 900 rows written
+
+## D-2F-11 — cz_0004 costs ~6x the healthy rate and is 429-limited (RECORDED, NOT FIXED)
+
+The 2026-09-21 00:34 run spent 875,000 tokens on cz_0004 and assembled ZERO of its rows: it stopped on
+`STOP_token_cap.md` at cz_0004_s09_v (1,410,428 spent + 95,000 in flight + 79,155 projected > cap
+1,408,861), i.e. below the 2,000,000 tripwire, with 12 HTTP 429s and three retries-exhausted give-ups
+(cz_0004_s04_rw, cz_0004_s04_v, plus cz_0003_s04_v at 00:28).  cz_0004 never reached assembly, so it
+has no annotations file, no meta and no GATE 3.  Measured cost this run: 29,322 tokens per NEW row
+against the healthy 1,379 tok/sentence.  The guard was NOT the cause this time and did not fire.
+
+## D-2F-12 — the 50 recovered rows got no lk pass (RECORDED, NOT FIXED)
+
+`run_part1.py` step 4 downgrades the dedicated lk pass to `--merge-only` whenever ANY `STOP_*.md`
+exists.  `STOP_token_cap.md` was written by this run, so the 50 newly assembled rows (5365-5414) were
+never lk-judged and `out/REPORT_2f_lk.json` was again not produced; the comparison degraded to the
+written "no new rows" note as designed, with no FileNotFoundError.
+
+## D-2F-13 — the degraded-note timestamp printed its own format string (FIXED)
+
+Over-escaped `%%Y-%%m-%%dT%%H:%%M:%%S` inside a `%`-formatted literal.  Fixed in `run_part1.py`; the
+one emitted `REPORT_2f_lk_compare.md` was corrected to its real write time.
