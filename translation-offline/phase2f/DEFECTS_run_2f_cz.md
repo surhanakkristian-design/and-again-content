@@ -51,3 +51,4 @@ then logged a `FileNotFoundError`.  It now writes `REPORT_2f_lk_compare.md` with
 `run_part1.py` step 4 skips the paid lk pass when ANY `STOP_*.md` exists in the phase directory, so
 the previous run's stop file would have downgraded this run too.  `STOP_throughput_guard.md` is moved
 to `archive/STOP_throughput_guard_20260921_0013.md` before the relaunch.
+2026-09-21 00:34 batch cz_0002 incomplete: sessions cz_0002_s04_v missing; 50 rows (5415-5464) not written, 950 rows written
