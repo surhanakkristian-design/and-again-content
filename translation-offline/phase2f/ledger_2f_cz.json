@@ -1,10 +1,10 @@
 {
  "cap": 1408861,
- "spent": 591139,
+ "spent": 787055,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-21T00:34:20",
- "wall_s_this_process": 0.8,
+ "updated": "2026-09-21T00:51:23",
+ "wall_s_this_process": 1023.6,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -16,8 +16,15 @@
   "min_tok_per_s": 60.0,
   "min_minutes": 20
  },
- "retries": 0,
- "giveups": [],
+ "retries": 6,
+ "giveups": [
+  {
+   "session": "cz_0004_s04_rw",
+   "why": "retries_exhausted after 3 retries (429)",
+   "tokens": 195916,
+   "wall_s": 1022.5
+  }
+ ],
  "stop_spawn": null,
  "by_kind": {
   "v": {
@@ -26,6 +33,13 @@
    "wall_s": 298.9,
    "mean_tokens": 66724.0,
    "mean_wall_s": 298.9
+  },
+  "rw": {
+   "sessions": 0,
+   "tokens": 0,
+   "wall_s": 0.0,
+   "mean_tokens": null,
+   "mean_wall_s": null
   }
  },
  "sessions": {
@@ -998,6 +1012,16 @@
    "status": "GIVEUP",
    "why": "retries_exhausted after 3 retries (429)",
    "ts": "2026-09-21T00:28:37"
+  },
+  "cz_0004_s04_rw": {
+   "kind": "rw",
+   "tokens": 195916,
+   "wall_s": 1022.5,
+   "exit": null,
+   "rows": 0,
+   "status": "GIVEUP",
+   "why": "retries_exhausted after 3 retries (429)",
+   "ts": "2026-09-21T00:51:23"
   }
  }
 }
