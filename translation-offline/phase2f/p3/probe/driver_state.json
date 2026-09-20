@@ -5,6 +5,26 @@
   {
    "what": "planned calls above the declared ~250 budget",
    "detail": "312 planned; spent anyway because the HARD constraint is the phase-wide cap of 900 shared with Part 2 (0 counted there), and the brief forbids narrowing the scope to fit. Local ceiling 320."
+  },
+  {
+   "what": "Clopper-Pearson helper in the PROBE REPORTING LAYER was wrong (found after the run, fixed, 0 model calls)",
+   "detail": "p3_probe.cp() inverted 1 - I_p(a,b) with a bisection that assumes an increasing function, so every interval came back degenerate ([0,0] for coverage, [100,100] for FA). k/n were never affected. Fixed to the textbook form lower = BetaInv(a; k, n-k+1), upper = BetaInv(1-a; k+1, n-k); the fixed helper now reproduces the FROZEN scorer (phase1t/run/score_1t.cp) to the last digit on this run and on 1W 392/401 and 16/499. The published headline is the frozen scorer, not my helper. The measuring apparatus was wrong before the measurement was - 8th occurrence of that pattern."
+  },
+  {
+   "what": "8 of the 36 hidden duplicate controls landed in the SAME judge packet",
+   "detail": "build_packets shuffles the item+duplicate sequence and then splits it into 4 contiguous packets, which does not force the two copies of a control into different packets. 28 of 36 pairs are cross-packet, 8 are within one packet, where the judge could in principle have anchored on its own earlier answer. The judge-noise rate is therefore an upper estimate of agreement quality / a lower estimate of noise. NOT fixed and NOT re-run: recorded."
+  },
+  {
+   "what": "the probe spent 312 counted calls against the declared ~250 budget",
+   "detail": "the preflight planned 312 and the brief forbids narrowing the scope to fit, so the run went ahead under the HARD constraint (the phase-wide 900 shared with Part 2, which had counted 0). Local ceiling was 320. Reported, not hidden."
+  },
+  {
+   "what": "the 1U construction floors cannot hold on production material",
+   "detail": "the seven F1-F5 floors are properties of a CONSTRUCTED set. The probe set is real uploaded production text, so the gate was kept structurally (a missing or malformed key still refuses) with every minimum set to 0 and the real counts reported as cells. A recorded DEVIATION, not a tuned gate."
+  },
+  {
+   "what": "production rows carry no topic field",
+   "detail": "phase2d/out/annotations_sk_final.jsonl has no 'topic'; the judge packet's topic is the row's type_title (the exercise type). Stated so the 1N defect (topic dropped from the packet, 13 labels moved) cannot recur silently."
   }
  ],
  "sessions": [

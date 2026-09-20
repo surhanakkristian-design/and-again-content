@@ -66,8 +66,8 @@ CAP_PART31_MAX = 320      # local ceiling; the HARD constraint is CAP_PHASE minu
 WAIT_MAX_S = 10 * 3600
 WAIT_POLL_S = 120
 # 1W blind-test Slovak, the comparison the brief names
-W1_COV = (218, 223, 97.76, 95.78, 98.97)
-W1_FA = (16, 498, 3.21, 1.84, 5.15)
+W1_COV = (392, 401, 97.76, 95.78, 98.97)
+W1_FA = (16, 499, 3.21, 1.84, 5.15)
 
 TAGS_OK = ('plain', 'determiner', 'aspect', 'number', 'by-passive', 'by-passive-embedded',
            'skp-passive', 'drop-main', 'drop-fronted', 'drop-misaligned', 'drop-other',
@@ -212,9 +212,13 @@ def cp(k, n, conf=0.95):
     """Exact Clopper-Pearson two-sided interval, in percent."""
     if not n:
         return {'k': k, 'n': n, 'pct': None, 'ci': [None, None]}
+    # DEFECT FIXED (reporting layer only, 0 model calls): betai is INCREASING in p, so the
+    # earlier 1 - betai form inverted a decreasing function with a bisection that assumes an
+    # increasing one and returned degenerate [0,0] / [100,100] bounds.  Clopper-Pearson is
+    # lower = BetaInv(a; k, n-k+1), upper = BetaInv(1-a; k+1, n-k).
     a = (1 - conf) / 2
-    lo = 0.0 if k == 0 else _inv(lambda p: 1 - betai(k, n - k + 1, p), 1 - a)
-    hi = 1.0 if k == n else _inv(lambda p: 1 - betai(k + 1, n - k, p), a)
+    lo = 0.0 if k == 0 else _inv(lambda p: betai(k, n - k + 1, p), a)
+    hi = 1.0 if k == n else _inv(lambda p: betai(k + 1, n - k, p), 1 - a)
     return {'k': k, 'n': n, 'pct': round(100.0 * k / n, 2),
             'ci': [round(100 * lo, 2), round(100 * hi, 2)]}
 
@@ -1401,16 +1405,56 @@ def pipeline(stub=False):
     return True
 
 
+
+def _post_defects():
+    pass
+
+
+def rescore():
+    """Rebuild the report from the stored artefacts.  0 model calls, nothing re-run, nothing
+    tuned: only the reporting layer (the Clopper-Pearson helper) changed."""
+    sel = jload(os.path.join(SET, 'selection.json'))
+    items = jload(os.path.join(DATA, 'items.json'))
+    labels = jload(os.path.join(DATA, 'labels.json'))
+    noise = jload(os.path.join(SET, 'judge', 'join_labels.json'))
+    if noise is not None:
+        n_p = noise.get('duplicate_controls_judged') or 0
+        noise['judge_noise_cp'] = cp(noise.get('label_disagreements') or 0, n_p) if n_p else None
+        pk = jload(os.path.join(SET, 'judge', 'packets.json')) or {}
+        by = collections.defaultdict(list)
+        for jid, m in (pk.get('key') or {}).items():
+            by[m['item_id']].append(m['packet_part'])
+        pr = [v for v in by.values() if len(v) > 1]
+        noise['duplicate_controls_cross_packet'] = sum(1 for v in pr if len(set(v)) > 1)
+        noise['duplicate_controls_same_packet'] = sum(1 for v in pr if len(set(v)) == 1)
+        jdump(noise, os.path.join(SET, 'judge', 'join_labels.json'))
+    res = jload(os.path.join(RUN, 'results_1u.json'))
+    calls = calls_stats(RUN)
+    st = jload(STATE) or {}
+    for k in ('freeze_hash', 'run_commit', 'final_run_done', 'final_exit', 'preflight',
+              'budget_msg', 'budget_before', 'budget_after', 'sessions', 'notes', 'defects',
+              'part2_counted', 'allowed_calls', 'started'):
+        if k in st:
+            R[k] = st[k]
+    R['status'] = 'completed'
+    cells = cells_from_rows(res, items, labels)
+    write_report(res, jload(os.path.join(RUN, 'score_1u.json')), cells, noise, sel, calls, RUN)
+    return True
+
 def main():
     global SET, DATA, RUN, SESS, STATE, LOG
     ap = argparse.ArgumentParser()
     ap.add_argument('--selftest', action='store_true')
     ap.add_argument('--run', action='store_true')
+    ap.add_argument('--rescore', action='store_true')
     a = ap.parse_args()
     old = jload(STATE)
     if old and a.run:
         R.update(old)
         R['status'] = None
+    if a.rescore:
+        rescore()
+        return 0
     if a.selftest:
         # a throwaway copy of the whole probe layout; touches nothing the real run uses
         base = os.path.join(PROBE, '_selftest')
