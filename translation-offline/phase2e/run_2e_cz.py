@@ -74,7 +74,10 @@ CB_TOK_FLOOR = 200_000
 CB_MULT = 3
 TP_WINDOW_S = 300                # change 4
 TP_MIN_TOK_S = 60.0
-TP_MIN_SAMPLES = 20
+TP_MIN_SAMPLES = 45              # 2E change 4: a full 5-step back-off ladder is 60+120+240+480+960 =
+                                 # ~31 min of legitimate waiting; a 20-min floor read that as a dead
+                                 # run and soft-stopped cz_0003..cz_0005. 45 min still catches 2C's
+                                 # throttling, which lasted hours.
 LANGS = ("cz",)
 
 # ---------------------------------------------------------------- argv (nothing is ignored)
@@ -1163,6 +1166,22 @@ def main():
     plan(SELECTED, adopted)
     if not A["dry"]:
         threading.Thread(target=monitor_loop, daemon=True).start()
+    def unpaid_left(after_bid):
+        """2E change 3: extrapolate over rows that still have to be PAID FOR, not over every remaining row.
+        On a resume where most sessions are adopted at 0 tokens, this process's tok/row applied to all
+        remaining rows overstates the total by the adopted:run ratio and stops a run well inside its cap."""
+        seen, v_rows, rw_n = False, 0, 0
+        for _bid, _lang, _rows in SELECTED:
+            if not seen:
+                if _bid == after_bid: seen = True
+                continue
+            for _k, _c in enumerate(chunks(_rows), 1):
+                if sess_complete("%s_s%02d_v" % (_bid, _k), [r["n"] for r in _c]) is None:
+                    v_rows += len(_c)
+                if not os.path.exists(sess_path("%s_s%02d_rw" % (_bid, _k))):
+                    rw_n += 1
+        return v_rows, rw_n
+
     done_batches, rows_left = 0, total_rows
     for bid, lang, rows in SELECTED:
         if STATE["stop_spawn"]:
@@ -1172,7 +1191,11 @@ def main():
         rows_left -= len(rows)
         if st in ("done", "partial"):
             done_batches += 1 if st == "done" else 0
-            p = projection(STATE["rows_paid"], rows_left, STATE["tok"], time.time() - STATE["t0"])
+            _vr, _rwn = unpaid_left(bid)
+            p = projection(STATE["rows_paid"], _vr, STATE["tok"], time.time() - STATE["t0"])
+            if p is not None:
+                p["unpaid_rows_left"], p["rw_sessions_left"], p["all_rows_left"] = _vr, _rwn, rows_left
+                p["projected_total_tokens"] += _rwn * EST["rw"]
             if p is None:
                 log("PROJECTION", bid, "no rows paid for in this process (all sessions adopted); gate not applicable")
             else:
