@@ -1,8 +1,9 @@
 # Phase 2F Part 2 result: Czech coverage and false acceptance, fresh set NOT OPENED
 
-- Status: STOP: not enough fresh annotated Czech sentences per level {"A1": 0, "A2": 0, "B1": 0, "B2": 0} (need 25 each); the set was NOT opened, 0 Gemini calls
+- Status: STOP: not enough fresh annotated Czech sentences per level {"A1": 17, "A2": 18, "B1": 8, "B2": 7} (need 25 each); the set was NOT opened, 0 Gemini calls
 - Method: Phase 1W §4, language changed to Czech; Slovak 1W figures are quoted beside every Czech one below.
-- Part 1: {"PART1_DONE": true, "PART1_STOP.md": true, "status": "STOPPED EARLY: ['STOP_throughput_guard.md']; 2800 rows assembled, 591139 headless tokens", "waited_s": 720}
+- Part 1: {"PART1_DONE": true, "PART1_STOP.md": true, "status": "STOPPED EARLY: ['STOP_token_cap.md']; 2850 rows assembled, 1466116 headless tokens", "waited_s": 0}
+- Note: PART 1 STOPPED EARLY (PART1_STOP.md present); Part 2 ran anyway as the brief instructs.
 - Note: PART 1 STOPPED EARLY (PART1_STOP.md present); Part 2 ran anyway as the brief instructs.
 
 ## Deviations from 1W (declared before the set was opened)
