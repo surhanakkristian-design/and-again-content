@@ -268,3 +268,27 @@ Exactly two behavioural changes, plus the mechanical repointing of artefact path
      log("END", "tokens", STATE["tok"], "wall_s", round(time.time() - STATE["t0"], 1), "batches_done", done_batches,
          "retries", STATE["retries"], "giveups", len(STATE["giveups"]),
 ```
+
+## 2F change 3 — the throughput guard cannot measure a window with no completion
+
+`run_2f_cz.py`, `ThroughputGuard`: `__init__` 444 -> 444-445 (`self.unmeasurable`), `sample`'s streak
+update 455 -> 463-474 (the guard now returns early when `tok - k0 <= 0` and `STATE["inflight"] > 0`),
+`monitor_loop`'s THROUGHPUT log 470 -> 481-482 (`unmeasurable_windows`).  Self-tests added at
+1195-1223: `guard:inflight_zero_delta_is_unmeasurable_never_fires` (40 minutes, tok frozen at 285,312,
+one session out — no fire, streak 0), `guard:unmeasurable_does_not_reset_a_real_streak`,
+`guard:2C_25_toks_with_returns_still_fires_at_20_min` (fires at exactly 20 low minutes),
+`guard:change1_sleep_exclusion_intact_under_change3`.  Floor unchanged (60 tok/s, 20 min, 300 s window).
+
+## 2F change 4 — the assembler accepts a contiguous half-chunk session
+
+`run_2f_cz.py` 995-1001 -> 1009-1032: a missing whole chunk now tries `<sid>_h1` / `<sid>_h2` over the
+chunk's two contiguous halves and keeps whatever they cover; the chunk still counts as missing so the
+meta stays honest.  This recovers `cz_0002_s04_v_h1` (n 5365-5414, 50 rows, already paid for).
+
+## run_part1.py
+
+`finish()` 60-67 -> 60-81: deletes a stale `PART1_STOP.md` on a clean finish and relaunches Part 2's
+driver (`nohup python3 p2_driver.py`) as the last step in every outcome.  Step 2 (refused chunks)
+154-160 -> 168-175: both `cz_0002_s04_v` and `cz_0003_s04_v` are closed, `halves.py` is not run.
+Step 3 176-180 -> 191-196: the run is confined to `cz_0004` and `cz_0005`.  Step 5 232-233 -> 248-259:
+the lk comparison degrades to a written "no new rows" note instead of a `FileNotFoundError`.

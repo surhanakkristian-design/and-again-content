@@ -442,6 +442,7 @@ class ThroughputGuard(object):
     def __init__(self, window_s=TP_WINDOW_S, min_rate=TP_MIN_TOK_S, need=TP_MIN_SAMPLES):
         self.window_s, self.min_rate, self.need = window_s, min_rate, need
         self.samples = collections.deque(); self.low = 0; self.reason = None; self.rate = None; self.dt = None
+        self.unmeasurable = 0                              # 2F change 3: windows with no completion in flight
     def sample(self, t, tok):
         self.samples.append((t, tok))
         while len(self.samples) > 1 and t - self.samples[0][0] > self.window_s:
@@ -452,6 +453,16 @@ class ThroughputGuard(object):
         if dt <= 0:                                        # window was entirely back-off sleep (or worse,
             return self.reason                             # rounding); the guard CANNOT fire on it
         self.rate = (tok - k0) / dt
+        # 2F change 3: a window with NO session completion while work is IN FLIGHT is UNMEASURABLE.
+        # STATE["tok"] only moves when a session RETURNS, so one long-running session reads as 0.0 tok/s
+        # while the pool is in fact working - that is what soft-stopped 2F Part 1 at 00:13:25 with
+        # cz_0003_s04_v still out.  A pool that is genuinely STUCK is the CIRCUIT BREAKER's job
+        # (per-session wall and token floors, 3x the running mean).  This guard exists to catch a pool
+        # that IS returning work far too slowly - 2C's five hours at 25 tok/s - and that case still
+        # fires, because there tok rises.  Do not increment the streak, do not reset it, do not fire.
+        if (tok - k0) <= 0 and STATE["inflight"] > 0:
+            self.unmeasurable += 1
+            return self.reason
         self.low = self.low + 1 if self.rate < self.min_rate else 0
         if self.low >= self.need and not self.reason:
             self.reason = ("measured throughput %.1f tok/s stayed under %.0f tok/s for %d consecutive minutes "
@@ -468,6 +479,7 @@ def monitor_loop():
         r = GUARD.sample(time.time(), tok)
         log("THROUGHPUT", "rate %.1f tok/s" % (GUARD.rate or 0.0), "low_streak", GUARD.low, "cum_tok", tok,
             "inflight", STATE["inflight"], "measured_window_s %.0f" % (GUARD.dt if GUARD.dt is not None else -1),
+            "unmeasurable_windows", GUARD.unmeasurable,
             "backoff_sleep_excluded:true")
         if r:
             soft_stop("throughput_guard", r + ".\n\n2C ran five hours at 25 tok/s because nothing checked; this run "
@@ -994,6 +1006,28 @@ def run_batch(bid, lang, rows):
             owner.setdefault(n, []).append(sid)
         d = sess_complete(sid, ns)
         if d is None:
+            # 2F change 4: a HALF-CHUNK session (sid + "_h1"/"_h2") whose rows are a contiguous
+            # sub-range of this chunk is accepted for ITS OWN rows.  The chunk still counts as
+            # missing, so the meta records the partial coverage honestly.
+            half = {}
+            for suf, sub in (("_h1", ns[:len(ns) // 2]), ("_h2", ns[len(ns) // 2:])):
+                if not sub:
+                    continue
+                dh = sess_complete(sid + suf, sub)
+                if dh is not None:
+                    for o in (dh["rows"] or []):
+                        if o.get("n") in set(sub):
+                            half[o["n"]] = o
+            if half:
+                for n, o in half.items():
+                    (MV if kind == "v" else RW)[n] = o
+                gone = [n for n in ns if n not in half]
+                log("HALF-CHUNK", sid, "recovered", len(half), "row(s)", nranges(sorted(half))[:4],
+                    "| still missing", len(gone))
+                missing.append(sid)
+                for n in gone:
+                    blocked[n] = sid
+                continue
             missing.append(sid)
             for n in ns:
                 blocked[n] = sid
@@ -1150,6 +1184,39 @@ def selftest():
         r6 = g6.sample(tz + 60 * i, tok6)
     ck("guard:healthy_after_a_ladder_never_trips", r6 is None and g6.low == 0, "low=%d" % g6.low)
     del SLEEPS[:]
+    # 2F change 3: an UNMEASURABLE window (no completion while work is in flight) neither counts nor fires
+    del SLEEPS[:]
+    g7 = ThroughputGuard(); STATE["inflight"] = 1
+    res7 = None
+    for i in range(1, 41):                                     # 40 minutes, one session still out, tok frozen
+        res7 = g7.sample(tz + 60 * i, 285312)
+    ck("guard:inflight_zero_delta_is_unmeasurable_never_fires",
+       res7 is None and g7.low == 0 and g7.unmeasurable >= 39,
+       "low=%d unmeasurable=%d (the 2F Part 1 stop at 00:13:25)" % (g7.low, g7.unmeasurable))
+    g7b = ThroughputGuard()                                    # ... and it does not RESET a real streak either
+    for i in range(1, 11):
+        STATE["inflight"] = 0; g7b.sample(tz + 60 * i, 0)      # 10 genuinely idle minutes, nothing in flight
+    pre = g7b.low
+    STATE["inflight"] = 1
+    for i in range(11, 21):
+        g7b.sample(tz + 60 * i, 0)
+    ck("guard:unmeasurable_does_not_reset_a_real_streak", pre == 9 and g7b.low == 9,
+       "%d -> %d" % (pre, g7b.low))
+    g8 = ThroughputGuard(); STATE["inflight"] = 2              # 2C: 25 tok/s WITH sessions returning
+    tok8, trip8 = 0, None
+    for i in range(1, 60):
+        tok8 += 1500                                           # 25 tok/s * 60 s
+        if g8.sample(tz + 60 * i, tok8):
+            trip8 = i; break
+    ck("guard:2C_25_toks_with_returns_still_fires_at_20_min",
+       trip8 == TP_MIN_SAMPLES + 1 and g8.low == TP_MIN_SAMPLES,
+       "tripped at minute %s, rate %.1f tok/s" % (trip8, g8.rate or 0))
+    g9 = ThroughputGuard(); SLEEPS.append((tz, tz + 60 * 31))  # change 1 still behaves, now with inflight > 0
+    for i in range(1, 32):
+        g9.sample(tz + 60 * i, 0)
+    ck("guard:change1_sleep_exclusion_intact_under_change3", g9.low == 0 and g9.dt == 0.0,
+       "low=%d corrected_window=%.0f s" % (g9.low, g9.dt if g9.dt is not None else -1))
+    del SLEEPS[:]; STATE["inflight"] = 0
     # change 5: projection gate
     p = projection(rows_paid=700, rows_left=3364, tok=966_000, elapsed=7000.0)
     ck("projection:tokens", p["projected_total_tokens"] == int(966_000 + 1380.0 * 3364), json.dumps(p))

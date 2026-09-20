@@ -58,11 +58,22 @@ def note_stage(stage):
     log("LEDGER-STAGE", json.dumps(rec))
     return rec
 def finish(status, stop_md=None):
+    sp = os.path.join(H, "PART1_STOP.md")
     if stop_md:
-        open(os.path.join(H, "PART1_STOP.md"), "w", encoding="utf-8").write(stop_md)
+        open(sp, "w", encoding="utf-8").write(stop_md)
+    elif os.path.exists(sp):
+        os.remove(sp)                                  # this run did NOT stop early: the old record goes
+        log("PART1_STOP-REMOVED", "previous stop record deleted; this run did not stop early")
     open(os.path.join(H, "PART1_DONE"), "w", encoding="utf-8").write(status.strip() + "\n")
     log("PART1_DONE", status.strip())
     git(None, "Phase 2F Part 1: %s" % status.strip()[:70])
+    # ---- LAST step, every outcome: hand back to Part 2's driver (resumable, writes PART2_RESULT.md)
+    try:
+        d2 = os.path.join(H, "p2")
+        subprocess.Popen("nohup python3 p2_driver.py >> p2_driver.stdout.txt 2>&1 &", shell=True, cwd=d2)
+        log("PART2-RELAUNCHED", "nohup python3 p2_driver.py in", d2)
+    except Exception as e:
+        log("PART2-RELAUNCH-FAILED", type(e).__name__, str(e)[:200])
     sys.exit(0)
 def run(cmd, tag, cwd=H):
     log("RUN", tag, " ".join(cmd[:4]), "...")
@@ -150,14 +161,13 @@ def main():
         halves_worked = bool(json.load(open(hp, encoding="utf-8")).get("both_succeeded"))
     except Exception:
         log("HALVES", "no result file for cz_0002_s04_v")
-    exclude = []
-    if halves_worked:
-        log("RULING", "halves succeeded for cz_0002_s04_v -> cz_0003_s04_v is run as two 50-row halves too")
-        run([sys.executable, "halves.py", "cz_0003_s04_v"], "halves_cz_0003_s04_v", cwd=DIAG)
-    else:
-        log("RULING", "halves did NOT both succeed -> cz_0003_s04_v gets ONE whole-chunk attempt under "
-                      "MAX_RETRY=3; cz_0002_s04_v is NOT attempted a tenth time (§1 confines the loss)")
-        exclude = ["cz_0002_s04_v"]
+    # 2F re-run: BOTH refused chunks are closed.  cz_0002_s04_v was refused nine times (its h2 four more);
+    # cz_0003_s04_v already had its one whole-chunk attempt this phase and was refused.  Neither is
+    # attempted again; this run annotates cz_0004 and cz_0005 and nothing else.
+    exclude = ["cz_0002_s04_v", "cz_0003_s04_v"]
+    ONLY_BATCHES = ("cz_0004", "cz_0005")
+    log("RULING", "refused chunks closed:", exclude, "| this run runs only", ONLY_BATCHES,
+        "| halves_worked(diagnosis)", halves_worked)
     note_stage("refused_chunks"); git(None, "Phase 2F Part 1: refused chunks handled per the §1.2 ruling")
     if spend() > TRIPWIRE:
         finish("STOPPED at the 2,000,000-token tripwire before the main annotation run (%d spent)" % spend(),
@@ -166,14 +176,15 @@ def main():
     # ------------------------------------------------ 3. annotate what is missing
     cap = max(0, TRIPWIRE - spend())
     cmd = [sys.executable, "run_2f_cz.py", "--all", "--cap", str(cap), "--ignore-stop-file"]
-    if exclude:
+    if True:
         ids = json.loads(subprocess.run([sys.executable, "-c",
               "import sys,json;sys.path.insert(0,%r);import prompts_2f as P;"
               "m=P.load(['cz_0001','cz_0002','cz_0003','cz_0004','cz_0005']);"
               "out=[]\nfor b,l,r in m.BATCHES:\n out+= [t[0] for t in m.batch_tasks(b,l,r,m.derive_batch(r))]\n"
               "print(json.dumps(out))" % DIAG], capture_output=True, text=True, cwd=DIAG).stdout.splitlines()[-1])
-        for sid in ids:
-            if sid in exclude: continue
+        sel = [sid for sid in ids if sid not in exclude and sid.startswith(ONLY_BATCHES)]
+        log("ONLY", len(sel), "session(s) may run:", ",".join(sel))
+        for sid in sel:
             cmd += ["--only", sid]
     rc = run(cmd, "run_2f_cz")
     note_stage("annotate"); git(None, "Phase 2F Part 1: Czech annotation segment finished (exit %d)" % rc)
@@ -221,6 +232,16 @@ def main():
             % (k, n, pt, lo, hi))
     except Exception as e:
         log("CP-COMPARE-FAILED", type(e).__name__, str(e)[:200])
+        why = ("`out/REPORT_2f_lk.json` does not exist: the dedicated lk pass produced no report, which "
+               "happens when there are NO NEW ROWS for it to judge."
+               if isinstance(e, (IOError, OSError)) and not os.path.exists(os.path.join(OUT, "REPORT_2f_lk.json"))
+               else "the lk report could not be read (%s: %s)." % (type(e).__name__, str(e)[:160]))
+        open(os.path.join(H, "REPORT_2f_lk_compare.md"), "w", encoding="utf-8").write(
+            "# 2F lk pass - non-exact rate with exact 95 %% Clopper-Pearson\n\n"
+            "**No comparison could be computed.** %s\n\n"
+            "Reference figures, unchanged: Czech pooled 2E 52.44 %% [50.54, 54.34] (1416/2700); "
+            "Slovak 1W / 2D 51.13 %%.\n\nWritten %s.\n" % (why, time.strftime("%%Y-%%m-%%dT%%H:%%M:%%S")))
+        log("CP-COMPARE", "degraded note written to REPORT_2f_lk_compare.md")
     run([sys.executable, "build_upload_cz.py"], "build_upload_cz")
     try:
         big = 0
