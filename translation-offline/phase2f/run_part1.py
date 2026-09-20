@@ -196,15 +196,28 @@ def main():
         sys.argv = ["run_2f_lk.py", "--merge-only"]; sys.path.insert(0, H)
         import run_2f_lk as L
         rep = json.load(open(os.path.join(OUT, "REPORT_2f_lk.json"), encoding="utf-8"))
-        k = rep.get("pooled_non_exact_k") or rep.get("pooled", {}).get("k")
-        n = rep.get("pooled_non_exact_n") or rep.get("pooled", {}).get("n")
-        md = ["# 2F lk pass — non-exact rate, exact 95 % Clopper–Pearson", ""]
-        if k is not None and n:
-            lo, hi = L.cp(k, n)[1], L.cp(k, n)[2] if isinstance(L.cp(k, n), (list, tuple)) and len(L.cp(k, n)) > 2 else (None, None)
-            md.append("pooled %s/%s = %.2f %%  CP95 %s" % (k, n, 100.0 * k / n, json.dumps(L.cp(k, n))))
-        md += ["", "Czech pooled 2E: 52.44 % [50.54, 54.34] — Slovak 1W/2D: 51.13 %.",
-               "", "Per-session rates and the low-mode re-run are in out/REPORT_2f_lk.json."]
+        po = rep["pooled"]
+        k, n = po["k"], po["n"]
+        pt, lo, hi = L.cp(k, n)
+        md = ["# 2F lk pass — non-exact rate with exact 95 % Clopper-Pearson", "",
+              "| set | k | n | non-exact %% | exact 95 %% CP |", "|---|---|---|---|---|",
+              "| **2F pooled (all rows now present)** | %d | %d | %.2f | [%.2f, %.2f] |" % (k, n, pt, lo, hi),
+              "| Czech pooled, 2E (2,700 judged) | 1416 | 2700 | 52.44 | [50.54, 54.34] |",
+              "| Slovak, 1W / 2D | - | - | 51.13 | - |", "",
+              "Span-adjusted leg: %.2f %% (k %s / n %s)." % (po.get("span_adjusted_pct", float("nan")),
+                                                             po.get("span_k"), po.get("span_n")), "",
+              "## Per session", "", "| session | non-exact % | k | n | exact 95 % CP |", "|---|---|---|---|---|"]
+        for sid, v in sorted((rep.get("per_session") or {}).items()):
+            kk, nn = v.get("k"), v.get("n") or v.get("judged")
+            if kk is None or not nn:
+                md.append("| %s | %s | - | - | - |" % (sid, v.get("pct"))); continue
+            p3 = L.cp(kk, nn)
+            md.append("| %s | %.2f | %d | %d | [%.2f, %.2f] |" % (sid, p3[0], kk, nn, p3[1], p3[2]))
+        md += ["", "Sessions under 30 %% non-exact were re-run exactly once; attempt 1 is archived in "
+               "`out/sessions_lowmode/` (see `low_mode` in REPORT_2f_lk.json).", ""]
         open(os.path.join(H, "REPORT_2f_lk_compare.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
+        log("CP-COMPARE", "pooled %d/%d = %.2f %% [%.2f, %.2f] vs Czech 2E 52.44 [50.54, 54.34] vs Slovak 51.13"
+            % (k, n, pt, lo, hi))
     except Exception as e:
         log("CP-COMPARE-FAILED", type(e).__name__, str(e)[:200])
     run([sys.executable, "build_upload_cz.py"], "build_upload_cz")
