@@ -139,11 +139,16 @@ def load(lang='sk'):
     agc = R1U.AG_CFG
     name = 'primary' if 'primary' in agc else sorted(agc)[0]
     mod, flags = agc[name]
+    ag_fn, ag_how = mod.decide, 'AG_CFG[%r].decide' % name
     if 'extra' not in inspect.signature(mod.decide).parameters:
-        raise SystemExit('REFUSED: AG decide has no extra= (refsubj cannot be removed)')
+        # runner_1u's PATCH object has no extra= parameter; it forwards to stack_1w.decide (CONTEXT 1.2 step 2), which
+        # is called directly here so that extra=() removes the AGv5 refsubj/rs_nom reference read.
+        s1w = sys.modules.get('stack_1w')
+        if s1w is None or 'extra' not in inspect.signature(s1w.decide).parameters:
+            raise SystemExit('REFUSED: no AG entry with extra= (refsubj cannot be removed)')
+        ag_fn, ag_how = s1w.decide, 'stack_1w.decide called directly (AG_CFG[%r] = %s forwards to it)' % (name, type(mod).__name__)
     ST.update(lang=lang, R1U=R1U, C=C, G=G[0], f4v2=fx['f4v2_subject_mismatch'], f4v3=fx['f4v3_subject_mismatch'],
-              ag_name=name, ag_mod=mod, ag_flags=flags, ag_cfg_names=sorted(agc),
-              ag_mod_file=os.path.relpath(os.path.abspath(inspect.getfile(mod)), TOFF))
+              ag_name=name, ag_fn=ag_fn, ag_how=ag_how, ag_flags=flags, ag_cfg_names=sorted(agc))
     return ST
 
 
@@ -182,7 +187,7 @@ def guards(items, lang, reference=''):
         g = {'ag_fired': False, 'ag_reason': None, 'ag_ref_read': False, 'ag_error': None,
              'f4v2_fired': False, 'f4v3_fired': False, 'f4_error': None}
         try:
-            d = S_['ag_mod'].decide(sk, ann.get(sid) or PoisonDict(), {}, it['answer'], reference, 'primary',
+            d = S_['ag_fn'](sk, ann.get(sid) or PoisonDict(), {}, it['answer'], reference, 'primary',
                                     S_['ag_flags'], extra=())
             g['ag_fired'], g['ag_reason'] = bool(d.get('fired')), d.get('reason')
         except PoisonHit as e:

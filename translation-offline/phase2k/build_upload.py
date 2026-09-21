@@ -15,6 +15,10 @@ ARTICLES = {'a', 'an', 'the'}
 PREPS = set('''about above across after against along among around at before behind below beneath beside besides between
 beyond by despite down during except for from in inside into like near of off on onto out outside over past since than
 through throughout till to toward towards under underneath until up upon via with within without'''.split())
+# STRICT = articles + prepositions that cannot close an English clause as a particle (the TEST fails on these);
+# the broad PREPS hits (particles / stranded prepositions: up, in, on, for, before ...) are listed for review only.
+STRICT = ARTICLES | {'of', 'onto', 'into', 'upon', 'among', 'between', 'beneath', 'via', 'despite', 'during', 'than',
+                     'toward', 'towards', 'to', 'from', 'with', 'at', 'by'}
 COLS = ('exercise_id', 'language_code', 'level', 'src', 'en', 'structure_json')
 
 
@@ -23,7 +27,7 @@ def jl(p):
 
 
 def last_word(s):
-    t = re.findall(r"[A-Za-z]+(?:'[A-Za-z]+)?", s or '')
+    t = re.findall(r"[A-Za-z0-9]+(?:'[A-Za-z]+)?", s or '')
     return t[-1].lower() if t else ''
 
 
@@ -34,7 +38,7 @@ def scan_endings(path, lang):
             w = last_word(s)
             if w in ARTICLES or w in PREPS:
                 hits.append({'lang': lang, 'exercise_id': r['exercise_id'], 'ref_index': i, 'last': w,
-                             'kind': 'article' if w in ARTICLES else 'preposition', 'ref': s, 'src': r.get('src')})
+                             'kind': 'article' if w in ARTICLES else 'preposition', 'strict': w in STRICT, 'ref': s, 'src': r.get('src')})
     return hits
 
 
@@ -92,6 +96,8 @@ if __name__ == '__main__':
     rest, hits = build()
     for x in rest:
         print('RESTORED ex %d [%d]: %r -> %r' % (x['exercise_id'], x['ref_index'], x['b3_value'], x['restored']))
-    print('ENDING HITS', len(hits))
+    print('ENDING HITS broad', len(hits), 'strict', sum(h['strict'] for h in hits))
     for h in hits:
+        if not h['strict']:
+            continue
         print('  %s ex %s [%d] %s %r: %s' % (h['lang'], h['exercise_id'], h['ref_index'], h['kind'], h['last'], h['ref']))
