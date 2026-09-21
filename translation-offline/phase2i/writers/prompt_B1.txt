@@ -1,0 +1,45 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Slovak sentences from a language-learning app, one per line as JSON: a writer id (wid), the Slovak sentence, its CEFR level and the exercise topic. Imagine real learners translating each Slovak sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Slovak. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Slovak's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Slovak (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Slovak is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Slovak names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+Sentences:
+{"wid": "wB101", "slovak": "Babka za jedno popoludnie zložila desiatky dumplingov, však? Absolútne neuveriteľné!", "level": "B1", "topic": "Question tags"}
+{"wid": "wB102", "slovak": "Keby sa sprievod pohyboval ešte rýchlejšie, tanečníci by predbehli ženu v zelenom.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB103", "slovak": "Vozidlo uháňalo po vidieckej ceste predtým, než bolo zaparkované pri dunách, ako bolo pozorované.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB104", "slovak": "Zdravotník povedal, že film bol poslaný z laboratória hodinu predtým.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB105", "slovak": "Kým dorazili k východu, oči jazdca si už zvykli na tmu.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB106", "slovak": "Muž volal hlasným hlasom, keď sa obloha sfarbila do fialova.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB107", "slovak": "Kamarátka povedala, že náramok je príliš voľný, tak ho upravila.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB108", "slovak": "Keby ryby mali ruky, ony by tlieskali tomu nahodeniu. Naozaj legendárna technika.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB109", "slovak": "Zajtra o takomto čase bude robiť pred zrkadlom tú istú grimasu s otvorenými ústami.", "level": "B1", "topic": "Future Continuous"}
+{"wid": "wB110", "slovak": "Povedal, že tréning bol najtvrdší v celom jeho živote! Čistá agónia!", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB111", "slovak": "Môj spolubývajúci prehral v kameň-papier-nožnice, tak vyniesol smeti! Absolútna zrada!", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB112", "slovak": "Dosiahla vankúše, otočila sa a padla na ne. Bezchybné pristátie.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB113", "slovak": "Počuj, vraj už spálila štyri marshmallowy a pálenie ju baví.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB114", "slovak": "Keď sa bábätko usmieva takto, každý si myslí, že je rozkošné.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB115", "slovak": "Nabudúce ona dá silnejší úder päsťou, lebo sa bude viac snažiť.", "level": "B1", "topic": "Future Simple or Continuos"}
+{"wid": "wB116", "slovak": "Kým si prezerali modré mestečko, somár zablokoval uličku. Mierne neplánovaná zastávka.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB117", "slovak": "Hádaj čo, chalan, ktorého zviera skočilo z toho útesu, sa vraj ani nebál.", "level": "B1", "topic": "Relative clauses"}
+{"wid": "wB118", "slovak": "Kým jeden príbuzný niesol tortu cez dvere, ostatní prichádzali po chodníku.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB119", "slovak": "Ona samozrejme nakukla do učebnice raz a potom postavila stenu z kníh.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB120", "slovak": "Zajtra o tejto hodine subjekt bude odomykať tie isté drevené dvere, ako to zvyčajne robí.", "level": "B1", "topic": "Future Simple or Continuos"}
+{"wid": "wB121", "slovak": "Ona zvykla hrať celé hodiny každú noc, kým sa nestala profesionálnou hráčkou! Úplne posadnutá!", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB122", "slovak": "Takéto meškanie už raz prečkala, však?", "level": "B1", "topic": "Question tags"}
+{"wid": "wB123", "slovak": "Veža zo stoličiek sa kýve, takže liezť na ňu musí byť veľmi riskantné.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB124", "slovak": "Keď pred zápasom hrá hymna, hráčky si dajú ruky na hruď.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB125", "slovak": "Ona zložila prísahu a všetko v tejto krajine sa navždy zmení!", "level": "B1", "topic": "Present Perfect Simple or Continuos"}

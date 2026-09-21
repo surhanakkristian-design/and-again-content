@@ -78,7 +78,7 @@ def validate(arr, sents):
         c, w = o.get('correct'), o.get('wrong')
         if not (isinstance(c, list) and len(c) == 5 and all(isinstance(x, str) and x.strip() for x in c)):
             return 'correct != 5 at %s' % o.get('wid')
-        if not (isinstance(w, list) and len(w) == 4 and sorted(x.get('type') for x in w) == TYPES
+        if not (isinstance(w, list) and len(w) == 4 and sorted(x.get('type') for x in w) == sorted(TYPES)
                 and all(isinstance(x.get('answer'), str) and x['answer'].strip() for x in w)):
             return 'wrong != T/W/M/S at %s' % o.get('wid')
     return None
@@ -88,6 +88,22 @@ def run_level(lv, sents, env, results):
     prompt = TEMPLATE.replace('{SENTENCES}', lines)
     open(os.path.join(HERE, 'prompt_%s.txt' % lv), 'w', encoding='utf-8').write(prompt)
     attempts, rate_retries, fails = [], 0, 0
+    # resume at 0 cost: re-validate stored attempts (stage-3 validator bug fixed after the first run)
+    import glob
+    stored = sorted(glob.glob(os.path.join(SESS, '%s_attempt*.json' % lv)), key=lambda q: int(q.rsplit('attempt', 1)[1][:-5]))
+    first_ok = None
+    for q in stored:
+        d = json.load(open(q)); e = d.get('envelope')
+        att = {'n': d['attempt'], 'usage': usage_parts(e), 'reused': True}
+        why = None
+        try:
+            arr = extract_array((e or {}).get('result')); why = validate(arr, sents)
+        except Exception as ex:
+            why = 'parse: %s' % ex
+        att['why'] = why; attempts.append(att)
+        if not why and first_ok is None: first_ok = arr; att['used'] = True
+    if first_ok is not None:
+        results[lv] = {'ok': True, 'arr': first_ok, 'attempts': attempts}; return
     while True:
         if os.path.exists(os.path.join(P2I, 'STOP_stage3.md')):
             results[lv] = {'ok': False, 'why': 'global stop', 'attempts': attempts}; return

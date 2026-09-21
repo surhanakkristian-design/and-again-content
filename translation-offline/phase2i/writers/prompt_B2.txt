@@ -1,0 +1,45 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Slovak sentences from a language-learning app, one per line as JSON: a writer id (wid), the Slovak sentence, its CEFR level and the exercise topic. Imagine real learners translating each Slovak sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Slovak. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Slovak's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Slovak (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Slovak is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Slovak names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+Sentences:
+{"wid": "wB201", "slovak": "Kvôli mrazivej zime jej dal svoju bundu skôr, než sa lunapark zmenil na totálnu katastrofu!", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB202", "slovak": "Roľník sa ďalej brodí vodou napriek dymu stúpajúcemu zo sopky.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB203", "slovak": "Tento rok park zatiaľ dosiahol 70 percent svojho cieľa v recyklácii.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB204", "slovak": "Smoothie mu skočilo rovno na nos, takže mal vrchnák vtedy zatlačiť silnejšie.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB205", "slovak": "Celé námestie kričí po hudbe, ktorú táto kapela hrá!", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB206", "slovak": "Dvaja politici kričali na seba, keď dopadlo obrovské kladivko.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB207", "slovak": "Na poludnie ona už bude chodiť po šatníku v župane dve hodiny.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB208", "slovak": "Priala by si, aby jej mačka tiež nosila takúto loptu.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB209", "slovak": "Zriedka si hostia užili takú vrelú pohostinnosť pri jednom samovare.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB210", "slovak": "Kámo, ona nakupuje od desiatej ráno a ešte nekončí.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB211", "slovak": "Do polnoci dočíta celú knihu a jej drdol prežije úplne všetko!", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB212", "slovak": "Od roku 2019 fotí lietadlá pri tomto plote. Zjavne veľmi nenáročný koníček.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB213", "slovak": "Do Vianoc si z toho bábikovského svetra bude uťahovať už mesiace.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB214", "slovak": "Dve červené nákladné lode priviezli svoj tovar do prístavu po mori.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB215", "slovak": "Do budúceho týždňa klíčok, v ktorý dúfala, vyrastie na malú rastlinku.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB216", "slovak": "Samozrejme si dala trasu nakresliť na mapu, pre prípad, že by zabudla vlastný plán.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB217", "slovak": "Vyliezla na tú debnu naľavo.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB218", "slovak": "Kým si vysuší ruky, mydlo odstráni všetku špinu.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB219", "slovak": "Žena pritiahla ich pozornosť práve vo chvíli, keď zdvíhali televízor z dodávky.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB220", "slovak": "Až po dlhom boji sa dostal na vrchol kopca.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB221", "slovak": "Katastrofa! Moji kamaráti vykopali obrovskú jamu a teraz som úplne zaseknutý!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB222", "slovak": "Práve teraz končí svoju prechádzku na streche nad mestom.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB223", "slovak": "Keď vošla na trh, netušila, že odíde von s dvoma metrami zlatej potlače.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB224", "slovak": "Červený lampión svietil pri okne celé hodiny, kým sa rozsvietilo svetlo v kuchyni.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB225", "slovak": "Oni robia fotky týchto stĺpov už dve hodiny a batéria je úplne mŕtva!", "level": "B2", "topic": "All Present Tenses"}

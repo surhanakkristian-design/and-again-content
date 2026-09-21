@@ -31,3 +31,6 @@
 11. **Adapter reads `d.get('lk')`.** Verbatim 2F code; on TRANSLATION-ONLY the row is lk-stripped first, so the read returns nothing (poison test passes).
 12. **Fixture observation:** in test (a) item jx0429 ('Honestly, ...') FROZEN returns layer 'L3', accept False, l3_reply None (no L3 request planned) while TONLY sends it to L3 and accepts. Likely the LOCKTIP/lock path labelling; check in the 4.2 analysis, not investigated here.
 13. **3 dirty paths outside phase2i predate 2I and stay as-is:** phase1p/access_log.jsonl, phase1p/run_1p.log (in SHA_before) and untracked phase2d/run_2d_cz.stdout.txt.
+
+## Stage 3
+14. **Writer validator bug (stage 3, fixed).** run_writers.validate compared `sorted(types)` with the unsorted list ['T','W','M','S'], so all 4 valid writer outputs were rejected and each session was retried once (4 wasted sessions, ~195k tokens). Fixed to `sorted(TYPES)`; the stored attempt-1 outputs were re-validated offline at 0 cost and used. The spurious STOP_stage3.md (uncommitted) was deleted.

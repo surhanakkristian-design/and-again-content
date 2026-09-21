@@ -1,0 +1,45 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Slovak sentences from a language-learning app, one per line as JSON: a writer id (wid), the Slovak sentence, its CEFR level and the exercise topic. Imagine real learners translating each Slovak sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Slovak. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Slovak's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Slovak (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Slovak is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Slovak names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+Sentences:
+{"wid": "wA201", "slovak": "Pred hodinou vlny zničili jeho vysoký hrad z piesku.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA202", "slovak": "Paradajky rastú na rastlinách, tak on ich musí odtrhnúť z rastliny.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA203", "slovak": "Dnes ráno tu nie je veľa ľudí, a úprimne, pôsobíš tak pokojne.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA204", "slovak": "Ty bojuješ s tou alergiou lepšie než ktokoľvek na tejto lúke. Ikonické.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA205", "slovak": "Autá opravuje každý deň, ale teraz práve nakúka pod kapotu.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA206", "slovak": "Pred začiatkom musíš vypnúť prúd.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA207", "slovak": "Kámo, nejako jej dochádzajú štipce. Na streche ostalo už len niekoľko štipcov.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA208", "slovak": "Do zákruty beží veľmi ľahko", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA209", "slovak": "Neuveriteľné! Nie je veľa darčekov veľkých ako babka!", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA210", "slovak": "Na tejto pláži je veľa jemného piesku", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA211", "slovak": "Už teraz som ohúrený: budúci týždeň sa chystáš držať modrého páva znova.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA212", "slovak": "Pozri! Práve teraz dýcha veľmi ťažko.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA213", "slovak": "Ak dnes v noci nasneží, oblečiem si tento kabát znova.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA214", "slovak": "Majú plán. Zajtra sa chystajú pokosiť trávu znova.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA215", "slovak": "Stôl je čistý, takže môže konečne pracovať.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA216", "slovak": "Pozri na ich čižmy! Hneď prejdú cez pole.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA217", "slovak": "Jej skok je vyšší ako ktorýkoľvek skok dňa.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA218", "slovak": "Nikto by nemal teraz siahať na jeho karty, inak je všetko zničené!", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA219", "slovak": "Má plán. Budúci rok sa chystá napísať nový prejav.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA220", "slovak": "Dnes si vlasy češe, ale včera na to zabudol.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA221", "slovak": "Zvyčajne nosí tri vrstvy, ale dnes si obliekol päť.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA222", "slovak": "Rodičia sú úplne vyčerpaní, ale deti chcú znova na hojdačky!", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA223", "slovak": "Pijú horúci čaj, aby sa zohriali a cítili v bezpečí.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA224", "slovak": "Zloží si slúchadlá. Ide odísť zo štúdia.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA225", "slovak": "Hej, v miestnosti bola nuda, ale teraz je to dosť živé.", "level": "A2", "topic": "Basic conjunctions"}
