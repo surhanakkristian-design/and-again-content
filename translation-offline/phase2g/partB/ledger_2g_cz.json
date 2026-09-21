@@ -1,10 +1,10 @@
 {
  "cap": 2900000,
- "spent": 613708,
+ "spent": 724487,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-21T08:01:52",
- "wall_s_this_process": 643.7,
+ "updated": "2026-09-21T08:03:57",
+ "wall_s_this_process": 768.7,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -12,13 +12,19 @@
   "mult": 3
  },
  "throughput_guard": "REMOVED in Phase 2G Part B (B1)",
- "retries": 6,
+ "retries": 7,
  "giveups": [
   {
    "session": "cz_0002_s04_v_p07",
    "why": "retries_exhausted after 2 retries (429)",
    "tokens": 107555,
    "wall_s": 319.4
+  },
+  {
+   "session": "cz_0003_s04_v_p07",
+   "why": "retries_exhausted after 2 retries (429)",
+   "tokens": 110779,
+   "wall_s": 352.4
   }
  ],
  "stop_spawn": null,
@@ -1233,6 +1239,16 @@
    "retry_tokens": 0,
    "retries": 0,
    "ts": "2026-09-21T08:01:52"
+  },
+  "cz_0003_s04_v_p07": {
+   "kind": "v",
+   "tokens": 110779,
+   "wall_s": 352.4,
+   "exit": null,
+   "rows": 0,
+   "status": "GIVEUP",
+   "why": "retries_exhausted after 2 retries (429)",
+   "ts": "2026-09-21T08:03:57"
   }
  }
 }
