@@ -147,5 +147,58 @@
    },
    "decision": "FLAG"
   }
+ },
+ "lk": {
+  "lk": {
+   "stage": "lk",
+   "batch": "lk",
+   "n_scored": 250,
+   "rows_in_scope": 1364,
+   "ts": "2026-09-21T09:09:41",
+   "agv4": {
+    "errors": 14,
+    "decided": 245,
+    "point_pct": 5.71,
+    "cp95_pct": [
+     3.16,
+     9.4
+    ],
+    "decision": "PASS",
+    "why": "point 5.71 % <= 12.0 % bar",
+    "bar": 12.0,
+    "counts": {
+     "AGREE": 231,
+     "UNDECIDED": 5,
+     "ERROR": 14
+    }
+   },
+   "reader_nom": {
+    "errors": 16,
+    "decided": 152,
+    "point_pct": 10.53,
+    "cp95_pct": [
+     6.14,
+     16.53
+    ],
+    "decision": "PASS",
+    "why": "point 10.53 % <= 12.0 % bar",
+    "bar": 12.0,
+    "counts": {
+     "CONSERVATIVE": 98,
+     "AGREE": 136,
+     "ERROR": 16
+    }
+   },
+   "g4_RECORDED_ONLY": {
+    "counts": {
+     "AGREE": 192,
+     "ERROR": 53,
+     "UNDECIDED": 5
+    },
+    "ERROR_of_decided_pct": 21.63,
+    "note": "recorded only, never gates"
+   },
+   "decision": "PASS"
+  }
  }
 }
