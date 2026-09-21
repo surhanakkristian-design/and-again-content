@@ -63,3 +63,20 @@ Token projection (2,200,000 budget): S1 ~250k, S2 ~150k, S3 ~200k, S4 ~250k agen
   2I 89.13/4.71 = phase2i/run/results.jsonl rows with stack=='tonly'; 2J 90.36/5.97 = phase2j/partD/run/results.jsonl;
   2J fixed stack on the 2I set = phase2j/run_S2c/results.jsonl. 2J's 25 reference-caused FRs: phase2j/analysis/numbers.json / ANALYSIS.md.
   Results: <run-dir>/results.jsonl (accept, layer AG|F4v2|F4v3|L3|L3:TIPrej|L3:failed, guard fields, l3_reply).
+
+## S2 - Part 3 closed-set re-score (21.9.2026; Gemini 1,788 calls, 0 headless tokens)
+- FROZEN_SHA_S1 verified OK before running; test_2k.py re-run 13/13 PASS (test_2k_output_S2.txt). Runs via run_S2.sh (nohup, sequential):
+  run_S2_2i/ (896 calls, COMPLETE), run_S2_2j/ (892 calls, COMPLETE), 0 uncounted attempts, 0 poison hits. Spend $0.1816 (S2).
+  New-stack layers: {"2I": {"L3": 756, "AG": 4, "L3:TIPrej": 140}, "2J": {"L3": 769, "L3:TIPrej": 123, "AG": 8}}.
+- Reference-based rows reproduce exactly: 2I 443/497 = 89.13 % / 19/403 = 4.71 %; 2J 450/498 = 90.36 % / 24/402 = 5.97 %.
+- SOURCE-ONLY: 2I cov 477/497 = 95.98 % [93.85, 97.52], FA 37/403 = 9.18 % [6.55, 12.43];
+  2J cov 474/498 = 95.18 % [92.91, 96.89], FA 36/402 = 8.96 % [6.35, 12.18];
+  POOLED cov 951/995 = 95.58 % [94.11, 96.77], FA 73/805 = 9.07 % [7.18, 11.27] (ref-based pooled 89.75 % / 5.34 %).
+  Pooled per level: A1 cov 231/248 = 93.15 % [89.25, 95.96] FA 7/202 = 3.47 % [1.40, 7.01] ; A2 cov 240/250 = 96.00 % [92.77, 98.07] FA 16/200 = 8.00 % [4.64, 12.67] ; B1 cov 237/247 = 95.95 % [92.68, 98.04] FA 25/203 = 12.32 % [8.13, 17.64] ; B2 cov 243/250 = 97.20 % [94.32, 98.87] FA 25/200 = 12.50 % [8.26, 17.90].
+- 182 verdicts changed: FR removed 2I 51 / 2J 40, FR added 17 / 16,
+  FA removed 7 / 7, FA added 25 / 19 (net FA +30). 2J's 25 reference-caused FRs: 25/25 now accepted.
+  FA added by writer type: {'M': 35, 'T': 5, 'S': 3, 'W': 1}. Every changed item with mechanical cause + earlier cause label: analysis/part3.md.
+- SAFETY STOP FIRED: pooled FA 9.07 % > 8.0 % -> STOP_part3.md written. Per the brief: no Czech (S3-S5 not run); the orchestrator writes the report.
+- Files: run_S2.sh, analyze_part3.py, analysis/part3.md, analysis/part3.json, run_S2_2i/, run_S2_2j/, run_S2_*.stdout.txt, STOP_part3.md,
+  SHA_after_S2.txt, SHA_diff_S2.txt.
+- Gemini calls: S2 1,788; cumulative 1,788 of 3,000. Headless tokens 0. SHA check S2: SHA_diff_S2.txt 0 lines.
