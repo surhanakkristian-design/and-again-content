@@ -1,0 +1,14 @@
+PASS  T1 mocked end-to-end: jid containing "429" is not a rate limit; a 200 reply "429" = counted failure, never retried
+PASS  T2 real 429 envelope (per-minute RESOURCE_EXHAUSTED): retried, not counted
+PASS  T3 usage-limit envelope (per-day quota): hard STOP, 0 counted, STOP file
+PASS  T4 resume at 0 cost (results kept; and results deleted -> replies reused from the ledger)
+PASS  T5 relative paths refused cleanly (exit 2, no traceback, nothing opened)
+PASS  T6 SOURCE-ONLY: items whose v/alt/lk/en are poison objects; no reference value or key is read; L3 body = source + answer only
+PASS  T7 hard cap 3,000: counted + needed > cap -> STOP before any call
+PASS  T8 reference-ending test over BOTH files (SK final, CZ phase2i/upload): no reference ends in an article or a STRICT preposition
+PASS  T9 upload_sk_final: 4,064 rows, exercise_id int, v[0]==en, the 4 references restored to the pre-B3 value, README
+PASS  T10 the 1.1 ruling verbatim (from BRIEF_2K.md) in judge brief, writer spec and L3 prompt, SK and CZ
+PASS  T11 headless spawner: "429" in result/stderr is not a rate limit; 429 envelope retried; usage-limit envelope = hard STOP
+PASS  T12 routing: every answer not rejected by a source-side guard reaches L3
+PASS  T13 earlier phases byte-identical (sha tree before == after suite == SHA_before.txt)
+RESULT 13/13 PASS; mocked calls 71; real model calls 0
