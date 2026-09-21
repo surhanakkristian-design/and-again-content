@@ -97,6 +97,55 @@
     "note": "recorded only, never gates"
    },
    "decision": "FLAG"
+  },
+  "cz_0005": {
+   "stage": "annotate",
+   "batch": "cz_0005",
+   "n_scored": 50,
+   "rows_in_scope": 64,
+   "ts": "2026-09-21T08:58:34",
+   "agv4": {
+    "errors": 5,
+    "decided": 50,
+    "point_pct": 10.0,
+    "cp95_pct": [
+     3.33,
+     21.81
+    ],
+    "decision": "PASS",
+    "why": "point 10.00 % <= 12.0 % bar",
+    "bar": 12.0,
+    "counts": {
+     "AGREE": 45,
+     "ERROR": 5
+    }
+   },
+   "reader_nom": {
+    "errors": 3,
+    "decided": 28,
+    "point_pct": 10.71,
+    "cp95_pct": [
+     2.27,
+     28.23
+    ],
+    "decision": "FLAG",
+    "why": "decided 28 < 40: FLAG only, never STOP",
+    "bar": 12.0,
+    "counts": {
+     "AGREE": 25,
+     "CONSERVATIVE": 22,
+     "ERROR": 3
+    }
+   },
+   "g4_RECORDED_ONLY": {
+    "counts": {
+     "AGREE": 39,
+     "ERROR": 11
+    },
+    "ERROR_of_decided_pct": 22.0,
+    "note": "recorded only, never gates"
+   },
+   "decision": "FLAG"
   }
  }
 }
