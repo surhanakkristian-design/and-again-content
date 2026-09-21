@@ -1,12 +1,416 @@
 {
- "status": "STOP: not enough fresh annotated Czech sentences per level {\"A1\": 17, \"A2\": 18, \"B1\": 8, \"B2\": 7} (need 25 each); the set was NOT opened, 0 Gemini calls",
+ "status": "STOP: the judge did not deliver all verdict files; 0 Gemini calls",
  "part1": {
   "PART1_DONE": true,
   "PART1_STOP.md": true,
   "status": "STOPPED EARLY: ['STOP_token_cap.md']; 2850 rows assembled, 1466116 headless tokens",
   "waited_s": 0
  },
- "selection": null,
+ "selection": {
+  "source": "FULL Czech production corpus (read-only SELECT), not phase2c/selection_2c.jsonl",
+  "corpus_total": 39498,
+  "corpus_by_level": {
+   "B1": 8906,
+   "B2": 7002,
+   "A1": 9999,
+   "A2": 13591
+  },
+  "corpus_expected": 39498,
+  "corpus_expected_by_level": {
+   "A1": 9999,
+   "A2": 13591,
+   "B1": 8906,
+   "B2": 7002
+  },
+  "exclusion_ex_annotated": 4064,
+  "exclusion_ex_selection": 4064,
+  "exclusion_ex_phase1": 488,
+  "exclusion_ex_ids_union": 4552,
+  "exclusion_ex_text": 10595,
+  "exclusion_used_n": 8128,
+  "exclusion_detail": {
+   "ex_annotated": 4064,
+   "ex_selection": 4064,
+   "ex_phase1": 488,
+   "ex_text": 10595,
+   "used_n": 8128,
+   "ex_ids_union": 4552,
+   "selection_2c_rows": 8128,
+   "sources_checked": [
+    {
+     "file": "phase2c/out/annotations_sk_0001.jsonl",
+     "new_n": 1000,
+     "new_exercise_ids": 1000
+    },
+    {
+     "file": "phase2c/out/annotations_sk_0002.jsonl",
+     "new_n": 1000,
+     "new_exercise_ids": 1000
+    },
+    {
+     "file": "phase2c/out/annotations_sk_0003.jsonl",
+     "new_n": 1000,
+     "new_exercise_ids": 1000
+    },
+    {
+     "file": "phase2c/out/annotations_sk_0004.jsonl",
+     "new_n": 1000,
+     "new_exercise_ids": 1000
+    },
+    {
+     "file": "phase2c/out/annotations_sk_0005.jsonl",
+     "new_n": 64,
+     "new_exercise_ids": 64
+    },
+    {
+     "file": "phase2d/out/annotations_sk_final.jsonl",
+     "new_n": 0,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2e/out/annotations_cz_0001.jsonl",
+     "new_n": 1000,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2e/out/annotations_cz_0002.jsonl",
+     "new_n": 900,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2e/out/annotations_cz_0003.jsonl",
+     "new_n": 900,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2e/out/annotations_cz_final.jsonl",
+     "new_n": 0,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2f/out/annotations_cz_0001.jsonl",
+     "new_n": 0,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2f/out/annotations_cz_0002.jsonl",
+     "new_n": 50,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2f/out/annotations_cz_0003.jsonl",
+     "new_n": 0,
+     "new_exercise_ids": 0
+    },
+    {
+     "file": "phase2f/out/annotations_cz_final.jsonl",
+     "new_n": 0,
+     "new_exercise_ids": 0
+    },
+    {
+     "phase1_roots": [
+      "phase1b",
+      "phase1c",
+      "phase1e",
+      "phase1f",
+      "phase1g",
+      "phase1h",
+      "phase1i",
+      "phase1j",
+      "phase1k",
+      "phase1l",
+      "phase1m",
+      "phase1n",
+      "phase1o",
+      "phase1p",
+      "phase1q",
+      "phase1r",
+      "phase1s",
+      "phase1t",
+      "phase1u",
+      "phase1v",
+      "phase1w",
+      "pilot",
+      "measurements"
+     ],
+     "json_files_scanned": 1961,
+     "exercise_ids": 488
+    },
+    {
+     "file": "phase1m/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1n/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1p/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1u/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1t/set/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1u/set/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1w/a4/data/sentences.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1m/existing_210.json",
+     "new_src": 0
+    },
+    {
+     "file": "phase1n/existing_350.json",
+     "new_src": 0
+    }
+   ]
+  },
+  "candidates": 34966,
+  "candidates_by_level": {
+   "A1": 8733,
+   "A2": 12269,
+   "B1": 7874,
+   "B2": 6090
+  },
+  "reserve_by_level": {
+   "A1": 40,
+   "A2": 40,
+   "B1": 40,
+   "B2": 40
+  },
+  "reserve_used": {
+   "A1": 0,
+   "A2": 0,
+   "B1": 0,
+   "B2": 0
+  },
+  "replacements_made": [],
+  "annotation": {
+   "method": "frozen 2E pipeline run by this driver: v (2C prompt verbatim) + arm-B rewrite + the dedicated lk pass",
+   "v_prompt_sha16": "4f9d486477084793",
+   "lk_prompt_sha16": "5fa910459c078539",
+   "par": 2,
+   "max_retry": 3,
+   "rounds": 3,
+   "headless_tokens_annotation": 310134,
+   "headless_tokens_part2_total": 310134,
+   "token_cap": 1800000,
+   "token_estimate": 190000,
+   "sessions": [
+    "ann_v_A1_r0_try0",
+    "ann_v_A2_r0_try0",
+    "ann_v_B1_r0_try0",
+    "ann_v_B2_r0_try0",
+    "ann_rw_A1_r0_try0",
+    "ann_rw_A2_r0_try0",
+    "ann_rw_B1_r0_try0",
+    "ann_rw_B2_r0_try0",
+    "ann_lk_A1_try0",
+    "ann_lk_A2_try0",
+    "ann_lk_B1_try0",
+    "ann_lk_B2_try0"
+   ],
+   "refused_chunks": [],
+   "replacements": [],
+   "reserve_used": {
+    "A1": 0,
+    "A2": 0,
+    "B1": 0,
+    "B2": 0
+   },
+   "rows_paid": 100,
+   "lk_merge": {
+    "corrected": 52,
+    "class_unusable": 23,
+    "class_adjust": 29,
+    "exact": 48,
+    "class_exact": 48
+   },
+   "unmeasurable_windows": 1,
+   "derive_2c": true,
+   "annotated": 100
+  },
+  "picked": 100,
+  "by_level": {
+   "A1": 25,
+   "A2": 25,
+   "B1": 25,
+   "B2": 25
+  },
+  "halves": {
+   "P1": 50,
+   "P2": 50
+  },
+  "kinds": {
+   "SKP": 52,
+   "MN": 23,
+   "FR": 6,
+   "MC": 19
+  },
+  "sid_range": [
+   210001,
+   210100
+  ],
+  "seed": 20260921,
+  "earlier_n_checked_against": 8128,
+  "earlier_sentences_checked_against": 10595,
+  "sources_checked": [
+   {
+    "file": "phase2c/out/annotations_sk_0001.jsonl",
+    "new_n": 1000,
+    "new_exercise_ids": 1000
+   },
+   {
+    "file": "phase2c/out/annotations_sk_0002.jsonl",
+    "new_n": 1000,
+    "new_exercise_ids": 1000
+   },
+   {
+    "file": "phase2c/out/annotations_sk_0003.jsonl",
+    "new_n": 1000,
+    "new_exercise_ids": 1000
+   },
+   {
+    "file": "phase2c/out/annotations_sk_0004.jsonl",
+    "new_n": 1000,
+    "new_exercise_ids": 1000
+   },
+   {
+    "file": "phase2c/out/annotations_sk_0005.jsonl",
+    "new_n": 64,
+    "new_exercise_ids": 64
+   },
+   {
+    "file": "phase2d/out/annotations_sk_final.jsonl",
+    "new_n": 0,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2e/out/annotations_cz_0001.jsonl",
+    "new_n": 1000,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2e/out/annotations_cz_0002.jsonl",
+    "new_n": 900,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2e/out/annotations_cz_0003.jsonl",
+    "new_n": 900,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2e/out/annotations_cz_final.jsonl",
+    "new_n": 0,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2f/out/annotations_cz_0001.jsonl",
+    "new_n": 0,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2f/out/annotations_cz_0002.jsonl",
+    "new_n": 50,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2f/out/annotations_cz_0003.jsonl",
+    "new_n": 0,
+    "new_exercise_ids": 0
+   },
+   {
+    "file": "phase2f/out/annotations_cz_final.jsonl",
+    "new_n": 0,
+    "new_exercise_ids": 0
+   },
+   {
+    "phase1_roots": [
+     "phase1b",
+     "phase1c",
+     "phase1e",
+     "phase1f",
+     "phase1g",
+     "phase1h",
+     "phase1i",
+     "phase1j",
+     "phase1k",
+     "phase1l",
+     "phase1m",
+     "phase1n",
+     "phase1o",
+     "phase1p",
+     "phase1q",
+     "phase1r",
+     "phase1s",
+     "phase1t",
+     "phase1u",
+     "phase1v",
+     "phase1w",
+     "pilot",
+     "measurements"
+    ],
+    "json_files_scanned": 1961,
+    "exercise_ids": 488
+   },
+   {
+    "file": "phase1m/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1n/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1p/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1u/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1t/set/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1u/set/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1w/a4/data/sentences.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1m/existing_210.json",
+    "new_src": 0
+   },
+   {
+    "file": "phase1n/existing_350.json",
+    "new_src": 0
+   }
+  ],
+  "overlaps_total": 0,
+  "violations_total": 0,
+  "lk_prompt_sha16": "5fa910459c078539",
+  "lk_verdicts": {
+   "adjusted": 52,
+   "exact": 48
+  },
+  "v_prompt_sha16": [
+   "4f9d486477084793"
+  ]
+ },
  "assemble": {
   "items": 900,
   "sentences": 100,
@@ -17,19 +421,17 @@
   "answer_tags": {
    "plain": 100,
    "determiner": 100,
-   "by-passive": 76,
+   "by-passive": 78,
    "paraphrase": 100,
-   "drop-fronted": 56,
-   "time-frame": 148,
+   "drop-main": 164,
+   "time-frame": 136,
    "missing-article": 100,
    "wrong-word": 100,
-   "drop-misaligned": 48,
-   "drop-main": 48,
-   "skp-passive": 24
+   "skp-passive": 22
   },
   "wrong_types": {
-   "M": 152,
-   "T": 148,
+   "M": 164,
+   "T": 136,
    "S": 100,
    "W": 100
   }
@@ -39,16 +441,23 @@
   "duplicate_controls": 80,
   "duplicates_per_level": 20,
   "total_qids": 980,
-  "parts": 3,
+  "parts": 4,
   "part_sizes": [
-   460,
-   460,
-   60
+   254,
+   256,
+   257,
+   213
   ],
   "seed": 20260921,
   "packet_fields_clean": true,
   "topic_present": true,
   "levels_per_part": [
+   [
+    "A1",
+    "A2",
+    "B1",
+    "B2"
+   ],
    [
     "A1",
     "A2",
@@ -191,16 +600,278 @@
   "tokens_out": 0,
   "spend_usd_list_price": 0.0
  },
- "headless_tokens": 0,
- "sessions": [],
+ "headless_tokens": 2265574,
+ "sessions": [
+  {
+   "session": "ann_v_A1_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 154071,
+   "total_cost_usd": 0.57473,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 19927,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 15018,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 14800, \"v\": [\"She stops the spinning globe with her hand.\"], \"lk\": [\"the\"], \"lk_verdict\": \"exact\", \"lk_reason\": \"article is the tested item\", \"voice\": \"active_prodrop\", \"subject\": null, \"agent_nom\": false, \"embedded_agents\": [], \"gender\": null, \"tf\": \"future\", \"tense_open\": true, \"fragment\": false, \"main_sentence_index\": 0, \"person\": \"3sg\", \"number\": \"sg\"},\n{\"n\": 11258, \"v\": [\"He shouts and"
+  },
+  {
+   "session": "ann_v_A2_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 129853,
+   "total_cost_usd": 0.52535,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 20149,
+   "cache_read_input_tokens": 0,
+   "output_tokens": 12954,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 18549, \"v\": [\"There is one big palette on the table.\"], \"lk\": [\"is\"], \"lk_verdict\": \"exact\", \"lk_reason\": \"copula is the whole verb phrase\", \"voice\": \"active_agent\", \"subject\": \"jedna velká paletka\", \"agent_nom\": true, \"embedded_agents\": [], \"gender\": \"f\", \"tf\": \"present\", \"tense_open\": false, \"fragment\": false, \"main_sentence_index\": 0},\n{\"n\": 30786, \"v\": [\"Bruh, one cry lowkey makes so mu"
+  },
+  {
+   "session": "ann_v_B1_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 144629,
+   "total_cost_usd": 0.469181,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 9786,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 14639,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 37932, \"v\": [\"She screamed that someone had moved the compass and the trip was ruined!\"], \"lk\": [\"had moved\"], \"lk_verdict\": \"exact\", \"lk_reason\": \"backshifted reported verb correct\", \"voice\": \"active_prodrop\", \"subject\": null, \"agent_nom\": false, \"embedded_agents\": [\"někdo\", \"výlet\"], \"gender\": \"f\", \"tf\": \"past\", \"tense_open\": false, \"fragment\": false, \"main_sentence_index\": 0},\n{\"n\": 394,"
+  },
+  {
+   "session": "ann_v_B2_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 113622,
+   "total_cost_usd": 0.391166,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 9707,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 11550,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 6727, \"v\": [\"If he hadn't touched the shelf, the jug would still be perfect.\"], \"lk\": [\"hadn't touched\"], \"lk_verdict\": \"exact\", \"lk_reason\": \"tested conditional verb span correct\", \"voice\": \"active_agent\", \"subject\": \"džbán\", \"agent_nom\": true, \"embedded_agents\": [], \"gender\": \"m\", \"tf\": \"present\", \"tense_open\": false, \"fragment\": false, \"main_sentence_index\": 0},\n{\"n\": 41466, \"v\": [\"Bro, "
+  },
+  {
+   "session": "ann_rw_A1_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 51269,
+   "total_cost_usd": 0.18084099999999997,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6512,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 4415,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 14800, \"action\": \"R\", \"sk_new\": \"Ona rukou zastaví ten točící se globus.\", \"pronoun\": \"ona\", \"where\": \"main\", \"reason\": \"\"},\n{\"n\": 17949, \"action\": \"U\", \"sk_new\": \"Rybář ji učí svoje vlastní slova.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 19545, \"action\": \"R\", \"sk_new\": \"Ona namáčí chleba do svého oblíbeného olivového oleje.\", \"pronoun\": \"ona\", \"where\": \"main\","
+  },
+  {
+   "session": "ann_rw_A2_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 43214,
+   "total_cost_usd": 0.16442099999999998,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6390,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 3807,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 30786, \"action\": \"U\", \"sk_new\": \"Vole, jeden výkřik nadělá fakt hodně hluku.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 32988, \"action\": \"U\", \"sk_new\": \"Pravidlo oslavy: každý musí dát dárek, protože dárek je na dávání.\", \"pronoun\": null, \"where\": null, \"reason\": \"explicit_subject\"},\n{\"n\": 29898, \"action\": \"R\", \"sk_new\": \"Hele, on se snažil zavřít bránu, ale záme"
+  },
+  {
+   "session": "ann_rw_B1_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 40971,
+   "total_cost_usd": 0.17559599999999997,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6895,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 4052,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 394, \"action\": \"R\", \"sk_new\": \"Oni jsou promočení a bez dechu, protože se od svítání prodírali nahoru tím hřebenem.\", \"pronoun\": \"oni\", \"where\": \"main\", \"reason\": \"\"},\n{\"n\": 4689, \"action\": \"R\", \"sk_new\": \"Když ona ten lavor teď překlopí, všechna mýdlová voda skončí v záhonu.\", \"pronoun\": \"ona\", \"where\": \"embedded\", \"reason\": \"\"},\n{\"n\": 867, \"action\": \"R\", \"sk_new\": \"Když zamává dost silně,"
+  },
+  {
+   "session": "ann_rw_B2_r0_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 108420,
+   "total_cost_usd": 0.326271,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 7210,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 9953,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 6727, \"action\": \"R\", \"sk_new\": \"Kdyby se on té police nebyl dotkl, džbán by byl ještě celý.\", \"pronoun\": \"on\", \"where\": \"embedded\", \"reason\": \"main clause has overt subject dzban; conditional clause pro-drop 3sg masc -> on after clitic se\"},\n{\"n\": 3150, \"action\": \"R\", \"sk_new\": \"Ona by si přála, aby zlato vypadalo naživo tak jasně jako na kameře.\", \"pronoun\": \"ona\", \"where\": \"main\", \"reason"
+  },
+  {
+   "session": "ann_lk_A1_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 36162,
+   "total_cost_usd": 0.16797099999999998,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6825,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 3775,
+   "permission_denials": 0,
+   "result_head": "[{\"n\":14800,\"class\":\"unusable\",\"lk\":null,\"reason\":\"bare article, not verb phrase\",\"lk_fixed\":\"stops the spinning globe\"},\n{\"n\":11258,\"class\":\"unusable\",\"lk\":null,\"reason\":\"possessive pronoun, not verb phrase\",\"lk_fixed\":\"shouts\"},\n{\"n\":28191,\"class\":\"adjust\",\"lk\":\"sits on a long wooden bench\",\"reason\":\"verb alone, needs complement\",\"lk_fixed\":\"sits on a long wooden bench\"},\n{\"n\":17949,\"class\":\"unu"
+  },
+  {
+   "session": "ann_lk_A2_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 25255,
+   "total_cost_usd": 0.14092099999999996,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 6920,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 2655,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 18549, \"class\": \"adjust\", \"lk\": \"There is\", \"reason\": \"existential phrase needs There\", \"lk_fixed\": \"There is\"},\n{\"n\": 30786, \"class\": \"unusable\", \"lk\": null, \"reason\": \"noun with period, not verb\", \"lk_fixed\": \"makes\"},\n{\"n\": 32988, \"class\": \"adjust\", \"lk\": \"has to give\", \"reason\": \"modal needs main verb\", \"lk_fixed\": \"has to give\"},\n{\"n\": 24314, \"class\": \"exact\", \"lk\": null, \"reason\": \"pa"
+  },
+  {
+   "session": "ann_lk_B1_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 37686,
+   "total_cost_usd": 0.163866,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 7077,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 3510,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 37932, \"class\": \"exact\", \"lk\": null, \"reason\": \"past perfect verb phrase, verbatim\", \"lk_fixed\": \"had moved\"},\n{\"n\": 394, \"class\": \"exact\", \"lk\": null, \"reason\": \"present perfect continuous, verbatim span\", \"lk_fixed\": \"have been pushing\"},\n{\"n\": 4689, \"class\": \"exact\", \"lk\": null, \"reason\": \"if-clause present simple practised\", \"lk_fixed\": \"tips\"},\n{\"n\": 867, \"class\": \"exact\", \"lk\": null, "
+  },
+  {
+   "session": "ann_lk_B2_try0",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 1,
+   "duration_ms": 23559,
+   "total_cost_usd": 0.14121099999999998,
+   "input_tokens": 2,
+   "cache_creation_input_tokens": 7049,
+   "cache_read_input_tokens": 10672,
+   "output_tokens": 2615,
+   "permission_denials": 0,
+   "result_head": "[{\"n\": 6727, \"class\": \"exact\", \"lk\": null, \"reason\": \"third conditional verb phrase verbatim\", \"lk_fixed\": \"hadn't touched\"},\n{\"n\": 41466, \"class\": \"adjust\", \"lk\": \"should have waited\", \"reason\": \"missing past participle\", \"lk_fixed\": \"should have waited\"},\n{\"n\": 3150, \"class\": \"exact\", \"lk\": null, \"reason\": \"wish plus past simple\", \"lk_fixed\": \"looked\"},\n{\"n\": 5620, \"class\": \"adjust\", \"lk\": \"get "
+  },
+  {
+   "session": "writer_A1_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 265412,
+   "total_cost_usd": 1.07521,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 35796,
+   "cache_read_input_tokens": 29160,
+   "output_tokens": 28106,
+   "permission_denials": 0,
+   "result_head": "25 sentences × 9 answers = 225 answers (100 correct, 125 wrong).\nTypes: null 100, M 36, T 39, W 25, S 25.\nTags: plain 25, determiner 25, paraphrase 25, missing-article 25, wrong-word 25.\nby-passive 14 (transitive with a named/pro-dropped doer), skp-passive 11 (agentless, copular or intransitive).\ndrop-main 36 (w1/w2 where a doer exists), time-frame 39 (w3 always, plus w1/w2 on the 7 agentless sent"
+  },
+  {
+   "session": "writer_A2_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 273521,
+   "total_cost_usd": 1.1176805,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 37083,
+   "cache_read_input_tokens": 29261,
+   "output_tokens": 29288,
+   "permission_denials": 0,
+   "result_head": "Wrote `writers/writer_A2.json`: 25 sentences × 9 = 225 answers.\nCorrect 100 (plain 25, determiner 25, paraphrase 25, by-passive 20, skp-passive 5).\nWrong 125: M 40 (drop-main), T 55 (time-frame: 30 in w1/w2 for the five agentless sentences + 25 in w3), S 25 (missing-article), W 25 (wrong-word).\nAgentless treated as no-doer: 210026, 210039, 210043, 210049, 210050.\nAll other sentences name a doer, s"
+  },
+  {
+   "session": "writer_B1_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 382516,
+   "total_cost_usd": 1.4789135,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 47518,
+   "cache_read_input_tokens": 29427,
+   "output_tokens": 39560,
+   "permission_denials": 0,
+   "result_head": "25 sentences (sids 210051–210075), 225 answers: 100 correct, 125 wrong.\nCorrect tags: plain 25, determiner 25, paraphrase 25, by-passive 19, skp-passive 6.\nWrong types: M 38 (drop-main), T 37 (time-frame: 25 w3 + 12 from the six agentless items), S 25 (missing-article), W 25 (wrong-word).\nskp-passive items (no doer named → w1/w2 are time-frame): 210056, 210061, 210067, 210070, 210071, 210074.\nWrit"
+  },
+  {
+   "session": "writer_B2_try1",
+   "exit": 0,
+   "is_error": false,
+   "subtype": "success",
+   "num_turns": 2,
+   "duration_ms": 310451,
+   "total_cost_usd": 1.244148,
+   "input_tokens": 4,
+   "cache_creation_input_tokens": 40809,
+   "cache_read_input_tokens": 29376,
+   "output_tokens": 32854,
+   "permission_denials": 0,
+   "result_head": "25 sentences (210076–210100), 225 answers: 100 correct, 125 wrong.\nCorrect tags: plain 25, determiner 25, by-passive 25, paraphrase 25.\nWrong types: M 50 (drop-main), T 25 (time-frame), S 25 (missing-article), W 25 (wrong-word).\nNo skp-passive written: every Czech sentence here names a doer (explicit noun or pro-dropped personal subject), so c3 is a by-passive throughout and w1/w2 are agent drops."
+  },
+  {
+   "session": "judge_s1",
+   "exit": 1,
+   "is_error": true,
+   "subtype": "error_max_turns",
+   "num_turns": 13,
+   "duration_ms": 759548,
+   "total_cost_usd": 4.691431000000001,
+   "input_tokens": 24,
+   "cache_creation_input_tokens": 197017,
+   "cache_read_input_tokens": 1266632,
+   "output_tokens": 83513,
+   "permission_denials": 0,
+   "result_head": ""
+  }
+ ],
  "deviations": [
-  "The 100 sentences are PRODUCTION Czech (phase2c/selection_2c.jsonl) annotated by the frozen 2E pipeline and adopted from phase2f/out/annotations_cz_final.jsonl at 0 new tokens; 1V/1W had the writers invent the sentences AND the annotation.  Consequence: the assembler, packet builder, label join and floor check are written in this driver against the same contracts instead of copied byte-identically from phase1v/trackA_set.",
+  "The 100 sentences are PRODUCTION Czech, drawn read-only from the full Czech production corpus and annotated by the frozen 2E pipeline inside this driver; 1V/1W had the writers invent the sentences AND the annotation.  Consequence: the assembler, packet builder, label join and floor check are written in this driver against the same contracts instead of copied byte-identically from phase1v/trackA_set.",
+  "STATED DEVIATION - the set source was WIDENED before the set was opened.  The first reading of \"100 NEW Czech sentences from PRODUCTION\" was narrow: the pool was 2C's own 4,064-row Czech selection minus every row 2C, 2D or 2E had already annotated, and the annotation was adopted from phase2f/out/annotations_cz_final.jsonl.  That pool was empty in practice.  Part 1 failed twice to annotate cz_0004 and cz_0005, so the adoptable residue was A1 17 / A2 18 / B1 8 / B2 7 against the 25 per level the design requires, and the driver correctly refused twice at 0 Gemini calls rather than open a short set.  Part 1 will NOT be re-attempted: cz_0004 is 429-limited and cost 875,000 headless tokens for zero rows.  The pool is therefore the WHOLE Czech production corpus - 39,498 grammar-topic exercises with a Czech full_sentence (A1 9,999 / A2 13,591 / B1 8,906 / B2 7,002), read with a SELECT-only query and never written to.  This is the same source 2C's selection was itself drawn from.  The widening makes the set MORE production-representative, not less: 2C's selection was a concept-capped, md5-ranked ONE-ROW-PER-(concept, level) sample of this corpus, so drawing straight from the corpus removes that sampling filter instead of adding one.  The 100 are annotated by this driver with the frozen 2E pipeline - the 2C/2E v prompt verbatim, the arm-B rewrite pass, and the dedicated lk pass (prompt sha16 5fa910459c078539, asserted in code) - which replaces the adoption path the narrow reading depended on.  Declared here BEFORE the set was opened.",
   "The writers therefore write ONLY the 4 correct + 5 wrong answers per sentence, seeing only the Czech sentence, its level and its topic - never the English reference, never the annotation.  The answer-slot contract is conditional on what the writer sees (a sentence that names no doer gets time-frame shifts in w1/w2 instead of agent drops).",
   "Floors F1a/F1b/F4 cannot be controlled on production text (the sentence shape is given, not commissioned).  They are COMPUTED and REPORTED but declared with min 0; the runner gate requires the seven 1U key names to be present, so they are present.  F7 (T/W/M/S each >= 60) is added for \"T/W/M/S otherwise balanced\".",
   "sentences.json carries the CZECH sentence under the key \"slovak\" because loader_1u.py requires that key and phase1p/runner_1p.py reads it; a duplicate \"czech\" key carries the same string.  Renaming it would have meant editing read-only phase1p code.",
   "The L3 prompt is P-FROZEN-1U, unchanged, including its sentence that names Slovak.  Editing it would have been a stack change and would have broken the article_line hash assertion; the brief says to tune nothing.  Recorded as a defect instead (see DEFECTS)."
  ],
- "defects": [],
+ "defects": [
+  {
+   "tag": "skp_heavy",
+   "text": "SKP (no named doer) is 52 of 100 production sentences; the agent-drop floor F1 >= 120 may not be reachable"
+  }
+ ],
  "slovak_1w": {
   "coverage": "392/401 = 97.76 % [95.78, 98.97]",
   "fa": "16/499 = 3.21 % [1.84, 5.15]",

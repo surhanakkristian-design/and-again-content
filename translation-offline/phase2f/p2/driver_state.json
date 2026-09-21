@@ -1,7 +1,8 @@
 {
- "status": null,
+ "status": "STOP: the judge did not deliver all verdict files; 0 Gemini calls",
  "notes": [
-  "PART 1 STOPPED EARLY (PART1_STOP.md present); Part 2 ran anyway as the brief instructs."
+  "PART 1 STOPPED EARLY (PART1_STOP.md present); Part 2 ran anyway as the brief instructs.",
+  "judge continuation session 2 for parts [4]"
  ],
  "sessions": [
   {
@@ -243,9 +244,24 @@
    "output_tokens": 32854,
    "permission_denials": 0,
    "result_head": "25 sentences (210076–210100), 225 answers: 100 correct, 125 wrong.\nCorrect tags: plain 25, determiner 25, by-passive 25, paraphrase 25.\nWrong types: M 50 (drop-main), T 25 (time-frame), S 25 (missing-article), W 25 (wrong-word).\nNo skp-passive written: every Czech sentence here names a doer (explicit noun or pro-dropped personal subject), so c3 is a by-passive throughout and w1/w2 are agent drops."
+  },
+  {
+   "session": "judge_s1",
+   "exit": 1,
+   "is_error": true,
+   "subtype": "error_max_turns",
+   "num_turns": 13,
+   "duration_ms": 759548,
+   "total_cost_usd": 4.691431000000001,
+   "input_tokens": 24,
+   "cache_creation_input_tokens": 197017,
+   "cache_read_input_tokens": 1266632,
+   "output_tokens": 83513,
+   "permission_denials": 0,
+   "result_head": ""
   }
  ],
- "stage": "packets",
+ "stage": "judge",
  "assemble": {
   "items": 900,
   "sentences": 100,

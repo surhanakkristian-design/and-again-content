@@ -101,3 +101,16 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
 [2026-09-21 02:12:58] $ git rev-parse HEAD -> exit 0
 [2026-09-21 02:12:58] === stage packets ===
 [2026-09-21 02:12:58] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 4, "part_sizes": [254, 256, 257, 213], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
+[2026-09-21 02:12:58] $ git add -A translation-offline/phase2f -> exit 0
+[2026-09-21 02:12:58] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1
+[2026-09-21 02:12:58] $ git commit -q -m Phase 2F Part 2: stage packets
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
+[2026-09-21 02:12:58] $ git rev-parse HEAD -> exit 0
+[2026-09-21 02:12:58] === stage judge ===
+[2026-09-21 02:12:58] spawned headless session judge_s1 (pid 10129)
+[2026-09-21 02:25:39] session judge_s1 done: {"exit": 1, "is_error": true, "num_turns": 13, "input_tokens": 24, "cache_read_input_tokens": 1266632, "output_tokens": 83513}
+[2026-09-21 02:25:39] STOP: Part 2 headless spend 2265574 + projected 250000 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 02:25:39] STOP: Part 2 headless spend 2265574 + projected 250000 would exceed the 1800000 token cap; the set was NOT opened, 0 Gemini calls
+[2026-09-21 02:25:39] STOP: the judge did not deliver all verdict files; 0 Gemini calls
+[2026-09-21 02:25:39] PART2_RESULT.md + part2_result.json written
