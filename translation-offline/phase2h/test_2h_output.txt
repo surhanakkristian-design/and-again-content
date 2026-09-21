@@ -1,0 +1,16 @@
+PASS T1 success with 429 in row numbers is not retried - n=5429: 1 call, SUCCESS; n=6429: 1 call, SUCCESS; n=7429: 1 call, SUCCESS (fixture tail = stored p07 fragment, 400 chars)
+PASS T2 rate limit only from the envelope - real 429 envelope retried (2 calls); 429 only in text/stderr -> 1 call
+PASS T3 _samp no recursion - k=250 over 3 -> 3 items; k=50 over 100 -> 50
+PASS T4 GATE 3 7/33 and 7/45 FLAG, not STOP - 7/33 CP [8.98, 38.91] -> FLAG file, no STOP; 7/45 CP [6.49, 29.46] -> FLAG
+PASS T4b GATE 3 <40 decided only FLAGS - 30/35 (CP lower 69.74) -> FLAG only; 30/45 -> STOP
+PASS T5 GATE 3 STOP stops only its batch - cz_t5a STOP (rows written, marked, excluded from xlsx); cz_t5b FLAG, in xlsx; 2 model calls
+PASS T6 700 adopted cz_0004 rows written before a failing gate - 700 adopted cz_0004 rows written before the (forced) STOP: ['7065-7364', '7465-7864']
+PASS T7 stop-file scoping between stages - gate STOP/FLAG files never block the other stage (lk 1 calls, annotate 1 calls); STOP_token_cap blocks (0 calls)
+PASS T9 end to end 10 real rows annotate->lk->merge->upload - 10 rows: 2 model calls; final 2980 rows ({'lk_2h_dedicated': 10, 'phase2g_final': 2970}); xlsx 2980 rows; lk status ['accepted']
+PASS T8 resume spawns 0 sessions - second invocation: 0 sessions planned, 0 spawns (first run made 2)
+PASS T10 apply_lk reproduces 2G lk merge - apply_lk reproduces 2G's lk-merged rows on all 280 rows 2G judged
+PASS T11 lk prompt byte-identical to 2G - lk prompt byte-identical to 2G's stored prompts (3 sessions), sha16 5fa910459c078539
+PASS T12 first session failure stops at 0 cost - first session exit 1 -> STOP_first_session_failed.md, 1 call, 0 tokens
+PASS T13 usage limit stops everything - usage-limit envelope -> STOP_usage_limit.md, no retry, lk then spawns 0
+PASS T14 token cap reservation - reservation 0 + 0 + 5000 > cap 1000 -> STOP_token_cap.md before spawning
+SUMMARY: 15/15 PASS
