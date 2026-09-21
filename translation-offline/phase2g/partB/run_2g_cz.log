@@ -25,3 +25,36 @@
 2026-09-21 07:51:09 SKIP-DONE cz_0001_s10_rw already complete on disk, 0 tokens
 2026-09-21 07:51:09 GATE3 cz_0001_all_rows_DIAGNOSTIC {"agv4": {"counts": {"AGREE": 45, "ERROR": 5}, "ERROR_of_decided_pct": 10.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 22, "CONSERVATIVE": 25, "ERROR": 3}, "ERROR_of_decided_pct": 12.0, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"AGREE": 39, "ERROR": 11}, "ERROR_of_decided_pct": 22.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 11.3}
 2026-09-21 07:51:09 GATE3-SKIP cz_0001 no row of this batch is new in 2G; all of them were gated in 2E/2F
+2026-09-21 07:51:09 BATCH-DONE cz_0001 rows_written 1000 of 1000 wall_s 0.4 cum_tok 0 complete True
+2026-09-21 07:51:09 PROJECTION cz_0001 no rows paid for in this process (all sessions adopted); gate not applicable
+2026-09-21 07:51:09 BATCH cz_0002 cz 1000 rows, 24 sessions total, 19 already complete (0 tokens): cz_0002_s01_v,cz_0002_s01_rw,cz_0002_s02_v,cz_0002_s02_rw,cz_0002_s03_v,cz_0002_s03_rw,cz_0002_s04_rw,cz_0002_s05_v,cz_0002_s05_rw,cz_0002_s06_v,cz_0002_s06_rw,cz_0002_s07_v,cz_0002_s07_rw,cz_0002_s08_v,cz_0002_s08_rw,cz_0002_s09_v,cz_0002_s09_rw,cz_0002_s10_v,cz_0002_s10_rw | 5 to run now, par 2
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s01_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s01_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s02_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s02_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s03_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s03_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s04_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s05_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s05_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s06_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s06_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s07_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s07_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s08_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s08_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s09_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s09_rw already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s10_v already complete on disk, 0 tokens
+2026-09-21 07:51:09 SKIP-DONE cz_0002_s10_rw already complete on disk, 0 tokens
+2026-09-21 07:51:35 RETRY cz_0002_s04_v_p07 v attempt 1 of 2 reason 429 sleep 81.4s counted:false
+2026-09-21 07:51:43 DONE cz_0002_s04_v_p06 v exit 0 tok 36160 cum 36160 wall 34.4 rows 10 / 10 missing {}
+2026-09-21 07:52:16 DONE cz_0002_s04_v_p08 v exit 0 tok 35880 cum 72040 wall 32.3 rows 10 / 10 missing {}
+2026-09-21 07:52:51 DONE cz_0002_s04_v_p09 v exit 0 tok 36270 cum 108310 wall 35.1 rows 10 / 10 missing {}
+2026-09-21 07:53:29 RETRY cz_0002_s04_v_p07 v attempt 2 of 2 reason 429 sleep 145.5s counted:false
+2026-09-21 07:53:32 DONE cz_0002_s04_v_p10 v exit 0 tok 36923 cum 145233 wall 40.6 rows 10 / 10 missing {}
+2026-09-21 07:56:28 GIVEUP cz_0002_s04_v_p07 v retries_exhausted after 2 retries (429) tok 107555 wall 319.4 - moving on, the run never hangs
+2026-09-21 07:56:29 INCOMPLETE cz_0002 1 session(s) missing: cz_0002_s04_v_p07 | rows lost 10 ['5425-5434'] | rows written anyway 990
+2026-09-21 07:56:29 DEFECT batch cz_0002 incomplete: sessions cz_0002_s04_v_p07 missing; 10 rows (5425-5434) not written, 990 rows written
+2026-09-21 07:56:29 GATE3 cz_0002_all_rows_DIAGNOSTIC {"agv4": {"counts": {"AGREE": 44, "ERROR": 4, "UNDECIDED": 2}, "ERROR_of_decided_pct": 8.33, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 27, "CONSERVATIVE": 21, "ERROR": 2}, "ERROR_of_decided_pct": 6.9, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"AGREE": 39, "ERROR": 9, "UNDECIDED": 2}, "ERROR_of_decided_pct": 18.75, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 15.96}
+2026-09-21 07:56:29 GATE3 cz_0002 {"agv4": {"counts": {"ERROR": 4, "AGREE": 36}, "ERROR_of_decided_pct": 10.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 24, "CONSERVATIVE": 14, "ERROR": 2}, "ERROR_of_decided_pct": 7.69, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"ERROR": 9, "AGREE": 31}, "ERROR_of_decided_pct": 22.5, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 7.5}
