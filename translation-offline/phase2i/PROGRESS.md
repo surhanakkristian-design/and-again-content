@@ -36,3 +36,7 @@
 - analysis/analyze.py (deterministic numbers, exact Clopper-Pearson; per-item causes hard-coded as the agent's categorisation) -> analysis/ANALYSIS.md (4.1-4.9 + judge noise, full per-item tables) + analysis/numbers.json.
 - TONLY pooled cov 443/497 = 89.13 % [86.06, 91.73], FA 19/403 = 4.71 % [2.86, 7.26]. FR 54: F4v2 subject-guard misfire 24 (cause-list extension, 5 sentences), reference wrong/narrow 16, synonym 4, structural 2, tense 2, M1 2 (F3 'got'), det 1, voice 1, AG 1, judge 1. M1 via F5 = 0. FA 19: 15 content drop. Diffs 35 (34 = removed ALREADY VERIFIED line, 1 F2B, 0 lock).
 - 0 Gemini calls, 0 headless sessions. Claude tokens this stage ~140k (estimate). Cumulative ~1,346,000 of 3,000,000. Projection: report ~100k -> ~1,446,000.
+## Stage 7 (report) - 21.9.2026
+- Wrote ~/Projects/and-again/docs/features/reports/TRANSLATION_PRODUCTION_PHASE2I_REPORT.md (copy: phase2i/TRANSLATION_PRODUCTION_PHASE2I_REPORT.md), assembled from analysis/ANALYSIS.md + stage files at 0 model calls.
+- SHA re-check: sha_tree.sh -> SHA_after_stage7.txt, 3,256 files, identical to SHA_before (SHA_diff_stage7.txt empty).
+- Tokens: harness-reported stages 1-6 incl. headless 1,339,096 + stage 7 ~110k (estimate) = ~1,449,096 of 3,000,000.
