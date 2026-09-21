@@ -93,3 +93,11 @@ Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
 [2026-09-21 02:12:58] $ git rev-parse HEAD -> exit 0
 [2026-09-21 02:12:58] === stage assemble ===
 [2026-09-21 02:12:58] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 78, "paraphrase": 100, "drop-main": 164, "time-frame": 136, "missing-article": 100, "wrong-word": 100, "skp-passive": 22}, "wrong_types": {"M": 164, "T": 136, "S": 100, "W": 100}}
+[2026-09-21 02:12:58] $ git add -A translation-offline/phase2f -> exit 0
+[2026-09-21 02:12:58] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1
+[2026-09-21 02:12:58] $ git commit -q -m Phase 2F Part 2: stage assemble
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
+[2026-09-21 02:12:58] $ git rev-parse HEAD -> exit 0
+[2026-09-21 02:12:58] === stage packets ===
+[2026-09-21 02:12:58] packets: {"items": 900, "duplicate_controls": 80, "duplicates_per_level": 20, "total_qids": 980, "parts": 4, "part_sizes": [254, 256, 257, 213], "seed": 20260921, "packet_fields_clean": true, "topic_present": true, "levels_per_part": [["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"], ["A1", "A2", "B1", "B2"]]}
