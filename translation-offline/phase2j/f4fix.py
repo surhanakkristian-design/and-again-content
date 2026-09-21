@@ -163,3 +163,80 @@ def install_sweeps(PP):
         return orig(*a, **k)
     PP.run_pipeline = run_pipeline
     PP._F4FIX_RP = True
+
+
+# ---------------------------------------------------------------- S2c: the same misreading through F4v3
+# guards_c.f4v3_subject_mismatch (phase1i/taskC/guards_c.py:339) -> sk_features_v3 (:323), whose FIRST step is
+# `feats, sources = C.sk_features(sk)` (:328) = the ORIGINAL checker_1i.sk_features with the A1 ending misreading.
+# F4v3 = F4v2 + an extra number signal consulted only when sk_features finds nothing, so on the 5 sentences it
+# re-fires on exactly the false -te/-s/-me signals. It runs in the guards_c decide wrapper AFTER the model layer
+# (guards_c.py:127-142), so un-firing it never creates an L3 request. Fix = the same fixed sk_features bound into
+# copies of sk_features_v3 + f4v3_subject_mismatch; sk_number_extra is untouched. P2J_F4V3FIX=0 = run_S2 behaviour.
+OLD3, FN3 = [], [None]
+
+
+def build_fixed_v3(G, C, lang='sk'):
+    src = os.path.abspath(G.__file__)
+    text = open(src, encoding='utf-8').read()
+    fx = build_fixed(C, lang)
+    ns = dict(G.__dict__)
+    ns['_SF_2J'] = fx['sk_features']
+    v3 = _sub(_func_src(text, 'sk_features_v3'), "feats, sources = C.sk_features(sk)", "feats, sources = _SF_2J(sk)", 1)
+    exec(compile(v3, src + ':sk_features_v3[2J]', 'exec'), ns)
+    exec(compile(_func_src(text, 'f4v3_subject_mismatch'), src + ':f4v3[2J]', 'exec'), ns)
+    return dict(fx, sk_features_v3=ns['sk_features_v3'], f4v3_subject_mismatch=ns['f4v3_subject_mismatch'])
+
+
+def v3_patch():
+    C = sys.modules.get('checker_1i'); n = 0
+    for m in list(sys.modules.values()):
+        f = getattr(m, '__file__', '') or ''
+        if f.endswith(os.sep + 'guards_c.py') and hasattr(m, 'GUARDS') and not getattr(m, 'F4V3FIX_2J', False):
+            fx = build_fixed_v3(m, C)
+            for old in (m.f4v3_subject_mismatch, m.GUARDS.get('F4v3')):
+                if old is not None and all(old is not o for o in OLD3):
+                    OLD3.append(old)
+            m.GUARDS['F4v3'] = m.f4v3_subject_mismatch = FN3[0] = fx['f4v3_subject_mismatch']
+            m.sk_features_v3 = fx['sk_features_v3']; m.F4V3FIX_2J = True; n += 1
+    return n
+
+
+def _is_old3(v):
+    return any(v is o for o in OLD3)
+
+
+def sweep3():
+    import gc
+    if not OLD3 or FN3[0] is None:
+        return 0
+    n = 0
+    for o in gc.get_objects():
+        if type(o) is types.FunctionType:
+            for c in (o.__closure__ or ()):
+                try:
+                    v = c.cell_contents
+                except ValueError:
+                    continue
+                if _is_old3(v):
+                    c.cell_contents = FN3[0]; n += 1
+        elif isinstance(o, dict):
+            for k in ('f4v3_subject_mismatch', 'F4v3'):
+                try:
+                    v = dict.get(o, k)
+                except Exception:
+                    continue
+                if _is_old3(v):
+                    dict.__setitem__(o, k, FN3[0]); n += 1
+    return n
+
+
+_sweep_v2 = sweep
+
+
+def sweep(where=''):
+    r = _sweep_v2(where)
+    if os.environ.get('P2J_F4V3FIX', '1') == '1':
+        m = v3_patch(); k = sweep3()
+        sys.stderr.write('F4V3FIX sweep %s: %d modules, %d refs\n' % (where, m, k))
+        r += k
+    return r

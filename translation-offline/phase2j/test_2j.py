@@ -12,7 +12,9 @@ shutil.rmtree(TMP, ignore_errors=True); os.makedirs(TMP)
 B.SLEEP[0] = lambda s: None; B.MIN_INTERVAL = 0; R.SLEEP_H[0] = lambda s: None
 RES = []
 ITEMS = [json.loads(l) for l in open(P2I + '/set/items.jsonl', encoding='utf-8')]
-NEW44 = json.load(open(P2J + '/partA/NEW_L3_CALLS_S2.json'))['jids']
+# the 44 = every 2I tonly item decided by F4v2 (NEW_L3_CALLS_S2.json was rewritten by the S2 run with the 43 needed jids)
+NEW44 = sorted(r['jid'] for r in (json.loads(l) for l in open(P2I + '/run/results.jsonl', encoding='utf-8')) if r['stack'] == 'tonly' and r['layer'] == 'F4v2')
+assert len(NEW44) == 44, len(NEW44)
 
 
 def t(name):
@@ -291,6 +293,49 @@ def _():
         R.run_session('s6', 'P', TMP + '/hl', stop_dir=TMP, token_cap=150, est=100); raise AssertionError('cap ignored')
     except R.Stop as e:
         assert e.kind == 'token_cap'
+
+
+sys.path.insert(0, TOFF + '/phase1i/taskC')
+import guards_c as G                                                            # noqa: E402
+FX3 = f4fix.build_fixed_v3(G, C)
+UNIT3 = [(s, en, want) for s, en, want in UNIT] + [
+    ('Potrebujú nový telefón.', 'He needs a new phone.', True), ('Budú čakať pred domom.', 'He will wait in front of the house.', True),
+    ('Potrebuje nový telefón.', 'He needs a new phone.', False)]
+
+
+@t('T14 S2c F4v3 unit: the 5 misread sentences fire with the 2I F4v3 and no longer with the fixed one; real verbs and the '
+   'number-only signal (-ujú, budú) still fire')
+def _():
+    for s, en, want in UNIT[:5]:
+        assert G.f4v3_subject_mismatch({'sk': s, 'answer': en})[0], ('2I F4v3 should fire (A1 extension)', s)
+    bad = [(s, want) for s, en, want in UNIT3 if FX3['f4v3_subject_mismatch']({'sk': s, 'answer': en})[0] != want]
+    assert not bad, bad
+    for s, en, want in UNIT3[len(UNIT):]:          # own number-only controls (UNIT's real-verb rows are T9's)
+        assert G.f4v3_subject_mismatch({'sk': s, 'answer': en})[0] == want, ('control differs in 2I', s)
+
+
+@t('T15 S2c F4v3 fix on the REAL stack path (run_2j, 45 items of the 5 sids, all replies stored, HTTP forbidden): '
+   'fix OFF reproduces run_S2, fix ON leaves no F4v3 layer and changes only F4v3 items')
+def _():
+    B.HTTP[0] = lambda *a: (_ for _ in ()).throw(AssertionError('HTTP called'))
+    S2 = {r['jid']: r for r in (json.loads(l) for l in open(P2J + '/run_S2/results.jsonl', encoding='utf-8'))}
+    st5 = write_set(TMP + '/set_v3.jsonl', sid_items(250, 1038, 1214, 2461, 2989))
+    out = {}
+    for fx in ('0', '1'):
+        os.environ['P2J_F4V3FIX'] = fx
+        d = TMP + '/run_v3_' + fx
+        st = R.run_gemini(st5, d, 'V' + fx, seed_ledger=P2J + '/partA/seed_2I_S2.jsonl', ledger_path=TMP + '/led_v3_%s.json' % fx,
+                          key='MOCK', expect_needed=0)
+        assert st['status'] == 'COMPLETE' and st['counted_total'] == 0, st
+        out[fx] = {r['jid']: r for r in (json.loads(l) for l in open(d + '/results.jsonl', encoding='utf-8'))}
+    os.environ['P2J_F4V3FIX'] = '1'
+    assert len(out['0']) == 45, len(out['0'])
+    assert all((out['0'][j]['layer'], out['0'][j]['accept']) == (S2[j]['layer'], S2[j]['accept']) for j in out['0']), 'OFF != run_S2'
+    assert not [j for j in out['1'] if out['1'][j]['layer'] == 'F4v3'], 'F4v3 still fires'
+    ch = [j for j in out['1'] if (out['1'][j]['layer'], out['1'][j]['accept']) != (out['0'][j]['layer'], out['0'][j]['accept'])]
+    assert ch and all(out['0'][j]['layer'] == 'F4v3' for j in ch), ch
+    globals()['T15'] = {'changed': len(ch), 'f4v3_off': sum(1 for j in out['0'] if out['0'][j]['layer'] == 'F4v3')}
+    print('T15', T15)
 
 
 npass = sum(1 for r in RES if r[1] == 'PASS')
