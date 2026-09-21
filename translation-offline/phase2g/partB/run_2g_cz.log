@@ -97,3 +97,9 @@
 2026-09-21 08:03:57 DEFECT batch cz_0003 incomplete: sessions cz_0003_s04_v_p07 missing; 10 rows (6425-6434) not written, 990 rows written
 2026-09-21 08:03:57 GATE3 cz_0003_all_rows_DIAGNOSTIC {"agv4": {"counts": {"AGREE": 45, "ERROR": 5}, "ERROR_of_decided_pct": 10.0, "bar": 12.0}, "reader_nom": {"counts": {"CONSERVATIVE": 18, "AGREE": 30, "ERROR": 2}, "ERROR_of_decided_pct": 6.25, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"ERROR": 14, "AGREE": 36}, "ERROR_of_decided_pct": 28.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 11.11}
 2026-09-21 08:03:57 GATE3 cz_0003 {"agv4": {"counts": {"AGREE": 45, "ERROR": 5}, "ERROR_of_decided_pct": 10.0, "bar": 12.0}, "reader_nom": {"counts": {"AGREE": 26, "CONSERVATIVE": 17, "ERROR": 7}, "ERROR_of_decided_pct": 21.21, "bar": 12.0}, "g4_DIAGNOSTIC_ONLY": {"counts": {"ERROR": 12, "AGREE": 38}, "ERROR_of_decided_pct": 24.0, "note": "never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern"}, "lk_adjust_rate_pct": 21.11}
+2026-09-21 08:03:57 STOP gate3_reader_nom_cz_0003 GATE 3 failed on batch cz_0003 (cz): reader_nom ERROR-of-decided 21.21 % > 12.0 % bar.
+
+Counts: {'AGREE': 26, 'CONSERVATIVE': 17, 'ERROR': 7}
+The batch's annotations are written and committed; the run stopped before the next batch.
+g4 (diagnostic only, never gates): {'counts': {'ERROR': 12, 'AGREE': 38}, 'ERROR_of_decided_pct': 24.0, 'note': 'never gates: built over AG v2/v3; 2B settled it as the reflexive si/sa/se pattern'}
+2026-09-21 08:03:57 PIECES {"SUCCESS": 13, "FAILURE": 2, "NOT_RUN": 10}
