@@ -158,3 +158,22 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Headless tokens: B2 total 1414860 (S4 recorded 177,611 at return; S5 adds 1237249 from the driver); S5 itself 0; cumulative headless 1414860.
 - SHA check S5: SHA_diff_S5.txt 0 lines.
 - NEXT (S6): Part D samples from the CORRECTED phase2j/upload/annotations_sk_fixed.jsonl, only audited ids (COVERAGE.json), excluding 2F-probe 60 + 2I 100.
+
+## S6 - Part D set + 4 blind writers (21.9.2026; 0 Gemini calls)
+- Set (partD/make_set.py, adapted from phase2i/make_set.py): source = CORRECTED phase2j/upload/annotations_sk_fixed.jsonl restricted
+  to the 3,200 B2-audited exercise_ids (COVERAGE.json); excluded 2F probe 60 (Slovak text) + 2I 100 (Slovak text AND exercise_id);
+  unique src (also across levels), sorted by n, random.Random(20260922+level_index).sample(25). Eligible per level:
+  A1 888 (rows 1,174, audited 921, probe 14, 2I 19), A2 932 (1,220/965/12/21), B1 663 (885/693/12/18), B2 588 (785/621/13/20).
+  partD/set/sentences.jsonl sha256 3a442591eb8d273c905c6f021277d9da015ed440c7615ecc3f063d936b17dab2 (+ .sha256, SET_META.json).
+- Writers (partD/run_writers.py): TEMPLATE copied byte-for-byte from phase2i/writers/run_writers.py, sha 68105f3dc611894e7d83d6e8efd0b21dfcfd33249a46dac708f5194b82104cfb
+  asserted == 2I PROMPTS.sha256; writers see wid/slovak/level/topic only; spawner = run_2j.run_session (usage-limit hard STOP, rate limit
+  from envelope only, resume 0 cost); validator uses sorted(TYPES) (DEFECTS 14 fix verified: mock invalid-types -> one retry, valid ->
+  accepted); cap 500,000 by reservation (est 110k). Before spawning: test_2j 16/16 PASS (partD/test_2j_output_S6.txt); mock run
+  (scratch dir) = 429 envelope retried, invalid output retried once, dedupe, resume 0 spawns, relative path REFUSED cleanly.
+- Real run: 4/4 sessions valid on first attempt (opus); answers 900 = 500 correct / 400 wrong, T/W/M/S 100 each, 0 dedupes,
+  agent_drop 5. partD/set/answers.jsonl sha256 eca9c5506bb5abe2adb16ba70ee9a3b9e1591060e4f794bde933fcff10fdeb3a (+ .sha256).
+  WRITERS_SUMMARY.json, PROMPTS.sha256, prompt_*.txt, sessions/ under partD/writers/. No labels created; set not opened with the stack.
+- Headless tokens S6: 225,497 (A1 50,352 / A2 51,383 / B1 62,083 / B2 61,679); cumulative headless 1,640,357.
+- Gemini calls: S6 0, cumulative 144 of 1,200.
+- SHA check S6: S1 generator (`zsh phase2i/sha_tree.sh | grep -v '  phase2j/'`), SHA_diff_S6.txt 0 lines.
+- NEXT (S7): judge over partD/set/answers.jsonl (aid = A:<sid>:<c1..c5|t|w|m|s>); items carry writer_intent/type - hide from judge.

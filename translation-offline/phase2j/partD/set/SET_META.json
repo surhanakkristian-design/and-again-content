@@ -1,0 +1,53 @@
+{
+ "seed": 20260922,
+ "per_level_seed": {
+  "A1": 20260922,
+  "A2": 20260923,
+  "B1": 20260924,
+  "B2": 20260925
+ },
+ "stats": {
+  "A1": {
+   "rows": 1174,
+   "audited": 921,
+   "excl_probe": 14,
+   "excl_2i": 19,
+   "dup_src": 0,
+   "eligible": 888,
+   "picked": 25
+  },
+  "A2": {
+   "rows": 1220,
+   "audited": 965,
+   "excl_probe": 12,
+   "excl_2i": 21,
+   "dup_src": 0,
+   "eligible": 932,
+   "picked": 25
+  },
+  "B1": {
+   "rows": 885,
+   "audited": 693,
+   "excl_probe": 12,
+   "excl_2i": 18,
+   "dup_src": 0,
+   "eligible": 663,
+   "picked": 25
+  },
+  "B2": {
+   "rows": 785,
+   "audited": 621,
+   "excl_probe": 13,
+   "excl_2i": 20,
+   "dup_src": 0,
+   "eligible": 588,
+   "picked": 25
+  }
+ },
+ "audited_ids": 3200,
+ "excluded_src": 160,
+ "excluded_2i_eids": 100,
+ "sha256": "3a442591eb8d273c905c6f021277d9da015ed440c7615ecc3f063d936b17dab2",
+ "source": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/upload/annotations_sk_fixed.jsonl",
+ "method": "Phase 2J S6: Part D 100-sentence set (25 per level), adapted from phase2i/make_set.py.\nSource = CORRECTED sk upload (phase2j/upload/annotations_sk_fixed.jsonl) restricted to B2-audited exercise_ids\n(partB/audit/COVERAGE.json). Excludes the 60 2F-probe sentences (Slovak text) and the 100 2I sentences (Slovak text AND\nexercise_id). Candidates per level = unique src (also unique across levels, levels in order A1..B2), sorted by n,\nrandom.Random(SEED+level_index).sample(25)."
+}

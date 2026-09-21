@@ -1,0 +1,19 @@
+T15 {'changed': 27, 'f4v3_off': 27}
+T16 ok 9
+PASS  T1 item/row number containing "429" is NOT a rate limit + T2 real 429 envelope is retried
+PASS  T3 resume at 0 cost (same command, finished items skipped, stored replies reused)
+PASS  T4 usage-limit (per-day quota) envelope -> hard STOP, 0 counted, STOP file
+PASS  T5 phase ledger: other stages 1,199 + needed > 1,200 -> STOP before any call
+PASS  T6 --expect-needed mismatch -> STOP at 0 calls; seeded replies are reused and not counted
+PASS  T7 relative-path invocation works (relative script, --set, --run-dir, --ledger; cwd = translation-offline)
+PASS  T8 A2 hook on the REAL stack path: fix ON vs OFF prepare on the 5 sids -> exactly the 44 new L3 requests
+PASS  T9 A2 fix unit: the 5 misread sentences no longer fire, real verbs still do (9 cases)
+PASS  T10 A2 verb-loss (S1 cost candidates): a PP-head verb keeps its reading - synthetic SK + CZ
+PASS  T11 A2 verb-loss on both upload files: every potrebuješ/bola (SK), byla/mluvila/dala (CZ) signal is kept; every removed signal is a non-verb
+PASS  T12 headless spawner: ok envelope (usage summed; "429" in result text is not a rate limit), resume 0 spawns, argv recipe
+PASS  T13 headless: real 429 envelope retried; usage-limit envelope -> STOP_usage_limit.md + hard stop; stop file blocks
+PASS  T14 S2c F4v3 unit: the 5 misread sentences fire with the 2I F4v3 and no longer with the fixed one; real verbs and the number-only signal (-ujú, budú) still fire
+PASS  T15 S2c F4v3 fix on the REAL stack path (run_2j, 45 items of the 5 sids, all replies stored, HTTP forbidden): fix OFF reproduces run_S2, fix ON leaves no F4v3 layer and changes only F4v3 items
+PASS  T16 S4 B2 audit (mocked spawner): validator hard/soft, cap reservation stops after wave 1 + COVERAGE ids, invalid -> one retry, "429" in id/result is not a rate limit, resume 0 spawns, relative paths, usage-limit envelope -> STOP
+PASS  T17 S5 B3 transforms + 1P lever-3 tense filter (remove added span, broader word added, other gender added/replaced, mixed/person W listed, tense filter, faithful untouched, dedup keeps v[0])
+SUMMARY 16/16 PASS

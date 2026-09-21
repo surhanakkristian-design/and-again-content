@@ -1,0 +1,45 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Slovak sentences from a language-learning app, one per line as JSON: a writer id (wid), the Slovak sentence, its CEFR level and the exercise topic. Imagine real learners translating each Slovak sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Slovak. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Slovak's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Slovak (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Slovak is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Slovak names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+Sentences:
+{"wid": "wA201", "slovak": "Ak chceš čerstvý vzduch, mal by si sa prejsť v parku.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA202", "slovak": "Skutočný profesionál, samozrejme: zubár potrebuje veľmi málo času na jej zuby.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA203", "slovak": "Skvelý pacient. Koleno ho bolelo, ale teraz robí drepy ako profík.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA204", "slovak": "Zvyčajne podáva tašky, ale teraz podáva zákazníkovi mincu.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA205", "slovak": "On používa toľko zelenej farby na stenu.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA206", "slovak": "Pravidlá tábora: každý sa musí zobudiť pred raňajkami.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA207", "slovak": "Za minútu tie kľúče nájdu vo dverách.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA208", "slovak": "Orechy je každú jeseň, ale vlani nezjedol ani jeden.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA209", "slovak": "Publikum to miluje, tak divadlo budúci týždeň uvedie tú hru znova.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA210", "slovak": "Uprostred série by si nemal prestať.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA211", "slovak": "Ona zvyčajne griluje ryby, ale včera večer grilovala hovädzie mäso.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA212", "slovak": "On dvíha svoj cylinder. Je zdvorilejší než ostatní muži v parku.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA213", "slovak": "Tam je voľné miesto! — Super, zaparkujem tam.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA214", "slovak": "Farebná girlanda spadla, lebo lepiaca páska bola príliš slabá. Úplná katastrofa!", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA215", "slovak": "Pouličný hudobník spieva nejaké piesne a dav počúva.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA216", "slovak": "Fakt, učiteľka, máš toľko práce a stále ideš ďalej.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA217", "slovak": "Včera bola tiež úplne zmätená.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA218", "slovak": "Ty zvyčajne kladieš jeden tanier, ale včera si pripravil hostinu. Elegantné!", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA219", "slovak": "Práve teraz sa mu hruď rýchlo dvíha", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA220", "slovak": "Ty sa usmievaš tak šťastne na rýchlom bicykli. Ikonické.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA221", "slovak": "Na rovinu, nie je tu žiadny ladnejší partner ako ty.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA222", "slovak": "Dokonalé plánovanie: včera označila načerveno nesprávny dátum.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA223", "slovak": "Ak je toto miesto voľné, sadnem si sem tiež.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA224", "slovak": "On teraz hovorí nie, ale zajtra sa ona opýta znova pred obchodom.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA225", "slovak": "Pozri na tie nohy! Chystá sa skočiť veľmi vysoko.", "level": "A2", "topic": "Going to or Will"}

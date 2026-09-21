@@ -1,0 +1,45 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Slovak sentences from a language-learning app, one per line as JSON: a writer id (wid), the Slovak sentence, its CEFR level and the exercise topic. Imagine real learners translating each Slovak sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Slovak. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Slovak's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Slovak (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Slovak is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Slovak names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+Sentences:
+{"wid": "wB201", "slovak": "Keby administratíva prestala skôr, ona by sa nezvalila na stôl.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB202", "slovak": "Teraz sa skrýva pod mnohými vrstvami a vidno mu len tvár.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB203", "slovak": "Farmár by si prial, aby nebol veril chlapcovi, ktorý sa pred pádom dozadu takto škerí.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB204", "slovak": "Sviečky zapália, len čo posledné taniere budú na čerstvom obruse.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB205", "slovak": "Nikdy predtým nebolo toľko ľudí okolo jedného novonarodeného bábätka.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB206", "slovak": "Pozri sa na ňu - práve hádže žetóny do vzduchu oboma rukami!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB207", "slovak": "Do konca dňa inžinier skontroluje každý manometer na týchto starých strojoch.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB208", "slovak": "Škrečok, ktorého preukaz otvára dvere kancelárie, odchádza o piatej.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB209", "slovak": "Do západu slnka zlyžuje celý svah. Očividne len malá ranná prechádzka.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB210", "slovak": "Muž momentálne jazdí na skateboarde s aktovkou.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB211", "slovak": "Keby mu sestry ráno barle nenastavili, bol by skončil na tvár pred celým oddelením.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB212", "slovak": "Nebudem klamať, ty si prehľadával svoju peňaženku celú večnosť, kým si sa uškrnul ako bohatý muž.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB213", "slovak": "Úradník sa jej spýtal, či má pri sebe preukaz totožnosti.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB214", "slovak": "Ten rozťahovací stôl je vraj najlepšia vec, akú kedy kúpil do bytu.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB215", "slovak": "Povedala, že sa opláchne rýchlo, ale ostala pod sprchou desať minút.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB216", "slovak": "Kámo, kým doniesli tortu, každý príbuzný sa už dvakrát objal, fakt.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB217", "slovak": "Počuj, on ten kufor musel kotúľať celé kilometre; kolieska má vraj zodraté.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB218", "slovak": "Zo šiestich hráčov spoluhráč, ktorý minul poslednú loptu, sa smeje najhlasnejšie.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB219", "slovak": "Do konca zápasu premení dve penalty v jednom stretnutí.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB220", "slovak": "Takže, do budúceho týždňa vraj vyrozprávajú príbeh o útoku býka všetkým.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB221", "slovak": "Naliala vodu z džbánu so zahnutým uchom do krhly.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB222", "slovak": "Do piatku odprezentuješ tento projekt každému tímu, a úprimne, rešpekt.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB223", "slovak": "Celé mesiace si prezerali byty, kým tento konečne ukončil nočnú moru!", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB224", "slovak": "Strany sprievodcu si pred cestou dali zalaminovať.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB225", "slovak": "Počuj, vraj z toho veľkého hrnca vyráža para zakaždým, keď zdvihne pokrievku.", "level": "B2", "topic": "All Present Tenses"}
