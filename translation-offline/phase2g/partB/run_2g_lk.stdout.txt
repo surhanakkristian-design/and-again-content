@@ -1,0 +1,25 @@
+08:03:58 START rows 280 sessions 3 PAR 2 cap 2175513 already_spent 0 prompt_sha 5fa910459c078539
+08:04:39 DONE cz_0002_s01_lk exit 0 tok 39835 cum 39835 wall 40.7 rows 90 / 90
+08:04:47 DONE cz_0003_s01_lk exit 0 tok 41577 cum 81412 wall 48.7 rows 100 / 100
+08:05:24 DONE cz_0003_s02_lk exit 0 tok 40427 cum 121839 wall 45.7 rows 90 / 90
+08:05:24 LOW-MODE 3 session(s) under 30 % non-exact: {"cz_0002_s01_lk": 0.0, "cz_0003_s01_lk": 26.0, "cz_0003_s02_lk": 23.33} - re-running each ONCE
+08:06:23 DONE cz_0002_s01_lk exit 0 tok 40954 cum 162793 wall 58.8 rows 90 / 90
+08:06:26 DONE cz_0003_s01_lk exit 0 tok 41288 cum 204081 wall 61.9 rows 100 / 100
+08:07:08 DONE cz_0003_s02_lk exit 0 tok 40071 cum 244152 wall 45.0 rows 90 / 90
+08:07:08 LOW-MODE-RERUN {"cz_0002_s01_lk": {"attempt1_pct": 0.0, "attempt2_pct": 50.0}, "cz_0003_s01_lk": {"attempt1_pct": 26.0, "attempt2_pct": 15.0}, "cz_0003_s02_lk": {"attempt1_pct": 23.33, "attempt2_pct": 23.33}}
+08:07:08 MERGE corrected 280 final 280 {'class_unusable': 32, 'class_adjust': 49, 'class_exact': 199}
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 641, in <module>
+    main()
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 636, in main
+    gate = gate3(merged)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 451, in gate3
+    pick = _samp(rnd, anns, min(GATE3_N, len(anns)))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 17, in _samp
+    def _samp(rnd, pop, k): return _samp(rnd, pop, min(k, len(pop)))   # 2G: fewer than 250 rows is legal
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 17, in _samp
+    def _samp(rnd, pop, k): return _samp(rnd, pop, min(k, len(pop)))   # 2G: fewer than 250 rows is legal
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partB/run_2g_lk.py", line 17, in _samp
+    def _samp(rnd, pop, k): return _samp(rnd, pop, min(k, len(pop)))   # 2G: fewer than 250 rows is legal
+  [Previous line repeated 993 more times]
+RecursionError: maximum recursion depth exceeded in comparison
