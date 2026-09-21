@@ -195,3 +195,24 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Gemini calls: S7 0, cumulative 144 of 1,200. Headless tokens S7 340352; cumulative headless 1980709.
 - SHA check S7: S1 generator, SHA_diff_S7.txt 0 lines.
 - NEXT (S8): freeze + commit before opening; run the fixed TRANSLATION-ONLY stack once over partD/set/items.jsonl (judge_label = truth).
+
+## S8 - Part D run, fixed TRANSLATION-ONLY stack, opened ONCE (21.9.2026)
+- Pre-flight at 0 cost (partD/s8_chain.sh): shasum -c FROZEN_SHA_S5.txt 14/14 OK (partD/S8_frozen_check.txt); test_2j 16/16 PASS
+  (partD/test_2j_output_S8.txt); items.jsonl sha 221c90a8...df5d OK; sha tree == SHA_before (SHA_pre_S8.txt, SHA_diff_pre_S8.txt empty);
+  dry count (stack prepare only in partD/dry, labels stripped, no L3 call, not via open_set) = 833 unique requests <= 1,056 remaining
+  (partD/S8_dry_count.json).
+- Freeze: partD/FROZEN_SHA_D.txt (S5 frozen files + run_2j.py + partD/set/items.jsonl + partD/judge/labels.jsonl), partD/FREEZE_HASH.txt
+  (sha of FROZEN_SHA_D.txt), partD/FREEZE_COMMIT.txt = ea0992cf088aa0b37b75c7dd81cb47c4abd36d78; partD/RUN_COMMIT.txt = 5d7008c0539dce4da810f455b499a0568189cc9a
+  (the commit carrying FREEZE_COMMIT.txt; RUN_COMMIT.txt itself committed in 4afd448 before the open; all three verified in HEAD, phase2j clean).
+- Run: nohup run_2j.py gemini --stage S8 --expect-needed 833, absolute paths, pid 26514, 12:07:52Z -> 12:23:57Z, status COMPLETE,
+  833 counted (all HTTP 200), 0 uncounted, 0 failed calls, 0 seeded, spend $0.104052. Access log: exactly 1 open (partD/run/ACCESS_LOG_VERBATIM.md).
+  Files partD/run/{FINAL_RUN_DONE, RUN_STATUS.json, ledger.jsonl, results.jsonl, access_log.jsonl, HEADLINE_QUICK.json}, partD/run.stdout.txt, partD/s8_post.py.
+- HEADLINE (truth = judge_label): coverage 450/498 = 90.36 % [87.42, 92.81] (90 % target met on the point, not the interval);
+  FA 24/402 = 5.97 % [3.86, 8.75] (5 % target missed on point and interval). 2I: 89.13 % [86.06, 91.73] / 4.71 % [2.86, 7.26].
+  Per level cov / FA: A1 109/124 87.90 % [80.83, 93.07] / 3/101 2.97 % [0.62, 8.44]; A2 119/125 95.20 % [89.85, 98.22] / 7/100 7.00 % [2.86, 13.89];
+  B1 103/124 83.06 % [75.28, 89.20] / 7/101 6.93 % [2.83, 13.76]; B2 119/125 95.20 % [89.85, 98.22] / 7/100 7.00 % [2.86, 13.89].
+  FR 48 by layer: L3 32, F3 5, L3:TIPrej 5, AG 5, F5 1. FA 24, all L3. Lists in HEADLINE_QUICK.json.
+- Gemini calls: S8 833, cumulative 977 of 1,200 (GEMINI_LEDGER.json). Spend: S8 $0.104052, cumulative $0.122434 (S2 0.005674 + S5 0.012708 + S8).
+- Headless tokens S8: 0; cumulative headless 1,980,709.
+- SHA check S8: SHA_after_S8.txt vs SHA_before, SHA_diff_S8.txt 0 lines.
+- NEXT (S9): FR/FA cause tables per 2I cause list from partD/run/results.jsonl + items; report.
