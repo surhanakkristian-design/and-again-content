@@ -17,6 +17,9 @@ CLI (run_2i.py spawns one subprocess per stack so the two module graphs never mi
 import json, os, sys
 sys.dont_write_bytecode = True
 HERE = os.path.dirname(os.path.abspath(__file__))
+if HERE not in sys.path:
+    sys.path.insert(0, HERE)
+import write_guard  # noqa: E402,F401  stage 2b: every write outside phase2i/ is redirected
 TOFF = os.path.dirname(HERE)
 RUN_1W = os.path.join(TOFF, 'phase1w', 'a4', 'run')
 TAG = 'fresh1u'                                   # runner_1u.SIDE_TAG, as the 1W run used it
@@ -26,7 +29,7 @@ ANN_FIELDS = ('agent_nom', 'alt', 'concept_id', 'correct_answer_src', 'embedded_
               'level', 'lk', 'lk_reason', 'lk_supplied', 'lk_verdict', 'main_sentence_index', 'n', 'number',
               'perfective_present', 'person', 'rewrite', 'script_reader_agent', 'script_voice_paths', 'src',
               'subject', 'tense_open', 'tf', 'type_title', 'v', 'voice')
-STATE = {'stack': 'frozen', 'R1U': None, 'ann_hook': None, 'post_build': None}
+STATE = {'stack': 'frozen', 'R1U': None, 'ann_hook': None, 'post_build': None, 'row_hook': None}
 
 
 def _say(*a, **k):
@@ -118,7 +121,10 @@ def decide(b, vm, failed_ids=()):
 
 
 def from_2i(items):
-    sents, ann, nat, idmap, seen = [], {}, [], {}, set()
+    """2I items -> the 1W data shapes. The annotation conversion is the 2F adapter (adapter_2f.py = verbatim
+    p3_probe.alt_dict/build_data), exactly as 2F ran production rows through the 1W stack (stage 2b)."""
+    import adapter_2f as A2F
+    rows, nat, idmap, seen = [], [], {}, set()
     if len({it['jid'] for it in items}) != len(items):
         raise SystemExit('REFUSED: duplicate jid')
     for k, it in enumerate(items):
@@ -127,13 +133,17 @@ def from_2i(items):
             {f: it[f] for f in ANN_FIELDS if f in it}
         if sid not in seen:
             seen.add(sid)
-            sents.append({'sid': sid, 'pid': 'P2I%d' % sid, 'slovak': it['slovak'], 'level': it['level'],
-                          'topic': it.get('topic') or a.get('type_title'), 'tags': {}})
-            ann[str(sid)] = a
+            if STATE['row_hook']:
+                a = STATE['row_hook'](a)
+            rows.append({'sid': sid, 'exercise_id': a.get('exercise_id'), 'level': it['level'],
+                         'topic': it.get('topic') or a.get('type_title') or 'general',
+                         'slovak': it['slovak'], 'ann': a})
         iid = 'C:%d:j%05d' % (sid, k)
         nat.append({'id': iid, 'sid': sid, 'kind': 'C', 'intent': None, 'form': None, 'tags': [],
                     'passive': None, 'answer': it['answer']})
         idmap[iid] = it['jid']
+    rd = os.environ.get('P2I_RUN_DIR') or os.path.join(HERE, 'run')
+    sents, ann = A2F.convert(rows, os.path.join(rd, '_adapter_%s' % STATE['stack']))
     return sents, ann, nat, idmap
 
 

@@ -8,3 +8,7 @@
 - STOP_stage2.md: the frozen chain crashes on production annotations (alt is a list; 1W needs the 2F adapter shape).
   Suite did not complete; nothing frozen. 0 Gemini calls, 0 headless sessions.
 - Claude tokens this stage ~160k (estimate; harness figure authoritative). Cumulative ~290k of 3,000,000.
+## Stage 2b (2F adapter, write isolation, tests, freeze) - 21.9.2026
+- adapter_2f.py (verbatim p3_probe.py 55, 121-128, 286-294, 297-322 + convert) wired into stack_frozen.from_2i; stack_tonly.strip_row; write_guard.py; test_2i (k)(w)(z sha tree) added; harness fix (SHA_before newline parse).
+- test_2i: 32/32 PASS, 0 model calls; probe data reproduced byte-identical 60/60; 0 chain writes outside phase2i.
+- FROZEN_SHA.txt + FREEZE_COMMIT.txt. Claude tokens this stage ~90k (estimate). Cumulative ~380k of 3,000,000.

@@ -10,6 +10,8 @@ sys.dont_write_bytecode = True
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOFF = os.path.dirname(HERE)
 TONLY = os.path.join(HERE, 'tonly')
+sys.path.insert(0, HERE)
+import write_guard  # noqa: E402,F401  stage 2b: before any 1W module
 COPIED = ('lib_prev', 'pipeline_1i', 'runner_1p')          # load order
 BAD = ('lk', 'locks', 'lock_ok', 'lock_released_2_1')
 HITS = []
@@ -108,6 +110,13 @@ def _poison_recs(st, recs, by):
     st['_poison_keep'] = keep
 
 
+def strip_row(a):
+    """stage 2b: lk / lk_* removed from the production row BEFORE the 2F adapter reads it (the verbatim adapter
+    does d.get('lk'); on this stack that key is absent, so hygienised/raw get lk = [] which strip_lk then drops)."""
+    return {k: v for k, v in a.items() if not _is_lk(k)}
+
+
+E.STATE['row_hook'] = strip_row
 E.STATE['ann_hook'] = strip_lk
 if POISON:
     E.STATE['post_build'] = _poison_recs

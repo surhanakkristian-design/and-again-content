@@ -82,3 +82,8 @@ No `sid`/`topic`/`sk` fields: sentence = `src`, topic = `type_title`. SK: every 
 - CZ: `phase2h/out/upload_cz_final.xlsx` sheet `cz`, 4,064 rows; + `phase2h/out/annotations_cz_final.jsonl` (older: phase2f/out 2,850 rows, phase2g/partB/out — superseded).
 - Columns (both): exercise_id, language_code, level, src, en, structure_json (= the full jsonl annotation row as JSON, default json.dumps style, ensure_ascii False; identical to the jsonl row for all 4,064 in both languages).
 - Part 0 result (phase2i/upload/): SK exercise_id already int (4,064), 0 empty v, 0 v[0]!=en; CZ exercise_id str on all 4,064 -> int, 50 empty v fixed (n 5365-5414), 0 v[0]!=en defects. No defects found.
+
+## 6. Stage 2b additions (21.9.2026)
+- Production rows reach both stacks through `phase2i/adapter_2f.py` (verbatim 2F adapter p3_probe.alt_dict/build_data; reproduces phase2f/p3/probe/data byte-identical, 60/60). Called in stack_frozen.from_2i; TONLY strips lk from the row before it (strip_row) and from the output after it (strip_lk). Shape adapter only; see TONLY_CHANGES 15.
+- `phase2i/write_guard.py` redirects every write outside phase2i/ to `$P2I_RUN_DIR/_redirected/`. test_2i (z) asserts sha_tree.sh output identical before/after the suite AND equal to SHA_before.txt (3,256 files; phase1p access_log/run_1p.log unchanged since the baseline).
+- Suite: 32/32 PASS (test_2i_output.txt). Frozen: FROZEN_SHA.txt, FREEZE_COMMIT.txt.

@@ -6,7 +6,9 @@
 (f) TONLY prompt has no 'ALREADY VERIFIED' / 'Practised grammar'; = FROZEN prompt minus exactly that line
 (g) FROZEN reproduces the stored 1W verdicts from phase1w/a4/run (all 900, stored L3 replies)
 (h) empty 200 -> FAILED, not retried              (i) hard cap and spend cap stop before any call
-(z) no earlier-phase file changed."""
+(k) the 2F adapter is verbatim and reproduces phase2f/p3/probe/data  (w) write guard redirects
+(z) no earlier-phase file changed: git status, and sha256 of every file under phase*/ except phase2i (sha_tree.sh)
+    identical before/after the suite and equal to SHA_before.txt."""
 import ast, hashlib, json, os, re, shutil, subprocess, sys, tempfile
 sys.dont_write_bytecode = True
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -89,9 +91,15 @@ def keys_deep(o):
             yield from keys_deep(v)
 
 
+def sha_tree():
+    o = subprocess.run(['zsh', os.path.join(HERE, 'sha_tree.sh')], capture_output=True, text=True, check=True).stdout
+    return dict(reversed(l.split('  ', 1)) for l in o.splitlines() if l.strip())
+
+
 def main():
     global SETF
     os.makedirs(SCR, exist_ok=True)
+    tree0 = sha_tree()
     dirty0 = git_dirty()
     pre = {p: fsha(os.path.join(TOFF, p)) for p in ('phase1p/access_log.jsonl', 'phase1p/run_1p.log')}
     items = fixture()
@@ -270,9 +278,73 @@ json.dump({"hits": T.HITS, "err": err, "q": q, "n_res": len(res), "modules": T.E
               '%d/%d verdicts+layers identical; mismatches %s' % (len(rows) - len(mis), len(rows), mis[:5]))
         check('g.frozen_prompts_byte_identical_to_1W', not hm, '%d/900 request hashes identical' % (900 - len(hm)))
 
+    # (k) 2F adapter: verbatim + reproduces the probe data
+    import adapter_2f as A2F
+    psrc = open(os.path.join(TOFF, 'phase2f', 'p3', 'probe', 'p3_probe.py'), encoding='utf-8').read()
+    asrc = open(os.path.join(HERE, 'adapter_2f.py'), encoding='utf-8').read()
+    segs = {n.name: ast.get_source_segment(psrc, n) for n in ast.parse(psrc).body
+            if isinstance(n, ast.FunctionDef) and n.name in ('jdump', 'alt_dict', 'build_data')}
+    check('k.adapter_verbatim', len(segs) == 3 and all(v in asrc for v in segs.values())
+          and 'SID_LO, SID_HI = 220001, 220060' in psrc, 'functions %s' % sorted(segs))
+    sel = json.load(open(os.path.join(TOFF, 'phase2f', 'p3', 'probe', 'set', 'selection.json'), encoding='utf-8'))
+    prod = {}
+    for l in open(os.path.join(TOFF, 'phase2d', 'out', 'annotations_sk_final.jsonl'), encoding='utf-8'):
+        if l.strip():
+            r = json.loads(l); prod.setdefault(r['exercise_id'], r)
+    rows = [{'sid': r['sid'], 'exercise_id': r['exercise_id'], 'level': r['level'], 'topic': r['topic'],
+             'slovak': r['slovak'], 'ann': prod[r['exercise_id']]} for r in sel['rows']]
+    d = fresh('k'); A2F.convert(rows, d)
+    PD = os.path.join(TOFF, 'phase2f', 'p3', 'probe', 'data')
+    for f in ('annotations.json', 'sentences.json'):
+        ref, new = json.load(open(os.path.join(PD, f), encoding='utf-8')), json.load(open(os.path.join(d, f), encoding='utf-8'))
+        if isinstance(ref, dict):
+            nm = sum(1 for k in ref if new.get(k) == ref[k]); nt = len(ref); nf = sum(1 for k in ref for x in ref[k] if (new.get(k) or {}).get(x) == ref[k][x])
+        else:
+            nm = sum(1 for a, b in zip(ref, new) if a == b); nt = len(ref); nf = sum(1 for a, b in zip(ref, new) for x in a if b.get(x) == a[x])
+        same = fsha(os.path.join(PD, f)) == fsha(os.path.join(d, f))
+        check('k.adapter_reproduces_probe_' + f, same and nm == nt == 60 and len(new) == 60,
+              'byte-identical %s; sids field-for-field equal %d/%d; top-level fields equal %d' % (same, nm, nt, nf))
+
+    # (w) write guard
+    d = fresh('w'); probe = os.path.join(TOFF, 'phase1p', 'zz_2i_guard_probe.txt')
+    pw = os.path.join(TOFF, 'phase1w', 'a4', 'run', 'zz_2i_probe.json')
+    child = r'''
+import os, sys
+sys.path.insert(0, %r)
+import write_guard
+with open(%r, 'a') as fh:
+    fh.write('x')
+open(%r + '.tmp', 'w').write('{}')
+os.replace(%r + '.tmp', %r)
+print(open(%r).read())
+''' % (HERE, probe, pw, pw, pw, pw)
+    p = subprocess.run([sys.executable, '-B', '-c', child], capture_output=True, text=True, cwd=HERE,
+                       env=dict(os.environ, PYTHONDONTWRITEBYTECODE='1', P2I_RUN_DIR=d))
+    red = R.jl_read(os.path.join(d, '_redirected', 'REDIRECTS.jsonl'))
+    check('w.write_guard_redirects', p.returncode == 0 and p.stdout.strip() == '{}' and not os.path.exists(probe)
+          and not os.path.exists(pw) and not os.path.exists(pw + '.tmp')
+          and os.path.exists(os.path.join(d, '_redirected', os.path.relpath(probe, REPO)))
+          and os.path.exists(os.path.join(d, '_redirected', os.path.relpath(pw, REPO))) and len(red) >= 3,
+          'rc %d, redirects %d, stderr %s' % (p.returncode, len(red), p.stderr[-300:]))
+    chain_red = []
+    for root, _ds, fs in os.walk(SCR):
+        if 'REDIRECTS.jsonl' in fs and os.sep + 'w' + os.sep not in root + os.sep:
+            chain_red += [x['from'] for x in R.jl_read(os.path.join(root, 'REDIRECTS.jsonl'))]
+    log('   w.writes the 1W chain attempted outside phase2i during this suite (all redirected): %d %s'
+        % (len(chain_red), sorted(set(chain_red))[:10]))
+
     # (z)
     post = {p: fsha(os.path.join(TOFF, p)) for p in pre}
     check('z.earlier_phases_untouched', git_dirty() == dirty0 and post == pre, 'dirty outside phase2i: %s' % git_dirty())
+    tree1 = sha_tree()
+    diff = sorted(k for k in set(tree0) | set(tree1) if tree0.get(k) != tree1.get(k))
+    check('z.sha_tree_unchanged_by_suite', not diff and len(tree1) > 3000, '%d files, changed %s' % (len(tree1), diff[:5]))
+    base = dict(reversed(l.split('  ', 1)) for l in open(os.path.join(HERE, 'SHA_before.txt'), encoding='utf-8').read().splitlines()
+                if l.strip())
+    diffb = sorted(k for k in set(base) | set(tree1) if base.get(k) != tree1.get(k))
+    check('z.sha_tree_equals_SHA_before', not diffb, '%d files vs SHA_before %d; differ %s' % (len(tree1), len(base), diffb[:5]))
+    check('z.phase1p_dirty_pair_as_in_SHA_before', all(tree1.get(k) == base.get(k) is not None for k in
+          ('phase1p/access_log.jsonl', 'phase1p/run_1p.log')))
     nf = sum(1 for _n, ok in RES if not ok)
     log('SUMMARY: %d checks, %d FAIL, 0 real model calls (HTTP layer mocked)' % (len(RES), nf))
     return nf

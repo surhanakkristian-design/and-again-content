@@ -13,7 +13,7 @@
    chk; a batch of only exact-reference answers would stop the stack. Harmless for the 900-item set (mixed).
 5. **F1 / F2 flags stay on in TONLY** (ROW7_FLAGS) though unreachable: they only run in the L2 lock branch.
    `phase1i/taskB/lock_fix.py` still patches C.f1_lock_ok / C.lock_equivalent_ok at state build (no read).
-6. **Production sentences carry no writer tags.** 1W sentences had `tags.writer_tags` (agent, subordinator,
+6. **(superseded in 2b)** Production sentences carry no writer tags. 1W sentences had `tags.writer_tags` (agent, subordinator,
    tf_gold...) feeding `ag_map_1u` (`wt`); production rows have none, so AG runs with `wt = {}` in both stacks.
 7. **Reply parsing.** run_2i parses a reply strictly: the bare token SAME / TIP / DIFF, optionally wrapped in
    whitespace or punctuation; anything else is a FAILED call. The 1W chain's own `P.parse_reply` is not used by
@@ -23,3 +23,11 @@
 9. **Production annotation shape != 1W annotation shape** (the stage-2 STOP). Production `alt` is a list of
    `{tok, class, groups_or_candidates}`; 1W code (backfill_s_ids.py:44 and others) needs `alt` as a dict and
    the `hygienised` / `tf_gold` / `voice_sk` wrapper. 2F converted with an adapter; see STOP_stage2.md.
+
+## Stage 2b
+9. -> resolved in 2b by the verbatim 2F adapter (adapter_2f.py); the defect itself (shape mismatch) stays true of the 1W code.
+6. -> with the adapter, sentences carry 2F's synthetic writer_tags (agent = `subject`, impersonal_or_passive = voice != 'active_agent', agent_clause always 'main', subordinator None): AG sees what it saw in the 2F probe, not true writer tags.
+10. **Adapter pid/lid labels.** The verbatim adapter formats `pid = 'P31%03d' % (sid - 220001 + 1)`; for production sids (n 1..4064) that yields labels like 'P31-219998'. Label only (not in the verdict path as far as the suite shows); not changed.
+11. **Adapter reads `d.get('lk')`.** Verbatim 2F code; on TRANSLATION-ONLY the row is lk-stripped first, so the read returns nothing (poison test passes).
+12. **Fixture observation:** in test (a) item jx0429 ('Honestly, ...') FROZEN returns layer 'L3', accept False, l3_reply None (no L3 request planned) while TONLY sends it to L3 and accepts. Likely the LOCKTIP/lock path labelling; check in the 4.2 analysis, not investigated here.
+13. **3 dirty paths outside phase2i predate 2I and stay as-is:** phase1p/access_log.jsonl, phase1p/run_1p.log (in SHA_before) and untracked phase2d/run_2d_cz.stdout.txt.
