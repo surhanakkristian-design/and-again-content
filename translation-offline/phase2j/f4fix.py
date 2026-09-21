@@ -13,7 +13,7 @@ Fix = two source patches of sk_features, used ONLY by F4v2 (reader_nom's CK.sk_f
       modifiers AND the head noun after them exactly like after_prep already shadows the first word;
   NV  a closed list of non-verbs ending in -š/-me/-te/-em (adverbs, the preposition 'okrem', first names in -š).
 No threshold, no abstain rule: every other signal is read as before."""
-import os, re
+import os, re, sys, types
 HERE = os.path.dirname(os.path.abspath(__file__))
 TOFF = os.path.dirname(HERE)
 CK_FILE = os.path.join(TOFF, 'phase1i', 'checker_1i.py')
@@ -34,6 +34,18 @@ def is_mod(x):
     return x in NP_DET or (len(x) >= 4 and x.endswith(ADJ_END))
 
 
+# S2 narrowing (verb-loss cost of S1): the PP head is NOT shadowed when it looks like a finite verb - an
+# l-participle (-l/-la/-lo/-li/-ly), a 2sg present (-s-caron) or a form of byt/mat.  Such a head returns to the 2I reading,
+# so the narrowing can only move the fixed reader back towards 2I, never create a new signal.
+VERB_HEAD_END = ('l', 'la', 'lo', 'li', 'ly', 'š')
+BE_HAVE = set('''je sú som si sme ste bol bola bolo boli boly bude budú budem budeš budeme budete jsem jsi jsme jste
+jsou byl byla bylo byli byly má mám máš máme máte majú mají'''.split())
+
+
+def is_verb_head(x):
+    return x not in NON_VERB and (x in BE_HAVE or x.endswith(VERB_HEAD_END))
+
+
 def pp_shadow(w, preps):
     sh = set()
     for i, x in enumerate(w):
@@ -41,7 +53,7 @@ def pp_shadow(w, preps):
             j, k = i + 1, 0
             while j < len(w) and k < 3 and is_mod(w[j]):
                 sh.add(j); j += 1; k += 1
-            if k and j < len(w):
+            if k and j < len(w) and not is_verb_head(w[j]):
                 sh.add(j)
     return sh
 
@@ -79,6 +91,7 @@ def build_fixed(C, lang='sk'):
 def apply(C):
     fx = build_fixed(C)
     C.f4v2_subject_mismatch = fx['f4v2_subject_mismatch']      # decide() looks it up in C's globals
+    C._F4FIX_FN = fx['f4v2_subject_mismatch']
     C.F4FIX_2J = True
     return fx
 
@@ -96,3 +109,57 @@ def apply_loaded():
     if not done and not already:
         raise SystemExit('REFUSED: F4FIX found no checker_1i module to patch')
     return done
+
+
+# ---------------------------------------------------------------- S2: the hook defect
+# S1 set C.f4v2_subject_mismatch on the checker_1i module, but the decide the stack actually runs is the guards_c
+# wrapper (pipeline_1i.configure -> guards_c.apply) whose globals are NOT checker_1i.__dict__ (S2 probe: st['decide']
+# globals != C.__dict__, 0 calls reached the patched name).  sweep() therefore replaces the ORIGINAL
+# f4v2_subject_mismatch in EVERY live namespace dict and closure cell of the process (gc walk), so whichever copy
+# decide resolves is the fixed one.  Called after load, after build (post_build) and before every run_pipeline.
+SWEEPS = []
+
+
+def _is_old(v, FN):
+    return (isinstance(v, types.FunctionType) and v is not FN and v.__name__ == 'f4v2_subject_mismatch'
+            and not v.__code__.co_filename.endswith('[2J]'))
+
+
+def sweep(where=''):
+    import gc
+    C = sys.modules.get('checker_1i')
+    FN = getattr(C, '_F4FIX_FN', None)
+    if FN is None:
+        raise SystemExit('REFUSED: F4FIX sweep before apply')
+    nd = nc = 0
+    for o in gc.get_objects():
+        if type(o) is types.FunctionType:
+            for c in (o.__closure__ or ()):
+                try:
+                    v = c.cell_contents
+                except ValueError:
+                    continue
+                if _is_old(v, FN):
+                    c.cell_contents = FN; nc += 1
+        elif isinstance(o, dict):
+            try:
+                v = dict.get(o, 'f4v2_subject_mismatch')
+            except Exception:
+                continue
+            if _is_old(v, FN):
+                dict.__setitem__(o, 'f4v2_subject_mismatch', FN); nd += 1
+    SWEEPS.append({'where': where, 'dicts': nd, 'cells': nc})
+    sys.stderr.write('F4FIX sweep %s: %d dicts, %d cells\n' % (where, nd, nc))
+    return nd + nc
+
+
+def install_sweeps(PP):
+    if getattr(PP, '_F4FIX_RP', False):
+        return
+    orig = PP.run_pipeline
+
+    def run_pipeline(*a, **k):
+        sweep('run_pipeline')
+        return orig(*a, **k)
+    PP.run_pipeline = run_pipeline
+    PP._F4FIX_RP = True

@@ -50,8 +50,11 @@ if os.environ.get('P2J_F4FIX', '1') == '1':
     def _load_fixed():
         R = _orig_load()
         f4fix.apply_loaded()
+        f4fix.install_sweeps(sys.modules['pipeline_1i'])
+        f4fix.sweep('load')
         return R
     E.load = _load_fixed
+    E.STATE['post_build'] = lambda st, recs, by: f4fix.sweep('post_build')     # S2 hook fix
     E.STATE['stack'] = 'tonly'
 
 
@@ -130,7 +133,13 @@ def strip_row(a):
 E.STATE['row_hook'] = strip_row
 E.STATE['ann_hook'] = strip_lk
 if POISON:
-    E.STATE['post_build'] = _poison_recs
+    _PB0 = E.STATE['post_build']
+
+    def _pb_chain(st, recs, by):
+        if _PB0:
+            _PB0(st, recs, by)
+        _poison_recs(st, recs, by)
+    E.STATE['post_build'] = _pb_chain
     _P = sys.modules['pipeline_1i']
     _orig_to_item = _P.to_item
     _P.to_item = lambda r: PoisonDict(_orig_to_item(r))

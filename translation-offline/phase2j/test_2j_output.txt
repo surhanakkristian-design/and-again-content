@@ -1,0 +1,20 @@
+PASS  T1 item/row number containing "429" is NOT a rate limit + T2 real 429 envelope is retried
+PASS  T3 resume at 0 cost (same command, finished items skipped, stored replies reused)
+PASS  T4 usage-limit (per-day quota) envelope -> hard STOP, 0 counted, STOP file
+PASS  T5 phase ledger: other stages 1,199 + needed > 1,200 -> STOP before any call
+PASS  T6 --expect-needed mismatch -> STOP at 0 calls; seeded replies are reused and not counted
+PASS  T7 relative-path invocation works (relative script, --set, --run-dir, --ledger; cwd = translation-offline)
+FAIL  T8 A2 hook on the REAL stack path: fix ON vs OFF prepare on the 5 sids -> exactly the 44 new L3 requests
+      AssertionError(['A:250:c3']) Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/test_2j.py", line 21, in deco
+    fn(); RES.append((name, 'PASS', ''))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/test_2j.py", line 165, in _
+    assert set(NEW44) <= set(out[1]), sorted(set(NEW44) - set(out[1]))
+AssertionError: ['A:250:c3']
+
+PASS  T9 A2 fix unit: the 5 misread sentences no longer fire, real verbs still do (9 cases)
+PASS  T10 A2 verb-loss (S1 cost candidates): a PP-head verb keeps its reading - synthetic SK + CZ
+PASS  T11 A2 verb-loss on both upload files: every potrebuješ/bola (SK), byla/mluvila/dala (CZ) signal is kept; every removed signal is a non-verb
+PASS  T12 headless spawner: ok envelope (usage summed; "429" in result text is not a rate limit), resume 0 spawns, argv recipe
+PASS  T13 headless: real 429 envelope retried; usage-limit envelope -> STOP_usage_limit.md + hard stop; stop file blocks
+SUMMARY 11/12 PASS

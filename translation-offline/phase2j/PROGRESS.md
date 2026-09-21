@@ -34,3 +34,33 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Files: f4fix.py, stack_tonly.py, partA/{partA.py, make_report.py, PART_A.md, partA_result.json, NEW_L3_CALLS_S2.json, *_stdout.txt, _run/}.
 - Gemini calls: S1 0, cumulative 0. Headless tokens 0.
 - SHA check S1: identical (3,256 files), diff empty
+
+## S2 — hook fix + verb-loss narrowing + runner/tests; STOPPED at 0 cost (test_2j 11/12)
+- Hook defect found: the decide the stack runs is the guards_c wrapper (pipeline_1i.configure -> guards_c.apply), whose
+  globals are NOT checker_1i.__dict__ (probe: 0 calls reached the patched C.f4v2_subject_mismatch). Fix = f4fix.sweep():
+  gc walk replacing the original f4v2_subject_mismatch in every namespace dict + closure cell; run after load, in
+  post_build and before every pipeline_1i.run_pipeline (stack_tonly.py hook; POISON post_build chained).
+- PROOF (partA.py re-run over the real stack path, 900 items): fix OFF = 2I exactly (800 reach L3, 0 missing, 0 diffs);
+  fix ON: 843 reach L3, **43 new requests** (44 items un-fire; one of them shares a request hash with a stored 2I
+  reply), changed = exactly the 44 (24 judge-correct, 20 judge-wrong), 0 other items changed. Bounds unchanged:
+  coverage 443/497 (all rejected) .. 466/497 = 93.76 % [91.26, 95.72] with 23 pending correct; FA 19/403 .. 39/403.
+- Verb-loss (S1 candidates): real. f4fix.is_verb_head(): the PP head is not shadowed when it is an l-participle
+  (-l/-la/-lo/-li/-ly), a 2sg -š form or byt/mat -> returns to the 2I reading (can never add a signal). Upload scan:
+  SK 125/4,064 rows change (was 128), CZ 18/4,064 (was 21); every potrebuješ/bola/byla/mluvila/dala signal kept, no
+  removed signal is verb-like (partA/T11_verbloss.json). 9/9 unit cases still pass; A4 1W + 1T/1U/1W files 0 changes.
+- A4 1S packet: phase1s/taskA/rows_1s.json (1,080 rows, all with Slovak) + phase1s/taskC/judge/packet.json (183):
+  F4v2 fire changes 0, verdict changes 0 -> PASS, 0 calls (partA/GATE_1S.json, partA/gate1s.py).
+- Built: run_2j.py (gemini transport = run_2i_base.py byte copy of 2I run_2i.py, one stack, phase ledger cap
+  1,200 - other stages, spend $1.00, --seed-ledger, --expect-needed, abspath everywhere; claude spawner = 2H recipe,
+  usage-limit STOP file, envelope-only rate limit, resume, token-cap reservation), test_2j.py (13 checks), s2_chain.sh.
+- STOP: the second suite run (inside s2_chain.sh, before freeze) ended 11/12 -> STOP_S2.md, 0 model calls, no freeze,
+  no run_S2. First run failed only T8 (subset-only artefact: A:250:c3 already reaches L3 with fix OFF in the 45-item
+  subset); T8 was relaxed to "the 44 all reach L3, nothing else changes". Failing check of the second run:
+    FAIL  T8 A2 hook on the REAL stack path: fix ON vs OFF prepare on the 5 sids -> exactly the 44 new L3 requests
+          AssertionError(['A:250:c3']) Traceback (most recent call last):
+      File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/test_2j.py", line 21, in deco
+        fn(); RES.append((name, 'PASS', ''))
+  Agent tool budget (12) exhausted, so not re-run. NEXT (S2 resume): fix that check, run
+  zsh /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/s2_chain.sh (tests -> freeze -> run_2j --expect-needed 43 -> partA/a3_final.py -> SHA).
+- Gemini calls: S2 0, cumulative 0 (GEMINI_LEDGER.json {"S1": 0}). Headless tokens 0.
+- SHA check S2: diff lines 122 (SHA_after_S2.txt, SHA_diff_S2.txt)
