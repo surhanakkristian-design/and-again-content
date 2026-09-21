@@ -1,0 +1,263 @@
+{
+ "ag_how": "stack_1w.decide called directly (AG_CFG['primary'] = type forwards to it)",
+ "2I": {
+  "items": 900,
+  "labels_file_rows": 900,
+  "label_counts": {
+   "correct": 497,
+   "wrong": 403
+  },
+  "guard_layers": {
+   "None": 896,
+   "AG": 4
+  },
+  "reach_l3": 896,
+  "unique_requests": 896,
+  "guard_rejected_by_label": {
+   "AG/wrong": 1,
+   "AG/correct": 3
+  },
+  "ag_errors": 0,
+  "ag_ref_read_attempts": 0,
+  "f4_errors": 0,
+  "poison_hits_real_path": 0,
+  "ag_agree_with_2J_stack": 892,
+  "ag_disagree": [
+   {
+    "jid": "A:250:c3",
+    "ours": false,
+    "twoJ": true,
+    "label": "correct",
+    "ours_reason": "c0: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 0 against the Slovak clause 'Vozidlo uháňalo po vidieckej ceste predtým' that names the agent: Vozidlo"
+   },
+   {
+    "jid": "A:262:c2",
+    "ours": true,
+    "twoJ": false,
+    "label": "correct",
+    "ours_reason": "agentless passive in clause 0 against the Slovak clause 'Zdravotník povedal' that names the agent: Zdravotník",
+    "twoJ_reason": "c0: the agent is rendered as that clause's own subject (medic)"
+   },
+   {
+    "jid": "A:737:m",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'nejako jej dochádzajú štipce. Na streche ostalo už len niekoľko štipcov.' that names the agent: štipce"
+   },
+   {
+    "jid": "A:737:s",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'nejako jej dochádzajú štipce. Na streche ostalo už len niekoľko štipcov.' that names the agent: štipce"
+   },
+   {
+    "jid": "A:737:t",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'nejako jej dochádzajú štipce. Na streche ostalo už len niekoľko štipcov.' that names the agent: štipce"
+   },
+   {
+    "jid": "A:737:w",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'nejako jej dochádzajú štipce. Na streche ostalo už len niekoľko štipcov.' that names the agent: štipce"
+   },
+   {
+    "jid": "A:3631:m",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c0: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 0 against the Slovak clause 'Každý môže sledovať tanec z balkónov.' that names the agent: Každý"
+   },
+   {
+    "jid": "A:3856:c4",
+    "ours": true,
+    "twoJ": false,
+    "label": "correct",
+    "ours_reason": "agentless passive in clause 1 against the Slovak clause 'Ona zložila prísahu a všetko v tejto krajine sa navždy zmení!' that names the agent: Ona",
+    "twoJ_reason": "c0: the agent is rendered as that clause's own subject (she); c1: the agent is rendered as that clause's own subject (country)"
+   }
+  ],
+  "f4_crosstab": {
+   "2J other / ours other": 900
+  },
+  "twoJ_layers": {
+   "L3": 792,
+   "AG": 8,
+   "L3:TIPrej": 51,
+   "L1": 20,
+   "F3": 25,
+   "F5": 4
+  },
+  "probe_reference_poison": {
+   "reads": 900,
+   "errors": {},
+   "verdict_changes_vs_empty_ref": 4,
+   "first_hits": [
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    },
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    },
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    }
+   ]
+  },
+  "paths": {
+   "items": "phase2i/set/items.jsonl",
+   "labels": "phase2i/judge/labels.jsonl",
+   "reference_based_results_2J_stack": "phase2j/run_S2c/results.jsonl"
+  }
+ },
+ "2J": {
+  "items": 900,
+  "labels_file_rows": 900,
+  "label_counts": {
+   "correct": 498,
+   "wrong": 402
+  },
+  "guard_layers": {
+   "None": 892,
+   "AG": 8
+  },
+  "reach_l3": 892,
+  "unique_requests": 892,
+  "guard_rejected_by_label": {
+   "AG/wrong": 5,
+   "AG/correct": 3
+  },
+  "ag_errors": 0,
+  "ag_ref_read_attempts": 0,
+  "f4_errors": 0,
+  "poison_hits_real_path": 0,
+  "ag_agree_with_2J_stack": 895,
+  "ag_disagree": [
+   {
+    "jid": "A:352:m",
+    "ours": true,
+    "twoJ": false,
+    "label": "wrong",
+    "ours_reason": "agentless passive in clause 0 against the Slovak clause 'Lúčová pištoľ ťa ešte nikdy netrafila' that names the agent: Lúčová pištoľ",
+    "twoJ_reason": "c0: the agent is rendered as that clause's own subject (never)"
+   },
+   {
+    "jid": "A:988:m",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'Do konca dňa inžinier skontroluje každý manometer na týchto starých strojoch.' that names the agent: inžinier"
+   },
+   {
+    "jid": "A:1033:c3",
+    "ours": false,
+    "twoJ": true,
+    "label": "correct",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'tak divadlo budúci týždeň uvedie tú hru znova.' that names the agent: divadlo"
+   },
+   {
+    "jid": "A:1918:m",
+    "ours": false,
+    "twoJ": true,
+    "label": "wrong",
+    "ours_reason": "c0: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 0 against the Slovak clause 'či má pri sebe preukaz totožnosti.' that names the agent: Úradník (inherited)"
+   },
+   {
+    "jid": "A:3147:c5",
+    "ours": false,
+    "twoJ": true,
+    "label": "correct",
+    "ours_reason": "c1: no agent string could be read off the Slovak",
+    "twoJ_reason": "agentless passive in clause 1 against the Slovak clause 'luxusný kočík je za 5000 eur.' that names the agent: luxusný kočík"
+   }
+  ],
+  "f4_crosstab": {
+   "2J other / ours other": 900
+  },
+  "twoJ_layers": {
+   "L3": 788,
+   "L3:TIPrej": 45,
+   "F3": 23,
+   "L1": 22,
+   "F5": 11,
+   "AG": 11
+  },
+  "probe_reference_poison": {
+   "reads": 900,
+   "errors": {},
+   "verdict_changes_vs_empty_ref": 8,
+   "first_hits": [
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    },
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    },
+    {
+     "key": "poison-value.__bool__",
+     "where": [
+      "phase1v/trackA_loop/stack_1v.py:95 decide",
+      "phase1u/taskA/agent_drop_v4.py:290 decide",
+      "phase1t/taskA/agent_drop_v3.py:386 decide",
+      "phase1t/taskA/agent_drop_v3.py:442 _decide_clauses",
+      "phase1t/taskA/agent_drop_v3.py:269 split_en"
+     ]
+    }
+   ]
+  },
+  "paths": {
+   "items": "phase2j/partD/set/items.jsonl",
+   "labels": "phase2j/partD/judge/labels.jsonl",
+   "reference_based_results_2J_stack": "phase2j/partD/run/results.jsonl"
+  }
+ }
+}
