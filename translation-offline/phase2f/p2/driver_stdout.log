@@ -63,3 +63,10 @@
 [2026-09-21 02:06:33] annotation done: {"annotated": 100, "headless_tokens_annotation": 310134, "refused_chunks": [], "replacements": [], "reserve_used": {"A1": 0, "A2": 0, "B1": 0, "B2": 0}, "lk_merge": {"corrected": 52, "class_unusable": 23, "class_adjust": 29, "exact": 48, "class_exact": 48}}
 [2026-09-21 02:06:33] DEFECT skp_heavy: SKP (no named doer) is 52 of 100 production sentences; the agent-drop floor F1 >= 120 may not be reachable
 [2026-09-21 02:06:33] selection: {"corpus_total": 39498, "corpus_by_level": {"B1": 8906, "B2": 7002, "A1": 9999, "A2": 13591}, "candidates": 34966, "candidates_by_level": {"A1": 8733, "A2": 12269, "B1": 7874, "B2": 6090}, "picked": 100, "by_level": {"A1": 25, "A2": 25, "B1": 25, "B2": 25}, "halves": {"P1": 50, "P2": 50}, "kinds": {"SKP": 52, "MN": 23, "FR": 6, "MC": 19}, "overlaps_total": 0, "violations_total": 0, "earlier_sentences_checked_against": 10595}
+[2026-09-21 02:06:33] $ git add -A translation-offline/phase2f -> exit 0
+[2026-09-21 02:06:33] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1
+[2026-09-21 02:06:33] $ git commit -q -m Phase 2F Part 2: stage selection
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
+[2026-09-21 02:06:33] $ git rev-parse HEAD -> exit 0
+[2026-09-21 02:06:33] === stage briefs ===
