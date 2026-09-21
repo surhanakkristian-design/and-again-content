@@ -403,6 +403,12 @@ def _():
     print('T16 ok', len(calls))
 
 
+@t('T17 S5 B3 transforms + 1P lever-3 tense filter (remove added span, broader word added, other gender added/replaced, mixed/person W listed, tense filter, faithful untouched, dedup keeps v[0])')
+def _():
+    sys.path.insert(0, '/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/partB')
+    import b3; assert b3.selftest()
+
+
 npass = sum(1 for r in RES if r[1] == 'PASS')
 for r in RES:
     print('%s  %s%s' % (r[1], r[0], ('\n      ' + r[2]) if r[2] else ''))
