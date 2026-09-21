@@ -34,3 +34,7 @@
 
 ## Stage 3
 14. **Writer validator bug (stage 3, fixed).** run_writers.validate compared `sorted(types)` with the unsorted list ['T','W','M','S'], so all 4 valid writer outputs were rejected and each session was retried once (4 wasted sessions, ~195k tokens). Fixed to `sorted(TYPES)`; the stored attempt-1 outputs were re-validated offline at 0 cost and used. The spurious STOP_stage3.md (uncommitted) was deleted.
+
+## Stage 5
+15. **run_2i.py relative-path crash (recorded, not fixed).** With relative `--set`/`--run-dir`, stack_call writes run/_io/*.json relative to the caller's cwd but runs the stack subprocess with cwd=phase2i, so `prepare` hit FileNotFoundError. First open of the set (pid 20166) died before any model call (0 calls, empty ledger/results); re-launched with absolute paths (pid 20343), which ran the whole set. The access log shows both opens. test_2i.py passes absolute paths, so the suite could not catch it.
+16. **Observation, not analysed:** TRANSLATION-ONLY pooled coverage 443/497 is BELOW FROZEN 447/497 on the same items, so removing the structure check lost 4 net correct acceptances. For the 4.2 analysis.

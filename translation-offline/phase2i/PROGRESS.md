@@ -26,3 +26,9 @@
 - Controls 80/80 (pairs {'1-2': '15/15', '1-3': '10/10', '1-4': '15/15', '2-3': '15/15', '2-4': '10/10', '3-4': '15/15'}); labels correct 497 / wrong 403; judge vs writer intent disagreements 5 ({'correct->correct': 496, 'wrong->wrong': 399, 'correct->wrong': 4, 'wrong->correct': 1}).
 - Files: judge/labels.jsonl, judge/controls.json, judge/intent_agreement.json, judge/STAGE4_RESULT.json, set/items.jsonl (+ .sha256 45f0abc7afb8ab0d63fbc997cb71127cf5c096c6ff356eb015b203dccd387ce7); items not opened by run_2i.py.
 - 0 Gemini calls. Cumulative ~1,160,993 of 3,000,000. Projection: run (0 Claude, orchestration ~50k) + analysis/report ~200k -> ~1,410,993.
+## Stage 5 (the run) - 21.9.2026
+- Pre-flight at 0 cost: FROZEN_SHA.txt all OK; test_2i.py 32/32 PASS (run/PREFLIGHT_TEST_2I.txt); set/items.jsonl sha 45f0abc7...387ce7 by bytes; sha_tree == SHA_before (3,256 files). RUN commit bac4b74 (run/RUN_COMMIT.txt committed in d3b16d3).
+- run_2i.py under nohup, both stacks, 900 items each: needed 1,600 requests (<= 2,000, no split needed), counted 1,600, uncounted 0, failed 0, spend $0.2051. Set opened twice: open 1 crashed at stack prepare (relative path, 0 calls, DEFECTS 15), open 2 ran it all.
+- Quick headline (run/HEADLINE_QUICK.json): TONLY coverage 443/497 = 89.13 %, FA 19/403 = 4.71 %; FROZEN 447/497 = 89.94 %, FA 21/403 = 5.21 %.
+- SHA_after == SHA_before (SHA_diff.txt empty; phase1p dirty pair unchanged). Files: run/{FINAL_RUN_DONE,ACCESS_LOG_VERBATIM.md,HEADLINE_QUICK.json,RUN_STATUS.json,ledger.jsonl,results.jsonl,access_log.jsonl}, SHA_after.txt, SHA_diff.txt.
+- 0 headless sessions; Claude tokens this stage ~45k (estimate). Cumulative ~1,206,000 of 3,000,000. Projection: analysis/report ~200k -> ~1,406,000.

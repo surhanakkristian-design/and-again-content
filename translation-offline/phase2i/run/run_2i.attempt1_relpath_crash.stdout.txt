@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 348, in <module>
+    sys.exit(main())
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 342, in main
+    st = run(a.set, a.run_dir, a.cap, a.spend_cap, purpose=a.purpose)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 274, in run
+    reqs = {s: stack_call(s, 'prepare', clean[s], P) for s in STACKS}
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 274, in <dictcomp>
+    reqs = {s: stack_call(s, 'prepare', clean[s], P) for s in STACKS}
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 197, in stack_call
+    raise RuntimeError('stack %s %s failed rc=%s: %s' % (s, cmd, p.returncode, p.stderr[-3000:]))
+RuntimeError: stack tonly prepare failed rc=1: Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_tonly.py", line 128, in <module>
+    E.cli(sys.argv)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_frozen.py", line 175, in cli
+    out = prepare_2i(json.load(open(argv[2], encoding='utf-8')))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/write_guard.py", line 66, in g_open
+    return _open(_read_path(file), mode, *a, **k)
+FileNotFoundError: [Errno 2] No such file or directory: 'phase2i/run/_io/tonly_prepare_items.json'
+

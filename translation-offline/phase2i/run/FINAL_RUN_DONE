@@ -1,0 +1,13 @@
+FINAL_RUN_DONE 2026-09-21T09:52:19+00:00
+status: COMPLETE (RUN_STATUS.json ts 2026-09-21T09:51:29+00:00)
+counted calls (HTTP 200): 1600   cap 2,000
+uncounted retries: 0
+failed calls (empty/unparsable 200): 0
+spend: $0.205100   cap $1.00
+requests needed/made: 1600/1600; shared requests: 0; L3 not reached (AG/offline decided): 200 item-stack pairs
+items done per stack: tonly 900/900, frozen 900/900; results_missing 0
+ordering: needed (1600) <= 2,000 known before any call, so no TRANSLATION-ONLY-first split was needed; 0 FROZEN items left unrun.
+set opens: 2 (see ACCESS_LOG_VERBATIM.md). Open 1 (pid 20166) crashed in the tonly 'prepare' subprocess before any model call
+  because --run-dir/--set were relative paths while stack_call runs the stack with cwd=phase2i (FileNotFoundError on
+  run/_io/tonly_prepare_items.json); ledger/results empty, 0 calls. Open 2 (pid 20343) = the same command with absolute
+  paths; it ran the whole set. Same bytes, same sha 45f0abc7...387ce7 both times. Defect recorded (DEFECTS 15).

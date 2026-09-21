@@ -1,0 +1,18 @@
+=== 2026-09-21T09:13:10+00:00 prepare rc=1
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_tonly.py", line 128, in <module>
+    E.cli(sys.argv)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_frozen.py", line 175, in cli
+    out = prepare_2i(json.load(open(argv[2], encoding='utf-8')))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/write_guard.py", line 66, in g_open
+    return _open(_read_path(file), mode, *a, **k)
+FileNotFoundError: [Errno 2] No such file or directory: 'phase2i/run/_io/tonly_prepare_items.json'
+
+=== 2026-09-21T09:22:50+00:00 prepare rc=0
+[BUILD fresh1u] 900 items / 100 sentences   chk {"correct/match": 20, "wrong/auto": 880}   passive {"None": 900}   levers {"l2:aspect": 756, "l2:definiteness": 754, "l2:number": 171, "l3:items_with_a_variant": 18, "l3:removed": 9, "l3:shown": 18}
+[AG v3] {"abstain_agentless_passive": 40, "errors": 0, "fired_guarded_union": 8, "fired_primary": 8, "fired_v2": 15, "fired_v3": 8, "fired_v3_not_v4": 0, "fired_v4_full": 8, "fired_v4_not_v3": 0, "items": 900}
+
+=== 2026-09-21T09:51:28+00:00 finish rc=0
+[BUILD fresh1u] 900 items / 100 sentences   chk {"correct/match": 20, "wrong/auto": 880}   passive {"None": 900}   levers {"l2:aspect": 756, "l2:definiteness": 754, "l2:number": 171, "l3:items_with_a_variant": 18, "l3:removed": 9, "l3:shown": 18}
+[AG v3] {"abstain_agentless_passive": 40, "errors": 0, "fired_guarded_union": 8, "fired_primary": 8, "fired_v2": 15, "fired_v3": 8, "fired_v3_not_v4": 0, "fired_v4_full": 8, "fired_v4_not_v3": 0, "items": 900}
+
