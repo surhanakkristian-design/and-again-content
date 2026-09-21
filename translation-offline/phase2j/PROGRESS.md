@@ -80,3 +80,19 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
   the 27, extend f4fix + tests + re-freeze; re-score reuses run_S2 replies at 0 cost (ceiling 465/497 = 93.56 %, FA risk +5).
 - Gemini calls: S2 43, cumulative 43 of 1,200 (GEMINI_LEDGER.json {"S1": 0, "S2": 43}). Headless tokens 0.
 - SHA check S2b: S1 generator, 3,256 files, diff empty (SHA_after_S2.txt; SHA_diff_S2.txt 0 lines).
+
+## S2c — F4v3 extension of Part A (21.9.2026)
+- A1: F4v3 (phase1i/taskC/guards_c.py:339 -> sk_features_v3 :323 -> C.sk_features :328) = SAME sk_features misreading; all 27
+  fire on the A1 false signals, extra number signal used 0x; F4v3 sits in the guards_c wrapper after L3 (:127-142).
+- A2: f4fix.build_fixed_v3 / v3_patch / sweep3 (P2J_F4V3FIX, default 1). T14 + T15 added; test_2j 14/14 PASS (T8 now takes
+  the 44 from 2I results, NEW_L3_CALLS_S2.json holds the 43 needed jids). Catches 21, cost 1 (A:250:m), 5 move to L3:TIPrej.
+- A3 closed-set re-score: 443/497 = 89.13 % [86.06, 91.73] -> 464/497 = 93.36 % [90.80, 95.39]; FA 19/403 = 4.71 % [2.86, 7.26]
+  -> 20/403 = 4.96 % [3.06, 7.56]. run_S2c: 843 requests all seeded (partA/seed_2I_S2.jsonl = 2I + run_S2 ledgers), 0 new calls.
+- A4: 1W 900 / 1S rows 1,080 / 1S packet 183: 0 F4v3 fire changes -> PASS, 0 calls. A5: Czech path has no F4v3.
+- Freeze d9b806d1c06093d7a360b82b84d97a787eec164f. Honest note: a zsh word-split bug ($G) skipped the pre-run commit; the 0-call run used exactly the files hashed
+  in FROZEN_SHA.txt before it (shasum -c after = 0 mismatches), committed as the freeze immediately after.
+- Files: f4fix.py, test_2j.py, partA/{gate_f4v3.py, GATE_F4V3.json, a3_final_s2c.py, A3_FINAL_S2c.{md,json}, seed_2I_S2.jsonl},
+  run_S2c/, SHA_after_S2c.txt, SHA_diff_S2c.txt.
+- Gemini calls: S2c 0, cumulative 43 of 1,200 (GEMINI_LEDGER.json {"S1": 0, "S2": 43, "S2c": 0}). Headless tokens 0.
+- SHA check S2c: S1 generator, 3,256 files, diff empty.
+- NEXT (S3): Part C; the one new FA (A:250:m, dropped adjective) belongs to C's dropped-content-word class.

@@ -190,3 +190,34 @@ The A2 fix removes every F4v2 fire on the 44 (0 still F4v2, 0 items changed outs
   reason on the 27; if it is the same heuristic, extend f4fix to F4v3 + tests + re-freeze; the 43 S2 replies are then reused at
   0 cost (ceiling +22 coverage -> 465/497 = 93.56 %; FA risk up to +5 -> 24/403).
 - L3 on the 43 new requests (per item): SAME 22, TIP 5, DIFF 16 (15 of the 16 DIFF judge-wrong).
+
+## S2c — F4v3 carries the same misreading (A1/A2/A3/A4/A5 extension, 21.9.2026; "F4v2 misfire" = F4v2+F4v3)
+**A1 ext.** F4v3 = phase1i/taskC/guards_c.py:339 `f4v3_subject_mismatch` -> :323 `sk_features_v3`, whose first step (:328)
+is `C.sk_features(sk)` = the ORIGINAL checker_1i.sk_features (checker_1i.py:552-563 ending heuristics, one-token after_prep
+542-544). Same cause, not a different one: all 27 F4v3 rejections fire on the A1 false signals only (present -te plote x7,
+-te živote x6, -me samozrejme + l-participle dala x6, -š príliš x4, -te ceste x4); the F4v3 extra number signal
+(sk_number_extra :291) is used 0 times. F4v3 runs in the guards_c decide wrapper AFTER the model layer (:127-142), which is
+why the 27 had L3 replies but were rejected anyway. f4fix (S1/S2) only replaced f4v2_subject_mismatch.
+**A2 ext.** f4fix.build_fixed_v3 + v3_patch/sweep3: copies of sk_features_v3 + f4v3_subject_mismatch bound to the SAME fixed
+sk_features (PP shadow + NV list + verb-head narrowing); GUARDS['F4v3'] and every namespace/closure reference swapped;
+sk_number_extra untouched; no abstain rule. P2J_F4V3FIX=0 reproduces run_S2. Tests: T14 (5 sentences fire in 2I, not fixed;
+number-only controls -ujú/budú still fire), T15 (real stack path via run_2j, 45 items, all replies stored, HTTP forbidden:
+OFF = run_S2 exactly, ON = 0 F4v3 layers, only the 27 change). test_2j 14/14 PASS.
+Catches vs cost (closed 2I set, vs run_S2): catches 21 judge-correct now accepted (L3 SAME); cost 1 judge-wrong now accepted
+(A:250:m, "along the road" - drops *vidieckej*; L3 SAME); 4 judge-wrong + 1 judge-correct (A:1038:c3) now rejected by
+L3:TIPrej instead of F4v3; 0 changes outside the 27. F4v3 fire changes on the 900 closed items: exactly the 44 of the 5 sids.
+**A3 FINAL (S2c) — CLOSED-SET RE-SCORE, labelled** (run_S2c: 843 requests, 843 seeded = 2I ledger + run_S2 ledger, 0 new, 0 calls):
+| | coverage | FA |
+|---|---|---|
+| 2I (before) | 443/497 = 89.13 % [86.06, 91.73] | 19/403 = 4.71 % [2.86, 7.26] |
+| A2 F4v2 only (S2) | 443/497 = 89.13 % [86.06, 91.73] | 19/403 = 4.71 % [2.86, 7.26] |
+| A2 F4v2+F4v3 (S2c, after) | 464/497 = 93.36 % [90.80, 95.39] | 20/403 = 4.96 % [3.06, 7.56] |
+Exact Clopper-Pearson 95 %. Of the 44 vs 2I: 21 correct accepted, 1 wrong accepted (A:250:m), 1 correct AG (A:250:c3),
+1 correct L3 DIFF (A:1038:c4), 1 correct L3:TIPrej (A:1038:c3), 19 wrong rejected (15 L3 DIFF, 4 L3:TIPrej). Coverage target
+90 % met on the point AND the interval (closed set); FA 5 % met on the point only. Per item: partA/A3_FINAL_S2c.md/.json.
+**A4 ext.** F4v3 old vs fixed (partA/GATE_F4V3.json): 1W test set 900 rows, 1S rows_1s.json 1,080, 1S packet.json 183 ->
+0 fire changes, 0 verdict flips, 0 new calls each; PASS (coverage/FA cannot move). Upload scan: SK 125/4,064 rows change
+v3 features, 2 rows newly get the F4v3 extra number signal (byt-future budú/bude, real verbs); CZ 18/4,064, 0 new extra.
+**A5 ext.** The Czech path has NO F4v3: cz_reader.py references no guards_c/decide, and guards_c._c() imports the Slovak
+checker_1i. If a Czech decide is ever wired, f4fix.build_fixed_v3(G, CZ_CK, 'cz') is the same fix (scan above).
+Freeze: d9b806d1c06093d7a360b82b84d97a787eec164f (FROZEN_SHA.txt written before the run; shasum -c of the frozen files after the run = 0 mismatches).
