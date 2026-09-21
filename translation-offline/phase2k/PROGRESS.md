@@ -80,3 +80,14 @@ Token projection (2,200,000 budget): S1 ~250k, S2 ~150k, S3 ~200k, S4 ~250k agen
 - Files: run_S2.sh, analyze_part3.py, analysis/part3.md, analysis/part3.json, run_S2_2i/, run_S2_2j/, run_S2_*.stdout.txt, STOP_part3.md,
   SHA_after_S2.txt, SHA_diff_S2.txt.
 - Gemini calls: S2 1,788; cumulative 1,788 of 3,000. Headless tokens 0. SHA check S2: SHA_diff_S2.txt 0 lines.
+
+## S6 - report (21.9.2026; 0 Gemini calls, 0 headless tokens)
+- Report written: /Users/kristiansurhanak/Projects/and-again/docs/features/reports/TRANSLATION_PRODUCTION_PHASE2K_REPORT.md
+  (and-again commit c61be3c, not pushed); copy at phase2k/TRANSLATION_PRODUCTION_PHASE2K_REPORT.md.
+- Headline: Czech NOT measured (Part 3 safety stop, pooled FA 9.07 % > 8.0 %); Parts 4 and 5 not run; no Czech upload; 0 Claude tokens on Czech.
+- FA-rise diagnosis in the report: 44 FA added (M 35), 9 formerly caught by removed F3 (6) / F5 (3), 3 by ref-reading AG, 2 by F4v2 path,
+  30 by the reference comparison inside L3; mostly dropped content words the §1.1 ruling calls WRONG. Judgement: SK file fit as display
+  data; grading should not switch to SOURCE-ONLY until a source-side dropped-content guard exists.
+- Gemini calls: S6 0; cumulative 1,788 of 3,000 ($0.1816). Claude tokens (harness): S1 201,462, S2 56,806, S6 ~75,000 est,
+  orchestrator ~60,000 est = ~393,000 of 2,200,000; headless 0. (TOKENS.jsonl S1/S2 rows are pre-harness estimates.)
+- SHA check S6: SHA_diff_S6.txt 0 lines.
