@@ -111,3 +111,8 @@ Not done: verdict REJECTED (A5 runs only on CONFIRMED or PARTIAL). Measured rate
 - 220027: main reference drops the object "ich" (them); new variants include it.
 - The reference source feeds the exact-match and L2 layers as well as the L3 prompt, so "only the references changed" still moves deterministic layers (see A1).
 - The FREEZE_FILES copy had to be repointed to phase2g/partA/run and FREEZE_HASH re-pinned to the Part A commit (ac91692) for the runner freeze check to pass; code bytes are the 2F probe run copies except the ledger filename.
+
+## Reading (diagnostic, not a new measurement)
+
+- The thin-reference hypothesis is REJECTED on this set: nearly 3 references per sentence rescued 3 of the 28 false rejections and created 8 new ones (net coverage -2.75 points). FA 11 -> 10, all still at L3.
+- The new false rejections are mainly TIP rejections (L3:TIPrej 5 -> 10): extra references shown beside the main one make the model answer TIP more often on correct answers. Plain L3 DIFF rejections stay at 16 and F4v2 at 7, so the 28-item gap sits in the model's reading of single answers and in F4v2, not in the number of references.
