@@ -21,11 +21,11 @@ Two source patches of `sk_features`, bound only into `f4v2_subject_mismatch` (re
 No abstain rule, no threshold; a real finite verb is still read (unit checks: `Chodíte po starej ceste`, `Robíte to príliš často`, `sme` still fire; the 5 sentences no longer do): 9/9 unit checks pass.
 
 Catches vs cost on the closed 2I set (F4v2 layer only):
-- catches: 0 judge-correct items no longer F4v2-rejected (the 24 FRs); they now go to L3.
-- cost: 0 judge-WRONG items no longer F4v2-rejected; they now go to L3 (FA risk, decided only by the S2 calls). Deterministic layers before L3 (F3/F5 run before F4v2) did not catch them.
+- catches: 24 judge-correct items no longer F4v2-rejected (the 24 FRs); they now go to L3.
+- cost: 20 judge-WRONG items no longer F4v2-rejected; they now go to L3 (FA risk, decided only by the S2 calls). Deterministic layers before L3 (F3/F5 run before F4v2) did not catch them.
 - items newly rejected / otherwise changed by the fix: 0.
 
-Production scan (sk_features signals, fixed vs 2I, every upload row): SK 128/4064 rows change signals, CZ 21/4064. Removed signals (top): present samozrejme x52; present príliš x28; present ceste x9; present proste x4; present pulte x3; present chate x3; present torte x2; present odlete x1; present skalám x1; present chrbte x1; present kurte x1; l-participle bola x1; present reklamám x1; present lopte x1; present tablete x1; present parapete x1; present momente x1; present liste x1; present živote x1; present výlete x1.
+Production scan (sk_features signals, fixed vs 2I, every upload row): SK 125/4064 rows change signals, CZ 18/4064. Removed signals (top): present samozrejme x52; present príliš x28; present ceste x9; present proste x4; present pulte x3; present chate x3; present torte x2; present odlete x1; present skalám x1; present chrbte x1; present kurte x1; present reklamám x1; present lopte x1; present tablete x1; present parapete x1; present momente x1; present liste x1; present živote x1; present výlete x1; present uniforme x1.
 
 ## A3 CLOSED-SET RE-SCORE (2I set, 900 items, TRANSLATION-ONLY stack through the real code path, stored 2I L3 replies by request hash, 0 calls)
 Replay check (fix OFF): 800 items reach L3, 0 without a stored reply, 0 decisions differ from 2I results.jsonl.
@@ -34,14 +34,58 @@ Replay check (fix OFF): 800 items reach L3, 0 without a stored reply, 0 decision
 |---|---|---|
 | 2I (before) | 443/497 = 89.13 % [86.06, 91.73] | 19/403 = 4.71 % [2.86, 7.26] |
 | fixed, deterministic part (pending counted as reject) | 443/497 = 89.13 % [86.06, 91.73] | 19/403 = 4.71 % [2.86, 7.26] |
-| fixed, bound: all pending accepted | 443/497 = 89.13 % [86.06, 91.73] | 19/403 = 4.71 % [2.86, 7.26] |
+| fixed, bound: all pending accepted | 466/497 = 93.76 % [91.26, 95.72] | 39/403 = 9.68 % [6.97, 12.99] |
 
-With the fix 800 items reach L3; **0 new L3 calls are needed** (no stored 2I reply; the 2I run never planned a call for F4v2-rejected items): 0 judge-correct, 0 judge-wrong. Final A3 numbers come in S2 after exactly these calls.
+With the fix 843 items reach L3; **43 new L3 calls are needed** (no stored 2I reply; the 2I run never planned a call for F4v2-rejected items): 23 judge-correct, 20 judge-wrong. Final A3 numbers come in S2 after exactly these calls.
 
 Every item whose verdict changed or is pending:
 
 | jid | judge | 2I layer, accept | fixed |
 |---|---|---|---|
+| A:1038:c1 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:c2 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:c3 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:c4 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:c5 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:m | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:s | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:t | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1038:w | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:c1 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:c2 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:c3 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:c4 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:c5 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:m | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:s | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:t | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:1214:w | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:c1 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:c2 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:c3 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:c4 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:c5 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:m | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:s | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:t | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2461:w | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:c1 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:c3 | correct | F4v2, False | AG, False |
+| A:250:c4 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:c5 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:m | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:s | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:t | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:250:w | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:c1 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:c2 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:c3 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:c4 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:c5 | correct | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:m | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:s | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:t | wrong | F4v2, False | PENDING L3 (no stored reply) |
+| A:2989:w | wrong | F4v2, False | PENDING L3 (no stored reply) |
 
 ## A4 Regression gate (deterministic, 0 calls)
 F4v2 runs after AG/F3/F5 and before L1/L2/L3 (checker_1i.decide 802-820), so a changed F4v2 decision is the only way the fix can move a verdict; every item is checked old vs fixed F4v2.
@@ -59,21 +103,7 @@ Verdict: PASS — no F4v2 decision changes on the 1W set or any 1Q/1S/1T/1U/1W i
 
 ## A5 Czech reader
 phase1v/trackC/cz_reader.py builds its Czech CK by executing checker_1i.py with only the `em` patch, so `sk_features` has the SAME ending heuristics and the same one-token `after_prep`. Unit (old -> fixed): `Jel po venkovské cestě příliš rychle.` {'person': '2', 'number': 'sg', 'gender': None} -> {'person': None, 'number': None, 'gender': None}; `Je příliš unavená, tak šla domů.` {'person': '2', 'number': 'sg', 'gender': None} -> {'person': None, 'number': None, 'gender': None}; `Při tomto plotě fotí letadla.` {'person': None, 'number': None, 'gender': None} -> {'person': None, 'number': None, 'gender': None}
-Czech upload scan: 21/4064 rows change signals with the Czech variant (Slovak + Czech prepositions při/přes/ve/ze/ke/podle/kolem/…, same NV list). Removed (top): present příliš x15; present nádražím x1; present skalám x1; l-participle byla x1; present reklamám x1; l-participle mluvila x1; l-participle dala x1.
+Czech upload scan: 18/4064 rows change signals with the Czech variant (Slovak + Czech prepositions při/přes/ve/ze/ke/podle/kolem/…, same NV list). Removed (top): present příliš x15; present nádražím x1; present skalám x1; present reklamám x1.
 Fix available as `f4fix.build_fixed(CZ_CK, "cz")`. Note: the 2I decide path for Czech items would call the Slovak checker_1i F4v2 (no Czech decide path is wired); the Czech CK is used by reader_nom (lang cz).
 
 Files: phase2j/f4fix.py, phase2j/stack_tonly.py (hook), phase2j/partA/partA.py, partA_result.json, partA_stdout.txt, _run/ (requests, reqkeys_fix0/1.json incl. the missing list, prepare/finish outputs).
-
-## A3 CORRECTION (supersedes the A3 table above) — hook defect, direct deterministic re-score
-The stack-path replay with the fix ON reproduced 2I exactly (800 reach L3, 0 changes): the `stack_tonly.py` hook patched a
-`checker_1i` module object that is NOT the one the pre-L3 plan/decide uses (the replay with fix OFF is valid: 800 requests,
-0 missing stored replies, 0 decisions differing from 2I — the stored-reply replay machinery works). DEFECT for S2: find the
-instance runner_1u/R1P plan_ids + decide actually call and patch that one; re-run partA.py; it must show 44 new requests.
-Direct deterministic re-score (every 2I item, old vs fixed F4v2 on the same sk/answer; items rejected earlier by AG/F3/F5 excluded):
-- F4v2 un-fires on 44 items (all 44 of the 2I F4v2 layer: 24 judge-correct = the 24 FRs, 20 judge-wrong); newly fires on 0 items.
-- These 44 items need **44 new L3 calls** (no stored 2I reply); A4 needs 0.
-- CLOSED-SET RE-SCORE, bounds until S2 makes the calls: coverage 443/497 = 89.13 % [86.06, 91.73] (all 44 L3-rejected) to 467/497 = 93.96 % [91.49, 95.89] (all accepted);
-  FA 19/403 = 4.71 % [2.86, 7.26] (all rejected) to 39/403 = 9.68 % [6.97, 12.99] (all accepted). 2I: coverage 443/497 = 89.13 %, FA 19/403 = 4.71 %.
-Production-scan cost candidates (sk upload, removed signals that ARE verbs): `potrebuješ` x1 (2sg) and `l-participle bola` x1
-(SK); CZ `byla`/`mluvila`/`dala` x1 each - the PP shadow swallowed a verb after a mis-read modifier. S2/S3: inspect these 5 rows
-(partA_result.json A5 examples) and tighten `is_mod` if they are real; everything else removed is a noun/adverb.
