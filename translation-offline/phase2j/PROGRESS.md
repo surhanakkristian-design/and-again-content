@@ -96,3 +96,21 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Gemini calls: S2c 0, cumulative 43 of 1,200 (GEMINI_LEDGER.json {"S1": 0, "S2": 43, "S2c": 0}). Headless tokens 0.
 - SHA check S2c: S1 generator, 3,256 files, diff empty.
 - NEXT (S3): Part C; the one new FA (A:250:m, dropped adjective) belongs to C's dropped-content-word class.
+
+## S3 — Part C (21.9.2026; 0 Gemini calls, 0 headless tokens; closed-set analysis on run_S2c)
+- C1: current FAs 20/403 = 2I's 19 + A:250:m; dropped content word 16 (2I 15 + A:250:m), grammar 2, wrong word 1, doubtful 1.
+  ONE path for all 20: F5 needs an order-preserving subsequence; `_subseq_positions` returns None at checker_1i.py:669,
+  loop `continue` :719, trace "not a subsequence of any accepted variant"; span_information (:683) never reached. Causes:
+  every FA sentence has exactly 1 reference (closed set 873/900 single-ref) AND every M answer also swaps >=1 token
+  (must/has to, put on/wore, incredible/unbelievable ...). Secondary: now/today/totally sit in FUNCTION/INFO_FUNC.
+- C2: no SK->EN lemma/bilingual resource in the repo (only annotation `alt`). Sized V1-V5 (content missing / net deficit /
+  pure deletion mod synonyms / word in all refs / F5 relaxed): closed-2I cost min 16 (V3/V4 catch 3), V5 catch 5 cost 34;
+  1W V4 3/0 but 2I 16 -> NOT BUILT, no test, no re-freeze. 1S packet (183) has no refs/labels and no overlap with rows_1s
+  -> not sizable. Needed: a per-sentence Slovak content-word -> English map (Part B's audit could supply it).
+- C3: A2 FA = the same 8/100 = 8.00 % [3.52, 15.16] on 2I and current stack: 7 dropped (now, today, totally, Look!, off the
+  plant, hot, in the room) + 1 doubtful (honestly); all M, L3 SAME, single-ref, non-subsequence. Levels now A1 2/101,
+  A2 8/100, B1 7/102, B2 3/100.
+- Files: partC/{partC.py, partC_result.json, PART_C.md}, SHA_after_S3.txt, SHA_diff_S3.txt.
+- Gemini calls: S3 0, cumulative 43 of 1,200 (GEMINI_LEDGER.json S3: 0). Headless tokens 0.
+- SHA check S3: S1 generator, 3,256 files, diff empty.
+- NEXT (S4): Part B; B's reference audit is the only route to a deterministic dropped-word rule (C2).

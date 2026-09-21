@@ -1,0 +1,2049 @@
+{
+ "label": "Part C, 0 model calls",
+ "lines": {
+  "f5": 705,
+  "subseq_none": 669,
+  "f5_continue": 719,
+  "f5_equal": 716,
+  "span_info": 683,
+  "noninfo_return": 691,
+  "refs_of": 402,
+  "optional_tokens": 415,
+  "decide_F5": 809
+ },
+ "src": {
+  "refs_of": "def refs_of(it):\n    a = annot(it['exercise_id'])\n    out = [it['reference']] + [v for v in (a.get('v') or []) if isinstance(v, str)]\n    if HYGIENE:\n        out = hyg.gender_variants(out, a.get('g'))\n    seen, uniq = set(), []\n    for r in out:\n        if r not in seen:\n            seen.add(r)\n            uniq.append(r)\n    return uniq\n",
+  "optional_tokens": "def optional_tokens(it):\n    a = annot(it['exercise_id'])\n    opt = set(ARTICLES)\n    for k, v in (a.get('d') or {}).items():\n        opt.add(base.norm(k).strip())\n        for alt in str(v).split('|'):\n            opt.add(base.norm(alt).strip())\n    for v in (a.get('v') or []):\n        for m in re.findall(r'\\(([^)]*)\\)', str(v)):\n            opt |= set(toks(m))\n    return {x for x in opt if x}\n",
+  "annot": "def annot(eid):\n    \"\"\"The hygienised annotation (2.3). phase1c/ is never written; hygiene is applied in memory.\"\"\"\n    if eid not in _ANN:\n        a = raw_annot(eid)\n        if a and HYGIENE:\n            a = hyg.hygienise(a, SK_OF.get(eid))[0]\n        _ANN[eid] = a or {}\n    return _ANN[eid]\n",
+  "f5_tail": "            continue\n        if not miss:\n            return False, {'fired': False, 'reason': 'no deletion against %s' % r}\n        pds = _postdash_start(r, opt)\n        reasons = []\n        for sp in _spans(miss):\n            why = span_information(sp, opt, pds)\n            if why:\n                reasons.append({'deleted': ' '.join(t for _p, t in sp), 'why': why, 'position': sp[0][0],\n                                'ref_len': len([t for t in rt if t not in opt])})\n        if not reasons:\n            return False, {'fired': False, 'reason': 'deletion carries no information (articles/closed class)',\n                           'variant': r, 'deleted': ' '.join(t for _p, t in miss)}\n        fires.append({'variant': r, 'spans': reasons})\n    if fires:\n        f = fires[0]\n        return True, {'fired': True, 'variant': f['variant'], 'spans': f['spans'],\n                      'deleted': '; '.join(s['deleted'] for s in f['spans']),\n                      'why': '; '.join(s['why'] for s in f['spans'])}\n    return False, {'fired': False, 'reason': 'not a subsequence of any accepted variant'}\n"
+ },
+ "C1_current_FAs": [
+  {
+   "jid": "A:110:m",
+   "level": "B1",
+   "slovak": "Babka za jedno popoludnie zložila desiatky dumplingov, však? Absolútne neuveriteľné!",
+   "refs": [
+    "Grandma folded dozens of dumplings in one afternoon, didn't she? Absolutely unbelievable!"
+   ],
+   "answer": "Grandma folded dozens of dumplings, didn't she? Absolutely incredible!",
+   "judge_type": null,
+   "judge_reason": "Dropped 'za jedno popoludnie' (in one afternoon)",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Grandma folded dozens of dumplings in one afternoon, didn't she? Absolutely unbelievable!",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "incredible"
+     ],
+     "first_break": "incredible"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "after",
+        "unbel"
+       ],
+       "extra": [
+        "incre"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "unbel",
+      "after"
+     ],
+     "extra_vs_all_refs": [
+      "incre"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:250:m",
+   "level": "B1",
+   "slovak": "Vozidlo uháňalo po vidieckej ceste predtým, než bolo zaparkované pri dunách, ako bolo pozorované.",
+   "refs": [
+    "The vehicle had sped along the country road before it was parked by the dunes, as observed."
+   ],
+   "answer": "The vehicle had been racing along the road before it was parked by the dunes, as was observed.",
+   "judge_type": null,
+   "judge_reason": "Drops 'country' (vidieckej).",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": false,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "The vehicle had sped along the country road before it was parked by the dunes, as observed.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "been",
+      "racing"
+     ],
+     "first_break": "been"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "sp",
+        "count"
+       ],
+       "extra": [
+        "racin"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "sp",
+      "count"
+     ],
+     "extra_vs_all_refs": [
+      "racin"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:276:m",
+   "level": "A2",
+   "slovak": "Paradajky rastú na rastlinách, tak on ich musí odtrhnúť z rastliny.",
+   "refs": [
+    "Tomatoes grow on plants, so he has to pick them off the plant."
+   ],
+   "answer": "Tomatoes grow on plants, so he must pick them.",
+   "judge_type": null,
+   "judge_reason": "Drops 'off the plant'.",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Tomatoes grow on plants, so he has to pick them off the plant.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "must"
+     ],
+     "first_break": "must"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": false,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:301:m",
+   "level": "B2",
+   "slovak": "Tento rok park zatiaľ dosiahol 70 percent svojho cieľa v recyklácii.",
+   "refs": [
+    "So far this year, the park has reached 70 percent of its recycling target."
+   ],
+   "answer": "This year the park has so far reached 70 percent of its goal.",
+   "judge_type": null,
+   "judge_reason": "Dropped 'v recyklácii' (recycling)",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "So far this year, the park has reached 70 percent of its recycling target.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "goal"
+     ],
+     "first_break": "so"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": true,
+    "V4_word_in_all_refs_missing_and_no_new_content": true,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "recyc"
+       ],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [
+      "recyc"
+     ],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:423:m",
+   "level": "A2",
+   "slovak": "Dnes ráno tu nie je veľa ľudí, a úprimne, pôsobíš tak pokojne.",
+   "refs": [
+    "There aren't many people this morning, and honestly, you are so calm."
+   ],
+   "answer": "There aren't many people here this morning, and you seem so calm.",
+   "judge_type": null,
+   "judge_reason": "Drops 'honestly'",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "There aren't many people this morning, and honestly, you are so calm.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "here",
+      "seem"
+     ],
+     "first_break": "here"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "hones"
+       ],
+       "extra": [
+        "seem"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "hones"
+     ],
+     "extra_vs_all_refs": [
+      "seem"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:842:m",
+   "level": "B2",
+   "slovak": "Smoothie mu skočilo rovno na nos, takže mal vrchnák vtedy zatlačiť silnejšie.",
+   "refs": [
+    "The smoothie jumped straight onto his nose, so he should have pressed the lid down harder that time."
+   ],
+   "answer": "The smoothie jumped right onto his nose, so he should have pressed harder then.",
+   "judge_type": null,
+   "judge_reason": "Drops 'the lid'.",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "The smoothie jumped straight onto his nose, so he should have pressed the lid down harder that time.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "right",
+      "then"
+     ],
+     "first_break": "right"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "strai",
+        "lid",
+        "time"
+       ],
+       "extra": [
+        "right"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "time",
+      "strai",
+      "lid"
+     ],
+     "extra_vs_all_refs": [
+      "right"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:1106:c4",
+   "level": "B1",
+   "slovak": "Keby ryby mali ruky, ony by tlieskali tomu nahodeniu. Naozaj legendárna technika.",
+   "refs": [
+    "If fish had hands, they would clap for that cast. Truly legendary technique."
+   ],
+   "answer": "Were fish to have hands, they would applaud that throw. Truly legendary technique.",
+   "judge_type": null,
+   "judge_reason": "Missing article: 'Truly legendary technique'.",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "If fish had hands, they would clap for that cast. Truly legendary technique.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "were",
+      "to",
+      "have",
+      "applaud",
+      "throw"
+     ],
+     "first_break": "were"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "clap",
+        "cast"
+       ],
+       "extra": [
+        "throw",
+        "appla"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "clap",
+      "cast"
+     ],
+     "extra_vs_all_refs": [
+      "throw",
+      "appla"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:1212:m",
+   "level": "B1",
+   "slovak": "Zajtra o takomto čase bude robiť pred zrkadlom tú istú grimasu s otvorenými ústami.",
+   "refs": [
+    "This time tomorrow she will be pulling the same open-mouth face at the mirror."
+   ],
+   "answer": "This time tomorrow, she will be making the same face with her mouth open.",
+   "judge_type": null,
+   "judge_reason": "Dropped 'pred zrkadlom' (in front of the mirror)",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "This time tomorrow she will be pulling the same open-mouth face at the mirror.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "making",
+      "with",
+      "her"
+     ],
+     "first_break": "making"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "pulli",
+        "mirro"
+       ],
+       "extra": [
+        "makin"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "mirro",
+      "pulli"
+     ],
+     "extra_vs_all_refs": [
+      "makin"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:1738:m",
+   "level": "A2",
+   "slovak": "Pozri! Práve teraz dýcha veľmi ťažko.",
+   "refs": [
+    "Look! She is breathing very hard now."
+   ],
+   "answer": "He's breathing very heavily right now.",
+   "judge_type": null,
+   "judge_reason": "Drops 'Look!' (Pozri).",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Look! She is breathing very hard now.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "he",
+      "is|has",
+      "heavily",
+      "right"
+     ],
+     "first_break": "he"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "look",
+        "hard"
+       ],
+       "extra": [
+        "right",
+        "heavi"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "hard",
+      "look"
+     ],
+     "extra_vs_all_refs": [
+      "heavi"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:2046:m",
+   "level": "B2",
+   "slovak": "Kámo, ona nakupuje od desiatej ráno a ešte nekončí.",
+   "refs": [
+    "Bro, she has been shopping since ten this morning and she ain't done yet."
+   ],
+   "answer": "Dude, she has been shopping since ten and she still isn't done.",
+   "judge_type": null,
+   "judge_reason": "Drops 'in the morning' (ráno).",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Bro, she has been shopping since ten this morning and she ain't done yet.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "dude",
+      "still",
+      "is"
+     ],
+     "first_break": "dude"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": true,
+    "V4_word_in_all_refs_missing_and_no_new_content": true,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "morni",
+        "yet"
+       ],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [
+      "yet",
+      "morni"
+     ],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:2356:c5",
+   "level": "B1",
+   "slovak": "Kým si prezerali modré mestečko, somár zablokoval uličku. Mierne neplánovaná zastávka.",
+   "refs": [
+    "While they were touring the blue town, a donkey blocked the lane. A slightly unplanned stop."
+   ],
+   "answer": "While they were sightseeing in the small blue town, a donkey was blocking the alley. Slightly unplanned stop.",
+   "judge_type": null,
+   "judge_reason": "Missing obligatory article in 'Slightly unplanned stop'",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "While they were touring the blue town, a donkey blocked the lane. A slightly unplanned stop.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "sightseeing",
+      "in",
+      "small",
+      "was",
+      "blocking",
+      "alley"
+     ],
+     "first_break": "sightseeing"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "touri",
+        "lane"
+       ],
+       "extra": [
+        "sight",
+        "alley",
+        "small"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "lane",
+      "touri"
+     ],
+     "extra_vs_all_refs": [
+      "sight",
+      "alley",
+      "small"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:2486:m",
+   "level": "B1",
+   "slovak": "Kým jeden príbuzný niesol tortu cez dvere, ostatní prichádzali po chodníku.",
+   "refs": [
+    "While one relative was carrying the cake through the door, the others came up the path."
+   ],
+   "answer": "While one relative was carrying the cake, the others were coming along the path.",
+   "judge_type": null,
+   "judge_reason": "Dropped 'cez dvere' (through the door)",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "While one relative was carrying the cake through the door, the others came up the path.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "were",
+      "coming",
+      "along"
+     ],
+     "first_break": "were"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "door",
+        "came"
+       ],
+       "extra": [
+        "comin"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "door",
+      "came"
+     ],
+     "extra_vs_all_refs": [
+      "comin"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:3060:c5",
+   "level": "A1",
+   "slovak": "Ona môže trénovať golf celú noc! Muž je úplne v šoku!",
+   "refs": [
+    "She can practice golf all night! The man is completely shocked!"
+   ],
+   "answer": "She can train golf all night! The man is completely in shock!",
+   "judge_type": null,
+   "judge_reason": "'train golf' is not idiomatic English",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "She can practice golf all night! The man is completely shocked!",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "train",
+      "in",
+      "shock"
+     ],
+     "first_break": "train"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": false,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:3285:m",
+   "level": "B1",
+   "slovak": "Veža zo stoličiek sa kýve, takže liezť na ňu musí byť veľmi riskantné.",
+   "refs": [
+    "The chair tower is swaying, so it must be very risky to climb."
+   ],
+   "answer": "The tower is wobbling, so climbing it must be very risky.",
+   "judge_type": null,
+   "judge_reason": "Dropped 'zo stoličiek' (of chairs)",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "The chair tower is swaying, so it must be very risky to climb.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "wobbling",
+      "climbing"
+     ],
+     "first_break": "wobbling"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "chair",
+        "swayi"
+       ],
+       "extra": [
+        "wobbl"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "chair",
+      "swayi"
+     ],
+     "extra_vs_all_refs": [
+      "wobbl"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:3489:m",
+   "level": "A2",
+   "slovak": "Nikto by nemal teraz siahať na jeho karty, inak je všetko zničené!",
+   "refs": [
+    "Nobody should touch his cards now, or everything is ruined!"
+   ],
+   "answer": "Nobody should touch his cards, otherwise everything is ruined!",
+   "judge_type": null,
+   "judge_reason": "Drops 'now'",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Nobody should touch his cards now, or everything is ruined!",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "otherwise"
+     ],
+     "first_break": "otherwise"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": false,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [],
+       "extra": [
+        "other"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [],
+     "extra_vs_all_refs": [
+      "other"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:3563:m",
+   "level": "A2",
+   "slovak": "Zvyčajne nosí tri vrstvy, ale dnes si obliekol päť.",
+   "refs": [
+    "He usually wears three layers, but today he wore five."
+   ],
+   "answer": "He usually wears three layers, but he put on five.",
+   "judge_type": null,
+   "judge_reason": "Drops 'today' (dnes).",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "He usually wears three layers, but today he wore five.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "put",
+      "on"
+     ],
+     "first_break": "put"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": false,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:3573:m",
+   "level": "A2",
+   "slovak": "Rodičia sú úplne vyčerpaní, ale deti chcú znova na hojdačky!",
+   "refs": [
+    "The parents are totally exhausted, but the kids want the swings again!"
+   ],
+   "answer": "The parents are exhausted, but the kids want to go on the swings again!",
+   "judge_type": null,
+   "judge_reason": "Drops 'completely' (úplne).",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "The parents are totally exhausted, but the kids want the swings again!",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "to",
+      "go",
+      "on"
+     ],
+     "first_break": "to"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": false,
+    "V2_net_content_deficit_every_ref": false,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [],
+       "extra": [
+        "go"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [],
+     "extra_vs_all_refs": [
+      "go"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:3672:m",
+   "level": "A2",
+   "slovak": "Pijú horúci čaj, aby sa zohriali a cítili v bezpečí.",
+   "refs": [
+    "They drink hot tea to feel warm and safe."
+   ],
+   "answer": "They drink tea to warm up and feel safe.",
+   "judge_type": null,
+   "judge_reason": "Drops 'hot'.",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "They drink hot tea to feel warm and safe.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "up"
+     ],
+     "first_break": "up"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": true,
+    "V4_word_in_all_refs_missing_and_no_new_content": true,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "hot"
+       ],
+       "extra": []
+      }
+     ],
+     "missing_from_all_refs": [
+      "hot"
+     ],
+     "extra_vs_all_refs": []
+    }
+   }
+  },
+  {
+   "jid": "A:3797:m",
+   "level": "A2",
+   "slovak": "Hej, v miestnosti bola nuda, ale teraz je to dosť živé.",
+   "refs": [
+    "Yo, the room was dead, but now it's kinda lively."
+   ],
+   "answer": "Hey, it was boring, but now it's quite lively.",
+   "judge_type": null,
+   "judge_reason": "Drops 'in the room'.",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Yo, the room was dead, but now it's kinda lively.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "hey",
+      "boring",
+      "quite"
+     ],
+     "first_break": "hey"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "yo",
+        "room",
+        "dead",
+        "kinda"
+       ],
+       "extra": [
+        "borin",
+        "quite",
+        "hey"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "dead",
+      "yo",
+      "room",
+      "kinda"
+     ],
+     "extra_vs_all_refs": [
+      "borin",
+      "quite",
+      "hey"
+     ]
+    }
+   }
+  },
+  {
+   "jid": "A:3957:m",
+   "level": "A1",
+   "slovak": "Tak trochu pôsobivé, ty umývaš surové kura ako skutočný šéfkuchár.",
+   "refs": [
+    "Low-key impressive, you wash the raw chicken like a real chef."
+   ],
+   "answer": "Kind of impressive, you wash the chicken like a real chef.",
+   "judge_type": null,
+   "judge_reason": "Drops 'raw'",
+   "layer": "L3",
+   "l3": "SAME",
+   "in_2I_FA": true,
+   "f5_recomputed_fire": false,
+   "f5_trace": {
+    "fired": false,
+    "reason": "not a subsequence of any accepted variant"
+   },
+   "per_ref": [
+    {
+     "ref": "Low-key impressive, you wash the raw chicken like a real chef.",
+     "subsequence": false,
+     "answer_tokens_not_in_ref": [
+      "kind",
+      "of"
+     ],
+     "first_break": "kind"
+    }
+   ],
+   "c2": {
+    "V1_any_ref_content_missing_every_ref": true,
+    "V2_net_content_deficit_every_ref": true,
+    "V3_pure_deletion_mod_synonyms_some_ref": false,
+    "V4_word_in_all_refs_missing_and_no_new_content": false,
+    "_detail": {
+     "per_ref": [
+      {
+       "missing": [
+        "low",
+        "key",
+        "raw"
+       ],
+       "extra": [
+        "kind"
+       ]
+      }
+     ],
+     "missing_from_all_refs": [
+      "key",
+      "raw",
+      "low"
+     ],
+     "extra_vs_all_refs": [
+      "kind"
+     ]
+    }
+   }
+  }
+ ],
+ "C2_sizing": [
+  {
+   "set": "closed 2I set (current stack run_S2c)",
+   "n": 900,
+   "n_correct": 497,
+   "n_wrong": 403,
+   "accepted_wrong": 20,
+   "rules": {
+    "V1_any_ref_content_missing_every_ref": {
+     "catches": 15,
+     "cost": 297,
+     "catch_ids": [
+      "A:110:m",
+      "A:250:m",
+      "A:301:m",
+      "A:423:m",
+      "A:842:m",
+      "A:1106:c4",
+      "A:1212:m",
+      "A:1738:m",
+      "A:2046:m",
+      "A:2356:c5",
+      "A:2486:m",
+      "A:3285:m",
+      "A:3672:m",
+      "A:3797:m",
+      "A:3957:m"
+     ],
+     "cost_ids": [
+      "A:59:c2",
+      "A:59:c4",
+      "A:59:c5",
+      "A:65:c1",
+      "A:65:c2",
+      "A:65:c3",
+      "A:65:c4",
+      "A:65:c5",
+      "A:110:c1",
+      "A:110:c2",
+      "A:110:c3",
+      "A:110:c4",
+      "A:110:c5",
+      "A:148:c2",
+      "A:148:c3",
+      "A:148:c4",
+      "A:148:c5",
+      "A:250:c1",
+      "A:250:c2",
+      "A:250:c4",
+      "A:262:c1",
+      "A:262:c4",
+      "A:276:c2",
+      "A:299:c2",
+      "A:299:c3",
+      "A:299:c4",
+      "A:299:c5",
+      "A:301:c2",
+      "A:301:c3",
+      "A:301:c4",
+      "A:301:c5",
+      "A:359:c1",
+      "A:359:c2",
+      "A:359:c3",
+      "A:359:c4",
+      "A:359:c5",
+      "A:363:c1",
+      "A:363:c2",
+      "A:363:c3",
+      "A:363:c4"
+     ],
+     "fires_on_already_rejected": 317
+    },
+    "V2_net_content_deficit_every_ref": {
+     "catches": 11,
+     "cost": 55,
+     "catch_ids": [
+      "A:110:m",
+      "A:250:m",
+      "A:301:m",
+      "A:842:m",
+      "A:1212:m",
+      "A:2046:m",
+      "A:2486:m",
+      "A:3285:m",
+      "A:3672:m",
+      "A:3797:m",
+      "A:3957:m"
+     ],
+     "cost_ids": [
+      "A:65:c4",
+      "A:110:c3",
+      "A:299:c4",
+      "A:301:c3",
+      "A:301:c5",
+      "A:541:c4",
+      "A:842:c1",
+      "A:842:c3",
+      "A:842:c4",
+      "A:842:c5",
+      "A:1004:c2",
+      "A:1004:c4",
+      "A:1106:c2",
+      "A:1106:c5",
+      "A:1402:c4",
+      "A:1446:c4",
+      "A:1446:c5",
+      "A:1577:c1",
+      "A:1577:c2",
+      "A:1577:c4",
+      "A:1577:c5",
+      "A:1611:c1",
+      "A:1611:c2",
+      "A:1611:c3",
+      "A:1611:c4",
+      "A:1611:c5",
+      "A:1727:c2",
+      "A:1727:c3",
+      "A:2040:c2",
+      "A:2040:c4",
+      "A:2046:c1",
+      "A:2046:c4",
+      "A:2456:c4",
+      "A:2463:c2",
+      "A:2495:c3",
+      "A:2502:c4",
+      "A:2798:c1",
+      "A:2798:c2",
+      "A:2798:c3",
+      "A:2845:c3"
+     ],
+     "fires_on_already_rejected": 114
+    },
+    "V3_pure_deletion_mod_synonyms_some_ref": {
+     "catches": 3,
+     "cost": 16,
+     "catch_ids": [
+      "A:301:m",
+      "A:2046:m",
+      "A:3672:m"
+     ],
+     "cost_ids": [
+      "A:299:c4",
+      "A:301:c3",
+      "A:1106:c2",
+      "A:1106:c5",
+      "A:1402:c4",
+      "A:2040:c2",
+      "A:2040:c4",
+      "A:2046:c1",
+      "A:2046:c4",
+      "A:2495:c3",
+      "A:2798:c2",
+      "A:3052:c2",
+      "A:3363:c1",
+      "A:3363:c3",
+      "A:3519:c4",
+      "A:4064:c2"
+     ],
+     "fires_on_already_rejected": 50
+    },
+    "V4_word_in_all_refs_missing_and_no_new_content": {
+     "catches": 3,
+     "cost": 16,
+     "catch_ids": [
+      "A:301:m",
+      "A:2046:m",
+      "A:3672:m"
+     ],
+     "cost_ids": [
+      "A:299:c4",
+      "A:301:c3",
+      "A:1106:c2",
+      "A:1106:c5",
+      "A:1402:c4",
+      "A:2040:c2",
+      "A:2040:c4",
+      "A:2046:c1",
+      "A:2046:c4",
+      "A:2495:c3",
+      "A:2798:c2",
+      "A:3052:c2",
+      "A:3363:c1",
+      "A:3363:c3",
+      "A:3519:c4",
+      "A:4064:c2"
+     ],
+     "fires_on_already_rejected": 54
+    }
+   }
+  },
+  {
+   "set": "1W test set",
+   "n": 900,
+   "n_correct": 401,
+   "n_wrong": 499,
+   "accepted_wrong": 16,
+   "rules": {
+    "V1_any_ref_content_missing_every_ref": {
+     "catches": 11,
+     "cost": 65,
+     "catch_ids": [
+      "W:200031:w2",
+      "W:200035:w2",
+      "W:200038:w2",
+      "W:200052:w2",
+      "W:200056:w2",
+      "W:200061:w2",
+      "W:200064:w5",
+      "W:200076:w2",
+      "W:200078:w2",
+      "W:200079:w2",
+      "W:200080:w2"
+     ],
+     "cost_ids": [
+      "C:200001:c3",
+      "C:200003:c3",
+      "C:200004:c4",
+      "C:200005:c3",
+      "C:200006:c3",
+      "C:200007:c3",
+      "C:200007:c4",
+      "C:200008:c4",
+      "C:200009:c3",
+      "C:200012:c3",
+      "C:200013:c3",
+      "C:200016:c3",
+      "C:200020:c3",
+      "C:200020:c4",
+      "C:200021:c3",
+      "C:200024:c3",
+      "C:200025:c3",
+      "C:200026:c3",
+      "C:200026:c4",
+      "C:200030:c4",
+      "C:200033:c4",
+      "C:200035:c3",
+      "C:200037:c3",
+      "C:200037:c4",
+      "C:200039:c3",
+      "C:200041:c4",
+      "C:200042:c3",
+      "C:200043:c3",
+      "C:200044:c3",
+      "C:200051:c4",
+      "C:200053:c3",
+      "C:200054:c3",
+      "C:200054:c4",
+      "C:200056:c4",
+      "C:200058:c3",
+      "C:200059:c3",
+      "C:200059:c4",
+      "C:200060:c3",
+      "C:200061:c3",
+      "C:200061:c4"
+     ],
+     "fires_on_already_rejected": 320
+    },
+    "V2_net_content_deficit_every_ref": {
+     "catches": 6,
+     "cost": 5,
+     "catch_ids": [
+      "W:200038:w2",
+      "W:200056:w2",
+      "W:200076:w2",
+      "W:200078:w2",
+      "W:200079:w2",
+      "W:200080:w2"
+     ],
+     "cost_ids": [
+      "C:200030:c4",
+      "C:200054:c3",
+      "C:200056:c4",
+      "C:200075:c2",
+      "C:200076:c4"
+     ],
+     "fires_on_already_rejected": 94
+    },
+    "V3_pure_deletion_mod_synonyms_some_ref": {
+     "catches": 3,
+     "cost": 30,
+     "catch_ids": [
+      "W:200038:w2",
+      "W:200056:w2",
+      "W:200078:w2"
+     ],
+     "cost_ids": [
+      "C:200001:c1",
+      "C:200001:c2",
+      "C:200005:c1",
+      "C:200005:c2",
+      "C:200005:c4",
+      "C:200009:c1",
+      "C:200009:c2",
+      "C:200016:c1",
+      "C:200016:c2",
+      "C:200018:c1",
+      "C:200018:c2",
+      "C:200018:c3",
+      "C:200020:c1",
+      "C:200020:c2",
+      "C:200021:c1",
+      "C:200021:c4",
+      "C:200024:c1",
+      "C:200024:c4",
+      "C:200030:c4",
+      "C:200054:c3",
+      "C:200056:c4",
+      "C:200059:c1",
+      "C:200059:c2",
+      "C:200063:c1",
+      "C:200063:c2",
+      "C:200081:c1",
+      "C:200081:c2",
+      "C:200081:c3",
+      "C:200100:c1",
+      "W:200100:w2"
+     ],
+     "fires_on_already_rejected": 75
+    },
+    "V4_word_in_all_refs_missing_and_no_new_content": {
+     "catches": 3,
+     "cost": 0,
+     "catch_ids": [
+      "W:200038:w2",
+      "W:200056:w2",
+      "W:200078:w2"
+     ],
+     "cost_ids": [],
+     "fires_on_already_rejected": 56
+    }
+   }
+  },
+  {
+   "set": "1S rows_1s",
+   "n": 1080,
+   "n_correct": 490,
+   "n_wrong": 590,
+   "accepted_wrong": 8,
+   "rules": {
+    "V1_any_ref_content_missing_every_ref": {
+     "catches": 5,
+     "cost": 158,
+     "catch_ids": [
+      "W:170057:w4",
+      "W:170080:w4",
+      "W:170088:w2",
+      "W:170090:w3",
+      "W:170096:w5"
+     ],
+     "cost_ids": [
+      "C:170001:c3",
+      "C:170002:c0",
+      "C:170002:c3",
+      "C:170004:c0",
+      "C:170004:c3",
+      "C:170005:c2",
+      "C:170005:c3",
+      "C:170006:c3",
+      "C:170007:c3",
+      "C:170008:c3",
+      "C:170009:c3",
+      "C:170010:c2",
+      "C:170010:c3",
+      "C:170011:c1",
+      "C:170013:c3",
+      "C:170014:c3",
+      "C:170015:c0",
+      "C:170015:c1",
+      "C:170015:c2",
+      "C:170015:c3",
+      "C:170016:c3",
+      "C:170017:c3",
+      "C:170018:c1",
+      "C:170019:c3",
+      "C:170020:c1",
+      "C:170020:c3",
+      "C:170021:c3",
+      "C:170023:c0",
+      "C:170023:c3",
+      "C:170024:c3",
+      "C:170025:c2",
+      "C:170025:c3",
+      "C:170027:c0",
+      "C:170028:c3",
+      "C:170029:c3",
+      "C:170030:c3",
+      "C:170031:c1",
+      "C:170031:c3",
+      "C:170032:c1",
+      "C:170032:c3"
+     ],
+     "fires_on_already_rejected": 537
+    },
+    "V2_net_content_deficit_every_ref": {
+     "catches": 2,
+     "cost": 17,
+     "catch_ids": [
+      "W:170080:w4",
+      "W:170088:w2"
+     ],
+     "cost_ids": [
+      "C:170005:c2",
+      "C:170025:c3",
+      "C:170027:c0",
+      "C:170056:c0",
+      "C:170061:c3",
+      "C:170063:c3",
+      "C:170088:c3",
+      "W:170091:w4",
+      "C:170095:c2",
+      "C:170101:c2",
+      "C:170102:c4",
+      "C:170104:c3",
+      "C:170110:c3",
+      "C:170116:c2",
+      "C:170116:c4",
+      "C:170117:c3",
+      "C:170118:c3"
+     ],
+     "fires_on_already_rejected": 293
+    },
+    "V3_pure_deletion_mod_synonyms_some_ref": {
+     "catches": 0,
+     "cost": 12,
+     "catch_ids": [],
+     "cost_ids": [
+      "C:170005:c2",
+      "C:170025:c3",
+      "C:170027:c0",
+      "C:170056:c0",
+      "C:170061:c3",
+      "C:170063:c3",
+      "C:170095:c2",
+      "C:170101:c2",
+      "C:170104:c3",
+      "C:170116:c4",
+      "C:170117:c3",
+      "C:170118:c3"
+     ],
+     "fires_on_already_rejected": 157
+    },
+    "V4_word_in_all_refs_missing_and_no_new_content": {
+     "catches": 0,
+     "cost": 12,
+     "catch_ids": [],
+     "cost_ids": [
+      "C:170005:c2",
+      "C:170025:c3",
+      "C:170027:c0",
+      "C:170056:c0",
+      "C:170061:c3",
+      "C:170063:c3",
+      "C:170095:c2",
+      "C:170101:c2",
+      "C:170104:c3",
+      "C:170116:c4",
+      "C:170117:c3",
+      "C:170118:c3"
+     ],
+     "fires_on_already_rejected": 157
+    }
+   },
+   "rows_skipped_no_ref_or_answer": 0,
+   "keys": [
+    "accept",
+    "accept_1q",
+    "accept_1s",
+    "ag_agent",
+    "ag_agent_elsewhere_in_answer",
+    "ag_agent_kind",
+    "ag_agent_source",
+    "ag_answer_is_agentless_passive",
+    "ag_fired",
+    "ag_noun_fired",
+    "ag_reason",
+    "answer",
+    "half",
+    "iid",
+    "judged",
+    "l3_tip",
+    "label_1r",
+    "label_1r_type",
+    "label_s2",
+    "label_s2_type",
+    "layer",
+    "layer_1q",
+    "layer_1s",
+    "lever1_agent",
+    "lever1_fired",
+    "lever1_off_accept",
+    "lever1_off_layer",
+    "reference",
+    "sid",
+    "slovak",
+    "tags",
+    "wrong_type"
+   ],
+   "label_values": [
+    "correct",
+    "wrong"
+   ]
+  },
+  {
+   "set": "1S packet",
+   "n": 0,
+   "n_correct": 0,
+   "n_wrong": 0,
+   "accepted_wrong": 0,
+   "rules": {
+    "V1_any_ref_content_missing_every_ref": {
+     "catches": 0,
+     "cost": 0,
+     "catch_ids": [],
+     "cost_ids": [],
+     "fires_on_already_rejected": 0
+    },
+    "V2_net_content_deficit_every_ref": {
+     "catches": 0,
+     "cost": 0,
+     "catch_ids": [],
+     "cost_ids": [],
+     "fires_on_already_rejected": 0
+    },
+    "V3_pure_deletion_mod_synonyms_some_ref": {
+     "catches": 0,
+     "cost": 0,
+     "catch_ids": [],
+     "cost_ids": [],
+     "fires_on_already_rejected": 0
+    },
+    "V4_word_in_all_refs_missing_and_no_new_content": {
+     "catches": 0,
+     "cost": 0,
+     "catch_ids": [],
+     "cost_ids": [],
+     "fires_on_already_rejected": 0
+    }
+   },
+   "rows_skipped_no_ref_or_answer": 183,
+   "keys": [
+    "answer",
+    "jid",
+    "level",
+    "slovak"
+   ],
+   "label_values": [
+    "None"
+   ]
+  }
+ ],
+ "C3_levels": {
+  "A2": {
+   "wrong": 100,
+   "fa": 8,
+   "fa_2I": 8
+  },
+  "B2": {
+   "wrong": 100,
+   "fa": 3,
+   "fa_2I": 3
+  },
+  "B1": {
+   "wrong": 102,
+   "fa": 7,
+   "fa_2I": 6
+  },
+  "A1": {
+   "wrong": 101,
+   "fa": 2,
+   "fa_2I": 2
+  }
+ },
+ "C3_A2_2I_FAs": [
+  "A:276:m",
+  "A:423:m",
+  "A:1738:m",
+  "A:3489:m",
+  "A:3563:m",
+  "A:3573:m",
+  "A:3672:m",
+  "A:3797:m"
+ ],
+ "bilingual_candidates": [
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/selftest/fx/judge/verdicts_part1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/judge/verdicts_B2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/judge/verdicts_A2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/judge/verdicts_A1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/judge/verdicts_B1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/verdicts_1u.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/verdicts_part1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/verdicts_part3.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/verdicts_part2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/set/judge/verdicts_part4.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1j/taskD/final_verdicts.jsonl",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1q/taskA/stack_offline_verdicts.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/selftest/fx/judge/verdicts_P1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/selftest/fx/judge/verdicts_P2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/selftest/fx/judge/verdicts_P3.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/selftest/fx/judge/verdicts_P4.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/judge/verdicts_P1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/judge/verdicts_P2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/judge/verdicts_P3.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/set/judge/verdicts_P4.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1s/taskC/judge/verdicts.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2g/partA/run/verdicts_1u.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/judge/verdicts_s1.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/judge/verdicts_s4.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/judge/verdicts_s2.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/judge/verdicts_s3.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1r/taskA/judge/verdicts.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/verdicts_1u.json",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_verdicts_exist",
+  "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1u/run/selftest/run_failed/verdicts_1u.json"
+ ],
+ "C2_V5_f5_relaxed": {
+  "closed 2I": {
+   "catches": [
+    "A:276:m",
+    "A:301:m",
+    "A:2046:m",
+    "A:3563:m",
+    "A:3672:m"
+   ],
+   "cost": [
+    [
+     "A:262:c5",
+     "The medic said that the lab had sent the film an hour before.",
+     "The medic said the film had been sent from the lab an hour before."
+    ],
+    [
+     "A:284:c2",
+     "The water in the bottle is really cold.",
+     "The water in the bottle is very cold."
+    ],
+    [
+     "A:284:c3",
+     "The bottle's water is very cold.",
+     "The water in the bottle is very cold."
+    ],
+    [
+     "A:301:c3",
+     "The park has reached 70% of its recycling goal so far this year.",
+     "So far this year, the park has reached 70 percent of its recycling target."
+    ],
+    [
+     "A:587:c4",
+     "Kitchen dancing is a great idea.",
+     "Dancing in the kitchen is a great idea."
+    ],
+    [
+     "A:1099:c5",
+     "A big mushroom grows up from the ground.",
+     "A big mushroom grows out of the ground."
+    ],
+    [
+     "A:1106:c5",
+     "If the fish had hands, they would clap at that cast. A really legendary technique.",
+     "If fish had hands, they would clap for that cast. Truly legendary technique."
+    ],
+    [
+     "A:1330:c2",
+     "This is the world's heaviest dictionary!",
+     "This is the heaviest dictionary in the world!"
+    ],
+    [
+     "A:1371:c3",
+     "This beach has a lot of soft sand.",
+     "There is a lot of soft sand on this beach."
+    ],
+    [
+     "A:1402:c4",
+     "The silver chain is in the wooden box.",
+     "The silver chain lies in the wooden box."
+    ],
+    [
+     "A:1738:c2",
+     "Look! She is breathing really hard right now.",
+     "Look! She is breathing very hard now."
+    ],
+    [
+     "A:1919:c3",
+     "Guests have rarely enjoyed such warm hospitality at one samovar.",
+     "Rarely have guests enjoyed such warm hospitality around one samovar."
+    ],
+    [
+     "A:1951:c4",
+     "If there's snow tonight, I'll wear this coat once more.",
+     "If it snows tonight, I will wear this coat again."
+    ],
+    [
+     "A:2040:c2",
+     "This beard is 10 years of work!",
+     "This beard is ten years of work!"
+    ],
+    [
+     "A:2046:c1",
+     "Dude, she has been shopping since ten in the morning and she still isn't done.",
+     "Bro, she has been shopping since ten this morning and she ain't done yet."
+    ],
+    [
+     "A:2046:c4",
+     "Dude, she's been shopping since 10 am and she's not done yet.",
+     "Bro, she has been shopping since ten this morning and she ain't done yet."
+    ],
+    [
+     "A:2486:c5",
+     "The others were arriving along the path while one relative was carrying the cake in through the door.",
+     "While one relative was carrying the cake through the door, the others came up the path."
+    ],
+    [
+     "A:2495:c3",
+     "What a nightmare! The cat has too much work, even in bed!",
+     "Nightmare! The cat has got too much work, even in bed!"
+    ],
+    [
+     "A:2798:c2",
+     "At this hour tomorrow the subject will be unlocking the same wooden door, as he usually does.",
+     "At this hour tomorrow, the subject will be unlocking the same wooden door, as she typically does."
+    ],
+    [
+     "A:2845:c4",
+     "Look at their boots! They are going to go through the field immediately.",
+     "Look at their boots! They are going to cross the field now."
+    ],
+    [
+     "A:2948:c1",
+     "Two red cargo ships brought their goods to the port by sea.",
+     "The two red cargo ships brought their goods into the port by sea."
+    ],
+    [
+     "A:2948:c5",
+     "Two red cargo ships had brought their goods to port by sea.",
+     "The two red cargo ships brought their goods into the port by sea."
+    ],
+    [
+     "A:2989:c5",
+     "Obviously she had the route drawn on a map, in case she were to forget her own plan.",
+     "Obviously she had the route drawn on a map, just in case she forgot her own plan."
+    ],
+    [
+     "A:3052:c2",
+     "She climbed up on the box on the left.",
+     "She climbed onto the crate on the left."
+    ],
+    [
+     "A:3052:c3",
+     "She climbed onto the crate to the left.",
+     "She climbed onto the crate on the left."
+    ],
+    [
+     "A:3177:c2",
+     "She's already waited out a delay like this once, hasn't she?",
+     "She's waited through a delay like this before, hasn't she?"
+    ],
+    [
+     "A:3285:c2",
+     "The chair tower is swaying, so climbing up it must be really risky.",
+     "The chair tower is swaying, so it must be very risky to climb."
+    ],
+    [
+     "A:3363:c1",
+     "They have one bottle of red wine for tonight.",
+     "They have got one bottle of red wine tonight."
+    ],
+    [
+     "A:3363:c3",
+     "For this evening they have one bottle of red wine.",
+     "They have got one bottle of red wine tonight."
+    ],
+    [
+     "A:3519:c4",
+     "She has a plan: next year she'll write a new speech.",
+     "She has a plan. She is going to write a new speech next year."
+    ],
+    [
+     "A:3709:c1",
+     "She takes off her headphones. She's going to leave the studio.",
+     "She takes off her headphones. She is going to leave the studio now."
+    ],
+    [
+     "A:3709:c2",
+     "He takes his headphones off. He's going to leave the studio.",
+     "She takes off her headphones. She is going to leave the studio now."
+    ],
+    [
+     "A:3709:c3",
+     "She removes her headphones. She is about to leave the studio.",
+     "She takes off her headphones. She is going to leave the studio now."
+    ],
+    [
+     "A:4064:c2",
+     "They've been photographing these pillars for two hours, and the battery is totally dead!",
+     "They have been taking photos of these pillars for two hours, and the battery is completely dead!"
+    ]
+   ]
+  },
+  "1W test": {
+   "catches": [
+    "W:200038:w2"
+   ],
+   "cost": [
+    [
+     "C:200023:c4",
+     "The room is cold today.",
+     "It is cold in the room today."
+    ],
+    [
+     "C:200048:c3",
+     "It's really cold in the kitchen today.",
+     "It is very cold in the kitchen today."
+    ],
+    [
+     "C:200048:c4",
+     "The kitchen is very cold today.",
+     "It is very cold in the kitchen today."
+    ]
+   ]
+  },
+  "1S rows_1s": {
+   "catches": [],
+   "cost": [
+    [
+     "C:170005:c2",
+     "I go to the park with my friend on Sundays.",
+     "Every Sunday I go to the park with my friend."
+    ],
+    [
+     "C:170024:c1",
+     "A dog ate my dinner from the table.",
+     "The dog ate my dinner off the table."
+    ],
+    [
+     "C:170025:c3",
+     "I sit in the kitchen with a thick book each evening.",
+     "Every evening I sit in the kitchen with a thick book."
+    ],
+    [
+     "C:170027:c0",
+     "They built a new bridge over the river.",
+     "They built a new bridge across the river."
+    ],
+    [
+     "C:170050:c0",
+     "Our cat sleeps all day on an old armchair.",
+     "Our cat sleeps all day in an old armchair."
+    ],
+    [
+     "C:170050:c2",
+     "Our cat is sleeping on an old armchair all day.",
+     "Our cat sleeps all day in an old armchair."
+    ],
+    [
+     "C:170056:c0",
+     "The neighbours will build a small pool behind the house next year.",
+     "Next year the neighbours will build a small swimming pool behind the house."
+    ],
+    [
+     "C:170057:c1",
+     "She threw old newspapers into a bin.",
+     "She threw the old newspapers in the bin."
+    ],
+    [
+     "C:170061:c1",
+     "When we got home, Zuzana had already washed all the glasses from the party.",
+     "When we got home, Zuzana had already washed all the glasses after the party."
+    ],
+    [
+     "C:170061:c2",
+     "When we got home, Zuzana had already washed all those glasses from the party.",
+     "When we got home, Zuzana had already washed all the glasses after the party."
+    ],
+    [
+     "C:170061:c3",
+     "When we got home, all the glasses from the party had already been washed.",
+     "When we got home, Zuzana had already washed all the glasses after the party."
+    ],
+    [
+     "C:170063:c3",
+     "If it doesn't stop raining tomorrow, the whole match will be cancelled.",
+     "If it does not stop raining tomorrow, the coach will cancel the whole match."
+    ],
+    [
+     "C:170086:c1",
+     "Since the mechanic will not manage the repair today, we will only pick up the car on Friday.",
+     "Since the mechanic will not manage the repair today, we will not pick up the car until Friday."
+    ],
+    [
+     "C:170086:c2",
+     "As the mechanic won't manage the repair today, we will only pick up our car on Friday.",
+     "Since the mechanic will not manage the repair today, we will not pick up the car until Friday."
+    ],
+    [
+     "C:170093:c1",
+     "It is said that the city is preparing new parking rules in the centre.",
+     "It is said that the city is preparing new parking rules for the centre."
+    ],
+    [
+     "C:170095:c2",
+     "If the situation doesn't improve, we will have to stay at home for two more weeks.",
+     "If the situation does not improve, we will have to stay at home for another two weeks."
+    ],
+    [
+     "C:170101:c2",
+     "If the committee approves the budget, the city will renovate its playgrounds as early as spring.",
+     "If the committee approves the budget, the city will renovate the children's playgrounds as early as in the spring."
+    ],
+    [
+     "C:170104:c3",
+     "While we were waiting for the verdict, the appeal was being prepared for several days.",
+     "While we were waiting for the verdict, the lawyer was preparing the appeal for several days."
+    ],
+    [
+     "C:170107:c2",
+     "Only after the technicians replaced the server did that website finally stop crashing.",
+     "Only when the technicians replaced the server did the website finally stop crashing."
+    ],
+    [
+     "C:170116:c4",
+     "This very insurance company covers wind damage too.",
+     "It is this insurance company that also covers damage caused by wind."
+    ],
+    [
+     "C:170117:c3",
+     "The results of the inspection should be published by the end of September.",
+     "The ministry should publish the results of the inspection by the end of September."
+    ],
+    [
+     "C:170118:c3",
+     "The manager admitted that the preparation for that presentation had been underestimated.",
+     "The manager admitted that the team had underestimated the preparation for that presentation."
+    ]
+   ]
+  }
+ },
+ "C2_packet_overlap": {
+  "packet_items": 183,
+  "in_rows_1s": 0
+ }
+}
