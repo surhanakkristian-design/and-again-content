@@ -1,0 +1,202 @@
+{
+ "label": "CLOSED-SET DIAGNOSTIC - set opened once in 2F; exactly one variable changed (reference source); identifies a cause, not a new measurement",
+ "calls_counted": 295,
+ "calls_failed": 0,
+ "calls_uncounted_retries": 0,
+ "gemini_tokens_in": 162952,
+ "gemini_tokens_out": 295,
+ "spend_usd": 0.01641,
+ "spend_note": "list-price upper bound; key tiers recorded: {'unrecorded': 295}",
+ "claude_tokens_used": 87237,
+ "claude_usage": {
+  "input_tokens": 6,
+  "cache_creation_input_tokens": 35290,
+  "cache_read_input_tokens": 39092,
+  "output_tokens": 12849
+ },
+ "claude_reported_cost_usd": 0.6937010000000001,
+ "claude_sessions": 1,
+ "claude_wall_s": 119.3,
+ "claude_tokens_per_sentence": 1454.0,
+ "verdict": "REJECTED",
+ "delta_coverage_pts": -2.75,
+ "delta_fa_pts": -0.56,
+ "before": {
+  "coverage": {
+   "k": 154,
+   "n": 182,
+   "pct": 84.62,
+   "ci": [
+    78.54,
+    89.53
+   ]
+  },
+  "fa": {
+   "k": 11,
+   "n": 178,
+   "pct": 6.18,
+   "ci": [
+    3.12,
+    10.79
+   ]
+  },
+  "fa_by_type": {
+   "S": {
+    "k": 3,
+    "n": 31,
+    "pct": 9.68,
+    "ci": [
+     2.04,
+     25.75
+    ]
+   },
+   "M": {
+    "k": 6,
+    "n": 55,
+    "pct": 10.91,
+    "ci": [
+     4.11,
+     22.25
+    ]
+   },
+   "T": {
+    "k": 1,
+    "n": 52,
+    "pct": 1.92,
+    "ci": [
+     0.05,
+     10.26
+    ]
+   },
+   "W": {
+    "k": 1,
+    "n": 40,
+    "pct": 2.5,
+    "ci": [
+     0.06,
+     13.16
+    ]
+   }
+  },
+  "fa_by_layer": {
+   "L3": 11
+  },
+  "false_rejections_by_layer": {
+   "L3": 16,
+   "F4v2": 7,
+   "L3:TIPrej": 5
+  },
+  "false_rejections": 28,
+  "layer_mix": {
+   "L3": 282,
+   "F4v2": 13,
+   "L1": 14,
+   "L3:TIPrej": 29,
+   "AG": 13,
+   "F3": 4,
+   "F5": 4,
+   "F2B": 1
+  }
+ },
+ "after": {
+  "coverage": {
+   "k": 149,
+   "n": 182,
+   "pct": 81.87,
+   "ci": [
+    75.49,
+    87.18
+   ]
+  },
+  "fa": {
+   "k": 10,
+   "n": 178,
+   "pct": 5.62,
+   "ci": [
+    2.73,
+    10.09
+   ]
+  },
+  "fa_by_type": {
+   "S": {
+    "k": 3,
+    "n": 31,
+    "pct": 9.68,
+    "ci": [
+     2.04,
+     25.75
+    ]
+   },
+   "M": {
+    "k": 5,
+    "n": 55,
+    "pct": 9.09,
+    "ci": [
+     3.02,
+     19.95
+    ]
+   },
+   "T": {
+    "k": 0,
+    "n": 52,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     6.85
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 40,
+    "pct": 5.0,
+    "ci": [
+     0.61,
+     16.92
+    ]
+   }
+  },
+  "fa_by_layer": {
+   "L3": 10
+  },
+  "false_rejections_by_layer": {
+   "L3:TIPrej": 10,
+   "L3": 16,
+   "F4v2": 7
+  },
+  "false_rejections": 33,
+  "layer_mix": {
+   "L3": 263,
+   "L3:TIPrej": 32,
+   "F4v2": 12,
+   "L1": 26,
+   "AG": 13,
+   "F5": 14
+  }
+ },
+ "w1": {
+  "coverage": "392/401 = 97.76 % [95.78, 98.97]",
+  "fa": "16/499 = 3.21 % [1.84, 5.15]"
+ },
+ "refs": {
+  "label": "CLOSED-SET DIAGNOSTIC (Phase 2G Part A1)",
+  "n_sentences": 60,
+  "mean_refs_before": 1.1,
+  "mean_refs_after": 2.85,
+  "mean_shown_to_L3_before": 1.05,
+  "mean_shown_to_L3_after": 2.8,
+  "generated": 114,
+  "duplicates_ignored": 0,
+  "dropped_by_tense_filter": 9,
+  "kept": 105,
+  "existing_refs_already_removed_by_lever3": 3,
+  "sentences_missing_in_output": [],
+  "sentences_with_3_after": 51
+ },
+ "changed_items": 45,
+ "verdict_flips": 16,
+ "rescued_false_rejections": 3,
+ "new_false_rejections": 8,
+ "added_false_acceptances": 2,
+ "removed_false_acceptances": 3,
+ "pricing": "not done - verdict REJECTED (A5 runs only on CONFIRMED/PARTIAL)"
+}

@@ -1,0 +1,2501 @@
+{
+ "phase": "1U",
+ "prompt": "P-FROZEN-1U",
+ "freeze_commit": "ac9169271ac003c4f287597077cd6588b535eb0b",
+ "stub_model": false,
+ "n_rows": 360,
+ "n_labelled": 360,
+ "preflight": {
+  "l2": 92,
+  "l3_eligible": 308,
+  "ag_rejected_before_l3": 13,
+  "reach_l3": 295
+ },
+ "floors": {
+  "F1_agent_drops_wrong": [
+   22,
+   0
+  ],
+  "F1a_fronted_wrong": [
+   1,
+   0
+  ],
+  "F1b_misaligned_wrong": [
+   0,
+   0
+  ],
+  "F2_time_frame_wrong": [
+   52,
+   0
+  ],
+  "F3_by_passive_correct": [
+   24,
+   0
+  ],
+  "F4_skp_correct": [
+   2,
+   0
+  ],
+  "F5_missing_article_wrong": [
+   27,
+   0
+  ]
+ },
+ "prompt_assertion": {
+  "ok": true,
+  "item_id": "C:220001:c1",
+  "prompt_1t": "P-FROZEN-1P",
+  "prompt_1u": "P-FROZEN-1U",
+  "lines_1t": 11,
+  "lines_1u": 12,
+  "added_at_line": 10,
+  "added_line": "Articles: the previous point is about the CHOICE of article. An article that English grammar REQUIRES and the learner sentence simply leaves out (\"Dad will buy new fridge.\", \"It is cold in kitchen today.\") is not acceptable English and is DIFF. An English article is a grammatical requirement of the target language, and Slovak has no article to omit in the first place, so nothing was dropped in translation: the sentence is simply not grammatical English. Where more than one determiner is grammatical (a / the / a possessive / no article where English allows it), the choice stays free and is SAME on that point.",
+  "line_before": "Also accepted English: \"On Monday morning he cleans the dirty floor. An absolute",
+  "line_after": "SAME, TIP or DIFF?",
+  "sys_identical": true,
+  "req_hash_1t": "39b8f8b2f270",
+  "req_hash_1u": "8b1cffe6f6f6",
+  "article_line_check": {
+   "ok": true,
+   "sha_line": "92c454a7e21a49f99ac8bc295a821ab925bbc522074c2f4116ebc3178cfa566c",
+   "sha_ruling": "de84a1da0810b7016b5f72fe6d47e44cf048f154215fb17d280d515280238dfd",
+   "chars": 615
+  },
+  "user_sha_1u": "312e857562451c9eb92c4b41c79505b6aceca2465675d5d9abbbd5b7c79f278c",
+  "user_sha_1t": "bd33c1b35f3b8a80952a92129c107dc8277d706702af7ea8862217c3b522fe4c"
+ },
+ "model": {
+  "model_replies": {
+   "SAME": 133,
+   "TIP": 32,
+   "DIFF": 130
+  },
+  "failed_calls": 0,
+  "counted_calls": 295,
+  "tokens_in": 162952,
+  "tokens_out": 0,
+  "latency_ms_total": 160636,
+  "latency_ms_mean": 544.5,
+  "spend_usd_upper_bound": 0.0163,
+  "price_note": "UPPER BOUND at the published flash-lite list price ($0.10/1M in, $0.40/1M out); free-tier calls cost 0"
+ },
+ "failed_call_rule": "an empty or unparsable HTTP 200 reply is a FAILED call: it is counted against the cap, never guessed and never silently retried; the item keeps the stack decision it gets without a model verdict (a rejection), stays in its own denominator and is listed under detail.failed_calls",
+ "headline": {
+  "pooled": {
+   "coverage": {
+    "k": 149,
+    "n": 182,
+    "pct": 81.87,
+    "ci": [
+     75.49,
+     87.18
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 10,
+    "n": 178,
+    "pct": 5.62,
+    "ci": [
+     2.73,
+     10.09
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 73,
+    "n": 91,
+    "pct": 80.22,
+    "ci": [
+     70.55,
+     87.84
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 89,
+    "pct": 5.62,
+    "ci": [
+     1.85,
+     12.63
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 76,
+    "n": 91,
+    "pct": 83.52,
+    "ci": [
+     74.27,
+     90.47
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 89,
+    "pct": 5.62,
+    "ci": [
+     1.85,
+     12.63
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.7008,
+   "fa": 1.0
+  },
+  "n_rows": 360,
+  "definition": "the judge labels on every labelled item",
+  "n_moved": 0,
+  "moved_items": []
+ },
+ "S1_writer_intent": {
+  "pooled": {
+   "coverage": {
+    "k": 149,
+    "n": 180,
+    "pct": 82.78,
+    "ci": [
+     76.45,
+     87.99
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 10,
+    "n": 180,
+    "pct": 5.56,
+    "ci": [
+     2.7,
+     9.98
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 73,
+    "n": 90,
+    "pct": 81.11,
+    "ci": [
+     71.49,
+     88.59
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 90,
+    "pct": 5.56,
+    "ci": [
+     1.83,
+     12.49
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 76,
+    "n": 90,
+    "pct": 84.44,
+    "ci": [
+     75.28,
+     91.23
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 90,
+    "pct": 5.56,
+    "ci": [
+     1.83,
+     12.49
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.6935,
+   "fa": 1.0
+  },
+  "n_rows": 360,
+  "definition": "scored by the writer kind C/W instead of the judge label",
+  "n_moved": 4,
+  "moved_items": [
+   "C:220057:c1",
+   "W:220002:w3",
+   "W:220005:w3",
+   "W:220039:w2"
+  ]
+ },
+ "S2_wrong_borderline_correct": {
+  "pooled": {
+   "coverage": {
+    "k": 155,
+    "n": 206,
+    "pct": 75.24,
+    "ci": [
+     68.77,
+     80.98
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 154,
+    "pct": 2.6,
+    "ci": [
+     0.71,
+     6.52
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 76,
+    "n": 102,
+    "pct": 74.51,
+    "ci": [
+     64.92,
+     82.62
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 2,
+    "n": 78,
+    "pct": 2.56,
+    "ci": [
+     0.31,
+     8.96
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 79,
+    "n": 104,
+    "pct": 75.96,
+    "ci": [
+     66.59,
+     83.8
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 2,
+    "n": 76,
+    "pct": 2.63,
+    "ci": [
+     0.32,
+     9.18
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.8723,
+   "fa": 1.0
+  },
+  "n_rows": 360,
+  "definition": "judged-wrong borderline (topped up to n>=20 by lowest confidence, ties by packet position) scored correct",
+  "n_moved": 24,
+  "moved_items": [
+   "C:220057:c1",
+   "W:220002:w1",
+   "W:220003:w3",
+   "W:220004:w2",
+   "W:220005:w1",
+   "W:220009:w2",
+   "W:220010:w2",
+   "W:220013:w3",
+   "W:220014:w3",
+   "W:220015:w2",
+   "W:220016:w2",
+   "W:220018:w2",
+   "W:220022:w1",
+   "W:220025:w1",
+   "W:220028:w3",
+   "W:220037:w2",
+   "W:220039:w3",
+   "W:220042:w3",
+   "W:220044:w2",
+   "W:220045:w1",
+   "W:220046:w2",
+   "W:220047:w3",
+   "W:220052:w2",
+   "W:220056:w1"
+  ]
+ },
+ "S3_correct_borderline_wrong": {
+  "pooled": {
+   "coverage": {
+    "k": 137,
+    "n": 162,
+    "pct": 84.57,
+    "ci": [
+     78.07,
+     89.76
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 22,
+    "n": 198,
+    "pct": 11.11,
+    "ci": [
+     7.1,
+     16.34
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 61,
+    "n": 75,
+    "pct": 81.33,
+    "ci": [
+     70.67,
+     89.4
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 17,
+    "n": 105,
+    "pct": 16.19,
+    "ci": [
+     9.72,
+     24.65
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 76,
+    "n": 87,
+    "pct": 87.36,
+    "ci": [
+     78.5,
+     93.52
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 93,
+    "pct": 5.38,
+    "ci": [
+     1.77,
+     12.1
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.3835,
+   "fa": 0.022
+  },
+  "n_rows": 360,
+  "definition": "judged-correct borderline (same top-up) scored wrong",
+  "n_moved": 20,
+  "moved_items": [
+   "C:220001:c2",
+   "C:220001:c3",
+   "C:220002:c3",
+   "C:220003:c2",
+   "C:220003:c3",
+   "C:220015:c2",
+   "C:220015:c3",
+   "C:220016:c3",
+   "C:220035:c2",
+   "C:220040:c2",
+   "C:220041:c3",
+   "C:220045:c2",
+   "C:220048:c3",
+   "C:220049:c3",
+   "C:220053:c3",
+   "C:220055:c2",
+   "C:220057:c2",
+   "C:220057:c3",
+   "W:220005:w3",
+   "W:220039:w2"
+  ]
+ },
+ "S4_exclude_S2_S3": {
+  "pooled": {
+   "coverage": {
+    "k": 137,
+    "n": 162,
+    "pct": 84.57,
+    "ci": [
+     78.07,
+     89.76
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 154,
+    "pct": 2.6,
+    "ci": [
+     0.71,
+     6.52
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 61,
+    "n": 75,
+    "pct": 81.33,
+    "ci": [
+     70.67,
+     89.4
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 2,
+    "n": 78,
+    "pct": 2.56,
+    "ci": [
+     0.31,
+     8.96
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 76,
+    "n": 87,
+    "pct": 87.36,
+    "ci": [
+     78.5,
+     93.52
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 2,
+    "n": 76,
+    "pct": 2.63,
+    "ci": [
+     0.32,
+     9.18
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.3835,
+   "fa": 1.0
+  },
+  "n_rows": 316,
+  "definition": "the S2 and S3 item sets excluded from the denominator",
+  "n_moved": 44,
+  "moved_items": [
+   "C:220001:c2",
+   "C:220001:c3",
+   "C:220002:c3",
+   "C:220003:c2",
+   "C:220003:c3",
+   "C:220015:c2",
+   "C:220015:c3",
+   "C:220016:c3",
+   "C:220035:c2",
+   "C:220040:c2",
+   "C:220041:c3",
+   "C:220045:c2",
+   "C:220048:c3",
+   "C:220049:c3",
+   "C:220053:c3",
+   "C:220055:c2",
+   "C:220057:c1",
+   "C:220057:c2",
+   "C:220057:c3",
+   "W:220002:w1",
+   "W:220003:w3",
+   "W:220004:w2",
+   "W:220005:w1",
+   "W:220005:w3",
+   "W:220009:w2",
+   "W:220010:w2",
+   "W:220013:w3",
+   "W:220014:w3",
+   "W:220015:w2",
+   "W:220016:w2",
+   "W:220018:w2",
+   "W:220022:w1",
+   "W:220025:w1",
+   "W:220028:w3",
+   "W:220037:w2",
+   "W:220039:w2",
+   "W:220039:w3",
+   "W:220042:w3",
+   "W:220044:w2",
+   "W:220045:w1",
+   "W:220046:w2",
+   "W:220047:w3",
+   "W:220052:w2",
+   "W:220056:w1"
+  ]
+ },
+ "S5_article_pre_ruling": {
+  "pooled": {
+   "coverage": {
+    "k": 152,
+    "n": 209,
+    "pct": 72.73,
+    "ci": [
+     66.15,
+     78.64
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 7,
+    "n": 151,
+    "pct": 4.64,
+    "ci": [
+     1.88,
+     9.32
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 75,
+    "n": 105,
+    "pct": 71.43,
+    "ci": [
+     61.79,
+     79.82
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 3,
+    "n": 75,
+    "pct": 4.0,
+    "ci": [
+     0.83,
+     11.25
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 77,
+    "n": 104,
+    "pct": 74.04,
+    "ci": [
+     64.52,
+     82.14
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 76,
+    "pct": 5.26,
+    "ci": [
+     1.45,
+     12.93
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.7565,
+   "fa": 1.0
+  },
+  "n_rows": 360,
+  "definition": "every missing-article item the judge called wrong scored correct (the 1T M1 reading)",
+  "n_moved": 27,
+  "moved_items": [
+   "W:220001:w2",
+   "W:220006:w1",
+   "W:220016:w3",
+   "W:220017:w1",
+   "W:220019:w2",
+   "W:220021:w1",
+   "W:220024:w2",
+   "W:220026:w2",
+   "W:220027:w2",
+   "W:220030:w1",
+   "W:220031:w2",
+   "W:220034:w1",
+   "W:220037:w1",
+   "W:220040:w1",
+   "W:220043:w1",
+   "W:220046:w3",
+   "W:220047:w2",
+   "W:220048:w1",
+   "W:220049:w1",
+   "W:220050:w3",
+   "W:220053:w3",
+   "W:220054:w1",
+   "W:220055:w1",
+   "W:220057:w1",
+   "W:220058:w3",
+   "W:220059:w1",
+   "W:220060:w3"
+  ]
+ },
+ "S6_leave_out_A1": {
+  "pooled": {
+   "coverage": {
+    "k": 110,
+    "n": 137,
+    "pct": 80.29,
+    "ci": [
+     72.64,
+     86.59
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 8,
+    "n": 133,
+    "pct": 6.02,
+    "ci": [
+     2.63,
+     11.51
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 49,
+    "n": 64,
+    "pct": 76.56,
+    "ci": [
+     64.31,
+     86.25
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 62,
+    "pct": 8.06,
+    "ci": [
+     2.67,
+     17.83
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 61,
+    "n": 73,
+    "pct": 83.56,
+    "ci": [
+     73.05,
+     91.21
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 3,
+    "n": 71,
+    "pct": 4.23,
+    "ci": [
+     0.88,
+     11.86
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.39,
+   "fa": 0.472
+  },
+  "n_rows": 270,
+  "definition": "leave-one-level-out: A1 dropped",
+  "n_moved": 90,
+  "moved_items": [
+   "C:220001:c1",
+   "C:220001:c2",
+   "C:220001:c3",
+   "C:220006:c1",
+   "C:220006:c2",
+   "C:220006:c3",
+   "C:220007:c1",
+   "C:220007:c2",
+   "C:220007:c3",
+   "C:220014:c1",
+   "C:220014:c2",
+   "C:220014:c3",
+   "C:220021:c1",
+   "C:220021:c2",
+   "C:220021:c3",
+   "C:220030:c1",
+   "C:220030:c2",
+   "C:220030:c3",
+   "C:220031:c1",
+   "C:220031:c2",
+   "C:220031:c3",
+   "C:220034:c1",
+   "C:220034:c2",
+   "C:220034:c3",
+   "C:220035:c1",
+   "C:220035:c2",
+   "C:220035:c3",
+   "C:220040:c1",
+   "C:220040:c2",
+   "C:220040:c3",
+   "C:220043:c1",
+   "C:220043:c2",
+   "C:220043:c3",
+   "C:220045:c1",
+   "C:220045:c2",
+   "C:220045:c3",
+   "C:220047:c1",
+   "C:220047:c2",
+   "C:220047:c3",
+   "C:220056:c1",
+   "C:220056:c2",
+   "C:220056:c3",
+   "C:220059:c1",
+   "C:220059:c2",
+   "C:220059:c3",
+   "W:220001:w1",
+   "W:220001:w2",
+   "W:220001:w3",
+   "W:220006:w1",
+   "W:220006:w2"
+  ]
+ },
+ "S6_leave_out_A2": {
+  "pooled": {
+   "coverage": {
+    "k": 107,
+    "n": 137,
+    "pct": 78.1,
+    "ci": [
+     70.24,
+     84.71
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 8,
+    "n": 133,
+    "pct": 6.02,
+    "ci": [
+     2.63,
+     11.51
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 52,
+    "n": 67,
+    "pct": 77.61,
+    "ci": [
+     65.78,
+     86.89
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 65,
+    "pct": 6.15,
+    "ci": [
+     1.7,
+     15.01
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 55,
+    "n": 70,
+    "pct": 78.57,
+    "ci": [
+     67.13,
+     87.48
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 68,
+    "pct": 5.88,
+    "ci": [
+     1.63,
+     14.38
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 1.0,
+   "fa": 1.0
+  },
+  "n_rows": 270,
+  "definition": "leave-one-level-out: A2 dropped",
+  "n_moved": 90,
+  "moved_items": [
+   "C:220008:c1",
+   "C:220008:c2",
+   "C:220008:c3",
+   "C:220009:c1",
+   "C:220009:c2",
+   "C:220009:c3",
+   "C:220010:c1",
+   "C:220010:c2",
+   "C:220010:c3",
+   "C:220012:c1",
+   "C:220012:c2",
+   "C:220012:c3",
+   "C:220017:c1",
+   "C:220017:c2",
+   "C:220017:c3",
+   "C:220019:c1",
+   "C:220019:c2",
+   "C:220019:c3",
+   "C:220022:c1",
+   "C:220022:c2",
+   "C:220022:c3",
+   "C:220023:c1",
+   "C:220023:c2",
+   "C:220023:c3",
+   "C:220027:c1",
+   "C:220027:c2",
+   "C:220027:c3",
+   "C:220037:c1",
+   "C:220037:c2",
+   "C:220037:c3",
+   "C:220041:c1",
+   "C:220041:c2",
+   "C:220041:c3",
+   "C:220042:c1",
+   "C:220042:c2",
+   "C:220042:c3",
+   "C:220046:c1",
+   "C:220046:c2",
+   "C:220046:c3",
+   "C:220049:c1",
+   "C:220049:c2",
+   "C:220049:c3",
+   "C:220058:c1",
+   "C:220058:c2",
+   "C:220058:c3",
+   "W:220008:w1",
+   "W:220008:w2",
+   "W:220008:w3",
+   "W:220009:w1",
+   "W:220009:w2"
+  ]
+ },
+ "S6_leave_out_B1": {
+  "pooled": {
+   "coverage": {
+    "k": 117,
+    "n": 136,
+    "pct": 86.03,
+    "ci": [
+     79.05,
+     91.37
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 10,
+    "n": 134,
+    "pct": 7.46,
+    "ci": [
+     3.64,
+     13.3
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 62,
+    "n": 72,
+    "pct": 86.11,
+    "ci": [
+     75.94,
+     93.13
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 72,
+    "pct": 6.94,
+    "ci": [
+     2.29,
+     15.47
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 55,
+    "n": 64,
+    "pct": 85.94,
+    "ci": [
+     74.98,
+     93.36
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 5,
+    "n": 62,
+    "pct": 8.06,
+    "ci": [
+     2.67,
+     17.83
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 1.0,
+   "fa": 1.0
+  },
+  "n_rows": 270,
+  "definition": "leave-one-level-out: B1 dropped",
+  "n_moved": 90,
+  "moved_items": [
+   "C:220003:c1",
+   "C:220003:c2",
+   "C:220003:c3",
+   "C:220004:c1",
+   "C:220004:c2",
+   "C:220004:c3",
+   "C:220005:c1",
+   "C:220005:c2",
+   "C:220005:c3",
+   "C:220011:c1",
+   "C:220011:c2",
+   "C:220011:c3",
+   "C:220015:c1",
+   "C:220015:c2",
+   "C:220015:c3",
+   "C:220016:c1",
+   "C:220016:c2",
+   "C:220016:c3",
+   "C:220020:c1",
+   "C:220020:c2",
+   "C:220020:c3",
+   "C:220032:c1",
+   "C:220032:c2",
+   "C:220032:c3",
+   "C:220036:c1",
+   "C:220036:c2",
+   "C:220036:c3",
+   "C:220038:c1",
+   "C:220038:c2",
+   "C:220038:c3",
+   "C:220048:c1",
+   "C:220048:c2",
+   "C:220048:c3",
+   "C:220050:c1",
+   "C:220050:c2",
+   "C:220050:c3",
+   "C:220051:c1",
+   "C:220051:c2",
+   "C:220051:c3",
+   "C:220053:c1",
+   "C:220053:c2",
+   "C:220053:c3",
+   "C:220054:c1",
+   "C:220054:c2",
+   "C:220054:c3",
+   "W:220003:w1",
+   "W:220003:w2",
+   "W:220003:w3",
+   "W:220004:w1",
+   "W:220004:w2"
+  ]
+ },
+ "S6_leave_out_B2": {
+  "pooled": {
+   "coverage": {
+    "k": 113,
+    "n": 136,
+    "pct": 83.09,
+    "ci": [
+     75.71,
+     88.97
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 4,
+    "n": 134,
+    "pct": 2.99,
+    "ci": [
+     0.82,
+     7.47
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P1": {
+   "coverage": {
+    "k": 56,
+    "n": 70,
+    "pct": 80.0,
+    "ci": [
+     68.73,
+     88.61
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 1,
+    "n": 68,
+    "pct": 1.47,
+    "ci": [
+     0.04,
+     7.92
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "P2": {
+   "coverage": {
+    "k": 57,
+    "n": 66,
+    "pct": 86.36,
+    "ci": [
+     75.69,
+     93.57
+    ],
+    "target": {
+     "point": "MISSED",
+     "interval": "MISSED",
+     "rule": "coverage >= 90 %"
+    }
+   },
+   "fa": {
+    "k": 3,
+    "n": 66,
+    "pct": 4.55,
+    "ci": [
+     0.95,
+     12.71
+    ],
+    "target": {
+     "point": "MET",
+     "interval": "MISSED",
+     "rule": "FA < 5 %"
+    }
+   }
+  },
+  "fisher_P1_vs_P2": {
+   "coverage": 0.3662,
+   "fa": 0.3619
+  },
+  "n_rows": 270,
+  "definition": "leave-one-level-out: B2 dropped",
+  "n_moved": 90,
+  "moved_items": [
+   "C:220002:c1",
+   "C:220002:c2",
+   "C:220002:c3",
+   "C:220013:c1",
+   "C:220013:c2",
+   "C:220013:c3",
+   "C:220018:c1",
+   "C:220018:c2",
+   "C:220018:c3",
+   "C:220024:c1",
+   "C:220024:c2",
+   "C:220024:c3",
+   "C:220025:c1",
+   "C:220025:c2",
+   "C:220025:c3",
+   "C:220026:c1",
+   "C:220026:c2",
+   "C:220026:c3",
+   "C:220028:c1",
+   "C:220028:c2",
+   "C:220028:c3",
+   "C:220029:c1",
+   "C:220029:c2",
+   "C:220029:c3",
+   "C:220033:c1",
+   "C:220033:c2",
+   "C:220033:c3",
+   "C:220039:c1",
+   "C:220039:c2",
+   "C:220039:c3",
+   "C:220044:c1",
+   "C:220044:c2",
+   "C:220044:c3",
+   "C:220052:c1",
+   "C:220052:c2",
+   "C:220052:c3",
+   "C:220055:c1",
+   "C:220055:c2",
+   "C:220055:c3",
+   "C:220057:c1",
+   "C:220057:c2",
+   "C:220057:c3",
+   "C:220060:c1",
+   "C:220060:c2",
+   "C:220060:c3",
+   "W:220002:w1",
+   "W:220002:w2",
+   "W:220002:w3",
+   "W:220013:w1",
+   "W:220013:w2"
+  ]
+ },
+ "cells": {
+  "missing_article": {
+   "judged_wrong_n": 27,
+   "fa": {
+    "k": 3,
+    "n": 27,
+    "pct": 11.11,
+    "ci": [
+     2.35,
+     29.16
+    ]
+   },
+   "rejected_by_layer": {
+    "L3:TIPrej": 12,
+    "L3": 11,
+    "F4v2": 1
+   },
+   "judged_correct_n": 2,
+   "coverage": {
+    "k": 0,
+    "n": 2,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     84.19
+    ]
+   }
+  },
+  "agent_drop_fa": {
+   "all": {
+    "k": 2,
+    "n": 22,
+    "pct": 9.09,
+    "ci": [
+     1.12,
+     29.16
+    ],
+    "ag_fired": 13
+   },
+   "main": {
+    "k": 2,
+    "n": 19,
+    "pct": 10.53,
+    "ci": [
+     1.3,
+     33.14
+    ],
+    "ag_fired": 12
+   },
+   "fronted": {
+    "k": 0,
+    "n": 1,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     97.5
+    ],
+    "ag_fired": 0
+   },
+   "misaligned": {
+    "k": 0,
+    "n": 0,
+    "pct": null,
+    "ci": [
+     0.0,
+     0.0
+    ],
+    "ag_fired": 0
+   },
+   "other": {
+    "k": 0,
+    "n": 2,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     84.19
+    ],
+    "ag_fired": 1
+   }
+  },
+  "by_passive_coverage": {
+   "k": 17,
+   "n": 24,
+   "pct": 70.83,
+   "ci": [
+    48.91,
+    87.38
+   ],
+   "expectation": "100 %",
+   "rejected": [
+    "C:220002:c3",
+    "C:220003:c2",
+    "C:220016:c3",
+    "C:220032:c2",
+    "C:220050:c3",
+    "C:220051:c3",
+    "C:220060:c3"
+   ]
+  },
+  "skp_coverage": {
+   "k": 2,
+   "n": 2,
+   "pct": 100.0,
+   "ci": [
+    15.81,
+    100.0
+   ],
+   "ag_fired": []
+  },
+  "time_frame_fa": {
+   "k": 0,
+   "n": 52,
+   "pct": 0.0,
+   "ci": [
+    0.0,
+    6.85
+   ]
+  }
+ },
+ "ag": {
+  "primary_v4": {
+   "fired": 13,
+   "catches_judged_wrong": 13,
+   "measured_cost_judged_correct": 0,
+   "cost_items": []
+  },
+  "shadows_offline": {
+   "v2": {
+    "fired": 11,
+    "catches_judged_wrong": 11,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 1,
+    "v4_fires_where_it_did_not": 3
+   },
+   "v3": {
+    "fired": 13,
+    "catches_judged_wrong": 13,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 0
+   },
+   "guarded_union": {
+    "fired": 13,
+    "catches_judged_wrong": 13,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 0
+   },
+   "v4_full": {
+    "fired": 13,
+    "catches_judged_wrong": 13,
+    "cost_judged_correct": 0,
+    "fired_where_v4_did_not": 0,
+    "v4_fires_where_it_did_not": 0
+   }
+  }
+ },
+ "detail": {
+  "by_level": {
+   "A1": {
+    "coverage": {
+     "k": 39,
+     "n": 45,
+     "pct": 86.67,
+     "ci": [
+      73.21,
+      94.95
+     ],
+     "target": {
+      "point": "MISSED",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 2,
+     "n": 45,
+     "pct": 4.44,
+     "ci": [
+      0.54,
+      15.15
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "A2": {
+    "coverage": {
+     "k": 42,
+     "n": 45,
+     "pct": 93.33,
+     "ci": [
+      81.73,
+      98.6
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 2,
+     "n": 45,
+     "pct": 4.44,
+     "ci": [
+      0.54,
+      15.15
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "B1": {
+    "coverage": {
+     "k": 32,
+     "n": 46,
+     "pct": 69.57,
+     "ci": [
+      54.25,
+      82.26
+     ],
+     "target": {
+      "point": "MISSED",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 0,
+     "n": 44,
+     "pct": 0.0,
+     "ci": [
+      0.0,
+      8.04
+     ],
+     "target": {
+      "point": "MET",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   },
+   "B2": {
+    "coverage": {
+     "k": 36,
+     "n": 46,
+     "pct": 78.26,
+     "ci": [
+      63.64,
+      89.05
+     ],
+     "target": {
+      "point": "MISSED",
+      "interval": "MISSED",
+      "rule": "coverage >= 90 %"
+     }
+    },
+    "fa": {
+     "k": 6,
+     "n": 44,
+     "pct": 13.64,
+     "ci": [
+      5.17,
+      27.35
+     ],
+     "target": {
+      "point": "MISSED",
+      "interval": "MISSED",
+      "rule": "FA < 5 %"
+     }
+    }
+   }
+  },
+  "fa_by_judged_type": {
+   "T": {
+    "k": 0,
+    "n": 52,
+    "pct": 0.0,
+    "ci": [
+     0.0,
+     6.85
+    ]
+   },
+   "W": {
+    "k": 2,
+    "n": 40,
+    "pct": 5.0,
+    "ci": [
+     0.61,
+     16.92
+    ]
+   },
+   "M": {
+    "k": 5,
+    "n": 55,
+    "pct": 9.09,
+    "ci": [
+     3.02,
+     19.95
+    ]
+   },
+   "S": {
+    "k": 3,
+    "n": 31,
+    "pct": 9.68,
+    "ci": [
+     2.04,
+     25.75
+    ]
+   }
+  },
+  "false_accepts_by_layer": {
+   "L3": 10
+  },
+  "false_rejections_by_layer": {
+   "L3:TIPrej": 10,
+   "L3": 16,
+   "F4v2": 7
+  },
+  "true_rejections_by_layer": {
+   "L3": 114,
+   "L3:TIPrej": 22,
+   "AG": 13,
+   "F5": 14,
+   "F4v2": 5
+  },
+  "false_accepts": [
+   {
+    "item_id": "C:220057:c1",
+    "sid": 220057,
+    "slovak": "Potrebuje si dať starý akordeón opraviť, kým klávesy úplne neprestanú fungovať.",
+    "answer": "They need to have the old accordion repaired before the keys stop working completely.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "wrong",
+    "type": "S",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220025:w1",
+    "sid": 220025,
+    "slovak": "Poprosila ma, aby som nehýbal rukou, kým spí.",
+    "answer": "I was asked not to move my arm while she was sleeping.",
+    "layer": "L3",
+    "tags": [
+     "drop-main"
+    ],
+    "judged": "wrong",
+    "type": "S",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220027:w2",
+    "sid": 220027,
+    "slovak": "Vločky sú v miske – hneď ich zje",
+    "answer": "The flakes are in bowl – he's going to eat them right away.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "A2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220028:w2",
+    "sid": 220028,
+    "slovak": "Pred vhadzovaním si dala omotať hokejku páskou.",
+    "answer": "Before the face-off, she had her hockey stick wrapped.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220034:w1",
+    "sid": 220034,
+    "slovak": "On má sivú handričku na čistenie auta.",
+    "answer": "He has got grey cloth for cleaning the car.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "A1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220039:w3",
+    "sid": 220039,
+    "slovak": "O šiestej už bude búchať do tých lap dve hodiny v kuse.",
+    "answer": "By six o'clock he will have been pounding some mitts for two hours straight.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "wrong",
+    "type": "W",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220044:w2",
+    "sid": 220044,
+    "slovak": "Kým došiel k úzkemu chodníku, on zliezal hodinu dolu po skalných rímsach.",
+    "answer": "By the time he reached the narrow path, he had been climbing down the ledges for an hour.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220046:w2",
+    "sid": 220046,
+    "slovak": "Takže mi povedal, že v meste nejazdí veľkou rýchlosťou.",
+    "answer": "So I was told that he doesn't drive at high speed in the city.",
+    "layer": "L3",
+    "tags": [
+     "drop-main"
+    ],
+    "judged": "wrong",
+    "type": "S",
+    "level": "A2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220055:w1",
+    "sid": 220055,
+    "slovak": "Napíše svoje meno na poslednú stranu zmluvy na novú prácu a kancelária tlieska.",
+    "answer": "They write their name on last page of the contract for the new job and the office applauds.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "wrong",
+    "type": "M",
+    "level": "B2",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220056:w1",
+    "sid": 220056,
+    "slovak": "Táto váha ukazuje oveľa viac ako pred chvíľou.",
+    "answer": "That scale shows a lot more than a moment ago.",
+    "layer": "L3",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "wrong",
+    "type": "W",
+    "level": "A1",
+    "model": "SAME",
+    "ag_fired": false,
+    "call_failed": false
+   }
+  ],
+  "false_rejections": [
+   {
+    "item_id": "C:220002:c1",
+    "sid": 220002,
+    "slovak": "Kámoška, povedal mi, že ten ľadovec bol obrovský; musel sa tam cítiť taký maličký.",
+    "answer": "Girl, he told me that the iceberg was huge; he must have felt so tiny there.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220002:c3",
+    "sid": 220002,
+    "slovak": "Kámoška, povedal mi, že ten ľadovec bol obrovský; musel sa tam cítiť taký maličký.",
+    "answer": "Girl, I was told by him that the iceberg was huge; he must have felt so tiny there.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220003:c2",
+    "sid": 220003,
+    "slovak": "Model stíhačky opeká chlieb približne tri minúty.",
+    "answer": "The bread has been toasted by the model fighter jet for about three minutes.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220003:c3",
+    "sid": 220003,
+    "slovak": "Model stíhačky opeká chlieb približne tri minúty.",
+    "answer": "The model of the fighter jet toasts the bread for approximately three minutes.",
+    "layer": "L3",
+    "tags": [
+     "aspect"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220005:c1",
+    "sid": 220005,
+    "slovak": "Ten strážnik o syre nemôže vedieť — rampu dvíha príliš rýchlo.",
+    "answer": "The guard can't know about the cheese - he raises the ramp too quickly.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220005:c3",
+    "sid": 220005,
+    "slovak": "Ten strážnik o syre nemôže vedieť — rampu dvíha príliš rýchlo.",
+    "answer": "The guard can't know about the cheese; he lifts the barrier too quickly.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220016:c1",
+    "sid": 220016,
+    "slovak": "Kým spustil kanvicu, všetci, čo zízali na jeho fúzy, úplne stíchli!",
+    "answer": "By the time he switched on the kettle, everyone who was staring at his moustache had fallen completely silent!",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220016:c2",
+    "sid": 220016,
+    "slovak": "Kým spustil kanvicu, všetci, čo zízali na jeho fúzy, úplne stíchli!",
+    "answer": "By the time he turned on the kettle, everyone staring at his moustache went completely silent!",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220016:c3",
+    "sid": 220016,
+    "slovak": "Kým spustil kanvicu, všetci, čo zízali na jeho fúzy, úplne stíchli!",
+    "answer": "By the time the kettle had been switched on by him, everyone who was staring at his moustache fell completely silent!",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220021:c1",
+    "sid": 220021,
+    "slovak": "Hore je vietor. Môžeš vidieť tú vlajku?",
+    "answer": "It's windy up there. Can you see the flag?",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220021:c2",
+    "sid": 220021,
+    "slovak": "Hore je vietor. Môžeš vidieť tú vlajku?",
+    "answer": "There's wind up there. Can you see that flag?",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "determiner"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220023:c3",
+    "sid": 220023,
+    "slovak": "Počúvaj, povedala, že majú rovnaké šaty, ale sú stále kamarátky.",
+    "answer": "Listen, she said they have the same dresses, but they're still friends.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "number"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220025:c1",
+    "sid": 220025,
+    "slovak": "Poprosila ma, aby som nehýbal rukou, kým spí.",
+    "answer": "She asked me not to move my arm while she was sleeping.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220025:c2",
+    "sid": 220025,
+    "slovak": "Poprosila ma, aby som nehýbal rukou, kým spí.",
+    "answer": "She asked me not to move my hand while she slept.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220030:c3",
+    "sid": 220030,
+    "slovak": "Fanúšik má jednu pomaľovanú tvár a šálu.",
+    "answer": "The fan has got one painted face and a scarf.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220032:c2",
+    "sid": 220032,
+    "slovak": "Stíhačkový hriankovač ohrieva tie isté dva krajce už tri minúty.",
+    "answer": "The same two slices have been heated by the fighter-jet toaster for three minutes.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220039:c2",
+    "sid": 220039,
+    "slovak": "O šiestej už bude búchať do tých lap dve hodiny v kuse.",
+    "answer": "At six he'll have been pounding those pads for two solid hours.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220040:c1",
+    "sid": 220040,
+    "slovak": "Žena mu na krk zavesí jednu zlatú medailu.",
+    "answer": "The woman will hang a gold medal around his neck.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220040:c2",
+    "sid": 220040,
+    "slovak": "Žena mu na krk zavesí jednu zlatú medailu.",
+    "answer": "The woman is going to hang one gold medal on his neck.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220041:c1",
+    "sid": 220041,
+    "slovak": "Kámo, dvere sú už otvorené, tak odhaľujú celé údolie, fakt.",
+    "answer": "Dude, the door is already open, so it reveals the whole valley, really.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220045:c3",
+    "sid": 220045,
+    "slovak": "Jedna košeľa, jeden golier a dve červené kravaty.",
+    "answer": "One shirt, one collar, two red ties.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220048:c3",
+    "sid": 220048,
+    "slovak": "Nebudem klamať, bol si ten najšarmantnejší úradník; ona sa nikdy predtým tak neusmievala.",
+    "answer": "I won't lie, you were the most charming clerk; she never smiled like that before.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220049:c2",
+    "sid": 220049,
+    "slovak": "Ryby majú plán. Idú uplávať preč od žraloka.",
+    "answer": "The fish have got a plan. They're going to swim off away from the shark.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "A2",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220050:c3",
+    "sid": 220050,
+    "slovak": "V momente, keď barla dopadla na mokrú podlahu, chytil ju pevne a šiel ďalej.",
+    "answer": "The moment the crutch fell onto the wet floor, it was grabbed firmly by him and he went on.",
+    "layer": "L3:TIPrej",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "TIP",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220051:c3",
+    "sid": 220051,
+    "slovak": "Približne štyridsať študentov žiada o členstvo na klubovom veľtrhu od obeda.",
+    "answer": "Membership has been requested by about forty students at the club fair since noon.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220053:c1",
+    "sid": 220053,
+    "slovak": "Pamätník zbožňoval, a samozrejme aj jeho fotoaparát.",
+    "answer": "He adored the monument, and so did his camera, of course.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220053:c2",
+    "sid": 220053,
+    "slovak": "Pamätník zbožňoval, a samozrejme aj jeho fotoaparát.",
+    "answer": "He loved the memorial, and of course his camera did too.",
+    "layer": "F4v2",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220057:c3",
+    "sid": 220057,
+    "slovak": "Potrebuje si dať starý akordeón opraviť, kým klávesy úplne neprestanú fungovať.",
+    "answer": "Before the keys stop working completely, they need to have the old accordion repaired.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220060:c1",
+    "sid": 220060,
+    "slovak": "Mal si skontrolovať kolíky pred tým zápasom - dva sa uvoľnili už v prvých desiatich minútach.",
+    "answer": "You should have checked the pegs before that match - two came loose in the first ten minutes.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220060:c2",
+    "sid": 220060,
+    "slovak": "Mal si skontrolovať kolíky pred tým zápasom - dva sa uvoľnili už v prvých desiatich minútach.",
+    "answer": "You ought to have checked the pegs before that match; two of them worked loose within the first ten minutes.",
+    "layer": "L3",
+    "tags": [
+     "plain"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "C:220060:c3",
+    "sid": 220060,
+    "slovak": "Mal si skontrolovať kolíky pred tým zápasom - dva sa uvoľnili už v prvých desiatich minútach.",
+    "answer": "The pegs should have been checked by you before that match - two came loose in the first ten minutes.",
+    "layer": "L3",
+    "tags": [
+     "by-passive"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220002:w3",
+    "sid": 220002,
+    "slovak": "Kámoška, povedal mi, že ten ľadovec bol obrovský; musel sa tam cítiť taký maličký.",
+    "answer": "Girl, he told me that iceberg was huge; he must have felt so tiny there.",
+    "layer": "L3",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B2",
+    "model": "DIFF",
+    "ag_fired": false,
+    "call_failed": false
+   },
+   {
+    "item_id": "W:220005:w3",
+    "sid": 220005,
+    "slovak": "Ten strážnik o syre nemôže vedieť — rampu dvíha príliš rýchlo.",
+    "answer": "The guard can't know about cheese - he raises the ramp too quickly.",
+    "layer": "F4v2",
+    "tags": [
+     "missing-article"
+    ],
+    "judged": "correct",
+    "type": null,
+    "level": "B1",
+    "model": null,
+    "ag_fired": false,
+    "call_failed": false
+   }
+  ],
+  "failed_calls": []
+ },
+ "judge_noise_duplicates": null,
+ "selftest_statistics": [
+  {
+   "check": "cp(8,481)",
+   "got": [
+    0.72,
+    3.25
+   ],
+   "want": [
+    0.72,
+    3.25
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(348,385)",
+   "got": [
+    87.0,
+    93.14
+   ],
+   "want": [
+    87.0,
+    93.14
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(0,10)",
+   "got": [
+    0.0,
+    30.85
+   ],
+   "want": [
+    0.0,
+    30.85
+   ],
+   "ok": true
+  },
+  {
+   "check": "cp(10,10)",
+   "got": [
+    69.15,
+    100.0
+   ],
+   "want": [
+    69.15,
+    100.0
+   ],
+   "ok": true
+  },
+  {
+   "check": "fisher_exact(1,9,11,3)",
+   "got": 0.002759,
+   "want": 0.0027,
+   "ok": true
+  },
+  {
+   "check": "fisher_exact(5,5,5,5)",
+   "got": 1.0,
+   "want": 1.0,
+   "ok": true
+  }
+ ]
+}
