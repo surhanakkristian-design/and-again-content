@@ -114,3 +114,37 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Gemini calls: S3 0, cumulative 43 of 1,200 (GEMINI_LEDGER.json S3: 0). Headless tokens 0.
 - SHA check S3: S1 generator, 3,256 files, diff empty.
 - NEXT (S4): Part B; B's reference audit is the only route to a deterministic dropped-word rule (C2).
+
+## S4 — Part B1 + B2 launch (21.9.2026; 0 Gemini calls)
+- B1 (partB/b1_audit.py, 0 calls): reader_nom.read (variant from phase1w s2_result) with f4fix.build_fixed sk_features swapped
+  into the reader's CK; Czech = cz_reader.build() + f4fix.build_fixed(CK,'cz'). English = subject pronoun of the aligned sentence
+  (discourse words / punctuation before it only; leading subordinate clause skipped to its comma; quotes ignored).
+  Rules: person, number (`you` never number), gender_contradiction (3sg m/f), gender_fixed_open (3sg, gender open, no explicit
+  subject, he/she) -> B3 adds other gender, neuter_as_he_she = REVIEW only. 1sg/2sg/1pl/2pl past: gender is on the participle
+  only and English I/you/we carry none -> never flagged. 3sg m/f + it not flagged.
+- Two reader defects found (measuring apparatus) and repaired IN THE AUDIT ONLY: R1 reader leaves gender None on 3sg past
+  (Povedal -> 3/sg/None) -> gender from the l-participle (753 SK / 730 CZ rows); R2 CZ bys/jsi/bych/jsem/bychom/jsme/byste/jste
+  not read (-> 3sg; 49 rows overridden), SK `si` beside an l-participle (`mal by si`) -> person open (57). Before repairs 356/302
+  flags (gender_fixed_open 253/184, mostly false).
+- Result: SK rows read 1,824/4,064 (2,240 reader abstain = not compared), refs compared 1,169/4,341; flags 92 on 83 rows:
+  person 44, number 19, neuter_as_he_she 15, gender_fixed_open 9, gender_contradiction 5.
+  CZ read 1,782, refs compared 1,097/4,313; flags 107 on 99 rows: person 53, number 16, gender_contradiction 15,
+  neuter_as_he_she 13, gender_fixed_open 10. Residual reader noise remains in the flags (e.g. `Udrie ho` read 1sg,
+  `ťa ... netrafila` object read as subject, CZ `Kdybych měl` still 3sg when the clause is split) -> S5: treat B1 flags as
+  candidates; act on SK only where B2 agrees; CZ flags need a per-item look before any B3 change.
+  Files: partB/{b1_audit.py, B1.md, B1_result.json, B1_flags_sk.jsonl, B1_flags_cz.jsonl}.
+- B2 (partB/audit/audit_2j.py): 41 packets of N=100 (seed 20260921, all levels mixed, items = id + Slovak + stored refs only),
+  PROMPT.txt sha256 ccf78e156ec1f6fb914f88731992469a3b7ec85e76af40dbae357a2332f0eea4 (PROMPT.sha256, PACKETS.json has per-packet
+  prompt sha); classes F/A/N/W/O with span, alt for N/W; validator hard (JSON, packet id, ids in order, refs count, class, alt)
+  vs soft (span not verbatim); invalid -> one retry <pid>_r1. Waves of 4 threads, run_2j.run_session (2H recipe, opus,
+  max_turns 3, zsh -ic token), usage-limit = STOP_usage_limit.md hard stop, cap 1,500,000 by reservation
+  (spent + #todo x max packet cost). test_2j T16 added; suite 15/15 PASS (test_2j_output_S4.txt) before any spawn.
+- Driver launched under nohup (pid 23767, cwd partB/audit, log partB/audit/driver.log). WAVE 1 (partB/audit/WAVE1.json):
+  4/4 valid, per session p000 43,755 / p001 44,441 / p002 45,494 / p003 43,921; spent 177,611; mean 44,403, max 45,494.
+  Projection all 41 = 1,860,889 (> cap) -> full audit does NOT fit; estimate 7 further waves fit = 8 waves = 32 packets =
+  3,200 sentences, stop before wave 9 (~1.46M). Czech sized, not run: 41 packets, 707,178 prompt chars (SK 710,993),
+  ~1.81M (mean) - 1.86M (max) tokens.
+- NEXT (S5): wait for partB/audit/DRIVER_DONE.json; COVERAGE.json lists exactly the audited exercise_ids (D samples only
+  from those); AUDIT_RESULTS.jsonl = one row per reference. Commit partB/audit after the driver ends.
+- Gemini calls: S4 0, cumulative 43 of 1,200. Headless tokens S4: 177,611 at return (wave 1), final <= 1,500,000.
+- SHA check S4: S1 generator, see SHA_diff_S4.txt (line count printed at the commit).

@@ -68,6 +68,30 @@ def classify(feats, pron, explicit):
             return 'gender_fixed_open'
     return None
 
+AUXCZ = {'bych': ('1', 'sg'), 'jsem': ('1', 'sg'), 'bys': ('2', 'sg'), 'jsi': ('2', 'sg'), 'bychom': ('1', 'pl'),
+         'jsme': ('1', 'pl'), 'byste': ('2', None), 'jste': ('2', None)}
+
+def repair(f, clause, L):
+    """Audit-level repairs of two reader defects found on this audit (the reader itself is NOT changed):
+    R1 gender from the l-participle: sk_features/_feats leave gender None on 3sg past (Povedal -> 3/sg/None);
+       -l m, -la f, -lo n (sg only; disagreeing participles -> open).
+    R2 person: CZ 2sg/1sg/1pl/2pl auxiliaries (bys/jsi/bych/jsem/bychom/jsme/byste/jste) are not read (-> 3sg);
+       SK `si` beside an l-participle (`mal by si` 2sg aux vs reflexive `si`) is ambiguous -> person open."""
+    p, n, g = f; low = [w.lower() for w in RN._toks(clause or '')]; notes = []
+    if L == 'cz':
+        hit = [AUXCZ[w] for w in low if w in AUXCZ]
+        if hit and hit[0][0] != p:
+            p, n = hit[0]; notes.append('R2_cz_aux')
+    lp = [w for w in low if w in RN._lpset(clause or '', MODS[L]['f9'])]
+    if L == 'sk' and p == '3' and 'si' in low and lp:
+        p = None; notes.append('R2_sk_si_open')
+    if g is None and p in ('3', None) and n != 'pl' and lp:
+        gs = {'f' if w.endswith('la') else 'n' if w.endswith('lo') else 'm' if w.endswith('l') else None for w in lp}
+        gs.discard(None)
+        if len(gs) == 1:
+            g = gs.pop(); n = n or 'sg'; notes.append('R1_participle_gender')
+    return (p, n, g), notes
+
 RES = {}
 for L in ('sk', 'cz'):
     rows = [json.loads(l) for l in open(TOFF + '/phase2i/upload/annotations_%s_fixed.jsonl' % L, encoding='utf-8')]
@@ -79,6 +103,9 @@ for L in ('sk', 'cz'):
         if not f:
             c['rows_unread'] += 1; c['refs_unread'] += len(r['v']); continue
         c['rows_read'] += 1
+        f, reps = repair(tuple(f), info.get('clause'), L)
+        for x in reps:
+            c['reader_repair_' + x] += 1
         explicit = bool(a) and a.lower().split()[0] not in RN.PRON[L]
         k = sent_index(r['src'], info.get('clause'))
         nsrc = len([x for x in re.split(SPLIT, r['src']) if x.strip()])
@@ -95,7 +122,7 @@ for L in ('sk', 'cz'):
                 c['flag_' + cls] += 1; c['flag_%s_aligned' % cls] += aligned
                 d = {'exercise_id': r['exercise_id'], 'lang': L, 'level': r.get('level'), 'ref_index': i, 'class': cls,
                      'src': r['src'], 'ref': ref, 'en_pronoun': pron, 'src_feats': list(f), 'src_agent': a,
-                     'explicit_subject': explicit, 'aligned': aligned, 'reader_why': info.get('why'), 'clause': info.get('clause')}
+                     'explicit_subject': explicit, 'repairs': reps, 'aligned': aligned, 'reader_why': info.get('why'), 'clause': info.get('clause')}
                 flags.append(d)
                 if len(ex[cls]) < 10:
                     ex[cls].append(d)
@@ -124,6 +151,10 @@ md = ["# Phase 2J S4 - B1 deterministic reference audit (0 model calls)", "",
       "- `neuter_as_he_she`: source 3sg neuter (dieťa/dievča/dítě/děvče...) rendered he/she - REVIEW class, often correct; B3 must not act on it blindly.",
       "- 1sg/2sg (and 1pl/2pl) past: gender is marked only by the l-participle; English I/you/we carry no gender, so a pronoun can never fix or "
       "contradict it -> NEVER flagged here. Gender fixed by other words (\"as his wife\") is B2's job.",
+      "- Reader repairs applied in the audit only (reader unchanged; defects for the record): R1 gender from the l-participle "
+      "(-l m / -la f / -lo n) when the reader leaves it None on 3sg past; R2 Czech 1/2-person auxiliaries bys/jsi/bych/jsem/bychom/jsme/"
+      "byste/jste override the reader's 3sg; Slovak `si` beside an l-participle (`mal by si`) = 2sg aux or reflexive -> person open. "
+      "Before the repairs SK flagged 356 (gender_fixed_open 253, person 80), CZ 302 (gender_fixed_open 184, person 100), mostly false.",
       "- 3sg m/f + `it`: correct for inanimate nouns, not flagged. Reader abstains -> row unread, not compared.", ""]
 for L in ('sk', 'cz'):
     c = RES[L]['counts']
