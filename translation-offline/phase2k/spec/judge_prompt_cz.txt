@@ -1,0 +1,22 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Czech sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Czech means?
+
+The owner's rules (apply them exactly):
+- The Czech is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Czech names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Czech while the English tense inside it is free.
+- A dropped function word is correct, a dropped content word is wrong, added content is wrong.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Czech only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
