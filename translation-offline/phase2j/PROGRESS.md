@@ -148,3 +148,13 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
   from those); AUDIT_RESULTS.jsonl = one row per reference. Commit partB/audit after the driver ends.
 - Gemini calls: S4 0, cumulative 43 of 1,200. Headless tokens S4: 177,611 at return (wave 1), final <= 1,500,000.
 - SHA check S4: S1 generator, see SHA_diff_S4.txt (line count printed at the commit).
+
+## S5 - B2 summary, B3 corrections, B4 closed-set re-score (21.9.2026)
+- B2 driver ended on the token cap before wave 9: 3200/4,064 SK rows audited (3413 refs), packets p032-p040 not audited; COVERAGE.json = the audited ids (Part D samples only from these). Per ref all: {"W": 469, "F": 2566, "O": 141, "N": 172, "A": 65}.
+- B1 agreement: B1 SK flags 92, audited 70, B2=W 21, any B2 flag 26; B2 W refs 469 of which B1-flagged 21.
+- B3 (partB/b3.py, T17 in test_2j): SK rows changed 577, v[0] changed 58 (en = v[0] kept), CZ 0 (all B1 CZ flags listed). Counts: {"sk/W": {"added": 385, "listed": 84}, "sk/O": {"listed": 141}, "sk/N": {"listed": 8, "added": 164}, "sk/A": {"listed": 5, "replaced": 60}, "sk/dedup": {"removed": 1}, "cz/B1_neuter_as_he_she": {"listed": 13}, "cz/B1_gender_contradiction": {"listed": 15}, "cz/B1_number": {"listed": 16}, "cz/B1_gender_fixed_open": {"listed": 10}, "cz/B1_person": {"listed": 53}}. Upload: phase2j/upload/ (+ B3_diff.jsonl, UPLOAD_README.md). Re-freeze: FROZEN_SHA_S5.txt, FREEZE_COMMIT_S5.txt (stack code unchanged; test_2j + b3 added).
+- B4 CLOSED-SET RE-SCORE A+B: coverage 474/497 = 95.37 % [93.14, 97.04], FA 21/403 = 5.21 % [3.25, 7.86] (A3 464/497 = 93.36 % [90.80, 95.39] / 20/403 = 4.96 % [3.06, 7.56]; 2I 443/497 = 89.13 % [86.06, 91.73] / 19/403 = 4.71 % [2.86, 7.26]); changed vs A3 22, vs 2I 63; run {"status": "COMPLETE", "requests": 837, "needed": 101, "seeded_used": 736, "calls_made": 101, "counted_total": 101, "spend_usd": 0.012708, "uncounted_attempts": 0}. Detail partB/PART_B.md, partB/b4/B4.json.
+- Gemini calls: S5 101, cumulative 144 of 1,200 (GEMINI_LEDGER.json {"S1": 0, "S2": 43, "S2c": 0, "S3": 0, "S5": 101, "S5probe": 0}).
+- Headless tokens: B2 total 1414860 (S4 recorded 177,611 at return; S5 adds 1237249 from the driver); S5 itself 0; cumulative headless 1414860.
+- SHA check S5: SHA_diff_S5.txt 0 lines.
+- NEXT (S6): Part D samples from the CORRECTED phase2j/upload/annotations_sk_fixed.jsonl, only audited ids (COVERAGE.json), excluding 2F-probe 60 + 2I 100.
