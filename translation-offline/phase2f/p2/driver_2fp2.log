@@ -444,3 +444,16 @@ b6e77e7aa140292fc0918584e0571732a8377ef8
 [2026-09-21 02:11:08] session writer_A2_try1 done: {"exit": 0, "is_error": false, "num_turns": 2, "input_tokens": 4, "cache_read_input_tokens": 29261, "output_tokens": 29288}
 [2026-09-21 02:12:58] session writer_B1_try1 done: {"exit": 0, "is_error": false, "num_turns": 2, "input_tokens": 4, "cache_read_input_tokens": 29427, "output_tokens": 39560}
 [2026-09-21 02:12:58] session writer_B2_try1 done: {"exit": 0, "is_error": false, "num_turns": 2, "input_tokens": 4, "cache_read_input_tokens": 29376, "output_tokens": 32854}
+[2026-09-21 02:12:58] $ git add -A translation-offline/phase2f -> exit 0
+
+[2026-09-21 02:12:58] $ git diff --cached --quiet -- translation-offline/phase2f -> exit 1
+
+[2026-09-21 02:12:58] $ git commit -q -m Phase 2F Part 2: stage writers
+
+Co-Authored-By: Claude Opus 5 <noreply@anthropic.com> -> exit 0
+
+[2026-09-21 02:12:58] $ git rev-parse HEAD -> exit 0
+75bd70e557e995e1acd696398488088290d993e9
+
+[2026-09-21 02:12:58] === stage assemble ===
+[2026-09-21 02:12:58] assemble: {"items": 900, "answer_tags": {"plain": 100, "determiner": 100, "by-passive": 78, "paraphrase": 100, "drop-main": 164, "time-frame": 136, "missing-article": 100, "wrong-word": 100, "skp-passive": 22}, "wrong_types": {"M": 164, "T": 136, "S": 100, "W": 100}}
