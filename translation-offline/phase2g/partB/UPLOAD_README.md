@@ -121,3 +121,12 @@ JSON in the one `structure_json` cell. Lossless; nothing was uploaded.
      Either the data is wrong on those rows or the judge's scope is too narrow. Nothing was overwritten.
 * **Rows that are missing, and why**, are recorded per batch in `annotations_cz_NNNN.meta.json`
   (`row_ranges_present`, `row_ranges_missing`, `sessions_missing`) and in `PARTIAL_cz_NNNN.json`.
+
+## Row sources in `out/annotations_cz_final.jsonl` (Phase 2G Part B)
+
+* `lk_2g_dedicated`: 280 rows
+* `phase2f_final_dedicated_lk`: 2700 rows
+* rows without a dedicated lk judgement: 0 (-)
+* rows still missing of 4,064: 1084 (5425-5434, 6425-6434, 7065-8128)
+* largest structure_json cell: 2936 chars (Excel limit 32,767)
+* nothing uploaded, nothing written to the database.
