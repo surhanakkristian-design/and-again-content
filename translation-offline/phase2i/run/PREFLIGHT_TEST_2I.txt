@@ -1,0 +1,36 @@
+PASS  a.requests_reach_L3  unique requests 4 (both stacks)
+PASS  a.429_text_not_rate_limit  status COMPLETE, calls 4, uncounted 0, first row verdict FAILED (unparsable 200 reply)
+PASS  a.all_results  8 result lines
+PASS  a.labels_not_passed  
+PASS  e.runner_strips_lk_for_tonly  
+PASS  d.resume_zero_calls  calls 0, ledger/results unchanged True
+   a.verdicts: {"j429/frozen": ["L1", true, null], "j429/tonly": ["L1", true, null], "jA1429/frozen": ["L3", true, "SAME"], "jA1429/tonly": ["L3", true, "SAME"], "jB/frozen": ["L1", true, null], "jB/tonly": ["L1", true, null], "jx0429/frozen": ["L3", false, null], "jx0429/tonly": ["L3", true, "SAME"]}
+PASS  b.real_429_retried  uncounted rows 1, calls 5, counted 4
+PASS  c.quota_stop_perday  status STOPPED, calls 1, results written 4 (all without L3)
+PASS  c.quota_stop_usage_limit  status STOPPED, calls 1, results written 4 (all without L3)
+PASS  c.resume_after_quota  calls 4
+PASS  h.empty_200_failed_not_retried  calls 4 = requests 4; failed items 4 all rejected
+PASS  h.failed_not_retried_on_resume  calls 0
+PASS  i.hard_cap  counted 0 + needed 4 = 4 > hard cap 1; NO call was made
+PASS  i.spend_cap  
+PASS  i.per_call_cap_guard  
+PASS  e.poisoned_items_never_read  hits [] err None results 4 requests 2
+PASS  e.import_graph_uses_copies_only  copies ['phase2i/tonly/lib_prev.py', 'phase2i/tonly/pipeline_1i.py', 'phase2i/tonly/runner_1p.py'], originals []
+PASS  e.F2B_off_rest_unchanged  {'F1': 1, 'F2': 1, 'F3': 1, 'F4v2': 1, 'F5': 1, 'F2B': 0}
+PASS  e.static_grep_verdict_path  hits in edited functions: []; remaining textual hits in functions off the 2I path (other phases' builders/fixtures): {'lib_prev.py': 1, 'pipeline_1i.py': 0, 'runner_1p.py': 4}
+PASS  f.no_practised_grammar_line  2 common prompts checked
+PASS  f.tonly_equals_frozen_minus_that_line  mismatch []
+   f.removed line example: 'Practised grammar: HAVE GOT — ALREADY VERIFIED as correct in this answer; judge meaning and vocabulary only.'
+PASS  e.import_graph_tonly_static  frozen 35 modules, tonly 36 modules
+PASS  g.frozen_reproduces_1W  900/900 verdicts+layers identical; mismatches []
+PASS  g.frozen_prompts_byte_identical_to_1W  900/900 request hashes identical
+PASS  k.adapter_verbatim  functions ['alt_dict', 'build_data', 'jdump']
+PASS  k.adapter_reproduces_probe_annotations.json  byte-identical True; sids field-for-field equal 60/60; top-level fields equal 420
+PASS  k.adapter_reproduces_probe_sentences.json  byte-identical True; sids field-for-field equal 60/60; top-level fields equal 360
+PASS  w.write_guard_redirects  rc 0, redirects 3, stderr 
+   w.writes the 1W chain attempted outside phase2i during this suite (all redirected): 0 []
+PASS  z.earlier_phases_untouched  dirty outside phase2i: [' M translation-offline/phase1p/access_log.jsonl', ' M translation-offline/phase1p/run_1p.log', '?? translation-offline/phase2d/run_2d_cz.stdout.txt']
+PASS  z.sha_tree_unchanged_by_suite  3256 files, changed []
+PASS  z.sha_tree_equals_SHA_before  3256 files vs SHA_before 3256; differ []
+PASS  z.phase1p_dirty_pair_as_in_SHA_before  
+SUMMARY: 32 checks, 0 FAIL, 0 real model calls (HTTP layer mocked)
