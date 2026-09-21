@@ -1,0 +1,51 @@
+CRASH: Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/test_2i.py", line 283, in <module>
+    rc = main()
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/test_2i.py", line 106, in main
+    st = go(d, m); L = R.jl_read(os.path.join(d, 'ledger.jsonl')); res = R.jl_read(os.path.join(d, 'results.jsonl'))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/test_2i.py", line 79, in go
+    return R.run(SETF, d, key='TESTKEY', purpose='test_2i', **kw)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 274, in run
+    reqs = {s: stack_call(s, 'prepare', clean[s], P) for s in STACKS}
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 274, in <dictcomp>
+    reqs = {s: stack_call(s, 'prepare', clean[s], P) for s in STACKS}
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/run_2i.py", line 197, in stack_call
+    raise RuntimeError('stack %s %s failed rc=%s: %s' % (s, cmd, p.returncode, p.stderr[-3000:]))
+RuntimeError: stack tonly prepare failed rc=1: 
+    na, rows = backfill_annotation(a, groups, norm)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/taskB/backfill_s_ids.py", line 44, in backfill_annotation
+    for k, vs in (a.get('alt') or {}).items():
+AttributeError: 'list' object has no attribute 'items'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_tonly.py", line 119, in <module>
+    E.cli(sys.argv)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_frozen.py", line 165, in cli
+    out = prepare_2i(json.load(open(argv[2], encoding='utf-8')))
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_frozen.py", line 142, in prepare_2i
+    return {idm[i]: q for i, q in requests(build(s, a, n)).items()}
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/stack_frozen.py", line 86, in build
+    cfg, sel, st, recs, ann2, by, info, ag = R1U.build(None, TAG, 'Phase 2I %s stack (0 calls)' % STATE['stack'],
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1w/a4/run/runner_1u.py", line 392, in build
+    return R1T.build(data_dir, tag, purpose, loader)           # patched ag_map / load_cfg
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1t/run/runner_1t.py", line 188, in build
+    st, recs, ann, by, info = R1P.build_side(purpose, data_dir, tag, sel['levers'], loader)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/tonly/runner_1p.py", line 163, in build_side
+    st = make_state(recs, ann, side_tag)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/tonly/runner_1p.py", line 193, in make_state
+    return R.make_state(recs, ann, ('F4v3',), side_tag='fresh1k')
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1j/taskC/runner_1j.py", line 178, in make_state
+    return P.configure(b_fix=True, guards=tuple(guards), side=side_tag)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2i/tonly/pipeline_1i.py", line 87, in configure
+    st['reports']['backfill'] = B.apply_to_checker(C)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/taskB/backfill_s_ids.py", line 90, in apply_to_checker
+    new, rep = backfill_annotations(src, C)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/taskB/backfill_s_ids.py", line 76, in backfill_annotations
+    na, rows = backfill_annotation(a, groups, norm)
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/taskB/backfill_s_ids.py", line 44, in backfill_annotation
+    for k, vs in (a.get('alt') or {}).items():
+AttributeError: 'list' object has no attribute 'items'
+
+

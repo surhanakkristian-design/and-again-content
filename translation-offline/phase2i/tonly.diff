@@ -1,0 +1,123 @@
+--- a/translation-offline/phase1i/lib_prev.py
++++ b/translation-offline/phase2i/tonly/lib_prev.py
+@@ -14,7 +14,7 @@
+ import json, os, re, sys, time, random, subprocess, hashlib, urllib.request, urllib.error
+ from collections import Counter, defaultdict
+ 
+-HERE = os.path.dirname(os.path.abspath(__file__))
++HERE = os.path.dirname(os.path.abspath('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/lib_prev.py'))
+ TO = os.path.dirname(HERE)                      # translation-offline/
+ P1C = os.path.join(TO, 'phase1c')               # FROZEN
+ APP = os.path.expanduser('~/Projects/and-again')
+@@ -124,8 +124,6 @@
+         return 'L1', 'checker verdict %s' % it['verdict']
+     if it['step'] == 'mistake':
+         return 'L2', 'library mistake matched: %s' % (it['feedback'] or '')
+-    if not it['lock_ok']:
+-        return 'L2', 'practised grammar span not present (lock %s)' % ' | '.join(it['locks'][:3])
+     return 'L3', ''
+ 
+ 
+@@ -230,9 +228,6 @@
+ 
+ def prompt(it, variant):
+     lines = ['Slovak: ' + it['sk'], 'Reference English: ' + it['reference'], 'Learner: ' + it['answer']]
+-    if variant == 'P-B':
+-        lines.insert(3, 'Practised grammar: %s — ALREADY VERIFIED as correct in this answer; judge meaning and '
+-                        'vocabulary only.' % it['topic'])
+     lines.append('SAME, TIP or DIFF?')
+     return '\n'.join(lines)
+ 
+--- a/translation-offline/phase1i/pipeline_1i.py
++++ b/translation-offline/phase2i/tonly/pipeline_1i.py
+@@ -23,12 +23,12 @@
+ import urllib.error
+ import urllib.request
+ 
+-HERE = os.path.dirname(os.path.abspath(__file__))
++HERE = os.path.dirname(os.path.abspath('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1i/pipeline_1i.py'))
+ for _p in (HERE, os.path.join(HERE, 'taskB'), os.path.join(HERE, 'taskC')):
+     if _p not in sys.path:
+         sys.path.insert(0, _p)
+ 
+-ROW7_FLAGS = {'F1': 1, 'F2': 1, 'F3': 1, 'F4v2': 1, 'F5': 1, 'F2B': 1}
++ROW7_FLAGS = {'F1': 1, 'F2': 1, 'F3': 1, 'F4v2': 1, 'F5': 1, 'F2B': 0}
+ MODEL = 'gemini-3.1-flash-lite'
+ GEN_CFG = {'temperature': 0, 'maxOutputTokens': 24, 'thinkingConfig': {'thinkingBudget': 0}}
+ API = 'https://generativelanguage.googleapis.com/v1beta/models/%s:generateContent'
+@@ -102,8 +102,7 @@
+             'level': r['level'], 'topic': r['topic'], 'sk': r['sk'], 'reference': r['reference'],
+             'answer': r['answer'], 'verdict': r['chk']['verdict'], 'step': r['chk']['step'],
+             'feedback': r['chk']['feedback'], 'chk_missing': r.get('chk_missing', False),
+-            'wrong_type': r['wrong_type'], 'wrong_why': '', 'locks': r['locks'],
+-            'lock_ok': r['lock_ok'], 'lock_released_2_1': r['lock_released_2_1'],
++            'wrong_type': r['wrong_type'], 'wrong_why': '',
+             'fa_class': None, 'fa_judgement': None, 'n': r['n']}
+ 
+ 
+--- a/translation-offline/phase1p/runner_1p.py
++++ b/translation-offline/phase2i/tonly/runner_1p.py
+@@ -15,7 +15,7 @@
+ import argparse, collections, json, os, random, subprocess, sys
+ 
+ sys.dont_write_bytecode = True
+-HERE = os.path.dirname(os.path.abspath(__file__))
++HERE = os.path.dirname(os.path.abspath('/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase1p/runner_1p.py'))
+ TOFF = os.path.dirname(HERE)
+ P1N = os.path.join(TOFF, 'phase1n')
+ for _p in (HERE, P1N):
+@@ -147,30 +147,18 @@
+         hy = a.get('hygienised', a)
+         if not hy:
+             raise SystemExit('REFUSED: sid %d has no annotation' % sid)
+-        lk = []
+-        for x in (hy.get('lk') or []):
+-            lk += [x] if isinstance(x, str) else [y for y in x if isinstance(y, str)]
+         refs = [x for x in (hy.get('v') or []) if isinstance(x, str) and x.strip()]
+         r = {'item_id': it['id'], 'kind': it['id'].split(':')[0], 'sid': sid, 'n': 1,
+              'level': s.get('level'), 'topic': s.get('topic'), 'sk': s['slovak'],
+              'band': R1N._band(s['slovak']), 'reference': refs[0], 'refs': list(refs),
+              'answer': it['answer'],
+              'judged': 'wrong' if it['id'].startswith('W') else 'correct',
+-             'wrong_type': None, 'half': half_of(sid), 'locks': lk,
++             'wrong_type': None, 'half': half_of(sid),
+              'intent': it.get('intent'), 'form': it.get('form'),
+              'passive': it.get('passive'), 'tags_list': list(it.get('tags') or []),
+              'tags': dict(s.get('tags') or {}),
+              'chk': {'verdict': 'wrong', 'step': 'auto', 'feedback': ''}, 'chk_missing': False,
+-             'rows': [], 'lock_ok': True, 'lock_released_2_1': None}
+-        try:
+-            nrm = C.base.norm
+-            r['lock_ok'] = (not lk) or any(nrm(x).strip() in nrm(r['answer']) for x in lk)
+-            if not r['lock_ok']:
+-                ok, tr = C.lock_equivalent_ok(P.to_item(r))
+-                if ok:
+-                    r['lock_ok'], r['lock_released_2_1'] = True, tr
+-        except Exception:
+-            pass
++             'rows': []}
+         recs.append(r)
+     st = make_state(recs, ann, side_tag)
+     dist, how = collections.Counter(), collections.Counter()
+@@ -220,18 +208,16 @@
+ 
+ 
+ def decide(st, recs, ann, vm, suppress_f4v2=()):
+-    g = R1K.guard_readouts(recs, ann, False)
+-    guards = {i: {'f8': None, 'f9': g[i]['f9']} for i in g}     # F8 CANNOT decide, F9 does not
++    guards = {}
+     stx = dict(st)
+     if suppress_f4v2:
+         stx['decide'] = _no_f4v2(st['decide'], set(suppress_f4v2))
+     RL.RES_VM[0] = vm
+-    return R1K.configure_row(stx, recs, vm, True, guards, False, False, True), guards
++    return R1K.configure_row(stx, recs, vm, False, guards, False, False, True), guards
+ 
+ 
+ def l3_eligible(st, recs):
+-    lock_rej, l3 = RL.lock_counts(st, recs)
+-    return lock_rej, l3
++    return [], RL.l3_ids(st, False)
+ 
+ 
+ def plan(st, recs, ids, prompt_id):
