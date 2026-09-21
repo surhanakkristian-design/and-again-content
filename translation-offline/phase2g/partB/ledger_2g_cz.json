@@ -1,10 +1,10 @@
 {
  "cap": 2900000,
- "spent": 0,
+ "spent": 36160,
  "par": 2,
  "concurrency": 2,
- "updated": "2026-09-21T07:51:09",
- "wall_s_this_process": 0.5,
+ "updated": "2026-09-21T07:51:43",
+ "wall_s_this_process": 35.1,
  "lk_needs_dedicated_pass": true,
  "circuit_breaker": {
   "wall_floor_s": 900,
@@ -12,10 +12,18 @@
   "mult": 3
  },
  "throughput_guard": "REMOVED in Phase 2G Part B (B1)",
- "retries": 0,
+ "retries": 1,
  "giveups": [],
  "stop_spawn": null,
- "by_kind": {},
+ "by_kind": {
+  "vp": {
+   "sessions": 1,
+   "tokens": 36160,
+   "wall_s": 34.4,
+   "mean_tokens": 36160.0,
+   "mean_wall_s": 34.4
+  }
+ },
  "sessions": {
   "cz_0001_s01_rw": {
    "kind": "rw",
@@ -1038,6 +1046,18 @@
    "adopted_from": "phase2f",
    "source": "translation-offline/phase2f/out/sessions/cz_0004_s08_v.json",
    "ts": "2026-09-21T07:51:08"
+  },
+  "cz_0002_s04_v_p06": {
+   "kind": "v",
+   "tokens": 36160,
+   "wall_s": 34.4,
+   "exit": 0,
+   "rows": 10,
+   "asked": 10,
+   "status": "OK",
+   "retry_tokens": 0,
+   "retries": 0,
+   "ts": "2026-09-21T07:51:43"
   }
  }
 }
