@@ -177,3 +177,21 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Gemini calls: S6 0, cumulative 144 of 1,200.
 - SHA check S6: S1 generator (`zsh phase2i/sha_tree.sh | grep -v '  phase2j/'`), SHA_diff_S6.txt 0 lines.
 - NEXT (S7): judge over partD/set/answers.jsonl (aid = A:<sid>:<c1..c5|t|w|m|s>); items carry writer_intent/type - hide from judge.
+
+## S7 - Part D judge (21.9.2026; 0 Gemini calls)
+- Files partD/judge/: make_packets.py, run_judges.py, analyze.py (copied from phase2i/judge/, absolute paths), selftest_S7.txt, key.jsonl,
+  packet_s1..4.jsonl, PACKETS_META.json, prompt_s1..4.txt, judge_prompt.txt, PROMPT.sha256, sessions/, verdicts_s1..4.json, JUDGES_SUMMARY.json,
+  labels.jsonl, controls.json, intent_agreement.json, STAGE4_RESULT.json (2I file name kept = S7 result); partD/set/items.jsonl (+ .sha256).
+- Judge prompt = READ from phase2i/judge/judge_prompt.txt and asserted: sha d3760e49e5f9451aa4a881c0b39825bce494eb1230ffd5386c9230f8890a1936 == 2I d3760e49... (byte-identical, identical prefix of all
+  4 prompts). Packets: seed 20260923, 900 originals shuffled across levels (i % 4) + 80 hidden duplicate controls (20/level, 40 correct/40 wrong
+  intent, each in a different session, shift A1 1/A2 2/B1 3/B2 1); 245 items/session, fields jid/slovak/level/answer/topic only; levels per session {'1': {'A1': 58, 'A2': 51, 'B1': 67, 'B2': 69}, '2': {'A1': 62, 'A2': 72, 'B1': 54, 'B2': 57}, '3': {'A1': 65, 'A2': 60, 'B1': 58, 'B2': 62}, '4': {'A1': 60, 'A2': 62, 'B1': 66, 'B2': 57}}.
+- Spawner run_2j.run_session (opus, --max-turns 2, usage-limit hard STOP, rate limit from envelope only, resume 0 cost); cap 450,000 by reservation
+  (est 75470/session = 1.1 x 2I max). Mocked self-test before spawn (selftest_S7.txt): validator 7 cases, 429 envelope retried, "429" in reason/stderr
+  not a rate limit, invalid output -> one _r1 retry, resume 0 spawns, usage envelope -> STOP_usage_limit.md + later runs refused, relative path
+  REFUSED, mock into phase2j REFUSED; analyze precheck (items assertions vs corrected upload) passed before spawn.
+- Real run: attempts (sid, spawns, turns) {'1': [('s1', 1, 1), ('s1_r1', 1, 1)], '2': [('s2', 1, 1)], '3': [('s3', 1, 1)], '4': [('s4', 1, 1)]}; tokens per session {'1': 135625, '2': 68836, '3': 67404, '4': 68487}; total 340352.
+- Controls 79/80, per session pair {'1-2': '15/15', '1-3': '10/10', '1-4': '14/15', '2-3': '15/15', '2-4': '10/10', '3-4': '15/15'}. Labels {'correct': 498, 'wrong': 402}, per level {'A1': {'correct': 124, 'wrong': 101}, 'A2': {'correct': 125, 'wrong': 100}, 'B1': {'correct': 124, 'wrong': 101}, 'B2': {'correct': 125, 'wrong': 100}}. Judge vs writer intent: 894/900 agree, confusion {'correct->correct': 496, 'wrong->wrong': 398, 'wrong->correct': 2, 'correct->wrong': 4}.
+- partD/set/items.jsonl sha256 221c90a8a9cfdeadbdef46f0afbdf5a98b042d521f8520feac5aed4208b4df5d (2I items format, annotation from phase2j/upload/annotations_sk_fixed.jsonl). Items NOT opened with the stack.
+- Gemini calls: S7 0, cumulative 144 of 1,200. Headless tokens S7 340352; cumulative headless 1980709.
+- SHA check S7: S1 generator, SHA_diff_S7.txt 0 lines.
+- NEXT (S8): freeze + commit before opening; run the fixed TRANSLATION-ONLY stack once over partD/set/items.jsonl (judge_label = truth).
