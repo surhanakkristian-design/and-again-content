@@ -231,3 +231,6 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Judge controls 79/80, intent 894/900. Gemini S9 0, cumulative 977 of 1,200, $0.122434. Headless S9 0, cumulative 1,980,709.
 - SHA check S9: S1 generator, SHA_diff_S9.txt 0 lines.
 - NEXT: report (orchestrator).
+
+## S10 - report (21.9.2026; 0 model calls)
+- Report written + copied; SHA_after.txt vs SHA_before, SHA_diff.txt 0 lines.
