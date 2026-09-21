@@ -32,3 +32,7 @@
 - Quick headline (run/HEADLINE_QUICK.json): TONLY coverage 443/497 = 89.13 %, FA 19/403 = 4.71 %; FROZEN 447/497 = 89.94 %, FA 21/403 = 5.21 %.
 - SHA_after == SHA_before (SHA_diff.txt empty; phase1p dirty pair unchanged). Files: run/{FINAL_RUN_DONE,ACCESS_LOG_VERBATIM.md,HEADLINE_QUICK.json,RUN_STATUS.json,ledger.jsonl,results.jsonl,access_log.jsonl}, SHA_after.txt, SHA_diff.txt.
 - 0 headless sessions; Claude tokens this stage ~45k (estimate). Cumulative ~1,206,000 of 3,000,000. Projection: analysis/report ~200k -> ~1,406,000.
+## Stage 6 (analysis) - 21.9.2026
+- analysis/analyze.py (deterministic numbers, exact Clopper-Pearson; per-item causes hard-coded as the agent's categorisation) -> analysis/ANALYSIS.md (4.1-4.9 + judge noise, full per-item tables) + analysis/numbers.json.
+- TONLY pooled cov 443/497 = 89.13 % [86.06, 91.73], FA 19/403 = 4.71 % [2.86, 7.26]. FR 54: F4v2 subject-guard misfire 24 (cause-list extension, 5 sentences), reference wrong/narrow 16, synonym 4, structural 2, tense 2, M1 2 (F3 'got'), det 1, voice 1, AG 1, judge 1. M1 via F5 = 0. FA 19: 15 content drop. Diffs 35 (34 = removed ALREADY VERIFIED line, 1 F2B, 0 lock).
+- 0 Gemini calls, 0 headless sessions. Claude tokens this stage ~140k (estimate). Cumulative ~1,346,000 of 3,000,000. Projection: report ~100k -> ~1,446,000.
