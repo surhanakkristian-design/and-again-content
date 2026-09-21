@@ -165,11 +165,14 @@ def _():
     H0, H1 = {rk(q) for q in out[0].values()}, {rk(q) for q in out[1].values()}
     full1 = json.load(open(P2J + '/partA/_run/reqkeys_fix1.json'))['requests']
     full0 = set(json.load(open(P2J + '/partA/_run/reqkeys_fix0.json'))['requests'].values())
-    H44 = {full1[j] for j in NEW44}
+    absent = [j for j in NEW44 if j not in full1]          # deduplicated onto a sibling with the identical request
+    assert absent == ['A:250:c3'], absent
+    H44 = {full1[j] for j in NEW44 if j in full1}
+    assert len(H44) == 43, len(H44)                          # 43 unique requests for 44 items
+    assert not (H44 & full0), 'a 44-request already existed with fix OFF'
     assert H44 <= H1, 'fix ON misses %d of the 44 requests' % len(H44 - H1)
     assert (H1 - H0) == (H44 - H0), ('new requests outside the 44', len((H1 - H0) - H44))
     assert H0 <= H1, 'fix ON lost a request that fix OFF made'
-    assert len(H44 - full0) == 43, ('full-set new unique requests', len(H44 - full0))
     s0, s1 = set(out[0]) - set(NEW44), set(out[1]) - set(NEW44)
     assert all(rk(out[0][j]) == rk(out[1][j]) for j in s0 & s1), 'request changed outside the 44'
 
