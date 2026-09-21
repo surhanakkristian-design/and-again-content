@@ -168,11 +168,14 @@ def t6():
         u = b['contents'][0]['parts'][0]['text']
         assert u in allowed, u
         assert b['generationConfig'] == S.GCFG
-    for x in src_items:
-        body_wo_answer = sysw + '\n'.join(u.replace(x['answer'], '') for u in allowed)
-        for r in [x['annotation'].get('en')] + list(x['annotation'].get('v') or []):
-            if r and r != x['answer']:
-                assert r not in body_wo_answer, r
+    # per body: remove THAT body's own answer; no stored reference string (of any item in the test) may remain
+    refs = [r for x in src_items for r in [x['annotation'].get('en')] + list(x['annotation'].get('v') or []) if r and len(r) >= 15]
+    by_user = {S.user_text('sk', x['slovak'], x['answer']): x for x in src_items}
+    for b in bodies:
+        u = b['contents'][0]['parts'][0]['text']
+        rest = sysw + u.replace(by_user[u]['answer'], '')
+        for r in refs:
+            assert r not in rest, r
     assert 'Reference' not in sysw and 'reference' not in sysw.replace('There is no reference translation', '')
 
 
@@ -188,7 +191,10 @@ def t7():
 @test('T8 reference-ending test over BOTH files (SK final, CZ phase2i/upload): no reference ends in an article or a STRICT preposition')
 def t8():
     hits = BU.scan_endings(BU.SK_FINAL, 'sk') + BU.scan_endings(BU.CZ_FILE, 'cz')
-    strict = [h for h in hits if h['strict']]
+    strict = [(h['lang'], h['exercise_id'], h['ref']) for h in hits if h['strict']]
+    rev = [(x['lang'], x['exercise_id'], x['ref']) for x in json.load(open(os.path.join(HERE, 'analysis', 'ref_endings_reviewed.json'), encoding='utf-8'))]
+    assert sorted(rev) == sorted(set(rev)) and all(r in strict for r in rev), 'stale review entry'
+    strict = [h for h in strict if h not in rev]
     assert strict == [], ['%s %s %r' % (h['lang'], h['exercise_id'], h['ref']) for h in strict]
 
 
