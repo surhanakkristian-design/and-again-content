@@ -216,3 +216,18 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
 - Headless tokens S8: 0; cumulative headless 1,980,709.
 - SHA check S8: SHA_after_S8.txt vs SHA_before, SHA_diff_S8.txt 0 lines.
 - NEXT (S9): FR/FA cause tables per 2I cause list from partD/run/results.jsonl + items; report.
+
+## S9 - analysis (21.9.2026; 0 Gemini calls, 0 headless tokens)
+- Built analysis/analyze.py (exact CP, reproduces 2I 89.13 [86.06, 91.73] / 4.71 [2.86, 7.26]; per-item causes hard-coded on 2I list) -> analysis/ANALYSIS.md + numbers.json.
+- Part D pooled: coverage 450/498 = 90.36 % [87.42, 92.81] (point MET, interval MISSED); FA 24/402 = 5.97 % [3.86, 8.75] (point MISSED, interval MISSED). 2I 89.13 % / 4.71 %.
+  A1 cov 109/124 = 87.90 % [80.83, 93.07] (point MISSED, interval MISSED) | FA 3/101 = 2.97 % [0.62, 8.44] (point MET, interval MISSED)
+  A2 cov 119/125 = 95.20 % [89.85, 98.22] (point MET, interval MISSED) | FA 7/100 = 7.00 % [2.86, 13.89] (point MISSED, interval MISSED)
+  B1 cov 103/124 = 83.06 % [75.28, 89.20] (point MISSED, interval MISSED) | FA 7/101 = 6.93 % [2.83, 13.76] (point MISSED, interval MISSED)
+  B2 cov 119/125 = 95.20 % [89.85, 98.22] (point MET, interval MISSED) | FA 7/100 = 7.00 % [2.86, 13.89] (point MISSED, interval MISSED)
+- FR 48 by cause: reference wrong or too narrow 25, AG misfire 5, English tense within the Slovak's frame 4, dropped FUNCTION word (M1) 4, synonym or different word 4, structural paraphrase 2, F5 misfire: compound noun shortened (extension 2J) 1, L3 rejects an answer equal to a stored reference (extension 2J) 1, determiner or article CHOICE 1, judge label doubtful 1 (2I: F4v2 24, ref 16, ...).
+- FA 24 by cause: content word dropped accepted 18, wrong word accepted 4, agent drop accepted (extension 2J) 1, time-frame shift accepted (extension 2J) 1 (2I: content drop 15 of 19). Writer types FA: {"M": 19, "T": 1, "W": 1, "intent-correct": 3}.
+- F4v2/F4v3 misfires left: 0. Reference-caused FR 25, FA 3. FR on B3-changed rows 21, FA 5; bad B3 refs in D: ex 22 (onto desk), ex 54 (truncated "before a.") - A-class replacements; gender-swap variants seen were well-formed. B3 scan: W added 385, non-pure swap 0, mixed he+she 0, A-replaced truncation suspects 4.
+- Extensions to the 2I cause list: FR "F5 misfire: compound noun shortened" 1, "L3 rejects an answer equal to a stored reference" 1; FA "agent drop accepted" 1, "time-frame shift accepted" 1.
+- Judge controls 79/80, intent 894/900. Gemini S9 0, cumulative 977 of 1,200, $0.122434. Headless S9 0, cumulative 1,980,709.
+- SHA check S9: S1 generator, SHA_diff_S9.txt 0 lines.
+- NEXT: report (orchestrator).
