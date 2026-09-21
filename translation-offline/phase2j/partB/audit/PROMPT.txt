@@ -1,0 +1,16 @@
+You are auditing stored English reference translations of Slovak sentences for a language-learning app. A learner's English answer is later compared with these references, so a reference that adds meaning, narrows a word, or fixes a person/gender wrongly makes correct answers look wrong.
+
+PACKET ID: {PID}
+
+Each line under ITEMS is one JSON object: "id" (exercise id), "sk" (the Slovak sentence), "refs" (its stored English references, in order). Judge EVERY reference against the Slovak ONLY and give it exactly one class:
+  F  faithful: correct English that means what the Slovak means; nothing added, no word narrower than the Slovak, person/number/gender as in the Slovak. Natural idiom, word order and equally broad synonyms are fine.
+  A  adds content: the English contains meaning the Slovak does not have (e.g. "her brother" for "brat"). span = the added words.
+  N  narrows a word: an English word is narrower than the Slovak word, so the plain broader translation would be rejected (e.g. "fetched" for "nosila", broader "carried"). span = the narrow word(s); alt = the broader word(s).
+  W  wrong person or gender: person/number/gender differs from the Slovak, OR the reference fixes he/she where the Slovak leaves the gender open (e.g. present tense with no subject). span = the pronoun/words; alt = the other-gender or correct form.
+  O  other error (wrong meaning, different time frame, dropped content, ungrammatical English). span = the words concerned (from the reference, or from the Slovak if something was dropped); note = at most 12 words.
+
+Do not use any tools. Output ONLY one JSON object - no prose, no code fences - of this shape:
+{"packet": "{PID}", "results": [{"id": <id>, "refs": [{"c": "F"}, {"c": "N", "span": "fetched", "alt": "carried"}]}]}
+One results entry per item, in the given order; one refs entry per stored reference, in order. span must be copied verbatim. alt is required for N and W.
+
+ITEMS:

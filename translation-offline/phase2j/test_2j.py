@@ -338,6 +338,71 @@ def _():
     print('T15', T15)
 
 
+@t('T16 S4 B2 audit (mocked spawner): validator hard/soft, cap reservation stops after wave 1 + COVERAGE ids, invalid -> one retry, '
+   '"429" in id/result is not a rate limit, resume 0 spawns, relative paths, usage-limit envelope -> STOP')
+def _():
+    import re as _re, types as _ty
+    sys.path.insert(0, P2J + '/partB/audit'); import audit_2j as A
+    rows = [{'exercise_id': 14290 if k == 0 else 10000 + k, 'src': 'Nosila vodu %d.' % k,
+             'v': ['She carried water %d.' % k] + (['She fetched water.'] if k % 7 == 0 else [])} for k in range(1000)]
+    up = write_set(TMP + '/aud_up.jsonl', [dict(r) for r in rows])
+    def answer(p, bad=None):
+        res = [{'id': i['id'], 'refs': [{'c': 'F'}] + ([{'c': 'N', 'span': 'fetched', 'alt': 'carried'}] if len(i['refs']) > 1 else [])} for i in p['items']]
+        if bad == 'drop': res = res[1:]
+        if bad == 'class': res[0]['refs'][0]['c'] = 'X'
+        if bad == 'alt': res[0]['refs'] = [{'c': 'N', 'span': 'carried'}] + res[0]['refs'][1:]
+        return json.dumps({'packet': p['packet'], 'results': res, 'comment': 'row 429'})
+    P0 = A.build_packets(rows)
+    assert len(P0) == 10 and len({i['id'] for p in P0 for i in p['items']}) == 1000
+    assert A.build_packets(rows) == P0 and '"answer"' not in A.prompt_of(P0[0])
+    assert A.validate(answer(P0[0]), P0[0])[:2] == ([], [])
+    for b in ('drop', 'class', 'alt'):
+        assert A.validate(answer(P0[0], b), P0[0])[0], b
+    assert A.validate('sorry', P0[0])[0]
+    soft = json.loads(answer(P0[0])); soft['results'][0]['refs'][0] = {'c': 'A', 'span': 'not there'}
+    h, s_, _ = A.validate(json.dumps(soft), P0[0]); assert not h and s_, (h, s_)
+    calls, mode = [], {}
+    def spawn(argv, timeout):
+        pr = argv[argv.index('-p') + 1]; pid = _re.search(r'PACKET ID: (p\d{3})', pr).group(1)
+        items = [json.loads(l) for l in pr.split('ITEMS:\n', 1)[1].splitlines() if l.strip()]
+        p = {'packet': pid, 'items': items}; calls.append(pid)
+        if mode.get('usage') == pid:
+            env = {'type': 'result', 'is_error': True, 'subtype': 'error', 'result': "You've hit your limit - resets at 5pm"}
+            return _ty.SimpleNamespace(returncode=1, stdout=json.dumps(env), stderr='')
+        bad = pid == 'p000' and calls.count('p000') == 1
+        env = {'type': 'result', 'subtype': 'success', 'is_error': False, 'num_turns': 1,
+               'result': 'not json 429' if bad else answer(p), 'usage': {'input_tokens': 10000 if bad else 300000, 'output_tokens': 0}}
+        return _ty.SimpleNamespace(returncode=0, stdout=json.dumps(env), stderr='')
+    old = (R.SPAWN[0], R.ENV[0]); R.SPAWN[0], R.ENV[0] = spawn, {}
+    try:
+        st = A.drive(up, TMP + '/aud1', cap=1500000, stop_dir=TMP, cz_upload=up)
+        cov = json.load(open(TMP + '/aud1/COVERAGE.json'))
+        assert len(calls) == 5 and calls.count('p000') == 2, calls
+        assert cov['stop']['kind'] == 'token_cap' and not cov['complete'] and cov['n_audited'] == 400, cov['stop']
+        assert cov['audited_exercise_ids'] == sorted(i['id'] for p in P0[:4] for i in p['items'])
+        assert st['spent'] == 1210000 and st['max_packet_cost'] == 310000 and 'cz_sizing' in st, st
+        assert os.path.exists(TMP + '/aud1/WAVE1.json') and not os.path.exists(TMP + '/STOP_usage_limit.md')
+        n = len(calls); A.drive(up, TMP + '/aud1', cap=1500000, stop_dir=TMP, cz_upload=None)
+        assert len(calls) == n, 'resume spawned'
+        cwd = os.getcwd(); os.chdir(TOFF)
+        try:
+            calls.clear(); A.drive('phase2j/_test_tmp/aud_up.jsonl', 'phase2j/_test_tmp/aud2', cap=10 ** 9, stop_dir='phase2j/_test_tmp', cz_upload=None)
+        finally:
+            os.chdir(cwd)
+        cov2 = json.load(open(TMP + '/aud2/COVERAGE.json'))
+        assert cov2['complete'] and cov2['n_audited'] == 1000 and len(calls) == 11, (cov2['stop'], len(calls))
+        assert sum(1 for _ in open(TMP + '/aud2/AUDIT_RESULTS.jsonl')) == sum(len(r['v']) for r in rows)
+        calls.clear(); mode['usage'] = 'p005'
+        A.drive(up, TMP + '/aud3', cap=10 ** 9, stop_dir=TMP, cz_upload=None)
+        cov3 = json.load(open(TMP + '/aud3/COVERAGE.json'))
+        assert cov3['stop']['kind'] == 'usage_limit' and os.path.exists(TMP + '/STOP_usage_limit.md'), cov3['stop']
+        assert 'p005' in cov3['packets_not_audited'] and 'p008' in cov3['packets_not_audited'] and cov3['n_audited'] == 700, cov3
+        assert 'p008' not in calls
+    finally:
+        R.SPAWN[0], R.ENV[0] = old
+    print('T16 ok', len(calls))
+
+
 npass = sum(1 for r in RES if r[1] == 'PASS')
 for r in RES:
     print('%s  %s%s' % (r[1], r[0], ('\n      ' + r[2]) if r[2] else ''))
