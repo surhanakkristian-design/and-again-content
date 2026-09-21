@@ -7,4 +7,4 @@ Source: `phase2j/upload/annotations_sk_fixed.jsonl` (B3-corrected) with the 4 re
 
 **`v` is display-only and no longer grades.** Since Phase 2K the checker is SOURCE-ONLY: it judges the answer against the Slovak sentence. The stored English reference (`en`, `v`) stays in the data and is shown to the learner as the correct answer when they are wrong; it is never used to grade.
 
-Reference-ending scan (preposition or article, SK final + CZ): `../analysis/ref_endings.json` (224 hits: SK 120, CZ 104).
+Reference-ending scan (preposition or article, SK final + CZ): `../analysis/ref_endings.json` (219 hits: SK 117, CZ 102).
