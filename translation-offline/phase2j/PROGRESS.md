@@ -64,3 +64,19 @@ B2 gets at most 4.0M - 1.9M - 0.4M reserve = ~1.7M, measured on wave 1 before la
   zsh /Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2j/s2_chain.sh (tests -> freeze -> run_2j --expect-needed 43 -> partA/a3_final.py -> SHA).
 - Gemini calls: S2 0, cumulative 0 (GEMINI_LEDGER.json {"S1": 0}). Headless tokens 0.
 - SHA check S2: diff lines 122 (SHA_after_S2.txt, SHA_diff_S2.txt)
+
+## S2b — resume of S2 (21.9.2026)
+- SHA question: NO real write to any earlier phase. SHA_diff_S2's 122 lines were a generator mismatch (the chain's own find
+  included the 121 phase2i files that S1's sha_tree.sh prunes). S1 generator re-run: 3,256 files, diff empty; phase2i git-clean;
+  no __pycache__ outside phase2j; nothing restored. partA/SHA_INCIDENT_S2.md. s2_chain.sh now uses
+  `zsh phase2i/sha_tree.sh | grep -v '  phase2j/'` and literal git -C calls (e5db040 committed all uncommitted S2 files).
+- T8 compares request hashes: 44 items -> 43 unique requests (A:250:c3 decided by AG before L3), none existed with fix OFF,
+  fix-ON subset requests = fix-OFF + exactly those. test_2j 12/12 PASS.
+- s2_chain.sh under nohup: tests 12/12 -> freeze (ce8b28e, FREEZE_COMMIT 583eced) -> run_S2: 843 requests, 800 seeded 2I
+  replies, 43 counted calls, $0.0057, 0 uncounted -> a3_final.py. Results commit 496fc75.
+- A3 FINAL (closed-set re-score, labelled): coverage 443/497 = 89.13 % [86.06, 91.73], FA 19/403 = 4.71 % [2.86, 7.26],
+  both UNCHANGED. The 44 un-fire F4v2 but are all rejected again: F4v3 27 (22 correct, 5 wrong), L3 DIFF 16 (15 wrong, 1 correct),
+  AG 1 (correct). => F4v3 very likely carries the same sk_features misreading; f4fix does not patch it. NEXT: F4v3 reasons on
+  the 27, extend f4fix + tests + re-freeze; re-score reuses run_S2 replies at 0 cost (ceiling 465/497 = 93.56 %, FA risk +5).
+- Gemini calls: S2 43, cumulative 43 of 1,200 (GEMINI_LEDGER.json {"S1": 0, "S2": 43}). Headless tokens 0.
+- SHA check S2b: S1 generator, 3,256 files, diff empty (SHA_after_S2.txt; SHA_diff_S2.txt 0 lines).
