@@ -1,0 +1,794 @@
+{
+ "label": "Wave 1 Ukrainian: frozen stack (L3 SOURCE-ONLY + content check, TIP rejected, no F4/AG), fresh production set opened ONCE",
+ "truth": "judge_label (partD/judge/labels.jsonl, 4 opus judge sessions)",
+ "pooled": {
+  "coverage": {
+   "x": 469,
+   "n": 496,
+   "pct": 94.56,
+   "cp95": [
+    92.18,
+    96.38
+   ]
+  },
+  "fa": {
+   "x": 11,
+   "n": 404,
+   "pct": 2.72,
+   "cp95": [
+    1.37,
+    4.82
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": true,
+   "interval": true
+  }
+ },
+ "per_level": {
+  "A1": {
+   "coverage": {
+    "x": 115,
+    "n": 123,
+    "pct": 93.5,
+    "cp95": [
+     87.59,
+     97.15
+    ]
+   },
+   "fa": {
+    "x": 2,
+    "n": 102,
+    "pct": 1.96,
+    "cp95": [
+     0.24,
+     6.9
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "A2": {
+   "coverage": {
+    "x": 114,
+    "n": 126,
+    "pct": 90.48,
+    "cp95": [
+     83.95,
+     94.98
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 99,
+    "pct": 3.03,
+    "cp95": [
+     0.63,
+     8.6
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B1": {
+   "coverage": {
+    "x": 119,
+    "n": 123,
+    "pct": 96.75,
+    "cp95": [
+     91.88,
+     99.11
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 102,
+    "pct": 2.94,
+    "cp95": [
+     0.61,
+     8.36
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B2": {
+   "coverage": {
+    "x": 121,
+    "n": 124,
+    "pct": 97.58,
+    "cp95": [
+     93.09,
+     99.5
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 101,
+    "pct": 2.97,
+    "cp95": [
+     0.62,
+     8.44
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  }
+ },
+ "l3_only_diagnostic": {
+  "coverage": {
+   "x": 478,
+   "n": 496,
+   "pct": 96.37,
+   "cp95": [
+    94.33,
+    97.84
+   ]
+  },
+  "fa": {
+   "x": 25,
+   "n": 404,
+   "pct": 6.19,
+   "cp95": [
+    4.04,
+    9.0
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": false,
+   "interval": false
+  }
+ },
+ "layers": {
+  "L3+CC:NONE": 480,
+  "L3": 266,
+  "L3:TIPrej": 131,
+  "CC:MISSING": 23
+ },
+ "gemini": {
+  "ledger_rows": 1403,
+  "counted_http200": 1403,
+  "by_part": {
+   "l3": 900,
+   "cc": 503
+  },
+  "failed_counted": 0,
+  "http": {
+   "200": 1403
+  },
+  "spend_usd": 0.137797
+ },
+ "ledger_language": {
+  "D_CC": 503,
+  "D_L3": 900
+ },
+ "access_logs": [
+  "run/access_log.jsonl"
+ ],
+ "both_targets_met_on_point": true,
+ "false_rejections": {
+  "n": 27,
+  "by_layer": {
+   "L3:TIPrej": 9,
+   "L3": 9,
+   "CC:MISSING": 9
+  },
+  "by_writer": {
+   "correct/None": 26,
+   "wrong/M": 1
+  },
+  "by_level": {
+   "B1": 4,
+   "B2": 3,
+   "A1": 8,
+   "A2": 12
+  },
+  "items": [
+   {
+    "aid": "A:600:c5",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "«Оце так!» - крикнув коментатор. - Він крикнув, що ніколи не бачив такого стрибка.",
+    "answer": "The commentator yelled that he had never seen such a jump.",
+    "judge_reason": "Only interjection 'Wow!' dropped."
+   },
+   {
+    "aid": "A:3344:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вона хоче віддати вкоротити зелений комбінезон до вечірки.",
+    "answer": "She wants the green jumpsuit shortened by the party.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:5578:c5",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ще ніколи я не бачив, щоб корок вийшов у цій кухні так чисто.",
+    "answer": "Never have I watched a cork come out so cleanly in this kitchen.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:11681:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вона кладе на стіл одну стару батарейку.",
+    "answer": "She's putting an old battery on the table.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:12537:c3",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Маленький ґудзик лежить на дерев'яному столі.",
+    "answer": "A little button is on the wooden table.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:13416:c5",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "пише",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вона пише те рівняння на старій дошці.",
+    "answer": "That equation is written by her on the old blackboard.",
+    "judge_reason": "Passive keeps agent; same meaning."
+   },
+   {
+    "aid": "A:16686:c3",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "За столом є одна гостя й один господар.",
+    "answer": "There's a guest and a host at the table.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:18309:c5",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Лев лягає в золоту траву.",
+    "answer": "A lion is lying down in golden grass.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:21981:c5",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.",
+    "answer": "He usually doesn't pour much sauce, but today he is pouring a whole bowl.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:25189:c3",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Стіна має багато старих інструментів.",
+    "answer": "There are many old tools on the wall.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:25782:c4",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "розпаковує",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Що він розпаковує першим? Складений одяг.",
+    "answer": "What does he take out first? The folded clothing.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:27150:c4",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "не потребують",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Примітка до бюджету: двоє гостей налякані й не потребують багато світла.",
+    "answer": "Note for the budget: two guests are scared and need little light.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:27437:c5",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "руки",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Чому вони використовують свої руки? Бо руки на тілі.",
+    "answer": "Why do they use their hands? Because they are on the body.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:28019:c3",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "Чергування",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Чергування в затоці: кожен човен має бути зареєстрований.",
+    "answer": "Bay watch duty: every boat must be registered.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:28019:c5",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "кожен",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Чергування в затоці: кожен човен має бути зареєстрований.",
+    "answer": "Bay duty: all boats have to be registered.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:33589:c2",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "одну",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вона дістає з набору одну викрутку.",
+    "answer": "She takes a screwdriver from the set.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:34283:c4",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "оглядає",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Медсестра оглядає багато пацієнтів на шкільному ярмарку.",
+    "answer": "The nurse sees lots of patients at the school fair.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36130:m",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Спокійний день, звісно: вона сьогодні по обіді збирається надрукувати п'ятдесят імейлів.",
+    "answer": "A calm day, of course: she is going to type fifty emails.",
+    "judge_reason": "Only time phrase dropped"
+   },
+   {
+    "aid": "A:36274:c1",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.",
+    "answer": "The racer should wash the motorbike before the 2 pm meeting.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:36274:c2",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.",
+    "answer": "The racer ought to wash the motorcycle before the meeting at 2:00 pm.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36274:c3",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.",
+    "answer": "The rider should wash his motorbike before the meeting at 14:00.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36274:c4",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.",
+    "answer": "The racer should clean the motorcycle before the 2 o'clock meeting.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36274:c5",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.",
+    "answer": "The motorcycle should be washed by the racer before the meeting at 2 pm.",
+    "judge_reason": "Passive keeps agent"
+   },
+   {
+    "aid": "A:37763:c1",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "за столом",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Якщо вона наллє ще одну склянку так, за столом стане ще веселіше.",
+    "answer": "If she pours another glass like that, the table will get even merrier.",
+    "judge_reason": "Accurate translation."
+   },
+   {
+    "aid": "A:38142:c3",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вона вирішила вдягнути райдужний костюм із пір'я на чолі параду.",
+    "answer": "She decided she would wear a rainbow-coloured feather costume leading the parade.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:39243:c4",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Він полоскав ганчірку, коли помітив ще більше волосся на брудному дзеркалі.",
+    "answer": "While he was rinsing the rag, he noticed more hair on the dirty mirror.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:44438:c4",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Чесно, до заходу сонця ти проїдеш на тому мотоциклі вертикально цілий кілометр.",
+    "answer": "Honestly, by sunset you'll be riding that motorcycle vertically for an entire kilometre.",
+    "judge_reason": "Same meaning, future frame."
+   }
+  ]
+ },
+ "false_acceptances": {
+  "n": 11,
+  "by_layer": {
+   "L3+CC:NONE": 11
+  },
+  "by_writer_type": {
+   "W": 2,
+   "T": 2,
+   "None": 4,
+   "M": 3
+  },
+  "by_level": {
+   "A2": 3,
+   "A1": 2,
+   "B2": 3,
+   "B1": 3
+  },
+  "items": [
+   {
+    "aid": "A:13260:w",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Скільки жуйки лишилося в пачці?",
+    "answer": "How much gum is left in the bag?",
+    "judge_reason": "Bag instead of pack."
+   },
+   {
+    "aid": "A:22528:w",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Учора він витратив цілий балончик за раз.",
+    "answer": "Yesterday he used up a whole bottle in one go.",
+    "judge_reason": "Bottle instead of spray can"
+   },
+   {
+    "aid": "A:27150:t",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Примітка до бюджету: двоє гостей налякані й не потребують багато світла.",
+    "answer": "Budget note: two guests were scared and didn't need much light.",
+    "judge_reason": "Past time frame; source is present."
+   },
+   {
+    "aid": "A:27540:c2",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Спортсмен може бігти дуже швидко на своїй доріжці.",
+    "answer": "The athlete can run very fast on her track.",
+    "judge_reason": "Masculine спортсмен rendered with her"
+   },
+   {
+    "aid": "A:27540:c5",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Спортсмен може бігти дуже швидко на своїй доріжці.",
+    "answer": "The athlete can run very quickly in her lane.",
+    "judge_reason": "Спортсмен is masculine; 'her' mismatches."
+   },
+   {
+    "aid": "A:37997:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Конфлікт за столом триває попри жінку, яка дивиться з дверей.",
+    "answer": "The conflict continues despite the woman who is watching from the doorway.",
+    "judge_reason": "Drops place phrase 'at the table'."
+   },
+   {
+    "aid": "A:38954:t",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.",
+    "answer": "Honestly, she couldn't help cheering like the most die-hard fan.",
+    "judge_reason": "Past tense; source is present."
+   },
+   {
+    "aid": "A:39952:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.",
+    "answer": "Bro, she's in a headscarf right next to the oven, she must be pretty hot.",
+    "judge_reason": "Drops adjective 'hot'."
+   },
+   {
+    "aid": "A:40700:c5",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Якщо вона скоро повернеться до зрубу, сьогодні ввечері вона буде в теплі біля вогню.",
+    "answer": "If she returns to the log cabin soon, she will be cosy and warm by the fire tonight.",
+    "judge_reason": "Adds 'cosy'."
+   },
+   {
+    "aid": "A:43943:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Чесно, ти зробив смак цього смузі ідеальним завдяки тому манго.",
+    "answer": "Honestly, you made this smoothie perfect thanks to that mango.",
+    "judge_reason": "Dropped noun taste"
+   },
+   {
+    "aid": "A:44381:c3",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Вони крутили те тісто десять хвилин, поки борошно не вибухнуло. Трохи безладно.",
+    "answer": "They spun that dough for ten minutes until the flour burst everywhere. A little messy.",
+    "judge_reason": "Added content everywhere"
+   }
+  ]
+ },
+ "judge_noise": {
+  "controls": 80,
+  "agree": 79,
+  "disagree": 1,
+  "disagree_rate": {
+   "x": 1,
+   "n": 80,
+   "pct": 1.25,
+   "cp95": [
+    0.03,
+    6.77
+   ]
+  },
+  "by_level": {
+   "A1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "A2": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B2": {
+    "n": 20,
+    "disagree": 1
+   }
+  },
+  "by_intent": {
+   "correct": {
+    "n": 40,
+    "disagree": 1
+   },
+   "wrong": {
+    "n": 40,
+    "disagree": 0
+   }
+  },
+  "disagreements": [
+   {
+    "aid": "A:44381:c3",
+    "level": "B2",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "orig_session": 4,
+    "dup_session": 1,
+    "orig_label": "wrong",
+    "dup_label": "correct",
+    "agree": false,
+    "orig_reason": "Added content everywhere",
+    "dup_reason": "Same meaning.",
+    "source": "Вони крутили те тісто десять хвилин, поки борошно не вибухнуло. Трохи безладно.",
+    "answer": "They spun that dough for ten minutes until the flour burst everywhere. A little messy."
+   }
+  ]
+ }
+}
