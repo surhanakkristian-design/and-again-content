@@ -35,3 +35,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Decision after the Phase 3B deploy (22 Sept 2026, Phase 3C-prep brief)
 
 21. **Warm-up for check-translation:** add a warm-up ping so the learner does not wait for a cold start (built and tested in Phase 3C-prep, deployed separately).
+
+## Decisions for the new languages (22 Sept 2026, Wave 1 brief)
+
+22. **Genderless sources:** when the source does not mark gender (e.g. Turkish/Hungarian 3rd person, Spanish "su", French "son/sa/ses"), BOTH he/she and his/her are correct. This rule is added only to the new languages' prompts.
+23. **Explicit-subject rewrite** (arm B, as for sk/cz) for es, ua, tr, hu, on the 4,064 selected exercises only.
+24. **Gemini budget for all six new languages:** up to $3.00 in total.
+25. **Two waves:** wave 1 = de, ua, es (Wave 1 brief); wave 2 = fr, tr, hu (later).
