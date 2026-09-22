@@ -1,14 +1,50 @@
+PENDING {"A1": "session A1 waits for its subagent (/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/_test/t14/writers/sessions/A1/reply.txt)"}
 t01_prompt_derivation                         PASS 
 t02_spec_files_match                          PASS 
 t03_parsers                                   PASS 
-t04_row_number_429_is_not_a_rate_limit        PASS 
+t04_row_number_429_is_not_a_rate_limit        FAIL FileNotFoundError: [Errno 2] No such file or directory: 'ledger.jsonl'
+1/common/test_w1.py", line 128, in t04_row_number_429_is_not_a_rate_limit
+    d = reset('t04')
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/common/test_w1.py", line 41, in reset
+    shutil.rmtree(d)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 718, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 655, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 655, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 655, in _rmtree_safe_fd
+    _rmtree_safe_fd(dirfd, fullname, onerror)
+  [Previous line repeated 1 more time]
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 675, in _rmtree_safe_fd
+    onerror(os.unlink, fullname, sys.exc_info())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 673, in _rmtree_safe_fd
+    os.unlink(entry.name, dir_fd=topfd)
+FileNotFoundError: [Errno 2] No such file or directory: 'ledger.jsonl'
+
 t05_real_429_envelope_retries_uncounted       PASS 
 t06_usage_limit_envelopes_stop                PASS 
-t07_resume_at_zero_cost                       PASS 
+t07_resume_at_zero_cost                       FAIL OSError: [Errno 66] Directory not empty: 'de'
+Traceback (most recent call last):
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/common/test_w1.py", line 64, in run
+    fn()
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/common/test_w1.py", line 199, in t07_resume_at_zero_cost
+    d = reset('t07')
+  File "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/common/test_w1.py", line 41, in reset
+    shutil.rmtree(d)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 718, in rmtree
+    _rmtree_safe_fd(fd, path, onerror)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 659, in _rmtree_safe_fd
+    onerror(os.rmdir, fullname, sys.exc_info())
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 657, in _rmtree_safe_fd
+    os.rmdir(entry.name, dir_fd=topfd)
+OSError: [Errno 66] Directory not empty: 'de'
+
 t08_relative_path_refused                     PASS 
 t09_poison_no_reference_read                  PASS 
 t10_layer_order                               PASS 
 t11_caps                                      PASS 
 t12_drop_lists_and_g22_everywhere             PASS 
 t13_frozen_sources_untouched                  PASS 
-RESULT 13/13 PASS; real Gemini calls: 0 (HTTP mocked); real headless sessions: 0 (spawner mocked)
+t14_subagent_transport                        PASS 
+RESULT 12/14 PASS; real Gemini calls: 0 (HTTP mocked); real headless sessions: 0 (spawner mocked)
