@@ -1,0 +1,1 @@
+- 2026-09-22T19:18:39Z judge s4 and s4_r1 each dropped jid j68edd (244/245); pipeline given ONE extra attempt _r2 for pure jid-set misses (after de/ua finished); STOP_invalid_judges.md removed

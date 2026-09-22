@@ -252,7 +252,11 @@ def run_group(kind, jobs, base, stop_dir, est, max_turns, cap_session, spent_bas
 
     def worker(key, prompt, vfn):
         atts = []
-        for sid in (key, key + '_r1'):
+        for n, sid in enumerate((key, key + '_r1', key + '_r2')):
+            # _r2 (22 Sept 2026, added after de/ua had finished): a third attempt ONLY when both earlier replies failed
+            # on the jid set alone (es judge s4: two sessions each dropped the same one of 245 items).
+            if n == 2 and not all(str(x['why']).startswith('jid set mismatch') for x in atts):
+                break
             sd = os.path.join(base, kind, 'sessions', sid)
             d0 = R.read_json(os.path.join(sd, sid + '.json'), None)
             done = bool(d0 and d0.get('status') == 'ok')

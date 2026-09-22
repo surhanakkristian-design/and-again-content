@@ -387,6 +387,19 @@ def t14_subagent_transport():
     assert r['A1']['ok'] and all(a['resumed'] for a in r['A1']['attempts']) and W.spent(d) == 1334   # 0 cost
     r = W.run_group('writers', {'A1': ('CHANGED PROMPT', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
     assert r['A1']['ok']                                     # finished sessions are never re-asked
+    jv = lambda arr: None if arr == [1] else 'jid set mismatch (missing 1, extra 0)'
+    for sid in ('J', 'J_r1'):
+        sd_ = os.path.join(d, 'judge/sessions', sid); os.makedirs(sd_, exist_ok=True)
+        open(os.path.join(sd_, 'prompt.txt'), 'w').write('PJ'); open(os.path.join(sd_, 'reply.txt'), 'w').write('[2]')
+        json.dump({'total_tokens': 1}, open(os.path.join(sd_, 'tokens.json'), 'w'))
+    r = W.run_group('judge', {'J': ('PJ', jv)}, d, d, est=1, max_turns=2, cap_session=None, spent_base=d)
+    assert r['J']['stop'] == 'pending' and 'J_r2' in r['J']['why'], r      # 2 jid-set misses -> ONE more attempt
+    for sid in ('K', 'K_r1'):
+        sd_ = os.path.join(d, 'judge/sessions', sid); os.makedirs(sd_, exist_ok=True)
+        open(os.path.join(sd_, 'prompt.txt'), 'w').write('PK'); open(os.path.join(sd_, 'reply.txt'), 'w').write('not json')
+        json.dump({'total_tokens': 1}, open(os.path.join(sd_, 'tokens.json'), 'w'))
+    r = W.run_group('judge', {'K': ('PK', jv)}, d, d, est=1, max_turns=2, cap_session=None, spent_base=d)
+    assert not r['K']['ok'] and r['K'].get('stop') is None, r                # other failures: no third attempt
     d2 = os.path.join(d, 'cap')
     r = W.run_group('judge', {'s1': ('P', ok_v)}, d2, d2, est=500, max_turns=2, cap_session=400, spent_base=d2)
     assert r['s1']['stop'] == 'token_cap'                    # the per-session cap still holds
