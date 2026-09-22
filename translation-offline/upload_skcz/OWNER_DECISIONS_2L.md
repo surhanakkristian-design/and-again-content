@@ -20,3 +20,14 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 10. **AG is DROPPED from the app checker** (option C). App stack = F4v2 -> F4v3 -> L3 -> content check. The 14 AG-decided items are re-measured first (Part A2).
 11. **Scope option C:** for learners whose native language is `sk` or `cz`, the translate format shows ONLY the 4,064 selected exercises (the exercise_ids of upload_sk_final.xlsx / upload_cz_final.xlsx, same ids in both), all checked by the new checker. Every other native language keeps today's behaviour and today's check.
 12. **ONE additive database change approved:** a new small table listing the 4,064 selected exercise_ids (Part A3). No change to existing tables.
+
+## Decisions before the Phase 3B deploy (22 Sept 2026, Phase 3B brief)
+
+13. **Production Gemini spend for the sk/cz check approved** (projected about $0.14 per 1,000 checks).
+14. **Cache stays OFF on the sk/cz path.** No database change for it.
+15. **The exact-reference match stays for sk/cz.**
+16. **No feedback text for sk/cz:** a wrong answer shows only the correct English sentence, then advances. The MISSING word is not shown.
+17. **sk/cz learners of German, Spanish or French keep today's check** (the new checker judges English only).
+18. **The 23 concepts without a selected exercise stay as they are.** No change.
+19. **No backward compatibility for old app versions is needed** (almost no active users). Deploy as built.
+20. **Deploy approved** as in the Phase 3B brief.
