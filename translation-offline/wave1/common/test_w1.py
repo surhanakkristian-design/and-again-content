@@ -90,6 +90,13 @@ def t01_prompt_derivation():
                 ('judge', P.judge_prompt(lang), frozen_j, '- %s\n' % P.g22(lang)),
                 ('writer', P.writer_template(lang), frozen_w,
                  "\n\nThe owner's rule for genderless sources: %s" % P.g22(lang)[len('Genderless source: '):])):
+            if name == 'judge' and lang in P.JUDGE_D3233:      # decisions 32 + 33: judge prompt only, es only
+                assert txt.count('- %s\n' % P.d32(lang)) == 1 and txt.count(P.D33_NEW) == 1, (lang, 'd32/d33')
+                txt = txt.replace('- %s\n' % P.d32(lang), '').replace(P.D33_NEW, P.D33_OLD)
+            elif name == 'judge':
+                assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, (lang, 'd32/d33 leaked')
+            if name != 'judge':
+                assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, (lang, name, 'checker changed')
             assert txt.count(g22line) == 1, (lang, name, 'decision 22 line')
             assert P.DROP[lang] in txt, (lang, name, 'drop list')
             assert 'Slovak' not in txt and 'Czech' not in txt, (lang, name)
@@ -405,10 +412,68 @@ def t14_subagent_transport():
     assert r['s1']['stop'] == 'token_cap'                    # the per-session cap still holds
 
 
+def t15_es_eight_packets_and_followups():
+    """Decision 31: 8 shuffled packets (originals 112-113, all levels), 80 controls in a different packet; a judge
+    reply that drops / duplicates / invents jids gets a follow-up session over the MISSING jids only, with the same
+    prompt, merged; at most 2 follow-ups, then STOP."""
+    import pipeline_w1 as W
+    d = reset('t15')
+    W.L.update(lang='es', dir=d, D=d)
+    lv = ['A1', 'A2', 'B1', 'B2']
+    ans = []
+    for sid in range(100):
+        for suf, intent, typ in [('c%d' % i, 'correct', None) for i in range(1, 6)] + [(x.lower(), 'wrong', x) for x in 'TWMS']:
+            ans.append({'aid': 'A:%d:%s' % (sid, suf), 'sid': sid, 'level': lv[sid % 4], 'source': 'S%d' % sid, 'topic': 't',
+                        'answer': '%s %d' % (suf, sid), 'writer_intent': intent, 'writer_type': typ, 'writer_agent_drop': False})
+    W.wjl(d + '/set/answers.jsonl', ans)
+    assert W.packets(d) == 0
+    key = W.jl(d + '/judge/key.jsonl')
+    meta = json.load(open(d + '/judge/PACKETS_META.json'))
+    assert meta['packets'] == 8 and sorted(meta['sessions']) == [str(i) for i in range(1, 9)]
+    assert all(v['originals'] in (112, 113) and len(v['levels']) == 4 for v in meta['sessions'].values())
+    cl = [k for k in key if k['is_control']]
+    assert len(cl) == 80 and all(k['session'] != k['orig_session'] for k in cl) and meta['controls_by_intent'] == {'correct': 40, 'wrong': 40}
+    assert len({k['aid'] for k in key if not k['is_control']}) == 900
+    # judge_rows: missing / duplicate / invented / bad rows -> missing, deterministic packet order
+    rows, miss, notes = W.judge_rows([{'jid': 'a', 'label': 'correct', 'reason': ''}, {'jid': 'b', 'label': 'x', 'reason': ''},
+                                      {'jid': 'c', 'label': 'wrong', 'reason': ''}, {'jid': 'c', 'label': 'wrong', 'reason': ''},
+                                      {'jid': 'zz', 'label': 'wrong', 'reason': ''}], ['a', 'b', 'c', 'd'])
+    assert set(rows) == {'a'} and miss == ['b', 'c', 'd'] and notes['extra'] == ['zz'] and notes['duplicate'] == ['c']
+    assert W.judge_rows(None, ['a', 'b'])[1] == ['a', 'b']
+    # judges8 with a fake subagent: s1 drops 2 jids, its f1 drops 1 again, f2 returns it; s2 always drops 1 -> STOP
+    asked = {}
+
+    def fake(pr):
+        its = [json.loads(l) for l in pr.split('Items:\n', 1)[1].splitlines() if l.strip()]
+        assert pr.split('Items:\n', 1)[0] + 'Items:\n' == P.judge_prompt('es') + ('' if P.judge_prompt('es').endswith('\n') else '\n') or pr.startswith(P.judge_prompt('es'))
+        asked.setdefault(its[0]['jid'], []).append(len(its))
+        arr = [{'jid': it['jid'], 'label': 'correct', 'reason': 'r'} for it in its]
+        pk = [p for p in range(1, 9) if its[0]['jid'] in {x['jid'] for x in W.jl(d + '/judge/packet_s%d.jsonl' % p)}]
+        if pk == [1] and len(its) > 5: arr = arr[2:]
+        elif pk == [1] and len(its) == 2: arr = arr[1:]
+        elif pk == [2]: arr = arr[1:]
+        return json.dumps(arr), 1000
+    W.SUB_FAKE[0] = fake
+    try:
+        rc = W.judges(d, d, mock=True)
+    finally:
+        W.SUB_FAKE[0] = None
+    summ = json.load(open(d + '/judge/JUDGES_SUMMARY.json'))
+    s1 = summ['sessions']['s1']
+    assert s1['ok'] and [a['sid'] for a in s1['attempts']] == ['s1', 's1_f1', 's1_f2'] and [a['asked'] for a in s1['attempts']][1:] == [2, 1]
+    s2 = summ['sessions']['s2']
+    assert not s2['ok'] and [a['sid'] for a in s2['attempts']] == ['s2', 's2_f1', 's2_f2'] and 'after 2 follow-ups' in s2['why']
+    assert all(summ['sessions']['s%d' % i]['ok'] and len(summ['sessions']['s%d' % i]['attempts']) == 1 for i in range(3, 9))
+    assert rc == 3 and os.path.exists(d + '/STOP_invalid_judges.md')
+    f1 = open(d + '/judge/sessions/s1_f1/prompt.txt', encoding='utf-8').read()
+    assert f1.startswith(P.judge_prompt('es')) and len([l for l in f1.split('Items:\n', 1)[1].splitlines() if l.strip()]) == 2
+
+
 TESTS = [t01_prompt_derivation, t02_spec_files_match, t03_parsers, t04_row_number_429_is_not_a_rate_limit,
          t05_real_429_envelope_retries_uncounted, t06_usage_limit_envelopes_stop, t07_resume_at_zero_cost,
          t08_relative_path_refused, t09_poison_no_reference_read, t10_layer_order, t11_caps,
-         t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched, t14_subagent_transport]
+         t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched, t14_subagent_transport,
+         t15_es_eight_packets_and_followups]
 
 if __name__ == '__main__':
     real = [0]

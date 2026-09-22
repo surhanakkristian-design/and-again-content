@@ -48,6 +48,14 @@ BUDGET_LANG = 1300000                      # Claude tokens per language (brief: 
 AGENT_EST = 250000                         # the language agent's own context (estimate, reserved)
 HEADLESS_CAP = BUDGET_LANG - AGENT_EST     # every headless session of this language together
 JUDGE_CAP = 400000
+# Wave 1 es brief (22 Sept 2026, decision 31): es is judged in 8 shuffled packets (not 4) with deterministic follow-up
+# sessions for MISSING jids only (cap 2 per packet).  de / ua keep the 4-packet path they were measured with.
+NPACK = {'de': 4, 'ua': 4, 'es': 8}
+FOLLOWUPS = 2
+SHIFT8 = {'A1': 1, 'A2': 3, 'B1': 5, 'B2': 7}
+# es resume: the brief's Claude budget (1,500,000) is for THIS run; es had spent 506,036 before it (writers + the 7
+# discarded 4-packet judge sessions).  Reservation cap for es subagents = that + 1,500,000 - the main session (est.).
+CAP_LANG = {'es': 506036 + 1500000 - 300000}
 REFK = S.REF_KEYS
 FORBID = set(REFK) | {'judge_label', 'judge_reason', 'judge_session', 'writer_intent', 'writer_type', 'writer_agent_drop',
                       'label', 'old_src', 'original'}
@@ -261,7 +269,7 @@ def run_group(kind, jobs, base, stop_dir, est, max_turns, cap_session, spent_bas
             d0 = R.read_json(os.path.join(sd, sid + '.json'), None)
             done = bool(d0 and d0.get('status') == 'ok')
             with lock:
-                if not done and spent(spent_base) + sum(inflight.values()) + est > HEADLESS_CAP:
+                if not done and spent(spent_base) + sum(inflight.values()) + est > CAP_LANG.get(L.get('lang'), HEADLESS_CAP):
                     results[key] = {'ok': False, 'stop': 'token_cap', 'why': 'language headless reservation cap %d' % HEADLESS_CAP, 'attempts': atts}
                     return
                 inflight[sid] = 0 if done else est
@@ -790,6 +798,8 @@ def writers(base, stop_root, mock=False):
 
 
 def packets(base):
+    if NPACK[L['lang']] == 8:
+        return packets8(base)
     ans = jl(base + '/set/answers.jsonl')
     rng = random.Random(JSEED)
     order = ans[:]; rng.shuffle(order)
@@ -834,7 +844,161 @@ def packets(base):
     return 0
 
 
+def packets8(base):
+    """Decision 31 (es): 8 shuffled packets.  Originals i % 8 of one seeded shuffle (112-113 each, all levels mixed);
+    80 hidden duplicates: per (packet, level) 3 or 2 controls (alternating, 16 x 3 + 16 x 2 = 80; 40 writer-correct,
+    40 writer-wrong), each placed in packet (s + SHIFT8[level]) % 8 != s."""
+    NP = 8
+    ans = jl(base + '/set/answers.jsonl')
+    rng = random.Random(JSEED)
+    order = ans[:]; rng.shuffle(order)
+    sess_of = {a['aid']: i % NP for i, a in enumerate(order)}
+    entries = [(a, sess_of[a['aid']], False) for a in order]
+    controls = []
+    for s in range(NP):
+        for li, lv in enumerate(LEVELS):
+            k = 3 if (s + li) % 2 == 0 else 2
+            nc = (2 if s % 2 == 0 else 1) if k == 3 else 1
+            pc = sorted([a for a in ans if sess_of[a['aid']] == s and a['level'] == lv and a['writer_intent'] == 'correct'], key=lambda a: a['aid'])
+            pw = sorted([a for a in ans if sess_of[a['aid']] == s and a['level'] == lv and a['writer_intent'] == 'wrong'], key=lambda a: a['aid'])
+            for a_ in rng.sample(pc, nc) + rng.sample(pw, k - nc):
+                t = (s + SHIFT8[lv]) % NP
+                assert t != s
+                controls.append((a_, t, True))
+    assert len(controls) == 80
+    entries += controls
+    jids, key, pk = set(), [], {s: [] for s in range(NP)}
+    for a_, s, dup in entries:
+        while True:
+            j = 'j%05x' % rng.randrange(16 ** 5)
+            if j not in jids:
+                jids.add(j); break
+        key.append({'jid': j, 'aid': a_['aid'], 'session': s + 1, 'is_control': dup, 'orig_session': sess_of[a_['aid']] + 1})
+        pk[s].append({'jid': j, 'source': a_['source'], 'level': a_['level'], 'answer': a_['answer'], 'topic': a_['topic']})
+    meta = {'seed': JSEED, 'packets': NP, 'controls': 80, 'sessions': {}}
+    for s in range(NP):
+        rng.shuffle(pk[s])
+        aids = [k['aid'] for k in key if k['session'] == s + 1]
+        assert len(aids) == len(set(aids)) and {p['level'] for p in pk[s]} == set(LEVELS)
+        h = wjl(base + '/judge/packet_s%d.jsonl' % (s + 1), pk[s])
+        meta['sessions'][s + 1] = {'items': len(pk[s]), 'originals': sum(1 for k in key if k['session'] == s + 1 and not k['is_control']),
+                                   'controls': sum(1 for k in key if k['session'] == s + 1 and k['is_control']),
+                                   'levels': dict(Counter(x['level'] for x in pk[s])), 'sha256': h}
+    wjl(base + '/judge/key.jsonl', key)
+    byaid = {x['aid']: x for x in ans}
+    cl = [k for k in key if k['is_control']]
+    assert all(k['session'] != k['orig_session'] for k in cl)
+    meta['controls_by_level'] = dict(Counter(byaid[k['aid']]['level'] for k in cl))
+    meta['controls_by_intent'] = dict(Counter(byaid[k['aid']]['writer_intent'] for k in cl))
+    meta['controls_session_pairs'] = dict(Counter('%d->%d' % (k['orig_session'], k['session']) for k in cl))
+    wj(base + '/judge/PACKETS_META.json', meta)
+    print(json.dumps(meta)[:400])
+    return 0
+
+
+def judge_rows(arr, want):
+    """Deterministic merge rule for one judge reply against the jids it was asked (decision 31).  A row counts only if
+    its jid was asked, its label is correct|wrong and its reason a string; a jid returned twice in one reply counts as
+    MISSING (never guessed); unknown jids are ignored (recorded).  -> (valid {jid: row}, missing [jid in packet order],
+    notes)"""
+    rows, seen, dup, extra, bad = {}, Counter(), set(), [], []
+    if not isinstance(arr, list):
+        return {}, list(want), {'unparsable': True}
+    for o in arr:
+        j = o.get('jid') if isinstance(o, dict) else None
+        seen[j] += 1
+    for o in arr:
+        j = o.get('jid') if isinstance(o, dict) else None
+        if j not in want:
+            extra.append(j); continue
+        if seen[j] > 1:
+            dup.add(j); continue
+        if o.get('label') not in ('correct', 'wrong') or not isinstance(o.get('reason'), str):
+            bad.append(j); continue
+        rows[j] = {'jid': j, 'label': o['label'], 'reason': o['reason']}
+    missing = [j for j in want if j not in rows]
+    return rows, missing, {'extra': extra, 'duplicate': sorted(dup), 'bad_row': bad}
+
+
+def judges8(base, stop_root, mock=False):
+    """Decision 31 (es): 8 packets, ONE prompt.  Per packet: session sN (the whole packet); if any jid is missing from
+    the valid rows, follow-up sN_f1 with the SAME prompt over the MISSING jids only (packet order), merged; at most
+    FOLLOWUPS follow-ups.  No whole-packet retries.  Every session is an Opus subagent (decision 26)."""
+    prompt = P.judge_prompt(L['lang'])
+    os.makedirs(base + '/judge', exist_ok=True)
+    open(base + '/judge/judge_prompt.txt', 'w', encoding='utf-8').write(prompt)
+    NP = NPACK[L['lang']]
+    lock, inflight, res = threading.Lock(), {}, {}
+    spent_base = base if mock else L['dir']
+    cap_lang = CAP_LANG.get(L['lang'], HEADLESS_CAP)
+
+    def mk(its):
+        return prompt + '\n'.join(json.dumps(it, ensure_ascii=False) for it in its) + '\n'
+
+    def worker(s):
+        key = 's%d' % s
+        its = jl(base + '/judge/packet_s%d.jsonl' % s)
+        for it in its:
+            assert set(it) == {'jid', 'source', 'level', 'answer', 'topic'}
+        byj = {it['jid']: it for it in its}
+        open(base + '/judge/prompt_%s.txt' % key, 'w', encoding='utf-8').write(mk(its))
+        merged, atts, ask = {}, [], [it['jid'] for it in its]
+        for n in range(FOLLOWUPS + 1):
+            sid = key if n == 0 else '%s_f%d' % (key, n)
+            pr = mk([byj[j] for j in ask])
+            est = 60000 if n == 0 else 15000 + 400 * len(ask)
+            sd = os.path.join(base, 'judge', 'sessions', sid)
+            d0 = R.read_json(os.path.join(sd, sid + '.json'), None)
+            done = bool(d0 and d0.get('status') == 'ok')
+            with lock:
+                if not done and spent(spent_base) + sum(inflight.values()) + est > cap_lang:
+                    res[key] = {'ok': False, 'stop': 'token_cap', 'why': 'language reservation cap %d' % cap_lang, 'attempts': atts}
+                    return
+                inflight[sid] = 0 if done else est
+            try:
+                d = sub_session(sid, pr, sd, token_cap=JUDGE_CAP, est=est)
+            except R.Stop as e:
+                res[key] = {'ok': False, 'stop': e.kind, 'why': e.why, 'attempts': atts}
+                return
+            finally:
+                with lock: inflight.pop(sid, None)
+            tok = int(d.get('tokens') or 0)
+            try:
+                arr = extract_array(d.get('result'))
+            except Exception:
+                arr = None
+            rows, missing, notes = judge_rows(arr, ask)
+            atts.append({'sid': sid, 'asked': len(ask), 'valid': len(rows), 'missing': missing, 'notes': notes, 'tokens': tok,
+                         'resumed': bool(d.get('resumed'))})
+            if tok > JUDGE_CAP:
+                res[key] = {'ok': False, 'stop': 'judge_cap', 'why': 'session %s used %d > cap %d' % (sid, tok, JUDGE_CAP), 'attempts': atts}
+                return
+            for j, r in rows.items():
+                merged[j] = dict(r, judge_session=sid)
+            if not missing:
+                res[key] = {'ok': True, 'arr': [merged[it['jid']] for it in its], 'attempts': atts}
+                return
+            ask = missing
+        res[key] = {'ok': False, 'why': 'jid set mismatch after %d follow-ups: missing %s' % (FOLLOWUPS, ask), 'attempts': atts}
+
+    th = [threading.Thread(target=worker, args=(s,)) for s in range(1, NP + 1)]
+    for t in th: t.start()
+    for t in th: t.join()
+    summ = {'prompt_sha': hashlib.sha256(prompt.encode()).hexdigest(), 'model': 'opus', 'packets': NP, 'followups_cap': FOLLOWUPS,
+            'cap_per_session': JUDGE_CAP,
+            'sessions': {k: {x: r.get(x) for x in ('ok', 'stop', 'why', 'attempts')} for k, r in sorted(res.items())}}
+    wj(base + '/judge/JUDGES_SUMMARY.json', summ)
+    rc = handle_fail(res, stop_root, 'judges')
+    if rc: return rc
+    for k, r in res.items():
+        json.dump(r['arr'], open(base + '/judge/verdicts_%s.json' % k, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+    print(json.dumps({k: [(x['sid'], x['asked'], x['valid'], x['tokens']) for x in r['attempts']] for k, r in sorted(res.items())}))
+    return 0
+
+
 def judges(base, stop_root, mock=False):
+    if NPACK[L['lang']] == 8:
+        return judges8(base, stop_root, mock)
     prompt = P.judge_prompt(L['lang'])
     os.makedirs(base + '/judge', exist_ok=True)
     open(base + '/judge/judge_prompt.txt', 'w', encoding='utf-8').write(prompt)
@@ -874,7 +1038,7 @@ def labels(base):
     key = jl(base + '/judge/key.jsonl')
     ans = {a['aid']: a for a in jl(base + '/set/answers.jsonl')}
     verd = {}
-    for s in range(1, 5):
+    for s in range(1, NPACK[L['lang']] + 1):
         for o in json.load(open(base + '/judge/verdicts_s%d.json' % s, encoding='utf-8')):
             verd[o['jid']] = o
     assert all(k['jid'] in verd for k in key)

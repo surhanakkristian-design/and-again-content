@@ -119,6 +119,21 @@ def cc_request(lang, src, answer):
     return {'sys': cc_sys(lang), 'user': cc_user(lang, src, answer), 'gcfg': json.loads(json.dumps(GCFG_CC))}
 
 
+# Owner decisions 32 + 33 (22 Sept 2026, Wave 1 es brief; added AFTER de/ua were frozen, so only for the languages in
+# JUDGE_D3233): the JUDGE prompt only.  The checker prompts (L3, content check) stay byte-identical.
+JUDGE_D3233 = {'es'}
+D32_EX = {'de': '"der Sportler"', 'ua': '"спортсмен"', 'es': '"el atleta"'}
+D32 = ('Grammatical gender decides: a grammatically masculine {L} noun (e.g. {EX}) is "he"; "she" is wrong. The '
+       'genderless rule above covers only sentences that mark no gender at all.')
+D33_OLD = '- Added content is wrong.\n'
+D33_NEW = ('- Added content is wrong. Exception: an ADDED interjection (e.g. "Wow", "Bro") is NOT an error, just as a '
+           'dropped interjection is not an error. Added content of any other kind stays wrong.\n')
+
+
+def d32(lang):
+    return D32.replace('{L}', LANG[lang]).replace('{EX}', D32_EX[lang])
+
+
 def judge_prompt(lang):
     _check_lang(lang)
     t = _read('judge')
@@ -126,6 +141,9 @@ def judge_prompt(lang):
     t = _once(t, '- Added content is wrong.\n', '- Added content is wrong.\n- %s\n' % g22(lang), 'judge g22')
     assert 'Slovak' not in t
     t = t.replace('Czech', LANG[lang])
+    if lang in JUDGE_D3233:
+        t = _once(t, '- %s\n' % g22(lang), '- %s\n- %s\n' % (g22(lang), d32(lang)), 'judge d32')
+        t = _once(t, D33_OLD, D33_NEW, 'judge d33')
     assert t.rstrip().endswith('Items:')
     return t
 

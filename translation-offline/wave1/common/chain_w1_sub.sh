@@ -28,11 +28,11 @@ if [ ! -f $D/.pre_done ]; then
   commit "Part D (subagent transport): preflight, live rows (SELECT), projection, fresh set + exclusion proof, mock pass"
 fi
 step writers; run writers; tok writers
-[ -f $E/judge/key.jsonl ] || { step packets; run packets; commit "Part D blind writers (4 subagents), judge packets"; }
+[ -f $E/judge/key.jsonl ] || { step packets; run packets; commit "Part D blind writers (4 subagents), judge packets (es: 8, decision 31)"; }
 step judges; run judges; tok judges
 step labels; run labels
 step build_items; run build_items
-commit "Part D judges (4 subagent sessions), labels, duplicate controls, stack items (no labels / refs)"
+commit "Part D judges (subagent sessions), labels, duplicate controls, stack items (no labels / refs)"
 if [ ! -f $E/RUN_COMMIT.txt ]; then
 step freeze
 ( cd $W1 && { ls common/*.py common/*.sh spec/*.txt; echo $LANG_/partA_live/rows.jsonl; echo $LANG_/partD/set/items.jsonl; echo $LANG_/partD/set/truth.jsonl; } \
