@@ -90,16 +90,16 @@ def run(part, batch_name, changes, cols, dry=False):
                 f.write("begin;\n" + rollback_sql(changes[i:i+500], cols) + "\ncommit;\n")
     written = []
     if not dry:
-        B = 250                       # <= 500 per the brief; 250 keeps the API request small
+        B = 100                       # <= 500 per the brief; 100 keeps the API request small (transport errors at 250)
         for i in range(0, len(todo), B):
             sql = update_sql(todo[i:i+B], cols)
-            for attempt in range(4):      # a transport error is retried; the guard makes a retry idempotent
+            for attempt in range(8):      # a transport error is retried; the guard makes a retry idempotent
                 try:
                     res = db.rows(sql); break
                 except RuntimeError as e:
-                    if attempt == 3:
+                    if attempt == 7:
                         raise
-                    import time; time.sleep(5 * (attempt + 1))
+                    import time; time.sleep(10 * (attempt + 1))
             written += [x["id"] for x in res]
     after = fetch([c["id"] for c in changes]) if not dry else cur
     verify_bad = []
