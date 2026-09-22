@@ -1,0 +1,1 @@
+- 2026-09-22T18:27:06Z first freeze b783108 made, then the chain's check 'freeze commit missing file' failed on its own bug (git ls-tree path taken relative to wave1/, fixed with --full-tree); set NOT opened; re-frozen

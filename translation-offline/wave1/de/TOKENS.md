@@ -35,3 +35,15 @@ Headless used so far (this language): 0. Agent reserve: 250,000. Projected langu
 - judge s4#sub: 53,778 tokens (ok, 90.7s)
 - 2026-09-22T18:26:21Z cumulative headless (this language) after judge: 352,118
 - 2026-09-22T18:26:21Z cumulative subagent tokens after judges: 352,118
+- writers A1#sub: 31,793 tokens (ok, 109.2s)
+- writers A2#sub: 31,813 tokens (ok, 103.6s)
+- writers B1#sub: 35,285 tokens (ok, 124.6s)
+- writers B2#sub: 36,448 tokens (ok, 135.2s)
+- 2026-09-22T18:27:06Z cumulative headless (this language) after writers: 352,118
+- 2026-09-22T18:27:06Z cumulative subagent tokens after writers: 352,118
+- judge s1#sub: 54,048 tokens (ok, 94.8s)
+- judge s2#sub: 55,058 tokens (ok, 101.8s)
+- judge s3#sub: 53,895 tokens (ok, 95.4s)
+- judge s4#sub: 53,778 tokens (ok, 90.7s)
+- 2026-09-22T18:27:07Z cumulative headless (this language) after judge: 352,118
+- 2026-09-22T18:27:07Z cumulative subagent tokens after judges: 352,118
