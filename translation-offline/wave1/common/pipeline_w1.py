@@ -575,25 +575,23 @@ def cmd_projection(a):
 
 
 def used_exercise_ids():
-    EID, files = set(), []
+    """exercise_ids of the earlier MEASUREMENT sets: every JSON/JSONL file inside a directory named `set` under
+    phase1*/phase2* (_mock excluded).  A file with > 1,000 distinct ids would be a production corpus, not a set: skipped."""
+    EID, files, skipped = set(), [], []
     for top in sorted(glob.glob(TOFF + '/phase1*') + glob.glob(TOFF + '/phase2*')):
         for dp, dn, fn in os.walk(top):
-            if '/_mock' in dp or '/.git' in dp:
-                continue
-            if '/set' not in dp + '/' and not any('set' in f for f in fn):
+            if '/_mock' in dp or '/.git' in dp or os.path.basename(dp) != 'set':
                 continue
             for f in fn:
                 if not f.endswith(('.json', '.jsonl')):
                     continue
-                if '/set' not in dp + '/' and 'set' not in f:
-                    continue
                 p = os.path.join(dp, f)
-                if os.path.getsize(p) > 60e6:
-                    continue
-                files.append(os.path.relpath(p, TOFF))
                 raw = open(p, encoding='utf-8', errors='replace').read()
-                for m in re.finditer(r'"exercise_id"\s*:\s*"?(\d+)', raw):
-                    EID.add(int(m.group(1)))
+                ids = {int(m.group(1)) for m in re.finditer(r'"exercise_id"\s*:\s*"?(\d+)', raw)}
+                if len(ids) > 1000:
+                    skipped.append(os.path.relpath(p, TOFF)); continue
+                files.append(os.path.relpath(p, TOFF))
+                EID |= ids
     return EID, files
 
 
@@ -633,8 +631,8 @@ def cmd_make_set(a):
     assert len(out) == 100 and len({o['sid'] for o in out}) == 100
     h = wjl(L['D'] + '/set/sentences.jsonl', out)
     wj(L['D'] + '/set/EXCLUSION_PROOF.json', {
-        'method': 'exercise_id of every JSON/JSONL file in a set directory (or with "set" in its name) under phase1*/phase2* '
-                  '(_mock excluded) is "used before" and skipped (preferred; relaxed per level only if < 25 remain). The 4,064 '
+        'method': 'exercise_id of every JSON/JSONL file in a directory named set under phase1*/phase2* '
+                  '(_mock excluded; a file with > 1,000 ids is a corpus and skipped) is "used before" and skipped (preferred; relaxed per level only if < 25 remain). The 4,064 '
                   'ids of each level are shuffled with one seed shared by the three wave-1 languages; de takes positions 0 mod 3, '
                   'ua 1 mod 3, es 2 mod 3, so the three wave-1 sets are disjoint by construction.',
         'files_scanned': len(files), 'used_before_ids': len(used), 'per_level': stats,

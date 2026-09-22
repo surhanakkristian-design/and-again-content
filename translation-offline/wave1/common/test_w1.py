@@ -305,29 +305,38 @@ def t10_layer_order():
 
 
 def t11_caps():
-    d = reset('t11')
-    os.makedirs(os.path.join(d, 'ua'), exist_ok=True)
-    S.write_json(S.lang_ledger('ua', d), {'X': 1649})
-    out = full(d, items('ua', 2), 'ua')
+    def setup(name, led):
+        d = reset(name)
+        for lg, v in led.items():
+            os.makedirs(os.path.join(d, lg), exist_ok=True)
+            S.write_json(S.lang_ledger(lg, d), v)
+        return d
+    # language cap: needed > cap -> STOP before any call
+    out = full(setup('t11', {'ua': {'X': S.LANG_CAP - 1}}), items('ua', 2), 'ua')
     assert out['status'] == 'STOPPED' and out['l3']['stop']['kind'] == 'cap' and CALLS[0] == 0, out
-    d2 = reset('t11b')
-    for lg, n in (('de', 1600), ('es', 1650)):
-        os.makedirs(os.path.join(d2, lg), exist_ok=True)
-        S.write_json(S.lang_ledger(lg, d2), {'X': n})
-    os.makedirs(os.path.join(d2, 'ua'), exist_ok=True)
-    S.write_json(S.lang_ledger('ua', d2), {'Y': 1649})
-    out = full(d2, items('ua', 1), 'ua')
+    # wave cap: other languages 3,400 + ua 1,599 -> exactly one call left in the wave
+    out = full(setup('t11b', {'de': {'X': 1700}, 'es': {'X': 1700}, 'ua': {'Y': 1599}}), items('ua', 1), 'ua')
     assert out['status'] == 'STOPPED' and out['l3']['calls_made'] == 1 and out['cc']['stop']['kind'] == 'cap', out
-    assert CALLS[0] == 1
-    d3 = reset('t11c')
-    for lg, n in (('de', 1650), ('es', 1650)):
-        os.makedirs(os.path.join(d3, lg), exist_ok=True)
-        S.write_json(S.lang_ledger(lg, d3), {'X': n})
-    os.makedirs(os.path.join(d3, 'ua'), exist_ok=True)
-    S.write_json(S.lang_ledger('ua', d3), {'Y': 1650})
-    out = full(d3, items('ua', 1), 'ua')
+    assert CALLS[0] == 1 and S.wave_counted(os.path.join(T, 't11b')) == 5000
+    # wave full -> 0 calls
+    out = full(setup('t11c', {'de': {'X': 1700}, 'es': {'X': 1700}, 'ua': {'Y': 1600}}), items('ua', 1), 'ua')
     assert out['status'] == 'STOPPED' and CALLS[0] == 0
-    assert S.LANG_CAP * 3 <= S.WAVE_CAP and abs(S.LANG_SPEND * 3 - S.WAVE_SPEND) < 1e-9
+    # the per-call wave re-read: another language spends the last calls while this one runs
+    d = setup('t11d', {'de': {'X': 1700}, 'es': {'X': 1697}, 'ua': {'Y': 1600}})
+    orig = B.HTTP[0]
+
+    def http(url, body, key):         # es calls concurrently, honouring the same lock + cap
+        with S.wave_lock(d):
+            if S.wave_counted(d) < S.WAVE_CAP:
+                S.write_json(S.lang_ledger('es', d), {'X': S.read_json(S.lang_ledger('es', d), {})['X'] + 1})
+        return orig(url, body, key)
+    B.HTTP[0] = http
+    try:
+        out = full(d, items('ua', 3), 'ua')
+    finally:
+        B.HTTP[0] = orig
+    assert out['status'] == 'STOPPED' and out['l3']['stop']['kind'] == 'wave_cap' and S.wave_counted(d) == 5000, (out, S.wave_counted(d))
+    assert abs(S.LANG_SPEND * 3 - S.WAVE_SPEND) < 1e-9 and S.WAVE_CAP == 5000
 
 
 def t12_drop_lists_and_g22_everywhere():

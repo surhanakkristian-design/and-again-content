@@ -8,12 +8,13 @@
 Transport = byte copy of phase2l/run_2i_base.py (call_one: counted = HTTP 200 only; rate limit ONLY from the HTTP
 status / error envelope; daily/usage quota envelope -> STOP; empty or unparsable 200 = counted FAILED call, never
 retried, never guessed); the content-check parser = byte copy of phase2l/content_check.py (parse / decide / transport).
-Caps (brief: Gemini HARD CAP 5,000 calls and $1.50 for the wave, counted = HTTP 200 only): per language 1,650 calls and
-$0.50 (3 x 1,650 = 4,950 <= 5,000, 3 x $0.50 = $1.50), checked before any call (counted + needed > cap -> STOP, 0 calls)
-and before every call, and the wave total over wave1/{de,ua,es}/GEMINI_LEDGER.json is re-read before every call.
+Caps (brief: Gemini HARD CAP 5,000 calls and $1.50 for the wave, counted = HTTP 200 only): per language 1,800 calls and
+$0.50 (3 x $0.50 = $1.50); the stage cap = min(language cap - the language's other stages, 5,000 - every other counted
+call of the wave), checked before any call (counted + needed > cap -> STOP, 0 calls) and before every call, and the wave
+total over wave1/{de,ua,es}/GEMINI_LEDGER.json is re-read before every call (a call that would be the 5,001st -> STOP).
 Items reach the stack wrapped in PoisonDict: reading a reference key (en, v, alt, lk, lk_*, reference, english, ...)
 raises PoisonHit.  Every path must be ABSOLUTE and lie under wave1/; anything else is REFUSED before anything opens."""
-import json, os, sys
+import contextlib, json, os, sys
 sys.dont_write_bytecode = True
 HERE = os.path.dirname(os.path.abspath(__file__))
 W1 = os.path.dirname(HERE)
@@ -23,7 +24,7 @@ import run_2i_base as B      # noqa: E402  byte copy of phase2l/run_2i_base.py
 import content_check as CC   # noqa: E402  byte copy of phase2l/content_check.py (parse / decide / transport only)
 import prompts_w1 as P       # noqa: E402
 LANGS = tuple(sorted(P.LANG))
-LANG_CAP, LANG_SPEND = 1650, 0.50
+LANG_CAP, LANG_SPEND = 1800, 0.50
 WAVE_CAP, WAVE_SPEND = 5000, 1.50
 Stop = B.Stop
 REF_KEYS = ('en', 'v', 'alt', 'lk', 'reference', 'references', 'refs', 'english', 'en_full_sentence',
@@ -91,6 +92,17 @@ def lang_ledger(lang, root=W1):
 
 def wave_counted(root=W1):
     return sum(int(v) for lg in LANGS for v in read_json(lang_ledger(lg, root), {}).values())
+
+
+@contextlib.contextmanager
+def wave_lock(root=W1):
+    import fcntl
+    with open(os.path.join(root, '.wave.lock'), 'w') as fh:
+        fcntl.flock(fh, fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            fcntl.flock(fh, fcntl.LOCK_UN)
 
 
 def spend_of(d):
@@ -169,13 +181,18 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
         elif need:
             try:
                 ctx['key'] = key or B.load_key()
-                import contextlib
                 with (CC.transport(B) if kind == 'cc' else contextlib.nullcontext()):
                     for k in need:
-                        if wave_counted(root) - sum(int(v) for v in phase.values()) + others + ctx['counted'] >= WAVE_CAP:
-                            raise Stop('wave_cap', 'wave total reached %d' % WAVE_CAP)
-                        got[k] = B.call_one(ctx, k, rq[k], users[k])
-                        sync()
+                        with wave_lock(root):       # check + reserve ONE call under the wave lock (strict 5,000)
+                            if wave_counted(root) - sum(int(v) for v in phase.values()) + others + ctx['counted'] + 1 > WAVE_CAP:
+                                raise Stop('wave_cap', 'wave total would exceed %d' % WAVE_CAP)
+                            phase[stage] = ctx['counted'] + 1
+                            write_json(ledger_path, phase)
+                        try:
+                            got[k] = B.call_one(ctx, k, rq[k], users[k])
+                        finally:
+                            with wave_lock(root):
+                                sync()
             except Stop as e:
                 stop = e
         sync()
