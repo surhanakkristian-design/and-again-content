@@ -1,0 +1,48 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Czech sentences from a language-learning app, one per line as JSON: a writer id (wid), the Czech sentence, its CEFR level and the exercise topic. Imagine real learners translating each Czech sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Czech. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Czech's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Czech (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Czech is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Czech names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+Sentences:
+{"wid": "wA101", "czech": "Proč je bochník zlatavý? Protože má zlatavou barvu.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA102", "czech": "Tahle nevěsta pod obloukem se usmívá.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA103", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA104", "czech": "On ohýbá kolena a klesá do dřepu.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA105", "czech": "Kde je Francie? Ve Francii, protože tam je Francie.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA106", "czech": "Praští ho svým velkým bílým polštářem.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA107", "czech": "Podívá se na své hodinky a zpanikaří.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA108", "czech": "Ona dělá každou neděli k obědu těstoviny, to se musí milovat, kámo.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA109", "czech": "Proč neodpovídá? Tahle kavárna je noční můra!", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA110", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA111", "czech": "Kde kreslí ten návrh? Na svém tabletu.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA112", "czech": "Proudové letadlo má dva velké motory.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA113", "czech": "Dno moře je písčité a světlé.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA114", "czech": "Co mu zamlží brýle? Horká pára.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA115", "czech": "Napíše pět slov na první řádek.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA116", "czech": "Upřímně, ty umíš postavit polici. Moje pochybnost je pryč.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA117", "czech": "Lavička je na sezení, tak on hraje na kytaru na ní.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA118", "czech": "Chaos! Deset kachen v jedné řadě a číslo deset je poslední!", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA119", "czech": "Kdy ten dospělý podepisuje 20 formulářů? Před termínem.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA120", "czech": "Velká kartonová krabice je skoro plná.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA121", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA122", "czech": "Držíš tuhle starověkou minci v ruce. Klobouk dolů.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA123", "czech": "Terče stojí před kopci.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA124", "czech": "Mladý muž má prázdný pas.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA125", "czech": "Zvedá sklenici na dalších deset let.", "level": "A1", "topic": "Cardinal numbers"}

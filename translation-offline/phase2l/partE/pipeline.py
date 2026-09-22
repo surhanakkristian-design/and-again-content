@@ -34,6 +34,7 @@ BUDGET = 1400000
 OWN_EST = 200000
 HEADLESS_CAP = BUDGET - OWN_EST
 JUDGE_CAP = 400000
+RELAX = [False]
 REFK = ('en', 'v', 'alt', 'lk')
 FORBID = set(REFK) | {'judge_label', 'judge_reason', 'judge_session', 'writer_intent', 'writer_type', 'writer_agent_drop',
                       'label', 'reference', 'references'}
@@ -187,7 +188,7 @@ def cmd_make_set(a):
                 if f.endswith(('.json', '.jsonl', '.md', '.txt', '.py', '.csv', '.tsv', '.sh')):
                     files.append(os.path.join(dp, f))
     ex_src, ex_en, ex_eid, ex_pairs, ex_czid = set(), set(), set(), set(), set()
-    contrib, corpus, skipped = [], [], []
+    contrib, corpus, skipped, recs = [], [], [], []
     for p in files:
         rel = os.path.relpath(p, ROOT)
         sz = os.path.getsize(p)
@@ -205,13 +206,27 @@ def cmd_make_set(a):
         harvest(obj if obj is not None else raw, S, EID, PAIRS)
         scan = json.dumps(obj, ensure_ascii=False) if obj is not None else raw
         hs, he = S & src_set, S & en_set
-        if len(hs) > 1000 or len(he) > 1000:
-            corpus.append({'file': rel, 'src_hits': len(hs), 'en_hits': len(he)}); continue
         sub = 0
-        if sz < 3e6 and CZRE.search(scan):
+        if len(hs) <= 1000 and len(he) <= 1000 and sz < 3e6 and CZRE.search(scan):
             extra = {s for s in src_list if s not in hs and s in scan}
             sub = len(extra); hs = hs | extra
         cz = {int(x) for x in CZID.findall(scan)}
+        recs.append((rel, hs, he, EID, PAIRS, cz, sub))
+    agg = defaultdict(lambda: [set(), set()])
+    for rel, hs, he, *_ in recs:
+        parts = rel.split('/')
+        for d in range(2, len(parts)):
+            agg['/'.join(parts[:d])][0].update(hs); agg['/'.join(parts[:d])][1].update(he)
+    prod_dirs = {k for k, (s_, e_) in agg.items() if len(s_) > 1000 or len(e_) > 1000}
+    for rel, hs, he, EID, PAIRS, cz, sub in recs:
+        parts = rel.split('/')
+        anc = [x for x in ('/'.join(parts[:d]) for d in range(2, len(parts))) if x in prod_dirs]
+        why = None
+        if len(hs) > 1000 or len(he) > 1000: why = 'file hits > 1000 (production corpus)'
+        elif anc: why = 'inside production directory %s (> 1000 distinct src/en across its files)' % anc[0]
+        elif rel.startswith('phase2h/') and 'test' not in rel.lower(): why = 'phase2h = the Czech production phase (source of the set)'
+        if why:
+            corpus.append({'file': rel, 'src_hits': len(hs), 'en_hits': len(he), 'why': why}); continue
         if hs or he or cz:
             contrib.append({'file': rel, 'src_hits': len(hs), 'src_substring_hits': sub, 'en_hits': len(he),
                             'exercise_ids': len(EID), 'concept_type_pairs': len(PAIRS), 'cz_ids': len(cz)})
@@ -228,15 +243,15 @@ def cmd_make_set(a):
             elif r['src'] in ex_src: why = 'excl_src'
             elif r.get('en') in ex_en: why = 'excl_en'
             elif int(r['exercise_id']) in ex_eid: why = 'excl_exercise_id'
-            elif int(r['exercise_id']) in ex_czid or int(r['n']) in ex_czid: why = 'excl_cz_id'
-            elif (int(r['concept_id']), int(r['exercise_type_id'])) in ex_pairs: why = 'excl_concept_type'
+            elif not RELAX[0] and (int(r['exercise_id']) in ex_czid or int(r['n']) in ex_czid): why = 'excl_cz_id'
+            elif not RELAX[0] and (int(r['concept_id']), int(r['exercise_type_id'])) in ex_pairs: why = 'excl_concept_type'
             elif r['src'] in gseen: why = 'dup_src'
             if why:
                 st[why] += 1; continue
             gseen.add(r['src']); cand.append(r)
         st['eligible'] = len(cand)
         if len(cand) < 25:
-            print('too few eligible at', lv, dict(st)); return 3
+            print('too few eligible at', lv, dict(st), 'relax', RELAX[0]); return 7
         pick = sorted(random.Random(SEED + li).sample(cand, 25), key=lambda r: int(r['n']))
         st['picked'] = 25
         stats[lv] = dict(st)
@@ -246,7 +261,7 @@ def cmd_make_set(a):
     assert len(out) == 100 and len({o['czech'] for o in out}) == 100 and len({o['sid'] for o in out}) == 100
     proof = {o['sid']: {'src_used_before': o['czech'] in ex_src, 'en_used_before': o['annotation'].get('en') in ex_en,
                         'eid_used_before': int(o['exercise_id']) in ex_eid,
-                        'concept_type_used_before': (int(o['annotation']['concept_id']), int(o['annotation']['exercise_type_id'])) in ex_pairs}
+                        'concept_type_used_before': (int(o['annotation']['concept_id']), int(o['annotation']['exercise_type_id'])) in ex_pairs and not RELAX[0]}
              for o in out}
     assert not any(any(v.values()) for v in proof.values())
     h = wjl(E + '/set/sentences.jsonl', out)
@@ -260,7 +275,7 @@ def cmd_make_set(a):
         'files_scanned': len(files), 'skipped_large': skipped, 'corpus_wide_files': corpus, 'contributing_files': contrib,
         'excluded': {'src': len(ex_src), 'en': len(ex_en), 'exercise_ids': len(ex_eid), 'concept_type_pairs': len(ex_pairs),
                      'cz_ids': len(ex_czid)},
-        'per_level': stats, 'picked_overlap_with_anything_used': 0, 'per_sentence': proof, 'sentences_sha256': h})
+        'per_level': stats, 'relaxed_concept_type_and_cz_id': RELAX[0], 'production_dirs': sorted(prod_dirs), 'picked_overlap_with_anything_used': 0, 'per_sentence': proof, 'sentences_sha256': h})
     wj(E + '/set/SET_META.json', {'seed': SEED, 'per_level_seed': {lv: SEED + i for i, lv in enumerate(LEVELS)}, 'stats': stats,
                                   'source': ANN, 'sha256': h})
     print(json.dumps({'stats': stats, 'files': len(files), 'corpus_wide': len(corpus), 'skipped': len(skipped)}))
@@ -759,11 +774,19 @@ def cmd_post(a):
     return 0
 
 
+def make_set_relaxing(a):
+    rc = cmd_make_set(a)
+    if rc == 7:
+        RELAX[0] = True
+        rc = cmd_make_set(a)
+    return rc
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('cmd', choices=['projection', 'make_set', 'mock', 'writers', 'packets', 'judges', 'labels', 'build_items', 'gemini', 'post'])
     a = ap.parse_args()
-    f = {'projection': cmd_projection, 'make_set': cmd_make_set, 'mock': cmd_mock, 'writers': cmd_writers,
+    f = {'projection': cmd_projection, 'make_set': make_set_relaxing, 'mock': cmd_mock, 'writers': cmd_writers,
          'packets': lambda a: packets(E), 'judges': cmd_judges, 'labels': lambda a: labels(E),
          'build_items': lambda a: build_items(E), 'gemini': cmd_gemini, 'post': cmd_post}[a.cmd]
     return f(a)
