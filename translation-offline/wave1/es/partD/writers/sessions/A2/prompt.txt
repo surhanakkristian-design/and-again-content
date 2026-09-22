@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Spanish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Spanish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Spanish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Spanish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Spanish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Spanish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Spanish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Spanish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Spanish: ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Spanish sentence does not mark gender (e.g. "su", "sus", "se", or a verb without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "La película empieza. Tienes que apagar el móvil.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA202", "source": "Hay muchas patatas en el cucurucho.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA203", "source": "Él se lamió el dedo porque la miel estaba muy pegajosa.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA204", "source": "Ahora vuela, pero hace un segundo estaba quieta.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA205", "source": "Él paga con monedas y sale con su bolsa.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA206", "source": "Tienes que devolver la sonrisa cuando alguien te sonríe.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA207", "source": "El nudo es muy corto, así que debes rehacerlo.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA208", "source": "Para despertarte a las seis necesitas mucha energía.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA209", "source": "Tienes que poner los labios redondos para silbar.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA210", "source": "Un buen vino necesita mucho sol.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA211", "source": "Si la cremallera se atasca, deberías tirar despacio.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA212", "source": "Tío, él cepilló esa piedra antigua súper suavemente, en serio.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA213", "source": "Todo un profesional. Va a llevar la margarita a casa sin volver a caerse.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA214", "source": "Bestie, ella ha dicho que normalmente celebra dentro. Esta noche está celebrando fuera.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA215", "source": "Ahora mismo está separando las monedas en dos montones.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA216", "source": "Tío, la dentista está mirando sus dientes con un espejito, la verdad.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA217", "source": "Obviamente nadie le obliga. Debe hacer ejercicio con cuatro perros.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA218", "source": "Tío, ayer a su cabeza le salió pelo en dos segundos, en serio.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA219", "source": "Ya son las 10:50. En serio, tú vas a llegar tarde, pero con confianza.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA220", "source": "Los funcionarios deberían estar en silencio mientras cada nación iza su bandera.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA221", "source": "Amiga, ella se ha levantado con la nota, así que al parecer va a preguntar a todo el mundo.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA222", "source": "Ellos señalan hacia arriba porque la cosa está en el cielo.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA223", "source": "¡Ni un autobús, el peor día de mi vida! ¡Vale, yo leeré mi libro aquí!", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA224", "source": "¡Madre mía, cae mucha agua detrás del puente de piedra! ¡Una pesadilla total!", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA225", "source": "No voy a mentir, tú picas tantas verduras en segundos.", "level": "A2", "topic": "Countable and uncountable"}

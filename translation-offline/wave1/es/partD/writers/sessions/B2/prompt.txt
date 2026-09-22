@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Spanish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Spanish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Spanish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Spanish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Spanish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Spanish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Spanish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Spanish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Spanish: ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Spanish sentence does not mark gender (e.g. "su", "sus", "se", or a verb without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Ojalá mis plantas de casa tuvieran unas raíces tan fuertes como esa.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB202", "source": "Si hubiera dejado la tarjeta de embarque en casa, él nunca habría pasado la puerta.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB203", "source": "Para cuando esté cubierta la última esquina, él habrá estado untando mantequilla durante un minuto entero.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB204", "source": "Si ella no hubiera escrito ni una palabra sobre la protesta, no habrían censurado la carta.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB205", "source": "La cogió en la primera inmersión, así que no hacía falta que preocuparse durante una semana.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB206", "source": "Rara vez se ve un maniquí mejor vestido que la gente que pasa por delante.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB207", "source": "Se dice que esa palangana es más vieja que la casa, y todavía aguanta el agua perfectamente.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB208", "source": "Si la hubiera juzgado entonces, ahora ellas no brindarían juntas.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB209", "source": "Para el atardecer el árbitro habrá movido todas las fichas a la fila de arriba.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB210", "source": "Si el salón hubiera asignado 2 estilistas, la trenza habría estado terminada antes de la fecha límite.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB211", "source": "Ellos se inclinaron tres veces, así que debieron de haber ensayado para la ceremonia.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB212", "source": "Oye, dicen que ella lleva dando las órdenes en este barco desde 2019.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB213", "source": "Vale, él me dijo que había estado usando este detergente durante semanas antes de que por fin funcionara.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB214", "source": "Para medianoche, ella habrá desenchufado todos y cada uno de los aparatos del piso. ¡Absolutamente todo se apaga!", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB215", "source": "No voy a mentir, para el pitido final tú habrás conquistado a todos los aficionados emotivos de este estadio.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB216", "source": "¡Dicen que su pobre dedo se quedó atrapado en la mesa de montar! ¡Lo peor de lo peor!", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB217", "source": "Amiga, él me dijo que ojalá hubiera arreglado ese fregadero la semana pasada, no hoy.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB218", "source": "Él está haciendo que le revisen el maletín en la puerta de la galería, obviamente una visita muy relajada.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB219", "source": "Tía, al parecer ella está con ese vestido dorado en el escenario ahora mismo.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB220", "source": "Tío, él debería haber comprado menos plantas de interior, no hay espacio, bro.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB221", "source": "Para esta noche, ellos habrán seguido cada paso de las instrucciones.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB222", "source": "Escucha, al parecer él había recordado cada tarjeta antes de dar un puñetazo al aire.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB223", "source": "Qué va, la espalda le duele desde que empezó la ruta, el tío está hecho polvo.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB224", "source": "Los vecinos habían estado teniendo una charla por encima de la valla durante una hora cuando el gato saltó.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB225", "source": "Sus lágrimas han estado inundando el suelo desde hace un minuto entero. Una reacción tranquila, obviamente.", "level": "B2", "topic": "All Present Tenses"}

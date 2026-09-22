@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Spanish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Spanish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Spanish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Spanish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Spanish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Spanish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Spanish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Spanish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Spanish: ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Spanish sentence does not mark gender (e.g. "su", "sus", "se", or a verb without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "«Esta tarjeta no funciona», le dijo al recepcionista. Ella dijo que la tarjeta no funcionaba ahí.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB102", "source": "La grieta no es ni ancha ni recta, así que en algunos puntos ellos tienen que ponerse de lado.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB103", "source": "Los tacos de sus botas están completamente cubiertos de barro, ¿no están?", "level": "B1", "topic": "Question tags"}
+{"wid": "wB104", "source": "Un bocado de comida por ese precio: el cocinero debe de estar de broma.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB105", "source": "Mañana a esta hora ella lo estará regañando por algo completamente distinto, seguramente las gallinas.", "level": "B1", "topic": "Future Simple or Continuos"}
+{"wid": "wB106", "source": "Ese jersey ahora es más pequeño que un cojín, así que ya no puede quedarle bien.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB107", "source": "Apretó el disparador tres veces mientras él seguía moviéndose.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB108", "source": "El bol que sacó estaba demasiado caliente para sostenerlo.", "level": "B1", "topic": "Relative clauses"}
+{"wid": "wB109", "source": "Tú estabas terminando la manzana cuando llegó esa hamburguesa gigante, y sinceramente, tu apetito es icónico.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB110", "source": "Él esquivó cada intento de agarrarlo hasta que ella lo acorraló junto al sofá.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB111", "source": "La verdad, tú pilotabas el dron con tanta suavidad cuando el equipo empezó a aplaudir.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB112", "source": "Para cuando alguien se dio cuenta, la masa ya había crecido por encima del borde. Buen trabajo vigilando, chicos.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB113", "source": "Esas máquinas son enormes, así que esta fábrica debe de formar parte de la industria pesada.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB114", "source": "Bro, ella dijo que se pintaría las mejillas otra vez el año que viene, porque es superpatriota.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB115", "source": "Bro, para cuando él salió a la superficie, sus amigos también habían saltado del muelle, en serio.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB116", "source": "El funcionario dijo que ese día serían liberados 12 hombres de la prisión, como mostraba el informe.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB117", "source": "Esta pirámide solía ser el centro de una ciudad para miles de personas, según el informe turístico.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB118", "source": "El hombre le ha rascado el pecho al canguro tres veces, y quiere una cuarta.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB119", "source": "¡Él temblaba de terror cuando ella levantó el sobre con el sello rojo!", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB120", "source": "Ella no puede evitar añadir más libros a su estudio. Una lista de lectura diminuta, claro.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB121", "source": "La puesta de sol ha teñido todo el aparcamiento de naranja; ¡parece que el mundo está en llamas!", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB122", "source": "Las flores la sorprendieron porque ella no las esperaba, y yo tampoco.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB123", "source": "La agente le dijo al pasajero que ella había atado una segunda etiqueta a su maleta.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB124", "source": "Ellos se ríen mientras cogen las llaves, así que debe de haberles gustado el piso que vieron.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB125", "source": "Espera, oí que él arrastró ese carro hasta aquí, ¿verdad?", "level": "B1", "topic": "Question tags"}

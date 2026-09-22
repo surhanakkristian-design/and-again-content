@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Spanish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Spanish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Spanish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Spanish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Spanish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Spanish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Spanish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Spanish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Spanish: ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Spanish sentence does not mark gender (e.g. "su", "sus", "se", or a verb without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA101", "source": "Hay dos boles de cereales en la mesa.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA102", "source": "¿Qué cierran con la cadena?", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA103", "source": "Este té caliente le calma la garganta irritada.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA104", "source": "Este agujero es pequeño, pero el gato mira dentro.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA105", "source": "Ella pela tres dientes blancos para la sartén.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA106", "source": "Tienen una furgoneta blanca grande en la calle.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA107", "source": "¿Qué asignatura te gusta? ¿Música o química?", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA108", "source": "Mira la luna con el telescopio.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA109", "source": "Cipreses altos están alrededor de la pista.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA110", "source": "Ey tío, el pavo real es un azul irreal.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA111", "source": "Él cierra su puerta de entrada y se va.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA112", "source": "Los dientes de león tienen semillas blancas para la brisa.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA113", "source": "2 perros están tumbados en el suelo junto a la nevera.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA114", "source": "Vale, pero tú eres tan guay cuando el avión vuela bajo.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA115", "source": "Ella coge un pañuelo y se suena la nariz con el pañuelo.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA116", "source": "Tío, ¿puedo yo pagar con tarjeta? Necesito ese perrito caliente sí o sí.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA117", "source": "¡Nadie puede pararlo! ¡Cientos de personas señalan al cielo!", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA118", "source": "Actualización trimestral: las puertas revelan una vista que vale 2 millones de euros.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA119", "source": "¡Él lleva su bufanda de la suerte en cada partido, para siempre!", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA120", "source": "Respeto, esta orilla es el mejor sitio para tu desayuno.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA121", "source": "Ella acerca las flores a su nariz para olerlas.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA122", "source": "Oye, tú puedes oír el sonido de ese radiocasete desde la calle de al lado, tío.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA123", "source": "El día está soleado porque ha salido el sol.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA124", "source": "La profesora sostiene su bolígrafo, así que está en su mano.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA125", "source": "¿Qué lleva ella primero? Una chaqueta vaquera.", "level": "A1", "topic": "Wh- questions"}
