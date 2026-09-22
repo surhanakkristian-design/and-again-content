@@ -47,3 +47,4 @@ Headless used so far (this language): 0. Agent reserve: 250,000. Projected langu
 - judge s4#sub: 53,778 tokens (ok, 90.7s)
 - 2026-09-22T18:27:07Z cumulative headless (this language) after judge: 352,118
 - 2026-09-22T18:27:07Z cumulative subagent tokens after judges: 352,118
+- 2026-09-22T19:17:32Z cumulative subagent tokens after post: 352,118

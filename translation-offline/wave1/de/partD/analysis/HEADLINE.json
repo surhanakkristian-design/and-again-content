@@ -1,0 +1,817 @@
+{
+ "label": "Wave 1 German: frozen stack (L3 SOURCE-ONLY + content check, TIP rejected, no F4/AG), fresh production set opened ONCE",
+ "truth": "judge_label (partD/judge/labels.jsonl, 4 opus judge sessions)",
+ "pooled": {
+  "coverage": {
+   "x": 472,
+   "n": 500,
+   "pct": 94.4,
+   "cp95": [
+    92.01,
+    96.25
+   ]
+  },
+  "fa": {
+   "x": 13,
+   "n": 400,
+   "pct": 3.25,
+   "cp95": [
+    1.74,
+    5.49
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": true,
+   "interval": false
+  }
+ },
+ "per_level": {
+  "A1": {
+   "coverage": {
+    "x": 119,
+    "n": 124,
+    "pct": 95.97,
+    "cp95": [
+     90.84,
+     98.68
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 101,
+    "pct": 2.97,
+    "cp95": [
+     0.62,
+     8.44
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "A2": {
+   "coverage": {
+    "x": 122,
+    "n": 125,
+    "pct": 97.6,
+    "cp95": [
+     93.15,
+     99.5
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 100,
+    "pct": 3.0,
+    "cp95": [
+     0.62,
+     8.52
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B1": {
+   "coverage": {
+    "x": 118,
+    "n": 125,
+    "pct": 94.4,
+    "cp95": [
+     88.8,
+     97.72
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 100,
+    "pct": 3.0,
+    "cp95": [
+     0.62,
+     8.52
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B2": {
+   "coverage": {
+    "x": 113,
+    "n": 126,
+    "pct": 89.68,
+    "cp95": [
+     83.0,
+     94.39
+    ]
+   },
+   "fa": {
+    "x": 4,
+    "n": 99,
+    "pct": 4.04,
+    "cp95": [
+     1.11,
+     10.02
+    ]
+   },
+   "coverage_target_90": {
+    "point": false,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  }
+ },
+ "l3_only_diagnostic": {
+  "coverage": {
+   "x": 483,
+   "n": 500,
+   "pct": 96.6,
+   "cp95": [
+    94.61,
+    98.01
+   ]
+  },
+  "fa": {
+   "x": 29,
+   "n": 400,
+   "pct": 7.25,
+   "cp95": [
+    4.91,
+    10.25
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": false,
+   "interval": false
+  }
+ },
+ "layers": {
+  "L3+CC:NONE": 485,
+  "L3:TIPrej": 131,
+  "L3": 257,
+  "CC:MISSING": 27
+ },
+ "gemini": {
+  "ledger_rows": 1412,
+  "counted_http200": 1412,
+  "by_part": {
+   "l3": 900,
+   "cc": 512
+  },
+  "failed_counted": 0,
+  "http": {
+   "200": 1412
+  },
+  "spend_usd": 0.134965
+ },
+ "ledger_language": {
+  "D_CC": 512,
+  "D_L3": 900
+ },
+ "access_logs": [
+  "run/access_log.jsonl"
+ ],
+ "both_targets_met_on_point": true,
+ "false_rejections": {
+  "n": 28,
+  "by_layer": {
+   "CC:MISSING": 11,
+   "L3": 13,
+   "L3:TIPrej": 4
+  },
+  "by_writer": {
+   "correct/None": 28
+  },
+  "by_level": {
+   "B1": 7,
+   "A2": 3,
+   "A1": 5,
+   "B2": 13
+  },
+  "items": [
+   {
+    "aid": "A:6526:c5",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "pflegte",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Als Kind pflegte sie, den Globus zu drehen und auf ein zufälliges Land zu tippen.",
+    "answer": "When she was little, she spun the globe and tapped on a random country.",
+    "judge_reason": "Habitual past preserved."
+   },
+   {
+    "aid": "A:8838:c4",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Er hörte nicht auf, den Sack zu schlagen, bis er durch die Garage schwang.",
+    "answer": "He didn't stop punching the bag until it was swinging through the garage.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:8838:c5",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "aufhören",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Er hörte nicht auf, den Sack zu schlagen, bis er durch die Garage schwang.",
+    "answer": "He kept on hitting the bag until it swung across the garage.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:23076:c5",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Die Wolken ziehen sehr langsam über den Himmel.",
+    "answer": "The clouds are moving slowly across the sky.",
+    "judge_reason": "Dropped degree adverb acceptable."
+   },
+   {
+    "aid": "A:32949:c4",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "Gärtnerin",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Die Gärtnerin hat Werkzeug in ihren Schürzentaschen.",
+    "answer": "There are tools in the gardener's apron pockets.",
+    "judge_reason": "Same meaning, different structure."
+   },
+   {
+    "aid": "A:33109:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Die Führerin führt die Gruppe eine schmale Gasse hinunter.",
+    "answer": "The guide leads the group down a narrow side street.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:34130:c5",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "küssen",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sie sind alt, und sie küssen sich ewig! Einfach wunderschön!",
+    "answer": "They are old and they keep kissing forever! Absolutely beautiful!",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:34858:c5",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Hilfe! Etwas ist in diesem dunklen Raum!",
+    "answer": "Help me! Something is in this dark room!",
+    "judge_reason": "Idiomatic 'Help me!'; meaning preserved."
+   },
+   {
+    "aid": "A:35377:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Du sagst mit Blumen sorry. Respekt.",
+    "answer": "You say sorry with flowers. Respect to you.",
+    "judge_reason": "Idiomatic rendering of 'Respekt'."
+   },
+   {
+    "aid": "A:35589:c3",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "Kraft",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mit dieser Kraft wird sie bald den Gipfel erreichen.",
+    "answer": "With this kind of strength she is going to reach the top soon.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:35589:c5",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "dieser",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mit dieser Kraft wird sie bald den Gipfel erreichen.",
+    "answer": "With strength like this, she will soon get to the top.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:36872:c4",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "niemanden",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bei ihren früheren Rennen brauchte sie niemanden, der ihr im Ziel assistierte.",
+    "answer": "In her past races, she never needed anyone to assist her at the finish line.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:36949:c3",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "herunter",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Während er durch die Galerie ging, fiel ihm vor Ehrfurcht die Kinnlade herunter.",
+    "answer": "While he was going through the gallery, his jaw fell in awe.",
+    "judge_reason": "Meaning preserved, slightly unidiomatic."
+   },
+   {
+    "aid": "A:36949:c5",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "Ehrfurcht",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Während er durch die Galerie ging, fiel ihm vor Ehrfurcht die Kinnlade herunter.",
+    "answer": "While he walked through the gallery, his jaw dropped in amazement.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:40655:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sie wartet im Bett, während die Flüssigkeit aus der braunen Flasche den Löffel füllt.",
+    "answer": "She is waiting in bed while the spoon fills with the liquid from the brown bottle.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41628:c4",
+    "level": "B2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "so",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bro, er wird diese Grube bis Sonnenuntergang so tief gegraben haben, dass er eine Leiter braucht, echt.",
+    "answer": "Bro, by sunset he will have dug this pit deep enough that he needs a ladder, really.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41807:c1",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.",
+    "answer": "By the end of the day, the colleagues will have been praising this graphic for about eight hours.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41807:c2",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.",
+    "answer": "At the end of the day the colleagues will have been praising this chart for roughly eight hours.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41807:c3",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.",
+    "answer": "By the end of the day the co-workers will have been praising this graphic for around eight hours.",
+    "judge_reason": "Accurate translation."
+   },
+   {
+    "aid": "A:41807:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.",
+    "answer": "By the end of the day, the colleagues will have praised this graphic for about eight hours.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41807:c5",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.",
+    "answer": "By the end of the day, this graphic will have been praised by the colleagues for about eight hours.",
+    "judge_reason": "Passive keeps agent; same meaning."
+   },
+   {
+    "aid": "A:42734:c3",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "wieder",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Nächste Woche um diese Zeit machen sie in derselben Nische wieder einen geheimen Deal.",
+    "answer": "Next week at this time, they will be making another secret deal in the same nook.",
+    "judge_reason": "Same meaning; another covers wieder."
+   },
+   {
+    "aid": "A:44573:c5",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Hör mal, ich habe gehört, dass sie eine Stunde in der Schlange gewartet hatte, bevor sie endlich gewählt hat.",
+    "answer": "Listen, I heard she waited in line for an hour before she voted.",
+    "judge_reason": "Same meaning; endlich drop acceptable."
+   },
+   {
+    "aid": "A:44823:c1",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.",
+    "answer": "By the end of the ride, the tram's pantograph will have struck hundreds of sparks from the wire.",
+    "judge_reason": "Accurate translation."
+   },
+   {
+    "aid": "A:44823:c2",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.",
+    "answer": "By the end of the journey the pantograph of the tram will have knocked hundreds of sparks off the wire.",
+    "judge_reason": "Same meaning and time frame."
+   },
+   {
+    "aid": "A:44823:c3",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.",
+    "answer": "By the end of the trip, the tram's pantograph will have thrown hundreds of sparks from the wire.",
+    "judge_reason": "Future reference preserved."
+   },
+   {
+    "aid": "A:44823:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.",
+    "answer": "By the end of the ride the streetcar's pantograph will have made hundreds of sparks fly from the wire.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:44823:c5",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.",
+    "answer": "By the end of the ride, hundreds of sparks will have been struck from the wire by the tram's pantograph.",
+    "judge_reason": "Passive keeps the agent."
+   }
+  ]
+ },
+ "false_acceptances": {
+  "n": 13,
+  "by_layer": {
+   "L3+CC:NONE": 13
+  },
+  "by_writer_type": {
+   "W": 1,
+   "M": 7,
+   "T": 2,
+   "None": 1,
+   "S": 2
+  },
+  "by_level": {
+   "B2": 4,
+   "B1": 3,
+   "A2": 3,
+   "A1": 3
+  },
+  "items": [
+   {
+    "aid": "A:1391:w",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Er schlug vor, die fertige Platte ins Schaufenster des Ateliers zu hängen.",
+    "answer": "She suggested hanging the finished plate in the studio's shop window.",
+    "judge_reason": "She instead of he."
+   },
+   {
+    "aid": "A:7123:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Wenn Nina so weiterspielt, gibt der Trainer ihr auch die Kapitänsbinde.",
+    "answer": "If Nina keeps playing like this, the coach will give her the armband too.",
+    "judge_reason": "Drops 'captain's' from armband."
+   },
+   {
+    "aid": "A:16914:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Schau! Sie fächelt sich gerade mit einem Papierfächer.",
+    "answer": "Look! She is fanning herself with a fan.",
+    "judge_reason": "Drops 'paper' of paper fan."
+   },
+   {
+    "aid": "A:23310:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Die Schlange streckt uns ihre dünne Zunge entgegen.",
+    "answer": "The snake stuck its thin tongue out at us.",
+    "judge_reason": "Past instead of present."
+   },
+   {
+    "aid": "A:25234:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Der Turm ist zu groß. Ich glaube, ich werde das aufräumen.",
+    "answer": "The tower is too big. I'll tidy that up.",
+    "judge_reason": "Dropped main verb 'I think'."
+   },
+   {
+    "aid": "A:29199:c4",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Wann benutzt du deine Kamera? Jeden Abend. Beeindruckend.",
+    "answer": "When do you use your camera? Each evening. Wow, impressive.",
+    "judge_reason": "Added content 'Wow'."
+   },
+   {
+    "aid": "A:34515:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Bro, schau dir diese krasse Gischt an. Er wird klatschnass werden, ohne Witz.",
+    "answer": "Bro, look at this spray. He's going to get soaking wet, no joke.",
+    "judge_reason": "Drops adjective krass."
+   },
+   {
+    "aid": "A:35656:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Ehrlich, du kannst zehn Sonnenblumen in zwei Armen tragen. Beeindruckend.",
+    "answer": "Honestly, you could carry ten sunflowers in two arms. Impressive.",
+    "judge_reason": "'could' changes present ability."
+   },
+   {
+    "aid": "A:40435:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Die Lagune erstreckt sich bis zum offenen Meer jenseits der Felswände.",
+    "answer": "The lagoon stretches to the sea beyond the cliffs.",
+    "judge_reason": "Dropped adjective 'open'."
+   },
+   {
+    "aid": "A:42849:s",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "S",
+    "source": "Bro, der Jogger hat sich seinen Anteil Pizza genommen, und die Hundeausführerin auch, ohne Witz.",
+    "answer": "Bro, jogger took his share of pizza, and so did the dog walker, no joke.",
+    "judge_reason": "Missing article before 'jogger'."
+   },
+   {
+    "aid": "A:44395:s",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "S",
+    "source": "Bro, ich wünschte, ich hätte so eine Tiefgarage, echt jetzt.",
+    "answer": "Bro, I wish I had a underground garage like that, seriously.",
+    "judge_reason": "'a underground' article error."
+   },
+   {
+    "aid": "A:44573:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Hör mal, ich habe gehört, dass sie eine Stunde in der Schlange gewartet hatte, bevor sie endlich gewählt hat.",
+    "answer": "Listen, I heard that she had waited for an hour before she finally voted.",
+    "judge_reason": "Drops place phrase in line."
+   },
+   {
+    "aid": "A:44700:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Seine Waffe wurde ins Gras gesenkt! Es ist vorbei, komplett vorbei!",
+    "answer": "His weapon was lowered! It's over, completely over!",
+    "judge_reason": "Drops 'into the grass'."
+   }
+  ]
+ },
+ "judge_noise": {
+  "controls": 80,
+  "agree": 80,
+  "disagree": 0,
+  "disagree_rate": {
+   "x": 0,
+   "n": 80,
+   "pct": 0.0,
+   "cp95": [
+    0.0,
+    4.51
+   ]
+  },
+  "by_level": {
+   "A1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "A2": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B2": {
+    "n": 20,
+    "disagree": 0
+   }
+  },
+  "by_intent": {
+   "correct": {
+    "n": 40,
+    "disagree": 0
+   },
+   "wrong": {
+    "n": 40,
+    "disagree": 0
+   }
+  },
+  "disagreements": []
+ }
+}
