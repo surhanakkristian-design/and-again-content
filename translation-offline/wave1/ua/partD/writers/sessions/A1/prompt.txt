@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Ukrainian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Ukrainian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Ukrainian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Ukrainian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Ukrainian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Ukrainian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Ukrainian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Ukrainian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Ukrainian: зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Ukrainian sentence does not mark gender (e.g. "свій", "себе", or a verb form without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA101", "source": "Вона кладе на стіл одну стару батарейку.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA102", "source": "У пивному саду вони випивають два келихи.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA103", "source": "Цей кущ має багато маленьких синіх ягід.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA104", "source": "Маленький ґудзик лежить на дерев'яному столі.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA105", "source": "Вона пише те рівняння на старій дошці.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA106", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA107", "source": "Лев лягає в золоту траву.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA108", "source": "У студії вона співає в старий мікрофон.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA109", "source": "Де вони сидять? За столом зі свічками.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA110", "source": "Стіна має багато старих інструментів.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA111", "source": "Їй потрібна лише одна маленька крапля пасти.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA112", "source": "Що він розпаковує першим? Складений одяг.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA113", "source": "Лікар каже, що в неї алергія на літні квіти.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA114", "source": "Чому вони використовують свої руки? Бо руки на тілі.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA115", "source": "Спортсмен може бігти дуже швидко на своїй доріжці.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA116", "source": "Молода жінка має вдома хороший догляд.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA117", "source": "Там лежать три футляри. Діамант вона знаходить у номері три.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA118", "source": "Чи може парашутист стояти у відчинених дверях?", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA119", "source": "Йоу, він одягається доволі швидко і поправляє свою краватку.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA120", "source": "Інфілдер має коричневу шкіряну рукавицю.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA121", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA122", "source": "Кухарка додає на кухні трави в сковороду.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA123", "source": "Валізи є не легкі, і вони падають на чоловіка.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA124", "source": "Бро, цей скутер має двох крихітних вершників. Це треба бачити.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA125", "source": "Широка річка ллється через край водоспаду.", "level": "A1", "topic": "Present Simple"}

@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Ukrainian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Ukrainian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Ukrainian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Ukrainian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Ukrainian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Ukrainian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Ukrainian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Ukrainian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Ukrainian: зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Ukrainian sentence does not mark gender (e.g. "свій", "себе", or a verb form without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Деко, яке двадцять років простояло в тій хатині, запікало все до золотистого.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB202", "source": "Подруга шкодує, що не скасувала на кілька годин раніше, але він не скаржиться.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB203", "source": "Вона запропонувала спробувати золото і на подрузі, і за дві хвилини обидві мали золоті повіки.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB204", "source": "Вона хоче віддати вкоротити зелений комбінезон до вечірки.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB205", "source": "Попри спеку вони пройшли аж до вершини луки.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB206", "source": "Вона знала, що маленька червона викрутка буде достатньою для всієї полиці.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB207", "source": "Мало того що вона заціпеніла від шоку, вона ще й впустила шолом собі на ногу.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB208", "source": "Ще ніколи я не бачив, щоб корок вийшов у цій кухні так чисто.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB209", "source": "Він визнав, що був нервовим увесь політ додому.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB210", "source": "Якби вітчим ланцюг не полагодив, хлопець пішов би до школи пішки.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB211", "source": "Якби він залишив секундомір удома, зараз вони не святкували б.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB212", "source": "Якби сумка була закрита, під час арешту не випала б жодна здобич.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB213", "source": "Конфлікт за столом триває попри жінку, яка дивиться з дверей.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB214", "source": "Не буду брехати, ти прямо зараз проєктуєш цей шпаківник, як справжній архітектор.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB215", "source": "Спорядження, яке використовує цей мийник вікон, складається з запобіжного пояса, каски та скребка.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB216", "source": "Полум'я майже миттєво піднялося до рівня пояса, що зазвичай стається, коли займається жир.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB217", "source": "Він різав овочі цілу вічність без травм, поки не зісковзнув ніж. Справжній професіонал.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB218", "source": "Саме зараз її долоні ширяють над єдиним світлом на цьому зовсім темному пляжі!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB219", "source": "Респект, ти вишикувала подушки в ідеальний ряд, перш ніж стрибнути на ліжко.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB220", "source": "Попри свою важку валізу, вона помчала пероном. Абсолютно нестримна!", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB221", "source": "Уяви, вона сказала мені, що фанати кричали годину, перш ніж команда взагалі вийшла.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB222", "source": "Чесно, ти зробив смак цього смузі ідеальним завдяки тому манго.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB223", "source": "Вони крутили те тісто десять хвилин, поки борошно не вибухнуло. Трохи безладно.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB224", "source": "Чесно, до заходу сонця ти проїдеш на тому мотоциклі вертикально цілий кілометр.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB225", "source": "Він відчув себе бажаним гостем, щойно прибув до різьблених дерев'яних воріт.", "level": "B2", "topic": "Advanced linkers"}

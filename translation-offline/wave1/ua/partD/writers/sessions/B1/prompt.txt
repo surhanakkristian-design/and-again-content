@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Ukrainian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Ukrainian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Ukrainian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Ukrainian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Ukrainian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Ukrainian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Ukrainian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Ukrainian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Ukrainian: зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Ukrainian sentence does not mark gender (e.g. "свій", "себе", or a verb form without a subject pronoun), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "«Оце так!» - крикнув коментатор. - Він крикнув, що ніколи не бачив такого стрибка.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB102", "source": "Якщо ти наносиш забагато рум'ян, щоки виглядають обгорілими на сонці.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB103", "source": "Той маленький загорнутий подарунок того вечора так ніким і не був відкритий.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB104", "source": "Якщо хлопавка клацає, усі на майданчику затихають.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB105", "source": "У дитинстві вона допомагала мамі з гостями щонеділі.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB106", "source": "Цього місяця вона пробігла чотири забіги, і ноги це відчувають.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB107", "source": "Якщо вона наллє ще одну склянку так, за столом стане ще веселіше.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB108", "source": "Цього ранку садівник уже зрізав шість троянд старими залізними ножицями.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB109", "source": "Поки він підвівся, кондиціонер уже трохи охолодив кімнату.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB110", "source": "Вона вирішила вдягнути райдужний костюм із пір'я на чолі параду.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB111", "source": "Якщо парапланерист занурює ноги надто глибоко, озеро затягує його повністю!", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB112", "source": "Поки стрибнув останній чоловік, сутінки вже змінилися ніччю.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB113", "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB114", "source": "Падіння чоловіка підкинуло його пакет з обідом у повітря.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB115", "source": "Бро, якби осінь тривала цілий рік, я чилив би в цьому парку щодня, чесно.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB116", "source": "Він полоскав ганчірку, коли помітив ще більше волосся на брудному дзеркалі.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB117", "source": "Один парашутист тримався за руки у формації, і наступний теж.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB118", "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB119", "source": "Цю поведінку спостерігали, коли мандрівниця прикріплювала бирку до валізи.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB120", "source": "Якщо вона скоро повернеться до зрубу, сьогодні ввечері вона буде в теплі біля вогню.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB121", "source": "Він тупав брудними чобітьми по килимку, коли раптом вирішив зайти всередину.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB122", "source": "Подружко, кажуть, завтра в цей час вона знову стоятиме в першій шерензі.", "level": "B1", "topic": "Future Continuous"}
+{"wid": "wB123", "source": "Слухай, кажуть, хлопець, який заніс її сумки сходами, просто пробігав повз.", "level": "B1", "topic": "Relative clauses"}
+{"wid": "wB124", "source": "Ти нахиляла відро над столом, коли яблука розкотилися всюди, чесно, культово.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB125", "source": "Маленький персонаж голосно закричав, коли колючки кактуса вкололи йому руку.", "level": "B1", "topic": "Passive or Active"}
