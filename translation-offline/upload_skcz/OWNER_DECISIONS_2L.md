@@ -31,3 +31,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 18. **The 23 concepts without a selected exercise stay as they are.** No change.
 19. **No backward compatibility for old app versions is needed** (almost no active users). Deploy as built.
 20. **Deploy approved** as in the Phase 3B brief.
+
+## Decision after the Phase 3B deploy (22 Sept 2026, Phase 3C-prep brief)
+
+21. **Warm-up for check-translation:** add a warm-up ping so the learner does not wait for a cold start (built and tested in Phase 3C-prep, deployed separately).
