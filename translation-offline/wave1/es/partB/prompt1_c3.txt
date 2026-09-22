@@ -1,0 +1,694 @@
+You are the arm-B rewrite agent of a Spanish->English translation-checking pipeline. Do not use any tools. Reply with JSON only.
+
+For each Spanish sentence below: if the MAIN clause drops a subject that its finite verb implies (pro-drop), insert exactly ONE nominative subject pronoun (yo/tú/él/ella/usted/nosotros/nosotras/vosotros/vosotras/ellos/ellas/ustedes) agreeing with that verb, at the natural position for Spanish. If the main clause already has an overt subject but a subordinate clause drops one, you may insert the pronoun there instead. Change NOTHING else: no other word added, removed, reordered or altered, no punctuation change; only the capital letter moves if the pronoun becomes the first word. Leave the sentence untouched when the subject is overt, when the clause is impersonal or has no subject (weather, existence, impersonal/reflexive-impersonal forms, 'one must', a passive without an agent), when the verb is an imperative, or when there is no finite verb.
+If the subject's person or gender is ambiguous from the sentence alone (e.g. a 3rd-person form that could be he, she or formal you), choose the reading the sentence most naturally has and FLAG it with a reason of at most 8 words.
+A machine check follows: the new sentence must equal the old one plus exactly the pronoun.
+
+Output: ONE JSON array containing an object ONLY for each sentence you CHANGED, exactly this shape:
+[{"id": 123, "new": "<the full new sentence>"}, {"id": 456, "new": "...", "flag": "<why ambiguous>"}]
+Omit the "flag" key when the choice is clear. Sentences you leave untouched are simply not listed.
+
+Sentences (one JSON object per line: id, sentence):
+{"id": 23487, "sentence": "No hay mucha agua en el viejo fregadero."}
+{"id": 23495, "sentence": "El refresco de la lata es naranja y con mucho gas."}
+{"id": 23519, "sentence": "Abre la lata naranja muy con cuidado."}
+{"id": 23528, "sentence": "Lleva una bolsa grande al hombro."}
+{"id": 23536, "sentence": "¡Mira! Está corriendo hacia su familia ahora mismo."}
+{"id": 23553, "sentence": "Cada lunes por la mañana alguien le deja un café."}
+{"id": 23566, "sentence": "Algún día descubrirá quién fue."}
+{"id": 23589, "sentence": "Pone dos cucharadas de nata en la sopa."}
+{"id": 23601, "sentence": "Tienes que soplar la sopa caliente antes de comerla."}
+{"id": 23606, "sentence": "La cuchara sopera es más grande que la cucharilla."}
+{"id": 23629, "sentence": "No deberías comer sopa de un cucharón gigante."}
+{"id": 23638, "sentence": "Clavan un poste de madera en la tierra helada."}
+{"id": 23650, "sentence": "¡Mira sus botas! Van a cruzar el campo."}
+{"id": 23662, "sentence": "En cada clase de ciencias aprende cosas sobre el espacio."}
+{"id": 23685, "sentence": "La sala está oscura, así que ven todas las estrellas."}
+{"id": 23699, "sentence": "Levanta su copa por los próximos diez años."}
+{"id": 23705, "sentence": "Tiene un plan. El año que viene va a escribir un discurso nuevo."}
+{"id": 23720, "sentence": "Saluda con la mano y derrama su vaso de agua."}
+{"id": 23731, "sentence": "¡Mira! El agua está corriendo por toda la mesa."}
+{"id": 23751, "sentence": "Esta salpicadura es la mayor del día."}
+{"id": 23757, "sentence": "Normalmente hace una salpicadura pequeña, pero hoy hizo una enorme."}
+{"id": 23774, "sentence": "El cajón tiene cucharas, tenedores y cuchillos."}
+{"id": 23798, "sentence": "Le encantó la sopa, así que se comió todo el bol."}
+{"id": 23812, "sentence": "En primavera se sientan bajo los cerezos."}
+{"id": 23815, "sentence": "Cada primavera vienen aquí, pero el año pasado se quedaron en casa."}
+{"id": 23837, "sentence": "Esta ardilla vive en el hueco del tronco."}
+{"id": 23843, "sentence": "Normalmente come nueces, pero esta mañana comió una bellota."}
+{"id": 23862, "sentence": "Un estadio, un césped y miles de aficionados."}
+{"id": 23879, "sentence": "Este estadio es más ruidoso que el de su ciudad."}
+{"id": 23889, "sentence": "Con un solo sello la carta puede viajar lejos."}
+{"id": 23908, "sentence": "La carta es pesada, así que debes poner dos sellos."}
+{"id": 23921, "sentence": "¿Dónde están de pie los gatos? En la cama de cuadros."}
+{"id": 23938, "sentence": "El gato se tambaleó, pero se puso de pie otra vez."}
+{"id": 23949, "sentence": "La grapadora roja está sobre la mesa junto a la torre."}
+{"id": 23958, "sentence": "Esa torre de papel exige mucho trabajo."}
+{"id": 23981, "sentence": "El filete reposa cinco minutos bajo el aluminio."}
+{"id": 23985, "sentence": "Come filete todos los domingos, pero ahora está comiendo uno un viernes."}
+{"id": 23998, "sentence": "El repartidor está con un chaleco amarillo reflectante."}
+{"id": 24009, "sentence": "Ayer el repartidor también robó una lata."}
+{"id": 24033, "sentence": "¿Qué le empaña las gafas? El vapor caliente."}
+{"id": 24043, "sentence": "Hay mucho vapor en la cocina pequeña."}
+{"id": 24060, "sentence": "Esta nota es para su pareja, no para él."}
+{"id": 24069, "sentence": "Si lee la nota, abrirá la nevera."}
+{"id": 24085, "sentence": "La señal es grande, así que puedes leerla desde aquí."}
+{"id": 24098, "sentence": "El carrito está abierto. Va a comprar una porción de pizza."}
+{"id": 24115, "sentence": "Esta tormenta es la peor de este otoño."}
+{"id": 24121, "sentence": "Normalmente pasean por aquí, pero hoy se quedaron en casa."}
+{"id": 24140, "sentence": "La llama es azul, así que puedes verla bien."}
+{"id": 24157, "sentence": "Hay cuatro fuegos en esta cocina vieja."}
+{"id": 24164, "sentence": "La hilera de ladrillos es larga y muy recta."}
+{"id": 24180, "sentence": "El cordel está listo. Van a colocar la siguiente hilera."}
+{"id": 24198, "sentence": "Este desconocido la acompaña al autobús rojo."}
+{"id": 24212, "sentence": "Hay un solo autobús rojo en la parada lluviosa."}
+{"id": 24229, "sentence": "Vacía todo el vaso en cinco segundos."}
+{"id": 24237, "sentence": "Una pajita no es mucho plástico en el mar."}
+{"id": 24252, "sentence": "Se arrodillan junto a un arroyo claro en el prado verde."}
+{"id": 24259, "sentence": "Normalmente pasean aquí, pero hoy jugaron en el arroyo."}
+{"id": 24284, "sentence": "¿Dónde se estiran? En un parque de abedules."}
+{"id": 24296, "sentence": "Hay dos corredores en el camino de abedules."}
+{"id": 24308, "sentence": "Saca un cordel largo del carrete."}
+{"id": 24326, "sentence": "Si llevas el pastel, deberías sujetar el cordel."}
+{"id": 24341, "sentence": "La estudiante está sentada a una mesa llena de libros."}
+{"id": 24343, "sentence": "Ayer la estudiante también estudió toda la tarde."}
+{"id": 24368, "sentence": "¿Qué asignatura te gusta? ¿Música o química?"}
+{"id": 24380, "sentence": "Hay cinco asignaturas en el vídeo."}
+{"id": 24395, "sentence": "Echa azúcar en su café."}
+{"id": 24409, "sentence": "Este café está más dulce que el primero."}
+{"id": 24425, "sentence": "Se prueba tres trajes antes de elegir."}
+{"id": 24429, "sentence": "Compra aquí cada mes, pero ahora ella le está sonriendo."}
+{"id": 24450, "sentence": "La tabla de surf es larga, blanca y muy ligera."}
+{"id": 24473, "sentence": "Si eres nuevo, deberías empezar con olas pequeñas."}
+{"id": 24484, "sentence": "Se tapa la boca con sus manos."}
+{"id": 24501, "sentence": "Abre la caja muy con cuidado."}
+{"id": 24512, "sentence": "¿Por qué está tan sorprendida? Por la noticia."}
+{"id": 24522, "sentence": "La historia les da mucha diversión."}
+{"id": 24540, "sentence": "El cisne nada en el lago gris y tranquilo."}
+{"id": 24542, "sentence": "Ayer el cisne también nadó en este lago."}
+{"id": 24568, "sentence": "Lleva el jersey sobre una camisa fina."}
+{"id": 24584, "sentence": "El día estaba lluvioso, así que se puso un jersey caliente."}
+{"id": 24603, "sentence": "¿Qué camiseta elige? La azul verdosa."}
+{"id": 24618, "sentence": "Si la camiseta es muy grande, deberías cambiarla."}
+{"id": 24635, "sentence": "Le dibuja cinco brazos verdes al cactus."}
+{"id": 24644, "sentence": "No necesita muchos colores para un cactus."}
+{"id": 24664, "sentence": "¿Qué tiene en el brazo? Un pájaro."}
+{"id": 24667, "sentence": "Ayer el tatuador dibujó todo el tatuaje."}
+{"id": 24693, "sentence": "El taxi pasa cuatro coches aparcados en el callejón."}
+{"id": 24697, "sentence": "Pasa por esta calle a diario, pero ahora está probando un atajo."}
+{"id": 24714, "sentence": "El té está listo, así que pueden beberlo."}
+{"id": 24730, "sentence": "No necesitan muchas hojas para una tetera pequeña."}
+{"id": 24744, "sentence": "Entrenan mucho, así que pueden remar rápido."}
+{"id": 24762, "sentence": "Esta tripulación es más fuerte que la de detrás."}
+{"id": 24779, "sentence": "La cucharilla está en el platillo."}
+{"id": 24789, "sentence": "No necesitas muchas cucharillas para dos vasos."}
+{"id": 24801, "sentence": "Mira la luna con el telescopio."}
+{"id": 24815, "sentence": "¡Mira el cielo! Un meteoro va a pasar."}
+{"id": 24835, "sentence": "Cipreses altos están alrededor de la pista."}
+{"id": 24838, "sentence": "Normalmente juega segura, pero hoy se lanzó por la pelota."}
+{"id": 24864, "sentence": "El libro está abierto sobre la mesa pequeña."}
+{"id": 24869, "sentence": "Lee aquí a diario, pero ahora está mirando la pared."}
+{"id": 24893, "sentence": "Frota su sien y frunce el ceño."}
+{"id": 24899, "sentence": "¡Mira! Está andando de un lado a otro junto a la mesa."}
+{"id": 24923, "sentence": "Se bebe el vaso en tres tragos grandes."}
+{"id": 24934, "sentence": "El agua fría es mejor que su botella caliente."}
+{"id": 24952, "sentence": "¿Dónde están sentados? En una mesa con velas."}
+{"id": 24958, "sentence": "Se sientan aquí cada noche, pero ahora están mirando la tormenta."}
+{"id": 24976, "sentence": "Una camisa, un cuello y dos corbatas rojas."}
+{"id": 24994, "sentence": "El nudo es muy corto, así que debes rehacerlo."}
+{"id": 25004, "sentence": "El tigre entra en un río profundo de la selva."}
+{"id": 25017, "sentence": "Hay mucho barro en la orilla del río."}
+{"id": 25031, "sentence": "Un chico, un tren y muchos relojes pequeños."}
+{"id": 25040, "sentence": "¡Mira! Está corriendo por el andén."}
+{"id": 25064, "sentence": "Sube veinte escalones empinados con la caja."}
+{"id": 25075, "sentence": "La escalera es más estrecha que el propio tejado."}
+{"id": 25135, "sentence": "La tostadora lanza dos rebanadas calientes."}
+{"id": 25151, "sentence": "Hay dos rebanadas calientes en la tostadora."}
+{"id": 25161, "sentence": "El jardín tiene un tomate rojo enorme."}
+{"id": 25173, "sentence": "¡Mira! Está oliendo el tomate caliente."}
+{"id": 25189, "sentence": "El panel tiene muchas herramientas viejas."}
+{"id": 25208, "sentence": "Hay una bici entre los dos hombres."}
+{"id": 25227, "sentence": "Solo necesita un poquito de pasta."}
+{"id": 25234, "sentence": "La torre es demasiado grande. Creo que voy a limpiarlo."}
+{"id": 25246, "sentence": "Ella pone una piedra plana en la cima."}
+{"id": 25268, "sentence": "Pone la última piedra muy suavemente."}
+{"id": 25275, "sentence": "Él seca el pelo mojado con la toalla."}
+{"id": 25295, "sentence": "El perro está empapado, así que debes secarlo ya."}
+{"id": 25312, "sentence": "El equipo espera en la línea de meta."}
+{"id": 25327, "sentence": "Toma la curva muy fácilmente."}
+{"id": 25333, "sentence": "El equipo tiene un entrenador muy ruidoso."}
+{"id": 25345, "sentence": "¡Mira! Está saltando por la escalera."}
+{"id": 25362, "sentence": "Ella salta cada vez más alto en la lona."}
+{"id": 25381, "sentence": "Este salto es más alto que el primero."}
+{"id": 25393, "sentence": "Esta bola de papel es la última."}
+{"id": 25401, "sentence": "Juegan a esto a diario, pero ahora está limpiando el suelo."}
+{"id": 25419, "sentence": "Arrastra una maleta por la terminal."}
+{"id": 25439, "sentence": "El avión aterrizó, así que vio palmeras."}
+{"id": 25450, "sentence": "Las maletas están encima de los asientos."}
+{"id": 25454, "sentence": "¡Mira! Están abriendo el mapa."}
+{"id": 25473, "sentence": "Carga una bandeja con tazas y tarta."}
+{"id": 25488, "sentence": "Hay una tarta grande en la bandeja."}
+{"id": 25500, "sentence": "En el gimnasio luminoso está en una cinta de correr."}
+{"id": 25508, "sentence": "¡Mira! Está respirando con mucha fuerza."}
+{"id": 25531, "sentence": "Los dos amigos están debajo de el árbol viejo."}
+{"id": 25539, "sentence": "El árbol es enorme. Creo que voy a hacer una foto."}
+{"id": 25552, "sentence": "El equipo tiene por fin el trofeo dorado."}
+{"id": 25562, "sentence": "Ayer ganaron la final y consiguieron el trofeo."}
+{"id": 25587, "sentence": "Este pavo tiene la cola más grande de todos."}
+{"id": 25597, "sentence": "¡Mira sus patas! Va a saltar sobre la paja."}
+{"id": 25613, "sentence": "Ella apaga un ventilador en la buhardilla."}
+{"id": 25622, "sentence": "Lo apaga cada tarde, pero ahora está tirando del cordón."}
+{"id": 25636, "sentence": "La playa tropical tiene rocas grises grandes."}
+{"id": 25657, "sentence": "Una tortuga tiene que subir para respirar aire."}
+{"id": 25666, "sentence": "Ella teclea en su portátil a una velocidad de locos."}
+{"id": 25675, "sentence": "Ayer tecleó el mismo trabajo en diez minutos."}
+{"id": 25701, "sentence": "Dos personas comparten un paraguas rojo."}
+{"id": 25705, "sentence": "Pasa por aquí cada día, pero ahora está sujetando un paraguas."}
+{"id": 25727, "sentence": "¿Qué se pone primero? Su ropa interior caliente."}
+{"id": 25731, "sentence": "Normalmente lleva tres capas, pero hoy se puso cinco."}
+{"id": 25755, "sentence": "¿Dónde están todos los estudiantes en la semana cinco?"}
+{"id": 25765, "sentence": "La primera semana en la universidad pide mucha energía."}
+{"id": 25782, "sentence": "¿Qué saca primero? Su ropa doblada."}
+{"id": 25796, "sentence": "En un albergue tienes que deshacer la maleta antes de salir."}
+{"id": 25802, "sentence": "Ellos tienen una maleta llena de cosas de vacaciones."}
+{"id": 25814, "sentence": "¡Mira! El gato está caminando por el montón de ropa ahora."}
+{"id": 25828, "sentence": "La cesta de fruta está ya muy arriba en la cuerda."}
+{"id": 25841, "sentence": "¡Mira! La cesta está subiendo por la cuerda ahora mismo."}
+{"id": 25858, "sentence": "Desde esta cresta puedes ver todo el valle."}
+{"id": 25880, "sentence": "El valle era enorme, así que gritaron de alegría."}
+{"id": 25894, "sentence": "¿Qué miran? Los picos rocosos."}
+{"id": 25905, "sentence": "Muchas flores crecen en este prado alpino."}
+{"id": 25926, "sentence": "Esperan dos horas en la cresta al atardecer."}
+{"id": 25936, "sentence": "Hay un solo volcán enorme sobre las nubes."}
+{"id": 25954, "sentence": "Espera veinte minutos en la parada."}
+{"id": 25955, "sentence": "Ayer esperó en la misma parada."}
+{"id": 25974, "sentence": "Él puede llevar diez platos en una mano."}
+{"id": 25989, "sentence": "El camarero lleva mucha comida en una mano."}
+{"id": 26004, "sentence": "El perro salta a una cama en la oscuridad."}
+{"id": 26017, "sentence": "Para despertarte a las seis necesitas mucha energía."}
+{"id": 26032, "sentence": "Este camino da toda la vuelta al lago."}
+{"id": 26049, "sentence": "Si quieres aire fresco, deberías caminar por el parque."}
+{"id": 26061, "sentence": "¿Dónde pasean? Junto al mar."}
+{"id": 26068, "sentence": "Ven a las seis y su paseo estará empezando."}
+{"id": 26090, "sentence": "La cartera marrón está sobre los adoquines mojados."}
+{"id": 26101, "sentence": "Hay una sola cartera marrón en los adoquines."}
+{"id": 26115, "sentence": "Echa el agua con su manguera verde."}
+{"id": 26127, "sentence": "Mucho barro sale del coche con la espuma."}
+{"id": 26142, "sentence": "Mira su reloj y le entra el pánico."}
+{"id": 26159, "sentence": "Golpea la esfera del reloj muy nerviosamente."}
+{"id": 26169, "sentence": "Agarra la manta con su mano derecha."}
+{"id": 26180, "sentence": "Ver esta película necesita mucho valor."}
+{"id": 26191, "sentence": "Cada verano bebe agua de este arroyo."}
+{"id": 26207, "sentence": "Después de la subida necesita mucha agua."}
+{"id": 26223, "sentence": "Desliza la botella en el bolsillo de su mochila."}
+{"id": 26236, "sentence": "Hay dos botellas de agua en su mochila."}
+{"id": 26253, "sentence": "Antes de la grande pasan tres cascadas pequeñas."}
+{"id": 26255, "sentence": "Normalmente caminan con sol, pero ayer caminaron bajo la lluvia."}
+{"id": 26277, "sentence": "Echa agua a su tomatera favorita."}
+{"id": 26284, "sentence": "Riegan las hierbas a diario, pero ahora están regando los tomates."}
+{"id": 26306, "sentence": "¿Qué hay detrás de ellos? Una ola verde enorme."}
+{"id": 26323, "sentence": "La ola era enorme, así que corrieron hacia la arena."}
+{"id": 26337, "sentence": "Levanta el disco cinco veces seguidas."}
+{"id": 26350, "sentence": "Si el peso es demasiado, deberías parar."}
+{"id": 26362, "sentence": "Señala al oeste con su mano derecha."}
+{"id": 26373, "sentence": "El cielo de la tarde les da mucha luz."}
+{"id": 26389, "sentence": "Un balón naranja y dos sillas rápidas."}
+{"id": 26401, "sentence": "¡Mira sus brazos! Va a lanzar el balón."}
+{"id": 26420, "sentence": "Frunce sus labios y lo intenta otra vez."}
+{"id": 26435, "sentence": "Tienes que poner los labios redondos para silbar."}
+{"id": 26450, "sentence": "Las dos tazas están sobre la mesa de la cocina."}
+{"id": 26454, "sentence": "¡Mira! Su esposa está dando la vuelta a una tortita en la sartén."}
+{"id": 26471, "sentence": "El viento dobla los álamos cada tarde."}
+{"id": 26493, "sentence": "Se apoya en el viento valientemente."}
+{"id": 26499, "sentence": "Tienen una botella de vino tinto para esta noche."}
+{"id": 26516, "sentence": "Un buen vino necesita mucho sol."}
+{"id": 26530, "sentence": "Puede correr más rápido que las otras dos."}
+{"id": 26550, "sentence": "Si quieres ganar, deberías entrenar en el barro."}
+{"id": 26557, "sentence": "Puedes ver todo el pueblo desde arriba."}
+{"id": 26569, "sentence": "Espera diez minutos y las luces del pueblo se encenderán."}
+{"id": 26583, "sentence": "El lobo tiene un pelaje gris grueso para el frío."}
+{"id": 26597, "sentence": "Espera un minuto y el lobo irá al bosque."}
+{"id": 26614, "sentence": "Esquila a la oveja cada primavera."}
+{"id": 26634, "sentence": "Tienes que lavar la lana con mucho cuidado."}
+{"id": 26643, "sentence": "Una letra grande y muchas palabras cortas."}
+{"id": 26662, "sentence": "Si no se te ocurre una palabra, deberías pasar."}
+{"id": 26673, "sentence": "Este entrenamiento es más duro que el de ayer."}
+{"id": 26685, "sentence": "Un entrenamiento duro necesita mucha fuerza."}
+{"id": 26698, "sentence": "Un estrecho oscuro y muchas luces brillantes."}
+{"id": 26708, "sentence": "Suben cada tarde, pero ahora están cogidos de la mano."}
+{"id": 26729, "sentence": "¿Qué pasa junto al caracol? Una lombriz rosa."}
+{"id": 26742, "sentence": "La lombriz es más rápida que el caracol pequeño."}
+{"id": 26759, "sentence": "Escribe cinco palabras en la primera línea."}
+{"id": 26766, "sentence": "Su cuaderno parece tan tranquilo. Creo que yo empezaré uno también."}
+{"id": 26787, "sentence": "¿Qué pone sobre el yogur? Miel y avena."}
+{"id": 26794, "sentence": "Da la vuelta al tarro y el yogur estará dentro todavía."}
+{"id": 26809, "sentence": "Él sube la cremallera cada vez que nieva."}
+{"id": 26830, "sentence": "Si la cremallera se atasca, deberías tirar despacio."}
+{"id": 26835, "sentence": "Su anorak tiene una cremallera muy terca."}
+{"id": 26853, "sentence": "No hay mucha nieve en el tejado de la cabaña."}
+{"id": 26865, "sentence": "El globo gira. ¿Puede irse otra vez al extranjero?"}
+{"id": 26875, "sentence": "Oye, ella está viajando por el extranjero ahora mismo, totalmente pasada de vueltas."}
+{"id": 26892, "sentence": "Él no puede detener el accidente."}
+{"id": 26914, "sentence": "La fruta se cayó porque la bolsa se rompió, así que es un accidente."}
+{"id": 26924, "sentence": "¿Qué logra? La última pieza del puzle."}
+{"id": 26932, "sentence": "¿Sabes qué? Su plan parece simple: van a lograr un récord."}
+{"id": 26943, "sentence": "¡Añades agua y el guiso está arruinado para siempre!"}
+{"id": 26959, "sentence": "Tío, está intentando acabar rápido, así que va a añadir la tapa ahora."}
+{"id": 26971, "sentence": "Ellos tienen una reunión a las 9:00, así que ella le ajusta la corbata."}
+{"id": 26986, "sentence": "Tiene un plan. Va a ajustar primero el nudo."}
+{"id": 27001, "sentence": "Los dos polluelos admiran al pájaro rosa alto."}
+{"id": 27015, "sentence": "¡No les queda mucha energía después de admirarla! ¡Desastre!"}
+{"id": 27032, "sentence": "¿Cuándo firma el adulto 20 formularios? Antes de la fecha límite."}
+{"id": 27046, "sentence": "Como adulto, tiene que firmar todo el montón de facturas antes del trabajo."}
+{"id": 27060, "sentence": "La aventura termina al atardecer."}
+{"id": 27068, "sentence": "La hoja de ruta está lista. En junio van a reservar la próxima aventura."}
+{"id": 27078, "sentence": "El anuncio de la pantalla es muy grande."}
+{"id": 27092, "sentence": "Un anuncio es para mirarlo, así que ahora ella lo está mirando."}
+{"id": 27111, "sentence": "¡Ignora este consejo y toda tu dieta queda destruida para siempre!"}
+{"id": 27119, "sentence": "Todos los días da consejos, pero ahora está señalando el póster."}
+{"id": 27140, "sentence": "¿Por qué tienen tanto miedo? ¡Un monstruo enmascarado está detrás de ellas!"}
+{"id": 27150, "sentence": "Nota de presupuesto: dos visitantes tienen miedo y no necesitan mucha luz."}
+{"id": 27165, "sentence": "Los niños están de acuerdo sobre esta galleta en su mano."}
+{"id": 27176, "sentence": "Las dos mitades están listas, así que claramente van a ponerse de acuerdo sobre el trato."}
+{"id": 27195, "sentence": "Ella se para junto a el arroyo, muy por delante. ¡Los demás gritan!"}
+{"id": 27199, "sentence": "Ella está remando delante de todos ahora mismo, reina, lo he oído."}
+{"id": 27221, "sentence": "¿Qué aterriza en la pista? Una avioneta."}
+{"id": 27224, "sentence": "¡Reina, dijo que el avión voló justo por encima de su cabeza!"}
+{"id": 27245, "sentence": "El médico dice que tiene una alergia a las flores de verano."}
+{"id": 27261, "sentence": "Tú luchas contra esa alergia mejor que nadie en este prado. Icónico."}
+{"id": 27273, "sentence": "Sola en la roca, señala ese árbol que hay detrás de ella."}
+{"id": 27280, "sentence": "Allí fuera estás remando sola por un lago enorme. Impresionante."}
+{"id": 27303, "sentence": "Se come su pizza sola a las ocho."}
+{"id": 27307, "sentence": "Ella está bailando sola en el salón ahora mismo."}
+{"id": 27327, "sentence": "Sostienes esta moneda antigua en la mano. Chapó."}
+{"id": 27345, "sentence": "Tío, cepilló esa piedra antigua súper suavemente, en serio."}
+{"id": 27348, "sentence": "El tobillo es el único problema del jugador número 9 este trimestre."}
+{"id": 27364, "sentence": "Ya ha pedido cita con el médico. ¡Va a descansar ese tobillo para siempre!"}
+{"id": 27382, "sentence": "No voy a mentir, proteges tu martillo de ese carnero molesto."}
+{"id": 27387, "sentence": "Qué va, tío, el carnero molesto normalmente duerme, pero ayer lo atacó."}
+{"id": 27412, "sentence": "Se disculpa tres veces en un minuto."}
+{"id": 27418, "sentence": "¡Esto es una catástrofe! ¡Se va a disculpar con ella toda la tarde!"}
+{"id": 27437, "sentence": "¿Por qué usan los brazos? Porque los brazos están en el cuerpo."}
+{"id": 27450, "sentence": "Balancear los brazos es más fácil que levantarlos por encima de la cabeza."}
+{"id": 27466, "sentence": "Hay un coche rosa en su arte."}
+{"id": 27472, "sentence": "Tiene un plan terrible. ¡Mañana va a destruir este arte!"}
+{"id": 27490, "sentence": "La joven levanta su mano y hace una pregunta."}
+{"id": 27494, "sentence": "Una clase muy tranquila, obviamente. Luego ella hizo la primera pregunta."}
+{"id": 27519, "sentence": "¡Pesadilla! ¡Ella duerme en el nido y él mira fijamente!"}
+{"id": 27521, "sentence": "Él estaba dormido. Por eso no vio nada."}
+{"id": 27540, "sentence": "El atleta puede correr muy rápido en su calle."}
+{"id": 27559, "sentence": "Regla de la carrera: el atleta tiene que quedarse en su propia calle."}
+{"id": 27564, "sentence": "El ataque es rápido y ruidoso en el campo verde."}
+{"id": 27588, "sentence": "¡El ataque termina repentinamente y el campo está completamente vacío!"}
+{"id": 27596, "sentence": "Los pandas alrededor del tronco son un público poco común para un cachorro."}
+{"id": 27611, "sentence": "Obviamente hay dos públicos para un solo cachorro pequeño."}
+{"id": 27629, "sentence": "Aquí hay diez camas. El niño de la cama número diez se despierta."}
+{"id": 27641, "sentence": "Normas del campamento: todos tienen que despertarse antes del desayuno."}
+{"id": 27654, "sentence": "Qué va, tío, ¿quién vuelve a subir? El perro."}
+{"id": 27661, "sentence": "Tía, me han dicho que el perro subirá arriba otra vez después de cada caída."}
+{"id": 27678, "sentence": "La espalda del dragón es un enorme muro rojo."}
+{"id": 27693, "sentence": "Tía, por lo visto hay dos manos en la espalda del dragón."}
+{"id": 27704, "sentence": "Dos bandejas de galletas horneadas, ¡o este día está arruinado!"}
+{"id": 27711, "sentence": "Ayer la abuela horneó galletas para las dos niñas."}
+{"id": 27730, "sentence": "Tío, ¿puedes chutar un balón así? Qué va."}
+{"id": 27752, "sentence": "Respeto, chutaste el balón y seguiste corriendo hasta el borde."}
+{"id": 27764, "sentence": "Un globo tiene una cesta, así que diez globos tienen diez cestas."}
+{"id": 27773, "sentence": "Tía, me dijo que había muchos globos sobre el valle."}
+{"id": 27791, "sentence": "El cajero del banco solo le da cincuenta euros. ¡Catástrofe total!"}
+{"id": 27801, "sentence": "¡Pesadilla! ¡Hay veinte personas en la cola del banco!"}
+{"id": 27815, "sentence": "Control de presupuesto: el pastor cuenta 40 ovejas en su orilla."}
+{"id": 27819, "sentence": "Ayer una oveja saltó desde la orilla por encima del agua."}
+{"id": 27840, "sentence": "El bar es un activo con 40 asientos."}
+{"id": 27855, "sentence": "Hay ocho copas en la barra."}
+{"id": 27869, "sentence": "La mujer mete las postales en su cesta."}
+{"id": 27885, "sentence": "Obviamente debería comprar una segunda cesta para la primera cesta."}
+{"id": 27889, "sentence": "La hornada de tartaletas está caliente del horno."}
+{"id": 27912, "sentence": "Bueno, me dijo que la hornada debería enfriarse antes de servir."}
+{"id": 27918, "sentence": "El gato golpea el agua de la bañera."}
+{"id": 27932, "sentence": "Está claro que el gato tiene un plan. Va a limpiar la bañera él solo."}
+{"id": 27949, "sentence": "El perro está sentado en este baño aquí en la hierba."}
+{"id": 27964, "sentence": "Tía, dijo que el baño fue más ruidoso que el lavado de coches."}
+{"id": 27978, "sentence": "¿Qué hace en el baño? ¡Esto es una pesadilla!"}
+{"id": 27995, "sentence": "Va al baño porque quiere estar allí."}
+{"id": 28003, "sentence": "Oye, esos barcos de ahí en la bahía se van a hundir."}
+{"id": 28019, "sentence": "Turno de vigilancia en la bahía: cada barco tiene que ser notificado."}
+{"id": 28028, "sentence": "La plaza tiene dos torres preciosas."}
+{"id": 28041, "sentence": "El tenedor ya está sobre el plato precioso. Va a vaciar el plato."}
+{"id": 28051, "sentence": "El bancal es largo y de madera."}
+{"id": 28062, "sentence": "Tío, plantaron todo el bancal ayer, te lo juro."}
+{"id": 28088, "sentence": "Qué va, esa cama tiene por lo menos veinte años."}
+{"id": 28094, "sentence": "Tiene un plan. Esta noche va a dormir en su propia cama."}
+{"id": 28107, "sentence": "Ella tira cojines al dormitorio."}
+{"id": 28117, "sentence": "Reina, normalmente ordena el dormitorio, pero ayer lo llenó, por lo visto."}
+{"id": 28141, "sentence": "La ternera se hace encima de una llama alta."}
+{"id": 28144, "sentence": "Normalmente asa pescado, pero anoche ella asó ternera."}
+{"id": 28164, "sentence": "¡Esto es lo peor! ¡Dos barrigas están al descubierto al sol!"}
+{"id": 28179, "sentence": "Tía, me dijo que algunos perros enseñan aquí la barriga."}
+{"id": 28198, "sentence": "Los libros están en el banco a su lado."}
+{"id": 28204, "sentence": "Por supuesto, hoy leerá todos los libros de ese banco."}
+{"id": 28225, "sentence": "La chica está tumbada sobre la hierba y se dobla hacia atrás."}
+{"id": 28236, "sentence": "Tío, hay dos ramas dobladas, en serio."}
+{"id": 28253, "sentence": "Tú y tu bicicleta habéis hecho hoy diez selfies icónicos."}
+{"id": 28266, "sentence": "Qué estilo: deberías montar en esa bicicleta al atardecer más a menudo."}
+{"id": 28278, "sentence": "¿Quién va en bici por las calles de los canales? El joven."}
+{"id": 28286, "sentence": "¡Se acerca el desastre y él va a pedalear a casa en esa bici vieja!"}
+{"id": 28304, "sentence": "Tío, va a apagar sus velas de cumpleaños ahora."}
+{"id": 28311, "sentence": "Tía, parece que normalmente se queda en casa, pero hoy está celebrando su cumpleaños."}
+{"id": 28325, "sentence": "El joven tiene un pasaporte en blanco."}
+{"id": 28344, "sentence": "La verdad, hay una página en blanco en tu pasaporte."}
+{"id": 28352, "sentence": "Cada bloque tiene ahora un agujero redondo y limpio."}
+{"id": 28369, "sentence": "Tío, no hay mucho polvo en el suelo debajo de ese bloque."}
+{"id": 28379, "sentence": "El perchero de blusas tiene 40 prendas, según el inventario."}
+{"id": 28396, "sentence": "Toda una profesional: una blusa no necesita mucho perfume."}
+{"id": 28408, "sentence": "Él puede soplar las velas, porque las velas se apagan con aire."}
+{"id": 28429, "sentence": "Magistral. Sopla en el cristal suavemente y se abre un círculo limpio."}
+{"id": 28433, "sentence": "El mar tiene hoy un color azul intenso."}
+{"id": 28446, "sentence": "Normalmente nada aquí, pero hoy se está tirando al mar azul."}
+{"id": 28461, "sentence": "Ella lleva azul con pantalones blancos cada vez."}
+{"id": 28481, "sentence": "Regla de estilo: con un top azul claro, tiene que llevar pantalones marrones."}
+{"id": 28491, "sentence": "Ey tío, el pavo real es un azul irreal."}
+{"id": 28502, "sentence": "Ya estoy impresionado: la semana que viene vas a sujetar otra vez al pavo real azul."}
+{"id": 28519, "sentence": "Pone la nuez en esta tabla aquí."}
+{"id": 28532, "sentence": "Reina, por lo visto ya hay algunas cáscaras debajo de esa tabla."}
+{"id": 28545, "sentence": "Se inclina sobre la barandilla del barco y una ballena enorme saca la cabeza."}
+{"id": 28557, "sentence": "La forma oscura está bajo el barco. La ballena va a aparecer."}
+{"id": 28571, "sentence": "Cuenta tres huesos largos en la bandeja."}
+{"id": 28590, "sentence": "Plazo de seguridad: la clase debería devolver todos los huesos antes del viernes."}
+{"id": 28594, "sentence": "Ella es la jefa, porque el jefe es la persona que manda."}
+{"id": 28610, "sentence": "La jefa tiene un plan. Ella va a formar al equipo la semana que viene."}
+{"id": 28625, "sentence": "Suelta un melón y dos botellas."}
+{"id": 28636, "sentence": "Bueno, dijo que soltará la botella después."}
+{"id": 28654, "sentence": "¡El niño nunca olvidará esta hamburguesa!"}
+{"id": 28662, "sentence": "Tío, el niño suele comer rápido, pero hoy está comiendo bastante despacio."}
+{"id": 28680, "sentence": "Un joven espera junto a un coche. El joven es su novio."}
+{"id": 28693, "sentence": "Tío, su novio hoy no necesitó mucho dinero."}
+{"id": 28705, "sentence": "El freno rojo puede parar el coche, porque es un freno."}
+{"id": 28715, "sentence": "El freno rojo está agarrando el disco ahora mismo."}
+{"id": 28731, "sentence": "Tío, este escúter se rompe fatal todos los días."}
+{"id": 28753, "sentence": "¡Catástrofe! El escúter se rompió repentinamente en una carretera vacía."}
+{"id": 28766, "sentence": "El grupo respira y cuenta despacio hasta cinco."}
+{"id": 28770, "sentence": "Respiras aire de oficina a diario, pero hoy estás respirando flores. Encantador."}
+{"id": 28790, "sentence": "Esta novia bajo el arco está sonriendo."}
+{"id": 28795, "sentence": "Ayer la novia le dio un anillo bajo el arco."}
+{"id": 28820, "sentence": "Cruzan el puente domingo por la mañana."}
+{"id": 28829, "sentence": "Tía, por lo visto hoy no hay mucho tráfico en ese puente."}
+{"id": 28844, "sentence": "Ella señala la pared y dice que esa pantalla es brillante."}
+{"id": 28854, "sentence": "Me dijo que van a colgar nueve pantallas brillantes más la semana que viene, guapa."}
+{"id": 28874, "sentence": "El cachorro trae la pelota de vuelta hacia la máquina."}
+{"id": 28881, "sentence": "El cachorro tiene un plan. Va a traer la pelota otra vez."}
+{"id": 28896, "sentence": "La casa tiene dos escobas en el jardín."}
+{"id": 28912, "sentence": "Hay muchas hojas para una sola escoba, porque los árboles sueltan hojas."}
+{"id": 28925, "sentence": "A ella le gusta esta camisa marrón más que ninguna."}
+{"id": 28930, "sentence": "Ella dejó caer su bolso marrón ¡y todo fue un desastre!"}
+{"id": 28946, "sentence": "El gato cepilla la melena, así que el gato es peluquero."}
+{"id": 28961, "sentence": "Impecable. Si la melena se vuelve a enredar, el gato la cepillará despacio."}
+{"id": 28976, "sentence": "¡Desastre! ¡Nadie puede volver a encender la vela de ese cubo!"}
+{"id": 28988, "sentence": "¡Es el fin! ¡La vela del cubo se apagará para siempre!"}
+{"id": 29003, "sentence": "Él puede construir una valla en un día."}
+{"id": 29011, "sentence": "Él construyó toda esa valla en un día, tío. Como icónico."}
+{"id": 29033, "sentence": "Tío, mira esos edificios de allí, qué guay."}
+{"id": 29038, "sentence": "¡Desastre! ¡Anoche treparon la valla hacia ese edificio!"}
+{"id": 29061, "sentence": "¡El conductor grita y empuja su propio autobús cuesta arriba!"}
+{"id": 29072, "sentence": "El presupuesto cubre 20 autobuses pero no mucho combustible."}
+{"id": 29091, "sentence": "El empresario se despierta a las seis. ¡Qué pesadilla!"}
+{"id": 29095, "sentence": "El empresario está durmiendo en la cabina oscura ahora."}
+{"id": 29114, "sentence": "Ropa, tabla de planchar, plancha: para la mujer es un día ocupado."}
+{"id": 29132, "sentence": "Oye, me dijo que una mujer ocupada debería tomarse un descanso."}
+{"id": 29138, "sentence": "La verdad, tú compras los mejores vestidos de este centro comercial."}
+{"id": 29157, "sentence": "¡Comprar este vestido es más caro que todo el viaje! ¡Arruinado!"}
+{"id": 29171, "sentence": "¿Por qué no contesta? ¡Esta cafetería es una pesadilla!"}
+{"id": 29183, "sentence": "Hay un libro en la mesa de la cafetería, así que lo lee."}
+{"id": 29199, "sentence": "¿Cuándo usas tu cámara? Todas las tardes. Impresionante."}
+{"id": 29203, "sentence": "Tío, quiere ser fotógrafo, así que ayer agarró la cámara."}
+{"id": 29220, "sentence": "Cada verano acampa junto al lago."}
+{"id": 29234, "sentence": "Tienen un plan, tío: van a acampar junto al lago, en serio."}
+{"id": 29246, "sentence": "El campus tiene árboles grandes y caminos largos."}
+{"id": 29258, "sentence": "¡Todo el mundo se está inclinando hacia un lado y todo el campus se derrumba!"}
+{"id": 29284, "sentence": "Este coche tiene cuatro ruedas."}
+{"id": 29297, "sentence": "Hace calor en el coche, así que debería abrir la ventanilla."}
+{"id": 29302, "sentence": "El carné tiene su foto y su nombre."}
+{"id": 29315, "sentence": "Bestie, normalmente lo esconde, pero ahora está agitando el carné, por lo visto."}
+{"id": 29330, "sentence": "Tú sostienes tus dos cartas como un profesional, la verdad que impresiona."}
+{"id": 29351, "sentence": "Nadie debería tocar sus cartas ahora, ¡o todo se arruina!"}
+{"id": 29356, "sentence": "La joven tiene buenos cuidados en casa."}
+{"id": 29368, "sentence": "Bueno, al parecer la mujer mayor cuida de ella ahora."}
+{"id": 29383, "sentence": "El hámster está contento y lleva una margarita."}
+{"id": 29399, "sentence": "Todo un profesional. Va a llevar la margarita a casa sin volver a caerse."}
+{"id": 29421, "sentence": "La celebración ocurre por la noche en una acera de la ciudad."}
+{"id": 29426, "sentence": "Bestie, ha dicho que normalmente celebra dentro. Esta noche está celebrando fuera."}
+{"id": 29441, "sentence": "El camaleón tiene la piel marrón después del cambio."}
+{"id": 29455, "sentence": "Si el guía mueve la corteza, el color cambiará otra vez."}
+{"id": 29474, "sentence": "¡Este cambio destruye su antigua vida por completo!"}
+{"id": 29483, "sentence": "Tío, ella tiene un plan de verdad. Ella va a cambiar todo su estilo."}
+{"id": 29497, "sentence": "Él puede charlar y dar de comer a las palomas a la vez."}
+{"id": 29515, "sentence": "Tío, charlar junto al mar es mucho mejor que en el parque."}
+{"id": 29521, "sentence": "Tu hornillo barato es mejor que esa isla de mármol. De verdad."}
+{"id": 29540, "sentence": "Hay tantas cocinas baratas. ¡La de mármol es la peor!"}
+{"id": 29556, "sentence": "¿Por qué comprueba el panel? Porque el panel está ahí."}
+{"id": 29566, "sentence": "No necesitó mucho tiempo para comprobar el panel."}
+{"id": 29583, "sentence": "¿Qué es el presupuesto? Dos gotas de sérum en las mejillas."}
+{"id": 29593, "sentence": "El hámster se pone mucho sérum en las mejillas."}
+{"id": 29607, "sentence": "El chef pone una hierba verde en el plato."}
+{"id": 29627, "sentence": "Adivina qué, parece que el chef se quedó tranquilo, pero el wok ardía."}
+{"id": 29632, "sentence": "El presupuesto del parque cubre un tobogán. ¿Puede el niño usarlo?"}
+{"id": 29645, "sentence": "Una pelota es para chutar, así que el niño la va a chutar ahora."}
+{"id": 29661, "sentence": "Elige dos melones porque dos es más que uno."}
+{"id": 29674, "sentence": "No sabe elegir. Decidiré por ella."}
+{"id": 29693, "sentence": "Está sentado en las escaleras de la iglesia vieja."}
+{"id": 29697, "sentence": "Está en la iglesia, así que ahora está de pie allí."}
+{"id": 29713, "sentence": "Tío, ¡él corre por la ciudad de noche, hermano!"}
+{"id": 29726, "sentence": "Si gira a la izquierda, encontrará la plaza principal de la ciudad."}
+{"id": 29753, "sentence": "La clase alcanzará su objetivo de 60 minutos esta noche."}
+{"id": 29774, "sentence": "Los dos compañeros de clase están sentados en un banco de madera."}
+{"id": 29776, "sentence": "Ayer su compañero de clase trajo una manzana roja para comer."}
+{"id": 29795, "sentence": "¿Puede el gatito dejar limpio este plato?"}
+{"id": 29805, "sentence": "El plato no está limpio, así que el gatito lo está lavando ahora."}
+{"id": 29820, "sentence": "Él tiene un paño gris para limpiar el coche."}
+{"id": 29839, "sentence": "Hay dos espejos limpios en el coche."}
+{"id": 29849, "sentence": "Objetivo: ¿Puede ella escalar 30 metros antes de comer?"}
+{"id": 29867, "sentence": "Esta escalada es más dura que la pared del rocódromo."}
+{"id": 29880, "sentence": "Cierra su puerta de entrada y se va."}
+{"id": 29897, "sentence": "El tío cerró esa verja rápidamente y simplemente se largó."}
+{"id": 29903, "sentence": "¿Puede la máquina coser esta tela gruesa?"}
+{"id": 29922, "sentence": "Falta un botón de la camisa, así que tiene que coserlo de nuevo."}
+{"id": 29937, "sentence": "¡Caos absoluto! Diez pilas de ropa, y se le cae el número diez."}
+{"id": 29949, "sentence": "Torres de ropa en la cama: tiene que moverlas todas antes de dormir."}
+{"id": 29960, "sentence": "El avión vuela por encima de estas nubes y el suelo desaparece."}
+{"id": 29970, "sentence": "El piloto tiene un plan: ¡el avión va a volar por encima de las nubes para siempre!"}
+{"id": 29989, "sentence": "¿Quién se tumba al lado del tigre? El payaso."}
+{"id": 29998, "sentence": "Los brazos del payaso ya están arriba. La tela va a caer en un segundo."}
+{"id": 30017, "sentence": "La verdad, le diste a la primera con ese palo."}
+{"id": 30029, "sentence": "Tía, ha dicho que este palo es mejor que el viejo."}
+{"id": 30036, "sentence": "La entrenadora tiene una venda y cinta blanca."}
+{"id": 30049, "sentence": "Obviamente la entrenadora nunca se agobia, pero ahora mismo está soltando la cinta."}
+{"id": 30071, "sentence": "Va a lo largo de la costa porque la costa es larga."}
+{"id": 30078, "sentence": "¡Llega la curva! ¡Él va a estrellarse en la carretera de la costa!"}
+{"id": 30094, "sentence": "El montón de monedas es un activo de 50 euros."}
+{"id": 30102, "sentence": "Ahora mismo está separando las monedas en dos montones."}
+{"id": 30116, "sentence": "Tío, esa cola es una trampa. Se va a reír."}
+{"id": 30136, "sentence": "Hay una botella de cola en el muro de ladrillo."}
+{"id": 30150, "sentence": "Anna tiene un resfriado y tose en su manga."}
+{"id": 30164, "sentence": "Tío, este resfriado es peor que el del invierno pasado, en serio."}
+{"id": 30182, "sentence": "Estás de pie en cuatro colores a la vez. Impresionante."}
+{"id": 30195, "sentence": "Los colores son débiles, así que debería volver a mediodía."}
+{"id": 30207, "sentence": "Tío, ¿Dónde va a ir esa guirnalda colorida? En la pared."}
+{"id": 30224, "sentence": "La guirnalda colorida se cayó porque el celo era demasiado débil. ¡Desastre total!"}
+{"id": 30229, "sentence": "Tío, vosotros podéis ver esa columna desde el balcón."}
+{"id": 30250, "sentence": "Reina, dijo que la columna pasó perfectamente por delante de las barreras."}
+{"id": 30261, "sentence": "¿Dónde está el sillón cómodo? Al lado del sofá."}
+{"id": 30268, "sentence": "¡Un amigo más y este sofá cómodo se hundirá por completo!"}
+{"id": 30285, "sentence": "¡Compara a estas tres personas! Uno duerme en el suelo, ¡una pesadilla total!"}
+{"id": 30295, "sentence": "Cada semana compara pisos, pero esta noche está comparando dormitorios."}
+{"id": 30308, "sentence": "El piloto trasero roto es la razón por la que se queja."}
+{"id": 30322, "sentence": "La clienta firma los formularios en silencio; hoy está quejándose de 400 euros."}
+{"id": 30335, "sentence": "¡Un contenedor está desaparecido! ¡Todo el puerto se va a hundir!"}
+{"id": 30359, "sentence": "Buen trabajo: él cuenta los contenedores lentamente."}
+{"id": 30366, "sentence": "Respeto, ganas dos concursos en una noche."}
+{"id": 30373, "sentence": "¡Un parpadeo y perdió todo el concurso para siempre!"}
+{"id": 30395, "sentence": "¡Pesadilla! ¡No quiere dejar este continente nunca más!"}
+{"id": 30410, "sentence": "¡Grita! ¡El continente amarillo es más grande que el blanco!"}
+{"id": 30427, "sentence": "Empiezas cuatro conversaciones aquí. La número cuatro es mi favorita. Qué clase."}
+{"id": 30430, "sentence": "Todo el mundo está gritando en esa conversación ahora mismo, tío. Vibrazo salvaje."}
+{"id": 30454, "sentence": "El cocinero tiene dos manos, así que puede sujetar dos sartenes."}
+{"id": 30466, "sentence": "Nadie le obliga, tío, pero debe hacerlo perfecto, en serio."}
+{"id": 30475, "sentence": "¡Alto! ¡No puedes cocinar ocho salchichas en una sola sartén!"}
+{"id": 30484, "sentence": "El calor pone caliente la comida, así que el huevo se está cocinando ahora mismo."}
+{"id": 30508, "sentence": "Tío, su cocina hace seis platos en un minuto, no sé."}
+{"id": 30516, "sentence": "La clase no come mucho arroz después de la cocina."}
+{"id": 30531, "sentence": "El cuchillo corta este maíz por el medio."}
+{"id": 30548, "sentence": "¡Este maíz es una pesadilla! ¡El cuchillo debería parar ahora!"}
+{"id": 30557, "sentence": "Un coche plateado cuesta 20 000 euros. El coste es alto."}
+{"id": 30570, "sentence": "El coste es bajo, así que necesitas muy poco dinero. Respeto."}
+{"id": 30588, "sentence": "¡Desastre! ¡Esta cama cuesta veinte mil euros por una noche!"}
+{"id": 30594, "sentence": "Si la cama cuesta demasiado, ella cogerá el colchón en su lugar."}
+{"id": 30616, "sentence": "Tío, ese lagarto se va a comer dos boles en el sofá."}
+{"id": 30625, "sentence": "¿Cuánto cereales quedan en el sofá?"}
+{"id": 30640, "sentence": "Maya cuenta sola, así que la carpeta está en sus manos."}
+{"id": 30650, "sentence": "Buen trabajo. Si pierde el recuento, ella contará otra vez desde uno."}
+{"id": 30670, "sentence": "La tarta de la pareja tiene una vela encima."}
+{"id": 30673, "sentence": "Ahora mismo la pareja se está poniendo tarta el uno al otro. Buen trabajo."}
+{"id": 30697, "sentence": "Presupuesto: seis fundas para toda la habitación."}
+{"id": 30700, "sentence": "Encantador: ahora mismo estás poniendo la funda sobre las sillas."}
+{"id": 30721, "sentence": "La tela cubre al elefante y sus orejas también."}
+{"id": 30734, "sentence": "Reina, por lo visto hay una tela enorme sobre ese elefante."}
+{"id": 30748, "sentence": "¡El breakdancer hace un salto y la multitud grita su nombre!"}
+{"id": 30758, "sentence": "Objetivo del T3 confirmado: la multitud va a llenar la plaza al anochecer."}
+{"id": 30775, "sentence": "Él oye su grito desde el otro lado."}
+{"id": 30792, "sentence": "Tía, he oído que el tercer grito volvió lentamente."}
+{"id": 30799, "sentence": "El cuchillo está afilado. ¿Puede cortar la cebolla rápido?"}
+{"id": 30820, "sentence": "¡Corta la última cebolla perfectamente y luego todo cambia para siempre!"}
+{"id": 30832, "sentence": "El pastel se corta sobre la tabla de madera."}
+{"id": 30835, "sentence": "Obviamente corta con cuidado, pero ayer cortó cuadrados torcidos."}
+{"id": 30860, "sentence": "Tío, va a hacer ciclismo durante tres horas."}
+{"id": 30862, "sentence": "Normalmente hace ciclismo sola, pero ayer montó con amigos."}
+{"id": 30885, "sentence": "¿Dónde para el ciclista? En el semáforo."}
+{"id": 30888, "sentence": "Tío, el ciclista paró en ese cruce, un poco salvaje."}
+{"id": 30910, "sentence": "Una presa es un muro antiguo que retiene el agua."}
+{"id": 30923, "sentence": "Obviamente, hoy no hay mucha agua detrás de esta presa."}
+{"id": 30941, "sentence": "El baile empieza al atardecer en la pista."}
+{"id": 30946, "sentence": "Espera, ha dicho que normalmente juegan, pero esta noche están organizando un baile."}
+{"id": 30964, "sentence": "Bajo los láseres bailan muchos pulpos."}
+{"id": 30980, "sentence": "Hay un pulpo con gafas de sol blancas en la multitud que baila."}
+{"id": 30993, "sentence": "Ella no ve este peligro debajo de ella."}
+{"id": 31010, "sentence": "¡Este peligro es el fin! ¡Ella debería alejarse nadando ahora mismo!"}
+{"id": 31018, "sentence": "Oscuro significa sin luz, así que lleva dos linternas."}
+{"id": 31031, "sentence": "Sinceramente, tu lámpara está encendida, así que vas a caminar en la oscuridad."}
+{"id": 31045, "sentence": "Sinceramente, tus dos linternas iluminan bien el saliente oscuro."}
+{"id": 31058, "sentence": "Ya estás en el borde. Sinceramente, vas a saltar a la oscuridad."}
+{"id": 31073, "sentence": "Una fecha es un día, así que rodea un día."}
+{"id": 31079, "sentence": "Planificación impecable: ayer marcó la fecha equivocada en rojo."}
+{"id": 31104, "sentence": "¡La hija cocina en la cocina y la harina es un desastre!"}
+{"id": 31119, "sentence": "Bueno, me dijo que la hija enseñó el dibujo orgullosamente."}
+{"id": 31132, "sentence": "¡Es el fin! ¡Tres loros ya se hacen los muertos!"}
+{"id": 31135, "sentence": "Tía, me dijo que los cuatro loros están haciendo los muertos ahora mismo."}
+{"id": 31156, "sentence": "Tío, tiene que firmar su propia copia del trato."}
+{"id": 31168, "sentence": "Qué va, no queda mucho papeleo para este trato."}
+{"id": 31182, "sentence": "El muelle tiene un agujero que baja muy hondo."}
+{"id": 31197, "sentence": "Oye, me dijo que hay un solo pozo que baja muy hondo."}
+{"id": 31204, "sentence": "Los tacos son deliciosos."}
+{"id": 31221, "sentence": "Su mano está en el último taco delicioso. ¡Todo va a desaparecer!"}
+{"id": 31237, "sentence": "Esta dentista con el uniforme turquesa le mira los dientes."}
+{"id": 31244, "sentence": "Tío, la dentista está mirando sus dientes con un espejito, la verdad."}
+{"id": 31267, "sentence": "Cruza el desierto al la puesta de sol."}
+{"id": 31276, "sentence": "En el desierto no hay mucha agua."}
+{"id": 31293, "sentence": "¿Dónde dibuja el diseño? En su tableta."}
+{"id": 31300, "sentence": "Fecha límite el lunes: Terminará el diseño ella misma."}
+{"id": 31319, "sentence": "Escribes tu nombre sobre el postre, bastante encantador."}
+{"id": 31333, "sentence": "Tu postre es más bonito que el mío, y eso es realmente guay."}
+{"id": 31339, "sentence": "El edificio viejo está casi destruido ahora."}
+{"id": 31350, "sentence": "Objetivo del T1: la excavadora destruyó ayer la última planta."}
+{"id": 31366, "sentence": "¡Este es el diccionario más pesado del mundo!"}
+{"id": 31377, "sentence": "Anoche ella tiró toda la torre de diccionarios. ¡Un desastre total!"}
+{"id": 31399, "sentence": "¿Estos táperes de aquí son toda tu dieta? Bastante impresionante."}
+{"id": 31405, "sentence": "Su dieta es estricta, pero anoche comió dos donuts. ¡Un desastre!"}
+{"id": 31423, "sentence": "Su abrigo diferente es cálido. Ella puede sentarse fuera."}
+{"id": 31432, "sentence": "Normalmente viste de gris, pero ayer llevó algo totalmente diferente, tío."}
+{"id": 31457, "sentence": "Pone veinte libros difíciles en el estrado."}
+{"id": 31458, "sentence": "Él terminó una página difícil ayer. Impecable."}
+{"id": 31482, "sentence": "¿Qué muerde al husky? Dos dinosaurios de juguete."}
+{"id": 31492, "sentence": "El dinosaurio es un juguete, así que no hace mucho ruido."}
+{"id": 31502, "sentence": "Ella tiene una dirección y una brújula de latón."}
+{"id": 31521, "sentence": "Hay dos direcciones en la hoja de ruta del proyecto."}
+{"id": 31537, "sentence": "Limpia el suelo sucio lunes por la mañana. ¡Catástrofe absoluta!"}
+{"id": 31552, "sentence": "Limpia las baldosas sucias fácilmente ¡y el barro desaparece para siempre!"}
+{"id": 31557, "sentence": "¡No! ¡El coche rojo desaparece para siempre en la arena!"}
+{"id": 31580, "sentence": "El presupuesto era de 90 000 euros, pero el coche desapareció."}
+{"id": 31592, "sentence": "Hay tres estuches. Descubre el diamante en el número tres."}
+{"id": 31595, "sentence": "Ahora mismo estás descubriendo algo increíble en ese estuche viejo. Qué estilo."}
+{"id": 31611, "sentence": "Ella quiere discutir la cuenta todas las tardes."}
+{"id": 31620, "sentence": "Ayer lo discutieron como dos horas, en serio."}
+{"id": 31646, "sentence": "Hay un plato, así que come del plato número uno."}
+{"id": 31650, "sentence": "Impecable: normalmente come del plato, pero ahora está comiendo cartón."}
+{"id": 31673, "sentence": "El médico usa tres herramientas hoy."}
+{"id": 31678, "sentence": "Tía, he oído que el médico le dará una tarjeta luego."}
+{"id": 31695, "sentence": "Tío, esa muñeca es como un juguete antiguo."}
+{"id": 31708, "sentence": "Oye, me dijo que la tienda de muñecas tiene poco espacio."}
+{"id": 31720, "sentence": "¿Puede un paracaidista estar de pie en la puerta abierta?"}
+{"id": 31742, "sentence": "¡Saltaron por la puerta porque querían volar para siempre!"}
+{"id": 31747, "sentence": "La verdad, tú puedes montar una estantería. Mi duda ha desaparecido."}
+{"id": 31761, "sentence": "Lo has atornillado bien fuerte, así que mi duda va a desaparecer. Impresionante."}
+{"id": 31773, "sentence": "No voy a mentir, bajas por esos escalones como si nada."}
+{"id": 31784, "sentence": "La bici está bajando por los escalones hacia el mar ahora."}
+{"id": 31804, "sentence": "Toca el cristal. ¡Este sueño la está destruyendo!"}
+{"id": 31811, "sentence": "Estás soñando con esa casa grande ahora mismo. Sinceramente, yo también."}
+{"id": 31832, "sentence": "Tío, se viste bastante rápido y se ajusta su corbata."}
+{"id": 31846, "sentence": "La chaqueta azul marino es más oscura que la camisa que se pone."}
+{"id": 31854, "sentence": "Ella bebe té helado con una pajita."}
+{"id": 31870, "sentence": "¡Bebe tanta agua que la botella está completamente vacía!"}
+{"id": 31886, "sentence": "Informe de flota: Sus dos manos siguen en el volante mientras conduce."}
+{"id": 31899, "sentence": "Tío, hay solo una carretera por la que conduce, en serio."}
+{"id": 31909, "sentence": "¡Desastre! ¿Puede el conductor arrancar este coche? ¡Nunca!"}
+{"id": 31917, "sentence": "Tío, ese conductor solo estuvo sentado ahí. Bastante regular, la verdad."}
+{"id": 31940, "sentence": "Estos tambores del desfile son coloridos."}
+{"id": 31954, "sentence": "Hay muchos tambores aquí, porque un tambor no es muchos."}
+{"id": 31964, "sentence": "En serio, ¿puedes arreglar ese bancal seco tú solo?"}
+{"id": 31972, "sentence": "Ella echó agua sobre la tierra seca."}
+{"id": 31993, "sentence": "La pala remueve la tierra y aparecen dos hojas."}
+{"id": 32007, "sentence": "No hay mucha agua en esta tierra seca."}
+{"id": 32023, "sentence": "La mujer arrastra su maleta pequeña y fácil."}
+{"id": 32038, "sentence": "Fácil o no, la aerolínea dice que tiene que facturar la maleta grande."}
+{"id": 32052, "sentence": "Informe del almuerzo: el equipo come a la una."}
+{"id": 32062, "sentence": "Tío, ¿cuántas patatas fritas se come? El plato entero, de verdad."}
+{"id": 32078, "sentence": "¿Por qué grita? ¡Porque este esfuerzo es pura agonía!"}
+{"id": 32091, "sentence": "Este esfuerzo es más grande que el entrenamiento de ayer."}
+{"id": 32107, "sentence": "Tío, dos personas van a ayudar a la señora anciana."}
+{"id": 32116, "sentence": "Tía, dijo que muchos vecinos caminaban detrás de la señora anciana."}
+{"id": 32136, "sentence": "Solo una pastilla queda en el cuenco vacío."}
+{"id": 32150, "sentence": "El husky vació el cuenco muy rápidamente."}
+{"id": 32161, "sentence": "¿Dónde está el perro enérgico? En la playa, según el plan del Q3."}
+{"id": 32172, "sentence": "Ey tío, ¿cuántos perros enérgicos corren en esta playa?"}
+{"id": 32186, "sentence": "Él disfruta de este momento tranquilo en el sillón."}
+{"id": 32195, "sentence": "Si ella para ahora, ¡él no disfrutará de nada nunca más!"}
+{"id": 32210, "sentence": "Una zanahoria enorme es grande, así que nadie puede sujetarla."}
+{"id": 32226, "sentence": "¡Hay demasiadas raíces enormes y el jardín está destruido!"}
+{"id": 32236, "sentence": "Él se sube al Ferrari rojo todas las tardes."}
+{"id": 32254, "sentence": "Qué va, tío, en el coche al que se va a subir hay dos asientos."}
+{"id": 32262, "sentence": "Tío, el parque tiene una entrada enorme, superguay."}
+{"id": 32273, "sentence": "Normalmente vas andando, pero ayer corriste por la entrada. Icónico."}
+{"id": 32290, "sentence": "¡Desastre! ¡La gallina hace su huida entre las llamas!"}
+{"id": 32308, "sentence": "Oye, dijo que en esa huida hay tres pollitos."}
+{"id": 32320, "sentence": "Tío, esta habitación es como un desastre total, con ropa por todas partes."}
+{"id": 32338, "sentence": "La ropa está por todas partes, así que debería recogerla ahora."}
+{"id": 32345, "sentence": "¿Puedes enseñarme tu tablero de pruebas? Eso es muy guay."}
+{"id": 32358, "sentence": "Un tablero es para clavar, así que ella va a clavar más pruebas."}
+{"id": 32375, "sentence": "Esta excusa de aquí es la misma que la de la semana pasada."}
+{"id": 32384, "sentence": "Previsión del T4: si vuelve a llamar, la excusa será el trabajo."}
+{"id": 32397, "sentence": "Él tiene cuatro perros y hace ejercicio con ellos."}
+{"id": 32418, "sentence": "Obviamente nadie le obliga. Debe hacer ejercicio con cuatro perros."}
+{"id": 32427, "sentence": "El experto lleva guantes de algodón blanco."}
+{"id": 32438, "sentence": "El experto decirle a la pareja el precio real."}
+{"id": 32459, "sentence": "Informe de expedición: explora la cueva a las ocho."}
+{"id": 32474, "sentence": "Exploras esa selva cuidadosamente y, sinceramente, impresiona."}
+{"id": 32477, "sentence": "Tío, su ojo es como gigante en la pantalla."}
+{"id": 32495, "sentence": "Oye, me dijo que su prueba de vista no necesita mucha ayuda."}
+{"id": 32505, "sentence": "¡Esa cara enfadada tiene dientes cuadrados y todos gritan!"}
+{"id": 32526, "sentence": "Tío, esa cara da bastante miedo, así que tenemos que mirar a otro lado."}
+{"id": 32540, "sentence": "Cae sobre la espalda en el foso de espuma."}
+{"id": 32553, "sentence": "Vale, pero las normas dicen que tienes que caer de espaldas, tío."}
+{"id": 32567, "sentence": "Tío, van a ver a ese tío familiar lunes."}
+{"id": 32569, "sentence": "Fecha límite 9:00: una cara familiar apareció en el quiosco."}
+{"id": 32585, "sentence": "Su habitación tiene un aire acondicionado muy frío."}
+{"id": 32586, "sentence": "Los dientes de león tienen semillas blancas para la brisa."}
+{"id": 32587, "sentence": "La ambulancia viene a cada emergencia por la noche."}
+{"id": 32588, "sentence": "Todo el mundo puede ver el baile desde los balcones."}
+{"id": 32589, "sentence": "La máquina le da dinero en efectivo en diez billetes."}
+{"id": 32591, "sentence": "Estas latas salen volando de su bolsa de papel."}
+{"id": 32592, "sentence": "Tom levanta su propia maleta de la cinta."}
+{"id": 32593, "sentence": "¿Dónde se secan las sábanas? En las cuerdas del balcón."}
+{"id": 32594, "sentence": "La semana pasada el barbero compró una maquinilla eléctrica nueva."}
+{"id": 32595, "sentence": "Ayer al atardecer, el excursionista vio el río muy abajo."}
+{"id": 32596, "sentence": "El domingo pasado, la viñeta del periódico mostró a un hombre con una fregona."}
+{"id": 32597, "sentence": "El artista suele pintar desiertos, pero el año pasado él dibujó este contraste."}
+{"id": 32598, "sentence": "Ahora mismo, la chica está comiendo caramelos dentro de la cabaña de mantas."}
+{"id": 32599, "sentence": "Bailar forma parte de su cultura, y ahora mismo ella está girando."}
+{"id": 32600, "sentence": "Ella salta desde la escalera y su papá promete que la atrapará."}
+{"id": 32601, "sentence": "La gota está suspendida en el aire. Va a caer en su frente."}
+{"id": 32602, "sentence": "Pierde sus tulipanes y dice: Prometo que seré más cuidadoso."}
+{"id": 32603, "sentence": "Hay un poco de luz en su barbilla redonda."}
+{"id": 32604, "sentence": "¿Cuántas banderas hay en la mesa del comité?"}
+{"id": 32605, "sentence": "Esta mañana el gallo está más despierto que el niño."}
+{"id": 32606, "sentence": "Sostiene la llave y piensa: Debo hacer que mi negocio funcione."}
+{"id": 32607, "sentence": "Norma de la cámara: el orador tiene que ponerse de pie en un debate."}
+{"id": 32608, "sentence": "Esta llamada es importante, así que ella debería apuntarlo todo."}
+{"id": 32609, "sentence": "Recoge los platos sucios porque la cena ha terminado."}
+{"id": 32610, "sentence": "La gente se da la mano, así que la cadena rodea todo el globo."}

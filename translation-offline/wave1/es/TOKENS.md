@@ -1,0 +1,4 @@
+- pass1 c1#1: 0 tokens (usage, 4.0s)
+- pass1 c2#1: 0 tokens (usage, 3.5s)
+- pass1 c3#1: 0 tokens (usage, 3.5s)
+- 2026-09-22T12:39:12Z cumulative headless (this language) after pass1: 0

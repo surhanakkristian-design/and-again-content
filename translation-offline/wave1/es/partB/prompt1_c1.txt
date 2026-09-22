@@ -1,0 +1,694 @@
+You are the arm-B rewrite agent of a Spanish->English translation-checking pipeline. Do not use any tools. Reply with JSON only.
+
+For each Spanish sentence below: if the MAIN clause drops a subject that its finite verb implies (pro-drop), insert exactly ONE nominative subject pronoun (yo/tú/él/ella/usted/nosotros/nosotras/vosotros/vosotras/ellos/ellas/ustedes) agreeing with that verb, at the natural position for Spanish. If the main clause already has an overt subject but a subordinate clause drops one, you may insert the pronoun there instead. Change NOTHING else: no other word added, removed, reordered or altered, no punctuation change; only the capital letter moves if the pronoun becomes the first word. Leave the sentence untouched when the subject is overt, when the clause is impersonal or has no subject (weather, existence, impersonal/reflexive-impersonal forms, 'one must', a passive without an agent), when the verb is an imperative, or when there is no finite verb.
+If the subject's person or gender is ambiguous from the sentence alone (e.g. a 3rd-person form that could be he, she or formal you), choose the reading the sentence most naturally has and FLAG it with a reason of at most 8 words.
+A machine check follows: the new sentence must equal the old one plus exactly the pronoun.
+
+Output: ONE JSON array containing an object ONLY for each sentence you CHANGED, exactly this shape:
+[{"id": 123, "new": "<the full new sentence>"}, {"id": 456, "new": "...", "flag": "<why ambiguous>"}]
+Omit the "flag" key when the choice is clear. Sentences you leave untouched are simply not listed.
+
+Sentences (one JSON object per line: id, sentence):
+{"id": 76, "sentence": "Para cuando empiece la peli, habrá movido todos los cojines del piso a ese banquito."}
+{"id": 87, "sentence": "Si lanza el birrete demasiado alto, no lo volverá a encontrar entre esa multitud."}
+{"id": 114, "sentence": "Cuando se puso en marcha la máquina de confeti, ya había bajado del escenario con su diploma."}
+{"id": 132, "sentence": "«Esta tarjeta no funciona», le dijo al recepcionista. Dijo que la tarjeta no funcionaba ahí."}
+{"id": 151, "sentence": "Estaba segura de que la tarjeta funcionaría en la primera puerta, pero el lector parpadeó en rojo."}
+{"id": 170, "sentence": "El líquido azul que va a esos tubos cambia de color al cabo de una hora."}
+{"id": 191, "sentence": "Mira la gradilla ahora mismo: la científica está metiendo el último tubo en el congelador."}
+{"id": 208, "sentence": "Le tiemblan las manos en el mando, así que no puede estar tan tranquila como suena."}
+{"id": 229, "sentence": "Estaba segura de que nadie haría ni una sola pregunta al final."}
+{"id": 245, "sentence": "En el vídeo las raíces fueron enjuagadas en un cuenco de agua limpia antes de que la planta volviera a la tierra."}
+{"id": 264, "sentence": "Ojalá mis plantas de casa tuvieran unas raíces tan fuertes como esa."}
+{"id": 331, "sentence": "Le duele el diente, y la oreja también, eso es lo peor."}
+{"id": 349, "sentence": "Para mañana por la mañana ese dolor habrá desaparecido del todo, y volverá a comer con normalidad."}
+{"id": 354, "sentence": "Estaba abrazando al gato contra su mejilla cuando de repente ronroneó muy fuerte."}
+{"id": 382, "sentence": "El salón, donde el sol de la tarde da en el sofá, es el sitio favorito del gato."}
+{"id": 403, "sentence": "Llevan desde el amanecer abriéndose paso por la nieve profunda, así que las piernas les tienen que estar ardiendo ya."}
+{"id": 410, "sentence": "Tenían la cara quemada porque habían estado avanzando por la nieve durante seis horas."}
+{"id": 433, "sentence": "Ha tirado la bolsa de flores al suelo, y ahora toda la nave se ha quedado en silencio."}
+{"id": 466, "sentence": "Mañana a esta hora ya lo habrá superado, y el puesto estará lleno de flores frescas."}
+{"id": 483, "sentence": "«Nunca he visto una arena así», dijo su padre. - Dijo que nunca había visto una así."}
+{"id": 494, "sentence": "«Vale, yo tiré las palomitas», se rió el chico. - Admitió haberlas tirado por toda la fila."}
+{"id": 515, "sentence": "Si sueltas la cuerda demasiado pronto, la flecha se va hacia la izquierda."}
+{"id": 541, "sentence": "Sabía que esa flecha daría en el centro en el momento en que salió de la cuerda."}
+{"id": 565, "sentence": "El slime no se le pega a los dedos, y las bolitas de dentro tampoco."}
+{"id": 580, "sentence": "Sabía que las bolitas saldrían en el segundo en que apretara ese puñado tan fuerte."}
+{"id": 600, "sentence": "«¡Guau!», gritó el comentarista. - Gritó que nunca había visto un salto así."}
+{"id": 606, "sentence": "Para el final del mitin, ella habrá competido en tres pruebas de atletismo diferentes."}
+{"id": 632, "sentence": "Si tecleas mal el PIN tres veces, el cajero se queda con tu tarjeta."}
+{"id": 656, "sentence": "Siempre saca el dinero del mismo cajero, el del puesto de flores."}
+{"id": 672, "sentence": "Si la puja sube más arriba, bajará la paleta."}
+{"id": 687, "sentence": "Si no hubiera levantado la paleta, ahora estaría mirando una pared vacía."}
+{"id": 720, "sentence": "¿Forraste la bandeja con papel de horno, ¿verdad??"}
+{"id": 733, "sentence": "La bandeja, que llevaba veinte años en esa cabaña, lo doraba todo."}
+{"id": 755, "sentence": "La amiga que enganchó los discos está grabando todo el levantamiento."}
+{"id": 775, "sentence": "Sus amigas sabían que levantaría esa barra en cuanto empezó a echarse magnesio en las manos."}
+{"id": 782, "sentence": "El barbero lleva recortando esa barba enorme desde hace diez minutos y el suelo ya está lleno de pelo."}
+{"id": 817, "sentence": "Para cuando llegue a casa, se habrá mirado en todos los escaparates del camino."}
+{"id": 824, "sentence": "Para cuando ella arrancó la corteza del abedul, él ya había golpeado dos veces la vieja corteza del pino."}
+{"id": 844, "sentence": "Esos agujeros redondos y limpios habían sido perforados por un pájaro carpintero mucho antes de que llegaran los dos."}
+{"id": 871, "sentence": "Esas alas miden casi un metro, así que esto no puede ser un murciélago pequeño y normal de casa."}
+{"id": 895, "sentence": "Para cuando aterrice esta noche, habrá batido las alas miles de veces."}
+{"id": 908, "sentence": "El pobre granjero fue traicionado por un crío que le llega a la cintura y una promesa rota."}
+{"id": 927, "sentence": "El granjero desearía no haberse fiado de un niño que sonríe así antes de una caída de confianza."}
+{"id": 937, "sentence": "Mientras el camarero volvía hacia la cocina, la pareja seguía desplegando la cuenta."}
+{"id": 969, "sentence": "A pesar de el susto en su cara, pagó su mitad de la cuenta con una sonrisa enorme."}
+{"id": 984, "sentence": "Si mira al suelo, verá las huellas de patas que llevan hasta el gato."}
+{"id": 1010, "sentence": "Mira: los tres se están señalando en este preciso momento, y nadie está limpiando nada."}
+{"id": 1030, "sentence": "Antes de que llegara la batidora, necesitaba veinte minutos y un cuchillo afilado para cortar su fruta."}
+{"id": 1041, "sentence": "El batido le saltó directamente a la nariz, así que debería haber apretado la tapa más fuerte aquella vez."}
+{"id": 1067, "sentence": "Quien parpadee primero tiene que pagar los dos batidos."}
+{"id": 1079, "sentence": "Lo acusó de haber parpadeado dos veces antes incluso de tocar su batido."}
+{"id": 1100, "sentence": "Si te pones demasiado colorete, las mejillas parecen quemadas por el sol."}
+{"id": 1117, "sentence": "Ese polvo rosa debe aplicarse en las mejillas con una brocha grande y suave, no con los dedos."}
+{"id": 1137, "sentence": "Mañana a esta hora estará embarcando en otro avión, con suerte otra vez en ventanilla."}
+{"id": 1154, "sentence": "Si hubiera dejado la tarjeta de embarque en casa, nunca habría pasado la puerta."}
+{"id": 1175, "sentence": "Para cuando abrió el libro, alguien ya le había atado la hamaca entre los dos postes."}
+{"id": 1207, "sentence": "Para el final de la semana habrá pasado todas y cada una de las tardes en esa hamaca."}
+{"id": 1228, "sentence": "«Yo no podría estar aquí una hora sin móvil.» - «Él tampoco, por lo visto.»"}
+{"id": 1240, "sentence": "La lavandería, cuyas máquinas funcionan todas a la misma velocidad lenta, es el verdadero hogar del aburrimiento."}
+{"id": 1261, "sentence": "Está tumbado a lo largo de cuatro sillas de plástico: el lavado debe de estar muy lejos de terminar."}
+{"id": 1268, "sentence": "Llevaba más de una hora tumbado en esas sillas de plástico, así que tenía la espalda completamente agarrotada."}
+{"id": 1303, "sentence": "De niña adoraba el sonido de la cuerda más que la propia diana."}
+{"id": 1321, "sentence": "En el momento en que entrecerró los ojos, su amigo supo que la flecha daría en el centro."}
+{"id": 1334, "sentence": "Si apuntas demasiado tiempo, el brazo te empieza a temblar y la flecha baja."}
+{"id": 1357, "sentence": "La bala de heno, que está al otro extremo del campo, es más pequeña de lo que parece desde aquí."}
+{"id": 1372, "sentence": "No llames a las cuatro: en ese momento exacto estarán hundiendo los últimos trozos en el barro."}
+{"id": 1391, "sentence": "Sugirió colgar el panel terminado en el escaparate del taller."}
+{"id": 1421, "sentence": "No paraba de pasar el cuchillo por el pan hasta que no quedó ni un rincón seco."}
+{"id": 1426, "sentence": "Para cuando esté cubierta la última esquina, habrá estado untando mantequilla durante un minuto entero."}
+{"id": 1444, "sentence": "La cámara estaba haciendo zoom sobre las espinas mientras ella señalaba el cactus alto."}
+{"id": 1465, "sentence": "Al final del sendero habrán estado caminando entre cactus durante tres horas seguidas."}
+{"id": 1494, "sentence": "Cada caloría de esa tarta fue contada por el entrenador antes de que entregara el plato."}
+{"id": 1511, "sentence": "Se hizo contar las calorías por un tío con un cronómetro y una bombilla."}
+{"id": 1534, "sentence": "Está sonriendo y dando puñetazos al aire, así que esos planes cancelados no pueden ser una mala noticia."}
+{"id": 1551, "sentence": "Su amiga ojalá hubiera cancelado unas horas antes, pero él no se queja."}
+{"id": 1579, "sentence": "La grieta no es ni ancha ni recta, así que en algunos puntos tienen que ponerse de lado."}
+{"id": 1593, "sentence": "A pesar de el calor de fuera, el cañón se mantuvo fresco toda la tarde."}
+{"id": 1615, "sentence": "Solía creer que una carta no era asunto de nadie más, y entonces la funcionaria cogió su rodillo."}
+{"id": 1622, "sentence": "Si no hubiera escrito ni una palabra sobre la protesta, no habrían censurado la carta."}
+{"id": 1656, "sentence": "Esa botella de champán costó más que tu móvil, ¿no costó?"}
+{"id": 1672, "sentence": "Prometió a sus amigos que abriría el champán en cuanto el sol tocara el tejado."}
+{"id": 1696, "sentence": "«Yo no puse ese huevo ahí». - «Yo tampoco», dijo el niño escondiendo las manos."}
+{"id": 1707, "sentence": "Ese perro no para de ladrar: ojalá parara mientras la gallina está en el nido."}
+{"id": 1735, "sentence": "«Ese muslo huele increíble.» - «Toda la cocina también», contestó ella."}
+{"id": 1744, "sentence": "Nunca había visto a nadie comerse un muslo tan rápido."}
+{"id": 1774, "sentence": "Ese puesto no te da ni tenedor ni cuchara: palillos o nada."}
+{"id": 1783, "sentence": "Nunca había visto a nadie tan feliz por un solo dumpling."}
+{"id": 1798, "sentence": "Tiene una bolsa llena a sus pies y no ha acabado: lleva limpiando este parque desde la hora de comer."}
+{"id": 1818, "sentence": "Si no se hubiera registrado a tiempo, ahora no estaría sujetando esa papeleta."}
+{"id": 1837, "sentence": "La sala está vacía ahora: las familias han recogido sus certificados y han salido a hacerse fotos."}
+{"id": 1867, "sentence": "Siempre supo que algún día sería ciudadano de este país."}
+{"id": 1890, "sentence": "Los tacos de sus botas están completamente cubiertos de barro, ¿no están?"}
+{"id": 1899, "sentence": "Debería haber revisado los tacos antes de ese partido: dos se soltaron en los primeros diez minutos."}
+{"id": 1913, "sentence": "¿Cuánto tiempo llevan sentados en esa sala de espera: veinte minutos o dos horas?"}
+{"id": 1945, "sentence": "Cuando pidió la cita, no tenía ni idea de que pasarían media mañana en esas sillas."}
+{"id": 1951, "sentence": "Mientras echaba trozos de carbón en la estufa, el fuego se avivó de repente en naranja."}
+{"id": 1977, "sentence": "Esa mañana debería haberse puesto guantes - el polvo negro se le metió en cada pliegue de las manos."}
+{"id": 2006, "sentence": "Terminó de colar la bebida y fue directo a por la piña."}
+{"id": 2016, "sentence": "Ella no debería habérselo bebido todo de golpe: las capas desaparecieron antes de que nadie sacara una foto."}
+{"id": 2039, "sentence": "Fue consolada por su mejor amiga antes incluso de que se le secaran las lágrimas."}
+{"id": 2057, "sentence": "Su amiga consiguió que hablara del tema en vez de llorar en silencio en las escaleras."}
+{"id": 2072, "sentence": "Cuando el sol tocó el agua, ya había ordenado dos veces a la fila que corriera."}
+{"id": 2090, "sentence": "Si no los hubiera mandado con tanta dureza, la mitad habría perdido la carrera el mes pasado."}
+{"id": 2123, "sentence": "Evita quedarse de pie en medio del tranvía, porque nunca llega a la puerta."}
+{"id": 2139, "sentence": "Es el primero que sonríe en la oficina aunque pasa dos horas al día en un tranvía."}
+{"id": 2164, "sentence": "«No puedo cambiar esta página.» - «Yo tampoco», respondió el funcionario cerrando el libro."}
+{"id": 2178, "sentence": "A pesar de todos sus gritos y sus grandes promesas, la constitución sigue diciendo que no."}
+{"id": 2195, "sentence": "El convoy fue grabado desde un cuarto coche que iba justo detrás del último alerón."}
+{"id": 2211, "sentence": "El coche de cámara debería haber ido un poco más cerca: medio convoy se quedó fuera del plano."}
+{"id": 2236, "sentence": "Le tiemblan las manos en la cuerda, así que debe de estar muerta de miedo ahí arriba."}
+{"id": 2245, "sentence": "Para su próximo cumpleaños llevará escalando en ese parque de aventura dos años enteros."}
+{"id": 2276, "sentence": "La amiga que le empujó el pie hacia atrás ha tenido el mismo calambre cien veces."}
+{"id": 2285, "sentence": "Si hubiera calentado bien antes de la carrera, ese calambre no habría pasado nunca."}
+{"id": 2317, "sentence": "Unas vacaciones así les parecían antes imposiblemente caras, hasta que vieron los precios de invierno."}
+{"id": 2332, "sentence": "El barco, cuya cubierta superior tiene tres piscinas, es más largo que toda su calle."}
+{"id": 2343, "sentence": "En el momento en que la muleta tocó el suelo mojado, la agarró con fuerza y siguió."}
+{"id": 2363, "sentence": "Si las enfermeras no hubieran ajustado las muletas, se habría caído de morros delante de toda la planta."}
+{"id": 2396, "sentence": "Admitió llevar un trozo pequeño de fruta, pero no un durián entero lleno de pinchos."}
+{"id": 2411, "sentence": "Al final, pasó el vestíbulo fronterizo sin pagar ni un euro de multa."}
+{"id": 2420, "sentence": "Desde que empezó a llover, llevan buscando a tientas un farol en la oscuridad."}
+{"id": 2454, "sentence": "Ya habían colocado la mitad de los platos cuando la lámpara del techo se apagó sin ningún aviso."}
+{"id": 2465, "sentence": "Si cierras un ojo, el dardo suele caer más cerca del centro."}
+{"id": 2477, "sentence": "Le dolía el hombro porque había estado lanzando dardos a esa diana toda la tarde."}
+{"id": 2513, "sentence": "Decidieron diseñar otra vez las patas traseras antes de cortar nada de cartón."}
+{"id": 2529, "sentence": "Aunque nunca habían construido nada antes, su silla de cartón aguantó una piedra pesada."}
+{"id": 2543, "sentence": "Si nadie echa nada en la funda durante horas, hasta el mejor músico pierde la esperanza."}
+{"id": 2564, "sentence": "Tiene que mandar arreglar su viejo acordeón antes de que las teclas dejen de funcionar del todo."}
+{"id": 2582, "sentence": "Si sostienes un diamante bajo una lámpara potente, lanza pequeños arcoíris a la pared."}
+{"id": 2594, "sentence": "Ya tenía los ojos rojos porque llevaba soñando con ese anillo desde hacía meses."}
+{"id": 2619, "sentence": "Mañana a las nueve de la mañana la directora estará rodando la escena del pirata otra vez desde el principio."}
+{"id": 2640, "sentence": "El pirata debería haber aprendido su texto la noche anterior, pero se puso a ver una película."}
+{"id": 2664, "sentence": "Ese regalito envuelto no fue abierto por nadie en toda la noche."}
+{"id": 2677, "sentence": "Esa cena en la azotea había sido preparada con semanas de antelación, y él se fue antes del primer plato."}
+{"id": 2704, "sentence": "Un bocado de comida por ese precio: el cocinero debe de estar de broma."}
+{"id": 2719, "sentence": "Nunca había estado tan decepcionado por una bandeja de comida."}
+{"id": 2748, "sentence": "Se ha dislocado ese mismo hombro dos veces esta temporada, ¿verdad?"}
+{"id": 2757, "sentence": "No debería haber usado esa presa mojada en el último movimiento: la mano se le fue en cuanto tiró de ella."}
+{"id": 2788, "sentence": "El perro salió disparado tras la pelota roja, y también el cachorro del vecino."}
+{"id": 2799, "sentence": "Ojalá su gato también trajera una pelota así."}
+{"id": 2821, "sentence": "Los dos brazos tiemblan y ninguno se mueve: esto tiene que ser un empate."}
+{"id": 2838, "sentence": "Ojalá hubiera empujado un poco más fuerte en los últimos cinco segundos."}
+{"id": 2853, "sentence": "Mañana a esta hora estará andando por la tienda sin esa manta."}
+{"id": 2869, "sentence": "La próxima primavera habrá estado midiendo dosis con ese mismo cuentagotas durante treinta años."}
+{"id": 2902, "sentence": "Este muelle era antes el doble de largo, antes de que una tormenta se llevara la punta."}
+{"id": 2919, "sentence": "A pesar de los carteles de aviso del campamento, salió hasta el borde."}
+{"id": 2926, "sentence": "El viento aullaba sobre la estación de carga vacía mientras el resplandor rojo crecía en las nubes."}
+{"id": 2949, "sentence": "Si las nubes se hubieran despejado antes, ahora sabríamos exactamente qué es esa luz en el cielo."}
+{"id": 2965, "sentence": "El lago de montaña pintado estaba completamente quieto cuando de repente un chapoteo rompió la superficie."}
+{"id": 2995, "sentence": "El lago, cuya superficie había sido como un cristal un segundo antes, estalló en espuma blanca."}
+{"id": 3021, "sentence": "Esas sentadillas fueron mucho más duras de lo que parecían, ¿verdad?"}
+{"id": 3038, "sentence": "Mira la primera fila: están bajando en una sentadilla profunda justo ahora."}
+{"id": 3046, "sentence": "Tiene la camisa empapada porque lleva empujando contra ese carro desde el pie de la cuesta."}
+{"id": 3067, "sentence": "En el pueblo se acepta que nadie más podría mover ese carro."}
+{"id": 3092, "sentence": "Ese lápiz de eyeliner no está testado en animales, según la caja que hay junto al lavabo."}
+{"id": 3106, "sentence": "Ese lápiz de eyeliner le fue regalado por su cumpleaños de parte de la amiga que está detrás de ella."}
+{"id": 3121, "sentence": "Mientras la brocha difuminaba el polvo dorado por su párpado, la cámara hacía zoom."}
+{"id": 3146, "sentence": "Ella sugirió probar el dorado también en su amiga, y dos minutos después las dos tenían los párpados dorados."}
+{"id": 3165, "sentence": "La semana que viene a esta hora llevará puesto un vestido hecho con esta misma tela."}
+{"id": 3193, "sentence": "Al entrar en el mercado, no imaginaba que saldría con dos metros de estampado dorado."}
+{"id": 3203, "sentence": "Cuando llegó la pizza, ya se habían puesto arcilla verde por toda la cara."}
+{"id": 3230, "sentence": "Después de la mascarilla siempre se van a la cama delante de una película que ya han visto."}
+{"id": 3256, "sentence": "Ella no quería mirar abajo, y su amiga tampoco."}
+{"id": 3271, "sentence": "Al reservar la entrada por internet, nunca pensó que un suelo de cristal la paralizaría."}
+{"id": 3284, "sentence": "Si la claqueta suena, todo el mundo se calla en el set."}
+{"id": 3303, "sentence": "Ellos deberían haber sujetado el reflector más alto; su cara salió medio en sombra en cada toma."}
+{"id": 3316, "sentence": "Se estaba cambiando detrás de la cortina cuando su amiga por fin levantó la vista del móvil."}
+{"id": 3344, "sentence": "Quiere mandar arreglar el mono verde antes de la fiesta."}
+{"id": 3367, "sentence": "La árbitra señala justo ese punto, así que eso tiene que ser un tiro libre, no un córner."}
+{"id": 3384, "sentence": "Ojalá hubiera mantenido las manos quietas en ese último minuto."}
+{"id": 3411, "sentence": "«Ni te has movido, ¿verdad?», se rió el delantero del portero."}
+{"id": 3415, "sentence": "Para el verano llevará practicando ese mismo golpeo en este campo durante diez años."}
+{"id": 3436, "sentence": "Tiene los dedos rojísimos porque lleva quitando la escarcha de ese banco con las manos desnudas."}
+{"id": 3453, "sentence": "Para las once el sol habrá derretido hasta el último resto de escarcha de esa hierba."}
+{"id": 3477, "sentence": "A medianoche estará contando sus fichas en la misma mesa con el mismo amigo nervioso."}
+{"id": 3506, "sentence": "Mírala: está lanzando fichas al aire con las dos manos."}
+{"id": 3527, "sentence": "Siguió intentando coger la anilla hasta que sus dedos se cerraron a su alrededor."}
+{"id": 3537, "sentence": "La cogió en la primera inmersión, así que no hacía falta que preocuparse durante una semana."}
+{"id": 3550, "sentence": "Mientras las dos amigas intercambiaban los últimos cotilleos, la pareja mayor de detrás oía cada palabra."}
+{"id": 3586, "sentence": "La semana que viene a esta hora ya nadie recordará ese cotilleo; tendrán una historia completamente nueva."}
+{"id": 3600, "sentence": "El volante del coche de carreras está lleno de botones, y cada uno fue montado a mano."}
+{"id": 3618, "sentence": "De pie junto al circuito vacío, ojalá tuviera un segundo coche de carreras para su hermano pequeño."}
+{"id": 3637, "sentence": "Si una sola carretera pasara por este desfiladero, ya no sería naturaleza salvaje de verdad."}
+{"id": 3649, "sentence": "La primavera que viene llevará grabando esta naturaleza salvaje durante cinco años sin encontrar ni una carretera."}
+{"id": 3669, "sentence": "En el segundo en que el sol tocó los tejados, el pájaro despegó de la barandilla."}
+{"id": 3697, "sentence": "El amanecer, cuya luz volvió dorado cada tejado, duró solo unos minutos."}
+{"id": 3715, "sentence": "Si tuviera una cámara de verdad, su pequeño videoblog parecería una película."}
+{"id": 3740, "sentence": "Mírala - está saludando a su propio móvil y contándole a diez mil personas cómo va su mañana."}
+{"id": 3761, "sentence": "A mitad de las escaleras se planteó coger un taxi para la última parte del viaje."}
+{"id": 3781, "sentence": "Llamará a su amiga en cuanto llegue a lo alto de las escaleras."}
+{"id": 3800, "sentence": "El perro no paraba de ladrar en la puerta del dormitorio hasta que su dueña por fin se movió."}
+{"id": 3812, "sentence": "El verano pasado mandaron instalar la cámara encima de la puerta del dormitorio."}
+{"id": 3831, "sentence": "Si esta mañana se salta el jabón, su madre lo notará en cuanto se siente."}
+{"id": 3853, "sentence": "La toalla, que cuelga de un gancho al lado del espejo, es solo para la cara."}
+{"id": 3878, "sentence": "Le encanta hacer formas de hierro más que ninguna otra cosa en el mundo."}
+{"id": 3898, "sentence": "Empezará la siguiente verja en cuanto este hierro se enfríe."}
+{"id": 3911, "sentence": "El pompón rojo y peludo fue enganchado al anillo junto a la llave de casa."}
+{"id": 3928, "sentence": "Nunca había prestado tanta atención a un trocito de metal como aquella mañana."}
+{"id": 3954, "sentence": "Él le preguntó dónde quería la caja enorme, y ella señaló lo alto de la torre."}
+{"id": 3976, "sentence": "Empezarán con la cocina en cuanto esta torre esté terminada."}
+{"id": 3993, "sentence": "Su compañera le preguntó dónde había puesto la segunda hoja de pegatinas del logotipo."}
+{"id": 4004, "sentence": "Negó haber copiado el diseño de internet, y de verdad lo dibujó ella misma."}
+{"id": 4032, "sentence": "El chico les preguntó por qué habían atado la bufanda tan apretada."}
+{"id": 4045, "sentence": "Rara vez se ve un maniquí mejor vestido que la gente que pasa por delante."}
+{"id": 4074, "sentence": "Había amapolas por toda esa ladera, ¿no?"}
+{"id": 4089, "sentence": "A pesar de el calor, subieron hasta lo alto del prado."}
+{"id": 4096, "sentence": "Mientras sostenía la vieja concha contra su oreja, el móvil le vibraba en el suelo del pasillo."}
+{"id": 4119, "sentence": "Si no lo hubiera guardado todo, ahora mismo no estaría rodando por el pasillo con patines viejos."}
+{"id": 4146, "sentence": "Su plan está dibujado con líneas de puntos encima de su cabeza, así que se ve cada jugada que está pensando."}
+{"id": 4164, "sentence": "Ojalá pudiera pensar tres jugadas por delante como ella."}
+{"id": 4179, "sentence": "Mañana a esta hora estarán caminando por otro bosque húmedo, buscando musgo aún más blando."}
+{"id": 4196, "sentence": "Si no hubiera llovido toda la semana, el musgo no habría retenido tanta agua al estrujarlo."}
+{"id": 4225, "sentence": "Apenas puede sostener la botella. Esos dos últimos metros debieron de costarle todo lo que le quedaba."}
+{"id": 4234, "sentence": "Para esta noche llevará seis horas en ese muro con solo dos descansos."}
+{"id": 4258, "sentence": "No entres a las ocho - justo entonces estará secando el suelo con la última toalla seca."}
+{"id": 4286, "sentence": "Mira el suelo ahora mismo - la espuma se está saliendo del fregadero y se mete bajo la nevera."}
+{"id": 4298, "sentence": "Si pierdes las llaves en un bolso de ese tamaño, el pánico llega en dos segundos."}
+{"id": 4314, "sentence": "Si hubiera salido del piso cinco minutos antes, ahora estaría en ese tren."}
+{"id": 4339, "sentence": "Si comprara su propia batería externa, no necesitaría su ayuda en cada salida."}
+{"id": 4350, "sentence": "Para cuando salgan del parque, la batería externa habrá cargado su móvil al cien por cien."}
+{"id": 4378, "sentence": "Si creyera sus predicciones, no estaría bajo la lluvia en camiseta."}
+{"id": 4388, "sentence": "Tenía la camisa empapada porque llevaba de pie a la intemperie diez minutos, riéndose de su nube."}
+{"id": 4409, "sentence": "Lleva practicando ese pino en su cuarto desde hace semanas, y hoy por fin se lo enseñó."}
+{"id": 4439, "sentence": "Lo aprendió por las malas esa tarde: nunca apuestes contra ella."}
+{"id": 4457, "sentence": "La cesta de mimbre es bajada hasta la calle por una mujer en la terraza de arriba."}
+{"id": 4471, "sentence": "Una cesta tan pesada no debería bajarse con una cuerda tan fina, digan lo que digan los vecinos."}
+{"id": 4495, "sentence": "Si tuviera una cicatriz como la de su espinilla, seguramente la llevaría tapada."}
+{"id": 4521, "sentence": "Para cuando habló el tercer amigo, los otros dos ya habían enseñado sus cicatrices dos veces."}
+{"id": 4531, "sentence": "Mañana a esta hora lo estará regañando por algo completamente distinto, seguramente las gallinas."}
+{"id": 4551, "sentence": "Debería haber cerrado la verja anoche - esta mañana los gansos estaban en medio de las coles."}
+{"id": 4582, "sentence": "«He mirado debajo de todos los cojines de esta habitación.» - «Yo también, dos veces», dijo ella, todavía de rodillas."}
+{"id": 4584, "sentence": "Para la hora de cenar habrá puesto todos los tornillos de esa bolsita en la silla."}
+{"id": 4620, "sentence": "Había apretado todos los tornillos antes de que él se levantara, ¿no?"}
+{"id": 4636, "sentence": "Sabía que el destornillador rojo pequeño sería suficiente para todo el estante."}
+{"id": 4647, "sentence": "Mañana a esta hora ella estará jugando en la final, con un público aún más ruidoso detrás."}
+{"id": 4674, "sentence": "A pesar de todo el movimiento de brazos detrás de la cuerda, no levantó la vista ni una vez."}
+{"id": 4685, "sentence": "La palangana ya estaba llena de agua jabonosa porque su amiga había vaciado dos regaderas enteras dentro."}
+{"id": 4705, "sentence": "Se dice que esa palangana es más vieja que la casa, y todavía aguanta el agua perfectamente."}
+{"id": 4728, "sentence": "Si ve ahora el espejo roto, el susto se convertirá directamente en rabia."}
+{"id": 4747, "sentence": "No solo se quedó helada del susto, sino que además se le cayó el casco en su propio pie."}
+{"id": 4771, "sentence": "Ese jersey ahora es más pequeño que un cojín, así que ya no puede quedarle bien."}
+{"id": 4780, "sentence": "Para Navidad su hermano habrá estado bromeando con ese jersey tamaño muñeca durante meses."}
+{"id": 4815, "sentence": "«Esa espuma es enorme, ¿verdad?» dijo el hombre, aplaudiendo aún como una foca."}
+{"id": 4819, "sentence": "Para el final del verano ese hombre habrá estado hablando de su truco del jabón durante tres meses enteros."}
+{"id": 4839, "sentence": "Buscaba un enchufe cuando ella de repente señaló la pared detrás de la monstera."}
+{"id": 4863, "sentence": "No debería haber dejado la batería externa en casa - el uno por ciento no es la idea de un café tranquilo para nadie."}
+{"id": 4884, "sentence": "Si mantiene la espalda recta a partir de ahora, el dolor desaparecerá en unas semanas."}
+{"id": 4902, "sentence": "Debería haber ido a la clínica hace semanas en vez de googlear su propia columna a medianoche."}
+{"id": 4918, "sentence": "Ya ha abrazado a su nuevo hermanastro tres veces, y la foto todavía no se ha hecho."}
+{"id": 4948, "sentence": "Cuando se puso el traje esa mañana, no tenía ni idea de que tendría un hermanastro para la hora de comer."}
+{"id": 4960, "sentence": "No la llames a las seis; estará vertiendo resina sobre el siguiente tablero."}
+{"id": 4974, "sentence": "Para el viernes habrá convertido cada superficie del taller en un espejo."}
+{"id": 4993, "sentence": "El sol se hundía en el mar mientras extendían el mantel blanco sobre la mesa."}
+{"id": 5029, "sentence": "Encenderán las velas en cuanto los últimos platos estén sobre el mantel limpio."}
+{"id": 5036, "sentence": "Para cuando el hielo cayó sobre su cabeza, el termómetro había alcanzado su número más alto."}
+{"id": 5062, "sentence": "El termómetro, que era de cristal fino, casi se rompe entre sus dientes."}
+{"id": 5077, "sentence": "Mañana a esta hora estará tumbado debajo de esa mesa buscando el tornillo que falta."}
+{"id": 5095, "sentence": "Se dice que esa mesa extensible es lo mejor que ha comprado nunca para el piso."}
+{"id": 5120, "sentence": "Los abrigos gruesos de invierno se ponen al fondo del armario cada verano."}
+{"id": 5138, "sentence": "Quiere mandar pintar de blanco el viejo armario antes del verano."}
+{"id": 5157, "sentence": "Si sigue moviendo la cabeza así, la peluca pelirroja caerá directamente al suelo."}
+{"id": 5183, "sentence": "Mírala ahora - está posando con la tercera peluca de la tarde."}
+{"id": 5188, "sentence": "Bostezaba en medio de la cocina cuando entró su novia con dos tazas."}
+{"id": 5220, "sentence": "A pesar de tres tazas de café, los dos seguían bostezándose el uno al otro."}
+{"id": 5561, "sentence": "El corcho fue sacado con un pop suave y la cocina se quedó en silencio."}
+{"id": 5578, "sentence": "Nunca en esta cocina había visto un corcho salir tan limpio."}
+{"id": 5592, "sentence": "Ella estaba de pie ante su escritorio mientras él fingía leer el formulario."}
+{"id": 5628, "sentence": "Mira: en cuanto pague, ese sello va a caer en el papel."}
+{"id": 5703, "sentence": "Si lee el pergamino más alto, la última fila oirá cada palabra."}
+{"id": 5728, "sentence": "Prometió que declararía abierto el puente en cuanto firmara el alcalde."}
+{"id": 5738, "sentence": "Para cuando encontró un bol, el pescado había hecho un charco en la encimera."}
+{"id": 5753, "sentence": "Llevaba diez minutos mirando el pescado cuando pensó en el bol."}
+{"id": 5775, "sentence": "Caminaba junto a las filas cuando su cara apareció en la pantalla gigante."}
+{"id": 5804, "sentence": "El título que sostiene es el primero de su familia."}
+{"id": 5829, "sentence": "Ya ha aguantado un retraso así antes, ¿verdad?"}
+{"id": 5833, "sentence": "Para las diez ese bus llevará tres horas en la misma parada."}
+{"id": 5870, "sentence": "Si yo tuviera una toga así, cruzaría el escenario dos veces por las fotos."}
+{"id": 5890, "sentence": "Ojalá el decano pronunciara bien su apellido: estuvo cerca."}
+{"id": 5906, "sentence": "Tranqui, echaré otro terrón si este tarda demasiado."}
+{"id": 5929, "sentence": "Ojalá el terrón desapareciera un poco más despacio: fue demasiado rápido."}
+{"id": 5960, "sentence": "Si yo tuviera su ojo para las falsificaciones, rechazaría medio mercado."}
+{"id": 5985, "sentence": "Normalmente confía en estos vendedores, pero hoy está dudando cada palabra."}
+{"id": 6020, "sentence": "No paraba de tocar el balón con el exterior de la bota."}
+{"id": 6029, "sentence": "Su colega insistió en que nadie lo había tocado en toda la noche."}
+{"id": 6056, "sentence": "Si nuestro piso fuera más grande, compraríamos todo un rack de mancuernas."}
+{"id": 6067, "sentence": "Para el viernes habrá levantado cada peso de este piso al menos una vez."}
+{"id": 6124, "sentence": "Dijo que no podía creer que él estuviera de verdad allí."}
+{"id": 6135, "sentence": "Admitió que había estado nervioso durante todo el vuelo de vuelta."}
+{"id": 6165, "sentence": "Tranquila, te prestaré mi bici vieja si de verdad quieres una."}
+{"id": 6179, "sentence": "Para el mes que viene habrá ahorrado suficiente para una bici de segunda mano."}
+{"id": 6218, "sentence": "La sartén está vacía, y la botella de al lado también."}
+{"id": 6228, "sentence": "Consiguió que su compañera grabara todo el experimento desde la puerta."}
+{"id": 6253, "sentence": "Debieron de planear este viaje durante semanas: mira ese equipaje."}
+{"id": 6272, "sentence": "Fue la mejor excursión de todo el año."}
+{"id": 6285, "sentence": "Lleva explicando la misma pantalla desde hace diez minutos."}
+{"id": 6313, "sentence": "Ojalá hubiera añadido el movimiento antes de que ella lo pidiera."}
+{"id": 6356, "sentence": "Mañana a esta hora estaremos filmando la misma escena desde el otro lado."}
+{"id": 6376, "sentence": "El productor preguntó dónde habían filmado ese plano con travelín."}
+{"id": 6442, "sentence": "A ella no le gusta la cobertura alta, y a su amiga tampoco."}
+{"id": 6443, "sentence": "Llevaban dando toques en esa única mancha durante siglos cuando por fin se difuminó."}
+{"id": 6526, "sentence": "De niña solía girar el globo terráqueo y caer en un país al azar."}
+{"id": 6530, "sentence": "Llevaba girando el globo terráqueo una hora cuando se fundió la bombilla."}
+{"id": 6577, "sentence": "Si un ministro levanta la mano, el voto cuenta como un sí."}
+{"id": 6589, "sentence": "Llevaban discutiendo por una sola línea horas cuando ella lo selló."}
+{"id": 6637, "sentence": "El desconocido fue espantado del coche por un soldado."}
+{"id": 6653, "sentence": "No debería haberse metido por la ventana: míralo ahora."}
+{"id": 6681, "sentence": "De niños solían pasar horas sobre una sola página de la guía."}
+{"id": 6694, "sentence": "Mandaron plastificar las páginas de la guía antes del viaje."}
+{"id": 6708, "sentence": "No ha comido nada desde que vio la grieta."}
+{"id": 6736, "sentence": "Devolvió la jarra a su sitio y esperó que nadie mirara."}
+{"id": 6783, "sentence": "Ese es el antebrazo que se rompió en primavera."}
+{"id": 6806, "sentence": "Para esta noche habrá contado a todos que el brazo ha sanado."}
+{"id": 6826, "sentence": "Las hojas fueron esparcidas sobre los espaguetis hace un minuto."}
+{"id": 6840, "sentence": "Admitió que había cogido demasiadas hojas."}
+{"id": 6862, "sentence": "Estaba atándose las botas cuando el sol dio en el tejado del refugio."}
+{"id": 6889, "sentence": "Nunca he llegado a un lago tan azul."}
+{"id": 6939, "sentence": "No le importaba compartir una habitación con ocho desconocidos."}
+{"id": 6958, "sentence": "Ya había soltado la mochila cuando los demás entraron."}
+{"id": 6977, "sentence": "De niña solía ayudar a su madre a recibir invitados cada domingo."}
+{"id": 6987, "sentence": "Admitió que había prometido demasiado para una sola noche."}
+{"id": 7016, "sentence": "Si las huellas fueran más antiguas, se rendirían ahora."}
+{"id": 7039, "sentence": "El barro era profundo; sin embargo, siguieron el rastro."}
+{"id": 7077, "sentence": "Mia se ha quejado de la cinta tres veces hoy y todavía no lo supera."}
+{"id": 7107, "sentence": "Mia no sospechaba que la cinta iría a una chica que había llegado hacía un mes."}
+{"id": 7123, "sentence": "Si Nina sigue jugando así, el entrenador le dará también el brazalete de capitana."}
+{"id": 7147, "sentence": "La camiseta le queda dos tallas grande; sin embargo, Nina se niega a cambiarla."}
+{"id": 7166, "sentence": "Si llueve más fuerte, Tom se pondrá la capucha y seguirá igualmente."}
+{"id": 7191, "sentence": "Tom no tenía ni idea de que su trote matutino se convertiría en una costumbre diaria."}
+{"id": 7245, "sentence": "Mira dijo que el arroyo era seguro si todos pisaban donde ella pisaba."}
+{"id": 7262, "sentence": "Guiar a desconocidos por un bosque de noche es un trabajo de verano poco común."}
+{"id": 7295, "sentence": "Mañana a esta hora llevará el mismo brillo para su vídeo de arreglarse."}
+{"id": 7317, "sentence": "Nunca había llevado un brillo tan luminoso antes de encontrar este tubo rosa."}
+{"id": 7352, "sentence": "Mañana a esta hora estará respirando otra vez en el mismo parque."}
+{"id": 7383, "sentence": "Mira ese globo: en dos segundos va a reventar."}
+{"id": 7413, "sentence": "Ella dirige de verdad este invernadero, ¿verdad?"}
+{"id": 7429, "sentence": "Les prometió al equipo que acabarían antes si las cajas estaban listas."}
+{"id": 7446, "sentence": "Mañana a esta hora estará poniendo la misma cara con la boca abierta ante el espejo."}
+{"id": 7476, "sentence": "Abrió la boca y luego pasó el cepillo por las pestañas."}
+{"id": 7499, "sentence": "Antes era alumno aquí, pero ahora la clase se inclina ante él."}
+{"id": 7512, "sentence": "Antes de cada clase manda amasar el barro."}
+{"id": 7545, "sentence": "Le dijo al grupo que el atardecer era el mejor momento para sentarse."}
+{"id": 7567, "sentence": "Mira ese cielo: el sol va a esconderse detrás de las palmeras en cualquier momento."}
+{"id": 7588, "sentence": "No me llames a las dos: estaré preparando mi portaobjetos para el examen de bio."}
+{"id": 7607, "sentence": "Nos pidió que no moviéramos la mesa mientras enfocaba la lente."}
+{"id": 7664, "sentence": "Mañana a esta hora estarán preparando otro bol arcoíris antes de salir a correr."}
+{"id": 7686, "sentence": "Nunca antes habían visto un desayuno tan bonito ante la cámara."}
+{"id": 7714, "sentence": "«Veo sus alas», dijo; nos dijo que las veía."}
+{"id": 7730, "sentence": "La caña, en la que se posó la libélula, se dobla con el viento."}
+{"id": 7749, "sentence": "Cuando lo grababa, la nutria estaba apoyando la cabeza en mi brazo desnudo."}
+{"id": 7774, "sentence": "Me pidió que no moviera el brazo mientras dormía."}
+{"id": 7803, "sentence": "Si la caravana fuera más rápido, nadie tendría que adelantarla."}
+{"id": 7816, "sentence": "Si el carril no hubiera estado libre, se habría quedado detrás de la caravana."}
+{"id": 7837, "sentence": "Mientras él dormitaba en la proa, ella remó justo frente a los acantilados."}
+{"id": 7869, "sentence": "Mira: está remando por la izquierda justo ahora y él sigue dormido."}
+{"id": 7890, "sentence": "Ese alambre doblado tiene que ser un clip; nada más encaja."}
+{"id": 7907, "sentence": "Ojalá hubiera puesto un clip en su montón hace diez minutos."}
+{"id": 7936, "sentence": "¿Nunca te ha dado una pistola de rayos, verdad?"}
+{"id": 7938, "sentence": "Llevaba construyendo esa pistola durante meses cuando por fin disparó."}
+{"id": 7972, "sentence": "Cuando el gato saltó a su regazo, ella ya había cerrado los ojos."}
+{"id": 7996, "sentence": "Hizo colgar la hamaca entre las palmeras el día que llegó."}
+{"id": 8025, "sentence": "Si marca este penalti, su equipo ganará todo el grupo."}
+{"id": 8037, "sentence": "Al final del partido habrá marcado dos penaltis en un mismo encuentro."}
+{"id": 8064, "sentence": "Cuando la cámara empezó, ella ya había ensayado el número dos veces."}
+{"id": 8094, "sentence": "Canta en este estudio cada semana, y ahora mismo está grabando el estribillo."}
+{"id": 8107, "sentence": "Si el público sigue así de grande, el sombrero estará lleno a las seis."}
+{"id": 8119, "sentence": "Al atardecer habrán hecho el espectáculo seis veces."}
+{"id": 8148, "sentence": "Apretó el disparador tres veces mientras él seguía moviéndose."}
+{"id": 8174, "sentence": "Hizo retocar sus fotos allí mismo, directamente en la pantalla."}
+{"id": 8204, "sentence": "Todos los domingos escondía sus piercings a su abuela."}
+{"id": 8225, "sentence": "El año que viene por estas fechas estará llevando seis aros en esa oreja."}
+{"id": 8240, "sentence": "Estaba cortando la última franja cuando los jugadores salieron a entrenar."}
+{"id": 8268, "sentence": "Hizo cambiar los banderines antes del primer silbato."}
+{"id": 8296, "sentence": "Antes de encontrar esta panadería, compraba los baratos del súper."}
+{"id": 8314, "sentence": "Salió pronto porque sabía que los buenos se habrían acabado a las nueve."}
+{"id": 8332, "sentence": "Mira el tubo así; no puede saber lo que hace."}
+{"id": 8349, "sentence": "Ojalá supiera algo de tuberías."}
+{"id": 8374, "sentence": "El podio fue construido con colchonetas en apenas un minuto."}
+{"id": 8382, "sentence": "Llevaban meses entrenando para esta final antes de hoy."}
+{"id": 8411, "sentence": "Si una barra del panel sube, el público grita más fuerte."}
+{"id": 8435, "sentence": "Subió a la caja de la izquierda."}
+{"id": 8454, "sentence": "Esta agua fue destruida por un solo hombre en unos diez segundos."}
+{"id": 8462, "sentence": "Llevaba años echando humo sobre estas colinas antes de que alguien se quejara."}
+{"id": 8496, "sentence": "Esos granos brillan rojos: la fruta debe de estar perfectamente madura."}
+{"id": 8518, "sentence": "Ahora mismo está separando los gajos mientras los granos brillan."}
+{"id": 8538, "sentence": "La jefa de correos ya ha sellado cada paquete de la estantería."}
+{"id": 8569, "sentence": "Ahora mismo está dando órdenes mientras los empleados sellan paquetes."}
+{"id": 8594, "sentence": "Siguió apilando libros en la pila hasta que se tambaleó."}
+{"id": 8613, "sentence": "Entró y luego se dejó caer hacia atrás sobre la esterilla."}
+{"id": 8619, "sentence": "Mientras los vecinos se reunían, ella cruzó los brazos y sonrió radiante."}
+{"id": 8646, "sentence": "Los vecinos desearían poder construir algo así."}
+{"id": 8667, "sentence": "Mañana a esta hora estarán probando un segundo robot en la misma pista."}
+{"id": 8682, "sentence": "Para medianoche habrán revisado cada línea del programa dos veces."}
+{"id": 8718, "sentence": "Los carteles están pintados a mano, ¿verdad?"}
+{"id": 8725, "sentence": "Se dice que la marcha se organizó en dos días."}
+{"id": 8749, "sentence": "Si el hielo está liso, el disco desliza mucho más rápido."}
+{"id": 8770, "sentence": "Antes del saque mandó encintar su stick."}
+{"id": 8787, "sentence": "Le ardían los brazos porque había hecho dos asaltos antes de este."}
+{"id": 8804, "sentence": "A las seis llevará dos horas seguidas golpeando esas manoplas."}
+{"id": 8838, "sentence": "Siguió golpeando el saco hasta que se balanceó por todo el garaje."}
+{"id": 8853, "sentence": "Colgó el saco que había subido por la escalera."}
+{"id": 8864, "sentence": "Lleva entrenando para esta altura desde la primera ronda."}
+{"id": 8897, "sentence": "Ahora mismo está apretando los puños mientras el público aplaude."}
+{"id": 8926, "sentence": "Siguió cambiando de dirección hasta que el defensa se cayó."}
+{"id": 8934, "sentence": "Se dice que su cambio de dirección es el más rápido del equipo."}
+{"id": 8981, "sentence": "El retrovisor izquierdo no está rayado, y el derecho tampoco — lo consiguió."}
+{"id": 8989, "sentence": "Debió de estar aterrada: mira sus manos en el volante."}
+{"id": 9010, "sentence": "No llames después de las diez: estaré ordenando mis notas para el ensayo."}
+{"id": 9023, "sentence": "Llevaba leyendo durante cuatro horas cuando escribió una sola línea."}
+{"id": 9055, "sentence": "Se estaba secando el pelo cuando la ducha se encendió de nuevo de repente."}
+{"id": 9086, "sentence": "Dijo que se enjuagaría rápido, pero se quedó diez minutos bajo la ducha."}
+{"id": 9129, "sentence": "Todo el desfile fue grabado a la vez con tres móviles."}
+{"id": 9139, "sentence": "Al final de la canción, llevará cuatro minutos seguidos por esa alfombra."}
+{"id": 9260, "sentence": "El gato negro no se mueve, y el blanco tampoco — estatuas totales."}
+{"id": 9266, "sentence": "Se dice que los dos gatos son la pareja más fotografiada de toda la orilla."}
+{"id": 9294, "sentence": "La plaza que están recorriendo está llena de palomas y cámaras."}
+{"id": 9310, "sentence": "Ojalá la plaza no estuviera tan llena: hacer turismo es un deporte de contacto."}
+{"id": 9325, "sentence": "Esa seda lleva resbalando del mostrador toda la tarde; nadie consigue sujetarla."}
+{"id": 9346, "sentence": "Si el mostrador no hubiera estado tan pulido, la seda se habría quedado quieta."}
+{"id": 9391, "sentence": "Ese guardia no puede saber lo del queso: levanta la barrera demasiado rápido."}
+{"id": 9413, "sentence": "Pasa queso todos los meses, pero ahora mismo solo sonríe."}
+{"id": 9429, "sentence": "La semana que viene a esta hora la tierra estará alimentando bien esas cebolletas."}
+{"id": 9451, "sentence": "No solo está oscura la tierra, sino que además huele a lluvia."}
+{"id": 9547, "sentence": "Esa especia no es nada dulce, ¿verdad?"}
+{"id": 9557, "sentence": "Solo después de probarlo entendieron lo picante que era la especia."}
+{"id": 9586, "sentence": "Este mes ha corrido cuatro carreras y las piernas lo notan."}
+{"id": 9606, "sentence": "Si hubiera sido de las que se rinden, ahora no tendría esa cinta."}
+{"id": 9648, "sentence": "El chef estaba agotado, y los camareros también."}
+{"id": 9656, "sentence": "El chef podría haber tocar antes: los platos ya estaban listos."}
+{"id": 9697, "sentence": "El Estado verde azulado es libre, y el naranja también."}
+{"id": 9705, "sentence": "Podrían haber firmar este acuerdo hace años: nada se lo impedía."}
+{"id": 9746, "sentence": "Su madre dijo que su padrastro había arreglado la bici esa mañana."}
+{"id": 9754, "sentence": "Si su padrastro no hubiera arreglado la cadena, el niño habría ido andando."}
+{"id": 9805, "sentence": "Dijo que el cronómetro había marcado su mejor tiempo de la historia."}
+{"id": 9814, "sentence": "Si hubiera dejado el cronómetro en casa, ahora no estarían celebrando."}
+{"id": 9854, "sentence": "Dijo que el estrés era demasiado para una sola mañana."}
+{"id": 9864, "sentence": "Se dice que el estrés es lo peor de su trabajo."}
+{"id": 9903, "sentence": "Su bufanda es llamativa, y sus botas también."}
+{"id": 9914, "sentence": "Sus amigas ojalá pudieran vestirse así también."}
+{"id": 9934, "sentence": "Mientras colgaba allí, su amiga se metió debajo."}
+{"id": 9962, "sentence": "Su amiga, cuyas manos la sostenían, no dijo nada."}
+{"id": 9979, "sentence": "Su tobillo se estaba hinchando rápido mientras se quitaba el calcetín."}
+{"id": 10008, "sentence": "Ojalá la hinchazón bajara antes del partido."}
+{"id": 10036, "sentence": "Su pie está rojo, y su tobillo también."}
+{"id": 10042, "sentence": "Se dice que las hinchazones empeoran por la tarde."}
+{"id": 10082, "sentence": "Si una terminal es así de grande, la gente se pierde cada día."}
+{"id": 10105, "sentence": "La terminal, cuyas ventanas dan a la pista, estaba en silencio."}
+{"id": 10122, "sentence": "No llames a las cinco: ella estará leyendo sus notas de terapia."}
+{"id": 10137, "sentence": "Para el otoño llevará un año entero haciendo terapia."}
+{"id": 10164, "sentence": "Si la botella estuviera llena, no estaría mirando un campo."}
+{"id": 10182, "sentence": "Nunca había visto una sed golpear a alguien tan fuerte."}
+{"id": 10205, "sentence": "Si el hilo fuera más grueso, la costura parecería tosca."}
+{"id": 10232, "sentence": "Para la hora de cierre el carrete de hilo se habrá quedado vacío."}
+{"id": 10254, "sentence": "Sus manos giraron el mástil pesado sin ninguna ayuda."}
+{"id": 10264, "sentence": "A las cinco llevará cuatro horas tumbada en esa sombra."}
+{"id": 10322, "sentence": "Su amiga nunca la juzga, y ella tampoco — por eso brindan."}
+{"id": 10327, "sentence": "Si la hubiera juzgado entonces, ahora no brindarían juntas."}
+{"id": 10358, "sentence": "El bol que sacó estaba demasiado caliente para sostenerlo."}
+{"id": 10372, "sentence": "Nunca se había quemado los dedos tan fuerte con un bol."}
+{"id": 10433, "sentence": "El niño ganó cada combate él mismo, así que nadie le regaló nada."}
+{"id": 10442, "sentence": "Para el atardecer el árbitro habrá movido todas las fichas a la fila de arriba."}
+{"id": 10463, "sentence": "Estaba subiendo la chaqueta del chándal cuando apareció la primera amiga."}
+{"id": 10499, "sentence": "El finde que viene las cuatro tomarán otra vez el mismo callejón."}
+{"id": 10522, "sentence": "No me llames a las tres: estaré en la cola del puesto de sombreros."}
+{"id": 10542, "sentence": "Podría haberme preguntarme primero, pero simplemente se puso el sombrero."}
+{"id": 10562, "sentence": "Si sueltas el balón aquí arriba, rueda directo desde el tejado."}
+{"id": 10582, "sentence": "Ni una sola vez se le cayó el balón durante toda la rutina."}
+{"id": 10609, "sentence": "Si él dice «Te tengo», ella se suelta sin pensarlo."}
+{"id": 10624, "sentence": "Si hubiera soltado la cuerda, ella habría caído diez metros."}
+{"id": 10666, "sentence": "Antes odiaba los trajes, y ahora mira esa sonrisa."}
+{"id": 10671, "sentence": "Para las nueve habrá revisado todos los espejos del piso."}
+{"id": 10716, "sentence": "Si la dibuja más arriba en la playa, el mar no la alcanzará."}
+{"id": 10743, "sentence": "Dibujó una espiral, y una ola se la llevó al instante."}
+{"id": 10764, "sentence": "Si una tripulación cruza la meta primera, el público enloquece siempre."}
+{"id": 10779, "sentence": "Si la cinta hubiera estado más alta, nadie habría visto cómo se rompía."}
+{"id": 10819, "sentence": "¿Estaba pasadísimo de ácido, ¿verdad?"}
+{"id": 10825, "sentence": "Si no hubiera comprado vinagre, ahora no se estarían riendo así."}
+{"id": 10861, "sentence": "Dijo que podía entrar en el país."}
+{"id": 10868, "sentence": "Para esta noche llevará seis horas enseñando esa página a todos."}
+{"id": 10939, "sentence": "Ha envuelto ya doce piruletas, así que el ramo está casi lleno."}
+{"id": 10965, "sentence": "Ojalá hubiera comprado papel más grueso antes de empezar — las hojas se rompen."}
+{"id": 10979, "sentence": "Estaba enseñando sus arrugas de la frente cuando su abuela se asomó de golpe."}
+{"id": 11000, "sentence": "Si la abuela hubiera usado todas esas cremas, su cara no contaría esta historia ahora."}
+{"id": 11074, "sentence": "El actor hizo la escena triste perfectamente y el equipo aplaudió."}
+{"id": 11085, "sentence": "¿Puede aterrizar un avión pequeño en este aeropuerto tan lleno? ¡Sí!"}
+{"id": 11099, "sentence": "¡Mira esos bastones! Va a parar el avión ahora mismo."}
+{"id": 11113, "sentence": "Esta ambulancia pasa por nuestra calle cada mañana."}
+{"id": 11135, "sentence": "Los sanitarios fueron rápidamente hacia la puerta con la bolsa."}
+{"id": 11145, "sentence": "Esta mujer enfadada tiene su ropa mojada en las manos."}
+{"id": 11156, "sentence": "¡Mira su cara enfadada! Va a gritar en un segundo."}
+{"id": 11170, "sentence": "Un animal es gris, pero los otros animales son de colores."}
+{"id": 11179, "sentence": "¡Mira! Los animales están cogiendo sus colores ahora mismo."}
+{"id": 11193, "sentence": "Su respuesta está en una tarjeta blanca pequeña."}
+{"id": 11214, "sentence": "Esta respuesta es peor que la de la última vez."}
+{"id": 11226, "sentence": "Coge una manzana en este huerto cada otoño."}
+{"id": 11239, "sentence": "Coge esta manzana y te encantará el sabor."}
+{"id": 11261, "sentence": "La discusión es por diez centímetros en la pared."}
+{"id": 11265, "sentence": "Cuelgan cuadros cada mes, pero ahora están discutiendo por uno."}
+{"id": 11288, "sentence": "¿Cuándo llegaste? A las tres."}
+{"id": 11305, "sentence": "Llegó de noche, pero el mar todavía estaba caliente."}
+{"id": 11313, "sentence": "Le enseña a la cámara el dibujo de la última página."}
+{"id": 11322, "sentence": "Siempre usa un lápiz, pero hoy está dibujando con ceras."}
+{"id": 11345, "sentence": "El asistente le pasa cuatro objetivos en un minuto."}
+{"id": 11357, "sentence": "Un asistente tiene que llevar las bolsas pesadas todo el día."}
+{"id": 11378, "sentence": "Atrapa cinco hojas en el aire a la vez."}
+{"id": 11383, "sentence": "Está refrescando. Pronto los árboles perderán todas sus hojas."}
+{"id": 11401, "sentence": "Esta es la única letra que le gusta."}
+{"id": 11419, "sentence": "Si el bebé llora, deberías cogerlo en brazos."}
+{"id": 11429, "sentence": "¡Estos asientos del fondo están completamente vacíos!"}
+{"id": 11435, "sentence": "Normalmente se sientan delante, pero ayer se sentaron al fondo."}
+{"id": 11453, "sentence": "La mochila es pesada, pero ella puede llevarla fácilmente."}
+{"id": 11468, "sentence": "No queda mucho espacio en su mochila."}
+{"id": 11478, "sentence": "Tienen un plan gracioso: caminar hacia atrás en el parque."}
+{"id": 11501, "sentence": "Caminaron hacia atrás muy lentamente."}
+{"id": 11509, "sentence": "Esta es la única manzana en la manta."}
+{"id": 11517, "sentence": "¡Mira! Está metiendo un sándwich en la bolsa ahora."}
+{"id": 11535, "sentence": "La masa está blanda, así que puede darle forma fácilmente."}
+{"id": 11543, "sentence": "Ayer horneó pan para toda la familia."}
+{"id": 11565, "sentence": "Él coge un plátano del racimo cada mañana."}
+{"id": 11580, "sentence": "¡Mira su boca abierta! Se va a comer el plátano."}
+{"id": 11593, "sentence": "Ahora la jugadora puede mover la muñeca otra vez."}
+{"id": 11607, "sentence": "¿Te duele la muñeca? Vale, te traeré una venda."}
+{"id": 11628, "sentence": "¿Quién cuelga del aro después del mate?"}
+{"id": 11638, "sentence": "Las jugadoras necesitan mucha energía para este partido."}
+{"id": 11657, "sentence": "El murciélago duerme doce horas cada día."}
+{"id": 11661, "sentence": "El murciélago se despierta cada día al anochecer."}
+{"id": 11681, "sentence": "Pone una pila vieja en la mesa."}
+{"id": 11698, "sentence": "Tienes que llevar las pilas viejas a una tienda."}
+{"id": 11710, "sentence": "La ola se lleva su castillo de arena."}
+{"id": 11726, "sentence": "Deberías construir el castillo más lejos del agua."}
+{"id": 11741, "sentence": "El oso pesca tres peces en un minuto."}
+{"id": 11742, "sentence": "Ayer el oso pescó un pez grande aquí."}
+{"id": 11768, "sentence": "¡Esta barba son diez años de trabajo!"}
+{"id": 11781, "sentence": "Si quieres barba, deberías tener paciencia."}
+{"id": 11792, "sentence": "¡Estas casas blancas son tan bonitas!"}
+{"id": 11810, "sentence": "En la terraza cálida gira muy lentamente."}
+{"id": 11822, "sentence": "¡Mira esta abeja peluda en la flor!"}
+{"id": 11841, "sentence": "La abeja recoge néctar y hace miel en casa."}
+{"id": 11853, "sentence": "Beben dos vasos en el jardín."}
+{"id": 11858, "sentence": "¡Inclina el vaso y la espuma será perfecta!"}
+{"id": 11875, "sentence": "Coge un cinturón marrón viejo de la silla."}
+{"id": 11889, "sentence": "¿Cuántos cinturones hay en su armario?"}
+{"id": 11909, "sentence": "El pájaro vuela sobre el césped verde."}
+{"id": 11921, "sentence": "La segunda rama es más alta que la primera."}
+{"id": 11936, "sentence": "¡Mira esta manta en el sofá!"}
+{"id": 11941, "sentence": "Ayer se echó la manta sobre las piernas."}
+{"id": 11970, "sentence": "Es la única olla de la pequeña cabaña."}
+{"id": 11984, "sentence": "¿Cuánta agua hierve en la olla?"}
+{"id": 12002, "sentence": "El gato duerme debajo de la manta caliente."}
+{"id": 12004, "sentence": "Ayer terminó todo el libro."}
+{"id": 12027, "sentence": "¡Mira estas botas llenas de barro en el camino!"}
+{"id": 12032, "sentence": "Ayer caminó por el barro profundo con estas botas."}
+{"id": 12051, "sentence": "Nadie puede esperar aquí sin aburrirse."}
+{"id": 12061, "sentence": "Ahora mismo está mirando el techo blanco."}
+{"id": 12077, "sentence": "El fondo del mar es arenoso y claro."}
+{"id": 12092, "sentence": "¡Toma otra respiración y alcanzarás el fondo!"}
+{"id": 12111, "sentence": "El chico levanta su cuenco azul con las dos manos."}
+{"id": 12120, "sentence": "Levanta el cuenco: va a beberse la leche."}
+{"id": 12131, "sentence": "La caja de cartón grande está casi llena."}
+{"id": 12144, "sentence": "Ahora mismo está cerrando la tapa de la caja."}
+{"id": 12168, "sentence": "El saco pesado cuelga al lado del ring de boxeo."}
+{"id": 12174, "sentence": "¡Ponte los guantes y te encantará el boxeo!"}
+{"id": 12193, "sentence": "La niña aprieta los dos puños y sigue adelante."}
+{"id": 12205, "sentence": "Levanta los puños — va a coger la cesta."}
+{"id": 12218, "sentence": "El panadero golpea la corteza para comprobar el pan."}
+{"id": 12237, "sentence": "Este pan es mejor que el pan de la tienda."}
+{"id": 12250, "sentence": "Mira su teléfono en vez del libro."}
+{"id": 12256, "sentence": "Ahora mismo se está riendo con un vídeo, no con el libro."}
+{"id": 12280, "sentence": "Dos personas comparten este desayuno al amanecer."}
+{"id": 12293, "sentence": "Deberías desayunar antes de salir de casa."}
+{"id": 12299, "sentence": "Rompe azulejos azules con un martillo pesado."}
+{"id": 12320, "sentence": "No deberías romper la maceta de barro del vecino."}
+{"id": 12335, "sentence": "Tienen un taladro, un nivel y cuatro tablas."}
+{"id": 12354, "sentence": "En el marco nuevo hay cuatro tablas."}
+{"id": 12362, "sentence": "La lamparita tiene ahora una luz amarilla y cálida."}
+{"id": 12381, "sentence": "Junto a la lámpara hay un gato dormilón."}
+{"id": 12397, "sentence": "¿Quién hace la hamburguesa en la parrilla de la tarde?"}
+{"id": 12412, "sentence": "Deberías dejar que el queso se derrita antes de montarla."}
+{"id": 12424, "sentence": "¿Qué quema en la sartén?"}
+{"id": 12434, "sentence": "Hay demasiado humo en la cocina."}
+{"id": 12453, "sentence": "¿Quién espera bajo la marquesina?"}
+{"id": 12458, "sentence": "Ahora mismo el autobús naranja está parando en la parada."}
+{"id": 12473, "sentence": "Este arbusto tiene muchas bayas azules pequeñas."}
+{"id": 12496, "sentence": "El mirlo sale del arbusto muy rápidamente."}
+{"id": 12510, "sentence": "Unta mantequilla en dos tostadas."}
+{"id": 12515, "sentence": "Dale cinco minutos y la mantequilla estará blanda."}
+{"id": 12537, "sentence": "Un botón pequeño está en la mesa de madera."}
+{"id": 12540, "sentence": "Lleva esta camisa todos los días, pero ayer llevó otra."}
+{"id": 12568, "sentence": "Las velas están sobre la tarta blanca."}
+{"id": 12572, "sentence": "Ahora mismo todos están comiendo un trozo grande de tarta."}
+{"id": 12594, "sentence": "¿Qué escribe en la calculadora?"}
+{"id": 12597, "sentence": "Ayer usó la calculadora para dos más dos."}
+{"id": 12619, "sentence": "Este día está por fin tachado."}
+{"id": 12633, "sentence": "Alrededor de una fecha hay un corazón rojo."}
+{"id": 12647, "sentence": "Abraza su móvil después de la llamada alegre."}
+{"id": 12658, "sentence": "No queda mucha batería en su móvil."}
+{"id": 12674, "sentence": "El camello dobla sus patas largas en la arena."}
+{"id": 12687, "sentence": "En las dunas hay solo un camello."}
+{"id": 12701, "sentence": "Esta colchoneta es la cama más blanda del mundo."}
+{"id": 12711, "sentence": "Coge el martillo — va a golpear una estaca."}
+{"id": 12723, "sentence": "La mesa de madera tiene una vela en el medio."}
+{"id": 12745, "sentence": "Deberías alejar la vela del papel."}
+{"id": 12758, "sentence": "Se pone la gorra en la cabeza caliente."}
+{"id": 12764, "sentence": "Póntela y tus ojos estarán mejor."}
+{"id": 12784, "sentence": "¿Qué ve desde arriba?"}
+{"id": 12789, "sentence": "Ahora mismo está mirando la cúpula dorada."}
+{"id": 12814, "sentence": "Tardan cinco minutos en desenrollarla."}
+{"id": 12825, "sentence": "La alfombra es más blanda que el suelo de madera."}
+{"id": 12836, "sentence": "Lava la zanahoria gigante con la regadera."}
+{"id": 12845, "sentence": "Normalmente recoge zanahorias pequeñas, pero hoy una gigante."}
+{"id": 12864, "sentence": "Cruzan el puente levadizo de madera."}
+{"id": 12882, "sentence": "Deberías agarrarte a la barandilla en la escalera."}
+{"id": 12896, "sentence": "Hay dos gatos en el rascador alto."}
+{"id": 12909, "sentence": "Deberías poner el rascador cerca de la ventana."}
+{"id": 12916, "sentence": "Él puede atrapar una pelota muy alta."}
+{"id": 12937, "sentence": "El chico atrapa la pelota roja muy fácilmente."}
+{"id": 12950, "sentence": "Dos amigos juegan con la pelota."}
+{"id": 12957, "sentence": "Ese lanzamiento es muy largo: va a caer en la arena."}
+{"id": 12969, "sentence": "Se arrastra despacio por la hoja mojada."}
+{"id": 12984, "sentence": "Mira esa crisálida: va a abrirse pronto."}
+{"id": 12998, "sentence": "Grandes rocas grises cuelgan del techo de la cueva."}
+{"id": 13012, "sentence": "Hay mucho aire frío en esta cueva oscura."}
+{"id": 13030, "sentence": "Los farolillos cuelgan encima de la mesa del jardín."}
+{"id": 13042, "sentence": "Esta fiesta es mejor que la del año pasado."}
+{"id": 13052, "sentence": "Hay dos boles de cereales en la mesa."}
+{"id": 13065, "sentence": "Los copos están en el bol: va a comer."}
+{"id": 13083, "sentence": "¿Qué cierran con la cadena?"}
+{"id": 13086, "sentence": "Ayer cerraron la verja con una cadena."}
+{"id": 13112, "sentence": "Da una vuelta completa en la silla."}
+{"id": 13119, "sentence": "Mira ese cojín: va a hundirse otra vez."}
+{"id": 13130, "sentence": "Él tiene un cargador blanco en el cajón desordenado."}
+{"id": 13152, "sentence": "Deberías llevar un cargador en la mochila."}
+{"id": 13157, "sentence": "La rueda grande de queso es amarilla y muy vieja."}
+{"id": 13171, "sentence": "A menudo cocina pasta, pero ahora está rallando queso."}
+{"id": 13192, "sentence": "Una mujer le pone una medalla de oro al cuello."}
+{"id": 13200, "sentence": "Ahora mismo su pecho se está moviendo rápido."}
+{"id": 13223, "sentence": "La ardilla está sobre el banco de madera."}
+{"id": 13226, "sentence": "Normalmente comen fruta, pero ayer masticaron caramelo."}
+{"id": 13242, "sentence": "Tiene una tira de chicle rosa."}
+{"id": 13260, "sentence": "¿Cuánto chicle queda en el paquete?"}
+{"id": 13269, "sentence": "La mujer tiene una cesta grande para los huevos."}
+{"id": 13279, "sentence": "Ayer la gallina puso dos huevos marrones."}
+{"id": 13302, "sentence": "Hay dos tabletas de chocolate en la mesa."}
+{"id": 13312, "sentence": "A menudo bebe té, pero ahora está derritiendo chocolate."}
+{"id": 13329, "sentence": "No es fácil. ¿Puedes usar palillos?"}
+{"id": 13348, "sentence": "El dumpling está caliente. Tienes que esperar un minuto."}
+{"id": 13359, "sentence": "Los asientos están a oscuras. ¿Puedes ver la pantalla?"}
+{"id": 13378, "sentence": "La película empieza. Tienes que apagar el móvil."}
+{"id": 13391, "sentence": "¿Dónde dibuja el círculo? En la playa."}
+{"id": 13394, "sentence": "Ayer dibujó un círculo en la playa."}
+{"id": 13416, "sentence": "Escribe una ecuación en la pizarra vieja."}
+{"id": 13440, "sentence": "El chico tiene una tableta nueva en el pupitre."}
+{"id": 13464, "sentence": "El aula es un caos, pero él no levanta la vista."}
+{"id": 13469, "sentence": "Ella aprieta la arcilla mojada en el torno."}
+{"id": 13492, "sentence": "Termina el cuenco y el gato la mira."}
+{"id": 13501, "sentence": "Estas toallas del carrito todavía están calientes."}
+{"id": 13520, "sentence": "La habitación era un desastre, pero ahora está perfecta."}
+{"id": 13526, "sentence": "Dos amigos están tumbados en el borde de hierba."}
+{"id": 13546, "sentence": "Se tumban en la hierba mojada muy silenciosamente."}
+{"id": 13558, "sentence": "La mujer ajusta las agujas con sus dedos pequeños."}
+{"id": 13567, "sentence": "Tienen un plan. Van a tomar café debajo del reloj."}
+{"id": 13583, "sentence": "Ella tiene un abrigo camel nuevo para el invierno."}
+{"id": 13597, "sentence": "Si nieva esta noche, llevaré este abrigo otra vez."}
+{"id": 13609, "sentence": "El café es muy oscuro y muy fuerte."}
+{"id": 13627, "sentence": "No queda mucho café en la cafetera."}
+{"id": 13646, "sentence": "¿Qué tiempo hace hoy en el lago? — Mucho frío."}
+{"id": 13653, "sentence": "Toma mis guantes: tus manos frías estarán mejor."}
+{"id": 13666, "sentence": "Su camisa blanca tiene un cuello grande."}
+{"id": 13677, "sentence": "Ahora lleva el cuello bajado, pero antes lo llevaba subido."}
+{"id": 13699, "sentence": "Dos amigos necesitan dos peines."}
+{"id": 13707, "sentence": "Hoy se peina el pelo, pero ayer se le olvidó."}
+{"id": 13725, "sentence": "El escenario pequeño tiene dos altavoces grandes."}
+{"id": 13738, "sentence": "El público suele sentarse, pero ahora todos están de pie y bailan."}
+{"id": 13754, "sentence": "No puede leer estas instrucciones tan confusas."}
+{"id": 13762, "sentence": "Ayer también estaba muy confundida."}
+{"id": 13787, "sentence": "¿Dónde moja la galleta? — En su bebida caliente."}
+{"id": 13800, "sentence": "Esta galleta está mejor que la de la tienda."}
+{"id": 13807, "sentence": "La esquina del muro de hormigón es muy afilada."}
+{"id": 13818, "sentence": "Ayer taparon la misma esquina con una tabla."}
+{"id": 13841, "sentence": "El presentador escribe su respuesta correcta en la tarjeta."}
+{"id": 13847, "sentence": "Mira, el presentador está haciendo una pregunta muy fácil."}
+{"id": 13863, "sentence": "El campo tiene mucho algodón blanco."}
+{"id": 13881, "sentence": "Hay muchas plantas de algodón en el campo dorado."}
+{"id": 13896, "sentence": "Este té caliente le calma la garganta irritada."}
+{"id": 13908, "sentence": "Hay mucha miel en su té caliente de limón."}
