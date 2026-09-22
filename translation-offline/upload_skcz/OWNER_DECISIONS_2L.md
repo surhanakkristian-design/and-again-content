@@ -7,3 +7,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 3. **Judge line replaced by "- Added content is wrong."** (2L defect 3): **CONFIRMED** as intended.
 4. **Upload of the SK and CZ files: APPROVED.** The only write allowed is an UPDATE of existing `exercise_localizations` rows for the exercises and languages in the two files. No INSERT, DELETE, schema change, migration, deploy or push.
 5. **Frozen checker configuration for both languages:** SOURCE-ONLY + content check, TIP rejected (2L Part C freeze 0042aaa, Czech freeze f9f794c).
+
+## Decisions after the SK/CZ upload stop (22 Sept 2026, Phase 3A brief)
+
+6. **The 54 disputed English references:** KEEP the live English. No write.
+7. **structure_json:** WAITS until app integration. No column is created now.
+8. **The SK/CZ upload is a no-op** (`src` already live on 8,128/8,128 rows). **Closed.**
+9. **Next step:** integrate the SK + CZ checker into the app (Phase 3A).
