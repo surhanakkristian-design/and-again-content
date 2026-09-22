@@ -361,10 +361,41 @@ def t13_frozen_sources_untouched():
         assert open(os.path.join(HERE, mine), 'rb').read() == open(os.path.join(os.path.dirname(S.W1), theirs), 'rb').read(), mine
 
 
+def t14_subagent_transport():
+    """Decision 26: sub_session writes prompt.txt + PENDING and stops 'pending' (0 tokens); a reply + tokens.json is
+    ingested once into the ledger; a finished session resumes at 0 cost; an invalid reply goes to ONE retry `_r1`."""
+    import pipeline_w1 as W
+    d = reset('t14')
+    W.SUB_FAKE[0] = None
+    W.L.update(lang='de', dir=d)
+    ok_v = lambda arr: None if isinstance(arr, list) and arr and arr[0].get('x') == 1 else 'bad'
+    r = W.run_group('writers', {'A1': ('PROMPT A1', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
+    assert r['A1']['stop'] == 'pending' and W.handle_fail(r, d, 'writers') == 6
+    sd = os.path.join(d, 'writers/sessions/A1')
+    assert open(os.path.join(sd, 'prompt.txt')).read() == 'PROMPT A1' and os.path.exists(os.path.join(sd, 'PENDING.json'))
+    open(os.path.join(sd, 'reply.txt'), 'w').write('```json\n[{"x": 2}]\n```')          # invalid -> retry _r1
+    json.dump({'total_tokens': 1234}, open(os.path.join(sd, 'tokens.json'), 'w'))
+    r = W.run_group('writers', {'A1': ('PROMPT A1', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
+    assert r['A1']['stop'] == 'pending' and 'A1_r1' in r['A1']['why'], r
+    assert W.spent(d) == 1234
+    s1 = os.path.join(d, 'writers/sessions/A1_r1')
+    open(os.path.join(s1, 'reply.txt'), 'w').write('[{"x": 1}]')
+    json.dump({'total_tokens': 100}, open(os.path.join(s1, 'tokens.json'), 'w'))
+    r = W.run_group('writers', {'A1': ('PROMPT A1', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
+    assert r['A1']['ok'] and r['A1']['arr'] == [{'x': 1}] and W.spent(d) == 1334
+    r = W.run_group('writers', {'A1': ('PROMPT A1', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
+    assert r['A1']['ok'] and all(a['resumed'] for a in r['A1']['attempts']) and W.spent(d) == 1334   # 0 cost
+    r = W.run_group('writers', {'A1': ('CHANGED PROMPT', ok_v)}, d, d, est=10, max_turns=2, cap_session=None, spent_base=d)
+    assert r['A1']['ok']                                     # finished sessions are never re-asked
+    d2 = os.path.join(d, 'cap')
+    r = W.run_group('judge', {'s1': ('P', ok_v)}, d2, d2, est=500, max_turns=2, cap_session=400, spent_base=d2)
+    assert r['s1']['stop'] == 'token_cap'                    # the per-session cap still holds
+
+
 TESTS = [t01_prompt_derivation, t02_spec_files_match, t03_parsers, t04_row_number_429_is_not_a_rate_limit,
          t05_real_429_envelope_retries_uncounted, t06_usage_limit_envelopes_stop, t07_resume_at_zero_cost,
          t08_relative_path_refused, t09_poison_no_reference_read, t10_layer_order, t11_caps,
-         t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched]
+         t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched, t14_subagent_transport]
 
 if __name__ == '__main__':
     real = [0]

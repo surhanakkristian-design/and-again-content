@@ -19,7 +19,14 @@
   gemini       opens <lang>/partD/set/items.jsonl ONCE and runs stack_w1.run_full (Gemini: counted = HTTP 200 only)
   post         FINAL_RUN_DONE, ACCESS_LOG_VERBATIM.md, analysis (exact CP 95 %), 0 calls
 Headless spawner = byte copy of phase2j/run_2j.py (bundled binary, token via `zsh -ic`, never printed; usage-limit
-envelope -> hard stop; rate limit only from the envelope; finished sessions resume at 0 cost)."""
+envelope -> hard stop; rate limit only from the envelope; finished sessions resume at 0 cost).
+Decision 26 (22 Sept 2026): NO headless CLI sessions.  Every writer / judge session is an Opus SUBAGENT of the main
+session (transport `subagent`, sub_session below): the pipeline writes <session dir>/prompt.txt and PENDING.json and
+exits 6; the main session spawns one blind subagent per pending session, which reads ONLY prompt.txt and writes
+reply.txt; the main session records the subagent's reported tokens in tokens.json; the next run of the same
+subcommand ingests the reply (same ledger, validation, one retry `_r1`, resume at 0 cost, token caps).
+  partA_live   SELECT only: the LIVE full_sentence of the 4,064 (Parts A/B done in the database, decision 26) -> <lang>/partA_live/
+               Part D sets are built from this snapshot for every language (no rewritten.jsonl)."""
 import argparse, glob, hashlib, json, math, os, random, re, subprocess, sys, threading, time, types
 from collections import Counter, defaultdict
 sys.dont_write_bytecode = True
@@ -48,6 +55,8 @@ PRON = {'ua': ['я', 'ти', 'він', 'вона', 'воно', 'ми', 'ви', '
         'es': ['yo', 'tú', 'él', 'ella', 'usted', 'nosotros', 'nosotras', 'vosotros', 'vosotras', 'ellos', 'ellas',
                'ustedes']}
 RW_CHUNKS = {'ua': 3, 'es': 3}
+TRANSPORT = 'subagent'                     # decision 26: no headless CLI; R.run_session is no longer called
+SUB_FAKE = [None]                          # mock / test hook: prompt -> (reply_text, tokens), stands in for the subagent
 RW2_CHUNKS = 3
 L = {}
 
@@ -253,8 +262,7 @@ def run_group(kind, jobs, base, stop_dir, est, max_turns, cap_session, spent_bas
                     return
                 inflight[sid] = 0 if done else est
             try:
-                d = R.run_session(sid, prompt, sd, stop_dir=stop_dir, model='opus', max_turns=max_turns, wall=2700,
-                                  token_cap=cap_session, est=est)
+                d = sub_session(sid, prompt, sd, token_cap=cap_session, est=est)
             except R.Stop as e:
                 results[key] = {'ok': False, 'stop': e.kind, 'why': e.why, 'attempts': atts}
                 return
@@ -281,12 +289,55 @@ def run_group(kind, jobs, base, stop_dir, est, max_turns, cap_session, spent_bas
     return results
 
 
+def sub_session(sid, prompt, out_dir, token_cap=None, est=100000):
+    """Subagent transport (decision 26).  Same contract as R.run_session: returns {'status': 'ok', 'result', 'tokens',
+    ...} or raises R.Stop.  Missing reply -> writes prompt.txt + PENDING.json and raises Stop('pending')."""
+    out_dir = os.path.abspath(out_dir)
+    os.makedirs(out_dir, exist_ok=True)
+    f = os.path.join(out_dir, '%s.json' % sid)
+    d = R.read_json(f, None)
+    if d and d.get('status') == 'ok':
+        return dict(d, resumed=True, spawns=0)
+    led = os.path.join(out_dir, 'headless_ledger.json')
+    Lg = R.read_json(led, {})
+    used = sum(int(v.get('tokens') or 0) for v in Lg.values())
+    if token_cap is not None and used + est > token_cap:
+        raise R.Stop('token_cap', 'used %d + reservation %d > cap %d' % (used, est, token_cap))
+    pp, rp, tp = (os.path.join(out_dir, x) for x in ('prompt.txt', 'reply.txt', 'tokens.json'))
+    if os.path.exists(pp) and open(pp, encoding='utf-8').read() != prompt:
+        raise R.Stop('headless_failed', 'session %s: prompt.txt differs from the prompt of this run' % sid)
+    if not os.path.exists(pp):
+        open(pp, 'w', encoding='utf-8').write(prompt)
+    if SUB_FAKE[0] is not None and not os.path.exists(rp):
+        txt, tk = SUB_FAKE[0](prompt)
+        open(rp, 'w', encoding='utf-8').write(txt)
+        R.write_json(tp, {'total_tokens': tk, 'agent': 'SUB_FAKE (mock)'})
+    if not (os.path.exists(rp) and os.path.exists(tp)):
+        R.write_json(os.path.join(out_dir, 'PENDING.json'), {'sid': sid, 'prompt': pp, 'reply': rp, 'tokens': tp, 'est': est,
+                                                             'ts': now()})
+        raise R.Stop('pending', 'session %s waits for its subagent (%s)' % (sid, rp))
+    tk = R.read_json(tp, {})
+    tok = int(tk.get('total_tokens') or 0)
+    Lg['%s#sub' % sid] = {'tokens': tok, 'kind': 'ok', 'ts': now(), 'secs': tk.get('secs'), 'agent': tk.get('agent'),
+                          'transport': 'subagent'}
+    R.write_json(led, Lg)
+    d = {'sid': sid, 'status': 'ok', 'result': open(rp, encoding='utf-8').read(), 'tokens': tok, 'usage': tk,
+         'num_turns': tk.get('tool_uses'), 'attempts': 1, 'model': 'opus (subagent)', 'ts': now()}
+    R.write_json(f, d)
+    if os.path.exists(os.path.join(out_dir, 'PENDING.json')):
+        os.remove(os.path.join(out_dir, 'PENDING.json'))
+    return dict(d, spawns=1)
+
+
 def handle_fail(results, stop_root, stage):
     bad = {k: r for k, r in results.items() if not r['ok']}
     if not bad:
         return 0
     kinds = {r.get('stop') for r in bad.values()}
     msg = '%s: %s' % (stage, {k: (r.get('stop'), r.get('why')) for k, r in bad.items()})
+    if kinds == {'pending'}:
+        print('PENDING', json.dumps({k: r.get('why') for k, r in bad.items()}))
+        return 6
     if 'usage_limit' in kinds:
         open(stop_root + '/STOP_quota.md', 'w').write('# STOP quota / usage limit (%s)\n\n%s\n' % (L['lang'], msg)); return 4
     if kinds & {'headless_auth', 'headless_failed', 'headless_timeout'}:
@@ -304,6 +355,8 @@ def append_tokens(base, kind):
 
 
 def token_login():
+    if TRANSPORT == 'subagent':
+        return 0                            # decision 26: no headless CLI, no OAuth token needed
     os.environ['CLAUDE_CODE_MAX_OUTPUT_TOKENS'] = '64000'
     try:
         R.load_token()
@@ -537,6 +590,9 @@ def cmd_rw_final(a):
 # ------------------------------------------------------------------ Part D
 def source_rows():
     """{exercise_id: row with 'src' = the sentence Part D measures (rewritten for ua/es)}"""
+    live = L['dir'] + '/partA_live/rows.jsonl'
+    if os.path.exists(live):                # decision 26: the LIVE rows (rewrite for ua/es already in the database)
+        return {r['exercise_id']: dict(r) for r in jl(live)}
     rows = {r['exercise_id']: dict(r) for r in jl(L['A'] + '/rows.jsonl')}
     if L['lang'] in PRON:
         rw = jl(L['B'] + '/rewritten.jsonl')
@@ -546,6 +602,34 @@ def source_rows():
             rows[o['exercise_id']]['src'] = o['new']
             rows[o['exercise_id']]['rewrite_status'] = o['status']
     return rows
+
+
+def cmd_partA_live(a):
+    """SELECT only.  The live full_sentence of the 4,064 for this language, compared with the Part A snapshot."""
+    lang = L['lang']
+    sql = ("select t.exercise_id, t.level, e.exercise_type_id, e.concept_id, et.title->>'en' as topic, "
+           "el.id as loc_id, el.full_sentence "
+           "from translation_selected_exercises t join exercises e on e.id = t.exercise_id "
+           "join exercise_types et on et.id = e.exercise_type_id "
+           "left join exercise_localizations el on el.exercise_id = t.exercise_id and el.language_code = '%s' "
+           "order by t.exercise_id" % lang)
+    assert is_select(sql)
+    rows = sb_rows(sql)
+    assert len(rows) == 4064 and len({r['exercise_id'] for r in rows}) == 4064, len(rows)
+    data = [{'exercise_id': int(r['exercise_id']), 'level': r['level'], 'exercise_type_id': r['exercise_type_id'],
+             'concept_id': r['concept_id'], 'topic': r['topic'], 'loc_id': r['loc_id'], 'src': r['full_sentence']} for r in rows]
+    h = wjl(L['dir'] + '/partA_live/rows.jsonl', data)
+    old = {r['exercise_id']: r['src'] for r in jl(L['A'] + '/rows.jsonl')}
+    cmp_ = Counter()
+    for r in data:
+        o, n = (old.get(r['exercise_id']) or '').strip(), (r['src'] or '').strip()
+        cmp_['empty_live' if not n else 'was_empty_now_filled' if not o else 'unchanged' if o == n else 'changed'] += 1
+    meta = {'lang': lang, 'rows': len(data), 'sha256': h, 'per_level': dict(Counter(r['level'] for r in data)),
+            'filled_per_level': dict(Counter(r['level'] for r in data if (r['src'] or '').strip())),
+            'vs_partA_snapshot': dict(cmp_), 'sql': sql, 'select_only': True, 'ts': now()}
+    wj(L['dir'] + '/partA_live/META.json', meta)
+    print(json.dumps(meta['vs_partA_snapshot']), meta['filled_per_level'])
+    return 0
 
 
 def cmd_projection(a):
@@ -885,6 +969,11 @@ def cmd_mock(a):
         env = {'type': 'result', 'is_error': False, 'subtype': 'success', 'result': '```json\n%s\n```' % json.dumps(arr), 'usage': usage}
         return types.SimpleNamespace(returncode=0, stdout=json.dumps(env), stderr='429 in stderr ignored')
     R.SPAWN[0] = fake; R.SLEEP_H[0] = lambda s: None; R.ENV[0] = dict(os.environ)
+
+    def sub_fake(prompt):
+        env = json.loads(fake(['-p', prompt], 0).stdout)
+        return env['result'], R.usage_total(env)
+    SUB_FAKE[0] = sub_fake
     saveD = L['D']
     for step in (lambda: writers(base, base, True), lambda: packets(base), lambda: judges(base, base, True),
                  lambda: labels(base)):
@@ -1051,11 +1140,11 @@ def cmd_post(a):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('lang', choices=sorted(P.LANG))
-    ap.add_argument('cmd', choices=['partA', 'rw_pass1', 'rw_pass2', 'rw_final', 'projection', 'make_set', 'mock', 'writers',
+    ap.add_argument('cmd', choices=['partA', 'partA_live', 'rw_pass1', 'rw_pass2', 'rw_final', 'projection', 'make_set', 'mock', 'writers',
                                     'packets', 'judges', 'labels', 'build_items', 'gemini', 'post'])
     a = ap.parse_args()
     setlang(a.lang)
-    f = {'partA': cmd_partA, 'rw_pass1': cmd_rw_pass1, 'rw_pass2': cmd_rw_pass2, 'rw_final': cmd_rw_final,
+    f = {'partA': cmd_partA, 'partA_live': cmd_partA_live, 'rw_pass1': cmd_rw_pass1, 'rw_pass2': cmd_rw_pass2, 'rw_final': cmd_rw_final,
          'projection': cmd_projection, 'make_set': cmd_make_set, 'mock': cmd_mock, 'writers': cmd_writers,
          'packets': lambda a: packets(L['D']), 'judges': cmd_judges, 'labels': lambda a: labels(L['D']),
          'build_items': lambda a: build_items(L['D']), 'gemini': cmd_gemini, 'post': cmd_post}[a.cmd]
