@@ -57,14 +57,19 @@ else:
 w("")
 # ---------------- Part 1
 p1 = J("part1/part1_final.json")
+props1 = {(p["exercise_id"], p["lang"]): p for p in J("part1/props_checked.json")["props"]}
 w("## Part 1 — SK and CZ grammar check and fix (4,064 selected exercises)")
 w("")
 w(f"- The proposer read all 4,064 × sk + cz rows (8 subagents, 508 exercises each) and listed **430** errors. The machine check passed all 430 "
   f"(the gap count is unchanged; full_sentence = intro_text + correct_answer via `derive_full_sentence`).")
-w(f"- The independent verifier (2 subagents) **agreed on 426** and disagreed on 4. **426 fixes were written** "
-  f"(sk {sum(1 for c in p1['written'] if c['lang']=='sk')}, cz {sum(1 for c in p1['written'] if c['lang']=='cz')}); 4 were not written.")
-w("- Of the 426: 289 are a missing final period on full_sentence (sentence-final gap: intro_text keeps ending on `...`, and the mechanical fill adds the period). "
-  "The other 137 are agreement, case, clitic order, reflexive, wrong-language words, a stray `?`/`.` in correct_answer, a capital mid-sentence, and `??`.")
+nper = sum(1 for c in p1["written"] if "period" in props1[(c["exercise_id"], c["lang"])]["why"].lower() and c["old"]["intro_text"] == c["new"]["intro_text"] and c["old"]["correct_answer"] == c["new"]["correct_answer"])
+w(f"- The independent verifier (2 subagents) **agreed on 426** and disagreed on 4. All 426 were written. Then 8 of them were **reverted** by a guarded "
+  f"write (backup `backups/part1/part1_revert_gap_moved.jsonl`): 38934, 39713, 39783 and 41194, in sk and cz. Those rows had an empty "
+  f"correct_answer by the empty-cell rule, and the fix moved the gap onto an existing word. That changes the gap, which Part 1 must keep. "
+  f"**Net: {len(p1['written'])} fixes stay written** (sk {sum(1 for c in p1['written'] if c['lang']=='sk')}, cz {sum(1 for c in p1['written'] if c['lang']=='cz')}).")
+w(f"- Of the {len(p1['written'])}: {nper} are a missing final period on full_sentence (sentence-final gap: intro_text keeps ending on `...`, and the mechanical fill adds the period). "
+  f"The other {len(p1['written'])-nper} are agreement, case, clitic order, reflexive/possessive, wrong-language words, spelling, a stray `?`/`.` in correct_answer "
+  "(it doubled the `??` of a tag question), and a capital mid-sentence.")
 w("- chunks and correct_alternative were not touched (sk/cz selected rows have no chunks).")
 w("")
 w("**Not written (the verifier disagreed):**")
@@ -74,7 +79,7 @@ w("|---|---|---|---|---|")
 for r in p1["rejected"]:
     w(f"| {r['exercise_id']} | {r['lang']} | {esc(r['old'][2])} | {esc(r['new'][2])} | {esc(r['verdict'][1] if len(r['verdict'])>1 else '')} |")
 w("")
-w("**Every fix written** (old → new; the field shown is full_sentence, and intro_text/correct_answer changed with it where the reason says so):")
+w("**Every fix that stays written** (old → new; the field shown is full_sentence, and intro_text/correct_answer changed with it where the reason says so):")
 w("")
 w("| id | lang | old | new | reason |")
 w("|---|---|---|---|---|")
@@ -255,6 +260,7 @@ w("")
 if remaining_slices:
     w(f"- **Part 3:** {len(rest):,} exercises (all non-selected B1/B2) in slices {', '.join(remaining_slices)}. "
       f"At the measured rate that is ≈ {len(rest)*((sum(int(x[2]) for x in nt)+sum(int(x[2]) for x in nr))//max(1,len(ids_done))):,} tokens. Resume as in the first section.")
+w("- Part 1: the 8 reverted rows (38934, 39713, 39783, 41194 sk+cz) keep their original text, and 41194's sk/cz empty answer stays as the empty-cell rule left it.")
 w("- The 4 Part 1 fixes the verifier refused (the `napriek tomu, / přesto,` comma rows) are still open. The proposals put the clitic in the wrong place.")
 gapo = {Lg: sum(1 for m in p4[Lg]["machine_fail"] if "gap opens" in (m.get("why") or "")) for Lg in ("es", "ua", "tr", "hu")}
 w(f"- Part 4 left alone: {sum(gapo.values())} rows (" + ", ".join(f"{k} {v}" for k, v in gapo.items() if v) + ") where the gap opens a sentence and the pronoun would need correct_answer re-cased; 1 hu row (7816) whose proposal also added a word; and the "
