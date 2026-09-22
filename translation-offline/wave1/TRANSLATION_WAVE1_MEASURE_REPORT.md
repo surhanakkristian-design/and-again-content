@@ -11,7 +11,7 @@ Pipeline: `~/Projects/and-again-content/translation-offline/wave1/` (below `W1/`
 | es | not measured | not measured | - | - | **no** |
 
 - Targets: coverage >= 90 % and FA < 5 %. Intervals are exact 95 % Clopper-Pearson.
-- **es stopped alone.** Judge session s4 returned 244 of 245 items in all three attempts (a different jid missing each time). The set was never frozen or opened and used 0 Gemini calls. It can be reused.
+- **es stopped alone.** Judge session s4 returned 244 of 245 items in all three attempts (j68edd was missing twice, then j19029). The set was never frozen or opened and used 0 Gemini calls. It can be reused.
 
 Per level (exact CP 95 %), plus the L3-only diagnostic (the decision before the content check):
 
