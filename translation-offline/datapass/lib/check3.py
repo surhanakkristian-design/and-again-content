@@ -8,7 +8,7 @@ LANGS = ["de", "ua", "es", "fr", "tr", "hu"]
 CYR = re.compile(r"[Ѐ-ӿ]")
 RUS_ONLY = re.compile(r"[ыэъёЫЭЪЁ]")
 LAT = re.compile(r"[A-Za-zÀ-ɏ]")
-EN_WORDS = set("the a an is are was were have has had will would and of to with you he she it they we this that my your his her their what where when why there here been being do does did not".split())
+EN_WORDS = set("the an is are was were have has had will would and of to with you he she it they we this that my your his her their what where when why there here been being do does did not".split())
 PRON = {"es": "yo tú él ella usted nosotros nosotras vosotros vosotras ellos ellas ustedes".split(),
         "ua": "я ти він вона воно ми ви вони".split(),
         "tr": "ben sen o biz siz onlar".split(),

@@ -41,7 +41,8 @@ def review_input(sl):
             for h in r["hard"]:
                 lines.append(f"  !HARD: {h}")
             for s_ in r["soft"]:
-                lines.append(f"  ~soft: {s_}")
+                if not s_.startswith("SEL: no subject pronoun"):     # noise: most are noun subjects; the reviewer checks SEL anyway
+                    lines.append(f"  ~soft: {s_}")
     open(os.path.join(HERE, "review", f"{sl}_in.txt"), "w").write("\n".join(lines) + "\n")
     hard = sum(1 for r in res.values() if r["hard"]); soft = sum(1 for r in res.values() if r["soft"])
     set_state(sl, translated=len(blocks), format_problems=probs, hard_before_review=hard, soft_before_review=soft)

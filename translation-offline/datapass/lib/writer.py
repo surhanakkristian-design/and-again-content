@@ -60,9 +60,14 @@ def run(part, batch_name, changes, cols, dry=False):
     rdir = os.path.join(ROOT, "rollback", part); os.makedirs(rdir, exist_ok=True)
     cur = fetch([c["id"] for c in changes])
     bpath = os.path.join(bdir, f"{batch_name}.jsonl")
-    if not os.path.exists(bpath):          # the FIRST backup is kept; a resumed run never overwrites it
-        with open(bpath, "w") as f:
-            for c in changes:
+    # the FIRST backup of a row is kept; a resumed run never overwrites it, it only appends rows not yet backed up
+    have = set()
+    if os.path.exists(bpath):
+        have = {json.loads(l)["id"] for l in open(bpath) if l.strip() and l.strip() != "null"}
+    add = [c for c in changes if c["id"] not in have and cur.get(c["id"]) is not None]
+    if add or not os.path.exists(bpath):
+        with open(bpath, "a") as f:
+            for c in add:
                 f.write(json.dumps(cur.get(c["id"]), ensure_ascii=False, sort_keys=True) + "\n")
         with open(bpath + ".sha256", "w") as f:
             f.write(_sha(bpath) + "  " + os.path.basename(bpath) + "\n")
@@ -77,7 +82,7 @@ def run(part, batch_name, changes, cols, dry=False):
             todo.append(c); continue
         skipped.append((c, "changed since backup: " + json.dumps({k: r[k] for k in cols}, ensure_ascii=False)))
     rpath = os.path.join(rdir, f"{batch_name}_rollback.sql")
-    if changes and not os.path.exists(rpath):
+    if changes:                            # rewritten each run from the full change list (idempotent, guarded)
         with open(rpath, "w") as f:
             f.write(f"-- rollback for {part}/{batch_name}; NOT run. Restores the backed-up values where the row\n"
                     f"-- still holds exactly what the data pass wrote.\n")
@@ -85,8 +90,16 @@ def run(part, batch_name, changes, cols, dry=False):
                 f.write("begin;\n" + rollback_sql(changes[i:i+500], cols) + "\ncommit;\n")
     written = []
     if not dry:
-        for i in range(0, len(todo), 500):
-            res = db.rows(update_sql(todo[i:i+500], cols))
+        B = 250                       # <= 500 per the brief; 250 keeps the API request small
+        for i in range(0, len(todo), B):
+            sql = update_sql(todo[i:i+B], cols)
+            for attempt in range(4):      # a transport error is retried; the guard makes a retry idempotent
+                try:
+                    res = db.rows(sql); break
+                except RuntimeError as e:
+                    if attempt == 3:
+                        raise
+                    import time; time.sleep(5 * (attempt + 1))
             written += [x["id"] for x in res]
     after = fetch([c["id"] for c in changes]) if not dry else cur
     verify_bad = []
