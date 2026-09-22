@@ -1,0 +1,48 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Czech sentences from a language-learning app, one per line as JSON: a writer id (wid), the Czech sentence, its CEFR level and the exercise topic. Imagine real learners translating each Czech sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Czech. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Czech's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Czech (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Czech is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Czech names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+Sentences:
+{"wid": "wB201", "czech": "Do konce léta ten muž bude mluvit o jejím mýdlovém triku celé tři měsíce.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB202", "czech": "Kdyby byla typ, co to vzdává, tu pásku by teď nedržela.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB203", "czech": "Na tohle finále trénovaly měsíce, než přišel dnešek.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB204", "czech": "Modrý papoušek, jehož objetí uklidnilo rozzlobeného ptáka, zavírá oči.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB205", "czech": "O tom průvodu se říká, že ho zorganizovali za dva dny.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB206", "czech": "Poslouchej, slyšela jsem, že seděly hodinu na svých stejných postelích, než začaly tančit.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB207", "czech": "Asi si přeje, aby netáhl boty po jezeře. Mokré ponožky, dokonalost.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB208", "czech": "Na podzim už bude chodit na terapii celý rok.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB209", "czech": "Právě teď zapojuje kabely za stolem v tmavém pokoji. Dokonalé plánování.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB210", "czech": "Brácho, ta slanina se smaží tak pět minut a pořád prská, fakt.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB211", "czech": "Káva se ještě kouří, takže on nemohl přijít na pracoviště už dávno.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB212", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB213", "czech": "V kanceláři se usmívá jako první, ačkoli stráví dvě hodiny denně v tramvaji.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB214", "czech": "Druhý tým odmítl uznat vítězství! Totální zrada!", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB215", "czech": "Kámo, do poledne ten úředník povolí vstup do země tak 200 lidem, fakt.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB216", "czech": "Přeje si, aby věděl aspoň něco o trubkách.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB217", "czech": "Není to ideální: tým tu stojí už hodinu a horizont pořád vypadá úplně stejně.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB218", "czech": "Věděla, že kuličky vyskočí ve chvíli, kdy tu hrst zmáčkne tak silně.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB219", "czech": "Muž věděl, že sucho potrvá až do dalšího období dešťů.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB220", "czech": "Kdyby bylo pršelo, hosté by nebyli měli večeři na nádvoří.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB221", "czech": "Ty pracuješ na té spirále celé hodiny a je to vidět. Respekt.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB222", "czech": "Do zítřejšího rána ta bolest úplně zmizí a on bude zase normálně jíst.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB223", "czech": "Navzdory chaosu zrzavovousý muž bojuje dál a řve jako hrom!", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB224", "czech": "Hned zrůžověla, takže ten kompliment musel být moc milý.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB225", "czech": "Holka, řekl mi, že do příštího léta sokol už roztáhne křídla ve 100 vystoupeních.", "level": "B2", "topic": "All Future Tenses"}

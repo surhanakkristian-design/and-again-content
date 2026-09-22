@@ -1,0 +1,48 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Czech sentences from a language-learning app, one per line as JSON: a writer id (wid), the Czech sentence, its CEFR level and the exercise topic. Imagine real learners translating each Czech sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Czech. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Czech's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Czech (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Czech is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Czech names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+Sentences:
+{"wid": "wA201", "czech": "Kočičí strom bys měl dát k oknu.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA202", "czech": "Na autě jsou dvě čistá zrcátka.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA203", "czech": "Brácho, ten malý pejsek dělá tolik hluku, bez legrace.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA204", "czech": "Holič obvykle holí brady, ale teď češe hustý plnovous.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA205", "czech": "Oči sovy jsou jasnější než displej mého telefonu.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA206", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA207", "czech": "Každý týden porovnává byty, ale dnes večer porovnává ložnice.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA208", "czech": "Vole, snaží se skončit rychle, tak teď se chystá přidat poklici.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA209", "czech": "Brácho, kolik hranolků sní? Celej talíř, fakt.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA210", "czech": "Včera běžela po stejné zdi.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA211", "czech": "Bolí tě zápěstí? Dobře, přinesu ti obvaz.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA212", "czech": "Kolik prasat žije na téhle malé farmě?", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA213", "czech": "Právě teď sníš o tom velkém domě. Upřímně, já taky.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA214", "czech": "Zákazník chce broskve, tak mu muž zítra prodá další.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA215", "czech": "Tabule je na připínání, tak se chystá připnout další důkazy.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA216", "czech": "Za vteřinu kýchne zase.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA217", "czech": "Pěny je moc, tak bys měl dát míň saponátu.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA218", "czech": "On ji včera objal na zlaté louce.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA219", "czech": "Aktualizace projektu: právě teď 3 lidé vytahují vlajku nahoru na zasněžené pláni.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA220", "czech": "Neumí se rozhodnout. Já rozhodnu za ni.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA221", "czech": "Vezmi si tohle jablko a ta chuť se ti bude líbit", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA222", "czech": "Podívej na ten prut! Dědeček právě se chystá vytáhnout rybu ven.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA223", "czech": "Ok, ale pravidla říkají, že ty musíš padat na záda, kámo.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA224", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA225", "czech": "Počkej minutu a vlk odejde do lesa.", "level": "A2", "topic": "Future with WILL"}
