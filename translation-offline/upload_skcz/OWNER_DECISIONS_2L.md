@@ -14,3 +14,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 7. **structure_json:** WAITS until app integration. No column is created now.
 8. **The SK/CZ upload is a no-op** (`src` already live on 8,128/8,128 rows). **Closed.**
 9. **Next step:** integrate the SK + CZ checker into the app (Phase 3A).
+
+## Decisions after the Phase 3A Part A stop (22 Sept 2026, Phase 3A continued brief)
+
+10. **AG is DROPPED from the app checker** (option C). App stack = F4v2 -> F4v3 -> L3 -> content check. The 14 AG-decided items are re-measured first (Part A2).
+11. **Scope option C:** for learners whose native language is `sk` or `cz`, the translate format shows ONLY the 4,064 selected exercises (the exercise_ids of upload_sk_final.xlsx / upload_cz_final.xlsx, same ids in both), all checked by the new checker. Every other native language keeps today's behaviour and today's check.
+12. **ONE additive database change approved:** a new small table listing the 4,064 selected exercise_ids (Part A3). No change to existing tables.
