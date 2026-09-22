@@ -42,3 +42,11 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 23. **Explicit-subject rewrite** (arm B, as for sk/cz) for es, ua, tr, hu, on the 4,064 selected exercises only.
 24. **Gemini budget for all six new languages:** up to $3.00 in total.
 25. **Two waves:** wave 1 = de, ua, es (Wave 1 brief); wave 2 = fr, tr, hu (later).
+
+## Decisions for the data pass (22 Sept 2026, Data pass brief)
+
+26. **Headless CLI sessions are NOT used.** All Claude work runs as Opus subagents in the main session (the headless OAuth token belongs to an old account).
+27. **Rewritten/translated native sentences go DIRECTLY into exercise_localizations.** The owner confirmed that the gap-fill fields and chunks of non-English languages are not used by the app.
+28. **Translate ALL 10,283 exercises into de/ua/es/fr/tr/hu:** the 2,015 selected first, then the rest.
+29. **Check the 4,064 selected SK and CZ sentences for grammar errors and FIX them at once**, with backup.
+30. **Fix the punctuation defects found in Wave 1 Part A.**
