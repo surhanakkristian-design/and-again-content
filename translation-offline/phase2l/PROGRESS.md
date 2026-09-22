@@ -1,1 +1,2 @@
 - 2026-09-22 08:19 S1: Part A done (0 calls, reproduces 2K exactly); content_check + run_2l built; test_2l 10/10 PASS (mocked, 0 real calls); B2 launched (1,287 unique requests).
+- 2026-09-22 08:43 S1: B2 content-check run done (ledger {'S1_B2': 1287}); partB + partC written (CLOSED-SET, IN-SAMPLE); Part C: FREEZE SOURCE-ONLY + B, TIP rejected; SHA after S1 0 diffs.
