@@ -1,0 +1,10 @@
+# Phase 2L - Czech upload file check (UPLOAD_CZ_CHECK)
+
+File `phase2l/upload/upload_cz_final.xlsx` (sheet `cz`, columns exercise_id, language_code, level, src, en, structure_json) + `annotations_cz_final.jsonl`; built by `build_upload_cz.py` from `phase2h/out/annotations_cz_final.jsonl`, mirroring 2K `build_upload.py`.
+
+- 2I Part 0 correction mirrored: `v = [en]` on 50 rows with empty `v` (21723, 21743, 35387, 35392, 15592, 15606, 15558, 15578, 38473, 38474, 31267, 31276, 39112, 24693, 24697, 31773, 31784, 42042, 42050, 16766, 16769, 44713, 44723, 43329, 43339, 35031, 35033, 35764, 35770, 31366, 31377, 44032, 44039, 35461, 9429, 9451, 35201, 41634, 41639, 33995, 34002, 20971, 20985, 35004, 35006, 18539, 18554, 20786, 20801, 24252); rows identical to phase2i/phase2j `annotations_cz_fixed.jsonl`: 4064 / 4,064
+- source checks: {"rows": 4064, "unique_ids": 4064, "int_ids": true, "v0_eq_en_violations": [], "language_code": {"cz": 4064}} -> PASS
+- written-file checks: {"sheets": ["cz"], "header": ["exercise_id", "language_code", "level", "src", "en", "structure_json"], "header_ok": true, "data_rows": 4064, "exercise_id_cell_types": {"int": 4064}, "unique_ids": 4064, "v0_eq_en_col": 4064, "structure_id_eq_col": 4064, "rows_equal_source": 4064, "jsonl_equal_source": true, "pandas": "unavailable: No module named 'pandas'"} -> PASS
+- `v` is display-only: the checker is SOURCE-ONLY and never grades against `en` / `v`.
+- 2K reference-ending scan on Czech: 102 broad hits, 1 strict (article / non-particle preposition); strict not reviewed in 2K: []; by last word {'before': 9, 'over': 6, 'down': 14, 'out': 8, 'in': 13, 'for': 2, 'up': 11, 'off': 6, 'of': 1, 'inside': 5, 'below': 3, 'on': 14, 'through': 1, 'around': 1, 'along': 1, 'outside': 3, 'past': 3, 'after': 1}; vs 2K's CZ scan: {'2k_hits': 102, 'same': 102, 'new_here': 0, 'gone_here': 0}. Detail `partD/ref_endings_cz.json`.
+- vs `phase2j/upload/annotations_cz_fixed.jsonl`: {"rows_2j": 4064, "same_ids": true, "v_differs": 0, "b3_cz_entries": 107, "b3_cz_actions": {"listed": 107}}
