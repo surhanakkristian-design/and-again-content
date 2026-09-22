@@ -22,6 +22,11 @@ one after the fact.
 import argparse, os, re, sys, time, urllib.error, urllib.request
 import openpyxl
 
+# Owner decision 36 (22 Sept 2026): content files never change under the same path, so the
+# browser may keep them for a year. Mirrors and-again lib/storageCache.ts CONTENT_CACHE_CONTROL.
+CACHE_CONTROL = {"Words": "public, max-age=31536000, immutable",
+                 "Thumbnails": "public, max-age=31536000, immutable"}
+
 MIME = {".mp4": "video/mp4", ".webp": "image/webp", ".png": "image/png",
         ".jpg": "image/jpeg", ".jpeg": "image/jpeg"}
 
@@ -82,10 +87,12 @@ def put(base, key, bucket, name, path, apply, tries=4):
     url = f"{base}/storage/v1/object/{bucket}/{urllib.request.quote(name)}"
     last = ""
     for attempt in range(1, tries + 1):
-        req = urllib.request.Request(url, data=data, method="POST", headers={
-            "Authorization": f"Bearer {key}", "apikey": key,
-            "Content-Type": MIME.get(ext, "application/octet-stream"),
-            "x-upsert": "true"})
+        headers = {"Authorization": f"Bearer {key}", "apikey": key,
+                   "Content-Type": MIME.get(ext, "application/octet-stream"),
+                   "x-upsert": "true"}
+        if bucket in CACHE_CONTROL:
+            headers["cache-control"] = CACHE_CONTROL[bucket]
+        req = urllib.request.Request(url, data=data, method="POST", headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=600) as r:
                 return "ok" if r.status in (200, 201) else f"HTTP {r.status}"
