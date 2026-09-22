@@ -1,0 +1,34 @@
+{
+ "model": "gemini-3.1-flash-lite",
+ "gcfg_l3": {
+  "temperature": 0,
+  "maxOutputTokens": 24,
+  "thinkingConfig": {
+   "thinkingBudget": 0
+  }
+ },
+ "gcfg_cc": {
+  "temperature": 0,
+  "maxOutputTokens": 48,
+  "thinkingConfig": {
+   "thinkingBudget": 0
+  }
+ },
+ "sources": {
+  "l3_sys": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2k/spec/l3_system_cz.txt",
+  "l3_user": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2k/spec/l3_user_cz.txt",
+  "judge": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2l/partE/judge/judge_prompt.txt",
+  "writer": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2k/spec/writer_template_cz.txt",
+  "cc_py": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/phase2l/content_check.py"
+ },
+ "drop": {
+  "de": "jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!",
+  "ua": "зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!",
+  "es": "ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!"
+ },
+ "g22_examples": {
+  "de": "\"sich\", or a neuter noun for a person such as \"das Kind\"",
+  "ua": "\"свій\", \"себе\", or a verb form without a subject pronoun",
+  "es": "\"su\", \"sus\", \"se\", or a verb without a subject pronoun"
+ }
+}
