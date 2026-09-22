@@ -26,3 +26,16 @@ Verdict: WITHIN budget. Headless reservation cap enforced in pipeline.py = 1,200
 - judge s3#1: 78,415 tokens (ok, 94.2s)
 - judge s4#1: 77,420 tokens (ok, 96.7s)
 - cumulative headless after judge: 532,825
+
+## Phase 2L final (whole phase, budget 2,000,000)
+
+| session | tokens |
+|---|---:|
+| main session (estimate) | ≈ 110,000 |
+| S1 agent (Parts A-C) | 155,035 |
+| S2 agent (Part D) | 152,342 |
+| S3 agent (Part E, own context) | 136,953 |
+| headless writers + judges (per session above) | 532,825 |
+| report agent (estimate) | ≈ 75,000 |
+| **total** | **≈ 1,162,155** |
+| **remainder** | **≈ 837,845** |
