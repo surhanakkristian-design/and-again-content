@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "Sie ging an den Reihen entlang, als ihr Gesicht auf der Leinwand erschien.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB102", "source": "Wenn unsere Wohnung größer wäre, würden wir ein ganzes Hantelregal kaufen.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB103", "source": "Als Kind pflegte sie, den Globus zu drehen und auf ein zufälliges Land zu tippen.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB104", "source": "Es machte ihm nichts aus, ein Zimmer mit acht Fremden zu teilen.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB105", "source": "Wenn Nina so weiterspielt, gibt der Trainer ihr auch die Kapitänsbinde.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB106", "source": "Er hörte nicht auf, den Sack zu schlagen, bis er durch die Garage schwang.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB107", "source": "Wenn sie das letzte Kissen platziert, ist die Reihe ungefähr zwei Meter lang.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB108", "source": "Bei ihren früheren Rennen brauchte sie niemanden, der ihr im Ziel assistierte.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB109", "source": "Während er durch die Galerie ging, fiel ihm vor Ehrfurcht die Kinnlade herunter.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB110", "source": "Bevor sie in diesem Büro gearbeitet hat, war sie früher eine Turnerin mit krassem Gleichgewicht.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB111", "source": "Mädel, angeblich hat der Wolf nicht aufgehört, sich näher heranzuschleichen, und die Henne hat's nicht mal gemerkt.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB112", "source": "Das Diagramm hat beschriftete Pfeile und eine Formel, also muss es Teil einer Naturwissenschaftsstunde sein.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB113", "source": "Die Katze war begeistert vom Flat Top, und der Gorilla auch, offensichtlich.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB114", "source": "Er ging gerade beim Tee die Tagesordnung für den Abend durch, als ein 30-Kilo-Hund seinen Schoß übernahm.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB115", "source": "Bro, er hat früher Laufen gehasst, jetzt läuft er einen ganzen Marathon, ohne Witz.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB116", "source": "Nebelige Hügel waren früher ihr schlimmster Albtraum, aber jetzt wandert sie im Regen durch sie hindurch!", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB117", "source": "Bro, wenn ich wie das Model laufen würde, sähe ich auch ziemlich ikonisch aus.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB118", "source": "Hör mal, angeblich ist das Motorrad mit einem speziellen Träger am Truck befestigt.", "level": "B1", "topic": "Passive"}
+{"wid": "wB119", "source": "Die Wanderer laufen seit dem frühen Morgen durch diese Berglandschaft.", "level": "B1", "topic": "Present Perfect Continuous"}
+{"wid": "wB120", "source": "Nächste Woche um diese Zeit machen sie in derselben Nische wieder einen geheimen Deal.", "level": "B1", "topic": "Future Continuous"}
+{"wid": "wB121", "source": "Bro, der Jogger hat sich seinen Anteil Pizza genommen, und die Hundeausführerin auch, ohne Witz.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB122", "source": "Sie roch gerade an dem weißen Tuch, als ihre Nachbarin sie rief. Perfektes Timing, offensichtlich.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB123", "source": "Die grüne Suppe wurde vom Subjekt ausgespuckt, was auf starke Abneigung hinweist.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB124", "source": "Sie konnte es nicht vermeiden, mitten auf dieser Albtraumwanderung eine Behandlung zu bekommen!", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB125", "source": "Seine Waffe wurde ins Gras gesenkt! Es ist vorbei, komplett vorbei!", "level": "B1", "topic": "Passive or Active"}

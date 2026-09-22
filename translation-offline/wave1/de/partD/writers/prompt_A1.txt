@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA101", "source": "Wer wartet unter dem Wartehäuschen?", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA102", "source": "Am Steg steht ein altes Warnschild.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA103", "source": "Er legt das Spiegelei auf eine Scheibe Toast.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA104", "source": "Sie gehen jedes Wochenende in die Natur.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA105", "source": "In der kalten Felslandschaft stehen zwei Wanderer.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA106", "source": "Drei Tauben picken an dem alten Brunnen.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA107", "source": "Die Schlange streckt uns ihre dünne Zunge entgegen.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA108", "source": "Sie isst ihre Pizza allein um acht Uhr.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA109", "source": "Der Welpe bringt den Ball zur Maschine zurück.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA110", "source": "Ihr gefällt dieses braune Hemd am besten.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA111", "source": "Wann benutzt du deine Kamera? Jeden Abend. Beeindruckend.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA112", "source": "Alter, ihr könnt die Kolonne vom Balkon aus sehen.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA113", "source": "Der Kuchen wird auf dem Holzbrett geschnitten.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA114", "source": "Tom hebt seinen eigenen Koffer vom Band.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA115", "source": "Ihre Gesichter im Handy sind sehr lustig.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA116", "source": "Diese Kisten in der Garage sind schwer.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA117", "source": "Die Gärtnerin hat Werkzeug in ihren Schürzentaschen.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA118", "source": "Die Führerin führt die Gruppe eine schmale Gasse hinunter.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA119", "source": "Was tut er in sein gesundes Getränk? Spinat.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA120", "source": "Sie sind alt, und sie küssen sich ewig! Einfach wunderschön!", "level": "A1", "topic": "TO BE"}
+{"wid": "wA121", "source": "Alter, überall auf der Theke sind Reiskörner, das gibt ein Chaos.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA122", "source": "Hilfe! Etwas ist in diesem dunklen Raum!", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA123", "source": "Du sagst mit Blumen sorry. Respekt.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA124", "source": "Im Sommer laufen zwei Kinder durch den Rasensprenger.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA125", "source": "Ehrlich, du kannst zehn Sonnenblumen in zwei Armen tragen. Beeindruckend.", "level": "A1", "topic": "Modal verb CAN"}

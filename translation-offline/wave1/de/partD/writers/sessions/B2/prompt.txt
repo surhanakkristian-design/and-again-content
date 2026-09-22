@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Das Wohnzimmer, wo die Nachmittagssonne aufs Sofa fällt, ist der Lieblingsplatz des Katers.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB202", "source": "Er schlug vor, die fertige Platte ins Schaufenster des Ateliers zu hängen.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB203", "source": "Nie hatte sie jemanden so glücklich über eine einzige Teigtasche gesehen.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB204", "source": "Wenn sie sich vor dem Lauf richtig aufgewärmt hätte, wäre dieser Krampf nie passiert.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB205", "source": "Im Dorf ist es allgemein anerkannt, dass niemand sonst diesen Karren überhaupt bewegen könnte.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB206", "source": "Nächsten Frühling wird die Drohne diese Wildnis fünf Jahre lang gefilmt haben, ohne eine einzige Straße zu finden.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB207", "source": "Sie ließen letzten Sommer die Kamera über der Schlafzimmertür installieren.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB208", "source": "Gerade jetzt gibt sie Befehle, während die Angestellten Pakete stempeln.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB209", "source": "Hätten die Dorfbewohner nicht so viel Zusammenarbeit gezeigt, läge das Gerüst jetzt noch im Gras.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB210", "source": "Ok, also angeblich redet sie über ihren Abflug, seit sie hier ist.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB211", "source": "Sie mühte sich ewig mit den Schlössern ab, bevor sie den Eingang erreichte. Ein kurzer Besuch, logisch.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB212", "source": "Die Laborleitung ließ vor dem Audit 50 Kolben reinigen.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB213", "source": "Bro, bis nächste Woche wird dieser Flat Top wieder zu einem vollen Afro gewachsen sein, kein Witz.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB214", "source": "Die Lagune erstreckt sich bis zum offenen Meer jenseits der Felswände.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB215", "source": "Sie wartet im Bett, während die Flüssigkeit aus der braunen Flasche den Löffel füllt.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB216", "source": "Bro, er wird diese Grube bis Sonnenuntergang so tief gegraben haben, dass er eine Leiter braucht, echt.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB217", "source": "Die Künstlerin trug etwa zwei Stunden lang Farbe auf, bevor das Porträt sichtbar wurde.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB218", "source": "Am Ende des Tages loben die Kollegen diese Grafik seit ungefähr acht Stunden.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB219", "source": "Der Steinbruch, der nach der Szene voller Staub war, wird für viele Filme genutzt.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB220", "source": "Er saß eine Minute allein auf dem geräumigen Sofa, bevor seine Freunde hereinstürmten.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB221", "source": "Omg, es heißt, dass sie den Vertrag zerrissen hatte, bevor jemand ein Wort sagen konnte.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB222", "source": "Bro, ich wünschte, ich hätte so eine Tiefgarage, echt jetzt.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB223", "source": "Ehrlich, du wusstest immer, dass du das Schiff rechtzeitig erwischen würdest, und so war's.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB224", "source": "Hör mal, ich habe gehört, dass sie eine Stunde in der Schlange gewartet hatte, bevor sie endlich gewählt hat.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB225", "source": "Bis zum Ende der Fahrt hat der Stromabnehmer der Straßenbahn Hunderte Funken aus dem Draht geschlagen.", "level": "B2", "topic": "Future Perfect Simple"}
