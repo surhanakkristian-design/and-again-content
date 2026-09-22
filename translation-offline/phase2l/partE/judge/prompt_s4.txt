@@ -1,0 +1,267 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Czech sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Czech means?
+
+The owner's rules (apply them exactly):
+- The Czech is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Czech names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Czech while the English tense inside it is free.
+- Added content is wrong.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Czech only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j7e0aa", "czech": "Počkej, slyšela jsem, že celé odpoledne švihá tou golfovou holí.", "level": "B1", "answer": "Wait, I heard she has been swinging that golf club the whole afternoon.", "topic": "Present Perfect Continuous"}
+{"jid": "j8431a", "czech": "On ji včera objal na zlaté louce.", "level": "A2", "answer": "She was hugged by him yesterday in the golden meadow.", "topic": "Past Simple"}
+{"jid": "jdadc8", "czech": "Upřímně, ty umíš postavit polici. Moje pochybnost je pryč.", "level": "A1", "answer": "Honestly, you can build a table. My doubt is gone.", "topic": "Modal verb CAN"}
+{"jid": "j70e0a", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "answer": "Dark means without light, so he carry two torches.", "topic": "Singular and plural"}
+{"jid": "j9934d", "czech": "Do konce léta ten muž bude mluvit o jejím mýdlovém triku celé tři měsíce.", "level": "B2", "answer": "By the end of summer, the man will have been talking about her soap trick for three whole months.", "topic": "Future Perfect Continuous"}
+{"jid": "jb04ea", "czech": "Na podzim už bude chodit na terapii celý rok.", "level": "B2", "answer": "By autumn, she will already have been attending therapy for a full year.", "topic": "Future Perfect Continuous"}
+{"jid": "j4dd3b", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "answer": "Really, the farmer pulled up about a hundred carrot today, mate.", "topic": "Past Simple"}
+{"jid": "j02242", "czech": "Kde je Francie? Ve Francii, protože tam je Francie.", "level": "A1", "answer": "Where is France located? In France, because France is there.", "topic": "Wh- questions"}
+{"jid": "j8a4e8", "czech": "Brácho, ten malý pejsek dělá tolik hluku, bez legrace.", "level": "A2", "answer": "Bro, that small dog is making so much noise, seriously.", "topic": "Countable and uncountable"}
+{"jid": "j497e7", "czech": "Bolí tě zápěstí? Dobře, přinesu ti obvaz.", "level": "A2", "answer": "Your wrist hurts? Fine, I'll bring you a bandage.", "topic": "Going to or Will"}
+{"jid": "j041e4", "czech": "Upřímně, ty umíš postavit polici. Moje pochybnost je pryč.", "level": "A1", "answer": "Honestly, you were able to build a shelf. My doubt was gone.", "topic": "Modal verb CAN"}
+{"jid": "j4ee56", "czech": "Kolik prasat žije na téhle malé farmě?", "level": "A2", "answer": "How many pigs live on this small farm?", "topic": "Much, Many, Some..."}
+{"jid": "jb2d3f", "czech": "Terče stojí před kopci.", "level": "A1", "answer": "The targets stand in front of the hills.", "topic": "Prepositions of place/time"}
+{"jid": "j1d507", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The rods were terribly hot. You had to use long tongs!", "topic": "Must, Have to..."}
+{"jid": "j36e80", "czech": "Věděla, že kuličky vyskočí ve chvíli, kdy tu hrst zmáčkne tak silně.", "level": "B2", "answer": "She knew that the balls would pop out the moment she squeezed the handful that hard.", "topic": "Future in past"}
+{"jid": "j0c854", "czech": "Podívej na ten prut! Dědeček právě se chystá vytáhnout rybu ven.", "level": "A2", "answer": "Look at that rod! Grandpa is just about to throw the fish back.", "topic": "Going to or Will"}
+{"jid": "j9a6c9", "czech": "Kde je Francie? Ve Francii, protože tam je Francie.", "level": "A1", "answer": "Where is France? In France, because France is there.", "topic": "Wh- questions"}
+{"jid": "jfb552", "czech": "Přeje si, aby věděl aspoň něco o trubkách.", "level": "B2", "answer": "She wishes he knew at least something about cables.", "topic": "Wish clauses"}
+{"jid": "jd8b4b", "czech": "Pokud smlouva zafunguje, ty dvě země zůstanou blízkými partnery mnoho let.", "level": "B1", "answer": "If the deal succeeds, the two countries are going to remain close partners for many years.", "topic": "1. Conditional"}
+{"jid": "j3c055", "czech": "Navzdory chaosu zrzavovousý muž bojuje dál a řve jako hrom!", "level": "B2", "answer": "Despite the chaos, the red-bearded man keeps fighting and roars like thunder!", "topic": "Advanced linkers"}
+{"jid": "j1d604", "czech": "Praští ho svým velkým bílým polštářem.", "level": "A1", "answer": "He hits him with his big white pillow.", "topic": "My, Your, His,..."}
+{"jid": "je4894", "czech": "Prostorná pohovka, kterou chtěl jen pro sebe, byla úplně obsazena!", "level": "B1", "answer": "The spacious sofa, which he wanted just for his dog, was completely occupied!", "topic": "Relative clauses"}
+{"jid": "j82677", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "answer": "The matches lie in a little wooden box.", "topic": "Prepositions of place/time"}
+{"jid": "jecacd", "czech": "Před velkými zápasy nebývala tak emotivní, ale dnes večer pláče.", "level": "B1", "answer": "She used not to be so emotional before important matches, but tonight she's in tears.", "topic": "Used to, Would"}
+{"jid": "j0681e", "czech": "Včera běžela po stejné zdi.", "level": "A2", "answer": "Yesterday she runned along the same wall.", "topic": "Past Simple"}
+{"jid": "jee66a", "czech": "Brácho, ta slanina se smaží tak pět minut a pořád prská, fakt.", "level": "B2", "answer": "Bro, the bacon has been frying for around five minutes and is still spitting, honestly.", "topic": "All Present Tenses"}
+{"jid": "j89684", "czech": "Ona dělá každou neděli k obědu těstoviny, to se musí milovat, kámo.", "level": "A1", "answer": "She made pasta for lunch every Sunday, you had to love that, mate.", "topic": "Present Simple"}
+{"jid": "jd9155", "czech": "Kde kreslí ten návrh? Na svém tabletu.", "level": "A1", "answer": "Where did he draw the design? On his tablet.", "topic": "Wh- questions"}
+{"jid": "jc5fe8", "czech": "Kde kreslí ten návrh? Na svém tabletu.", "level": "A1", "answer": "Where is he drawing? On his tablet.", "topic": "Wh- questions"}
+{"jid": "j76749", "czech": "Věděla, že kuličky vyskočí ve chvíli, kdy tu hrst zmáčkne tak silně.", "level": "B2", "answer": "She knew the marbles would break the moment she squeezed the handful so hard.", "topic": "Future in past"}
+{"jid": "ja4e95", "czech": "Na podzim už bude chodit na terapii celý rok.", "level": "B2", "answer": "By autumn she had been going to therapy for a whole year.", "topic": "Future Perfect Continuous"}
+{"jid": "je9bc2", "czech": "Do zítřejšího rána ta bolest úplně zmizí a on bude zase normálně jíst.", "level": "B2", "answer": "By tomorrow morning the pain will be completely gone and he'll be eating normally again.", "topic": "All Future Tenses"}
+{"jid": "j07692", "czech": "Podívá se na své hodinky a zpanikaří.", "level": "A1", "answer": "He'll look at his watch and panic.", "topic": "My, Your, His,..."}
+{"jid": "j22bf8", "czech": "Za vteřinu kýchne zase.", "level": "A2", "answer": "She will sneeze again in a second.", "topic": "Future with WILL"}
+{"jid": "jed589", "czech": "Kámo, do poledne ten úředník povolí vstup do země tak 200 lidem, fakt.", "level": "B2", "answer": "Dude, by midday the official will have let around 200 people into the country, for real.", "topic": "Future Perfect Simple"}
+{"jid": "jd6dc8", "czech": "V kanceláři se usmívá jako první, ačkoli stráví dvě hodiny denně v tramvaji.", "level": "B2", "answer": "In the office she is always first to smile, though she spends two hours each day on the tram.", "topic": "Advanced linkers"}
+{"jid": "j1ae7b", "czech": "Zítra v tuhle dobu si ona zase bude dávat pauzu na tom gauči, bez kecu, kámo.", "level": "B1", "answer": "This time tomorrow she'll be taking a break on that bed again, no kidding, dude.", "topic": "Future Continuous"}
+{"jid": "je599f", "czech": "Vozidlo bylo schované celou dobu v tmavém přívěsu. Naprosto neuvěřitelné!", "level": "B1", "answer": "The vehicle was hidden the whole time in a trailer. Absolutely incredible!", "topic": "Passive"}
+{"jid": "j08605", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The rods is terribly hot. You must use long tongs!", "topic": "Must, Have to..."}
+{"jid": "j6c2fd", "czech": "On programovával pozdě v noci, když byl student.", "level": "B1", "answer": "He programs late at night because he is a student.", "topic": "Used to, Would"}
+{"jid": "j5004e", "czech": "Praští ho svým velkým bílým polštářem.", "level": "A1", "answer": "She hits him with her white pillow.", "topic": "My, Your, His,..."}
+{"jid": "ja1e0d", "czech": "Od chvíle, co začalo pršet, šmátrají ve tmě po lucerně.", "level": "B1", "answer": "Ever since it began to rain, they've been groping around in the dark for the lantern.", "topic": "Present Perfect Continuous"}
+{"jid": "je027e", "czech": "Poslouchej, slyšela jsem, že seděly hodinu na svých stejných postelích, než začaly tančit.", "level": "B2", "answer": "Listen, I heard they had sat on their identical beds for an hour before they started dancing.", "topic": "All Past Tenses"}
+{"jid": "j831d0", "czech": "Napíše pět slov na první řádek.", "level": "A1", "answer": "He writes five words in the first row.", "topic": "Cardinal numbers"}
+{"jid": "j4fdbd", "czech": "Kdyby bylo pršelo, hosté by nebyli měli večeři na nádvoří.", "level": "B2", "answer": "If it had rained, the guests wouldn't have had dinner.", "topic": "3. Conditional"}
+{"jid": "jb7b3d", "czech": "Jestli ji nakreslí výš na pláži, moře na ni nedosáhne", "level": "B1", "answer": "If he sketches it higher on the beach, the sea won't reach it.", "topic": "1. Conditional"}
+{"jid": "j3c201", "czech": "Příští týden touhle dobou bude mít na sobě šaty ušité přesně z téhle látky.", "level": "B1", "answer": "This time next week she will be wearing a dress sewn from exactly this fabric.", "topic": "Future Continuous"}
+{"jid": "jf668d", "czech": "Velká kartonová krabice je skoro plná.", "level": "A1", "answer": "The big cardboard box was almost full.", "topic": "TO BE"}
+{"jid": "jd113f", "czech": "Na tohle finále trénovaly měsíce, než přišel dnešek.", "level": "B2", "answer": "For months before today, they had been training for this final.", "topic": "Past Perfect Continuous"}
+{"jid": "jb6dca", "czech": "Poslouchej, slyšela jsem, že seděly hodinu na svých stejných postelích, než začaly tančit.", "level": "B2", "answer": "Listen, I heard they sat for an hour on their identical beds before they started dancing.", "topic": "All Past Tenses"}
+{"jid": "j89eed", "czech": "Za vteřinu kýchne zase.", "level": "A2", "answer": "He'll sneeze again in one second.", "topic": "Future with WILL"}
+{"jid": "j45ba8", "czech": "Kočičí strom bys měl dát k oknu.", "level": "A2", "answer": "You should put the tree by the window.", "topic": "Modal verb SHOULD"}
+{"jid": "j75a77", "czech": "Kdy ten dospělý podepisuje 20 formulářů? Před termínem.", "level": "A1", "answer": "When is the adult signing 20 forms? Before the deadline.", "topic": "Wh- questions"}
+{"jid": "j28de1", "czech": "Oči sovy jsou jasnější než displej mého telefonu.", "level": "A2", "answer": "The owl's eyes are darker than my phone's display.", "topic": "Adjective comparison"}
+{"jid": "j7df54", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "answer": "Dark meant without light, so he carried two torches.", "topic": "Singular and plural"}
+{"jid": "j9e792", "czech": "Fanoušek uvedl, že jeho věrnost začala přibližně před čtyřiceti lety.", "level": "B1", "answer": "The fan said that his loyalty had began about forty year before.", "topic": "Reported speech"}
+{"jid": "j3faea", "czech": "Kdyby byla typ, co to vzdává, tu pásku by teď nedržela.", "level": "B2", "answer": "If she were the type, she wouldn't be holding the tape now.", "topic": "Mixed Conditional"}
+{"jid": "jb7bc8", "czech": "Proč je bochník zlatavý? Protože má zlatavou barvu.", "level": "A1", "answer": "Why is the loaf golden? Because it has a golden colour.", "topic": "Wh- questions"}
+{"jid": "j40c7c", "czech": "Ona dělá každou neděli k obědu těstoviny, to se musí milovat, kámo.", "level": "A1", "answer": "She make pasta for lunch every Sunday, you've got to love that, mate.", "topic": "Present Simple"}
+{"jid": "j7c9c7", "czech": "Tahle nevěsta pod obloukem se usmívá.", "level": "A1", "answer": "This bride under the arch smiled.", "topic": "This, That, These..."}
+{"jid": "jea73a", "czech": "Myslím, že se sněhová pevnost na jaře roztaje, protože je ze sněhu.", "level": "B1", "answer": "I think that in spring the snow fort will melt, because it's built of snow.", "topic": "Future Simple or Continuos"}
+{"jid": "j362d2", "czech": "Horní míček byl hozen přes celý stůl a nikdo tomu nevěřil!", "level": "B1", "answer": "The upper ball was tossed across the entire table and no one could believe it!", "topic": "Passive"}
+{"jid": "jf7f5d", "czech": "Před velkými zápasy nebývala tak emotivní, ale dnes večer pláče.", "level": "B1", "answer": "She wasn't usually so emotional before major matches, but tonight she's crying.", "topic": "Used to, Would"}
+{"jid": "j28604", "czech": "Za vteřinu kýchne zase.", "level": "A2", "answer": "In a second he'll cough again.", "topic": "Future with WILL"}
+{"jid": "j40b8b", "czech": "Hned zrůžověla, takže ten kompliment musel být moc milý.", "level": "B2", "answer": "She turned pink right away, so the compliment must have been really sweet.", "topic": "Modals in past"}
+{"jid": "jb4c94", "czech": "Velká kartonová krabice je skoro plná.", "level": "A1", "answer": "The big cardboard box are almost full.", "topic": "TO BE"}
+{"jid": "je12fe", "czech": "Proudové letadlo má dva velké motory.", "level": "A1", "answer": "The jet plane has two engines.", "topic": "HAVE GOT"}
+{"jid": "jdf12e", "czech": "Prostorná pohovka, kterou chtěl jen pro sebe, byla úplně obsazena!", "level": "B1", "answer": "The sofa, which he wanted just for himself, was completely occupied!", "topic": "Relative clauses"}
+{"jid": "j685be", "czech": "Za vteřinu kýchne zase.", "level": "A2", "answer": "In a second he will sneezes again.", "topic": "Future with WILL"}
+{"jid": "jebfdf", "czech": "Právě teď sníš o tom velkém domě. Upřímně, já taky.", "level": "A2", "answer": "You're dreaming about that big house now. Honestly, I am too.", "topic": "Present Continuous"}
+{"jid": "j3c216", "czech": "Na autě jsou dvě čistá zrcátka.", "level": "A2", "answer": "There is two clean mirrors on the car.", "topic": "There is, are"}
+{"jid": "j6cb78", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "answer": "By this evening she will have bought chocolate, a hat and a present.", "topic": "Future Perfect Simple"}
+{"jid": "j2ee6c", "czech": "Napíše pět slov na první řádek.", "level": "A1", "answer": "He writes five words on the first line.", "topic": "Cardinal numbers"}
+{"jid": "j8304d", "czech": "Včera běžela po stejné zdi.", "level": "A2", "answer": "Yesterday she ran along the same wall.", "topic": "Past Simple"}
+{"jid": "jcd630", "czech": "Lavička je na sezení, tak on hraje na kytaru na ní.", "level": "A1", "answer": "The bench is meant for sitting, so he plays the guitar on it.", "topic": "Prepositions of place/time"}
+{"jid": "jbc9b8", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bicycle have made ten iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j2a855", "czech": "Vezmi si tohle jablko a ta chuť se ti bude líbit", "level": "A2", "answer": "Take this apple and you liked the taste.", "topic": "Future with WILL"}
+{"jid": "je5595", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "answer": "Dark means there is no light, so he is carrying two torches.", "topic": "Singular and plural"}
+{"jid": "j7dc28", "czech": "Vozidlo bylo schované celou dobu v tmavém přívěsu. Naprosto neuvěřitelné!", "level": "B1", "answer": "The vehicle had been hidden in a dark trailer all along. Totally unbelievable!", "topic": "Passive"}
+{"jid": "je7e51", "czech": "Přeje si, aby věděl aspoň něco o trubkách.", "level": "B2", "answer": "She wished he had known at least something about pipes back then.", "topic": "Wish clauses"}
+{"jid": "j26ec7", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The rods are super hot. You have to use long tongs!", "topic": "Must, Have to..."}
+{"jid": "jb3a77", "czech": "Myslím, že se sněhová pevnost na jaře roztaje, protože je ze sněhu.", "level": "B1", "answer": "I think the snow fort will melt in summer because it's made of snow.", "topic": "Future Simple or Continuos"}
+{"jid": "jd38b5", "czech": "Majitel stánku řekl, že platba přišla celá v mincích a bankovkách z váčku.", "level": "B1", "answer": "The stall owner said that the payment came entirely in coins and banknotes from a pouch.", "topic": "Reported speech"}
+{"jid": "j8b40b", "czech": "Od chvíle, co začalo pršet, šmátrají ve tmě po lucerně.", "level": "B1", "answer": "Since it started raining, they have been fumbling in the dark for a lantern.", "topic": "Present Perfect Continuous"}
+{"jid": "je448f", "czech": "Kde kreslí ten návrh? Na svém tabletu.", "level": "A1", "answer": "Where does she draw the design? On her tablet.", "topic": "Wh- questions"}
+{"jid": "j4dc95", "czech": "Proudové letadlo má dva velké motory.", "level": "A1", "answer": "The jet's got two big engines.", "topic": "HAVE GOT"}
+{"jid": "j962db", "czech": "Pokud smlouva zafunguje, ty dvě země zůstanou blízkými partnery mnoho let.", "level": "B1", "answer": "If the treaty worked, the two countries remained close partners for many years.", "topic": "1. Conditional"}
+{"jid": "ja85c9", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "answer": "Dark means with no light, so he's carrying two torches.", "topic": "Singular and plural"}
+{"jid": "j53613", "czech": "Terče stojí před kopci.", "level": "A1", "answer": "The targets are in front of the hills.", "topic": "Prepositions of place/time"}
+{"jid": "je3410", "czech": "Počkej, slyšela jsem, že celé odpoledne švihá tou golfovou holí.", "level": "B1", "answer": "Wait, I heard that he's been swinging that golf club all afternoon.", "topic": "Present Perfect Continuous"}
+{"jid": "j1b45c", "czech": "Podívá se na své hodinky a zpanikaří.", "level": "A1", "answer": "He looked at his watch and panicked.", "topic": "My, Your, His,..."}
+{"jid": "j35c35", "czech": "Lavička je na sezení, tak on hraje na kytaru na ní.", "level": "A1", "answer": "A bench is for sitting, so he plays the guitar on it.", "topic": "Prepositions of place/time"}
+{"jid": "ja5d87", "czech": "Proč neodpovídá? Tahle kavárna je noční můra!", "level": "A1", "answer": "Why isn't he answering? This café is a nightmare!", "topic": "Wh- questions"}
+{"jid": "j64391", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bicycle took ten iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j2d64d", "czech": "Proč je bochník zlatavý? Protože má zlatavou barvu.", "level": "A1", "answer": "Why is the loaf golden? Because it is golden in colour.", "topic": "Wh- questions"}
+{"jid": "j31d2e", "czech": "Myslím, že se sněhová pevnost na jaře roztaje, protože je ze sněhu.", "level": "B1", "answer": "I think the snow fort is going to melt in the spring, since it's made of snow.", "topic": "Future Simple or Continuos"}
+{"jid": "j9f413", "czech": "Hádej co, řekl mi: Slibuju, že neudělám další tak bolestivý trénink nohou.", "level": "B1", "answer": "Guess what, he said to me: I promise I won't do another leg workout that painful.", "topic": "Future Simple or Continuos"}
+{"jid": "jd1a25", "czech": "Není to ideální: tým tu stojí už hodinu a horizont pořád vypadá úplně stejně.", "level": "B2", "answer": "It's not ideal: the team has been standing here for a day and the horizon still looks exactly the same.", "topic": "All Present Tenses"}
+{"jid": "jca2b5", "czech": "Druhý tým odmítl uznat vítězství! Totální zrada!", "level": "B2", "answer": "The second team refused to recognize the win! Complete betrayal!", "topic": "Reported speech"}
+{"jid": "jc1c04", "czech": "Kámo, do poledne ten úředník povolí vstup do země tak 200 lidem, fakt.", "level": "B2", "answer": "Dude, by noon that official will have allow about 200 people to enter the country, seriously.", "topic": "Future Perfect Simple"}
+{"jid": "j0a995", "czech": "Než se slunce dotklo vody, přikázala té řadě dvakrát běžet.", "level": "B1", "answer": "Before the sun touched the water, she had ordered that row to swim twice.", "topic": "Past Perfect Simple"}
+{"jid": "jd5056", "czech": "Aktualizace projektu: právě teď 3 lidé vytahují vlajku nahoru na zasněžené pláni.", "level": "A2", "answer": "Update on the project: right now three people are pulling up the flag on the snowy plain.", "topic": "Present Continuous"}
+{"jid": "j73003", "czech": "Vozidlo bylo schované celou dobu v tmavém přívěsu. Naprosto neuvěřitelné!", "level": "B1", "answer": "The vehicle was concealed in a dark trailer the whole time. Completely incredible!", "topic": "Passive"}
+{"jid": "jd2571", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "answer": "Matches are lying in a small wooden box.", "topic": "Prepositions of place/time"}
+{"jid": "j417c2", "czech": "Holka, prej ta fotka byla pořízena, zatímco pět kluků leželo u jezera.", "level": "B1", "answer": "Girl, apparently that photo was taken while five boys were lying there.", "topic": "Passive"}
+{"jid": "ja5a1e", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The rods are terribly hot. You must use long tongs!", "topic": "Must, Have to..."}
+{"jid": "ja7b94", "czech": "Právě teď zapojuje kabely za stolem v tmavém pokoji. Dokonalé plánování.", "level": "B2", "answer": "At the moment she's hooking up the cables behind the desk in a dark room. Flawless planning.", "topic": "All Present Tenses"}
+{"jid": "jda5c8", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "answer": "For real, the farmer has pulled up about a hundred carrots today, man.", "topic": "Past Simple"}
+{"jid": "j6f6bd", "czech": "Pěny je moc, tak bys měl dát míň saponátu.", "level": "A2", "answer": "There's too much foam, so you should use less detergent.", "topic": "Modal verb SHOULD"}
+{"jid": "jf90c6", "czech": "Holič obvykle holí brady, ale teď češe hustý plnovous.", "level": "A2", "answer": "The barber usually shaves chins, but now he is cutting a thick full beard.", "topic": "Present Continuous or Simple"}
+{"jid": "jf8e3e", "czech": "O tom průvodu se říká, že ho zorganizovali za dva dny.", "level": "B2", "answer": "That parade is said to have been organized in two weeks.", "topic": "Advanced Passive Voice"}
+{"jid": "jf484e", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "answer": "The matches were lying in a small wooden box.", "topic": "Prepositions of place/time"}
+{"jid": "j460a2", "czech": "Na autě jsou dvě čistá zrcátka.", "level": "A2", "answer": "On the car there are two clean mirrors.", "topic": "There is, are"}
+{"jid": "jbaf8a", "czech": "Majitel stánku řekl, že platba přišla celá v mincích a bankovkách z váčku.", "level": "B1", "answer": "The stall owner said that payment come entirely in coins and banknote from a pouch.", "topic": "Reported speech"}
+{"jid": "jdd543", "czech": "Vozidlo bylo schované celou dobu v tmavém přívěsu. Naprosto neuvěřitelné!", "level": "B1", "answer": "The vehicle was hide the whole time in dark trailer. Absolutely incredible!", "topic": "Passive"}
+{"jid": "j7f3b3", "czech": "Proč neodpovídá? Tahle kavárna je noční můra!", "level": "A1", "answer": "Why doesn't she answer? This café is a nightmare!", "topic": "Wh- questions"}
+{"jid": "j6b07b", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "answer": "By this evening she will has bought chocolate, a coat and a present.", "topic": "Future Perfect Simple"}
+{"jid": "jb8ebd", "czech": "Tahle nevolnost přepadá každého jezdce už hodinu! Totální noční můra!", "level": "B1", "answer": "This nausea hit every rider for an hour! A total nightmare!", "topic": "Present Perfect Continuous"}
+{"jid": "j82fb2", "czech": "Zákazník chce broskve, tak mu muž zítra prodá další.", "level": "A2", "answer": "The customer wants peaches, so the man will sell some more to him tomorrow.", "topic": "Future with WILL"}
+{"jid": "j8e288", "czech": "Proč neodpovídá? Tahle kavárna je noční můra!", "level": "A1", "answer": "Why is he not replying? This cafe is a nightmare!", "topic": "Wh- questions"}
+{"jid": "j817d7", "czech": "Než se slunce dotklo vody, přikázala té řadě dvakrát běžet.", "level": "B1", "answer": "Before the sun had touched the water, she ordered the line to run twice.", "topic": "Past Perfect Simple"}
+{"jid": "jd5091", "czech": "Brácho, ta slanina se smaží tak pět minut a pořád prská, fakt.", "level": "B2", "answer": "Bro, the bacon have been frying for about five minutes and it still spitting, seriously.", "topic": "All Present Tenses"}
+{"jid": "j770f0", "czech": "Fanoušek uvedl, že jeho věrnost začala přibližně před čtyřiceti lety.", "level": "B1", "answer": "The supporter said his loyalty had started approximately forty years earlier.", "topic": "Reported speech"}
+{"jid": "j0fae4", "czech": "Kočičí strom bys měl dát k oknu.", "level": "A2", "answer": "You should put the cat tree by the door.", "topic": "Modal verb SHOULD"}
+{"jid": "j5f451", "czech": "Podívej na ten prut! Dědeček právě se chystá vytáhnout rybu ven.", "level": "A2", "answer": "Look at that rod! Grandpa is just about to pull out.", "topic": "Going to or Will"}
+{"jid": "j1c118", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bike will take ten iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j4dacf", "czech": "Za vteřinu kýchne zase.", "level": "A2", "answer": "In a second he'll sneeze again.", "topic": "Future with WILL"}
+{"jid": "j86bdb", "czech": "Káva se ještě kouří, takže on nemohl přijít na pracoviště už dávno.", "level": "B2", "answer": "The tea is still steaming, so he can't have come to the workplace long ago.", "topic": "Modals in past"}
+{"jid": "j8a230", "czech": "Pěny je moc, tak bys měl dát míň saponátu.", "level": "A2", "answer": "There is a lot of foam, so you should put in less dish soap.", "topic": "Modal verb SHOULD"}
+{"jid": "jb2bf1", "czech": "Každý týden porovnává byty, ale dnes večer porovnává ložnice.", "level": "A2", "answer": "Every week he compares flats, but tonight he is comparing kitchens.", "topic": "Present Continuous or Simple"}
+{"jid": "j43a21", "czech": "Do zítřejšího rána ta bolest úplně zmizí a on bude zase normálně jíst.", "level": "B2", "answer": "By tomorrow morning the pain will completely disappear and he will eats normally again.", "topic": "All Future Tenses"}
+{"jid": "jb1008", "czech": "Od chvíle, co začalo pršet, šmátrají ve tmě po lucerně.", "level": "B1", "answer": "Since it started snowing, they have been fumbling in the dark for a lantern.", "topic": "Present Perfect Continuous"}
+{"jid": "j12db6", "czech": "Kdy ten dospělý podepisuje 20 formulářů? Před termínem.", "level": "A1", "answer": "When does the adult sign 20? Before the deadline.", "topic": "Wh- questions"}
+{"jid": "jea5f9", "czech": "Majitel stánku řekl, že platba přišla celá v mincích a bankovkách z váčku.", "level": "B1", "answer": "The stall owner said that the payment came entirely in coins from a pouch.", "topic": "Reported speech"}
+{"jid": "j1fe9b", "czech": "Holič obvykle holí brady, ale teď češe hustý plnovous.", "level": "A2", "answer": "The barber usually shaves chins, but he's combing a dense full beard now.", "topic": "Present Continuous or Simple"}
+{"jid": "j5a861", "czech": "Mladý muž má prázdný pas.", "level": "A1", "answer": "The young man had an empty passport.", "topic": "HAVE GOT"}
+{"jid": "jb5d40", "czech": "Asi si přeje, aby netáhl boty po jezeře. Mokré ponožky, dokonalost.", "level": "B2", "answer": "She must wish he hadn't dragged his boots through the lake. Wet socks, perfection.", "topic": "Wish clauses"}
+{"jid": "jdbb02", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "answer": "The matches lies in a small wooden box.", "topic": "Prepositions of place/time"}
+{"jid": "j95bf7", "czech": "Právě teď sníš o tom velkém domě. Upřímně, já taky.", "level": "A2", "answer": "You are dreaming of that big house right now. Honestly, so am I.", "topic": "Present Continuous"}
+{"jid": "j0a0cf", "czech": "Bolí tě zápěstí? Dobře, přinesu ti obvaz.", "level": "A2", "answer": "Does it hurt? OK, I'll bring you a bandage.", "topic": "Going to or Will"}
+{"jid": "j0f78c", "czech": "Druhý tým odmítl uznat vítězství! Totální zrada!", "level": "B2", "answer": "The other team refused to recognise the victory! A total betrayal!", "topic": "Reported speech"}
+{"jid": "j51918", "czech": "Muž věděl, že sucho potrvá až do dalšího období dešťů.", "level": "B2", "answer": "The man knew the drought would last until the next rainy season.", "topic": "Future in past"}
+{"jid": "j2baef", "czech": "Káva se ještě kouří, takže on nemohl přijít na pracoviště už dávno.", "level": "B2", "answer": "The coffee is still steaming, so he can't have come to the workplace long ago.", "topic": "Modals in past"}
+{"jid": "jc518c", "czech": "Do konce léta ten muž bude mluvit o jejím mýdlovém triku celé tři měsíce.", "level": "B2", "answer": "By the end of summer, that guy will have been talking about her trick with the soap for all of three months.", "topic": "Future Perfect Continuous"}
+{"jid": "jb264c", "czech": "Myslím, že se sněhová pevnost na jaře roztaje, protože je ze sněhu.", "level": "B1", "answer": "I think the fort will melt in spring because it's made of snow.", "topic": "Future Simple or Continuos"}
+{"jid": "j8f8c6", "czech": "Horní míček byl hozen přes celý stůl a nikdo tomu nevěřil!", "level": "B1", "answer": "The top ball got thrown right across the table and nobody believed it!", "topic": "Passive"}
+{"jid": "jad5d6", "czech": "Brácho, tenhle pekař dneska upekl 200 croissantů a ještě není ani poledne.", "level": "B1", "answer": "Bro, this baker has baked 20 croissants today and it isn't even noon yet.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "j1f3a9", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "answer": "Really, about a hundred carrots were pulled up today, mate.", "topic": "Past Simple"}
+{"jid": "j48def", "czech": "Do zítřejšího rána ta bolest úplně zmizí a on bude zase normálně jíst.", "level": "B2", "answer": "By tomorrow morning the pain will be completely gone.", "topic": "All Future Tenses"}
+{"jid": "j4471c", "czech": "Prostorná pohovka, kterou chtěl jen pro sebe, byla úplně obsazena!", "level": "B1", "answer": "The big spacious sofa he wanted only for himself was fully occupied!", "topic": "Relative clauses"}
+{"jid": "jcb383", "czech": "Na autě jsou dvě čistá zrcátka.", "level": "A2", "answer": "There were two clean mirrors on the car.", "topic": "There is, are"}
+{"jid": "j14f39", "czech": "Holič obvykle holí brady, ale teď češe hustý plnovous.", "level": "A2", "answer": "The barber generally shaves chins; now, though, he is combing a bushy full beard.", "topic": "Present Continuous or Simple"}
+{"jid": "j0436c", "czech": "Není to ideální: tým tu stojí už hodinu a horizont pořád vypadá úplně stejně.", "level": "B2", "answer": "It's not perfect: the team has stood here for an hour, and the horizon looks exactly the same.", "topic": "All Present Tenses"}
+{"jid": "j660c8", "czech": "Kdyby bylo pršelo, hosté by nebyli měli večeři na nádvoří.", "level": "B2", "answer": "If it had rained, the guests wouldn't have dined in the courtyard.", "topic": "3. Conditional"}
+{"jid": "jfbacf", "czech": "V kanceláři se usmívá jako první, ačkoli stráví dvě hodiny denně v tramvaji.", "level": "B2", "answer": "At the office she's the first to smile, even though she spends two hours a day on the tram.", "topic": "Advanced linkers"}
+{"jid": "jf420b", "czech": "Hned zrůžověla, takže ten kompliment musel být moc milý.", "level": "B2", "answer": "She blushed immediately, so the compliment must have be very nice.", "topic": "Modals in past"}
+{"jid": "ja87f7", "czech": "Upřímně, ty umíš postavit polici. Moje pochybnost je pryč.", "level": "A1", "answer": "To be honest, you can build a shelf. My doubt is gone.", "topic": "Modal verb CAN"}
+{"jid": "je40a3", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "answer": "By tonight she'll have got chocolate, a coat and a present.", "topic": "Future Perfect Simple"}
+{"jid": "j0a8e8", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "answer": "Really, the farmer is pulling up about a hundred carrots today, mate.", "topic": "Past Simple"}
+{"jid": "j32141", "czech": "Zápalky leží v malé dřevěné krabičce.", "level": "A1", "answer": "The matches lie in a small metal box.", "topic": "Prepositions of place/time"}
+{"jid": "j85c18", "czech": "Kdyby byl obrovský hrnek úplně naplněný, jeho zvednutí by vyžadovalo značné úsilí.", "level": "B1", "answer": "If the mug were completely full, lifting it would require considerable effort.", "topic": "2. Conditional"}
+{"jid": "j58b5d", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bike took twelve iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j2395b", "czech": "Kolik prasat žije na téhle malé farmě?", "level": "A2", "answer": "On this small farm, how many pigs live?", "topic": "Much, Many, Some..."}
+{"jid": "je597e", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "answer": "By this evening, she will have bought some chocolate, a coat, and a gift.", "topic": "Future Perfect Simple"}
+{"jid": "ja72bb", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bike has taken ten iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j0d14f", "czech": "Příští týden touhle dobou bude mít na sobě šaty ušité přesně z téhle látky.", "level": "B1", "answer": "Next week at this time she will be wearing a dress made of exactly this fabric.", "topic": "Future Continuous"}
+{"jid": "jfcfb6", "czech": "Ty a tvoje kolo jste dnes udělali deset ikonických selfie.", "level": "A1", "answer": "You and your bike took ten iconic selfies today.", "topic": "Cardinal numbers"}
+{"jid": "j7b41e", "czech": "Věděla, že kuličky vyskočí ve chvíli, kdy tu hrst zmáčkne tak silně.", "level": "B2", "answer": "She knew the marbles would pop out the moment she squeezed the handful so hard.", "topic": "Future in past"}
+{"jid": "jb4ef8", "czech": "Modrý papoušek, jehož objetí uklidnilo rozzlobeného ptáka, zavírá oči.", "level": "B2", "answer": "The green parrot whose hug calmed the angry bird is closing its eyes.", "topic": "Relative clauses"}
+{"jid": "jfdabd", "czech": "Každý týden porovnává byty, ale dnes večer porovnává ložnice.", "level": "A2", "answer": "Every week he compare flats, but tonight he is comparing bedrooms.", "topic": "Present Continuous or Simple"}
+{"jid": "j38d9c", "czech": "Brácho, ta slanina se smaží tak pět minut a pořád prská, fakt.", "level": "B2", "answer": "Bro, the bacon has been frying for about five minutes, seriously.", "topic": "All Present Tenses"}
+{"jid": "jcb94e", "czech": "Oči sovy jsou jasnější než displej mého telefonu.", "level": "A2", "answer": "An owl's eyes are brighter than my phone screen.", "topic": "Adjective comparison"}
+{"jid": "j5afb2", "czech": "Horní míček byl hozen přes celý stůl a nikdo tomu nevěřil!", "level": "B1", "answer": "The ball on top was thrown across the whole table, and no one believed it!", "topic": "Passive"}
+{"jid": "j4693a", "czech": "Kámo, do poledne ten úředník povolí vstup do země tak 200 lidem, fakt.", "level": "B2", "answer": "Dude, by noon about 200 people will have been allowed into the country by that official, seriously.", "topic": "Future Perfect Simple"}
+{"jid": "j35b95", "czech": "Do zítřejšího rána ta bolest úplně zmizí a on bude zase normálně jíst.", "level": "B2", "answer": "The pain will be gone by tomorrow morning and he'll eat normally again.", "topic": "All Future Tenses"}
+{"jid": "j0ecec", "czech": "Asi si přeje, aby netáhl boty po jezeře. Mokré ponožky, dokonalost.", "level": "B2", "answer": "Probably she wishes he didn't drag his shoes across the lake. Wet socks, perfection.", "topic": "Wish clauses"}
+{"jid": "jb22c0", "czech": "Dno moře je písčité a světlé.", "level": "A1", "answer": "The bottom of the sea is sandy and light.", "topic": "TO BE"}
+{"jid": "j65356", "czech": "Hádej co, řekl mi: Slibuju, že neudělám další tak bolestivý trénink nohou.", "level": "B1", "answer": "Guess what, he said to me: I promise I'm not going to do another leg day that painful.", "topic": "Future Simple or Continuos"}
+{"jid": "j4cc7c", "czech": "Ok, ale pravidla říkají, že ty musíš padat na záda, kámo.", "level": "A2", "answer": "Fine, but the rules say you need to fall onto your back, man.", "topic": "Must, Have to..."}
+{"jid": "jc5efc", "czech": "Vole, snaží se skončit rychle, tak teď se chystá přidat poklici.", "level": "A2", "answer": "Dude, he tried to finish quickly, so he added the lid.", "topic": "Future BE GOING TO"}
+{"jid": "ja8091", "czech": "Muž věděl, že sucho potrvá až do dalšího období dešťů.", "level": "B2", "answer": "The man knows the drought will last until the next rainy season.", "topic": "Future in past"}
+{"jid": "jb43b0", "czech": "Příští týden touhle dobou bude mít na sobě šaty ušité přesně z téhle látky.", "level": "B1", "answer": "This time next week she will be wearing a skirt sewn from exactly this fabric.", "topic": "Future Continuous"}
+{"jid": "jb2f18", "czech": "Proudové letadlo má dva velké motory.", "level": "A1", "answer": "The jet plane have two big engines.", "topic": "HAVE GOT"}
+{"jid": "jaf892", "czech": "Tahle nevolnost přepadá každého jezdce už hodinu! Totální noční můra!", "level": "B1", "answer": "This nausea has been hitting every rider for a day! A total nightmare!", "topic": "Present Perfect Continuous"}
+{"jid": "j1172d", "czech": "Proč je bochník zlatavý? Protože má zlatavou barvu.", "level": "A1", "answer": "Why is the loaf brown? Because it has a brown colour.", "topic": "Wh- questions"}
+{"jid": "j27c26", "czech": "Proudové letadlo má dva velké motory.", "level": "A1", "answer": "The jet aircraft has two big engines.", "topic": "HAVE GOT"}
+{"jid": "j99587", "czech": "Právě teď zapojuje kabely za stolem v tmavém pokoji. Dokonalé plánování.", "level": "B2", "answer": "Right now she is connecting cables behind the table in the dark room. Perfect planning.", "topic": "All Present Tenses"}
+{"jid": "jd9b8c", "czech": "Fanoušek uvedl, že jeho věrnost začala přibližně před čtyřiceti lety.", "level": "B1", "answer": "The fan said that his loyalty would begin in about forty years.", "topic": "Reported speech"}
+{"jid": "j08348", "czech": "Brácho, kolik hranolků sní? Celej talíř, fakt.", "level": "A2", "answer": "Bro, how many will he eat? A whole plate, really.", "topic": "Much, Many, Some..."}
+{"jid": "jee400", "czech": "Na autě jsou dvě čistá zrcátka.", "level": "A2", "answer": "The car has got two clean mirrors.", "topic": "There is, are"}
+{"jid": "j41d51", "czech": "Podívá se na své hodinky a zpanikaří.", "level": "A1", "answer": "He looks at his watch.", "topic": "My, Your, His,..."}
+{"jid": "j18df5", "czech": "Fakt, farmář dneska vytáhl asi sto mrkví, kámo.", "level": "A2", "answer": "Really, the farmer pulled up about a hundred potatoes today, mate.", "topic": "Past Simple"}
+{"jid": "j4e63f", "czech": "Poslouchej, žralok, kterého zachránil, se prý druhý den vrátil.", "level": "B1", "answer": "Listen, the shark that was saved apparently came back the next day.", "topic": "Relative clauses"}
+{"jid": "j72d15", "czech": "Zákazník chce broskve, tak mu muž zítra prodá další.", "level": "A2", "answer": "The customer wants peaches, so more will be sold to him tomorrow.", "topic": "Future with WILL"}
+{"jid": "j04d08", "czech": "Kdyby byl obrovský hrnek úplně naplněný, jeho zvednutí by vyžadovalo značné úsilí.", "level": "B1", "answer": "If the enormous mug was totally full, lifting it would take a lot of effort.", "topic": "2. Conditional"}
+{"jid": "jb5f49", "czech": "Vezmi si tohle jablko a ta chuť se ti bude líbit", "level": "A2", "answer": "Grab this apple and you'll like that taste.", "topic": "Future with WILL"}
+{"jid": "jd4586", "czech": "Počkej minutu a vlk odejde do lesa.", "level": "A2", "answer": "Wait a minute and the wolf will go into the forest.", "topic": "Future with WILL"}
+{"jid": "j08f7e", "czech": "Brácho, kolik hranolků sní? Celej talíř, fakt.", "level": "A2", "answer": "Bro, how many fries did he eat? A whole plate, really.", "topic": "Much, Many, Some..."}
+{"jid": "j2f42e", "czech": "Právě teď sníš o tom velkém domě. Upřímně, já taky.", "level": "A2", "answer": "Right now you dreaming about that big house. Honestly, me too.", "topic": "Present Continuous"}
+{"jid": "j2287f", "czech": "Brácho, ten malý pejsek dělá tolik hluku, bez legrace.", "level": "A2", "answer": "Bro, that little dog make so much noise, no kidding.", "topic": "Countable and uncountable"}
+{"jid": "j86dce", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The bars are really hot. You have to use long tongs!", "topic": "Must, Have to..."}
+{"jid": "jfae81", "czech": "Než se slunce dotklo vody, přikázala té řadě dvakrát běžet.", "level": "B1", "answer": "Before the sun reached the water, she had commanded the row to run twice.", "topic": "Past Perfect Simple"}
+{"jid": "j1811c", "czech": "O tom průvodu se říká, že ho zorganizovali za dva dny.", "level": "B2", "answer": "They say the parade was organized within two days.", "topic": "Advanced Passive Voice"}
+{"jid": "j3a255", "czech": "Proutěný koš je spouštěn dolů na ulici ženou z horní terasy.", "level": "B1", "answer": "The wicker basket was lowered down to the street by a woman from the upper terrace.", "topic": "Passive"}
+{"jid": "j7dc1f", "czech": "Včera běžela po stejné zdi.", "level": "A2", "answer": "She was running along the same wall yesterday.", "topic": "Past Simple"}
+{"jid": "j92c6b", "czech": "Modrý papoušek, jehož objetí uklidnilo rozzlobeného ptáka, zavírá oči.", "level": "B2", "answer": "The blue parrot whose hug calmed the angry bird are closing its eyes.", "topic": "Relative clauses"}
+{"jid": "jb53af", "czech": "Tahle nevolnost přepadá každého jezdce už hodinu! Totální noční můra!", "level": "B1", "answer": "Every rider has been struck by this nausea for an hour now! Total nightmare!", "topic": "Present Perfect Continuous"}
+{"jid": "j4fdef", "czech": "Vezmi si tohle jablko a ta chuť se ti bude líbit", "level": "A2", "answer": "Have this apple, and you will like its taste.", "topic": "Future with WILL"}
+{"jid": "j20b8f", "czech": "Kdyby byla typ, co to vzdává, tu pásku by teď nedržela.", "level": "B2", "answer": "If she had been the type who gives up, she wouldn't have held the tape back then.", "topic": "Mixed Conditional"}
+{"jid": "ja62d6", "czech": "Poslouchej, žralok, kterého zachránil, se prý druhý den vrátil.", "level": "B1", "answer": "Listen, the shark that he rescued supposedly returned the following day.", "topic": "Relative clauses"}
+{"jid": "jc26c3", "czech": "Kámo, do poledne ten úředník povolí vstup do země tak 200 lidem, fakt.", "level": "B2", "answer": "Dude, by noon that official will have granted about 2,000 people entry into the country, seriously.", "topic": "Future Perfect Simple"}
+{"jid": "jd51cf", "czech": "Pěny je moc, tak bys měl dát míň saponátu.", "level": "A2", "answer": "Too much foam, so you should add less washing-up liquid.", "topic": "Modal verb SHOULD"}
+{"jid": "j9b0d7", "czech": "Tabule je na připínání, tak se chystá připnout další důkazy.", "level": "A2", "answer": "The board is for pinning, so he is going to remove more evidence.", "topic": "Future BE GOING TO"}
+{"jid": "j31167", "czech": "Oči sovy jsou jasnější než displej mého telefonu.", "level": "A2", "answer": "The owl's eyes are brighter than my display.", "topic": "Adjective comparison"}
+{"jid": "j2d38d", "czech": "Hned zrůžověla, takže ten kompliment musel být moc milý.", "level": "B2", "answer": "She went pale immediately, so the compliment must have been very nice.", "topic": "Modals in past"}
+{"jid": "j4fd15", "czech": "Poslouchej, žralok, kterého zachránil, se prý druhý den vrátil.", "level": "B1", "answer": "Listen, the shark who he saved apparently come back the next day.", "topic": "Relative clauses"}
+{"jid": "jd4b08", "czech": "Majitel stánku řekl, že platba přišla celá v mincích a bankovkách z váčku.", "level": "B1", "answer": "The owner of the stall said the payment came completely in coins and notes from a purse.", "topic": "Reported speech"}
+{"jid": "jad4b8", "czech": "Neumí se rozhodnout. Já rozhodnu za ni.", "level": "A2", "answer": "She couldn't decide. I decided for her.", "topic": "Going to or Will"}
+{"jid": "jf53dc", "czech": "Na tohle finále trénovaly měsíce, než přišel dnešek.", "level": "B2", "answer": "They had been train for this final for months before today came.", "topic": "Past Perfect Continuous"}
+{"jid": "jd0d7c", "czech": "Tmavý znamená bez světla, tak nese dvě baterky.", "level": "A1", "answer": "'Dark' means lacking light, so he carries two flashlights.", "topic": "Singular and plural"}
+{"jid": "jc08b9", "czech": "Proč je bochník zlatavý? Protože má zlatavou barvu.", "level": "A1", "answer": "Why's the loaf golden? Because it's got a golden colour.", "topic": "Wh- questions"}
+{"jid": "j31d64", "czech": "Ok, ale pravidla říkají, že ty musíš padat na záda, kámo.", "level": "A2", "answer": "OK, but the rules say you must fall, mate.", "topic": "Must, Have to..."}
+{"jid": "j5a2c2", "czech": "Poslouchej, slyšela jsem, že seděly hodinu na svých stejných postelích, než začaly tančit.", "level": "B2", "answer": "Listen, I heard they had sat on their identical chairs for an hour before they started dancing.", "topic": "All Past Tenses"}
+{"jid": "jd8184", "czech": "Držíš tuhle starověkou minci v ruce. Klobouk dolů.", "level": "A1", "answer": "You hold this ancient coin in your hand. Hats off to you.", "topic": "This, That, These..."}
+{"jid": "j5b7a4", "czech": "Jestli ji nakreslí výš na pláži, moře na ni nedosáhne", "level": "B1", "answer": "If she will draws it higher up on the beach, the sea won't reach it.", "topic": "1. Conditional"}
+{"jid": "jbc257", "czech": "Kdyby byl obrovský hrnek úplně naplněný, jeho zvednutí by vyžadovalo značné úsilí.", "level": "B1", "answer": "If the huge mug were completely full, lift it would requires considerable effort.", "topic": "2. Conditional"}
+{"jid": "j9bcf0", "czech": "Tyče jsou hrozně horké. Musíš použít dlouhé kleště!", "level": "A2", "answer": "The poles are awfully hot. You've got to use the long tongs!", "topic": "Must, Have to..."}
+{"jid": "j28c01", "czech": "Počkej minutu a vlk odejde do lesa.", "level": "A2", "answer": "Wait a minute and the wolf will go.", "topic": "Future with WILL"}
+{"jid": "j9a102", "czech": "Do dnešního večera ona koupí čokoládu, kabát a dárek.", "level": "B2", "answer": "By this evening she will have bought chocolate and a present.", "topic": "Future Perfect Simple"}
+{"jid": "j22050", "czech": "Včera běžela po stejné zdi.", "level": "A2", "answer": "She runs along the same wall.", "topic": "Past Simple"}
+{"jid": "j25e5e", "czech": "Neumí se rozhodnout. Já rozhodnu za ni.", "level": "A2", "answer": "She can't. I'll decide for her.", "topic": "Going to or Will"}
+{"jid": "je5dcc", "czech": "Držíš tuhle starověkou minci v ruce. Klobouk dolů.", "level": "A1", "answer": "You're holding this ancient coin in your hand. Kudos.", "topic": "This, That, These..."}
+{"jid": "j617df", "czech": "Počkej minutu a vlk odejde do lesa.", "level": "A2", "answer": "Wait a minute and the wolf went into the forest.", "topic": "Future with WILL"}
+{"jid": "ja6e71", "czech": "Každý týden porovnává byty, ale dnes večer porovnává ložnice.", "level": "A2", "answer": "She compares flats every week, but this evening she's comparing bedrooms.", "topic": "Present Continuous or Simple"}
+{"jid": "je0a2f", "czech": "Druhý tým odmítl uznat vítězství! Totální zrada!", "level": "B2", "answer": "The other team refused to acknowledge the defeat! Total betrayal!", "topic": "Reported speech"}
+{"jid": "jccf21", "czech": "Holka, řekl mi, že do příštího léta sokol už roztáhne křídla ve 100 vystoupeních.", "level": "B2", "answer": "Girl, he told me that by next summer the falcon will have spread its wings in 100.", "topic": "All Future Tenses"}
+{"jid": "j03c94", "czech": "Do konce léta ten muž bude mluvit o jejím mýdlovém triku celé tři měsíce.", "level": "B2", "answer": "By the end of summer, the man will have been talking about her trick for three whole months.", "topic": "Future Perfect Continuous"}
+{"jid": "j0c7ca", "czech": "Jako dítě mívala v ložnici dětský kompas.", "level": "B1", "answer": "As a child she use to have children's compass in her bedroom.", "topic": "Used to, Would"}
+{"jid": "j0ad70", "czech": "Kočičí strom bys měl dát k oknu.", "level": "A2", "answer": "You should move the cat tree to the window.", "topic": "Modal verb SHOULD"}
+{"jid": "j27d55", "czech": "Holič obvykle holí brady, ale teď češe hustý plnovous.", "level": "A2", "answer": "The barber usually shaved chins, but then he combed a thick full beard.", "topic": "Present Continuous or Simple"}
+{"jid": "j4b841", "czech": "Lavička je na sezení, tak on hraje na kytaru na ní.", "level": "A1", "answer": "The bench is for sitting, so he plays the violin on it.", "topic": "Prepositions of place/time"}
+{"jid": "j688ff", "czech": "Jestli ji nakreslí výš na pláži, moře na ni nedosáhne", "level": "B1", "answer": "The sea won't reach it if she draws it higher on the beach.", "topic": "1. Conditional"}
+{"jid": "jb9073", "czech": "Praští ho svým velkým bílým polštářem.", "level": "A1", "answer": "She whacks him with her large white pillow.", "topic": "My, Your, His,..."}
+{"jid": "j935ff", "czech": "Jako dítě mívala v ložnici dětský kompas.", "level": "B1", "answer": "As a child she has a children's compass in her bedroom.", "topic": "Used to, Would"}
+{"jid": "j45cc1", "czech": "Pěny je moc, tak bys měl dát míň saponátu.", "level": "A2", "answer": "There's so much foam, so you should use less soap.", "topic": "Modal verb SHOULD"}

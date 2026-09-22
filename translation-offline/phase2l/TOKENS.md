@@ -21,3 +21,8 @@ Verdict: WITHIN budget. Headless reservation cap enforced in pipeline.py = 1,200
 - writers B1#1: 52,987 tokens (ok, 101.4s)
 - writers B2#1: 54,906 tokens (ok, 102.7s)
 - cumulative headless after writers: 219,767
+- judge s1#1: 79,019 tokens (ok, 100.9s)
+- judge s2#1: 78,204 tokens (ok, 99.4s)
+- judge s3#1: 78,415 tokens (ok, 94.2s)
+- judge s4#1: 77,420 tokens (ok, 96.7s)
+- cumulative headless after judge: 532,825
