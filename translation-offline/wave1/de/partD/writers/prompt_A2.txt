@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "Sie hängen jeden Monat Bilder auf, aber jetzt streiten sie über eins.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA202", "source": "Die Spielerinnen brauchen für dieses Spiel viel Energie.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA203", "source": "Jetzt trägt er den Kragen unten, aber vorher trug er ihn oben.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA204", "source": "Die Kamera ist nass! Keine Sorge, ich werde sie trocknen.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA205", "source": "Sie werden den ganzen Abendhimmel anschauen.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA206", "source": "Schau! Sie schaut sich gerade im neuen Studio um.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA207", "source": "Schau! Sie fächelt sich gerade mit einem Papierfächer.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA208", "source": "Dieser Turm ist höher als alle Gebäude um ihn herum.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA209", "source": "Der Marker ist offen. Du musst ihn jetzt zumachen.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA210", "source": "Die Bläschen kitzeln ihre Nase, also kichert sie.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA211", "source": "Das sieht schmerzhaft aus! — Keine Sorge, ich werde dir Eis holen.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA212", "source": "Der Teller ist sauber, deshalb sieht das Essen perfekt aus.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA213", "source": "Endlich hält er die Schlüssel glücklich hoch.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA214", "source": "Dieser Pinsel ist weicher als der kleine.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA215", "source": "Wie viel Wasser ist in der Dusche?", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA216", "source": "Die Wolken ziehen sehr langsam über den Himmel.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA217", "source": "Schau! Er rennt gerade den Bahnsteig entlang.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA218", "source": "Der Turm ist zu groß. Ich glaube, ich werde das aufräumen.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA219", "source": "Schau! Er hüpft gerade durch die Leiter.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA220", "source": "Hör mal, sie hat mir gesagt, dass eine beschäftigte Frau eine Pause machen sollte.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA221", "source": "Wenn er links abbiegt, wird finden er den Hauptplatz der Stadt.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA222", "source": "Dieser Aufstieg ist schwerer als die Wand in der Halle.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA223", "source": "Hör zu, sie hat gesagt, bei dieser Flucht sind drei Küken.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA224", "source": "Letzten Sonntag zeigte der Zeitungscartoon einen Mann mit einem Mopp.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA225", "source": "Auf ihrem runden Kinn ist ein bisschen Licht.", "level": "A2", "topic": "Countable and uncountable"}

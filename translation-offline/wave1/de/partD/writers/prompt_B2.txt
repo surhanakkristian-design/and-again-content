@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Die Konfettimaschine sprang erst an, als er mit seinem Diplom schon von der Bühne gegangen war.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB202", "source": "Das Wohnzimmer, wo die Nachmittagssonne aufs Sofa fällt, ist der Lieblingsplatz des Katers.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB203", "source": "Bis sie heute Nacht landet, wird sie tausendmal mit den Flügeln geschlagen haben.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB204", "source": "Dieses rosa Puder soll mit einem großen weichen Pinsel auf die Wangen aufgetragen werden, nicht mit den Fingern.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB205", "source": "Er schlug vor, die fertige Platte ins Schaufenster des Ateliers zu hängen.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB206", "source": "Nie hatte sie jemanden eine Keule so schnell essen sehen.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB207", "source": "Nie hatte sie jemanden so glücklich über eine einzige Teigtasche gesehen.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB208", "source": "Wenn sie sich vor dem Lauf richtig aufgewärmt hätte, wäre dieser Krampf nie passiert.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB209", "source": "Er wünscht sich, dass er in den letzten fünf Sekunden ein bisschen fester gedrückt hätte.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB210", "source": "Im Dorf ist es allgemein anerkannt, dass niemand sonst diesen Karren überhaupt bewegen könnte.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB211", "source": "Am leeren Streckenrand wünscht er sich, er hätte einen zweiten Rennwagen für seinen kleinen Bruder.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB212", "source": "Nächsten Frühling wird die Drohne diese Wildnis fünf Jahre lang gefilmt haben, ohne eine einzige Straße zu finden.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB213", "source": "Sie ließen letzten Sommer die Kamera über der Schlafzimmertür installieren.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB214", "source": "Er fängt das nächste Tor an, sobald dieses Eisen abkühlt.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB215", "source": "Wenn sie nicht alles aufgehoben hätte, würde sie jetzt nicht auf alten Rollschuhen durch den Flur rollen.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB216", "source": "Normalerweise vertraut er diesen Händlern, aber heute bezweifelt er jedes Wort.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB217", "source": "Bis nächsten Monat wird sie genug für ein gebrauchtes Rad gespart haben.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB218", "source": "Er stellte den Krug zurück und hoffte, niemand würde hinsehen.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB219", "source": "Fremde durch einen Nachtwald zu führen ist ein ungewöhnlicher Sommerjob.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB220", "source": "Sie versprach dem Team, sie würden früher Schluss machen, wenn die Kisten fertig sind.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB221", "source": "Wenn die Spur nicht frei gewesen wäre, wäre er hinter dem Wohnmobil geblieben.", "level": "B2", "topic": "3. Conditional"}
+{"wid": "wB222", "source": "Bis Sonnenuntergang werden sie die Show sechsmal gespielt haben.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB223", "source": "Gerade jetzt gibt sie Befehle, während die Angestellten Pakete stempeln.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB224", "source": "Ihre Freundinnen wünschten, sie könnten sich auch so kleiden.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB225", "source": "Es wird gesagt, dass Schwellungen abends schlimmer sind.", "level": "B2", "topic": "Advanced Passive Voice"}

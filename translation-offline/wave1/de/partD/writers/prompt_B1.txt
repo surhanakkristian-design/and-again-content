@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of German sentences from a language-learning app, one per line as JSON: a writer id (wid), the German sentence, its CEFR level and the exercise topic. Imagine real learners translating each German sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the German. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the German's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the German (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the German is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the German names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (German: jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the German sentence does not mark gender (e.g. "sich", or a neuter noun for a person such as "das Kind"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "Während der Kellner zurück in die Küche ging, faltete das Paar die Rechnung immer noch auseinander.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB102", "source": "Er hat den Drink zu Ende abgeseiht und griff sofort zur Ananas.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB103", "source": "Ihre Hände zittern am Seil, sie muss da oben absolut panisch sein.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB104", "source": "Morgen um diese Zeit wird er ohne diese Decke durch den Laden laufen.", "level": "B1", "topic": "Future Continuous"}
+{"wid": "wB105", "source": "Er genießt es, Formen aus Eisen zu machen, mehr als alles andere auf der Welt.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB106", "source": "Ihre Kollegin fragte sie, wohin sie das zweite Blatt mit den Logo-Stickern gelegt hatte.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB107", "source": "Ihr Plan wird in gepunkteten Linien über ihrem Kopf gezeichnet, sodass man jeden Zug sieht, an den sie denkt.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB108", "source": "Sie hatte jede Schraube festgezogen, bevor er überhaupt aufstand, nicht wahr?", "level": "B1", "topic": "Question tags"}
+{"wid": "wB109", "source": "Die Sonne sank ins Meer, während sie die weiße Tischdecke über den Tisch breiteten.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB110", "source": "Wenn er weiter so den Kopf schüttelt, fällt die rote Perücke direkt auf den Boden.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB111", "source": "Sie ging an den Reihen entlang, als ihr Gesicht auf der Leinwand erschien.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB112", "source": "Wenn unsere Wohnung größer wäre, würden wir ein ganzes Hantelregal kaufen.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB113", "source": "Als Kind pflegte sie, den Globus zu drehen und auf ein zufälliges Land zu tippen.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB114", "source": "Es machte ihm nichts aus, ein Zimmer mit acht Fremden zu teilen.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB115", "source": "Wenn die Spuren älter wären, würden sie jetzt aufgeben.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB116", "source": "Mia hat sich heute schon dreimal über die Schleife beschwert und ist immer noch nicht darüber hinweg.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB117", "source": "Wenn Nina so weiterspielt, gibt der Trainer ihr auch die Kapitänsbinde.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB118", "source": "Wenn sie diesen Elfmeter verwandelt, gewinnt ihr Team die ganze Gruppe.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB119", "source": "Während sich die Nachbarn versammelten, verschränkte sie die Arme und strahlte.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB120", "source": "Wenn das Eis glatt ist, gleitet der Puck viel schneller.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB121", "source": "Er hörte nicht auf, den Sack zu schlagen, bis er durch die Garage schwang.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB122", "source": "Sie trainiert seit der ersten Runde für diese Höhe.", "level": "B1", "topic": "Present Perfect Continuous"}
+{"wid": "wB123", "source": "Er sagte, die Stoppuhr habe ihre schnellste Zeit überhaupt gezeigt.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB124", "source": "Ruf nicht um fünf an — dann liest sie ihre Therapienotizen.", "level": "B1", "topic": "Future Simple or Continuos"}
+{"wid": "wB125", "source": "Sie sagte, er dürfe in das Land einreisen.", "level": "B1", "topic": "Reported speech"}
