@@ -1,0 +1,21 @@
+PASS  T1 content check (cz): item ids containing "429" are not a rate limit; a 200 reply "429" = counted FAILED call, never retried
+PASS  T1b full Czech stack: a row id containing "429" through stack_2l_cz.run is not a rate limit
+PASS  T2 real HTTP 429 envelope (per-minute RESOURCE_EXHAUSTED): detected, retried, not counted
+PASS  T3 usage-limit / per-day quota envelope: hard STOP, 0 counted, STOP file (content check and full Czech stack)
+PASS  T4 resume at 0 cost (replies kept; replies deleted -> cached ledger replies reused; full Czech stack re-run)
+PASS  T5 relative path REFUSED (CLI exit 2, run_check, run_full cz, stack_2l_cz.run), outside phase2l refused; write guard redirects
+PASS  T6 poison test on the CZECH stack + content check: v/alt/lk/en poison; no reference key/value read; bodies = Czech sentence + answer only; TIP accepted and the frozen TIP-rejected run; no AG/F4 error
+PASS  T7 strict parse: NONE / MISSING: <word> only (whitespace + one trailing period trimmed); failed call keeps the L3 verdict
+PASS  T8 phase hard cap 3,500 (and a stage cap): counted + needed > cap -> STOP before any call
+PASS  T9 content-check prompt: the brief's question, reply format and ruling lists verbatim, Czech names the Czech sentence; spec current
+PASS  T10 earlier phases byte-identical (every file in SHA_before.txt, before and after the suite)
+PASS  T11 Czech misread -em read as 1sg (1T gold): the assembled Czech readers (F4v2 fixed + CK) never read an -em word as 1sg; Slovak CK does
+PASS  T12 Czech misread missing `se` (1T gold reflex_se_missed): the AG chain (agent_drop_v4 / reader_nom) reads the Czech V2/V3 and sees `se`; the Slovak V2 does not
+PASS  T13 Czech misread `jestli` read as an l-participle (1T gold): the Czech f9 never reads jestli/jestliže/zdali as a participle; the Slovak f9 does
+PASS  T14 Czech misread `příliš` read as 2sg (2J cause b): the fixed Czech F4v2/F4v3 reader never reads příliš as a verb; the unfixed CK does
+PASS  T15 assembly: the four 1V Track C fixes present; AG/F4v2/F4v3 bound to the Czech reader; no Slovak reader object left in the chain
+PASS  T16 mirror: stack_source_cz.py == stack_source.py + cz_assemble.SUBS only; same content_check / run_2l / TIP rejected; Slovak frozen files unchanged
+PASS  T17 Czech L3 spec is SOURCE-ONLY: phase2k/spec/l3_system_cz.txt + l3_user_cz.txt == the prompt sent; no reference / English sentence
+PASS  T10b earlier phases byte-identical, re-run after T11-T17; guards_c._C is the Czech CK after a full run
+RESULT 19/19 PASS; mocked calls 121; real model calls 0
+INFO {"T6_layers_48_items": {"L3:TIPrej": 18, "L3": 29, "F4v2": 1}, "T11_em": {"gold_cases_1T": [[17, "Jednoho dne se chce stát hercem."], [21, "Herec čeká v křesle před záběrem."], [61, "„arena“ znamená velká krytá hala se sedadly kolem hřiště"], [80, "Když dokončíš kurz na té škole, dostaneš certifikát se svým jménem."], [83, "Každý z těch certifikátů je podepsán ředitelem školy na konci kurzu."], [87, "„Opravdu jsem tvrdě studovala,“ řekla. Řekla, že opravdu tvrdě studovala"], [105, "Nikdy jsem neviděla tolik certifikátů v jedné malé ložnici."], [112, "Podívej se na ni teď - mává do kamery dalším certifikátem a sotva je všechny udrží."]], "slovak_reader_misreads": 10, "cases": 11}, "T12_se": {"gold_cases_1T": 23, "probe_rows_1T": [3, 4, 6, 17, 27, 30, 31, 43, 44, 45, 46, 50, 59, 61, 71, 80, 94, 97, 102, 111, 112, 114, 120]}, "T13_jestli": {"gold_cases_1T": [[29, "Jestli vydrží slunce, zkusíme po téhle ještě jednu aktivitu."]], "slovak_f9_misreads": 4}, "T14_prilis": {"gold_cases_1T": [], "production_cases": [32226, 1334, 12434, 6987, 37336, 42564, 33716, 39857], "unfixed_reader_misreads": 9}, "T15_rebound": {"count": 32, "sample": [["global", "runner_1j", "_C", "('CK', '<module>')"], ["global", "runner_1k", "f9", "('f9', '<module>')"], ["global", "f8", "f9", "('f9', '<module>')"], ["global", "f8", "EXIST_PREP", "('f9', 'PREPS')"], ["global", "runner_1l", "f9_1l", "('f9', '<module>')"], ["global", "runner_1l", "C", "('CK', '<module>')"], ["global", "runner_1n", "C", "('CK', '<module>')"], ["global", "runner_1p", "C", "('CK', '<module>')"], ["global", "runner_1t", "AG3", "('V3', '<module>')"], ["global", "runner_1t", "C", "('CK', '<module>')"], ["global", "runner_1t", "AG_FLAGS", "('V3', 'ALL_FLAGS')"], ["global", "agent_drop_v4", "V3", "('V3', '<module>')"]]}}
