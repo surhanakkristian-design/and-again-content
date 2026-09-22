@@ -145,10 +145,7 @@ English sentence as written and say so in your report — do not quietly fix it.
 
 - **The exercise is English; your row translates it.** Ruling of 11 September 2026, recorded as
   section 10 of `/Users/kristian/Meine Ablage/And Again/Claude Krasty/1.Step - Exercises/EXERCISE_AUTHORING_SPEC.md`
-  — **read section 10 in full; it is binding and wins over anything in this prompt. The BRIEF wins
-  over section 10.** So the order is: brief, then spec section 10, then this prompt, then the rules
-  file. §10.4 and §10.6 of the spec were **deleted on 15.9.2026** under §0a; §10.1, §10.2, §10.3,
-  §10.5 and §10.7 stand. English is the
+  — **read section 10 in full; it is binding and wins over anything in this prompt.** English is the
   learning language; sk, de, cz, fr, es, ua, tr and hu only translate. The learner chooses among the
   English options and reads your row to understand the exercise. Nobody learns your language from it,
   so your row never has to work as an exercise in your language.
@@ -165,17 +162,10 @@ English sentence as written and say so in your report — do not quietly fix it.
      When two English options collapse onto one word in your language, keep the word and write it in
      both cells: `musieť` / `musieť` for *must* against *have to*, `jeho` / `jeho` for *his* against
      *its*. Identical options are the accepted outcome, not an error — the learner answers in English
-     and reads your row only to understand the sentence.
-  2a. **THE EMPTY-CELL RULE — brief §0m, and it is about ANY word, not only articles.** Kristian's
-     ruling of 15 September 2026: *"To pravidlo o prázdnych bunkách sa netýka iba členov. Patria tam
-     akékoľvek slová."* **Where an English option has no adequate equivalent in your language, the
-     cell is EMPTY.** Not a category name, not a grammatical term, not a description, not a bracket —
-     empty. This covers, and is not limited to: **articles** (sk, cz and ua leave all three empty; tr
-     writes `bir` for *a*/*an* and leaves the definite cell empty; de, fr, es and hu translate the
-     forms), the **Turkish present copula** and **case endings** written as suffixes, the **Hungarian
-     unwritten 3rd-person copula**, and **auxiliary *do* / *does***, which has no word in any of the
-     eight. Where two English options collapse onto one target form, both cells carry that same
-     natural form and the row shows identical options, which is ruling §0h.2 and is correct.
+     and reads your row only to understand the sentence. **Articles** (§0e): translate the article
+     where your language has one; leave the cell **empty** where it does not — sk, cz and ua leave all
+     three empty, tr writes `bir` for *a*/*an* and leaves the definite cell empty, de, fr, es and hu
+     translate the forms. Never a bracket, never a category name, never a parenthetical.
   3. **Never rebuild the exercise and never fabricate a form.** No grammatical contrast of your language
      in place of the English one; no option dropped, merged or swapped because your language lacks the
      category; no invented wrong form of your language.
@@ -188,7 +178,7 @@ English sentence as written and say so in your report — do not quietly fix it.
   Up, Chill, Nerd Mode).
 - `options_count` is **3 for most types and 2 for types 13, 15 and 18** (ruling of 15 September 2026,
   brief §0h.3). Where it is 2, `distractor_2` is empty in all nine languages and you write nothing
-  there. Where it is 3, fill `distractor_2` — unless §0m leaves that cell empty.
+  there. Where it is 3, fill `distractor_2` — unless §0e leaves that cell empty.
 
 ## Per-language rules files — binding
 

@@ -12,7 +12,7 @@ Checks (E = error, W = warning):
   E1  every sheet present, headers unchanged vs the template contract
   E2  All Words: only Level B rows, one part_of_speech token, category resolvable
   E3  media: one row per All Words row, title == <slug>_<media_id>,
-      media_url ends in <title>.mp4/.webp, thumbnail_url in Thumbnails/<title>.webp (images too, 17.9.2026),
+      media_url/thumbnail_url end in <title>.mp4/.webp, image -> media_url == thumbnail_url,
       style_id in `styles`, media_type in {video,image}
   E4  media_categories: exactly one row per media_id, category_id in `categories`
   E5  word_concepts: unique concept id, no leading article, unique SENSE (word + pos +
@@ -20,11 +20,9 @@ Checks (E = error, W = warning):
       media carry two different meanings is an error too
   E6  word_localizations: exactly 9 rows per concept, all 9 language codes, no empty translation
   E7  concept_media: exactly one row per media_id, concept_id resolvable
-  E8  exercises: the per-media contract comes from exercise_selection.py (BRIEF §0r, 16.9.2026),
-      by the workbook's contract profile in exercise_contract.json (default '0r'): A video 8
-      grammar + 27 + 74, A image 1 + 27 + 74, B video 11 + 68 69 75, B image 1 + 68 69 75;
-      profile 'part1-28' (A part 1 only): video all 26 + 27 + 74, image 1 + 27 + 74.
-      ids unique; no deprecated/unruled type (70-73, 76-77); options_count in {2,3}
+  E8  exercises: video media -> exactly 39 rows with type set 31..67+68+69;
+      image media -> exactly 2 rows (68, 69); ids unique; no deprecated type (70+/POV);
+      options_count in {2,3}
   E9  sentence_translations: exactly 9 rows per exercise, all 9 codes, no duplicate code;
       correct_answer + distractor_1 non-empty on the en row only (brief v26: the eight
       translating languages may leave an answer cell empty and may repeat an option);
@@ -59,7 +57,6 @@ import openpyxl
 # fourth copy of "which types have no intro" cannot drift away from the other three.
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import lang_scope
-import exercise_selection   # BRIEF §0r/§0s — the [E8] contract is derived from it, 16.9.2026
 
 LANGS = ["sk", "en", "de", "cz", "fr", "es", "ua", "tr", "hu"]
 EN_LIMITS = [("intro_text", 90), ("correct_answer", 50),
@@ -313,16 +310,12 @@ def main(a):
     words = rows_of(wb["All Words"], example_col=9)
     seen_levels = {s(r[3]).upper() for _, r in words if len(r) > 3}
     level = "A" if seen_levels == {"A"} else ("B" if seen_levels == {"B"} else "AB")
-    # BRIEF §0r, 16.9.2026 — the exercise-count contract is a per-workbook profile, keyed by file
-    # name exactly like the language scope. Default = the ruling (§0r); A part 1 is the exception.
-    contract = exercise_selection.contract_for(a.workbook)
-    print(f"contract profile {contract!r}: {exercise_selection.CONTRACTS[contract]}")
     if level == "AB":
         print("contract: mixed A/B part — each media row keeps the contract of its own level")
     else:
-        print(f"contract: level {level} — "
-              f"{exercise_selection.expected_total(level, 'video', contract)} exercises per video, "
-              f"{exercise_selection.expected_total(level, 'image', contract)} per still")
+        VIDEO_TYPES, IMAGE_TYPES = CONTRACT[level]
+        print(f"contract: level {level} — {len(VIDEO_TYPES)} exercises per video, "
+              f"{len(IMAGE_TYPES)} per still")
     level_of = {}   # media_id -> A/B
     media = rows_of(wb["media"], example_col=6)
     mcats = rows_of(wb["media_categories"], example_col=2)
@@ -366,10 +359,10 @@ def main(a):
         ext = ".mp4" if mtype == "video" else ".webp"
         if not s(r[2]).endswith(title + ext):
             err("E3", f"media row {i}: media_url must end in {title}{ext}")
-        # PROMPT 2026-09-17/03 Task 2: every media row, image included, has its own thumbnail in the Thumbnails bucket.
-        # Replaces the old live convention "image -> media_url == thumbnail_url" (no image thumbnails existed then).
-        if not s(r[3]).endswith("/Thumbnails/" + title + ".webp"):
-            err("E3", f"media row {i}: thumbnail_url must end in Thumbnails/{title}.webp")
+        if not s(r[3]).endswith(title + ".webp"):
+            err("E3", f"media row {i}: thumbnail_url must end in {title}.webp")
+        if mtype == "image" and s(r[2]) != s(r[3]):
+            err("E3", f"media row {i}: image media_url must equal thumbnail_url")
     for mid in aw:
         if mid not in md:
             err("E3", f"media_id {mid} in All Words has no `media` row")
@@ -473,18 +466,13 @@ def main(a):
         if mid not in md:
             err("E8", f"exercises reference unknown media_id {mid}")
             continue
-        lv = level_of.get(mid, level) if level == "AB" else level
-        kind = s(md[mid][5])
-        if lv not in ("A", "B") or kind not in ("video", "image"):
-            continue            # E2/E3 already report an unknown level or media_type
-        probs = exercise_selection.check_media(types, lv, kind, contract)
-        stray = sorted(t for t in types if t not in exercise_selection.GRAMMAR_TYPES[lv]
-                       and t not in exercise_selection.VOCAB_TYPES[lv])
-        if stray:
-            probs.append(f"types {stray} do not belong to level {lv}")
-        if probs:
-            err("E8", f"media {mid} ({kind}): {len(types)} exercises, expected "
-                      f"{exercise_selection.expected_total(lv, kind, contract)} — " + "; ".join(probs))
+        vid_t, img_t = CONTRACT.get(level_of.get(mid, level), CONTRACT["B"]) if level == "AB" \
+            else (VIDEO_TYPES, IMAGE_TYPES)
+        expect = vid_t if s(md[mid][5]) == "video" else img_t
+        got = set(types)
+        if len(types) != len(expect) or got != expect:
+            err("E8", f"media {mid} ({s(md[mid][5])}): {len(types)} exercises, expected "
+                      f"{len(expect)}; missing {sorted(expect-got)}, extra {sorted(got-expect)}")
     for mid in aw:
         if mid not in by_media:
             err("E8", f"media_id {mid} has no exercises")

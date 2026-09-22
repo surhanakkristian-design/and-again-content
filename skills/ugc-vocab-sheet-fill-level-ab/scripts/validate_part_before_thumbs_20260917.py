@@ -12,7 +12,7 @@ Checks (E = error, W = warning):
   E1  every sheet present, headers unchanged vs the template contract
   E2  All Words: only Level B rows, one part_of_speech token, category resolvable
   E3  media: one row per All Words row, title == <slug>_<media_id>,
-      media_url ends in <title>.mp4/.webp, thumbnail_url in Thumbnails/<title>.webp (images too, 17.9.2026),
+      media_url/thumbnail_url end in <title>.mp4/.webp, image -> media_url == thumbnail_url,
       style_id in `styles`, media_type in {video,image}
   E4  media_categories: exactly one row per media_id, category_id in `categories`
   E5  word_concepts: unique concept id, no leading article, unique SENSE (word + pos +
@@ -366,10 +366,10 @@ def main(a):
         ext = ".mp4" if mtype == "video" else ".webp"
         if not s(r[2]).endswith(title + ext):
             err("E3", f"media row {i}: media_url must end in {title}{ext}")
-        # PROMPT 2026-09-17/03 Task 2: every media row, image included, has its own thumbnail in the Thumbnails bucket.
-        # Replaces the old live convention "image -> media_url == thumbnail_url" (no image thumbnails existed then).
-        if not s(r[3]).endswith("/Thumbnails/" + title + ".webp"):
-            err("E3", f"media row {i}: thumbnail_url must end in Thumbnails/{title}.webp")
+        if not s(r[3]).endswith(title + ".webp"):
+            err("E3", f"media row {i}: thumbnail_url must end in {title}.webp")
+        if mtype == "image" and s(r[2]) != s(r[3]):
+            err("E3", f"media row {i}: image media_url must equal thumbnail_url")
     for mid in aw:
         if mid not in md:
             err("E3", f"media_id {mid} in All Words has no `media` row")

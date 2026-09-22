@@ -50,7 +50,6 @@ import openpyxl
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate_part import derive_full_sentence, NO_INTRO_TYPES   # same folder, one rule
-import lang_scope                                                 # BRIEF §0p, one module
 
 # (sheet in the workbook, table in Supabase, sheet columns -> table columns)
 # The workbook sheet names are NOT all table names: `media_categories` is the table
@@ -121,7 +120,7 @@ def shape(row, mapping):
     return rec
 
 
-def derive_full_sentences(wb, rows, records, profile=None):
+def derive_full_sentences(wb, rows, records):
     """sentence_translations only: set rec["full_sentence"] via derive_full_sentence.
 
     Type per exercise comes from the `exercises` sheet of the same workbook.
@@ -142,15 +141,6 @@ def derive_full_sentences(wb, rows, records, profile=None):
             sys.exit(f"sentence_translations: exercise_id {eid} is not in the exercises sheet")
         t = etype[eid]
         if t in NO_INTRO_TYPES:
-            rec["full_sentence"] = None
-            n_null += 1
-            continue
-        # BRIEF §0p: a language outside this type's scope is an empty row by ruling (validate_part
-        # E18 refuses one that carries text). It goes in empty, with no full_sentence; the app
-        # skips it exactly as it skips a missing row (GameplayScreen: learn `continue`, native nulls).
-        if profile is not None and lang not in lang_scope.scope_for(t, profile):
-            if any(rec.get(c) for c in ("intro_text", "correct_answer", "distractor_1", "distractor_2")):
-                sys.exit(f"exercise {eid}/{lang}: out of scope for type {t} but carries text (E18)")
             rec["full_sentence"] = None
             n_null += 1
             continue
@@ -272,8 +262,7 @@ def main_sql(a):
         rows = rows_of(wb[sheet])
         recs[table] = [shape(r, mapping) for r in rows]
         if table == "exercise_localizations":
-            n_set, n_null, per_lang = derive_full_sentences(wb, rows, recs[table],
-                                                            lang_scope.profile_for(a.workbook))
+            n_set, n_null, per_lang = derive_full_sentences(wb, rows, recs[table])
             print(f"full_sentence derived {n_set} rows; {n_null} null (types {sorted(NO_INTRO_TYPES)})")
             for rec in recs[table]:
                 # §0m/§0o: an empty answer is a ruled cell, not a missing one. The column is NOT NULL,
@@ -427,15 +416,18 @@ def main_sql(a):
                  "and table_name='word_concepts' and column_name='definition') then\n"
                  "    raise exception 'word_concepts.definition does not exist — run task 1 first';\n  end if;\nend $$;")
         g = []
-        # No live row may sit inside any new id run. (Until 17.9 run08 this was "live max < first new id",
-        # which is right for the first part only: A1's media ids 4007-5506 surround A2's, so the max test
-        # refuses a clean A2. A collision inside a run is what matters; plain inserts would fail on it too.)
-        g.append(f"  if exists (select 1 from public.media where id in ({mids})) then "
-                 f"raise exception 'FLOOR media: a live row already has one of the new ids'; end if;")
-        for t in ("word_concepts", "word_localizations", "concept_media", "exercises"):
-            for lo, hi in ranges[t]:
-                g.append(f"  if exists (select 1 from public.{t} where id between {lo} and {hi}) "
-                         f"then raise exception 'FLOOR {t}: live rows inside {lo}-{hi}'; end if;")
+        for t in ("media", "word_concepts", "word_localizations", "concept_media"):
+            if ranges[t]:
+                g.append(f"  if (select coalesce(max(id),0) from public.{t}) >= {ranges[t][0][0]} then "
+                         f"raise exception 'FLOOR {t}: live max id >= first new id {ranges[t][0][0]}'; end if;")
+        main_ex = [r["id"] for r in ex if r["id"] < SE_BLOCK_START]
+        se_ex = [r["id"] for r in ex if r["id"] >= SE_BLOCK_START]
+        if main_ex:
+            g.append(f"  if (select coalesce(max(id),0) from public.exercises where id < {SE_BLOCK_START}) >= {min(main_ex)} "
+                     f"then raise exception 'FLOOR exercises main block: live max >= {min(main_ex)}'; end if;")
+        if se_ex:
+            g.append(f"  if (select coalesce(max(id),0) from public.exercises) >= {min(se_ex)} "
+                     f"then raise exception 'FLOOR exercises SE block: live max >= {min(se_ex)}'; end if;")
         for lo, hi in ranges["exercise_localizations"]:
             g.append(f"  if exists (select 1 from public.exercise_localizations where id between {lo} and {hi}) "
                      f"then raise exception 'FLOOR exercise_localizations: live rows inside {lo}-{hi}'; end if;")

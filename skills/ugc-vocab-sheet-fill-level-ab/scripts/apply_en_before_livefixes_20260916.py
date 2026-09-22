@@ -11,8 +11,7 @@ Content file (UTF-8, pipe-delimited; '#' lines and blank lines ignored):
 
 Every exercise in the file is validated before anything is written, against the
 workbook's own exercises sheet: id exists, type-specific intro rule (27/68/74/75
-empty, 69 is the stem “<English headword>” means... in curly quotes, grammar types carry exactly one
-'...' gap and the answer's edge word may not repeat the word beside the gap),
+empty, 69 starts with "<word>" means, grammar types carry exactly one '...' gap),
 English budget (intro <= 90, options <= 50), three distinct options, no four-dot gap,
 no option that is a bare copy of another. The workbook is saved once. Only the
 `en` row of sentence_translations is touched; nothing else is written.
@@ -31,35 +30,6 @@ def s(v):
 
 def canon(w):
     return re.sub(r"^(a|an|the|to)\s+", "", s(w).lower())
-
-
-def en_headword(word, pos):
-    """BRIEF §0t / ruling of 16.9.2026: an English VERB headword takes `to ` ("to adore"); every other part of
-    speech is the bare word — the -ing keywords (eating, shopping) are nouns and stay bare."""
-    w = s(word)
-    return w if s(pos).lower() != "verb" or w.lower().startswith("to ") else "to " + w
-
-
-STEM_RE = re.compile(r"^\u201c([^\u201c\u201d\"]+)\u201d means\.\.\.$")   # “<headword>” means...  (curly, as live 977/977)
-WORD_RE = re.compile(r"[A-Za-z']+")
-
-
-def repeated_edge_word(intro, ca):
-    """The answer's first word repeats the word just before the gap, or its last word repeats the word just after
-    it: 'take ... tissues' + 'these tissues' -> 'take these tissues tissues'. Returns the repeated word or ''."""
-    i = intro.find("...")
-    if i < 0 or not ca:
-        return ""
-    words = WORD_RE.findall(ca)
-    if not words:
-        return ""
-    after = re.match(r"\s*([A-Za-z']+)", intro[i + 3:])
-    before = re.findall(r"([A-Za-z']+)\s*$", intro[:i])
-    if after and after.group(1).lower() == words[-1].lower():
-        return after.group(1)
-    if before and before[0].lower() == words[0].lower():
-        return before[0]
-    return ""
 
 
 def main():
@@ -95,13 +65,6 @@ def main():
         ex[int(r[0])] = (int(r[1]), int(r[2]), int(r[3]))
     con = {int(r[0]): s(r[1]) for r in wb["word_concepts"].iter_rows(min_row=2, values_only=True)
            if r[0] is not None and s(r[0]).isdigit()}
-    pos = {int(r[0]): s(r[2]) for r in wb["word_concepts"].iter_rows(min_row=2, values_only=True)
-           if r[0] is not None and s(r[0]).isdigit()}
-    # the English headword as the workbook holds it (word_localizations, language_code en), when already written
-    en_head = {}
-    for r in wb["word_localizations"].iter_rows(min_row=2, values_only=True):
-        if r[0] is not None and s(r[0]).isdigit() and s(r[2]) == "en" and s(r[3]):
-            en_head[int(s(r[1]))] = s(r[3])
     # type 69 uses the media's `meaning of the word` (All Words, column F) verbatim as its
     # correct answer — the field is written to a 50-char budget for exactly this use.
     meaning = {int(r[0]): s(r[5]) for r in wb["All Words"].iter_rows(min_row=2, values_only=True)
@@ -130,14 +93,10 @@ def main():
         if t in NO_INTRO and intro:
             errors.append(f"exercise {eid}: type {t} must have empty intro_text")
         if t in STEM:
-            m = STEM_RE.match(intro)
-            head = en_headword(word, pos.get(cid, ""))
-            if not m:
-                errors.append(f"exercise {eid}: type 69 stem must be '\u201c<headword>\u201d means...' (curly quotes) got {intro!r}")
-            elif m.group(1) != head:
-                errors.append(f"exercise {eid}: type 69 stem word {m.group(1)!r} != English headword {head!r}")
-            if cid in en_head and en_head[cid] != head:
-                errors.append(f"exercise {eid}: workbook en headword {en_head[cid]!r} != expected {head!r}")
+            if not re.match(r'^"[^"]+" means\.\.\.$', intro):
+                errors.append(f"exercise {eid}: type 69 stem must be '\"<word>\" means...' got {intro!r}")
+            elif canon(intro.split('"')[1]) != word:
+                errors.append(f"exercise {eid}: type 69 stem word {intro.split(chr(34))[1]!r} != concept {word!r}")
             if mid in meaning and ca != meaning[mid]:
                 errors.append(f"exercise {eid}: type 69 correct_answer must be the media's meaning column "
                               f"verbatim — got {ca!r}, meaning is {meaning[mid]!r}")
@@ -146,9 +105,6 @@ def main():
                 errors.append(f"exercise {eid}: type {t} needs intro_text")
             elif intro.count("...") != 1:
                 errors.append(f"exercise {eid}: intro must contain exactly one '...' gap: {intro!r}")
-            elif repeated_edge_word(intro, ca):
-                errors.append(f"exercise {eid}: the answer's edge word {repeated_edge_word(intro, ca)!r} repeats the "
-                              f"word beside the gap — full sentence would double it: {intro!r} + {ca!r}")
         if "...." in intro:
             errors.append(f"exercise {eid}: four-dot gap marker")
         if not ca or not d1 or not d2:

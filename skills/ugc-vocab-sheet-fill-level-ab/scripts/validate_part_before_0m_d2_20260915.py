@@ -12,7 +12,7 @@ Checks (E = error, W = warning):
   E1  every sheet present, headers unchanged vs the template contract
   E2  All Words: only Level B rows, one part_of_speech token, category resolvable
   E3  media: one row per All Words row, title == <slug>_<media_id>,
-      media_url ends in <title>.mp4/.webp, thumbnail_url in Thumbnails/<title>.webp (images too, 17.9.2026),
+      media_url/thumbnail_url end in <title>.mp4/.webp, image -> media_url == thumbnail_url,
       style_id in `styles`, media_type in {video,image}
   E4  media_categories: exactly one row per media_id, category_id in `categories`
   E5  word_concepts: unique concept id, no leading article, unique SENSE (word + pos +
@@ -20,11 +20,9 @@ Checks (E = error, W = warning):
       media carry two different meanings is an error too
   E6  word_localizations: exactly 9 rows per concept, all 9 language codes, no empty translation
   E7  concept_media: exactly one row per media_id, concept_id resolvable
-  E8  exercises: the per-media contract comes from exercise_selection.py (BRIEF §0r, 16.9.2026),
-      by the workbook's contract profile in exercise_contract.json (default '0r'): A video 8
-      grammar + 27 + 74, A image 1 + 27 + 74, B video 11 + 68 69 75, B image 1 + 68 69 75;
-      profile 'part1-28' (A part 1 only): video all 26 + 27 + 74, image 1 + 27 + 74.
-      ids unique; no deprecated/unruled type (70-73, 76-77); options_count in {2,3}
+  E8  exercises: video media -> exactly 39 rows with type set 31..67+68+69;
+      image media -> exactly 2 rows (68, 69); ids unique; no deprecated type (70+/POV);
+      options_count in {2,3}
   E9  sentence_translations: exactly 9 rows per exercise, all 9 codes, no duplicate code;
       correct_answer + distractor_1 non-empty on the en row only (brief v26: the eight
       translating languages may leave an answer cell empty and may repeat an option);
@@ -43,9 +41,6 @@ Checks (E = error, W = warning):
   E15 full_sentence: no double space, no leftover '...'; W: not the §3 derivation
       from intro_text and correct_answer (substitute, collapse, per-language
       punctuation spacing, final stop -- see interleave())
-  E18 BRIEF §0p: a language outside this exercise type's scope carries text (or the type is
-      one of the unruled 76/77); E19 an in-scope language is empty while another in-scope
-      language of the same exercise is written
   E16 chunks/correct_alternative: valid JSON, chunks join back to full_sentence,
       every alternative is a permutation that keeps the opening piece first and the
       piece carrying the final punctuation last
@@ -53,13 +48,6 @@ Checks (E = error, W = warning):
 import argparse, json, os, re, sys
 from collections import defaultdict, Counter
 import openpyxl
-
-# BRIEF §0p, 15.9.2026 — the per-type language scope lives in ONE module, imported by this
-# script, by check_lang.py and by apply_lang.py. The type sets below come from it too, so a
-# fourth copy of "which types have no intro" cannot drift away from the other three.
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import lang_scope
-import exercise_selection   # BRIEF §0r/§0s — the [E8] contract is derived from it, 16.9.2026
 
 LANGS = ["sk", "en", "de", "cz", "fr", "es", "ua", "tr", "hu"]
 EN_LIMITS = [("intro_text", 90), ("correct_answer", 50),
@@ -73,9 +61,9 @@ CONTRACT = {                       # level -> (types for a video, types for a st
     "B": (set(range(31, 68)) | {68, 69, 75}, {68, 69, 75}),
     "A": (set(range(1, 28)) | {74},          {27, 74}),
 }
-VOCAB_TYPES = set(lang_scope.VOCAB_TYPES)        # 27 68 69 74 75 — see lang_scope.py
-NO_INTRO_TYPES = set(lang_scope.NO_INTRO_TYPES)  # Label + Simple Explanation: options only, no stem
-STEM_TYPES = set(lang_scope.STEM_TYPES)          # 69 Meaning of the word: stem is '"<word>" means...' 
+VOCAB_TYPES = {27, 68, 69, 74, 75}
+NO_INTRO_TYPES = {27, 68, 74, 75}   # Label + Simple Explanation: options only, no stem
+STEM_TYPES = {69}            # 69 Meaning of the word: stem is '"<word>" means...' 
 CLOSE_PAIRS = [("sk", "cz")]
 HEADER_ROWS = 2
 
@@ -288,11 +276,6 @@ def slug(word):
 
 def main(a):
     wb = openpyxl.load_workbook(a.workbook, read_only=True, data_only=True)
-    # BRIEF §0p — the language scope profile of THIS workbook. A missing lang_scope.json means
-    # the ruling ('0p'), never the legacy all-nine, so a new part cannot inherit the old scope
-    # by being forgotten.
-    profile = lang_scope.profile_for(a.workbook)
-    print(f"language scope: {lang_scope.describe(profile)}")
     need = ["All Words", "media", "media_categories", "word_concepts", "word_localizations",
             "concept_media", "exercises", "sentence_translations", "categories", "styles",
             "ALIAS - exercise_types"]
@@ -313,16 +296,12 @@ def main(a):
     words = rows_of(wb["All Words"], example_col=9)
     seen_levels = {s(r[3]).upper() for _, r in words if len(r) > 3}
     level = "A" if seen_levels == {"A"} else ("B" if seen_levels == {"B"} else "AB")
-    # BRIEF §0r, 16.9.2026 — the exercise-count contract is a per-workbook profile, keyed by file
-    # name exactly like the language scope. Default = the ruling (§0r); A part 1 is the exception.
-    contract = exercise_selection.contract_for(a.workbook)
-    print(f"contract profile {contract!r}: {exercise_selection.CONTRACTS[contract]}")
     if level == "AB":
         print("contract: mixed A/B part — each media row keeps the contract of its own level")
     else:
-        print(f"contract: level {level} — "
-              f"{exercise_selection.expected_total(level, 'video', contract)} exercises per video, "
-              f"{exercise_selection.expected_total(level, 'image', contract)} per still")
+        VIDEO_TYPES, IMAGE_TYPES = CONTRACT[level]
+        print(f"contract: level {level} — {len(VIDEO_TYPES)} exercises per video, "
+              f"{len(IMAGE_TYPES)} per still")
     level_of = {}   # media_id -> A/B
     media = rows_of(wb["media"], example_col=6)
     mcats = rows_of(wb["media_categories"], example_col=2)
@@ -366,10 +345,10 @@ def main(a):
         ext = ".mp4" if mtype == "video" else ".webp"
         if not s(r[2]).endswith(title + ext):
             err("E3", f"media row {i}: media_url must end in {title}{ext}")
-        # PROMPT 2026-09-17/03 Task 2: every media row, image included, has its own thumbnail in the Thumbnails bucket.
-        # Replaces the old live convention "image -> media_url == thumbnail_url" (no image thumbnails existed then).
-        if not s(r[3]).endswith("/Thumbnails/" + title + ".webp"):
-            err("E3", f"media row {i}: thumbnail_url must end in Thumbnails/{title}.webp")
+        if not s(r[3]).endswith(title + ".webp"):
+            err("E3", f"media row {i}: thumbnail_url must end in {title}.webp")
+        if mtype == "image" and s(r[2]) != s(r[3]):
+            err("E3", f"media row {i}: image media_url must equal thumbnail_url")
     for mid in aw:
         if mid not in md:
             err("E3", f"media_id {mid} in All Words has no `media` row")
@@ -473,18 +452,13 @@ def main(a):
         if mid not in md:
             err("E8", f"exercises reference unknown media_id {mid}")
             continue
-        lv = level_of.get(mid, level) if level == "AB" else level
-        kind = s(md[mid][5])
-        if lv not in ("A", "B") or kind not in ("video", "image"):
-            continue            # E2/E3 already report an unknown level or media_type
-        probs = exercise_selection.check_media(types, lv, kind, contract)
-        stray = sorted(t for t in types if t not in exercise_selection.GRAMMAR_TYPES[lv]
-                       and t not in exercise_selection.VOCAB_TYPES[lv])
-        if stray:
-            probs.append(f"types {stray} do not belong to level {lv}")
-        if probs:
-            err("E8", f"media {mid} ({kind}): {len(types)} exercises, expected "
-                      f"{exercise_selection.expected_total(lv, kind, contract)} — " + "; ".join(probs))
+        vid_t, img_t = CONTRACT.get(level_of.get(mid, level), CONTRACT["B"]) if level == "AB" \
+            else (VIDEO_TYPES, IMAGE_TYPES)
+        expect = vid_t if s(md[mid][5]) == "video" else img_t
+        got = set(types)
+        if len(types) != len(expect) or got != expect:
+            err("E8", f"media {mid} ({s(md[mid][5])}): {len(types)} exercises, expected "
+                      f"{len(expect)}; missing {sorted(expect-got)}, extra {sorted(got-expect)}")
     for mid in aw:
         if mid not in by_media:
             err("E8", f"media_id {mid} has no exercises")
@@ -528,22 +502,9 @@ def main(a):
             err("E9", f"exercise {eid}: missing translations {sorted(missing)}")
             continue
         t, oc = int(s(r[3])), int(s(r[4]))
-        # BRIEF §0p — which languages this TYPE is translated into, in this PART's profile.
-        try:
-            scope = lang_scope.scope_for(t, profile)
-        except lang_scope.UnruledTypeError as exc:
-            err("E18", f"exercise {eid}: {exc}")
-            continue
         for lang, (intro, ca, d1, d2, full, chunks_s, alt_s) in got.items():
             if a.phase == "en" and lang != "en":
                 continue          # English pass only: the other 8 rows are still skeletons
-            # BRIEF §0p: a language outside this type's scope is deliberately empty — silent.
-            # A cell filled there means a translator did not get the ruling, and that IS an error.
-            if lang not in scope:
-                if any((intro, ca, d1, d2)):
-                    err("E18", f"exercise {eid}/{lang}: type {t} is out of scope for this part "
-                               f"(§0p scope {sorted(scope)}) but the row carries text")
-                continue
             if a.phase == "en" and t in SIMPLE.values() and not ca:
                 continue          # Simple Explanation is derived from Label after the language pass
             # BRIEF v26, 14.9.2026: English keeps both guards; the eight translating languages
@@ -556,13 +517,8 @@ def main(a):
                     err("E9", f"exercise {eid}/{lang}: empty distractor_1")
                 if oc == 3 and not d2:
                     err("E9", f"exercise {eid}/{lang}: options_count 3 but distractor_2 empty")
-            # BRIEF §0m, 15.9.2026 — for the eight translating languages the
-            # `oc == 3 and not d2` guard is REMOVED OUTRIGHT, as it now is in
-            # check_lang.py and apply_lang.py. The `(ca or d1)` carve-out that stood
-            # here was written for the §0e ARTICLE shape, where a row is empty in all
-            # three cells; §0m empties a cell whose English counterpart is any word at
-            # all, so a filled correct_answer beside an empty distractor_2 is the
-            # ruling, not a missing option. The safety net is the counter of §0l.
+            elif oc == 3 and not d2 and (ca or d1):
+                err("E9", f"exercise {eid}/{lang}: options_count 3 but distractor_2 empty")
             if oc == 2 and d2:
                 err("E9", f"exercise {eid}/{lang}: options_count 2 but distractor_2 filled")
             if t in NO_INTRO_TYPES and intro:
@@ -624,30 +580,20 @@ def main(a):
         # pending. Completeness is judged on "intro_text OR correct_answer written": a §0e article
         # row in sk/cz/ua has an intro and no answers, an unwritten row has neither, and a type-27
         # Label row has an answer and no intro. So the E10/E11 identity checks still run on §0e rows.
-        # BRIEF §0p: completeness is judged over the IN-SCOPE languages. Under the 'all-nine'
-        # profile that is every language, so part 1 is unchanged.
-        written = [l for l in scope if (got[l][0] or got[l][1])]
-        finished = len(written) == len(scope)
+        finished = all((got[l][0] or got[l][1]) for l in LANGS)
         if not finished:
-            # Nothing written yet is an unfinished row, as it always was. Something written in
-            # one in-scope language and missing in another is a HOLE, and §0p's own condition:
-            # sk or cz missing on a grammar row must stay an error.
-            if written and [l for l in written if l != "en"]:
-                err("E19", f"exercise {eid}: §0p in-scope language(s) "
-                           f"{sorted(set(scope) - set(written))} empty while "
-                           f"{sorted(set(written) - {'en'})} are written")
             UNFINISHED.append(eid)
             continue
         if a.phase == "en":
             continue
         en = got["en"]
-        for lang in sorted(scope):
+        for lang in LANGS:
             if lang == "en":
                 continue
             if got[lang] == en and not all(x in allow or not x for x in got[lang]):
                 err("E10", f"exercise {eid}/{lang}: byte-identical to the en row (English fallback)")
         seen_rows = {}
-        for lang in sorted(scope):
+        for lang in LANGS:
             key = got[lang]
             if key in seen_rows:
                 other = seen_rows[key]

@@ -143,16 +143,11 @@ Then fill `sk, de, cz, fr, es, ua, tr, hu` for every exercise, and the 9 `word_l
 
 - **A language_code row is ENTIRELY in that language** (Instructions sheet). No English fallback,
   no half-translated row, no copy of the `en` row. `E10` fails the part for this.
-- **Options — translate, never rebuild** (`EXERCISE_AUTHORING_SPEC.md` section 10, ruling of
-  11 September 2026: English is the learning language, the eight rows only translate).
-  (1) **Translate each option in its position** as well as the target grammar allows (EN `2 cats.` /
-  `2 cat.` → SK `2 mačky.` / `2 mačka.`); a distractor that happens to be correct in the target
-  language is not a defect, because the learner chooses in English. (2) **Name it in words where
-  there is no form** — keep the collapsed word and add a short neutral bracket label
-  (`musí (vonkajšia povinnosť)` / `musí (vnútorná motivácia)`), or use the category name where the
-  option has no word (`neurčitý člen`). (3) **Never rebuild the exercise or fabricate a form** — no
-  local contrast, no option dropped, merged or swapped. Per-language label glossaries:
-  `PROMPT_translations.md`, section "Per-language label glossaries".
+- **Distractors — the hierarchy:** (1) **mirror the error** — reproduce the equivalent mistake in
+  the target language (EN `2 cats.` / `2 cat.` → SK `2 mačky.` / `2 mačka.`); the distractor is
+  SUPPOSED to be wrong in the target language. (2) **Bracket gloss (max 3 words)** only when the
+  contrast has no equivalent and two options would otherwise be identical. (3) **Never fabricate**
+  a fake form — translate the sense plainly and flag the row.
 - **Loanword rule (food & cultural terms).** When no clean 1:1 equivalent exists, use ONE agreed
   loanword per language, identically in `word_localizations` and in every `sentence_translations`
   row of that concept (`dumplings` → `dumplingy`, never `pirôžok` in one row and `raviole` in the
