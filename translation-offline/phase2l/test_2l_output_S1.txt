@@ -1,0 +1,11 @@
+PASS  T1 content check: item ids containing "429" are not a rate limit; a 200 reply "429" = counted FAILED call, never retried
+PASS  T2 real HTTP 429 envelope (per-minute RESOURCE_EXHAUSTED): detected, retried, not counted
+PASS  T3 usage-limit / per-day quota envelope: hard STOP, 0 counted, STOP file
+PASS  T4 resume at 0 cost (replies kept; and replies deleted -> cached ledger replies reused, zero new calls)
+PASS  T5 relative path REFUSED (CLI exit 2, run_check, run_full), path outside phase2l refused; write guard redirects a write outside phase2l
+PASS  T6 2K poison test extended to content_check: v/alt/lk/en are poison; no reference key/value read by the stack OR the check; bodies = source + answer only; both TIP variants
+PASS  T7 strict parse: NONE / MISSING: <word> only (whitespace + one trailing period trimmed); failed call keeps the L3 verdict
+PASS  T8 phase hard cap 3,500 (and a stage cap): counted + needed > cap -> STOP before any call
+PASS  T9 prompt: the brief's question, reply format and the owner's ruling word lists verbatim (BRIEF_2L.md), SK and CZ; spec file current
+PASS  T10 earlier phases byte-identical (every file in SHA_before.txt, before and after the suite)
+RESULT 10/10 PASS; mocked calls 108; real model calls 0

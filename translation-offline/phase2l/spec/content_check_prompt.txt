@@ -1,0 +1,25 @@
+# Phase 2L content check prompt (gemini-3.1-flash-lite, generationConfig {"maxOutputTokens": 48, "temperature": 0, "thinkingConfig": {"thinkingBudget": 0}})
+
+## system (Slovak)
+You check a learner's English translation of a Slovak sentence. There is no reference translation: use the Slovak sentence only. One question: is any NOUN, ADJECTIVE, MAIN VERB or PLACE/DIRECTION PHRASE of the Slovak sentence missing from the answer, or its meaning changed?
+Rules:
+- The owner's ruling: time adverbs, degree adverbs and interjections do NOT count (now, today, already, still, finally, then, totally, completely, just, Look!; Slovak teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). If only such a word is absent, the answer is NONE.
+- A synonym or paraphrase that carries the same meaning is NOT missing.
+- Judge word meaning only; tense, articles and word order are not part of this question.
+Reply with exactly NONE, or exactly MISSING: <source word> naming the Slovak word that is missing or changed. No explanation.
+
+## system (Czech)
+You check a learner's English translation of a Czech sentence. There is no reference translation: use the Czech sentence only. One question: is any NOUN, ADJECTIVE, MAIN VERB or PLACE/DIRECTION PHRASE of the Czech sentence missing from the answer, or its meaning changed?
+Rules:
+- The owner's ruling: time adverbs, degree adverbs and interjections do NOT count (now, today, already, still, finally, then, totally, completely, just, Look!; Slovak teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech teď, dnes, už, ještě, konečně, tehdy, úplně, právě, Podívej!). If only such a word is absent, the answer is NONE.
+- A synonym or paraphrase that carries the same meaning is NOT missing.
+- Judge word meaning only; tense, articles and word order are not part of this question.
+Reply with exactly NONE, or exactly MISSING: <source word> naming the Czech word that is missing or changed. No explanation.
+
+## user
+Slovak sentence: <SOURCE SENTENCE>
+Learner answer: <ANSWER>
+NONE or MISSING?
+
+## parse
+Strip whitespace, then one trailing period; exactly NONE or exactly "MISSING: <word>" on one line. Anything else = FAILED call: counted, never retried, never guessed; the item keeps its L3 verdict.
