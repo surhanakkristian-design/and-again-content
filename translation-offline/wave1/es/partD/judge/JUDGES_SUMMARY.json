@@ -1,0 +1,84 @@
+{
+ "prompt_sha": "3bcc0125e7be0692ae90f56cbfb61bfaa1a8854bc3097bb1dc643c3be660d89f",
+ "model": "opus",
+ "max_turns": 2,
+ "cap_per_session": 400000,
+ "sessions": {
+  "s1": {
+   "ok": true,
+   "stop": null,
+   "why": null,
+   "attempts": [
+    {
+     "sid": "s1",
+     "tokens": 54182,
+     "resumed": true,
+     "spawns": 0,
+     "num_turns": 2,
+     "why": null
+    }
+   ]
+  },
+  "s2": {
+   "ok": true,
+   "stop": null,
+   "why": null,
+   "attempts": [
+    {
+     "sid": "s2",
+     "tokens": 53614,
+     "resumed": true,
+     "spawns": 0,
+     "num_turns": 2,
+     "why": null
+    }
+   ]
+  },
+  "s4": {
+   "ok": false,
+   "stop": null,
+   "why": "jid set mismatch (missing 1, extra 0)",
+   "attempts": [
+    {
+     "sid": "s4",
+     "tokens": 53074,
+     "resumed": true,
+     "spawns": 0,
+     "num_turns": 2,
+     "why": "jid set mismatch (missing 2, extra 1)"
+    },
+    {
+     "sid": "s4_r1",
+     "tokens": 52710,
+     "resumed": false,
+     "spawns": 1,
+     "num_turns": 2,
+     "why": "jid set mismatch (missing 1, extra 0)"
+    }
+   ]
+  },
+  "s3": {
+   "ok": true,
+   "stop": null,
+   "why": null,
+   "attempts": [
+    {
+     "sid": "s3",
+     "tokens": 53664,
+     "resumed": true,
+     "spawns": 0,
+     "num_turns": 2,
+     "why": "jid set mismatch (missing 1, extra 0)"
+    },
+    {
+     "sid": "s3_r1",
+     "tokens": 53157,
+     "resumed": false,
+     "spawns": 1,
+     "num_turns": 2,
+     "why": null
+    }
+   ]
+  }
+ }
+}
