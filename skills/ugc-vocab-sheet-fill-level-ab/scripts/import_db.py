@@ -50,6 +50,7 @@ import openpyxl
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from validate_part import derive_full_sentence, NO_INTRO_TYPES   # same folder, one rule
+from validate_part import blank_text_gaps, filled_text_counts, LANGS as ALL_LANGS
 import lang_scope                                                 # BRIEF §0p, one module
 
 # (sheet in the workbook, table in Supabase, sheet columns -> table columns)
@@ -168,6 +169,40 @@ def derive_full_sentences(wb, rows, records, profile=None):
     return n_set, n_null, per_lang
 
 
+def text_safeguard(records):
+    """Owner decision 28 (22.9.2026): FAIL the import when any of the nine languages has blank text
+    (intro_text and full_sentence) on an exercise whose sk or en row has text. Run after
+    derive_full_sentences. Returns the per-language filled-text counts (they go into the
+    verification); exits on a gap, before anything is sent or any SQL is written."""
+    by = {}
+    for r in records:
+        by.setdefault(r["exercise_id"], {})[r["language_code"]] = r
+    gaps = blank_text_gaps(by)
+    counts = filled_text_counts(records)
+    print("filled text per language: " + json.dumps(counts))
+    if gaps:
+        per = {}
+        for eid, L in gaps:
+            per.setdefault(L, []).append(eid)
+        lines = [f"  {L}: {len(v)} blank, e.g. {v[:5]}" for L, v in sorted(per.items())]
+        sys.exit("IMPORT REFUSED: blank language text where sk/en have text "
+                 f"({len(gaps)} rows)\n" + "\n".join(lines)
+                 + "\nTranslate the rows (validate_part.py E20 lists them); the import does not upload blanks.")
+    return counts
+
+
+def lang_count_sql(cond, want):
+    """Verification lines: per language, the rows with text among the imported localizations must
+    equal the workbook's count (a blank, or a shifted column, fails the transaction)."""
+    out = []
+    for L in ALL_LANGS:
+        out.append(f"  select count(*) into n from public.exercise_localizations where {cond} and language_code = '{L}' "
+                   f"and (coalesce(btrim(intro_text), '') <> '' or coalesce(btrim(full_sentence), '') <> '');")
+        out.append(f"  if n <> {int(want.get(L, 0))} then raise exception 'TEXT {L}: % rows with text <> {int(want.get(L, 0))}', n; end if;")
+        out.append(f"  msg := msg || 'text_{L}=' || n || ' ';")
+    return out
+
+
 def post(base, key, table, records, on_conflict):
     url = f"{base}/rest/v1/{table}?on_conflict={on_conflict}"
     req = urllib.request.Request(
@@ -196,6 +231,7 @@ def main(a):
         rows = rows_of(wb[sheet])
         records = [shape(r, mapping) for r in rows]
         if table == "exercise_localizations":
+            text_safeguard(records)          # decision 28: before anything else can refuse or send
             n_set, n_null, per_lang = derive_full_sentences(wb, rows, records)
             print(f"{'  full_sentence derived':<46} {n_set:>7} rows; "
                   f"{n_null} null (types {sorted(NO_INTRO_TYPES)}); "
@@ -272,9 +308,11 @@ def main_sql(a):
         rows = rows_of(wb[sheet])
         recs[table] = [shape(r, mapping) for r in rows]
         if table == "exercise_localizations":
+            text_counts = text_safeguard(recs[table])      # decision 28: refuse blanks before any SQL
             n_set, n_null, per_lang = derive_full_sentences(wb, rows, recs[table],
                                                             lang_scope.profile_for(a.workbook))
             print(f"full_sentence derived {n_set} rows; {n_null} null (types {sorted(NO_INTRO_TYPES)})")
+            assert filled_text_counts(recs[table]) == text_counts
             for rec in recs[table]:
                 # §0m/§0o: an empty answer is a ruled cell, not a missing one. The column is NOT NULL,
                 # so it goes in as '' (the app skips a learning row with an empty answer and shows
@@ -445,7 +483,7 @@ def main_sql(a):
         h.append("do $$ begin\n" + "\n".join(g) + "\nend $$;")
         return h
 
-    def tail(el_expect, el_runs, commit):
+    def tail(el_expect, el_runs, commit, text_want):
         counts = [
             ("media", f"select count(*) from public.media where id in ({mids})", expect["media"]),
             ("media_categories", f"select count(*) from public.media_categories where media_id in ({mids})", expect["media_categories"]),
@@ -463,6 +501,7 @@ def main_sql(a):
             if want is not None:
                 body.append(f"  if n <> {want} then raise exception 'COUNT {k}: % <> {want}', n; end if;")
             body.append(f"  msg := msg || '{k}=' || n || ' ';")
+        body += lang_count_sql(between("id", el_runs), text_want)      # decision 28: text per language
         body += [
             f"  select count(*) into n from public.exercises e join public.concept_media c on c.media_id = e.media_id "
             f"where e.media_id in ({mids}) and e.concept_id <> c.concept_id;",
@@ -504,7 +543,7 @@ def main_sql(a):
         w(f"{part}_dryrun_{i:02d}_of_{len(chunks):02d}.sql",
           header(f"DRY RUN chunk {i}/{len(chunks)} — raises, nothing persists")
           + parents + [values_sql("exercise_localizations", COLS["exercise_localizations"], ch, chunk=500), fills_sql,
-                       tail(len(ch), id_runs(r["id"] for r in ch), commit=False)])
+                       tail(len(ch), id_runs(r["id"] for r in ch), commit=False, text_want=filled_text_counts(ch))])
 
     # (2) the real import: staged in import_stage (a schema the API does not expose), then ONE transaction
     st = f"import_stage.{part}_"
@@ -533,7 +572,7 @@ def main_sql(a):
         upd = (f"update public.word_concepts c set definition = f.definition from {st}definition_fills f "
                f"where c.id = f.id and c.definition is null;")
         return (["begin;"] + header("IMPORT from stage — " + ("COMMIT" if commit else "DRY RUN, raises"))
-                + [chk] + ins + [upd, tail(expect["exercise_localizations"], ranges["exercise_localizations"], commit),
+                + [chk] + ins + [upd, tail(expect["exercise_localizations"], ranges["exercise_localizations"], commit, text_counts),
                                  "commit;" if commit else "rollback;"])
     w(f"{part}_stage_30_import_DRYRUN.sql", from_stage(False))
     w(f"{part}_stage_31_import_COMMIT.sql", from_stage(True))

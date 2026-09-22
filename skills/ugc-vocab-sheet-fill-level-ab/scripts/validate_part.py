@@ -46,6 +46,10 @@ Checks (E = error, W = warning):
   E18 BRIEF §0p: a language outside this exercise type's scope carries text (or the type is
       one of the unruled 76/77); E19 an in-scope language is empty while another in-scope
       language of the same exercise is written
+  E20 (owner decision 28, 22.9.2026) a language row of ANY of the nine languages has blank text
+      (intro_text and full_sentence both empty) while the sk or en row of the same exercise has
+      text -- regardless of the §0p scope: the 6.9.2026 batch was imported with 10,283 grammar
+      exercises blank in de/ua/es/fr/tr/hu and no check noticed. See blank_text_gaps().
   E16 chunks/correct_alternative: valid JSON, chunks join back to full_sentence,
       every alternative is a permutation that keeps the opening piece first and the
       piece carrying the final punctuation last
@@ -276,6 +280,39 @@ def derive_full_sentence(intro, answer, lang, exercise_type):
     if exercise_type in STEM_TYPES:
         return stem_sentence(intro, answer)
     return interleave(intro, answer, lang)
+
+
+def _has_text(row):
+    """A language row 'has text' when intro_text or full_sentence is non-blank."""
+    return bool(row) and any((row.get(k) or "").strip() for k in ("intro_text", "full_sentence"))
+
+
+def blank_text_gaps(by_exercise, langs=None):
+    """E20 / the import safeguard (owner decision 28, 22.9.2026).
+
+    by_exercise: {exercise_id: {lang: {"intro_text": .., "full_sentence": ..}}}.
+    Returns [(exercise_id, lang)] for every language of `langs` (default: all nine) whose row is
+    missing or has blank text while the sk or en row of the same exercise has text. The §0p
+    language scope does NOT exempt a row: a blank grammar row in de/ua/es/fr/tr/hu is a gap.
+    """
+    langs = langs or LANGS
+    out = []
+    for eid in sorted(by_exercise):
+        rows = by_exercise[eid]
+        if not (_has_text(rows.get("sk")) or _has_text(rows.get("en"))):
+            continue
+        out += [(eid, L) for L in langs if not _has_text(rows.get(L))]
+    return out
+
+
+def filled_text_counts(records, langs=None):
+    """Per language: the number of rows with text (intro_text or full_sentence non-blank)."""
+    langs = langs or LANGS
+    n = {L: 0 for L in langs}
+    for r in records:
+        if r.get("language_code") in n and _has_text(r):
+            n[r["language_code"]] += 1
+    return n
 
 
 def canon(word):
@@ -515,6 +552,18 @@ def main(a):
         if meaning and len(meaning) > MEANING_LIMIT:
             err("E13", f"media {mid}: meaning is {len(meaning)} chars, "
                        f"limit {MEANING_LIMIT} ({meaning!r})")
+
+    # E20 — owner decision 28 (22.9.2026): no language may be blank where sk/en have text.
+    if a.phase != "en":
+        texts = {eid: {L: {"intro_text": v[0], "full_sentence": v[4]} for L, v in got_.items()}
+                 for eid, got_ in st.items() if eid in ex}
+        gaps = blank_text_gaps(texts)
+        per = Counter(L for _, L in gaps)
+        for L in LANGS:
+            if per.get(L):
+                eids = [e for e, l in gaps if l == L]
+                err("E20", f"{per[L]} exercises have blank {L} text (intro_text and full_sentence) while "
+                           f"sk/en have text, e.g. {eids[:5]}")
 
     for eid, r in ex.items():
         got = st.get(eid, {})
