@@ -40,7 +40,7 @@ step freeze
 shasum -a 256 $E/FROZEN_SHA_D.txt | cut -d' ' -f1 > $E/FREEZE_HASH.txt
 python3 -B $C/gitc.py "Wave 1 $LANG_: Part D freeze (FROZEN_SHA_D, hash $(cat $E/FREEZE_HASH.txt))" $D $W1/common $W1/spec >/dev/null || fail "freeze commit"
 FC=$(git -C $W1 rev-parse HEAD); echo $FC > $E/FREEZE_COMMIT.txt
-git -C $W1 ls-tree -r --name-only $FC translation-offline/wave1/$LANG_/partD/FROZEN_SHA_D.txt | grep -q FROZEN_SHA_D || fail "freeze commit missing file"
+git -C $W1 ls-tree -r --full-tree --name-only $FC translation-offline/wave1/$LANG_/partD/FROZEN_SHA_D.txt | grep -q FROZEN_SHA_D || fail "freeze commit missing file"
 commit "Part D FREEZE_COMMIT $FC"
 RC=$(git -C $W1 log -1 --format=%H -- $D); echo $RC > $E/RUN_COMMIT.txt
 commit "Part D RUN_COMMIT $RC (the run opens at this tree + this file)"
