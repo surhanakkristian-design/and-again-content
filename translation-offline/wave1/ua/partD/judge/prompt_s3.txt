@@ -1,0 +1,268 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Ukrainian sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Ukrainian means?
+
+The owner's rules (apply them exactly):
+- The Ukrainian is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Ukrainian names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Ukrainian while the English tense inside it is free.
+- Added content is wrong.
+- Genderless source: when the Ukrainian sentence does not mark gender (e.g. "свій", "себе", or a verb form without a subject pronoun), BOTH he/she and his/her are correct.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Ukrainian: зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Ukrainian only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j3a995", "source": "Вона часто варить пасту, а зараз тре сир.", "level": "A2", "answer": "She often boils pasta, but she is grating cheese.", "topic": "Present Continuous or Simple"}
+{"jid": "j18079", "source": "Йоу, він одягається доволі швидко і поправляє свою краватку.", "level": "A1", "answer": "Yo, he dresses fairly fast and straightens his tie.", "topic": "My, Your, His,..."}
+{"jid": "jdbdb8", "source": "Лікар каже, що в неї алергія на літні квіти.", "level": "A1", "answer": "The doctor says that she has an allergy to summer flowers.", "topic": "A, AN, THE"}
+{"jid": "j941cd", "source": "Респект, ти вишикувала подушки в ідеальний ряд, перш ніж стрибнути на ліжко.", "level": "B2", "answer": "Respect, you lined up the pillows in a perfect row before jumping onto the sofa.", "topic": "All Past Tenses"}
+{"jid": "j81002", "source": "Ти зазвичай читаєш одну сторінку, але вчора ти дочитала цілий роман. Респект.", "level": "A2", "answer": "You usually read one page, but yesterday you finished a whole magazine. Respect.", "topic": "Present or Past Simple"}
+{"jid": "j213d9", "source": "Поки стрибнув останній чоловік, сутінки вже змінилися ніччю.", "level": "B1", "answer": "By the time the first man jumped, dusk had already turned into night.", "topic": "Past Perfect Simple"}
+{"jid": "j9ba82", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "The fries are hot and crispy.", "topic": "TO BE"}
+{"jid": "j68202", "source": "Якби він залишив секундомір удома, зараз вони не святкували б.", "level": "B2", "answer": "Had he left the stopwatch at home, they would not be celebrating right now.", "topic": "Mixed Conditional"}
+{"jid": "j67f89", "source": "Якщо ти наносиш забагато рум'ян, щоки виглядають обгорілими на сонці.", "level": "B1", "answer": "If you use too much blush, your cheeks look like they're sunburnt.", "topic": "0 Conditional"}
+{"jid": "j691c0", "source": "Спортсмен може бігти дуже швидко на своїй доріжці.", "level": "A1", "answer": "The athlete can run very quickly in her lane.", "topic": "Modal verb CAN"}
+{"jid": "j6b9c4", "source": "Вона пише те рівняння на старій дошці.", "level": "A1", "answer": "She is writing that equation on the old blackboard.", "topic": "A, AN, THE"}
+{"jid": "j2e0e6", "source": "Стіна має багато старих інструментів.", "level": "A1", "answer": "The wall has a lot of old tools.", "topic": "HAVE GOT"}
+{"jid": "jdcbb0", "source": "Чесно, до заходу сонця ти проїдеш на тому мотоциклі вертикально цілий кілометр.", "level": "B2", "answer": "Honestly, by sunset you'll ride that motorbike vertically for a whole kilometre.", "topic": "All Future Tenses"}
+{"jid": "jbf4e8", "source": "Він різав овочі цілу вічність без травм, поки не зісковзнув ніж. Справжній професіонал.", "level": "B2", "answer": "For ages he had cut vegetables with no injuries, until the knife slipped. A true professional.", "topic": "All Past Tenses"}
+{"jid": "j146bb", "source": "Маленький персонаж голосно закричав, коли колючки кактуса вкололи йому руку.", "level": "B1", "answer": "The little character screamed loudly when his hand was pricked.", "topic": "Passive or Active"}
+{"jid": "j642f3", "source": "Чи може парашутист стояти у відчинених дверях?", "level": "A1", "answer": "Can the skydiver stand in the open door?", "topic": "Modal verb CAN"}
+{"jid": "j20548", "source": "Конфлікт за столом триває попри жінку, яка дивиться з дверей.", "level": "B2", "answer": "Despite the woman watching from the door, the conflict at the table carries on.", "topic": "Advanced linkers"}
+{"jid": "jb83e2", "source": "Чесно, ти зробив смак цього смузі ідеальним завдяки тому манго.", "level": "B2", "answer": "Honestly, thanks to that mango, you've made this smoothie's taste perfect.", "topic": "Articles advanced"}
+{"jid": "jf9a93", "source": "У студії вона співає в старий мікрофон.", "level": "A1", "answer": "In the kitchen she sings into an old microphone.", "topic": "A, AN, THE"}
+{"jid": "j10a77", "source": "Якщо вона скоро повернеться до зрубу, сьогодні ввечері вона буде в теплі біля вогню.", "level": "B1", "answer": "If she got back to the log cabin soon, she was warm by the fire tonight.", "topic": "1. Conditional"}
+{"jid": "jef84b", "source": "Учора він витратив цілий балончик за раз.", "level": "A2", "answer": "Yesterday he spent an entire can at one time.", "topic": "Past Simple"}
+{"jid": "jecf3d", "source": "Якби вітчим ланцюг не полагодив, хлопець пішов би до школи пішки.", "level": "B2", "answer": "If the stepfather had not repaired the chain, the boy would have gone to school on foot.", "topic": "3. Conditional"}
+{"jid": "jb6dc9", "source": "Йоу, він одягається доволі швидко і поправляє свою краватку.", "level": "A1", "answer": "Yo, he get dressed pretty fast and adjusts his tie.", "topic": "My, Your, His,..."}
+{"jid": "jda7c9", "source": "Бро, якби осінь тривала цілий рік, я чилив би в цьому парку щодня, чесно.", "level": "B1", "answer": "Honestly, bro, if autumn went on all year round, I would hang out in this park daily.", "topic": "2. Conditional"}
+{"jid": "j15fca", "source": "Попри спеку вони пройшли аж до вершини луки.", "level": "B2", "answer": "Regardless of the heat, they made it all the way to the meadow's summit.", "topic": "Advanced linkers"}
+{"jid": "j5095d", "source": "Цього місяця вона пробігла чотири забіги, і ноги це відчувають.", "level": "B1", "answer": "This month she has run four races, and her legs feel it.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jb847b", "source": "Попри свою важку валізу, вона помчала пероном. Абсолютно нестримна!", "level": "B2", "answer": "Despite her heavy backpack, she raced along the platform. Absolutely unstoppable!", "topic": "Advanced linkers"}
+{"jid": "j1fd9d", "source": "Кухарка додає на кухні трави в сковороду.", "level": "A1", "answer": "Herbs are added to the pan by the cook in the kitchen.", "topic": "Present Simple"}
+{"jid": "j2129b", "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.", "level": "B1", "answer": "Bro, she's wearing a headscarf just next to the hot oven, so she must feel pretty hot.", "topic": "Modal verbs Probability"}
+{"jid": "j32ad3", "source": "Чергування в затоці: кожен човен має бути зареєстрований.", "level": "A2", "answer": "Bay duty: all boats have to be registered.", "topic": "Must, Have to..."}
+{"jid": "je9827", "source": "Валізи є не легкі, і вони падають на чоловіка.", "level": "A1", "answer": "Suitcases aren't light, and they fall onto a man.", "topic": "TO BE"}
+{"jid": "j1d5ab", "source": "У дитинстві вона допомагала мамі з гостями щонеділі.", "level": "B1", "answer": "As a child, she helps her mum with the guests every Sunday.", "topic": "Used to, Would"}
+{"jid": "j3a71d", "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.", "level": "B1", "answer": "Bro, she's in a headscarf right next to the hot oven, she must be pretty hot.", "topic": "Modal verbs Probability"}
+{"jid": "j174d5", "source": "Якщо вона скоро повернеться до зрубу, сьогодні ввечері вона буде в теплі біля вогню.", "level": "B1", "answer": "If she gets back to the log cabin soon, she will be warm by the fire tonight.", "topic": "1. Conditional"}
+{"jid": "jb0bf0", "source": "Лев лягає в золоту траву.", "level": "A1", "answer": "A lion is lying down in golden grass.", "topic": "Prepositions of place/time"}
+{"jid": "j4a8dc", "source": "Попри свою важку валізу, вона помчала пероном. Абсолютно нестримна!", "level": "B2", "answer": "Despite her heavy luggage, she tore along the platform. Unstoppable!", "topic": "Advanced linkers"}
+{"jid": "j9a59b", "source": "Учора офіцер перевірив кожну сумку на кордоні! Жах!", "level": "A2", "answer": "Yesterday the officer checked every bags at the border! Horrible!", "topic": "Past Simple"}
+{"jid": "j7b934", "source": "Цього ранку садівник уже зрізав шість троянд старими залізними ножицями.", "level": "B1", "answer": "This morning the gardener has cut six roses with some old iron shears.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jcd524", "source": "Вона часто варить пасту, а зараз тре сир.", "level": "A2", "answer": "She often cooks pasta, but now she is grating cheese.", "topic": "Present Continuous or Simple"}
+{"jid": "j53cf8", "source": "Його друг в машині, тож він поспішить назад незабаром.", "level": "A2", "answer": "His friend is waiting in the car, so he will hurry back before long.", "topic": "Future with WILL"}
+{"jid": "j4f628", "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.", "level": "A2", "answer": "Usually he pours little sauce, but today he's pouring a whole bowl.", "topic": "Present Continuous or Simple"}
+{"jid": "j7641e", "source": "Вона знала, що маленька червона викрутка буде достатньою для всієї полиці.", "level": "B2", "answer": "She knew that the small blue screwdriver would be enough for the whole shelf.", "topic": "Future in past"}
+{"jid": "j360ab", "source": "Якби він залишив секундомір удома, зараз вони не святкували б.", "level": "B2", "answer": "If he had left his stopwatch at home, they would not be celebrating at the moment.", "topic": "Mixed Conditional"}
+{"jid": "j79654", "source": "Зазвичай вона їсть горіхи, але сьогодні вранці вона з'їла жолудь.", "level": "A2", "answer": "Usually she eats nuts, but this morning she ate an acorn.", "topic": "Present or Past Simple"}
+{"jid": "j6bf7d", "source": "У дитинстві вона допомагала мамі з гостями щонеділі.", "level": "B1", "answer": "As a little girl, she helped her mother with the visitors every Sunday.", "topic": "Used to, Would"}
+{"jid": "jfeb2a", "source": "Де вони сидять? За столом зі свічками.", "level": "A1", "answer": "Where did they sit? At a table with candles.", "topic": "Wh- questions"}
+{"jid": "ja72af", "source": "Вона пише те рівняння на старій дошці.", "level": "A1", "answer": "She writes that equation on the board.", "topic": "A, AN, THE"}
+{"jid": "j9ed16", "source": "Попри свою важку валізу, вона помчала пероном. Абсолютно нестримна!", "level": "B2", "answer": "Despite her suitcase, she raced along the platform. Absolutely unstoppable!", "topic": "Advanced linkers"}
+{"jid": "jf3f0f", "source": "У його шлунку зараз є багато спагеті.", "level": "A2", "answer": "There are many spaghettis in his stomach now.", "topic": "There is, are"}
+{"jid": "jf6764", "source": "Один парашутист тримався за руки у формації, і наступний теж.", "level": "B1", "answer": "A skydiver held hands in the formation, and so did the following one.", "topic": "So, Neither, Nor"}
+{"jid": "jdb86a", "source": "Вона вирішила вдягнути райдужний костюм із пір'я на чолі параду.", "level": "B1", "answer": "She chose to wear a rainbow costume made of feathers at the front of the parade.", "topic": "Gerund vs Infinitive"}
+{"jid": "j7c9d6", "source": "Там лежать три футляри. Діамант вона знаходить у номері три.", "level": "A1", "answer": "Three cases are lying there. She finds the diamond in case number three.", "topic": "Cardinal numbers"}
+{"jid": "j9dae7", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She takes a screwdriver from the set.", "topic": "Cardinal numbers"}
+{"jid": "je9956", "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.", "level": "A2", "answer": "He usually pours a little sauce, but today he is pouring a whole bottle.", "topic": "Present Continuous or Simple"}
+{"jid": "j93a69", "source": "Полум'я майже миттєво піднялося до рівня пояса, що зазвичай стається, коли займається жир.", "level": "B2", "answer": "The flames will rise to waist level almost instantly, which usually happens when fat catches fire.", "topic": "Articles advanced"}
+{"jid": "j0f7fa", "source": "Зазвичай вона їсть горіхи, але сьогодні вранці вона з'їла жолудь.", "level": "A2", "answer": "She usually eats nuts; this morning, though, she ate an acorn.", "topic": "Present or Past Simple"}
+{"jid": "j72b60", "source": "Поки стрибнув останній чоловік, сутінки вже змінилися ніччю.", "level": "B1", "answer": "By the time the final man jumped, the dusk had turned to night.", "topic": "Past Perfect Simple"}
+{"jid": "j62243", "source": "Лікар каже, що в неї алергія на літні квіти.", "level": "A1", "answer": "The doctor said that she was allergic to summer flowers.", "topic": "A, AN, THE"}
+{"jid": "j92cc8", "source": "Стіна має багато старих інструментів.", "level": "A1", "answer": "The wall has got lots of old tools.", "topic": "HAVE GOT"}
+{"jid": "j9336e", "source": "Дві хвилини вона бігала на місці.", "level": "A2", "answer": "For two minutes, she was running in place.", "topic": "Past Simple"}
+{"jid": "j50d7b", "source": "Ти зазвичай читаєш одну сторінку, але вчора ти дочитала цілий роман. Респект.", "level": "A2", "answer": "You usually read one page, but today you are finishing a whole novel. Respect.", "topic": "Present or Past Simple"}
+{"jid": "j23b92", "source": "Вона пише те рівняння на старій дошці.", "level": "A1", "answer": "She writes that letter on the old board.", "topic": "A, AN, THE"}
+{"jid": "jce4a3", "source": "Вона кладе на стіл одну стару батарейку.", "level": "A1", "answer": "She lays one old battery on the table.", "topic": "A, AN, THE"}
+{"jid": "j03d44", "source": "У пивному саду вони випивають два келихи.", "level": "A1", "answer": "They down two glasses in the beer garden.", "topic": "Cardinal numbers"}
+{"jid": "jece03", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "One screwdriver is taken out of the set by her.", "topic": "Cardinal numbers"}
+{"jid": "j61c4a", "source": "«Оце так!» - крикнув коментатор. - Він крикнув, що ніколи не бачив такого стрибка.", "level": "B1", "answer": "\"What a jump!\" cried the commentator. He cried that he'd never seen such a jump.", "topic": "Reported speech"}
+{"jid": "jcfb59", "source": "Очевидно, є дві публіки для одного маленького цуценяти.", "level": "A2", "answer": "Apparently, there is two audience for one small puppy.", "topic": "There is, are"}
+{"jid": "j6034e", "source": "Вона часто варить пасту, а зараз тре сир.", "level": "A2", "answer": "She frequently cooks pasta, but she's grating cheese now.", "topic": "Present Continuous or Simple"}
+{"jid": "j8f6f9", "source": "Вона кладе на стіл одну стару батарейку.", "level": "A1", "answer": "She put one old battery on the table yesterday.", "topic": "A, AN, THE"}
+{"jid": "jd4549", "source": "Він полоскав ганчірку, коли помітив ще більше волосся на брудному дзеркалі.", "level": "B1", "answer": "He was rinsing out the cloth when he spotted even more hair on the dirty mirror.", "topic": "Past Simple or Continuos"}
+{"jid": "j023cc", "source": "Стіна має багато старих інструментів.", "level": "A1", "answer": "A wall has plenty of old tools.", "topic": "HAVE GOT"}
+{"jid": "j450f8", "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.", "level": "A2", "answer": "The racer should wash the motorbike before the 2 pm meeting.", "topic": "Modal verb SHOULD"}
+{"jid": "j5f948", "source": "Бро, цей скутер має двох крихітних вершників. Це треба бачити.", "level": "A1", "answer": "Bro, this scooter has two tiny riders. You have to see it.", "topic": "HAVE GOT"}
+{"jid": "ja4cc6", "source": "Ти зазвичай читаєш одну сторінку, але вчора ти дочитала цілий роман. Респект.", "level": "A2", "answer": "You normally read a single page, but yesterday you finished reading an entire novel. Respect.", "topic": "Present or Past Simple"}
+{"jid": "j58eee", "source": "Примітка до бюджету: двоє гостей налякані й не потребують багато світла.", "level": "A2", "answer": "Budget note: two guests are scared and don't need much food.", "topic": "Countable and uncountable"}
+{"jid": "j495b9", "source": "Він відчув себе бажаним гостем, щойно прибув до різьблених дерев'яних воріт.", "level": "B2", "answer": "He felt welcome as a guest the moment he got to the carved wooden gates.", "topic": "Advanced linkers"}
+{"jid": "j3393a", "source": "Вона хоче віддати вкоротити зелений комбінезон до вечірки.", "level": "B2", "answer": "She wants to have the green jumpsuit shorten before the party.", "topic": "Causative HAVE/GET"}
+{"jid": "j69e69", "source": "Неймовірно! Його рюкзак важчий за холодильник!", "level": "A2", "answer": "Unbelievable! His backpack is lighter than the fridge!", "topic": "Adjective comparison"}
+{"jid": "jdc1ca", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She takes one hammer out of the set.", "topic": "Cardinal numbers"}
+{"jid": "jddbc5", "source": "Спорядження, яке використовує цей мийник вікон, складається з запобіжного пояса, каски та скребка.", "level": "B2", "answer": "The equipment that this window cleaner used consisted of a safety belt, a helmet and a scraper.", "topic": "Articles advanced"}
+{"jid": "j79b01", "source": "Саме зараз її долоні ширяють над єдиним світлом на цьому зовсім темному пляжі!", "level": "B2", "answer": "Right now her palms are hovering over the only light on the beach!", "topic": "All Present Tenses"}
+{"jid": "jc5be7", "source": "Скільки дощу тут випадає за годину?", "level": "A2", "answer": "How much rain fell here in an hour?", "topic": "Much, Many, Some..."}
+{"jid": "jb94c0", "source": "Подружко, кажуть, завтра в цей час вона знову стоятиме в першій шерензі.", "level": "B1", "answer": "Girl, they say this time yesterday she was standing in the front row again.", "topic": "Future Continuous"}
+{"jid": "jac26b", "source": "Вона вирішила вдягнути райдужний костюм із пір'я на чолі параду.", "level": "B1", "answer": "She decided to wear a rainbow feather hat at the head of the parade.", "topic": "Gerund vs Infinitive"}
+{"jid": "j239ac", "source": "Конфлікт за столом триває попри жінку, яка дивиться з дверей.", "level": "B2", "answer": "The conflict at the table continues despite the man who is watching from the doorway.", "topic": "Advanced linkers"}
+{"jid": "j9b305", "source": "Якщо вона наллє ще одну склянку так, за столом стане ще веселіше.", "level": "B1", "answer": "If she pours another glass like that, it will get even merrier.", "topic": "1. Conditional"}
+{"jid": "j4650f", "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.", "level": "B1", "answer": "Bro, she's in a headscarf right by the hot stove, she's probably fairly hot.", "topic": "Modal verbs Probability"}
+{"jid": "j1f6fa", "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.", "level": "B1", "answer": "Honestly, she can't help rooting like the most hardcore fan.", "topic": "Gerund vs Infinitive"}
+{"jid": "j688fd", "source": "Бро, якби осінь тривала цілий рік, я чилив би в цьому парку щодня, чесно.", "level": "B1", "answer": "Bro, if it were autumn all year, I would chill in this park every day, for real.", "topic": "2. Conditional"}
+{"jid": "j3bacf", "source": "Якщо вона скоро повернеться до зрубу, сьогодні ввечері вона буде в теплі біля вогню.", "level": "B1", "answer": "If she returns to the log cabin soon, she will be cosy and warm by the fire tonight.", "topic": "1. Conditional"}
+{"jid": "ja5448", "source": "Він тупав брудними чобітьми по килимку, коли раптом вирішив зайти всередину.", "level": "B1", "answer": "He was tramping his dirty boots on the rug when all of a sudden he decided to go inside.", "topic": "Past Continuous"}
+{"jid": "ja1f26", "source": "За столом є одна гостя й один господар.", "level": "A2", "answer": "At the table there is one guest and one host.", "topic": "There is, are"}
+{"jid": "j9e42b", "source": "Цього місяця вона пробігла чотири забіги, і ноги це відчувають.", "level": "B1", "answer": "She has run four races this month, and her legs can feel it.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jed288", "source": "Той маленький загорнутий подарунок того вечора так ніким і не був відкритий.", "level": "B1", "answer": "That big wrapped present was never opened by anyone that evening.", "topic": "Passive or Active"}
+{"jid": "jc6efc", "source": "Він тупав брудними чобітьми по килимку, коли раптом вирішив зайти всередину.", "level": "B1", "answer": "He was stomping his boots on the mat when he suddenly decided to go inside.", "topic": "Past Continuous"}
+{"jid": "jd948d", "source": "Зазвичай він п'є тихо, але зараз хлюпається.", "level": "A2", "answer": "He usually eats quietly, but now he is slurping.", "topic": "Present Continuous or Simple"}
+{"jid": "j185ba", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She is taking one screwdriver out of the kit.", "topic": "Cardinal numbers"}
+{"jid": "jba8aa", "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.", "level": "A2", "answer": "The racer should washes motorbike before the 2 pm meeting.", "topic": "Modal verb SHOULD"}
+{"jid": "j0c8e9", "source": "Інфілдер має коричневу шкіряну рукавицю.", "level": "A1", "answer": "The infielder had a brown leather glove.", "topic": "HAVE GOT"}
+{"jid": "je7d5d", "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.", "level": "B1", "answer": "Honestly, she can't help cheering like the most die-hard fan.", "topic": "Gerund vs Infinitive"}
+{"jid": "j3245b", "source": "Цю поведінку спостерігали, коли мандрівниця прикріплювала бирку до валізи.", "level": "B1", "answer": "This behavior was seen while the traveler was attaching a tag to her suitcase.", "topic": "Past Simple or Continuos"}
+{"jid": "ja6b43", "source": "На цьому дивані є двоє людей, які плачуть.", "level": "A2", "answer": "There were two people crying on this sofa.", "topic": "There is, are"}
+{"jid": "jf4781", "source": "Лікар каже, що в неї алергія на літні квіти.", "level": "A1", "answer": "The doctor says she's allergic to summer flowers.", "topic": "A, AN, THE"}
+{"jid": "j9a8e0", "source": "Їй потрібна лише одна маленька крапля пасти.", "level": "A1", "answer": "She needs just a single small drop of paste.", "topic": "Cardinal numbers"}
+{"jid": "j595fa", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She take one screwdriver out of the set.", "topic": "Cardinal numbers"}
+{"jid": "j96060", "source": "Стіна має багато старих інструментів.", "level": "A1", "answer": "The wall had many old tools.", "topic": "HAVE GOT"}
+{"jid": "j0380a", "source": "Респект, ти вишикувала подушки в ідеальний ряд, перш ніж стрибнути на ліжко.", "level": "B2", "answer": "Respect, you lined up the pillows before jumping onto the bed.", "topic": "All Past Tenses"}
+{"jid": "j5061e", "source": "Їй потрібна лише одна маленька крапля пасти.", "level": "A1", "answer": "She only needed one small drop of paste.", "topic": "Cardinal numbers"}
+{"jid": "jaf154", "source": "У маленькому салоні небагато повітря.", "level": "A2", "answer": "The small car doesn't have much air.", "topic": "Countable and uncountable"}
+{"jid": "j72aae", "source": "У маленькому салоні небагато повітря.", "level": "A2", "answer": "There isn't much water in the small car.", "topic": "Countable and uncountable"}
+{"jid": "j6c772", "source": "На цьому дивані є двоє людей, які плачуть.", "level": "A2", "answer": "There are two people on this couch who are crying.", "topic": "There is, are"}
+{"jid": "j4cc10", "source": "Примітка до бюджету: двоє гостей налякані й не потребують багато світла.", "level": "A2", "answer": "Note for the budget: two guests are scared and need little light.", "topic": "Countable and uncountable"}
+{"jid": "j21c89", "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.", "level": "A2", "answer": "The racer should wash the motorbike before the meeting.", "topic": "Modal verb SHOULD"}
+{"jid": "jba307", "source": "У дитинстві вона допомагала мамі з гостями щонеділі.", "level": "B1", "answer": "As a child, she used to help her mum with the guests every Sunday.", "topic": "Used to, Would"}
+{"jid": "j2028d", "source": "Ти нахиляла відро над столом, коли яблука розкотилися всюди, чесно, культово.", "level": "B1", "answer": "You was tipping the bucket over the table when the apples rolled everywhere, honestly, iconic.", "topic": "Past Continuous"}
+{"jid": "j4cfb4", "source": "Очевидно, є дві публіки для одного маленького цуценяти.", "level": "A2", "answer": "Apparently, there are two audiences for one small kitten.", "topic": "There is, are"}
+{"jid": "j5eca4", "source": "У його шлунку зараз є багато спагеті.", "level": "A2", "answer": "There is a lot of soup in his stomach now.", "topic": "There is, are"}
+{"jid": "jd5710", "source": "Дві хвилини вона бігала на місці.", "level": "A2", "answer": "She jogged in place for two minutes.", "topic": "Past Simple"}
+{"jid": "jfb83a", "source": "Маленький ґудзик лежить на дерев'яному столі.", "level": "A1", "answer": "A little button is on the wooden table.", "topic": "Prepositions of place/time"}
+{"jid": "j91e4a", "source": "Медсестра оглядає багато пацієнтів на шкільному ярмарку.", "level": "A2", "answer": "The nurse examine much patients at the school fair.", "topic": "Much, Many, Some..."}
+{"jid": "j4ecc7", "source": "Чи може парашутист стояти у відчинених дверях?", "level": "A1", "answer": "Was the parachutist able to stand in the open door?", "topic": "Modal verb CAN"}
+{"jid": "j95299", "source": "Цей кущ має багато маленьких синіх ягід.", "level": "A1", "answer": "This bush have many small blue berries.", "topic": "HAVE GOT"}
+{"jid": "jfce1e", "source": "Якби вітчим ланцюг не полагодив, хлопець пішов би до школи пішки.", "level": "B2", "answer": "If the grandfather hadn't fixed the chain, the boy would have walked to school.", "topic": "3. Conditional"}
+{"jid": "j377d2", "source": "Саме зараз її долоні ширяють над єдиним світлом на цьому зовсім темному пляжі!", "level": "B2", "answer": "Her palms are hovering over the only light on this pitch-dark beach right now!", "topic": "All Present Tenses"}
+{"jid": "jb764f", "source": "Мало того що вона заціпеніла від шоку, вона ще й впустила шолом собі на ногу.", "level": "B2", "answer": "Not only is she frozen with shock, but she also drops the helmet on her foot.", "topic": "Inversion basic"}
+{"jid": "j0d9da", "source": "Цього місяця вона пробігла чотири забіги, і ноги це відчувають.", "level": "B1", "answer": "This month she will run four races, and her legs will feel it.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jae79a", "source": "У студії вона співає в старий мікрофон.", "level": "A1", "answer": "In the studio she sang into an old microphone.", "topic": "A, AN, THE"}
+{"jid": "j069d9", "source": "Якщо хлопавка клацає, усі на майданчику затихають.", "level": "B1", "answer": "If the clapperboard clicks, everyone goes quiet.", "topic": "0 Conditional"}
+{"jid": "jb6811", "source": "Ще ніколи я не бачив, щоб корок вийшов у цій кухні так чисто.", "level": "B2", "answer": "Never before have I seen a cork come out so cleanly.", "topic": "Inversion basic"}
+{"jid": "j25c06", "source": "Не буду брехати, ти прямо зараз проєктуєш цей шпаківник, як справжній архітектор.", "level": "B2", "answer": "I won't lie, you is designing this birdhouse right now like a real architect.", "topic": "All Present Tenses"}
+{"jid": "j1fe21", "source": "Якщо ти наносиш забагато рум'ян, щоки виглядають обгорілими на сонці.", "level": "B1", "answer": "If you apply too much lipstick, your cheeks look sunburnt.", "topic": "0 Conditional"}
+{"jid": "jfd94f", "source": "Валізи є не легкі, і вони падають на чоловіка.", "level": "A1", "answer": "The suitcases are not light, and they fall on the man.", "topic": "TO BE"}
+{"jid": "j2ae84", "source": "Чесно, до заходу сонця ти проїдеш на тому мотоциклі вертикально цілий кілометр.", "level": "B2", "answer": "Honestly, by sunset you'll be riding that motorcycle vertically for an entire kilometre.", "topic": "All Future Tenses"}
+{"jid": "j3c041", "source": "Цей кущ має багато маленьких синіх ягід.", "level": "A1", "answer": "This bush has many small blue berries.", "topic": "HAVE GOT"}
+{"jid": "j064a4", "source": "Вони крутили те тісто десять хвилин, поки борошно не вибухнуло. Трохи безладно.", "level": "B2", "answer": "They had been twirling that dough for ten minutes before the flour exploded. Slightly messy.", "topic": "Past Perfect Continuous"}
+{"jid": "j0ae28", "source": "Гонщик мав би помити мотоцикл до зустрічі о 14:00.", "level": "A2", "answer": "The racer should have washed the motorbike before the 2 pm meeting.", "topic": "Modal verb SHOULD"}
+{"jid": "j34908", "source": "Полум'я майже миттєво піднялося до рівня пояса, що зазвичай стається, коли займається жир.", "level": "B2", "answer": "The flames rose to waist level almost instantly, which usually happen when fat catches fire.", "topic": "Articles advanced"}
+{"jid": "j39f43", "source": "Валізи є не легкі, і вони падають на чоловіка.", "level": "A1", "answer": "The suitcases are not light, and they fall.", "topic": "TO BE"}
+{"jid": "jbc1c4", "source": "Якщо ти наносиш забагато рум'ян, щоки виглядають обгорілими на сонці.", "level": "B1", "answer": "When you wear too much blush, the cheeks look burnt by the sun.", "topic": "0 Conditional"}
+{"jid": "jf7ac4", "source": "Чесно, ти зробив смак цього смузі ідеальним завдяки тому манго.", "level": "B2", "answer": "Honestly, you've made this smoothie taste perfect thanks to the mango.", "topic": "Articles advanced"}
+{"jid": "j7b9a7", "source": "Якби сумка була закрита, під час арешту не випала б жодна здобич.", "level": "B2", "answer": "If the bag had been closed, no loot would have fell out during the arrest.", "topic": "3. Conditional"}
+{"jid": "j04dff", "source": "Він визнав, що був нервовим увесь політ додому.", "level": "B2", "answer": "He acknowledged that he'd been nervous for the whole flight back home.", "topic": "Reported speech"}
+{"jid": "je018b", "source": "Якщо парапланерист занурює ноги надто глибоко, озеро затягує його повністю!", "level": "B1", "answer": "If the paraglider dips his legs too deep, the lake sucks him in entirely!", "topic": "0 Conditional"}
+{"jid": "jd05a5", "source": "Подруга шкодує, що не скасувала на кілька годин раніше, але він не скаржиться.", "level": "B2", "answer": "The girlfriend regrets that she did not cancel several hours earlier, but he is not complaining.", "topic": "Wish clauses"}
+{"jid": "j61dfa", "source": "Бро, вона в хустці прямо біля гарячої духовки, їй мабуть досить жарко.", "level": "B1", "answer": "Bro, she in headscarf right next to the hot oven, she must be pretty hot.", "topic": "Modal verbs Probability"}
+{"jid": "j528f3", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "The fries is hot and crispy.", "topic": "TO BE"}
+{"jid": "j666fa", "source": "Їй потрібна лише одна маленька крапля пасти.", "level": "A1", "answer": "She only needs two small drops of paste.", "topic": "Cardinal numbers"}
+{"jid": "j68abc", "source": "У пивному саду вони випивають два келихи.", "level": "A1", "answer": "They drink two glasses.", "topic": "Cardinal numbers"}
+{"jid": "j56c22", "source": "Не буду брехати, ти прямо зараз проєктуєш цей шпаківник, як справжній архітектор.", "level": "B2", "answer": "I won't lie: at this very moment you are designing this birdhouse like a real architect.", "topic": "All Present Tenses"}
+{"jid": "j796e7", "source": "Один парашутист тримався за руки у формації, і наступний теж.", "level": "B1", "answer": "One skydiver held hands in the formation, and so did the next one.", "topic": "So, Neither, Nor"}
+{"jid": "jb322b", "source": "«Оце так!» - крикнув коментатор. - Він крикнув, що ніколи не бачив такого стрибка.", "level": "B1", "answer": "\"Wow!\" shouted the commentator. He shouted that he had never seen such a fall.", "topic": "Reported speech"}
+{"jid": "je5d89", "source": "Він полоскав ганчірку, коли помітив ще більше волосся на брудному дзеркалі.", "level": "B1", "answer": "He is rinsing the rag when he notices even more hair on the dirty mirror.", "topic": "Past Simple or Continuos"}
+{"jid": "j0025c", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "The French fries are hot and crispy.", "topic": "TO BE"}
+{"jid": "j11f5b", "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.", "level": "A2", "answer": "He usually pours a little sauce, but today he is pouring a whole bowl.", "topic": "Present Continuous or Simple"}
+{"jid": "j5205f", "source": "Що він розпаковує першим? Складений одяг.", "level": "A1", "answer": "What is he unpacking first? The folded clothes.", "topic": "Wh- questions"}
+{"jid": "je55bb", "source": "Вона хоче віддати вкоротити зелений комбінезон до вечірки.", "level": "B2", "answer": "She wants the green jumpsuit shortened by the party.", "topic": "Causative HAVE/GET"}
+{"jid": "jb3c8e", "source": "Нудна подорож, звісно. Вона мала там так мало задоволення.", "level": "A2", "answer": "A boring trip, of course. She had so few funs there.", "topic": "Countable and uncountable"}
+{"jid": "j31318", "source": "Він полоскав ганчірку, коли помітив ще більше волосся на брудному дзеркалі.", "level": "B1", "answer": "He was rinsing the rag when he noticed even more hair on the dirty window.", "topic": "Past Simple or Continuos"}
+{"jid": "jbf86c", "source": "Вони крутили те тісто десять хвилин, поки борошно не вибухнуло. Трохи безладно.", "level": "B2", "answer": "They had been spinning that dough for ten minutes until the sugar exploded. A bit messy.", "topic": "Past Perfect Continuous"}
+{"jid": "jdbfc1", "source": "Не буду брехати, ти прямо зараз проєктуєш цей шпаківник, як справжній архітектор.", "level": "B2", "answer": "I'm not going to lie, right now you're designing this nest box like a proper architect.", "topic": "All Present Tenses"}
+{"jid": "je07b3", "source": "У його шлунку зараз є багато спагеті.", "level": "A2", "answer": "There is a lot of spaghetti in his stomach.", "topic": "There is, are"}
+{"jid": "j56e9b", "source": "Вона запропонувала спробувати золото і на подрузі, і за дві хвилини обидві мали золоті повіки.", "level": "B2", "answer": "She suggested trying the gold on her friend as well, and in two minutes they both had golden eyelids.", "topic": "Reported speech"}
+{"jid": "j0b71d", "source": "Там лежать три футляри. Діамант вона знаходить у номері три.", "level": "A1", "answer": "Three cases lies there. She finds the diamond in number three.", "topic": "Cardinal numbers"}
+{"jid": "j9263d", "source": "Не буду брехати, ти прямо зараз проєктуєш цей шпаківник, як справжній архітектор.", "level": "B2", "answer": "I won't lie, you're designing this right now like a real architect.", "topic": "All Present Tenses"}
+{"jid": "j51916", "source": "Слухай, кажуть, хлопець, який заніс її сумки сходами, просто пробігав повз.", "level": "B1", "answer": "Listen, they say the guy who carried her bags up the stairs was just running past.", "topic": "Relative clauses"}
+{"jid": "j7b2be", "source": "Він відчув себе бажаним гостем, щойно прибув до різьблених дерев'яних воріт.", "level": "B2", "answer": "He felt like a welcome visitor the instant he came to the carved wooden gates.", "topic": "Advanced linkers"}
+{"jid": "j89bd9", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "The French fries are crispy and hot.", "topic": "TO BE"}
+{"jid": "j7e999", "source": "Уяви, вона сказала мені, що фанати кричали годину, перш ніж команда взагалі вийшла.", "level": "B2", "answer": "Imagine, she told me the fans had screamed for a whole hour before the team came out at all.", "topic": "All Past Tenses"}
+{"jid": "j3a5a1", "source": "Він визнав, що був нервовим увесь політ додому.", "level": "B2", "answer": "He admitted to having been nervous throughout the flight home.", "topic": "Reported speech"}
+{"jid": "j61a62", "source": "Скільки жуйки лишилося в пачці?", "level": "A2", "answer": "How much gum is left in the bag?", "topic": "Much, Many, Some..."}
+{"jid": "j0e2aa", "source": "Кухарка додає на кухні трави в сковороду.", "level": "A1", "answer": "The cook added herbs to the pan in the kitchen.", "topic": "Present Simple"}
+{"jid": "j74e43", "source": "Кухарка додає на кухні трави в сковороду.", "level": "A1", "answer": "The cook is adding herbs to the frying pan in the kitchen.", "topic": "Present Simple"}
+{"jid": "jee7d8", "source": "Якщо хлопавка клацає, усі на майданчику затихають.", "level": "B1", "answer": "When the clapper claps, everybody on set falls silent.", "topic": "0 Conditional"}
+{"jid": "j34abd", "source": "Попри спеку вони пройшли аж до вершини луки.", "level": "B2", "answer": "Despite the heat they hiked right up to the top of the meadow.", "topic": "Advanced linkers"}
+{"jid": "j5b376", "source": "Цього місяця вона пробігла чотири забіги, і ноги це відчувають.", "level": "B1", "answer": "This month she has ran four races, and her legs feels it.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "j117a4", "source": "«Оце так!» - крикнув коментатор. - Він крикнув, що ніколи не бачив такого стрибка.", "level": "B1", "answer": "\"Wow!\" shouted the commentator. He shouted that he had never seen such a thing.", "topic": "Reported speech"}
+{"jid": "jf1c62", "source": "Кухарка додає на кухні трави в сковороду.", "level": "A1", "answer": "In the kitchen the cook adds herbs to the pan.", "topic": "Present Simple"}
+{"jid": "j3576c", "source": "Він відчув себе бажаним гостем, щойно прибув до різьблених дерев'яних воріт.", "level": "B2", "answer": "He felt like welcome guest as soon as he arrived at the carved wooden gates.", "topic": "Advanced linkers"}
+{"jid": "j977d9", "source": "Його друг в машині, тож він поспішить назад незабаром.", "level": "A2", "answer": "His friend is in the house, so he will hurry back soon.", "topic": "Future with WILL"}
+{"jid": "j7902a", "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.", "level": "B1", "answer": "Honestly, she can't help crying like the most die-hard fan.", "topic": "Gerund vs Infinitive"}
+{"jid": "j23e85", "source": "Де вони сидять? За столом зі свічками.", "level": "A1", "answer": "Where are they sitting? At a table with flowers.", "topic": "Wh- questions"}
+{"jid": "jcaa26", "source": "Якби він залишив секундомір удома, зараз вони не святкували б.", "level": "B2", "answer": "If he'd left the stopwatch at home, they wouldn't be celebrating.", "topic": "Mixed Conditional"}
+{"jid": "j2a20d", "source": "Якби вітчим ланцюг не полагодив, хлопець пішов би до школи пішки.", "level": "B2", "answer": "If the stepfather hadn't fixed the chain, the boy would have walked.", "topic": "3. Conditional"}
+{"jid": "j81f0b", "source": "Подруга шкодує, що не скасувала на кілька годин раніше, але він не скаржиться.", "level": "B2", "answer": "My friend regret that she didn't cancel a few hours earlier, but he isn't complaining.", "topic": "Wish clauses"}
+{"jid": "jd54b2", "source": "Ти зазвичай читаєш одну сторінку, але вчора ти дочитала цілий роман. Респект.", "level": "A2", "answer": "You usually read one page, but yesterday you finished a whole novel. Respect.", "topic": "Present or Past Simple"}
+{"jid": "j1af9f", "source": "Бро, якби осінь тривала цілий рік, я чилив би в цьому парку щодня, чесно.", "level": "B1", "answer": "Bro, if fall lasted the whole year, I'd chill in this park every day, honestly.", "topic": "2. Conditional"}
+{"jid": "j615e2", "source": "Спорядження, яке використовує цей мийник вікон, складається з запобіжного пояса, каски та скребка.", "level": "B2", "answer": "The equipment that this window cleaner uses consists of a safety belt, a helmet and a scraper.", "topic": "Articles advanced"}
+{"jid": "j5735a", "source": "Вона знала, що маленька червона викрутка буде достатньою для всієї полиці.", "level": "B2", "answer": "She knew that the small red screwdriver would been enough for the whole shelf.", "topic": "Future in past"}
+{"jid": "j9b691", "source": "Скільки сторінок має ця газета?", "level": "A2", "answer": "How many does this newspaper have?", "topic": "Much, Many, Some..."}
+{"jid": "j384dd", "source": "Лікар каже, що в неї алергія на літні квіти.", "level": "A1", "answer": "According to the doctor, she is allergic to summer flowers.", "topic": "A, AN, THE"}
+{"jid": "j1a240", "source": "Чесно, ти зробив смак цього смузі ідеальним завдяки тому манго.", "level": "B2", "answer": "Honestly, you made this smoothie taste perfect thanks to that banana.", "topic": "Articles advanced"}
+{"jid": "j7c599", "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.", "level": "A2", "answer": "He usually pours a small amount of sauce, but today he's pouring a whole bowlful.", "topic": "Present Continuous or Simple"}
+{"jid": "j405c7", "source": "Мало того що вона заціпеніла від шоку, вона ще й впустила шолом собі на ногу.", "level": "B2", "answer": "Not only did she freeze from shock, but she also dropped the helmet onto her foot.", "topic": "Inversion basic"}
+{"jid": "j0d722", "source": "У маленькому салоні небагато повітря.", "level": "A2", "answer": "There aren't many airs in the small car.", "topic": "Countable and uncountable"}
+{"jid": "jba07a", "source": "Зазвичай він ллє мало соусу, але сьогодні він ллє цілу миску.", "level": "A2", "answer": "He usually pours a little, but today he is pouring a whole bowl.", "topic": "Present Continuous or Simple"}
+{"jid": "jf4814", "source": "Бро, цей скутер має двох крихітних вершників. Це треба бачити.", "level": "A1", "answer": "Bro, this scooter has three tiny riders. You have to see it.", "topic": "HAVE GOT"}
+{"jid": "jf4a13", "source": "У студії вона співає в старий мікрофон.", "level": "A1", "answer": "She's singing into the old microphone in the studio.", "topic": "A, AN, THE"}
+{"jid": "j3935e", "source": "Учора він витратив цілий балончик за раз.", "level": "A2", "answer": "Yesterday he emptied a whole aerosol can in one go.", "topic": "Past Simple"}
+{"jid": "jfe968", "source": "Падіння чоловіка підкинуло його пакет з обідом у повітря.", "level": "B1", "answer": "His lunch bag was thrown into the air.", "topic": "Passive or Active"}
+{"jid": "j277f4", "source": "Чесно, вона не може не вболівати як найзапекліша фанатка.", "level": "B1", "answer": "Honestly, she couldn't help cheering like the most die-hard fan.", "topic": "Gerund vs Infinitive"}
+{"jid": "j4f499", "source": "Вона вирішила вдягнути райдужний костюм із пір'я на чолі параду.", "level": "B1", "answer": "She decided to put on a rainbow feathered costume at the front of the parade.", "topic": "Gerund vs Infinitive"}
+{"jid": "j5d785", "source": "Там лежать три футляри. Діамант вона знаходить у номері три.", "level": "A1", "answer": "Three cases lie there. She finds the diamond in number three.", "topic": "Cardinal numbers"}
+{"jid": "j83179", "source": "Учора офіцер перевірив кожну сумку на кордоні! Жах!", "level": "A2", "answer": "Yesterday every bag was checked at the border! Horrible!", "topic": "Past Simple"}
+{"jid": "jc0c2c", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "The fries were hot and crispy.", "topic": "TO BE"}
+{"jid": "je129e", "source": "Їй потрібна лише одна маленька крапля пасти.", "level": "A1", "answer": "She only needs one small drop of paste.", "topic": "Cardinal numbers"}
+{"jid": "j57ee3", "source": "Ще ніколи я не бачив, щоб корок вийшов у цій кухні так чисто.", "level": "B2", "answer": "Never have I seen a cork come out so cleanly in this kitchen.", "topic": "Inversion basic"}
+{"jid": "jc98f5", "source": "Картопля фрі є гаряча й хрумка.", "level": "A1", "answer": "Fries are hot and crisp.", "topic": "TO BE"}
+{"jid": "ja6bd5", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She took one screwdriver out of the set.", "topic": "Cardinal numbers"}
+{"jid": "j2eb4a", "source": "Де вони сидять? За столом зі свічками.", "level": "A1", "answer": "Where do they sit? At the table with the candles.", "topic": "Wh- questions"}
+{"jid": "j8c3dd", "source": "Вона кладе на стіл одну стару батарейку.", "level": "A1", "answer": "She's putting an old battery on the table.", "topic": "A, AN, THE"}
+{"jid": "jc825d", "source": "Подружко, кажуть, завтра в цей час вона знову стоятиме в першій шерензі.", "level": "B1", "answer": "Girl, they say she will be standing in the first row again at this time tomorrow.", "topic": "Future Continuous"}
+{"jid": "j39f72", "source": "Чесно, до заходу сонця ти проїдеш на тому мотоциклі вертикально цілий кілометр.", "level": "B2", "answer": "To be honest, by sundown you're going to ride that motorbike a full kilometre vertically.", "topic": "All Future Tenses"}
+{"jid": "j0ef42", "source": "Скільки дощу тут випадає за годину?", "level": "A2", "answer": "How many rain fall here in an hour?", "topic": "Much, Many, Some..."}
+{"jid": "j69083", "source": "Скільки сторінок має ця газета?", "level": "A2", "answer": "How many pages does this magazine have?", "topic": "Much, Many, Some..."}
+{"jid": "j8dfea", "source": "На цьому дивані є двоє людей, які плачуть.", "level": "A2", "answer": "There is two people who is crying on this sofa.", "topic": "There is, are"}
+{"jid": "j19e33", "source": "За столом є одна гостя й один господар.", "level": "A2", "answer": "There's a guest and a host at the table.", "topic": "There is, are"}
+{"jid": "je91f5", "source": "У маленькому салоні небагато повітря.", "level": "A2", "answer": "There wasn't much air in the small car.", "topic": "Countable and uncountable"}
+{"jid": "j142e8", "source": "Подружко, кажуть, завтра в цей час вона знову стоятиме в першій шерензі.", "level": "B1", "answer": "Girl, apparently this time tomorrow she'll be standing in the front line again.", "topic": "Future Continuous"}
+{"jid": "j214d0", "source": "Молода жінка має вдома хороший догляд.", "level": "A1", "answer": "The young woman has good care at home.", "topic": "HAVE GOT"}
+{"jid": "j1e4cc", "source": "Вона дістає з набору одну викрутку.", "level": "A1", "answer": "She takes one screwdriver.", "topic": "Cardinal numbers"}
+{"jid": "j59805", "source": "Чергування в затоці: кожен човен має бути зареєстрований.", "level": "A2", "answer": "Bay watch duty: every boat must be registered.", "topic": "Must, Have to..."}
+{"jid": "ja1172", "source": "Йоу, він одягається доволі швидко і поправляє свою краватку.", "level": "A1", "answer": "Yo, he dresses quite quickly and straightens his tie.", "topic": "My, Your, His,..."}
+{"jid": "j3aa80", "source": "Очевидно, є дві публіки для одного маленького цуценяти.", "level": "A2", "answer": "Apparently, there are two audiences.", "topic": "There is, are"}
+{"jid": "jf67ce", "source": "Він визнав, що був нервовим увесь політ додому.", "level": "B2", "answer": "He confessed that he had been nervous all the way through the flight home.", "topic": "Reported speech"}
+{"jid": "jcfd25", "source": "Той маленький загорнутий подарунок того вечора так ніким і не був відкритий.", "level": "B1", "answer": "That evening, the small wrapped present remained unopened by anyone.", "topic": "Passive or Active"}
+{"jid": "j71d3e", "source": "Якщо парапланерист занурює ноги надто глибоко, озеро затягує його повністю!", "level": "B1", "answer": "If the paraglider dips his feet too deep, it pulls him in completely!", "topic": "0 Conditional"}
+{"jid": "j66d68", "source": "Вона часто варить пасту, а зараз тре сир.", "level": "A2", "answer": "She often cooks, but now she is grating cheese.", "topic": "Present Continuous or Simple"}
+{"jid": "j6f260", "source": "Дві хвилини вона бігала на місці.", "level": "A2", "answer": "She runs on the spot for two minutes.", "topic": "Past Simple"}
+{"jid": "j0eafb", "source": "Дві хвилини вона бігала на місці.", "level": "A2", "answer": "She was running on the spot for two minutes.", "topic": "Past Simple"}
+{"jid": "jbd244", "source": "Маленький персонаж голосно закричав, коли колючки кактуса вкололи йому руку.", "level": "B1", "answer": "The tiny character yelled loudly when the spines of the cactus pricked his hand.", "topic": "Passive or Active"}
+{"jid": "j5f89c", "source": "Примітка до бюджету: двоє гостей налякані й не потребують багато світла.", "level": "A2", "answer": "Budget note: two frightened guests don't need much light.", "topic": "Countable and uncountable"}
+{"jid": "j152ca", "source": "Вона часто варить пасту, а зараз тре сир.", "level": "A2", "answer": "She often cook pasta, but now she grating cheese.", "topic": "Present Continuous or Simple"}
+{"jid": "j714e4", "source": "Вона пише те рівняння на старій дошці.", "level": "A1", "answer": "She writes that equation on the old board.", "topic": "A, AN, THE"}
+{"jid": "j84f0e", "source": "Широка річка ллється через край водоспаду.", "level": "A1", "answer": "The river pours over the edge of the waterfall.", "topic": "Present Simple"}
+{"jid": "j8db5f", "source": "Ще ніколи я не бачив, щоб корок вийшов у цій кухні так чисто.", "level": "B2", "answer": "Never before I have seen a cork come out so cleanly in this kitchen.", "topic": "Inversion basic"}
+{"jid": "j8adcd", "source": "Деко, яке двадцять років простояло в тій хатині, запікало все до золотистого.", "level": "B2", "answer": "The baking tray which had sat in that little hut for twenty years baked everything until it was golden.", "topic": "Relative clauses"}
+{"jid": "jd5b0e", "source": "Мало того що вона заціпеніла від шоку, вона ще й впустила шолом собі на ногу.", "level": "B2", "answer": "Not only was she frozen with shock, but she also dropped the helmet on her hand.", "topic": "Inversion basic"}
+{"jid": "jd8e14", "source": "Маленький ґудзик лежить на дерев'яному столі.", "level": "A1", "answer": "The little button is lying on a wooden table.", "topic": "Prepositions of place/time"}
+{"jid": "jd22dc", "source": "Вона знала, що маленька червона викрутка буде достатньою для всієї полиці.", "level": "B2", "answer": "She knew that the small screwdriver would be enough for the whole shelf.", "topic": "Future in past"}
+{"jid": "je4eda", "source": "Валізи є не легкі, і вони падають на чоловіка.", "level": "A1", "answer": "The suitcases are not light and they are falling on the man.", "topic": "TO BE"}
+{"jid": "j325b6", "source": "Цю поведінку спостерігали, коли мандрівниця прикріплювала бирку до валізи.", "level": "B1", "answer": "This behaviour was observe when the traveller were attaching a tag to her suitcase.", "topic": "Past Simple or Continuos"}
+{"jid": "j415a2", "source": "Вона знала, що маленька червона викрутка буде достатньою для всієї полиці.", "level": "B2", "answer": "She knew a small red screwdriver would be sufficient for the whole shelf.", "topic": "Future in past"}
+{"jid": "j01f67", "source": "Спорядження, яке використовує цей мийник вікон, складається з запобіжного пояса, каски та скребка.", "level": "B2", "answer": "The equipment that this window cleaner uses consists of a belt, a helmet and a scraper.", "topic": "Articles advanced"}
+{"jid": "j21930", "source": "Спорядження, яке використовує цей мийник вікон, складається з запобіжного пояса, каски та скребка.", "level": "B2", "answer": "The equipment that this window cleaner uses consists of a safety belt, a helmet and a sponge.", "topic": "Articles advanced"}
+{"jid": "j8de7c", "source": "Стіна має багато старих інструментів.", "level": "A1", "answer": "The wall has many tools.", "topic": "HAVE GOT"}
