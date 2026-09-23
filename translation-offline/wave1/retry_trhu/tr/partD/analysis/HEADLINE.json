@@ -1,0 +1,1001 @@
+{
+ "label": "Wave 1 Turkish: frozen stack (L3 SOURCE-ONLY + content check, TIP rejected, no F4/AG), fresh production set opened ONCE",
+ "truth": "judge_label (partD/judge/labels.jsonl, 4 opus judge sessions)",
+ "pooled": {
+  "coverage": {
+   "x": 467,
+   "n": 504,
+   "pct": 92.66,
+   "cp95": [
+    90.02,
+    94.78
+   ]
+  },
+  "fa": {
+   "x": 18,
+   "n": 396,
+   "pct": 4.55,
+   "cp95": [
+    2.72,
+    7.09
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": true,
+   "interval": false
+  }
+ },
+ "per_level": {
+  "A1": {
+   "coverage": {
+    "x": 102,
+    "n": 128,
+    "pct": 79.69,
+    "cp95": [
+     71.67,
+     86.28
+    ]
+   },
+   "fa": {
+    "x": 1,
+    "n": 97,
+    "pct": 1.03,
+    "cp95": [
+     0.03,
+     5.61
+    ]
+   },
+   "coverage_target_90": {
+    "point": false,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "A2": {
+   "coverage": {
+    "x": 117,
+    "n": 123,
+    "pct": 95.12,
+    "cp95": [
+     89.68,
+     98.19
+    ]
+   },
+   "fa": {
+    "x": 6,
+    "n": 102,
+    "pct": 5.88,
+    "cp95": [
+     2.19,
+     12.36
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": false,
+    "interval": false
+   }
+  },
+  "B1": {
+   "coverage": {
+    "x": 120,
+    "n": 124,
+    "pct": 96.77,
+    "cp95": [
+     91.95,
+     99.11
+    ]
+   },
+   "fa": {
+    "x": 7,
+    "n": 101,
+    "pct": 6.93,
+    "cp95": [
+     2.83,
+     13.76
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": false,
+    "interval": false
+   }
+  },
+  "B2": {
+   "coverage": {
+    "x": 128,
+    "n": 129,
+    "pct": 99.22,
+    "cp95": [
+     95.76,
+     99.98
+    ]
+   },
+   "fa": {
+    "x": 4,
+    "n": 96,
+    "pct": 4.17,
+    "cp95": [
+     1.15,
+     10.33
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  }
+ },
+ "l3_only_diagnostic": {
+  "coverage": {
+   "x": 473,
+   "n": 504,
+   "pct": 93.85,
+   "cp95": [
+    91.38,
+    95.78
+   ]
+  },
+  "fa": {
+   "x": 42,
+   "n": 396,
+   "pct": 10.61,
+   "cp95": [
+    7.75,
+    14.07
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": false,
+   "interval": false
+  }
+ },
+ "layers": {
+  "L3+CC:NONE": 485,
+  "CC:MISSING": 30,
+  "L3:TIPrej": 80,
+  "L3": 305
+ },
+ "gemini": {
+  "ledger_rows": 1416,
+  "counted_http200": 1415,
+  "by_part": {
+   "l3": 900,
+   "cc": 515
+  },
+  "failed_counted": 0,
+  "http": {
+   "200": 1415,
+   "503": 1
+  },
+  "spend_usd": 0.203629
+ },
+ "ledger_language": {
+  "D_CC": 515,
+  "D_L3": 900
+ },
+ "access_logs": [
+  "run/access_log.jsonl"
+ ],
+ "both_targets_met_on_point": true,
+ "false_rejections": {
+  "n": 37,
+  "by_layer": {
+   "L3": 17,
+   "CC:MISSING": 6,
+   "L3:TIPrej": 14
+  },
+  "by_writer": {
+   "correct/None": 32,
+   "wrong/S": 1,
+   "wrong/M": 4
+  },
+  "by_level": {
+   "B1": 4,
+   "A2": 6,
+   "A1": 26,
+   "B2": 1
+  },
+  "items": [
+   {
+    "aid": "A:2039:c3",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Gözyaşları daha kurumadan en yakın arkadaşı tarafından avutuldu.",
+    "answer": "Her best friend comforted her before her tears had even dried.",
+    "judge_reason": "Active voice keeps the agent; meaning matches."
+   },
+   {
+    "aid": "A:10861:c5",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ülkeye girebileceğini söyledi.",
+    "answer": "He said he could come into the country.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:12092:c3",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "al",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bir nefes daha al, dibe ulaşacaksın!",
+    "answer": "One more breath, you'll get to the bottom!",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:13841:c1",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sunucu doğru cevabını karta yazıyor.",
+    "answer": "The presenter writes his correct answer on the card.",
+    "judge_reason": "Faithful meaning."
+   },
+   {
+    "aid": "A:13841:c2",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sunucu doğru cevabını karta yazıyor.",
+    "answer": "The host is writing her correct answer on the card.",
+    "judge_reason": "Genderless possessive; her acceptable."
+   },
+   {
+    "aid": "A:13841:c4",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sunucu doğru cevabını karta yazıyor.",
+    "answer": "The presenter is writing his right answer onto the card.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:13841:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Sunucu doğru cevabını karta yazıyor.",
+    "answer": "The TV host writes her correct answer on the card.",
+    "judge_reason": "Same meaning; genderless source"
+   },
+   {
+    "aid": "A:20213:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bu telefon yine çalıyor!",
+    "answer": "This phone rings again!",
+    "judge_reason": "Present time frame kept; tense free"
+   },
+   {
+    "aid": "A:23033:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Parktaki taş basamaklardan aşağı iniyor.",
+    "answer": "He comes down the stone stairs in the park.",
+    "judge_reason": "Meaning matches; gender free."
+   },
+   {
+    "aid": "A:24198:c1",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "kadar",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bu yabancı onu kırmızı otobüse kadar götürüyor.",
+    "answer": "This stranger takes her to the red bus.",
+    "judge_reason": "Faithful meaning."
+   },
+   {
+    "aid": "A:27060:c1",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Macera gün batımı bitiyor.",
+    "answer": "The adventure sunset is ending.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:27060:c2",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Macera gün batımı bitiyor.",
+    "answer": "The adventure sunset ends.",
+    "judge_reason": "Literal, matches source."
+   },
+   {
+    "aid": "A:27060:c3",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Macera gün batımı bitiyor.",
+    "answer": "The adventure sunset is coming to an end.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:27060:c4",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Macera gün batımı bitiyor.",
+    "answer": "The sunset adventure is ending.",
+    "judge_reason": "Faithful."
+   },
+   {
+    "aid": "A:27060:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Macera gün batımı bitiyor.",
+    "answer": "The sunset adventure is coming to an end.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:30792:c5",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "haykırışın",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kızım, ben üçüncü haykırışın yavaşça geri geldiğini duydum.",
+    "answer": "Daughter, I heard the third yell echo back slowly.",
+    "judge_reason": "Faithful meaning."
+   },
+   {
+    "aid": "A:30792:s",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "S",
+    "source": "Kızım, ben üçüncü haykırışın yavaşça geri geldiğini duydum.",
+    "answer": "My daughter, I heard the third shout come back slow.",
+    "judge_reason": "Same meaning; informal flat adverb acceptable"
+   },
+   {
+    "aid": "A:31993:c1",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.",
+    "answer": "The shovel turns the soil and two leaves appear.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:31993:c2",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.",
+    "answer": "The spade turns over the earth and two leaves come out.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:31993:c3",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.",
+    "answer": "The shovel is turning the soil, and two leaves are appearing.",
+    "judge_reason": "Faithful; plural corrected naturally."
+   },
+   {
+    "aid": "A:31993:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.",
+    "answer": "The shovel turns over the dirt and two leaves emerge.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:31993:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.",
+    "answer": "The spade is turning the soil and two leaves show up.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:32116:c2",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Canım, yaşlı hanımın arkasında çok komşunun yürüdüğünü söyledi.",
+    "answer": "Honey, she said a lot of neighbors are walking behind the old woman.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:32116:c4",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Canım, yaşlı hanımın arkasında çok komşunun yürüdüğünü söyledi.",
+    "answer": "Dear, she said that many neighbours are walking behind the old lady.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:33261:m",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "tava",
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Çanta neden bu kadar ağır? Üstünde tencere tava asılı.",
+    "answer": "Why is the bag so heavy? Pots are hanging on it.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:33274:c3",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Hey, tam masanın üstünde yardım için mendil var, kanka.",
+    "answer": "Hey dude, there's a handkerchief right on the table to help.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:34687:c2",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "giyiyor",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bir kadın onun zümrüt kolyesiyle kırmızı giyiyor.",
+    "answer": "A woman wears red with her emerald necklace.",
+    "judge_reason": "Accurate"
+   },
+   {
+    "aid": "A:34687:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bir kadın onun zümrüt kolyesiyle kırmızı giyiyor.",
+    "answer": "One woman wears red with her emerald necklace.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:34701:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Onlar nerede dinleniyor? Bir tuz gölünün suyunda.",
+    "answer": "Where are they relaxing? In salt lake water.",
+    "judge_reason": "Acceptable mass-noun phrasing; same meaning."
+   },
+   {
+    "aid": "A:35311:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Açıkçası etkileyici: sen ona kadar sayıyorsun ve on numaralı kar tanesi konuyor.",
+    "answer": "Frankly, it's impressive: you count up to ten and snowflake number ten settles.",
+    "judge_reason": "Meaning matches."
+   },
+   {
+    "aid": "A:35621:m",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Hey, o onun kollarını havaya kaldırıyor çünkü başarı çok büyük.",
+    "answer": "Hey, she raises her arms because the success is huge.",
+    "judge_reason": "Same meaning; she acceptable"
+   },
+   {
+    "aid": "A:35823:c2",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "İki genç kanepede oyun oynuyor.",
+    "answer": "Two teenagers play games on the couch.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:35823:c4",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "İki genç kanepede oyun oynuyor.",
+    "answer": "Two young people play a game on the sofa.",
+    "judge_reason": "Faithful meaning."
+   },
+   {
+    "aid": "A:35823:m",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "oyun",
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "İki genç kanepede oyun oynuyor.",
+    "answer": "Two young people are playing on the sofa.",
+    "judge_reason": "\"playing\" covers \"oyun oynuyor\""
+   },
+   {
+    "aid": "A:36865:m",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Dinle, o bana yarına kadar o kütüklerin küle dönmüş olacağını söyledi.",
+    "answer": "Listen, he told me those logs will have turned to ash.",
+    "judge_reason": "Only time adverbial dropped, acceptable"
+   },
+   {
+    "aid": "A:43555:c5",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Dün taksi yoğun saatte tek elle sürüldü; belli ki şehrin en güvenli yolculuğu.",
+    "answer": "Somebody drove the taxi with one hand in rush hour yesterday; obviously the safest ride in the city.",
+    "judge_reason": "Active with somebody, same meaning"
+   },
+   {
+    "aid": "A:43602:c5",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Elleri yapış yapış bir felaket! Ve kolları da.",
+    "answer": "His hands are one sticky disaster! His arms are too.",
+    "judge_reason": "Meaning matches."
+   }
+  ]
+ },
+ "false_acceptances": {
+  "n": 18,
+  "by_layer": {
+   "L3+CC:NONE": 18
+  },
+  "by_writer_type": {
+   "T": 1,
+   "None": 5,
+   "M": 10,
+   "W": 2
+  },
+  "by_level": {
+   "B1": 7,
+   "A2": 6,
+   "A1": 1,
+   "B2": 4
+  },
+  "items": [
+   {
+    "aid": "A:2236:t",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Halatta elleri titriyor, yani yukarıda ödü kopuyor olmalı.",
+    "answer": "His hands were shaking on the rope, so he must have been terrified up there.",
+    "judge_reason": "Past time frame; Turkish is present."
+   },
+   {
+    "aid": "A:8787:c4",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Bu rauntan önce iki raunt yaptığı için kolları yanıyordu.",
+    "answer": "Her arms burned because she had already done two rounds before this one.",
+    "judge_reason": "Added 'already' not in source."
+   },
+   {
+    "aid": "A:11580:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Açık ağzına bak! Muzu yemek üzere.",
+    "answer": "Look at his mouth! He's about to eat the banana.",
+    "judge_reason": "Dropped adjective 'open'"
+   },
+   {
+    "aid": "A:14306:c5",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ortadaki buz, iskelenin yanındakinden daha ince.",
+    "answer": "Ice in the middle is thinner than that next to the pier.",
+    "judge_reason": "Missing obligatory article before \"Ice\""
+   },
+   {
+    "aid": "A:20891:w",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Dar sokakta büyük bir su birikintisine atlıyor.",
+    "answer": "He jumps into a big puddle in the wide street.",
+    "judge_reason": "\"wide\" instead of narrow"
+   },
+   {
+    "aid": "A:26708:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Onlar her akşam buraya çıkarlar ama şimdi el ele tutuşuyorlar.",
+    "answer": "They come up every evening, but now they're holding hands.",
+    "judge_reason": "Dropped place word \"here\""
+   },
+   {
+    "aid": "A:27364:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Doktordan çoktan randevu aldı. O ayak bileğini sonsuza dek dinlendirecek!",
+    "answer": "She has already made an appointment. She is going to rest her ankle forever!",
+    "judge_reason": "Dropped 'from the doctor'"
+   },
+   {
+    "aid": "A:32116:c5",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Canım, yaşlı hanımın arkasında çok komşunun yürüdüğünü söyledi.",
+    "answer": "Sweetie, he told me many neighbors were walking behind the old woman.",
+    "judge_reason": "Adds 'me'; Turkish only says 'said'."
+   },
+   {
+    "aid": "A:36188:c5",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Yeleğin kolu yok, bu yüzden ceketten daha az malzeme gerekir.",
+    "answer": "The vest has no arms, so it takes less material than the jacket.",
+    "judge_reason": "'arms' wrong for sleeves."
+   },
+   {
+    "aid": "A:36687:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Bol kolları görünce terzi anında karar veriyor: onları da düzeltecek.",
+    "answer": "When he sees the sleeves, the tailor decides instantly: he will fix them too.",
+    "judge_reason": "Dropped adjective \"baggy\""
+   },
+   {
+    "aid": "A:36687:w",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Bol kolları görünce terzi anında karar veriyor: onları da düzeltecek.",
+    "answer": "When he sees the baggy trousers, the tailor decides instantly: he will fix them too.",
+    "judge_reason": "trousers instead of sleeves"
+   },
+   {
+    "aid": "A:39538:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Şu anda alnı terden parlıyor; kusursuz planlama, belli ki.",
+    "answer": "Right now his forehead is shining; perfect planning, clearly.",
+    "judge_reason": "Dropped 'with sweat'."
+   },
+   {
+    "aid": "A:40373:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Kanka, o yabancı yaşlı adama gerçek bir iyilik gösterdiğinde bardaktan boşanırcasına yağmur yağıyordu, yalan yok.",
+    "answer": "Bro, it was pouring with rain when he showed that stranger a real kindness, no lie.",
+    "judge_reason": "Dropped 'old man'."
+   },
+   {
+    "aid": "A:40618:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Sen her bir bavulu o minibüse kaldırdın, değil mi? Sırtın tamamen mahvoldu!",
+    "answer": "You lifted every single suitcase, didn't you? Your back is completely ruined!",
+    "judge_reason": "Dropped direction phrase 'into that minibus'."
+   },
+   {
+    "aid": "A:43555:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Dün taksi yoğun saatte tek elle sürüldü; belli ki şehrin en güvenli yolculuğu.",
+    "answer": "Yesterday the taxi was driven during rush hour; clearly the safest ride in the city.",
+    "judge_reason": "Dropped 'one-handed'"
+   },
+   {
+    "aid": "A:43956:c3",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "O çorbayı tattığında, adam çiçekleri çoktan arkasına saklamıştı.",
+    "answer": "When she tasted the soup, the man had already put the flowers behind his back.",
+    "judge_reason": "\"put\" loses the meaning \"hid\""
+   },
+   {
+    "aid": "A:43956:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "O çorbayı tattığında, adam çiçekleri çoktan arkasına saklamıştı.",
+    "answer": "When she tasted the soup, the man had already hidden the flowers.",
+    "judge_reason": "Dropped place phrase 'behind his back'"
+   },
+   {
+    "aid": "A:44014:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Bahçede şişme şatonun yanındaki çadır hâlâ ayakta duran tek şey.",
+    "answer": "The tent next to the bouncy castle is the only thing still standing.",
+    "judge_reason": "Drops \"in the garden\"."
+   }
+  ]
+ },
+ "judge_noise": {
+  "controls": 80,
+  "agree": 80,
+  "disagree": 0,
+  "disagree_rate": {
+   "x": 0,
+   "n": 80,
+   "pct": 0.0,
+   "cp95": [
+    0.0,
+    4.51
+   ]
+  },
+  "by_level": {
+   "A1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "A2": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B2": {
+    "n": 20,
+    "disagree": 0
+   }
+  },
+  "by_intent": {
+   "correct": {
+    "n": 40,
+    "disagree": 0
+   },
+   "wrong": {
+    "n": 40,
+    "disagree": 0
+   }
+  },
+  "disagreements": []
+ }
+}
