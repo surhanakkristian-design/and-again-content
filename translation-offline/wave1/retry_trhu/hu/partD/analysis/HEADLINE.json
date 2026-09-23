@@ -1,0 +1,922 @@
+{
+ "label": "Wave 1 Hungarian: frozen stack (L3 SOURCE-ONLY + content check, TIP rejected, no F4/AG), fresh production set opened ONCE",
+ "truth": "judge_label (partD/judge/labels.jsonl, 4 opus judge sessions)",
+ "pooled": {
+  "coverage": {
+   "x": 464,
+   "n": 494,
+   "pct": 93.93,
+   "cp95": [
+    91.44,
+    95.87
+   ]
+  },
+  "fa": {
+   "x": 19,
+   "n": 406,
+   "pct": 4.68,
+   "cp95": [
+    2.84,
+    7.21
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": true,
+   "interval": false
+  }
+ },
+ "per_level": {
+  "A1": {
+   "coverage": {
+    "x": 117,
+    "n": 125,
+    "pct": 93.6,
+    "cp95": [
+     87.78,
+     97.2
+    ]
+   },
+   "fa": {
+    "x": 2,
+    "n": 100,
+    "pct": 2.0,
+    "cp95": [
+     0.24,
+     7.04
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "A2": {
+   "coverage": {
+    "x": 109,
+    "n": 121,
+    "pct": 90.08,
+    "cp95": [
+     83.32,
+     94.77
+    ]
+   },
+   "fa": {
+    "x": 4,
+    "n": 104,
+    "pct": 3.85,
+    "cp95": [
+     1.06,
+     9.56
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B1": {
+   "coverage": {
+    "x": 121,
+    "n": 123,
+    "pct": 98.37,
+    "cp95": [
+     94.25,
+     99.8
+    ]
+   },
+   "fa": {
+    "x": 10,
+    "n": 102,
+    "pct": 9.8,
+    "cp95": [
+     4.8,
+     17.29
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": false,
+    "interval": false
+   }
+  },
+  "B2": {
+   "coverage": {
+    "x": 117,
+    "n": 125,
+    "pct": 93.6,
+    "cp95": [
+     87.78,
+     97.2
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 100,
+    "pct": 3.0,
+    "cp95": [
+     0.62,
+     8.52
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  }
+ },
+ "l3_only_diagnostic": {
+  "coverage": {
+   "x": 474,
+   "n": 494,
+   "pct": 95.95,
+   "cp95": [
+    93.82,
+    97.51
+   ]
+  },
+  "fa": {
+   "x": 44,
+   "n": 406,
+   "pct": 10.84,
+   "cp95": [
+    7.99,
+    14.27
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": false,
+   "interval": false
+  }
+ },
+ "layers": {
+  "L3+CC:NONE": 483,
+  "L3:TIPrej": 62,
+  "L3": 320,
+  "CC:MISSING": 35
+ },
+ "gemini": {
+  "ledger_rows": 1419,
+  "counted_http200": 1418,
+  "by_part": {
+   "l3": 900,
+   "cc": 518
+  },
+  "failed_counted": 0,
+  "http": {
+   "200": 1418,
+   "503": 1
+  },
+  "spend_usd": 0.208738
+ },
+ "ledger_language": {
+  "D_CC": 518,
+  "D_L3": 900
+ },
+ "access_logs": [
+  "run/access_log.jsonl"
+ ],
+ "both_targets_met_on_point": true,
+ "false_rejections": {
+  "n": 30,
+  "by_layer": {
+   "L3": 14,
+   "L3:TIPrej": 6,
+   "CC:MISSING": 10
+  },
+  "by_writer": {
+   "correct/None": 30
+  },
+  "by_level": {
+   "B2": 8,
+   "A2": 12,
+   "A1": 8,
+   "B1": 2
+  },
+  "items": [
+   {
+    "aid": "A:1465:c1",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Az ösvény végére három órán át fognak gyalogolni a kaktuszok között.",
+    "answer": "By the end of the trail, they will have been walking among the cacti for three hours.",
+    "judge_reason": "Accurate meaning and grammar."
+   },
+   {
+    "aid": "A:12937:c3",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A fiú nagyon könnyen kapja el a piros labdát.",
+    "answer": "The boy is catching the red ball very easily.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:16071:c4",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Nem sok idő maradt a meccsből.",
+    "answer": "Not much of the match time remains.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:16791:c3",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "tele",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A hörcsög magokkal tömi tele a pofazacskóját.",
+    "answer": "The hamster fills its cheeks with seeds.",
+    "judge_reason": "Cheeks acceptable for cheek pouches."
+   },
+   {
+    "aid": "A:18558:c2",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "sakktáblájuk",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Az idős férfiaknak kis sakktáblájuk van.",
+    "answer": "The elderly men have got small chessboards.",
+    "judge_reason": "Faithful"
+   },
+   {
+    "aid": "A:20767:c1",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "elolvasnod",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ha jó jegyet akarsz, el kellene olvasnod a jegyzeteidet.",
+    "answer": "If you want a good grade, you should read your notes.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:20767:c2",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "el",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ha jó jegyet akarsz, el kellene olvasnod a jegyzeteidet.",
+    "answer": "If you want a good mark, you ought to read your notes.",
+    "judge_reason": "Faithful"
+   },
+   {
+    "aid": "A:26068:c5",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Gyere hatkor, és a sétájuk éppen csak kezdődni fog.",
+    "answer": "Come at six, and their walk will be starting.",
+    "judge_reason": "Dropped 'just' is acceptable."
+   },
+   {
+    "aid": "A:26454:c2",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Nézd! A felesége épp fordítja egy palacsintát a serpenyőben.",
+    "answer": "Look! Her wife is turning a pancake in the frying pan.",
+    "judge_reason": "Genderless possessor; her allowed."
+   },
+   {
+    "aid": "A:27588:c5",
+    "level": "A2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A támadás hirtelen véget ér, és a mező teljesen üres!",
+    "answer": "The attack suddenly ends and the field is empty!",
+    "judge_reason": "Dropped degree adverb acceptable"
+   },
+   {
+    "aid": "A:31482:c2",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "kap",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mi kap oda a huskynak? Két játék dinoszaurusz.",
+    "answer": "What is the husky given? Two toy dinosaurs.",
+    "judge_reason": "Same meaning via passive."
+   },
+   {
+    "aid": "A:31482:c3",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "oda",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mi kap oda a huskynak? Két játék dinoszaurusz.",
+    "answer": "What does the husky receive? Two toy dinosaurs.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:32585:c3",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A szobájában van egy nagyon hideg légkondi.",
+    "answer": "His room has a very cold air conditioner.",
+    "judge_reason": "Same meaning; genderless possessive."
+   },
+   {
+    "aid": "A:33560:c4",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A gyerek szombaton a labdájához fut.",
+    "answer": "The kid runs to his ball on Saturdays.",
+    "judge_reason": "Accurate meaning."
+   },
+   {
+    "aid": "A:33847:c5",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A lánynak ma sok postája van.",
+    "answer": "The girl has a lot of mail.",
+    "judge_reason": "Dropped 'today' is acceptable."
+   },
+   {
+    "aid": "A:34183:c1",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "semmilyen",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Képzeld, ő azt mondta, hogy a szekrényében nincs semmilyen narancssárga ing.",
+    "answer": "Imagine, she said there are no orange shirts in her wardrobe.",
+    "judge_reason": "Accurate reported meaning."
+   },
+   {
+    "aid": "A:34325:c4",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A házi cica ráugorhat a játékegérre.",
+    "answer": "The pet cat is allowed to jump on the toy mouse.",
+    "judge_reason": "-hat allows permission reading."
+   },
+   {
+    "aid": "A:36362:c1",
+    "level": "A2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "kormánynál",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.",
+    "answer": "Honestly, there's no better driver than you at this wheel.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36362:c2",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.",
+    "answer": "Honestly, there is no better driver behind this wheel than you.",
+    "judge_reason": "Accurate translation."
+   },
+   {
+    "aid": "A:36362:c4",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.",
+    "answer": "Honestly, nobody drives better than you at this wheel.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:36362:c5",
+    "level": "A2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.",
+    "answer": "Honestly, at this wheel there is no better driver than you.",
+    "judge_reason": "Accurate translation."
+   },
+   {
+    "aid": "A:37518:c5",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A nyugalma a T-rex-támadás óta odavan, ezért a takaró alá bújik.",
+    "answer": "He hasn't been calm since the T-rex attack, so he's hiding under the blanket.",
+    "judge_reason": "Same meaning, rephrased."
+   },
+   {
+    "aid": "A:38669:c1",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mire ő a kamerához ér, a távoli tornyok eltűnnek a ködben.",
+    "answer": "By the time he reaches the camera, the distant towers will have disappeared into the fog.",
+    "judge_reason": "Future frame kept, meaning matches."
+   },
+   {
+    "aid": "A:38669:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Mire ő a kamerához ér, a távoli tornyok eltűnnek a ködben.",
+    "answer": "By the time she reaches the camera, the far-off towers will have disappeared in the fog.",
+    "judge_reason": "Faithful future meaning"
+   },
+   {
+    "aid": "A:39777:c2",
+    "level": "B1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "A kukorica egy nagylelkű tyúk által lett betolva a lyukba. Nyilván az egerek végezték az összes munkát.",
+    "answer": "A generous hen pushed the corn into the hole. Obviously the mice did all the work.",
+    "judge_reason": "Active keeps agent; same meaning."
+   },
+   {
+    "aid": "A:40273:c4",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "útmutatókkal",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Kicsit le vagyok nyűgözve: te biztos zseniális vagy az útmutatókkal; a szekrény olyan gyorsan összeállt.",
+    "answer": "I'm kind of impressed: you must be brilliant at following instructions; the wardrobe was put together so fast.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:41343:c4",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Katasztrófa! Ő tíz perce kopog az ajtón, és a csomag még mindig a kezében van!",
+    "answer": "Disaster! She has been knocking on the door for 10 minutes and the package is in her hand!",
+    "judge_reason": "Dropped 'still' is acceptable."
+   },
+   {
+    "aid": "A:41398:c4",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ha nem hozta volna el az iratokat, a megbeszélés most lenne szüneteltetve.",
+    "answer": "Had she not brought the documents, the meeting would be paused.",
+    "judge_reason": "Dropped 'now' is acceptable."
+   },
+   {
+    "aid": "A:42805:c3",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Több kutya most követi a futót, ami jellemzően megfigyelhető a társas fajoknál.",
+    "answer": "A few dogs are following the jogger now, which is typical of social species.",
+    "judge_reason": "Same meaning, correct English."
+   },
+   {
+    "aid": "A:44237:c2",
+    "level": "B2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "beszállt",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Csajszi, ő azt mondta nekem, hogy az edző már tíz perce vezette az órát, amikor a macska beszállt.",
+    "answer": "Girl, she told me the trainer had been running the class for ten minutes when the cat got involved.",
+    "judge_reason": "Same meaning; dropped \"already\" acceptable."
+   }
+  ]
+ },
+ "false_acceptances": {
+  "n": 19,
+  "by_layer": {
+   "L3+CC:NONE": 19
+  },
+  "by_writer_type": {
+   "None": 6,
+   "M": 6,
+   "W": 2,
+   "T": 4,
+   "S": 1
+  },
+  "by_level": {
+   "B1": 10,
+   "A1": 2,
+   "A2": 4,
+   "B2": 3
+  },
+  "items": [
+   {
+    "aid": "A:4096:c5",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Miközben tartotta a régi kagylót a füléhez, a telefonja a folyosó padlóján zümmögött.",
+    "answer": "While holding the old receiver to his ear, his phone was vibrating on the corridor floor.",
+    "judge_reason": "Dangling participle makes the phone hold the receiver"
+   },
+   {
+    "aid": "A:4096:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Miközben tartotta a régi kagylót a füléhez, a telefonja a folyosó padlóján zümmögött.",
+    "answer": "While he was holding the receiver to his ear, his phone was buzzing on the hallway floor.",
+    "judge_reason": "Drops adjective 'old'."
+   },
+   {
+    "aid": "A:16791:w",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "A hörcsög magokkal tömi tele a pofazacskóját.",
+    "answer": "The hamster stuffs its cheek pouches with nuts.",
+    "judge_reason": "Nuts instead of seeds"
+   },
+   {
+    "aid": "A:17769:c5",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Ezt csókkal kellene elmondanod, nem üzenettel.",
+    "answer": "This should be said with a kiss, not a message.",
+    "judge_reason": "Passive drops agent 'you' named by the verb."
+   },
+   {
+    "aid": "A:27224:c4",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Csajszi, ő azt mondta, hogy a repülőgép pont a feje fölött repült el!",
+    "answer": "Girl, he told me the plane flew just over his head!",
+    "judge_reason": "Added content: told me."
+   },
+   {
+    "aid": "A:30885:m",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Hol áll meg a kerékpáros? A lámpánál.",
+    "answer": "Where does he stop? At the traffic light.",
+    "judge_reason": "Dropped noun cyclist"
+   },
+   {
+    "aid": "A:31300:c2",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Határidő hétfő: ő a tervet maga fogja befejezni.",
+    "answer": "Deadline is Monday: he will finish the plan himself.",
+    "judge_reason": "Missing article before 'Deadline'"
+   },
+   {
+    "aid": "A:34432:c3",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!",
+    "answer": "Hundreds of sticky notes! This plan needs so much time, what a nightmare!",
+    "judge_reason": "Added 'sticky'."
+   },
+   {
+    "aid": "A:36905:c1",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Az üzlet arra számít, hogy bevonz 500 új ügyfelet, amint felszerelik a tévét.",
+    "answer": "The shop expects to attract 500 new customers as soon as the TV is installed.",
+    "judge_reason": "Hungarian subject is \"you\" (bevonz), not the shop."
+   },
+   {
+    "aid": "A:38740:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Neki sikerül széthúznia a nehéz ajtókat, és ő megáll az ajtónyílásban.",
+    "answer": "He manages to pull the doors apart, and he stops in the doorway.",
+    "judge_reason": "Dropped adjective heavy."
+   },
+   {
+    "aid": "A:38740:t",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Neki sikerül széthúznia a nehéz ajtókat, és ő megáll az ajtónyílásban.",
+    "answer": "He managed to pull the heavy doors apart, and he stopped in the doorway.",
+    "judge_reason": "Past tense; Hungarian is present."
+   },
+   {
+    "aid": "A:39999:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Ők tíz percig billegtek a tüskés sarkakon, mire a nő végül nevetve összeesett!",
+    "answer": "They wobbled on the spiky heels for ten minutes before the woman finally collapsed!",
+    "judge_reason": "'laughing' dropped."
+   },
+   {
+    "aid": "A:40202:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Ha a vásárlók figyelmen kívül hagyják egy ajtóban álló eladót, ő jellemzően végül egyedül ül.",
+    "answer": "If customers ignore a salesperson, he typically ends up sitting alone.",
+    "judge_reason": "Drops 'standing in a doorway'"
+   },
+   {
+    "aid": "A:40202:t",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Ha a vásárlók figyelmen kívül hagyják egy ajtóban álló eladót, ő jellemzően végül egyedül ül.",
+    "answer": "If customers ignored a salesperson standing in a doorway, he typically ended up sitting alone.",
+    "judge_reason": "General present shifted to past."
+   },
+   {
+    "aid": "A:40438:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.",
+    "answer": "The big lantern was placed next to the window to catch the evening light.",
+    "judge_reason": "Dropped adjective 'red'."
+   },
+   {
+    "aid": "A:40592:t",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Őszintén, a keret, amelyet te vízszintbe tettél, nagyon elegáns.",
+    "answer": "Honestly, the frame that you levelled was very elegant.",
+    "judge_reason": "Present time frame shifted to past"
+   },
+   {
+    "aid": "A:41194:t",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Ritkán néz ki egy kutya ilyen rendezetten egy nyírás után. Enyhén lenyűgöző.",
+    "answer": "Rarely did a dog look so neat after a haircut. Mildly impressive.",
+    "judge_reason": "Past time frame; source is present."
+   },
+   {
+    "aid": "A:41543:w",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.",
+    "answer": "The cow of course denied that it had eaten the whole cake while leaning over the empty plate.",
+    "judge_reason": "Cake instead of pie"
+   },
+   {
+    "aid": "A:44454:s",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "S",
+    "source": "Az esernyőt a szél kifordította, így most használhatatlan.",
+    "answer": "The umbrella was turn inside out by the wind, so now it's useless.",
+    "judge_reason": "Grammar error: was turn."
+   }
+  ]
+ },
+ "judge_noise": {
+  "controls": 80,
+  "agree": 80,
+  "disagree": 0,
+  "disagree_rate": {
+   "x": 0,
+   "n": 80,
+   "pct": 0.0,
+   "cp95": [
+    0.0,
+    4.51
+   ]
+  },
+  "by_level": {
+   "A1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "A2": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B2": {
+    "n": 20,
+    "disagree": 0
+   }
+  },
+  "by_intent": {
+   "correct": {
+    "n": 40,
+    "disagree": 0
+   },
+   "wrong": {
+    "n": 40,
+    "disagree": 0
+   }
+  },
+  "disagreements": []
+ }
+}

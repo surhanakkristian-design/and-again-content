@@ -1,0 +1,10 @@
+# Part D access log (verbatim copies)
+
+Opens of partD/set/items.jsonl recorded: 1 (run/access_log.jsonl).
+
+## run/access_log.jsonl
+
+```
+{"argv": ["hu", "gemini"], "bytes": 204908, "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/retry_trhu/hu/partD/set/items.jsonl", "pid": 4250, "purpose": "Wave 1 Part D fresh Hungarian set, opened ONCE by the frozen wave-1 stack", "sha256": "4c3552699b9839469266e5a30107be38adf5513fe4b2b1ee18d5868968961fb0", "ts": "2026-09-23T10:49:09+00:00"}
+```
+
