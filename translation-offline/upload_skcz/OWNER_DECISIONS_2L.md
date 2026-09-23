@@ -65,3 +65,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 37. **The scope restriction to the 4,064 selected exercises also applies to native de, ua and es learners of English.**
 38. **Decision 32 (grammatical gender) stays in the JUDGE prompt only.** The checker prompts stay byte-identical and nothing is re-measured.
 39. **The last 2 untranslated cells (40497 tr, 39286 hu) are fixed.**
+
+## Decisions for the CDN / ua check / translate mix brief (23 Sept 2026)
+
+40. **Purge the Cloudflare CDN copies of the Words and Thumbnails buckets** so the new Cache-Control takes effect now.
+41. **The Ukrainian checker is sanity-checked offline** after the two live false rejections on exercise 1067.
+42. **The translate format must appear more often for the routed natives** (sk, cz, de, ua, es learning English), while the "at most 3 of the same exercise in a row" rule keeps holding.
+43. **Signed-URL caching for user-media is deliberately left unsolved for now.**
