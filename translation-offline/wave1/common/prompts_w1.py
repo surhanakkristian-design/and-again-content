@@ -75,7 +75,11 @@ def l3_sys(lang):
     t = _once(t, SKCZ_PAREN, '(%s: %s)' % (LANG[lang], DROP[lang]), 'l3 list')
     t = _once(t, '- Added content is WRONG.\n', '- Added content is WRONG.\n- %s\n' % g22(lang), 'l3 g22')
     assert 'Slovak' not in t
-    return t.replace('Czech', LANG[lang])
+    t = t.replace('Czech', LANG[lang])
+    if lang in RETRY:
+        t = _once(t, '- Added content is WRONG.\n', '- %s\n- Added content is WRONG.\n' % voc_line(lang), 'l3 voc')
+        t = _once(t, '\nWRONG or an ERROR = DIFF.', '\n- %s\nWRONG or an ERROR = DIFF.' % G22V[lang], 'l3 g22v')
+    return t
 
 
 def l3_user(lang, src, answer):
@@ -108,7 +112,12 @@ def cc_sys(lang):
     t = _once(t, '- A synonym or paraphrase that carries the same meaning is NOT missing.\n',
               '- A synonym or paraphrase that carries the same meaning is NOT missing.\n- %s\n' % g22(lang), 'cc g22')
     assert 'Slovak' not in t and 'Czech' not in t
-    return t.replace('{L}', LANG[lang])
+    t = t.replace('{L}', LANG[lang])
+    if lang in RETRY:
+        t = _once(t, '- A synonym or paraphrase that carries the same meaning is NOT missing.\n',
+                  '- A synonym or paraphrase that carries the same meaning is NOT missing.\n- %s\n' % voc_line(lang), 'cc voc')
+        t = _once(t, '\nReply with exactly NONE', '\n- %s\nReply with exactly NONE' % G22V_CC[lang], 'cc g22v')
+    return t
 
 
 def cc_user(lang, src, answer):
@@ -117,6 +126,44 @@ def cc_user(lang, src, answer):
         raise TypeError('content check takes the source sentence and the answer as plain strings only')
     assert _cc_frozen()['USER_TMPL'] == '%s sentence: %s\nLearner answer: %s\nNONE or MISSING?'
     return '%s sentence: %s\nLearner answer: %s\nNONE or MISSING?' % (LANG[lang], src, answer)
+
+
+# Retry brief (23 Sept 2026, owner decision 55): tr / hu ONLY.  Two additions to the L3 and content-check prompts (and
+# the vocative line to the judge prompt, so the ground truth applies the same owner rule); every other language's
+# output stays byte-identical.
+#   1. Vocatives: an address term may be dropped like an interjection.  The terms are the ones that occur as address
+#      terms in the 4,064 live selected rows (counts in retry_trhu/VOCATIVES.json).
+#   2. Genderless source made effective (defect 4): an explicit verdict rule next to the verdict line, with a worked
+#      example in the language.
+RETRY = {'tr', 'hu'}
+VOC = {'tr': 'Kanka, Kankam, Kızım, Canım, Dostum, Kardeşim, Millet',
+       'hu': 'Tesó, Csajszi, Haver, Bestie, Főnök, Tanárnő'}
+VOC_LINE = ('A vocative or address term ({L}: {V}) may be dropped, like an interjection; dropping it is NOT an error.')
+G22V = {
+    'tr': ('VERDICT RULE for gender: Turkish has no he/she. When the Turkish sentence refers to a person only with "o", '
+           '"onun", "kendi" or a bare verb ending, the answer\'s he, she, his or her is ALWAYS correct (each such '
+           'pronoun may be he or she) and is never a slip: reply SAME when the rest is correct, never TIP or DIFF for '
+           'the gender. Worked example: Turkish sentence: O dün markete gitti. Learner answer: She went to the market '
+           'yesterday. -> SAME. Learner answer: He went to the market yesterday. -> SAME. Turkish sentence: Onun '
+           'kedisi bahçede uyuyor. Learner answer: Her cat is sleeping in the garden. -> SAME.'),
+    'hu': ('VERDICT RULE for gender: Hungarian has no he/she. When the Hungarian sentence refers to a person only with '
+           '"ő", "övé", "maga", a possessive suffix or a bare verb ending, the answer\'s he, she, his or her is ALWAYS '
+           'correct (each such pronoun may be he or she) and is never a slip: reply SAME when the rest is correct, '
+           'never TIP or DIFF for the gender. Worked example: Hungarian sentence: Ő tegnap a boltba ment. Learner '
+           'answer: She went to the shop yesterday. -> SAME. Learner answer: He went to the shop yesterday. -> SAME. '
+           'Hungarian sentence: A macskája a kertben alszik. Learner answer: Her cat is sleeping in the garden. -> SAME.')}
+G22V_CC = {
+    'tr': ('VERDICT RULE for gender: he, she, his or her for "o", "onun", "kendi" or a bare verb ending is never a '
+           'missing or changed word. Worked example: Turkish sentence: Onun kedisi bahçede uyuyor. Learner answer: Her '
+           'cat is sleeping in the garden. -> NONE. Learner answer: His cat is sleeping in the garden. -> NONE.'),
+    'hu': ('VERDICT RULE for gender: he, she, his or her for "ő", "övé", "maga", a possessive suffix or a bare verb '
+           'ending is never a missing or changed word. Worked example: Hungarian sentence: A macskája a kertben alszik. '
+           'Learner answer: Her cat is sleeping in the garden. -> NONE. Learner answer: His cat is sleeping in the '
+           'garden. -> NONE.')}
+
+
+def voc_line(lang):
+    return VOC_LINE.replace('{L}', LANG[lang]).replace('{V}', VOC[lang])
 
 
 def l3_request(lang, src, answer):
@@ -158,6 +205,8 @@ def judge_prompt(lang):
         t = _once(t, '- %s\n' % g22(lang), '- %s\n- %s\n' % (g22(lang), d32(lang)), 'judge d32')
     if lang in JUDGE_D33:
         t = _once(t, D33_OLD, D33_NEW, 'judge d33')
+    if lang in RETRY:
+        t = _once(t, '- Genderless source:', '- %s\n- Genderless source:' % voc_line(lang), 'judge voc')
     assert t.rstrip().endswith('Items:')
     return t
 

@@ -49,6 +49,14 @@ LANG_ORDER = ['de', 'ua', 'es']            # position mod 3 in the shared seeded
 # de/ua/es sets) is excluded.
 LANG_ORDER2 = ['fr', 'tr', 'hu']
 SEED2 = 20261101
+# tr/hu retry (brief 23 Sept 2026, owner decision 55): environment W1_RETRY=1 puts tr / hu under wave1/retry_trhu/<lang>
+# with their OWN Gemini ledgers (stack root = RETRY_ROOT: cap 4,000 calls / $1.00 for the two together), a fresh seeded
+# order (SEED3, tr = 0 mod 2, hu = 1 mod 2: the two sets disjoint by construction), and every exercise_id of every
+# earlier set excluded (phase1*/phase2*, wave 1 de/ua/es, wave 2 fr/tr/hu incl. the failed tr/hu sets).
+RETRY_ROOT = W1 + '/retry_trhu'
+RETRY = os.environ.get('W1_RETRY') == '1'
+LANG_ORDER3 = ['tr', 'hu']
+SEED3 = 20261201
 BUDGET_LANG = 1300000                      # Claude tokens per language (brief: about 1,300,000)
 AGENT_EST = 250000                         # the language agent's own context (estimate, reserved)
 HEADLESS_CAP = BUDGET_LANG - AGENT_EST     # every headless session of this language together
@@ -77,8 +85,11 @@ L = {}
 def setlang(lang):
     if lang not in P.LANG:
         raise SystemExit('REFUSED: language %r' % lang)
-    L.update(lang=lang, name=P.LANG[lang], dir=W1 + '/' + lang, A=W1 + '/' + lang + '/partA', B=W1 + '/' + lang + '/partB',
-             D=W1 + '/' + lang + '/partD')
+    if RETRY and lang not in LANG_ORDER3:
+        raise SystemExit('REFUSED: retry mode is tr / hu only, got %r' % lang)
+    top = (RETRY_ROOT if RETRY else W1) + '/' + lang
+    L.update(lang=lang, name=P.LANG[lang], dir=top, A=top + '/partA', B=top + '/partB', D=top + '/partD',
+             root=RETRY_ROOT if RETRY else W1)
     for k in ('dir', 'A', 'B', 'D'):
         os.makedirs(L[k], exist_ok=True)
 
@@ -682,6 +693,8 @@ def used_exercise_ids():
     tops = glob.glob(TOFF + '/phase1*') + glob.glob(TOFF + '/phase2*')
     if P.WAVE.get(L.get('lang')) == 2:          # wave 2: the wave-1 sets are earlier sets too
         tops += [W1 + '/' + lg + '/partD' for lg in LANG_ORDER]
+    if RETRY:                                   # retry: every wave-1 and wave-2 set, incl. the failed tr / hu sets
+        tops += [W1 + '/' + lg + '/partD' for lg in LANG_ORDER + LANG_ORDER2]
     for top in sorted(tops):
         for dp, dn, fn in os.walk(top):
             if '/_mock' in dp or '/.git' in dp or os.path.basename(dp) != 'set':
@@ -704,13 +717,15 @@ def cmd_make_set(a):
     rows = source_rows()
     used, files = used_exercise_ids()
     w2 = P.WAVE[lang] == 2
-    pos = (LANG_ORDER2 if w2 else LANG_ORDER).index(lang)
+    order_l = LANG_ORDER3 if RETRY else LANG_ORDER2 if w2 else LANG_ORDER
+    pos, mod = order_l.index(lang), len(order_l)
+    seed = SEED3 if RETRY else SEED2 if w2 else SEED
     out, stats = [], {}
     for li, lv in enumerate(LEVELS):
         ids = sorted(e for e, r in rows.items() if r['level'] == lv)
         order = ids[:]
-        random.Random((SEED2 if w2 else SEED) + li).shuffle(order)
-        mine = [e for i, e in enumerate(order) if i % 3 == pos]
+        random.Random(seed + li).shuffle(order)
+        mine = [e for i, e in enumerate(order) if i % mod == pos]
         st = Counter(level_rows=len(ids), my_slots=len(mine))
         cand, relaxed = [], False
         for relax in (False, True):
@@ -736,13 +751,15 @@ def cmd_make_set(a):
     assert len(out) == 100 and len({o['sid'] for o in out}) == 100
     h = wjl(L['D'] + '/set/sentences.jsonl', out)
     wj(L['D'] + '/set/EXCLUSION_PROOF.json', {
+        'retry_method': ('retry (decision 55): excluded = every set under phase1*/phase2* + wave1/{de,ua,es,fr,tr,hu}/partD '
+                         '(incl. the failed wave-2 tr / hu sets); seed %d, tr positions 0 mod 2, hu 1 mod 2' % SEED3) if RETRY else None,
         'method': 'exercise_id of every JSON/JSONL file in a directory named set under phase1*/phase2* '
                   '(_mock excluded; a file with > 1,000 ids is a corpus and skipped) is "used before" and skipped (preferred; relaxed per level only if < 25 remain). The 4,064 '
                   'ids of each level are shuffled with one seed shared by the three wave-1 languages; de takes positions 0 mod 3, '
                   'ua 1 mod 3, es 2 mod 3, so the three wave-1 sets are disjoint by construction.',
         'files_scanned': len(files), 'used_before_ids': len(used), 'per_level': stats,
         'picked_used_before': sum(1 for o in out if o['exercise_id'] in used), 'sentences_sha256': h})
-    wj(L['D'] + '/set/SET_META.json', {'seed': SEED2 if w2 else SEED, 'wave': P.WAVE[lang], 'lang': lang, 'position_mod3': pos, 'stats': stats, 'sha256': h,
+    wj(L['D'] + '/set/SET_META.json', {'seed': seed, 'wave': 'retry' if RETRY else P.WAVE[lang], 'lang': lang, 'position': pos, 'modulus': mod, 'stats': stats, 'sha256': h,
                                        'rewritten_in_set': sum(1 for o in out if o['rewrite_status'] == 'changed')})
     print(json.dumps({'stats': stats, 'used_before': len(used)}))
     return 0
@@ -1202,14 +1219,15 @@ def cmd_gemini(a):
     items = S.B.open_set(L['D'] + '/set/items.jsonl', S.B.paths(RUN),
                          'Wave 1 Part D fresh %s set, opened ONCE by the frozen wave-1 stack' % P.LANG[L['lang']])
     t0 = time.time()
-    led0 = S.read_json(S.lang_ledger(L['lang']), {})
+    root = L['root']
+    led0 = S.read_json(S.lang_ledger(L['lang'], root), {})
     try:
-        out = S.run_full([S.PoisonDict(x) for x in items], RUN, 'D', L['lang'], S.lang_ledger(L['lang']))
+        out = S.run_full([S.PoisonDict(x) for x in items], RUN, 'D', L['lang'], S.lang_ledger(L['lang'], root), root=root)
     except (S.Stop, S.Refused) as e:
         wj(RUN + '/RUN_OUT.json', {'status': 'STOPPED', 'kind': getattr(e, 'kind', None), 'why': getattr(e, 'why', str(e))})
         print('STOPPED', e); return 4
-    out.update(ledger_before=led0, ledger_after=S.read_json(S.lang_ledger(L['lang']), {}), secs=round(time.time() - t0, 1),
-               wave_counted_after=S.wave_counted(lang=L['lang']))
+    out.update(ledger_before=led0, ledger_after=S.read_json(S.lang_ledger(L['lang'], root), {}), secs=round(time.time() - t0, 1),
+               wave_counted_after=S.wave_counted(root, lang=L['lang']))
     wj(RUN + '/RUN_OUT.json', out)
     print(json.dumps({'status': out['status'], 'ledger_after': out['ledger_after']}))
     return 0 if out['status'] == 'COMPLETE' else 3
@@ -1250,7 +1268,7 @@ def cmd_post(a):
          'layers': dict(Counter(str(r.get('layer')) for r in res.values())),
          'gemini': {'ledger_rows': len(led), 'counted_http200': len(counted), 'by_part': dict(Counter(r['_part'] for r in counted)),
                     'failed_counted': fails, 'http': dict(Counter(str(r.get('http')) for r in led)), 'spend_usd': spend_usd},
-         'ledger_language': S.read_json(S.lang_ledger(L['lang']), {}), 'access_logs': [os.path.relpath(p, E) for p in acc]}
+         'ledger_language': S.read_json(S.lang_ledger(L['lang'], L['root']), {}), 'access_logs': [os.path.relpath(p, E) for p in acc]}
     p_ = H['pooled']
     H['both_targets_met_on_point'] = bool(p_['coverage_target_90']['point'] and p_['fa_target_5']['point'])
     FR = [j for j in ids if T[j]['judge_label'] == 'correct' and not res[j]['accept']]

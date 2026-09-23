@@ -102,6 +102,15 @@ def t01_prompt_derivation():
                 assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, (lang, 'd32/d33 leaked')
             if name != 'judge':
                 assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, (lang, name, 'checker changed')
+            if lang in P.RETRY and name != 'writer':            # decision 55: tr / hu only
+                assert txt.count('- %s\n' % P.voc_line(lang)) == 1, (lang, name, 'vocative line')
+                txt = txt.replace('- %s\n' % P.voc_line(lang), '')
+                if name in ('l3', 'cc'):
+                    g = P.G22V[lang] if name == 'l3' else P.G22V_CC[lang]
+                    assert txt.count('\n- %s\n' % g) == 1, (lang, name, 'genderless verdict rule')
+                    txt = txt.replace('\n- %s\n' % g, '\n')
+            else:
+                assert 'vocative' not in txt and 'VERDICT RULE' not in txt, (lang, name, 'retry lines leaked')
             assert txt.count(g22line) == 1, (lang, name, 'decision 22 line')
             assert P.DROP[lang] in txt, (lang, name, 'drop list')
             assert 'Slovak' not in txt and 'Czech' not in txt, (lang, name)
@@ -499,11 +508,87 @@ def t16_wave2_separate_caps_and_prompts():
     assert P.judge_prompt('es') == open(os.path.join(S.W1, 'spec', 'judge_prompt_es.txt'), encoding='utf-8').read()
 
 
+def t17_retry_trhu_prompts_caps_and_genderless_mock():
+    """Retry brief (decision 55): (a) only the tr / hu prompts changed (the pre-retry spec SHA list, all other files OK);
+    (b) mocked model that follows a genderless rule ONLY when the prompt states it next to the verdict line with a
+    worked example in the language (the defect-4 behaviour otherwise): a he / she rendering of a genderless tr / hu
+    source reaches SAME -> content check NONE -> ACCEPT with the new prompts, and is rejected with the old ones;
+    (c) the retry root is its own wave with cap 4,000 calls / $1.00; (d) retry set selection excludes every earlier
+    wave-1 / wave-2 set and tr / hu take disjoint positions."""
+    import subprocess
+    before = os.path.join(S.W1, 'retry_trhu', 'SHA_spec_before.txt')
+    r = subprocess.run(['shasum', '-a', '256', '-c', before], cwd=S.W1, capture_output=True, text=True)
+    bad = sorted(l.split(':')[0] for l in r.stdout.splitlines() if not l.endswith(': OK'))
+    assert bad == ['spec/content_check_system_hu.txt', 'spec/content_check_system_tr.txt', 'spec/judge_prompt_hu.txt',
+                   'spec/judge_prompt_tr.txt', 'spec/l3_system_hu.txt', 'spec/l3_system_tr.txt'], bad
+    src = {'tr': 'O dün akşam eve geç geldi.', 'hu': 'Ő tegnap este későn jött haza.'}
+    ans = {'tr': 'She came home late last night.', 'hu': 'She came home late last night.'}
+
+    def gender_model(url, body, key):
+        CALLS[0] += 1
+        sysx = body['systemInstruction']['parts'][0]['text']
+        u = body['contents'][0]['parts'][0]['text']
+        follows = 'VERDICT RULE for gender' in sysx and 'Worked example' in sysx
+        if u.endswith('NONE or MISSING?'):
+            x = 'NONE' if follows else 'MISSING: o'
+        else:
+            x = 'SAME' if follows else 'DIFF'
+        js = {'candidates': [{'content': {'parts': [{'text': x}]}}], 'usageMetadata': {'promptTokenCount': 10, 'candidatesTokenCount': 1}}
+        return 200, js, json.dumps(js)
+    B.HTTP[0] = gender_model
+    try:
+        for lang in ('tr', 'hu'):
+            d = reset('t17_' + lang)
+            it = [{'jid': 'G:1:c1', 'sid': 1, 'level': 'A1', 'src': src[lang], 'answer': ans[lang]},
+                  {'jid': 'G:1:c2', 'sid': 1, 'level': 'A1', 'src': src[lang], 'answer': ans[lang].replace('She', 'He')}]
+            out = full(d, it, lang)
+            fin = [json.loads(l) for l in open(os.path.join(d, lang, 'run', 'x', 'final_tiprej.jsonl'))]
+            assert out['status'] == 'COMPLETE' and all(f['accept'] and f['layer'] == 'L3+CC:NONE' for f in fin), fin
+            assert all(f['l3_reply'] == 'SAME' for f in fin), fin
+        # the same mock with the OLD (pre-retry) prompts rejects: the test discriminates
+        old = {'l3': P.l3_sys, 'cc': P.cc_sys}
+        P.RETRY.discard('tr')
+        try:
+            d = reset('t17_old')
+            out = full(d, [{'jid': 'G:2:c1', 'sid': 2, 'level': 'A1', 'src': src['tr'], 'answer': ans['tr']}], 'tr')
+            fin = [json.loads(l) for l in open(os.path.join(d, 'tr', 'run', 'x', 'final_tiprej.jsonl'))]
+            assert not fin[0]['accept'] and fin[0]['layer'] == 'L3', fin
+        finally:
+            P.RETRY.add('tr')
+        _ = old
+        # other languages never see the rule
+        for lang in ('de', 'ua', 'es', 'fr'):
+            assert 'VERDICT RULE' not in P.l3_sys(lang) + P.cc_sys(lang) and 'vocative' not in P.judge_prompt(lang)
+    finally:
+        B.HTTP[0] = fake_http
+    # (c) retry caps
+    rr = os.path.join(S.W1, 'retry_trhu')
+    assert S.wave_caps(rr) == (4000, 1.00) and S.wave_caps(S.W1) == (5000, 1.50) and S.wave_caps(T) == (5000, 1.50)
+    # (d) retry set selection
+    import pipeline_w1 as W
+    W.RETRY = True
+    try:
+        W.setlang('tr')
+        assert W.L['dir'] == rr + '/tr' and W.L['root'] == rr
+        used, files = W.used_exercise_ids()
+        for lg in ('de', 'ua', 'es', 'fr', 'tr', 'hu'):
+            ids = {json.loads(l)['exercise_id'] for l in open(os.path.join(S.W1, lg, 'partD', 'set', 'sentences.jsonl'))}
+            assert ids <= used, lg
+        try:
+            W.setlang('fr'); raise AssertionError('fr allowed in retry mode')
+        except SystemExit:
+            pass
+    finally:
+        W.RETRY = False
+        W.setlang('de')
+
+
 TESTS = [t01_prompt_derivation, t02_spec_files_match, t03_parsers, t04_row_number_429_is_not_a_rate_limit,
          t05_real_429_envelope_retries_uncounted, t06_usage_limit_envelopes_stop, t07_resume_at_zero_cost,
          t08_relative_path_refused, t09_poison_no_reference_read, t10_layer_order, t11_caps,
          t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched, t14_subagent_transport,
-         t15_es_eight_packets_and_followups, t16_wave2_separate_caps_and_prompts]
+         t15_es_eight_packets_and_followups, t16_wave2_separate_caps_and_prompts,
+         t17_retry_trhu_prompts_caps_and_genderless_mock]
 
 if __name__ == '__main__':
     real = [0]

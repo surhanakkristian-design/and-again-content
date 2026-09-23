@@ -26,6 +26,13 @@ import prompts_w1 as P       # noqa: E402
 LANGS = tuple(sorted(P.LANG))
 LANG_CAP, LANG_SPEND = 1800, 0.50
 WAVE_CAP, WAVE_SPEND = 5000, 1.50
+# tr/hu retry (brief 23 Sept 2026): the ledgers under wave1/retry_trhu are their own wave, HARD CAP 4,000 calls / $1.00.
+RETRY_ROOT = os.path.join(W1, 'retry_trhu')
+RETRY_CAP, RETRY_SPEND = 4000, 1.00
+
+
+def wave_caps(root=W1):
+    return (RETRY_CAP, RETRY_SPEND) if os.path.normpath(root) == RETRY_ROOT else (WAVE_CAP, WAVE_SPEND)
 Stop = B.Stop
 REF_KEYS = ('en', 'v', 'alt', 'lk', 'reference', 'references', 'refs', 'english', 'en_full_sentence',
             'full_sentence_en', 'translation', 'headword', 'correct_answer_en')
@@ -159,12 +166,13 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
     others = sum(int(v) for k, v in phase.items() if k != stage)
     counted0 = sum(1 for r in B.jl_read(PP['ledger']) if r.get('http') == 200)
     wave_other = wave_counted(root, lang) - sum(int(v) for v in phase.values())
-    cap = min(LANG_CAP - others, WAVE_CAP - wave_other - others)
+    wcap, wspend = wave_caps(root)
+    cap = min(LANG_CAP - others, wcap - wave_other - others)
     spent_here = spend_of(run_dir)
     spent_lang = lang_spend(root, lang)
     spent_lang_other = spent_lang - spent_here
     spent_wave_other = wave_spend(root, lang) - spent_lang
-    ctx = {'P': PP, 'cap': cap, 'spend_cap': min(LANG_SPEND - spent_lang_other, WAVE_SPEND - spent_wave_other - spent_lang_other),
+    ctx = {'P': PP, 'cap': cap, 'spend_cap': min(LANG_SPEND - spent_lang_other, wspend - spent_wave_other - spent_lang_other),
            'key': None, 'last': 0.0, 'made': 0, 'uncounted': 0, 'counted': counted0, 'spent': spent_here,
            'est': B.EST_CALL_USD}
 
@@ -189,15 +197,15 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
         elif ctx['counted'] + len(need) > cap:
             stop = Stop('cap', 'counted %d + needed %d > cap for this stage %d (language cap %d - other stages %d; wave '
                         'cap %d - other languages %d); NO call was made' % (ctx['counted'], len(need), cap, LANG_CAP,
-                                                                              others, WAVE_CAP, wave_other))
+                                                                              others, wcap, wave_other))
         elif need:
             try:
                 ctx['key'] = key or B.load_key()
                 with (CC.transport(B) if kind == 'cc' else contextlib.nullcontext()):
                     for k in need:
                         with wave_lock(root):       # check + reserve ONE call under the wave lock (strict 5,000)
-                            if wave_counted(root, lang) - sum(int(v) for v in phase.values()) + others + ctx['counted'] + 1 > WAVE_CAP:
-                                raise Stop('wave_cap', 'wave total would exceed %d' % WAVE_CAP)
+                            if wave_counted(root, lang) - sum(int(v) for v in phase.values()) + others + ctx['counted'] + 1 > wcap:
+                                raise Stop('wave_cap', 'wave total would exceed %d' % wcap)
                             phase[stage] = ctx['counted'] + 1
                             write_json(ledger_path, phase)
                         try:
