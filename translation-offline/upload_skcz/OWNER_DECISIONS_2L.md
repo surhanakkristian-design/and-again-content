@@ -90,3 +90,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 
 51. **A deterministic pronoun/person sweep runs over all 4,064 selected exercises in de, ua, es, fr, tr and hu;** what it finds is fixed with the same two-pass rule (one judge, an independent verifier, only rows both call wrong are fixed).
 52. **Wave 2 (fr, tr, hu) is measured with the same method and the same targets as wave 1.**
+
+## Decisions for the fr deploy / punctuation / tr-hu retry brief (23 Sept 2026)
+
+53. **French is routed and deployed;** fr learners of English get the translate format only on the 4,064 selected exercises.
+54. **Missing sentence-final punctuation is repaired in ALL nine languages, across the whole table,** not only the selection.
+55. **Turkish and Hungarian are fixed and re-measured on NEW sets:** vocatives droppable, the genderless rule made effective, punctuation repaired.
+56. **Rows where a native distractor equals the correct answer are NOT an issue:** the options are shown to the learner in English. No action, and this is not to be raised again.
