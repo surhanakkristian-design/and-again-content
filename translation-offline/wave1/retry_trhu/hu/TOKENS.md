@@ -4,3 +4,4 @@
 Headless used so far (this language): 0. Agent reserve: 250,000. Projected language total: 953,619 of 1,300,000 -> WITHIN budget.
 
 - 2026-09-23T10:33:26Z cumulative subagent tokens after projection: 0
+- 2026-09-23T10:33:28Z cumulative headless (this language) after writers: 0

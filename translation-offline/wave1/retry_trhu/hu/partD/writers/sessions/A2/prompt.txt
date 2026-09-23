@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Hungarian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Hungarian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Hungarian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Hungarian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Hungarian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Hungarian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Hungarian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Hungarian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Hungarian: most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Hungarian sentence does not mark gender (e.g. "ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "Ha te szakállt akarsz, türelmesnek kellene lenned.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA202", "source": "A fiú nagyon könnyen kapja el a piros labdát.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA203", "source": "A teremben káosz van, de ő fel sem néz.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA204", "source": "Nincs szükségük sok helyre a salsához.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA205", "source": "Nem sok idő maradt a meccsből.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA206", "source": "Ezt csókkal kellene elmondanod, nem üzenettel.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA207", "source": "A tányér forró. Ő azt mondja: Elveszem én.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA208", "source": "Nyitott a vágás, ezért előbb ki kell tisztítanod.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA209", "source": "Ha jó jegyet akarsz, el kellene olvasnod a jegyzeteidet.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA210", "source": "Van egy terve. Ő a péntekét teljesen szabadon fogja hagyni.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA211", "source": "Gyere hatkor, és a sétájuk éppen csak kezdődni fog.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA212", "source": "Nézd! A felesége épp fordítja egy palacsintát a serpenyőben.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA213", "source": "Csajszi, ő azt mondta, hogy a repülőgép pont a feje fölött repült el!", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA214", "source": "A támadás hirtelen véget ér, és a mező teljesen üres!", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA215", "source": "Ezt a ruhát megvenni drágább az egész utazásnál! Mindennek vége!", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA216", "source": "Ha az idegenvezető megmozdítja a kérget, a szín megint változni fog.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA217", "source": "Az osztály a főzés után nem eszik sok rizst.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA218", "source": "Határidő hétfő: ő a tervet maga fogja befejezni.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA219", "source": "Q4-es előrejelzés: ha megint telefonál, a kifogás a munka lesz.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA220", "source": "Szóval, én azt hallottam, hogy annyi szőr volt a szőnyegén a kutyától!", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA221", "source": "Hamarosan ez a rovar pillangóvá fog válni.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA222", "source": "A zöld motorja jól működött, de nyilván egy nagyobb kellett neki.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA223", "source": "Képzeld, ő azt mondta, hogy a szekrényében nincs semmilyen narancssárga ing.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA224", "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA225", "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.", "level": "A2", "topic": "There is, are"}

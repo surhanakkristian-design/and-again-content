@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Turkish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Turkish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Turkish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Turkish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Turkish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Turkish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Turkish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Turkish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA101", "source": "Ağır kum torbası boks ringinin yanında asılı.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA102", "source": "Sunucu doğru cevabını karta yazıyor.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA103", "source": "Tarlada çok beyaz pamuk var.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA104", "source": "Un ve bir yumurtayla hamur yapıyor.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA105", "source": "Centilmen yağmurda çok kibar.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA106", "source": "Bu telefon yine çalıyor!", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA107", "source": "Dar sokakta büyük bir su birikintisine atlıyor.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA108", "source": "Parktaki taş basamaklardan aşağı iniyor.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA109", "source": "Bu yabancı onu kırmızı otobüse kadar götürüyor.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA110", "source": "nerede yürüyüşe çıkıyorlar? Deniz kenarında.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA111", "source": "Arkalarında ne var? Devasa yeşil bir dalga.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA112", "source": "Kayak montunda çok inatçı bir fermuar var.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA113", "source": "Küre dönüyor. Yine yurt dışına gidebilir mi?", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA114", "source": "Macera gün batımı bitiyor.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA115", "source": "Kürek toprağı çeviriyor ve iki yapraklar ortaya çıkıyor.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA116", "source": "Çanta neden bu kadar ağır? Üstünde tencere tava asılı.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA117", "source": "Arabanın kapısında üç kelimeyle “Ben onun kocasıyım” yazıyor.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA118", "source": "Okul dersleri okul günlerinde olur, bu yüzden bu ders pazartesi yapılır.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA119", "source": "Hedef biraz peynir ama tabakta 2 kilo var.", "level": "A1", "topic": "TO BE"}
+{"wid": "wA120", "source": "Bir kadın onun zümrüt kolyesiyle kırmızı giyiyor.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA121", "source": "Onlar nerede dinleniyor? Bir tuz gölünün suyunda.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA122", "source": "O, kupasını hep bu sallanan masaya koyar! Tam bir kâbus!", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA123", "source": "Açıkçası etkileyici: sen ona kadar sayıyorsun ve on numaralı kar tanesi konuyor.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA124", "source": "Hey, o onun kollarını havaya kaldırıyor çünkü başarı çok büyük.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA125", "source": "İki genç kanepede oyun oynuyor.", "level": "A1", "topic": "Cardinal numbers"}

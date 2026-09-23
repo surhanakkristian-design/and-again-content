@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Hungarian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Hungarian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Hungarian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Hungarian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Hungarian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Hungarian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Hungarian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Hungarian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Hungarian: most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Hungarian sentence does not mark gender (e.g. "ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Ő tudta, hogy az a nyíl el fogja találni a közepét abban a pillanatban, ahogy elhagyta az ideget.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB202", "source": "Az arcán ülő döbbenet ellenére ő hatalmas mosollyal fizette ki a számla rá eső felét.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB203", "source": "Az ösvény végére három órán át fognak gyalogolni a kaktuszok között.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB204", "source": "A kinti hőség ellenére, a kanyon egész délután hűvös maradt.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB205", "source": "Nézd meg most a padlót - a hab terjed a mosogatóból a hűtő alá.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB206", "source": "Soha nem viselt ilyen fényes szájfényt, mielőtt megtalálta ezt a rózsaszín tubust.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB207", "source": "Ő bement, majd hátrafelé dőlt a matracra.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB208", "source": "A roadmap szerint a csapat 6 hónapig edzett, mielőtt a repülő megmozdult.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB209", "source": "Csajszi, állítólag a házigazda idén kétszer kapott tőle csokrot.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB210", "source": "A nyugalma a T-rex-támadás óta odavan, ezért a takaró alá bújik.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB211", "source": "A meccs kezdetére a stadion már egy órája volt zsúfolt. Kicsit népszerű.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB212", "source": "Mire ő a kamerához ér, a távoli tornyok eltűnnek a ködben.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB213", "source": "Az a nő, akinek a piros kardigánja csupa liszt, minden dumplingot redőkbe hajtogat.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB214", "source": "Nyilvánvalóan békés délután: a piros csapat tagadta, hogy elkezdte a hógolyócsatát a várából.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB215", "source": "Nyárra te már magad mögött hagyod ezt a törést, és őszintén, tisztelet.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB216", "source": "Épp most a barátságos rendőrnő simogatja a kutyát a ládában.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB217", "source": "Ők tíz percig billegtek a tüskés sarkakon, mire a nő végül nevetve összeesett!", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB218", "source": "Ritkán néz ki egy kutya ilyen rendezetten egy nyírás után. Enyhén lenyűgöző.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB219", "source": "Katasztrófa! Ő tíz perce kopog az ajtón, és a csomag még mindig a kezében van!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB220", "source": "Ha nem hozta volna el az iratokat, a megbeszélés most lenne szüneteltetve.", "level": "B2", "topic": "Mixed Conditional"}
+{"wid": "wB221", "source": "Mielőtt a tűzijáték elkezdődött, a tömeg körülbelül egy órán át lengette a hazafias zászlókat.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB222", "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB223", "source": "Több kutya most követi a futót, ami jellemzően megfigyelhető a társas fajoknál.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB224", "source": "Te épp most csinálod a sminkedet, mögötted az egész városképpel. Ikonikus.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB225", "source": "Csajszi, ő azt mondta nekem, hogy az edző már tíz perce vezette az órát, amikor a macska beszállt.", "level": "B2", "topic": "All Past Tenses"}

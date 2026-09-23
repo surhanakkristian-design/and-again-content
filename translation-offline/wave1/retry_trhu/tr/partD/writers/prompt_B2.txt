@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Turkish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Turkish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Turkish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Turkish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Turkish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Turkish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Turkish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Turkish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Eve varana kadar, yoldaki her vitrinde kendine bakmış olacak.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB202", "source": "Tarlanın öbür ucunda duran saman balyası, buradan göründüğünden daha küçük.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB203", "source": "Bir tepsi yemek yüzünden daha önce hiç bu kadar hayal kırıklığına uğramamıştı.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB204", "source": "O öğleden sonra bunu zor yoldan öğrendi: ona karşı asla bahse girme.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB205", "source": "Şimdi ona bak - öğleden sonranın üçüncü peruğuyla poz veriyor.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB206", "source": "Çok korkmuş olmalı — direksiyondaki ellerine bak.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB207", "source": "İki kedinin bu kıyıdaki en çok fotoğraflanan çift olduğu söyleniyor.", "level": "B2", "topic": "Advanced Passive Voice"}
+{"wid": "wB208", "source": "Toprak sadece koyu değil, aynı zamanda yağmur kokuyor.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB209", "source": "Dinle, o bana yarına kadar o kütüklerin küle dönmüş olacağını söyledi.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB210", "source": "Kanka, yardımcı resmen onun otoritesini sorguladığını itiraf etti, yalan yok.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB211", "source": "Oyuncular, arkasında bir dağ olan biraz alışılmadık bir kort seçtiklerini itiraf ettiler.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB212", "source": "Yarın saat altıda kalabalıklar şehir merkezindeki büyük geçidi geçiyor olacak.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB213", "source": "Şu anda o onun parasını bozuyor ve kadın tamamen dilini yutmuş durumda!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB214", "source": "Şu anda alnı terden parlıyor; kusursuz planlama, belli ki.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB215", "source": "Kalın buz olmasına rağmen, örnek yaklaşık bir dakikada serbest bırakıldı.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB216", "source": "Kanka, gece yarısına kadar o altı saat gibi ışık asıyor olacak, biraz kafayı yemiş.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB217", "source": "Onlar saatlerdir burada yatıyor ve kimse bir daha asla kıpırdamak istemiyor!", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB218", "source": "Yeşil slime saçından kutuya damlıyor ve dağınıklık büyümeye devam ediyor.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB219", "source": "Dışarıdaki soğuk havaya rağmen, bebek odası sıcak ışık ve kahkahalarla dolu.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB220", "source": "O çorbayı tattığında, adam çiçekleri çoktan arkasına saklamıştı.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB221", "source": "Bahçede şişme şatonun yanındaki çadır hâlâ ayakta duran tek şey.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB222", "source": "O, dişli çok küçük olduğu için büyüteçle çalışıyor.", "level": "B2", "topic": "Advanced linkers"}
+{"wid": "wB223", "source": "İlk müşteri gelmeden önce o tropik meyveleri bir saat boyunca diziyordu, biraz yavaş.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB224", "source": "Yürüyüşçü her yürüyüşte her elde bir tane olmak üzere iki baton kullanır.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB225", "source": "O bir saattir çalışma alanını süslüyor, ve belli ki hâlâ çok minimalist.", "level": "B2", "topic": "All Present Tenses"}
