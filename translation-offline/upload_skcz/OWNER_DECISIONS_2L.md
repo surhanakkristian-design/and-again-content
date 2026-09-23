@@ -125,3 +125,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 70. **Listening and Speaking filter their videos by the learner's level (A/B),** the way Tinder does.
 71. **The free listening check forgives ONE wrong letter in a word of 5+ letters (the speaking rule),** and the stored correct spelling is shown in green above the learner's answer whenever the two differ.
 72. **Tinder, Listening and Speaking go live on the web.**
+
+## Decisions for the UI fixes (bubbles) + cadence brief (23 Sept 2026)
+
+73. **The new exercises appear much more often:** Tinder about once every 6 cards, Listening/Speaking about once every 4 cards, and the first of them inside the opening 5 cards.
+74. **Bubble rule for the whole app:** text in the learner's NATIVE language sits in a WHITE bubble, text in the LEARNING language sits in a BLACK glass bubble, per the Figma designs.
+75. **The translate input follows Figma 1623-1722:** a compact field, not the oversized bubble that was live.
