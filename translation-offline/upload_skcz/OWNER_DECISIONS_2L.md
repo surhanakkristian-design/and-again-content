@@ -97,3 +97,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 54. **Missing sentence-final punctuation is repaired in ALL nine languages, across the whole table,** not only the selection.
 55. **Turkish and Hungarian are fixed and re-measured on NEW sets:** vocatives droppable, the genderless rule made effective, punctuation repaired.
 56. **Rows where a native distractor equals the correct answer are NOT an issue:** the options are shown to the learner in English. No action, and this is not to be raised again.
+
+## Decisions for the tr/hu deploy / 5 source fixes brief (23 Sept 2026)
+
+57. **Turkish and Hungarian are routed and deployed.** All eight non-English natives (sk, cz, de, ua, es, fr, tr, hu) now use the SOURCE-ONLY checker, each restricted to the 4,064 selected exercises.
+58. **Type-69 definition rows keep NO sentence-final mark, in every language, as the English rows do.** apply_type69.py is not run and the convention in validate_part.stem_sentence stays.
+59. **Five broken source sentences are fixed:** tr 27060, tr 31993, tr 13301, hu 31482, hu 36905.
