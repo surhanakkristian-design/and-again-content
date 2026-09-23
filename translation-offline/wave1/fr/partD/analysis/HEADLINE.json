@@ -1,0 +1,698 @@
+{
+ "label": "Wave 1 French: frozen stack (L3 SOURCE-ONLY + content check, TIP rejected, no F4/AG), fresh production set opened ONCE",
+ "truth": "judge_label (partD/judge/labels.jsonl, 4 opus judge sessions)",
+ "pooled": {
+  "coverage": {
+   "x": 480,
+   "n": 499,
+   "pct": 96.19,
+   "cp95": [
+    94.12,
+    97.69
+   ]
+  },
+  "fa": {
+   "x": 13,
+   "n": 401,
+   "pct": 3.24,
+   "cp95": [
+    1.74,
+    5.48
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": true,
+   "interval": false
+  }
+ },
+ "per_level": {
+  "A1": {
+   "coverage": {
+    "x": 120,
+    "n": 125,
+    "pct": 96.0,
+    "cp95": [
+     90.91,
+     98.69
+    ]
+   },
+   "fa": {
+    "x": 4,
+    "n": 100,
+    "pct": 4.0,
+    "cp95": [
+     1.1,
+     9.93
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "A2": {
+   "coverage": {
+    "x": 125,
+    "n": 125,
+    "pct": 100.0,
+    "cp95": [
+     97.09,
+     100.0
+    ]
+   },
+   "fa": {
+    "x": 2,
+    "n": 100,
+    "pct": 2.0,
+    "cp95": [
+     0.24,
+     7.04
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B1": {
+   "coverage": {
+    "x": 114,
+    "n": 124,
+    "pct": 91.94,
+    "cp95": [
+     85.67,
+     96.06
+    ]
+   },
+   "fa": {
+    "x": 3,
+    "n": 101,
+    "pct": 2.97,
+    "cp95": [
+     0.62,
+     8.44
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": false
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  },
+  "B2": {
+   "coverage": {
+    "x": 121,
+    "n": 125,
+    "pct": 96.8,
+    "cp95": [
+     92.01,
+     99.12
+    ]
+   },
+   "fa": {
+    "x": 4,
+    "n": 100,
+    "pct": 4.0,
+    "cp95": [
+     1.1,
+     9.93
+    ]
+   },
+   "coverage_target_90": {
+    "point": true,
+    "interval": true
+   },
+   "fa_target_5": {
+    "point": true,
+    "interval": false
+   }
+  }
+ },
+ "l3_only_diagnostic": {
+  "coverage": {
+   "x": 488,
+   "n": 499,
+   "pct": 97.8,
+   "cp95": [
+    96.09,
+    98.89
+   ]
+  },
+  "fa": {
+   "x": 31,
+   "n": 401,
+   "pct": 7.73,
+   "cp95": [
+    5.31,
+    10.79
+   ]
+  },
+  "coverage_target_90": {
+   "point": true,
+   "interval": true
+  },
+  "fa_target_5": {
+   "point": false,
+   "interval": false
+  }
+ },
+ "layers": {
+  "L3+CC:NONE": 493,
+  "L3:TIPrej": 156,
+  "L3": 225,
+  "CC:MISSING": 26
+ },
+ "gemini": {
+  "ledger_rows": 1419,
+  "counted_http200": 1419,
+  "by_part": {
+   "l3": 900,
+   "cc": 519
+  },
+  "failed_counted": 0,
+  "http": {
+   "200": 1419
+  },
+  "spend_usd": 0.141787
+ },
+ "ledger_language": {
+  "D_CC": 519,
+  "D_L3": 900
+ },
+ "access_logs": [
+  "run/access_log.jsonl"
+ ],
+ "both_targets_met_on_point": true,
+ "false_rejections": {
+  "n": 19,
+  "by_layer": {
+   "CC:MISSING": 8,
+   "L3:TIPrej": 8,
+   "L3": 3
+  },
+  "by_writer": {
+   "correct/None": 19
+  },
+  "by_level": {
+   "B1": 10,
+   "B2": 4,
+   "A1": 5
+  },
+  "items": [
+   {
+    "aid": "A:4298:c4",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "Si",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Si tu perds tes clés dans un sac de cette taille, la panique arrive en deux secondes.",
+    "answer": "When you lose your keys in a bag that size, the panic comes in two seconds.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:8454:c2",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "détruite",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Cette eau a été détruite par un seul homme en une dizaine de secondes.",
+    "answer": "This water was ruined by one man in around ten seconds.",
+    "judge_reason": "Same meaning, agent kept"
+   },
+   {
+    "aid": "A:9934:c5",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Pendant qu'elle pendait là, son amie s'est glissée sous elle.",
+    "answer": "While she was dangling there, his friend slid under her.",
+    "judge_reason": "Son is genderless; his allowed"
+   },
+   {
+    "aid": "A:10008:c4",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Il aimerait que l'enflure disparaisse avant le match.",
+    "answer": "He hopes the swelling goes down before the game.",
+    "judge_reason": "Close equivalent meaning"
+   },
+   {
+    "aid": "A:11170:c4",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Un animal est gris, mais les autres animaux sont colorés.",
+    "answer": "One of the animals is grey, while the other animals are brightly coloured.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:14409:c2",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Il y a six verres sur la table.",
+    "answer": "Six glasses are on the table.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:15333:c5",
+    "level": "A1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Elle met sa main au-dessus de ses yeux.",
+    "answer": "She places a hand above her eyes.",
+    "judge_reason": "Same meaning; article choice free"
+   },
+   {
+    "aid": "A:21392:c5",
+    "level": "A1",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Elle montre à droite après les stands.",
+    "answer": "She shows the way to the right after the booths.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:36196:c3",
+    "level": "A1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "maison",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Les enfants font signe depuis leur maison au village.",
+    "answer": "The children wave from their village house.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:37187:c5",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Si la poubelle n'était pas si profonde, le raton laveur sortirait facilement.",
+    "answer": "If the dustbin wasn't this deep, the racoon would escape easily.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:37755:c2",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "celle-là",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Le garçon a dit qu'il n'avait jamais entendu d'acclamation aussi forte que celle-là.",
+    "answer": "The boy said that he'd never heard such a loud cheer.",
+    "judge_reason": "Same meaning"
+   },
+   {
+    "aid": "A:37755:c3",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "celle-là",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Le garçon a dit qu'il n'avait jamais entendu d'acclamation aussi forte que celle-là.",
+    "answer": "The boy said he had never heard a cheer that loud.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:38440:c3",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "La poule a défendu ses poussins toute la nuit, donc elle est restée éveillée toute la nuit.",
+    "answer": "The hen has been defending its chicks all night, so it has stayed awake all night.",
+    "judge_reason": "Same meaning; tense free."
+   },
+   {
+    "aid": "A:38934:c5",
+    "level": "B2",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "prennent fin",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Nulle part sur la gravure les dunes infinies ne prennent fin.",
+    "answer": "In the engraving, the endless dunes end nowhere.",
+    "judge_reason": "Same meaning."
+   },
+   {
+    "aid": "A:40548:c5",
+    "level": "B1",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Pendant qu'elle s'appuyait sur la rambarde du pont, son partenaire a enregistré 5 km sur l'objectif hebdomadaire.",
+    "answer": "While she leaned on the bridge railing, his partner clocked 5 km towards the weekly target.",
+    "judge_reason": "Genderless 'son' allows his"
+   },
+   {
+    "aid": "A:40913:c3",
+    "level": "B2",
+    "layer": "L3:TIPrej",
+    "l3_reply": "TIP",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Elle était restée assise sur le matelas dur pendant une minute avant de crier que c'était une catastrophe !",
+    "answer": "She sat on the hard mattress for a minute before shouting it was a catastrophe!",
+    "judge_reason": "Past frame kept"
+   },
+   {
+    "aid": "A:41379:c5",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "avait l'habitude de",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Enfant, elle avait l'habitude de tenir ses paumes au-dessus des feux de plage chaque été.",
+    "answer": "When she was little, she held her palms above the beach fires every summer.",
+    "judge_reason": "Habitual past kept."
+   },
+   {
+    "aid": "A:42755:c2",
+    "level": "B2",
+    "layer": "L3",
+    "l3_reply": "DIFF",
+    "cc_state": "not_checked",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Le vendeur versait du thé depuis une heure quand les jeunes ont commencé à le filmer.",
+    "answer": "The vendor had poured tea for an hour when the young people started to film him.",
+    "judge_reason": "Past frame kept; tense free."
+   },
+   {
+    "aid": "A:42785:c5",
+    "level": "B1",
+    "layer": "CC:MISSING",
+    "l3_reply": "SAME",
+    "cc_state": "missing",
+    "cc_word": "tu",
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Si tu entretiens une voiture régulièrement, elle dure plus longtemps.",
+    "answer": "If a car is maintained regularly, it lasts longer.",
+    "judge_reason": "Generic 'tu' not a named agent"
+   }
+  ]
+ },
+ "false_acceptances": {
+  "n": 13,
+  "by_layer": {
+   "L3+CC:NONE": 13
+  },
+  "by_writer_type": {
+   "T": 6,
+   "M": 5,
+   "None": 1,
+   "W": 1
+  },
+  "by_level": {
+   "A1": 4,
+   "A2": 2,
+   "B1": 3,
+   "B2": 4
+  },
+  "items": [
+   {
+    "aid": "A:23662:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "À chaque cours de sciences, il apprend des choses sur l'espace.",
+    "answer": "In every science class, he learned things about space.",
+    "judge_reason": "Past time frame instead of present"
+   },
+   {
+    "aid": "A:24603:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Quel t-shirt choisit-il ? Le bleu canard.",
+    "answer": "Which T-shirt did he choose? The teal one.",
+    "judge_reason": "Past time frame; French is present"
+   },
+   {
+    "aid": "A:34791:m",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Devine quoi, apparemment ce mec riche ne cuisine jamais, mais là, il est en train de faire frire des poivrons.",
+    "answer": "Guess what, apparently this guy never cooks, but right now he's frying peppers.",
+    "judge_reason": "Dropped adjective 'riche'."
+   },
+   {
+    "aid": "A:35597:t",
+    "level": "A2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Évaluation de performance : elle balance le kettlebell de 20 kg fortement.",
+    "answer": "Performance review: she swung the 20 kg kettlebell strongly.",
+    "judge_reason": "Past time frame instead of present"
+   },
+   {
+    "aid": "A:35730:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Où les plongeurs nagent-ils ? Vers la surface ensoleillée, tout en haut.",
+    "answer": "Where were the divers swimming? Towards the sunny surface, right at the top.",
+    "judge_reason": "Past time frame instead of present"
+   },
+   {
+    "aid": "A:36196:t",
+    "level": "A1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Les enfants font signe depuis leur maison au village.",
+    "answer": "The children waved from their house in the village.",
+    "judge_reason": "Present time frame changed to past."
+   },
+   {
+    "aid": "A:37488:c4",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "correct",
+    "writer_type": null,
+    "source": "Si l'entraîneur lui étire le mollet, le joueur sera bientôt de retour sur le terrain.",
+    "answer": "If the coach stretches her calf, the player will be back on the pitch before long.",
+    "judge_reason": "'her' refers to masculine le joueur."
+   },
+   {
+    "aid": "A:38324:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Les individus au centre souhaitent vraisemblablement que les autres se serrent moins.",
+    "answer": "The individuals probably wish that the others would squeeze together less.",
+    "judge_reason": "Dropped place phrase 'in the centre'"
+   },
+   {
+    "aid": "A:38934:m",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Nulle part sur la gravure les dunes infinies ne prennent fin.",
+    "answer": "Nowhere in the engraving do the dunes come to an end.",
+    "judge_reason": "Dropped adjective 'infinies' (endless)."
+   },
+   {
+    "aid": "A:38934:t",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "T",
+    "source": "Nulle part sur la gravure les dunes infinies ne prennent fin.",
+    "answer": "Nowhere in the engraving did the endless dunes come to an end.",
+    "judge_reason": "Present time frame changed to past."
+   },
+   {
+    "aid": "A:38934:w",
+    "level": "B2",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "W",
+    "source": "Nulle part sur la gravure les dunes infinies ne prennent fin.",
+    "answer": "Nowhere in the painting do the endless dunes come to an end.",
+    "judge_reason": "Painting instead of engraving."
+   },
+   {
+    "aid": "A:40548:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Pendant qu'elle s'appuyait sur la rambarde du pont, son partenaire a enregistré 5 km sur l'objectif hebdomadaire.",
+    "answer": "While she was leaning on the railing, her partner logged 5 km towards the weekly goal.",
+    "judge_reason": "Drops 'bridge' from the railing."
+   },
+   {
+    "aid": "A:43045:m",
+    "level": "B1",
+    "layer": "L3+CC:NONE",
+    "l3_reply": "SAME",
+    "cc_state": "none",
+    "cc_word": null,
+    "writer_intent": "wrong",
+    "writer_type": "M",
+    "source": "Clairement un chef-d'œuvre : ce panneau a été peint à la main il y a environ cent ans.",
+    "answer": "Clearly a masterpiece: this sign was painted about a hundred years ago.",
+    "judge_reason": "Drops 'by hand'."
+   }
+  ]
+ },
+ "judge_noise": {
+  "controls": 80,
+  "agree": 80,
+  "disagree": 0,
+  "disagree_rate": {
+   "x": 0,
+   "n": 80,
+   "pct": 0.0,
+   "cp95": [
+    0.0,
+    4.51
+   ]
+  },
+  "by_level": {
+   "A1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "A2": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B1": {
+    "n": 20,
+    "disagree": 0
+   },
+   "B2": {
+    "n": 20,
+    "disagree": 0
+   }
+  },
+  "by_intent": {
+   "correct": {
+    "n": 40,
+    "disagree": 0
+   },
+   "wrong": {
+    "n": 40,
+    "disagree": 0
+   }
+  },
+  "disagreements": []
+ }
+}
