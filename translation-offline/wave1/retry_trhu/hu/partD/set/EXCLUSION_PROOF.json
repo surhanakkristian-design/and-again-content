@@ -1,0 +1,38 @@
+{
+ "retry_method": "retry (decision 55): excluded = every set under phase1*/phase2* + wave1/{de,ua,es,fr,tr,hu}/partD (incl. the failed wave-2 tr / hu sets); seed 20261201, tr positions 0 mod 2, hu 1 mod 2",
+ "method": "exercise_id of every JSON/JSONL file in a directory named set under phase1*/phase2* (_mock excluded; a file with > 1,000 ids is a corpus and skipped) is \"used before\" and skipped (preferred; relaxed per level only if < 25 remain). The 4,064 ids of each level are shuffled with one seed shared by the three wave-1 languages; de takes positions 0 mod 3, ua 1 mod 3, es 2 mod 3, so the three wave-1 sets are disjoint by construction.",
+ "files_scanned": 115,
+ "used_before_ids": 1060,
+ "per_level": {
+  "A1": {
+   "level_rows": 1174,
+   "my_slots": 587,
+   "excl_used_before": 125,
+   "picked": 25,
+   "relaxed_used_before": false
+  },
+  "A2": {
+   "level_rows": 1220,
+   "my_slots": 610,
+   "excl_used_before": 127,
+   "picked": 25,
+   "relaxed_used_before": false
+  },
+  "B1": {
+   "level_rows": 885,
+   "my_slots": 442,
+   "excl_used_before": 116,
+   "picked": 25,
+   "relaxed_used_before": false
+  },
+  "B2": {
+   "level_rows": 785,
+   "my_slots": 392,
+   "excl_used_before": 119,
+   "picked": 25,
+   "relaxed_used_before": false
+  }
+ },
+ "picked_used_before": 0,
+ "sentences_sha256": "2bd8f423efc65b7d678751880bbba9adfd582547890a7fe2ec81a7c68205d95f"
+}
