@@ -118,3 +118,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 66. **Eligibility is widened: a spoken line qualifies if it contains a FINITE VERB.** An explicit subject is no longer required, so imperatives and set phrases count ("Take me to the tower.", "Hold them like this, slowly."). A line with no verb at all ("Awesome!", "Two coffees.", sound markers) still does not qualify.
 67. **Listening may have MORE THAN ONE question per video** where the transcript carries them (up to 3).
 68. **Music: tracks 01 (upbeat electro), 02 (disco funk) and 05 (dance pop) are kept.** Tracks 03 and 04 are dropped.
+
+## Decisions for the finish-the-three-new-exercises brief (23 Sept 2026)
+
+69. **Tinder keeps +5 s per correct answer, with no upper limit and no XP cap.** Accepted as built.
+70. **Listening and Speaking filter their videos by the learner's level (A/B),** the way Tinder does.
+71. **The free listening check forgives ONE wrong letter in a word of 5+ letters (the speaking rule),** and the stored correct spelling is shown in green above the learner's answer whenever the two differ.
+72. **Tinder, Listening and Speaking go live on the web.**
