@@ -112,3 +112,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 63. **Speech recognition for Speaking uses Gemini** (the key already exists); pronunciation is judged leniently; audio is never stored.
 64. **Tinder: no pair table.** At runtime one correct sentence for the image, or one sentence taken from a DIFFERENT word of the SAME level. Correct/incorrect ratio 50:50. Images: all styles. 30 s to start, +5 s per correct answer, no penalty for a wrong one, no upper limit, counts towards the streak.
 65. **Background music for Tinder: royalty-free tracks from Pixabay,** several, played at random.
+
+## Decisions for the widen-eligibility / more listening questions / music brief (23 Sept 2026)
+
+66. **Eligibility is widened: a spoken line qualifies if it contains a FINITE VERB.** An explicit subject is no longer required, so imperatives and set phrases count ("Take me to the tower.", "Hold them like this, slowly."). A line with no verb at all ("Awesome!", "Two coffees.", sound markers) still does not qualify.
+67. **Listening may have MORE THAN ONE question per video** where the transcript carries them (up to 3).
+68. **Music: tracks 01 (upbeat electro), 02 (disco funk) and 05 (dance pop) are kept.** Tracks 03 and 04 are dropped.
