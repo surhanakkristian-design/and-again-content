@@ -72,3 +72,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 41. **The Ukrainian checker is sanity-checked offline** after the two live false rejections on exercise 1067.
 42. **The translate format must appear more often for the routed natives** (sk, cz, de, ua, es learning English), while the "at most 3 of the same exercise in a row" rule keeps holding.
 43. **Signed-URL caching for user-media is deliberately left unsolved for now.**
+
+## Decisions for the cadence deploy / mismatch scan brief (23 Sept 2026)
+
+44. **The CDN purge was run by the owner on 23 Sept 2026; verified on 10 files.**
+45. **The translate cadence (at least 1 translate card in 6, rule "max 3 of the same kind in a row" intact) is deployed.**
+46. **The selected 4,064 exercises are scanned in all six non-English natives for source/reference mismatches.** Report only, no fix in this run.
