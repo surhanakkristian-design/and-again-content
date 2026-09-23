@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of French sentences from a language-learning app, one per line as JSON: a writer id (wid), the French sentence, its CEFR level and the exercise topic. Imagine real learners translating each French sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the French. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the French's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the French (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the French is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the French names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (French: maintenant, aujourd'hui, déjà, encore, toujours, enfin, finalement, alors, totalement, complètement, juste, Regarde !). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the French sentence does not mark gender (e.g. "son", "sa", "ses", "leur" (they agree with the possessed noun, not the owner), "lui", or "se"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA101", "source": "Un petit avion peut-il atterrir dans cet aéroport si animé ? Oui !", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA102", "source": "Un animal est gris, mais les autres animaux sont colorés.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA103", "source": "Ce crocodile sort de l'eau.", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA104", "source": "Il y a six verres sur la table.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA105", "source": "Le sommet a une vue dégagée vers l'est.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA106", "source": "Elle met sa main au-dessus de ses yeux.", "level": "A1", "topic": "My, Your, His,..."}
+{"wid": "wA107", "source": "Les rayons tombent entre les grands arbres.", "level": "A1", "topic": "Singular and plural"}
+{"wid": "wA108", "source": "Elle est assise sur la glace et lace ses patins.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA109", "source": "La coureuse a des jambes très fortes.", "level": "A1", "topic": "HAVE GOT"}
+{"wid": "wA110", "source": "Il tient son pied blessé à deux mains.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA111", "source": "Elle montre à droite après les stands.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA112", "source": "À chaque cours de sciences, il apprend des choses sur l'espace.", "level": "A1", "topic": "Present Simple"}
+{"wid": "wA113", "source": "Quel t-shirt choisit-il ? Le bleu canard.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA114", "source": "Le tigre entre dans une rivière profonde dans la jungle.", "level": "A1", "topic": "A, AN, THE"}
+{"wid": "wA115", "source": "Il monte vingt marches raides avec la caisse.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA116", "source": "Cauchemar ! Elle ne veut plus jamais quitter ce continent !", "level": "A1", "topic": "This, That, These..."}
+{"wid": "wA117", "source": "Mec, sa cuisine fait six assiettes en une minute, je sais pas.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA118", "source": "Est-ce que tu peux me montrer ton tableau de preuves ? C'est vraiment cool.", "level": "A1", "topic": "Modal verb CAN"}
+{"wid": "wA119", "source": "Le fermier a un chien et une charrette.", "level": "A1", "topic": "Cardinal numbers"}
+{"wid": "wA120", "source": "Comment tu cuisines comme ça ? Cuisine de riche, gestes fluides.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA121", "source": "Il fait une fouille dans le salon.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA122", "source": "Cauchemar ! La douche est sur le mur juste derrière les toilettes !", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA123", "source": "Elle verse du liquide vaisselle sur l'éponge au-dessus de la poêle sale.", "level": "A1", "topic": "Prepositions of place/time"}
+{"wid": "wA124", "source": "Où les plongeurs nagent-ils ? Vers la surface ensoleillée, tout en haut.", "level": "A1", "topic": "Wh- questions"}
+{"wid": "wA125", "source": "Les enfants font signe depuis leur maison au village.", "level": "A1", "topic": "My, Your, His,..."}

@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of French sentences from a language-learning app, one per line as JSON: a writer id (wid), the French sentence, its CEFR level and the exercise topic. Imagine real learners translating each French sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the French. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the French's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the French (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the French is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the French names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (French: maintenant, aujourd'hui, déjà, encore, toujours, enfin, finalement, alors, totalement, complètement, juste, Regarde !). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the French sentence does not mark gender (e.g. "son", "sa", "ses", "leur" (they agree with the possessed noun, not the owner), "lui", or "se"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "Ce pain est meilleur que le pain du magasin.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA202", "source": "Hier, il a cassé le concombre en deux.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA203", "source": "Viens avec nous et tu verras cette petite île aussi.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA204", "source": "Il y a un parachute rose au-dessus des collines.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA205", "source": "D'habitude ils boivent du cola, mais là ils boivent de la limonade.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA206", "source": "Il y a beaucoup d'eau dans ce ruisseau propre.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA207", "source": "Il tient la prise. Il va la brancher.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA208", "source": "Cette corde est plus grosse que l'ancienne.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA209", "source": "Tu es effrayée. Tu dois quitter ce parking tout de suite.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA210", "source": "D'habitude il se cache dans l'herbe, mais là il est en train de glisser sur le chemin.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA211", "source": "La forme sombre est sous le bateau. La baleine va apparaître.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA212", "source": "Il y a un livre sur la table du café, donc elle le lit.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA213", "source": "Hier, son camarade de classe a apporté une pomme rouge au déjeuner.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA214", "source": "Écoute, il m'a dit qu'il y a un seul puits qui descend tout au fond.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA215", "source": "Mec, ce visage fait un peu peur, donc on doit regarder ailleurs.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA216", "source": "Bon, apparemment le père est en train de porter un bébé sur ses épaules en ce moment.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA217", "source": "D'habitude elle cadre les fleurs. Hier elle a cadré les toits, évidemment.", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA218", "source": "Il a la liberté maintenant, donc je pense qu'il sera libre.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA219", "source": "Tu devrais rejoindre le câlin maintenant, ou tu le regretteras pour toujours !", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA220", "source": "Je vais pas mentir, tu ne perds pas beaucoup de temps. Tu trouves la clé.", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA221", "source": "Il répare d'habitude des voitures, mais aujourd'hui il est en train de réparer un tableau électrique.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA222", "source": "Devine quoi, apparemment ce mec riche ne cuisine jamais, mais là, il est en train de faire frire des poivrons.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA223", "source": "Évaluation de performance : elle balance le kettlebell de 20 kg fortement.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA224", "source": "Il y a plein de pièges entre les rayons de jouets.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA225", "source": "Ma belle, apparemment mamie adore les cuillères en bois, mais hier elle a utilisé une fourchette.", "level": "A2", "topic": "Present or Past Simple"}

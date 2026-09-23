@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of French sentences from a language-learning app, one per line as JSON: a writer id (wid), the French sentence, its CEFR level and the exercise topic. Imagine real learners translating each French sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the French. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the French's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the French (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the French is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the French names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (French: maintenant, aujourd'hui, déjà, encore, toujours, enfin, finalement, alors, totalement, complètement, juste, Regarde !). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the French sentence does not mark gender (e.g. "son", "sa", "ses", "leur" (they agree with the possessed noun, not the owner), "lui", or "se"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "Avant l'arrivée du blender, il avait besoin de vingt minutes et un couteau aiguisé pour couper ses fruits.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB102", "source": "Il y a un sac plein à ses pieds et elle n'a pas fini - elle nettoie ce parc depuis midi.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB103", "source": "Si tu perds tes clés dans un sac de cette taille, la panique arrive en deux secondes.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB104", "source": "Cette eau a été détruite par un seul homme en une dizaine de secondes.", "level": "B1", "topic": "Passive or Active"}
+{"wid": "wB105", "source": "Pendant qu'elle pendait là, son amie s'est glissée sous elle.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB106", "source": "Meuf, apparemment il portait un sac de faux bijoux quand le policier l'a arrêté.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB107", "source": "Il a transformé son sous-sol en home cinéma, et maintenant c'est fini.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}
+{"wid": "wB108", "source": "Si la poubelle n'était pas si profonde, le raton laveur sortirait facilement.", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB109", "source": "Si l'entraîneur lui étire le mollet, le joueur sera bientôt de retour sur le terrain.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB110", "source": "Le garçon a dit qu'il n'avait jamais entendu d'acclamation aussi forte que celle-là.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB111", "source": "À la fin de la compétition, elle avait soulevé une voiture au-dessus de sa tête. Incroyable !", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB112", "source": "S'ils bercent le bébé encore un peu, elle s'endormira.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB113", "source": "Pendant que l'homme traversait en courant la place mouillée, une douzaine de pigeons s'est envolée.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB114", "source": "La poule a défendu ses poussins toute la nuit, donc elle est restée éveillée toute la nuit.", "level": "B1", "topic": "Present Perfect Continuous"}
+{"wid": "wB115", "source": "Les jeunes grimpeurs continuent de l'encourager avec de grands cris.", "level": "B1", "topic": "Gerund vs Infinitive"}
+{"wid": "wB116", "source": "Les adieux du vieil homme ont été regardés par tout le village depuis le mur du port.", "level": "B1", "topic": "Passive"}
+{"wid": "wB117", "source": "Si la circulation reste bloquée pendant des heures, les conducteurs se sentent désespérés.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB118", "source": "Pendant qu'elle s'appuyait sur la rambarde du pont, son partenaire a enregistré 5 km sur l'objectif hebdomadaire.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB119", "source": "Enfant, elle avait l'habitude de tenir ses paumes au-dessus des feux de plage chaque été.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB120", "source": "Son retour était grave iconique : elle tournoyait pieds nus quand la caméra l'a filmée.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB121", "source": "Pendant que la fille écrivait sa liste, la prof a préparé l'étoile dorée en récompense.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB122", "source": "Si tu entretiens une voiture régulièrement, elle dure plus longtemps.", "level": "B1", "topic": "0 Conditional"}
+{"wid": "wB123", "source": "Clairement un chef-d'œuvre : ce panneau a été peint à la main il y a environ cent ans.", "level": "B1", "topic": "Passive"}
+{"wid": "wB124", "source": "Au moment où elle a reculé d'un bond, l'étagère qui avait l'air si stable était tombée de son support.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB125", "source": "Je vais pas mentir, tu as collé déjà trois drapeaux sur cette carte. Goût du voyage iconique.", "level": "B1", "topic": "Present Perfect Simple or Continuos"}

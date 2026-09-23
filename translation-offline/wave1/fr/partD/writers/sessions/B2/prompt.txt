@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of French sentences from a language-learning app, one per line as JSON: a writer id (wid), the French sentence, its CEFR level and the exercise topic. Imagine real learners translating each French sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the French. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the French's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the French (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the French is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the French names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (French: maintenant, aujourd'hui, déjà, encore, toujours, enfin, finalement, alors, totalement, complètement, juste, Regarde !). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the French sentence does not mark gender (e.g. "son", "sa", "ses", "leur" (they agree with the possessed noun, not the owner), "lui", or "se"), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "D'ici vendredi, elle aura transformé chaque surface de l'atelier en miroir.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB202", "source": "Elle faisait tourner le globe depuis une heure quand l'ampoule a lâché.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB203", "source": "Elle a admis qu'elle avait cueilli trop de feuilles.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB204", "source": "Il aimerait que l'enflure disparaisse avant le match.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB205", "source": "L'homme savait que les applaudissements seraient longs, comme c'est typiquement le cas après une performance forte.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB206", "source": "Écoute, j'ai entendu dire qu'ils trébuchaient à l'aveugle depuis une heure quand les bandeaux sont tombés.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB207", "source": "Ses amis auraient dû le consoler plus tôt ; il pleurait seul depuis des heures.", "level": "B2", "topic": "Modals in past"}
+{"wid": "wB208", "source": "Elle savait que ce couloir serait un vrai cauchemar le jour du déménagement !", "level": "B2", "topic": "Future in past"}
+{"wid": "wB209", "source": "Ils avaient bercé le bébé pendant une heure avant de la mettre dans le berceau.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB210", "source": "Les individus au centre souhaitent vraisemblablement que les autres se serrent moins.", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB211", "source": "La poule, dont les poussins ont été en danger deux fois, les a défendus comme une vraie pro.", "level": "B2", "topic": "Relative clauses"}
+{"wid": "wB212", "source": "Nulle part sur la gravure les dunes infinies ne prennent fin.", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB213", "source": "En ce moment, la piscine gonflable bleue est en train de gonfler sur la pelouse devant la femme.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB214", "source": "D'ici la deadline, elle aura suivi les 8 étapes de la recette écrite à la main.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB215", "source": "D'ici 17 h, elle aura cuit chaque cookie, et ce foulard en gardera l'odeur pour toujours !", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB216", "source": "Elle était restée assise sur le matelas dur pendant une minute avant de crier que c'était une catastrophe !", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB217", "source": "D'ici le mois prochain à la même époque, il aura pris la moto pour des centaines de petits trajets.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB218", "source": "D'ici ce soir, elle aura ramassé tout le plastique près de la rive.", "level": "B2", "topic": "Future Perfect Simple"}
+{"wid": "wB219", "source": "Ils avaient gardé l'argent secret pendant des années avant que cette nappe gâche tout !", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB220", "source": "Le vendeur versait du thé depuis une heure quand les jeunes ont commencé à le filmer.", "level": "B2", "topic": "Past Perfect Continuous"}
+{"wid": "wB221", "source": "La maquilleuse avait lissé les bandes avec une éponge avant d'utiliser le pinceau.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB222", "source": "Il veut se faire prendre en photo sur l'escalier en marbre.", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB223", "source": "Elle avait épluché pendant dix bonnes minutes avant d'oser lever les yeux de cette bande ! Incroyable !", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB224", "source": "Elle arrose ses plantes avec l'arrosoir au coucher du soleil sur son balcon.", "level": "B2", "topic": "Articles advanced"}
+{"wid": "wB225", "source": "L'atelier, dont les murs sont couverts d'outils, abrite aussi une horloge à coucou sculptée.", "level": "B2", "topic": "Relative clauses"}
