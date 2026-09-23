@@ -5,3 +5,9 @@ Headless used so far (this language): 0. Agent reserve: 250,000. Projected langu
 
 - 2026-09-23T10:33:26Z cumulative subagent tokens after projection: 0
 - 2026-09-23T10:33:28Z cumulative headless (this language) after writers: 0
+- writers A1#sub: 34,562 tokens (ok, 98.7s)
+- writers A2#sub: 32,574 tokens (ok, 92.3s)
+- writers B1#sub: 35,259 tokens (ok, 105.5s)
+- writers B2#sub: 39,753 tokens (ok, 133.2s)
+- 2026-09-23T10:36:42Z cumulative headless (this language) after writers: 142,148
+- 2026-09-23T10:36:43Z cumulative subagent tokens after writers: 142,148
