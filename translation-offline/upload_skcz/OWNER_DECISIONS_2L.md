@@ -85,3 +85,8 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 48. **Spanish keeps the explicit subject;** only the wrong pronoun is corrected (not a restore from the Part 4 backup).
 49. **Where the native sentence says something entirely different** (most of the Hungarian A1 series), it is re-translated from the English, not patched.
 50. **The 440 native rows with an empty gap word stay as they are for now.**
+
+## Decisions for the pronoun sweep / wave 2 brief (23 Sept 2026)
+
+51. **A deterministic pronoun/person sweep runs over all 4,064 selected exercises in de, ua, es, fr, tr and hu;** what it finds is fixed with the same two-pass rule (one judge, an independent verifier, only rows both call wrong are fixed).
+52. **Wave 2 (fr, tr, hu) is measured with the same method and the same targets as wave 1.**
