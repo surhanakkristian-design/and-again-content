@@ -90,8 +90,14 @@ def lang_ledger(lang, root=W1):
     return os.path.join(root, lang, 'GEMINI_LEDGER.json')
 
 
-def wave_counted(root=W1):
-    return sum(int(v) for lg in LANGS for v in read_json(lang_ledger(lg, root), {}).values())
+def wave_langs(lang=None):
+    """The languages of lang's wave (wave 1 de/ua/es, wave 2 fr/tr/hu: separate 5,000-call / $1.50 caps); None = wave 1."""
+    w = P.WAVE.get(lang, 1)
+    return tuple(lg for lg in LANGS if P.WAVE[lg] == w)
+
+
+def wave_counted(root=W1, lang=None):
+    return sum(int(v) for lg in wave_langs(lang) for v in read_json(lang_ledger(lg, root), {}).values())
 
 
 @contextlib.contextmanager
@@ -114,8 +120,14 @@ def spend_of(d):
     return tot
 
 
-def wave_spend(root=W1):
-    return sum(spend_of(os.path.join(root, lg, 'run')) for lg in LANGS if os.path.isdir(os.path.join(root, lg, 'run')))
+def lang_spend(root, lg):
+    """A language's HTTP-200 spend: <lang>/run (test layout) + <lang>/partD/run (the production layout; 23 Sept 2026 fix:
+    the wave-1 code read only <lang>/run, so the spend guard never saw the other stage of the same language)."""
+    return sum(spend_of(p) for p in (os.path.join(root, lg, 'run'), os.path.join(root, lg, 'partD', 'run')) if os.path.isdir(p))
+
+
+def wave_spend(root=W1, lang=None):
+    return sum(lang_spend(root, lg) for lg in wave_langs(lang))
 
 
 def clean_item(it):
@@ -129,7 +141,7 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
     for p, w in ((run_dir, 'run dir'), (ledger_path, 'ledger'), (root, 'root')):
         guard_path(p, w) if p != W1 else None
     if lang not in LANGS:
-        raise Refused('REFUSED: language %r (de|ua|es)' % (lang,))
+        raise Refused('REFUSED: language %r (de|ua|es|fr|tr|hu)' % (lang,))
     build = P.l3_request if kind == 'l3' else P.cc_request
     os.makedirs(run_dir, exist_ok=True)
     PP = B.paths(run_dir)
@@ -146,12 +158,12 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
     phase = read_json(ledger_path, {})
     others = sum(int(v) for k, v in phase.items() if k != stage)
     counted0 = sum(1 for r in B.jl_read(PP['ledger']) if r.get('http') == 200)
-    wave_other = wave_counted(root) - sum(int(v) for v in phase.values())
+    wave_other = wave_counted(root, lang) - sum(int(v) for v in phase.values())
     cap = min(LANG_CAP - others, WAVE_CAP - wave_other - others)
-    lang_run = os.path.join(os.path.dirname(ledger_path), 'run')
     spent_here = spend_of(run_dir)
-    spent_lang_other = spend_of(lang_run) - spent_here
-    spent_wave_other = wave_spend(root) - spend_of(lang_run)
+    spent_lang = lang_spend(root, lang)
+    spent_lang_other = spent_lang - spent_here
+    spent_wave_other = wave_spend(root, lang) - spent_lang
     ctx = {'P': PP, 'cap': cap, 'spend_cap': min(LANG_SPEND - spent_lang_other, WAVE_SPEND - spent_wave_other - spent_lang_other),
            'key': None, 'last': 0.0, 'made': 0, 'uncounted': 0, 'counted': counted0, 'spent': spent_here,
            'est': B.EST_CALL_USD}
@@ -184,7 +196,7 @@ def run_calls(kind, items, run_dir, stage, lang, ledger_path, key=None, root=W1,
                 with (CC.transport(B) if kind == 'cc' else contextlib.nullcontext()):
                     for k in need:
                         with wave_lock(root):       # check + reserve ONE call under the wave lock (strict 5,000)
-                            if wave_counted(root) - sum(int(v) for v in phase.values()) + others + ctx['counted'] + 1 > WAVE_CAP:
+                            if wave_counted(root, lang) - sum(int(v) for v in phase.values()) + others + ctx['counted'] + 1 > WAVE_CAP:
                                 raise Stop('wave_cap', 'wave total would exceed %d' % WAVE_CAP)
                             phase[stage] = ctx['counted'] + 1
                             write_json(ledger_path, phase)

@@ -48,7 +48,8 @@ def reset(name):
 
 def items(lang='de', n=3, extra=None):
     src = {'de': 'Der große Hund schläft jetzt im Garten.', 'ua': 'Великий пес зараз спить у саду.',
-           'es': 'El perro grande duerme ahora en el jardín.'}[lang]
+           'es': 'El perro grande duerme ahora en el jardín.', 'fr': 'Le grand chien dort maintenant dans le jardin.',
+           'tr': 'Büyük köpek şimdi bahçede uyuyor.', 'hu': 'A nagy kutya most a kertben alszik.'}[lang]
     out = []
     for i in range(n):
         it = {'jid': 'A:%d:c%d' % (7 + i, i + 1), 'sid': 7 + i, 'level': 'A1', 'src': src,
@@ -90,9 +91,13 @@ def t01_prompt_derivation():
                 ('judge', P.judge_prompt(lang), frozen_j, '- %s\n' % P.g22(lang)),
                 ('writer', P.writer_template(lang), frozen_w,
                  "\n\nThe owner's rule for genderless sources: %s" % P.g22(lang)[len('Genderless source: '):])):
-            if name == 'judge' and lang in P.JUDGE_D3233:      # decisions 32 + 33: judge prompt only, es only
-                assert txt.count('- %s\n' % P.d32(lang)) == 1 and txt.count(P.D33_NEW) == 1, (lang, 'd32/d33')
-                txt = txt.replace('- %s\n' % P.d32(lang), '').replace(P.D33_NEW, P.D33_OLD)
+            if name == 'judge' and lang in P.JUDGE_D3233:      # decisions 32 + 33: judge prompt only (es; wave 2 fr/tr/hu)
+                assert lang not in P.JUDGE_D32 or txt.count('- %s\n' % P.d32(lang)) == 1, (lang, 'd32')
+                assert txt.count(P.D33_NEW) == (1 if lang in P.JUDGE_D33 else 0), (lang, 'd33')
+                if lang not in P.JUDGE_D32:
+                    assert 'Grammatical gender decides' not in txt, (lang, 'd32 in a genderless language')
+                txt = txt.replace('- %s\n' % P.d32(lang), '') if lang in P.JUDGE_D32 else txt
+                txt = txt.replace(P.D33_NEW, P.D33_OLD)
             elif name == 'judge':
                 assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, (lang, 'd32/d33 leaked')
             if name != 'judge':
@@ -237,8 +242,8 @@ def t08_relative_path_refused():
             pass
     assert CALLS[0] == 0 and not os.path.exists('rel') and not os.path.exists(os.path.join(d, 'x'))
     try:
-        S.run_calls('l3', items('fr'.replace('fr', 'de')), os.path.join(d, 'y'), 'T', 'fr', os.path.join(d, 'de/L.json'), key='MOCK')
-        raise AssertionError('language fr not refused')
+        S.run_calls('l3', items('de'), os.path.join(d, 'y'), 'T', 'it', os.path.join(d, 'de/L.json'), key='MOCK')
+        raise AssertionError('language it not refused')      # (was fr before wave 2 added fr/tr/hu)
     except S.Refused:
         pass
 
@@ -353,7 +358,7 @@ def t12_drop_lists_and_g22_everywhere():
                 assert w in txt, (lang, w)
             assert 'BOTH he/she and his/her are correct' in txt
             assert 'now, today, already, still, finally, then, totally, completely, just, Look!' in txt
-    assert set(P.DROP) == set(P.LANG) == {'de', 'ua', 'es'}
+    assert set(P.DROP) == set(P.LANG) == {'de', 'ua', 'es', 'fr', 'tr', 'hu'}
 
 
 def t13_frozen_sources_untouched():
@@ -469,11 +474,36 @@ def t15_es_eight_packets_and_followups():
     assert f1.startswith(P.judge_prompt('es')) and len([l for l in f1.split('Items:\n', 1)[1].splitlines() if l.strip()]) == 2
 
 
+def t16_wave2_separate_caps_and_prompts():
+    """Wave 2 (fr/tr/hu): its own 5,000-call cap (wave-1 ledgers do not count), per-language 1,800 cap as before,
+    8 judge packets, d32 only in the fr judge prompt, d33 in all three, checker prompts carry neither."""
+    def setup(name, led):
+        d = reset(name)
+        for lg, v in led.items():
+            os.makedirs(os.path.join(d, lg), exist_ok=True)
+            S.write_json(S.lang_ledger(lg, d), v)
+        return d
+    import pipeline_w1 as W
+    assert S.wave_langs('fr') == S.wave_langs('hu') == ('fr', 'hu', 'tr') and S.wave_langs('es') == ('de', 'es', 'ua')
+    out = full(setup('t16', {'de': {'X': 1700}, 'es': {'X': 1700}, 'ua': {'Y': 1600}}), items('fr', 2), 'fr')
+    assert out['status'] == 'COMPLETE' and CALLS[0] == 4, (out, CALLS[0])        # wave 1 full, wave 2 untouched
+    out = full(setup('t16b', {'fr': {'X': 1700}, 'tr': {'X': 1700}, 'hu': {'Y': 1599}, 'de': {'X': 5000}}), items('hu', 1), 'hu')
+    assert out['status'] == 'STOPPED' and out['l3']['calls_made'] == 1 and out['cc']['stop']['kind'] == 'cap', out
+    assert S.wave_counted(os.path.join(T, 't16b'), 'hu') == 5000
+    for lang in ('fr', 'tr', 'hu'):
+        assert W.NPACK[lang] == 8 and P.WAVE[lang] == 2
+        j = P.judge_prompt(lang)
+        assert ('Grammatical gender decides' in j) == (lang == 'fr') and P.D33_NEW in j, lang
+        for txt in (P.l3_sys(lang), P.cc_sys(lang), P.writer_template(lang)):
+            assert 'Grammatical gender decides' not in txt and 'ADDED interjection' not in txt, lang
+    assert P.judge_prompt('es') == open(os.path.join(S.W1, 'spec', 'judge_prompt_es.txt'), encoding='utf-8').read()
+
+
 TESTS = [t01_prompt_derivation, t02_spec_files_match, t03_parsers, t04_row_number_429_is_not_a_rate_limit,
          t05_real_429_envelope_retries_uncounted, t06_usage_limit_envelopes_stop, t07_resume_at_zero_cost,
          t08_relative_path_refused, t09_poison_no_reference_read, t10_layer_order, t11_caps,
          t12_drop_lists_and_g22_everywhere, t13_frozen_sources_untouched, t14_subagent_transport,
-         t15_es_eight_packets_and_followups]
+         t15_es_eight_packets_and_followups, t16_wave2_separate_caps_and_prompts]
 
 if __name__ == '__main__':
     real = [0]

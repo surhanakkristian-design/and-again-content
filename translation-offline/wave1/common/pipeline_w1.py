@@ -44,13 +44,18 @@ TYPES = ['T', 'W', 'M', 'S']
 SHIFT = {'A1': 1, 'A2': 2, 'B1': 3, 'B2': 1}
 SEED, JSEED = 20261001, 20261002
 LANG_ORDER = ['de', 'ua', 'es']            # position mod 3 in the shared seeded order
+# Wave 2 (23 Sept 2026, decision 52): fr / tr / hu take positions 0 / 1 / 2 mod 3 of their OWN seeded order (SEED2), so
+# the three wave-2 sets are disjoint by construction; every id of an earlier set (phase1*/phase2* and the wave-1
+# de/ua/es sets) is excluded.
+LANG_ORDER2 = ['fr', 'tr', 'hu']
+SEED2 = 20261101
 BUDGET_LANG = 1300000                      # Claude tokens per language (brief: about 1,300,000)
 AGENT_EST = 250000                         # the language agent's own context (estimate, reserved)
 HEADLESS_CAP = BUDGET_LANG - AGENT_EST     # every headless session of this language together
 JUDGE_CAP = 400000
 # Wave 1 es brief (22 Sept 2026, decision 31): es is judged in 8 shuffled packets (not 4) with deterministic follow-up
 # sessions for MISSING jids only (cap 2 per packet).  de / ua keep the 4-packet path they were measured with.
-NPACK = {'de': 4, 'ua': 4, 'es': 8}
+NPACK = {'de': 4, 'ua': 4, 'es': 8, 'fr': 8, 'tr': 8, 'hu': 8}
 FOLLOWUPS = 2
 SHIFT8 = {'A1': 1, 'A2': 3, 'B1': 5, 'B2': 7}
 # es resume: the brief's Claude budget (1,500,000) is for THIS run; es had spent 506,036 before it (writers + the 7
@@ -631,7 +636,7 @@ def cmd_partA_live(a):
     data = [{'exercise_id': int(r['exercise_id']), 'level': r['level'], 'exercise_type_id': r['exercise_type_id'],
              'concept_id': r['concept_id'], 'topic': r['topic'], 'loc_id': r['loc_id'], 'src': r['full_sentence']} for r in rows]
     h = wjl(L['dir'] + '/partA_live/rows.jsonl', data)
-    old = {r['exercise_id']: r['src'] for r in jl(L['A'] + '/rows.jsonl')}
+    old = {r['exercise_id']: r['src'] for r in jl(L['A'] + '/rows.jsonl')} if os.path.exists(L['A'] + '/rows.jsonl') else {}
     cmp_ = Counter()
     for r in data:
         o, n = (old.get(r['exercise_id']) or '').strip(), (r['src'] or '').strip()
@@ -674,7 +679,10 @@ def used_exercise_ids():
     """exercise_ids of the earlier MEASUREMENT sets: every JSON/JSONL file inside a directory named `set` under
     phase1*/phase2* (_mock excluded).  A file with > 1,000 distinct ids would be a production corpus, not a set: skipped."""
     EID, files, skipped = set(), [], []
-    for top in sorted(glob.glob(TOFF + '/phase1*') + glob.glob(TOFF + '/phase2*')):
+    tops = glob.glob(TOFF + '/phase1*') + glob.glob(TOFF + '/phase2*')
+    if P.WAVE.get(L.get('lang')) == 2:          # wave 2: the wave-1 sets are earlier sets too
+        tops += [W1 + '/' + lg + '/partD' for lg in LANG_ORDER]
+    for top in sorted(tops):
         for dp, dn, fn in os.walk(top):
             if '/_mock' in dp or '/.git' in dp or os.path.basename(dp) != 'set':
                 continue
@@ -695,12 +703,13 @@ def cmd_make_set(a):
     lang = L['lang']
     rows = source_rows()
     used, files = used_exercise_ids()
-    pos = LANG_ORDER.index(lang)
+    w2 = P.WAVE[lang] == 2
+    pos = (LANG_ORDER2 if w2 else LANG_ORDER).index(lang)
     out, stats = [], {}
     for li, lv in enumerate(LEVELS):
         ids = sorted(e for e, r in rows.items() if r['level'] == lv)
         order = ids[:]
-        random.Random(SEED + li).shuffle(order)
+        random.Random((SEED2 if w2 else SEED) + li).shuffle(order)
         mine = [e for i, e in enumerate(order) if i % 3 == pos]
         st = Counter(level_rows=len(ids), my_slots=len(mine))
         cand, relaxed = [], False
@@ -733,7 +742,7 @@ def cmd_make_set(a):
                   'ua 1 mod 3, es 2 mod 3, so the three wave-1 sets are disjoint by construction.',
         'files_scanned': len(files), 'used_before_ids': len(used), 'per_level': stats,
         'picked_used_before': sum(1 for o in out if o['exercise_id'] in used), 'sentences_sha256': h})
-    wj(L['D'] + '/set/SET_META.json', {'seed': SEED, 'lang': lang, 'position_mod3': pos, 'stats': stats, 'sha256': h,
+    wj(L['D'] + '/set/SET_META.json', {'seed': SEED2 if w2 else SEED, 'wave': P.WAVE[lang], 'lang': lang, 'position_mod3': pos, 'stats': stats, 'sha256': h,
                                        'rewritten_in_set': sum(1 for o in out if o['rewrite_status'] == 'changed')})
     print(json.dumps({'stats': stats, 'used_before': len(used)}))
     return 0
@@ -1200,7 +1209,7 @@ def cmd_gemini(a):
         wj(RUN + '/RUN_OUT.json', {'status': 'STOPPED', 'kind': getattr(e, 'kind', None), 'why': getattr(e, 'why', str(e))})
         print('STOPPED', e); return 4
     out.update(ledger_before=led0, ledger_after=S.read_json(S.lang_ledger(L['lang']), {}), secs=round(time.time() - t0, 1),
-               wave_counted_after=S.wave_counted())
+               wave_counted_after=S.wave_counted(lang=L['lang']))
     wj(RUN + '/RUN_OUT.json', out)
     print(json.dumps({'status': out['status'], 'ledger_after': out['ledger_after']}))
     return 0 if out['status'] == 'COMPLETE' else 3

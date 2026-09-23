@@ -16,17 +16,25 @@ import json, os, sys
 sys.dont_write_bytecode = True
 TOFF = '/Users/kristiansurhanak/Projects/and-again-content/translation-offline'
 W1 = TOFF + '/wave1'
-LANG = {'de': 'German', 'ua': 'Ukrainian', 'es': 'Spanish'}
+LANG = {'de': 'German', 'ua': 'Ukrainian', 'es': 'Spanish', 'fr': 'French', 'tr': 'Turkish', 'hu': 'Hungarian'}
+# Wave 2 (23 Sept 2026, owner decision 52): fr / tr / hu, derived by the same substitutions as wave 1.
+WAVE = {'de': 1, 'ua': 1, 'es': 1, 'fr': 2, 'tr': 2, 'hu': 2}
 # written from the owner's list: now, today, already, still, finally, then, totally, completely, just, Look!
 DROP = {
     'de': 'jetzt, heute, schon, noch, endlich, dann, damals, total, völlig, gerade, eben, Schau!',
     'ua': 'зараз, тепер, сьогодні, вже, ще, нарешті, тоді, зовсім, цілком, повністю, щойно, Дивись!',
-    'es': 'ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!'}
+    'es': 'ahora, hoy, ya, todavía, aún, por fin, finalmente, entonces, totalmente, completamente, justo, ¡Mira!',
+    'fr': "maintenant, aujourd'hui, déjà, encore, toujours, enfin, finalement, alors, totalement, complètement, juste, Regarde !",
+    'tr': 'şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!',
+    'hu': 'most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!'}
 # decision 22 examples: where the language leaves gender unmarked
 G22_EX = {
     'de': '"sich", or a neuter noun for a person such as "das Kind"',
     'ua': '"свій", "себе", or a verb form without a subject pronoun',
-    'es': '"su", "sus", "se", or a verb without a subject pronoun'}
+    'es': '"su", "sus", "se", or a verb without a subject pronoun',
+    'fr': '"son", "sa", "ses", "leur" (they agree with the possessed noun, not the owner), "lui", or "se"',
+    'tr': '"o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender',
+    'hu': '"ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender'}
 G22 = 'Genderless source: when the {L} sentence does not mark gender (e.g. {EX}), BOTH he/she and his/her are correct.'
 EN_LIST = 'now, today, already, still, finally, then, totally, completely, just, Look!'
 SKCZ_PAREN = ('(Slovak: teraz, dnes, už, ešte, konečne, vtedy, úplne, práve, Pozri!; Czech: teď, dnes, už, ještě, '
@@ -54,7 +62,7 @@ def _once(text, old, new, what):
 
 def _check_lang(lang):
     if lang not in LANG:
-        raise ValueError('language %r (de|ua|es)' % (lang,))
+        raise ValueError('language %r (de|ua|es|fr|tr|hu)' % (lang,))
 
 
 def g22(lang):
@@ -121,8 +129,13 @@ def cc_request(lang, src, answer):
 
 # Owner decisions 32 + 33 (22 Sept 2026, Wave 1 es brief; added AFTER de/ua were frozen, so only for the languages in
 # JUDGE_D3233): the JUDGE prompt only.  The checker prompts (L3, content check) stay byte-identical.
-JUDGE_D3233 = {'es'}
-D32_EX = {'de': '"der Sportler"', 'ua': '"спортсмен"', 'es': '"el atleta"'}
+# Wave 2 (brief 23 Sept 2026): decisions 32 + 33 in the JUDGE prompt of fr / tr / hu as well.  Decision 32 needs a
+# grammatical gender: Turkish and Hungarian have none (decision 22 covers every tr/hu sentence), so the d32 line is
+# added for fr only; d33 for all three.  es output is byte-identical to wave 1.
+JUDGE_D32 = {'es', 'fr'}
+JUDGE_D33 = {'es', 'fr', 'tr', 'hu'}
+JUDGE_D3233 = JUDGE_D32 | JUDGE_D33
+D32_EX = {'de': '"der Sportler"', 'ua': '"спортсмен"', 'es': '"el atleta"', 'fr': '"le client"'}
 D32 = ('Grammatical gender decides: a grammatically masculine {L} noun (e.g. {EX}) is "he"; "she" is wrong. The '
        'genderless rule above covers only sentences that mark no gender at all.')
 D33_OLD = '- Added content is wrong.\n'
@@ -141,8 +154,9 @@ def judge_prompt(lang):
     t = _once(t, '- Added content is wrong.\n', '- Added content is wrong.\n- %s\n' % g22(lang), 'judge g22')
     assert 'Slovak' not in t
     t = t.replace('Czech', LANG[lang])
-    if lang in JUDGE_D3233:
+    if lang in JUDGE_D32:
         t = _once(t, '- %s\n' % g22(lang), '- %s\n- %s\n' % (g22(lang), d32(lang)), 'judge d32')
+    if lang in JUDGE_D33:
         t = _once(t, D33_OLD, D33_NEW, 'judge d33')
     assert t.rstrip().endswith('Items:')
     return t
