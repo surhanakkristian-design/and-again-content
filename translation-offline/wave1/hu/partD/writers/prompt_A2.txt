@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Hungarian sentences from a language-learning app, one per line as JSON: a writer id (wid), the Hungarian sentence, its CEFR level and the exercise topic. Imagine real learners translating each Hungarian sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Hungarian. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Hungarian's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Hungarian (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Hungarian is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Hungarian names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Hungarian: most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Hungarian sentence does not mark gender (e.g. "ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "A meleg teraszon nagyon lassan forog.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA202", "source": "Épp most csukja a doboz fedelét.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA203", "source": "A szomszéd agyagedényét nem kellene eltörnöd.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA204", "source": "Egy dátum körül van egy piros szív.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA205", "source": "Éppen most nézi az aranykupolát.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA206", "source": "Ők általában egyedül táncolnak, de ma sorban táncolnak", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA207", "source": "Add oda neki az oldalt, és mondani fogja, hogy az övé.", "level": "A2", "topic": "Future with WILL"}
+{"wid": "wA208", "source": "Ő most jeget olvaszt, de régebben havat olvasztott", "level": "A2", "topic": "Present or Past Simple"}
+{"wid": "wA209", "source": "Tegnap egy hal ugrott és az arcába fröccsent a víz.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA210", "source": "Mennyi tejre van szükség a recepthez?", "level": "A2", "topic": "Much, Many, Some..."}
+{"wid": "wA211", "source": "A sár mély, ezért együtt kell húznotok.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA212", "source": "Szórt a paradicsomra sót, és megkóstolta.", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA213", "source": "Ez a kávé édesebb, mint az első.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA214", "source": "Nézd! A kosár most éppen megy fel a kötélen.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA215", "source": "Rémálom! Húsz ember van a banki sorban!", "level": "A2", "topic": "There is, are"}
+{"wid": "wA216", "source": "Csajszi, ő állítólag általában otthon marad, de ma ünnepli a születésnapját.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA217", "source": "Tesó, a fiú általában gyorsan eszik, de ma elég lassan eszik.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA218", "source": "Figyu, tényleg van terve. Ő az egész stílusát meg fogja változtatni.", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA219", "source": "Most épp mindenki kiabál abban a beszélgetésben, tesó. Vad vibe.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA220", "source": "A kamara szabálya: a szónoknak vitában fel kell állnia.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA221", "source": "Nagyon kényelmes, nyilván: neki van ágya, de ő a hűtő mellett fekszik.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA222", "source": "A kórházi folyosó mindkét oldalán korlátok vannak.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA223", "source": "Most ő vár a piros lámpánál, szóval ott van.", "level": "A2", "topic": "Present Continuous or Simple"}
+{"wid": "wA224", "source": "A közönség ujjong, ezért ő eldönti: én még egy trükköt fogok mutatni.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA225", "source": "Haver, a teknős olyan lassan megy, elég gyenge, de nyer.", "level": "A2", "topic": "Adverb formation"}
