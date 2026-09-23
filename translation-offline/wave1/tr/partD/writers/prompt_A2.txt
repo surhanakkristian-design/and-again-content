@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Turkish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Turkish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Turkish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Turkish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Turkish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Turkish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Turkish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Turkish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wA201", "source": "Sırt çantasında çok yer kalmadı.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA202", "source": "Dün battaniyeyi bacaklarının üstüne çekti", "level": "A2", "topic": "Past Simple"}
+{"wid": "wA203", "source": "Bak, köpek şu anda kamerayı kokluyor!", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA204", "source": "Planları var. Köyün yanında kamp kuracaklar", "level": "A2", "topic": "Future BE GOING TO"}
+{"wid": "wA205", "source": "Bugün sokakta çok yağmur var.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA206", "source": "Bak! Şu anda renkli çizgiler çiziyor", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA207", "source": "Dışarıda içmek barda içmekten daha soğuk", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA208", "source": "Laleleri çok seviyor, ama onu hapşırtıyorlar.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA209", "source": "Bu zıplama ilkinden daha yüksek", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA210", "source": "Yetişkin olarak işten önce bütün fatura yığınını imzalamak zorunda.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA211", "source": "Yatakta kıyafet kuleleri: uyumadan önce hepsini taşımak zorunda.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA212", "source": "Maliyet düşük, yani çok az para lazım. Helal.", "level": "A2", "topic": "Countable and uncountable"}
+{"wid": "wA213", "source": "Canım, o filin üstünde kocaman bir örtü var galiba.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA214", "source": "Dans eden kalabalıkta beyaz gözlüklü bir ahtapot var.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA215", "source": "Bütçe 90000 euroydu ama araba kayboldu.", "level": "A2", "topic": "Basic conjunctions"}
+{"wid": "wA216", "source": "Kolay olsun olmasın, havayolu büyük valizi vermek zorunda diyor.", "level": "A2", "topic": "Must, Have to..."}
+{"wid": "wA217", "source": "O lalelerini kaybediyor ve diyor ki: Söz veriyorum, daha dikkatli olacağım.", "level": "A2", "topic": "Going to or Will"}
+{"wid": "wA218", "source": "Kaplumbağa özgür, bu yüzden o mutlulukla yüzüp uzaklaşıyor çünkü mutlu.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA219", "source": "O hep geç uyanıyor, bu yüzden daha sesli bir çalar saat almalı.", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA220", "source": "Bil bakalım, ben duydum ki modern kapı çok yavaşça dönüyormuş.", "level": "A2", "topic": "Adverb formation"}
+{"wid": "wA221", "source": "Denetim: onun pembe saçı 2 makine çamaşırdan daha parlak.", "level": "A2", "topic": "Adjective comparison"}
+{"wid": "wA222", "source": "Masada pizza var çünkü onlar pizza yaptı.", "level": "A2", "topic": "There is, are"}
+{"wid": "wA223", "source": "Bil bakalım, o dedi ki kaleci şu an hızlı bir plonjon yapıyor.", "level": "A2", "topic": "Present Continuous"}
+{"wid": "wA224", "source": "Bavul asla kapanmayacak! Sen daha az tişört koymalısın!", "level": "A2", "topic": "Modal verb SHOULD"}
+{"wid": "wA225", "source": "Onlar yapı için o kadar çok ahşaba ihtiyaç duyuyor.", "level": "A2", "topic": "Countable and uncountable"}

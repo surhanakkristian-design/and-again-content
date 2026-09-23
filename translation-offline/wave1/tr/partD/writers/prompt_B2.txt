@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Turkish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Turkish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Turkish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Turkish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Turkish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Turkish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Turkish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Turkish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB201", "source": "Birinin bir budu bu kadar hızlı yediğini hiç görmemişti", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB202", "source": "Randevuyu alırken o sandalyelerde sabahın yarısını geçireceklerini hiç aklına gelmemişti.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB203", "source": "Keşke o son dakikada ellerini kendine saklasaymış", "level": "B2", "topic": "Wish clauses"}
+{"wid": "wB204", "source": "Merdivenlerin tepesine varır varmaz arkadaşını arayacak.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB205", "source": "Belediye başkanı imzalayınca köprüyü açık ilan edeceğine söz verdi.", "level": "B2", "topic": "Future in past"}
+{"wid": "wB206", "source": "Bu akşama kadar kolun iyileştiğini herkese söylemiş olacak", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB207", "source": "Merceği netlerken sırayı sallamamamızı bizden rica etti", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB208", "source": "Kamerada bu kadar iyi görünen bir kahvaltıyı daha önce hiç görmemişlerdi", "level": "B2", "topic": "Inversion basic"}
+{"wid": "wB209", "source": "Şu anda çekirdekler parlarken dilimleri ayırıyor", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB210", "source": "O bu inanılmaz andan önce aylarca onayı beklemişti!", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB211", "source": "Kızım, güya cumaya kadar o bu hastaya tam bir aydır bakıyor olacak.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB212", "source": "Kızım, duyduğuma göre o, o mükemmel atıştan önce saatlerce çalışmıştı.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB213", "source": "Yavru kedi, yakalamadan önce topu tam beş dakika kovalamıştı, tam bir profesyonel.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB214", "source": "Gelecek aya kadar o, belgeleri için iki yıldır bu mahkeme salonuna geliyor olacak.", "level": "B2", "topic": "Future Perfect Continuous"}
+{"wid": "wB215", "source": "Yayalar burada karşıya geçişi tipik olarak yalnızca ışık yeşilken yapar.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB216", "source": "Gözlüklü hamster her cuma bu kanepeye pizza getirir.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB217", "source": "Onlar duşu bir profesyonele taktırmayı reddettiler ve neredeyse felaket oldu!", "level": "B2", "topic": "Causative HAVE/GET"}
+{"wid": "wB218", "source": "Gecenin sonuna kadar o, bu lensle yüzlerce fotoğraf çekmiş olacak.", "level": "B2", "topic": "All Future Tenses"}
+{"wid": "wB219", "source": "O onu durdurduğunda, o çoktan o timsahı köpeğiyle karıştırmıştı, tam bir kâbus!", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB220", "source": "Yo, bütün aile şu anda çiçek dikiyor, bayağı tatlı.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB221", "source": "Kızım, o herkesin önünde bir kazdan geri çekildiğini itiraf etti.", "level": "B2", "topic": "Reported speech"}
+{"wid": "wB222", "source": "Çift barınağın çıkışına vardığında görevli formları çoktan damgalamıştı.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB223", "source": "O dalgadan geri çekildiğinde bütün kıyı mavi ışıkla parıldıyordu.", "level": "B2", "topic": "All Past Tenses"}
+{"wid": "wB224", "source": "Sen ve eşin evlendiğiniz günden beri takım olarak çalışıyorsunuz ve açıkçası, saygı.", "level": "B2", "topic": "All Present Tenses"}
+{"wid": "wB225", "source": "Kanka, evde kalsaydı o dünya turunda o penguenleri kaçırmış olurdu, cidden.", "level": "B2", "topic": "3. Conditional"}

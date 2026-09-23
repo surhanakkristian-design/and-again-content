@@ -1,0 +1,50 @@
+You are a writer for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Below is a list of Turkish sentences from a language-learning app, one per line as JSON: a writer id (wid), the Turkish sentence, its CEFR level and the exercise topic. Imagine real learners translating each Turkish sentence into English.
+
+For EACH sentence write:
+- 5 CORRECT English translations: correct English with the same meaning as the Turkish. Make them as varied as real learners would be: different words (synonyms), different structures, different articles where the choice is free, different English tenses as long as they stay inside the Turkish's time frame (past stays past, present stays present, future stays future), a passive where it is natural, dropped optional function words. Each must be a fully acceptable translation.
+- 4 WRONG translations, exactly one of each type:
+  T = the time frame differs from the Turkish (e.g. past instead of present or future); otherwise correct.
+  W = a wrong word or a changed meaning (a different thing, person, place, time, quantity or action).
+  M = a content word of the Turkish is missing (the rest is correct).
+  S = a structure or grammar error that makes it not correct English (e.g. a missing obligatory article, broken subject-verb agreement, wrong word form); the meaning is otherwise kept.
+  Each wrong answer must be wrong for its tagged reason and should otherwise look like a plausible learner answer.
+- If the Turkish names an agent (a person or thing doing the action), you MAY (not must) make one of the wrong answers an English passive that drops that agent; if you do, set "agent_drop": true on it (its type stays the one it is tagged with). Otherwise "agent_drop": false.
+
+Do not repeat an answer within one sentence. Write only the English answers; no explanations.
+
+Output: one JSON array, one object per sentence, in the input order, exactly this shape:
+[{"wid": "...", "correct": ["...", "...", "...", "...", "..."], "wrong": [{"type": "T", "answer": "...", "agent_drop": false}, {"type": "W", "answer": "...", "agent_drop": false}, {"type": "M", "answer": "...", "agent_drop": false}, {"type": "S", "answer": "...", "agent_drop": false}]}]
+
+The owner's dropped-word ruling (it decides which dropped words make an answer correct or wrong):
+Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+The owner's rule for genderless sources: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+
+Sentences:
+{"wid": "wB101", "source": "Slime parmaklarına yapışmıyor, içindeki boncuklar de yapışmıyor.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB102", "source": "O kanatlar neredeyse bir metre, yani bu sıradan küçük bir ev yarasası olamaz.", "level": "B1", "topic": "Modal verbs Probability"}
+{"wid": "wB103", "source": "Turkuaz devlet özgür, turuncu olan da öyle", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB104", "source": "Çorabını çıkarırken ayak bileği hızla şişiyordu", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB105", "source": "Beşte arama — o sırada terapi notlarını okuyor olacak", "level": "B1", "topic": "Future Simple or Continuos"}
+{"wid": "wB106", "source": "Kanka, onay daha gelmeden kalabalık 10'luk kartlarını hazır etmişti, cidden.", "level": "B1", "topic": "Past Perfect Simple"}
+{"wid": "wB107", "source": "Krem şeritleri makyöz tarafından cilde yedirildi ve eşit bir ton gözlemlendi.", "level": "B1", "topic": "Passive"}
+{"wid": "wB108", "source": "O çantasını düşürürse, kâğıtları bütün sahil yoluna saçılacak.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB109", "source": "Boğa arabaya bir daha saldırsa, cam tamamen parçalanırdı!", "level": "B1", "topic": "2. Conditional"}
+{"wid": "wB110", "source": "Çarpışma olduğunda mavi araba kavşaktan geçiyordu.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB111", "source": "Dinle, ben duydum ki turistler meydana doluşmuş, ofis çalışanları da.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB112", "source": "O güvercinler bütün sabah sepetlerde oturuyor! Uçmak için can atıyorlar!", "level": "B1", "topic": "Present Perfect Continuous"}
+{"wid": "wB113", "source": "Başının üstünden bir ara papağanı uçtuğunda kâşif lianları kesiyordu.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB114", "source": "Bir şey kıpırdadığında o dürbünle uzak kıyıyı tarıyordu.", "level": "B1", "topic": "Past Continuous"}
+{"wid": "wB115", "source": "Felaket! O, ikinci rafı takarken, kitap yığını neredeyse çöküyordu!", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB116", "source": "O kitabının üstünde uyuyor, yani pek verimli değil, öyle mi?", "level": "B1", "topic": "Question tags"}
+{"wid": "wB117", "source": "Dinle, o bana bir gün önce bütün geri dönüşümünü ayırmış olduğunu söyledi.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB118", "source": "Yarın öğlen memur banknotları kasaya koyuyor olacak, bu yüzden gişe kapalı olacak.", "level": "B1", "topic": "Future Continuous"}
+{"wid": "wB119", "source": "O başlamadan önce zemin eskiden donuktu; şimdi parlıyor.", "level": "B1", "topic": "Used to, Would"}
+{"wid": "wB120", "source": "Kardeşlerden biri son kurabiyeyi alırsa, diğeri çok kızgın olacak.", "level": "B1", "topic": "1. Conditional"}
+{"wid": "wB121", "source": "Belli ki çok rahat: palyaço belirince o dehşet içinde adamın kolunu yakaladı.", "level": "B1", "topic": "Past Simple or Continuos"}
+{"wid": "wB122", "source": "O, iki eli olduğu için iki başparmağa sahip, ve şarkıcı da öyle.", "level": "B1", "topic": "So, Neither, Nor"}
+{"wid": "wB123", "source": "Kanka, o bana daha önce hiç uçaktan baş aşağı asılmadığını söyledi.", "level": "B1", "topic": "Reported speech"}
+{"wid": "wB124", "source": "Onlar bir saattir bu kuyrukta bekliyor, oy vermek için. Hızlı bir süreç, belli ki.", "level": "B1", "topic": "Present Perfect Continuous"}
+{"wid": "wB125", "source": "Sen bir bekleme odasında oturursan beklersin, çünkü oda bunun için var.", "level": "B1", "topic": "0 Conditional"}
