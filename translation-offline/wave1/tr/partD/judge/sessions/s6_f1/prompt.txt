@@ -1,0 +1,24 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Turkish sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Turkish means?
+
+The owner's rules (apply them exactly):
+- The Turkish is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Turkish names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Turkish while the English tense inside it is free.
+- Added content is wrong. Exception: an ADDED interjection (e.g. "Wow", "Bro") is NOT an error, just as a dropped interjection is not an error. Added content of any other kind stays wrong.
+- Genderless source: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Turkish only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j5ae19", "source": "O onu durdurduğunda, o çoktan o timsahı köpeğiyle karıştırmıştı, tam bir kâbus!", "level": "B2", "answer": "By the time he stopped her, she had already confused that crocodile with her dog, a real nightmare!", "topic": "All Past Tenses"}

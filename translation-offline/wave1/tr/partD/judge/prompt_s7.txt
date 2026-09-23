@@ -1,0 +1,145 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Turkish sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Turkish means?
+
+The owner's rules (apply them exactly):
+- The Turkish is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Turkish names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Turkish while the English tense inside it is free.
+- Added content is wrong. Exception: an ADDED interjection (e.g. "Wow", "Bro") is NOT an error, just as a dropped interjection is not an error. Added content of any other kind stays wrong.
+- Genderless source: when the Turkish sentence does not mark gender (e.g. "o", "onun", "kendi", or a verb without a subject pronoun; Turkish never marks gender), BOTH he/she and his/her are correct.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Turkish: şimdi, bugün, zaten, artık, hâlâ, henüz, nihayet, sonunda, o zaman, tamamen, büsbütün, az önce, Bak!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Turkish only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j688fd", "source": "Bak, köpek şu anda kamerayı kokluyor!", "level": "A2", "answer": "Look, the dog sniffed the camera!", "topic": "Present Continuous"}
+{"jid": "j185ba", "source": "Yayalar burada karşıya geçişi tipik olarak yalnızca ışık yeşilken yapar.", "level": "B2", "answer": "Pedestrians here typically crossed only when the light was green.", "topic": "All Present Tenses"}
+{"jid": "jf4814", "source": "Rauttan önce o kendi mavi eldivenlerini bağlıyor.", "level": "A1", "answer": "Before the round he fastens his blue gloves.", "topic": "My, Your, His,..."}
+{"jid": "j61dfa", "source": "O hep geç uyanıyor, bu yüzden daha sesli bir çalar saat almalı.", "level": "A2", "answer": "He always wakes up late, so he should buy an alarm clock.", "topic": "Modal verb SHOULD"}
+{"jid": "j5f89c", "source": "Dans eden kalabalıkta beyaz gözlüklü bir ahtapot var.", "level": "A2", "answer": "There is an octopus with glasses in the dancing crowd.", "topic": "There is, are"}
+{"jid": "j4cc10", "source": "Canım, o filin üstünde kocaman bir örtü var galiba.", "level": "A2", "answer": "Darling, I think there is a huge cover on that giraffe.", "topic": "There is, are"}
+{"jid": "j3c041", "source": "O kanatlar neredeyse bir metre, yani bu sıradan küçük bir ev yarasası olamaz.", "level": "B1", "answer": "The wings are almost a metre long, so it can't be an ordinary small house bat.", "topic": "Modal verbs Probability"}
+{"jid": "jbbc2e", "source": "O, zeminde gittikçe daha yükseğe zıplar", "level": "A1", "answer": "She jumps lower and lower on the floor.", "topic": "Present Simple"}
+{"jid": "j0b71d", "source": "O kanatlar neredeyse bir metre, yani bu sıradan küçük bir ev yarasası olamaz.", "level": "B1", "answer": "Those wings are almost two metres, so this can't be an ordinary small house bat.", "topic": "Modal verbs Probability"}
+{"jid": "jd8e14", "source": "Merceği netlerken sırayı sallamamamızı bizden rica etti", "level": "B2", "answer": "He is asking us not to shake the desk while he focuses the lens", "topic": "Reported speech"}
+{"jid": "j25c06", "source": "Dışarıda içmek barda içmekten daha soğuk", "level": "A2", "answer": "Drinking outdoors is colder than drinking at the bar.", "topic": "Adjective comparison"}
+{"jid": "j53cf8", "source": "O kanatlar neredeyse bir metre, yani bu sıradan küçük bir ev yarasası olamaz.", "level": "B1", "answer": "Those wings are nearly a metre, which means this cannot be an ordinary small house bat.", "topic": "Modal verbs Probability"}
+{"jid": "j11f5b", "source": "Belli ki çok rahat: palyaço belirince o dehşet içinde adamın kolunu yakaladı.", "level": "B1", "answer": "Very relaxed, obviously: when the clown turned up, he clutched the man's arm in terror.", "topic": "Past Simple or Continuos"}
+{"jid": "j72b60", "source": "Planları var. Köyün yanında kamp kuracaklar", "level": "A2", "answer": "They have plans. They are going to camp near the lake.", "topic": "Future BE GOING TO"}
+{"jid": "j4650f", "source": "Masada on dergi var.", "level": "A1", "answer": "There were ten magazines on the table.", "topic": "Cardinal numbers"}
+{"jid": "j04dff", "source": "Bütçe 90000 euroydu ama araba kayboldu.", "level": "A2", "answer": "The budget was 90000 euros, but the car went missing.", "topic": "Basic conjunctions"}
+{"jid": "j0ef42", "source": "Kızım, duyduğuma göre o, o mükemmel atıştan önce saatlerce çalışmıştı.", "level": "B2", "answer": "Girl, I heard she had practice for hours before that perfect shot.", "topic": "All Past Tenses"}
+{"jid": "j1af9f", "source": "Onlar pazar sabahı köprüyü geçiyorlar.", "level": "A1", "answer": "They cross the bridge on Sunday morning.", "topic": "Prepositions of place/time"}
+{"jid": "j71d3e", "source": "Belediye başkanı imzalayınca köprüyü açık ilan edeceğine söz verdi.", "level": "B2", "answer": "The mayor promised she would declare the bridge open after signing.", "topic": "Future in past"}
+{"jid": "j81002", "source": "Krem şeritleri makyöz tarafından cilde yedirildi ve eşit bir ton gözlemlendi.", "level": "B1", "answer": "The cream streaks were blended into the skin, and an even tone was observed.", "topic": "Passive"}
+{"jid": "j8f6f9", "source": "Yetişkin olarak işten önce bütün fatura yığınını imzalamak zorunda.", "level": "A2", "answer": "As an adult, he has to pay the whole pile of bills before work.", "topic": "Must, Have to..."}
+{"jid": "jb847b", "source": "Turkuaz devlet özgür, turuncu olan da öyle", "level": "B1", "answer": "The turquoise state is free, and so's the orange one.", "topic": "So, Neither, Nor"}
+{"jid": "jece03", "source": "Çarpışma olduğunda mavi araba kavşaktan geçiyordu.", "level": "B1", "answer": "The blue car were going through intersection when the crash happened.", "topic": "Past Continuous"}
+{"jid": "jfeb2a", "source": "Onlar pazar sabahı köprüyü geçiyorlar.", "level": "A1", "answer": "On Sunday morning they're crossing the bridge.", "topic": "Prepositions of place/time"}
+{"jid": "j615e2", "source": "Onlar yapı için o kadar çok ahşaba ihtiyaç duyuyor.", "level": "A2", "answer": "They needed so much wood for the construction.", "topic": "Countable and uncountable"}
+{"jid": "j6f260", "source": "Yarın öğlen memur banknotları kasaya koyuyor olacak, bu yüzden gişe kapalı olacak.", "level": "B1", "answer": "Tomorrow at noon, the official will be putting the banknotes into the vault, so the desk will be closed.", "topic": "Future Continuous"}
+{"jid": "jee7d8", "source": "Onlar yapı için o kadar çok ahşaba ihtiyaç duyuyor.", "level": "A2", "answer": "They need so many woods for the construction.", "topic": "Countable and uncountable"}
+{"jid": "j213d9", "source": "O dalgadan geri çekildiğinde bütün kıyı mavi ışıkla parıldıyordu.", "level": "B2", "answer": "When he pulled back from the wave, the whole shore was glowing with red light.", "topic": "All Past Tenses"}
+{"jid": "j8db5f", "source": "O bu inanılmaz andan önce aylarca onayı beklemişti!", "level": "B2", "answer": "He had been waiting for approval for months before this amazing moment!", "topic": "All Past Tenses"}
+{"jid": "j57ee3", "source": "Merceği netlerken sırayı sallamamamızı bizden rica etti", "level": "B2", "answer": "He asked us not to shake the camera while he was focusing the lens", "topic": "Reported speech"}
+{"jid": "j9a59b", "source": "O bu inanılmaz andan önce aylarca onayı beklemişti!", "level": "B2", "answer": "She had waited months before this incredible moment!", "topic": "All Past Tenses"}
+{"jid": "jcfb59", "source": "Merceği netlerken sırayı sallamamamızı bizden rica etti", "level": "B2", "answer": "She asked us not to shake the desk while focusing the lens", "topic": "Reported speech"}
+{"jid": "j72aae", "source": "O onun kartını okutuyor çünkü kartlı bir üye.", "level": "A1", "answer": "He scans his card because he is a member with a card.", "topic": "My, Your, His,..."}
+{"jid": "j142e8", "source": "Başının üstünden bir ara papağanı uçtuğunda kâşif lianları kesiyordu.", "level": "B1", "answer": "The explorer was hacking through lianas when at one point a parrot flew overhead.", "topic": "Past Continuous"}
+{"jid": "je07b3", "source": "Bir şey kıpırdadığında o dürbünle uzak kıyıyı tarıyordu.", "level": "B1", "answer": "She was scanning the shore with binoculars when something moved.", "topic": "Past Continuous"}
+{"jid": "j360ab", "source": "Rauttan önce o kendi mavi eldivenlerini bağlıyor.", "level": "A1", "answer": "He ties his own blue gloves before the round.", "topic": "My, Your, His,..."}
+{"jid": "j81f0b", "source": "Dinle, o bana bir gün önce bütün geri dönüşümünü ayırmış olduğunu söyledi.", "level": "B1", "answer": "Listen, she told me that she had separated all her recycling the day before.", "topic": "Reported speech"}
+{"jid": "j3a995", "source": "Sen bir bekleme odasında oturursan beklersin, çünkü oda bunun için var.", "level": "B1", "answer": "You wait if you sit in a waiting room, because that is what the room is for.", "topic": "0 Conditional"}
+{"jid": "je5d89", "source": "Bir inek burada otluyor, iki inek orada su içiyor.", "level": "A1", "answer": "One cow is grazing here, two cows are drinking there.", "topic": "Singular and plural"}
+{"jid": "j528f3", "source": "Sırt çantasında çok yer kalmadı.", "level": "A2", "answer": "There isn't much space left.", "topic": "Countable and uncountable"}
+{"jid": "j4cfb4", "source": "Dinle, o bana bir gün önce bütün geri dönüşümünü ayırmış olduğunu söyledi.", "level": "B1", "answer": "Listen, she told me she had sorted all her recycling the day before.", "topic": "Reported speech"}
+{"jid": "jf1c62", "source": "Felaket! O, ikinci rafı takarken, kitap yığını neredeyse çöküyordu!", "level": "B1", "answer": "What a disaster! While he was installing the second shelf, the book pile nearly collapsed!", "topic": "Past Simple or Continuos"}
+{"jid": "j9263d", "source": "Bu akşama kadar kolun iyileştiğini herkese söylemiş olacak", "level": "B2", "answer": "By this evening he will have told everyone that your leg has healed", "topic": "All Future Tenses"}
+{"jid": "j714e4", "source": "Kardeşlerden biri son kurabiyeyi alırsa, diğeri çok kızgın olacak.", "level": "B1", "answer": "If one sibling takes the last biscuit, the other will be very angry.", "topic": "1. Conditional"}
+{"jid": "ja1172", "source": "O başlamadan önce zemin eskiden donuktu; şimdi parlıyor.", "level": "B1", "answer": "The floor use to being dull before she started; now it shines.", "topic": "Used to, Would"}
+{"jid": "jdb86a", "source": "Turkuaz devlet özgür, turuncu olan da öyle", "level": "B1", "answer": "The turquoise state is free, and so is the purple one.", "topic": "So, Neither, Nor"}
+{"jid": "je4eda", "source": "Gelecek aya kadar o, belgeleri için iki yıldır bu mahkeme salonuna geliyor olacak.", "level": "B2", "answer": "By next month he will have been coming to this court room for his documents for two years.", "topic": "Future Perfect Continuous"}
+{"jid": "j7b2be", "source": "Yavru kedi, yakalamadan önce topu tam beş dakika kovalamıştı, tam bir profesyonel.", "level": "B2", "answer": "The kitten had chased the ball for exactly ten minutes before catching it, a real pro.", "topic": "All Past Tenses"}
+{"jid": "jdc1ca", "source": "Çift barınağın çıkışına vardığında görevli formları çoktan damgalamıştı.", "level": "B2", "answer": "When the pair reached the shelter's exit, the official had already stamped the forms.", "topic": "All Past Tenses"}
+{"jid": "je7d3b", "source": "Çarpışma olduğunda mavi araba kavşaktan geçiyordu.", "level": "B1", "answer": "The blue car was passing through the crossroads when the crash occurred.", "topic": "Past Continuous"}
+{"jid": "j0e2aa", "source": "Onlar duşu bir profesyonele taktırmayı reddettiler ve neredeyse felaket oldu!", "level": "B2", "answer": "They refused to have the shower fitted by a pro and it almost turned into a disaster!", "topic": "Causative HAVE/GET"}
+{"jid": "j79b01", "source": "O onun kartını okutuyor çünkü kartlı bir üye.", "level": "A1", "answer": "He is scanning her card because she is a member with a card.", "topic": "My, Your, His,..."}
+{"jid": "j9ba82", "source": "Slime parmaklarına yapışmıyor, içindeki boncuklar de yapışmıyor.", "level": "B1", "answer": "The slime doesn't stick to your toes, and neither do the beads inside it.", "topic": "So, Neither, Nor"}
+{"jid": "j4f499", "source": "Kedi sıcak battaniyenin altında uyuyor.", "level": "A1", "answer": "The cat's sleeping underneath the warm blanket.", "topic": "Prepositions of place/time"}
+{"jid": "jf4a13", "source": "Büyüleyici enerji: sen her odayı bir saniyede canlandırabilirsin.", "level": "A1", "answer": "Charming energy: you could liven up every room in a second back then.", "topic": "Modal verb CAN"}
+{"jid": "j20548", "source": "Sırt çantasında çok yer kalmadı.", "level": "A2", "answer": "The backpack doesn't have much space left.", "topic": "Countable and uncountable"}
+{"jid": "j95299", "source": "Kızım, güya cumaya kadar o bu hastaya tam bir aydır bakıyor olacak.", "level": "B2", "answer": "Girl, supposedly she will have been taking care of this patient for a full month by Friday.", "topic": "Future Perfect Continuous"}
+{"jid": "je55bb", "source": "Yo, bütün aile şu anda çiçek dikiyor, bayağı tatlı.", "level": "B2", "answer": "Yo, the whole family is planting flowers, pretty sweet.", "topic": "All Present Tenses"}
+{"jid": "j977d9", "source": "Kutlama şehirdeki bir kaldırımda gece yapılıyor.", "level": "A1", "answer": "The celebration was held at night on a sidewalk in the city.", "topic": "Prepositions of place/time"}
+{"jid": "j277f4", "source": "Kalemliğe iki kalem koyuyor.", "level": "A1", "answer": "He put two pens into the pencil holder yesterday.", "topic": "Singular and plural"}
+{"jid": "j5061e", "source": "Bak! Şu anda renkli çizgiler çiziyor", "level": "A2", "answer": "Look! He drawing colorful lines right now.", "topic": "Present Continuous"}
+{"jid": "j8dfea", "source": "Kanka, o koca bir arabayı hareket ettirir, saygı duymak lazım.", "level": "A1", "answer": "Bro, he moves a huge car, you have to respect that.", "topic": "Present Simple"}
+{"jid": "j7902a", "source": "Bugün sokakta çok yağmur var.", "level": "A2", "answer": "It's raining a lot in the street today.", "topic": "Countable and uncountable"}
+{"jid": "jfce1e", "source": "Denetim: onun pembe saçı 2 makine çamaşırdan daha parlak.", "level": "A2", "answer": "Inspection: her pink hair is more brighter than 2 machine loads of laundry.", "topic": "Adjective comparison"}
+{"jid": "j21930", "source": "Sen ve eşin evlendiğiniz günden beri takım olarak çalışıyorsunuz ve açıkçası, saygı.", "level": "B2", "answer": "You and your wife have been working as a team since your wedding day and honestly, respect.", "topic": "All Present Tenses"}
+{"jid": "j69e69", "source": "Kızım, güya cumaya kadar o bu hastaya tam bir aydır bakıyor olacak.", "level": "B2", "answer": "Girl, apparently by Friday he'll have been caring for this patient for a full month.", "topic": "Future Perfect Continuous"}
+{"jid": "j34908", "source": "Bil bakalım, o dedi ki kaleci şu an hızlı bir plonjon yapıyor.", "level": "A2", "answer": "Guess what, she said the goalkeeper will make a quick dive tomorrow.", "topic": "Present Continuous"}
+{"jid": "j3393a", "source": "Bu sıçrama günün en büyüğü.", "level": "A1", "answer": "This is the biggest jump of the day.", "topic": "This, That, These..."}
+{"jid": "j56c22", "source": "O, iki eli olduğu için iki başparmağa sahip, ve şarkıcı da öyle.", "level": "B1", "answer": "He had two thumbs because he had two hands, and so did the singer.", "topic": "So, Neither, Nor"}
+{"jid": "j3245b", "source": "Bil bakalım, ben duydum ki modern kapı çok yavaşça dönüyormuş.", "level": "A2", "answer": "Guess what, I heard that the modern door turn very slow.", "topic": "Adverb formation"}
+{"jid": "j01f67", "source": "Onlar yapı için o kadar çok ahşaba ihtiyaç duyuyor.", "level": "A2", "answer": "They need so much wood for the construction.", "topic": "Countable and uncountable"}
+{"jid": "jaf154", "source": "Dışarıda içmek barda içmekten daha soğuk", "level": "A2", "answer": "Having a drink outside is colder than having a drink in a bar.", "topic": "Adjective comparison"}
+{"jid": "je018b", "source": "Kanka, onay daha gelmeden kalabalık 10'luk kartlarını hazır etmişti, cidden.", "level": "B1", "answer": "Dude, the crowd will have got their 10-point cards ready before the approval even comes, seriously.", "topic": "Past Perfect Simple"}
+{"jid": "j5735a", "source": "Bavul asla kapanmayacak! Sen daha az tişört koymalısın!", "level": "A2", "answer": "The suitcase will never close! You should put in fewer!", "topic": "Modal verb SHOULD"}
+{"jid": "j0eafb", "source": "Belli ki çok rahat: palyaço belirince o dehşet içinde adamın kolunu yakaladı.", "level": "B1", "answer": "Clearly very relaxed: when the clown appeared, she grabbed the man's arm.", "topic": "Past Simple or Continuos"}
+{"jid": "j68abc", "source": "O, zeminde gittikçe daha yükseğe zıplar", "level": "A1", "answer": "He jumps increasingly higher on the floor.", "topic": "Present Simple"}
+{"jid": "j21c89", "source": "O öğleden sonra sırta varıyor ve manzarayı görüyor.", "level": "A1", "answer": "She arrive at the ridge in the afternoon and see the view.", "topic": "Prepositions of place/time"}
+{"jid": "j642f3", "source": "Yatakta kıyafet kuleleri: uyumadan önce hepsini taşımak zorunda.", "level": "A2", "answer": "There are towers of clothes on the bed: he has to carry all of them away before going to sleep.", "topic": "Must, Have to..."}
+{"jid": "j1e4cc", "source": "Kalemliğe iki kalem koyuyor.", "level": "A1", "answer": "She is putting two pens in the pencil case.", "topic": "Singular and plural"}
+{"jid": "jdbdb8", "source": "Maliyet düşük, yani çok az para lazım. Helal.", "level": "A2", "answer": "The price is low, so very little money is needed. Well done.", "topic": "Countable and uncountable"}
+{"jid": "j56e9b", "source": "Kaplumbağa özgür, bu yüzden o mutlulukla yüzüp uzaklaşıyor çünkü mutlu.", "level": "A2", "answer": "The tortoise is free, so it happily swims away because it's happy.", "topic": "Adverb formation"}
+{"jid": "j93a69", "source": "Genç kadın onun elini kaldırıyor ve bir soru soruyor.", "level": "A1", "answer": "The young woman raises her hand and asks a question.", "topic": "My, Your, His,..."}
+{"jid": "j174d5", "source": "Bir inek burada otluyor, iki inek orada su içiyor.", "level": "A1", "answer": "A cow is grazing here, and two cows are drinking water over there.", "topic": "Singular and plural"}
+{"jid": "jf67ce", "source": "Sırt çantasında çok yer kalmadı.", "level": "A2", "answer": "There isn't much space left in the backpack.", "topic": "Countable and uncountable"}
+{"jid": "j39f72", "source": "Yetişkin olarak işten önce bütün fatura yığınını imzalamak zorunda.", "level": "A2", "answer": "As an adult, he must sign the entire stack of bills before work.", "topic": "Must, Have to..."}
+{"jid": "jc5be7", "source": "Kalemliğe iki kalem koyuyor.", "level": "A1", "answer": "She puts two pencils into the pencil holder.", "topic": "Singular and plural"}
+{"jid": "jee632", "source": "Randevuyu alırken o sandalyelerde sabahın yarısını geçireceklerini hiç aklına gelmemişti.", "level": "B2", "answer": "When making the appointment, it had never occurred to him that they would spend half the morning.", "topic": "Future in past"}
+{"jid": "jcea3f", "source": "Kedi sıcak battaniyenin altında uyuyor.", "level": "A1", "answer": "The cat sleeps under the warm blanket.", "topic": "Prepositions of place/time"}
+{"jid": "j18079", "source": "Gecenin sonuna kadar o, bu lensle yüzlerce fotoğraf çekmiş olacak.", "level": "B2", "answer": "She will have taken hundreds of photographs with this lens by the end of the night.", "topic": "All Future Tenses"}
+{"jid": "jc825d", "source": "Başının üstünden bir ara papağanı uçtuğunda kâşif lianları kesiyordu.", "level": "B1", "answer": "The explorer was cutting lianas when a parrot flew over his head at one point.", "topic": "Past Continuous"}
+{"jid": "j15fca", "source": "Beşinci haftada bütün öğrenciler nerede", "level": "A1", "answer": "Where are all the pupils in the fifth week?", "topic": "Wh- questions"}
+{"jid": "ja51a7", "source": "Kızım, duyduğuma göre o, o mükemmel atıştan önce saatlerce çalışmıştı.", "level": "B2", "answer": "Girl, I heard she will practice for hours before that perfect shot.", "topic": "All Past Tenses"}
+{"jid": "j3a71d", "source": "Kanka, o bana daha önce hiç uçaktan baş aşağı asılmadığını söyledi.", "level": "B1", "answer": "Dude, he told me he had never hung upside down from a plane before.", "topic": "Reported speech"}
+{"jid": "j152ca", "source": "Yatakta kıyafet kuleleri: uyumadan önce hepsini taşımak zorunda.", "level": "A2", "answer": "Towers of clothes on the bed: she has to move everything before sleeping.", "topic": "Must, Have to..."}
+{"jid": "j61c4a", "source": "Kanka, iki ayıya bir bakış, ben de çığlığı basacağım.", "level": "A1", "answer": "Bro, one look at two bear and I'll scream.", "topic": "Singular and plural"}
+{"jid": "j7c599", "source": "O çantasını düşürürse, kâğıtları bütün sahil yoluna saçılacak.", "level": "B1", "answer": "If she lets her bag fall, her papers will fly all over the coast road.", "topic": "1. Conditional"}
+{"jid": "j7db96", "source": "Çift barınağın çıkışına vardığında görevli formları çoktan damgalamıştı.", "level": "B2", "answer": "By the time the couple got to the exit of the shelter, the clerk had already stamped the forms.", "topic": "All Past Tenses"}
+{"jid": "je91f5", "source": "Beton duvarın köşesi çok keskindir", "level": "A1", "answer": "The corner of the concrete wall is really sharp.", "topic": "TO BE"}
+{"jid": "j2e0e6", "source": "Kanka, evde kalsaydı o dünya turunda o penguenleri kaçırmış olurdu, cidden.", "level": "B2", "answer": "Bro, had he stayed home, he'd have missed those penguins on the world tour, for real.", "topic": "3. Conditional"}
+{"jid": "j2028d", "source": "Kanka, evde kalsaydı o dünya turunda o penguenleri kaçırmış olurdu, cidden.", "level": "B2", "answer": "Bro, if he had stayed home he would have miss those penguins on the world tour, seriously.", "topic": "3. Conditional"}
+{"jid": "j666fa", "source": "Rauttan önce o kendi mavi eldivenlerini bağlıyor.", "level": "A1", "answer": "She ties her blue gloves.", "topic": "My, Your, His,..."}
+{"jid": "je9827", "source": "Adamın uzun koyu bir sakalı var", "level": "A1", "answer": "That man has a long dark beard.", "topic": "HAVE GOT"}
+{"jid": "j8adcd", "source": "Denetim: onun pembe saçı 2 makine çamaşırdan daha parlak.", "level": "A2", "answer": "Inspection: her blue hair is brighter than 2 machine loads of laundry.", "topic": "Adjective comparison"}
+{"jid": "j6bf7d", "source": "Bil bakalım, o dedi ki kaleci şu an hızlı bir plonjon yapıyor.", "level": "A2", "answer": "Guess what, she said the goalkeeper making a quick dive right now.", "topic": "Present Continuous"}
+{"jid": "j069d9", "source": "Kedi ne içiyor? Taze beyaz süt.", "level": "A1", "answer": "What is the cat drinking? Fresh orange juice.", "topic": "Wh- questions"}
+{"jid": "j9e42b", "source": "Şu anda çekirdekler parlarken dilimleri ayırıyor", "level": "B2", "answer": "He's separating the slices while the seeds shine", "topic": "All Present Tenses"}
+{"jid": "jb6811", "source": "O, zeminde gittikçe daha yükseğe zıplar", "level": "A1", "answer": "She jumps higher and higher on the ground.", "topic": "Present Simple"}
+{"jid": "jd54b2", "source": "Yo, bütün aile şu anda çiçek dikiyor, bayağı tatlı.", "level": "B2", "answer": "Yo, the whole family is planting right now, pretty cute.", "topic": "All Present Tenses"}
+{"jid": "j941cd", "source": "Çift barınağın çıkışına vardığında görevli formları çoktan damgalamıştı.", "level": "B2", "answer": "When the couple arrived at the shelter exit, the forms had already been stamped by the staff member.", "topic": "All Past Tenses"}
+{"jid": "j79654", "source": "Adamın uzun koyu bir sakalı var", "level": "A1", "answer": "The man has a long dark beard.", "topic": "HAVE GOT"}
+{"jid": "j5f948", "source": "Kedi ne içiyor? Taze beyaz süt.", "level": "A1", "answer": "What is that cat drinking? Fresh white milk.", "topic": "Wh- questions"}
+{"jid": "j9dae7", "source": "Kanka, o koca bir arabayı hareket ettirir, saygı duymak lazım.", "level": "A1", "answer": "Bro, he moves a car, you have to respect that.", "topic": "Present Simple"}
+{"jid": "j064a4", "source": "Kanka, onay daha gelmeden kalabalık 10'luk kartlarını hazır etmişti, cidden.", "level": "B1", "answer": "Dude, the crowd had got their 10-point cards ready before the approval even came, seriously.", "topic": "Past Perfect Simple"}
+{"jid": "jba07a", "source": "Dün battaniyeyi bacaklarının üstüne çekti", "level": "A2", "answer": "Yesterday she pulled the blanket over her head.", "topic": "Past Simple"}
+{"jid": "jd05a5", "source": "Kanka, iki ayıya bir bakış, ben de çığlığı basacağım.", "level": "A1", "answer": "Bro, one look at two bears and I screamed.", "topic": "Singular and plural"}
+{"jid": "j1d5ab", "source": "Kedi sıcak battaniyenin altında uyuyor.", "level": "A1", "answer": "The cat is asleep under the warm blanket.", "topic": "Prepositions of place/time"}
+{"jid": "jd22dc", "source": "Bu akşama kadar kolun iyileştiğini herkese söylemiş olacak", "level": "B2", "answer": "By this evening, she'll have told everyone your arm got better", "topic": "All Future Tenses"}
+{"jid": "j10a77", "source": "Kitap yerine kendi telefonuna bakıyor.", "level": "A1", "answer": "He is looking at his own phone rather than the book.", "topic": "My, Your, His,..."}
+{"jid": "j7e999", "source": "Bugün sokakta çok yağmur var.", "level": "A2", "answer": "There is a lot of rain in the street today.", "topic": "Countable and uncountable"}
+{"jid": "j5b376", "source": "O onu durdurduğunda, o çoktan o timsahı köpeğiyle karıştırmıştı, tam bir kâbus!", "level": "B2", "answer": "When she stopped him, he had already mistaken that crocodile for his dog!", "topic": "All Past Tenses"}
+{"jid": "j9b691", "source": "Kalemliğe iki kalem koyuyor.", "level": "A1", "answer": "He is putting two pens into the pen pot.", "topic": "Singular and plural"}
+{"jid": "jac26b", "source": "Bir inek burada otluyor, iki inek orada su içiyor.", "level": "A1", "answer": "One cow is grazing here, three cows are drinking water there.", "topic": "Singular and plural"}
