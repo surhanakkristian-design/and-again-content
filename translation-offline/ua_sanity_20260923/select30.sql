@@ -1,0 +1,9 @@
+with c as (
+ select s.exercise_id id, et.level, coalesce(et.title->>'en', et.title::text) topic, ua.full_sentence src,
+  row_number() over (partition by et.level order by md5(s.exercise_id::text||'ua-sanity-20260923')) rn
+ from translation_selected_exercises s join exercises e on e.id=s.exercise_id join exercise_types et on et.id=e.exercise_type_id
+ join exercise_localizations ua on ua.exercise_id=e.id and ua.language_code='ua'
+ join exercise_localizations en on en.exercise_id=e.id and en.language_code='en'
+ where e.exercise_type_id<>69 and coalesce(trim(ua.full_sentence),'')<>'' and coalesce(trim(en.full_sentence),'')<>''
+   and s.exercise_id not in (0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,429,600,733,1067,1100,1551,2664,3146,3284,3344,4089,4636,4747,5578,6135,6977,9586,9754,9814,11681,11853,12473,12537,13171,13260,13416,14108,14949,15220,15713,15941,16686,18309,19388,21129,21981,22528,22835,23843,24952,25189,25227,25782,27150,27245,27437,27540,27611,28019,29356,31592,31720,31832,32996,33264,33418,33589,33599,33728,34095,34127,34283,34941,35526,35634,35966,36130,36274,36374,36845,37763,37842,37997,38053,38142,38542,38800,38844,38954,38973,39112,39121,39243,39340,39563,39952,40247,40412,40700,41146,41381,41589,41665,42069,42953,43505,43943,44117,44381,44438,44735,44900))
+select id, level, topic, trim(src) src from c where (level in ('A1','A2') and rn<=8) or (level in ('B1','B2') and rn<=7) order by level, rn
