@@ -1,0 +1,23 @@
+{
+ "lang": "hu",
+ "rows": 4064,
+ "sha256": "cd9b454df139583c6b71484b289ac982e592f0915a620d38b94899a259fcbaa7",
+ "per_level": {
+  "B2": 785,
+  "B1": 885,
+  "A2": 1220,
+  "A1": 1174
+ },
+ "filled_per_level": {
+  "B2": 785,
+  "B1": 885,
+  "A2": 1220,
+  "A1": 1174
+ },
+ "vs_partA_snapshot": {
+  "was_empty_now_filled": 4064
+ },
+ "sql": "select t.exercise_id, t.level, e.exercise_type_id, e.concept_id, et.title->>'en' as topic, el.id as loc_id, el.full_sentence from translation_selected_exercises t join exercises e on e.id = t.exercise_id join exercise_types et on et.id = e.exercise_type_id left join exercise_localizations el on el.exercise_id = t.exercise_id and el.language_code = 'hu' order by t.exercise_id",
+ "select_only": true,
+ "ts": "2026-09-23T08:08:06Z"
+}
