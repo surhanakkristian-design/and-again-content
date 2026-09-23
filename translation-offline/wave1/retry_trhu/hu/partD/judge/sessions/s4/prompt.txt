@@ -1,0 +1,147 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Hungarian sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Hungarian means?
+
+The owner's rules (apply them exactly):
+- The Hungarian is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Hungarian names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Hungarian while the English tense inside it is free.
+- Added content is wrong. Exception: an ADDED interjection (e.g. "Wow", "Bro") is NOT an error, just as a dropped interjection is not an error. Added content of any other kind stays wrong.
+- A vocative or address term (Hungarian: Tesó, Csajszi, Haver, Bestie, Főnök, Tanárnő) may be dropped, like an interjection; dropping it is NOT an error.
+- Genderless source: when the Hungarian sentence does not mark gender (e.g. "ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender), BOTH he/she and his/her are correct.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Hungarian: most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Hungarian only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j76f59", "source": "Egy sort ír, és becsukja a füzetet.", "level": "A1", "answer": "He write one line and close the notebook.", "topic": "Cardinal numbers"}
+{"jid": "j3840e", "source": "Nem sok idő maradt a meccsből.", "level": "A2", "answer": "There isn't much time left in the match.", "topic": "Countable and uncountable"}
+{"jid": "j18f23", "source": "Hol áll meg a kerékpáros? A lámpánál.", "level": "A1", "answer": "Where does the biker stop? At the lights.", "topic": "Wh- questions"}
+{"jid": "j36395", "source": "Egy nő fellázadt az asztalán, és persze mindenki más is.", "level": "B1", "answer": "A man rebelled at his desk, and of course so did everyone else.", "topic": "So, Neither, Nor"}
+{"jid": "j40114", "source": "A kukorica egy nagylelkű tyúk által lett betolva a lyukba. Nyilván az egerek végezték az összes munkát.", "level": "B1", "answer": "The corn was pushed into the hole by a kind-hearted hen. Obviously, the mice did all of the work.", "topic": "Passive"}
+{"jid": "j7c452", "source": "Ha a toronyban nem lenne labda, a kiscica semmit sem kergetne, mert nem lenne labda.", "level": "B1", "answer": "If there had been no ball in the tower, the kitten wouldn't have chased anything, because there wouldn't have been a ball.", "topic": "2. Conditional"}
+{"jid": "j62efd", "source": "Az egész kertben minden lámpát egyetlen kapcsolóval kapcsolták fel! Hihetetlen!", "level": "B1", "answer": "Every light in the whole house was switched on with a single switch! Incredible!", "topic": "Passive"}
+{"jid": "j6c772", "source": "Csajszi, ő azt mondta, hogy a repülőgép pont a feje fölött repült el!", "level": "A2", "answer": "Girl, she said the plane flew right over her head!", "topic": "Past Simple"}
+{"jid": "jf8ae6", "source": "Ki lóg a gyűrűn a zsákolás után?", "level": "A1", "answer": "Who hang on the rim after the dunk?", "topic": "Wh- questions"}
+{"jid": "jde9df", "source": "A versenyautó kormánya tele van gombokkal, és mindegyiket kézzel szerelték be.", "level": "B1", "answer": "The race car's wheel is full of buttons, and each one has been installed by hand.", "topic": "Passive or Active"}
+{"jid": "ja6d05", "source": "A meccs kezdetére a stadion már egy órája volt zsúfolt. Kicsit népszerű.", "level": "B2", "answer": "By the beginning of the game, the stadium had already been packed for one hour. Kinda popular.", "topic": "All Past Tenses"}
+{"jid": "j63a24", "source": "A támadás hirtelen véget ér, és a mező teljesen üres!", "level": "A2", "answer": "The attack comes to a sudden end, and the field is completely empty!", "topic": "Adverb formation"}
+{"jid": "jae31c", "source": "Határidő hétfő: ő a tervet maga fogja befejezni.", "level": "A2", "answer": "Deadline Monday: he will finish the plan on his own.", "topic": "Future with WILL"}
+{"jid": "jfca5b", "source": "Ha az idegenvezető megmozdítja a kérget, a szín megint változni fog.", "level": "A2", "answer": "If the guide moves the bark, the colour will change again.", "topic": "Future with WILL"}
+{"jid": "jac4f4", "source": "Kicsit le vagyok nyűgözve: te biztos zseniális vagy az útmutatókkal; a szekrény olyan gyorsan összeállt.", "level": "B1", "answer": "I'm a bit impressed: you must be brilliant with instructions; the wardrobe came together so quickly.", "topic": "Modal verbs Probability"}
+{"jid": "j85cf2", "source": "Csajszi, állítólag miközben ő írta alá a szerződést, majdnem kifogyott a tolla.", "level": "B1", "answer": "Girl, apparently while she is signing the contract, her pen is nearly running out.", "topic": "Past Continuous"}
+{"jid": "jcaf86", "source": "A kukorica egy nagylelkű tyúk által lett betolva a lyukba. Nyilván az egerek végezték az összes munkát.", "level": "B1", "answer": "The corn was pushed into the hole. Obviously the mice did all the work.", "topic": "Passive"}
+{"jid": "ja3ca6", "source": "A csapat a célvonal mellett vár.", "level": "A1", "answer": "The team waits by the starting line.", "topic": "Prepositions of place/time"}
+{"jid": "j657fa", "source": "A kinti hőség ellenére, a kanyon egész délután hűvös maradt.", "level": "B2", "answer": "Despite the heat outside, the canyon stayed cool all afternoon.", "topic": "Advanced linkers"}
+{"jid": "j21154", "source": "A portás üdvözli az idős férfit a szálloda ajtajában.", "level": "A1", "answer": "The doorman greets the young man at the hotel door.", "topic": "Present Simple"}
+{"jid": "jb0087", "source": "Tesó, ő már vagy két órája mászkál ezen az agykiállításon, komolyan.", "level": "B1", "answer": "Bro, he have been wandering around this brain exhibition for about two hours, seriously.", "topic": "Present Perfect Continuous"}
+{"jid": "j19029", "source": "A lánynak ma sok postája van.", "level": "A1", "answer": "The girl has a lot today.", "topic": "HAVE GOT"}
+{"jid": "jc0f10", "source": "Mielőtt a tűzijáték elkezdődött, a tömeg körülbelül egy órán át lengette a hazafias zászlókat.", "level": "B2", "answer": "Before the fireworks started, the crowd had been waving patriotic flags for about an hour.", "topic": "All Past Tenses"}
+{"jid": "j0f62c", "source": "Egy nő fellázadt az asztalán, és persze mindenki más is.", "level": "B1", "answer": "A woman rose up in rebellion at her desk, and of course so did everyone else.", "topic": "So, Neither, Nor"}
+{"jid": "ja18ae", "source": "Ha nem hozta volna el az iratokat, a megbeszélés most lenne szüneteltetve.", "level": "B2", "answer": "If he doesn't bring the documents, the meeting will be paused.", "topic": "Mixed Conditional"}
+{"jid": "j67818", "source": "A lánynak ma sok postája van.", "level": "A1", "answer": "The girl have a lot of mail today.", "topic": "HAVE GOT"}
+{"jid": "j2055c", "source": "Határidő hétfő: ő a tervet maga fogja befejezni.", "level": "A2", "answer": "Deadline Monday: she will finishes the plan herself.", "topic": "Future with WILL"}
+{"jid": "jf3707", "source": "Az idős férfiaknak kis sakktáblájuk van.", "level": "A1", "answer": "The elderly men have a small chess board.", "topic": "HAVE GOT"}
+{"jid": "j0a753", "source": "Te egy napsütéses reggelen lépsz ki az otthonodból. Ikonikus.", "level": "A1", "answer": "You leave your home on a sunny morning. Iconic.", "topic": "Prepositions of place/time"}
+{"jid": "jfdaf6", "source": "Katasztrófa! Ő tíz perce kopog az ajtón, és a csomag még mindig a kezében van!", "level": "B2", "answer": "Disaster! He has been knocking on the door for ten minutes and the package is still in his hand!", "topic": "All Present Tenses"}
+{"jid": "je31f6", "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!", "level": "A2", "answer": "Hundreds of notes! So much time is needed for this plan, it's a nightmare!", "topic": "Countable and uncountable"}
+{"jid": "ja25f9", "source": "Van egy terve. Ő a péntekét teljesen szabadon fogja hagyni.", "level": "A2", "answer": "He had a plan. He kept Friday completely free.", "topic": "Future BE GOING TO"}
+{"jid": "jf9e62", "source": "Képzeld, ő azt mondta, hogy a szekrényében nincs semmilyen narancssárga ing.", "level": "A2", "answer": "Imagine, she says there are no orange shirts in her wardrobe.", "topic": "Much, Many, Some..."}
+{"jid": "jf186e", "source": "Ezt csókkal kellene elmondanod, nem üzenettel.", "level": "A2", "answer": "You should say this with a kiss.", "topic": "Modal verb SHOULD"}
+{"jid": "jfe121", "source": "A kinti hőség ellenére, a kanyon egész délután hűvös maradt.", "level": "B2", "answer": "Despite the heat, the canyon stayed cool all afternoon.", "topic": "Advanced linkers"}
+{"jid": "j5aca8", "source": "Ritkán néz ki egy kutya ilyen rendezetten egy nyírás után. Enyhén lenyűgöző.", "level": "B2", "answer": "Rarely does a dog look so messy after a haircut. Mildly impressive.", "topic": "Inversion basic"}
+{"jid": "jc3ebc", "source": "A támadás hirtelen véget ér, és a mező teljesen üres!", "level": "A2", "answer": "The attack suddenly ends, and the field is completely empty!", "topic": "Adverb formation"}
+{"jid": "jc04eb", "source": "A teremben káosz van, de ő fel sem néz.", "level": "A2", "answer": "There is chaos in the kitchen, but he doesn't even look up.", "topic": "Basic conjunctions"}
+{"jid": "je7393", "source": "Mi van a csiga hátán? Egy barna ház.", "level": "A1", "answer": "What is on the turtle's back? A brown house.", "topic": "Wh- questions"}
+{"jid": "jfa282", "source": "Akkoriban a nagyi soha nem rontott volna el egy tortát ennyi bogyóval!", "level": "B1", "answer": "Back then, Grandpa would never have ruined a cake with so many berries!", "topic": "Used to, Would"}
+{"jid": "j540f9", "source": "Az üzlet arra számít, hogy bevonz 500 új ügyfelet, amint felszerelik a tévét.", "level": "B1", "answer": "The shop expects attracting 500 new customers as soon as the TV is installed.", "topic": "Gerund vs Infinitive"}
+{"jid": "j1f014", "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.", "level": "B1", "answer": "The large red lantern was set next to the window to catch the light in the evening.", "topic": "Passive or Active"}
+{"jid": "j14ce4", "source": "A házi cica ráugorhat a játékegérre.", "level": "A1", "answer": "The domestic cat can pounce on the toy mouse.", "topic": "Modal verb CAN"}
+{"jid": "j8bf36", "source": "A szobájában van egy nagyon hideg légkondi.", "level": "A1", "answer": "His room has a very cold air conditioner.", "topic": "HAVE GOT"}
+{"jid": "j9a6c4", "source": "Egy sort ír, és becsukja a füzetet.", "level": "A1", "answer": "He writes one line, then closes the exercise book.", "topic": "Cardinal numbers"}
+{"jid": "j93ca9", "source": "Csajszi, állítólag a házigazda idén kétszer kapott tőle csokrot.", "level": "B2", "answer": "Girl, apparently the host will get a bouquet from him twice this year.", "topic": "All Present Tenses"}
+{"jid": "j99a14", "source": "Tudod ilyen szorosan megölelni a nővéredet?", "level": "A1", "answer": "Can you hug your elder sister as tightly as this?", "topic": "Modal verb CAN"}
+{"jid": "j4b95d", "source": "Az arcán ülő döbbenet ellenére ő hatalmas mosollyal fizette ki a számla rá eső felét.", "level": "B2", "answer": "Despite the shock on her face, she paid her half of the bill with a huge smile.", "topic": "Advanced linkers"}
+{"jid": "jbe017", "source": "A lánynak ma sok postája van.", "level": "A1", "answer": "The girl had a lot of mail today.", "topic": "HAVE GOT"}
+{"jid": "j8f2df", "source": "A gyerek szombaton a labdájához fut.", "level": "A1", "answer": "The child runs on Saturday.", "topic": "Prepositions of place/time"}
+{"jid": "ja6ee6", "source": "Mielőtt a tűzijáték elkezdődött, a tömeg körülbelül egy órán át lengette a hazafias zászlókat.", "level": "B2", "answer": "The crowd had been waving patriotic flags for approximately an hour before the fireworks began.", "topic": "All Past Tenses"}
+{"jid": "j546c0", "source": "Az esernyőt a szél kifordította, így most használhatatlan.", "level": "B1", "answer": "The umbrella was turned inside out by the rain, so now it's useless.", "topic": "Passive"}
+{"jid": "j6b1aa", "source": "Nyilván szuper üzlet: egy saját szökőkutas villa nem lehet olcsó.", "level": "B1", "answer": "Obviously a great deal: a villa can't be cheap.", "topic": "Modal verbs Probability"}
+{"jid": "jd22a7", "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.", "level": "B1", "answer": "Someone placed the big red lantern next to the window to catch the evening light.", "topic": "Passive or Active"}
+{"jid": "j3a928", "source": "Csajszi, ő azt mondta nekem, hogy az edző már tíz perce vezette az órát, amikor a macska beszállt.", "level": "B2", "answer": "Girl, he told me that the coach had already been leading the class for ten minutes when the dog joined in.", "topic": "All Past Tenses"}
+{"jid": "j3447d", "source": "Holnap ilyenkor egy másik nedves erdőben fognak sétálni, még puhább mohát keresve.", "level": "B1", "answer": "By this time tomorrow they will be walking in a different wet forest in search of even softer moss.", "topic": "Future Continuous"}
+{"jid": "j3c9da", "source": "Ez egy régi újság, nem a mai.", "level": "A1", "answer": "This is an old magazine, not today's.", "topic": "A, AN, THE"}
+{"jid": "j4c247", "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!", "level": "A2", "answer": "Hundreds of notes! This plan required so much time, it was a nightmare!", "topic": "Countable and uncountable"}
+{"jid": "jd4bfc", "source": "Nézd meg most a padlót - a hab terjed a mosogatóból a hűtő alá.", "level": "B2", "answer": "Look at the floor now - the foam is spreading under the fridge.", "topic": "All Present Tenses"}
+{"jid": "j4cda8", "source": "Nyárra te már magad mögött hagyod ezt a törést, és őszintén, tisztelet.", "level": "B2", "answer": "By summer this fracture will be behind you, and honestly, respect.", "topic": "Future Perfect Simple"}
+{"jid": "j952b9", "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.", "level": "B2", "answer": "The cow, of course, denied that she had eaten the whole pie while she leaned over the empty plate.", "topic": "Reported speech"}
+{"jid": "j5c2e8", "source": "Ha a toronyban nem lenne labda, a kiscica semmit sem kergetne, mert nem lenne labda.", "level": "B1", "answer": "If there was no ball in the tower, the kitten would chase nothing, because there wouldn't be a ball.", "topic": "2. Conditional"}
+{"jid": "j7301e", "source": "Ők éjjel egy marokkói udvaron állnak.", "level": "A1", "answer": "They stood in a Moroccan courtyard at night.", "topic": "Prepositions of place/time"}
+{"jid": "j0f03e", "source": "Ezt a ruhát megvenni drágább az egész utazásnál! Mindennek vége!", "level": "A2", "answer": "Buying this dress costs more than the entire trip! Everything is over!", "topic": "Adjective comparison"}
+{"jid": "ja0a5a", "source": "Ezt a ruhát megvenni drágább az egész utazásnál! Mindennek vége!", "level": "A2", "answer": "Buying this dress is more expensiver than the whole trip! It's all over!", "topic": "Adjective comparison"}
+{"jid": "j45768", "source": "A meccs kezdetére a stadion már egy órája volt zsúfolt. Kicsit népszerű.", "level": "B2", "answer": "By the start of the match, the stadium had already been packed. Kind of popular.", "topic": "All Past Tenses"}
+{"jid": "jf9a93", "source": "Ez egy régi újság, nem a mai.", "level": "A1", "answer": "This is an old newspaper, not the one from today.", "topic": "A, AN, THE"}
+{"jid": "jad9a8", "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.", "level": "B1", "answer": "The big red lantern was placed next to the door to catch the evening light.", "topic": "Passive or Active"}
+{"jid": "jcbc4e", "source": "Ha meglenne az ő szeme a hamisítványokhoz, a piac felét visszautasítanám.", "level": "B1", "answer": "If I had his eye for fakes, I would turn down the whole market.", "topic": "2. Conditional"}
+{"jid": "jd6bd1", "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.", "level": "B2", "answer": "The cow of course denied that it had eaten the whole pie while leaning over the plate.", "topic": "Reported speech"}
+{"jid": "jd9519", "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.", "level": "B1", "answer": "The large red lantern was put beside the window to catch the evening light.", "topic": "Passive or Active"}
+{"jid": "j3bffd", "source": "Nézd! A felesége épp fordítja egy palacsintát a serpenyőben.", "level": "A2", "answer": "Look! His wife is flipping a pancake in the frying pan right now.", "topic": "Present Continuous"}
+{"jid": "j88ef2", "source": "Ha a toronyban nem lenne labda, a kiscica semmit sem kergetne, mert nem lenne labda.", "level": "B1", "answer": "If there were no ball in the tower, the kitten wouldn't chase anything, because there would be no ball.", "topic": "2. Conditional"}
+{"jid": "j6427d", "source": "Nyilván szuper üzlet: egy saját szökőkutas villa nem lehet olcsó.", "level": "B1", "answer": "Obviously a super deal - a villa that has its own fountain can't be cheap.", "topic": "Modal verbs Probability"}
+{"jid": "j50d7b", "source": "Nincs szükségük sok helyre a salsához.", "level": "A2", "answer": "They don't need much space.", "topic": "Much, Many, Some..."}
+{"jid": "jd922a", "source": "Hamarosan ez a rovar pillangóvá fog válni.", "level": "A2", "answer": "Soon this insect will become a butterfly.", "topic": "Future with WILL"}
+{"jid": "jfb5ee", "source": "Tudod ilyen szorosan megölelni a nővéredet?", "level": "A1", "answer": "Can you hug your sister this tightly?", "topic": "Modal verb CAN"}
+{"jid": "j9b487", "source": "A faasztalnak középen egy gyertyája van.", "level": "A1", "answer": "The wooden table has a candle in the middle.", "topic": "HAVE GOT"}
+{"jid": "j5162d", "source": "Ha meglenne az ő szeme a hamisítványokhoz, a piac felét visszautasítanám.", "level": "B1", "answer": "If I had his eye, I would turn down half the market.", "topic": "2. Conditional"}
+{"jid": "jb1bcc", "source": "Ők éjjel egy marokkói udvaron állnak.", "level": "A1", "answer": "They stand in a Moroccan courtyard at night.", "topic": "Prepositions of place/time"}
+{"jid": "j5fb90", "source": "Ha az idegenvezető megmozdítja a kérget, a szín megint változni fog.", "level": "A2", "answer": "If the tour guide moves the bark, the color will change again.", "topic": "Future with WILL"}
+{"jid": "jba307", "source": "Őszintén, a keret, amelyet te vízszintbe tettél, nagyon elegáns.", "level": "B1", "answer": "Frankly, the frame you levelled looks very elegant.", "topic": "Relative clauses"}
+{"jid": "j9d647", "source": "Mi kap oda a huskynak? Két játék dinoszaurusz.", "level": "A1", "answer": "What does the husky get? Two toy dinosaurs.", "topic": "Wh- questions"}
+{"jid": "jbd409", "source": "Két szelet pirítósra ken vajat.", "level": "A1", "answer": "She butters two slices of toast.", "topic": "Cardinal numbers"}
+{"jid": "ja05bf", "source": "Őszintén, a keret, amelyet te vízszintbe tettél, nagyon elegáns.", "level": "B1", "answer": "Honestly, the frame you leveled is really elegant.", "topic": "Relative clauses"}
+{"jid": "j32c48", "source": "A dugó halk pukkanással kihúzták, és a konyha elcsendesedett.", "level": "B1", "answer": "With a quiet pop the cork was pulled out, and the kitchen fell quiet.", "topic": "Passive"}
+{"jid": "j89cf6", "source": "Ők tíz percig billegtek a tüskés sarkakon, mire a nő végül nevetve összeesett!", "level": "B2", "answer": "They wobbled on the spiky heels for ten minutes before the woman finally collapse laughing!", "topic": "All Past Tenses"}
+{"jid": "jcf4d7", "source": "Az arcán ülő döbbenet ellenére ő hatalmas mosollyal fizette ki a számla rá eső felét.", "level": "B2", "answer": "Despite the shock on her face, she paid her half of the bill with an enormous smile.", "topic": "Advanced linkers"}
+{"jid": "jc6e8e", "source": "Indulhat most a hajó? Igen, indulhat.", "level": "A1", "answer": "Can the boat depart now? Yes, it can.", "topic": "Modal verb CAN"}
+{"jid": "j4985b", "source": "Ez a kis légy tényleg idegesítő.", "level": "A1", "answer": "This tiny fly is really irritating.", "topic": "TO BE"}
+{"jid": "jf2d44", "source": "Ő tudta, hogy az a nyíl el fogja találni a közepét abban a pillanatban, ahogy elhagyta az ideget.", "level": "B2", "answer": "He knew that the arrow was going to hit the middle the instant it left the string.", "topic": "Future in past"}
+{"jid": "j2ad13", "source": "Nem sok idő maradt a meccsből.", "level": "A2", "answer": "There isn't much left of the match.", "topic": "Countable and uncountable"}
+{"jid": "jbfef3", "source": "Őszintén, ennél a kormánynál nálad jobb sofőr nincs.", "level": "A2", "answer": "Honestly, nobody drives better than you at this wheel.", "topic": "There is, are"}
+{"jid": "jed0fb", "source": "Az ösvény végére három órán át fognak gyalogolni a kaktuszok között.", "level": "B2", "answer": "By the end of the trail they will have been walking among the cacti for two hours.", "topic": "Future Perfect Continuous"}
+{"jid": "j313f6", "source": "Ő bement, majd hátrafelé dőlt a matracra.", "level": "B2", "answer": "He goed in, then fell backwards onto the mattress.", "topic": "All Past Tenses"}
+{"jid": "j913ea", "source": "Szerintem a hatalmas hullám egy másodperc múlva le fog zúdulni a sirályokra.", "level": "B1", "answer": "In my opinion, the huge wave will come crashing down on the seagulls in a second.", "topic": "Future Simple or Continuos"}
+{"jid": "j70248", "source": "A hörcsög magokkal tömi tele a pofazacskóját.", "level": "A1", "answer": "The hamster is stuffing its cheek pouches full of seeds.", "topic": "My, Your, His,..."}
+{"jid": "je2095", "source": "A szobájában van egy nagyon hideg légkondi.", "level": "A1", "answer": "She has got a very cold air conditioner in her room.", "topic": "HAVE GOT"}
+{"jid": "j0ab50", "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!", "level": "A2", "answer": "Hundreds of sticky notes! This plan needs so much time, what a nightmare!", "topic": "Countable and uncountable"}
+{"jid": "j12915", "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.", "level": "B2", "answer": "The cow of course denied that it had eat the whole pie while leaning over the empty plate.", "topic": "Reported speech"}
+{"jid": "jf03b4", "source": "Nézd meg most a padlót - a hab terjed a mosogatóból a hűtő alá.", "level": "B2", "answer": "Look at the floor now - the foam are spreading from the sink under the fridge.", "topic": "All Present Tenses"}
+{"jid": "j118e9", "source": "Nyilván szuper üzlet: egy saját szökőkutas villa nem lehet olcsó.", "level": "B1", "answer": "Clearly it's a super deal: a villa with its own fountain cannot be cheap.", "topic": "Modal verbs Probability"}
+{"jid": "j01ae7", "source": "Mielőtt a tűzijáték elkezdődött, a tömeg körülbelül egy órán át lengette a hazafias zászlókat.", "level": "B2", "answer": "Before the fireworks start, the crowd will wave patriotic flags for about an hour.", "topic": "All Past Tenses"}
+{"jid": "j54b5b", "source": "Mire a robot végre megmozdult, ő már begépelt vagy tíz parancsot. Enyhén lassú kiszolgálás.", "level": "B1", "answer": "By the time the robot finally moved, she had already typed around ten commands. Slightly slow service.", "topic": "Past Perfect Simple"}
+{"jid": "j70a37", "source": "Határidő hétfő: ő a tervet maga fogja befejezni.", "level": "A2", "answer": "Deadline: Monday. She'll complete the plan herself.", "topic": "Future with WILL"}
+{"jid": "j84fa1", "source": "Ők tíz percig billegtek a tüskés sarkakon, mire a nő végül nevetve összeesett!", "level": "B2", "answer": "They teetered on the spiked heels for ten minutes before the woman finally fell down laughing!", "topic": "All Past Tenses"}
+{"jid": "j3eb90", "source": "Nincs szükségük sok helyre a salsához.", "level": "A2", "answer": "They don't need much room for the salsa.", "topic": "Much, Many, Some..."}
+{"jid": "jecda8", "source": "A roadmap szerint a csapat 6 hónapig edzett, mielőtt a repülő megmozdult.", "level": "B2", "answer": "According to the roadmap, the team practised for six months before the plane began to move.", "topic": "All Past Tenses"}
+{"jid": "j29b63", "source": "A fagylaltjukat ők a napos tengerparti stand mellett eszik.", "level": "A1", "answer": "Next to the sunny beach stand, they eat their ice cream.", "topic": "Prepositions of place/time"}
+{"jid": "j4cda3", "source": "A tehén persze tagadta, hogy megette az egész pitét, miközben az üres tányér fölé hajolt.", "level": "B2", "answer": "The cow of course denies that it has eaten the whole pie while leaning over the empty plate.", "topic": "Reported speech"}
+{"jid": "j15f23", "source": "Több száz cetli! Ez a terv annyi időt igényel, rémálom!", "level": "A2", "answer": "Hundreds of notes! This plan requires so much time!", "topic": "Countable and uncountable"}
+{"jid": "jcc2bb", "source": "Gyere hatkor, és a sétájuk éppen csak kezdődni fog.", "level": "A2", "answer": "Come at six, and their walk will be starting.", "topic": "Future with WILL"}
+{"jid": "j67788", "source": "Tudsz ilyen egyenes sort ültetni?", "level": "A1", "answer": "Can you plant a row as straight as this?", "topic": "Modal verb CAN"}
+{"jid": "j1105b", "source": "Ha nem hozta volna el az iratokat, a megbeszélés most lenne szüneteltetve.", "level": "B2", "answer": "Had she not brought the documents, the meeting would be paused.", "topic": "Mixed Conditional"}
+{"jid": "j27344", "source": "Neki sikerül széthúznia a nehéz ajtókat, és ő megáll az ajtónyílásban.", "level": "B1", "answer": "He manages to pull the heavy doors apart, and he stops in the doorway.", "topic": "Gerund vs Infinitive"}
+{"jid": "jfe7be", "source": "A nagy piros lámpás az ablak mellé lett helyezve, hogy elkapja az esti fényt.", "level": "B1", "answer": "The big red lantern has been placed by the window so that it catches the evening light.", "topic": "Passive or Active"}
+{"jid": "j98bb0", "source": "A teremben káosz van, de ő fel sem néz.", "level": "A2", "answer": "It's chaos in the hall, but she won't even look up.", "topic": "Basic conjunctions"}
+{"jid": "j5d44a", "source": "Az osztály a főzés után nem eszik sok rizst.", "level": "A2", "answer": "After cooking, the class doesn't eat much rice.", "topic": "Countable and uncountable"}
+{"jid": "jd4549", "source": "Ez a csapat 6 hónapja edz együtt csapattársakként, és a cél a döntő.", "level": "B1", "answer": "This team has been training together as teammates, and the goal is the final.", "topic": "Present Perfect Continuous"}
+{"jid": "j5d962", "source": "Ezt a ruhát megvenni drágább az egész utazásnál! Mindennek vége!", "level": "A2", "answer": "Buying this is more expensive than the whole trip! It's all over!", "topic": "Adjective comparison"}
+{"jid": "j4d6ca", "source": "Egy sort ír, és becsukja a füzetet.", "level": "A1", "answer": "He writes a line and then shuts the notebook.", "topic": "Cardinal numbers"}
+{"jid": "je4742", "source": "Több kutya most követi a futót, ami jellemzően megfigyelhető a társas fajoknál.", "level": "B2", "answer": "Several dogs followed the runner, which was typically observed in social species.", "topic": "All Present Tenses"}
+{"jid": "je5113", "source": "A házi cica ráugorhat a játékegérre.", "level": "A1", "answer": "The house cat can leap onto the toy mouse.", "topic": "Modal verb CAN"}

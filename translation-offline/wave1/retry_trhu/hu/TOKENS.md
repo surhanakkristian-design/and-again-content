@@ -11,3 +11,46 @@ Headless used so far (this language): 0. Agent reserve: 250,000. Projected langu
 - writers B2#sub: 39,753 tokens (ok, 133.2s)
 - 2026-09-23T10:36:42Z cumulative headless (this language) after writers: 142,148
 - 2026-09-23T10:36:43Z cumulative subagent tokens after writers: 142,148
+- 2026-09-23T10:36:43Z cumulative headless (this language) after judge: 142,148
+- writers A1#sub: 34,562 tokens (ok, 98.7s)
+- writers A2#sub: 32,574 tokens (ok, 92.3s)
+- writers B1#sub: 35,259 tokens (ok, 105.5s)
+- writers B2#sub: 39,753 tokens (ok, 133.2s)
+- 2026-09-23T10:38:12Z cumulative headless (this language) after writers: 142,148
+- 2026-09-23T10:38:12Z cumulative subagent tokens after writers: 142,148
+- judge s1#sub: 38,602 tokens (ok, 58.9s)
+- judge s2#sub: 38,168 tokens (ok, 51.1s)
+- 2026-09-23T10:38:12Z cumulative headless (this language) after judge: 218,918
+- writers A1#sub: 34,562 tokens (ok, 98.7s)
+- writers A2#sub: 32,574 tokens (ok, 92.3s)
+- writers B1#sub: 35,259 tokens (ok, 105.5s)
+- writers B2#sub: 39,753 tokens (ok, 133.2s)
+- 2026-09-23T10:38:20Z cumulative headless (this language) after writers: 218,918
+- 2026-09-23T10:38:20Z cumulative subagent tokens after writers: 218,918
+- judge s1#sub: 38,602 tokens (ok, 58.9s)
+- judge s2#sub: 38,168 tokens (ok, 51.1s)
+- judge s3#sub: 38,560 tokens (ok, 59.2s)
+- judge s4#sub: 38,404 tokens (ok, 57.7s)
+- judge s5#sub: 38,781 tokens (ok, 56.6s)
+- judge s6#sub: 38,288 tokens (ok, 55.7s)
+- judge s7#sub: 38,136 tokens (ok, 57.6s)
+- judge s8#sub: 38,160 tokens (ok, 54.1s)
+- 2026-09-23T10:38:20Z cumulative headless (this language) after judge: 449,247
+- writers A1#sub: 34,562 tokens (ok, 98.7s)
+- writers A2#sub: 32,574 tokens (ok, 92.3s)
+- writers B1#sub: 35,259 tokens (ok, 105.5s)
+- writers B2#sub: 39,753 tokens (ok, 133.2s)
+- 2026-09-23T10:49:08Z cumulative headless (this language) after writers: 449,247
+- 2026-09-23T10:49:08Z cumulative subagent tokens after writers: 449,247
+- judge s1#sub: 38,602 tokens (ok, 58.9s)
+- judge s2#sub: 38,168 tokens (ok, 51.1s)
+- judge s3#sub: 38,560 tokens (ok, 59.2s)
+- judge s4#sub: 38,404 tokens (ok, 57.7s)
+- judge s5#sub: 38,781 tokens (ok, 56.6s)
+- judge s5_f1#sub: 19,859 tokens (ok, 9.6s)
+- judge s6#sub: 38,288 tokens (ok, 55.7s)
+- judge s6_f1#sub: 19,809 tokens (ok, 8.4s)
+- judge s7#sub: 38,136 tokens (ok, 57.6s)
+- judge s8#sub: 38,160 tokens (ok, 54.1s)
+- 2026-09-23T10:49:08Z cumulative headless (this language) after judge: 488,915
+- 2026-09-23T10:49:08Z cumulative subagent tokens after judges: 488,915
