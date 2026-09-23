@@ -78,3 +78,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 44. **The CDN purge was run by the owner on 23 Sept 2026; verified on 10 files.**
 45. **The translate cadence (at least 1 translate card in 6, rule "max 3 of the same kind in a row" intact) is deployed.**
 46. **The selected 4,064 exercises are scanned in all six non-English natives for source/reference mismatches.** Report only, no fix in this run.
+
+## Decisions for the mismatch fix brief (23 Sept 2026)
+
+47. **All 303 confirmed mismatches are fixed:** the 174 Spanish pronouns, the 123 other native rows, and the 6 rows where the English is wrong.
+48. **Spanish keeps the explicit subject;** only the wrong pronoun is corrected (not a restore from the Part 4 backup).
+49. **Where the native sentence says something entirely different** (most of the Hungarian A1 series), it is re-translated from the English, not patched.
+50. **The 440 native rows with an empty gap word stay as they are for now.**
