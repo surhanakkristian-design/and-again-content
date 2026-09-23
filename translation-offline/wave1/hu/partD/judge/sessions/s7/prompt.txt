@@ -1,0 +1,145 @@
+You are the judge for a translation-checking test set. Do not use any tools. Reply with JSON only.
+
+Each line below is one learner answer, as JSON: an item id (jid), a Hungarian sentence, its CEFR level, the exercise topic, and the learner's English translation (answer). For every item decide ONE question: is this correct English that means what the Hungarian means?
+
+The owner's rules (apply them exactly):
+- The Hungarian is the ground truth, not the English reference.
+- Any correct English with the same meaning is correct regardless of the grammar structure used.
+- A passive is acceptable.
+- A passive that drops an agent the Hungarian names is WRONG.
+- A missing obligatory English article is an ERROR while the CHOICE of article is free.
+- The time frame must match the Hungarian while the English tense inside it is free.
+- Added content is wrong. Exception: an ADDED interjection (e.g. "Wow", "Bro") is NOT an error, just as a dropped interjection is not an error. Added content of any other kind stays wrong.
+- Genderless source: when the Hungarian sentence does not mark gender (e.g. "ő", "övé", "maga", a possessive suffix, or a verb without a subject pronoun; Hungarian never marks gender), BOTH he/she and his/her are correct.
+- Dropping a word is judged by its KIND. ACCEPTABLE to drop: time adverbs, degree adverbs and interjections — now, today, already, still, finally, then, totally, completely, just, Look! (Hungarian: most, ma, már, még, végre, akkor, teljesen, totálisan, éppen, épp, Nézd!). WRONG to drop: nouns, adjectives, main verbs, and place or direction phrases — hot, in the room, off the plant. The owner's reason: where even the model does not treat it as a serious error, it is not counted as one.
+
+OUT OF SCOPE: the practised structure. The topic tells you which grammar the exercise practises; it does NOT matter whether the answer uses that grammar. Never mark an answer wrong because it does not use the practised structure. There is no English reference; judge against the Hungarian only.
+
+Label each item "correct" or "wrong", with a reason of at most 12 words. Judge every item independently.
+
+Output: one JSON array with exactly one object per item, every jid exactly once, exactly this shape:
+[{"jid": "...", "label": "correct", "reason": "..."}]
+
+Items:
+{"jid": "j688fd", "source": "A szomszéd agyagedényét nem kellene eltörnöd.", "level": "A2", "answer": "You shouldn't have broken the neighbour's clay pot.", "topic": "Modal verb SHOULD"}
+{"jid": "j185ba", "source": "Ő tovább ment felfelé az ösvényen, pedig a köd egyre sűrűsödött.", "level": "B2", "answer": "He keeps going up the path, even though the fog is getting thicker.", "topic": "Advanced linkers"}
+{"jid": "jf4814", "source": "A táncos buli napnyugtakor kezdődik a pályán.", "level": "A1", "answer": "At sunset the dance party begins on the field.", "topic": "Prepositions of place/time"}
+{"jid": "j61dfa", "source": "Most épp mindenki kiabál abban a beszélgetésben, tesó. Vad vibe.", "level": "A2", "answer": "Everyone is shouting right now, bro. Wild vibe.", "topic": "Present Continuous"}
+{"jid": "j5f89c", "source": "Nézd! A kosár most éppen megy fel a kötélen.", "level": "A2", "answer": "Look! The basket is going up right now.", "topic": "Present Continuous"}
+{"jid": "j4cc10", "source": "Ez a kávé édesebb, mint az első.", "level": "A2", "answer": "This coffee is more bitter than the first one.", "topic": "Adjective comparison"}
+{"jid": "j3c041", "source": "Odavágta a virágos zacskót a földre, és most az egész csarnok elnémult.", "level": "B1", "answer": "She flung the floral bag onto the floor and the whole hall has gone quiet now.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jbbc2e", "source": "Te csak egy hátizsákkal utazgatsz Németországban? Respekt.", "level": "A1", "answer": "You're travelling around Austria with just a backpack? Respect.", "topic": "Present Simple"}
+{"jid": "j0b71d", "source": "Odavágta a virágos zacskót a földre, és most az egész csarnok elnémult.", "level": "B1", "answer": "He slammed the flowery bag onto the table, and now the whole hall has gone silent.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "jd8e14", "source": "A fenevad sokáig állt a sziklán, mielőtt leugrott.", "level": "B2", "answer": "The beast has been standing on the rock for a long time before it jumps down.", "topic": "Past Perfect Continuous"}
+{"jid": "j25c06", "source": "Add oda neki az oldalt, és mondani fogja, hogy az övé.", "level": "A2", "answer": "Give her the page, and she'll say it is hers.", "topic": "Future with WILL"}
+{"jid": "j53cf8", "source": "Odavágta a virágos zacskót a földre, és most az egész csarnok elnémult.", "level": "B1", "answer": "He hurled the flowery bag to the ground, and now the whole hall has fallen quiet.", "topic": "Present Perfect Simple or Continuos"}
+{"jid": "j11f5b", "source": "Tesó, holnap ilyenkor az a tyúk megint fog elosonni a farkasok mellett, komolyan.", "level": "B1", "answer": "Brother, this time tomorrow that hen will be creeping past the wolves once more, honestly.", "topic": "Future Continuous"}
+{"jid": "j72b60", "source": "Egy dátum körül van egy piros szív.", "level": "A2", "answer": "There is a blue heart around a date.", "topic": "There is, are"}
+{"jid": "j4650f", "source": "Ő egyedül a sziklán arra a fára mutat maga mögött.", "level": "A1", "answer": "Alone on the rock, he pointed at that tree behind him.", "topic": "This, That, These..."}
+{"jid": "j04dff", "source": "Rémálom! Húsz ember van a banki sorban!", "level": "A2", "answer": "It's a nightmare! Twenty people are in the queue at the bank!", "topic": "There is, are"}
+{"jid": "j0ef42", "source": "Egy kipörgő hátsó gumi jellemzően laza földet repít a levegőbe a motor mögött.", "level": "B2", "answer": "Spinning rear tyre typically throw loose dirt into the air behind the motorbike.", "topic": "Articles advanced"}
+{"jid": "j1af9f", "source": "Tesó, ő tud támaszkodni arra a nyélre. Nagyon menő.", "level": "A1", "answer": "Bro, she can lean on that handle. So cool.", "topic": "Modal verb CAN"}
+{"jid": "j71d3e", "source": "Rajzolt egy spirált, és egy hullám azonnal elmosta.", "level": "B2", "answer": "He drew a spiral, and a wave instantly washed it away.", "topic": "All Past Tenses"}
+{"jid": "j81002", "source": "Gyerekként szoktak órákat tölteni az útikönyv egyetlen oldalán.", "level": "B1", "answer": "As children, they used to spend hours on a single page.", "topic": "Used to, Would"}
+{"jid": "j8f6f9", "source": "Mennyi tejre van szükség a recepthez?", "level": "A2", "answer": "How much cream is needed for the recipe?", "topic": "Much, Many, Some..."}
+{"jid": "jb847b", "source": "Ő nem hagyta abba a kés húzogatását a kenyéren, amíg egyetlen száraz folt sem maradt.", "level": "B1", "answer": "He did not stop pulling the knife across the bread until there was not a single dry spot left.", "topic": "Gerund vs Infinitive"}
+{"jid": "jece03", "source": "Ő nem hagyta abba a kés húzogatását a kenyéren, amíg egyetlen száraz folt sem maradt.", "level": "B1", "answer": "He didn't stopped dragging the knife across the bread until not a single dry spot was left.", "topic": "Gerund vs Infinitive"}
+{"jid": "jfeb2a", "source": "Tesó, ő tud támaszkodni arra a nyélre. Nagyon menő.", "level": "A1", "answer": "Dude, he is able to lean on that handle. Really cool.", "topic": "Modal verb CAN"}
+{"jid": "j615e2", "source": "Haver, a teknős olyan lassan megy, elég gyenge, de nyer.", "level": "A2", "answer": "Dude, the turtle went so slowly, it was pretty weak, but it won.", "topic": "Adverb formation"}
+{"jid": "j6f260", "source": "Ha a kutya tovább kapar, a gödör elég nagy lesz mindkettőjüknek.", "level": "B1", "answer": "The hole will be large enough for both of them if the dog keeps on scraping.", "topic": "1. Conditional"}
+{"jid": "jee7d8", "source": "Haver, a teknős olyan lassan megy, elég gyenge, de nyer.", "level": "A2", "answer": "Dude, the turtle go so slowly, it's pretty weak, but it wins.", "topic": "Adverb formation"}
+{"jid": "j213d9", "source": "Csajszi, a pletyka szerint ő évekig edzett, mielőtt átütötte a betont.", "level": "B2", "answer": "Girl, rumour has it she had trained for years before she punched through the wood.", "topic": "All Past Tenses"}
+{"jid": "j8db5f", "source": "Képzeld, ő állítólag abban a fekete beterítőben megcsináltatta a haját.", "level": "B2", "answer": "Guess what, he supposedly got his hair done in that black cape.", "topic": "Causative HAVE/GET"}
+{"jid": "j57ee3", "source": "A fenevad sokáig állt a sziklán, mielőtt leugrott.", "level": "B2", "answer": "The beast had been lying on the rock for a long time before it jumped down.", "topic": "Past Perfect Continuous"}
+{"jid": "j9a59b", "source": "Képzeld, ő állítólag abban a fekete beterítőben megcsináltatta a haját.", "level": "B2", "answer": "Imagine, she apparently had her hair done in that cape.", "topic": "Causative HAVE/GET"}
+{"jid": "jcfb59", "source": "A fenevad sokáig állt a sziklán, mielőtt leugrott.", "level": "B2", "answer": "The beast stood on the cliff for a long time before it leapt down.", "topic": "Past Perfect Continuous"}
+{"jid": "j72aae", "source": "Segítség! Hol van a recepció? Én teljesen eltévedtem!", "level": "A1", "answer": "Help! Where's reception? I've got completely lost!", "topic": "Wh- questions"}
+{"jid": "j142e8", "source": "A férfi hajnalban kint van a tavon, és a jávorszarvas is.", "level": "B1", "answer": "At dawn, the man is out on the lake, and the moose is also there.", "topic": "So, Neither, Nor"}
+{"jid": "je07b3", "source": "Ő éppen dugott egy kábelt az elosztóba, amikor az áram elérte a fényfüzért.", "level": "B1", "answer": "He was plugging a cable in when the electricity reached the string of lights.", "topic": "Past Continuous"}
+{"jid": "j360ab", "source": "A táncos buli napnyugtakor kezdődik a pályán.", "level": "A1", "answer": "The dance party begins at sundown on the pitch.", "topic": "Prepositions of place/time"}
+{"jid": "j81f0b", "source": "Persze ő megígéri, hogy csak öt percig fog heverészni a kanapén.", "level": "B1", "answer": "Of course he promises he'll only be lazing around on the couch for five minutes.", "topic": "Future Simple or Continuos"}
+{"jid": "j3a995", "source": "Te nyugodt maradtál azok alatt a széles szárnyak alatt, és őszintén a sólyom is.", "level": "B1", "answer": "You remained calm under those wide wings, and frankly so did the falcon.", "topic": "So, Neither, Nor"}
+{"jid": "je5d89", "source": "Egy piros jelet húzzák át a fehér krétavonalon.", "level": "A1", "answer": "They draw a mark across the white chalk line.", "topic": "A, AN, THE"}
+{"jid": "j528f3", "source": "A meleg teraszon nagyon lassan forog.", "level": "A2", "answer": "It turns very slowly on the terrace.", "topic": "Adverb formation"}
+{"jid": "j4cfb4", "source": "Persze ő megígéri, hogy csak öt percig fog heverészni a kanapén.", "level": "B1", "answer": "Of course he promises that he'll only lounge on the sofa for five minutes.", "topic": "Future Simple or Continuos"}
+{"jid": "jf1c62", "source": "Ez a hajó évek óta napi 300 turistát visz át a kikötőn, teljes kapacitással.", "level": "B1", "answer": "This boat has carried 300 tourists daily across the harbor for years, running at full capacity.", "topic": "Present Perfect Continuous"}
+{"jid": "j9263d", "source": "Ma estére már hat órája fogja mutogatni mindenkinek azt az oldalt.", "level": "B2", "answer": "By tonight he will have been showing that page to everyone for two hours.", "topic": "Future Perfect Continuous"}
+{"jid": "j714e4", "source": "A hím egyed elutasította a kérést felemelt mutatóujjal, ahogy megfigyelték.", "level": "B1", "answer": "The request was rejected by the male specimen with a raised index finger, as observed.", "topic": "Passive or Active"}
+{"jid": "ja1172", "source": "A rövid oszlop fából van, és a magas is.", "level": "B1", "answer": "The short pillar is made of wood, and so does the tall one.", "topic": "So, Neither, Nor"}
+{"jid": "jdb86a", "source": "Ő nem hagyta abba a kés húzogatását a kenyéren, amíg egyetlen száraz folt sem maradt.", "level": "B1", "answer": "He didn't stop dragging the fork across the bread until not a single dry spot was left.", "topic": "Gerund vs Infinitive"}
+{"jid": "je4eda", "source": "Néhány szem már leesett a tál aljára.", "level": "B2", "answer": "A few kernels have fallen to the bottom of the bowl already.", "topic": "All Present Tenses"}
+{"jid": "j7b2be", "source": "Haver, ha velük edzettem volna, én most abban a formációban zuhannék, nem kamu.", "level": "B2", "answer": "Dude, if I had trained with them, I would be flying in that plane now, no kidding.", "topic": "Mixed Conditional"}
+{"jid": "jdc1ca", "source": "Tesó, mire odaérünk, ő elfoglalja az egyetlen helyet az utcában, komolyan.", "level": "B2", "answer": "Bro, by the time we reach it, he will have occupied the only spot on the street, seriously.", "topic": "All Future Tenses"}
+{"jid": "je7d3b", "source": "Holnap ilyenkor a két nő egy újabb nagy öleléssel fogja kimutatni a szeretetét.", "level": "B1", "answer": "Tomorrow at this time the two women will be expressing their love with one more big hug.", "topic": "Future Continuous"}
+{"jid": "j0e2aa", "source": "Tesó, ők hetekig programozták azt az appot, mire végre megjelent a zöld pipa, komolyan.", "level": "B2", "answer": "Bro, they had been developing that app for weeks by the time the green checkmark finally appeared, for real.", "topic": "All Past Tenses"}
+{"jid": "j79b01", "source": "Segítség! Hol van a recepció? Én teljesen eltévedtem!", "level": "A1", "answer": "Help! Where is the front desk? I got completely lost!", "topic": "Wh- questions"}
+{"jid": "j9ba82", "source": "A kék folyadék, amely azokba a kémcsövekbe megy, egy óra múlva színt vált.", "level": "B1", "answer": "The red liquid that goes into those test tubes changes color in an hour.", "topic": "Relative clauses"}
+{"jid": "j4f499", "source": "A fehér ingének van egy nagy gallérja.", "level": "A1", "answer": "There is a big collar on his white shirt.", "topic": "HAVE GOT"}
+{"jid": "jf4a13", "source": "Te négy kaput nyitsz ki, hogy megtaláld azt a palotát? Respekt.", "level": "A1", "answer": "You opened four gates to find that palace? Respect.", "topic": "Cardinal numbers"}
+{"jid": "j20548", "source": "A meleg teraszon nagyon lassan forog.", "level": "A2", "answer": "It is turning really slowly on the warm terrace.", "topic": "Adverb formation"}
+{"jid": "j95299", "source": "Képzeld, mindenki azt mondja, hogy a roham volt az egész show legjobb része.", "level": "B2", "answer": "Can you believe it, everyone is saying the charge was the best bit of the whole show.", "topic": "Articles advanced"}
+{"jid": "je55bb", "source": "Amikor felmászott a tetőre, ő már három órája fotózott.", "level": "B2", "answer": "When he climbed up to the roof, she had been taking photographs for three hours already.", "topic": "All Past Tenses"}
+{"jid": "j977d9", "source": "Ágyjelentés: 1 mopsz elfoglalhatja az egész közepet.", "level": "A1", "answer": "Bed report: 1 pug was able to take up the whole middle.", "topic": "Modal verb CAN"}
+{"jid": "j277f4", "source": "A bőröndök az ülések fölött", "level": "A1", "answer": "The suitcases were above the seats.", "topic": "Prepositions of place/time"}
+{"jid": "j5061e", "source": "Ők általában egyedül táncolnak, de ma sorban táncolnak", "level": "A2", "answer": "They usually dances alone, but today they are dancing in a line.", "topic": "Present Continuous or Simple"}
+{"jid": "j8dfea", "source": "Tesó, Hol fog ülni mindenki? Tele van a terem.", "level": "A1", "answer": "Bro, where will everyone sit? The room is full.", "topic": "Wh- questions"}
+{"jid": "j7902a", "source": "Éppen most nézi az aranykupolát.", "level": "A2", "answer": "She's looking at the golden cupola right now.", "topic": "Present Continuous"}
+{"jid": "jfce1e", "source": "Nagyon kényelmes, nyilván: neki van ágya, de ő a hűtő mellett fekszik.", "level": "A2", "answer": "Very comfortable, obviously: he have a bed, but he lies next to the fridge.", "topic": "Basic conjunctions"}
+{"jid": "j21930", "source": "Ő azt kívánja, bárcsak a nagy nap előtt megtanulta volna, hogyan kell csokornyakkendőt kötni.", "level": "B2", "answer": "He wishes that he had learned how to knot a bow tie before the big day.", "topic": "Wish clauses"}
+{"jid": "j69e69", "source": "Képzeld, mindenki azt mondja, hogy a roham volt az egész show legjobb része.", "level": "B2", "answer": "Imagine, everybody says that the charge was the best part of the entire show.", "topic": "Articles advanced"}
+{"jid": "j34908", "source": "Most ő vár a piros lámpánál, szóval ott van.", "level": "A2", "answer": "He was waiting at the red light, so he was there.", "topic": "Present Continuous or Simple"}
+{"jid": "j3393a", "source": "Ő megérinti az üveget. Ez az álom tönkreteszi!", "level": "A1", "answer": "He touches the bottle. This dream is ruining it!", "topic": "This, That, These..."}
+{"jid": "j56c22", "source": "Ha még közelebb jön, az a hullám teljesen el fogja tüntetni a kis nyomukat!", "level": "B1", "answer": "If it came any closer, that wave completely wiped out their little footprints!", "topic": "1. Conditional"}
+{"jid": "j3245b", "source": "A kamara szabálya: a szónoknak vitában fel kell állnia.", "level": "A2", "answer": "The chamber's rule: the speaker must to stand up in a debate.", "topic": "Must, Have to..."}
+{"jid": "j01f67", "source": "Haver, a teknős olyan lassan megy, elég gyenge, de nyer.", "level": "A2", "answer": "Dude, the turtle goes so slowly, it's pretty weak, but it wins.", "topic": "Adverb formation"}
+{"jid": "jaf154", "source": "Add oda neki az oldalt, és mondani fogja, hogy az övé.", "level": "A2", "answer": "Hand him the page and he'll say that it's his.", "topic": "Future with WILL"}
+{"jid": "je018b", "source": "Azon a domboldalon mindenütt pipacs volt, ugye?", "level": "B1", "answer": "There are poppies everywhere on that hillside, aren't there?", "topic": "Question tags"}
+{"jid": "j5735a", "source": "A közönség ujjong, ezért ő eldönti: én még egy trükköt fogok mutatni.", "level": "A2", "answer": "The audience is cheering, so he decides: I'll show one more.", "topic": "Going to or Will"}
+{"jid": "j0eafb", "source": "Tesó, holnap ilyenkor az a tyúk megint fog elosonni a farkasok mellett, komolyan.", "level": "B1", "answer": "Bro, this time tomorrow that hen will be sneaking past again, seriously.", "topic": "Future Continuous"}
+{"jid": "j68abc", "source": "Te csak egy hátizsákkal utazgatsz Németországban? Respekt.", "level": "A1", "answer": "You travel around Germany with just a backpack? Respect!", "topic": "Present Simple"}
+{"jid": "j21c89", "source": "Ezek a nemzeti színek! Szó szerint sírok!", "level": "A1", "answer": "These is the national colours! I'm literally crying!", "topic": "TO BE"}
+{"jid": "j642f3", "source": "A sár mély, ezért együtt kell húznotok.", "level": "A2", "answer": "The mud's deep, so you all need to pull together.", "topic": "Must, Have to..."}
+{"jid": "j1e4cc", "source": "A bőröndök az ülések fölött", "level": "A1", "answer": "The suitcases above the seats.", "topic": "Prepositions of place/time"}
+{"jid": "jdbdb8", "source": "Szórt a paradicsomra sót, és megkóstolta.", "level": "A2", "answer": "He salted the tomato and tasted it.", "topic": "Past Simple"}
+{"jid": "j56e9b", "source": "Figyu, tényleg van terve. Ő az egész stílusát meg fogja változtatni.", "level": "A2", "answer": "Look, she really has a plan. She is going to change her entire style.", "topic": "Future BE GOING TO"}
+{"jid": "j93a69", "source": "Oké, de a borbély egy csíkot borotvált a frizurájába, elég ikonikus.", "level": "A1", "answer": "Okay, but the barber shaved a stripe into his haircut, pretty iconic.", "topic": "My, Your, His,..."}
+{"jid": "j174d5", "source": "Egy piros jelet húzzák át a fehér krétavonalon.", "level": "A1", "answer": "A red mark is drawn across the white chalk line.", "topic": "A, AN, THE"}
+{"jid": "jf67ce", "source": "A meleg teraszon nagyon lassan forog.", "level": "A2", "answer": "It turns very slowly on the warm terrace.", "topic": "Adverb formation"}
+{"jid": "j39f72", "source": "Mennyi tejre van szükség a recepthez?", "level": "A2", "answer": "How much milk do you need for the recipe?", "topic": "Much, Many, Some..."}
+{"jid": "jc5be7", "source": "A bőröndök az ülések fölött", "level": "A1", "answer": "The cases are above the seats.", "topic": "Prepositions of place/time"}
+{"jid": "jee632", "source": "Képzeld, mindenki azt mondja, hogy a roham volt az egész show legjobb része.", "level": "B2", "answer": "Guess what, everyone say the charge was the best part of the whole show.", "topic": "Articles advanced"}
+{"jid": "jcea3f", "source": "A fehér ingének van egy nagy gallérja.", "level": "A1", "answer": "Her white shirt has got a large collar.", "topic": "HAVE GOT"}
+{"jid": "j18079", "source": "A dolgozóknak sokkal korábban kellett volna fellázadniuk; a szabályok évek óta igazságtalanok voltak.", "level": "B2", "answer": "The employees should have rebelled a lot earlier; the rules had been unfair for years.", "topic": "Modals in past"}
+{"jid": "jc825d", "source": "A férfi hajnalban kint van a tavon, és a jávorszarvas is.", "level": "B1", "answer": "The man is out on the lake at dawn, and so is the moose.", "topic": "So, Neither, Nor"}
+{"jid": "j15fca", "source": "Tesó, ő biztos a legjobb nagyi a világon.", "level": "A1", "answer": "Bro, she must be the world's best grandma.", "topic": "A, AN, THE"}
+{"jid": "ja51a7", "source": "Várj, azt beszélik, a következő körre ő megint lesokkolja egy újabb alattomos lépéssel.", "level": "B2", "answer": "Wait, they say that in the next round she will shocks him again with another sneaky move.", "topic": "All Future Tenses"}
+{"jid": "j3a71d", "source": "Az alany körülbelül öt perce teszi a virágokat a vázába egyenként.", "level": "B1", "answer": "The subject has been putting the flowers into the vase one by one for about five minutes.", "topic": "Present Perfect Continuous"}
+{"jid": "j152ca", "source": "A sár mély, ezért együtt kell húznotok.", "level": "A2", "answer": "Because the mud is deep, you have to pull together.", "topic": "Must, Have to..."}
+{"jid": "j61c4a", "source": "Parkjelentés: 1 férfi a tóban van, a dzsekije rajta.", "level": "A1", "answer": "Park report: 1 man are in the lake, his jacket on.", "topic": "My, Your, His,..."}
+{"jid": "j7c599", "source": "Mira azt mondta, hogy a patak biztonságos, ha mindenki oda lép, ahová ő.", "level": "B1", "answer": "According to Mira, the stream was safe if everyone stepped where she stepped.", "topic": "Reported speech"}
+{"jid": "j7db96", "source": "Nem kellett volna bemásznia az ablakon — nézd meg most.", "level": "B2", "answer": "He shouldn't have got in through the window — look at it.", "topic": "Modals in past"}
+{"jid": "je91f5", "source": "A férfinak nagyon tetszik az ő hegyrajza.", "level": "A1", "answer": "The man really likes his drawing of a mountain.", "topic": "My, Your, His,..."}
+{"jid": "j2e0e6", "source": "A trombiták hangja betöltötte az egész sugárutat.", "level": "B2", "answer": "The trumpets' sound filled the whole boulevard.", "topic": "Articles advanced"}
+{"jid": "j2028d", "source": "A trombiták hangja betöltötte az egész sugárutat.", "level": "B2", "answer": "The sound of the trumpets were filling whole avenue.", "topic": "Articles advanced"}
+{"jid": "j666fa", "source": "A táncos buli napnyugtakor kezdődik a pályán.", "level": "A1", "answer": "The dance party starts on the field.", "topic": "Prepositions of place/time"}
+{"jid": "je9827", "source": "A régi épület most már majdnem teljesen romokban.", "level": "A1", "answer": "The old building is already almost totally in ruins.", "topic": "TO BE"}
+{"jid": "j8adcd", "source": "Nagyon kényelmes, nyilván: neki van ágya, de ő a hűtő mellett fekszik.", "level": "A2", "answer": "Very comfortable, obviously: he has a bed, but he lies next to the oven.", "topic": "Basic conjunctions"}
+{"jid": "j6bf7d", "source": "Most ő vár a piros lámpánál, szóval ott van.", "level": "A2", "answer": "He's wait at the red light now, so he's there.", "topic": "Present Continuous or Simple"}
+{"jid": "j069d9", "source": "Ő három hosszú csontot számol meg a tálcán.", "level": "A1", "answer": "She counts three short bones on the tray.", "topic": "Singular and plural"}
+{"jid": "j9e42b", "source": "Ő lenéz a határra a két ország között, és átlép rajta.", "level": "B2", "answer": "He looks down at the frontier between the two countries and crosses it with one step.", "topic": "Articles advanced"}
+{"jid": "jb6811", "source": "Te csak egy hátizsákkal utazgatsz Németországban? Respekt.", "level": "A1", "answer": "You're traveling around Germany with just a backpack? Respect.", "topic": "Present Simple"}
+{"jid": "jd54b2", "source": "Amikor felmászott a tetőre, ő már három órája fotózott.", "level": "B2", "answer": "When he climbed up, she had already been taking photos for three hours.", "topic": "All Past Tenses"}
+{"jid": "j941cd", "source": "Tesó, mire odaérünk, ő elfoglalja az egyetlen helyet az utcában, komolyan.", "level": "B2", "answer": "Bro, by the time we get there, he will take the only spot in the street, seriously.", "topic": "All Future Tenses"}
+{"jid": "j79654", "source": "A régi épület most már majdnem teljesen romokban.", "level": "A1", "answer": "The old building is now almost completely in ruins.", "topic": "TO BE"}
+{"jid": "j5f948", "source": "Ő három hosszú csontot számol meg a tálcán.", "level": "A1", "answer": "On the tray, he counts three long bones.", "topic": "Singular and plural"}
+{"jid": "j9dae7", "source": "Tesó, Hol fog ülni mindenki? Tele van a terem.", "level": "A1", "answer": "Bro, where will everyone sit? It is full.", "topic": "Wh- questions"}
+{"jid": "j064a4", "source": "Azon a domboldalon mindenütt pipacs volt, ugye?", "level": "B1", "answer": "There were poppies everywhere on that hillside, weren't there?", "topic": "Question tags"}
+{"jid": "jba07a", "source": "Épp most csukja a doboz fedelét.", "level": "A2", "answer": "He is opening the lid of the box right now.", "topic": "Present Continuous"}
+{"jid": "jd05a5", "source": "Parkjelentés: 1 férfi a tóban van, a dzsekije rajta.", "level": "A1", "answer": "Park report: 1 man was in the lake, his jacket on.", "topic": "My, Your, His,..."}
+{"jid": "j1d5ab", "source": "A fehér ingének van egy nagy gallérja.", "level": "A1", "answer": "Her white shirt has a big collar.", "topic": "HAVE GOT"}
+{"jid": "jd22dc", "source": "Ma estére már hat órája fogja mutogatni mindenkinek azt az oldalt.", "level": "B2", "answer": "By tonight, he'll have been showing that page to everybody for six hours already.", "topic": "Future Perfect Continuous"}
+{"jid": "j10a77", "source": "Egy mozdulattal tud parkolni.", "level": "A1", "answer": "He's able to park in a single manoeuvre.", "topic": "Modal verb CAN"}
+{"jid": "j7e999", "source": "Éppen most nézi az aranykupolát.", "level": "A2", "answer": "She is looking at the golden dome right now.", "topic": "Present Continuous"}
+{"jid": "j5b376", "source": "Várj, azt beszélik, a következő körre ő megint lesokkolja egy újabb alattomos lépéssel.", "level": "B2", "answer": "Wait, they say that she will shock him again with another sneaky move.", "topic": "All Future Tenses"}
+{"jid": "j9b691", "source": "A bőröndök az ülések fölött", "level": "A1", "answer": "Suitcases above the seats.", "topic": "Prepositions of place/time"}
+{"jid": "jac26b", "source": "Egy piros jelet húzzák át a fehér krétavonalon.", "level": "A1", "answer": "They draw a blue mark across the white chalk line.", "topic": "A, AN, THE"}
