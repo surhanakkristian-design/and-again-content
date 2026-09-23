@@ -1,0 +1,10 @@
+# Part D access log (verbatim copies)
+
+Opens of partD/set/items.jsonl recorded: 1 (run/access_log.jsonl).
+
+## run/access_log.jsonl
+
+```
+{"argv": ["tr", "gemini"], "bytes": 198762, "path": "/Users/kristiansurhanak/Projects/and-again-content/translation-offline/wave1/tr/partD/set/items.jsonl", "pid": 99977, "purpose": "Wave 1 Part D fresh Turkish set, opened ONCE by the frozen wave-1 stack", "sha256": "45b80c8ce56b794fd12a3a6fd0d5f6c731c3e1ff7bb257a26d1c4628795235a2", "ts": "2026-09-23T09:10:05+00:00"}
+```
+
