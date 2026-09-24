@@ -165,3 +165,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 95. **Listening questions and the spoken lines used as subtitles are translated into the 8 languages by CLAUDE agents** (no Gemini), stored in a new table.
 96. **The comment check judges MEANING as well as grammar:** an answer that is nonsense, or does not answer the question, is wrong even when the grammar is perfect.
 97. **This run ends with a web deploy.**
+
+## Decisions for the swipe-up skip, transcript fix and gender-neutral feedback brief (24 Sept 2026)
+
+98. **A fast upward flick on a Tinder card is an explicit SKIP:** it moves to the next card and counts as a rejection for the recommender, exactly as a fast skip does on the other card kinds.
+99. **The 12 garbled English subtitle lines are re-transcribed from the video audio** and their translations are added.
+100. **Every piece of feedback the learner reads must be gender-neutral in every language.**
