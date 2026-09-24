@@ -155,3 +155,13 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 88. **BLOCK_AFTER_REJECTIONS = 2:** a media is blocked only after the SECOND rejection, so one accidental flick does not remove it for good.
 89. **EVERY sentence and question the learner sees must be translatable on demand into their native language, on every card kind.**
 90. **The comment check function is deployed** so the comment exercise works locally and live.
+
+## Decisions for the Tinder drag, UI corrections, listening/speaking translations, meaning check and deploy brief (24 Sept 2026)
+
+91. **The translation toggle works on EVERY card kind,** listening and speaking included.
+92. **No XP badge in the top bar.**
+93. **All top-bar and rail buttons keep the glass style of the Figma mockups;** the skip pill uses the mockup's font weight (not bold); every icon stroke is ICON_LINE_WIDTH (1.6 pt), the X included.
+94. **Tinder uses a real drag-and-throw card,** identical on mobile and desktop, with the verdict mark DRAWN as the drag progresses.
+95. **Listening questions and the spoken lines used as subtitles are translated into the 8 languages by CLAUDE agents** (no Gemini), stored in a new table.
+96. **The comment check judges MEANING as well as grammar:** an answer that is nonsense, or does not answer the question, is wrong even when the grammar is perfect.
+97. **This run ends with a web deploy.**
