@@ -149,3 +149,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 85. **A media the learner rejected once or twice is never shown to them again.** A topic is only downgraded after repeated rejections in DIFFERENT situations.
 86. **The Training wall is re-ranked after every finished session and on every app start.** For now only the ORDER changes; nothing is hidden (hiding comes later, with more content).
 87. **Cold start:** a learner we know nothing about gets mostly media uploaded on or after 10 Sept 2026 (1,489 of 3,667). As soon as their own signals exist, those decide; new media still fill the gaps whenever the picture is thin.
+
+## Decisions for the fix brief: comment check, microphone, translations on every card (24 Sept 2026)
+
+88. **BLOCK_AFTER_REJECTIONS = 2:** a media is blocked only after the SECOND rejection, so one accidental flick does not remove it for good.
+89. **EVERY sentence and question the learner sees must be translatable on demand into their native language, on every card kind.**
+90. **The comment check function is deployed** so the comment exercise works locally and live.
