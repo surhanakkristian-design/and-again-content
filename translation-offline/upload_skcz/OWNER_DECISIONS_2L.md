@@ -208,3 +208,12 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 120. **Tinder stops using grammar-exercise sentences.** Every media gets FOUR purpose-written English texts, stored in a new table (`tinder_sentences`) and translated into the 8 other languages later.
 121. **Per media: a TRUE sentence and a FALSE sentence (max 60 characters), plus a TRUE short phrase and a FALSE short phrase** (max 30 characters, 2-5 words, not sentences).
 122. **Grammar first, humour second.** 70 % of the sentences must be short (max 30 characters), counted separately for A-level and for B-level media.
+
+## Decisions for the vocabulary sessions brief (25 Sept 2026)
+
+123. **Vocabulary tiles disappear from the Training home grid.** They live only in the profile's vocabulary section. The media grid in Training keeps only ordinary media tiles.
+124. **A vocabulary tile shows its NAME in a white pill in the top left,** as the owner's screenshot marks.
+125. **Opening a vocabulary still shows its word tiles (unchanged). TAPPING A WORD now starts an exercise session for that vocabulary:** it begins with the word the learner tapped, then the other words follow in random order and the list repeats endlessly, so a learner can go through it ten times.
+126. **A vocabulary session uses all three exercises: Tinder, Speaking-repeat and Answer (the comment/answer card).** On a later pass through the same word, a DIFFERENT exercise is chosen when one is available.
+127. **Two automatic vocabularies are kept per learner and filled automatically from their answers: "Not yet" (words answered wrong) and "You got this" (words answered right).** A word moves from "Not yet" to "You got this" as soon as it is answered correctly, and back on a wrong answer, so both lists always show the current state.
+128. **The two automatic vocabularies cannot be deleted.** Their settings sheet offers only SHARE and RESET (Figma 1796-651).
