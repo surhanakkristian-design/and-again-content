@@ -184,3 +184,11 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 105. **Comment, listening and speaking cards play WITH SOUND from the first frame.** The muted fallback is a last resort only, when the browser truly refuses, never the normal path.
 106. **The Tinder card has SQUARE corners at rest.** The corners round only while the learner is holding the card (pointer down), and go square again when it is released or flies away. (Supersedes 104.)
 107. **While the card is held, every other control disappears** (the rail, the top bar, the check and X buttons), so only the card and its verdict mark are on screen. They come back when the card is released.
+
+## Decisions for the card-under corners, tap, verdict mark and audio pool brief (25 Sept 2026)
+
+108. **The card UNDERNEATH has the same rounded corners as the held card,** so the two read as one stack.
+109. **A single tap on a card's video does nothing:** it must not pause, play or toggle anything. The card moves only while it is held.
+110. **The verdict mark is drawn on the OPPOSITE side to the drag:** dragging RIGHT (yes) draws the green check on the LEFT of the card, dragging LEFT (no) draws the red X on the RIGHT. The mark is attached to the card, so it moves and tilts with it.
+111. **AUDIO_UNLOCK_POOL_SIZE goes from 12 to 24.**
+112. **The desktop left sidebar (AppShell) stays visible while a card is held.** Only the feed's own chrome fades.
