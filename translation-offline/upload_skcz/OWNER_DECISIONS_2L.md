@@ -178,3 +178,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 102. **The translation state does NOT carry over:** every new card starts in the LEARNING language, even if the learner left the previous card translated.
 103. **A card must never show without its media.** If the media cannot be shown, the card is replaced.
 104. **The Tinder card keeps the mockup's rounded corners at all times,** including while dragging and flying.
+
+## Decisions for the sound-from-the-start and hold brief (25 Sept 2026)
+
+105. **Comment, listening and speaking cards play WITH SOUND from the first frame.** The muted fallback is a last resort only, when the browser truly refuses, never the normal path.
+106. **The Tinder card has SQUARE corners at rest.** The corners round only while the learner is holding the card (pointer down), and go square again when it is released or flies away. (Supersedes 104.)
+107. **While the card is held, every other control disappears** (the rail, the top bar, the check and X buttons), so only the card and its verdict mark are on screen. They come back when the card is released.
