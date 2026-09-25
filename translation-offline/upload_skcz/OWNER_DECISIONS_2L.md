@@ -171,3 +171,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 98. **A fast upward flick on a Tinder card is an explicit SKIP:** it moves to the next card and counts as a rejection for the recommender, exactly as a fast skip does on the other card kinds.
 99. **The 12 garbled English subtitle lines are re-transcribed from the video audio** and their translations are added.
 100. **Every piece of feedback the learner reads must be gender-neutral in every language.**
+
+## Decisions for the translation swap, blank cards and Tinder corners brief (25 Sept 2026)
+
+101. **The translation REPLACES the text in place:** there is always exactly ONE bubble, always the black glass one. Tapping ⇄ swaps the learning-language text for the native one, tapping again swaps it back. The learner can answer with either language showing. White bubbles are no longer used for translations anywhere.
+102. **The translation state does NOT carry over:** every new card starts in the LEARNING language, even if the learner left the previous card translated.
+103. **A card must never show without its media.** If the media cannot be shown, the card is replaced.
+104. **The Tinder card keeps the mockup's rounded corners at all times,** including while dragging and flying.
