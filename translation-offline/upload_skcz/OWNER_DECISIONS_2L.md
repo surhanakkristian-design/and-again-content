@@ -129,7 +129,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Decisions for the UI fixes (bubbles) + cadence brief (23 Sept 2026)
 
 73. **The new exercises appear much more often:** Tinder about once every 6 cards, Listening/Speaking about once every 4 cards, and the first of them inside the opening 5 cards.
-74. **Bubble rule for the whole app:** text in the learner's NATIVE language sits in a WHITE bubble, text in the LEARNING language sits in a BLACK glass bubble, per the Figma designs.
+74. **Bubble rule for the whole app:** text in the learner's NATIVE language sits in a WHITE bubble, text in the LEARNING language sits in a BLACK glass bubble, per the Figma designs. — *For translations: superseded by 148 (the translation shows inside the same black bubble; no white cell).*
 75. **The translate input follows Figma 1623-1722:** a compact field, not the oversized bubble that was live.
 
 ## Decisions for the overnight brief: comment questions, exercise rebuild, translations (23 Sept 2026)
@@ -175,7 +175,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Decisions for the translation swap, blank cards and Tinder corners brief (25 Sept 2026)
 
 101. **The translation REPLACES the text in place:** there is always exactly ONE bubble, always the black glass one. Tapping ⇄ swaps the learning-language text for the native one, tapping again swaps it back. The learner can answer with either language showing. White bubbles are no longer used for translations anywhere.
-102. **The translation state does NOT carry over:** every new card starts in the LEARNING language, even if the learner left the previous card translated.
+102. **The translation state does NOT carry over:** every new card starts in the LEARNING language, even if the learner left the previous card translated. — *Superseded by 149.*
 103. **A card must never show without its media.** If the media cannot be shown, the card is replaced.
 104. **The Tinder card keeps the mockup's rounded corners at all times,** including while dragging and flying.
 
@@ -199,7 +199,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 114. **A CORRECT answer shows no text at all:** the answer pill simply turns green. The correct version is not repeated and nothing is praised.
 115. **A WRONG answer shows the corrected version,** as the Figma "wrong" frames show. In Speaking-repeat the corrected version is THE SENTENCE FROM THE VIDEO, not a repair of what the learner said.
 116. **On a wrong answer only, a SHORT, gender-neutral encouragement is shown in about 3 of 10 cases,** chosen at random ("Blízko.", "Skoro tam.", "Ešte raz."). Never on a correct answer.
-117. **The instructions of an exercise are shown only the FIRST time that learner opens that exercise kind** (stored per device / account). Afterwards they appear only when the learner taps the exercise icon in the top left. This applies to listening, speaking, comment AND Tinder.
+117. **The instructions of an exercise are shown only the FIRST time that learner opens that exercise kind** (stored per device / account). Afterwards they appear only when the learner taps the exercise icon in the top left. This applies to listening, speaking, comment AND Tinder. — *For Tinder: superseded by 150 (the hint on the first Tinder card of each session).*
 118. **After SKIP the card moves on by itself after 2 s.** After a correct or a wrong answer it does NOT move on: the learner decides when to continue.
 119. **No tip for now.**
 
@@ -220,7 +220,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 
 ## Decisions for the Tinder finish brief (25 Sept 2026)
 
-129. **Tinder switches from grammar-exercise sentences to `tinder_sentences`.** The old source stays in the code behind a fallback for media that have no row yet.
+129. **Tinder switches from grammar-exercise sentences to `tinder_sentences`.** The old source stays in the code behind a fallback for media that have no row yet. — *The fallback part is superseded by 151.*
 130. **The four texts are mixed independently of level:** every Tinder card picks at random whether it shows the PHRASE pair or the SENTENCE pair, about 50:50, the same on A-level and B-level media. There is no difference between the levels.
 131. **The English rows are translated into de, ua, es, fr, tr, hu, sk, cz,** in this order of usefulness: sk, cz, de, ua, es, fr, tr, hu.
 
@@ -251,3 +251,17 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Owner addendum 2 to the 17.9 follow-up brief (26 Sept 2026)
 
 144. **Media 6975 "company" (concept 5056, "a guest or guests visiting someone") uses the owner's replacement image** (generic file name hf_20260926_121746_344e7e40-b316-4960-8962-ada303237f21.png), uploaded under the new object name company_6975b.webp. The file is the replacement for target 3636, never a media of its own. Its description, Tinder texts, comment questions and 74/75 exercise are rewritten from the new image; the meaning taught is "having company": unexpected visitors arriving.
+
+## Decisions for the card fixes brief (26 Sept 2026)
+
+145. **The comment card no longer shows the character counter ("0/60"); the 60-character limit stays.** (The counter was the 0/60 word counter of the pre-25 Sept build; the limit in the code is 60 words and stays as it is.)
+146. **Every exercise card shows its exercise-type icon in the top-left corner.**
+147. **After a CORRECT comment answer the card shows only the learner's answer in its green cell:** no model answer, no verdict line. After a wrong answer the model answer and the explanation stay.
+148. **The ⇄ translation shows the translated text inside the same black text bubble, replacing the original text.** The earlier rule that the translation appears only in a white cell (74) is withdrawn.
+149. **The ⇄ translation stays on across cards until the learner turns it off.**
+150. **The Tinder hint "swipe left or right" appears only on the first Tinder card of a session** (the normal feed and a vocabulary session each count as a session).
+151. **Tinder cards use only the tinder_sentences texts.** A media without a complete row (learning language, else English) is not dealt as a Tinder card; the old exercise-sentence path is removed from Tinder.
+
+## Owner addendum to the card fixes brief (26 Sept 2026)
+
+152. **The answer controls of the Answer/Comment card and of the Speaking-repeat card follow Figma 4evr-2.0 frames 1741:183 and 1786:365.**
