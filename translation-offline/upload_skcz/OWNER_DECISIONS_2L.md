@@ -223,3 +223,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 129. **Tinder switches from grammar-exercise sentences to `tinder_sentences`.** The old source stays in the code behind a fallback for media that have no row yet.
 130. **The four texts are mixed independently of level:** every Tinder card picks at random whether it shows the PHRASE pair or the SENTENCE pair, about 50:50, the same on A-level and B-level media. There is no difference between the levels.
 131. **The English rows are translated into de, ua, es, fr, tr, hu, sk, cz,** in this order of usefulness: sk, cz, de, ua, es, fr, tr, hu.
+
+## Decisions for the Tinder translations brief es, fr, tr, hu (26 Sept 2026)
+
+132. **The Tinder texts are translated into es, fr, tr and hu with the same method as sk, cz, de and ua.**
