@@ -241,3 +241,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 138. **Of the 6 images dropped from batch 17.9, permit_6599, outrageous_8596 and lose-contact_9803 are imported after all,** using the owner's reading: permit = the raised flat hand tells the dog to wait, it needs permission before it may go ahead; outrageous = someone walked through the wet concrete on purpose, which is outrageous; lose contact = the woman has lost contact with other people, a loner alone with old letters.
 139. **right_242, pointless_7314 and unfollow-someone_9908 are to be regenerated:** marked not done in the image-targets workbook, and their orphan storage objects are deleted.
 140. **Batch 26.9.2026 is imported like batch 17.9:** media, words, Tinder texts, comment questions and one minimal level exercise per media; no grammar exercises (same as decision 133).
+
+## Owner addendum to the 17.9 follow-up brief (26 Sept 2026)
+
+141. **bloody (media 5662), affordable (5534) and discrimination (5862) stay, with new Tinder texts and comment questions** that follow the owner's reading: bloody = the man is not really bleeding, he is covered in tomato sauce ("bloody" in quotation marks as an exaggeration, in every language); affordable = the flowers are affordable FOR HER, she can pay for them; discrimination = the bouncer lets the man in and stops her because she is a woman.
+142. **respectable (6514, target 9391) and sentence (6567, target 9399) are removed from the app and regenerated later.** Their concepts (4616, 4664) and word_localizations stay so the new images can attach to them.
+143. **The rest of the 17.9 review page (the other weak images and the 9 meanings without their own picture) is accepted as it is.**
