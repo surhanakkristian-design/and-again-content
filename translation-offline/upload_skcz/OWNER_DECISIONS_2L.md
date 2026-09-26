@@ -227,3 +227,10 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Decisions for the Tinder translations brief es, fr, tr, hu (26 Sept 2026)
 
 132. **The Tinder texts are translated into es, fr, tr and hu with the same method as sk, cz, de and ua.**
+
+## Decisions for the 17.9.2026 image batch import brief (26 Sept 2026)
+
+133. **The 17.9.2026 image batch is imported WITHOUT the ~70 grammar exercises per level.** Only what the app needs to show the media in Tinder, Comment, the feed, the Training wall and vocabularies is created.
+134. **The extra word "chosen" (not in the workbook) is added:** adjective, "selected as the best or most suitable; the chosen one", CEFR B1.
+135. **A target whose word AND meaning already exist in the database is attached to the EXISTING concept** (a new picture for a known word). Only genuinely new meanings get a new concept.
+136. **Targets without an image in the folder (the 29 rows not marked done, or any other missing file) are skipped.**
