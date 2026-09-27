@@ -321,3 +321,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Phrase display form brief (27 Sept 2026)
 
 179. **English phrase concepts that work as a verb (phrasal verbs and verb phrases such as "break apart", "hold up", "book a table") get the display form "to …"; other phrases (adjectives like "worn out", pronouns like "nobody", fixed expressions) stay as they are.**
+
+## One card at a time brief (27 Sept 2026)
+
+180. **A tap on a tile always opens that tile's media as the first card, whatever the pools' rules (level, cooldown, seen, rejected).**
+181. **A session loads one card at a time: first only the card on screen (its media and its exercise data); only when that card is fully loaded (full-quality media and exercise data), the next card is chosen and prepared in the background. Always exactly one card ahead. No loading of whole pools (texts, questions, media) up front.**
