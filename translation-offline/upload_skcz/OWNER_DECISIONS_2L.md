@@ -278,3 +278,14 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 157. **The search field shows the live number of meanings, rounded to thousands: "+" only when the rounded number is not above the real count** (5,400 -> 5,000+; 5,800 -> 6,000).
 158. **Every wall tile shows the meaning it represents, in the learning language (Figma 1105:584).**
 159. **The settings icon in the wall header uses the same stroke as the heart icon.**
+
+## Decisions for the Training wall brief: layout, video slots, thumbnails, results in Profil (27 Sept 2026)
+
+160. **Wall and bottom bar follow Figma 1105:584: lower tiles (more per screen), smaller search bar and header icons, a lower bottom bar used on every screen of the app.** (Not built yet on 27 Sept: the Figma Dev Mode MCP Server did not answer; see WALL_LAYOUT_VIDEO_THUMBS_REPORT.md.)
+161. **Video tiles sit at fixed positions and play: phone (3 columns) positions 3, 4, 9, 10, 15, 16 … (6k+3 and 6k+4, 1-based), i.e. one video per row on the edge, alternating right and left; never two video tiles side by side. Desktop (4 columns): the same principle, one video per row on the edge column, alternating right and left** (positions 4, 5, 12, 13 … = 8k+4 and 8k+5).
+162. **Image tiles on the wall load the thumbnail on every device; the full image only when the media is opened.**
+163. **A thumbnail is always smaller (lower resolution and fewer bytes) than its full image.**
+
+## Owner addendum: results screen moves to Profil (27 Sept 2026)
+
+164. **Pressing X in a training session no longer shows the results screen; points are saved as before and summed until the learner opens Profil, where the results screen (with the bottom bar visible) is the first screen; "Keep going, Tiger" then shows the profile.**
