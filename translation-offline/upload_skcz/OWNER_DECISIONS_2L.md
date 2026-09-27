@@ -330,3 +330,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Intro text in the search slot brief (27 Sept 2026)
 
 182. **The typing intro on the Training wall (shown after a page load, e.g. "Zapamätaj si slovíčka a…") is written in 12 pt inside the search bar's slot, at the level of the search placeholder; the wall grid never moves during or after it.**
+
+## Next card on preview brief (27 Sept 2026)
+
+183. **The next card is prepared as soon as the card on screen shows its thumbnail or preview and has its data (replaces "fully loaded" in decision 181). Still exactly one card ahead. The next card fetches its data and its thumbnail/preview at once; its full-quality file starts only after the card on screen has its full-quality file (or after the learner moves on).**
+184. **Touch-down prefetch no longer fetches a byte range of the full video; images keep their touch-down prefetch.**
