@@ -335,3 +335,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 183. **The next card is prepared as soon as the card on screen shows its thumbnail or preview and has its data (replaces "fully loaded" in decision 181). Still exactly one card ahead. The next card fetches its data and its thumbnail/preview at once; its full-quality file starts only after the card on screen has its full-quality file (or after the learner moves on).**
 184. **Touch-down prefetch no longer fetches a byte range of the full video; images keep their touch-down prefetch.**
+
+## Three videos and missing Tinder brief (27 Sept 2026)
+
+185. **Media 12 (to hug), 43 (to spin) and 275 (argue) get a description, Tinder texts in 9 languages and comment questions (A + B, 9 languages) like every other media; the 13 missing Tinder translations of batch 26.9 are filled.**
