@@ -289,3 +289,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Owner addendum: results screen moves to Profil (27 Sept 2026)
 
 164. **Pressing X in a training session no longer shows the results screen; points are saved as before and summed until the learner opens Profil, where the results screen (with the bottom bar visible) is the first screen; "Keep going, Tiger" then shows the profile.**
+
+## Decisions for the noun display form brief (27 Sept 2026)
+
+165. **Every noun gets a dictionary display form in en, de, es, fr, stored next to the translation (`word_localizations.display_form`) and used for tile labels: en with a/an (none for uncountable, plural-only and proper nouns, following the meaning); de, es, fr with the definite article (der/die/das, el/la/los/las, le/la/les), and in French, where the article elides to l', the indefinite un/une so the gender stays visible. sk, cz, ua, hu, tr stay without articles.**
