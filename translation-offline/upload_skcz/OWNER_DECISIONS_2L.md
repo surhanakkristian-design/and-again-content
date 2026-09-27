@@ -293,3 +293,9 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Decisions for the noun display form brief (27 Sept 2026)
 
 165. **Every noun gets a dictionary display form in en, de, es, fr, stored next to the translation (`word_localizations.display_form`) and used for tile labels: en with a/an (none for uncountable, plural-only and proper nouns, following the meaning); de, es, fr with the definite article (der/die/das, el/la/los/las, le/la/les), and in French, where the article elides to l', the indefinite un/une so the gender stays visible. sk, cz, ua, hu, tr stay without articles.**
+
+## Decisions for the wall Figma layout + tile previews brief (27 Sept 2026)
+
+166. **Video tiles play a small preview file (400 px wide, the first 5 s, or the whole clip if it is at most 6.5 s, no audio); the full video plays when the media is opened.** (`media.preview_url`, bucket `Previews`.)
+167. **The 242 full videos with the moov atom at the end are remuxed with faststart (no re-encode, no quality change) and served from new objects** (`Words/<title>_fs.mp4`; the old objects stay).
+168. **At the end of the wall, when the images run out (about row 450 on phone, 300 on desktop), the remaining videos stay on the wall even if side by side; nothing is left out.** (Settles open point 3 of WALL_LAYOUT_VIDEO_THUMBS_REPORT.md; decision 161 applies while images last.)
