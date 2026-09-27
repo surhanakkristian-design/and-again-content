@@ -326,3 +326,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 180. **A tap on a tile always opens that tile's media as the first card, whatever the pools' rules (level, cooldown, seen, rejected).**
 181. **A session loads one card at a time: first only the card on screen (its media and its exercise data); only when that card is fully loaded (full-quality media and exercise data), the next card is chosen and prepared in the background. Always exactly one card ahead. No loading of whole pools (texts, questions, media) up front.**
+
+## Intro text in the search slot brief (27 Sept 2026)
+
+182. **The typing intro on the Training wall (shown after a page load, e.g. "Zapamätaj si slovíčka a…") is written in 12 pt inside the search bar's slot, at the level of the search placeholder; the wall grid never moves during or after it.**
