@@ -270,3 +270,11 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 
 153. **The answer controls stay as in Figma 1741:183 / 1786:365: one long pill (speak part + write part) and ONE round chevron under it that sends and checks at once.** There is no separate "check answer" button.
 154. **The comment limit stays 60 WORDS (COMMENT_MAX_WORDS = 60), not 60 characters.** This settles the open question of 145 (whose wording said "60-character limit"): no character cap is added.
+
+## Decisions for the Training wall brief: fresh tiles, labels, meaning count (27 Sept 2026)
+
+155. **Returning to the Training wall without having tapped a tile shows tiles not seen before; tiles already seen go to the end** (least recently seen first). A tile counts as seen when it entered the wall's rendered window (as the impression events); kept per learner and per guest device.
+156. **Newer media rank higher for everyone (the owner's content keeps getting better); learners with history get their liked topics, unseen and newer first.** Newer = the newest upload batch of media.uploaded_at first, found from the upload times themselves (no fixed date). Supersedes the "recent = on/after 10 Sept 2026" part of 86 for the wall.
+157. **The search field shows the live number of meanings, rounded to thousands: "+" only when the rounded number is not above the real count** (5,400 -> 5,000+; 5,800 -> 6,000).
+158. **Every wall tile shows the meaning it represents, in the learning language (Figma 1105:584).**
+159. **The settings icon in the wall header uses the same stroke as the heart icon.**
