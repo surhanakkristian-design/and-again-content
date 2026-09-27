@@ -265,3 +265,8 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 ## Owner addendum to the card fixes brief (26 Sept 2026)
 
 152. **The answer controls of the Answer/Comment card and of the Speaking-repeat card follow Figma 4evr-2.0 frames 1741:183 and 1786:365.**
+
+## Decisions for the comment notice brief (27 Sept 2026)
+
+153. **The answer controls stay as in Figma 1741:183 / 1786:365: one long pill (speak part + write part) and ONE round chevron under it that sends and checks at once.** There is no separate "check answer" button.
+154. **The comment limit stays 60 WORDS (COMMENT_MAX_WORDS = 60), not 60 characters.** This settles the open question of 145 (whose wording said "60-character limit"): no character cap is added.
