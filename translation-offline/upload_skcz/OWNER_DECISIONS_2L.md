@@ -306,3 +306,14 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 170. **My Vocabulary, the vocabulary group detail and the player word pill show display_form for nouns in en/de/es/fr; sorting, A-Z grouping, search, matching and saved vocabulary text keep the bare word.**
 171. **English display forms follow British pronunciation ("a herb").** (Settles open point 3 of NOUN_DISPLAY_FORM_REPORT.md.)
 172. **The vocabulary group detail uses the same grid and tile labels as the Training wall: on desktop the same column count, tile size and grid width as the wall; on every device the meaning label bottom-left in the wall's style (no white pill top-left); its image tiles use the thumbnail (this replaces the earlier "vocabulary detail keeps the full image"). Video tiles in the vocabulary group detail follow the wall's video-slot rule (decision 161): videos on the edge slots, never two side by side, playing only while on screen.**
+
+## Speed rules + instant open brief (27 Sept 2026)
+
+Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (owner, 27 Sept 2026)"):
+
+173. **Model:** Opus for the main session, for writing and verifying content (translations, texts, exercises) and for code; Sonnet for mechanical subagents (running scripts, encoding, uploads, file checks, test runs, screenshots, measurements).
+174. **Speed measurements only when the brief is about speed;** then 3 runs, the median, and say when a difference is inside the spread.
+175. **Screenshots only for visual changes, main screens only.**
+176. **Report:** first line, what changed, open points; tables, logs and per-run data go into asset files, not into the report text.
+177. **Quality gates never drop:** tests, type checks, style/colour checks, deploy verification, backups before writes, writer + verifier for content.
+178. **Opening a media shows the already-loaded smaller file at once and swaps to the full-quality file when it is ready, for everyone (not only on slow connections):** images show `thumbnail_url` and cross-fade to the decoded `media_url`; videos show the thumbnail as poster and play the muted `preview_url`, then switch to the full video at the preview's position and cross-fade. Sound, audio exercises and all normal card behaviour start with the full file. This applies to tiles on the wall, in the vocabulary detail and every other grid, and to every card in a session.
