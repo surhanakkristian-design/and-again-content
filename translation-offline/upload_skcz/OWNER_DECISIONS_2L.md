@@ -348,3 +348,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 187. **The slower full image of card 1 on Slow 4G (about +0.6 s, NEXT_CARD_ON_PREVIEW open point 1) is accepted; the next card keeps loading its data, thumbnail and preview at once.**
 188. **Media 12, 43 and 275 get their transcripts and become listen/speak eligible like other videos if they meet the same rules.**
+
+## Answers and unclear translations brief (28 Sept 2026)
+
+189. **The exercise answers that still equal a corrected translation are updated to the corrected word; the 3 unclear translations are resolved by writer + verifier.**
