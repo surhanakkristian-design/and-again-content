@@ -359,3 +359,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 191. **A short tap on a card pauses/plays it; a card is grabbed only after the finger/pointer moves beyond a small threshold.**
 192. **The ⇄ translation button uses the same stroke width as the other icons in the card's right-hand rail.**
 193. **The heart and settings icons are visible and tappable from the first frame, also during the intro (replaces the hidden-icons part of decision 186); the intro text uses the room left of them, with the existing per-text shrink rule (24 pt, down to 14 pt).**
+
+## Gerund nouns brief (28 Sept 2026)
+
+194. **bringing (3838), entering (4041), following (4113), modeling (5418) and solo (4703) stay nouns (part_of_speech and definition unchanged). Every translation becomes a noun naming the activity (e.g. sk "prinášanie", de "das Bringen"); the English display form has no article (uncountable activity, like "swimming").**
