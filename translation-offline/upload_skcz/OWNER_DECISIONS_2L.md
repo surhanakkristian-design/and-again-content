@@ -414,3 +414,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 222. **French uncountable (mass) nouns take the definite article (le/la/l') in display forms and phrases, never un/une ("l'oxygène", "l'argent", "l'huile d'olive"); decision 165's un/une-for-elision applies to countable nouns only.**
 223. **Hungarian verb key words stay in the Hungarian dictionary form (3rd person singular, e.g. "hámoz"), which is how Hungarian dictionaries list verbs.**
 224. **A phrase must read naturally; when the dictionary form of the key word makes a caption stiff, the rest of the phrase is rephrased (the key word stays in its dictionary form).**
+
+## Sound / lowercase brief (28 Sept 2026)
+
+225. **Tinder video cards play with sound from the start, the same way Repeat and Answer cards do (no extra tap, no sound button). The silent preview may bridge the load; the full video takes over with sound.**
+226. **Short phrases (Tinder true/false phrases and similar short answers) are displayed exactly as stored, with no automatic capital letter; full sentences keep their stored capital.**
