@@ -367,3 +367,12 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Tinder phrase rule brief (28 Sept 2026)
 
 195. **A Tinder phrase is not a sentence. Both phrases (true and false) contain the concept's key word exactly in its dictionary form, as on the tiles and in the vocabulary: verbs in the infinitive (en "to care", never "caring"; other languages their infinitive), nouns with the article the language needs (en/de/es/fr display_form; none for uncountable, plural-only, proper nouns; sk/cz/ua/hu/tr bare), adjectives in their base form, except that in sk, cz, ua, de, es and fr an adjective agrees with its noun (e.g. "nebezpečná cesta"). Lowercase first letter, except proper nouns and German nouns. Sentences may inflect and conjugate as before.**
+
+## Comment questions sample 2 brief (28 Sept 2026) — DRAFT, pending the owner's approval of sample 2
+
+196. **(draft) One comment question per media, by the word's level: a level-A word (type-74 level exercise, A1/A2) gets only a level-A question; a level-B word (type 75, B1/B2) gets only a level-B question.**
+197. **(draft) Length: en level A at most 7 words, level B at most 10 (a contraction counts as one word); sk A at most 8, B at most 12.**
+198. **(draft) The key word is in every question, exactly that word: never a phrasal verb, idiom or related word in its place ("to order" is not "to order around"); in a normal question it may be inflected or conjugated; in a definition question it stands in its dictionary form, as on the tiles (display_form: "a coach", "to care", "self-confidence").**
+199. **(draft) About one question in five is a definition question, exactly: How would you define "<key word in its dictionary form>"?, spread over levels and parts of speech.**
+200. **(draft) The other questions are about the picture or the learner's opinion and are funny: playful, cheeky, a small twist, like the Tinder sentences, never mean (model: "Would you trade your lunch for a Czech beer?", level A shortened "Trade your lunch for a Czech beer?"). Plain inventory questions are phased out.**
+201. **(draft) The sk question (and every other language) is a faithful translation of the en question: same content, same people and things, the key word translated, neutral natural language, never a different question; in a definition question the key word is in that language's dictionary form ("Ako by si definoval „tréner“?").**
