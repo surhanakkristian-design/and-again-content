@@ -363,3 +363,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Gerund nouns brief (28 Sept 2026)
 
 194. **bringing (3838), entering (4041), following (4113), modeling (5418) and solo (4703) stay nouns (part_of_speech and definition unchanged). Every translation becomes a noun naming the activity (e.g. sk "prinášanie", de "das Bringen"); the English display form has no article (uncountable activity, like "swimming").**
+
+## Tinder phrase rule brief (28 Sept 2026)
+
+195. **A Tinder phrase is not a sentence. Both phrases (true and false) contain the concept's key word exactly in its dictionary form, as on the tiles and in the vocabulary: verbs in the infinitive (en "to care", never "caring"; other languages their infinitive), nouns with the article the language needs (en/de/es/fr display_form; none for uncountable, plural-only, proper nouns; sk/cz/ua/hu/tr bare), adjectives in their base form, except that in sk, cz, ua, de, es and fr an adjective agrees with its noun (e.g. "nebezpečná cesta"). Lowercase first letter, except proper nouns and German nouns. Sentences may inflect and conjugate as before.**
