@@ -352,3 +352,10 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Answers and unclear translations brief (28 Sept 2026)
 
 189. **The exercise answers that still equal a corrected translation are updated to the corrected word; the 3 unclear translations are resolved by writer + verifier.**
+
+## Search, stack and tap brief (28 Sept 2026)
+
+190. **Every card in the swipe stack has the same rounded corners as the card being dragged, at every moment of a drag.**
+191. **A short tap on a card pauses/plays it; a card is grabbed only after the finger/pointer moves beyond a small threshold.**
+192. **The ⇄ translation button uses the same stroke width as the other icons in the card's right-hand rail.**
+193. **The heart and settings icons are visible and tappable from the first frame, also during the intro (replaces the hidden-icons part of decision 186); the intro text uses the room left of them, with the existing per-text shrink rule (24 pt, down to 14 pt).**
