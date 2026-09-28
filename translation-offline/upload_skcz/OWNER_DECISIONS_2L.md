@@ -407,3 +407,10 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Comment statements brief (28 Sept 2026)
 
 220. **Comment cards have two kinds, question and statement (comment_questions.kind, default 'question'). For a statement the learner agrees or disagrees and gives a view in a sentence (a reason is welcome, not required; a bare "Yes." / "I agree." is not a sentence). The check-comment function and the card texts (instruction pill, wrong-meaning note, neutral fallback, in all 9 app languages) handle both.**
+
+## Tinder phrase follow-up brief (28 Sept 2026)
+
+221. **Person nouns in sk, cz, ua, de, es and fr take the gender of the person shown in the media in Tinder phrases and sentences (e.g. sk „študentka", de „die Studentin", es „la modelo"); the dictionary form elsewhere is unchanged; en unchanged.**
+222. **French uncountable (mass) nouns take the definite article (le/la/l') in display forms and phrases, never un/une ("l'oxygène", "l'argent", "l'huile d'olive"); decision 165's un/une-for-elision applies to countable nouns only.**
+223. **Hungarian verb key words stay in the Hungarian dictionary form (3rd person singular, e.g. "hámoz"), which is how Hungarian dictionaries list verbs.**
+224. **A phrase must read naturally; when the dictionary form of the key word makes a caption stiff, the rest of the phrase is rephrased (the key word stays in its dictionary form).**
