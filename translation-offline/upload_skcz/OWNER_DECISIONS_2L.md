@@ -339,3 +339,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Three videos and missing Tinder brief (27 Sept 2026)
 
 185. **Media 12 (to hug), 43 (to spin) and 275 (argue) get a description, Tinder texts in 9 languages and comment questions (A + B, 9 languages) like every other media; the 13 missing Tinder translations of batch 26.9 are filled.**
+
+## Intro text 24 pt brief (28 Sept 2026)
+
+186. **The typing intro is 24 pt as in Figma 1876:434 (replaces the 12 pt of decision 182). A text that does not fit on one line at 24 pt gets a smaller size for that text only, just enough to fit, never below 14 pt (the placeholder's size). The grid never moves (decision 182 stays).**
