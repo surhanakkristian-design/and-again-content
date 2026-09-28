@@ -403,3 +403,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Bus 4881 brief (28 Sept 2026)
 
 219. **Media 4881 ("bus") uses a thumbnail and a tile preview taken from the moment the bus is visible (the hard cut to the bus at 1.625 s; the clip opens on a car): Thumbnails/bus_4881_b.webp and Previews/bus_4881_b.mp4 (5 s from 1.625 s). media_url, the full video, is unchanged. A preview that does not start at 0 s records its start in media.preview_start_s so the card continues the full video at the right place (branch preview-start-offset, with its migration, in the next deploy).**
+
+## Comment statements brief (28 Sept 2026)
+
+220. **Comment cards have two kinds, question and statement (comment_questions.kind, default 'question'). For a statement the learner agrees or disagrees and gives a view in a sentence (a reason is welcome, not required; a bare "Yes." / "I agree." is not a sentence). The check-comment function and the card texts (instruction pill, wrong-meaning note, neutral fallback, in all 9 app languages) handle both.**
