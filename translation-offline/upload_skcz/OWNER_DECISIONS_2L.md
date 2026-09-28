@@ -343,3 +343,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Intro text 24 pt brief (28 Sept 2026)
 
 186. **The typing intro is 24 pt as in Figma 1876:434 (replaces the 12 pt of decision 182). A text that does not fit on one line at 24 pt gets a smaller size for that text only, just enough to fit, never below 14 pt (the placeholder's size). The grid never moves (decision 182 stays).**
+
+## Small clean-up brief (28 Sept 2026)
+
+187. **The slower full image of card 1 on Slow 4G (about +0.6 s, NEXT_CARD_ON_PREVIEW open point 1) is accepted; the next card keeps loading its data, thumbnail and preview at once.**
+188. **Media 12, 43 and 275 get their transcripts and become listen/speak eligible like other videos if they meet the same rules.**
