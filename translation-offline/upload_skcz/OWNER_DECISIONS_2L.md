@@ -443,3 +443,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 234. **Concepts left without media after a split (the 14 "—" rows of KEY_FLAGS_APPLIED: to dive 871, anybody 997, club 2312, same 2705, thick 2822, bounce 2971, burst 2982, platform 3375, rod 3439, sickness 3490, transfer 3606, introduction 4280, come up 5052, tie 5708) stay in the database; the app hides them because they have no media, and they go on the image-target list for new pictures (`And_Again_image_targets_split_senses.xlsx`).**
 235. **A key on a tile is always a full word, never a prefix (e.g. de „Haupt-“ is not a key).**
+
+## Grammar 100 % brief: listening questions and line translations (29 Sept 2026)
+
+236. **Every learner-facing text we write is grammatically perfect in every language: complete model sentences and questions (listening questions and their answers, translations of video lines and questions, and every other written text). Transcripts of what people SAY in a video (media.transcript) are never corrected; they must match the audio.**
