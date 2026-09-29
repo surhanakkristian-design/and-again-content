@@ -447,3 +447,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Grammar 100 % brief: listening questions and line translations (29 Sept 2026)
 
 236. **Every learner-facing text we write is grammatically perfect in every language: complete model sentences and questions (listening questions and their answers, translations of video lines and questions, and every other written text). Transcripts of what people SAY in a video (media.transcript) are never corrected; they must match the audio.**
+
+## Pill and stack brief (29 Sept 2026)
+
+236. **The answer pill (AnswerPill on comment, listening, speaking-repeat cards) is wide enough for its placeholder and text in every app language and screen size; it never shows scroll arrows or a resize handle.**
+237. **The card behind the dragged card never changes: it already has exactly the size, position and corner radius it will have as the front card; nothing is scaled, re-rounded or animated on it during a drag, fly-out or snap-back.**
