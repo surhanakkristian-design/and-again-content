@@ -452,3 +452,17 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 237. **The answer pill (AnswerPill on comment, listening, speaking-repeat cards) is wide enough for its placeholder and text in every app language and screen size; it never shows scroll arrows or a resize handle.**
 238. **The card behind the dragged card never changes: it already has exactly the size, position and corner radius it will have as the front card; nothing is scaled, re-rounded or animated on it during a drag, fly-out or snap-back.**
+
+## Eleven words fix brief (29 Sept 2026)
+
+239. **window 2154 (media 1548, building windows; definition vehicle window): split rule (231). A new concept "window" = an opening with glass in the wall of a building takes media 1548; the other 2 media of 2154 were checked (5498 building windows moves too, 4231 truck window stays).**
+240. **minaret 592 (media 2614, minaret not clearly visible, religious topic): the concept stays; its comment item becomes a neutral definition question (What is "a minaret"?) in 9 languages.**
+241. **closing 3895 (media 5748, hands pushing a door shut) stays a noun (decision 194); its definition becomes the activity "the act of shutting something, e.g. a door", sk „zatváranie“ and the other 8 keys name that activity.**
+242. **coming 3905 (media 5761): the concept stays; its comment item becomes a definition question (What does "coming" mean?).**
+243. **cross 3951 (adjective "lying sideways", media 5811, a tree lying across a road): the media move to "across" (from one side to the other).**
+244. **upside 4844 "the top surface" (media 6755, a man wiping a car roof): the media move to "a roof".**
+245. **loading 5356 "the weight a vehicle has to carry" (media 7300, a truck with a huge load of hay): the media move to "a load".**
+246. **modeling 5418 (media 7366, a sculptor's studio): the definition becomes the activity "shaping figures from clay by hand"; the keys stay activity nouns (decision 194).**
+247. **pussy 5525 (media 7478, a cat): the media move to "a kitty" (sk „mačička“).**
+248. **trump 5726 "a brass instrument" (media 7689, a man playing a trumpet): the media move to "a trumpet".**
+249. **upper 5734 "the higher of two stacked beds" (media 7698, a cat on a top bunk): the media move to "a bunk bed".**
