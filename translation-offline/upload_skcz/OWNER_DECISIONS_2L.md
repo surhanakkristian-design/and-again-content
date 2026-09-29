@@ -423,3 +423,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Comment rewrite (all media) brief (28 Sept 2026)
 
 227. **Slovak comma before „alebo“ (Czech „nebo“): a comma when the two clauses exclude each other (choose one: „Urobil by si fotku, alebo by si si len užil výhľad?“); no comma when they join freely (either or both). Grammar verifiers of sk and cz apply this rule everywhere.**
+
+## Image batch 27.9 brief (29 Sept 2026)
+
+228. **Image batch 27.9.2026 is imported like batch 26.9 (no grammar exercises; one type-74/75 level exercise per media), from workbook `And_Again_image_targets_v6_new_only.xlsx` (the only workbook whose target ids and keywords match the files: 313/313; v2 and v3 match 0), with the display-form (165, 179, 222), Tinder-phrase (195, 221-224) and comment (202-218, 227) rules; the 74/75 answers mirror the Tinder phrases. Images whose picture does not show the word (two independent looks) are not imported.**
