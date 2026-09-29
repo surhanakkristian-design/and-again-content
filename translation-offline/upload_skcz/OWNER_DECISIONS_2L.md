@@ -427,3 +427,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## Image batch 27.9 brief (29 Sept 2026)
 
 228. **Image batch 27.9.2026 is imported like batch 26.9 (no grammar exercises; one type-74/75 level exercise per media), from workbook `And_Again_image_targets_v6_new_only.xlsx` (the only workbook whose target ids and keywords match the files: 313/313; v2 and v3 match 0), with the display-form (165, 179, 222), Tinder-phrase (195, 221-224) and comment (202-218, 227) rules; the 74/75 answers mirror the Tinder phrases. Images whose picture does not show the word (two independent looks) are not imported.**
+
+## Comment rewrite follow-up brief (29 Sept 2026)
+
+229. **The 70-character limit on comment items (comment_questions) stays; approved texts that are longer (the sample-4 texts) are shortened to at most 70 characters, keeping the approved meaning, type and tone.**
+230. **The sk key words of concepts 4029 „elementárny“, 4862 „navštevovanie“ and 4866 „čakajúci“ stay as written by the comment rewrite (owner's decision; the verifier's objection is noted and closed).**
