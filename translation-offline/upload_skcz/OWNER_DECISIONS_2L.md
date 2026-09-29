@@ -432,3 +432,9 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 229. **The 70-character limit on comment items (comment_questions) stays; approved texts that are longer (the sample-4 texts) are shortened to at most 70 characters, keeping the approved meaning, type and tone.**
 230. **The sk key words of concepts 4029 „elementárny“, 4862 „navštevovanie“ and 4866 „čakajúci“ stay as written by the comment rewrite (owner's decision; the verifier's objection is noted and closed).**
+
+## Key flags apply brief (29 Sept 2026)
+
+231. **Split rule (standing): when the media of one concept show different senses that some language translates with different words, the concept is split instead of replacing the key. The existing concept keeps one sense; a new concept (same English word and part of speech, its own definition) takes the other, with all 9 word_localizations and display forms, and each media moves to the concept of the sense it shows. Example: concept 1563 "messy" stays "dirty and not in any order" (sk „neporiadny", media 4991); a new "messy" = untidy hair, not combed (sk „strapatý", de „zerzaust", media 2477).**
+232. **The 282 real-error and the 33 unclear key-flag cards (KEY_FLAGS_REVIEW) are approved through the split rule (231): every card first passes a two-verifier split check; where the media show another sense (for unclear cards: another sense than the definition), the concept is split, otherwise the proposed key is applied. Card #291 (cz thick, concept 2822): "thick" = wide stays; a new "thick" = growing close together, dense (sk/cz „hustý", de „dicht") takes media 4383.**
+233. **Cards #119 (es solo), #127 (es wearing), #153 (fr pouring), #161 (fr spilling): the concepts stay nouns (decision 194); the key is a noun that names the activity in that language, with a display form, not a verb or phrase.**
