@@ -476,3 +476,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 252. **Exclamative sentences are complete sentences and are allowed in Tinder sentences: "What a view!", "Such a brave dog!", "How cute!" and their natural equivalents in each language. Verbless captions that are not exclamatives ("Cheap tent, big storm.") stay rewritten. Refines decision 250. Report G6_REPORT.md.**
 253. **The true Tinder sentence always contains the key word of the media's own concept in that language (inflected or conjugated forms count). Report G6_REPORT.md.**
+
+## G8 brief (30 Sept 2026)
+
+254. **The 183 KEYDOUBT rows of G6 are resolved by concept, not by sentence: a stored key that is wrong for its concept is fixed for every media of that concept (72 key changes); a media that shows another sense is split off by the split rule (decision 231; 24 new concepts 6075–6098); a key that fits keeps its place and the true sentence is written with it. Tinder phrases, 74/75 answers and comment items that quoted an old key follow the new key. Where the new key cannot carry the English false joke, the false phrase may swap a different, clearly false item. Report G8_REPORT.md.**
