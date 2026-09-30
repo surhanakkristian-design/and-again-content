@@ -466,3 +466,4 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 247. **pussy 5525 (media 7478, a cat): the media move to "a kitty" (sk „mačička“).**
 248. **trump 5726 "a brass instrument" (media 7689, a man playing a trumpet): the media move to "a trumpet".**
 249. **upper 5734 "the higher of two stacked beds" (media 7698, a cat on a top bunk): the media move to "a bunk bed".**
+250. **Tinder sentences (tinder_sentences.true_sentence / false_sentence, all 9 languages) are complete sentences: subject (or the language's dropped subject) + finite verb; imperatives fine; a short interjection next to a complete sentence ("Wow!", "¡Uf!") is fine; a text made only of verbless fragments ("Cheap tent, big storm.", "Such a brave dog!") is rewritten. Grammar 100 %, true stays true, false stays clearly false on the same fact in every language. Brief of 29 Sept 2026, report GRAMMAR_TINDER_SENTENCES_REPORT.md.**
