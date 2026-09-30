@@ -198,7 +198,7 @@ Recorded at the start of the SK/CZ upload session, as given in the upload brief.
 113. **Speech is written into the input WHILE the learner speaks,** word by word, not as one sentence at the end. This applies to Speaking-repeat and to the Comment/answer input.
 114. **A CORRECT answer shows no text at all:** the answer pill simply turns green. The correct version is not repeated and nothing is praised.
 115. **A WRONG answer shows the corrected version,** as the Figma "wrong" frames show. In Speaking-repeat the corrected version is THE SENTENCE FROM THE VIDEO, not a repair of what the learner said.
-116. **On a wrong answer only, a SHORT, gender-neutral encouragement is shown in about 3 of 10 cases,** chosen at random ("Blízko.", "Skoro tam.", "Ešte raz."). Never on a correct answer.
+116. **On a wrong answer only, a SHORT, gender-neutral encouragement is shown in about 3 of 10 cases,** chosen at random ("Blízko.", "Skoro tam.", "Ešte raz."). Never on a correct answer. *(superseded by 256)*
 117. **The instructions of an exercise are shown only the FIRST time that learner opens that exercise kind** (stored per device / account). Afterwards they appear only when the learner taps the exercise icon in the top left. This applies to listening, speaking, comment AND Tinder. — *For Tinder: superseded by 150 (the hint on the first Tinder card of each session).*
 118. **After SKIP the card moves on by itself after 2 s.** After a correct or a wrong answer it does NOT move on: the learner decides when to continue.
 119. **No tip for now.**
@@ -480,3 +480,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G8 brief (30 Sept 2026)
 
 254. **The 183 KEYDOUBT rows of G6 are resolved by concept, not by sentence: a stored key that is wrong for its concept is fixed for every media of that concept (72 key changes); a media that shows another sense is split off by the split rule (decision 231; 24 new concepts 6075–6098); a key that fits keeps its place and the true sentence is written with it. Tinder phrases, 74/75 answers and comment items that quoted an old key follow the new key. Where the new key cannot carry the English false joke, the false phrase may swap a different, clearly false item. Report G8_REPORT.md.**
+
+## G7 brief (30 Sept 2026)
+
+255. **The old exercises (the 66 types other than 74/75) are no longer used anywhere: the two-player mode is removed, shared links open the new card of the same media (old `?sharedVideoId=<exercise id>` links resolve through `legacy_exercise_media`, new links are `?sharedMediaId=<media id>`), and share and report use media ids. The old exercise rows that nothing references are deleted (40,081 exercises, 360,729 localizations, backed up); the 4,824 still referenced by the translation pipeline, caches and repetitions are kept. Report G7_REPORT.md.**
+256. **No encouraging texts anywhere in the app ("Blízko.", "Skoro tam.", "Close.", "Almost there." and every similar praise or encouragement line, in every language). Results are shown by colour and state only: green / red, the learner's answer and the corrected answer where one is shown. Supersedes 116. Report G7_REPORT.md.**
