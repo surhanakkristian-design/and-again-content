@@ -467,3 +467,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 248. **trump 5726 "a brass instrument" (media 7689, a man playing a trumpet): the media move to "a trumpet".**
 249. **upper 5734 "the higher of two stacked beds" (media 7698, a cat on a top bunk): the media move to "a bunk bed".**
 250. **Tinder sentences (tinder_sentences.true_sentence / false_sentence, all 9 languages) are complete sentences: subject (or the language's dropped subject) + finite verb; imperatives fine; a short interjection next to a complete sentence ("Wow!", "¡Uf!") is fine; a text made only of verbless fragments ("Cheap tent, big storm.", "Such a brave dog!") is rewritten. Grammar 100 %, true stays true, false stays clearly false on the same fact in every language. Brief of 29 Sept 2026, report GRAMMAR_TINDER_SENTENCES_REPORT.md.**
+
+## G4 brief (30 Sept 2026)
+
+251. **The gerund keys of decision 194 go live without the stale parts: 3838 bringing de „das Bringen“, sk „prinášanie“, cz „přinášení“; 4041 entering sk „vchádzanie“, cz „vcházení“, ua „входження“; 4703 en display „solo“. Their Tinder phrases, sentences (verb forms bringt / prináša / přináší / vchádza / vchází) and mirrored 74/75 answers follow the new keys. 5418 modeling needs nothing more (live through the eleven-words fix). Report G4_REPORT.md.**
