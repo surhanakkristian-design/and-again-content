@@ -471,3 +471,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G4 brief (30 Sept 2026)
 
 251. **The gerund keys of decision 194 go live without the stale parts: 3838 bringing de „das Bringen“, sk „prinášanie“, cz „přinášení“; 4041 entering sk „vchádzanie“, cz „vcházení“, ua „входження“; 4703 en display „solo“. Their Tinder phrases, sentences (verb forms bringt / prináša / přináší / vchádza / vchází) and mirrored 74/75 answers follow the new keys. 5418 modeling needs nothing more (live through the eleven-words fix). Report G4_REPORT.md.**
+
+## G6 brief (30 Sept 2026)
+
+252. **Exclamative sentences are complete sentences and are allowed in Tinder sentences: "What a view!", "Such a brave dog!", "How cute!" and their natural equivalents in each language. Verbless captions that are not exclamatives ("Cheap tent, big storm.") stay rewritten. Refines decision 250. Report G6_REPORT.md.**
+253. **The true Tinder sentence always contains the key word of the media's own concept in that language (inflected or conjugated forms count). Report G6_REPORT.md.**
