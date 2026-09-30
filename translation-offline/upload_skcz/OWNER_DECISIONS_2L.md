@@ -489,3 +489,10 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 257. **The Training wall paints progressively: the first rows load first, each tile appears as soon as its own image is ready, and nothing else may delay the first tiles. Report G9_REPORT.md.**
 258. **Images first: on the first screen every tile starts as an image (video tiles show their thumbnail); video previews start only after the whole first screen is painted. Report G9_REPORT.md.**
 259. **Language choice for a new learner is two cards (Figma 1892:503 and 1892:605) instead of one; the wall's first images are prefetched while the learner chooses. Report G9_REPORT.md.**
+
+## G10 brief (30 Sept 2026)
+
+260. **The remaining 4,824 old exercises and their references (translation_selected_exercises, sentence_chunk_rejects, translation_check_cache, user_exercise_repetitions) are deleted, with backup; nothing but 74/75 remains. Supersedes the "kept" part of 255. Report G10_REPORT.md.**
+261. **The automatic vocabulary lists get neutral names: "Learned" / "To practise" (sk „Naučené" / „Na precvičenie"), in all 9 app languages. Report G10_REPORT.md.**
+262. **Training Settings has no "I focus on… (Vocabulary / Grammar)" option any more (an old stored value is ignored); the vocabulary library level filter shows A (A1+A2) and B (B1+B2) only. Report G10_REPORT.md.**
+263. **Person nouns take the gender of the person shown also in Tinder SENTENCES (extends 221 for phrases): e.g. sk „poetka", „pokladníčka", cz „pokladní"; the feminine form counts as the key. Report G10_REPORT.md.**
