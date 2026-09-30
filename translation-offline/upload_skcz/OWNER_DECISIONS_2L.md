@@ -485,3 +485,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 255. **The old exercises (the 66 types other than 74/75) are no longer used anywhere: the two-player mode is removed, shared links open the new card of the same media (old `?sharedVideoId=<exercise id>` links resolve through `legacy_exercise_media`, new links are `?sharedMediaId=<media id>`), and share and report use media ids. The old exercise rows that nothing references are deleted (40,081 exercises, 360,729 localizations, backed up); the 4,824 still referenced by the translation pipeline, caches and repetitions are kept. Report G7_REPORT.md.**
 256. **No encouraging texts anywhere in the app ("Blízko.", "Skoro tam.", "Close.", "Almost there." and every similar praise or encouragement line, in every language). Results are shown by colour and state only: green / red, the learner's answer and the corrected answer where one is shown. Supersedes 116. Report G7_REPORT.md.**
+
+257. **The Training wall paints progressively: the first rows load first, each tile appears as soon as its own image is ready, and nothing else may delay the first tiles. Report G9_REPORT.md.**
+258. **Images first: on the first screen every tile starts as an image (video tiles show their thumbnail); video previews start only after the whole first screen is painted. Report G9_REPORT.md.**
+259. **Language choice for a new learner is two cards (Figma 1892:503 and 1892:605) instead of one; the wall's first images are prefetched while the learner chooses. Report G9_REPORT.md.**
