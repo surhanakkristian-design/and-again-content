@@ -540,3 +540,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G18 brief (1 Oct 2026)
 
 286. **The Tinder card's two answer buttons swap sides as in Figma 1620:1305 and 1920:1284 (X left, check right; one player and every player's pair); nothing else changes. Report G18_REPORT.md.**
+
+## G19 brief (1 Oct 2026)
+
+287. **Browser tests make no sound: every browser a session starts is muted (`--mute-audio`) and is closed when its script ends, also on errors; in the owner's Chrome a tab used for checks is muted before it plays anything and closed afterwards; no video or audio keeps playing after a check; at the end of a session no test browser or tab is left open. Standing rule in and-again CLAUDE.md "Browser tests: no sound", guarded by `npm run check:browser-mute`. Report G19_REPORT.md.**
