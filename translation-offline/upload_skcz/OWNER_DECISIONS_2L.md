@@ -531,3 +531,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G16 brief (1 Oct 2026)
 
 283. **Touch scrolling starts anywhere on the wall, including on tiles; overscroll protection applies to the page as a whole, not to every element. Report G16_REPORT.md.**
+
+## G17 brief (1 Oct 2026)
+
+284. **The search field on the Training wall is solid white #FFFFFF (no transparency, no blend with the background). Report G17_REPORT.md.**
+285. **Icons are never clipped: every icon shows its full shape on all sides. Report G17_REPORT.md.**
