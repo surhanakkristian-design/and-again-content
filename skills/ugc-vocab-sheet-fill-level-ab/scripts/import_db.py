@@ -7,6 +7,9 @@ import_db.py — push a part workbook into Supabase, sheet by sheet, in foreign-
   python3 import_db.py --workbook part.xlsx                 # dry run: counts + first row per table
   ... --apply
 
+AFTER EVERY APPLIED IMPORT: cd ~/Projects/and-again && node scripts/wall-files/build.mjs
+(G12: the Training wall's precomputed files; SKILL.md "After every import").
+
 Order is fixed and not negotiable — a child row inserted before its parent is rejected:
 
     styles → categories → media → media_categories → word_concepts
@@ -259,6 +262,8 @@ def main(a):
     print(f"\n{'imported' if a.apply else 'would import'} {total} rows")
     if not a.apply:
         print("dry run — add --apply to write")
+    else:
+        print("NEXT: cd ~/Projects/and-again && node scripts/wall-files/build.mjs  (wall files, G12)")
 
 
 # ---------------------------------------------------------------------------------------------
@@ -614,6 +619,7 @@ def main_sql(a):
     print(f"SQL files in {out}:")
     for n_, b_ in written:
         print(f"  {n_:<52} {b_:>10,} B")
+    print("AFTER the import is applied: cd ~/Projects/and-again && node scripts/wall-files/build.mjs  (wall files, G12)")
 
     if a.report_dir:
         os.makedirs(a.report_dir, exist_ok=True)

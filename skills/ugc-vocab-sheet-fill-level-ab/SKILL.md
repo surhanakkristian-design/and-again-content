@@ -175,6 +175,19 @@ Then fill `sk, de, cz, fr, es, ua, tr, hu` for every exercise, and the 9 `word_l
    verified, dropped rows and why, POV rows remapped, loanword decisions, `W1`/`W2` warnings with a
    one-line judgement each, and every cell the user must still decide on.
 
+## After every import — rebuild the Training wall files (G12, 1 Oct 2026)
+Every import that adds or changes media, words, concept_media, 74/75 exercises or translations
+(import_db.py `--apply`, the SQL import set, a translation write) is followed by:
+
+    cd ~/Projects/and-again && node scripts/wall-files/build.mjs
+
+It rebuilds the precomputed wall files (starter order + tile data, one label file per learning
+language), uploads them under new names and switches the manifest. Until it runs, a device
+without a wall copy still gets the old tiles (the REST wave is only the fallback). It stops
+without uploading when the tile rows differ between languages or a starter media is gone; a
+starter media removed by the import must first be swapped in scripts/wall-files/starter_order.json.
+The import is not done until it prints "wall files live".
+
 ## Single-phase runs (the user may ask for one phase only)
 The user often runs ONE phase per session — e.g. "only continue the translations in part 1, then
 stop". In that case: touch nothing outside that phase's columns, do not re-open QC, do not
