@@ -522,3 +522,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 278. **A new wall when the learner goes to another section (Profil, Rebríček, Pridať) and back, reloads, opens the app on another device, signs in or out, comes back after more than 6 hours, or opens a shared link. Rotation / resize: same tiles and order, reflowed, anchored on the top tile. New media appear only with a new wall. Report G13_REPORT.md.**
 279. **Settings save automatically: no Save button; every choice is saved the moment it is tapped (device, and the profile when signed in; the last tap wins, a failed save retries quietly). Supersedes the Save button of 267. Report G13_REPORT.md.**
 280. **Videos first: every wall (starter and ranked) aims at about 70 % video tiles while there are enough videos. Only videos on the edge slots (161) play automatically; videos on other positions show their thumbnail and play only when opened. The starter wall (270) is 42 videos + 18 images; the cat 209 is tile 1. Report G13_REPORT.md.**
+
+## G14 brief (1 Oct 2026)
+
+281. **Media 209 ("curious", the cat in the box) is at tile 4 of the starter wall, which is a playing edge slot on both layouts (phone 3 columns: slots 3, 4, 9, 10 …; desktop 4 columns: slots 4, 5, 12, 13 …), so it plays at once on phone and desktop. Report G14_REPORT.md.**
+282. **The header row (search, heart, learning-language icon) hides while the learner scrolls down and shows again when the learner scrolls up, over the wall, without moving the grid. Report G14_REPORT.md.**
