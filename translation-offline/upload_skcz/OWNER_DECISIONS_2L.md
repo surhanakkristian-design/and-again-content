@@ -536,3 +536,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 284. **The search field on the Training wall is solid white #FFFFFF (no transparency, no blend with the background). Report G17_REPORT.md.**
 285. **Icons are never clipped: every icon shows its full shape on all sides. Report G17_REPORT.md.**
+
+## G18 brief (1 Oct 2026)
+
+286. **The Tinder card's two answer buttons swap sides as in Figma 1620:1305 and 1920:1284 (X left, check right; one player and every player's pair); nothing else changes. Report G18_REPORT.md.**
