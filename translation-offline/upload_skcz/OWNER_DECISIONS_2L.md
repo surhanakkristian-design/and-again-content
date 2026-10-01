@@ -527,3 +527,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 281. **Media 209 ("curious", the cat in the box) is at tile 4 of the starter wall, which is a playing edge slot on both layouts (phone 3 columns: slots 3, 4, 9, 10 …; desktop 4 columns: slots 4, 5, 12, 13 …), so it plays at once on phone and desktop. Report G14_REPORT.md.**
 282. **The header row (search, heart, learning-language icon) hides while the learner scrolls down and shows again when the learner scrolls up, over the wall, without moving the grid. Report G14_REPORT.md.**
+
+## G16 brief (1 Oct 2026)
+
+283. **Touch scrolling starts anywhere on the wall, including on tiles; overscroll protection applies to the page as a whole, not to every element. Report G16_REPORT.md.**
