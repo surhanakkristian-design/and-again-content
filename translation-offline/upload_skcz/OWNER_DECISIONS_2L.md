@@ -544,3 +544,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G19 brief (1 Oct 2026)
 
 287. **Browser tests make no sound: every browser a session starts is muted (`--mute-audio`) and is closed when its script ends, also on errors; in the owner's Chrome a tab used for checks is muted before it plays anything and closed afterwards; no video or audio keeps playing after a check; at the end of a session no test browser or tab is left open. Standing rule in and-again CLAUDE.md "Browser tests: no sound", guarded by `npm run check:browser-mute`. Report G19_REPORT.md.**
+
+## G20 brief (2 Oct 2026)
+
+288. **Videos made from an existing image replace that image in the same media row (same media id, concept, exercises and texts); the image files are deleted from storage after the video is verified; uploaded_at is set to the import date. Report G20_REPORT.md.**
