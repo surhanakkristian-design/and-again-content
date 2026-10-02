@@ -548,3 +548,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G20 brief (2 Oct 2026)
 
 288. **Videos made from an existing image replace that image in the same media row (same media id, concept, exercises and texts); the image files are deleted from storage after the video is verified; uploaded_at is set to the import date. Report G20_REPORT.md.**
+
+## G21 brief (2 Oct 2026)
+
+289. **When a video exists in a shortened or hand-edited version (also under a generic name such as 1002.mp4), that version is always used. Report G21_REPORT.md.**
+290. **Videos without an image to replace are imported as new video media if two independent looks confirm they show the word. Report G21_REPORT.md.**
