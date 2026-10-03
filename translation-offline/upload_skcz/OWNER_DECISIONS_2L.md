@@ -576,3 +576,10 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G27 brief (3 Oct 2026)
 
 298. **The text bubbles at the top of every card follow Figma 1620:1305 (padding, width, radius, font, line height, background, position): the bubble hugs its text, 20 / 10 padding with the 1 pt hairline inside, radius 45, 16 / 19 text, black 60 % with the Glass blur 4, top 76, centred; it may grow to the card minus 21 pt on each side, and a wrapped text keeps the 20 pt side padding (and-again `lib/topBubble.ts`, `components/feedChrome.ts`, `components/CardLineBubble.tsx`). Report G27_REPORT.md.**
+
+## G28 brief (3 Oct 2026)
+
+299. **Standing rule: desktop and phone never differ in settings like which card kinds or which texts a session shows; only the design differs.** (An earlier G28 draft, phones only Tinder, was stopped and discarded before anything was committed.)
+300. **Sessions deal only Tinder cards, everywhere: the feed, vocabulary sessions, several players, tile taps (the tapped media opens as its Tinder card) and shared links. One switch brings the other kinds back: and-again `lib/cardKinds.ts` `CARD_KINDS = ['tinder']` (all kinds: `['tinder', 'comment', 'listening', 'speaking']`). Comment questions, listening questions and spoken lines stay in the database.**
+301. **Tinder cards show only the short phrases (`true_phrase` / `false_phrase`), at most 30 characters in every language; the full sentences are not shown (they stay in the database). Switch: and-again `lib/tinderTexts.ts` `TINDER_TEXT = 'phrase'` (`'both'` = phrase or sentence as before). The 30-character limit replaces "other languages max ~40" of decision 195; where a key word is too long for a natural phrase of 30 characters, its shortest natural form stands in.**
+302. **Every video has Tinder texts: a complete `tinder_sentences` row in all 9 languages. Report G28_REPORT.md.**
