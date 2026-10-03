@@ -634,3 +634,9 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 330. **Edge videos on the wall play reliably on iOS; if iOS refuses autoplay, they start on the next touch.** and-again `lib/wallAutoplay.ts`.
 331. **Text inputs never make iOS zoom the page.** The font sizes stay; on iOS the viewport gets `maximum-scale=1` (and-again `lib/webViewport.ts`).
 332. **On phones the card's video fills the screen down to the bottom edge (under the browser's bottom bar); the answer buttons, the right-hand rail and the X stay where they are, inside the safe area, above the browser's bars.** and-again `lib/fullHeightMedia.ts`. Report A36_REPORT.md.
+
+## A37 brief (3 Oct 2026)
+
+333. **About 100 groups instead of 35 (112), each with at least 6 videos at level A and at level B; one-word names in every language; every video has one main group.** The 35 groups of A31 stay as parents (`media_groups.parent_id`) and hold no video. and-again `supabase/scripts/a37_groups_20261003/` (names: `group_names.md`, counts and representatives: `group_list.md`); run folder `runs/a37_20261003`.
+334. **Until the owner redesigns the wrong words: a card's wrong word comes from its own (new) group; if that gives fewer than 5 options, from the group it was split from (the A31 list), then from the other level (the A32 rule); the body-part rule stays.** `tinder_word_distractors.distractor_concept_ids` = the own group's words, `fallback_concept_ids` = the parent's rest (plus the other level's words only where both are below 5). This narrows decision 323.
+335. **The search field has a clear button (×) at its end while it holds text: it clears the text, closes the keyboard and returns to the wall at the same place.** and-again `screens/GameSelectionScreen.tsx` (`search-clear`). Report A37_REPORT.md.
