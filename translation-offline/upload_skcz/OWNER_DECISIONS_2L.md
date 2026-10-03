@@ -561,3 +561,9 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G23 brief (3 Oct 2026)
 
 292. **A video the owner made for a word is never rejected by the verifiers: they may flag issues (AI artefacts, unclear meaning), but the video is imported. Where the meaning is not obvious from the picture, the texts (description, Tinder sentences, comment item) make the word's meaning clear. This replaces the "two confirming looks" condition of decision 290. Report G23_REPORT.md.**
+
+## G24 brief (3 Oct 2026)
+
+293. **There are three starter walls: level A, level B and all levels; a learner without history gets the one for the chosen level (and-again `scripts/wall-files/starter_order.json`: `A`, `B`, `media`). Media 209 is tile 4 in the A and the all-levels order. Report G24_REPORT.md.**
+294. **"an idiot" may stay on the starter wall (owner).**
+295. **The learner's own uploads (Add flow) are not affected by the videos-only switch; their photos keep showing.**
