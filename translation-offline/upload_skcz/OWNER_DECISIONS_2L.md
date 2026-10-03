@@ -567,3 +567,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 293. **There are three starter walls: level A, level B and all levels; a learner without history gets the one for the chosen level (and-again `scripts/wall-files/starter_order.json`: `A`, `B`, `media`). Media 209 is tile 4 in the A and the all-levels order. Report G24_REPORT.md.**
 294. **"an idiot" may stay on the starter wall (owner).**
 295. **The learner's own uploads (Add flow) are not affected by the videos-only switch; their photos keep showing.**
+
+## G25 brief (3 Oct 2026)
+
+296. **Behind and around an open card the app's grey background shows, never black (phone and desktop): the card screen, the safe areas at the top and bottom, the browser bars (theme-color) and the overscroll take the wall's background (and-again `MOBILE_GRID_BACKGROUND`). Media inside the card keep their own fit. Report G25_REPORT.md.**
+297. **While the keyboard is open on a card, only that card is visible: the page and the feed do not scroll to the next card, the card keeps its size, and the answer pill sits just above the keyboard (and-again `lib/keyboardCardLock.ts`). Closing the keyboard restores the layout exactly.**
