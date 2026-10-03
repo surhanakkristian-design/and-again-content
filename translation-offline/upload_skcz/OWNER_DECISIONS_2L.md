@@ -622,3 +622,15 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 322. **When a group session has shown every video of its group at the learner's level, it continues with videos of the next groups, in the order of the wall (by the learner's interest); the wrong word of a card always comes from that card's own group list.** The session never restarts the first group while unseen videos exist elsewhere. This replaces the second sentence of decision 317. and-again `lib/groupWall.ts` (`groupStages`, `byGroupStage`). Report A35_REPORT.md.
 323. **The owner will redesign the wrong-word lists later; no change to them now.**
+
+## A36 brief (3 Oct 2026)
+
+324. **The ⇄ translation starts OFF on every new card.** This replaces decision 149 ("the ⇄ translation stays on across cards", CARD_FIXES PART 4). and-again `lib/translationToggle.ts`.
+325. **Group names are one word in every language; the wall repeats the groups after the last one, each repeat with a different representative video** (the group's next best-ranked video not yet on the wall; no video twice; a tap on a repeated tile starts that group with that tile's video). and-again `lib/groupWall.ts` (`groupRounds`); the names: `supabase/scripts/a36_names_4754_20261003/names_table.md`.
+326. **The sound icon over a paused video switches the sound of the whole app off / on (card videos and answer sounds), remembered on the device.** and-again `lib/appSound.ts`.
+327. **Media 4754 gets a key word its clip clearly shows: "a referee" (it was "protest"); it moves to Sport.** "protest" stays without media.
+328. **An answered card shown again has no ✓ / ✗ mark, only the word in its result colour and the highlighted button.** This changes decision 307's "with its result" for the mark only.
+329. **Nothing but the next card is ever visible behind a card while it moves.** On iOS a session has no history entry of its own, so Safari's back swipe has no picture of the wall to show (and-again `lib/sessionExit.ts`).
+330. **Edge videos on the wall play reliably on iOS; if iOS refuses autoplay, they start on the next touch.** and-again `lib/wallAutoplay.ts`.
+331. **Text inputs never make iOS zoom the page.** The font sizes stay; on iOS the viewport gets `maximum-scale=1` (and-again `lib/webViewport.ts`).
+332. **On phones the card's video fills the screen down to the bottom edge (under the browser's bottom bar); the answer buttons, the right-hand rail and the X stay where they are, inside the safe area, above the browser's bars.** and-again `lib/fullHeightMedia.ts`. Report A36_REPORT.md.
