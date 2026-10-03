@@ -572,3 +572,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 296. **Behind and around an open card the app's grey background shows, never black (phone and desktop): the card screen, the safe areas at the top and bottom, the browser bars (theme-color) and the overscroll take the wall's background (and-again `MOBILE_GRID_BACKGROUND`). Media inside the card keep their own fit. Report G25_REPORT.md.**
 297. **While the keyboard is open on a card, only that card is visible: the page and the feed do not scroll to the next card, the card keeps its size, and the answer pill sits just above the keyboard (and-again `lib/keyboardCardLock.ts`). Closing the keyboard restores the layout exactly.**
+
+## G27 brief (3 Oct 2026)
+
+298. **The text bubbles at the top of every card follow Figma 1620:1305 (padding, width, radius, font, line height, background, position): the bubble hugs its text, 20 / 10 padding with the 1 pt hairline inside, radius 45, 16 / 19 text, black 60 % with the Glass blur 4, top 76, centred; it may grow to the card minus 21 pt on each side, and a wrapped text keeps the 20 pt side padding (and-again `lib/topBubble.ts`, `components/feedChrome.ts`, `components/CardLineBubble.tsx`). Report G27_REPORT.md.**
