@@ -553,3 +553,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 289. **When a video exists in a shortened or hand-edited version (also under a generic name such as 1002.mp4), that version is always used. Report G21_REPORT.md.**
 290. **Videos without an image to replace are imported as new video media if two independent looks confirm they show the word. Report G21_REPORT.md.**
+
+## G22 brief (3 Oct 2026)
+
+291. **Videos only: the app shows only video media everywhere (wall, starter wall, search, every card kind, sessions, vocabulary lists and details, several-players mode, shared links). Image media stay in the database and come back by one switch (and-again `lib/mediaKinds.ts` `MEDIA_KINDS`). Words without a video are hidden until they get one. Only the edge-slot videos play automatically on the wall (decision 161, G13); the others show their thumbnail. Report G22_REPORT.md.**
