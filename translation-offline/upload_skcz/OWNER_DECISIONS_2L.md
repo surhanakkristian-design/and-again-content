@@ -617,3 +617,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 319. **Thin lists: a video with fewer than 5 wrong words takes extra wrong words from the same group's other level** (`tinder_word_distractors.fallback_concept_ids`); a video without any wrong word gets only correct cards.
 320. **Body parts: no body-part word is ever a wrong word on a video that shows a person (or an animal with that part), on every video. Videos of the Body Parts group take their wrong words from other groups** (words that clearly do not fit the clip). The list of body-part concepts and the rules: and-again-content `runs/a32_20261003/out/`.
 321. **Tinder card look as Figma 1620:1305: a larger font for the word (48), always on one line (a long word shrinks just enough, never below 18, never wraps); no exercise-type icon in the top-left corner; the streak (flame and number) sits in the top-left corner and shows only from the 6th correct answer in a row on.** Report A32_REPORT.md.
+
+## A35 brief (3 Oct 2026)
+
+322. **When a group session has shown every video of its group at the learner's level, it continues with videos of the next groups, in the order of the wall (by the learner's interest); the wrong word of a card always comes from that card's own group list.** The session never restarts the first group while unseen videos exist elsewhere. This replaces the second sentence of decision 317. and-again `lib/groupWall.ts` (`groupStages`, `byGroupStage`). Report A35_REPORT.md.
+323. **The owner will redesign the wrong-word lists later; no change to them now.**
