@@ -557,3 +557,7 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## G22 brief (3 Oct 2026)
 
 291. **Videos only: the app shows only video media everywhere (wall, starter wall, search, every card kind, sessions, vocabulary lists and details, several-players mode, shared links). Image media stay in the database and come back by one switch (and-again `lib/mediaKinds.ts` `MEDIA_KINDS`). Words without a video are hidden until they get one. Only the edge-slot videos play automatically on the wall (decision 161, G13); the others show their thumbnail. Report G22_REPORT.md.**
+
+## G23 brief (3 Oct 2026)
+
+292. **A video the owner made for a word is never rejected by the verifiers: they may flag issues (AI artefacts, unclear meaning), but the video is imported. Where the meaning is not obvious from the picture, the texts (description, Tinder sentences, comment item) make the word's meaning clear. This replaces the "two confirming looks" condition of decision 290. Report G23_REPORT.md.**
