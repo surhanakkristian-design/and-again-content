@@ -659,3 +659,8 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 ## A41 brief (4 Oct 2026)
 
 342. **In the lab's nouns step the learner places each correct noun onto its slot on the still picture (drag, or tap the word then the slot); only the correct nouns are offered.** The picture shows one translucent slot pill per noun, on or right next to its object; a noun on its own slot becomes a white pill with the word, on another slot or elsewhere it returns to its place with the wrong state shown briefly and does not count; when every noun sits in its slot the sentence step comes. 3-4 nouns per video, each with its slot (`x`, `y` as a share of the whole picture) in and-again `lib/labExercises.json`; rules `lib/labSlots.ts`, sizes `lib/labLayout.ts`. Also on the lab page: the app's sound switch stands on the playing media, the media reaches both side edges on phones, the chips and the arrow button are about 18 % larger. Report A41_REPORT.md.
+
+## A42 brief (4 Oct 2026)
+
+343. **The lab's nouns step keeps the title "Place the nouns." (owner).**
+344. **On the lab page quick taps in a row are never lost on touch devices; the Tinder cards are not changed (the owner expects them to be replaced).** No double-tap wait anywhere on the page (`touch-action: manipulation` on the page), and a tap on a lab control (chips, slots, buttons, the sound switch, the lab wall's tiles) presses at the end of the touch instead of waiting for the browser's click, which iOS Safari drops for a second tap that comes right after the first. The dragged noun chips keep their own touch handling; the A36 no-zoom-at-focus rule stays. and-again `lib/labTap.ts`, `screens/LabScreen.tsx`, `components/LabMedia.tsx`. Report A42_REPORT.md.
