@@ -1,0 +1,34 @@
+{
+  "mediaId": 7071, "lang": "fr", "level": "B",
+  "keyWord": "le roi",
+  "taps": [
+    {"phrase": "arborer une couronne en or", "target": "le roi", "voice": "male"},
+    {"phrase": "projeter de la boue", "target": "le quad", "voice": "male"},
+    {"phrase": "refléter le ciel gris", "target": "la flaque", "voice": "male"}
+  ],
+  "nouns": [
+    {"word": "la couronne", "voice": "male"},
+    {"word": "le roi", "voice": "male"},
+    {"word": "le quad", "voice": "male"},
+    {"word": "la flaque", "voice": "male"}
+  ],
+  "question": "Que fait le roi ?",
+  "answer": ["Il", "traverse", "une", "flaque", "en", "quad."],
+  "answerVoice": "male",
+  "carousel": [
+    {"en": "young king", "caption": "un jeune roi", "type": "noun coll.", "hasKeyWord": true, "note": "A56 'jeune roi' kept, with its article."},
+    {"en": "king and queen", "caption": "le roi et la reine", "type": "noun coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to bow to the king", "caption": "s'incliner devant le roi", "type": "verb coll.", "hasKeyWord": true, "note": ""}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "arborer", "gap": true, "accept": ["arborer", "porter"]}, {"text": "une couronne en or"}]},
+    {"from": "taps", "parts": [{"text": "projeter de la"}, {"text": "boue", "gap": true, "accept": ["boue"]}]},
+    {"from": "taps", "parts": [{"text": "refléter", "gap": true, "accept": ["refléter"]}, {"text": "le ciel gris"}]},
+    {"from": "nouns", "parts": [{"text": "le"}, {"text": "quad", "gap": true, "accept": ["quad"]}]},
+    {"from": "answer", "parts": [{"text": "traverse", "gap": true, "accept": ["traverse"]}, {"text": "une flaque"}, {"text": "en quad"}]},
+    {"from": "carousel", "parts": [{"text": "un"}, {"text": "jeune", "gap": true, "accept": ["jeune"]}, {"text": "roi"}]},
+    {"from": "carousel", "parts": [{"text": "le roi et la"}, {"text": "reine", "gap": true, "accept": ["reine"]}]},
+    {"from": "carousel", "parts": [{"text": "s'incliner devant le"}, {"text": "roi", "gap": true, "accept": ["roi"]}]}
+  ],
+  "notes": "B words: arborer, projeter de la boue, refléter, flaque. Phrase 1 'arborer' (to wear proudly) is B2 and natural for a crown; 'porter' accepted in recall. In the last caption the gap is 'roi' because 's'incliner' is elided (brief rule). Answer word order: 'en quad' could in theory follow 'traverse' ('Il traverse en quad une flaque') but that is marked; the given order is the natural one. Caption types inferred from the English forms."
+}

@@ -1,0 +1,33 @@
+{
+  "mediaId": 8039, "lang": "de", "level": "B",
+  "keyWord": "der Durchgang",
+  "taps": [
+    { "phrase": "einen schmalen Weg freischaufeln", "target": "die Frau", "voice": "female" },
+    { "phrase": "den Weg entlangrennen", "target": "der Hund", "voice": "female" },
+    { "phrase": "hinter dem Fenster gestikulieren", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Schnee", "voice": "female" },
+    { "word": "die Schaufel", "voice": "female" },
+    { "word": "der Hund", "voice": "female" },
+    { "word": "der Weg", "voice": "female" }
+  ],
+  "question": "Was macht die Frau draußen?",
+  "answer": ["Sie", "schaufelt", "einen", "Weg", "durch", "den", "Schnee."],
+  "answerVoice": "female",
+  "carousel": [
+    { "en": "to block the way", "caption": "den Durchgang versperren", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "narrow way", "caption": "der schmale Durchgang", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to look for a way through", "caption": "einen Durchgang suchen", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen schmalen Weg" }, { "text": "freischaufeln", "gap": true, "accept": ["freischaufeln", "schaufeln", "graben"] } ] },
+    { "from": "taps", "parts": [ { "text": "den" }, { "text": "Weg", "gap": true, "accept": ["Weg", "Durchgang"] }, { "text": "entlangrennen" } ] },
+    { "from": "taps", "parts": [ { "text": "hinter dem" }, { "text": "Fenster", "gap": true, "accept": ["Fenster"] }, { "text": "gestikulieren" } ] },
+    { "from": "answer", "parts": [ { "text": "schaufelt einen Weg" }, { "text": "durch den" }, { "text": "Schnee", "gap": true, "accept": ["Schnee"] } ] },
+    { "from": "carousel", "parts": [ { "text": "den Durchgang" }, { "text": "versperren", "gap": true, "accept": ["versperren", "blockieren"] } ] },
+    { "from": "carousel", "parts": [ { "text": "der" }, { "text": "schmale", "gap": true, "accept": ["schmale", "enge"] }, { "text": "Durchgang" } ] },
+    { "from": "carousel", "parts": [ { "text": "einen Durchgang" }, { "text": "suchen", "gap": true, "accept": ["suchen"] } ] }
+  ],
+  "notes": "Key word: English uses two words (way = key word, path = the trench in the clip); German 'der Durchgang' fits the captions, but the cleared trench in the clip is naturally 'der Weg', so noun 4, the phrases and the answer use 'Weg' and the key word appears in all three captions. Proposal: keep 'der Durchgang' as key word; owner may prefer 'der Weg' if the concept is meant as 'way/path'. Phrase 3 uses 'gestikulieren' (B2) because the man waves and points behind the glass; the woman inside stands still. Carousel types inferred (verb coll., noun coll., verb coll.)."
+}

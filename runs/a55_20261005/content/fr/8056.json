@@ -1,0 +1,33 @@
+{
+  "mediaId": 8056, "lang": "fr", "level": "A",
+  "keyWord": "le banc",
+  "taps": [
+    { "phrase": "lire un livre", "target": "l'homme", "voice": "male" },
+    { "phrase": "regarder l'homme", "target": "le chien", "voice": "male" },
+    { "phrase": "être assis sur un banc", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les arbres", "voice": "male" },
+    { "word": "le livre", "voice": "male" },
+    { "word": "le banc", "voice": "male" },
+    { "word": "le chien", "voice": "male" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "lit", "un", "livre", "sur", "un", "banc."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "weight bench", "caption": "banc de musculation", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to paint a bench", "caption": "peindre un banc", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to share a bench", "caption": "partager un banc", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lire", "gap": true, "accept": ["lire"] }, { "text": "un livre" } ] },
+    { "from": "taps", "parts": [ { "text": "regarder", "gap": true, "accept": ["regarder"] }, { "text": "l'homme" } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "assis", "gap": true, "accept": ["assis"] }, { "text": "sur un banc" } ] },
+    { "from": "answer", "parts": [ { "text": "lit", "gap": true, "accept": ["lit"] }, { "text": "un livre sur un banc" } ] },
+    { "from": "carousel", "parts": [ { "text": "banc de" }, { "text": "musculation", "gap": true, "accept": ["musculation"] } ] },
+    { "from": "carousel", "parts": [ { "text": "peindre", "gap": true, "accept": ["peindre", "partager"] }, { "text": "un banc" } ] },
+    { "from": "carousel", "parts": [ { "text": "partager", "gap": true, "accept": ["partager", "peindre"] }, { "text": "un banc" } ] }
+  ],
+  "notes": "'banc de musculation' is the only natural French term for a weight bench ('musculation' is above A2, but there is no simpler everyday word). English slot of noun 2 'a book' sits left of the book (on the man's knee/legs), not on it - an English slot issue, same position in French."
+}

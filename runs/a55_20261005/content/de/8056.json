@@ -1,0 +1,189 @@
+{
+  "mediaId": 8056,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Bank",
+  "taps": [
+    {
+      "phrase": "ein Buch lesen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "zum Mann hochschauen",
+      "target": "der Hund",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf einer Bank sitzen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Bäume",
+      "voice": "male"
+    },
+    {
+      "word": "das Buch",
+      "voice": "male"
+    },
+    {
+      "word": "die Bank",
+      "voice": "male"
+    },
+    {
+      "word": "der Hund",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "liest",
+    "auf",
+    "einer",
+    "Bank",
+    "ein",
+    "Buch."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "weight bench",
+      "caption": "die Hantelbank",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": "Key word only inside the compound (Hantel+bank), the natural German word for a weight bench."
+    },
+    {
+      "en": "to paint a bench",
+      "caption": "eine Bank streichen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to share a bench",
+      "caption": "sich eine Bank teilen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Buch"
+        },
+        {
+          "text": "lesen",
+          "gap": true,
+          "accept": [
+            "lesen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "zum Mann"
+        },
+        {
+          "text": "hochschauen",
+          "gap": true,
+          "accept": [
+            "hochschauen",
+            "hochsehen",
+            "aufschauen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf einer Bank"
+        },
+        {
+          "text": "sitzen",
+          "gap": true,
+          "accept": [
+            "sitzen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "liest",
+          "gap": true,
+          "accept": [
+            "liest"
+          ]
+        },
+        {
+          "text": "auf einer Bank"
+        },
+        {
+          "text": "ein Buch"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Hantelbank",
+          "gap": true,
+          "accept": [
+            "Hantelbank"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "eine Bank"
+        },
+        {
+          "text": "streichen",
+          "gap": true,
+          "accept": [
+            "streichen",
+            "anmalen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "sich eine Bank"
+        },
+        {
+          "text": "teilen",
+          "gap": true,
+          "accept": [
+            "teilen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Answer chips allow two correct German orders: 'Er liest auf einer Bank ein Buch.' and 'Er liest ein Buch auf einer Bank.' (the second is less smooth but grammatical) - the checker should accept both. Phrase 2: the dog looks UP at the man, so 'hochschauen'. Carousel types inferred (noun coll., verb coll., verb coll.)."
+}

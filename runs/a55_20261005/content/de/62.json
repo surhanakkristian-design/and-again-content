@@ -1,0 +1,200 @@
+{
+  "mediaId": 62,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Tasche",
+  "taps": [
+    {
+      "phrase": "eine schwere Tasche hochheben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "voll mit Essen sein",
+      "target": "die Tasche",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine Sonnenbrille tragen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Hemd",
+      "voice": "male"
+    },
+    {
+      "word": "das Brot",
+      "voice": "male"
+    },
+    {
+      "word": "die Äpfel",
+      "voice": "male"
+    },
+    {
+      "word": "die Tasche",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "packt",
+    "Essen",
+    "in",
+    "die",
+    "Tasche."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "to drop a bag",
+      "caption": "eine Tasche fallen lassen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "beach bag",
+      "caption": "die Strandtasche",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": "Key word only inside the compound (Strand+tasche), the natural German word; 'eine Tasche für den Strand' would be unnatural."
+    },
+    {
+      "en": "sports bag",
+      "caption": "die Sporttasche",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": "Key word only inside the compound (Sport+tasche), the natural German word."
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "schwere",
+          "gap": true,
+          "accept": [
+            "schwere"
+          ]
+        },
+        {
+          "text": "Tasche hochheben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "voll mit"
+        },
+        {
+          "text": "Essen",
+          "gap": true,
+          "accept": [
+            "Essen"
+          ]
+        },
+        {
+          "text": "sein"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Sonnenbrille",
+          "gap": true,
+          "accept": [
+            "Sonnenbrille",
+            "Brille"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "packt",
+          "gap": true,
+          "accept": [
+            "packt"
+          ]
+        },
+        {
+          "text": "Essen"
+        },
+        {
+          "text": "in die Tasche"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "eine Tasche"
+        },
+        {
+          "text": "fallen",
+          "gap": true,
+          "accept": [
+            "fallen"
+          ]
+        },
+        {
+          "text": "lassen"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Strandtasche",
+          "gap": true,
+          "accept": [
+            "Strandtasche",
+            "Sporttasche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Sporttasche",
+          "gap": true,
+          "accept": [
+            "Sporttasche",
+            "Strandtasche"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Dark glasses -> 'Sonnenbrille' (what natives call them). Noun 1 'das Hemd' is a purple polo shirt (Poloshirt is less A-level). Answer: 'Er packt in die Tasche Essen' is possible but marked; the chips have one natural order. Carousel types inferred (verb coll., noun coll., noun coll.)."
+}

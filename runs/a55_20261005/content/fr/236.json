@@ -1,0 +1,188 @@
+{
+  "mediaId": 236,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le dauphin",
+  "taps": [
+    {
+      "phrase": "nager dans la mer",
+      "target": "le dauphin",
+      "voice": "female"
+    },
+    {
+      "phrase": "sauter en l'air",
+      "target": "le dauphin",
+      "voice": "female"
+    },
+    {
+      "phrase": "retomber dans l'eau",
+      "target": "le dauphin",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "female"
+    },
+    {
+      "word": "le dauphin",
+      "voice": "female"
+    },
+    {
+      "word": "la queue",
+      "voice": "female"
+    },
+    {
+      "word": "l'eau",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le dauphin ?",
+  "answer": [
+    "Il",
+    "saute",
+    "hors",
+    "de",
+    "l'eau."
+  ],
+  "answerVoice": "female",
+  "carousel": [
+    {
+      "en": "pod of dolphins",
+      "caption": "un groupe de dauphins",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": "A56 'groupe de dauphins' kept with its article; 'banc' is for fish, 'groupe' is the everyday word."
+    },
+    {
+      "en": "to swim with a dolphin",
+      "caption": "nager avec un dauphin",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to feed a dolphin",
+      "caption": "nourrir un dauphin",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "nager",
+          "gap": true,
+          "accept": [
+            "nager"
+          ]
+        },
+        {
+          "text": "dans la mer"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sauter",
+          "gap": true,
+          "accept": [
+            "sauter",
+            "bondir"
+          ]
+        },
+        {
+          "text": "en l'air"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "retomber",
+          "gap": true,
+          "accept": [
+            "retomber",
+            "tomber",
+            "plonger"
+          ]
+        },
+        {
+          "text": "dans l'eau"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "saute",
+          "gap": true,
+          "accept": [
+            "saute",
+            "bondit"
+          ]
+        },
+        {
+          "text": "hors de l'eau"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "un"
+        },
+        {
+          "text": "groupe",
+          "gap": true,
+          "accept": [
+            "groupe"
+          ]
+        },
+        {
+          "text": "de dauphins"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "nager avec un"
+        },
+        {
+          "text": "dauphin",
+          "gap": true,
+          "accept": [
+            "dauphin"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "nourrir",
+          "gap": true,
+          "accept": [
+            "nourrir"
+          ]
+        },
+        {
+          "text": "un dauphin"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3 'retomber' (fall back down) is what a native says of a dolphin after its jump; plain 'tomber dans l'eau' sounds like an accident. Recall row 'nager avec un dauphin': gap is 'dauphin' to avoid repeating the gap 'nager' of row 1. Caption types inferred from the English form. Distant dolphins also jump far on the horizon in the later frames (same as English)."
+}

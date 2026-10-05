@@ -1,0 +1,176 @@
+{
+  "mediaId": 461,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le mannequin",
+  "taps": [
+    {
+      "phrase": "habiller un mannequin",
+      "target": "la jeune femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être drapé d'une écharpe",
+      "target": "le mannequin",
+      "voice": "female"
+    },
+    {
+      "phrase": "imiter la pose du mannequin",
+      "target": "le jeune homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'écharpe",
+      "voice": "female"
+    },
+    {
+      "word": "la chemise",
+      "voice": "female"
+    },
+    {
+      "word": "le chat",
+      "voice": "female"
+    },
+    {
+      "word": "le mannequin",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le jeune homme ?",
+  "answer": [
+    "Il",
+    "imite",
+    "la",
+    "pose",
+    "du",
+    "mannequin."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "to carry a mannequin",
+      "caption": "porter un mannequin",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "shop-window mannequin",
+      "caption": "mannequin de vitrine",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to dress a mannequin",
+      "caption": "habiller un mannequin",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "habiller",
+          "gap": true,
+          "accept": [
+            "habiller",
+            "vêtir"
+          ]
+        },
+        {
+          "text": "un mannequin"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être drapé d'une"
+        },
+        {
+          "text": "écharpe",
+          "gap": true,
+          "accept": [
+            "écharpe"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "imiter la"
+        },
+        {
+          "text": "pose",
+          "gap": true,
+          "accept": [
+            "pose",
+            "posture"
+          ]
+        },
+        {
+          "text": "du mannequin"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "imite",
+          "gap": true,
+          "accept": [
+            "imite",
+            "copie"
+          ]
+        },
+        {
+          "text": "la pose du mannequin"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "porter"
+        },
+        {
+          "text": "un"
+        },
+        {
+          "text": "mannequin",
+          "gap": true,
+          "accept": [
+            "mannequin"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "mannequin de"
+        },
+        {
+          "text": "vitrine",
+          "gap": true,
+          "accept": [
+            "vitrine"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 2 uses 'être drapé d'une écharpe' (B2) instead of plain 'porter une écharpe' (A2) for the level-B rule. Caption 1 'porter un mannequin' = carry (picture shows him carrying it on his shoulder). Two cats in the clip; noun slot is on the cat on the window sill, kept singular like English."
+}

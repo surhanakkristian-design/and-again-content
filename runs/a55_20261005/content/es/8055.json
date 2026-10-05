@@ -1,0 +1,33 @@
+{
+  "mediaId": 8055, "lang": "es", "level": "A",
+  "keyWord": "el globo",
+  "taps": [
+    { "phrase": "llevar a un hombre", "target": "el globo", "voice": "male" },
+    { "phrase": "sujetar una cuerda", "target": "el hombre", "voice": "male" },
+    { "phrase": "colgar de una cuerda", "target": "el hombre", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "el globo", "voice": "male" },
+    { "word": "las nubes", "voice": "male" },
+    { "word": "la cuerda", "voice": "male" },
+    { "word": "el hombre", "voice": "male" }
+  ],
+  "question": "¿Qué hace el hombre?",
+  "answer": ["Cuelga", "de", "un", "globo", "grande."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "to fly in a balloon", "caption": "volar en globo", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to land a balloon", "caption": "hacer aterrizar un globo", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "balloon basket", "caption": "la cesta del globo", "type": "noun coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "llevar", "gap": true, "accept": ["llevar", "transportar"] }, { "text": "a un hombre" } ] },
+    { "from": "taps", "parts": [ { "text": "sujetar una" }, { "text": "cuerda", "gap": true, "accept": ["cuerda"] } ] },
+    { "from": "taps", "parts": [ { "text": "colgar", "gap": true, "accept": ["colgar"] }, { "text": "de una cuerda" } ] },
+    { "from": "answer", "parts": [ { "text": "cuelga", "gap": true, "accept": ["cuelga"] }, { "text": "de un globo grande" } ] },
+    { "from": "carousel", "parts": [ { "text": "volar", "gap": true, "accept": ["volar", "viajar"] }, { "text": "en globo" } ] },
+    { "from": "carousel", "parts": [ { "text": "hacer" }, { "text": "aterrizar", "gap": true, "accept": ["aterrizar"] }, { "text": "un globo" } ] },
+    { "from": "carousel", "parts": [ { "text": "la" }, { "text": "cesta", "gap": true, "accept": ["cesta"] }, { "text": "del globo" } ] }
+  ],
+  "notes": "Key word el globo fits (globo aerostático is the full term; 'globo' alone is what natives say). The clip shows several ropes; noun kept singular 'la cuerda' as in English and at the same slot. Caption 2: 'hacer aterrizar' preferred over transitive 'aterrizar un globo' (jargon)."
+}

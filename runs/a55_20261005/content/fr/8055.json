@@ -1,0 +1,33 @@
+{
+  "mediaId": 8055, "lang": "fr", "level": "A",
+  "keyWord": "la montgolfière",
+  "taps": [
+    {"phrase": "porter un homme", "target": "la montgolfière", "voice": "male"},
+    {"phrase": "tenir une corde", "target": "l'homme", "voice": "male"},
+    {"phrase": "être suspendu à une corde", "target": "l'homme", "voice": "male"}
+  ],
+  "nouns": [
+    {"word": "la montgolfière", "voice": "male"},
+    {"word": "les nuages", "voice": "male"},
+    {"word": "la corde", "voice": "male"},
+    {"word": "l'homme", "voice": "male"}
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "est", "suspendu", "à", "une", "grosse", "montgolfière."],
+  "answerVoice": "male",
+  "carousel": [
+    {"en": "to fly in a balloon", "caption": "voler en montgolfière", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to land a balloon", "caption": "faire atterrir une montgolfière", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "balloon basket", "caption": "la nacelle de la montgolfière", "type": "noun coll.", "hasKeyWord": true, "note": "A56 'nacelle de montgolfière' kept, with articles as a noun phrase; 'nacelle' is the only natural French word for a balloon basket ('panier' sounds childish), slightly above A2."}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "porter", "gap": true, "accept": ["porter", "transporter"]}, {"text": "un homme"}]},
+    {"from": "taps", "parts": [{"text": "tenir"}, {"text": "une"}, {"text": "corde", "gap": true, "accept": ["corde"]}]},
+    {"from": "taps", "parts": [{"text": "être"}, {"text": "suspendu", "gap": true, "accept": ["suspendu", "accroché"]}, {"text": "à une corde"}]},
+    {"from": "answer", "parts": [{"text": "est suspendu"}, {"text": "à une grosse"}, {"text": "montgolfière", "gap": true, "accept": ["montgolfière"]}]},
+    {"from": "carousel", "parts": [{"text": "voler", "gap": true, "accept": ["voler"]}, {"text": "en montgolfière"}]},
+    {"from": "carousel", "parts": [{"text": "faire"}, {"text": "atterrir", "gap": true, "accept": ["atterrir"]}, {"text": "une montgolfière"}]},
+    {"from": "carousel", "parts": [{"text": "la"}, {"text": "nacelle", "gap": true, "accept": ["nacelle"]}, {"text": "de la montgolfière"}]}
+  ],
+  "notes": "English 'balloon' = hot-air balloon here, so 'la montgolfière' (database word) is used everywhere, also as phrase-1 target. Caption types are not in the source; inferred from the English form (verb coll., verb coll., noun coll.). 'suspendu' is borderline A2/B1 but the most natural word for hanging under the balloon."
+}

@@ -1,0 +1,33 @@
+{
+  "mediaId": 4265, "lang": "fr", "level": "B",
+  "keyWord": "calmer",
+  "taps": [
+    {"phrase": "entrer en trombe dans la pièce", "target": "le perroquet vert", "voice": "male"},
+    {"phrase": "se prélasser sur le canapé", "target": "le perroquet bleu", "voice": "male"},
+    {"phrase": "calmer un ami furieux", "target": "le perroquet bleu", "voice": "male"}
+  ],
+  "nouns": [
+    {"word": "la porte", "voice": "male"},
+    {"word": "les ailes", "voice": "male"},
+    {"word": "le perroquet", "voice": "male"},
+    {"word": "le canapé", "voice": "male"}
+  ],
+  "question": "Que fait le perroquet bleu ?",
+  "answer": ["Il", "calme", "le", "perroquet", "furieux", "avec", "un", "câlin."],
+  "answerVoice": "male",
+  "carousel": [
+    {"en": "was calmed by a knight", "caption": "a été calmé par un chevalier", "type": "past", "hasKeyWord": true, "note": "A56 'il a été calmé par un chevalier' without the subject."},
+    {"en": "to calm a barking dog", "caption": "calmer un chien qui aboie", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to calm a crying baby", "caption": "calmer un bébé qui pleure", "type": "verb coll.", "hasKeyWord": true, "note": ""}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "entrer en"}, {"text": "trombe", "gap": true, "accept": ["trombe"]}, {"text": "dans la pièce"}]},
+    {"from": "taps", "parts": [{"text": "se prélasser sur le"}, {"text": "canapé", "gap": true, "accept": ["canapé", "sofa"]}]},
+    {"from": "taps", "parts": [{"text": "calmer un ami"}, {"text": "furieux", "gap": true, "accept": ["furieux", "en colère"]}]},
+    {"from": "answer", "parts": [{"text": "calme le perroquet furieux"}, {"text": "avec un"}, {"text": "câlin", "gap": true, "accept": ["câlin"]}]},
+    {"from": "carousel", "parts": [{"text": "a été calmé"}, {"text": "par un"}, {"text": "chevalier", "gap": true, "accept": ["chevalier"]}]},
+    {"from": "carousel", "parts": [{"text": "calmer un chien qui"}, {"text": "aboie", "gap": true, "accept": ["aboie"]}]},
+    {"from": "carousel", "parts": [{"text": "calmer un bébé qui"}, {"text": "pleure", "gap": true, "accept": ["pleure"]}]}
+  ],
+  "notes": "English answerVoice is an audio URL, not a gender; set 'male' (subject 'il' = le perroquet, defaultVoice male) - please check. Phrase 2: the blue parrot is sitting slumped on the sofa rather than lying, so 'se prélasser' (lounge, B2) fits better than 'être allongé'. B words: en trombe, se prélasser, furieux, câlin. Answer order: 'avec un câlin' could also go after 'calme' but that order is marked; given order is the natural one. Noun 'le perroquet' at the English slot = the green parrot. Caption types inferred from the English forms."
+}

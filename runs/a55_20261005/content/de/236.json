@@ -1,0 +1,33 @@
+{
+  "mediaId": 236, "lang": "de", "level": "A",
+  "keyWord": "der Delfin",
+  "taps": [
+    {"phrase": "im Meer schwimmen", "target": "der Delfin", "voice": "female"},
+    {"phrase": "in die Luft springen", "target": "der Delfin", "voice": "female"},
+    {"phrase": "ins Wasser zurückfallen", "target": "der Delfin", "voice": "female"}
+  ],
+  "nouns": [
+    {"word": "der Himmel", "voice": "female"},
+    {"word": "der Delfin", "voice": "female"},
+    {"word": "die Schwanzflosse", "voice": "female"},
+    {"word": "das Wasser", "voice": "female"}
+  ],
+  "question": "Was macht der Delfin?",
+  "answer": ["Er", "springt", "aus", "dem", "Wasser."],
+  "answerVoice": "female",
+  "carousel": [
+    {"en": "pod of dolphins", "caption": "eine Gruppe Delfine", "type": "noun coll.", "hasKeyWord": true, "note": "A56 'Gruppe von Delfinen' shortened to the more idiomatic partitive 'eine Gruppe Delfine'; the technical 'Delfinschule' is not everyday German."},
+    {"en": "to swim with a dolphin", "caption": "mit einem Delfin schwimmen", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to feed a dolphin", "caption": "einen Delfin füttern", "type": "verb coll.", "hasKeyWord": true, "note": ""}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "im Meer"}, {"text": "schwimmen", "gap": true, "accept": ["schwimmen"]}]},
+    {"from": "taps", "parts": [{"text": "in die Luft"}, {"text": "springen", "gap": true, "accept": ["springen"]}]},
+    {"from": "taps", "parts": [{"text": "ins Wasser"}, {"text": "zurückfallen", "gap": true, "accept": ["zurückfallen", "fallen"]}]},
+    {"from": "answer", "parts": [{"text": "springt", "gap": true, "accept": ["springt"]}, {"text": "aus dem Wasser"}]},
+    {"from": "carousel", "parts": [{"text": "eine"}, {"text": "Gruppe", "gap": true, "accept": ["Gruppe"]}, {"text": "Delfine"}]},
+    {"from": "carousel", "parts": [{"text": "mit einem Delfin"}, {"text": "schwimmen", "gap": true, "accept": ["schwimmen"]}]},
+    {"from": "carousel", "parts": [{"text": "einen Delfin"}, {"text": "füttern", "gap": true, "accept": ["füttern"]}]}
+  ],
+  "notes": "Noun 3 'a tail': for a dolphin German says 'die Schwanzflosse' (plain 'der Schwanz' sounds wrong for a dolphin); compound of A-level parts, accepted for level A. Phrase 3 'ins Wasser zurückfallen' (falls BACK in) is what a native says; 'fallen' accepted in recall. Other dolphins jump far away on the horizon in some frames; all three targets are the main dolphin anyway."
+}

@@ -1,0 +1,33 @@
+{
+  "mediaId": 624, "lang": "de", "level": "A",
+  "keyWord": "rennen",
+  "taps": [
+    {"phrase": "einem Hut hinterherrennen", "target": "das Mädchen", "voice": "female"},
+    {"phrase": "im Wind fliegen", "target": "der Hut", "voice": "female"},
+    {"phrase": "einen Hut fangen", "target": "das Mädchen", "voice": "female"}
+  ],
+  "nouns": [
+    {"word": "die Bäume", "voice": "female"},
+    {"word": "der Hut", "voice": "female"},
+    {"word": "das Mädchen", "voice": "female"},
+    {"word": "das Gras", "voice": "female"}
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": ["Sie", "rennt", "einem", "Hut", "hinterher."],
+  "answerVoice": "female",
+  "carousel": [
+    {"en": "ran after a hat", "caption": "rannte einem Hut hinterher", "type": "past", "hasKeyWord": true, "note": "A56 'sie rannte einem Hut hinterher' without the subject, as the brief requires for tense captions."},
+    {"en": "will run after a hat", "caption": "wird einem Hut hinterherrennen", "type": "future", "hasKeyWord": true, "note": "A56 'sie wird ...' without the subject."},
+    {"en": "to run for the bus", "caption": "zum Bus rennen", "type": "verb coll.", "hasKeyWord": true, "note": ""}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "einem Hut"}, {"text": "hinterherrennen", "gap": true, "accept": ["hinterherrennen", "hinterherlaufen"]}]},
+    {"from": "taps", "parts": [{"text": "im"}, {"text": "Wind", "gap": true, "accept": ["Wind"]}, {"text": "fliegen"}]},
+    {"from": "taps", "parts": [{"text": "einen Hut"}, {"text": "fangen", "gap": true, "accept": ["fangen"]}]},
+    {"from": "answer", "parts": [{"text": "rennt", "gap": true, "accept": ["rennt", "läuft"]}, {"text": "einem Hut hinterher"}]},
+    {"from": "carousel", "parts": [{"text": "rannte einem"}, {"text": "Hut", "gap": true, "accept": ["Hut"]}, {"text": "hinterher"}]},
+    {"from": "carousel", "parts": [{"text": "wird einem"}, {"text": "Hut", "gap": true, "accept": ["Hut"]}, {"text": "hinterherrennen"}]},
+    {"from": "carousel", "parts": [{"text": "zum"}, {"text": "Bus", "gap": true, "accept": ["Bus"]}, {"text": "rennen"}]}
+  ],
+  "notes": "Answer uses 'Sie' for das Mädchen (what natives and most teachers say; 'Es' would be the strict grammatical form). The girl looks like a young woman; 'das Mädchen' kept to match English 'girl'. Phrase 2 'im Wind fliegen' is true only of the hat (the girl's dive is not 'in the wind')."
+}

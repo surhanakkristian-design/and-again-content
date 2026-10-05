@@ -1,0 +1,33 @@
+{
+  "mediaId": 432, "lang": "fr", "level": "B",
+  "keyWord": "guider",
+  "taps": [
+    { "phrase": "guider le groupe", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "éclairer le sentier", "target": "la lanterne", "voice": "female" },
+    { "phrase": "porter des lunettes à monture ronde", "target": "le jeune homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la lanterne", "voice": "female" },
+    { "word": "la vallée", "voice": "female" },
+    { "word": "la veste", "voice": "female" },
+    { "word": "le sac à dos", "voice": "female" }
+  ],
+  "question": "Que fait la jeune femme ?",
+  "answer": ["Elle", "guide", "le", "groupe", "avec", "une", "lanterne."],
+  "answerVoice": "female",
+  "carousel": [
+    { "en": "was leading knights to a castle", "caption": "guidait des chevaliers vers un château", "type": "past", "hasKeyWord": true, "note": "A56 caption had the subject 'elle'; removed (tense captions without subject)." },
+    { "en": "will be leading robots on Mars", "caption": "guidera des robots sur Mars", "type": "future", "hasKeyWord": true, "note": "A56 caption had the subject 'elle'; removed (tense captions without subject)." },
+    { "en": "to lead a horse", "caption": "guider un cheval", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "guider", "gap": true, "accept": ["guider", "mener"] }, { "text": "le groupe" } ] },
+    { "from": "taps", "parts": [ { "text": "éclairer le" }, { "text": "sentier", "gap": true, "accept": ["sentier", "chemin"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "lunettes", "gap": true, "accept": ["lunettes"] }, { "text": "à monture ronde" } ] },
+    { "from": "answer", "parts": [ { "text": "guide le groupe avec une" }, { "text": "lanterne", "gap": true, "accept": ["lanterne", "lampe"] } ] },
+    { "from": "carousel", "parts": [ { "text": "guidait des chevaliers vers un" }, { "text": "château", "gap": true, "accept": ["château"] } ] },
+    { "from": "carousel", "parts": [ { "text": "guidera des" }, { "text": "robots", "gap": true, "accept": ["robots"] }, { "text": "sur Mars" } ] },
+    { "from": "carousel", "parts": [ { "text": "guider un" }, { "text": "cheval", "gap": true, "accept": ["cheval"] } ] }
+  ],
+  "notes": "Phrase 2 'éclairer le sentier' (B1) instead of literal 'briller dans le noir'; the lantern lights the path in every frame. Phrase 3 'à monture ronde' adds the B2 word 'monture' (plain 'lunettes rondes' is A2). The older bearded man may also wear glasses in some frames (not round frames); verifier please check phrase 3 fits only the young man. Noun 3 'la veste' = the woman's orange jacket."
+}

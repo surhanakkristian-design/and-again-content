@@ -1,0 +1,183 @@
+{
+  "mediaId": 461,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Schaufensterpuppe",
+  "taps": [
+    {
+      "phrase": "eine Schaufensterpuppe anziehen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Schal um den Hals tragen",
+      "target": "die Schaufensterpuppe",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Pose der Schaufensterpuppe nachahmen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Schal",
+      "voice": "female"
+    },
+    {
+      "word": "das Hemd",
+      "voice": "female"
+    },
+    {
+      "word": "die Katze",
+      "voice": "female"
+    },
+    {
+      "word": "die Schaufensterpuppe",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "ahmt",
+    "die",
+    "Pose",
+    "der",
+    "Schaufensterpuppe",
+    "nach."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "to carry a mannequin",
+      "caption": "eine Schaufensterpuppe tragen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "shop-window mannequin",
+      "caption": "die Schaufensterpuppe im Fenster",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": "German Schaufensterpuppe already means shop-window mannequin; the A56 caption 'Schaufensterpuppe' alone is one bare word, so 'im Fenster' adds what picture 2 shows (the mannequin in the window display)."
+    },
+    {
+      "en": "to dress a mannequin",
+      "caption": "eine Schaufensterpuppe anziehen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Schaufensterpuppe",
+          "gap": true,
+          "accept": [
+            "Schaufensterpuppe"
+          ]
+        },
+        {
+          "text": "anziehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Schal",
+          "gap": true,
+          "accept": [
+            "Schal"
+          ]
+        },
+        {
+          "text": "um den Hals tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Pose",
+          "gap": true,
+          "accept": [
+            "Pose",
+            "Haltung"
+          ]
+        },
+        {
+          "text": "der Schaufensterpuppe nachahmen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "ahmt",
+          "gap": true,
+          "accept": [
+            "ahmt",
+            "macht"
+          ]
+        },
+        {
+          "text": "die Pose der Schaufensterpuppe"
+        },
+        {
+          "text": "nach"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "eine Schaufensterpuppe"
+        },
+        {
+          "text": "tragen",
+          "gap": true,
+          "accept": [
+            "tragen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "die Schaufensterpuppe im"
+        },
+        {
+          "text": "Fenster",
+          "gap": true,
+          "accept": [
+            "Fenster",
+            "Schaufenster"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1 'anziehen' (dress) vs caption 3 identical on purpose, as in English. Carousel types inferred (source has no type field): verb coll., noun coll., verb coll. Level-B words: Schaufensterpuppe, nachahmen, um den Hals tragen."
+}

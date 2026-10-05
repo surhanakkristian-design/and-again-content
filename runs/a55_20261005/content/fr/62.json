@@ -1,0 +1,190 @@
+{
+  "mediaId": 62,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le sac",
+  "taps": [
+    {
+      "phrase": "soulever un sac lourd",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "être plein de nourriture",
+      "target": "le sac",
+      "voice": "male"
+    },
+    {
+      "phrase": "porter des lunettes de soleil",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le polo",
+      "voice": "male"
+    },
+    {
+      "word": "la baguette",
+      "voice": "male"
+    },
+    {
+      "word": "les pommes",
+      "voice": "male"
+    },
+    {
+      "word": "le sac",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "remplit",
+    "le",
+    "sac",
+    "de",
+    "nourriture."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "to drop a bag",
+      "caption": "laisser tomber un sac",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "beach bag",
+      "caption": "sac de plage",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "sports bag",
+      "caption": "sac de sport",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "soulever un sac"
+        },
+        {
+          "text": "lourd",
+          "gap": true,
+          "accept": [
+            "lourd"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être plein de"
+        },
+        {
+          "text": "nourriture",
+          "gap": true,
+          "accept": [
+            "nourriture"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter des"
+        },
+        {
+          "text": "lunettes",
+          "gap": true,
+          "accept": [
+            "lunettes"
+          ]
+        },
+        {
+          "text": "de soleil"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "remplit",
+          "gap": true,
+          "accept": [
+            "remplit"
+          ]
+        },
+        {
+          "text": "le sac de nourriture"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "laisser"
+        },
+        {
+          "text": "tomber",
+          "gap": true,
+          "accept": [
+            "tomber"
+          ]
+        },
+        {
+          "text": "un sac"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "sac de"
+        },
+        {
+          "text": "plage",
+          "gap": true,
+          "accept": [
+            "plage",
+            "sport"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "sac de"
+        },
+        {
+          "text": "sport",
+          "gap": true,
+          "accept": [
+            "sport",
+            "plage"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Noun 1 (English 'shirt') is a polo shirt in the clip: 'le polo' is the everyday French word. Noun 2 (English 'bread') is a baguette: 'la baguette'. 'dark glasses' -> 'des lunettes de soleil' (natural French)."
+}

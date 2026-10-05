@@ -1,0 +1,32 @@
+{
+  "mediaId": 461, "lang": "es", "level": "B",
+  "keyWord": "el maniquí",
+  "taps": [
+    { "phrase": "vestir un maniquí", "target": "la chica", "voice": "female" },
+    { "phrase": "llevar un fular al cuello", "target": "el maniquí", "voice": "female" },
+    { "phrase": "imitar la pose del maniquí", "target": "el chico", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "el fular", "voice": "female" },
+    { "word": "la camisa", "voice": "female" },
+    { "word": "el gato", "voice": "female" },
+    { "word": "el maniquí", "voice": "female" }
+  ],
+  "question": "¿Qué está haciendo el chico?",
+  "answer": ["Está", "imitando", "la", "pose", "del", "maniquí."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "to carry a mannequin", "caption": "llevar un maniquí al hombro", "type": "verb coll.", "hasKeyWord": true, "note": "A56 'cargar un maniquí' improved: in Spain 'cargar con' or 'llevar ... al hombro'; the picture shows it on his shoulder." },
+    { "en": "shop-window mannequin", "caption": "el maniquí de escaparate", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to dress a mannequin", "caption": "vestir un maniquí", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "vestir" }, { "text": "un" }, { "text": "maniquí", "gap": true, "accept": ["maniquí"] } ] },
+    { "from": "taps", "parts": [ { "text": "llevar" }, { "text": "un" }, { "text": "fular", "gap": true, "accept": ["fular", "pañuelo"] }, { "text": "al cuello" } ] },
+    { "from": "taps", "parts": [ { "text": "imitar" }, { "text": "la" }, { "text": "pose", "gap": true, "accept": ["pose", "postura"] }, { "text": "del maniquí" } ] },
+    { "from": "answer", "parts": [ { "text": "está" }, { "text": "imitando", "gap": true, "accept": ["imitando", "copiando"] }, { "text": "la pose del maniquí" } ] },
+    { "from": "carousel", "parts": [ { "text": "llevar", "gap": true, "accept": ["llevar", "cargar"] }, { "text": "un maniquí" }, { "text": "al hombro" } ] },
+    { "from": "carousel", "parts": [ { "text": "el maniquí" }, { "text": "de" }, { "text": "escaparate", "gap": true, "accept": ["escaparate"] } ] }
+  ],
+  "notes": "Scarf = 'el fular' (light fringed summer scarf; 'bufanda' in Spain means a winter wool scarf, which this is not; 'pañuelo' accepted in recall). Man = 'el chico' (young man; more natural in Spain than 'el hombre'). Two cats are visible; noun 3 at its slot is the cat on the sill, kept singular as in English."
+}

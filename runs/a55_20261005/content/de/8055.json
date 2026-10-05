@@ -1,0 +1,33 @@
+{
+  "mediaId": 8055, "lang": "de", "level": "A",
+  "keyWord": "der Heißluftballon",
+  "taps": [
+    {"phrase": "einen Mann tragen", "target": "der Heißluftballon", "voice": "male"},
+    {"phrase": "ein Seil halten", "target": "der Mann", "voice": "male"},
+    {"phrase": "an einem Seil hängen", "target": "der Mann", "voice": "male"}
+  ],
+  "nouns": [
+    {"word": "der Heißluftballon", "voice": "male"},
+    {"word": "die Wolken", "voice": "male"},
+    {"word": "das Seil", "voice": "male"},
+    {"word": "der Mann", "voice": "male"}
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "hängt", "an", "einem", "großen", "Heißluftballon."],
+  "answerVoice": "male",
+  "carousel": [
+    {"en": "to fly in a balloon", "caption": "mit einem Heißluftballon fliegen", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to land a balloon", "caption": "einen Heißluftballon landen", "type": "verb coll.", "hasKeyWord": true, "note": ""},
+    {"en": "balloon basket", "caption": "der Korb des Heißluftballons", "type": "noun coll.", "hasKeyWord": true, "note": "A56 'Korb eines Heißluftballons' given the definite article, as a noun phrase is normally written."}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "einen Mann"}, {"text": "tragen", "gap": true, "accept": ["tragen"]}]},
+    {"from": "taps", "parts": [{"text": "ein"}, {"text": "Seil", "gap": true, "accept": ["Seil"]}, {"text": "halten"}]},
+    {"from": "taps", "parts": [{"text": "an einem Seil"}, {"text": "hängen", "gap": true, "accept": ["hängen"]}]},
+    {"from": "answer", "parts": [{"text": "hängt", "gap": true, "accept": ["hängt"]}, {"text": "an einem großen Heißluftballon"}]},
+    {"from": "carousel", "parts": [{"text": "mit einem Heißluftballon"}, {"text": "fliegen", "gap": true, "accept": ["fliegen", "fahren"]}]},
+    {"from": "carousel", "parts": [{"text": "einen Heißluftballon"}, {"text": "landen", "gap": true, "accept": ["landen"]}]},
+    {"from": "carousel", "parts": [{"text": "der"}, {"text": "Korb", "gap": true, "accept": ["Korb"]}, {"text": "des Heißluftballons"}]}
+  ],
+  "notes": "English uses 'balloon' throughout; German uses the database word 'Heißluftballon' everywhere for consistency (plain 'Ballon' would also be understood). 'fahren' accepted in the fly gap (balloonists' term)."
+}

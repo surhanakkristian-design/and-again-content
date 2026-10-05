@@ -1,0 +1,33 @@
+{
+  "mediaId": 236, "lang": "es", "level": "A",
+  "keyWord": "el delfín",
+  "taps": [
+    { "phrase": "nadar en el mar", "target": "el delfín", "voice": "female" },
+    { "phrase": "saltar muy alto", "target": "el delfín", "voice": "female" },
+    { "phrase": "caer al agua", "target": "el delfín", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "el cielo", "voice": "female" },
+    { "word": "el delfín", "voice": "female" },
+    { "word": "la cola", "voice": "female" },
+    { "word": "el agua", "voice": "female" }
+  ],
+  "question": "¿Qué hace el delfín?",
+  "answer": ["Salta", "fuera", "del", "agua."],
+  "answerVoice": "female",
+  "carousel": [
+    { "en": "pod of dolphins", "caption": "un grupo de delfines", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to swim with a dolphin", "caption": "nadar con un delfín", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to feed a dolphin", "caption": "dar de comer a un delfín", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "nadar", "gap": true, "accept": ["nadar"] }, { "text": "en el mar" } ] },
+    { "from": "taps", "parts": [ { "text": "saltar", "gap": true, "accept": ["saltar"] }, { "text": "muy alto" } ] },
+    { "from": "taps", "parts": [ { "text": "caer", "gap": true, "accept": ["caer"] }, { "text": "al agua" } ] },
+    { "from": "answer", "parts": [ { "text": "salta", "gap": true, "accept": ["salta"] }, { "text": "fuera del agua" } ] },
+    { "from": "carousel", "parts": [ { "text": "un" }, { "text": "grupo", "gap": true, "accept": ["grupo", "manada"] }, { "text": "de delfines" } ] },
+    { "from": "carousel", "parts": [ { "text": "nadar con un" }, { "text": "delfín", "gap": true, "accept": ["delfín"] } ] },
+    { "from": "carousel", "parts": [ { "text": "dar de" }, { "text": "comer", "gap": true, "accept": ["comer"] }, { "text": "a un delfín" } ] }
+  ],
+  "notes": "Phrase 2: 'saltar en el aire' is unnatural in Spanish; 'saltar muy alto' says what the dolphin does. Answer in simple present (natural es for an ongoing action; 'Está saltando fuera del agua' also right). answerVoice kept female as in English although el delfín is grammatically masculine (no natural gender). Other dolphins jump far in the background in the late frames; the tap regions are on the near dolphin only."
+}

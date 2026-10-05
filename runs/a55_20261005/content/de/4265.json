@@ -1,0 +1,203 @@
+{
+  "mediaId": 4265,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "beruhigen",
+  "taps": [
+    {
+      "phrase": "ins Zimmer stürmen",
+      "target": "der grüne Papagei",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf dem Sofa faulenzen",
+      "target": "der blaue Papagei",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen wütenden Freund beruhigen",
+      "target": "der blaue Papagei",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Tür",
+      "voice": "male"
+    },
+    {
+      "word": "die Flügel",
+      "voice": "male"
+    },
+    {
+      "word": "der Papagei",
+      "voice": "male"
+    },
+    {
+      "word": "das Sofa",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der blaue Papagei?",
+  "answer": [
+    "Er",
+    "beruhigt",
+    "den",
+    "wütenden",
+    "Papagei",
+    "mit",
+    "einer",
+    "Umarmung."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "was calmed by a knight",
+      "caption": "wurde von einem Ritter beruhigt",
+      "type": "past",
+      "hasKeyWord": true,
+      "note": "A56 'er wurde von einem Ritter beruhigt' without the subject, as the brief requires for tense captions."
+    },
+    {
+      "en": "to calm a barking dog",
+      "caption": "einen bellenden Hund beruhigen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to calm a crying baby",
+      "caption": "ein weinendes Baby beruhigen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ins Zimmer"
+        },
+        {
+          "text": "stürmen",
+          "gap": true,
+          "accept": [
+            "stürmen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Sofa",
+          "gap": true,
+          "accept": [
+            "Sofa",
+            "Couch"
+          ]
+        },
+        {
+          "text": "faulenzen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "wütenden",
+          "gap": true,
+          "accept": [
+            "wütenden"
+          ]
+        },
+        {
+          "text": "Freund beruhigen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "beruhigt den wütenden Papagei"
+        },
+        {
+          "text": "mit einer"
+        },
+        {
+          "text": "Umarmung",
+          "gap": true,
+          "accept": [
+            "Umarmung"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "wurde von einem"
+        },
+        {
+          "text": "Ritter",
+          "gap": true,
+          "accept": [
+            "Ritter"
+          ]
+        },
+        {
+          "text": "beruhigt"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "bellenden",
+          "gap": true,
+          "accept": [
+            "bellenden"
+          ]
+        },
+        {
+          "text": "Hund beruhigen"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "weinendes",
+          "gap": true,
+          "accept": [
+            "weinendes"
+          ]
+        },
+        {
+          "text": "Baby beruhigen"
+        }
+      ]
+    }
+  ],
+  "notes": "English answerVoice is an audio URL (voice 'daniel'), copied here as 'male'. Answer: German also allows 'Er beruhigt mit einer Umarmung den wütenden Papagei' (second order, less neutral). Phrase 2 'auf dem Sofa faulenzen' instead of plain 'liegen' to carry a B1 word; the blue parrot lounges lazily, eyes half shut. Level B words: stürmen, faulenzen, wütend, beruhigen, Umarmung, Ritter."
+}

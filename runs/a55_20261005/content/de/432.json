@@ -1,0 +1,208 @@
+{
+  "mediaId": 432,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "führen",
+  "taps": [
+    {
+      "phrase": "die Gruppe durch den Wald führen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "im Dunkeln leuchten",
+      "target": "die Laterne",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine Nickelbrille tragen",
+      "target": "der junge Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Laterne",
+      "voice": "female"
+    },
+    {
+      "word": "das Tal",
+      "voice": "female"
+    },
+    {
+      "word": "die Jacke",
+      "voice": "female"
+    },
+    {
+      "word": "der Rucksack",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "führt",
+    "die",
+    "Gruppe",
+    "mit",
+    "einer",
+    "Laterne."
+  ],
+  "answerVoice": "female",
+  "carousel": [
+    {
+      "en": "was leading knights to a castle",
+      "caption": "führte Ritter zu einer Burg",
+      "type": "past",
+      "hasKeyWord": true,
+      "note": "A56 caption had the subject 'sie'; removed (tense captions have no subject)."
+    },
+    {
+      "en": "will be leading robots on Mars",
+      "caption": "wird Roboter auf dem Mars führen",
+      "type": "future",
+      "hasKeyWord": true,
+      "note": "A56 caption had the subject 'sie'; removed."
+    },
+    {
+      "en": "to lead a horse",
+      "caption": "ein Pferd führen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Gruppe"
+        },
+        {
+          "text": "durch den Wald"
+        },
+        {
+          "text": "führen",
+          "gap": true,
+          "accept": [
+            "führen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im"
+        },
+        {
+          "text": "Dunkeln",
+          "gap": true,
+          "accept": [
+            "Dunkeln"
+          ]
+        },
+        {
+          "text": "leuchten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Nickelbrille",
+          "gap": true,
+          "accept": [
+            "Nickelbrille",
+            "Brille"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "führt die Gruppe"
+        },
+        {
+          "text": "mit einer"
+        },
+        {
+          "text": "Laterne",
+          "gap": true,
+          "accept": [
+            "Laterne"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "führte",
+          "gap": true,
+          "accept": [
+            "führte"
+          ]
+        },
+        {
+          "text": "Ritter"
+        },
+        {
+          "text": "zu einer Burg"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "wird Roboter"
+        },
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Mars",
+          "gap": true,
+          "accept": [
+            "Mars"
+          ]
+        },
+        {
+          "text": "führen"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "Pferd",
+          "gap": true,
+          "accept": [
+            "Pferd"
+          ]
+        },
+        {
+          "text": "führen"
+        }
+      ]
+    }
+  ],
+  "notes": "Round glasses -> 'Nickelbrille' (the natural German word for small round glasses, gives phrase 3 a B-level word; only the young man wears glasses). Phrase 1 adds 'durch den Wald' (shown: bamboo forest at night). Answer: 'Sie führt mit einer Laterne die Gruppe' is also possible German (adverbial can move); the main order is the natural one. Picture 1 shows a torch, not a lantern, so the caption avoids naming the light."
+}

@@ -1,0 +1,34 @@
+{
+  "mediaId": 7071, "lang": "de", "level": "B",
+  "keyWord": "der König",
+  "taps": [
+    {"phrase": "eine goldene Krone tragen", "target": "der König", "voice": "male"},
+    {"phrase": "durch den Schlamm rollen", "target": "das Quad", "voice": "male"},
+    {"phrase": "den grauen Himmel spiegeln", "target": "die Pfütze", "voice": "male"}
+  ],
+  "nouns": [
+    {"word": "die Krone", "voice": "male"},
+    {"word": "der König", "voice": "male"},
+    {"word": "das Quad", "voice": "male"},
+    {"word": "die Pfütze", "voice": "male"}
+  ],
+  "question": "Was macht der König?",
+  "answer": ["Er", "steuert", "das", "Quad", "durch", "eine", "Pfütze."],
+  "answerVoice": "male",
+  "carousel": [
+    {"en": "young king", "caption": "ein junger König", "type": "noun coll.", "hasKeyWord": true, "note": "A56 'junger König' given the article it needs as a stand-alone noun phrase."},
+    {"en": "king and queen", "caption": "König und Königin", "type": "noun coll.", "hasKeyWord": true, "note": ""},
+    {"en": "to bow to the king", "caption": "sich vor dem König verbeugen", "type": "verb coll.", "hasKeyWord": true, "note": ""}
+  ],
+  "recall": [
+    {"from": "taps", "parts": [{"text": "eine goldene Krone"}, {"text": "tragen", "gap": true, "accept": ["tragen"]}]},
+    {"from": "taps", "parts": [{"text": "durch den"}, {"text": "Schlamm", "gap": true, "accept": ["Schlamm", "Matsch"]}, {"text": "rollen"}]},
+    {"from": "taps", "parts": [{"text": "den grauen Himmel"}, {"text": "spiegeln", "gap": true, "accept": ["spiegeln", "widerspiegeln"]}]},
+    {"from": "nouns", "parts": [{"text": "das"}, {"text": "Quad", "gap": true, "accept": ["Quad"]}]},
+    {"from": "answer", "parts": [{"text": "steuert", "gap": true, "accept": ["steuert", "fährt", "lenkt"]}, {"text": "das Quad"}, {"text": "durch eine Pfütze"}]},
+    {"from": "carousel", "parts": [{"text": "ein"}, {"text": "junger", "gap": true, "accept": ["junger"]}, {"text": "König"}]},
+    {"from": "carousel", "parts": [{"text": "König und"}, {"text": "Königin", "gap": true, "accept": ["Königin"]}]},
+    {"from": "carousel", "parts": [{"text": "sich vor dem König"}, {"text": "verbeugen", "gap": true, "accept": ["verbeugen"]}]}
+  ],
+  "notes": "Level B words: Krone, Schlamm, spiegeln, Pfütze, steuern, sich verbeugen. Answer uses 'steuert das Quad durch eine Pfütze' (one natural order) instead of the more common 'fährt mit einem Quad durch eine Pfütze', where the two adverbials could swap. Phrase 2 uses 'rollen' (not 'fahren') so that it fits only the quad, not the king riding it. 'das Quad' is the everyday German word for a quad bike."
+}

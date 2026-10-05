@@ -1,0 +1,191 @@
+{
+  "mediaId": 8039,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le passage",
+  "taps": [
+    {
+      "phrase": "dégager un passage",
+      "target": "la jeune femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "courir le long du passage",
+      "target": "le chien",
+      "voice": "female"
+    },
+    {
+      "phrase": "gesticuler derrière la vitre",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la neige",
+      "voice": "female"
+    },
+    {
+      "word": "la pelle",
+      "voice": "female"
+    },
+    {
+      "word": "le chien",
+      "voice": "female"
+    },
+    {
+      "word": "le passage",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme dehors ?",
+  "answer": [
+    "Elle",
+    "dégage",
+    "un",
+    "passage",
+    "dans",
+    "la",
+    "neige."
+  ],
+  "answerVoice": "female",
+  "carousel": [
+    {
+      "en": "to block the way",
+      "caption": "barrer le passage",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "narrow way",
+      "caption": "passage étroit",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to look for a way through",
+      "caption": "chercher un passage",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dégager",
+          "gap": true,
+          "accept": [
+            "dégager",
+            "creuser"
+          ]
+        },
+        {
+          "text": "un passage"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "courir le long du"
+        },
+        {
+          "text": "passage",
+          "gap": true,
+          "accept": [
+            "passage",
+            "chemin"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "gesticuler derrière la"
+        },
+        {
+          "text": "vitre",
+          "gap": true,
+          "accept": [
+            "vitre",
+            "fenêtre"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "dégage un passage dans la"
+        },
+        {
+          "text": "neige",
+          "gap": true,
+          "accept": [
+            "neige"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "barrer",
+          "gap": true,
+          "accept": [
+            "barrer",
+            "bloquer"
+          ]
+        },
+        {
+          "text": "le passage"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "passage"
+        },
+        {
+          "text": "étroit",
+          "gap": true,
+          "accept": [
+            "étroit"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "chercher"
+        },
+        {
+          "text": "un"
+        },
+        {
+          "text": "passage",
+          "gap": true,
+          "accept": [
+            "passage",
+            "chemin"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "English 'a path' (noun 4, taps 1-2) and 'way' (captions) both map to the database word 'le passage', which is the natural French for a corridor dug through snow; used consistently. Phrase 1 'dégager un passage' (B1/B2 'dégager') instead of literal 'creuser un chemin'. Phrase 3: the man is inside behind the glass, so 'derrière la vitre' rather than 'par la fenêtre'."
+}

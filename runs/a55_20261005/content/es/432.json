@@ -1,0 +1,33 @@
+{
+  "mediaId": 432, "lang": "es", "level": "B",
+  "keyWord": "guiar",
+  "taps": [
+    { "phrase": "guiar al grupo", "target": "la chica", "voice": "female" },
+    { "phrase": "brillar en la oscuridad", "target": "el farol", "voice": "female" },
+    { "phrase": "llevar gafas de montura redonda", "target": "el chico", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "el farol", "voice": "female" },
+    { "word": "el valle", "voice": "female" },
+    { "word": "la chaqueta", "voice": "female" },
+    { "word": "la mochila", "voice": "female" }
+  ],
+  "question": "¿Qué está haciendo la chica?",
+  "answer": ["Está", "guiando", "al", "grupo", "con", "un", "farol."],
+  "answerVoice": "female",
+  "carousel": [
+    { "en": "was leading knights to a castle", "caption": "guiaba a unos caballeros hacia un castillo", "type": "past", "hasKeyWord": true, "note": "A56 'estaba guiando' shortened to the imperfect 'guiaba', the natural Spanish past for an ongoing action." },
+    { "en": "will be leading robots on Mars", "caption": "guiará a unos robots por Marte", "type": "future", "hasKeyWord": true, "note": "A56 'estará guiando' replaced: in Spanish that form mainly expresses a guess about the present; simple future 'guiará' is the clear future. 'por Marte' = across Mars, as in the picture." },
+    { "en": "to lead a horse", "caption": "guiar un caballo", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "guiar", "gap": true, "accept": ["guiar"] }, { "text": "al grupo" } ] },
+    { "from": "taps", "parts": [ { "text": "brillar" }, { "text": "en la" }, { "text": "oscuridad", "gap": true, "accept": ["oscuridad"] } ] },
+    { "from": "taps", "parts": [ { "text": "llevar" }, { "text": "gafas", "gap": true, "accept": ["gafas"] }, { "text": "de montura redonda" } ] },
+    { "from": "answer", "parts": [ { "text": "está guiando al grupo" }, { "text": "con un" }, { "text": "farol", "gap": true, "accept": ["farol", "farolillo"] } ] },
+    { "from": "carousel", "parts": [ { "text": "guiaba", "gap": true, "accept": ["guiaba", "conducía"] }, { "text": "a unos caballeros" }, { "text": "hacia un castillo" } ] },
+    { "from": "carousel", "parts": [ { "text": "guiará a unos robots" }, { "text": "por" }, { "text": "Marte", "gap": true, "accept": ["Marte"] } ] },
+    { "from": "carousel", "parts": [ { "text": "guiar un" }, { "text": "caballo", "gap": true, "accept": ["caballo"] } ] }
+  ],
+  "notes": "Lantern = 'el farol' (in Spain 'la linterna' is a torch/flashlight). Phrase 3 'llevar gafas de montura redonda' carries the B-level word 'montura' (plain 'gafas redondas' is A2). Woman/young man = 'la chica' / 'el chico' (cartoon young adults). Future caption avoids 'estará guiando' (probability reading in Spanish)."
+}

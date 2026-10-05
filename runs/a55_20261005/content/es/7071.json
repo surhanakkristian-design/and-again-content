@@ -1,0 +1,34 @@
+{
+  "mediaId": 7071, "lang": "es", "level": "B",
+  "keyWord": "el rey",
+  "taps": [
+    { "phrase": "lucir una corona de oro", "target": "el rey", "voice": "male" },
+    { "phrase": "avanzar por el barro", "target": "el quad", "voice": "male" },
+    { "phrase": "reflejar el cielo gris", "target": "el charco", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la corona", "voice": "male" },
+    { "word": "el rey", "voice": "male" },
+    { "word": "el quad", "voice": "male" },
+    { "word": "el charco", "voice": "male" }
+  ],
+  "question": "¿Qué hace el rey?",
+  "answer": ["Atraviesa", "un", "charco", "montado", "en", "un", "quad."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "young king", "caption": "un rey joven", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "king and queen", "caption": "el rey y la reina", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to bow to the king", "caption": "hacer una reverencia al rey", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lucir", "gap": true, "accept": ["lucir", "llevar"] }, { "text": "una corona de oro" } ] },
+    { "from": "taps", "parts": [ { "text": "avanzar por el" }, { "text": "barro", "gap": true, "accept": ["barro"] } ] },
+    { "from": "taps", "parts": [ { "text": "reflejar", "gap": true, "accept": ["reflejar"] }, { "text": "el cielo gris" } ] },
+    { "from": "nouns", "parts": [ { "text": "el" }, { "text": "quad", "gap": true, "accept": ["quad"] } ] },
+    { "from": "answer", "parts": [ { "text": "atraviesa", "gap": true, "accept": ["atraviesa", "cruza"] }, { "text": "un charco" }, { "text": "montado en un quad" } ] },
+    { "from": "carousel", "parts": [ { "text": "un rey" }, { "text": "joven", "gap": true, "accept": ["joven"] } ] },
+    { "from": "carousel", "parts": [ { "text": "el rey y la" }, { "text": "reina", "gap": true, "accept": ["reina"] } ] },
+    { "from": "carousel", "parts": [ { "text": "hacer una" }, { "text": "reverencia", "gap": true, "accept": ["reverencia"] }, { "text": "al rey" } ] }
+  ],
+  "notes": "B words: lucir (phrase 1), avanzar (2), reflejar (3), atravesar + charco + montado en (answer). 'el quad' is the everyday Spanish word for a quad bike. Phrase 2 says 'avanzar por el barro' (English 'roll through the mud'; 'rodar por el barro' would suggest the vehicle tumbling)."
+}

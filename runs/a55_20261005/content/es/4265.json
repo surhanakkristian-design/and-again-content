@@ -1,0 +1,33 @@
+{
+  "mediaId": 4265, "lang": "es", "level": "B",
+  "keyWord": "calmar",
+  "taps": [
+    { "phrase": "irrumpir en la habitación", "target": "el loro verde", "voice": "male" },
+    { "phrase": "estar repantigado en el sofá", "target": "el loro azul", "voice": "male" },
+    { "phrase": "calmar a un amigo furioso", "target": "el loro azul", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la puerta", "voice": "male" },
+    { "word": "las alas", "voice": "male" },
+    { "word": "el loro", "voice": "male" },
+    { "word": "el sofá", "voice": "male" }
+  ],
+  "question": "¿Qué hace el loro azul?",
+  "answer": ["Calma", "al", "loro", "furioso", "con", "un", "abrazo."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "was calmed by a knight", "caption": "fue calmado por un caballero", "type": "past", "hasKeyWord": true, "note": "" },
+    { "en": "to calm a barking dog", "caption": "calmar a un perro que ladra", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to calm a crying baby", "caption": "calmar a un bebé que llora", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "irrumpir", "gap": true, "accept": ["irrumpir", "entrar"] }, { "text": "en la habitación" } ] },
+    { "from": "taps", "parts": [ { "text": "estar repantigado en el" }, { "text": "sofá", "gap": true, "accept": ["sofá"] } ] },
+    { "from": "taps", "parts": [ { "text": "calmar a un amigo" }, { "text": "furioso", "gap": true, "accept": ["furioso", "enfadado"] } ] },
+    { "from": "answer", "parts": [ { "text": "calma al loro furioso con un" }, { "text": "abrazo", "gap": true, "accept": ["abrazo"] } ] },
+    { "from": "carousel", "parts": [ { "text": "fue calmado por un" }, { "text": "caballero", "gap": true, "accept": ["caballero"] } ] },
+    { "from": "carousel", "parts": [ { "text": "calmar a un perro que" }, { "text": "ladra", "gap": true, "accept": ["ladra"] } ] },
+    { "from": "carousel", "parts": [ { "text": "calmar a un bebé que" }, { "text": "llora", "gap": true, "accept": ["llora"] } ] }
+  ],
+  "notes": "Source answerVoice is an audio URL (a48_answer_daniel = male), so male was used. Phrase 2: the blue parrot sits slumped on the sofa rather than lying, so 'estar repantigado en el sofá' (B2) instead of 'estar tumbado'. 'angry' rendered 'furioso' (B1) in phrase 3 and the answer, consistently. Caption 1 keeps the ser-passive 'fue calmado por un caballero' (correct, mirrors English; a native might rather say 'un caballero lo calmó', which needs a subject)."
+}

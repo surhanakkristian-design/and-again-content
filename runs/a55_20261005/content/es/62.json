@@ -1,0 +1,33 @@
+{
+  "mediaId": 62, "lang": "es", "level": "A",
+  "keyWord": "la bolsa",
+  "taps": [
+    { "phrase": "levantar una bolsa pesada", "target": "el hombre", "voice": "male" },
+    { "phrase": "estar llena de comida", "target": "la bolsa", "voice": "male" },
+    { "phrase": "llevar gafas de sol", "target": "el hombre", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la camisa", "voice": "male" },
+    { "word": "el pan", "voice": "male" },
+    { "word": "las manzanas", "voice": "male" },
+    { "word": "la bolsa", "voice": "male" }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": ["Está", "llenando", "la", "bolsa", "de", "comida."],
+  "answerVoice": "male",
+  "carousel": [
+    { "en": "to drop a bag", "caption": "dejar caer una bolsa", "type": "verb coll.", "hasKeyWord": true, "note": "" },
+    { "en": "beach bag", "caption": "la bolsa de playa", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "sports bag", "caption": "la bolsa de deporte", "type": "noun coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "levantar" }, { "text": "una bolsa" }, { "text": "pesada", "gap": true, "accept": ["pesada"] } ] },
+    { "from": "taps", "parts": [ { "text": "estar" }, { "text": "llena de" }, { "text": "comida", "gap": true, "accept": ["comida"] } ] },
+    { "from": "taps", "parts": [ { "text": "llevar" }, { "text": "gafas", "gap": true, "accept": ["gafas"] }, { "text": "de sol" } ] },
+    { "from": "answer", "parts": [ { "text": "está" }, { "text": "llenando", "gap": true, "accept": ["llenando"] }, { "text": "la bolsa" }, { "text": "de comida" } ] },
+    { "from": "carousel", "parts": [ { "text": "dejar" }, { "text": "caer", "gap": true, "accept": ["caer"] }, { "text": "una bolsa" } ] },
+    { "from": "carousel", "parts": [ { "text": "la bolsa de" }, { "text": "playa", "gap": true, "accept": ["playa", "deporte"] } ] },
+    { "from": "carousel", "parts": [ { "text": "la bolsa de" }, { "text": "deporte", "gap": true, "accept": ["deporte", "playa"] } ] }
+  ],
+  "notes": "'dark glasses' -> 'gafas de sol' (what a Spaniard says). Noun 1 is a polo shirt; 'la camisa' kept as the A-level word for English 'shirt' ('el polo' would be more exact). Noun 2 is a baguette; 'el pan' (A1) rather than 'la barra de pan'. Answer 'llenar la bolsa de comida' = English 'packing a bag with food'."
+}

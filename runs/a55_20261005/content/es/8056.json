@@ -1,0 +1,192 @@
+{
+  "mediaId": 8056,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el banco",
+  "taps": [
+    {
+      "phrase": "leer un libro",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "mirar al hombre",
+      "target": "el perro",
+      "voice": "male"
+    },
+    {
+      "phrase": "estar sentado en un banco",
+      "target": "el hombre",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "los árboles",
+      "voice": "male"
+    },
+    {
+      "word": "el libro",
+      "voice": "male"
+    },
+    {
+      "word": "el banco",
+      "voice": "male"
+    },
+    {
+      "word": "el perro",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "Está",
+    "leyendo",
+    "un",
+    "libro",
+    "en",
+    "un",
+    "banco."
+  ],
+  "answerVoice": "male",
+  "carousel": [
+    {
+      "en": "weight bench",
+      "caption": "el banco de pesas",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to paint a bench",
+      "caption": "pintar un banco",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to share a bench",
+      "caption": "compartir un banco",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "leer",
+          "gap": true,
+          "accept": [
+            "leer"
+          ]
+        },
+        {
+          "text": "un libro"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar",
+          "gap": true,
+          "accept": [
+            "mirar"
+          ]
+        },
+        {
+          "text": "al hombre"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar"
+        },
+        {
+          "text": "sentado",
+          "gap": true,
+          "accept": [
+            "sentado"
+          ]
+        },
+        {
+          "text": "en un banco"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está"
+        },
+        {
+          "text": "leyendo",
+          "gap": true,
+          "accept": [
+            "leyendo"
+          ]
+        },
+        {
+          "text": "un libro en un banco"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "el banco de"
+        },
+        {
+          "text": "pesas",
+          "gap": true,
+          "accept": [
+            "pesas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "pintar",
+          "gap": true,
+          "accept": [
+            "pintar"
+          ]
+        },
+        {
+          "text": "un banco"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "compartir"
+        },
+        {
+          "text": "un"
+        },
+        {
+          "text": "banco",
+          "gap": true,
+          "accept": [
+            "banco"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3 'estar sentado en un banco' (state, as in the clip) rather than 'sentarse' (the act of sitting down, not shown). Recall gaps are content words (English gapped 'at'/'on'). Carousel accept lists keep only the row's own verb: 'pintar'/'compartir' are not synonyms of each other. 'el banco' is also 'bank' in Spanish; the clip and captions make the seat sense clear."
+}
