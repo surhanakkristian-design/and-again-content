@@ -707,3 +707,15 @@ Standing speed rules (also in the app repo's CLAUDE.md, section "Speed rules (ow
 
 371. **`media_exercise_sets` stores every video's picture shape in two columns, `width` and `height` (the video's pixel size; aspect = width / height; NULL = unknown, assume 9:16).** Migration 20261005100000 (applied and recorded 5 Oct 2026); filled for every row (the lab 10 from ffprobe, the rest from the frame extraction). The app (A46 open point 11) maps tap regions and noun slots with this aspect instead of 9:16. and-again `supabase/migrations/20261005100000_a45_exercise_set_shape.sql`
 372. **The A45 owner script retries network errors before it gives up a batch:** missing audio files are uploaded again (up to 5 rounds, pauses of 30, 60, 90 ... s), SQL files are sent again up to 3 times, every database read 3 times; a batch is still written only when every one of its audio objects reads back. `runs/a45_20261004/apply_a45.sh`
+
+## A51 brief (5 Oct 2026)
+
+373. **A lab carousel has exactly 3 pictures = 3 answers (replaces the cross of decisions 360 and 362).** The video's original still is NOT shown; every picture is still an EDIT of the still (same person, scene, camera; decision 365). The three pictures stand in one row, walked by swiping sideways; under the media the three captions are the chips. and-again `lib/labCarousel.ts`.
+374. **Tenses in a carousel: per word at most ONE future, ONE present and ONE past form (replaces "exactly 3 forms" of decision 363).** The forms must stay distinct in German, Spanish and French. Far-future and centuries-ago variants stay allowed (decision 364). Infinitive collocations ("to lead a horse") are not tense forms.
+375. **Carousel collocations are common phrases only, no idioms yet; each caption's key word translates to the same word as the video's key word** (captions are later simply translated: the native caption must contain the native word the video teaches, e.g. German "Weg" for "way", so "way out" = "Ausgang" is out).
+376. **Lead (432) keeps "will be leading robots on Mars" as it is** (braid outside the helmet accepted).
+377. **Higgsfield budget for A51: 22 credits (krasty1333; the owner adds 20 to the 2 left).** The real balance is read before every job and is never exceeded.
+378. **A51 is lab only; the main game is not changed.**
+379. **Celebrities and brand logos (owner's addition to A51, confirms decision 370):** never deliberately depict a recognisable celebrity or add a large famous brand logo; accidental resemblance and logos carried over from the video stay allowed.
+380. **The contact sheet per word shows every kept picture with its caption, its tense / collocation type and any UNSURE mark**, so the owner approves a word in one look.
+
