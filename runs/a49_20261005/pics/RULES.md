@@ -34,3 +34,6 @@ QC = HARD fails only: text/letters/digits; word or tense not readable at first g
 violence or gross. ALLOWED: faces resembling real people, logos/stickers carried over from the source, framing
 differences, imperfect eyelines (prompts still ask for clear eyelines). Blind verifier 3x per picture, pass = right
 caption in at least 2 of 3; a single miss = UNSURE for the owner, never a remake. Reuse earlier paid generations first.
+
+## A51 update (5 Oct 2026)
+The carousel shape and caption rules changed (decisions 373-380): see `runs/a51_20261005/pics/RULES.md`.
