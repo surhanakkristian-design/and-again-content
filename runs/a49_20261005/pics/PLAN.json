@@ -1,0 +1,337 @@
+[
+ {
+  "id": 62,
+  "word": "a bag",
+  "style": "2D TV cartoon (bold black outlines, flat colours)",
+  "still": "stills/62.png",
+  "inventory": "none: the water bottle has no label, the purple polo has two plain buttons (round button on the placket, not a letter), the bag and blanket are unprinted",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "shopping bag",
+    "set": "vertical",
+    "prompt": "prompts/62_shopping_bag.txt",
+    "risk": "Model may print a shop logo or lettering on the paper bag (named as plain, still the top risk) or keep the orange cloth colour so it reads as the original; a paper bag on a picnic blanket is a mild context clash but the cue is unmistakable.",
+    "drop": false
+   },
+   {
+    "caption": "tea bag",
+    "set": "vertical",
+    "prompt": "prompts/62_tea_bag.txt",
+    "risk": "Tea-bag tag or mug may get lettering (named blank; retouch if tiny); hand/string contact can look disconnected; scale of a giant tea bag may be rendered small, which weakens the cue.",
+    "drop": false
+   },
+   {
+    "caption": "to drop a bag",
+    "set": "horizontal",
+    "prompt": "prompts/62_to_drop_a_bag.txt",
+    "risk": "Mid-air states read ambiguously; the motion lines plus shadow carry the fall, but the model may glue the bag to the blanket (reads as a tipped bag) or keep it in his hands (reads as packing).",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 8039,
+  "word": "a way",
+  "style": "photo (phone snapshot, golden hour)",
+  "still": "stills/8039.png",
+  "inventory": "none readable: no logos on beanie, jacket, gloves or shovel; behind the window a small pale-blue rectangular object at the man's waist and the woman's Nordic sweater pattern (both pattern only, no letters); picture frames on the cabin wall",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "way out",
+    "set": "vertical",
+    "prompt": "prompts/8039_way_out.txt",
+    "risk": "Tunnel geometry may come out as a cave or igloo interior with no clear exit, or the exit too small; her turned head could change her face. The camera does not step back, so the opening must sit in the background, not in front of her.",
+    "drop": false
+   },
+   {
+    "caption": "to block the way",
+    "set": "horizontal",
+    "prompt": "prompts/8039_to_block_the_way.txt",
+    "risk": "The moose may be placed behind her (path not blocked) or rendered too small; hand/face of the couple behind glass are tiny and may warp; risk of the husky being duplicated.",
+    "drop": false
+   },
+   {
+    "caption": "to lose your way",
+    "set": "horizontal",
+    "prompt": "prompts/8039_to_lose_your_way.txt",
+    "risk": "Model may keep part of the trench or the cabin (reads as clearing the way); heavy snow can smear her face; a 'looking around' moment is less direct than an action, so her lost expression must stay strong.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 8055,
+  "word": "a balloon",
+  "style": "pen-and-ink hatched line drawing on white",
+  "still": "stills/8055.png",
+  "inventory": "none: no lettering, signature or watermark; plain white paper, the man's face is a blank oval",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "water balloon",
+    "set": "vertical",
+    "prompt": "prompts/8055_water_balloon.txt",
+    "risk": "Ink style makes water hard to show; the balloon may read as a plain balloon unless the water line and drips render; model may draw a face on the blank oval or add colour.",
+    "drop": false
+   },
+   {
+    "caption": "balloon animal",
+    "set": "vertical",
+    "prompt": "prompts/8055_balloon_animal.txt",
+    "risk": "Model may keep the hot-air balloon stripes or draw a real dog; twisted-segment anatomy can come out as a blob; the man hanging from a single string is fantasy, as in the original.",
+    "drop": false
+   },
+   {
+    "caption": "to blow up a balloon",
+    "set": "horizontal",
+    "prompt": "prompts/8055_to_blow_up_a_balloon.txt",
+    "risk": "Hand-to-mouth contact and puffed cheek on a figure whose face was blank may come out messy; the man changing size breaks R4 on purpose (cue needs it); a party balloon may be mistaken for 'water balloon' if drips appear.",
+    "drop": false
+   },
+   {
+    "caption": "to pop a balloon",
+    "set": "horizontal",
+    "prompt": "prompts/8055_to_pop_a_balloon.txt",
+    "risk": "Burst graphics invite onomatopoeia lettering (forbidden twice; retouch if a stray mark); bird perched on a bursting balloon is physically odd; the model may draw an intact balloon with a bird (no burst = fails the cue).",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 236,
+  "word": "a dolphin",
+  "style": "photo (phone, from a boat)",
+  "still": "stills/236.png",
+  "inventory": "none: open sea and sky only, no watermark, no boat parts, no lettering",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "dolphin show",
+    "set": "vertical",
+    "prompt": "prompts/236_dolphin_show.txt",
+    "risk": "Stadium backgrounds invite signs/banners/screens with text (forbidden, check closely); crowd faces small and smeary; the hoop may not wrap the dolphin correctly (dolphin in front of or behind it).",
+    "drop": false
+   },
+   {
+    "caption": "pod of dolphins",
+    "set": "vertical",
+    "prompt": "prompts/236_pod_of_dolphins.txt",
+    "risk": "Multiple dolphins invite merged bodies or copy-paste clones (named, still the main risk); the model may shrink the dolphins so the group reads as dots.",
+    "drop": false
+   },
+   {
+    "caption": "to feed a dolphin",
+    "set": "horizontal",
+    "prompt": "prompts/236_to_feed_a_dolphin.txt",
+    "risk": "The pose change (leap -> rising head close to the boat) is needed for a large cue but may give dolphin anatomy errors; the hand may grow extra fingers or hold the fish unnaturally.",
+    "drop": false
+   },
+   {
+    "caption": "to swim with a dolphin",
+    "set": "horizontal",
+    "prompt": "prompts/236_to_swim_with_a_dolphin.txt",
+    "risk": "Partly-submerged bodies are hard: arm/leg count and where the swimmer's body continues under water may glitch; the mask/snorkel may get a brand mark.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 8056,
+  "word": "a bench",
+  "style": "doodle animation (black monoline + orange spot colour)",
+  "still": "stills/8056.png",
+  "inventory": "none: no lettering or logos; one tiny stray dark dot in the empty white area below the drawing (about x=376, y=994); the book cover is blank",
+  "originalRetouch": "optional: clone out the 1-pixel stray dark dot below the drawing (about x=376, y=994); nothing else",
+  "items": [
+   {
+    "caption": "weight bench",
+    "set": "vertical",
+    "prompt": "prompts/8056_weight_bench.txt",
+    "risk": "Plates may get weight numbers (forbidden; retouch if small); the model may keep slats from the park bench; a man reading on a weight bench in a park is odd but clear.",
+    "drop": false
+   },
+   {
+    "caption": "picnic bench",
+    "set": "vertical",
+    "prompt": "prompts/8056_picnic_bench.txt",
+    "risk": "Model may draw a table next to the old park bench instead of an attached picnic bench (would read as 'park bench'); table perspective in doodle style may come out wonky.",
+    "drop": false
+   },
+   {
+    "caption": "to paint a bench",
+    "set": "horizontal",
+    "prompt": "prompts/8056_to_paint_a_bench.txt",
+    "risk": "Model may keep him sitting (reads as reading), add a 'wet paint' sign with text (forbidden), or flood the orange beyond half the bench; brush hand anatomy.",
+    "drop": false
+   },
+   {
+    "caption": "to share a bench",
+    "set": "horizontal",
+    "prompt": "prompts/8056_to_share_a_bench.txt",
+    "risk": "Dog paws holding a book may merge; the man may shift; low risk of reading as a sibling.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 4265,
+  "word": "to calm",
+  "style": "3D animated feature-film cartoon (parrots)",
+  "still": "stills/4265_6.5s.png",
+  "inventory": "none: no logos, emblems, lettering or watermark; plain brass door handle at right",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "was calmed by a knight",
+    "set": "vertical",
+    "prompt": "prompts/4265_was_calmed_by_a_knight.txt",
+    "risk": "3D-animated knight may drift photoreal or gain a heraldic emblem on chest/banners (forbidden); the crest may stay red (then it reads as still angry); armoured arms around a parrot can merge.",
+    "drop": false
+   },
+   {
+    "caption": "has just calmed a baby",
+    "set": "vertical",
+    "prompt": "prompts/4265_has_just_calmed_a_baby.txt",
+    "risk": "Baby may look uncanny or slip toward a creepy hybrid; the tear plus dummy may be dropped; must stay clearly asleep (a crying baby would read as 'is calming').",
+    "drop": false
+   },
+   {
+    "caption": "to calm down",
+    "set": "horizontal",
+    "prompt": "prompts/4265_to_calm_down.txt",
+    "risk": "Model may keep the red crest (biggest risk; it carries 'angry'); the green parrot's full body was hidden in the source so its design may drift; the blue parrot may still be touching it.",
+    "drop": false
+   },
+   {
+    "caption": "to calm a barking dog",
+    "set": "horizontal",
+    "prompt": "prompts/4265_to_calm_a_barking_dog.txt",
+    "risk": "Wing stroking the head while hugging may produce an extra wing; the dog may look calm instead of barking; style drift to a different 3D look.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 461,
+  "word": "a mannequin",
+  "style": "photo (phone snapshot, sunlight)",
+  "still": "stills/461.png",
+  "inventory": "none: no shop sign, labels or logos on T-shirt, shirt, scarf or mannequin base; dark shop interior with ceiling spot lights and a person silhouette (no text); thin chain necklace on the mannequin",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "shop-window mannequin",
+    "set": "vertical",
+    "prompt": "prompts/461_shop_window_mannequin.txt",
+    "risk": "Glass/reflection rendering may hide the mannequin or put it in front of the glass; shop windows invite lettering or price tags (forbidden); the woman's position change may alter her face.",
+    "drop": false
+   },
+   {
+    "caption": "dressmaker's mannequin",
+    "set": "vertical",
+    "prompt": "prompts/461_dressmaker_s_mannequin.txt",
+    "risk": "Tape measure may get digits (forbidden; local retouch if small); the woman kneeling is a big pose change at the frame edge; the dress form may keep a head.",
+    "drop": false
+   },
+   {
+    "caption": "to dress a mannequin",
+    "set": "horizontal",
+    "prompt": "prompts/461_to_dress_a_mannequin.txt",
+    "risk": "Removing the man leaves a large inpaint area (wall/frame may warp); half-on shirt over a raised arm may tangle with her hands; the woman may change face.",
+    "drop": false
+   },
+   {
+    "caption": "to carry a mannequin",
+    "set": "horizontal",
+    "prompt": "prompts/461_to_carry_a_mannequin.txt",
+    "risk": "Body-on-body overlap (mannequin limbs crossing his arms/head) is the main anatomy risk; mannequin may get duplicated; the man's waving hand from the source may survive as an extra arm.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 432,
+  "word": "to lead",
+  "style": "2D anime illustration (dusk)",
+  "still": "stills/432.png",
+  "inventory": "none: no logos or lettering on backpacks, jackets or lantern; no watermark",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "was leading knights to a castle",
+    "set": "vertical",
+    "prompt": "prompts/432_was_leading_knights_to_a_castle.txt",
+    "risk": "Castle may be small in the haze (R7: named large); shields/armour may gain heraldry (forbidden); the torch flame may be lost into a lantern again.",
+    "drop": false
+   },
+   {
+    "caption": "will be leading robots on Mars",
+    "set": "vertical",
+    "prompt": "prompts/432_will_be_leading_robots_on_mars.txt",
+    "risk": "Robots/spacesuit often get numbers or flag patches (forbidden, retouch if tiny); count of robots may drift; the sky may go blue instead of pink.",
+    "drop": false
+   },
+   {
+    "caption": "to lead a horse",
+    "set": "horizontal",
+    "prompt": "prompts/432_to_lead_a_horse.txt",
+    "risk": "The horse may be placed in front of her and cover her; reins may detach from the hand; four-leg anatomy; she may end up mounted.",
+    "drop": false
+   },
+   {
+    "caption": "to lead the race",
+    "set": "horizontal",
+    "prompt": "prompts/432_to_lead_the_race.txt",
+    "risk": "Race bibs strongly invite digits (forbidden; retouch if small, or drop bibs on retry); from the rear camera her lead depends on the runners' size/gap; daylight conversion may restyle the scene.",
+    "drop": false
+   }
+  ]
+ },
+ {
+  "id": 624,
+  "word": "to run",
+  "style": "2D anime, soft watercolour backgrounds",
+  "still": "stills/624.png",
+  "inventory": "none: no logos or lettering; the straw hat's blue band is plain",
+  "originalRetouch": "none",
+  "items": [
+   {
+    "caption": "ran after a hat",
+    "set": "vertical",
+    "prompt": "prompts/624_ran_after_a_hat.txt",
+    "risk": "Era cue (village) may be too small behind the trees; the bonnet may land on her head instead of flying ahead; long dress may break the running-leg pose.",
+    "drop": false
+   },
+   {
+    "caption": "will run after a hat",
+    "set": "vertical",
+    "prompt": "prompts/624_will_run_after_a_hat.txt",
+    "risk": "Futuristic city invites glowing signs/screens with text (forbidden); the city may be too small to read as 'future' at thumbnail size.",
+    "drop": false
+   },
+   {
+    "caption": "to run a race",
+    "set": "horizontal",
+    "prompt": "prompts/624_to_run_a_race.txt",
+    "risk": "The model may add race numbers on vests or lettering on the tape (forbidden); new runners can duplicate her face; finish tape may be drawn as a ribbon not held by anyone.",
+    "drop": false
+   },
+   {
+    "caption": "to run for the bus",
+    "set": "horizontal",
+    "prompt": "prompts/624_to_run_for_the_bus.txt",
+    "risk": "Bus fronts/backs invite route numbers, destination text or number plates (forbidden, the top risk); a stopped bus would read as 'catching' not 'running for'.",
+    "drop": false
+   },
+   {
+    "caption": "to run out of breath",
+    "set": "horizontal",
+    "prompt": "prompts/624_to_run_out_of_breath.txt",
+    "risk": "Pose change may alter her face; she may be rendered sitting or kneeling; sweat drops may be lost (then it reads as just resting).",
+    "drop": false
+   }
+  ]
+ }
+]
