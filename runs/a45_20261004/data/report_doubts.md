@@ -1,0 +1,4 @@
+- 4891 (b017): failed the first verification (no phrase fit only its target in a crowd that all lean and laugh); rewritten with unique targets (the students as one group, the tower, the trees) and passed an independent second verification.
+- 5460 (b021): failed the first verification (everyone in the clip hurries to the bins; identities across cuts unreliable); rewritten (the pendulum ride; the curly-haired man who supports his sick friend and later turns green) and FIXED by an independent second verifier (identity across cuts inferred from T-shirt, hair and partner).
+- 5489 (b021): verifier doubt: an AI duplicate of the woman in the background at 6.0-7.0 s (clip QC), bikini under the feather coat (owner to check suitability).
+- 5705 (b023): verifier doubt: the cat stands up from 2.2 s, so "to sit on a car" is true only for the first half.

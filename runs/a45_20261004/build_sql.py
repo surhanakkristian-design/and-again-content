@@ -1,8 +1,9 @@
-# A45: guarded batch write of content/<id>.json (+ audio manifests) into public.media_exercise_sets.
+# A45 (5 Oct: + width / height, the picture shape; needs migration 20261005100000): guarded batch write of content/<id>.json (+ audio manifests) into public.media_exercise_sets.
 #   python3 build_sql.py <batch> <id> [...]  -> out/<batch>_data_NN.sql (each one transaction, < 900 kB), out/<batch>_rollback.sql,
 #   batches/<batch>.json (ids, files, audio objects). Stops when a video fails validate.py.
 import json, os, sys
 from validate import check
+from shape import shape, build as build_shape
 HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = 'https://abyrutykpvmzkfbesire.supabase.co/storage/v1/object/public/audio/'
 batch, ids = sys.argv[1], [int(x) for x in sys.argv[2:]]
@@ -18,7 +19,7 @@ for i in ids:
     taps = [{'phrase': t['phrase'], 'target': t['target'], 'voice': t['voice'], 'audio_url': url[('tap', n + 1)], 'keys': t['keys']} for n, t in enumerate(c['taps'])]
     nouns = [{'word': x['word'], 'x': x['x'], 'y': x['y'], 'voice': x['voice'], 'audio_url': url[('noun', n + 1)]} for n, x in enumerate(c['nouns'])]
     ans_s = 'null' if c.get('answerS') is None else str(c['answerS'])
-    rows.append((i, f"({i}, '{c['level']}', 'live', '{c['defaultVoice']}', {j(taps)}, {j(nouns)}, {c['stillS']}, {ans_s}, {q(c['question'])}, {j(c['answer'])}, {q(' '.join(c['answer']))}, '{c['answerVoice']}', {q(url[('answer', '')])}, {j(c['tr'])}, {j(m['voices'])})"))
+    rows.append((i, f"({i}, '{c['level']}', 'live', '{c['defaultVoice']}', {j(taps)}, {j(nouns)}, {c['stillS']}, {ans_s}, {q(c['question'])}, {j(c['answer'])}, {q(' '.join(c['answer']))}, '{c['answerVoice']}', {q(url[('answer', '')])}, {j(c['tr'])}, {j(m['voices'])}, {shape(i)[0]}, {shape(i)[1]})"))
 parts, cur, size = [], [], 0
 for r in rows:
     if cur and size + len(r[1].encode()) > 850_000: parts.append(cur); cur, size = [], 0
@@ -33,7 +34,7 @@ do $g$ begin
   if exists (select 1 from public.media_exercise_sets where media_id in ({pid})) then raise exception 'A45 {batch}/{n}: rows exist already, nothing written'; end if;
   if (select count(*) from public.media where media_type = 'video' and id in ({pid})) <> {len(part)} then raise exception 'A45 {batch}/{n}: not all ids are videos, nothing written'; end if;
 end $g$;
-insert into public.media_exercise_sets (media_id, level, status, default_voice, taps, nouns, still_s, answer_s, question, answer_chips, answer_text, answer_voice, answer_audio_url, tr, voice_names) values
+insert into public.media_exercise_sets (media_id, level, status, default_voice, taps, nouns, still_s, answer_s, question, answer_chips, answer_text, answer_voice, answer_audio_url, tr, voice_names, width, height) values
 """ + ',\n'.join(r for _, r in part) + f""";
 do $g$ begin
   if (select count(*) from public.media_exercise_sets where media_id in ({pid}) and jsonb_array_length(taps) = 3 and jsonb_array_length(nouns) between 3 and 4) <> {len(part)} then raise exception 'A45 {batch}/{n}: count after the write is wrong, rolled back'; end if;
@@ -44,4 +45,5 @@ commit;
 allid = ','.join(str(i) for i in ids)
 open(f'{HERE}/out/{batch}_rollback.sql', 'w').write(f"-- A45 rollback of batch {batch} (NOT run). The rows did not exist before; the audio objects stay in storage.\nbegin;\ndelete from public.media_exercise_sets where media_id in ({allid});\ncommit;\n")
 json.dump({'batch': batch, 'ids': ids, 'sql': files, 'rollback': f'out/{batch}_rollback.sql', 'objects': objects}, open(f'{HERE}/batches/{batch}.json', 'w'), indent=1)
+build_shape(batch)  # out/<batch>_shape.sql: a no-op for these rows (they carry their shape), kept for one apply path
 print(batch, len(ids), 'videos', len(files), 'sql files', [os.path.getsize(f'{HERE}/{f}') for f in files], 'B;', len(objects), 'audio objects')

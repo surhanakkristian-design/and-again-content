@@ -1,0 +1,41 @@
+import json
+p='hu.json'; d=json.load(open(p)); log=[]
+def f(i,field,idx,new,why):
+    x=d[i]
+    old = x[field][idx] if idx is not None else x[field]
+    if idx is not None: x[field][idx]=new
+    else: x[field]=new
+    log.append(f'- {i} {field}{"["+str(idx)+"]" if idx is not None else ""}: {old} -> {new} ({why})')
+f('7198','phrases',0,'kémlelve lenézni a peremről','the fox stands on top and looks down; "átnézni a peremen" = look across it')
+f('7198','answer',None,'Kémlelve lenéz a peremről.','same wording as phrase')
+f('7207','phrases',2,'világítani a fényszóróival','shine, not switch on')
+f('7213','answer',None,'Két kézzel tart egy forró bögrét.','cradle = hold gently in both hands, "szorongat" = clutch')
+f('7214','phrases',0,'széttárni a karját','idiomatic form of throw arms wide')
+f('7214','answer',None,'Széttárja a karját.','same as phrase')
+f('7217','nouns',1,'paellaserpenyő','standard word; "paellasütő" is not in use')
+f('7219','phrases',1,'megtörölni a sáros arcát','article needed before possessed noun')
+f('7221','answer',None,'Egy lámpaoszlopba kapaszkodik.','natural word order (focus on object)')
+f('7225','phrases',1,'rögzítve maradni a helyén','clamped = rögzítve, same word as answer')
+f('7225','phrases',2,'felemelni a kesztyűs kezét','body part takes possessive in Hungarian')
+f('7230','nouns',0,'simlis sapka','flat cap; "svájcisapka" is a beret')
+f('7232','phrases',1,'takaróba bugyolálva lenni','natural participle for wrapped in a blanket')
+f('7235','phrases',2,'az ég felé sodródni','drift, not take off')
+f('7244','nouns',3,'fővízvezeték','water main; "fővezeték" alone is unspecified')
+f('7256','phrases',1,'kinyújtani az összezárt tenyerét','article needed before possessed noun')
+f('7258','phrases',1,'berakni egy fémdobozt','"berakodni" is used for cargo in general, not one object')
+f('7259','phrases',0,'szélesre tátani a csőrét','a beak is opened with tátani, not tárni')
+f('7259','nouns',2,'réteges torta','"rétegestorta" is not a compound in use')
+f('7261','phrases',0,'nehéz farmeranyagot kigöngyölíteni','unroll = kigöngyölíteni; mass noun, no article')
+f('7265','answer',None,'Kiemel egy meglazult padlódeszkát.','loose floorboard = meglazult; natural verb')
+f('7275','nouns',2,'flakon gél','"gélesflakon" is not a word in use')
+f('7275','phrases',2,'egy vesefelvételt mutatni','scan = felvétel; "vesekép" is not used')
+f('7277','phrases',0,'széttárni a karját','idiomatic form of spread arms wide')
+f('7277','phrases',1,'egyensúlyban állni egy bőröndön','the tower is balanced (state); "egyensúlyozni" is an active verb of a person')
+f('7277','answer',None,'Széttárja a karját.','same as phrase')
+f('7278','phrases',1,'lehajtani a fejét pihenni','rest its head: lays it down and rests')
+f('7278','phrases',2,'átvetve lógni az ágon','the dead antelope is draped over the branch')
+f('7285','nouns',2,'állólétra','stepladder; "fellépő" is a step stool')
+f('7293','nouns',2,'szemeteslapát','dustpan; "lapát" alone is a shovel')
+json.dump(d,open(p,'w'),ensure_ascii=False,indent=1)
+open('_fixlog_b027_hu.txt','w').write('\n'.join(log)+'\n')
+print(len(log))
