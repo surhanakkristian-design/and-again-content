@@ -1,0 +1,20 @@
+# Pre-check word 624 (run) - A51, free, no credits spent
+
+Still: a49 stills/624.png (496x864, 2D anime). Woman mid-air running left-to-right at left-centre, back leg cut by the left edge, straw hat with blue band flying at the right edge (partly cropped, small), meadow + path, big trees behind, grass tuft + pond in the foreground. The pond at the bottom left shows a DARK FIGURE-SHAPED REFLECTION of her - the old keep-block only said "no reflection of her", which an edit model tends to ignore and keep the old blue-dress silhouette. No logos or lettering in the source. Originals (backups) in /private/tmp/claude-501/a51_pre/.
+
+Applies to all three: added an explicit removal of the dark figure-shaped reflection at the bottom left of the pond (otherwise there's a leftover duplicate of the original figure). The existing strict block already covers "no real person, celebrity" and "no logos or brand names". Shoes are now said to be plain with no stripes or logos, so no famous sports-brand marks appear.
+
+## ran after a hat (past, centuries ago)
+Before: the bonnet sat "at the same place and size", so it would stay small and cropped by the right edge, giving a weak R7 cue for "hat". Her hands were not named. The eyeline only said "looking at the hat". The village had no location in a frame filled by trees, and the model might add villagers, which would confuse the reading with the race picture (other runners).
+Changed: the reflection is removed. The bonnet moves a little left, sits wholly inside the frame and grows to about a fifth of the frame width, just out of reach. Her hands are empty fists as now, and her eyes are on the bonnet. The village is placed on the horizon line between the trunks, with no people in it.
+Remaining risk: low-medium. The ankle-length skirt on a mid-air stride may hide or bend the legs oddly. The village may come out small behind the trees, which weakens "centuries ago", but the costume carries the past.
+
+## will run after a hat (future, ~1000 years ahead)
+Before: the same small, cropped hat problem as the past picture. The trainers could pick up sports-brand stripes. The propeller hat could read as a child's toy and get oversized. Her hands were not named.
+Changed: the reflection is removed. The hat sits wholly inside the frame at about a fifth of the frame width, with a small plain propeller. The trainers are plain white with no stripes or logos. Her hands are empty fists, and her eyes are on the hat.
+Remaining risk: low. Watch for glossy-3D towers, which would break the style, and any sign or screen on the towers, which would be a text hard fail. The future reading depends on the silver suit plus the city, both of which are strong.
+
+## to run a race
+Before: the frame has only about a third of free width on the right. "A tape between two officials who each hold one end" left the layout to the model, so it would likely widen the framing, crop an official or put both officials side by side with the tape running nowhere. The officials and other runners had no concrete features (R3), so the model could produce clones of the heroine, a duplicate-character fail. "Run after her" echoed the sibling captions. The shoes could get brand stripes. The old reflection would stay.
+Changed: the tape now crosses her path in depth, from one official on the near grass at the right to a second, smaller one on the far side of the path. Both officials are fictional with concrete features, and each holds one end with one hand. The two other runners are a short-haired man and a woman with a bun in grey vests, with faces unlike hers, running "behind her". The shoes are plain. The Must-NOT list now also names any hat, the pond reflection, a crowd and a stadium. The reflection is removed.
+Remaining risk: medium. Fitting the tape and two officials into the right third may still push the framing wider or crop the far official. Hands holding the tape ends are an anatomy risk. The background runners may be partly hidden at the left edge. The race itself reads clearly as long as the tape is visible.

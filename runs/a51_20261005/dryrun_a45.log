@@ -1,0 +1,11 @@
+== batch files and SQL files that name 4265
+lab10 [4265]
+out/lab10_data_01.sql
+out/lab10_dryrun.sql
+out/lab10_shape.sql
+== apply_a45.sh lab10: rows of its 10 ids in the table = 10 (n = 10)
+   -> 'batch lab10: already in the database (10 rows), skipped' (no upload, no insert)
+   shape step: rows without a shape = 0 -> returns before any update
+   insert guard (if it were ever sent): rows exist = True -> raises 'rows exist already, nothing written'
+== the patched lab10 SQL rows vs the database (taps, nouns, question, answer chips/text/audio, tr)
+   4265: content_version 3, equal: taps yes, nouns yes, question yes, chips yes, text yes, audio yes, tr yes
