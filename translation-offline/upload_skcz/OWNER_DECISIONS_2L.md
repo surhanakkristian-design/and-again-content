@@ -737,3 +737,9 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 388. **Noun slots and other markers on the picture never overlap:** each slot stays at its noun's place but is nudged apart, at least 20 px between slots and 20 px from the rail (`lib/labSlots.ts` `nudgeSlots`); the carousel's dots stand 20 px inside the picture's edge.
 389. **Exercise titles are 20 px (as the chip text; replaces the 14 px of decision 368). The recall title stays 32 px, centred.**
 390. **The layout fills the real visible screen:** the visual viewport (dynamic viewport) and the safe-area insets; with a phone's keyboard open (recall, own sentence) the step stands in the visible part above the keyboard - the field being typed in stays visible and nothing overlaps (the question's hint chips and the recall title wait until the keyboard closes).
+
+## A56 brief (5 Oct 2026)
+
+391. **A carousel caption's key word is the database word the app teaches (the concept's `word_localizations.translation`)**, e.g. 8039 = the passage sense (Durchgang / paso / passage), 8055 = the hot-air balloon (Heißluftballon / montgolfière). A51's choices stay (confirms A51 open point 2 and decision 375). and-again `CLAUDE.md` ("Carousel pictures"), run folder `runs/a51_20261005/pics/RULES.md`.
+392. **When the natural translation of a caption does not contain the translated key word, the natural translation wins** (e.g. Turkish "to lead a horse" = "bir atı yularından çekmek", "weight bench"): the natural caption is kept and marked in the report; the English caption is not replaced. Exception to decision 375 for these cases only.
+393. **Higgsfield budget for A56: at most 40 credits spent (krasty1333, balance about 9,002, nothing topped up).** The run tracks its own spending from the balance at its start, never waits for the balance to change and stops before exceeding 40. A56 is lab only; the main game is not changed.
