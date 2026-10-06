@@ -771,3 +771,12 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 404. **A German compound counts as containing the key word** (die Sporttasche, die Hantelbank, die Strandtasche).
 405. **4265's carousel pictures stay as they are** (the parrot does the calming).
 406. **German, Spanish and French stay switched off in the main app** (`lib/learnLanguages.ts`) until the owner approves turning each on.
+
+## A59 brief (6 Oct 2026)
+
+413. **Key-word phrase first, always (lab):** the first phrase of exercise 1 always contains the key word as its placeable noun ("to have a date", "to sit on a bench") and has a clear doer visible in the clip; when two people do it together, tapping either is correct (a second region, `alsoKeys`). The same phrase then comes back in exercise 2 (its noun = noun 1), exercise 4 (row 1) and the story. This holds also when exercise 1 is not shown (one actor or a scene cut).
+414. **Step numbers run 1, 2, 3 … over the exercises a video actually shows** (as A58 does): kept.
+415. **Verbs (rule for later, not built yet):** exercise 4 uses a TIMELINE instead of the mind map: past → present → future, the three carousel captions with the verb form left empty (the bank holds the forms); below it the three exercise-1 phrases as rows, as for nouns; the bank holds only correct pieces.
+416. **Verb carousel (rule for later):** exactly three tenses - one past (centuries ago), one present, one future (about 1,000 years ahead); every picture is an edit of the still (same people, same camera).
+417. **8039 help captions:** the German and Spanish help captions of `lib/labExtras.json` switch to Weg / camino (decision 403), checked by a native verifier each.
+418. **"to select" (owner correction, 6 Oct 2026): not done on purpose** - no lab item, no picture search, no carousel pictures, 0 Higgsfield credits. Decisions 415-416 stay written for a later verb pilot.
