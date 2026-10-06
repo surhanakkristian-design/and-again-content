@@ -754,3 +754,11 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 399. **Voices (each item keeps the English female / male choice):** German Anna (Premium, de_DE) / Yannick (Enhanced, de_DE); Spanish Mónica (Enhanced, es_ES) / Jorge (Enhanced, es_ES); French Aude (Enhanced, fr_BE; texts stay France French) / Thomas (Enhanced, fr_FR). Recorded by voice identifier (`com.apple.voice.premium.de-DE.Anna` ...), so the compact voice of the same name is never used.
 400. **Storage: one row per (media, learning language) in the new table `media_exercise_sets_l10n`** (migration 20261006100000); the English table `media_exercise_sets` is not touched and English works exactly as before. Regions, slots, still moment, shape and carousel pictures are copied unchanged from the English set into the row.
 401. **Learning languages stay switched off in the main app** (`lib/learnLanguages.ts`, decision 384) until the owner approves a language after the full run; only `/lab` gets a learning-language switch (EN / DE / ES / FR, `?learn=de` in a link).
+
+## A57 brief (6 Oct 2026)
+
+402. **The full run is approved: all remaining 3,034 videos × German, Spanish (Spain), French (France) go into `media_exercise_sets_l10n`** with exactly the A55 pipeline, voices and rules (decisions 394-401). Batches of 100 videos per language, resumable, guarded writes with backups; a video that still fails after one rewrite and a second verification is skipped and listed. Run folder `runs/a57_20261006`, report and-again `docs/features/reports/A57_REPORT.md`.
+403. **8039 "way": the concept's German word becomes "der Weg" and its Spanish word "el camino"** (`word_localizations` of concept 6040; French stays "le passage"). The 8039 German and Spanish rows (captions included) are rewritten so the key word is used consistently, and their voices re-recorded. Applied 6 Oct 2026 (`runs/a57_20261006/out/wl_8039.sql`, backup `backup/wl_6040_before.json`, rollback `out/wl_8039_rollback.sql`).
+404. **A German compound counts as containing the key word** (die Sporttasche, die Hantelbank, die Strandtasche).
+405. **4265's carousel pictures stay as they are** (the parrot does the calming).
+406. **German, Spanish and French stay switched off in the main app** (`lib/learnLanguages.ts`) until the owner approves turning each on.
