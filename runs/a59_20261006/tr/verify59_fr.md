@@ -1,0 +1,3 @@
+FIXED
+62 story[0]: "Un homme a rempli un grand sac de nourriture et d'une bouteille d'eau." -> "Un homme a rempli un grand sac avec de la nourriture et une bouteille d'eau." (why: "remplir de ... d'une bouteille d'eau" is an awkward zeugma with a single countable item; "avec de la nourriture et une bouteille d'eau" is natural)
+7071 story[1]: "Il l'a conduit tout droit à travers une flaque de boue, et il a ri à gorge déployée." -> "Il a conduit le quad tout droit à travers une flaque de boue, et il a ri à gorge déployée." (why: "l'" had no clear antecedent, sentence 1 only has "en quad"; name the quad, consistent with phrase "conduire un quad")
