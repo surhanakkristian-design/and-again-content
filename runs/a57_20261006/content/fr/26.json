@@ -1,0 +1,120 @@
+{
+  "mediaId": 26,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la paille",
+  "taps": [
+    {
+      "phrase": "tenir une longue paille",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "boire du jus d'orange",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "être posé sur le comptoir",
+      "target": "le verre",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les lunettes de soleil",
+      "voice": "male"
+    },
+    {
+      "word": "la paille",
+      "voice": "male"
+    },
+    {
+      "word": "le verre",
+      "voice": "male"
+    },
+    {
+      "word": "la chemise",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "boit",
+    "du",
+    "jus",
+    "avec",
+    "une",
+    "paille."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir une longue"
+        },
+        {
+          "text": "paille",
+          "gap": true,
+          "accept": [
+            "paille"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "boire du"
+        },
+        {
+          "text": "jus",
+          "gap": true,
+          "accept": [
+            "jus"
+          ]
+        },
+        {
+          "text": "d'orange"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être posé sur le"
+        },
+        {
+          "text": "comptoir",
+          "gap": true,
+          "accept": [
+            "comptoir",
+            "bar"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "boit",
+          "gap": true,
+          "accept": [
+            "boit"
+          ]
+        },
+        {
+          "text": "du jus avec une paille"
+        }
+      ]
+    }
+  ],
+  "notes": "English 'the bar' (the counter) is 'le comptoir' in French ('le bar' is the place); 'bar' accepted in recall. The glass stands on the counter in the wide shots; in the close-ups the counter is out of frame and near the end the man lifts the empty glass upside down, so phrase 3 describes most boxed frames."
+}

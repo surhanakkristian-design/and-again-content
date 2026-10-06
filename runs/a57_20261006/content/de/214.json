@@ -1,0 +1,26 @@
+{
+  "mediaId": 214, "lang": "de", "level": "A",
+  "keyWord": "gefährlich",
+  "taps": [
+    { "phrase": "auf dem Eis stehen", "target": "der Junge", "voice": "male" },
+    { "phrase": "den Jungen zurückziehen", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "in Stücke brechen", "target": "das Eis", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Schild", "voice": "male" },
+    { "word": "der Baum", "voice": "male" },
+    { "word": "der Junge", "voice": "male" },
+    { "word": "das Eis", "voice": "male" }
+  ],
+  "question": "Was macht der Junge?",
+  "answer": ["Der", "Junge", "steht", "auf", "gefährlichem", "Eis."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf dem" }, { "text": "Eis", "gap": true, "accept": ["Eis"] }, { "text": "stehen" } ] },
+    { "from": "taps", "parts": [ { "text": "den Jungen" }, { "text": "zurückziehen", "gap": true, "accept": ["zurückziehen"] } ] },
+    { "from": "taps", "parts": [ { "text": "in Stücke" }, { "text": "brechen", "gap": true, "accept": ["brechen", "zerbrechen"] } ] },
+    { "from": "answer", "parts": [ { "text": "steht auf" }, { "text": "gefährlichem", "gap": true, "accept": ["gefährlichem"] }, { "text": "Eis" } ] }
+  ],
+  "notes": "'stehen' instead of 'gehen': after one step the boy stands wobbling on the cracking ice in most boxed frames (also in the answer). Tap 2: 'den Jungen' instead of 'ihren Freund' (Freund could read as boyfriend). Tap 2 box also covers the end where both sit on the dock; the phrase describes the pulling moment. The boy's tap box also covers the final frames where he sits on the dock. Key word gefährlich is an adjective: no noun row; the answer row gaps it."
+}

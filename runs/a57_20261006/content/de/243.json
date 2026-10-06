@@ -1,0 +1,26 @@
+{
+  "mediaId": 243, "lang": "de", "level": "A",
+  "keyWord": "das Anziehen",
+  "taps": [
+    { "phrase": "einen Pullover anziehen", "target": "die Frau", "voice": "female" },
+    { "phrase": "ihr beim Anziehen helfen", "target": "der Mann", "voice": "male" },
+    { "phrase": "in den Spiegel schauen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Mütze", "voice": "female" },
+    { "word": "die Tasche", "voice": "female" },
+    { "word": "die Tür", "voice": "female" },
+    { "word": "die Jeans", "voice": "female" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "hilft", "ihr", "beim", "Anziehen."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Pullover", "gap": true, "accept": ["Pullover", "Pulli"] }, { "text": "anziehen" } ] },
+    { "from": "taps", "parts": [ { "text": "ihr beim" }, { "text": "Anziehen", "gap": true, "accept": ["Anziehen"] }, { "text": "helfen" } ] },
+    { "from": "taps", "parts": [ { "text": "in den" }, { "text": "Spiegel", "gap": true, "accept": ["Spiegel"] }, { "text": "schauen" } ] },
+    { "from": "answer", "parts": [ { "text": "hilft", "gap": true, "accept": ["hilft"] }, { "text": "ihr beim Anziehen" } ] }
+  ],
+  "notes": "Tap 1 and tap 3 share the woman's box (as in English); the sweater is put on in the first boxed frames, the mirror comes later. 'die Mütze' for the beanie (English 'hat'). No noun row: the key word is in tap row 2 and the answer."
+}

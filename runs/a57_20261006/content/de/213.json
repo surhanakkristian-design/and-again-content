@@ -1,0 +1,26 @@
+{
+  "mediaId": 213, "lang": "de", "level": "A",
+  "keyWord": "das Tanzen",
+  "taps": [
+    { "phrase": "sich im Kreis drehen", "target": "die Frau", "voice": "female" },
+    { "phrase": "mit der Frau tanzen", "target": "der Mann", "voice": "male" },
+    { "phrase": "einen bunten Rock tragen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "das Radio", "voice": "female" },
+    { "word": "der Boden", "voice": "female" }
+  ],
+  "question": "Was machen der Mann und die Frau?",
+  "answer": ["Sie", "tanzen", "in", "der", "Küche."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich im" }, { "text": "Kreis", "gap": true, "accept": ["Kreis"] }, { "text": "drehen" } ] },
+    { "from": "taps", "parts": [ { "text": "mit der Frau" }, { "text": "tanzen", "gap": true, "accept": ["tanzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen bunten" }, { "text": "Rock", "gap": true, "accept": ["Rock"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "tanzen in der" }, { "text": "Küche", "gap": true, "accept": ["Küche"] } ] }
+  ],
+  "notes": "English tap 1 'to cook on the stove' is true only in the first two boxed frames; in most boxed frames the woman dances and twirls, so 'sich im Kreis drehen' (the man does not spin). English tap 2 'to hold the woman' is true only in the last boxed frames (the dip); in most boxed frames the man comes in and dances with her, so 'mit der Frau tanzen'. 'langen' replaced by 'bunten': the skirt is knee to calf length and very colourful. Key word das Tanzen is not a noun of the set, so no noun row; tap 2 gaps 'tanzen'."
+}

@@ -1,0 +1,135 @@
+{
+ "mediaId": 221,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el título universitario",
+ "taps": [
+  {
+   "phrase": "celebrar su graduación",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "lucir un sello dorado",
+   "target": "el título",
+   "voice": "female"
+  },
+  {
+   "phrase": "revolotear por el aire",
+   "target": "el confeti",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el título universitario",
+   "voice": "female"
+  },
+  {
+   "word": "el birrete",
+   "voice": "female"
+  },
+  {
+   "word": "la borla",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está celebrando la mujer?",
+ "answer": [
+  "Está",
+  "celebrando",
+  "su",
+  "graduación."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "celebrar su"
+    },
+    {
+     "text": "graduación",
+     "gap": true,
+     "accept": [
+      "graduación"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lucir un"
+    },
+    {
+     "text": "sello",
+     "gap": true,
+     "accept": [
+      "sello"
+     ]
+    },
+    {
+     "text": "dorado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "revolotear",
+     "gap": true,
+     "accept": [
+      "revolotear",
+      "volar"
+     ]
+    },
+    {
+     "text": "por el aire"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "título",
+     "gap": true,
+     "accept": [
+      "título"
+     ]
+    },
+    {
+     "text": "universitario"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "celebrando",
+     "gap": true,
+     "accept": [
+      "celebrando",
+      "festejando"
+     ]
+    },
+    {
+     "text": "su graduación"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 'a degree certificate' = the key word 'el título universitario' (in Spain the document itself is 'el título'). Answer drops the subject, so the answer row is the whole sentence."
+}

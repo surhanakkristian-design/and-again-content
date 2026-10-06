@@ -1,0 +1,26 @@
+{
+  "mediaId": 3, "lang": "fr", "level": "A",
+  "keyWord": "la classe",
+  "taps": [
+    { "phrase": "écrire au tableau", "target": "la professeure", "voice": "female" },
+    { "phrase": "boire dans sa tasse", "target": "la professeure", "voice": "female" },
+    { "phrase": "se retourner vers la classe et sourire", "target": "la professeure", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la professeure", "voice": "female" },
+    { "word": "la tasse", "voice": "female" },
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "le tableau", "voice": "female" }
+  ],
+  "question": "Que fait la professeure ?",
+  "answer": ["Elle", "écrit", "au", "tableau."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "écrire", "gap": true, "accept": ["écrire"] }, { "text": "au tableau" } ] },
+    { "from": "taps", "parts": [ { "text": "boire dans sa" }, { "text": "tasse", "gap": true, "accept": ["tasse"] } ] },
+    { "from": "taps", "parts": [ { "text": "se retourner vers la" }, { "text": "classe", "gap": true, "accept": ["classe"] }, { "text": "et sourire" } ] },
+    { "from": "answer", "parts": [ { "text": "écrit au" }, { "text": "tableau", "gap": true, "accept": ["tableau"] } ] }
+  ],
+  "notes": "All three phrases have the same target (the teacher), as in English; the three boxes are identical. The class itself is only on screen in unboxed shots, so the key word appears once, in phrase 3 ('se retourner vers la classe': she turns from the board to face the room/camera). The last boxed frames are a close-up where she stares into the lens (shocked, not smiling); phrase 3 is true of the turn-around frames. 'la professeure' chosen over colloquial 'la prof'."
+}

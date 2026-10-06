@@ -1,0 +1,122 @@
+{
+ "mediaId": 23,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el discurso",
+ "taps": [
+  {
+   "phrase": "dar un discurso",
+   "target": "la mujer de verde",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber un poco de agua",
+   "target": "la mujer de verde",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un traje gris",
+   "target": "el hombre de gris",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las ventanas",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el micrófono",
+   "voice": "female"
+  },
+  {
+   "word": "el vaso",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer de verde?",
+ "answer": [
+  "La",
+  "mujer",
+  "está",
+  "dando",
+  "un",
+  "discurso."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar un"
+    },
+    {
+     "text": "discurso",
+     "gap": true,
+     "accept": [
+      "discurso"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber un poco de"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "traje",
+     "gap": true,
+     "accept": [
+      "traje"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "dando",
+     "gap": true,
+     "accept": [
+      "dando",
+      "pronunciando"
+     ]
+    },
+    {
+     "text": "un discurso"
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

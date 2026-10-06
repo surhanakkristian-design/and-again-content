@@ -1,0 +1,124 @@
+{
+ "mediaId": 7849,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "für alle reichen",
+ "taps": [
+  {
+   "phrase": "über der Dachterrasse hängen",
+   "target": "die Lichterkette",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich am Horizont erheben",
+   "target": "der Berg",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf einem Holzbrett liegen",
+   "target": "die Pizza",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lichterkette",
+   "voice": "male"
+  },
+  {
+   "word": "der Berg",
+   "voice": "male"
+  },
+  {
+   "word": "die Pizza",
+   "voice": "male"
+  },
+  {
+   "word": "der Krug",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die Freunde?",
+ "answer": [
+  "Sie",
+  "teilen",
+  "sich",
+  "eine",
+  "Pizza,",
+  "die",
+  "für",
+  "alle",
+  "reicht."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über der"
+    },
+    {
+     "text": "Dachterrasse",
+     "gap": true,
+     "accept": [
+      "Dachterrasse"
+     ]
+    },
+    {
+     "text": "hängen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich am"
+    },
+    {
+     "text": "Horizont",
+     "gap": true,
+     "accept": [
+      "Horizont"
+     ]
+    },
+    {
+     "text": "erheben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem Holzbrett"
+    },
+    {
+     "text": "liegen",
+     "gap": true,
+     "accept": [
+      "liegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "teilen sich eine Pizza, die für alle"
+    },
+    {
+     "text": "reicht",
+     "gap": true,
+     "accept": [
+      "reicht"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word used in the answer via a relative clause ('eine Pizza, die für alle reicht'); the comma is attached to the chip 'Pizza,'. Two strings of lights are visible; the pill names one ('die Lichterkette'). No noun row: the key word is a phrase."
+}

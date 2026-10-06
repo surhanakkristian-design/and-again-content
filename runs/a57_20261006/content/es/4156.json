@@ -1,0 +1,123 @@
+{
+ "mediaId": 4156,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "acercarse",
+ "taps": [
+  {
+   "phrase": "plantarse sobre su pecho",
+   "target": "el robot",
+   "voice": "male"
+  },
+  {
+   "phrase": "lanzarse a por el robot",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "tender las dos manos",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el seto",
+   "voice": "male"
+  },
+  {
+   "word": "la valla",
+   "voice": "male"
+  },
+  {
+   "word": "el robot",
+   "voice": "male"
+  },
+  {
+   "word": "el césped",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el robot al principio?",
+ "answer": [
+  "Se",
+  "acerca",
+  "a",
+  "la",
+  "cámara",
+  "por",
+  "el",
+  "camino."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plantarse sobre su"
+    },
+    {
+     "text": "pecho",
+     "gap": true,
+     "accept": [
+      "pecho"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lanzarse",
+     "gap": true,
+     "accept": [
+      "lanzarse",
+      "tirarse"
+     ]
+    },
+    {
+     "text": "a por el robot"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tender",
+     "gap": true,
+     "accept": [
+      "tender",
+      "extender"
+     ]
+    },
+    {
+     "text": "las dos manos"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "acerca",
+     "gap": true,
+     "accept": [
+      "acerca",
+      "aproxima"
+     ]
+    },
+    {
+     "text": "a la cámara por el camino"
+    }
+   ]
+  }
+ ],
+ "notes": "Box issues as in English: the robot box also covers the first part where it walks towards the camera (the phrase is true only in the last frames, where it stands on the man's chest); the man's boxes for phrases 2 and 3 are the same and each phrase is true only in part of them. 'por el camino' could also stand after 'Se acerca' (less natural). 'el camino' here = the path; no clash with 8039."
+}

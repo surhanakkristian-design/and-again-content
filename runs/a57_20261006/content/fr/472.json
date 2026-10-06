@@ -1,0 +1,128 @@
+{
+ "mediaId": 472,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le mécanicien",
+ "taps": [
+  {
+   "phrase": "réparer une voiture",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir un outil",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "sourire à la caméra",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le mécanicien",
+   "voice": "male"
+  },
+  {
+   "word": "la voiture",
+   "voice": "male"
+  },
+  {
+   "word": "l'outil",
+   "voice": "male"
+  },
+  {
+   "word": "le sol",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "répare",
+  "une",
+  "voiture."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "réparer une"
+    },
+    {
+     "text": "voiture",
+     "gap": true,
+     "accept": [
+      "voiture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "outil",
+     "gap": true,
+     "accept": [
+      "outil"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à la caméra"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "mécanicien",
+     "gap": true,
+     "accept": [
+      "mécanicien"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "répare",
+     "gap": true,
+     "accept": [
+      "répare"
+     ]
+    },
+    {
+     "text": "une voiture"
+    }
+   ]
+  }
+ ],
+ "notes": "He smiles at the camera only in the last boxed frames (the box covers the whole clip); phrase 3 kept as in English. Noun 3 'l'outil' = the impact wrench in his hands."
+}

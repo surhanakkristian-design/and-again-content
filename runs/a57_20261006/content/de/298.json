@@ -1,0 +1,125 @@
+{
+ "mediaId": 298,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Umkleidekabine",
+ "taps": [
+  {
+   "phrase": "mehrere Outfits anprobieren",
+   "target": "die blonde Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Outfits bewerten",
+   "target": "die dunkelhaarige Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Tresen dösen",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Vorhang",
+   "voice": "female"
+  },
+  {
+   "word": "der Kleiderhaufen",
+   "voice": "female"
+  },
+  {
+   "word": "die Sandalen",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die blonde Frau?",
+ "answer": [
+  "Sie",
+  "probiert",
+  "in",
+  "einer",
+  "Umkleidekabine",
+  "Outfits",
+  "an."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mehrere Outfits"
+    },
+    {
+     "text": "anprobieren",
+     "gap": true,
+     "accept": [
+      "anprobieren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Outfits"
+    },
+    {
+     "text": "bewerten",
+     "gap": true,
+     "accept": [
+      "bewerten",
+      "beurteilen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Tresen",
+     "gap": true,
+     "accept": [
+      "Tresen",
+      "Theke"
+     ]
+    },
+    {
+     "text": "dösen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "probiert in einer"
+    },
+    {
+     "text": "Umkleidekabine",
+     "gap": true,
+     "accept": [
+      "Umkleidekabine",
+      "Umkleide"
+     ]
+    },
+    {
+     "text": "Outfits an"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: English 'give a thumbs up' happens only in the last boxed frames; in most boxed frames the friend yawns, gives thumbs down, then thumbs up, so 'die Outfits bewerten' (B1). Phrase 3: the dog lies still with its head down ('dösen', B2); it sits up in the last frames. Answer: German also allows 'Sie probiert Outfits in einer Umkleidekabine an.' (second chip order). Key word not a noun of the set, so no noun row."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 50,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el tarro",
+ "taps": [
+  {
+   "phrase": "sujetar la manga pastelera",
+   "target": "la mano",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un guante negro",
+   "target": "la mano",
+   "voice": "female"
+  },
+  {
+   "phrase": "llenarse de crema",
+   "target": "el tarro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el guante",
+   "voice": "female"
+  },
+  {
+   "word": "la manga pastelera",
+   "voice": "female"
+  },
+  {
+   "word": "el tarro",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mano?",
+ "answer": [
+  "Está",
+  "llenando",
+  "un",
+  "tarro",
+  "de",
+  "crema."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar",
+     "gap": true,
+     "accept": [
+      "sujetar",
+      "sostener",
+      "agarrar"
+     ]
+    },
+    {
+     "text": "la manga pastelera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "guante",
+     "gap": true,
+     "accept": [
+      "guante"
+     ]
+    },
+    {
+     "text": "negro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llenarse",
+     "gap": true,
+     "accept": [
+      "llenarse"
+     ]
+    },
+    {
+     "text": "de crema"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está llenando un"
+    },
+    {
+     "text": "tarro",
+     "gap": true,
+     "accept": [
+      "tarro"
+     ]
+    },
+    {
+     "text": "de crema"
+    }
+   ]
+  }
+ ],
+ "notes": "'la manga pastelera' is the only natural word for the piping bag (above A2, plain right word). Phrases 1 and 2 both have the hand as target, as in English."
+}

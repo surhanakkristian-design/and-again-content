@@ -1,0 +1,130 @@
+{
+ "mediaId": 680,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le chanteur",
+ "taps": [
+  {
+   "phrase": "chanter une chanson",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "toucher son casque",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être assis derrière la vitre",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la chanteuse",
+   "voice": "female"
+  },
+  {
+   "word": "le casque",
+   "voice": "female"
+  },
+  {
+   "word": "le micro",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "chante",
+  "dans",
+  "un",
+  "micro."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "chanter",
+     "gap": true,
+     "accept": [
+      "chanter"
+     ]
+    },
+    {
+     "text": "une chanson"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toucher son"
+    },
+    {
+     "text": "casque",
+     "gap": true,
+     "accept": [
+      "casque"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis derrière la"
+    },
+    {
+     "text": "vitre",
+     "gap": true,
+     "accept": [
+      "vitre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "chanteuse",
+     "gap": true,
+     "accept": [
+      "chanteuse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "chante dans un"
+    },
+    {
+     "text": "micro",
+     "gap": true,
+     "accept": [
+      "micro",
+      "microphone"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The singer is a woman: noun 1 uses the feminine 'la chanteuse' for keyWord 'le chanteur' (proposal: accept the feminine form). Phrase 3: English 'sit at a desk'; the man sits at a mixing console behind the studio glass, so 'être assis derrière la vitre' (fits only him, A2) instead of an awkward 'être assis à un bureau'. 'le casque' = headphones (everyday French), 'le micro' = microphone."
+}

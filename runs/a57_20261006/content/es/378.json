@@ -1,0 +1,116 @@
+{
+ "mediaId": 378,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el amanecer",
+ "taps": [
+  {
+   "phrase": "posarse en una barandilla",
+   "target": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "phrase": "sobrevolar los tejados",
+   "target": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "phrase": "proyectar largos rayos dorados",
+   "target": "el sol",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "los tejados",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el pájaro?",
+ "answer": [
+  "Sobrevuela",
+  "los",
+  "tejados",
+  "al",
+  "amanecer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "posarse en una"
+    },
+    {
+     "text": "barandilla",
+     "gap": true,
+     "accept": [
+      "barandilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sobrevolar",
+     "gap": true,
+     "accept": [
+      "sobrevolar"
+     ]
+    },
+    {
+     "text": "los tejados"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "proyectar largos"
+    },
+    {
+     "text": "rayos",
+     "gap": true,
+     "accept": [
+      "rayos"
+     ]
+    },
+    {
+     "text": "dorados"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Sobrevuela los tejados"
+    },
+    {
+     "text": "al"
+    },
+    {
+     "text": "amanecer",
+     "gap": true,
+     "accept": [
+      "amanecer"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word in the answer ('al amanecer'). 'Al amanecer' could also open the sentence, but then the capitalised first chip fixes the order."
+}

@@ -1,0 +1,137 @@
+{
+  "mediaId": 659,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el champú",
+  "taps": [
+    {
+      "phrase": "lavarle el pelo al hombre",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "estar detrás del lavabo",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "cerrar los ojos",
+      "target": "el hombre",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el champú",
+      "voice": "female"
+    },
+    {
+      "word": "la botella",
+      "voice": "female"
+    },
+    {
+      "word": "la mano",
+      "voice": "female"
+    },
+    {
+      "word": "la pared",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer?",
+  "answer": [
+    "Le",
+    "está",
+    "lavando",
+    "el",
+    "pelo",
+    "al",
+    "hombre."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lavarle el"
+        },
+        {
+          "text": "pelo",
+          "gap": true,
+          "accept": [
+            "pelo"
+          ]
+        },
+        {
+          "text": "al hombre"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar detrás del"
+        },
+        {
+          "text": "lavabo",
+          "gap": true,
+          "accept": [
+            "lavabo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cerrar",
+          "gap": true,
+          "accept": [
+            "cerrar"
+          ]
+        },
+        {
+          "text": "los ojos"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "el"
+        },
+        {
+          "text": "champú",
+          "gap": true,
+          "accept": [
+            "champú"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Le está"
+        },
+        {
+          "text": "lavando",
+          "gap": true,
+          "accept": [
+            "lavando"
+          ]
+        },
+        {
+          "text": "el pelo al hombre"
+        }
+      ]
+    }
+  ],
+  "notes": "Box 3 (the man) also covers the foam-tower shots and the end where his eyes are open; he has his eyes closed in the washing shots. Chips: 'Le está lavando al hombre el pelo' is grammatical but marked; the natural order is the model one."
+}

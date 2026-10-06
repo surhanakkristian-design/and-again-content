@@ -1,0 +1,122 @@
+{
+ "mediaId": 558,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "jugar",
+ "taps": [
+  {
+   "phrase": "volar por encima de la red",
+   "target": "la pelota",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar tumbado en la hierba",
+   "target": "el chico del sombrero",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una cinta en la cabeza",
+   "target": "el chico de azul",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la pelota",
+   "voice": "male"
+  },
+  {
+   "word": "la red",
+   "voice": "male"
+  },
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hacen los amigos?",
+ "answer": [
+  "Están",
+  "jugando",
+  "al",
+  "voleibol."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar por encima de la"
+    },
+    {
+     "text": "red",
+     "gap": true,
+     "accept": [
+      "red"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado"
+     ]
+    },
+    {
+     "text": "en la hierba"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "cinta",
+     "gap": true,
+     "accept": [
+      "cinta"
+     ]
+    },
+    {
+     "text": "en la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "jugando",
+     "gap": true,
+     "accept": [
+      "jugando"
+     ]
+    },
+    {
+     "text": "al voleibol"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses 'jugar al voleibol' (the natural Spanish collocation for the key word) instead of a literal 'jugar con una pelota'. Phrase 3: English 'to hold the ball up' is not visible in any boxed frame (the man in blue runs, laughs and hugs, never holds the ball), so 'llevar una cinta en la cabeza' (his headband, true in every boxed frame and only of him). 'el sombrero' for the bucket hat."
+}

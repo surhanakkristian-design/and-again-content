@@ -1,0 +1,117 @@
+{
+  "mediaId": 287,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "lejos",
+  "taps": [
+    {
+      "phrase": "señalar un pueblo",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "mirar hacia atrás",
+      "target": "el hombre de verde",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar una chaqueta roja",
+      "target": "la persona de rojo",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cielo",
+      "voice": "female"
+    },
+    {
+      "word": "el pueblo",
+      "voice": "female"
+    },
+    {
+      "word": "la hierba",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está señalando la mujer?",
+  "answer": [
+    "Está",
+    "señalando",
+    "un",
+    "pueblo",
+    "que",
+    "está",
+    "muy",
+    "lejos."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "señalar un"
+        },
+        {
+          "text": "pueblo",
+          "gap": true,
+          "accept": [
+            "pueblo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar",
+          "gap": true,
+          "accept": [
+            "mirar"
+          ]
+        },
+        {
+          "text": "hacia atrás"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "chaqueta",
+          "gap": true,
+          "accept": [
+            "chaqueta",
+            "cazadora"
+          ]
+        },
+        {
+          "text": "roja"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está señalando un pueblo que está muy"
+        },
+        {
+          "text": "lejos",
+          "gap": true,
+          "accept": [
+            "lejos"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: she points only in the close-up frames; in the wide shots the red box holds her standing. Phrase 2: 'mirar hacia atrás' (he turns back to look at her) - A level, the man in green is the only one doing it. The village is a tiny white settlement on the horizon. Key word 'lejos' (adverb) is gapped in the answer row; no noun row."
+}

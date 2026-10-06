@@ -1,0 +1,145 @@
+{
+ "mediaId": 6849,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Automobil",
+ "taps": [
+  {
+   "phrase": "die Steinstufen hinunterrollen",
+   "target": "das rote Auto",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Brotkorb umklammern",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Fahrrad festhalten",
+   "target": "der junge Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Automobil",
+   "voice": "female"
+  },
+  {
+   "word": "der Korb",
+   "voice": "female"
+  },
+  {
+   "word": "die Wäsche",
+   "voice": "female"
+  },
+  {
+   "word": "das Kopfsteinpflaster",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht das rote Automobil?",
+ "answer": [
+  "Das",
+  "Automobil",
+  "rollt",
+  "die",
+  "steilen",
+  "Stufen",
+  "hinunter."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Steinstufen"
+    },
+    {
+     "text": "hinunterrollen",
+     "gap": true,
+     "accept": [
+      "hinunterrollen",
+      "hinabrollen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Brotkorb",
+     "gap": true,
+     "accept": [
+      "Brotkorb",
+      "Korb"
+     ]
+    },
+    {
+     "text": "umklammern"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Fahrrad",
+     "gap": true,
+     "accept": [
+      "Fahrrad",
+      "Rad"
+     ]
+    },
+    {
+     "text": "festhalten"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Automobil",
+     "gap": true,
+     "accept": [
+      "Automobil",
+      "Auto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rollt",
+     "gap": true,
+     "accept": [
+      "rollt",
+      "fährt"
+     ]
+    },
+    {
+     "text": "die steilen Stufen"
+    },
+    {
+     "text": "hinunter"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: 'das Automobil' is dated/formal German; the everyday word is 'das Auto'. It is acceptable here because the car is a vintage car, so I used it in the noun and the answer; proposal: owner may switch the concept's German word to 'das Auto'. Recall noun row accepts 'Auto' too."
+}

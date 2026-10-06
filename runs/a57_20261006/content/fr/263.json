@@ -1,0 +1,116 @@
+{
+ "mediaId": 263,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "émerger",
+ "taps": [
+  {
+   "phrase": "émerger du lac",
+   "target": "la nageuse",
+   "voice": "female"
+  },
+  {
+   "phrase": "relever ses lunettes de natation",
+   "target": "la nageuse",
+   "voice": "female"
+  },
+  {
+   "phrase": "flotter près de la rive",
+   "target": "la barque",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lunettes de natation",
+   "voice": "female"
+  },
+  {
+   "word": "la barque",
+   "voice": "female"
+  },
+  {
+   "word": "le reflet",
+   "voice": "female"
+  },
+  {
+   "word": "les montagnes",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la nageuse ?",
+ "answer": [
+  "Elle",
+  "émerge",
+  "du",
+  "lac."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "émerger du"
+    },
+    {
+     "text": "lac",
+     "gap": true,
+     "accept": [
+      "lac"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "relever",
+     "gap": true,
+     "accept": [
+      "relever",
+      "remonter"
+     ]
+    },
+    {
+     "text": "ses lunettes de natation"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotter près de la"
+    },
+    {
+     "text": "rive",
+     "gap": true,
+     "accept": [
+      "rive",
+      "berge"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "émerge",
+     "gap": true,
+     "accept": [
+      "émerge",
+      "surgit"
+     ]
+    },
+    {
+     "text": "du lac"
+    }
+   ]
+  }
+ ],
+ "notes": "B words: émerger, relever ses lunettes, la rive, le reflet, la barque. The boat lies still near the shore; 'flotter' kept."
+}

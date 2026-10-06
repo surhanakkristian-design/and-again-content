@@ -1,0 +1,119 @@
+{
+ "mediaId": 192,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le coin",
+ "taps": [
+  {
+   "phrase": "rentrer dans le coin",
+   "target": "la planche",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter des vêtements orange",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter des lunettes",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "le coin",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "question": "Où mettent-ils la planche ?",
+ "answer": [
+  "Ils",
+  "la",
+  "mettent",
+  "dans",
+  "le",
+  "coin."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rentrer",
+     "gap": true,
+     "accept": [
+      "rentrer",
+      "entrer"
+     ]
+    },
+    {
+     "text": "dans le coin"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter des"
+    },
+    {
+     "text": "vêtements",
+     "gap": true,
+     "accept": [
+      "vêtements"
+     ]
+    },
+    {
+     "text": "orange"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter des"
+    },
+    {
+     "text": "lunettes",
+     "gap": true,
+     "accept": [
+      "lunettes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "la mettent dans le"
+    },
+    {
+     "text": "coin",
+     "gap": true,
+     "accept": [
+      "coin"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Subject 'ils' = the woman and the man; answerVoice kept female as in English."
+}

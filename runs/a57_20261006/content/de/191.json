@@ -1,0 +1,27 @@
+{
+  "mediaId": 191, "lang": "de", "level": "B",
+  "keyWord": "der Korkenzieher",
+  "taps": [
+    { "phrase": "am Korken schnuppern", "target": "der Mann", "voice": "male" },
+    { "phrase": "sich in den Korken bohren", "target": "der Korkenzieher", "voice": "male" },
+    { "phrase": "eine langärmlige Bluse tragen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Korkenzieher", "voice": "male" },
+    { "word": "der Korken", "voice": "male" },
+    { "word": "die Flasche", "voice": "male" },
+    { "word": "der Kochtopf", "voice": "male" }
+  ],
+  "question": "Wie öffnet der Mann die Flasche?",
+  "answer": ["Er", "öffnet", "die", "Flasche", "mit", "einem", "Korkenzieher."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "am Korken" }, { "text": "schnuppern", "gap": true, "accept": ["schnuppern", "riechen"] } ] },
+    { "from": "taps", "parts": [ { "text": "sich in den Korken" }, { "text": "bohren", "gap": true, "accept": ["bohren", "drehen", "schrauben"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine langärmlige" }, { "text": "Bluse", "gap": true, "accept": ["Bluse"] }, { "text": "tragen" } ] },
+    { "from": "nouns", "parts": [ { "text": "der" }, { "text": "Korkenzieher", "gap": true, "accept": ["Korkenzieher"] } ] },
+    { "from": "answer", "parts": [ { "text": "öffnet die" }, { "text": "Flasche", "gap": true, "accept": ["Flasche", "Weinflasche"] }, { "text": "mit einem Korkenzieher" } ] }
+  ],
+  "notes": "Tap 1: the red box (the man's hands/body) also covers twisting, pouring and drinking; the phrase describes the sniffing moment (box_04). 'schnuppern' chosen for B level (riechen accepted). Tap 2: the green box also covers frames where the corkscrew holds the pulled cork or lies on the table. Woman's garment = 'Bluse' (verifier: 'Hemd' removed from accept, 'eine langärmlige Hemd' is ungrammatical). Answer: German also allows 'Er öffnet mit einem Korkenzieher die Flasche' (marked order). Noun row added because Korkenzieher is in no tap row."
+}

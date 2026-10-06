@@ -1,0 +1,116 @@
+{
+ "mediaId": 4858,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Spirale",
+ "taps": [
+  {
+   "phrase": "den ersten Dominostein umstoßen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Fäuste ballen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine riesige Spirale bilden",
+   "target": "die Dominosteine",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Spirale",
+   "voice": "male"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "der Boden",
+   "voice": "male"
+  }
+ ],
+ "question": "Was hat der Mann gebaut?",
+ "answer": [
+  "Er",
+  "hat",
+  "eine",
+  "riesige",
+  "Dominospirale",
+  "gebaut."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den ersten Dominostein"
+    },
+    {
+     "text": "umstoßen",
+     "gap": true,
+     "accept": [
+      "umstoßen",
+      "anstoßen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Fäuste"
+    },
+    {
+     "text": "ballen",
+     "gap": true,
+     "accept": [
+      "ballen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine riesige"
+    },
+    {
+     "text": "Spirale",
+     "gap": true,
+     "accept": [
+      "Spirale"
+     ]
+    },
+    {
+     "text": "bilden"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hat eine riesige Dominospirale"
+    },
+    {
+     "text": "gebaut",
+     "gap": true,
+     "accept": [
+      "gebaut",
+      "aufgebaut"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "German also allows 'Er hat aus Dominosteinen eine riesige Spirale gebaut.' with the same chips (two orders). In the box frames the man mostly points at / nudges the dominoes; phrase 1 kept as in English. VERIFIER: answer changed to 'Er hat eine riesige Dominospirale gebaut.' so the chips allow only one natural order."
+}

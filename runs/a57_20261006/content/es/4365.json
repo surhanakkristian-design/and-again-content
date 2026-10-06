@@ -1,0 +1,126 @@
+{
+ "mediaId": 4365,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "fresco",
+ "taps": [
+  {
+   "phrase": "llevar panecillos frescos",
+   "target": "la mujer mayor",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar una tarta de frutas",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un delantal rojo",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la tarta",
+   "voice": "female"
+  },
+  {
+   "word": "los panecillos",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué lleva la mujer mayor?",
+ "answer": [
+  "Lleva",
+  "panecillos",
+  "frescos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "panecillos"
+    },
+    {
+     "text": "frescos",
+     "gap": true,
+     "accept": [
+      "frescos",
+      "recién hechos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "tarta",
+     "gap": true,
+     "accept": [
+      "tarta"
+     ]
+    },
+    {
+     "text": "de frutas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "delantal",
+     "gap": true,
+     "accept": [
+      "delantal"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Lleva"
+    },
+    {
+     "text": "panecillos",
+     "gap": true,
+     "accept": [
+      "panecillos",
+      "bollos"
+     ]
+    },
+    {
+     "text": "frescos"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box also covers later frames where the older woman stands at the table without the tray; the phrase describes her taking the tray out of the oven (English box as given). Answer has no subject (Spanish drops it), so the answer recall row is the whole sentence. 'frescos' used for just-baked rolls; 'recién hechos' accepted as equally right."
+}

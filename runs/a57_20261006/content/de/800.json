@@ -1,0 +1,121 @@
+{
+  "mediaId": 800,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Training",
+  "taps": [
+    {
+      "phrase": "mit dem Ball laufen",
+      "target": "der Mann in Gelb",
+      "voice": "male"
+    },
+    {
+      "phrase": "in die Hände klatschen",
+      "target": "der Mann in Schwarz",
+      "voice": "male"
+    },
+    {
+      "phrase": "die Hand heben",
+      "target": "der Mann in Schwarz",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "male"
+    },
+    {
+      "word": "die Lampe",
+      "voice": "male"
+    },
+    {
+      "word": "der Ball",
+      "voice": "male"
+    },
+    {
+      "word": "das Gras",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann in Gelb?",
+  "answer": [
+    "Er",
+    "läuft",
+    "mit",
+    "dem",
+    "Ball."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit dem"
+        },
+        {
+          "text": "Ball",
+          "gap": true,
+          "accept": [
+            "Ball"
+          ]
+        },
+        {
+          "text": "laufen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in die Hände"
+        },
+        {
+          "text": "klatschen",
+          "gap": true,
+          "accept": [
+            "klatschen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Hand",
+          "gap": true,
+          "accept": [
+            "Hand"
+          ]
+        },
+        {
+          "text": "heben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "läuft",
+          "gap": true,
+          "accept": [
+            "läuft",
+            "rennt"
+          ]
+        },
+        {
+          "text": "mit dem Ball"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Training' is not a noun of the set and is not used in the exercises (no natural slot; 'beim Training' in the answer would allow two word orders). Phrase 1: the red box also covers the end where the man in yellow lies laughing on the grass. Phrase 3: the coach raises one finger/hand in the early frames only. Noun 2 = the floodlight ('das Flutlicht' is above level A, so 'die Lampe')."
+}

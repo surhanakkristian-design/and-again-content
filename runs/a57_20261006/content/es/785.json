@@ -1,0 +1,117 @@
+{
+  "mediaId": 785,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el horario",
+  "taps": [
+    {
+      "phrase": "mirar su reloj",
+      "target": "el niño",
+      "voice": "male"
+    },
+    {
+      "phrase": "mostrar trenes y relojes",
+      "target": "el horario",
+      "voice": "male"
+    },
+    {
+      "phrase": "llegar a la estación",
+      "target": "el tren",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el horario",
+      "voice": "male"
+    },
+    {
+      "word": "el niño",
+      "voice": "male"
+    },
+    {
+      "word": "el banco",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el niño?",
+  "answer": [
+    "El",
+    "niño",
+    "está",
+    "mirando",
+    "el",
+    "horario."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar",
+          "gap": true,
+          "accept": [
+            "mirar"
+          ]
+        },
+        {
+          "text": "su reloj"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mostrar"
+        },
+        {
+          "text": "trenes",
+          "gap": true,
+          "accept": [
+            "trenes"
+          ]
+        },
+        {
+          "text": "y relojes"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llegar",
+          "gap": true,
+          "accept": [
+            "llegar"
+          ]
+        },
+        {
+          "text": "a la estación"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está mirando"
+        },
+        {
+          "text": "el"
+        },
+        {
+          "text": "horario",
+          "gap": true,
+          "accept": [
+            "horario"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Red box (boy) also covers frames where he stares at the board, points or runs; he looks at his watch in the middle frames (same as English). No noun row: the key word is already in the answer row."
+}

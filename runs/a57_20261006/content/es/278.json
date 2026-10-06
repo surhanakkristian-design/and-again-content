@@ -1,0 +1,128 @@
+{
+ "mediaId": 278,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la sentadilla",
+ "taps": [
+  {
+   "phrase": "asomar por encima de los árboles",
+   "target": "el sol",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una trenza larga",
+   "target": "la mujer de lila",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar unas mallas verde oscuro",
+   "target": "la mujer de blanco",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sol",
+   "voice": "female"
+  },
+  {
+   "word": "la palmera",
+   "voice": "female"
+  },
+  {
+   "word": "la trenza",
+   "voice": "female"
+  },
+  {
+   "word": "el césped",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué ejercicio hace el grupo?",
+ "answer": [
+  "Hacen",
+  "sentadillas",
+  "en",
+  "el",
+  "césped."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomar",
+     "gap": true,
+     "accept": [
+      "asomar",
+      "salir"
+     ]
+    },
+    {
+     "text": "por encima de"
+    },
+    {
+     "text": "los árboles"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "trenza",
+     "gap": true,
+     "accept": [
+      "trenza"
+     ]
+    },
+    {
+     "text": "larga"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar unas"
+    },
+    {
+     "text": "mallas",
+     "gap": true,
+     "accept": [
+      "mallas",
+      "leggings"
+     ]
+    },
+    {
+     "text": "verde oscuro"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Hacen"
+    },
+    {
+     "text": "sentadillas",
+     "gap": true,
+     "accept": [
+      "sentadillas"
+     ]
+    },
+    {
+     "text": "en el césped"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (natural in Spanish), so the recall row is the whole sentence. Squats are done in the first seconds only; later lunges and arm raises."
+}

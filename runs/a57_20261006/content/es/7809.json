@@ -1,0 +1,113 @@
+{
+ "mediaId": 7809,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el dólar",
+ "taps": [
+  {
+   "phrase": "coger un dólar",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "pagar la tarta",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír al hombre",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el batido",
+   "voice": "female"
+  },
+  {
+   "word": "la tarta",
+   "voice": "female"
+  },
+  {
+   "word": "los dólares",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué coge la mujer?",
+ "answer": [
+  "Coge",
+  "un",
+  "dólar."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger un"
+    },
+    {
+     "text": "dólar",
+     "gap": true,
+     "accept": [
+      "dólar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pagar",
+     "gap": true,
+     "accept": [
+      "pagar"
+     ]
+    },
+    {
+     "text": "la tarta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "al hombre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Coge",
+     "gap": true,
+     "accept": [
+      "Coge",
+      "Toma"
+     ]
+    },
+    {
+     "text": "un dólar"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 2: English 'a drink' is a milkshake; 'el batido' is the everyday word in Spain. Answer kept short (3 chips) to keep one word order."
+}

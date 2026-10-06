@@ -1,0 +1,129 @@
+{
+ "mediaId": 259,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "unheimlich",
+ "taps": [
+  {
+   "phrase": "sich über den Himmel ausbreiten",
+   "target": "das rote Leuchten",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Güterbahnhof füllen",
+   "target": "die Güterwagen",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich als dunkle Silhouette abzeichnen",
+   "target": "die Bäume",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Wolken",
+   "voice": "male"
+  },
+  {
+   "word": "der Feuerball",
+   "voice": "male"
+  },
+  {
+   "word": "die Güterwagen",
+   "voice": "male"
+  },
+  {
+   "word": "die Baumkronen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was breitet sich über den Nachthimmel aus?",
+ "answer": [
+  "Ein",
+  "unheimliches",
+  "rotes",
+  "Leuchten",
+  "breitet",
+  "sich",
+  "über",
+  "den",
+  "Himmel",
+  "aus."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich über den"
+    },
+    {
+     "text": "Himmel",
+     "gap": true,
+     "accept": [
+      "Himmel",
+      "Nachthimmel"
+     ]
+    },
+    {
+     "text": "ausbreiten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Güterbahnhof",
+     "gap": true,
+     "accept": [
+      "Güterbahnhof"
+     ]
+    },
+    {
+     "text": "füllen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich als dunkle"
+    },
+    {
+     "text": "Silhouette",
+     "gap": true,
+     "accept": [
+      "Silhouette"
+     ]
+    },
+    {
+     "text": "abzeichnen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "breitet",
+     "gap": true,
+     "accept": [
+      "breitet"
+     ]
+    },
+    {
+     "text": "sich über den Himmel aus"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'unheimlich' (adjective) appears only in the model answer's subject, so no recall row carries it (the answer row drops the subject by rule). German also allows 'Über den Himmel breitet sich ein unheimliches rotes Leuchten aus.' with the same chips (second order). Phrase 1 target = the red glow; it grows and then fades, but it spreads over the sky in most boxed frames."
+}

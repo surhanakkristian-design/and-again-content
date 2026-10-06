@@ -1,0 +1,124 @@
+{
+ "mediaId": 244,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la bebida",
+ "taps": [
+  {
+   "phrase": "beber zumo de naranja",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "hacer zumo de naranja",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar posado en un palo",
+   "target": "el loro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el loro",
+   "voice": "male"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el zumo",
+   "voice": "male"
+  },
+  {
+   "word": "las naranjas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "bebiendo",
+  "un",
+  "vaso",
+  "de",
+  "zumo",
+  "de",
+  "naranja."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber",
+     "gap": true,
+     "accept": [
+      "beber",
+      "tomar"
+     ]
+    },
+    {
+     "text": "zumo de naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer"
+    },
+    {
+     "text": "zumo",
+     "gap": true,
+     "accept": [
+      "zumo"
+     ]
+    },
+    {
+     "text": "de naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar posado en un"
+    },
+    {
+     "text": "palo",
+     "gap": true,
+     "accept": [
+      "palo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está bebiendo un"
+    },
+    {
+     "text": "vaso",
+     "gap": true,
+     "accept": [
+      "vaso"
+     ]
+    },
+    {
+     "text": "de zumo de naranja"
+    }
+   ]
+  }
+ ],
+ "notes": "'posado' (B1) is the plain right word for a bird on a perch; no A-level alternative sounds native. Key word 'la bebida' appears in no exercise (as in English, the juice is named 'zumo'). Answer drops the subject, so the answer row is the whole sentence."
+}

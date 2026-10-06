@@ -1,0 +1,123 @@
+{
+ "mediaId": 5652,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "grande",
+ "taps": [
+  {
+   "phrase": "oler la pelota grande",
+   "target": "el perro",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser más grande que el perro",
+   "target": "la pelota grande",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser más pequeña que el perro",
+   "target": "la pelota pequeña",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "la pelota",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el perro?",
+ "answer": [
+  "El",
+  "perro",
+  "está",
+  "oliendo",
+  "una",
+  "pelota",
+  "grande."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "oler",
+     "gap": true,
+     "accept": [
+      "oler",
+      "olfatear"
+     ]
+    },
+    {
+     "text": "la pelota grande"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser más"
+    },
+    {
+     "text": "grande",
+     "gap": true,
+     "accept": [
+      "grande"
+     ]
+    },
+    {
+     "text": "que el perro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser más pequeña que el"
+    },
+    {
+     "text": "perro",
+     "gap": true,
+     "accept": [
+      "perro"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está oliendo una"
+    },
+    {
+     "text": "pelota",
+     "gap": true,
+     "accept": [
+      "pelota"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 2/3 compare each ball with the dog (the giant ball is taller than the dog, the normal one much smaller) instead of 'ser la pelota más grande/pequeña', which sounds unnatural as an entry. 'la pelota' = tennis ball in Spain."
+}

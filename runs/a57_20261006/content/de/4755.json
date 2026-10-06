@@ -1,0 +1,128 @@
+{
+ "mediaId": 4755,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Knochenbruch",
+ "taps": [
+  {
+   "phrase": "auf das Röntgenbild zeigen",
+   "target": "die Ärztin",
+   "voice": "female"
+  },
+  {
+   "phrase": "vor Schmerz das Gesicht verziehen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Knochenbruch erkennen lassen",
+   "target": "das Röntgenbild",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Röntgenbild",
+   "voice": "male"
+  },
+  {
+   "word": "die Ärztin",
+   "voice": "female"
+  },
+  {
+   "word": "der Gips",
+   "voice": "male"
+  },
+  {
+   "word": "die Armschlinge",
+   "voice": "male"
+  }
+ ],
+ "question": "Worauf zeigt die Ärztin?",
+ "answer": [
+  "Sie",
+  "zeigt",
+  "auf",
+  "einen",
+  "Knochenbruch",
+  "im",
+  "Röntgenbild."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf das"
+    },
+    {
+     "text": "Röntgenbild",
+     "gap": true,
+     "accept": [
+      "Röntgenbild",
+      "Bild"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor Schmerz das Gesicht"
+    },
+    {
+     "text": "verziehen",
+     "gap": true,
+     "accept": [
+      "verziehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Knochenbruch",
+     "gap": true,
+     "accept": [
+      "Knochenbruch",
+      "Bruch"
+     ]
+    },
+    {
+     "text": "erkennen lassen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeigt",
+     "gap": true,
+     "accept": [
+      "zeigt",
+      "deutet"
+     ]
+    },
+    {
+     "text": "auf einen Knochenbruch"
+    },
+    {
+     "text": "im Röntgenbild"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer: 'Sie zeigt im Röntgenbild auf einen Knochenbruch.' is a second possible chip order."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 92,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la couverture",
+ "taps": [
+  {
+   "phrase": "s'enrouler dans une couverture",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "tirer sur la couverture",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir les cheveux blonds",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "le canapé",
+   "voice": "female"
+  },
+  {
+   "word": "la couverture",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "est",
+  "assise",
+  "sous",
+  "une",
+  "grande",
+  "couverture."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'enrouler dans une"
+    },
+    {
+     "text": "couverture",
+     "gap": true,
+     "accept": [
+      "couverture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer",
+     "gap": true,
+     "accept": [
+      "tirer"
+     ]
+    },
+    {
+     "text": "sur la couverture"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir les"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    },
+    {
+     "text": "blonds"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "est"
+    },
+    {
+     "text": "assise",
+     "gap": true,
+     "accept": [
+      "assise",
+      "installée"
+     ]
+    },
+    {
+     "text": "sous une grande couverture"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the English 'to throw a big blanket' box also covers many frames where she sits wrapped in it, so 's'enrouler dans une couverture' (true of the throw-and-wrap and of most boxed frames; the man only sits under it at the end, he does not wrap himself). Phrase 2: 'tirer sur la couverture' (not 'tirer la couverture', which hints at the idiom 'tirer la couverture à soi')."
+}

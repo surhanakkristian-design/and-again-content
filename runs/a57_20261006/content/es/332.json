@@ -1,0 +1,134 @@
+{
+ "mediaId": 332,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la jirafa",
+ "taps": [
+  {
+   "phrase": "comer hojas verdes",
+   "target": "la jirafa",
+   "voice": "female"
+  },
+  {
+   "phrase": "bajar la cabeza",
+   "target": "la jirafa",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber agua",
+   "target": "la jirafa",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la jirafa",
+   "voice": "female"
+  },
+  {
+   "word": "la cebra",
+   "voice": "female"
+  },
+  {
+   "word": "el agua",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la jirafa?",
+ "answer": [
+  "Está",
+  "bebiendo",
+  "agua."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer"
+    },
+    {
+     "text": "hojas",
+     "gap": true,
+     "accept": [
+      "hojas"
+     ]
+    },
+    {
+     "text": "verdes"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bajar",
+     "gap": true,
+     "accept": [
+      "bajar"
+     ]
+    },
+    {
+     "text": "la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "jirafa",
+     "gap": true,
+     "accept": [
+      "jirafa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "bebiendo",
+     "gap": true,
+     "accept": [
+      "bebiendo",
+      "tomando"
+     ]
+    },
+    {
+     "text": "agua"
+    }
+   ]
+  }
+ ],
+ "notes": "Several zebras in the background; noun kept singular as in English (pill on one zebra). Subject dropped."
+}

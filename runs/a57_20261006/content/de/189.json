@@ -1,0 +1,26 @@
+{
+  "mediaId": 189, "lang": "de", "level": "B",
+  "keyWord": "der Konvoi",
+  "taps": [
+    { "phrase": "den Konvoi anführen", "target": "das graue Auto", "voice": "male" },
+    { "phrase": "zwischen zwei Fahrzeugen parken", "target": "das schwarze Auto", "voice": "male" },
+    { "phrase": "das Schlusslicht bilden", "target": "das weiße Auto", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Konvoi", "voice": "male" },
+    { "word": "die Bäume", "voice": "male" },
+    { "word": "der Asphalt", "voice": "male" },
+    { "word": "der Himmel", "voice": "male" }
+  ],
+  "question": "Was machen die drei Autos?",
+  "answer": ["Sie", "fahren", "im", "Konvoi."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "den" }, { "text": "Konvoi", "gap": true, "accept": ["Konvoi"] }, { "text": "anführen" } ] },
+    { "from": "taps", "parts": [ { "text": "zwischen zwei" }, { "text": "Fahrzeugen", "gap": true, "accept": ["Fahrzeugen", "Autos", "Wagen"] }, { "text": "parken" } ] },
+    { "from": "taps", "parts": [ { "text": "das" }, { "text": "Schlusslicht", "gap": true, "accept": ["Schlusslicht"] }, { "text": "bilden" } ] },
+    { "from": "answer", "parts": [ { "text": "fahren", "gap": true, "accept": ["fahren"] }, { "text": "im Konvoi" } ] }
+  ],
+  "notes": "Tap boxes 1 and 3 also cover the parked and close-up shots; the phrases describe the driving shots (grey car first, white car last). 'das Schlusslicht bilden' is the B2 idiom for 'bring up the rear'. No noun row: Konvoi is gapped in tap row 1."
+}

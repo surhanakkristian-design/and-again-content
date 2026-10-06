@@ -1,0 +1,115 @@
+{
+ "mediaId": 4210,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "sostener",
+ "taps": [
+  {
+   "phrase": "sostener dos palitos de madera",
+   "target": "el hámster",
+   "voice": "female"
+  },
+  {
+   "phrase": "ocultar el rostro tras los helados",
+   "target": "el hámster",
+   "voice": "female"
+  },
+  {
+   "phrase": "sonreír de oreja a oreja",
+   "target": "el hámster",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el helado",
+   "voice": "female"
+  },
+  {
+   "word": "el hámster",
+   "voice": "female"
+  },
+  {
+   "word": "la encimera",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hámster?",
+ "answer": [
+  "El",
+  "hámster",
+  "sostiene",
+  "dos",
+  "helados."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener",
+     "gap": true,
+     "accept": [
+      "sostener",
+      "sujetar"
+     ]
+    },
+    {
+     "text": "dos palitos de madera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ocultar el"
+    },
+    {
+     "text": "rostro",
+     "gap": true,
+     "accept": [
+      "rostro",
+      "cara"
+     ]
+    },
+    {
+     "text": "tras los helados"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "de oreja a oreja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sostiene dos"
+    },
+    {
+     "text": "helados",
+     "gap": true,
+     "accept": [
+      "helados"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes cover the whole clip: 'ocultar el rostro' is true for most frames, 'sonreír de oreja a oreja' only for the last ~3 s (one target, so no confusion). 'El helado' for the chocolate-coated ice cream bar (Spain: also 'bombón helado'). Answer subject el hámster is masculine; voice kept female as in English."
+}

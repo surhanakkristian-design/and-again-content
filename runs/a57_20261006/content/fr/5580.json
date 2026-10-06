@@ -1,0 +1,26 @@
+{
+  "mediaId": 5580, "lang": "fr", "level": "A",
+  "keyWord": "adjoint",
+  "taps": [
+    { "phrase": "boutonner une veste", "target": "la femme", "voice": "female" },
+    { "phrase": "être debout sur une caisse", "target": "l'homme", "voice": "male" },
+    { "phrase": "tenir un plateau", "target": "le chien", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la femme", "voice": "female" },
+    { "word": "la veste", "voice": "female" },
+    { "word": "le chien", "voice": "female" },
+    { "word": "la lampe", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "boutonne", "la", "veste", "de", "l'homme."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "boutonner", "gap": true, "accept": ["boutonner", "fermer", "ajuster"] }, { "text": "une veste" } ] },
+    { "from": "taps", "parts": [ { "text": "être debout sur une" }, { "text": "caisse", "gap": true, "accept": ["caisse", "boîte"] } ] },
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "plateau", "gap": true, "accept": ["plateau"] } ] },
+    { "from": "answer", "parts": [ { "text": "boutonne la" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "de l'homme" } ] }
+  ],
+  "notes": "KEY WORD: 'adjoint' (adjective, 'directeur adjoint') does not fit the clip and is not an everyday A-level word; the clip shows a helper (the woman / the dog assisting the tailor's client). Proposal: 'l'assistant / l'assistante' (noun) or 'assistant(e)'. Kept unchanged, appears in no exercise. 'boutonner' chosen because she fastens his jacket button; at the very end she pats the dog instead."
+}

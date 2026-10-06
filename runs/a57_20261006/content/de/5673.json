@@ -1,0 +1,119 @@
+{
+ "mediaId": 5673,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "beide",
+ "taps": [
+  {
+   "phrase": "beide Kuchenstücke hochhalten",
+   "target": "die Frau in Rot",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen leeren Teller halten",
+   "target": "die Bäckerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Fenster stehen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lampe",
+   "voice": "female"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Brötchen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was hält die Frau in Rot?",
+ "answer": [
+  "Sie",
+  "hält",
+  "beide",
+  "Kuchenstücke."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beide",
+     "gap": true,
+     "accept": [
+      "beide"
+     ]
+    },
+    {
+     "text": "Kuchenstücke hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen leeren"
+    },
+    {
+     "text": "Teller",
+     "gap": true,
+     "accept": [
+      "Teller"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Fenster",
+     "gap": true,
+     "accept": [
+      "Fenster"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hält beide"
+    },
+    {
+     "text": "Kuchenstücke",
+     "gap": true,
+     "accept": [
+      "Kuchenstücke"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'bread' = the trays of round buns -> 'die Brötchen'. Key word beide gapped in phrase 1."
+}

@@ -1,0 +1,114 @@
+{
+ "mediaId": 27,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un étudiant",
+ "taps": [
+  {
+   "phrase": "ouvrir la fenêtre",
+   "target": "l'étudiante",
+   "voice": "female"
+  },
+  {
+   "phrase": "être posée sur les livres",
+   "target": "la tasse",
+   "voice": "female"
+  },
+  {
+   "phrase": "être posés sur le bureau",
+   "target": "les livres",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'étudiante",
+   "voice": "female"
+  },
+  {
+   "word": "la tasse",
+   "voice": "female"
+  },
+  {
+   "word": "les livres",
+   "voice": "female"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient l'étudiante ?",
+ "answer": [
+  "Elle",
+  "tient",
+  "une",
+  "tasse."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir",
+     "gap": true,
+     "accept": [
+      "ouvrir"
+     ]
+    },
+    {
+     "text": "la fenêtre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posée sur les"
+    },
+    {
+     "text": "livres",
+     "gap": true,
+     "accept": [
+      "livres"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posés sur le"
+    },
+    {
+     "text": "bureau",
+     "gap": true,
+     "accept": [
+      "bureau",
+      "table"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient une"
+    },
+    {
+     "text": "tasse",
+     "gap": true,
+     "accept": [
+      "tasse"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'un étudiant' kept; the clip shows a young woman, so pill/target use 'l'étudiante' (feminine form of the same word). No noun row: the elided pill 'l'étudiante' cannot be cut into 2-5 parts without splitting the elision, and no other row contains it. Tap 1: red box covers the whole clip, she opens the window only around 7-8 s. Tap 2: in a few boxed frames she holds the cup instead of it standing on the books; 'posée' agrees with la tasse, 'posés' with les livres."
+}

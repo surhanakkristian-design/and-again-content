@@ -1,0 +1,134 @@
+{
+ "mediaId": 261,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el electricista",
+ "taps": [
+  {
+   "phrase": "cortar un cable",
+   "target": "la electricista",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta rosa",
+   "target": "la niña",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener barba",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la puerta",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la niña",
+   "voice": "female"
+  },
+  {
+   "word": "la electricista",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la electricista?",
+ "answer": [
+  "Está",
+  "cortando",
+  "un",
+  "cable."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cortar un"
+    },
+    {
+     "text": "cable",
+     "gap": true,
+     "accept": [
+      "cable"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "rosa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "electricista",
+     "gap": true,
+     "accept": [
+      "electricista"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "cortando",
+     "gap": true,
+     "accept": [
+      "cortando"
+     ]
+    },
+    {
+     "text": "un cable"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'el electricista' kept as given, but the electrician in the clip is a woman, so the noun pill, target and question use 'la electricista' (same word, feminine article). Proposal: allow 'la electricista' as the shown form. Phrase 1 box also covers frames where she fits/switches the breaker; cutting is the main boxed action."
+}

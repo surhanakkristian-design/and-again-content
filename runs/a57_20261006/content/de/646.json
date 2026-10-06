@@ -1,0 +1,124 @@
+{
+ "mediaId": 646,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Wissenschaft",
+ "taps": [
+  {
+   "phrase": "lila Handschuhe tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "aus dem Glas kommen",
+   "target": "der orange Schaum",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Mund weit aufmachen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Handschuh",
+   "voice": "female"
+  },
+  {
+   "word": "die Brille",
+   "voice": "female"
+  },
+  {
+   "word": "der Kittel",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was hat die Frau an den Händen?",
+ "answer": [
+  "Sie",
+  "trägt",
+  "lila",
+  "Handschuhe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lila"
+    },
+    {
+     "text": "Handschuhe",
+     "gap": true,
+     "accept": [
+      "Handschuhe"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus dem"
+    },
+    {
+     "text": "Glas",
+     "gap": true,
+     "accept": [
+      "Glas",
+      "Becher"
+     ]
+    },
+    {
+     "text": "kommen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Mund",
+     "gap": true,
+     "accept": [
+      "Mund"
+     ]
+    },
+    {
+     "text": "weit aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trägt",
+     "gap": true,
+     "accept": [
+      "trägt",
+      "hat"
+     ]
+    },
+    {
+     "text": "lila Handschuhe"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Wissenschaft' is only in the transcript (as in English); it is no noun of the set, so no noun row. 'glasses' = safety goggles: plain 'die Brille' at level A (exact word 'die Schutzbrille' is B1). 'coat' = lab coat: 'der Kittel' is the right word ('der Mantel' would be wrong), slightly above A2 - please check. Tap 1/3 boxes also cover the close-up pouring frames (only gloved hands visible); tap 1 fits those, tap 3 is written for the face frames."
+}

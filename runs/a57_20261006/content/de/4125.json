@@ -1,0 +1,127 @@
+{
+ "mediaId": 4125,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Bühne",
+ "taps": [
+  {
+   "phrase": "an einem Tuch zerren",
+   "target": "der Mann im Anzug",
+   "voice": "male"
+  },
+  {
+   "phrase": "in Blütenblätter zerfallen",
+   "target": "der Blumenelefant",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Rüssel heben",
+   "target": "der graue Elefant",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Scheinwerfer",
+   "voice": "male"
+  },
+  {
+   "word": "der Elefant",
+   "voice": "male"
+  },
+  {
+   "word": "der Anzug",
+   "voice": "male"
+  },
+  {
+   "word": "die Bühne",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der graue Elefant?",
+ "answer": [
+  "Er",
+  "hebt",
+  "auf",
+  "der",
+  "Bühne",
+  "den",
+  "Rüssel."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an einem Tuch"
+    },
+    {
+     "text": "zerren",
+     "gap": true,
+     "accept": [
+      "zerren",
+      "ziehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in"
+    },
+    {
+     "text": "Blütenblätter",
+     "gap": true,
+     "accept": [
+      "Blütenblätter",
+      "Blüten"
+     ]
+    },
+    {
+     "text": "zerfallen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Rüssel",
+     "gap": true,
+     "accept": [
+      "Rüssel"
+     ]
+    },
+    {
+     "text": "heben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hebt auf der"
+    },
+    {
+     "text": "Bühne",
+     "gap": true,
+     "accept": [
+      "Bühne"
+     ]
+    },
+    {
+     "text": "den Rüssel"
+    }
+   ]
+  }
+ ],
+ "notes": "Box 1 also covers the man while he walks on, throws the sheet up and touches the flower elephant; he tugs at the sheet only in some boxed frames (box_03). German also allows 'Er hebt den Rüssel auf der Bühne.' (two orders possible). 'der Scheinwerfer' for spotlight. The flower elephant is shown 'der Blumenelefant' (verifier label only). No noun row: 'Bühne' already in the answer row."
+}

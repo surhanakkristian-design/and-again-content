@@ -1,0 +1,117 @@
+{
+  "mediaId": 274,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "todo el mundo",
+  "taps": [
+    {
+      "phrase": "levantar una bufanda",
+      "target": "el hombre de la bufanda",
+      "voice": "male"
+    },
+    {
+      "phrase": "ir subido a los hombros de alguien",
+      "target": "el niño",
+      "voice": "male"
+    },
+    {
+      "phrase": "brillar en el techo",
+      "target": "las luces",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "las luces",
+      "voice": "male"
+    },
+    {
+      "word": "el niño",
+      "voice": "male"
+    },
+    {
+      "word": "la bufanda",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hace todo el mundo?",
+  "answer": [
+    "Todo",
+    "el",
+    "mundo",
+    "grita",
+    "en",
+    "el",
+    "estadio."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "levantar una"
+        },
+        {
+          "text": "bufanda",
+          "gap": true,
+          "accept": [
+            "bufanda"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ir subido a los"
+        },
+        {
+          "text": "hombros",
+          "gap": true,
+          "accept": [
+            "hombros"
+          ]
+        },
+        {
+          "text": "de alguien"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "brillar",
+          "gap": true,
+          "accept": [
+            "brillar"
+          ]
+        },
+        {
+          "text": "en el techo"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "grita",
+          "gap": true,
+          "accept": [
+            "grita",
+            "chilla",
+            "celebra"
+          ]
+        },
+        {
+          "text": "en el estadio"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'todo el mundo' is the subject of the answer, so the answer recall row (subject removed) does not contain it. Small rainbow flags are also waved in the crowd, but only the boxed man lifts a big rainbow scarf. The lights box covers the roof floodlights in all frames."
+}

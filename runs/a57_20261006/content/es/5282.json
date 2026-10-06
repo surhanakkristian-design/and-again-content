@@ -1,0 +1,122 @@
+{
+ "mediaId": 5282,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la canción",
+ "taps": [
+  {
+   "phrase": "tocar la guitarra",
+   "target": "el hombre de la guitarra",
+   "voice": "male"
+  },
+  {
+   "phrase": "cantar con una cuchara de madera",
+   "target": "la mujer de la cocina",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar de pie en un escenario",
+   "target": "el hombre del traje blanco",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la iglesia",
+   "voice": "female"
+  },
+  {
+   "word": "el micrófono",
+   "voice": "female"
+  },
+  {
+   "word": "la guitarra",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre mayor?",
+ "answer": [
+  "Está",
+  "cantando",
+  "una",
+  "canción",
+  "con",
+  "su",
+  "guitarra."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocar",
+     "gap": true,
+     "accept": [
+      "tocar"
+     ]
+    },
+    {
+     "text": "la guitarra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cantar con una"
+    },
+    {
+     "text": "cuchara",
+     "gap": true,
+     "accept": [
+      "cuchara"
+     ]
+    },
+    {
+     "text": "de madera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar de pie en un"
+    },
+    {
+     "text": "escenario",
+     "gap": true,
+     "accept": [
+      "escenario"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está cantando una"
+    },
+    {
+     "text": "canción",
+     "gap": true,
+     "accept": [
+      "canción"
+     ]
+    },
+    {
+     "text": "con su guitarra"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la canción' appears in the model answer and its recall gap. The church in the background is a large church; 'la iglesia' is the plain word."
+}

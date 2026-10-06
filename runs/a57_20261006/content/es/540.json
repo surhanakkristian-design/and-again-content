@@ -1,0 +1,118 @@
+{
+ "mediaId": 540,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el penalti",
+ "taps": [
+  {
+   "phrase": "señalar un penalti",
+   "target": "el árbitro",
+   "voice": "male"
+  },
+  {
+   "phrase": "lanzar un penalti",
+   "target": "la delantera",
+   "voice": "female"
+  },
+  {
+   "phrase": "defender la portería",
+   "target": "la portera",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las palmeras",
+   "voice": "female"
+  },
+  {
+   "word": "la portería",
+   "voice": "female"
+  },
+  {
+   "word": "la portera",
+   "voice": "female"
+  },
+  {
+   "word": "el balón",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la delantera?",
+ "answer": [
+  "Está",
+  "lanzando",
+  "un",
+  "penalti."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar",
+     "gap": true,
+     "accept": [
+      "señalar",
+      "pitar"
+     ]
+    },
+    {
+     "text": "un penalti"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lanzar un"
+    },
+    {
+     "text": "penalti",
+     "gap": true,
+     "accept": [
+      "penalti"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "defender la"
+    },
+    {
+     "text": "portería",
+     "gap": true,
+     "accept": [
+      "portería"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "lanzando",
+     "gap": true,
+     "accept": [
+      "lanzando",
+      "tirando"
+     ]
+    },
+    {
+     "text": "un penalti"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the goalkeeper box is ON mostly while she stands in goal with her arms up; she dives only in the last two boxed frames, so \"defender la portería\" (true in all boxed frames) instead of \"lanzarse a por el balón\". The referee box also covers frames where he only stands far away; \"señalar un penalti\" follows the pointing frames. Goalkeeper = \"la portera\" (women's match)."
+}

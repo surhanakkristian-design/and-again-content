@@ -1,0 +1,125 @@
+{
+ "mediaId": 288,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la moda",
+ "taps": [
+  {
+   "phrase": "llevar un traje blanco",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar zapatillas blancas",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un jersey gris",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué llevan las dos personas?",
+ "answer": [
+  "Llevan",
+  "unos",
+  "trajes",
+  "muy",
+  "grandes."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "traje",
+     "gap": true,
+     "accept": [
+      "traje"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "zapatillas",
+     "gap": true,
+     "accept": [
+      "zapatillas",
+      "deportivas"
+     ]
+    },
+    {
+     "text": "blancas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "jersey",
+     "gap": true,
+     "accept": [
+      "jersey"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Llevan unos trajes muy"
+    },
+    {
+     "text": "grandes",
+     "gap": true,
+     "accept": [
+      "grandes",
+      "anchos"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la moda' is abstract and is not named naturally by any thing in the clip; not forced into the texts. Phrase 2: the man takes photos only in the first boxed frames; in most boxed frames he walks next to the woman - 'hacer una foto' kept as the English (only he holds a phone). The woman's suit is cream: 'blanco' as in English. VERIFIER: phrase 2 changed from 'hacer una foto' (true only in 3 of ~23 boxed frames) to 'llevar zapatillas blancas' (true in every boxed frame; only he wears white trainers)."
+}

@@ -1,0 +1,120 @@
+{
+  "mediaId": 5652,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "grand",
+  "taps": [
+    {
+      "phrase": "renifler la grosse balle",
+      "target": "le chien",
+      "voice": "female"
+    },
+    {
+      "phrase": "être la plus grosse balle",
+      "target": "la grosse balle",
+      "voice": "female"
+    },
+    {
+      "phrase": "être la plus petite balle",
+      "target": "la petite balle",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les arbres",
+      "voice": "female"
+    },
+    {
+      "word": "la balle",
+      "voice": "female"
+    },
+    {
+      "word": "le chien",
+      "voice": "female"
+    },
+    {
+      "word": "l'herbe",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le chien ?",
+  "answer": [
+    "Il",
+    "renifle",
+    "une",
+    "grosse",
+    "balle."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "renifler",
+          "gap": true,
+          "accept": [
+            "renifler",
+            "sentir"
+          ]
+        },
+        {
+          "text": "la grosse balle"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être la plus"
+        },
+        {
+          "text": "grosse",
+          "gap": true,
+          "accept": [
+            "grosse",
+            "grande"
+          ]
+        },
+        {
+          "text": "balle"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être la plus petite"
+        },
+        {
+          "text": "balle",
+          "gap": true,
+          "accept": [
+            "balle"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "renifle",
+          "gap": true,
+          "accept": [
+            "renifle",
+            "sent"
+          ]
+        },
+        {
+          "text": "une grosse balle"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'grand' kept, but for a ball (volume) French natives say 'gros/grosse' ('une grosse balle'), not 'grande balle'; so 'grand' does not appear. Proposal: map this video to 'gros' for French, or accept 'grande' as an alternative (the recall row for phrase 2 accepts 'grande'). 'renifler' (to sniff) is everyday French; 'sentir' accepted as synonym."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 6,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Kissen",
+ "taps": [
+  {
+   "phrase": "sich den schmerzenden Rücken reiben",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Daumen hochhalten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich hoch auftürmen",
+   "target": "die Kissen",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Bart",
+   "voice": "male"
+  },
+  {
+   "word": "die Strickjacke",
+   "voice": "male"
+  },
+  {
+   "word": "der Blumentopf",
+   "voice": "male"
+  },
+  {
+   "word": "das Kissen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "stapelt",
+  "Kissen",
+  "auf",
+  "seinem",
+  "Schoß."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich den schmerzenden"
+    },
+    {
+     "text": "Rücken",
+     "gap": true,
+     "accept": [
+      "Rücken"
+     ]
+    },
+    {
+     "text": "reiben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich hoch"
+    },
+    {
+     "text": "auftürmen",
+     "gap": true,
+     "accept": [
+      "auftürmen",
+      "stapeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stapelt"
+    },
+    {
+     "text": "Kissen",
+     "gap": true,
+     "accept": [
+      "Kissen"
+     ]
+    },
+    {
+     "text": "auf seinem Schoß"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word noun 'das Kissen' is in the answer row (plural Kissen, same form), so no separate noun row. Answer: 'Er stapelt auf seinem Schoß Kissen' is also possible (marked order). English boxes 1 and 2 span the whole man footage; phrase 1 at the start, phrase 2 at the end, as in English."
+}

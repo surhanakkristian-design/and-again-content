@@ -1,0 +1,116 @@
+{
+ "mediaId": 35,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un acteur",
+ "taps": [
+  {
+   "phrase": "pleurer et crier",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "filmer avec la caméra",
+   "target": "l'homme à la caméra",
+   "voice": "male"
+  },
+  {
+   "phrase": "applaudir l'acteur",
+   "target": "l'homme à la casquette",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le micro",
+   "voice": "male"
+  },
+  {
+   "word": "la caméra",
+   "voice": "male"
+  },
+  {
+   "word": "l'acteur",
+   "voice": "male"
+  },
+  {
+   "word": "la chaise",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'acteur ?",
+ "answer": [
+  "Il",
+  "pleure",
+  "devant",
+  "la",
+  "caméra."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pleurer et"
+    },
+    {
+     "text": "crier",
+     "gap": true,
+     "accept": [
+      "crier",
+      "hurler"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "filmer",
+     "gap": true,
+     "accept": [
+      "filmer"
+     ]
+    },
+    {
+     "text": "avec la caméra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "applaudir",
+     "gap": true,
+     "accept": [
+      "applaudir"
+     ]
+    },
+    {
+     "text": "l'acteur"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "pleure",
+     "gap": true,
+     "accept": [
+      "pleure",
+      "crie"
+     ]
+    },
+    {
+     "text": "devant la caméra"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap box 1 also covers the make-up, the walk to the mark and the final laughing/bowing; the phrase describes the main scene. Phrase 2: the camera stands on a tripod, so 'filmer avec la caméra' rather than holding a big camera. The man in the cap sits and watches in about half of his boxed frames and claps at the end; 'applaudir l'acteur' is his distinctive action. 'le micro' = everyday word for the boom microphone. The key word is in tap row 3 but elided ('l'acteur'), so it cannot be a gap; no noun row because row 3 contains it."
+}

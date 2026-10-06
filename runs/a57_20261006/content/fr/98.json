@@ -1,0 +1,125 @@
+{
+ "mediaId": 98,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le hamac",
+ "taps": [
+  {
+   "phrase": "rester bouche bée",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "serrer le livre contre son cœur",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une couverture bordeaux",
+   "target": "le livre",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le hamac",
+   "voice": "female"
+  },
+  {
+   "word": "la coupole",
+   "voice": "female"
+  },
+  {
+   "word": "la tresse",
+   "voice": "female"
+  },
+  {
+   "word": "les fleurs",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "lit",
+  "un",
+  "livre",
+  "dans",
+  "un",
+  "hamac."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rester"
+    },
+    {
+     "text": "bouche bée",
+     "gap": true,
+     "accept": [
+      "bouche bée"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer",
+     "gap": true,
+     "accept": [
+      "serrer"
+     ]
+    },
+    {
+     "text": "le livre"
+    },
+    {
+     "text": "contre son cœur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "couverture",
+     "gap": true,
+     "accept": [
+      "couverture"
+     ]
+    },
+    {
+     "text": "bordeaux"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lit un livre"
+    },
+    {
+     "text": "dans un"
+    },
+    {
+     "text": "hamac",
+     "gap": true,
+     "accept": [
+      "hamac"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 (English 'squeeze her eyes shut'): she closes her eyes only briefly; in the boxed frames she hugs the book to her chest with closed eyes, so 'serrer le livre contre son cœur' (same target, the woman). Phrase 1 and 2 both the woman, as in English. 'la coupole' for the blue church dome ('le dôme' also possible). Key word in the answer row."
+}

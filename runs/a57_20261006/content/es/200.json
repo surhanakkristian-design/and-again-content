@@ -1,0 +1,116 @@
+{
+ "mediaId": 200,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la nata",
+ "taps": [
+  {
+   "phrase": "batir la nata",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "comer un gofre",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un pañuelo en la cabeza",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la nata",
+   "voice": "male"
+  },
+  {
+   "word": "el gofre",
+   "voice": "male"
+  },
+  {
+   "word": "el plato",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "batiendo",
+  "la",
+  "nata."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "batir la"
+    },
+    {
+     "text": "nata",
+     "gap": true,
+     "accept": [
+      "nata"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer un"
+    },
+    {
+     "text": "gofre",
+     "gap": true,
+     "accept": [
+      "gofre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "pañuelo",
+     "gap": true,
+     "accept": [
+      "pañuelo"
+     ]
+    },
+    {
+     "text": "en la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "batiendo",
+     "gap": true,
+     "accept": [
+      "batiendo",
+      "montando"
+     ]
+    },
+    {
+     "text": "la nata"
+    }
+   ]
+  }
+ ],
+ "notes": "'batir' (whisk) rather than 'mezclar': it is what he does with the whisk. Tap 3: she wears a headscarf, so 'llevar un pañuelo en la cabeza' instead of a literal 'cubrirse el pelo'. Tap 1 box also covers the bowl-on-head and tasting frames."
+}

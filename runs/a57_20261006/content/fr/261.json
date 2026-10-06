@@ -1,0 +1,118 @@
+{
+ "mediaId": 261,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un électricien",
+ "taps": [
+  {
+   "phrase": "couper un fil",
+   "target": "l'électricienne",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un tee-shirt rose",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une barbe",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la porte",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  },
+  {
+   "word": "l'électricienne",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'électricienne ?",
+ "answer": [
+  "Elle",
+  "coupe",
+  "un",
+  "fil."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "couper",
+     "gap": true,
+     "accept": [
+      "couper"
+     ]
+    },
+    {
+     "text": "un fil"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "tee-shirt",
+     "gap": true,
+     "accept": [
+      "tee-shirt",
+      "t-shirt"
+     ]
+    },
+    {
+     "text": "rose"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "coupe un"
+    },
+    {
+     "text": "fil",
+     "gap": true,
+     "accept": [
+      "fil",
+      "câble"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: the worker is a woman, so the noun is the feminine 'l'électricienne' (database word 'un électricien' kept; proposal: add 'une électricienne' as the feminine form). No noun row: 'l'électricienne' is one elided chip and cannot be split into 2 parts."
+}

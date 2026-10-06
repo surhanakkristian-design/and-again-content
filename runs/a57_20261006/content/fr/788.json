@@ -1,0 +1,121 @@
+{
+  "mediaId": 788,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "passer au micro-ondes",
+  "taps": [
+    {
+      "phrase": "passer ses nouilles au micro-ondes",
+      "target": "le garçon",
+      "voice": "male"
+    },
+    {
+      "phrase": "adresser un large sourire au garçon",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "éclairer le bol de nouilles",
+      "target": "le micro-ondes",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le micro-ondes",
+      "voice": "male"
+    },
+    {
+      "word": "les nouilles",
+      "voice": "male"
+    },
+    {
+      "word": "l'étagère",
+      "voice": "male"
+    },
+    {
+      "word": "le sweat à capuche",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait le garçon ?",
+  "answer": [
+    "Il",
+    "passe",
+    "un",
+    "bol",
+    "de",
+    "nouilles",
+    "au",
+    "micro-ondes."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "passer",
+          "gap": true,
+          "accept": [
+            "passer"
+          ]
+        },
+        {
+          "text": "ses nouilles au micro-ondes"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "adresser un large"
+        },
+        {
+          "text": "sourire",
+          "gap": true,
+          "accept": [
+            "sourire"
+          ]
+        },
+        {
+          "text": "au garçon"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "éclairer",
+          "gap": true,
+          "accept": [
+            "éclairer",
+            "illuminer"
+          ]
+        },
+        {
+          "text": "le bol de nouilles"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "passe un bol de nouilles au"
+        },
+        {
+          "text": "micro-ondes",
+          "gap": true,
+          "accept": [
+            "micro-ondes"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: the microwave's inside light shines on the bowl in the running frames (lit close-ups); in several boxed frames the door is open and the light is off - phrase written for the lit moments as in English 'light up inside'. Avoided 's'illuminer' so the recall gap is not an elided word. Question/answer: present tense 'Que fait le garçon ?' as in English, although at the still moment he is already holding the hot bowl."
+}

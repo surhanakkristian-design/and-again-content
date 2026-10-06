@@ -1,0 +1,139 @@
+{
+ "mediaId": 4434,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Jahrmarkt",
+ "taps": [
+  {
+   "phrase": "einen Teddybären an sich drücken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "an einem Eis lecken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ihr seine Jacke umlegen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "der Jahrmarkt",
+   "voice": "female"
+  },
+  {
+   "word": "die Eiswaffel",
+   "voice": "female"
+  },
+  {
+   "word": "der Teddybär",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht sie auf dem Jahrmarkt?",
+ "answer": [
+  "Sie",
+  "drückt",
+  "einen",
+  "riesigen",
+  "Teddybären",
+  "an",
+  "sich."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Teddybären an sich"
+    },
+    {
+     "text": "drücken",
+     "gap": true,
+     "accept": [
+      "drücken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an einem"
+    },
+    {
+     "text": "Eis",
+     "gap": true,
+     "accept": [
+      "Eis"
+     ]
+    },
+    {
+     "text": "lecken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ihr seine Jacke"
+    },
+    {
+     "text": "umlegen",
+     "gap": true,
+     "accept": [
+      "umlegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Jahrmarkt",
+     "gap": true,
+     "accept": [
+      "Jahrmarkt",
+      "Rummel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "drückt einen riesigen"
+    },
+    {
+     "text": "Teddybären",
+     "gap": true,
+     "accept": [
+      "Teddybären",
+      "Teddy"
+     ]
+    },
+    {
+     "text": "an sich"
+    }
+   ]
+  }
+ ],
+ "notes": "Box 3 covers the man the whole clip; he takes off his jacket (box_02) and lays it over her shoulders (box_03), later he holds an ice cream. Verifier: phrase 3 changed from 'seine Jacke abstreifen' (not the usual collocation for a jacket) to 'ihr seine Jacke umlegen'. Phrases 1 and 2 share the woman as target and box, as in English; she licks the ice cream only in box_03/04. 'ice cream cone' -> 'die Eiswaffel'."
+}

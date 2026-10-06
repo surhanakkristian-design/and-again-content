@@ -1,0 +1,26 @@
+{
+  "mediaId": 5358, "lang": "fr", "level": "B",
+  "keyWord": "jeter un coup d'œil",
+  "taps": [
+    { "phrase": "jeter un coup d'œil entre deux piles", "target": "la femme au gilet", "voice": "female" },
+    { "phrase": "empiler de gros livres", "target": "la femme au gilet", "voice": "female" },
+    { "phrase": "poser le menton sur sa main", "target": "la femme à gauche", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les étagères", "voice": "female" },
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "le gilet", "voice": "female" },
+    { "word": "le manuel", "voice": "female" }
+  ],
+  "question": "Que fait la femme cachée ?",
+  "answer": ["Elle", "jette", "un", "coup", "d'œil", "entre", "les", "livres."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "jeter un coup d'œil entre deux" }, { "text": "piles", "gap": true, "accept": ["piles"] } ] },
+    { "from": "taps", "parts": [ { "text": "empiler", "gap": true, "accept": ["empiler"] }, { "text": "de gros livres" } ] },
+    { "from": "taps", "parts": [ { "text": "poser le" }, { "text": "menton", "gap": true, "accept": ["menton"] }, { "text": "sur sa main" } ] },
+    { "from": "answer", "parts": [ { "text": "jette", "gap": true, "accept": ["jette"] }, { "text": "un coup d'œil entre les livres" } ] }
+  ],
+  "notes": "Key word: 'jeter un coup d'œil' = a quick look, but loses the 'secretly, from hiding' sense of the definition; proposal: 'regarder furtivement' or 'épier' would match better (owner decides). Phrase 1 box (shared with phrase 2) covers the writing/stacking frames too; the peeking happens only at the end."
+}

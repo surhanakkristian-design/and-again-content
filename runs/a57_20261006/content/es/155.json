@@ -1,0 +1,125 @@
+{
+ "mediaId": 155,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el queso",
+ "taps": [
+  {
+   "phrase": "cortar un trozo de queso",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "dar la vuelta al sándwich",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar tumbado en el suelo",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el queso",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "haciendo",
+  "un",
+  "sándwich",
+  "de",
+  "queso."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cortar un trozo de"
+    },
+    {
+     "text": "queso",
+     "gap": true,
+     "accept": [
+      "queso"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar la"
+    },
+    {
+     "text": "vuelta",
+     "gap": true,
+     "accept": [
+      "vuelta"
+     ]
+    },
+    {
+     "text": "al sándwich"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "en el suelo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está haciendo un"
+    },
+    {
+     "text": "sándwich",
+     "gap": true,
+     "accept": [
+      "sándwich"
+     ]
+    },
+    {
+     "text": "de queso"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'fry a cheese sandwich' rendered as 'hacer un sándwich en la sartén' (toasting in a pan; 'freír' sounds like deep oil in Spain). Question changed from 'what is he frying' to '¿Qué está haciendo el hombre?' for natural Spanish. Tap 1 box (woman) also covers frames where she eats or stretches the sandwich; she cuts the cheese wheel in the first frames. Dog is on a mat on the floor; 'tumbado' = lying (Spain). VERIFIER: tap 2 changed from 'hacer un sándwich en la sartén' (the woman grating cheese into the pan also helps make it) to 'dar la vuelta al sándwich' (only the man flips it with the spatula)."
+}

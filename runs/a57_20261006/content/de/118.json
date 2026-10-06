@@ -1,0 +1,26 @@
+{
+  "mediaId": 118, "lang": "de", "level": "A",
+  "keyWord": "das Zusammenbauen",
+  "taps": [
+    { "phrase": "eine Bohrmaschine benutzen", "target": "der Mann", "voice": "male" },
+    { "phrase": "einen Bart haben", "target": "der Mann", "voice": "male" },
+    { "phrase": "lange Haare haben", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Vogel", "voice": "female" }
+  ],
+  "question": "Was machen die beiden?",
+  "answer": ["Sie", "bauen", "eine", "große", "Holzkiste", "zusammen."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Bohrmaschine", "gap": true, "accept": ["Bohrmaschine", "Akkuschrauber"] }, { "text": "benutzen" } ] },
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Bart", "gap": true, "accept": ["Bart"] }, { "text": "haben" } ] },
+    { "from": "taps", "parts": [ { "text": "lange" }, { "text": "Haare", "gap": true, "accept": ["Haare"] }, { "text": "haben" } ] },
+    { "from": "answer", "parts": [ { "text": "bauen", "gap": true, "accept": ["bauen"] }, { "text": "eine große Holzkiste zusammen" } ] }
+  ],
+  "notes": "Key word 'das Zusammenbauen' is a nominalised verb; the answer uses the verb 'zusammenbauen' (separable: 'bauen ... zusammen'), which teaches it naturally. Proposal: the database word could be the verb 'zusammenbauen' (or 'bauen'), since the English 'building' here is the activity. The drill is really a cordless screwdriver ('Akkuschrauber', B1); 'Bohrmaschine' is the A-level everyday word, Akkuschrauber accepted in recall. The man uses the drill only in some boxed frames (box covers him throughout, also while holding boards and planting). The bed is a raised bed ('Hochbeet', B1); 'Holzkiste' mirrors the English 'wooden box'. No noun row: the key word is not one of the nouns."
+}

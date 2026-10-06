@@ -1,0 +1,117 @@
+{
+ "mediaId": 199,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "s'écraser",
+ "taps": [
+  {
+   "phrase": "conduire une voiture rouge",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever les deux bras",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un t-shirt jaune",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la voiture rouge",
+   "voice": "male"
+  },
+  {
+   "word": "la voiture jaune",
+   "voice": "male"
+  }
+ ],
+ "question": "Que conduit l'homme ?",
+ "answer": [
+  "Il",
+  "conduit",
+  "une",
+  "voiture",
+  "rouge."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "conduire",
+     "gap": true,
+     "accept": [
+      "conduire"
+     ]
+    },
+    {
+     "text": "une voiture rouge"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever les deux"
+    },
+    {
+     "text": "bras",
+     "gap": true,
+     "accept": [
+      "bras"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "t-shirt",
+     "gap": true,
+     "accept": [
+      "t-shirt",
+      "tee-shirt"
+     ]
+    },
+    {
+     "text": "jaune"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "conduit une"
+    },
+    {
+     "text": "voiture",
+     "gap": true,
+     "accept": [
+      "voiture"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: 's'écraser' means a violent crash (plane, car wreck); bumping bumper cars is 'se rentrer dedans' / 'percuter' in French. Proposal: 'rentrer dans' or 'percuter' for this clip (owner decides). The cars are bumper cars (autos tamponneuses); kept 'voiture' as level A word. Shirt is a t-shirt."
+}

@@ -1,0 +1,116 @@
+{
+  "mediaId": 57,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der hintere Teil",
+  "taps": [
+    {
+      "phrase": "als Erste nach oben gehen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Finger heben",
+      "target": "der Mann im blauen Hemd",
+      "voice": "male"
+    },
+    {
+      "phrase": "hinter den anderen gehen",
+      "target": "der Mann im roten Hemd",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Mauer",
+      "voice": "male"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Sitze",
+      "voice": "male"
+    }
+  ],
+  "question": "Wo sitzen die drei?",
+  "answer": [
+    "Sie",
+    "sitzen",
+    "ganz",
+    "hinten."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "als Erste nach"
+        },
+        {
+          "text": "oben",
+          "gap": true,
+          "accept": [
+            "oben"
+          ]
+        },
+        {
+          "text": "gehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Finger",
+          "gap": true,
+          "accept": [
+            "Finger"
+          ]
+        },
+        {
+          "text": "heben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hinter den anderen"
+        },
+        {
+          "text": "gehen",
+          "gap": true,
+          "accept": [
+            "gehen",
+            "laufen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sitzen ganz"
+        },
+        {
+          "text": "hinten",
+          "gap": true,
+          "accept": [
+            "hinten"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "KEY WORD: 'der hintere Teil' is not how German says English 'at the back' here; natives say 'ganz hinten' (adverb), so the answer uses 'hinten' and 'der hintere Teil' appears nowhere (forcing 'im hinteren Teil' would sound stiff for a level A answer). Proposal for the owner: map concept 'back (of a place)' in German to the adverb 'hinten' or keep 'der hintere Teil' and accept that the video teaches 'hinten'. No noun row: the key word is not one of the nouns. The stone wall behind the seats is outdoors, so 'die Mauer' rather than 'die Wand'. In the seated frames at the end the man in the red shirt no longer walks; phrase 3 describes the climbing frames (most boxed frames)."
+}

@@ -1,0 +1,115 @@
+{
+ "mediaId": 40,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la respuesta",
+ "taps": [
+  {
+   "phrase": "sacar una carta",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sobre la mesa",
+   "target": "las cartas",
+   "voice": "female"
+  },
+  {
+   "phrase": "levantar una carta",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pelo",
+   "voice": "female"
+  },
+  {
+   "word": "el jersey",
+   "voice": "female"
+  },
+  {
+   "word": "la carta",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué levanta la mujer?",
+ "answer": [
+  "Levanta",
+  "una",
+  "carta."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sacar",
+     "gap": true,
+     "accept": [
+      "sacar",
+      "coger"
+     ]
+    },
+    {
+     "text": "una carta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sobre la"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar una"
+    },
+    {
+     "text": "carta",
+     "gap": true,
+     "accept": [
+      "carta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Levanta",
+     "gap": true,
+     "accept": [
+      "Levanta",
+      "Enseña",
+      "Muestra"
+     ]
+    },
+    {
+     "text": "una carta"
+    }
+   ]
+  }
+ ],
+ "notes": "'sacar una carta' is the native collocation for drawing a card. Key word 'la respuesta' is not a noun of the set (the card shows her answer), so no noun row. Tap boxes 1 and 3 also cover opening frames where only the table and the card stack are visible. Answer row is the whole sentence (no subject in Spanish)."
+}

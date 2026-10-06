@@ -1,0 +1,124 @@
+{
+ "mediaId": 673,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "einlaufen",
+ "taps": [
+  {
+   "phrase": "die Waschmaschine befüllen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "fassungslos starren",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "in der Wäsche einlaufen",
+   "target": "der Pullover",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Sommersprossen",
+   "voice": "female"
+  },
+  {
+   "word": "der Pullover",
+   "voice": "female"
+  },
+  {
+   "word": "die Latzhose",
+   "voice": "female"
+  },
+  {
+   "word": "die Waschmaschine",
+   "voice": "female"
+  }
+ ],
+ "question": "Was ist mit dem Pullover passiert?",
+ "answer": [
+  "Der",
+  "Pullover",
+  "ist",
+  "in",
+  "der",
+  "Waschmaschine",
+  "eingelaufen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Waschmaschine"
+    },
+    {
+     "text": "befüllen",
+     "gap": true,
+     "accept": [
+      "befüllen",
+      "beladen",
+      "füllen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fassungslos"
+    },
+    {
+     "text": "starren",
+     "gap": true,
+     "accept": [
+      "starren",
+      "schauen",
+      "gucken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in der Wäsche"
+    },
+    {
+     "text": "einlaufen",
+     "gap": true,
+     "accept": [
+      "einlaufen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ist in der"
+    },
+    {
+     "text": "Waschmaschine",
+     "gap": true,
+     "accept": [
+      "Waschmaschine",
+      "Wäsche"
+     ]
+    },
+    {
+     "text": "eingelaufen"
+    }
+   ]
+  }
+ ],
+ "notes": "English past tense -> German Perfekt ('ist eingelaufen'), the natural spoken form. The red box for 'die Waschmaschine befüllen' mostly frames the girl's face; loading happens only in the frames with the arm at the machine. Answer subject is der Pullover (masc.), voice kept female as in English (default voice)."
+}

@@ -1,0 +1,27 @@
+{
+  "mediaId": 230, "lang": "de", "level": "B",
+  "keyWord": "der Regisseur",
+  "taps": [
+    { "phrase": "die Fäuste in die Luft reißen", "target": "die Regisseurin", "voice": "female" },
+    { "phrase": "ein Piratenkostüm tragen", "target": "der Schauspieler", "voice": "male" },
+    { "phrase": "auf einem Stativ stehen", "target": "die Filmkamera", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Regisseurin", "voice": "female" },
+    { "word": "die Filmkamera", "voice": "female" },
+    { "word": "der Klappstuhl", "voice": "female" },
+    { "word": "die Sonne", "voice": "female" }
+  ],
+  "question": "Was macht die Regisseurin?",
+  "answer": ["Sie", "reißt", "die", "Fäuste", "in", "die", "Luft."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Fäuste", "gap": true, "accept": ["Fäuste", "Arme"] }, { "text": "in die Luft reißen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "Piratenkostüm", "gap": true, "accept": ["Piratenkostüm", "Kostüm"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "auf einem" }, { "text": "Stativ", "gap": true, "accept": ["Stativ"] }, { "text": "stehen" } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Regisseurin", "gap": true, "accept": ["Regisseurin"] } ] },
+    { "from": "answer", "parts": [ { "text": "reißt", "gap": true, "accept": ["reißt", "streckt"] }, { "text": "die Fäuste in die Luft" } ] }
+  ],
+  "notes": "KEY WORD: the director is a woman, so the natural German noun is 'die Regisseurin' (used for the pill, question and noun row); database word 'der Regisseur' kept as keyWord. Proposal: accept the feminine form for this video or map it to 'die Regisseurin'. Director's box covers her the whole clip; she raises her fists only at the end (most boxed frames show her gesturing and demonstrating); phrase written for the payoff the English names. The folding chair is a director's chair ('Regiestuhl'); 'Klappstuhl' mirrors the English and is the everyday word."
+}

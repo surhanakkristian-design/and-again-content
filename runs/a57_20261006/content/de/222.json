@@ -1,0 +1,26 @@
+{
+  "mediaId": 222, "lang": "de", "level": "B",
+  "keyWord": "die Verspätung",
+  "taps": [
+    { "phrase": "die Fahrgäste vertrösten", "target": "der Busfahrer", "voice": "male" },
+    { "phrase": "auf ihrem Koffer zusammensacken", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Uhrzeit anzeigen", "target": "die Uhr", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Uhr", "voice": "female" },
+    { "word": "der Koffer", "voice": "female" },
+    { "word": "die Leuchtreklamen", "voice": "female" },
+    { "word": "der Busfahrer", "voice": "male" }
+  ],
+  "question": "Was macht der Busfahrer?",
+  "answer": ["Er", "versperrt", "die", "Bustür."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Fahrgäste" }, { "text": "vertrösten", "gap": true, "accept": ["vertrösten"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf ihrem" }, { "text": "Koffer", "gap": true, "accept": ["Koffer"] }, { "text": "zusammensacken" } ] },
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Uhrzeit", "gap": true, "accept": ["Uhrzeit", "Zeit"] }, { "text": "anzeigen" } ] },
+    { "from": "answer", "parts": [ { "text": "versperrt", "gap": true, "accept": ["versperrt", "blockiert"] }, { "text": "die Bustür" } ] }
+  ],
+  "notes": "Tap 1: the driver's box covers the door frames (arms out, 'not yet' finger) AND many frames in the bus windscreen (arms up, finger raised, slumped) where he no longer blocks the door; 'die Fahrgäste vertrösten' (put them off) fits all of them, while the answer keeps the English door-blocking ('versperrt die Bustür'). Tap 2: she sits slumped on the suitcase in most boxed frames and lies across it at the end: 'zusammensacken' covers both. 'die Leuchtreklamen' = neon signs. Key word 'die Verspätung' is not a noun of the set (no noun row); the clip shows waiting, the key word is never named."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 7748,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "día y noche",
+ "taps": [
+  {
+   "phrase": "pintar una escultura de dragón",
+   "target": "la chica del peto",
+   "voice": "female"
+  },
+  {
+   "phrase": "bostezar con un café en la mano",
+   "target": "la chica de verde",
+   "voice": "female"
+  },
+  {
+   "phrase": "dormitar sobre un cojín azul",
+   "target": "el chico del cojín azul",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el dragón",
+   "voice": "female"
+  },
+  {
+   "word": "los botes de pintura",
+   "voice": "female"
+  },
+  {
+   "word": "la caja de pizza",
+   "voice": "female"
+  },
+  {
+   "word": "la manta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica del peto?",
+ "answer": [
+  "Está",
+  "pintando",
+  "una",
+  "escultura",
+  "de",
+  "dragón."
+ ],
+ "answerVoice": "female",
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pintar una"
+    },
+    {
+     "text": "escultura",
+     "gap": true,
+     "accept": [
+      "escultura"
+     ]
+    },
+    {
+     "text": "de dragón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bostezar",
+     "gap": true,
+     "accept": [
+      "bostezar"
+     ]
+    },
+    {
+     "text": "con un café en la mano"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormitar sobre un"
+    },
+    {
+     "text": "cojín",
+     "gap": true,
+     "accept": [
+      "cojín"
+     ]
+    },
+    {
+     "text": "azul"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "pintando",
+     "gap": true,
+     "accept": [
+      "pintando"
+     ]
+    },
+    {
+     "text": "una escultura de dragón"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'día y noche' is a time phrase that no tap target, noun or the question can carry naturally (the clip only implies an all-night shift: sleepers, coffee, dawn light), so it appears in no exercise, as in English. Phrase 3: a second person also sleeps on the floor (left), but only the man in the box lies on a blue cushion. Answer drops the subject (native usage).",
+ "carousel": []
+}

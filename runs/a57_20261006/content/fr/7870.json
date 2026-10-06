@@ -1,0 +1,119 @@
+{
+ "mediaId": 7870,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "avec espoir",
+ "taps": [
+  {
+   "phrase": "se lécher les babines",
+   "target": "le chien",
+   "voice": "female"
+  },
+  {
+   "phrase": "pendre au bout de la fourchette",
+   "target": "les spaghettis",
+   "voice": "female"
+  },
+  {
+   "phrase": "scintiller dans l'olivier",
+   "target": "les guirlandes lumineuses",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "les spaghettis",
+   "voice": "female"
+  },
+  {
+   "word": "le bracelet",
+   "voice": "female"
+  },
+  {
+   "word": "le mur en pierre",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le chien ?",
+ "answer": [
+  "Il",
+  "fixe",
+  "les",
+  "spaghettis",
+  "avec",
+  "espoir."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se lécher les"
+    },
+    {
+     "text": "babines",
+     "gap": true,
+     "accept": [
+      "babines"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pendre",
+     "gap": true,
+     "accept": [
+      "pendre"
+     ]
+    },
+    {
+     "text": "au bout de la"
+    },
+    {
+     "text": "fourchette"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "scintiller",
+     "gap": true,
+     "accept": [
+      "scintiller",
+      "briller"
+     ]
+    },
+    {
+     "text": "dans l'olivier"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fixe les spaghettis avec"
+    },
+    {
+     "text": "espoir",
+     "gap": true,
+     "accept": [
+      "espoir"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word avec espoir in the model answer. 'avec espoir' could also stand before 'les spaghettis' (less natural). The dog sticks its tongue out rather than clearly licking in the last frames; 'se lécher les babines' kept as English."
+}

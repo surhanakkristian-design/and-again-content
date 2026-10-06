@@ -1,0 +1,25 @@
+{
+  "mediaId": 4930, "lang": "de", "level": "B",
+  "keyWord": "die Belohnung",
+  "taps": [
+    { "phrase": "sich eifrig melden", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "stolz ihr Heft hochhalten", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "auf der Seite glitzern", "target": "der Goldstern", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Goldstern", "voice": "female" },
+    { "word": "das Heft", "voice": "female" },
+    { "word": "das Whiteboard", "voice": "female" }
+  ],
+  "question": "Welche Belohnung bekommt das Mädchen?",
+  "answer": ["Sie", "bekommt", "einen", "glitzernden", "Goldstern."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich eifrig" }, { "text": "melden", "gap": true, "accept": ["melden"] } ] },
+    { "from": "taps", "parts": [ { "text": "stolz ihr" }, { "text": "Heft", "gap": true, "accept": ["Heft", "Spiralheft"] }, { "text": "hochhalten" } ] },
+    { "from": "taps", "parts": [ { "text": "auf der Seite" }, { "text": "glitzern", "gap": true, "accept": ["glitzern", "funkeln"] } ] },
+    { "from": "answer", "parts": [ { "text": "bekommt einen glitzernden" }, { "text": "Goldstern", "gap": true, "accept": ["Goldstern", "Stern"] } ] }
+  ],
+  "notes": "'sich melden' is the German school word for raising your hand in class. Taps 1 and 2 share the same box (the girl); she raises her hand early and holds up the notebook only at the end, writing in between. The key word 'die Belohnung' is not a noun of the set, so no noun row; it appears in the question only (no recall row can contain it naturally). 'das Heft' for the spiral notebook ('Spiralheft' accepted in recall). 'das Mädchen' -> 'Sie' as native teachers write."
+}

@@ -1,0 +1,117 @@
+{
+ "mediaId": 200,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la crème",
+ "taps": [
+  {
+   "phrase": "mélanger la crème",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "manger une gaufre",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un foulard",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la crème",
+   "voice": "male"
+  },
+  {
+   "word": "la gaufre",
+   "voice": "male"
+  },
+  {
+   "word": "l'assiette",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "mélange",
+  "la",
+  "crème",
+  "dans",
+  "un",
+  "bol."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mélanger la"
+    },
+    {
+     "text": "crème",
+     "gap": true,
+     "accept": [
+      "crème"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger une"
+    },
+    {
+     "text": "gaufre",
+     "gap": true,
+     "accept": [
+      "gaufre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "foulard",
+     "gap": true,
+     "accept": [
+      "foulard"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mélange",
+     "gap": true,
+     "accept": [
+      "mélange",
+      "bat",
+      "fouette"
+     ]
+    },
+    {
+     "text": "la crème"
+    },
+    {
+     "text": "dans un bol"
+    }
+   ]
+  }
+ ],
+ "notes": "Natives say 'fouetter / monter la crème' for whisking (B1); kept A-level 'mélanger'. English 'cover her hair' rendered as 'porter un foulard' (she wears a headscarf). Phrase 1 boxes include the first frames where the woman pours."
+}

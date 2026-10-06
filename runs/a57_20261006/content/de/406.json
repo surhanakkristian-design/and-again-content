@@ -1,0 +1,131 @@
+{
+ "mediaId": 406,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Eisen",
+ "taps": [
+  {
+   "phrase": "einen schweren Hammer schwingen",
+   "target": "der Schmied",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine Eisenspirale befestigen",
+   "target": "der Schmied",
+   "voice": "male"
+  },
+  {
+   "phrase": "scharfe Spitzen haben",
+   "target": "das Tor",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Amboss",
+   "voice": "male"
+  },
+  {
+   "word": "die Eisenstange",
+   "voice": "male"
+  },
+  {
+   "word": "die Schutzbrille",
+   "voice": "male"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Schmied?",
+ "answer": [
+  "Er",
+  "schmiedet",
+  "heißes",
+  "Eisen",
+  "auf",
+  "dem",
+  "Amboss."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schweren"
+    },
+    {
+     "text": "Hammer",
+     "gap": true,
+     "accept": [
+      "Hammer"
+     ]
+    },
+    {
+     "text": "schwingen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Eisenspirale",
+     "gap": true,
+     "accept": [
+      "Eisenspirale",
+      "Spirale"
+     ]
+    },
+    {
+     "text": "befestigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "scharfe"
+    },
+    {
+     "text": "Spitzen",
+     "gap": true,
+     "accept": [
+      "Spitzen"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schmiedet",
+     "gap": true,
+     "accept": [
+      "schmiedet",
+      "bearbeitet",
+      "hämmert"
+     ]
+    },
+    {
+     "text": "heißes Eisen"
+    },
+    {
+     "text": "auf dem Amboss"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word in the answer (Eisen) and as compounds (Eisenspirale, Eisenstange, decision 404), so no separate noun row. Answer: German also allows 'Er schmiedet auf dem Amboss heißes Eisen' (two orders). English tap boxes 1 and 2 span the whole blacksmith footage; phrase 2 happens at the gate at the end, as in English."
+}

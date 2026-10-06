@@ -1,0 +1,26 @@
+{
+  "mediaId": 190, "lang": "de", "level": "A",
+  "keyWord": "der Keks",
+  "taps": [
+    { "phrase": "einen großen Keks essen", "target": "die Frau", "voice": "female" },
+    { "phrase": "einen Löffel halten", "target": "der Mann", "voice": "male" },
+    { "phrase": "am Fenster liegen", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Fenster", "voice": "female" },
+    { "word": "die Katze", "voice": "female" },
+    { "word": "die Kekse", "voice": "female" },
+    { "word": "der Tisch", "voice": "female" }
+  ],
+  "question": "Was isst die Frau?",
+  "answer": ["Sie", "isst", "einen", "großen", "Keks."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen großen" }, { "text": "Keks", "gap": true, "accept": ["Keks", "Cookie"] }, { "text": "essen" } ] },
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Löffel", "gap": true, "accept": ["Löffel"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "am Fenster" }, { "text": "liegen", "gap": true, "accept": ["liegen"] } ] },
+    { "from": "answer", "parts": [ { "text": "isst", "gap": true, "accept": ["isst"] }, { "text": "einen großen Keks" } ] }
+  ],
+  "notes": "Tap 1 box also covers the early frames where the woman takes the tray out and holds the cookie up; the phrase describes her eating in most boxed frames. No noun row: Keks is gapped in tap row 1."
+}

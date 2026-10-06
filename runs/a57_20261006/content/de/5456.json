@@ -1,0 +1,121 @@
+{
+  "mediaId": 5456,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Erlaubnis",
+  "taps": [
+    {
+      "phrase": "seinen Pass öffnen",
+      "target": "der junge Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "durch die Kontrolle gehen",
+      "target": "der junge Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine Uniform tragen",
+      "target": "der Beamte",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Bäume",
+      "voice": "male"
+    },
+    {
+      "word": "die Brille",
+      "voice": "male"
+    },
+    {
+      "word": "die Hände",
+      "voice": "male"
+    },
+    {
+      "word": "der Pass",
+      "voice": "male"
+    }
+  ],
+  "question": "Was hält der junge Mann?",
+  "answer": [
+    "Er",
+    "hält",
+    "seinen",
+    "Pass."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "seinen Pass"
+        },
+        {
+          "text": "öffnen",
+          "gap": true,
+          "accept": [
+            "öffnen",
+            "aufmachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die"
+        },
+        {
+          "text": "Kontrolle",
+          "gap": true,
+          "accept": [
+            "Kontrolle"
+          ]
+        },
+        {
+          "text": "gehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Uniform",
+          "gap": true,
+          "accept": [
+            "Uniform"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält seinen"
+        },
+        {
+          "text": "Pass",
+          "gap": true,
+          "accept": [
+            "Pass",
+            "Reisepass"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'die Erlaubnis' is abstract and not one of the nouns; not forced (no noun row). The English 'gate' is a metal detector at a security check; 'durch ein Tor gehen' is unnatural German, so phrase 2 says 'durch die Kontrolle gehen' (A2; 'die Sicherheitsschleuse' would be B2). The English tap boxes for phrases 1 and 2 are the same and cover the whole clip; phrase 1 describes the passport moments (he opens it to the visa page). 'der Pass' is the everyday word ('Reisepass' accepted)."
+}

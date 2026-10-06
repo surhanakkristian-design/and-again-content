@@ -1,0 +1,124 @@
+{
+ "mediaId": 4755,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la fractura",
+ "taps": [
+  {
+   "phrase": "señalar la radiografía",
+   "target": "la doctora",
+   "voice": "female"
+  },
+  {
+   "phrase": "hacer una mueca de dolor",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "mostrar una fractura",
+   "target": "la radiografía",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la radiografía",
+   "voice": "male"
+  },
+  {
+   "word": "la doctora",
+   "voice": "female"
+  },
+  {
+   "word": "la escayola",
+   "voice": "male"
+  },
+  {
+   "word": "el cabestrillo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está señalando la doctora?",
+ "answer": [
+  "Está",
+  "señalando",
+  "una",
+  "fractura",
+  "en",
+  "la",
+  "radiografía."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar",
+     "gap": true,
+     "accept": [
+      "señalar"
+     ]
+    },
+    {
+     "text": "la radiografía"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer una"
+    },
+    {
+     "text": "mueca",
+     "gap": true,
+     "accept": [
+      "mueca"
+     ]
+    },
+    {
+     "text": "de dolor"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mostrar",
+     "gap": true,
+     "accept": [
+      "mostrar",
+      "revelar",
+      "enseñar"
+     ]
+    },
+    {
+     "text": "una fractura"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está señalando una"
+    },
+    {
+     "text": "fractura",
+     "gap": true,
+     "accept": [
+      "fractura"
+     ]
+    },
+    {
+     "text": "en la radiografía"
+    }
+   ]
+  }
+ ],
+ "notes": "Target of tap 2 is the young man ('el chico'). 'la escayola' = Spain word for a plaster cast. Answer drops the subject (la doctora)."
+}

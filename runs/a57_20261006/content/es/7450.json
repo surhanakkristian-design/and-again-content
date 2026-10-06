@@ -1,0 +1,144 @@
+{
+ "mediaId": 7450,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el alfarero",
+ "taps": [
+  {
+   "phrase": "dar forma a un jarrón alto",
+   "target": "la alfarera de delante",
+   "voice": "female"
+  },
+  {
+   "phrase": "meter las manos dentro del jarrón",
+   "target": "la alfarera de delante",
+   "voice": "female"
+  },
+  {
+   "phrase": "trabajar al fondo del taller",
+   "target": "la persona del fondo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el horno",
+   "voice": "female"
+  },
+  {
+   "word": "la alfarera",
+   "voice": "female"
+  },
+  {
+   "word": "el jarrón",
+   "voice": "female"
+  },
+  {
+   "word": "la esponja",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la alfarera de delante?",
+ "answer": [
+  "La",
+  "alfarera",
+  "está",
+  "dando",
+  "forma",
+  "a",
+  "un",
+  "jarrón",
+  "de",
+  "barro."
+ ],
+ "answerVoice": "female",
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar forma a un"
+    },
+    {
+     "text": "jarrón",
+     "gap": true,
+     "accept": [
+      "jarrón"
+     ]
+    },
+    {
+     "text": "alto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "meter las"
+    },
+    {
+     "text": "manos",
+     "gap": true,
+     "accept": [
+      "manos"
+     ]
+    },
+    {
+     "text": "dentro del jarrón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "trabajar al"
+    },
+    {
+     "text": "fondo",
+     "gap": true,
+     "accept": [
+      "fondo"
+     ]
+    },
+    {
+     "text": "del taller"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "alfarera",
+     "gap": true,
+     "accept": [
+      "alfarera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está dando forma a un jarrón de"
+    },
+    {
+     "text": "barro",
+     "gap": true,
+     "accept": [
+      "barro",
+      "arcilla"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el alfarero' (masculine) but the potter is a woman: noun 2, the question and the answer use the feminine 'la alfarera' (same word, natural gender). Proposal: accept 'alfarera' as the key word form for this video. Phrase 3: the person at the back is visible only in the second half (box off at first).",
+ "carousel": []
+}

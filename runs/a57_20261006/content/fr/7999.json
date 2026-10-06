@@ -1,0 +1,123 @@
+{
+ "mediaId": 7999,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "loger à l'hôtel",
+ "taps": [
+  {
+   "phrase": "sauter sur le lit",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "se rouler sur le dos",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "apporter les valises",
+   "target": "le chat",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chien",
+   "voice": "male"
+  },
+  {
+   "word": "le chat",
+   "voice": "male"
+  },
+  {
+   "word": "le lit",
+   "voice": "male"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le chien ?",
+ "answer": [
+  "Il",
+  "est",
+  "allongé",
+  "sur",
+  "le",
+  "lit",
+  "de",
+  "l'hôtel."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sauter",
+     "gap": true,
+     "accept": [
+      "sauter",
+      "bondir"
+     ]
+    },
+    {
+     "text": "sur le lit"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se rouler sur le"
+    },
+    {
+     "text": "dos",
+     "gap": true,
+     "accept": [
+      "dos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apporter les"
+    },
+    {
+     "text": "valises",
+     "gap": true,
+     "accept": [
+      "valises",
+      "bagages"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "est"
+    },
+    {
+     "text": "allongé",
+     "gap": true,
+     "accept": [
+      "allongé",
+      "couché"
+     ]
+    },
+    {
+     "text": "sur le lit de l'hôtel"
+    }
+   ]
+  }
+ ],
+ "notes": "Key phrase 'loger à l'hôtel' cannot be shown as an action; the answer uses 'l'hôtel' (elided, so not a gap). Phrase 2: the dog rolls and wriggles on its back, hence 'se rouler sur le dos'. Cat pushes a luggage trolley; 'apporter les valises' kept at A level."
+}

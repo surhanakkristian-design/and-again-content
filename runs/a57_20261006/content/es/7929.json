@@ -1,0 +1,129 @@
+{
+  "mediaId": 7929,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "el aparcamiento",
+  "taps": [
+    {
+      "phrase": "aplastar dos coches pequeños",
+      "target": "el camión monstruo",
+      "voice": "male"
+    },
+    {
+      "phrase": "levantar los dos puños",
+      "target": "el chico del camión",
+      "voice": "male"
+    },
+    {
+      "phrase": "cruzarse de brazos",
+      "target": "la mujer de delante",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el camión monstruo",
+      "voice": "male"
+    },
+    {
+      "word": "el coche rojo",
+      "voice": "male"
+    },
+    {
+      "word": "la plaza de aparcamiento",
+      "voice": "male"
+    },
+    {
+      "word": "las botas",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el camión monstruo?",
+  "answer": [
+    "Está",
+    "aplastando",
+    "dos",
+    "coches",
+    "aparcados."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "aplastar",
+          "gap": true,
+          "accept": [
+            "aplastar"
+          ]
+        },
+        {
+          "text": "dos coches pequeños"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "levantar los dos"
+        },
+        {
+          "text": "puños",
+          "gap": true,
+          "accept": [
+            "puños"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cruzarse",
+          "gap": true,
+          "accept": [
+            "cruzarse"
+          ]
+        },
+        {
+          "text": "de brazos"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "la plaza de"
+        },
+        {
+          "text": "aparcamiento",
+          "gap": true,
+          "accept": [
+            "aparcamiento"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está aplastando dos coches"
+        },
+        {
+          "text": "aparcados",
+          "gap": true,
+          "accept": [
+            "aparcados"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "'el aparcamiento' in Spain mainly means the car park (shown) and also the act of parking; noun 3 'la plaza de aparcamiento' carries the key word, so the noun row gaps it. 'el camión monstruo' is the usual Spanish term (some say 'monster truck')."
+}

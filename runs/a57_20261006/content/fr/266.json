@@ -1,0 +1,119 @@
+{
+ "mediaId": 266,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "l'énergie",
+ "taps": [
+  {
+   "phrase": "monter les marches en courant",
+   "target": "la femme en blanc",
+   "voice": "female"
+  },
+  {
+   "phrase": "sauter sur place",
+   "target": "la femme en blanc",
+   "voice": "female"
+  },
+  {
+   "phrase": "poser les mains sur les genoux",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les marches",
+   "voice": "female"
+  },
+  {
+   "word": "le lampadaire",
+   "voice": "female"
+  },
+  {
+   "word": "le mur",
+   "voice": "female"
+  },
+  {
+   "word": "le ciel",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en blanc ?",
+ "answer": [
+  "Elle",
+  "monte",
+  "les",
+  "marches",
+  "en",
+  "courant."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "monter les"
+    },
+    {
+     "text": "marches",
+     "gap": true,
+     "accept": [
+      "marches"
+     ]
+    },
+    {
+     "text": "en courant"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sauter",
+     "gap": true,
+     "accept": [
+      "sauter",
+      "bondir"
+     ]
+    },
+    {
+     "text": "sur place"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "poser les mains sur les"
+    },
+    {
+     "text": "genoux",
+     "gap": true,
+     "accept": [
+      "genoux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "monte",
+     "gap": true,
+     "accept": [
+      "monte"
+     ]
+    },
+    {
+     "text": "les marches en courant"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'l'énergie' is not a visible thing, so it appears in no exercise. Phrase 3: other exhausted people in the background also bend over with hands on knees, as in English; the blue box marks the man."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 7145, "lang": "de", "level": "B",
+  "keyWord": "die Haustür",
+  "taps": [
+    { "phrase": "sich hinter die Tür zurückziehen", "target": "der Mann", "voice": "male" },
+    { "phrase": "den Mann anschnauben", "target": "die große Kuh", "voice": "male" },
+    { "phrase": "an den Milchflaschen vorbeischlendern", "target": "die Katze", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Haustür", "voice": "male" },
+    { "word": "der Bademantel", "voice": "male" },
+    { "word": "die Milchflaschen", "voice": "male" },
+    { "word": "das Kopfsteinpflaster", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "zieht", "sich", "hinter", "seine", "Haustür", "zurück."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich hinter die Tür" }, { "text": "zurückziehen", "gap": true, "accept": ["zurückziehen"] } ] },
+    { "from": "taps", "parts": [ { "text": "den Mann" }, { "text": "anschnauben", "gap": true, "accept": ["anschnauben", "anprusten"] } ] },
+    { "from": "taps", "parts": [ { "text": "an den" }, { "text": "Milchflaschen", "gap": true, "accept": ["Milchflaschen", "Flaschen"] }, { "text": "vorbeischlendern" } ] },
+    { "from": "answer", "parts": [ { "text": "zieht sich hinter seine" }, { "text": "Haustür", "gap": true, "accept": ["Haustür", "Tür"] }, { "text": "zurück" } ] }
+  ],
+  "notes": "Phrase 1: in the first frames the man is still standing in the doorway; he steps back behind the door in the later boxed frames."
+}

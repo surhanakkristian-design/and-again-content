@@ -1,0 +1,122 @@
+{
+  "mediaId": 239,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "douter",
+  "taps": [
+    {
+      "phrase": "examiner une bague en or",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "adresser un grand sourire au client",
+      "target": "la vieille dame",
+      "voice": "female"
+    },
+    {
+      "phrase": "froncer les sourcils d'un air sceptique",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la bague",
+      "voice": "male"
+    },
+    {
+      "word": "le foulard",
+      "voice": "male"
+    },
+    {
+      "word": "la veste",
+      "voice": "male"
+    },
+    {
+      "word": "les nuages",
+      "voice": "male"
+    }
+  ],
+  "question": "Qu'est-ce que l'homme examine ?",
+  "answer": [
+    "Il",
+    "examine",
+    "une",
+    "bague",
+    "en",
+    "or."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "examiner une"
+        },
+        {
+          "text": "bague",
+          "gap": true,
+          "accept": [
+            "bague"
+          ]
+        },
+        {
+          "text": "en or"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "adresser un grand"
+        },
+        {
+          "text": "sourire",
+          "gap": true,
+          "accept": [
+            "sourire"
+          ]
+        },
+        {
+          "text": "au client"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "froncer les sourcils d'un air"
+        },
+        {
+          "text": "sceptique",
+          "gap": true,
+          "accept": [
+            "sceptique",
+            "dubitatif"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "examine",
+          "gap": true,
+          "accept": [
+            "examine"
+          ]
+        },
+        {
+          "text": "une bague en or"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'douter' is not used in the texts (the clip shows doubt, not the verb); 'd'un air sceptique' carries the meaning. Phrase 1 gaps 'bague' so it does not look like the answer row ('examine une bague en or') once blanked. The man also smiles slightly in the last frames, but only the old woman grins at the customer."
+}

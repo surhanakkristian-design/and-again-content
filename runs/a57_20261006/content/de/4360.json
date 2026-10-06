@@ -1,0 +1,125 @@
+{
+  "mediaId": 4360,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Handtasche",
+  "taps": [
+    {
+      "phrase": "neugierig in eine Tüte spähen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "mehrere Einkaufstüten schleppen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "stolz ihre Handtasche präsentieren",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Papiertüten",
+      "voice": "female"
+    },
+    {
+      "word": "die Handtasche",
+      "voice": "female"
+    },
+    {
+      "word": "die Reisetasche",
+      "voice": "female"
+    },
+    {
+      "word": "die Rolltreppe",
+      "voice": "female"
+    }
+  ],
+  "question": "Was präsentiert die Frau?",
+  "answer": [
+    "Sie",
+    "präsentiert",
+    "ihre",
+    "Handtasche."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "neugierig in eine Tüte"
+        },
+        {
+          "text": "spähen",
+          "gap": true,
+          "accept": [
+            "spähen",
+            "schauen",
+            "blicken",
+            "gucken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mehrere"
+        },
+        {
+          "text": "Einkaufstüten",
+          "gap": true,
+          "accept": [
+            "Einkaufstüten",
+            "Tüten",
+            "Taschen"
+          ]
+        },
+        {
+          "text": "schleppen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "stolz ihre"
+        },
+        {
+          "text": "Handtasche",
+          "gap": true,
+          "accept": [
+            "Handtasche"
+          ]
+        },
+        {
+          "text": "präsentieren"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "präsentiert",
+          "gap": true,
+          "accept": [
+            "präsentiert",
+            "zeigt"
+          ]
+        },
+        {
+          "text": "ihre Handtasche"
+        }
+      ]
+    }
+  ],
+  "notes": "'Purse' here is the patterned leather handbag: 'die Handtasche' fits. Duffel bag = 'die Reisetasche' ('die Sporttasche' would also do). Model answer kept short (no 'auf der Rolltreppe') so only one word order is possible. No noun row: Handtasche is in tap row 3; the answer row gaps the verb so it differs from tap row 3."
+}

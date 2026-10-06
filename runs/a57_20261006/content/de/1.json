@@ -1,0 +1,121 @@
+{
+ "mediaId": 1,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Pause",
+ "taps": [
+  {
+   "phrase": "über sein Handy lachen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich an den Kopf fassen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Mund weit aufmachen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Vorhang",
+   "voice": "male"
+  },
+  {
+   "word": "das Handy",
+   "voice": "male"
+  },
+  {
+   "word": "der Pullover",
+   "voice": "male"
+  },
+  {
+   "word": "die Bücher",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "lacht",
+  "über",
+  "sein",
+  "Handy."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über sein Handy"
+    },
+    {
+     "text": "lachen",
+     "gap": true,
+     "accept": [
+      "lachen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich an den"
+    },
+    {
+     "text": "Kopf",
+     "gap": true,
+     "accept": [
+      "Kopf"
+     ]
+    },
+    {
+     "text": "fassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Mund",
+     "gap": true,
+     "accept": [
+      "Mund"
+     ]
+    },
+    {
+     "text": "weit aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lacht über sein"
+    },
+    {
+     "text": "Handy",
+     "gap": true,
+     "accept": [
+      "Handy",
+      "Smartphone"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three English tap boxes cover the whole clip; each phrase is true only in part of it (laughing first, then hand on head, then mouth wide open). 'die Pause' is not a noun of the set, so no noun row."
+}

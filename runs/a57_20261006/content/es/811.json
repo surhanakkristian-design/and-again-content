@@ -1,0 +1,117 @@
+{
+  "mediaId": 811,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el trofeo",
+  "taps": [
+    {
+      "phrase": "correr hacia el trofeo",
+      "target": "las jugadoras",
+      "voice": "female"
+    },
+    {
+      "phrase": "levantar el trofeo",
+      "target": "las jugadoras",
+      "voice": "female"
+    },
+    {
+      "phrase": "mirar a las jugadoras",
+      "target": "el público",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "las luces",
+      "voice": "female"
+    },
+    {
+      "word": "el trofeo",
+      "voice": "female"
+    },
+    {
+      "word": "la mesa",
+      "voice": "female"
+    },
+    {
+      "word": "el suelo",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué están haciendo las jugadoras?",
+  "answer": [
+    "Están",
+    "levantando",
+    "el",
+    "trofeo."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "correr",
+          "gap": true,
+          "accept": [
+            "correr"
+          ]
+        },
+        {
+          "text": "hacia el trofeo"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "levantar el"
+        },
+        {
+          "text": "trofeo",
+          "gap": true,
+          "accept": [
+            "trofeo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar",
+          "gap": true,
+          "accept": [
+            "mirar"
+          ]
+        },
+        {
+          "text": "a las jugadoras"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Están"
+        },
+        {
+          "text": "levantando",
+          "gap": true,
+          "accept": [
+            "levantando",
+            "alzando"
+          ]
+        },
+        {
+          "text": "el trofeo"
+        }
+      ]
+    }
+  ],
+  "notes": "English uses both 'cup' and 'trophy' for the same object; Spanish uses 'el trofeo' throughout (same thing, same word). 'la copa' accepted in the trofeo gap. English answer has 'together'; dropped to keep one chip order. Verifier: 'copa' removed from the trofeo gap accept (row reads 'levantar el ___'; 'el copa' is wrong gender)."
+}

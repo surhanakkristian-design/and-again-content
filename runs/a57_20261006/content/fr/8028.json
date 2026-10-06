@@ -1,0 +1,26 @@
+{
+  "mediaId": 8028, "lang": "fr", "level": "B",
+  "keyWord": "s'élever à",
+  "taps": [
+    { "phrase": "montrer la pile du doigt", "target": "le cuisinier", "voice": "male" },
+    { "phrase": "se cacher le visage", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "se dresser sur le comptoir", "target": "les piles d'assiettes", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la lanterne", "voice": "female" },
+    { "word": "le bandeau", "voice": "female" },
+    { "word": "les assiettes", "voice": "female" },
+    { "word": "les baguettes", "voice": "female" }
+  ],
+  "question": "Que fait le cuisinier ?",
+  "answer": ["Il", "désigne", "la", "pile", "d'assiettes."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "montrer", "gap": true, "accept": ["montrer"] }, { "text": "la pile du doigt" } ] },
+    { "from": "taps", "parts": [ { "text": "se cacher le" }, { "text": "visage", "gap": true, "accept": ["visage"] } ] },
+    { "from": "taps", "parts": [ { "text": "se dresser sur le" }, { "text": "comptoir", "gap": true, "accept": ["comptoir"] } ] },
+    { "from": "answer", "parts": [ { "text": "désigne la" }, { "text": "pile", "gap": true, "accept": ["pile"] }, { "text": "d'assiettes" } ] }
+  ],
+  "notes": "Key word 's'élever à' (to total, an amount) is not used: the clip shows no amount in writing; its literal sense ('s'élever' = to rise) would fit the stacks but means something else, so I avoided it. 'Se cacher le visage': in the first frames she waves her hands and laughs; she hides her face in the later frames. Answer uses 'désigner' to keep one chip order ('Il montre la pile du doigt' / 'Il montre du doigt la pile' would allow two)."
+}

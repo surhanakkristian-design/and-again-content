@@ -1,0 +1,121 @@
+{
+ "mediaId": 241,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el dibujo",
+ "taps": [
+  {
+   "phrase": "estar sentado en los escalones",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "hacer un dibujo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un sombrero amarillo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el dibujo",
+   "voice": "male"
+  },
+  {
+   "word": "el sombrero",
+   "voice": "male"
+  },
+  {
+   "word": "las casas",
+   "voice": "male"
+  },
+  {
+   "word": "la camisa",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué le enseña el hombre a la mujer?",
+ "answer": [
+  "Le",
+  "enseña",
+  "su",
+  "dibujo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en los"
+    },
+    {
+     "text": "escalones",
+     "gap": true,
+     "accept": [
+      "escalones",
+      "peldaños"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer un"
+    },
+    {
+     "text": "dibujo",
+     "gap": true,
+     "accept": [
+      "dibujo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "sombrero",
+     "gap": true,
+     "accept": [
+      "sombrero"
+     ]
+    },
+    {
+     "text": "amarillo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le"
+    },
+    {
+     "text": "enseña",
+     "gap": true,
+     "accept": [
+      "enseña",
+      "muestra"
+     ]
+    },
+    {
+     "text": "su dibujo"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (natural in Spain), so the answer row is the whole sentence. Many boxed frames for phrases 1/2 are close-ups of the pencil/face where the steps are not visible; the man sits on the steps in the wide shots."
+}

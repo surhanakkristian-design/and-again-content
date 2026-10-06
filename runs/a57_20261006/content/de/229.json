@@ -1,0 +1,26 @@
+{
+  "mediaId": 229, "lang": "de", "level": "B",
+  "keyWord": "das Diplom",
+  "taps": [
+    { "phrase": "über die Bühne schreiten", "target": "der Absolvent", "voice": "male" },
+    { "phrase": "dem Absolventen die Hand schütteln", "target": "der ältere Mann", "voice": "male" },
+    { "phrase": "mit einer Schleife zugebunden sein", "target": "das Diplom", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Diplom", "voice": "male" },
+    { "word": "der Absolventenhut", "voice": "male" },
+    { "word": "der Talar", "voice": "male" },
+    { "word": "die Schärpe", "voice": "male" }
+  ],
+  "question": "Was macht der Absolvent?",
+  "answer": ["Er", "hebt", "sein", "Diplom", "über", "den", "Kopf."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über die Bühne" }, { "text": "schreiten", "gap": true, "accept": ["schreiten", "gehen", "laufen"] } ] },
+    { "from": "taps", "parts": [ { "text": "dem Absolventen die" }, { "text": "Hand", "gap": true, "accept": ["Hand"] }, { "text": "schütteln" } ] },
+    { "from": "taps", "parts": [ { "text": "mit einer" }, { "text": "Schleife", "gap": true, "accept": ["Schleife"] }, { "text": "zugebunden sein" } ] },
+    { "from": "answer", "parts": [ { "text": "hebt sein" }, { "text": "Diplom", "gap": true, "accept": ["Diplom"] }, { "text": "über den Kopf" } ] }
+  ],
+  "notes": "Red box (graduate) also covers the last frames where he lifts the diploma; most boxed frames show him walking across the stage. The older man shakes his hand (visible), so 'die Hand schütteln' instead of 'gratulieren' (speech act). Graduation cap: 'der Absolventenhut' (colloquially also 'Doktorhut'). The sash is a stole; 'die Schärpe' is the everyday word. No noun row: Diplom is in the answer row (gap)."
+}

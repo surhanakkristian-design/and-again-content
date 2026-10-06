@@ -1,0 +1,137 @@
+{
+ "mediaId": 665,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Schaf",
+ "taps": [
+  {
+   "phrase": "grünes Gras fressen",
+   "target": "das große Schaf",
+   "voice": "male"
+  },
+  {
+   "phrase": "das Maul weit aufmachen",
+   "target": "das große Schaf",
+   "voice": "male"
+  },
+  {
+   "phrase": "über die Wiese laufen",
+   "target": "das große Schaf",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Schaf",
+   "voice": "male"
+  },
+  {
+   "word": "die Mauer",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht das Schaf?",
+ "answer": [
+  "Das",
+  "Schaf",
+  "läuft",
+  "über",
+  "die",
+  "Wiese."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "grünes Gras"
+    },
+    {
+     "text": "fressen",
+     "gap": true,
+     "accept": [
+      "fressen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Maul",
+     "gap": true,
+     "accept": [
+      "Maul"
+     ]
+    },
+    {
+     "text": "weit aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über die"
+    },
+    {
+     "text": "Wiese",
+     "gap": true,
+     "accept": [
+      "Wiese"
+     ]
+    },
+    {
+     "text": "laufen"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Schaf",
+     "gap": true,
+     "accept": [
+      "Schaf"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "läuft",
+     "gap": true,
+     "accept": [
+      "läuft",
+      "geht"
+     ]
+    },
+    {
+     "text": "über die Wiese"
+    }
+   ]
+  }
+ ],
+ "notes": "'das Maul' is the correct word for an animal's mouth (A2/B1 border); 'Mund' accepted in recall. 'field' rendered as 'die Wiese' (grassy field). 'die Mauer' = the dry-stone wall. Verifier: removed 'Mund' from the recall accept list (row reads 'das ___', der Mund would be wrong gender and wrong word for a sheep)."
+}

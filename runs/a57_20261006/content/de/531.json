@@ -1,0 +1,123 @@
+{
+  "mediaId": 531,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Party",
+  "taps": [
+    {
+      "phrase": "auf einer Party tanzen",
+      "target": "die Leute",
+      "voice": "male"
+    },
+    {
+      "phrase": "über die Wiese rennen",
+      "target": "der Hund",
+      "voice": "male"
+    },
+    {
+      "phrase": "durch die Luft fliegen",
+      "target": "die Luftballons",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Luftballon",
+      "voice": "male"
+    },
+    {
+      "word": "der Baum",
+      "voice": "male"
+    },
+    {
+      "word": "die Leute",
+      "voice": "male"
+    },
+    {
+      "word": "der Hund",
+      "voice": "male"
+    }
+  ],
+  "question": "Was machen die Leute?",
+  "answer": [
+    "Sie",
+    "tanzen",
+    "auf",
+    "einer",
+    "Party."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf einer"
+        },
+        {
+          "text": "Party",
+          "gap": true,
+          "accept": [
+            "Party",
+            "Feier"
+          ]
+        },
+        {
+          "text": "tanzen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über die"
+        },
+        {
+          "text": "Wiese",
+          "gap": true,
+          "accept": [
+            "Wiese",
+            "Rasen"
+          ]
+        },
+        {
+          "text": "rennen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die Luft"
+        },
+        {
+          "text": "fliegen",
+          "gap": true,
+          "accept": [
+            "fliegen",
+            "schweben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "tanzen",
+          "gap": true,
+          "accept": [
+            "tanzen"
+          ]
+        },
+        {
+          "text": "auf einer Party"
+        }
+      ]
+    }
+  ],
+  "notes": "English noun 1 'a balloon' at the slot is one balloon -> 'der Luftballon' (singular). Phrase 1 box also covers the first seconds at the table where nobody dances yet. No noun row: Party appears in tap row 1 and the answer row."
+}

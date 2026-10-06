@@ -1,0 +1,117 @@
+{
+ "mediaId": 228,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le dîner",
+ "taps": [
+  {
+   "phrase": "porter une casserole chaude",
+   "target": "la femme à la casserole",
+   "voice": "female"
+  },
+  {
+   "phrase": "allumer une bougie",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis sur le mur",
+   "target": "le chat",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chat",
+   "voice": "female"
+  },
+  {
+   "word": "la casserole",
+   "voice": "female"
+  },
+  {
+   "word": "la salade",
+   "voice": "female"
+  },
+  {
+   "word": "le pain",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les gens ?",
+ "answer": [
+  "Ils",
+  "dînent",
+  "ensemble."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "casserole",
+     "gap": true,
+     "accept": [
+      "casserole"
+     ]
+    },
+    {
+     "text": "chaude"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "allumer",
+     "gap": true,
+     "accept": [
+      "allumer"
+     ]
+    },
+    {
+     "text": "une bougie"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis sur le"
+    },
+    {
+     "text": "mur",
+     "gap": true,
+     "accept": [
+      "mur",
+      "muret"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "dînent",
+     "gap": true,
+     "accept": [
+      "dînent",
+      "mangent"
+     ]
+    },
+    {
+     "text": "ensemble"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box also covers later frames where the woman sits and eats; she carries the pot in the boxed frames where she stands. Phrase 2: the man lights the candle only in the first boxed frames; later he passes bread, pours water, toasts and eats (no single other action dominates, so the English action is kept). Key word le dîner appears only as the verb dîner in the answer; it is not one of the nouns, so no noun row. 'la casserole' chosen over 'la marmite' / 'la cocotte' for level A."
+}

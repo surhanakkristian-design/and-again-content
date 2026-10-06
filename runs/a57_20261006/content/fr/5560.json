@@ -1,0 +1,117 @@
+{
+ "mediaId": 5560,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "apprécier",
+ "taps": [
+  {
+   "phrase": "mettre la main sur le cœur",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "boire du thé chaud",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis sur la marche",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "la voiture",
+   "voice": "female"
+  },
+  {
+   "word": "la neige",
+   "voice": "female"
+  },
+  {
+   "word": "la lampe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que boit l'homme ?",
+ "answer": [
+  "Il",
+  "boit",
+  "du",
+  "thé",
+  "chaud."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre la main sur le"
+    },
+    {
+     "text": "cœur",
+     "gap": true,
+     "accept": [
+      "cœur"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "du thé chaud"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis sur la"
+    },
+    {
+     "text": "marche",
+     "gap": true,
+     "accept": [
+      "marche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "boit du"
+    },
+    {
+     "text": "thé",
+     "gap": true,
+     "accept": [
+      "thé"
+     ]
+    },
+    {
+     "text": "chaud"
+    }
+   ]
+  }
+ ],
+ "notes": "Key-word mapping: the concept is 'to be thankful for something'; French 'apprécier' mainly means to like / value / enjoy, the thankful sense is 'être reconnaissant (de)' or 'remercier'. Proposal: 'être reconnaissant'. Key word not forced into the rows. Phrase 1 (red, the woman): English 'give him some tea' happens only in the first frames; in most boxed frames she holds her hand on her chest in thanks, so 'mettre la main sur le cœur'. Noun 4: the wall-mounted street lantern = 'la lampe' (A level; 'la lanterne' also possible)."
+}

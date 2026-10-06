@@ -1,0 +1,125 @@
+{
+ "mediaId": 273,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le soir",
+ "taps": [
+  {
+   "phrase": "disparaître derrière les collines",
+   "target": "le soleil",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir les cheveux longs",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un pull vert",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le soleil",
+   "voice": "male"
+  },
+  {
+   "word": "les maisons",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le soleil ?",
+ "answer": [
+  "Le",
+  "soleil",
+  "se",
+  "couche",
+  "derrière",
+  "les",
+  "collines."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "disparaître derrière les"
+    },
+    {
+     "text": "collines",
+     "gap": true,
+     "accept": [
+      "collines"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir les"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    },
+    {
+     "text": "longs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "pull",
+     "gap": true,
+     "accept": [
+      "pull"
+     ]
+    },
+    {
+     "text": "vert"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "couche",
+     "gap": true,
+     "accept": [
+      "couche"
+     ]
+    },
+    {
+     "text": "derrière les collines"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le soir' is not a thing in the noun set and appears in no exercise text (as in English). The sun is visible in the boxed frames before it sets; in the later frames it is gone."
+}

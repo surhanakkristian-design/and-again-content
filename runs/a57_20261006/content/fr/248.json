@@ -1,0 +1,118 @@
+{
+  "mediaId": 248,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le compte-gouttes",
+  "taps": [
+    {
+      "phrase": "verser le remède goutte à goutte",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "avaler le remède",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "dégager de la vapeur",
+      "target": "la bouilloire en cuivre",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le compte-gouttes",
+      "voice": "female"
+    },
+    {
+      "word": "la cuillère en bois",
+      "voice": "female"
+    },
+    {
+      "word": "le tablier",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "dose",
+    "le",
+    "remède",
+    "au",
+    "compte-gouttes."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "verser le"
+        },
+        {
+          "text": "remède",
+          "gap": true,
+          "accept": [
+            "remède",
+            "médicament"
+          ]
+        },
+        {
+          "text": "goutte à goutte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avaler",
+          "gap": true,
+          "accept": [
+            "avaler"
+          ]
+        },
+        {
+          "text": "le remède"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dégager de la"
+        },
+        {
+          "text": "vapeur",
+          "gap": true,
+          "accept": [
+            "vapeur"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "dose le remède"
+        },
+        {
+          "text": "au"
+        },
+        {
+          "text": "compte-gouttes",
+          "gap": true,
+          "accept": [
+            "compte-gouttes"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "B1/B2 words: 'remède', 'goutte à goutte', 'dégager', 'doser', 'au compte-gouttes'. The medicine is called 'le remède' everywhere (old apothecary setting); recall row 1 also accepts 'médicament'. The man drinks the dose from the spoon in the boxed frames ('avaler')."
+}

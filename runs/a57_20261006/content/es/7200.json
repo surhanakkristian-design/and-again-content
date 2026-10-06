@@ -1,0 +1,119 @@
+{
+ "mediaId": 7200,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el golfo",
+ "taps": [
+  {
+   "phrase": "pilotar un parapente",
+   "target": "el hombre de la chaqueta roja",
+   "voice": "male"
+  },
+  {
+   "phrase": "elevar al piloto",
+   "target": "la vela naranja",
+   "voice": "male"
+  },
+  {
+   "phrase": "ondear al viento",
+   "target": "la manga de viento",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el parapente",
+   "voice": "male"
+  },
+  {
+   "word": "la manga de viento",
+   "voice": "male"
+  },
+  {
+   "word": "el golfo",
+   "voice": "male"
+  },
+  {
+   "word": "el saliente rocoso",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el piloto?",
+ "answer": [
+  "Está",
+  "planeando",
+  "sobre",
+  "un",
+  "golfo",
+  "turquesa."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pilotar un"
+    },
+    {
+     "text": "parapente",
+     "gap": true,
+     "accept": [
+      "parapente"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "elevar",
+     "gap": true,
+     "accept": [
+      "elevar",
+      "levantar"
+     ]
+    },
+    {
+     "text": "al piloto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ondear",
+     "gap": true,
+     "accept": [
+      "ondear"
+     ]
+    },
+    {
+     "text": "al viento"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está planeando sobre un"
+    },
+    {
+     "text": "golfo",
+     "gap": true,
+     "accept": [
+      "golfo"
+     ]
+    },
+    {
+     "text": "turquesa"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: the water shown is a small, almost enclosed bay; a Spaniard would rather call it 'la bahía' (or 'la cala'); 'el golfo' kept as database word, recall accepts 'bahía'. Proposal: owner may consider 'la bahía' for es if the concept covers small bays. Phrase 2 target name 'la vela naranja' (paraglider wing = 'la vela'); noun 1 'el parapente' sits on the wing, which is what 'parapente' names in Spain."
+}

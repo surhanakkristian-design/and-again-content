@@ -1,0 +1,130 @@
+{
+ "mediaId": 197,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la vache",
+ "taps": [
+  {
+   "phrase": "manger de l'herbe verte",
+   "target": "la vache",
+   "voice": "female"
+  },
+  {
+   "phrase": "boire le lait",
+   "target": "le veau",
+   "voice": "female"
+  },
+  {
+   "phrase": "verser le lait",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la vache",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "la cloche",
+   "voice": "female"
+  },
+  {
+   "word": "le lait",
+   "voice": "female"
+  }
+ ],
+ "question": "Que mange la vache ?",
+ "answer": [
+  "La",
+  "vache",
+  "mange",
+  "de",
+  "l'herbe",
+  "verte."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger",
+     "gap": true,
+     "accept": [
+      "manger"
+     ]
+    },
+    {
+     "text": "de l'herbe verte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire le"
+    },
+    {
+     "text": "lait",
+     "gap": true,
+     "accept": [
+      "lait"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "verser",
+     "gap": true,
+     "accept": [
+      "verser"
+     ]
+    },
+    {
+     "text": "le lait"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "vache",
+     "gap": true,
+     "accept": [
+      "vache"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange de l'herbe"
+    },
+    {
+     "text": "verte",
+     "gap": true,
+     "accept": [
+      "verte"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Calf box: in the early frames the calf only stands in the background; it drinks the milk in the last frames. Cow box also covers the final frames where it nuzzles the woman."
+}

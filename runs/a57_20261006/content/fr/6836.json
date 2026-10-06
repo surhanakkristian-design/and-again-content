@@ -1,0 +1,125 @@
+{
+ "mediaId": 6836,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un immeuble",
+ "taps": [
+  {
+   "phrase": "hisser un canapé",
+   "target": "la jeune femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "pendre au bout d'une corde",
+   "target": "le canapé",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever le poing",
+   "target": "la jeune femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'immeuble",
+   "voice": "female"
+  },
+  {
+   "word": "le barbecue",
+   "voice": "female"
+  },
+  {
+   "word": "le canapé",
+   "voice": "female"
+  },
+  {
+   "word": "la camionnette",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la jeune femme ?",
+ "answer": [
+  "Elle",
+  "hisse",
+  "un",
+  "canapé",
+  "le",
+  "long",
+  "de",
+  "l'immeuble."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hisser",
+     "gap": true,
+     "accept": [
+      "hisser",
+      "monter"
+     ]
+    },
+    {
+     "text": "un canapé"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pendre au bout"
+    },
+    {
+     "text": "d'une"
+    },
+    {
+     "text": "corde",
+     "gap": true,
+     "accept": [
+      "corde"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "poing",
+     "gap": true,
+     "accept": [
+      "poing"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hisse un"
+    },
+    {
+     "text": "canapé",
+     "gap": true,
+     "accept": [
+      "canapé",
+      "sofa"
+     ]
+    },
+    {
+     "text": "le long de l'immeuble"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord.fr is 'un immeuble' (indefinite article, unlike the other key words); the noun pill uses 'l'immeuble'. The key word sits in the answer row, but 'l'immeuble' is elided so it cannot be the gap; no separate noun row (answer row contains it). The tap-3 box also covers the hauling frames, where she does not yet raise her fist."
+}

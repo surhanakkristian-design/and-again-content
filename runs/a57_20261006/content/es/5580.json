@@ -1,0 +1,121 @@
+{
+ "mediaId": 5580,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "asistente",
+ "taps": [
+  {
+   "phrase": "arreglar la chaqueta",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar de pie sobre una caja",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una bandeja en la boca",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "la lámpara",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "arreglando",
+  "la",
+  "chaqueta",
+  "del",
+  "hombre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arreglar",
+     "gap": true,
+     "accept": [
+      "arreglar"
+     ]
+    },
+    {
+     "text": "la chaqueta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar de pie sobre una"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "bandeja",
+     "gap": true,
+     "accept": [
+      "bandeja"
+     ]
+    },
+    {
+     "text": "en la boca"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está arreglando la"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta"
+     ]
+    },
+    {
+     "text": "del hombre"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'asistente' (adjective, 'helping another person'): in Spain it is almost always a noun ('el/la asistente'); the adjective sense is usually 'auxiliar'/'adjunto'. Proposal: treat it as the noun 'el/la asistente' (the dog or woman as helper). Not forced into the exercises. 'arreglar' chosen over B1 'abrochar' (she fastens his jacket button)."
+}

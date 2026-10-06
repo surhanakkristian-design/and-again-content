@@ -1,0 +1,125 @@
+{
+ "mediaId": 215,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Dunkelheit",
+ "taps": [
+  {
+   "phrase": "ein Streichholz anzünden",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen gestreiften Pullover tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "in der Dunkelheit leuchten",
+   "target": "die Laterne",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Laterne",
+   "voice": "female"
+  },
+  {
+   "word": "das Streichholz",
+   "voice": "female"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "die Kupferpfanne",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "zündet",
+  "eine",
+  "Laterne",
+  "an."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Streichholz",
+     "gap": true,
+     "accept": [
+      "Streichholz",
+      "Zündholz"
+     ]
+    },
+    {
+     "text": "anzünden"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen gestreiften"
+    },
+    {
+     "text": "Pullover",
+     "gap": true,
+     "accept": [
+      "Pullover",
+      "Pulli"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in der"
+    },
+    {
+     "text": "Dunkelheit",
+     "gap": true,
+     "accept": [
+      "Dunkelheit"
+     ]
+    },
+    {
+     "text": "leuchten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zündet",
+     "gap": true,
+     "accept": [
+      "zündet"
+     ]
+    },
+    {
+     "text": "eine Laterne an"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the lantern only glows in the last boxed frames (dark/unlit in most of its box, as in English); 'in der Dunkelheit leuchten' kept for the key word. Answer drops 'in der Dunkelheit' to keep one chip order (the adverbial could stand before or after 'eine Laterne'); the key word stays in tap 3. Phrase 1 covers the plate-stacking frames too; she holds/lights the match in the later ones."
+}

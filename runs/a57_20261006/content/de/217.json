@@ -1,0 +1,122 @@
+{
+ "mediaId": 217,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Dartpfeil",
+ "taps": [
+  {
+   "phrase": "auf die Dartscheibe zielen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "Chips knabbern",
+   "target": "der Mann mit den Chips",
+   "voice": "male"
+  },
+  {
+   "phrase": "knapp neben der Mitte landen",
+   "target": "der Dartpfeil",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Dartpfeil",
+   "voice": "female"
+  },
+  {
+   "word": "die Dartscheibe",
+   "voice": "female"
+  },
+  {
+   "word": "die Holzwand",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "zielt",
+  "mit",
+  "einem",
+  "Dartpfeil",
+  "auf",
+  "die",
+  "Dartscheibe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf die Dartscheibe"
+    },
+    {
+     "text": "zielen",
+     "gap": true,
+     "accept": [
+      "zielen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Chips"
+    },
+    {
+     "text": "knabbern",
+     "gap": true,
+     "accept": [
+      "knabbern",
+      "essen",
+      "futtern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "knapp neben der"
+    },
+    {
+     "text": "Mitte",
+     "gap": true,
+     "accept": [
+      "Mitte"
+     ]
+    },
+    {
+     "text": "landen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zielt mit einem"
+    },
+    {
+     "text": "Dartpfeil",
+     "gap": true,
+     "accept": [
+      "Dartpfeil",
+      "Pfeil"
+     ]
+    },
+    {
+     "text": "auf die Dartscheibe"
+    }
+   ]
+  }
+ ],
+ "notes": "'Bullseye' rendered as 'die Mitte' (natural for non-players; 'das Bull/Bullseye' is jargon). Answer: 'auf die Dartscheibe mit einem Dartpfeil' is possible but marked; the given order is the natural one. Phrase 1 box also covers the throw and cheering frames; she aims in most of them. Another man in black appears briefly but holds a cup, not crisps."
+}

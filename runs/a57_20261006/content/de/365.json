@@ -1,0 +1,26 @@
+{
+  "mediaId": 365, "lang": "de", "level": "A",
+  "keyWord": "die Kopfhörer",
+  "taps": [
+    { "phrase": "einen Kochlöffel halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein blaues T-Shirt tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "auf dem Kühlschrank liegen", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Katze", "voice": "female" },
+    { "word": "die Kopfhörer", "voice": "female" },
+    { "word": "der Kochlöffel", "voice": "female" },
+    { "word": "die Äpfel", "voice": "female" }
+  ],
+  "question": "Was trägt die Frau?",
+  "answer": ["Sie", "trägt", "große", "weiße", "Kopfhörer."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen Kochlöffel" }, { "text": "halten", "gap": true, "accept": ["halten"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein blaues" }, { "text": "T-Shirt", "gap": true, "accept": ["T-Shirt", "Shirt"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "auf dem Kühlschrank" }, { "text": "liegen", "gap": true, "accept": ["liegen"] } ] },
+    { "from": "answer", "parts": [ { "text": "trägt große weiße" }, { "text": "Kopfhörer", "gap": true, "accept": ["Kopfhörer"] } ] }
+  ],
+  "notes": "Tap box 1 also covers the first ~4 s when the woman is putting on the headphones and holds no spoon yet; from then on she holds the wooden spoon in every boxed frame, so 'einen Kochlöffel halten' describes most boxed frames. The same spoon is 'der Kochlöffel' in the nouns for consistency (English 'a spoon'). Headphones are off-white/cream; 'weiß' follows the English. No noun row: Kopfhörer is gapped in the answer row."
+}

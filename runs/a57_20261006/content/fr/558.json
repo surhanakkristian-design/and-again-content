@@ -1,0 +1,120 @@
+{
+ "mediaId": 558,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "jouer",
+ "taps": [
+  {
+   "phrase": "passer au-dessus du filet",
+   "target": "le ballon",
+   "voice": "male"
+  },
+  {
+   "phrase": "être allongé dans l'herbe",
+   "target": "l'homme au chapeau",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir le ballon en l'air",
+   "target": "l'homme en bleu",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ballon",
+   "voice": "male"
+  },
+  {
+   "word": "le filet",
+   "voice": "male"
+  },
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font les gens ?",
+ "answer": [
+  "Ils",
+  "jouent",
+  "au",
+  "volley."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer au-dessus du"
+    },
+    {
+     "text": "filet",
+     "gap": true,
+     "accept": [
+      "filet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "allongé",
+     "gap": true,
+     "accept": [
+      "allongé",
+      "couché"
+     ]
+    },
+    {
+     "text": "dans l'herbe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir le"
+    },
+    {
+     "text": "ballon",
+     "gap": true,
+     "accept": [
+      "ballon"
+     ]
+    },
+    {
+     "text": "en l'air"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "jouent",
+     "gap": true,
+     "accept": [
+      "jouent"
+     ]
+    },
+    {
+     "text": "au volley"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer 'Ils jouent au volley.' (a native says 'jouer au volley' for this game; English 'playing with a ball'). Phrase 2 box also covers the end frames where the man in the hat stands and is hugged; phrase 3 box mostly shows the man in blue without the ball (he holds it up in one shot) - phrases written for the frames where the action happens."
+}

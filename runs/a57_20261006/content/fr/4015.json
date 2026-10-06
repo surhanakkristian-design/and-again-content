@@ -1,0 +1,26 @@
+{
+  "mediaId": 4015, "lang": "fr", "level": "A",
+  "keyWord": "la rive",
+  "taps": [
+    { "phrase": "sauter par-dessus l'eau", "target": "le mouton qui saute", "voice": "male" },
+    { "phrase": "surveiller les moutons", "target": "le chien", "voice": "male" },
+    { "phrase": "être grand et mince", "target": "l'arbre", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "l'arbre", "voice": "male" },
+    { "word": "le chien", "voice": "male" },
+    { "word": "la rive", "voice": "male" },
+    { "word": "l'eau", "voice": "male" }
+  ],
+  "question": "Que font les moutons ?",
+  "answer": ["Ils", "sautent", "sur", "l'autre", "rive."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sauter", "gap": true, "accept": ["sauter", "bondir"] }, { "text": "par-dessus l'eau" } ] },
+    { "from": "taps", "parts": [ { "text": "surveiller", "gap": true, "accept": ["surveiller", "garder"] }, { "text": "les moutons" } ] },
+    { "from": "taps", "parts": [ { "text": "être grand et" }, { "text": "mince", "gap": true, "accept": ["mince", "fin"] } ] },
+    { "from": "answer", "parts": [ { "text": "sautent sur" }, { "text": "l'autre" }, { "text": "rive", "gap": true, "accept": ["rive", "berge"] } ] }
+  ],
+  "notes": "Key word 'la rive' is fine; for a narrow stream a French speaker would also say 'la berge' or 'le bord (du ruisseau)', which could be accepted as synonyms if the owner wants. Model answer uses the key word ('sur l'autre rive') so it does not repeat tap phrase 1. The dog is partly out of shot in a few frames of its box."
+}

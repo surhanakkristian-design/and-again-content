@@ -1,0 +1,123 @@
+{
+ "mediaId": 281,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Eyeliner",
+ "taps": [
+  {
+   "phrase": "einen geschwungenen Lidstrich ziehen",
+   "target": "die dunkelhaarige Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Wattestäbchen halten",
+   "target": "die dunkelhaarige Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Daumen hochhalten",
+   "target": "die blonde Freundin",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Glühbirnen",
+   "voice": "female"
+  },
+  {
+   "word": "der Spiegel",
+   "voice": "female"
+  },
+  {
+   "word": "der Eyeliner",
+   "voice": "female"
+  },
+  {
+   "word": "das Wattestäbchen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die dunkelhaarige Frau?",
+ "answer": [
+  "Sie",
+  "trägt",
+  "Eyeliner",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen geschwungenen"
+    },
+    {
+     "text": "Lidstrich",
+     "gap": true,
+     "accept": [
+      "Lidstrich"
+     ]
+    },
+    {
+     "text": "ziehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Wattestäbchen",
+     "gap": true,
+     "accept": [
+      "Wattestäbchen"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Daumen"
+    },
+    {
+     "text": "hochhalten",
+     "gap": true,
+     "accept": [
+      "hochhalten",
+      "heben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trägt"
+    },
+    {
+     "text": "Eyeliner",
+     "gap": true,
+     "accept": [
+      "Eyeliner"
+     ]
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 uses 'Lidstrich' (the line drawn); 'der Eyeliner' (the pen) is noun 3 and the answer's gap. No noun row because the answer row contains the key word."
+}

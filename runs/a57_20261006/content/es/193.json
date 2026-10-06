@@ -1,0 +1,121 @@
+{
+ "mediaId": 193,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "corrupto",
+ "taps": [
+  {
+   "phrase": "aceptar un soborno",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sellar el documento",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "meter la mano en el bolsillo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sello",
+   "voice": "male"
+  },
+  {
+   "word": "el bigote",
+   "voice": "male"
+  },
+  {
+   "word": "el documento",
+   "voice": "male"
+  },
+  {
+   "word": "el delantal",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "funcionario",
+  "corrupto",
+  "está",
+  "aceptando",
+  "un",
+  "soborno."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aceptar un"
+    },
+    {
+     "text": "soborno",
+     "gap": true,
+     "accept": [
+      "soborno"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sellar",
+     "gap": true,
+     "accept": [
+      "sellar"
+     ]
+    },
+    {
+     "text": "el documento"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "meter la mano en el"
+    },
+    {
+     "text": "bolsillo",
+     "gap": true,
+     "accept": [
+      "bolsillo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "aceptando",
+     "gap": true,
+     "accept": [
+      "aceptando",
+      "recibiendo",
+      "cogiendo"
+     ]
+    },
+    {
+     "text": "un soborno"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'corrupto' (adjective) appears only in the answer subject 'El funcionario corrupto', which the A57 answer row drops, so no recall row gaps the key word. 'el sello' = the rubber stamp object (also used in 'sellar'). Phrase 3: she reaches into her apron pocket; 'el bolsillo' is the apron pocket."
+}

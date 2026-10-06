@@ -1,0 +1,119 @@
+{
+ "mediaId": 7996,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "destacar",
+ "taps": [
+  {
+   "phrase": "destacar entre los demás",
+   "target": "el tulipán rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "girar con la brisa",
+   "target": "el molino",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar apoyada en la barandilla",
+   "target": "la bicicleta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "el molino",
+   "voice": "female"
+  },
+  {
+   "word": "la bicicleta",
+   "voice": "female"
+  },
+  {
+   "word": "los tulipanes",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué tulipán destaca en el campo?",
+ "answer": [
+  "El",
+  "tulipán",
+  "rojo",
+  "destaca",
+  "en",
+  "el",
+  "campo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "destacar",
+     "gap": true,
+     "accept": [
+      "destacar",
+      "sobresalir"
+     ]
+    },
+    {
+     "text": "entre los demás"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "girar con la"
+    },
+    {
+     "text": "brisa",
+     "gap": true,
+     "accept": [
+      "brisa",
+      "viento"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar apoyada en la"
+    },
+    {
+     "text": "barandilla",
+     "gap": true,
+     "accept": [
+      "barandilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "destaca",
+     "gap": true,
+     "accept": [
+      "destaca",
+      "sobresale"
+     ]
+    },
+    {
+     "text": "en el campo"
+    }
+   ]
+  }
+ ],
+ "notes": "'el molino' (windmill) used without 'de viento': context is clear. The bicycle is small in the far right box."
+}

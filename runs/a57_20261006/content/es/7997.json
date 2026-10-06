@@ -1,0 +1,123 @@
+{
+ "mediaId": 7997,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "protagonizar",
+ "taps": [
+  {
+   "phrase": "protagonizar un espectáculo",
+   "target": "la mujer de dorado",
+   "voice": "female"
+  },
+  {
+   "phrase": "hincar una rodilla en el suelo",
+   "target": "el bailarín",
+   "voice": "male"
+  },
+  {
+   "phrase": "bailar con tacones altos",
+   "target": "la bailarina de negro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el telón",
+   "voice": "female"
+  },
+  {
+   "word": "el foco",
+   "voice": "female"
+  },
+  {
+   "word": "el vestido de gala",
+   "voice": "female"
+  },
+  {
+   "word": "las candilejas",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer de dorado?",
+ "answer": [
+  "Está",
+  "protagonizando",
+  "un",
+  "espectáculo."
+ ],
+ "answerVoice": "female",
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "protagonizar un"
+    },
+    {
+     "text": "espectáculo",
+     "gap": true,
+     "accept": [
+      "espectáculo",
+      "show"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hincar una"
+    },
+    {
+     "text": "rodilla",
+     "gap": true,
+     "accept": [
+      "rodilla"
+     ]
+    },
+    {
+     "text": "en el suelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bailar con"
+    },
+    {
+     "text": "tacones",
+     "gap": true,
+     "accept": [
+      "tacones"
+     ]
+    },
+    {
+     "text": "altos"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "protagonizando",
+     "gap": true,
+     "accept": [
+      "protagonizando"
+     ]
+    },
+    {
+     "text": "un espectáculo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: in the first boxed frames the male dancer is still dancing; he kneels on one knee in most frames (from about the middle on), so 'hincar una rodilla en el suelo'. Noun 1: theatre curtains = 'el telón' (the usual Spanish word, singular even though the drape has several parts). Answer drops the subject (native usage), so the answer recall row is the whole sentence.",
+ "carousel": []
+}

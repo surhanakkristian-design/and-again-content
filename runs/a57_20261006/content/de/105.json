@@ -1,0 +1,122 @@
+{
+ "mediaId": 105,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Bogen",
+ "taps": [
+  {
+   "phrase": "den Bogen spannen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "staunend zuschauen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf die Zielscheibe zielen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Bogen",
+   "voice": "female"
+  },
+  {
+   "word": "der Pfeil",
+   "voice": "female"
+  },
+  {
+   "word": "der Zopf",
+   "voice": "female"
+  },
+  {
+   "word": "die Tunika",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "zielt",
+  "auf",
+  "die",
+  "Zielscheibe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Bogen",
+     "gap": true,
+     "accept": [
+      "Bogen"
+     ]
+    },
+    {
+     "text": "spannen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "staunend"
+    },
+    {
+     "text": "zuschauen",
+     "gap": true,
+     "accept": [
+      "zuschauen",
+      "zusehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf die"
+    },
+    {
+     "text": "Zielscheibe",
+     "gap": true,
+     "accept": [
+      "Zielscheibe",
+      "Scheibe"
+     ]
+    },
+    {
+     "text": "zielen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zielt",
+     "gap": true,
+     "accept": [
+      "zielt"
+     ]
+    },
+    {
+     "text": "auf die Zielscheibe"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the man's box covers him watching open-mouthed in most boxed frames (box_02-03), cheering once (box_04) and handing over the arrow only in the last two frames (box_05), so the phrase says what he does in most frames ('staunend zuschauen') instead of 'einen Pfeil reichen'. Phrases 1 and 3 share the woman's box; the model answer is kept short (one word order)."
+}

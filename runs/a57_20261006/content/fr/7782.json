@@ -1,0 +1,122 @@
+{
+  "mediaId": 7782,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "plus près",
+  "taps": [
+    {
+      "phrase": "allonger sa trompe",
+      "target": "l'éléphant",
+      "voice": "female"
+    },
+    {
+      "phrase": "rire aux éclats",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "tendre une banane",
+      "target": "la main",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le lustre",
+      "voice": "female"
+    },
+    {
+      "word": "la trompe",
+      "voice": "female"
+    },
+    {
+      "word": "les croissants",
+      "voice": "female"
+    },
+    {
+      "word": "la nappe",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait l'éléphant ?",
+  "answer": [
+    "Il",
+    "avance",
+    "sa",
+    "trompe",
+    "plus",
+    "près",
+    "de",
+    "la",
+    "banane."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "allonger",
+          "gap": true,
+          "accept": [
+            "allonger",
+            "tendre"
+          ]
+        },
+        {
+          "text": "sa trompe"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "rire aux"
+        },
+        {
+          "text": "éclats",
+          "gap": true,
+          "accept": [
+            "éclats"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tendre une"
+        },
+        {
+          "text": "banane",
+          "gap": true,
+          "accept": [
+            "banane"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "avance sa trompe"
+        },
+        {
+          "text": "plus près",
+          "gap": true,
+          "accept": [
+            "plus près"
+          ]
+        },
+        {
+          "text": "de la banane"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer subject 'Il' = l'éléphant (masc.); answerVoice kept female as in English (voice of the clip). Gap of the answer row is the key word 'plus près' (two words in one gap)."
+}

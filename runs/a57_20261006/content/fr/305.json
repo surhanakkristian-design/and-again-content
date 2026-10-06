@@ -1,0 +1,133 @@
+{
+ "mediaId": 305,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la mouche",
+ "taps": [
+  {
+   "phrase": "se poser sur la tartine",
+   "target": "la mouche",
+   "voice": "male"
+  },
+  {
+   "phrase": "voler au-dessus de la table",
+   "target": "la mouche",
+   "voice": "male"
+  },
+  {
+   "phrase": "agiter une serviette",
+   "target": "la main",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mouche",
+   "voice": "male"
+  },
+  {
+   "word": "le pot",
+   "voice": "male"
+  },
+  {
+   "word": "le thé",
+   "voice": "male"
+  },
+  {
+   "word": "la tartine",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la mouche ?",
+ "answer": [
+  "Elle",
+  "est",
+  "posée",
+  "sur",
+  "la",
+  "tartine."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "poser",
+     "gap": true,
+     "accept": [
+      "poser"
+     ]
+    },
+    {
+     "text": "sur la tartine"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voler",
+     "gap": true,
+     "accept": [
+      "voler"
+     ]
+    },
+    {
+     "text": "au-dessus de la table"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agiter une"
+    },
+    {
+     "text": "serviette",
+     "gap": true,
+     "accept": [
+      "serviette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "mouche",
+     "gap": true,
+     "accept": [
+      "mouche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "est posée sur la"
+    },
+    {
+     "text": "tartine",
+     "gap": true,
+     "accept": [
+      "tartine"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'bread' = a slice of toast with jam: 'la tartine' is the everyday French word for it (A2). Answer subject 'Elle' (la mouche) while answerVoice stays male as in English (voice copied)."
+}

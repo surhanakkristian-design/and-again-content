@@ -1,0 +1,124 @@
+{
+ "mediaId": 358,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Hammer",
+ "taps": [
+  {
+   "phrase": "einen Nagel einschlagen",
+   "target": "der Mann links",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Hammer halten",
+   "target": "der Mann links",
+   "voice": "male"
+  },
+  {
+   "phrase": "in der Sonne liegen",
+   "target": "der Hund",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bäume",
+   "voice": "male"
+  },
+  {
+   "word": "der Hund",
+   "voice": "male"
+  },
+  {
+   "word": "der Hammer",
+   "voice": "male"
+  },
+  {
+   "word": "das Vogelhaus",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann mit dem Hammer?",
+ "answer": [
+  "Er",
+  "schlägt",
+  "einen",
+  "Nagel",
+  "ein."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Nagel"
+    },
+    {
+     "text": "einschlagen",
+     "gap": true,
+     "accept": [
+      "einschlagen",
+      "reinschlagen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Hammer",
+     "gap": true,
+     "accept": [
+      "Hammer"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in der"
+    },
+    {
+     "text": "Sonne",
+     "gap": true,
+     "accept": [
+      "Sonne"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schlägt einen"
+    },
+    {
+     "text": "Nagel",
+     "gap": true,
+     "accept": [
+      "Nagel"
+     ]
+    },
+    {
+     "text": "ein"
+    }
+   ]
+  }
+ ],
+ "notes": "English question 'What is the hammer hitting?' is rephrased natively as 'Was macht der Mann mit dem Hammer?' so the key word stays in the question; answer 'Er schlägt einen Nagel ein.' Some boxed frames of phrases 1/2 show the man stroking the roof or holding the hammer down; hammering/holding dominates."
+}

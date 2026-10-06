@@ -1,0 +1,122 @@
+{
+ "mediaId": 376,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la naturaleza salvaje",
+ "taps": [
+  {
+   "phrase": "abrirse paso por el desfiladero",
+   "target": "el río",
+   "voice": "female"
+  },
+  {
+   "phrase": "formar espuma entre las rocas",
+   "target": "el río",
+   "voice": "female"
+  },
+  {
+   "phrase": "alzarse a lo lejos",
+   "target": "las montañas lejanas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el bosque",
+   "voice": "female"
+  },
+  {
+   "word": "el acantilado",
+   "voice": "female"
+  },
+  {
+   "word": "los rápidos",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el río?",
+ "answer": [
+  "El",
+  "río",
+  "atraviesa",
+  "la",
+  "naturaleza",
+  "salvaje."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrirse paso"
+    },
+    {
+     "text": "por el"
+    },
+    {
+     "text": "desfiladero",
+     "gap": true,
+     "accept": [
+      "desfiladero",
+      "cañón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "formar"
+    },
+    {
+     "text": "espuma",
+     "gap": true,
+     "accept": [
+      "espuma"
+     ]
+    },
+    {
+     "text": "entre las rocas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzarse",
+     "gap": true,
+     "accept": [
+      "alzarse",
+      "elevarse"
+     ]
+    },
+    {
+     "text": "a lo lejos"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "atraviesa"
+    },
+    {
+     "text": "la"
+    },
+    {
+     "text": "naturaleza salvaje",
+     "gap": true,
+     "accept": [
+      "naturaleza salvaje"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English phrase 1 'rush through the gorge' rendered as 'abrirse paso por el desfiladero' (B2). 'a cliff' = 'el acantilado' (the rock walls of the gorge; 'la pared de roca' would also do). Key word 'la naturaleza salvaje' fits (no road, building or person); used in the answer and gapped there as one two-word part."
+}

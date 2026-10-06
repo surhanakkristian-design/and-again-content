@@ -1,0 +1,124 @@
+{
+  "mediaId": 7999,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "alojarse en un hotel",
+  "taps": [
+    {
+      "phrase": "saltar a la cama",
+      "target": "el perro",
+      "voice": "male"
+    },
+    {
+      "phrase": "tumbarse boca arriba",
+      "target": "el perro",
+      "voice": "male"
+    },
+    {
+      "phrase": "traer las maletas",
+      "target": "el gato",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el perro",
+      "voice": "male"
+    },
+    {
+      "word": "el gato",
+      "voice": "male"
+    },
+    {
+      "word": "la cama",
+      "voice": "male"
+    },
+    {
+      "word": "la ventana",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el perro?",
+  "answer": [
+    "El",
+    "perro",
+    "está",
+    "tumbado",
+    "en",
+    "la",
+    "cama",
+    "del",
+    "hotel."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "saltar",
+          "gap": true,
+          "accept": [
+            "saltar",
+            "subirse"
+          ]
+        },
+        {
+          "text": "a la cama"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tumbarse",
+          "gap": true,
+          "accept": [
+            "tumbarse",
+            "echarse",
+            "ponerse"
+          ]
+        },
+        {
+          "text": "boca arriba"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "traer las"
+        },
+        {
+          "text": "maletas",
+          "gap": true,
+          "accept": [
+            "maletas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está tumbado"
+        },
+        {
+          "text": "en la cama del"
+        },
+        {
+          "text": "hotel",
+          "gap": true,
+          "accept": [
+            "hotel"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "'del hotel' added to the answer (clearly a hotel room with a bellhop) so the key phrase's noun appears; the full key phrase 'alojarse en un hotel' is not used in the texts. Phrase 2 box: the dog rolls onto its back in the first box frames, then lies on its back."
+}

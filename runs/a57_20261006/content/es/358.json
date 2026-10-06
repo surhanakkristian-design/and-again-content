@@ -1,0 +1,118 @@
+{
+ "mediaId": 358,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el martillo",
+ "taps": [
+  {
+   "phrase": "clavar un clavo",
+   "target": "el hombre de la izquierda",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar el martillo",
+   "target": "el hombre de la izquierda",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar tumbado al sol",
+   "target": "el perro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el martillo",
+   "voice": "male"
+  },
+  {
+   "word": "la casita para pájaros",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué golpea el martillo?",
+ "answer": [
+  "El",
+  "martillo",
+  "golpea",
+  "un",
+  "clavo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "clavar un"
+    },
+    {
+     "text": "clavo",
+     "gap": true,
+     "accept": [
+      "clavo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar el"
+    },
+    {
+     "text": "martillo",
+     "gap": true,
+     "accept": [
+      "martillo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "al sol"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "golpea",
+     "gap": true,
+     "accept": [
+      "golpea"
+     ]
+    },
+    {
+     "text": "un clavo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the same target as in English. Some early boxed frames of phrase 3 show the dog only small in the background."
+}

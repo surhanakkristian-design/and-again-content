@@ -1,0 +1,122 @@
+{
+ "mediaId": 233,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "ausrenken",
+ "taps": [
+  {
+   "phrase": "sich die ausgerenkte Schulter halten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "neben dem Kletterer knien",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "aufgerollt im Gras liegen",
+   "target": "das Seil",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Helm",
+   "voice": "male"
+  },
+  {
+   "word": "die Schulter",
+   "voice": "male"
+  },
+  {
+   "word": "die Jacke",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "hält",
+  "sich",
+  "die",
+  "ausgerenkte",
+  "Schulter."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die"
+    },
+    {
+     "text": "ausgerenkte",
+     "gap": true,
+     "accept": [
+      "ausgerenkte",
+      "verletzte"
+     ]
+    },
+    {
+     "text": "Schulter halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "neben dem"
+    },
+    {
+     "text": "Kletterer",
+     "gap": true,
+     "accept": [
+      "Kletterer"
+     ]
+    },
+    {
+     "text": "knien"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aufgerollt",
+     "gap": true,
+     "accept": [
+      "aufgerollt"
+     ]
+    },
+    {
+     "text": "im Gras liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hält",
+     "gap": true,
+     "accept": [
+      "hält"
+     ]
+    },
+    {
+     "text": "sich die ausgerenkte Schulter"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word ausrenken used as the participle 'ausgerenkte Schulter' (phrase 1 + answer); the clip shows a hurt shoulder, the dislocation itself is not visible, 'verletzte' accepted in recall. Red box 1 also covers the fall and crawling frames (box_01-02) before he clutches the shoulder; phrase written for the clutching frames. Rope phrase: the rope lies coiled in the grass."
+}

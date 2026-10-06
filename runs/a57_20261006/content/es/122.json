@@ -1,0 +1,125 @@
+{
+ "mediaId": 122,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la parada de autobús",
+ "taps": [
+  {
+   "phrase": "llevar un abrigo rojo",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrar un carro de la compra",
+   "target": "la señora mayor",
+   "voice": "female"
+  },
+  {
+   "phrase": "llegar a la parada de autobús",
+   "target": "el autobús",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la parada de autobús",
+   "voice": "female"
+  },
+  {
+   "word": "el banco",
+   "voice": "female"
+  },
+  {
+   "word": "el autobús",
+   "voice": "female"
+  },
+  {
+   "word": "la calle",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la gente?",
+ "answer": [
+  "La",
+  "gente",
+  "espera",
+  "en",
+  "la",
+  "parada",
+  "de",
+  "autobús."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "abrigo",
+     "gap": true,
+     "accept": [
+      "abrigo"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar",
+     "gap": true,
+     "accept": [
+      "agarrar",
+      "sujetar",
+      "llevar"
+     ]
+    },
+    {
+     "text": "un carro de la compra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llegar",
+     "gap": true,
+     "accept": [
+      "llegar"
+     ]
+    },
+    {
+     "text": "a la parada de autobús"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "espera en la"
+    },
+    {
+     "text": "parada",
+     "gap": true,
+     "accept": [
+      "parada"
+     ]
+    },
+    {
+     "text": "de autobús"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman in red sits on the bench in only about half of the boxed frames (she stands and leans out in the rest), so 'llevar un abrigo rojo' (true in every frame, only her). Phrase 3: the bus pulls up at the stop and leaves; 'llegar a la parada de autobús' uses the key word. Noun 4: the road is a town street, so 'la calle' (not 'la carretera')."
+}

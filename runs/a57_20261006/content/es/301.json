@@ -1,0 +1,110 @@
+{
+ "mediaId": 301,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "flotar",
+ "taps": [
+  {
+   "phrase": "flotar en el lago",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar el pulgar",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "posarse sobre el hombre",
+   "target": "el pájaro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pájaro",
+   "voice": "male"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el lago",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "flotando",
+  "en",
+  "el",
+  "lago."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotar",
+     "gap": true,
+     "accept": [
+      "flotar"
+     ]
+    },
+    {
+     "text": "en el lago"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar el"
+    },
+    {
+     "text": "pulgar",
+     "gap": true,
+     "accept": [
+      "pulgar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "posarse",
+     "gap": true,
+     "accept": [
+      "posarse"
+     ]
+    },
+    {
+     "text": "sobre el hombre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está flotando en el"
+    },
+    {
+     "text": "lago",
+     "gap": true,
+     "accept": [
+      "lago"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 box covers the whole clip but the thumbs up only appears at the end. Phrase 3: 'posarse' (B1-ish) is the plain right verb for a bird landing/sitting on something; the bird also flies in some boxed frames."
+}

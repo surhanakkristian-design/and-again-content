@@ -1,0 +1,117 @@
+{
+ "mediaId": 21,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "une école",
+ "taps": [
+  {
+   "phrase": "ouvrir la porte de l'école",
+   "target": "la main",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis autour des tables",
+   "target": "les élèves",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir beaucoup de fenêtres",
+   "target": "le bâtiment de l'école",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "l'école",
+   "voice": "male"
+  },
+  {
+   "word": "la pelouse",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font les élèves ?",
+ "answer": [
+  "Ils",
+  "sont",
+  "assis",
+  "autour",
+  "des",
+  "tables."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir la"
+    },
+    {
+     "text": "porte",
+     "gap": true,
+     "accept": [
+      "porte"
+     ]
+    },
+    {
+     "text": "de l'école"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "assis",
+     "gap": true,
+     "accept": [
+      "assis"
+     ]
+    },
+    {
+     "text": "autour des tables"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir beaucoup de"
+    },
+    {
+     "text": "fenêtres",
+     "gap": true,
+     "accept": [
+      "fenêtres"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sont assis autour des"
+    },
+    {
+     "text": "tables",
+     "gap": true,
+     "accept": [
+      "tables"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'une école' copied unchanged (indefinite article); the noun pill uses 'l'école'. Phrase 1 says 'la porte de l'école' (the entrance doors) so the key word sits in a tap row; no noun row because 'l'école' is elided and cannot be gapped. 'la pelouse' for the mowed lawn (English 'grass'). Students look older but 'les élèves' is the A-level school word."
+}

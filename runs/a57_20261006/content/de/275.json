@@ -1,0 +1,117 @@
+{
+ "mediaId": 275,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "streiten",
+ "taps": [
+  {
+   "phrase": "mit dem Finger zeigen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "nach oben schauen und nachdenken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Mann anlächeln",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Vorhänge",
+   "voice": "male"
+  },
+  {
+   "word": "das Sofa",
+   "voice": "male"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "male"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen der Mann und die Frau?",
+ "answer": [
+  "Sie",
+  "streiten",
+  "im",
+  "Wohnzimmer."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit dem"
+    },
+    {
+     "text": "Finger",
+     "gap": true,
+     "accept": [
+      "Finger"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nach oben schauen und"
+    },
+    {
+     "text": "nachdenken",
+     "gap": true,
+     "accept": [
+      "nachdenken",
+      "überlegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Mann"
+    },
+    {
+     "text": "anlächeln",
+     "gap": true,
+     "accept": [
+      "anlächeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "streiten",
+     "gap": true,
+     "accept": [
+      "streiten"
+     ]
+    },
+    {
+     "text": "im Wohnzimmer"
+    }
+   ]
+  }
+ ],
+ "notes": "Natives often say 'sie streiten sich'; the database word 'streiten' is used without 'sich', which is also correct."
+}

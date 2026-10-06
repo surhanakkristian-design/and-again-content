@@ -1,0 +1,121 @@
+{
+  "mediaId": 402,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la glace",
+  "taps": [
+    {
+      "phrase": "glisser sur la glace",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter un bonnet vert",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "porter une veste rouge",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "female"
+    },
+    {
+      "word": "les arbres",
+      "voice": "female"
+    },
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "la glace",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "glisse",
+    "sur",
+    "la",
+    "glace."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "glisser sur la"
+        },
+        {
+          "text": "glace",
+          "gap": true,
+          "accept": [
+            "glace"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un"
+        },
+        {
+          "text": "bonnet",
+          "gap": true,
+          "accept": [
+            "bonnet"
+          ]
+        },
+        {
+          "text": "vert"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter une"
+        },
+        {
+          "text": "veste",
+          "gap": true,
+          "accept": [
+            "veste",
+            "doudoune"
+          ]
+        },
+        {
+          "text": "rouge"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "glisse",
+          "gap": true,
+          "accept": [
+            "glisse"
+          ]
+        },
+        {
+          "text": "sur la glace"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: the woman slides only in the last boxed frames; in the first ones she crouches on the ice and touches it (as in English)."
+}

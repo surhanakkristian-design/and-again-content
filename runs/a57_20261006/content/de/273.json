@@ -1,0 +1,127 @@
+{
+ "mediaId": 273,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Abend",
+ "taps": [
+  {
+   "phrase": "hinter den Hügeln untergehen",
+   "target": "die Sonne",
+   "voice": "male"
+  },
+  {
+   "phrase": "lange Haare haben",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen grünen Pullover tragen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "die Sonne",
+   "voice": "male"
+  },
+  {
+   "word": "die Häuser",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Sonne?",
+ "answer": [
+  "Die",
+  "Sonne",
+  "geht",
+  "hinter",
+  "den",
+  "Hügeln",
+  "unter."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter den Hügeln"
+    },
+    {
+     "text": "untergehen",
+     "gap": true,
+     "accept": [
+      "untergehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lange"
+    },
+    {
+     "text": "Haare",
+     "gap": true,
+     "accept": [
+      "Haare"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen grünen"
+    },
+    {
+     "text": "Pullover",
+     "gap": true,
+     "accept": [
+      "Pullover",
+      "Pulli"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "geht hinter den"
+    },
+    {
+     "text": "Hügeln",
+     "gap": true,
+     "accept": [
+      "Hügeln",
+      "Bergen"
+     ]
+    },
+    {
+     "text": "unter"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'der Abend' names the time of the clip, not a thing in the frame, so it appears in no exercise (none of the nouns is Abend; nothing forced). Answer voice stays male (narrator; die Sonne is an object)."
+}

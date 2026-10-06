@@ -1,0 +1,121 @@
+{
+  "mediaId": 256,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "manger",
+  "taps": [
+    {
+      "phrase": "sentir la soupe chaude",
+      "target": "la jeune femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir une barbe brune",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "cuisiner dans la rue",
+      "target": "la cuisinière",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le panneau",
+      "voice": "female"
+    },
+    {
+      "word": "la barbe",
+      "voice": "female"
+    },
+    {
+      "word": "les bols",
+      "voice": "female"
+    },
+    {
+      "word": "le jean",
+      "voice": "female"
+    }
+  ],
+  "question": "Que mangent l'homme et la femme ?",
+  "answer": [
+    "Ils",
+    "mangent",
+    "une",
+    "soupe",
+    "de",
+    "nouilles."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sentir la"
+        },
+        {
+          "text": "soupe",
+          "gap": true,
+          "accept": [
+            "soupe"
+          ]
+        },
+        {
+          "text": "chaude"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir une"
+        },
+        {
+          "text": "barbe",
+          "gap": true,
+          "accept": [
+            "barbe"
+          ]
+        },
+        {
+          "text": "brune"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cuisiner",
+          "gap": true,
+          "accept": [
+            "cuisiner"
+          ]
+        },
+        {
+          "text": "dans la rue"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "mangent",
+          "gap": true,
+          "accept": [
+            "mangent"
+          ]
+        },
+        {
+          "text": "une soupe de nouilles"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'manger' gapped in the answer row. 'a sign' -> 'le panneau' (A-level; 'l'enseigne' would be B). 'jeans' -> 'le jean' (singular in French). 'hot' dropped from the answer to keep one chip order; the soup is hot in tap 1. Answer subject 'Ils' (mixed couple); answerVoice kept female as in English. The cook in the background is a woman -> 'la cuisinière'."
+}

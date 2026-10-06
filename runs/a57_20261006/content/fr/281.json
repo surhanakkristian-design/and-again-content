@@ -1,0 +1,123 @@
+{
+ "mediaId": 281,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le crayon pour les yeux",
+ "taps": [
+  {
+   "phrase": "tracer un trait d'eye-liner",
+   "target": "la femme brune",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir un coton-tige",
+   "target": "la femme brune",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever le pouce",
+   "target": "l'amie blonde",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les ampoules",
+   "voice": "female"
+  },
+  {
+   "word": "le miroir",
+   "voice": "female"
+  },
+  {
+   "word": "l'eye-liner",
+   "voice": "female"
+  },
+  {
+   "word": "le coton-tige",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme brune ?",
+ "answer": [
+  "Elle",
+  "applique",
+  "de",
+  "l'eye-liner",
+  "sur",
+  "sa",
+  "paupière."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tracer un"
+    },
+    {
+     "text": "trait",
+     "gap": true,
+     "accept": [
+      "trait"
+     ]
+    },
+    {
+     "text": "d'eye-liner"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "coton-tige",
+     "gap": true,
+     "accept": [
+      "coton-tige"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "pouce",
+     "gap": true,
+     "accept": [
+      "pouce"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "applique",
+     "gap": true,
+     "accept": [
+      "applique",
+      "met"
+     ]
+    },
+    {
+     "text": "de l'eye-liner"
+    },
+    {
+     "text": "sur sa paupière"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: 'le crayon pour les yeux' is a pencil (kohl); the clip shows a felt-tip liquid liner pen, which French calls 'l'eye-liner' (usual everyday word in France). Kept the keyWord unchanged but used 'l'eye-liner' for noun 3 and in the texts; proposal: keyWord 'l'eye-liner'. 'l'eye-liner'/'d'eye-liner' are elided so they are never gapped. Phrase 2 box also covers the first frames where she is still drawing with the pen; she holds the cotton swab in the later boxed frames."
+}

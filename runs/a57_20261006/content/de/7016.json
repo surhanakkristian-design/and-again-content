@@ -1,0 +1,130 @@
+{
+ "mediaId": 7016,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Milchbauernhof",
+ "taps": [
+  {
+   "phrase": "lachend neben den Kühen hergehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Zaun entlangschlendern",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "im Gänsemarsch laufen",
+   "target": "die Kühe",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Tor",
+   "voice": "female"
+  },
+  {
+   "word": "der Stall",
+   "voice": "female"
+  },
+  {
+   "word": "die Milchkannen",
+   "voice": "female"
+  },
+  {
+   "word": "die Kühe",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "tätschelt",
+  "einer",
+  "Milchkuh",
+  "den",
+  "Rücken."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lachend",
+     "gap": true,
+     "accept": [
+      "lachend",
+      "lächelnd"
+     ]
+    },
+    {
+     "text": "neben den Kühen"
+    },
+    {
+     "text": "hergehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Zaun"
+    },
+    {
+     "text": "entlangschlendern",
+     "gap": true,
+     "accept": [
+      "entlangschlendern",
+      "entlanggehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Gänsemarsch",
+     "gap": true,
+     "accept": [
+      "Gänsemarsch"
+     ]
+    },
+    {
+     "text": "laufen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tätschelt",
+     "gap": true,
+     "accept": [
+      "tätschelt",
+      "streichelt"
+     ]
+    },
+    {
+     "text": "einer Milchkuh"
+    },
+    {
+     "text": "den Rücken"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: she pats a cow only at about 2.2-2.7 s; in most boxed frames she walks laughing beside the cows, so phrase 1 says that; the answer keeps the patting. Key word 'der Milchbauernhof' fits the whole scene but names no single object, so it appears in no row; 'die Milchkuh' (B) mirrors English 'dairy cow'. Barn = 'der Stall' (cows come out of it)."
+}

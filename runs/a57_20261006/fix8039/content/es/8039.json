@@ -1,0 +1,33 @@
+{
+  "mediaId": 8039, "lang": "es", "level": "B",
+  "keyWord": "el paso",
+  "taps": [
+    { "phrase": "abrir un camino en la nieve", "target": "la chica", "voice": "female" },
+    { "phrase": "correr por el camino despejado", "target": "el perro", "voice": "female" },
+    { "phrase": "señalar a través del cristal", "target": "el hombre", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la nieve", "voice": "female" },
+    { "word": "la pala", "voice": "female" },
+    { "word": "el perro", "voice": "female" },
+    { "word": "el camino", "voice": "female" }
+  ],
+  "question": "¿Qué hace la chica que está fuera?",
+  "answer": ["Está", "abriendo", "un", "camino", "en", "la", "nieve."],
+  "answerVoice": "female",
+  "carousel": [
+    { "en": "to block the way", "caption": "cortar el paso", "type": "verb coll.", "hasKeyWord": true, "note": "A56 'bloquear el paso' improved: 'cortar el paso' is the everyday collocation in Spain (the moose stands across the path)." },
+    { "en": "narrow way", "caption": "el paso estrecho", "type": "noun coll.", "hasKeyWord": true, "note": "" },
+    { "en": "to look for a way through", "caption": "buscar un paso", "type": "verb coll.", "hasKeyWord": true, "note": "" }
+  ],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "abrir", "gap": true, "accept": ["abrir", "cavar"] }, { "text": "un camino" }, { "text": "en la nieve" } ] },
+    { "from": "taps", "parts": [ { "text": "correr" }, { "text": "por el" }, { "text": "camino", "gap": true, "accept": ["camino", "paso"] }, { "text": "despejado" } ] },
+    { "from": "taps", "parts": [ { "text": "señalar" }, { "text": "a través del" }, { "text": "cristal", "gap": true, "accept": ["cristal", "ventanal"] } ] },
+    { "from": "answer", "parts": [ { "text": "está abriendo un camino" }, { "text": "en la" }, { "text": "nieve", "gap": true, "accept": ["nieve"] } ] },
+    { "from": "carousel", "parts": [ { "text": "cortar", "gap": true, "accept": ["cortar", "bloquear"] }, { "text": "el paso" } ] },
+    { "from": "carousel", "parts": [ { "text": "el paso" }, { "text": "estrecho", "gap": true, "accept": ["estrecho"] } ] },
+    { "from": "carousel", "parts": [ { "text": "buscar", "gap": true, "accept": ["buscar"] }, { "text": "un paso" } ] }
+  ],
+  "notes": "The cleared path in the clip is 'el camino' (what a Spaniard calls it; 'el paso' for the trench itself sounds odd), so the key word 'el paso' appears only in the captions, where it is natural (cortar el paso / paso estrecho / buscar un paso). Phrase 3: 'a través del cristal' = through the window glass (natural in Spain); 'la ventana' would also do. Question uses 'que está fuera' because two people stand inside."
+}

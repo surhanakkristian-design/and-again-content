@@ -1,0 +1,114 @@
+{
+ "mediaId": 121,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "quemar",
+ "taps": [
+  {
+   "phrase": "quemar una tortita",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar un trapo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar en un plato",
+   "target": "la tortita",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la sartén",
+   "voice": "male"
+  },
+  {
+   "word": "el fuego",
+   "voice": "male"
+  },
+  {
+   "word": "la tortita",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué ha quemado el hombre?",
+ "answer": [
+  "Ha",
+  "quemado",
+  "una",
+  "tortita."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quemar",
+     "gap": true,
+     "accept": [
+      "quemar"
+     ]
+    },
+    {
+     "text": "una tortita"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "trapo",
+     "gap": true,
+     "accept": [
+      "trapo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en un"
+    },
+    {
+     "text": "plato",
+     "gap": true,
+     "accept": [
+      "plato"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Ha quemado una"
+    },
+    {
+     "text": "tortita",
+     "gap": true,
+     "accept": [
+      "tortita",
+      "crepe"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English simple past rendered with the pretérito perfecto ('ha quemado'), the natural Spain form for something that just happened. Pancake = 'tortita' (Spain). Phrase 3: in the first boxed frames the pancake is still in the pan, as in the English box."
+}

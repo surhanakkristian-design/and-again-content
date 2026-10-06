@@ -1,0 +1,124 @@
+{
+ "mediaId": 239,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "dudar",
+ "taps": [
+  {
+   "phrase": "examinar un anillo de oro",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír de oreja a oreja",
+   "target": "la anciana",
+   "voice": "female"
+  },
+  {
+   "phrase": "fruncir el ceño con desconfianza",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el anillo",
+   "voice": "male"
+  },
+  {
+   "word": "el pañuelo",
+   "voice": "male"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "male"
+  },
+  {
+   "word": "las nubes",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está examinando el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "está",
+  "examinando",
+  "un",
+  "anillo",
+  "de",
+  "oro."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "examinar",
+     "gap": true,
+     "accept": [
+      "examinar",
+      "observar"
+     ]
+    },
+    {
+     "text": "un anillo de oro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "de oreja a oreja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fruncir el"
+    },
+    {
+     "text": "ceño",
+     "gap": true,
+     "accept": [
+      "ceño"
+     ]
+    },
+    {
+     "text": "con desconfianza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está examinando un"
+    },
+    {
+     "text": "anillo",
+     "gap": true,
+     "accept": [
+      "anillo"
+     ]
+    },
+    {
+     "text": "de oro"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'dudar' not forced into the texts; phrase 3 expresses the doubt ('con desconfianza'). Headscarf = 'el pañuelo' (the usual word in Spain)."
+}

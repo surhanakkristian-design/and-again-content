@@ -1,0 +1,114 @@
+{
+ "mediaId": 5712,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el caso judicial",
+ "taps": [
+  {
+   "phrase": "señalar la prueba",
+   "target": "el abogado",
+   "voice": "male"
+  },
+  {
+   "phrase": "dejar caer un folio",
+   "target": "el abogado",
+   "voice": "male"
+  },
+  {
+   "phrase": "descansar sobre un soporte",
+   "target": "la bicicleta",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el abogado",
+   "voice": "male"
+  },
+  {
+   "word": "la bicicleta",
+   "voice": "male"
+  },
+  {
+   "word": "el barro",
+   "voice": "male"
+  },
+  {
+   "word": "las cajas de cartón",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el abogado?",
+ "answer": [
+  "Señala",
+  "la",
+  "bicicleta",
+  "embarrada."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar la"
+    },
+    {
+     "text": "prueba",
+     "gap": true,
+     "accept": [
+      "prueba"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dejar caer un"
+    },
+    {
+     "text": "folio",
+     "gap": true,
+     "accept": [
+      "folio"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descansar",
+     "gap": true,
+     "accept": [
+      "descansar",
+      "apoyarse"
+     ]
+    },
+    {
+     "text": "sobre un soporte"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Señala la bicicleta"
+    },
+    {
+     "text": "embarrada",
+     "gap": true,
+     "accept": [
+      "embarrada"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el caso judicial' is not a visible thing; the clip shows a courtroom scene, so the key word does not appear in the exercises (not forced). Spanish drops the subject: the answer row is the whole sentence. 'Señalar la prueba': the bicycle with the evidence tag is the exhibit."
+}

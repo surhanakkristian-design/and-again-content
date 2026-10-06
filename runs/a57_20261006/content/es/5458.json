@@ -1,0 +1,123 @@
+{
+ "mediaId": 5458,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la vitamina",
+ "taps": [
+  {
+   "phrase": "dar un trago del vaso",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "burbujear y ponerse naranja",
+   "target": "el vaso",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una etiqueta de vitaminas",
+   "target": "el bote",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el armario",
+   "voice": "female"
+  },
+  {
+   "word": "la pastilla de vitaminas",
+   "voice": "female"
+  },
+  {
+   "word": "el frutero",
+   "voice": "female"
+  },
+  {
+   "word": "el vaso",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está echando la mujer en el vaso?",
+ "answer": [
+  "Está",
+  "echando",
+  "una",
+  "pastilla",
+  "de",
+  "vitaminas."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar un"
+    },
+    {
+     "text": "trago",
+     "gap": true,
+     "accept": [
+      "trago",
+      "sorbo"
+     ]
+    },
+    {
+     "text": "del vaso"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "burbujear",
+     "gap": true,
+     "accept": [
+      "burbujear"
+     ]
+    },
+    {
+     "text": "y ponerse naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "etiqueta",
+     "gap": true,
+     "accept": [
+      "etiqueta"
+     ]
+    },
+    {
+     "text": "de vitaminas"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está echando una pastilla de"
+    },
+    {
+     "text": "vitaminas",
+     "gap": true,
+     "accept": [
+      "vitaminas",
+      "vitamina"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The red box for phrase 1 covers the whole clip, but she only drinks in the last seconds; phrase written for the drinking. Phrase 2: strictly the water in the glass fizzes, said of 'el vaso' as natives do. Subject dropped in the answer (natural Spanish), so the answer row is the whole sentence. Key word appears as plural 'vitaminas' (natural in 'pastilla de vitaminas')."
+}

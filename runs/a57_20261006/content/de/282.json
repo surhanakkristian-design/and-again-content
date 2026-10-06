@@ -1,0 +1,125 @@
+{
+ "mediaId": 282,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Lidschatten",
+ "taps": [
+  {
+   "phrase": "goldenen Lidschatten aufnehmen",
+   "target": "der Pinsel",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Kopftuch tragen",
+   "target": "die Frau mit dem Kopftuch",
+   "voice": "female"
+  },
+  {
+   "phrase": "golden geschminkte Lider zur Schau stellen",
+   "target": "die Frau in der Bluse",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Kopftuch",
+   "voice": "female"
+  },
+  {
+   "word": "der Lidschatten",
+   "voice": "female"
+  },
+  {
+   "word": "der Kragen",
+   "voice": "female"
+  },
+  {
+   "word": "der Knopf",
+   "voice": "female"
+  }
+ ],
+ "question": "Was nimmt der Pinsel auf?",
+ "answer": [
+  "Er",
+  "nimmt",
+  "goldenen",
+  "Lidschatten",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "goldenen"
+    },
+    {
+     "text": "Lidschatten",
+     "gap": true,
+     "accept": [
+      "Lidschatten"
+     ]
+    },
+    {
+     "text": "aufnehmen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Kopftuch",
+     "gap": true,
+     "accept": [
+      "Kopftuch",
+      "Tuch"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "golden geschminkte"
+    },
+    {
+     "text": "Lider",
+     "gap": true,
+     "accept": [
+      "Lider",
+      "Augenlider"
+     ]
+    },
+    {
+     "text": "zur Schau stellen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "nimmt",
+     "gap": true,
+     "accept": [
+      "nimmt"
+     ]
+    },
+    {
+     "text": "goldenen Lidschatten auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer subject 'Er' = der Pinsel; answerVoice kept female as in English (no natural gender). 'zur Schau stellen' is the B1/B2 collocation for 'show off'."
+}

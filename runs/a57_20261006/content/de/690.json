@@ -1,0 +1,124 @@
+{
+ "mediaId": 690,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Himmel",
+ "taps": [
+  {
+   "phrase": "eine weiße Bluse tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein blaues Hemd tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "lange Haare haben",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "das Gras",
+   "voice": "female"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "question": "Wohin schauen die beiden?",
+ "answer": [
+  "Sie",
+  "schauen",
+  "in",
+  "den",
+  "blauen",
+  "Himmel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine weiße"
+    },
+    {
+     "text": "Bluse",
+     "gap": true,
+     "accept": [
+      "Bluse"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein blaues"
+    },
+    {
+     "text": "Hemd",
+     "gap": true,
+     "accept": [
+      "Hemd"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lange"
+    },
+    {
+     "text": "Haare",
+     "gap": true,
+     "accept": [
+      "Haare"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schauen in den blauen"
+    },
+    {
+     "text": "Himmel",
+     "gap": true,
+     "accept": [
+      "Himmel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Woman's white shirt rendered as 'eine weiße Bluse' (the natural German word for a woman's shirt); the man's denim shirt as 'ein blaues Hemd'. Question 'What are they looking at?' rendered natively as 'Wohin schauen die beiden?'"
+}

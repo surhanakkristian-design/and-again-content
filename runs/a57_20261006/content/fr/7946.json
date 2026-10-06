@@ -1,0 +1,125 @@
+{
+ "mediaId": 7946,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "postal",
+ "taps": [
+  {
+   "phrase": "vider la boîte aux lettres",
+   "target": "le chien noir",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un sac postal",
+   "target": "le chien noir",
+   "voice": "female"
+  },
+  {
+   "phrase": "passer la tête par la fenêtre",
+   "target": "le colley",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les arbres",
+   "voice": "female"
+  },
+  {
+   "word": "la boîte aux lettres",
+   "voice": "female"
+  },
+  {
+   "word": "la camionnette",
+   "voice": "female"
+  },
+  {
+   "word": "le sac",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le chien noir ?",
+ "answer": [
+  "Il",
+  "vide",
+  "la",
+  "boîte",
+  "aux",
+  "lettres",
+  "dans",
+  "un",
+  "sac",
+  "postal."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vider",
+     "gap": true,
+     "accept": [
+      "vider"
+     ]
+    },
+    {
+     "text": "la boîte aux lettres"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un sac"
+    },
+    {
+     "text": "postal",
+     "gap": true,
+     "accept": [
+      "postal"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer la"
+    },
+    {
+     "text": "tête",
+     "gap": true,
+     "accept": [
+      "tête"
+     ]
+    },
+    {
+     "text": "par la fenêtre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "vide la"
+    },
+    {
+     "text": "boîte",
+     "gap": true,
+     "accept": [
+      "boîte"
+     ]
+    },
+    {
+     "text": "aux lettres dans un sac postal"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'postal' (adjective) used in phrase 2 and the answer ('sac postal'). Noun 4 'le sac' kept plain at the English slot. Answer subject 'Il' (le chien); voice kept female as in English."
+}

@@ -1,0 +1,119 @@
+{
+  "mediaId": 256,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Essen",
+  "taps": [
+    {
+      "phrase": "an der heißen Nudelsuppe riechen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen dunklen Bart haben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf der Straße kochen",
+      "target": "die Köchin",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Schild",
+      "voice": "female"
+    },
+    {
+      "word": "der Bart",
+      "voice": "female"
+    },
+    {
+      "word": "die Schüsseln",
+      "voice": "female"
+    },
+    {
+      "word": "die Jeans",
+      "voice": "female"
+    }
+  ],
+  "question": "Was essen der Mann und die Frau?",
+  "answer": [
+    "Sie",
+    "essen",
+    "heiße",
+    "Nudelsuppe."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an der heißen Nudelsuppe"
+        },
+        {
+          "text": "riechen",
+          "gap": true,
+          "accept": [
+            "riechen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen dunklen"
+        },
+        {
+          "text": "Bart",
+          "gap": true,
+          "accept": [
+            "Bart"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf der"
+        },
+        {
+          "text": "Straße",
+          "gap": true,
+          "accept": [
+            "Straße"
+          ]
+        },
+        {
+          "text": "kochen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "essen",
+          "gap": true,
+          "accept": [
+            "essen"
+          ]
+        },
+        {
+          "text": "heiße Nudelsuppe"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word das Essen (noun) is taught via the verb 'essen' in the answer and its recall row. The woman smells the soup only at the start; for most of her box she eats, but the man eats too, so the English action is kept. Soup is called 'Nudelsuppe' in both tap 1 and the answer. The cook is a woman -> 'die Köchin'."
+}

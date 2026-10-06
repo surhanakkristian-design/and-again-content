@@ -1,0 +1,118 @@
+{
+ "mediaId": 290,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le sentiment",
+ "taps": [
+  {
+   "phrase": "mettre la main sur la poitrine",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "fermer les yeux",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter une chemise grise",
+   "target": "l'homme aux cheveux longs",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le drapeau",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le verre",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "met",
+  "la",
+  "main",
+  "sur",
+  "la",
+  "poitrine."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre la"
+    },
+    {
+     "text": "main",
+     "gap": true,
+     "accept": [
+      "main"
+     ]
+    },
+    {
+     "text": "sur la poitrine"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fermer",
+     "gap": true,
+     "accept": [
+      "fermer"
+     ]
+    },
+    {
+     "text": "les yeux"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "chemise",
+     "gap": true,
+     "accept": [
+      "chemise"
+     ]
+    },
+    {
+     "text": "grise"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "met la main sur la"
+    },
+    {
+     "text": "poitrine",
+     "gap": true,
+     "accept": [
+      "poitrine"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: 'le sentiment' is kept, but for the sense 'an emotion, like joy or sadness' (what the clip shows: nervousness then joy) a French native says 'l'émotion' far more often; proposal: 'l'émotion' for this concept (owner decides). The key word is not used in the exercises (nothing natural). 'mettre la main sur la poitrine' is the natural French for the English 'touch her chest'; same wording in the answer."
+}

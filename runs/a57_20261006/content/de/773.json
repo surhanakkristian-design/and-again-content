@@ -1,0 +1,123 @@
+{
+ "mediaId": 773,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Thermometer",
+ "taps": [
+  {
+   "phrase": "Fieber messen",
+   "target": "die Krankenschwester",
+   "voice": "female"
+  },
+  {
+   "phrase": "knallrot anlaufen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine hohe Temperatur anzeigen",
+   "target": "das Thermometer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "das Thermometer",
+   "voice": "female"
+  },
+  {
+   "word": "die Krankenschwester",
+   "voice": "female"
+  },
+  {
+   "word": "die Schüssel",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Krankenschwester?",
+ "answer": [
+  "Sie",
+  "misst",
+  "mit",
+  "dem",
+  "Thermometer",
+  "Fieber."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Fieber",
+     "gap": true,
+     "accept": [
+      "Fieber",
+      "Temperatur"
+     ]
+    },
+    {
+     "text": "messen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "knallrot"
+    },
+    {
+     "text": "anlaufen",
+     "gap": true,
+     "accept": [
+      "anlaufen",
+      "werden"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine hohe"
+    },
+    {
+     "text": "Temperatur",
+     "gap": true,
+     "accept": [
+      "Temperatur"
+     ]
+    },
+    {
+     "text": "anzeigen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "misst mit dem"
+    },
+    {
+     "text": "Thermometer",
+     "gap": true,
+     "accept": [
+      "Thermometer"
+     ]
+    },
+    {
+     "text": "Fieber"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer: 'Sie misst Fieber mit dem Thermometer.' is a second possible chip order. Window: several windows visible, English singular kept."
+}

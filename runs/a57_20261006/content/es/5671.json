@@ -1,0 +1,123 @@
+{
+ "mediaId": 5671,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el ánimo",
+ "taps": [
+  {
+   "phrase": "levantar el puño",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "subir la cuesta pedaleando",
+   "target": "la ciclista",
+   "voice": "female"
+  },
+  {
+   "phrase": "correr junto a la ciclista",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los picos nevados",
+   "voice": "male"
+  },
+  {
+   "word": "el casco",
+   "voice": "male"
+  },
+  {
+   "word": "el muro de piedra",
+   "voice": "male"
+  },
+  {
+   "word": "las hojas caídas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "Le",
+  "da",
+  "ánimos",
+  "a",
+  "la",
+  "ciclista."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar el"
+    },
+    {
+     "text": "puño",
+     "gap": true,
+     "accept": [
+      "puño"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir la"
+    },
+    {
+     "text": "cuesta",
+     "gap": true,
+     "accept": [
+      "cuesta",
+      "pendiente"
+     ]
+    },
+    {
+     "text": "pedaleando"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr",
+     "gap": true,
+     "accept": [
+      "correr"
+     ]
+    },
+    {
+     "text": "junto a la ciclista"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le da"
+    },
+    {
+     "text": "ánimos",
+     "gap": true,
+     "accept": [
+      "ánimos",
+      "ánimo"
+     ]
+    },
+    {
+     "text": "a la ciclista"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el ánimo appears in the answer in its natural plural collocation 'dar ánimos' (accept also 'ánimo'). Subject dropped in the answer as natives do, so the answer row is the whole sentence without the full stop."
+}

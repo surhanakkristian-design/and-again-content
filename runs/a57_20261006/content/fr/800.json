@@ -1,0 +1,114 @@
+{
+ "mediaId": 800,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "l'entraînement",
+ "taps": [
+  {
+   "phrase": "courir avec le ballon",
+   "target": "l'homme en jaune",
+   "voice": "male"
+  },
+  {
+   "phrase": "taper dans ses mains",
+   "target": "l'homme en noir",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever la main",
+   "target": "l'homme en noir",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le projecteur",
+   "voice": "male"
+  },
+  {
+   "word": "le ballon",
+   "voice": "male"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme en jaune ?",
+ "answer": [
+  "Il",
+  "court",
+  "avec",
+  "le",
+  "ballon."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "courir avec le"
+    },
+    {
+     "text": "ballon",
+     "gap": true,
+     "accept": [
+      "ballon"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taper",
+     "gap": true,
+     "accept": [
+      "taper"
+     ]
+    },
+    {
+     "text": "dans ses mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever",
+     "gap": true,
+     "accept": [
+      "lever"
+     ]
+    },
+    {
+     "text": "la main"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "court",
+     "gap": true,
+     "accept": [
+      "court"
+     ]
+    },
+    {
+     "text": "avec le ballon"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'l'entraînement' is not a noun of the set and fits no phrase naturally, so it does not appear (not forced). Phrase 1 box also covers the end frames where the man in yellow lies laughing on the grass; phrase written for the dribbling frames. 'le projecteur' for English 'a light' (the floodlight mast). 'l'herbe' for 'grass' (artificial pitch; 'le gazon' also possible)."
+}

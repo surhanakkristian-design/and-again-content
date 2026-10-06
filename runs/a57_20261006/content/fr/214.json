@@ -1,0 +1,116 @@
+{
+ "mediaId": 214,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "dangereux",
+ "taps": [
+  {
+   "phrase": "marcher sur la glace",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "tirer son ami en arrière",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "se casser en morceaux",
+   "target": "la glace",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le panneau",
+   "voice": "male"
+  },
+  {
+   "word": "l'arbre",
+   "voice": "male"
+  },
+  {
+   "word": "le garçon",
+   "voice": "male"
+  },
+  {
+   "word": "la glace",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le garçon ?",
+ "answer": [
+  "Le",
+  "garçon",
+  "marche",
+  "sur",
+  "une",
+  "glace",
+  "dangereuse."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcher",
+     "gap": true,
+     "accept": [
+      "marcher"
+     ]
+    },
+    {
+     "text": "sur la glace"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer",
+     "gap": true,
+     "accept": [
+      "tirer"
+     ]
+    },
+    {
+     "text": "son ami en arrière"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se casser en"
+    },
+    {
+     "text": "morceaux",
+     "gap": true,
+     "accept": [
+      "morceaux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "marche sur une glace"
+    },
+    {
+     "text": "dangereuse",
+     "gap": true,
+     "accept": [
+      "dangereuse"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word as adjective in the answer ('une glace dangereuse', feminine agreement)."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 5609, "lang": "fr", "level": "A",
+  "keyWord": "avoir peur de",
+  "taps": [
+    { "phrase": "avoir peur des souris", "target": "l'homme", "voice": "male" },
+    { "phrase": "manger par terre", "target": "la souris", "voice": "male" },
+    { "phrase": "être renversée", "target": "la tasse", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la souris", "voice": "male" },
+    { "word": "la tasse", "voice": "male" },
+    { "word": "la chaise", "voice": "male" },
+    { "word": "la fenêtre", "voice": "male" }
+  ],
+  "question": "De quoi l'homme a-t-il peur ?",
+  "answer": ["Il", "a", "peur", "de", "la", "souris."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "avoir peur des" }, { "text": "souris", "gap": true, "accept": ["souris"] } ] },
+    { "from": "taps", "parts": [ { "text": "manger", "gap": true, "accept": ["manger", "grignoter"] }, { "text": "par terre" } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "renversée", "gap": true, "accept": ["renversée", "renversé"] } ] },
+    { "from": "answer", "parts": [ { "text": "a" }, { "text": "peur", "gap": true, "accept": ["peur"] }, { "text": "de la souris" } ] }
+  ],
+  "notes": "Phrase 2: the mouse sits by a crumb and nibbles at it ('manger par terre'), since 'être assis par terre' sounds odd for a mouse and the cup is on the floor too; verifier please confirm the eating is visible. Phrase 3 'être renversée' agrees with 'la tasse' (feminine)."
+}

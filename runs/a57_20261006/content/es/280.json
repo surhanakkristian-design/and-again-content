@@ -1,0 +1,126 @@
+{
+ "mediaId": 280,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el gatito",
+ "taps": [
+  {
+   "phrase": "mirar a la cámara",
+   "target": "el gatito",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado en una cama",
+   "target": "el gatito",
+   "voice": "female"
+  },
+  {
+   "phrase": "acercarse mucho a la cámara",
+   "target": "el gatito",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gatito",
+   "voice": "female"
+  },
+  {
+   "word": "la cama",
+   "voice": "female"
+  },
+  {
+   "word": "el móvil",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el gatito?",
+ "answer": [
+  "El",
+  "gatito",
+  "mira",
+  "a",
+  "la",
+  "cámara."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar",
+     "gap": true,
+     "accept": [
+      "mirar"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en una"
+    },
+    {
+     "text": "cama",
+     "gap": true,
+     "accept": [
+      "cama"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acercarse",
+     "gap": true,
+     "accept": [
+      "acercarse"
+     ]
+    },
+    {
+     "text": "mucho a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "gatito",
+     "gap": true,
+     "accept": [
+      "gatito"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mira a la"
+    },
+    {
+     "text": "cámara",
+     "gap": true,
+     "accept": [
+      "cámara"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the kitten (the only one in the clip), as in English."
+}

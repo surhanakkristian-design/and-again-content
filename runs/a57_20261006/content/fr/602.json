@@ -1,0 +1,116 @@
+{
+ "mediaId": 602,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la lecture",
+ "taps": [
+  {
+   "phrase": "lire un gros livre",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "mettre la main devant la bouche",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "boire dans une tasse",
+   "target": "la fille",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  },
+  {
+   "word": "le livre",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la fille ?",
+ "answer": [
+  "Elle",
+  "lit",
+  "un",
+  "livre",
+  "dans",
+  "le",
+  "train."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lire un gros"
+    },
+    {
+     "text": "livre",
+     "gap": true,
+     "accept": [
+      "livre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre la main devant la"
+    },
+    {
+     "text": "bouche",
+     "gap": true,
+     "accept": [
+      "bouche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "dans une tasse"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lit",
+     "gap": true,
+     "accept": [
+      "lit"
+     ]
+    },
+    {
+     "text": "un livre dans le train"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la lecture' is not used: no natural A-level place for the abstract noun in these exercises (it is not one of the nouns, so no nouns row); 'lire'/'lit' carry the meaning. Answer says 'dans le train' (train window and seat visible) instead of 'à la table' ('à table' means at a meal). All three boxes cover the whole clip; each phrase happens in part of it."
+}

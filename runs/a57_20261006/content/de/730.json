@@ -1,0 +1,27 @@
+{
+  "mediaId": 730, "lang": "de", "level": "B",
+  "keyWord": "das Personal",
+  "taps": [
+    { "phrase": "die Küchentheke abwischen", "target": "der Koch", "voice": "male" },
+    { "phrase": "eine Tischdecke ausbreiten", "target": "die Kellnerin", "voice": "female" },
+    { "phrase": "einen Cappuccino servieren", "target": "der Barkeeper", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Personal", "voice": "female" },
+    { "word": "die Gäste", "voice": "female" },
+    { "word": "die Tischdecke", "voice": "female" },
+    { "word": "die Hängelampen", "voice": "female" }
+  ],
+  "question": "Was macht die Kellnerin?",
+  "answer": ["Sie", "breitet", "eine", "weiße", "Tischdecke", "aus."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Küchentheke", "gap": true, "accept": ["Küchentheke", "Theke", "Arbeitsfläche"] }, { "text": "abwischen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine Tischdecke" }, { "text": "ausbreiten", "gap": true, "accept": ["ausbreiten"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen Cappuccino" }, { "text": "servieren", "gap": true, "accept": ["servieren", "bringen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "das" }, { "text": "Personal", "gap": true, "accept": ["Personal", "Team"] } ] },
+    { "from": "answer", "parts": [ { "text": "breitet eine weiße" }, { "text": "Tischdecke", "gap": true, "accept": ["Tischdecke", "Decke"] }, { "text": "aus" } ] }
+  ],
+  "notes": "Chef's box also covers him at the end posing with the team; phrase written for the early frames where he wipes the pass counter with cloths ('Küchentheke' = the pass; 'Theke'/'Arbeitsfläche' accepted). 'das Personal' pill sits on the waitress inside the posing group - the word names the whole team, which is natural. 'die Hängelampen' = pendant lamps (everyday word; 'Pendelleuchten' is technical). Noun row added because the key word is a noun of the set and no other row contains it."
+}

@@ -1,0 +1,144 @@
+{
+ "mediaId": 5273,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Model",
+ "taps": [
+  {
+   "phrase": "über den Laufsteg schreiten",
+   "target": "das Model",
+   "voice": "male"
+  },
+  {
+   "phrase": "seine Sonnenbrille aufsetzen",
+   "target": "das Model",
+   "voice": "male"
+  },
+  {
+   "phrase": "seine Jacke vorführen",
+   "target": "das Model",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Model",
+   "voice": "male"
+  },
+  {
+   "word": "die Zuschauer",
+   "voice": "male"
+  },
+  {
+   "word": "der Laufsteg",
+   "voice": "male"
+  },
+  {
+   "word": "die Decke",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht das Model?",
+ "answer": [
+  "Das",
+  "Model",
+  "schreitet",
+  "selbstbewusst",
+  "über",
+  "den",
+  "Laufsteg."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über den"
+    },
+    {
+     "text": "Laufsteg",
+     "gap": true,
+     "accept": [
+      "Laufsteg",
+      "Catwalk"
+     ]
+    },
+    {
+     "text": "schreiten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "seine Sonnenbrille"
+    },
+    {
+     "text": "aufsetzen",
+     "gap": true,
+     "accept": [
+      "aufsetzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "seine"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke",
+      "Jeansjacke"
+     ]
+    },
+    {
+     "text": "vorführen"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Model",
+     "gap": true,
+     "accept": [
+      "Model"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schreitet",
+     "gap": true,
+     "accept": [
+      "schreitet",
+      "läuft",
+      "geht"
+     ]
+    },
+    {
+     "text": "selbstbewusst"
+    },
+    {
+     "text": "über den Laufsteg"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses the noun subject 'Das Model' instead of a pronoun (das Model -> es/er conflict for a male model). 'Selbstbewusst schreitet das Model über den Laufsteg.' is a possible marked second order. Phrase 2: he puts the sunglasses on near the end (English 'adjust')."
+}

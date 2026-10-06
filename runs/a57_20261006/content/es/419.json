@@ -1,0 +1,121 @@
+{
+ "mediaId": 419,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "chutar",
+ "taps": [
+  {
+   "phrase": "llevar una camiseta naranja",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta morada",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "volar por el aire",
+   "target": "la pelota",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "los edificios",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la pelota",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están haciendo?",
+ "answer": [
+  "Están",
+  "chutando",
+  "la",
+  "pelota."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una camiseta"
+    },
+    {
+     "text": "morada",
+     "gap": true,
+     "accept": [
+      "morada",
+      "lila"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar",
+     "gap": true,
+     "accept": [
+      "volar"
+     ]
+    },
+    {
+     "text": "por el aire"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "chutando",
+     "gap": true,
+     "accept": [
+      "chutando",
+      "pateando"
+     ]
+    },
+    {
+     "text": "la pelota"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'chutar': in Spain it is mostly 'to shoot/kick hard at goal'; for the playful keep-ups 'dar patadas/dar toques al balón' is the everyday phrase. Kept 'chutar' in the answer (natural enough for kicking a ball to each other); proposal: 'dar una patada' as the concept word. Ball looks like a volleyball, so 'la pelota' (not 'el balón')."
+}

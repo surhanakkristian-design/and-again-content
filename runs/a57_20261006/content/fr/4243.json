@@ -1,0 +1,26 @@
+{
+  "mediaId": 4243, "lang": "fr", "level": "A",
+  "keyWord": "payer",
+  "taps": [
+    { "phrase": "tenir un hot-dog", "target": "le chat", "voice": "male" },
+    { "phrase": "faire cuire des saucisses", "target": "le chien", "voice": "male" },
+    { "phrase": "payer par carte", "target": "la main", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le chat", "voice": "male" },
+    { "word": "le chien", "voice": "male" },
+    { "word": "le hot-dog", "voice": "male" },
+    { "word": "les saucisses", "voice": "male" }
+  ],
+  "question": "Que prépare le chat ?",
+  "answer": ["Il", "prépare", "un", "hot-dog."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "hot-dog", "gap": true, "accept": ["hot-dog"] } ] },
+    { "from": "taps", "parts": [ { "text": "faire cuire des" }, { "text": "saucisses", "gap": true, "accept": ["saucisses"] } ] },
+    { "from": "taps", "parts": [ { "text": "payer", "gap": true, "accept": ["payer"] }, { "text": "par carte" } ] },
+    { "from": "answer", "parts": [ { "text": "prépare", "gap": true, "accept": ["prépare", "fait"] }, { "text": "un hot-dog" } ] }
+  ],
+  "notes": "Phrase 1: the cat lifts the hot dog only at the very end; in most boxed frames it holds the bun/hot dog with its paw, so 'tenir un hot-dog' (not 'lever'). The dog holds the tongs in its mouth over the grill: 'faire cuire des saucisses'."
+}

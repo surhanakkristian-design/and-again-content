@@ -1,0 +1,127 @@
+{
+ "mediaId": 8036,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Volumen",
+ "taps": [
+  {
+   "phrase": "sich gegen die Wand drücken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "das ganze Zimmer ausfüllen",
+   "target": "der Flamingo",
+   "voice": "female"
+  },
+  {
+   "phrase": "aus dem Blumentopf herabhängen",
+   "target": "die Pflanze",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Dachfenster",
+   "voice": "female"
+  },
+  {
+   "word": "der Lampenschirm",
+   "voice": "female"
+  },
+  {
+   "word": "der Flamingo",
+   "voice": "female"
+  },
+  {
+   "word": "die Dielen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Flamingo?",
+ "answer": [
+  "Er",
+  "füllt",
+  "das",
+  "gesamte",
+  "Volumen",
+  "des",
+  "Zimmers",
+  "aus."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich gegen die Wand"
+    },
+    {
+     "text": "drücken",
+     "gap": true,
+     "accept": [
+      "drücken",
+      "pressen",
+      "quetschen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das ganze Zimmer"
+    },
+    {
+     "text": "ausfüllen",
+     "gap": true,
+     "accept": [
+      "ausfüllen",
+      "füllen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus dem"
+    },
+    {
+     "text": "Blumentopf",
+     "gap": true,
+     "accept": [
+      "Blumentopf",
+      "Topf"
+     ]
+    },
+    {
+     "text": "herabhängen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "füllt das gesamte"
+    },
+    {
+     "text": "Volumen",
+     "gap": true,
+     "accept": [
+      "Volumen"
+     ]
+    },
+    {
+     "text": "des Zimmers aus"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word das Volumen is not a noun of the set (it is in the answer only), so no noun row. 'die Dielen' = floorboards (everyday word). The answer could also be reordered 'Das gesamte Volumen des Zimmers füllt er aus' (marked, unlikely)."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 811,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Trophäe",
+ "taps": [
+  {
+   "phrase": "zur Trophäe rennen",
+   "target": "die Spielerinnen",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Trophäe hochheben",
+   "target": "die Spielerinnen",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Spielerinnen zuschauen",
+   "target": "die Zuschauer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lampen",
+   "voice": "female"
+  },
+  {
+   "word": "die Trophäe",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  },
+  {
+   "word": "der Boden",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen die Spielerinnen?",
+ "answer": [
+  "Sie",
+  "heben",
+  "die",
+  "Trophäe",
+  "in",
+  "die",
+  "Luft."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zur"
+    },
+    {
+     "text": "Trophäe",
+     "gap": true,
+     "accept": [
+      "Trophäe"
+     ]
+    },
+    {
+     "text": "rennen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Trophäe"
+    },
+    {
+     "text": "hochheben",
+     "gap": true,
+     "accept": [
+      "hochheben",
+      "heben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Spielerinnen"
+    },
+    {
+     "text": "zuschauen",
+     "gap": true,
+     "accept": [
+      "zuschauen",
+      "zusehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "heben",
+     "gap": true,
+     "accept": [
+      "heben",
+      "halten",
+      "strecken"
+     ]
+    },
+    {
+     "text": "die Trophäe in die Luft"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: for a sports cup most Germans say 'der Pokal'; 'die Trophäe' is correct too and used consistently (Pokal accepted in recall). Red box (phrase 1, run to the trophy) also covers the many later frames where the players lift the trophy; phrase kept on the running (first boxed frames), as in English. Phrase 3 target = the crowd ('die Zuschauer'), box is OFF after the cut. Noun 1 'lights' = 'die Lampen' (arena lights). Noun 3 is a small stand; 'der Tisch' as in English."
+}

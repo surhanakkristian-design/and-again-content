@@ -1,0 +1,148 @@
+{
+ "mediaId": 230,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el director de cine",
+ "taps": [
+  {
+   "phrase": "dar indicaciones al actor",
+   "target": "la directora",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un disfraz de pirata",
+   "target": "el actor",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar montada sobre un trípode",
+   "target": "la cámara de cine",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la directora de cine",
+   "voice": "female"
+  },
+  {
+   "word": "la cámara de cine",
+   "voice": "female"
+  },
+  {
+   "word": "la silla plegable",
+   "voice": "female"
+  },
+  {
+   "word": "el sol",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la directora?",
+ "answer": [
+  "La",
+  "directora",
+  "levanta",
+  "los",
+  "puños",
+  "en",
+  "señal",
+  "de",
+  "victoria."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "indicaciones",
+     "gap": true,
+     "accept": [
+      "indicaciones",
+      "instrucciones"
+     ]
+    },
+    {
+     "text": "al actor"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "disfraz",
+     "gap": true,
+     "accept": [
+      "disfraz"
+     ]
+    },
+    {
+     "text": "de pirata"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar montada sobre un"
+    },
+    {
+     "text": "trípode",
+     "gap": true,
+     "accept": [
+      "trípode"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "directora",
+     "gap": true,
+     "accept": [
+      "directora",
+      "realizadora"
+     ]
+    },
+    {
+     "text": "de cine"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "levanta los"
+    },
+    {
+     "text": "puños",
+     "gap": true,
+     "accept": [
+      "puños",
+      "brazos"
+     ]
+    },
+    {
+     "text": "en señal de victoria"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: the director is a woman, so the noun is 'la directora de cine' (feminine of the database word 'el director de cine'); proposal: the concept keeps 'el director de cine', the female form is accepted. Tap 1 box covers the whole clip, where she mostly gives the actor directions (gestures, demonstrates, points); she raises her fists only at the end, so phrase 1 is 'dar indicaciones al actor' (question/answer keep the fists)."
+}

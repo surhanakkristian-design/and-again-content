@@ -1,0 +1,27 @@
+{
+  "mediaId": 212, "lang": "de", "level": "A",
+  "keyWord": "der Tänzer",
+  "taps": [
+    { "phrase": "das Bein dehnen", "target": "die Frau", "voice": "female" },
+    { "phrase": "in einem Studio tanzen", "target": "die Frau", "voice": "female" },
+    { "phrase": "in die Kamera lächeln", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Tänzerin", "voice": "female" },
+    { "word": "der Spiegel", "voice": "female" },
+    { "word": "der Lautsprecher", "voice": "female" },
+    { "word": "der Boden", "voice": "female" }
+  ],
+  "question": "Was macht die Tänzerin?",
+  "answer": ["Sie", "tanzt", "in", "einem", "Studio."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "das" }, { "text": "Bein", "gap": true, "accept": ["Bein"] }, { "text": "dehnen" } ] },
+    { "from": "taps", "parts": [ { "text": "in einem Studio" }, { "text": "tanzen", "gap": true, "accept": ["tanzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "in die Kamera" }, { "text": "lächeln", "gap": true, "accept": ["lächeln", "lachen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Tänzerin", "gap": true, "accept": ["Tänzerin"] } ] },
+    { "from": "answer", "parts": [ { "text": "tanzt in einem" }, { "text": "Studio", "gap": true, "accept": ["Studio", "Tanzstudio"] } ] }
+  ],
+  "notes": "Key word 'der Tänzer', but the dancer is a woman: noun 1 and the question use the natural feminine 'die Tänzerin' (proposal: keep der Tänzer as the database word). All three tap boxes cover the whole clip on the same woman, so each phrase is true only in its part of the clip (stretching at the start, dancing in the middle, smiling at the camera at the end); her mirror reflection does the same moves. Noun row added: Tänzerin appears in no other row."
+}

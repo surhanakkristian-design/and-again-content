@@ -1,0 +1,119 @@
+{
+ "mediaId": 721,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le renversement",
+ "taps": [
+  {
+   "phrase": "rire très fort",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "ne pas avoir de cheveux",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "se renverser sur la table",
+   "target": "le verre",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le verre",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le garçon",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'est-ce qui se renverse sur la table ?",
+ "answer": [
+  "Le",
+  "verre",
+  "se",
+  "renverse",
+  "sur",
+  "la",
+  "table."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rire",
+     "gap": true,
+     "accept": [
+      "rire"
+     ]
+    },
+    {
+     "text": "très fort"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ne pas avoir de"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "renverser",
+     "gap": true,
+     "accept": [
+      "renverser"
+     ]
+    },
+    {
+     "text": "sur la table"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se renverse sur la"
+    },
+    {
+     "text": "table",
+     "gap": true,
+     "accept": [
+      "table"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: 'le renversement' is not the everyday French noun for spilling (it reads as overturning/reversal, and is abstract for level A); natives say 'renverser' (verb). Proposal: keep the verb family; the exercises use 'se renverser'. Phrase 1: the woman laughs in the first half only, then looks shocked. Answer uses 'Le verre' (the known glass) rather than 'Un verre'."
+}

@@ -1,0 +1,121 @@
+{
+  "mediaId": 7053,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "fregar los platos",
+  "taps": [
+    {
+      "phrase": "lavar un plato sucio",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "secar un plato",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar un vestido blanco",
+      "target": "la mujer",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "los platos",
+      "voice": "male"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    },
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "el fregadero",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué están haciendo?",
+  "answer": [
+    "Están",
+    "fregando",
+    "los",
+    "platos."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lavar",
+          "gap": true,
+          "accept": [
+            "lavar",
+            "fregar"
+          ]
+        },
+        {
+          "text": "un plato sucio"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "secar un"
+        },
+        {
+          "text": "plato",
+          "gap": true,
+          "accept": [
+            "plato"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "vestido",
+          "gap": true,
+          "accept": [
+            "vestido"
+          ]
+        },
+        {
+          "text": "blanco"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Están"
+        },
+        {
+          "text": "fregando",
+          "gap": true,
+          "accept": [
+            "fregando",
+            "lavando"
+          ]
+        },
+        {
+          "text": "los platos"
+        }
+      ]
+    }
+  ],
+  "notes": "The woman is a bride; kept 'la mujer' to match the English noun. Subject of the answer is both people (masc. plural voice kept)."
+}

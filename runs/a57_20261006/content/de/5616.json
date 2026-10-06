@@ -1,0 +1,26 @@
+{
+  "mediaId": 5616, "lang": "de", "level": "A",
+  "keyWord": "voll sein von",
+  "taps": [
+    { "phrase": "die Arme hochheben", "target": "der Mann", "voice": "male" },
+    { "phrase": "die Schnüre festhalten", "target": "der Mann", "voice": "male" },
+    { "phrase": "am Himmel fliegen", "target": "die Luftballons am Himmel", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "male" },
+    { "word": "die Luftballons", "voice": "male" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "das Auto", "voice": "male" }
+  ],
+  "question": "Womit ist das Auto voll?",
+  "answer": ["Das", "Auto", "ist", "voll", "mit", "Luftballons."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Arme" }, { "text": "hochheben", "gap": true, "accept": ["hochheben", "heben", "hochnehmen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Schnüre", "gap": true, "accept": ["Schnüre", "Bänder", "Fäden"] }, { "text": "festhalten" } ] },
+    { "from": "taps", "parts": [ { "text": "am Himmel" }, { "text": "fliegen", "gap": true, "accept": ["fliegen", "schweben"] } ] },
+    { "from": "answer", "parts": [ { "text": "ist" }, { "text": "voll", "gap": true, "accept": ["voll"] }, { "text": "mit Luftballons" } ] }
+  ],
+  "notes": "Key word 'voll sein von' kept, but everyday German says 'voll mit' / 'voller' ('Das Auto ist voll mit Luftballons'); 'voll von Luftballons' sounds stilted. Proposal: word_localizations de = 'voll sein mit' (or 'voller ... sein'). Answer uses 'voll mit'; the answer row gaps 'voll'. Phrase 3 fits only the balloons in the sky (the ones in the boot do not fly)."
+}

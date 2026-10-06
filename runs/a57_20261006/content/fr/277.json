@@ -1,0 +1,26 @@
+{
+  "mediaId": 277, "lang": "fr", "level": "A",
+  "keyWord": "l'exercice",
+  "taps": [
+    { "phrase": "se pencher en avant", "target": "la femme", "voice": "female" },
+    { "phrase": "sauter dans le jardin", "target": "la femme", "voice": "female" },
+    { "phrase": "lever les deux pouces", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le tee-shirt", "voice": "female" },
+    { "word": "les jambes", "voice": "female" },
+    { "word": "les baskets", "voice": "female" },
+    { "word": "les fleurs", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "fait", "ses", "exercices", "dans", "le", "jardin."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "pencher", "gap": true, "accept": ["pencher"] }, { "text": "en avant" } ] },
+    { "from": "taps", "parts": [ { "text": "sauter", "gap": true, "accept": ["sauter"] }, { "text": "dans le jardin" } ] },
+    { "from": "taps", "parts": [ { "text": "lever les deux" }, { "text": "pouces", "gap": true, "accept": ["pouces"] } ] },
+    { "from": "answer", "parts": [ { "text": "fait ses" }, { "text": "exercices", "gap": true, "accept": ["exercices"] }, { "text": "dans le jardin" } ] }
+  ],
+  "notes": "Tap 1: English 'touch her toes', but she bends forward and touches her shins/ankles, never her toes; 'se pencher en avant' is what the clip shows ('orteils' would also be above A2). Answer uses 'faire ses exercices' (her routine) so the key word can be the gap; 'faire de l'exercice' would put the key word in an elided chip that cannot be gapped. 'les baskets' = the everyday French word for sports shoes."
+}

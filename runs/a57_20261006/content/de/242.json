@@ -1,0 +1,26 @@
+{
+  "mediaId": 242, "lang": "de", "level": "A",
+  "keyWord": "das Kleid",
+  "taps": [
+    { "phrase": "an einem Kleiderbügel hängen", "target": "das Kleid", "voice": "female" },
+    { "phrase": "sich im Kreis drehen", "target": "die Frau", "voice": "female" },
+    { "phrase": "in die Hände klatschen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Zitronen", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "das Kleid", "voice": "female" },
+    { "word": "der Spiegel", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "dreht", "sich", "in", "einem", "roten", "Kleid."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "an einem" }, { "text": "Kleiderbügel", "gap": true, "accept": ["Kleiderbügel", "Bügel"] }, { "text": "hängen" } ] },
+    { "from": "taps", "parts": [ { "text": "sich im Kreis" }, { "text": "drehen", "gap": true, "accept": ["drehen"] } ] },
+    { "from": "taps", "parts": [ { "text": "in die Hände" }, { "text": "klatschen", "gap": true, "accept": ["klatschen"] } ] },
+    { "from": "answer", "parts": [ { "text": "dreht sich in einem roten" }, { "text": "Kleid", "gap": true, "accept": ["Kleid"] } ] }
+  ],
+  "notes": "Man claps only in the later boxed frames (from the twirl on), which is the whole time his box is on. No noun row: Kleid is in the answer row. Answer word order fixed ('Sie dreht sich in einem roten Kleid.')."
+}

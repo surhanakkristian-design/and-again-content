@@ -1,0 +1,128 @@
+{
+ "mediaId": 259,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "inquietante",
+ "taps": [
+  {
+   "phrase": "teñir el cielo de un rojo inquietante",
+   "target": "el resplandor rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "llenar la estación de mercancías",
+   "target": "los vagones de mercancías",
+   "voice": "male"
+  },
+  {
+   "phrase": "formar una silueta oscura",
+   "target": "los árboles",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las nubes",
+   "voice": "male"
+  },
+  {
+   "word": "la bola de fuego",
+   "voice": "male"
+  },
+  {
+   "word": "los vagones de mercancías",
+   "voice": "male"
+  },
+  {
+   "word": "las copas de los árboles",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué se extiende por el cielo nocturno?",
+ "answer": [
+  "Un",
+  "inquietante",
+  "resplandor",
+  "rojo",
+  "se",
+  "extiende",
+  "por",
+  "el",
+  "cielo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "teñir el cielo de un rojo"
+    },
+    {
+     "text": "inquietante",
+     "gap": true,
+     "accept": [
+      "inquietante"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llenar la"
+    },
+    {
+     "text": "estación",
+     "gap": true,
+     "accept": [
+      "estación"
+     ]
+    },
+    {
+     "text": "de mercancías"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "formar una"
+    },
+    {
+     "text": "silueta",
+     "gap": true,
+     "accept": [
+      "silueta"
+     ]
+    },
+    {
+     "text": "oscura"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "extiende",
+     "gap": true,
+     "accept": [
+      "extiende",
+      "propaga"
+     ]
+    },
+    {
+     "text": "por el cielo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 is not a literal 'extenderse por el cielo': 'teñir el cielo de un rojo inquietante' says what the glow does and carries the key word. The answer subject 'Un inquietante resplandor rojo' holds the key word, so the answer recall row (subject removed) does not; the key word is gapped in tap row 1. The glow is faint in the first boxed frames and swells later."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 5417,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Depot",
+ "taps": [
+  {
+   "phrase": "in eine historische Straßenbahn einsteigen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Fahrgast aufnehmen",
+   "target": "die alte Straßenbahn",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich im Depot umsehen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Oberleitungen",
+   "voice": "female"
+  },
+  {
+   "word": "die Schienen",
+   "voice": "female"
+  },
+  {
+   "word": "der Stoffbeutel",
+   "voice": "female"
+  },
+  {
+   "word": "der Zopf",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht sie am Ende?",
+ "answer": [
+  "Sie",
+  "sieht",
+  "sich",
+  "im",
+  "Straßenbahndepot",
+  "um."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in eine historische Straßenbahn"
+    },
+    {
+     "text": "einsteigen",
+     "gap": true,
+     "accept": [
+      "einsteigen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Fahrgast",
+     "gap": true,
+     "accept": [
+      "Fahrgast",
+      "Passagier"
+     ]
+    },
+    {
+     "text": "aufnehmen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich im"
+    },
+    {
+     "text": "Depot",
+     "gap": true,
+     "accept": [
+      "Depot"
+     ]
+    },
+    {
+     "text": "umsehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sieht",
+     "gap": true,
+     "accept": [
+      "sieht",
+      "schaut"
+     ]
+    },
+    {
+     "text": "sich im Straßenbahndepot um"
+    }
+   ]
+  }
+ ],
+ "notes": "English tap box 1 (board) covers the whole clip, incl. the ride and the depot; phrase kept for the boarding. Tap 2 box also covers the depot frames where the tram just stands. 'Straßenbahndepot' is a compound with the key word; 'Betriebshof' would be the more technical German word."
+}

@@ -1,0 +1,126 @@
+{
+ "mediaId": 220,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "auftauen",
+ "taps": [
+  {
+   "phrase": "einen gefrorenen Fisch auftauen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Fisch auf die Arbeitsplatte knallen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "in einer Schüssel mit Wasser liegen",
+   "target": "der Fisch",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Filet",
+   "voice": "male"
+  },
+  {
+   "word": "der Wasserhahn",
+   "voice": "male"
+  },
+  {
+   "word": "die Schüssel",
+   "voice": "male"
+  },
+  {
+   "word": "der Küchenschrank",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "taut",
+  "einen",
+  "gefrorenen",
+  "Fisch",
+  "auf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen gefrorenen Fisch"
+    },
+    {
+     "text": "auftauen",
+     "gap": true,
+     "accept": [
+      "auftauen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Fisch auf die"
+    },
+    {
+     "text": "Arbeitsplatte",
+     "gap": true,
+     "accept": [
+      "Arbeitsplatte",
+      "Arbeitsfläche"
+     ]
+    },
+    {
+     "text": "knallen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in einer"
+    },
+    {
+     "text": "Schüssel",
+     "gap": true,
+     "accept": [
+      "Schüssel"
+     ]
+    },
+    {
+     "text": "mit Wasser liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "taut einen"
+    },
+    {
+     "text": "gefrorenen",
+     "gap": true,
+     "accept": [
+      "gefrorenen",
+      "tiefgefrorenen"
+     ]
+    },
+    {
+     "text": "Fisch auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 2 share one target and box (as in English). Phrase 2: the slam is a single moment (box_01 frame 3); phrase 3 box also covers frames where the fish is held in the air. Noun 1 'das Filet' vs 'der Fisch' in phrases mirrors the English fillet/fish split."
+}

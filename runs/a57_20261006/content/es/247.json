@@ -1,0 +1,117 @@
+{
+  "mediaId": 247,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "dejar caer",
+  "taps": [
+    {
+      "phrase": "dejar caer una manzana roja",
+      "target": "el chico",
+      "voice": "male"
+    },
+    {
+      "phrase": "caer sobre las piedras",
+      "target": "la manzana",
+      "voice": "male"
+    },
+    {
+      "phrase": "mirar al suelo",
+      "target": "el chico",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el chico",
+      "voice": "male"
+    },
+    {
+      "word": "la manzana",
+      "voice": "male"
+    },
+    {
+      "word": "la hierba",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el chico?",
+  "answer": [
+    "Está",
+    "dejando",
+    "caer",
+    "una",
+    "manzana",
+    "roja."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dejar"
+        },
+        {
+          "text": "caer",
+          "gap": true,
+          "accept": [
+            "caer"
+          ]
+        },
+        {
+          "text": "una manzana roja"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "caer sobre las"
+        },
+        {
+          "text": "piedras",
+          "gap": true,
+          "accept": [
+            "piedras"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar al"
+        },
+        {
+          "text": "suelo",
+          "gap": true,
+          "accept": [
+            "suelo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está dejando caer una"
+        },
+        {
+          "text": "manzana",
+          "gap": true,
+          "accept": [
+            "manzana"
+          ]
+        },
+        {
+          "text": "roja"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3 box also covers the drop itself; 'mirar al suelo' fits most boxed frames (he bends over and looks down at the apple)."
+}

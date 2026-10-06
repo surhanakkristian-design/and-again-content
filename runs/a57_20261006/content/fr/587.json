@@ -1,0 +1,115 @@
+{
+ "mediaId": 587,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le palet",
+ "taps": [
+  {
+   "phrase": "lâcher le palet",
+   "target": "l'arbitre",
+   "voice": "male"
+  },
+  {
+   "phrase": "célébrer son but",
+   "target": "la joueuse en jaune",
+   "voice": "female"
+  },
+  {
+   "phrase": "finir au fond des filets",
+   "target": "le palet",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le palet",
+   "voice": "female"
+  },
+  {
+   "word": "le gant",
+   "voice": "female"
+  },
+  {
+   "word": "le casque",
+   "voice": "female"
+  },
+  {
+   "word": "le maillot",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la joueuse en jaune ?",
+ "answer": [
+  "Elle",
+  "célèbre",
+  "son",
+  "but."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lâcher le"
+    },
+    {
+     "text": "palet",
+     "gap": true,
+     "accept": [
+      "palet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "célébrer",
+     "gap": true,
+     "accept": [
+      "célébrer",
+      "fêter"
+     ]
+    },
+    {
+     "text": "son but"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "finir au fond des"
+    },
+    {
+     "text": "filets",
+     "gap": true,
+     "accept": [
+      "filets",
+      "filet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "célèbre son"
+    },
+    {
+     "text": "but",
+     "gap": true,
+     "accept": [
+      "but"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the blue box follows the puck through the whole clip (held by the referee, dropped, pushed over the ice, held up at the end); the phrase describes its flight into the goal (most dynamic boxed moment, the English meaning). 'au fond des filets' is the fixed French sports idiom for a goal. Key word 'le palet' is the standard word in France (Québec: la rondelle)."
+}

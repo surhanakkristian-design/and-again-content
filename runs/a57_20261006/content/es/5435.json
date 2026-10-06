@@ -1,0 +1,116 @@
+{
+ "mediaId": 5435,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "parecido",
+ "taps": [
+  {
+   "phrase": "sacar algo azul de la riñonera",
+   "target": "la chica de la izquierda",
+   "voice": "female"
+  },
+  {
+   "phrase": "sacar algo rojo de la riñonera",
+   "target": "la chica de la derecha",
+   "voice": "female"
+  },
+  {
+   "phrase": "guardar algo azul en la riñonera",
+   "target": "la chica de la derecha",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "el césped",
+   "voice": "female"
+  },
+  {
+   "word": "la acera",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Cómo son las dos chicas?",
+ "answer": [
+  "Las",
+  "dos",
+  "chicas",
+  "son",
+  "muy",
+  "parecidas."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sacar",
+     "gap": true,
+     "accept": [
+      "sacar"
+     ]
+    },
+    {
+     "text": "algo azul de la riñonera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sacar algo rojo de la"
+    },
+    {
+     "text": "riñonera",
+     "gap": true,
+     "accept": [
+      "riñonera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "guardar",
+     "gap": true,
+     "accept": [
+      "guardar",
+      "meter"
+     ]
+    },
+    {
+     "text": "algo azul en la riñonera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "son muy"
+    },
+    {
+     "text": "parecidas",
+     "gap": true,
+     "accept": [
+      "parecidas"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word parecido is an adjective, so no noun row. The blue and red things are crisp packets taken from / put into the bum bags (riñonera, B1). The two chicas are early 20s; 'chicas' is what a Spanish teacher says (English 'women'). Answer 'muy parecidas' renders 'exactly alike' without forcing 'idénticas', so the key word stays in the answer."
+}

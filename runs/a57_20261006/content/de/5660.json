@@ -1,0 +1,27 @@
+{
+  "mediaId": 5660, "lang": "de", "level": "A",
+  "keyWord": "der Häuserblock",
+  "taps": [
+    { "phrase": "über die Straße gehen", "target": "der Hund", "voice": "female" },
+    { "phrase": "die Hauswand beleuchten", "target": "die Laterne", "voice": "female" },
+    { "phrase": "an einer Laterne vorbeilaufen", "target": "der Hund", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Häuserblock", "voice": "female" },
+    { "word": "der Baum", "voice": "female" },
+    { "word": "der Hund", "voice": "female" },
+    { "word": "der Himmel", "voice": "female" }
+  ],
+  "question": "Was macht der Hund?",
+  "answer": ["Der", "Hund", "geht", "über", "die", "Straße."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über die" }, { "text": "Straße", "gap": true, "accept": ["Straße"] }, { "text": "gehen" } ] },
+    { "from": "taps", "parts": [ { "text": "die Hauswand" }, { "text": "beleuchten", "gap": true, "accept": ["beleuchten"] } ] },
+    { "from": "taps", "parts": [ { "text": "an einer" }, { "text": "Laterne", "gap": true, "accept": ["Laterne", "Lampe"] }, { "text": "vorbeilaufen" } ] },
+    { "from": "nouns", "parts": [ { "text": "der" }, { "text": "Häuserblock", "gap": true, "accept": ["Häuserblock"] } ] },
+    { "from": "answer", "parts": [ { "text": "geht", "gap": true, "accept": ["geht", "läuft"] }, { "text": "über die Straße" } ] }
+  ],
+  "notes": "Key word 'der Häuserblock' is rather B1 for a level A video, but it is the plain right word for the pill on the corner building; kept. 'die Laterne' (street lamp) is the everyday word; 'beleuchten' (A2/B1) is the natural verb for a lamp shining on a wall ('an der Wand leuchten' sounds odd). Other lamps glow in the distance but only the boxed lamp lights the wall next to the dog."
+}

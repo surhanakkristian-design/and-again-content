@@ -1,0 +1,120 @@
+{
+  "mediaId": 612,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "à droite",
+  "taps": [
+    {
+      "phrase": "montrer la droite du doigt",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter un gros sac à dos",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "faire au revoir de la main",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les lumières",
+      "voice": "female"
+    },
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "la nourriture",
+      "voice": "female"
+    },
+    {
+      "word": "la roue",
+      "voice": "female"
+    }
+  ],
+  "question": "Quelle direction montre la femme ?",
+  "answer": [
+    "Elle",
+    "montre",
+    "la",
+    "droite."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "montrer la"
+        },
+        {
+          "text": "droite",
+          "gap": true,
+          "accept": [
+            "droite"
+          ]
+        },
+        {
+          "text": "du doigt"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un gros"
+        },
+        {
+          "text": "sac",
+          "gap": true,
+          "accept": [
+            "sac"
+          ]
+        },
+        {
+          "text": "à dos"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "faire au revoir de la"
+        },
+        {
+          "text": "main",
+          "gap": true,
+          "accept": [
+            "main"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "montre",
+          "gap": true,
+          "accept": [
+            "montre",
+            "indique"
+          ]
+        },
+        {
+          "text": "la droite"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'à droite' (adverbial) kept; with 'montrer' French natives say 'montrer la droite' / 'vers la droite', so the exact form 'à droite' does not appear (the word 'droite' does). Proposal: accept 'la droite' for this video. Phrase 3: the woman waves goodbye only in the last frames; in most boxed frames she points or turns the man around (same as the English box). The man also waves a thumbs-up, not goodbye, so phrase 3 fits only her."
+}

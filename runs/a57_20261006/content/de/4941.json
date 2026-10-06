@@ -1,0 +1,140 @@
+{
+ "mediaId": 4941,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Feuerwehrmann",
+ "taps": [
+  {
+   "phrase": "eine Leiter hochklettern",
+   "target": "die Feuerwehrfrau",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Baum sitzen",
+   "target": "die Katze",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Katze an sich drücken",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Feuerwehrfrau",
+   "voice": "female"
+  },
+  {
+   "word": "die Katze",
+   "voice": "female"
+  },
+  {
+   "word": "die Leiter",
+   "voice": "female"
+  },
+  {
+   "word": "der Baum",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Feuerwehrfrau?",
+ "answer": [
+  "Sie",
+  "rettet",
+  "eine",
+  "Katze",
+  "aus",
+  "dem",
+  "Baum."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Leiter"
+    },
+    {
+     "text": "hochklettern",
+     "gap": true,
+     "accept": [
+      "hochklettern",
+      "hochsteigen",
+      "raufklettern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Baum",
+     "gap": true,
+     "accept": [
+      "Baum"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Katze",
+     "gap": true,
+     "accept": [
+      "Katze"
+     ]
+    },
+    {
+     "text": "an sich drücken"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Feuerwehrfrau",
+     "gap": true,
+     "accept": [
+      "Feuerwehrfrau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rettet",
+     "gap": true,
+     "accept": [
+      "rettet",
+      "holt"
+     ]
+    },
+    {
+     "text": "eine Katze aus dem Baum"
+    }
+   ]
+  }
+ ],
+ "notes": "The firefighter is a woman, so the noun pill, target and question use 'die Feuerwehrfrau' (calling her 'der Feuerwehrmann' would be wrong for a native); the key word 'der Feuerwehrmann' stays unchanged. Proposal: add 'die Feuerwehrfrau' as a female form of the concept in word_localizations. Noun recall row uses die Feuerwehrfrau (accepts Feuerwehrmann). Tap box 1 also covers the pole slide, dressing and the final shot; the phrase describes the ladder climb (the action in most boxed frames with the ladder)."
+}

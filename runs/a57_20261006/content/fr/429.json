@@ -1,0 +1,26 @@
+{
+  "mediaId": 429, "lang": "fr", "level": "A",
+  "keyWord": "atterrir",
+  "taps": [
+    { "phrase": "atterrir en courant", "target": "la femme au casque", "voice": "female" },
+    { "phrase": "lever les deux bras", "target": "la femme au casque", "voice": "female" },
+    { "phrase": "porter une doudoune violette", "target": "la femme en doudoune", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "le casque", "voice": "female" },
+    { "word": "la doudoune", "voice": "female" },
+    { "word": "l'herbe", "voice": "female" }
+  ],
+  "question": "Que fait la femme en rose ?",
+  "answer": ["Elle", "atterrit", "sur", "l'herbe."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "atterrir", "gap": true, "accept": ["atterrir"] }, { "text": "en courant" } ] },
+    { "from": "taps", "parts": [ { "text": "lever les deux" }, { "text": "bras", "gap": true, "accept": ["bras", "mains"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "doudoune", "gap": true, "accept": ["doudoune", "veste"] }, { "text": "violette" } ] },
+    { "from": "answer", "parts": [ { "text": "atterrit", "gap": true, "accept": ["atterrit"] }, { "text": "sur l'herbe" } ] }
+  ],
+  "notes": "Phrase 1 is 'atterrir en courant' (she touches down running, 4-5 s) instead of a literal 'atterrir sur l'herbe', so its recall row does not look identical to the answer row 'atterrit sur l'herbe' once the gap is blanked ('l'herbe' is elided and cannot be the gap). English 'a jacket' is a puffer jacket: 'la doudoune' (everyday word in France, A2), used in phrase 3 and the noun. Phrase 2: she raises both fists after landing; during the flight her hands are up on the brake lines."
+}

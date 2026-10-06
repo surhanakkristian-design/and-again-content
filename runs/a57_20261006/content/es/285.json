@@ -1,0 +1,123 @@
+{
+  "mediaId": 285,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la familia",
+  "taps": [
+    {
+      "phrase": "hacer una foto de familia",
+      "target": "el abuelo",
+      "voice": "male"
+    },
+    {
+      "phrase": "saludar con las dos manos",
+      "target": "el abuelo",
+      "voice": "male"
+    },
+    {
+      "phrase": "subir los escalones corriendo",
+      "target": "el perro",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la ventana",
+      "voice": "male"
+    },
+    {
+      "word": "la familia",
+      "voice": "male"
+    },
+    {
+      "word": "los escalones",
+      "voice": "male"
+    },
+    {
+      "word": "la hierba",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo la familia?",
+  "answer": [
+    "Se",
+    "está",
+    "haciendo",
+    "una",
+    "foto",
+    "de",
+    "familia."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hacer una foto de"
+        },
+        {
+          "text": "familia",
+          "gap": true,
+          "accept": [
+            "familia"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "saludar",
+          "gap": true,
+          "accept": [
+            "saludar"
+          ]
+        },
+        {
+          "text": "con las dos manos"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "subir los"
+        },
+        {
+          "text": "escalones",
+          "gap": true,
+          "accept": [
+            "escalones"
+          ]
+        },
+        {
+          "text": "corriendo"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Se está haciendo una"
+        },
+        {
+          "text": "foto",
+          "gap": true,
+          "accept": [
+            "foto",
+            "fotografía"
+          ]
+        },
+        {
+          "text": "de familia"
+        }
+      ]
+    }
+  ],
+  "notes": "'la familia' is grammatically singular in Spanish, so the answer is 'Se está haciendo una foto de familia' (English 'They are taking'). answerVoice kept male as in English. 'Subir los escalones corriendo' could also be 'subir corriendo los escalones'; the row is fixed as written. Lawn = 'la hierba' (A1; 'el césped' also possible)."
+}

@@ -1,0 +1,113 @@
+{
+ "mediaId": 206,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le concombre",
+ "taps": [
+  {
+   "phrase": "couper un concombre",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "manger du concombre",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "regarder par-dessus la table",
+   "target": "le chien",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  },
+  {
+   "word": "le concombre",
+   "voice": "male"
+  },
+  {
+   "word": "la chemise",
+   "voice": "male"
+  },
+  {
+   "word": "le chien",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "coupe",
+  "un",
+  "concombre."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "couper un"
+    },
+    {
+     "text": "concombre",
+     "gap": true,
+     "accept": [
+      "concombre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger",
+     "gap": true,
+     "accept": [
+      "manger"
+     ]
+    },
+    {
+     "text": "du concombre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder par-dessus la"
+    },
+    {
+     "text": "table",
+     "gap": true,
+     "accept": [
+      "table"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "coupe",
+     "gap": true,
+     "accept": [
+      "coupe"
+     ]
+    },
+    {
+     "text": "un concombre"
+    }
+   ]
+  }
+ ],
+ "notes": "No noun row: le concombre is already in tap rows 1-2 and the answer. Gaps moved so row 1 (couper un ___) and the answer (___ un concombre) do not look alike. The dog peeks over the edge of the counter/table."
+}

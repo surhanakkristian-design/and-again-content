@@ -1,0 +1,121 @@
+{
+ "mediaId": 4015,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la orilla",
+ "taps": [
+  {
+   "phrase": "saltar por encima del agua",
+   "target": "la oveja que salta",
+   "voice": "male"
+  },
+  {
+   "phrase": "vigilar a las ovejas",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "ser alto y delgado",
+   "target": "el árbol",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el árbol",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "la orilla",
+   "voice": "male"
+  },
+  {
+   "word": "el agua",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hacen las ovejas?",
+ "answer": [
+  "Saltan",
+  "de",
+  "una",
+  "orilla",
+  "a",
+  "la",
+  "otra."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saltar por encima del"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vigilar",
+     "gap": true,
+     "accept": [
+      "vigilar",
+      "mirar"
+     ]
+    },
+    {
+     "text": "a las ovejas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser alto y"
+    },
+    {
+     "text": "delgado",
+     "gap": true,
+     "accept": [
+      "delgado",
+      "fino"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Saltan de una"
+    },
+    {
+     "text": "orilla",
+     "gap": true,
+     "accept": [
+      "orilla"
+     ]
+    },
+    {
+     "text": "a la otra"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses the key word ('de una orilla a la otra') instead of repeating phrase 1."
+}

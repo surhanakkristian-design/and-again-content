@@ -1,0 +1,26 @@
+{
+  "mediaId": 868, "lang": "fr", "level": "A",
+  "keyWord": "la vague",
+  "taps": [
+    { "phrase": "devenir de plus en plus grande", "target": "la vague", "voice": "female" },
+    { "phrase": "porter un T-shirt blanc", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un haut noir", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la vague", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "le sable", "voice": "female" }
+  ],
+  "question": "Que font les deux personnes ?",
+  "answer": ["Ils", "courent", "pour", "fuir", "une", "grosse", "vague."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "devenir de plus en plus" }, { "text": "grande", "gap": true, "accept": ["grande", "haute", "grosse"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "T-shirt", "gap": true, "accept": ["T-shirt", "tee-shirt"] }, { "text": "blanc" } ] },
+    { "from": "taps", "parts": [ { "text": "porter", "gap": true, "accept": ["porter"] }, { "text": "un haut noir" } ] },
+    { "from": "answer", "parts": [ { "text": "courent pour fuir une grosse" }, { "text": "vague", "gap": true, "accept": ["vague"] } ] }
+  ],
+  "notes": "The wave box also covers the frames where the wave breaks into foam and the later frames of the next wave on the horizon; 'devenir de plus en plus grande' fits the first half (the wave rising behind the swimmers). The man's top is a dark/black rash-guard style shirt: 'un haut noir'. 'fuir' is A2/B1 but the plain natural verb for running away from the wave. The key word 'la vague' is in the answer row, so no extra noun row."
+}

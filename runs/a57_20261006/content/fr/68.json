@@ -1,0 +1,26 @@
+{
+  "mediaId": 68, "lang": "fr", "level": "A",
+  "keyWord": "le bandage",
+  "taps": [
+    { "phrase": "tendre le bras", "target": "la femme", "voice": "female" },
+    { "phrase": "porter des lunettes", "target": "l'homme", "voice": "male" },
+    { "phrase": "entourer le poignet", "target": "le bandage", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "le pouce", "voice": "female" },
+    { "word": "le bandage", "voice": "female" },
+    { "word": "le banc", "voice": "female" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "lui", "met", "un", "bandage", "au", "poignet."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tendre le" }, { "text": "bras", "gap": true, "accept": ["bras"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "lunettes", "gap": true, "accept": ["lunettes"] } ] },
+    { "from": "taps", "parts": [ { "text": "entourer", "gap": true, "accept": ["entourer"] }, { "text": "le poignet" } ] },
+    { "from": "answer", "parts": [ { "text": "lui met un" }, { "text": "bandage", "gap": true, "accept": ["bandage"] }, { "text": "au poignet" } ] }
+  ],
+  "notes": "Phrase 1: English 'to smile at the camera', but in the boxed frames the woman looks down at her wrist almost all the time and smiles into the camera only in the last second; 'tendre le bras' is what she does in most boxed frames (she holds her arm out to the man). The bandage is wound around her wrist and the base of the hand; 'le poignet' is used in phrase 3 and the answer for consistency (English 'hand'). Answer word order 'Il lui met un bandage au poignet' is the one natural order. Key noun is in the answer row, so no noun row."
+}

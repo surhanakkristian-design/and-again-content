@@ -1,0 +1,117 @@
+{
+ "mediaId": 243,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "vestirse",
+ "taps": [
+  {
+   "phrase": "ponerse un jersey",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "ayudarla a vestirse",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "mirarse en el espejo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gorro",
+   "voice": "female"
+  },
+  {
+   "word": "el bolso",
+   "voice": "female"
+  },
+  {
+   "word": "la puerta",
+   "voice": "female"
+  },
+  {
+   "word": "los vaqueros",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "La",
+  "está",
+  "ayudando",
+  "a",
+  "vestirse."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ponerse un"
+    },
+    {
+     "text": "jersey",
+     "gap": true,
+     "accept": [
+      "jersey"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ayudarla a"
+    },
+    {
+     "text": "vestirse",
+     "gap": true,
+     "accept": [
+      "vestirse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirarse en el"
+    },
+    {
+     "text": "espejo",
+     "gap": true,
+     "accept": [
+      "espejo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "La está"
+    },
+    {
+     "text": "ayudando",
+     "gap": true,
+     "accept": [
+      "ayudando"
+     ]
+    },
+    {
+     "text": "a vestirse"
+    }
+   ]
+  }
+ ],
+ "notes": "The English tap boxes 1 and 3 also cover the boot-lacing and door frames; phrases written for what the woman does in most boxed frames. Answer drops the subject, so the answer row is the whole sentence."
+}

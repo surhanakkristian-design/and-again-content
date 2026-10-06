@@ -1,0 +1,119 @@
+{
+ "mediaId": 7453,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "zubereiten",
+ "taps": [
+  {
+   "phrase": "die Nudeln im Wok schwenken",
+   "target": "die Köchin",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Teller hinhalten",
+   "target": "der Mann mit dem Teller",
+   "voice": "male"
+  },
+  {
+   "phrase": "unter dem Wok lodern",
+   "target": "die Flammen",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Wok",
+   "voice": "female"
+  },
+  {
+   "word": "die Flammen",
+   "voice": "female"
+  },
+  {
+   "word": "die Schöpfkelle",
+   "voice": "female"
+  },
+  {
+   "word": "das Bandana",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Köchin?",
+ "answer": [
+  "Sie",
+  "bereitet",
+  "Nudeln",
+  "im",
+  "Wok",
+  "zu."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Nudeln im Wok"
+    },
+    {
+     "text": "schwenken",
+     "gap": true,
+     "accept": [
+      "schwenken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Teller",
+     "gap": true,
+     "accept": [
+      "Teller"
+     ]
+    },
+    {
+     "text": "hinhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "unter dem Wok"
+    },
+    {
+     "text": "lodern",
+     "gap": true,
+     "accept": [
+      "lodern",
+      "brennen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bereitet",
+     "gap": true,
+     "accept": [
+      "bereitet"
+     ]
+    },
+    {
+     "text": "Nudeln im Wok zu"
+    }
+   ]
+  }
+ ],
+ "notes": "Bandana -> 'das Bandana' (Duden), avoids the religious sense of 'das Kopftuch'. Green box: the man holds the plate in front of him (hinhalten fits loosely; 'in der Hand halten' would also do)."
+}

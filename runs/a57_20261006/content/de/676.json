@@ -1,0 +1,26 @@
+{
+  "mediaId": 676, "lang": "de", "level": "B",
+  "keyWord": "das Sightseeing",
+  "taps": [
+    { "phrase": "die Sehenswürdigkeiten fotografieren", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Gondel steuern", "target": "der Mann", "voice": "male" },
+    { "phrase": "den Platz überragen", "target": "der Glockenturm", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Glockenturm", "voice": "female" },
+    { "word": "die Kuppel", "voice": "female" },
+    { "word": "die Kamera", "voice": "female" },
+    { "word": "die Gondel", "voice": "female" }
+  ],
+  "question": "Was machen die beiden Touristen?",
+  "answer": ["Sie", "machen", "Sightseeing", "in", "einer", "Gondel."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Sehenswürdigkeiten", "gap": true, "accept": ["Sehenswürdigkeiten"] }, { "text": "fotografieren" } ] },
+    { "from": "taps", "parts": [ { "text": "die Gondel" }, { "text": "steuern", "gap": true, "accept": ["steuern", "lenken"] } ] },
+    { "from": "taps", "parts": [ { "text": "den Platz" }, { "text": "überragen", "gap": true, "accept": ["überragen"] } ] },
+    { "from": "answer", "parts": [ { "text": "machen" }, { "text": "Sightseeing", "gap": true, "accept": ["Sightseeing"] }, { "text": "in einer Gondel" } ] }
+  ],
+  "notes": "German also allows 'Sie machen in einer Gondel Sightseeing' (second word order with the same chips). Key word 'das Sightseeing' is not one of the four nouns, so no noun row. Tap 2: the man steers the gondola only in the second half; in the square/church frames he walks and points."
+}

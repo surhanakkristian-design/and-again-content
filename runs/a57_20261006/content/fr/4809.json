@@ -1,0 +1,26 @@
+{
+  "mediaId": 4809, "lang": "fr", "level": "B",
+  "keyWord": "le couloir",
+  "taps": [
+    { "phrase": "porter un panier à linge", "target": "la femme", "voice": "female" },
+    { "phrase": "manœuvrer un vélo", "target": "l'homme au sweat à capuche", "voice": "male" },
+    { "phrase": "avoir les cheveux bouclés", "target": "l'homme aux cheveux bouclés", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les manteaux", "voice": "female" },
+    { "word": "le panier à linge", "voice": "female" },
+    { "word": "le couloir", "voice": "female" },
+    { "word": "les chaussures", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "traverse", "le", "couloir", "avec", "un", "panier", "à", "linge."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "panier", "gap": true, "accept": ["panier"] }, { "text": "à linge" } ] },
+    { "from": "taps", "parts": [ { "text": "manœuvrer", "gap": true, "accept": ["manœuvrer", "pousser"] }, { "text": "un vélo" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir les cheveux" }, { "text": "bouclés", "gap": true, "accept": ["bouclés", "frisés"] } ] },
+    { "from": "answer", "parts": [ { "text": "traverse le" }, { "text": "couloir", "gap": true, "accept": ["couloir"] }, { "text": "avec un panier à linge" } ] }
+  ],
+  "notes": "Phrase 2: 'manœuvrer un vélo' (he pushes and turns the bike in the narrow corridor) chosen over plain 'pousser un vélo' for the B level; 'pousser' accepted in recall. Phrase 3 describes an appearance like the English; the curly-haired man also carries the cardboard box, which the hoodie man helps with, so the box was not used. The key word 'couloir' is in the answer row (gapped there), so no noun row. In the last red boxes the woman is turning into a side door, partly without the basket in view."
+}

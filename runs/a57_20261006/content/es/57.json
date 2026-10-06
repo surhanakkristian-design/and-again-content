@@ -1,0 +1,109 @@
+{
+ "mediaId": 57,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el fondo",
+ "taps": [
+  {
+   "phrase": "subir la primera",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "levantar un dedo",
+   "target": "el hombre de la camisa azul",
+   "voice": "male"
+  },
+  {
+   "phrase": "ir el último",
+   "target": "el hombre de la camiseta granate",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la pared",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "los asientos",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Dónde están sentados los tres?",
+ "answer": [
+  "Están",
+  "sentados",
+  "al",
+  "fondo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir",
+     "gap": true,
+     "accept": [
+      "subir"
+     ]
+    },
+    {
+     "text": "la primera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar un"
+    },
+    {
+     "text": "dedo",
+     "gap": true,
+     "accept": [
+      "dedo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir el"
+    },
+    {
+     "text": "último",
+     "gap": true,
+     "accept": [
+      "último"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están sentados al"
+    },
+    {
+     "text": "fondo",
+     "gap": true,
+     "accept": [
+      "fondo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: English 'to walk at the back' means last in the line on the stairs; Spanish 'ir el último' (not 'al fondo', which would mean the far end). In the seated boxes the three do not walk; phrases describe most boxed frames. The answer drops the subject, as natives do, so the answer row is the whole sentence. Phrase 2: the man in blue raises one finger only in the seated frames."
+}

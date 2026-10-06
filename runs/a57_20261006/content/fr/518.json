@@ -1,0 +1,138 @@
+{
+  "mediaId": 518,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le hibou",
+  "taps": [
+    {
+      "phrase": "être posé sur une branche",
+      "target": "le hibou",
+      "voice": "female"
+    },
+    {
+      "phrase": "tourner la tête",
+      "target": "le hibou",
+      "voice": "female"
+    },
+    {
+      "phrase": "voler entre les arbres",
+      "target": "le hibou",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le hibou",
+      "voice": "female"
+    },
+    {
+      "word": "la branche",
+      "voice": "female"
+    },
+    {
+      "word": "l'arbre",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le hibou ?",
+  "answer": [
+    "Le",
+    "hibou",
+    "est",
+    "posé",
+    "sur",
+    "une",
+    "branche."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être posé"
+        },
+        {
+          "text": "sur une"
+        },
+        {
+          "text": "branche",
+          "gap": true,
+          "accept": [
+            "branche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tourner",
+          "gap": true,
+          "accept": [
+            "tourner"
+          ]
+        },
+        {
+          "text": "la tête"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "voler entre"
+        },
+        {
+          "text": "les"
+        },
+        {
+          "text": "arbres",
+          "gap": true,
+          "accept": [
+            "arbres"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "le"
+        },
+        {
+          "text": "hibou",
+          "gap": true,
+          "accept": [
+            "hibou",
+            "chouette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "est"
+        },
+        {
+          "text": "posé",
+          "gap": true,
+          "accept": [
+            "posé",
+            "perché"
+          ]
+        },
+        {
+          "text": "sur une branche"
+        }
+      ]
+    }
+  ],
+  "notes": "Key-word note: the bird has no ear tufts (round head, Ural/tawny owl type), so in French it is strictly 'une chouette', not 'un hibou'. Kept 'le hibou' (database word; everyday speakers often use it loosely); proposal: the owner may switch fr to 'la chouette' for this concept or accept both. Noun row accepts 'chouette'."
+}

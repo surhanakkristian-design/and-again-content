@@ -1,0 +1,27 @@
+{
+  "mediaId": 852, "lang": "fr", "level": "A",
+  "keyWord": "le serveur",
+  "taps": [
+    { "phrase": "porter des assiettes", "target": "le serveur", "voice": "male" },
+    { "phrase": "porter un collier blanc", "target": "la vieille dame", "voice": "female" },
+    { "phrase": "courir dans le restaurant", "target": "le serveur", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la lampe", "voice": "male" },
+    { "word": "le serveur", "voice": "male" },
+    { "word": "la table", "voice": "male" },
+    { "word": "la chaise", "voice": "male" }
+  ],
+  "question": "Que fait le serveur ?",
+  "answer": ["Il", "apporte", "les", "assiettes", "à", "la", "table."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "assiettes", "gap": true, "accept": ["assiettes"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "collier", "gap": true, "accept": ["collier"] }, { "text": "blanc" } ] },
+    { "from": "taps", "parts": [ { "text": "courir", "gap": true, "accept": ["courir"] }, { "text": "dans le restaurant" } ] },
+    { "from": "nouns", "parts": [ { "text": "le" }, { "text": "serveur", "gap": true, "accept": ["serveur"] } ] },
+    { "from": "answer", "parts": [ { "text": "apporte", "gap": true, "accept": ["apporte", "porte"] }, { "text": "les assiettes à la table" } ] }
+  ],
+  "notes": "The necklace is a pearl necklace ('collier de perles' would be the native description, but 'perles' is above A2); kept 'collier blanc'. Phrase 1 and 3 boxes also cover the final bow frames where he no longer runs or carries plates."
+}

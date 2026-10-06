@@ -1,0 +1,125 @@
+{
+ "mediaId": 34,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "une activité",
+ "taps": [
+  {
+   "phrase": "porter un tee-shirt blanc",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une barbe courte",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "courir à quatre pattes",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font l'homme et la femme ?",
+ "answer": [
+  "Ils",
+  "jouent",
+  "au",
+  "badminton",
+  "sur",
+  "l'herbe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "tee-shirt",
+     "gap": true,
+     "accept": [
+      "tee-shirt",
+      "t-shirt"
+     ]
+    },
+    {
+     "text": "blanc"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    },
+    {
+     "text": "courte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "courir",
+     "gap": true,
+     "accept": [
+      "courir"
+     ]
+    },
+    {
+     "text": "à quatre pattes"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "jouent au"
+    },
+    {
+     "text": "badminton",
+     "gap": true,
+     "accept": [
+      "badminton"
+     ]
+    },
+    {
+     "text": "sur l'herbe"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'une activité' copied unchanged (indefinite article in the database word, unlike the other nouns). It is not a visible thing and not a noun of the set, so no noun row; the activity shown is badminton. The man wears a light blue T-shirt, so the white T-shirt fits only the woman. Blue box (dog) is OFF until the last frames; the man crawls on all fours earlier, but never while the dog box is on. 'l'herbe' is elided, so the answer row gaps 'badminton'."
+}

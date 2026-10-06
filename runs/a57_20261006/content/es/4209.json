@@ -1,0 +1,122 @@
+{
+ "mediaId": 4209,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el sueño",
+ "taps": [
+  {
+   "phrase": "teclear en el portátil",
+   "target": "el hámster de las gafas",
+   "voice": "male"
+  },
+  {
+   "phrase": "dormir a pierna suelta",
+   "target": "el hámster de la mascarilla",
+   "voice": "male"
+  },
+  {
+   "phrase": "echar un vistazo a la cámara",
+   "target": "el hámster de las gafas",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el tulipán",
+   "voice": "male"
+  },
+  {
+   "word": "el portátil",
+   "voice": "male"
+  },
+  {
+   "word": "la mascarilla",
+   "voice": "male"
+  },
+  {
+   "word": "el bolso",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hámster de la mascarilla?",
+ "answer": [
+  "Está",
+  "sumido",
+  "en",
+  "un",
+  "sueño",
+  "profundo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "teclear",
+     "gap": true,
+     "accept": [
+      "teclear",
+      "escribir"
+     ]
+    },
+    {
+     "text": "en el portátil"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormir",
+     "gap": true,
+     "accept": [
+      "dormir"
+     ]
+    },
+    {
+     "text": "a pierna suelta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar un"
+    },
+    {
+     "text": "vistazo",
+     "gap": true,
+     "accept": [
+      "vistazo"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está sumido en un"
+    },
+    {
+     "text": "sueño",
+     "gap": true,
+     "accept": [
+      "sueño"
+     ]
+    },
+    {
+     "text": "profundo"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer chips allow a second order 'un profundo sueño' (adjective before noun is also correct, literary). 'la mascarilla' = the sheet face mask (cosmetic sense is clear from the picture)."
+}

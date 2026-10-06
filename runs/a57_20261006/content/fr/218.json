@@ -1,0 +1,122 @@
+{
+ "mediaId": 218,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "déclarer",
+ "taps": [
+  {
+   "phrase": "brandir un parchemin",
+   "target": "la femme au balcon",
+   "voice": "female"
+  },
+  {
+   "phrase": "tirer la corde de la cloche",
+   "target": "le sonneur",
+   "voice": "male"
+  },
+  {
+   "phrase": "enlacer un petit garçon",
+   "target": "la femme au foulard",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cloche",
+   "voice": "female"
+  },
+  {
+   "word": "le parchemin",
+   "voice": "female"
+  },
+  {
+   "word": "les colombes",
+   "voice": "female"
+  },
+  {
+   "word": "le foulard",
+   "voice": "female"
+  }
+ ],
+ "question": "Que se passe-t-il sur le balcon ?",
+ "answer": [
+  "Une",
+  "femme",
+  "déclare",
+  "quelque",
+  "chose",
+  "à",
+  "la",
+  "foule."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brandir un"
+    },
+    {
+     "text": "parchemin",
+     "gap": true,
+     "accept": [
+      "parchemin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer la"
+    },
+    {
+     "text": "corde",
+     "gap": true,
+     "accept": [
+      "corde"
+     ]
+    },
+    {
+     "text": "de la cloche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "enlacer",
+     "gap": true,
+     "accept": [
+      "enlacer",
+      "étreindre"
+     ]
+    },
+    {
+     "text": "un petit garçon"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "déclare",
+     "gap": true,
+     "accept": [
+      "déclare",
+      "annonce"
+     ]
+    },
+    {
+     "text": "quelque chose à la foule"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 'brandir' covers both holding the scroll out and raising it high; the woman only holds it at chest height in some boxed frames."
+}

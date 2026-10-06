@@ -1,0 +1,27 @@
+{
+  "mediaId": 7119, "lang": "de", "level": "B",
+  "keyWord": "der Fischer",
+  "taps": [
+    { "phrase": "ein schweres Netz einholen", "target": "die Frau", "voice": "female" },
+    { "phrase": "gelbes Ölzeug tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "vor Fischen überquellen", "target": "das Netz", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Möwe", "voice": "female" },
+    { "word": "das Netz", "voice": "female" },
+    { "word": "die Kiste", "voice": "female" },
+    { "word": "die Fischerin", "voice": "female" }
+  ],
+  "question": "Was macht die Fischerin in Orange?",
+  "answer": ["Sie", "holt", "ein", "schweres", "Netz", "ein."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein schweres Netz" }, { "text": "einholen", "gap": true, "accept": ["einholen", "hochziehen"] } ] },
+    { "from": "taps", "parts": [ { "text": "gelbes" }, { "text": "Ölzeug", "gap": true, "accept": ["Ölzeug", "Regenzeug"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "vor Fischen" }, { "text": "überquellen", "gap": true, "accept": ["überquellen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Fischerin", "gap": true, "accept": ["Fischerin"] } ] },
+    { "from": "answer", "parts": [ { "text": "holt ein schweres" }, { "text": "Netz", "gap": true, "accept": ["Netz", "Fischernetz"] }, { "text": "ein" } ] }
+  ],
+  "notes": "KEY WORD: the fisher is a woman, so the natural German noun is 'die Fischerin' (pill, question, noun row); database word 'der Fischer' kept as keyWord. Proposal: accept the feminine form for this video or map it to 'die Fischerin'. 'Ölzeug' (B2) is the exact word for yellow oilskins. 'die Möwe' singular as the English slot shows one gull; 'die Kiste' = the fish crate."
+}

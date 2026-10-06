@@ -1,0 +1,26 @@
+{
+  "mediaId": 4360, "lang": "fr", "level": "B",
+  "keyWord": "le sac à main",
+  "taps": [
+    { "phrase": "jeter un coup d'œil dans un sac", "target": "la femme", "voice": "female" },
+    { "phrase": "porter des sacs à bout de bras", "target": "la femme", "voice": "female" },
+    { "phrase": "exhiber fièrement son sac à main", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les sacs en papier", "voice": "female" },
+    { "word": "le sac à main", "voice": "female" },
+    { "word": "le sac de voyage", "voice": "female" },
+    { "word": "l'escalator", "voice": "female" }
+  ],
+  "question": "Que montre fièrement la femme ?",
+  "answer": ["Elle", "exhibe", "son", "sac", "à", "main", "sur", "l'escalator."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "jeter", "gap": true, "accept": ["jeter"] }, { "text": "un coup d'œil" }, { "text": "dans un sac" } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "sacs", "gap": true, "accept": ["sacs"] }, { "text": "à bout de bras" } ] },
+    { "from": "taps", "parts": [ { "text": "exhiber fièrement son" }, { "text": "sac", "gap": true, "accept": ["sac"] }, { "text": "à main" } ] },
+    { "from": "answer", "parts": [ { "text": "exhibe", "gap": true, "accept": ["exhibe", "montre"] }, { "text": "son sac à main" }, { "text": "sur l'escalator" } ] }
+  ],
+  "notes": "All three tap boxes cover the whole clip (one woman): she peers into the bag on the street, carries the bags in the mall, shows off the handbag on the escalator. 'escalator' is the everyday word in France ('escalier mécanique' is the formal one). Duffel bag = 'le sac de voyage'."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 7145, "lang": "fr", "level": "B",
+  "keyWord": "la porte d'entrée",
+  "taps": [
+    { "phrase": "se réfugier derrière la porte", "target": "l'homme", "voice": "male" },
+    { "phrase": "souffler par les naseaux", "target": "la grosse vache", "voice": "male" },
+    { "phrase": "longer les bouteilles de lait", "target": "le chat", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la porte d'entrée", "voice": "male" },
+    { "word": "le peignoir", "voice": "male" },
+    { "word": "les bouteilles de lait", "voice": "male" },
+    { "word": "les pavés", "voice": "male" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "se", "réfugie", "derrière", "sa", "porte", "d'entrée."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "réfugier", "gap": true, "accept": ["réfugier"] }, { "text": "derrière la porte" } ] },
+    { "from": "taps", "parts": [ { "text": "souffler par les" }, { "text": "naseaux", "gap": true, "accept": ["naseaux"] } ] },
+    { "from": "taps", "parts": [ { "text": "longer", "gap": true, "accept": ["longer"] }, { "text": "les bouteilles de lait" } ] },
+    { "from": "answer", "parts": [ { "text": "se réfugie derrière sa" }, { "text": "porte", "gap": true, "accept": ["porte"] }, { "text": "d'entrée" } ] }
+  ],
+  "notes": "Phrase 2 'souffler par les naseaux' renders 'to snort at the man' (the cow blows a cloud of breath towards him); 'sur l'homme' left out to keep the collocation natural. The cat only appears in the later boxed frames (box off before). Answer row gaps 'porte' inside the key word 'porte d'entrée'; no separate noun row since the answer row contains the key word."
+}

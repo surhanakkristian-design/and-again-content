@@ -1,0 +1,120 @@
+{
+ "mediaId": 7739,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Reifung",
+ "taps": [
+  {
+   "phrase": "einen Käselaib rollen",
+   "target": "die Maus mit der Mütze",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Käse mit dem Hammer abklopfen",
+   "target": "die Maus in Grün",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Leiter hinaufklettern",
+   "target": "die Maus auf der Leiter",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Laterne",
+   "voice": "male"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  },
+  {
+   "word": "die Leiter",
+   "voice": "male"
+  },
+  {
+   "word": "der Eimer",
+   "voice": "male"
+  }
+ ],
+ "question": "Was rollt die Maus?",
+ "answer": [
+  "Sie",
+  "rollt",
+  "einen",
+  "schweren",
+  "Käselaib."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Käselaib"
+    },
+    {
+     "text": "rollen",
+     "gap": true,
+     "accept": [
+      "rollen",
+      "schieben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Käse mit dem Hammer"
+    },
+    {
+     "text": "abklopfen",
+     "gap": true,
+     "accept": [
+      "abklopfen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Leiter",
+     "gap": true,
+     "accept": [
+      "Leiter"
+     ]
+    },
+    {
+     "text": "hinaufklettern"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rollt einen schweren"
+    },
+    {
+     "text": "Käselaib",
+     "gap": true,
+     "accept": [
+      "Käselaib",
+      "Laib",
+      "Käse"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Reifung' (aging) is not shown as a thing and not used in the exercises (English does not use 'aging' either). 'die Maus' is feminine, so the answer uses 'Sie' while answerVoice stays male as in English (the mouse character is male)."
+}

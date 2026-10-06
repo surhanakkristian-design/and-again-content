@@ -1,0 +1,136 @@
+{
+ "mediaId": 5288,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el esquí",
+ "taps": [
+  {
+   "phrase": "bajar la pista esquiando",
+   "target": "el esquiador de rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un traje rojo",
+   "target": "el esquiador de rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "dar un salto",
+   "target": "el esquiador de rojo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los esquís",
+   "voice": "male"
+  },
+  {
+   "word": "las montañas",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "la nieve",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el esquiador de rojo?",
+ "answer": [
+  "Está",
+  "esquiando",
+  "por",
+  "la",
+  "pista."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bajar",
+     "gap": true,
+     "accept": [
+      "bajar"
+     ]
+    },
+    {
+     "text": "la pista esquiando"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "traje",
+     "gap": true,
+     "accept": [
+      "traje",
+      "mono"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar un"
+    },
+    {
+     "text": "salto",
+     "gap": true,
+     "accept": [
+      "salto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "los"
+    },
+    {
+     "text": "esquís",
+     "gap": true,
+     "accept": [
+      "esquís"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "esquiando",
+     "gap": true,
+     "accept": [
+      "esquiando"
+     ]
+    },
+    {
+     "text": "por la pista"
+    }
+   ]
+  }
+ ],
+ "notes": "The jump ('dar un salto') is visible only in some boxed frames (box_04); most frames show him carving down the piste. 'Hill' rendered as 'la pista' (natural for a ski slope in Spain). The suit is a one-piece ('mono'), 'traje' kept as the A-level word; recall accepts 'mono'."
+}

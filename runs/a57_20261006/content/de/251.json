@@ -1,0 +1,117 @@
+{
+ "mediaId": 251,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Hantel",
+ "taps": [
+  {
+   "phrase": "den Bizeps trainieren",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "an ihrem Kaffee nippen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Schneidersitz sitzen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Hantel",
+   "voice": "male"
+  },
+  {
+   "word": "die Palme",
+   "voice": "male"
+  },
+  {
+   "word": "der Sessel",
+   "voice": "male"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "stemmt",
+  "eine",
+  "schwere",
+  "Hantel."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Bizeps"
+    },
+    {
+     "text": "trainieren",
+     "gap": true,
+     "accept": [
+      "trainieren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an ihrem Kaffee"
+    },
+    {
+     "text": "nippen",
+     "gap": true,
+     "accept": [
+      "nippen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Schneidersitz",
+     "gap": true,
+     "accept": [
+      "Schneidersitz"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stemmt eine schwere"
+    },
+    {
+     "text": "Hantel",
+     "gap": true,
+     "accept": [
+      "Hantel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses 'stemmen' (B2) rather than the gym loanword 'Bizepscurls': he curls and also presses the dumbbell overhead. Key word 'die Hantel' is in the answer row, so no separate noun row."
+}

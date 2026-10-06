@@ -1,0 +1,129 @@
+{
+  "mediaId": 4852,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "das Zahnrad",
+  "taps": [
+    {
+      "phrase": "mit offenem Mund staunen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "mit kleinen Bauteilen bestückt sein",
+      "target": "die Platine",
+      "voice": "male"
+    },
+    {
+      "phrase": "große Zahnräder aus Metall haben",
+      "target": "die riesige Maschine",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Schutzbrille",
+      "voice": "male"
+    },
+    {
+      "word": "die Werkzeuge",
+      "voice": "male"
+    },
+    {
+      "word": "die Platine",
+      "voice": "male"
+    },
+    {
+      "word": "der Schraubstock",
+      "voice": "male"
+    }
+  ],
+  "question": "Was baut der Mann?",
+  "answer": [
+    "Er",
+    "baut",
+    "eine",
+    "Maschine",
+    "mit",
+    "Zahnrädern",
+    "aus",
+    "Metall."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit offenem Mund"
+        },
+        {
+          "text": "staunen",
+          "gap": true,
+          "accept": [
+            "staunen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit kleinen"
+        },
+        {
+          "text": "Bauteilen",
+          "gap": true,
+          "accept": [
+            "Bauteilen",
+            "Teilen",
+            "Komponenten",
+            "Bauelementen"
+          ]
+        },
+        {
+          "text": "bestückt sein"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "große"
+        },
+        {
+          "text": "Zahnräder",
+          "gap": true,
+          "accept": [
+            "Zahnräder"
+          ]
+        },
+        {
+          "text": "aus Metall haben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "baut eine"
+        },
+        {
+          "text": "Maschine",
+          "gap": true,
+          "accept": [
+            "Maschine"
+          ]
+        },
+        {
+          "text": "mit Zahnrädern aus Metall"
+        }
+      ]
+    }
+  ],
+  "notes": "Man box (phrase 1): English 'raise both arms' is true only in the last 3 frames (box_05); in most boxed frames he stares wide-eyed with his mouth open, so 'mit offenem Mund staunen' (the first 2 frames show only his hands with the spanner). Board box (phrase 2): it glows red and green only in 2 frames (box_02); in all boxed frames it is visibly fitted with small components, so 'mit kleinen Bauteilen bestückt sein'. No noun row: 'Zahnräder' is in tap row 3 and the answer."
+}

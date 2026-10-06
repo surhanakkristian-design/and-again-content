@@ -1,0 +1,130 @@
+{
+ "mediaId": 5458,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Vitamin",
+ "taps": [
+  {
+   "phrase": "einen kräftigen Schluck nehmen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "aufschäumen und sich orange färben",
+   "target": "das Glas",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Vitaminetikett tragen",
+   "target": "die Dose",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Küchenschrank",
+   "voice": "female"
+  },
+  {
+   "word": "die Vitamintablette",
+   "voice": "female"
+  },
+  {
+   "word": "die Obstschale",
+   "voice": "female"
+  },
+  {
+   "word": "das Glas",
+   "voice": "female"
+  }
+ ],
+ "question": "Was lässt die Frau ins Glas fallen?",
+ "answer": [
+  "Sie",
+  "lässt",
+  "eine",
+  "Vitamintablette",
+  "ins",
+  "Glas",
+  "fallen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen kräftigen"
+    },
+    {
+     "text": "Schluck",
+     "gap": true,
+     "accept": [
+      "Schluck"
+     ]
+    },
+    {
+     "text": "nehmen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aufschäumen",
+     "gap": true,
+     "accept": [
+      "aufschäumen",
+      "sprudeln",
+      "schäumen"
+     ]
+    },
+    {
+     "text": "und sich orange färben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Vitaminetikett",
+     "gap": true,
+     "accept": [
+      "Vitaminetikett",
+      "Etikett"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lässt eine"
+    },
+    {
+     "text": "Vitamintablette",
+     "gap": true,
+     "accept": [
+      "Vitamintablette",
+      "Brausetablette",
+      "Tablette"
+     ]
+    },
+    {
+     "text": "ins Glas fallen"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'das Vitamin' appears in compounds (die Vitamintablette, das Vitaminetikett; decision 404), so no separate noun row. The woman's red box covers the whole clip; she drinks only at the end (a sip, not a gulp), so 'einen kräftigen Schluck nehmen' instead of 'hinunterstürzen'. The glass phrase is the liquid in it fizzing; 'das Glas' is the target name as in English."
+}

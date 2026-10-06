@@ -1,0 +1,129 @@
+{
+ "mediaId": 7811,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "las docenas",
+ "taps": [
+  {
+   "phrase": "sujetar una raqueta de tenis",
+   "target": "la mujer de blanco",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrar la máquina lanzapelotas",
+   "target": "el hombre de verde",
+   "voice": "male"
+  },
+  {
+   "phrase": "lanzar docenas de pelotas",
+   "target": "la máquina lanzapelotas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las nubes",
+   "voice": "female"
+  },
+  {
+   "word": "la máquina lanzapelotas",
+   "voice": "female"
+  },
+  {
+   "word": "la raqueta",
+   "voice": "female"
+  },
+  {
+   "word": "las pelotas de tenis",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la máquina lanzapelotas?",
+ "answer": [
+  "Está",
+  "lanzando",
+  "docenas",
+  "de",
+  "pelotas",
+  "de",
+  "tenis."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "raqueta",
+     "gap": true,
+     "accept": [
+      "raqueta"
+     ]
+    },
+    {
+     "text": "de tenis"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar",
+     "gap": true,
+     "accept": [
+      "agarrar",
+      "coger"
+     ]
+    },
+    {
+     "text": "la máquina lanzapelotas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lanzar"
+    },
+    {
+     "text": "docenas",
+     "gap": true,
+     "accept": [
+      "docenas",
+      "decenas",
+      "montones"
+     ]
+    },
+    {
+     "text": "de pelotas"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "lanzando",
+     "gap": true,
+     "accept": [
+      "lanzando",
+      "disparando"
+     ]
+    },
+    {
+     "text": "docenas de pelotas de tenis"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman swings the racket only in the first two boxed frames; in most frames she stands laughing holding it lowered, so 'sujetar una raqueta de tenis'. keyWord: in Spain 'decenas' (or 'montones') is the more usual word for an indefinite 'dozens'; 'docenas' is correct and used here as the database word; recall accepts 'decenas'. Proposal: consider 'las decenas'."
+}

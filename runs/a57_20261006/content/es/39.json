@@ -1,0 +1,121 @@
+{
+ "mediaId": 39,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la ambulancia",
+ "taps": [
+  {
+   "phrase": "mirar la ambulancia",
+   "target": "el hombre de negro",
+   "voice": "male"
+  },
+  {
+   "phrase": "parar cerca de la cafetería",
+   "target": "la ambulancia",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una bolsa roja",
+   "target": "el hombre de amarillo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "las casas",
+   "voice": "male"
+  },
+  {
+   "word": "la ambulancia",
+   "voice": "male"
+  },
+  {
+   "word": "la bolsa",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre de negro?",
+ "answer": [
+  "Está",
+  "mirando",
+  "la",
+  "ambulancia."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar la"
+    },
+    {
+     "text": "ambulancia",
+     "gap": true,
+     "accept": [
+      "ambulancia"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "parar",
+     "gap": true,
+     "accept": [
+      "parar",
+      "aparcar"
+     ]
+    },
+    {
+     "text": "cerca de la cafetería"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    },
+    {
+     "text": "roja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "mirando",
+     "gap": true,
+     "accept": [
+      "mirando",
+      "observando"
+     ]
+    },
+    {
+     "text": "la ambulancia"
+    }
+   ]
+  }
+ ],
+ "notes": "'mirar' instead of 'observar' to stay A1-A2. The woman paramedic also wears yellow but carries nothing, so the red bag fits only the man in yellow. Tap box 2 covers the ambulance driving up and standing parked; 'parar' covers stopping. No noun row: la ambulancia is in tap row 1 (gap) and the answer row."
+}

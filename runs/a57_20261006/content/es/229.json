@@ -1,0 +1,122 @@
+{
+ "mediaId": 229,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el diploma",
+ "taps": [
+  {
+   "phrase": "cruzar el escenario",
+   "target": "el graduado",
+   "voice": "male"
+  },
+  {
+   "phrase": "estrechar la mano al graduado",
+   "target": "el señor mayor",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar atado con una cinta",
+   "target": "el diploma",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el diploma",
+   "voice": "male"
+  },
+  {
+   "word": "el birrete",
+   "voice": "male"
+  },
+  {
+   "word": "la toga",
+   "voice": "male"
+  },
+  {
+   "word": "la banda",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el graduado?",
+ "answer": [
+  "Está",
+  "levantando",
+  "el",
+  "diploma",
+  "por",
+  "encima",
+  "de",
+  "la",
+  "cabeza."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzar el"
+    },
+    {
+     "text": "escenario",
+     "gap": true,
+     "accept": [
+      "escenario"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estrechar",
+     "gap": true,
+     "accept": [
+      "estrechar"
+     ]
+    },
+    {
+     "text": "la mano al graduado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar atado con una"
+    },
+    {
+     "text": "cinta",
+     "gap": true,
+     "accept": [
+      "cinta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está levantando el"
+    },
+    {
+     "text": "diploma",
+     "gap": true,
+     "accept": [
+      "diploma",
+      "título"
+     ]
+    },
+    {
+     "text": "por encima de la cabeza"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: English 'congratulate'; the visible act is the handshake, so 'estrechar la mano'. Phrase 1: in the last boxed frames the graduate stands lifting the diploma rather than crossing. Sash = 'la banda' (in Spain also 'la beca' for the university sash, avoided as ambiguous)."
+}

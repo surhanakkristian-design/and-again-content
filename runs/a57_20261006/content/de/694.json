@@ -1,0 +1,124 @@
+{
+  "mediaId": 694,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "schneiden",
+  "taps": [
+    {
+      "phrase": "eine Tomate in Scheiben schneiden",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine Scheibe hochhalten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf dem Brett liegen",
+      "target": "die Tomate",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Jacke",
+      "voice": "male"
+    },
+    {
+      "word": "das Messer",
+      "voice": "male"
+    },
+    {
+      "word": "die Tomate",
+      "voice": "male"
+    },
+    {
+      "word": "das Brett",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "schneidet",
+    "eine",
+    "Tomate",
+    "in",
+    "Scheiben."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine Tomate in Scheiben"
+        },
+        {
+          "text": "schneiden",
+          "gap": true,
+          "accept": [
+            "schneiden"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Scheibe",
+          "gap": true,
+          "accept": [
+            "Scheibe"
+          ]
+        },
+        {
+          "text": "hochhalten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Brett",
+          "gap": true,
+          "accept": [
+            "Brett"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schneidet eine"
+        },
+        {
+          "text": "Tomate",
+          "gap": true,
+          "accept": [
+            "Tomate"
+          ]
+        },
+        {
+          "text": "in Scheiben"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'schneiden' is broader than 'to slice'; the exact German is 'in Scheiben schneiden', used in phrase 1 and the answer. Proposal: word_localizations could carry 'in Scheiben schneiden'. 'die Jacke' for the chef's jacket ('die Kochjacke' is the exact word, less common for A learners). Phrase 3 'auf dem Brett liegen': target is the tomato/slices on the board. Answer without 'mit einem Messer' so the chips have one order."
+}

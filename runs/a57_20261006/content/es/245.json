@@ -1,0 +1,121 @@
+{
+ "mediaId": 245,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "beber",
+ "taps": [
+  {
+   "phrase": "lavarse las manos",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llenar la botella",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentado en las rocas",
+   "target": "el animalito",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "las montañas",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están haciendo los dos?",
+ "answer": [
+  "Están",
+  "bebiendo",
+  "agua",
+  "de",
+  "sus",
+  "botellas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lavarse las"
+    },
+    {
+     "text": "manos",
+     "gap": true,
+     "accept": [
+      "manos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llenar",
+     "gap": true,
+     "accept": [
+      "llenar",
+      "rellenar"
+     ]
+    },
+    {
+     "text": "la botella"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en las"
+    },
+    {
+     "text": "rocas",
+     "gap": true,
+     "accept": [
+      "rocas",
+      "piedras"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "bebiendo",
+     "gap": true,
+     "accept": [
+      "bebiendo",
+      "tomando"
+     ]
+    },
+    {
+     "text": "agua de sus botellas"
+    }
+   ]
+  }
+ ],
+ "notes": "English box 1 covers the woman mostly while she drinks (the man drinks too); she washes her hands only at the fountain frames - phrase kept as English, verifier please check. Phrase 3 target is a marmot; named 'el animalito' so 'sentado' agrees. Answer drops the subject, so the answer row is the whole sentence."
+}

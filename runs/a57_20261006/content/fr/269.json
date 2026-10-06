@@ -1,0 +1,117 @@
+{
+ "mediaId": 269,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "l'envie",
+ "taps": [
+  {
+   "phrase": "regarder par la vitre avec envie",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "doubler le bus à vélo",
+   "target": "la cycliste",
+   "voice": "female"
+  },
+  {
+   "phrase": "reposer en travers de ses genoux",
+   "target": "le guidon rouillé",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cycliste",
+   "voice": "female"
+  },
+  {
+   "word": "les cheveux bouclés",
+   "voice": "female"
+  },
+  {
+   "word": "le débardeur",
+   "voice": "female"
+  },
+  {
+   "word": "le guidon",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme aux cheveux bouclés ?",
+ "answer": [
+  "Elle",
+  "fixe",
+  "la",
+  "cycliste",
+  "avec",
+  "envie."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder par la vitre avec"
+    },
+    {
+     "text": "envie",
+     "gap": true,
+     "accept": [
+      "envie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "doubler",
+     "gap": true,
+     "accept": [
+      "doubler",
+      "dépasser"
+     ]
+    },
+    {
+     "text": "le bus à vélo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposer en travers de ses"
+    },
+    {
+     "text": "genoux",
+     "gap": true,
+     "accept": [
+      "genoux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fixe",
+     "gap": true,
+     "accept": [
+      "fixe",
+      "regarde"
+     ]
+    },
+    {
+     "text": "la cycliste avec envie"
+    }
+   ]
+  }
+ ],
+ "notes": "The cyclist is a woman in the clip -> 'la cycliste' (noun 1 and answer). 'avec envie' could also stand before 'la cycliste' ('Elle fixe avec envie la cycliste'), but the given order is the natural one. Key word 'l'envie' appears in tap 1 and the answer as 'avec envie'."
+}

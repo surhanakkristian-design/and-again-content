@@ -1,0 +1,15 @@
+{"mediaId": 119, "lang": "fr", "level": "A", "keyWord": "une ampoule",
+ "taps": [{"phrase": "donner une lumière chaude", "target": "l'ampoule", "voice": "male"},
+          {"phrase": "tenir une tasse", "target": "la femme", "voice": "female"},
+          {"phrase": "avoir le poil gris", "target": "le chat", "voice": "male"}],
+ "nouns": [{"word": "l'ampoule", "voice": "male"}, {"word": "le chat", "voice": "male"}, {"word": "le bol", "voice": "male"}, {"word": "les livres", "voice": "male"}],
+ "question": "Que fait l'homme ?",
+ "answer": ["Il", "met", "une", "nouvelle", "ampoule."],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {"from": "taps", "parts": [{"text": "donner une"}, {"text": "lumière", "gap": true, "accept": ["lumière"]}, {"text": "chaude"}]},
+  {"from": "taps", "parts": [{"text": "tenir", "gap": true, "accept": ["tenir"]}, {"text": "une tasse"}]},
+  {"from": "taps", "parts": [{"text": "avoir le"}, {"text": "poil", "gap": true, "accept": ["poil", "pelage"]}, {"text": "gris"}]},
+  {"from": "answer", "parts": [{"text": "met une nouvelle"}, {"text": "ampoule", "gap": true, "accept": ["ampoule"]}]}],
+ "notes": "Key word copied unchanged as 'une ampoule' (database word has the indefinite article, unlike the other fr key words; proposal: 'l'ampoule' or keep). Question changed from the English 'What is the woman holding?' to 'Que fait l'homme ?' / 'Il met une nouvelle ampoule.' (answerVoice male): the key-word noun row would be the elided 'l'ampoule', which cannot be cut into gap + text, so the key word goes into the answer row instead, where it is gapped. The man takes a new bulb out of the box and screws it in (shown). Phrase 1: the red box also covers frames where the bulb is off in the man's hands; it glows warmly at the start and end."}

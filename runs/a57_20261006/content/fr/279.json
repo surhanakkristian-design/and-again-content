@@ -1,0 +1,116 @@
+{
+ "mediaId": 279,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "déployer de la force",
+ "taps": [
+  {
+   "phrase": "déployer toute sa force",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "brandir le poing",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "rouler dans une flaque",
+   "target": "la charrette",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les sacs",
+   "voice": "male"
+  },
+  {
+   "word": "la roue",
+   "voice": "male"
+  },
+  {
+   "word": "la flaque",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "déploie",
+  "toute",
+  "sa",
+  "force."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "déployer",
+     "gap": true,
+     "accept": [
+      "déployer"
+     ]
+    },
+    {
+     "text": "toute sa force"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brandir le"
+    },
+    {
+     "text": "poing",
+     "gap": true,
+     "accept": [
+      "poing"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rouler"
+    },
+    {
+     "text": "dans une"
+    },
+    {
+     "text": "flaque",
+     "gap": true,
+     "accept": [
+      "flaque"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "déploie"
+    },
+    {
+     "text": "toute sa"
+    },
+    {
+     "text": "force",
+     "gap": true,
+     "accept": [
+      "force"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: English 'clench his fist'; the clip shows him raising a clenched fist, so 'brandir le poing' (B2). The green box also covers frames where he pushes or lies on the handle; the fist is raised in the last frames. Phrase 1 uses the key word, as the English does."
+}

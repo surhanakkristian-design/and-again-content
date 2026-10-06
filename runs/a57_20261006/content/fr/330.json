@@ -1,0 +1,118 @@
+{
+ "mediaId": 330,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la porte",
+ "taps": [
+  {
+   "phrase": "courir vers la porte d'embarquement",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "montrer son billet",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir la porte ouverte",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "la porte d'embarquement",
+   "voice": "female"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  },
+  {
+   "word": "la valise",
+   "voice": "female"
+  }
+ ],
+ "question": "Où court la fille ?",
+ "answer": [
+  "Elle",
+  "court",
+  "vers",
+  "la",
+  "porte",
+  "d'embarquement."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "courir",
+     "gap": true,
+     "accept": [
+      "courir"
+     ]
+    },
+    {
+     "text": "vers la porte d'embarquement"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer son"
+    },
+    {
+     "text": "billet",
+     "gap": true,
+     "accept": [
+      "billet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "la porte ouverte"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "court vers la"
+    },
+    {
+     "text": "porte",
+     "gap": true,
+     "accept": [
+      "porte"
+     ]
+    },
+    {
+     "text": "d'embarquement"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la porte' kept: alone it is ambiguous here (the plane door is also 'la porte', phrase 3), so the gate is 'la porte d'embarquement' in phrase 1, noun 2 and the answer; proposal: keyWord 'la porte d'embarquement'. Phrase 3: the man holds the plane door open only in the later boxed frames; earlier he scans her pass at the gate. 'son billet' kept at A level (strictly 'carte d'embarquement')."
+}

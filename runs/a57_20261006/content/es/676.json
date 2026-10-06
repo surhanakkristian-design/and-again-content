@@ -1,0 +1,120 @@
+{
+ "mediaId": 676,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el turismo",
+ "taps": [
+  {
+   "phrase": "fotografiar los monumentos",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "guiar la góndola con el remo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "alzarse sobre la plaza",
+   "target": "el campanario",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el campanario",
+   "voice": "female"
+  },
+  {
+   "word": "la cúpula",
+   "voice": "female"
+  },
+  {
+   "word": "la cámara",
+   "voice": "female"
+  },
+  {
+   "word": "la góndola",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están haciendo los dos turistas?",
+ "answer": [
+  "Están",
+  "haciendo",
+  "turismo",
+  "en",
+  "góndola."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fotografiar los"
+    },
+    {
+     "text": "monumentos",
+     "gap": true,
+     "accept": [
+      "monumentos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "guiar",
+     "gap": true,
+     "accept": [
+      "guiar",
+      "dirigir",
+      "llevar"
+     ]
+    },
+    {
+     "text": "la góndola con el remo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzarse",
+     "gap": true,
+     "accept": [
+      "alzarse",
+      "elevarse"
+     ]
+    },
+    {
+     "text": "sobre la plaza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están haciendo"
+    },
+    {
+     "text": "turismo",
+     "gap": true,
+     "accept": [
+      "turismo"
+     ]
+    },
+    {
+     "text": "en góndola"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 box also covers the square and colonnade shots where the man is not yet rowing; the phrase fits the gondola frames (most of the boxed frames). Key word used in the natural collocation 'hacer turismo'. Answer drops the subject."
+}

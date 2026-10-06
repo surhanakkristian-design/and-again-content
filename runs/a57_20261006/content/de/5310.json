@@ -1,0 +1,117 @@
+{
+  "mediaId": 5310,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Sohn",
+  "taps": [
+    {
+      "phrase": "ihren Sohn umarmen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein graues T-Shirt tragen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "durch die Luft fliegen",
+      "target": "der Ball",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Junge",
+      "voice": "male"
+    },
+    {
+      "word": "der Ball",
+      "voice": "male"
+    },
+    {
+      "word": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "umarmt",
+    "ihren",
+    "Sohn."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ihren"
+        },
+        {
+          "text": "Sohn",
+          "gap": true,
+          "accept": [
+            "Sohn",
+            "Jungen"
+          ]
+        },
+        {
+          "text": "umarmen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein graues"
+        },
+        {
+          "text": "T-Shirt",
+          "gap": true,
+          "accept": [
+            "T-Shirt",
+            "Shirt"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die Luft"
+        },
+        {
+          "text": "fliegen",
+          "gap": true,
+          "accept": [
+            "fliegen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "umarmt",
+          "gap": true,
+          "accept": [
+            "umarmt"
+          ]
+        },
+        {
+          "text": "ihren Sohn"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word der Sohn used in phrase 1 and the answer ('ihren Sohn' = the boy is her son, as the video intends; English says 'the boy'). Noun 1 stays 'der Junge' (English 'a boy'). Phrase 3 'durch die Luft fliegen' instead of 'past the garage': the ball flies in front of the garage door, not past the garage."
+}

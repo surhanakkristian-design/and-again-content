@@ -1,0 +1,120 @@
+{
+ "mediaId": 5506,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el baile",
+ "taps": [
+  {
+   "phrase": "jugar con un balón",
+   "target": "la chica de ropa colorida",
+   "voice": "female"
+  },
+  {
+   "phrase": "ir en monopatín",
+   "target": "el chico del gorro azul",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una gorra roja",
+   "target": "la chica de la gorra roja",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la pared",
+   "voice": "female"
+  },
+  {
+   "word": "el balón",
+   "voice": "female"
+  },
+  {
+   "word": "la gente",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la gente?",
+ "answer": [
+  "La",
+  "gente",
+  "baila",
+  "en",
+  "la",
+  "calle."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "jugar con un"
+    },
+    {
+     "text": "balón",
+     "gap": true,
+     "accept": [
+      "balón",
+      "pelota"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir en"
+    },
+    {
+     "text": "monopatín",
+     "gap": true,
+     "accept": [
+      "monopatín",
+      "skate"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "gorra",
+     "gap": true,
+     "accept": [
+      "gorra"
+     ]
+    },
+    {
+     "text": "roja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "baila",
+     "gap": true,
+     "accept": [
+      "baila"
+     ]
+    },
+    {
+     "text": "en la calle"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el baile (party where people dance) is not a noun of the set and does not fit naturally in the answer; 'baila' (same family) is used instead."
+}

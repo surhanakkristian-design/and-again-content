@@ -1,0 +1,122 @@
+{
+  "mediaId": 620,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Rose",
+  "taps": [
+    {
+      "phrase": "an einer rosa Rose riechen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Augen schließen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "am Himmel scheinen",
+      "target": "die Sonne",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Rose",
+      "voice": "female"
+    },
+    {
+      "word": "der Korb",
+      "voice": "female"
+    },
+    {
+      "word": "die Sonne",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "riecht",
+    "an",
+    "einer",
+    "rosa",
+    "Rose."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an einer rosa"
+        },
+        {
+          "text": "Rose",
+          "gap": true,
+          "accept": [
+            "Rose"
+          ]
+        },
+        {
+          "text": "riechen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Augen"
+        },
+        {
+          "text": "schließen",
+          "gap": true,
+          "accept": [
+            "schließen",
+            "zumachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am"
+        },
+        {
+          "text": "Himmel",
+          "gap": true,
+          "accept": [
+            "Himmel"
+          ]
+        },
+        {
+          "text": "scheinen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "riecht",
+          "gap": true,
+          "accept": [
+            "riecht"
+          ]
+        },
+        {
+          "text": "an einer rosa Rose"
+        }
+      ]
+    }
+  ],
+  "notes": "'rosa' stays uninflected (standard). The phrase-2 box also covers the rose close-ups and the end where her eyes are open; written for the smelling frames where they are closed. Key word die Rose used in phrase 1, noun 2 and the answer."
+}

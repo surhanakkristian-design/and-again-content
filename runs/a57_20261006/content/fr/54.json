@@ -1,0 +1,26 @@
+{
+  "mediaId": 54, "lang": "fr", "level": "B",
+  "keyWord": "le distributeur de billets",
+  "taps": [
+    { "phrase": "composer son code confidentiel", "target": "la femme", "voice": "female" },
+    { "phrase": "délivrer les billets", "target": "le distributeur de billets", "voice": "female" },
+    { "phrase": "compter la liasse de billets", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la lampe", "voice": "female" },
+    { "word": "le distributeur de billets", "voice": "female" },
+    { "word": "les billets", "voice": "female" },
+    { "word": "le manteau", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "retire", "de", "l'argent", "au", "distributeur", "de", "billets."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "composer son" }, { "text": "code", "gap": true, "accept": ["code"] }, { "text": "confidentiel" } ] },
+    { "from": "taps", "parts": [ { "text": "délivrer", "gap": true, "accept": ["délivrer", "distribuer"] }, { "text": "les billets" } ] },
+    { "from": "taps", "parts": [ { "text": "compter la" }, { "text": "liasse", "gap": true, "accept": ["liasse"] }, { "text": "de billets" } ] },
+    { "from": "answer", "parts": [ { "text": "retire de l'argent au" }, { "text": "distributeur", "gap": true, "accept": ["distributeur"] }, { "text": "de billets" } ] }
+  ],
+  "notes": "Phrase 1 'composer son code confidentiel' (the usual French for entering the PIN). The woman's red and blue boxes cover the whole clip, including the card insertion and the sunflower purchase at the end: phrase 1 fits the keypad frames, phrase 3 the frames where she counts the wad of notes. The key word is in the answer row (gapped there), so no noun row."
+}

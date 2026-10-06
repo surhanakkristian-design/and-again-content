@@ -1,0 +1,124 @@
+{
+ "mediaId": 7059,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el perrito caliente",
+ "taps": [
+  {
+   "phrase": "preparar un perrito caliente",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar de pie junto a la parrilla",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentado junto al pan",
+   "target": "el gato",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el gato",
+   "voice": "male"
+  },
+  {
+   "word": "el perrito caliente",
+   "voice": "male"
+  },
+  {
+   "word": "el pan",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el perro?",
+ "answer": [
+  "El",
+  "perro",
+  "está",
+  "preparando",
+  "un",
+  "perrito",
+  "caliente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "preparar",
+     "gap": true,
+     "accept": [
+      "preparar",
+      "hacer"
+     ]
+    },
+    {
+     "text": "un perrito caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar de pie junto a la"
+    },
+    {
+     "text": "parrilla",
+     "gap": true,
+     "accept": [
+      "parrilla",
+      "plancha"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "sentado",
+     "gap": true,
+     "accept": [
+      "sentado"
+     ]
+    },
+    {
+     "text": "junto al pan"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está preparando un"
+    },
+    {
+     "text": "perrito",
+     "gap": true,
+     "accept": [
+      "perrito"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer chips: 'perrito caliente' is two chips ('perrito', 'caliente.'). The cat sits; only the dog stands at the grill. No noun recall row because the tap row and the answer contain the key word."
+}

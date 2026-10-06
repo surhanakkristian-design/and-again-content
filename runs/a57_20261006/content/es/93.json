@@ -1,0 +1,121 @@
+{
+ "mediaId": 93,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la licuadora",
+ "taps": [
+  {
+   "phrase": "triturar la fruta",
+   "target": "la batidora",
+   "voice": "male"
+  },
+  {
+   "phrase": "chuparse el dedo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar el pulgar",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la batidora",
+   "voice": "male"
+  },
+  {
+   "word": "la jarra",
+   "voice": "male"
+  },
+  {
+   "word": "las fresas",
+   "voice": "male"
+  },
+  {
+   "word": "la cinta del pelo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué prepara el hombre?",
+ "answer": [
+  "Prepara",
+  "un",
+  "batido",
+  "en",
+  "la",
+  "batidora."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "triturar",
+     "gap": true,
+     "accept": [
+      "triturar",
+      "batir"
+     ]
+    },
+    {
+     "text": "la fruta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "chuparse",
+     "gap": true,
+     "accept": [
+      "chuparse",
+      "lamerse"
+     ]
+    },
+    {
+     "text": "el dedo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar el"
+    },
+    {
+     "text": "pulgar",
+     "gap": true,
+     "accept": [
+      "pulgar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Prepara un batido"
+    },
+    {
+     "text": "en la"
+    },
+    {
+     "text": "batidora",
+     "gap": true,
+     "accept": [
+      "batidora",
+      "licuadora"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: in Spain this jug blender is 'la batidora (de vaso)'; 'la licuadora' is the Latin American word and in Spain mostly means a juicer. Used 'la batidora' everywhere; proposal: change keyWord.es to 'la batidora' (recall accepts 'licuadora')."
+}

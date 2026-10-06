@@ -1,0 +1,26 @@
+{
+  "mediaId": 7996, "lang": "fr", "level": "B",
+  "keyWord": "se démarquer",
+  "taps": [
+    { "phrase": "se démarquer nettement", "target": "la tulipe rouge", "voice": "female" },
+    { "phrase": "tourner dans la brise", "target": "le moulin à vent", "voice": "female" },
+    { "phrase": "être appuyé contre la rambarde", "target": "le vélo", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les arbres", "voice": "female" },
+    { "word": "le moulin à vent", "voice": "female" },
+    { "word": "le vélo", "voice": "female" },
+    { "word": "les tulipes", "voice": "female" }
+  ],
+  "question": "Quelle tulipe se démarque dans le champ ?",
+  "answer": ["La", "tulipe", "rouge", "se", "démarque", "dans", "le", "champ."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "démarquer", "gap": true, "accept": ["démarquer", "distinguer"] }, { "text": "nettement" } ] },
+    { "from": "taps", "parts": [ { "text": "tourner dans la" }, { "text": "brise", "gap": true, "accept": ["brise"] } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "appuyé", "gap": true, "accept": ["appuyé", "posé"] }, { "text": "contre la rambarde" } ] },
+    { "from": "answer", "parts": [ { "text": "se démarque dans le" }, { "text": "champ", "gap": true, "accept": ["champ"] } ] }
+  ],
+  "notes": ""
+}

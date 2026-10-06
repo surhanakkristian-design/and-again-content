@@ -1,0 +1,26 @@
+{
+  "mediaId": 868, "lang": "de", "level": "A",
+  "keyWord": "die Welle",
+  "taps": [
+    { "phrase": "immer größer werden", "target": "die Welle", "voice": "female" },
+    { "phrase": "ein weißes T-Shirt tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein dunkles Shirt tragen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Welle", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "der Sand", "voice": "female" }
+  ],
+  "question": "Was machen die beiden?",
+  "answer": ["Sie", "laufen", "vor", "einer", "großen", "Welle", "weg."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "immer" }, { "text": "größer", "gap": true, "accept": ["größer", "höher"] }, { "text": "werden" } ] },
+    { "from": "taps", "parts": [ { "text": "ein weißes" }, { "text": "T-Shirt", "gap": true, "accept": ["T-Shirt", "Shirt"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein dunkles" }, { "text": "Shirt", "gap": true, "accept": ["Shirt", "Oberteil"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "laufen vor einer großen" }, { "text": "Welle", "gap": true, "accept": ["Welle"] }, { "text": "weg" } ] }
+  ],
+  "notes": "Man wears a dark long-sleeved top (rash guard): 'ein dunkles Shirt' is the everyday word. In the second half the wave box shows the next wave behind them rather than one wave growing; phrase 1 kept for the first half and the build-up behind the runners. No noun row: Welle is in the answer row. 'weglaufen' (separable) = run away."
+}

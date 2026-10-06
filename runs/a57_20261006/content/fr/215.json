@@ -1,0 +1,120 @@
+{
+ "mediaId": 215,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "l'obscurité",
+ "taps": [
+  {
+   "phrase": "craquer une allumette",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un pull rayé",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "briller dans l'obscurité",
+   "target": "la lanterne",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lanterne",
+   "voice": "female"
+  },
+  {
+   "word": "l'allumette",
+   "voice": "female"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "la casserole en cuivre",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "allume",
+  "une",
+  "lanterne",
+  "dans",
+  "l'obscurité."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "craquer",
+     "gap": true,
+     "accept": [
+      "craquer",
+      "frotter"
+     ]
+    },
+    {
+     "text": "une allumette"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un pull"
+    },
+    {
+     "text": "rayé",
+     "gap": true,
+     "accept": [
+      "rayé"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "briller",
+     "gap": true,
+     "accept": [
+      "briller",
+      "luire"
+     ]
+    },
+    {
+     "text": "dans l'obscurité"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "allume une"
+    },
+    {
+     "text": "lanterne",
+     "gap": true,
+     "accept": [
+      "lanterne"
+     ]
+    },
+    {
+     "text": "dans l'obscurité"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word l'obscurité is elided, so it is never a gap (it appears in tap 3 and the answer). 'la casserole en cuivre' for the copper pans hanging on the wall."
+}

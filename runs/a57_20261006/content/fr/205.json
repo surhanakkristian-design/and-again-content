@@ -1,0 +1,115 @@
+{
+ "mediaId": 205,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "les pleurs",
+ "taps": [
+  {
+   "phrase": "s'essuyer les yeux",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "prendre la femme dans ses bras",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "prendre un mouchoir",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la couverture",
+   "voice": "female"
+  },
+  {
+   "word": "les mouchoirs",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "pleure",
+  "et",
+  "s'essuie",
+  "les",
+  "yeux."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'essuyer les"
+    },
+    {
+     "text": "yeux",
+     "gap": true,
+     "accept": [
+      "yeux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre la femme dans ses"
+    },
+    {
+     "text": "bras",
+     "gap": true,
+     "accept": [
+      "bras"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre un"
+    },
+    {
+     "text": "mouchoir",
+     "gap": true,
+     "accept": [
+      "mouchoir"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "pleure",
+     "gap": true,
+     "accept": [
+      "pleure"
+     ]
+    },
+    {
+     "text": "et s'essuie les yeux"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word les pleurs: kept, but it is a B1+/written noun and not A-level French; at A level French teaches the verb pleurer (used in the answer: 'Elle pleure'). Proposal: le verbe pleurer, or 'les larmes' if a noun is needed. The man also tears up, but only the woman wipes her eyes and takes a tissue."
+}

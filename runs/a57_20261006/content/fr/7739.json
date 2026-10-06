@@ -1,0 +1,26 @@
+{
+  "mediaId": 7739, "lang": "fr", "level": "B",
+  "keyWord": "l'affinage",
+  "taps": [
+    { "phrase": "faire rouler une meule de fromage", "target": "la souris à la casquette", "voice": "male" },
+    { "phrase": "tapoter une meule au marteau", "target": "la souris au gilet vert", "voice": "male" },
+    { "phrase": "grimper à l'échelle", "target": "la souris sur l'échelle", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la lanterne", "voice": "male" },
+    { "word": "la fenêtre", "voice": "male" },
+    { "word": "l'échelle", "voice": "male" },
+    { "word": "le seau", "voice": "male" }
+  ],
+  "question": "Que fait rouler la souris à la casquette ?",
+  "answer": ["Elle", "fait", "rouler", "une", "lourde", "meule", "de", "fromage."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "faire rouler une" }, { "text": "meule", "gap": true, "accept": ["meule"] }, { "text": "de fromage" } ] },
+    { "from": "taps", "parts": [ { "text": "tapoter une meule au" }, { "text": "marteau", "gap": true, "accept": ["marteau"] } ] },
+    { "from": "taps", "parts": [ { "text": "grimper", "gap": true, "accept": ["grimper", "monter"] }, { "text": "à l'échelle" } ] },
+    { "from": "answer", "parts": [ { "text": "fait" }, { "text": "rouler", "gap": true, "accept": ["rouler"] }, { "text": "une lourde meule de fromage" } ] }
+  ],
+  "notes": "'La souris' is grammatically feminine, so the answer pronoun is 'Elle'; the voice stays male as in English (male-coded mouse). Question names 'la souris à la casquette' because three mice are visible (8 words). Phrase 3: in the box_02 frames the mouse has already reached the shelf and stands with the brush; it climbs in the box_01 frames. 'L'affinage' (cheese aging) fits the clip well; it is not a noun of the set, so no noun recall row."
+}

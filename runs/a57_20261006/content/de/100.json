@@ -1,0 +1,121 @@
+{
+ "mediaId": 100,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Stiefel",
+ "taps": [
+  {
+   "phrase": "den Stiefel zubinden",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "vier Beine haben",
+   "target": "der Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine graue Jacke tragen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "der Stiefel",
+   "voice": "female"
+  },
+  {
+   "word": "das Wasser",
+   "voice": "female"
+  }
+ ],
+ "question": "Was trägt die Frau?",
+ "answer": [
+  "Sie",
+  "trägt",
+  "braune",
+  "Stiefel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Stiefel"
+    },
+    {
+     "text": "zubinden",
+     "gap": true,
+     "accept": [
+      "zubinden",
+      "zuschnüren",
+      "schnüren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vier"
+    },
+    {
+     "text": "Beine",
+     "gap": true,
+     "accept": [
+      "Beine"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine graue"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trägt braune"
+    },
+    {
+     "text": "Stiefel",
+     "gap": true,
+     "accept": [
+      "Stiefel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word is plural 'die Stiefel'; the noun pill sits on one boot, so it is singular 'der Stiefel' (same lemma). Tap box 1 also covers the woman walking through puddles and up the path after tying; the phrase describes the tying at the start."
+}

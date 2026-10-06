@@ -1,0 +1,144 @@
+{
+ "mediaId": 7835,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la corriente",
+ "taps": [
+  {
+   "phrase": "descender por la ladera",
+   "target": "la lava",
+   "voice": "male"
+  },
+  {
+   "phrase": "brillar en la cumbre",
+   "target": "el cráter",
+   "voice": "male"
+  },
+  {
+   "phrase": "flotar sobre el horizonte",
+   "target": "la nube",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la corriente de lava",
+   "voice": "male"
+  },
+  {
+   "word": "el cráter",
+   "voice": "male"
+  },
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "la nube",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué pasa en el volcán?",
+ "answer": [
+  "Una",
+  "corriente",
+  "de",
+  "lava",
+  "desciende",
+  "por",
+  "la",
+  "ladera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descender",
+     "gap": true,
+     "accept": [
+      "descender",
+      "bajar"
+     ]
+    },
+    {
+     "text": "por la ladera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar"
+    },
+    {
+     "text": "en la"
+    },
+    {
+     "text": "cumbre",
+     "gap": true,
+     "accept": [
+      "cumbre",
+      "cima"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotar",
+     "gap": true,
+     "accept": [
+      "flotar"
+     ]
+    },
+    {
+     "text": "sobre el horizonte"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "corriente",
+     "gap": true,
+     "accept": [
+      "corriente"
+     ]
+    },
+    {
+     "text": "de lava"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "desciende"
+    },
+    {
+     "text": "por la"
+    },
+    {
+     "text": "ladera",
+     "gap": true,
+     "accept": [
+      "ladera",
+      "pendiente"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la corriente' is used as 'la corriente de lava' (noun 1, natural in Spain; 'la colada de lava' is the geological term). The lava is the subject of the answer."
+}

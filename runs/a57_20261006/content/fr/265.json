@@ -1,0 +1,116 @@
+{
+ "mediaId": 265,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un employé",
+ "taps": [
+  {
+   "phrase": "recevoir une enveloppe",
+   "target": "le garçon à lunettes",
+   "voice": "male"
+  },
+  {
+   "phrase": "mettre sa veste",
+   "target": "le garçon à lunettes",
+   "voice": "male"
+  },
+  {
+   "phrase": "lui toucher l'épaule",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'employé",
+   "voice": "male"
+  },
+  {
+   "word": "les papiers",
+   "voice": "male"
+  },
+  {
+   "word": "le clavier",
+   "voice": "male"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  }
+ ],
+ "question": "Que reçoit l'employé ?",
+ "answer": [
+  "Il",
+  "reçoit",
+  "une",
+  "enveloppe."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recevoir une"
+    },
+    {
+     "text": "enveloppe",
+     "gap": true,
+     "accept": [
+      "enveloppe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre sa"
+    },
+    {
+     "text": "veste",
+     "gap": true,
+     "accept": [
+      "veste"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lui"
+    },
+    {
+     "text": "toucher",
+     "gap": true,
+     "accept": [
+      "toucher"
+     ]
+    },
+    {
+     "text": "l'épaule"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "reçoit",
+     "gap": true,
+     "accept": [
+      "reçoit"
+     ]
+    },
+    {
+     "text": "une enveloppe"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word noun 'l'employé' is elided, so it cannot be gapped in a noun row; it is in the nouns and the question only. English 'paper' (stacks of sheets) -> 'les papiers'."
+}

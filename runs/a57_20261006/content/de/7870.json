@@ -1,0 +1,129 @@
+{
+ "mediaId": 7870,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "hoffnungsvoll",
+ "taps": [
+  {
+   "phrase": "die Spaghetti nicht aus den Augen lassen",
+   "target": "der Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "von der Gabel herabhängen",
+   "target": "die Spaghetti",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Olivenbaum funkeln",
+   "target": "die Lichter",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "die Spaghetti",
+   "voice": "female"
+  },
+  {
+   "word": "das Armband",
+   "voice": "female"
+  },
+  {
+   "word": "die Steinmauer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Er",
+  "starrt",
+  "hoffnungsvoll",
+  "auf",
+  "die",
+  "Spaghetti."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Spaghetti"
+    },
+    {
+     "text": "nicht aus den"
+    },
+    {
+     "text": "Augen",
+     "gap": true,
+     "accept": [
+      "Augen"
+     ]
+    },
+    {
+     "text": "lassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "von der"
+    },
+    {
+     "text": "Gabel",
+     "gap": true,
+     "accept": [
+      "Gabel"
+     ]
+    },
+    {
+     "text": "herabhängen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Olivenbaum"
+    },
+    {
+     "text": "funkeln",
+     "gap": true,
+     "accept": [
+      "funkeln",
+      "leuchten",
+      "glitzern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "starrt"
+    },
+    {
+     "text": "hoffnungsvoll",
+     "gap": true,
+     "accept": [
+      "hoffnungsvoll"
+     ]
+    },
+    {
+     "text": "auf die Spaghetti"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the dog licks its lips only in the last frames; in most boxed frames it follows the spaghetti with its eyes, so phrase 1 says that. Answer voice female copied (der Hund is masculine 'er', voice follows English)."
+}

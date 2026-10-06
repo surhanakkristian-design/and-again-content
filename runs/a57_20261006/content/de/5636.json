@@ -1,0 +1,123 @@
+{
+ "mediaId": 5636,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "bei dir liegen",
+ "taps": [
+  {
+   "phrase": "sich über die Eistheke beugen",
+   "target": "die Frau im Pullover",
+   "voice": "female"
+  },
+  {
+   "phrase": "über das ganze Gesicht grinsen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine Eiswaffel in der Hand halten",
+   "target": "die Frau mit der Schürze",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Kronleuchter",
+   "voice": "female"
+  },
+  {
+   "word": "der Schrank",
+   "voice": "female"
+  },
+  {
+   "word": "die Schürze",
+   "voice": "female"
+  },
+  {
+   "word": "das Eis",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Kundin?",
+ "answer": [
+  "Sie",
+  "beugt",
+  "sich",
+  "über",
+  "die",
+  "Eistheke."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich über die Eistheke"
+    },
+    {
+     "text": "beugen",
+     "gap": true,
+     "accept": [
+      "beugen",
+      "lehnen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über das ganze Gesicht"
+    },
+    {
+     "text": "grinsen",
+     "gap": true,
+     "accept": [
+      "grinsen",
+      "strahlen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Eiswaffel",
+     "gap": true,
+     "accept": [
+      "Eiswaffel",
+      "Waffel",
+      "Eistüte"
+     ]
+    },
+    {
+     "text": "in der Hand halten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "beugt sich über die"
+    },
+    {
+     "text": "Eistheke",
+     "gap": true,
+     "accept": [
+      "Eistheke",
+      "Theke"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'bei dir liegen' is not shown or needed in any exercise (as in English). Phrase 3: the waitress holds the wafer cone mainly in the later boxed frames; in the first ones she is working behind the counter. 'der Schrank' = the gilded glass cabinet (Vitrine avoided to keep it apart from the ice-cream display)."
+}

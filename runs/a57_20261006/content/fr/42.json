@@ -1,0 +1,115 @@
+{
+ "mediaId": 42,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un examen",
+ "taps": [
+  {
+   "phrase": "regarder son examen",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être posé sur les feuilles",
+   "target": "le stylo",
+   "voice": "male"
+  },
+  {
+   "phrase": "recouvrir la table",
+   "target": "les feuilles",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la porte",
+   "voice": "male"
+  },
+  {
+   "word": "la chaise",
+   "voice": "male"
+  },
+  {
+   "word": "le mur",
+   "voice": "male"
+  },
+  {
+   "word": "les feuilles",
+   "voice": "male"
+  }
+ ],
+ "question": "Que regarde le jeune homme ?",
+ "answer": [
+  "Il",
+  "regarde",
+  "son",
+  "examen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder son"
+    },
+    {
+     "text": "examen",
+     "gap": true,
+     "accept": [
+      "examen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posé sur les"
+    },
+    {
+     "text": "feuilles",
+     "gap": true,
+     "accept": [
+      "feuilles",
+      "papiers"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recouvrir",
+     "gap": true,
+     "accept": [
+      "recouvrir",
+      "couvrir"
+     ]
+    },
+    {
+     "text": "la table"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde",
+     "gap": true,
+     "accept": [
+      "regarde"
+     ]
+    },
+    {
+     "text": "son examen"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord copied unchanged but it carries the indefinite article ('un examen'); proposal: 'l'examen' like the other languages' definite form. 'papers' -> 'les feuilles' (everyday word for loose sheets), 'papiers' accepted. Tap box 1 also covers frames where he walks to/away from the table; phrase written for the frames where he sits and looks at the papers. No noun row: 'examen' is not a noun of the set and is gapped in tap row 1."
+}

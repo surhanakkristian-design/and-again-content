@@ -1,0 +1,123 @@
+{
+  "mediaId": 42,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Prüfung",
+  "taps": [
+    {
+      "phrase": "sich seine Prüfung ansehen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf den Blättern liegen",
+      "target": "der Stift",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Tisch bedecken",
+      "target": "die Blätter",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Tür",
+      "voice": "male"
+    },
+    {
+      "word": "der Stuhl",
+      "voice": "male"
+    },
+    {
+      "word": "die Wand",
+      "voice": "male"
+    },
+    {
+      "word": "die Blätter",
+      "voice": "male"
+    }
+  ],
+  "question": "Was sieht sich der Mann an?",
+  "answer": [
+    "Er",
+    "sieht",
+    "sich",
+    "seine",
+    "Prüfung",
+    "an."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich seine"
+        },
+        {
+          "text": "Prüfung",
+          "gap": true,
+          "accept": [
+            "Prüfung"
+          ]
+        },
+        {
+          "text": "ansehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf den"
+        },
+        {
+          "text": "Blättern",
+          "gap": true,
+          "accept": [
+            "Blättern",
+            "Papieren"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Tisch"
+        },
+        {
+          "text": "bedecken",
+          "gap": true,
+          "accept": [
+            "bedecken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sieht",
+          "gap": true,
+          "accept": [
+            "sieht",
+            "schaut"
+          ]
+        },
+        {
+          "text": "sich seine Prüfung an"
+        }
+      ]
+    }
+  ],
+  "notes": "Papers = 'die Blätter' (everyday word for sheets of paper; 'die Papiere' would suggest documents). Tap box 1 also covers frames where the man walks to/away from the table; phrase written for the frames where he sits and looks down at the papers. No noun row: 'die Prüfung' is not one of the nouns and is already in tap row 1 and the answer."
+}

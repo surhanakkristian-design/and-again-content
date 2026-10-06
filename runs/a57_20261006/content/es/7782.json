@@ -1,0 +1,120 @@
+{
+ "mediaId": 7782,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "más cerca",
+ "taps": [
+  {
+   "phrase": "estirar la trompa",
+   "target": "el elefante",
+   "voice": "female"
+  },
+  {
+   "phrase": "reírse a carcajadas",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "ofrecer un plátano",
+   "target": "la mano con el plátano",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara de araña",
+   "voice": "female"
+  },
+  {
+   "word": "la trompa",
+   "voice": "female"
+  },
+  {
+   "word": "los cruasanes",
+   "voice": "female"
+  },
+  {
+   "word": "el mantel",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el elefante?",
+ "answer": [
+  "Está",
+  "acercando",
+  "la",
+  "trompa",
+  "al",
+  "plátano."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estirar la"
+    },
+    {
+     "text": "trompa",
+     "gap": true,
+     "accept": [
+      "trompa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reírse a"
+    },
+    {
+     "text": "carcajadas",
+     "gap": true,
+     "accept": [
+      "carcajadas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ofrecer",
+     "gap": true,
+     "accept": [
+      "ofrecer",
+      "dar"
+     ]
+    },
+    {
+     "text": "un plátano"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "acercando",
+     "gap": true,
+     "accept": [
+      "acercando",
+      "arrimando"
+     ]
+    },
+    {
+     "text": "la trompa al plátano"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'más cerca' kept; the natural answer uses the verb 'acercar' (same root) rather than forcing 'más cerca', so no row gaps the key word itself. answerVoice kept female as in English although 'el elefante' is grammatically masculine (no subject word in the sentence)."
+}

@@ -1,0 +1,134 @@
+{
+ "mediaId": 270,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la gomme",
+ "taps": [
+  {
+   "phrase": "sourire à la caméra",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "ressembler à une montagne",
+   "target": "la gomme",
+   "voice": "female"
+  },
+  {
+   "phrase": "montrer un soleil rouge",
+   "target": "la boîte",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la boîte",
+   "voice": "female"
+  },
+  {
+   "word": "la main",
+   "voice": "female"
+  },
+  {
+   "word": "la gomme",
+   "voice": "female"
+  },
+  {
+   "word": "le papier",
+   "voice": "female"
+  }
+ ],
+ "question": "À quoi ressemble la gomme ?",
+ "answer": [
+  "La",
+  "gomme",
+  "ressemble",
+  "à",
+  "une",
+  "petite",
+  "montagne."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à la caméra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ressembler",
+     "gap": true,
+     "accept": [
+      "ressembler"
+     ]
+    },
+    {
+     "text": "à une montagne"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer un"
+    },
+    {
+     "text": "soleil",
+     "gap": true,
+     "accept": [
+      "soleil"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "gomme",
+     "gap": true,
+     "accept": [
+      "gomme"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ressemble à une petite"
+    },
+    {
+     "text": "montagne",
+     "gap": true,
+     "accept": [
+      "montagne"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 231, "lang": "de", "level": "B",
+  "keyWord": "enttäuschen",
+  "taps": [
+    { "phrase": "in Tränen ausbrechen", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Frau enttäuschen", "target": "der Mann", "voice": "male" },
+    { "phrase": "auf dem Tisch flackern", "target": "die Kerze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Lichterkette", "voice": "female" },
+    { "word": "die Kerze", "voice": "female" },
+    { "word": "die Spaghetti", "voice": "female" },
+    { "word": "das Geschenk", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "bricht", "in", "Tränen", "aus."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "in Tränen" }, { "text": "ausbrechen", "gap": true, "accept": ["ausbrechen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Frau" }, { "text": "enttäuschen", "gap": true, "accept": ["enttäuschen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf dem" }, { "text": "Tisch", "gap": true, "accept": ["Tisch"] }, { "text": "flackern" } ] },
+    { "from": "answer", "parts": [ { "text": "bricht in" }, { "text": "Tränen", "gap": true, "accept": ["Tränen"] }, { "text": "aus" } ] }
+  ],
+  "notes": "Red box (woman) also covers the happy opening frames; she cries in most boxed frames. Phrase 2 uses the key word: the man apologises and leaves, she cries (visible); he puts his hand on her shoulder only briefly, so no 'auf die Schulter klopfen'. 'am Tisch' dropped from the answer to keep one word order. One string of fairy lights at the slot: singular 'die Lichterkette'."
+}

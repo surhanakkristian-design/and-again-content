@@ -1,0 +1,125 @@
+{
+  "mediaId": 7069,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "vorfahren",
+  "taps": [
+    {
+      "phrase": "den Strohhut schwenken",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf der Türschwelle stehen",
+      "target": "die junge Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "alles vom Fenster aus beobachten",
+      "target": "die alte Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Traktor",
+      "voice": "male"
+    },
+    {
+      "word": "die Sonnenblumen",
+      "voice": "male"
+    },
+    {
+      "word": "der Strohhut",
+      "voice": "male"
+    },
+    {
+      "word": "der Kies",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "fährt",
+    "auf",
+    "einem",
+    "roten",
+    "Traktor",
+    "vor."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Strohhut",
+          "gap": true,
+          "accept": [
+            "Strohhut",
+            "Hut"
+          ]
+        },
+        {
+          "text": "schwenken"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf der"
+        },
+        {
+          "text": "Türschwelle",
+          "gap": true,
+          "accept": [
+            "Türschwelle",
+            "Schwelle"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "alles vom Fenster aus"
+        },
+        {
+          "text": "beobachten",
+          "gap": true,
+          "accept": [
+            "beobachten",
+            "verfolgen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fährt",
+          "gap": true,
+          "accept": [
+            "fährt"
+          ]
+        },
+        {
+          "text": "auf einem roten Traktor vor"
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 1: he swings the hat in frames 5-8 only; in frames 1-4 he drives up with the hat on (English phrase is the same). Key word in the answer ('fährt ... vor'); answer row gaps 'fährt' (the key verb). German could also say 'Er fährt mit einem roten Traktor vor.' (auf/mit both fine), single chip order otherwise."
+}

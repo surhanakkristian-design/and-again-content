@@ -1,0 +1,121 @@
+{
+ "mediaId": 24,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la cuchara",
+ "taps": [
+  {
+   "phrase": "abrir un cajón",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "coger una cuchara",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "tomar sopa",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la cuchara",
+   "voice": "female"
+  },
+  {
+   "word": "el cuenco",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "La",
+  "chica",
+  "está",
+  "tomando",
+  "sopa",
+  "con",
+  "una",
+  "cuchara."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir un"
+    },
+    {
+     "text": "cajón",
+     "gap": true,
+     "accept": [
+      "cajón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger una"
+    },
+    {
+     "text": "cuchara",
+     "gap": true,
+     "accept": [
+      "cuchara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomar",
+     "gap": true,
+     "accept": [
+      "tomar",
+      "comer"
+     ]
+    },
+    {
+     "text": "sopa"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está tomando"
+    },
+    {
+     "text": "sopa",
+     "gap": true,
+     "accept": [
+      "sopa"
+     ]
+    },
+    {
+     "text": "con una cuchara"
+    }
+   ]
+  }
+ ],
+ "notes": "'tomar sopa' is how Spaniards say eating soup; 'comer' is accepted in the recall row. 'el cuenco' for the bowl ('el bol' is also common in Spain)."
+}

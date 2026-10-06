@@ -1,0 +1,125 @@
+{
+ "mediaId": 7563,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "ponerse en camino",
+ "taps": [
+  {
+   "phrase": "pilotar una moto",
+   "target": "el motorista",
+   "voice": "male"
+  },
+  {
+   "phrase": "ir sentado en el sidecar",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "vitorear junto a la verja",
+   "target": "la familia",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la casa de campo",
+   "voice": "male"
+  },
+  {
+   "word": "la verja",
+   "voice": "male"
+  },
+  {
+   "word": "el saco de dormir",
+   "voice": "male"
+  },
+  {
+   "word": "la grava",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el motorista?",
+ "answer": [
+  "Se",
+  "pone",
+  "en",
+  "camino",
+  "con",
+  "su",
+  "moto."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pilotar",
+     "gap": true,
+     "accept": [
+      "pilotar",
+      "conducir"
+     ]
+    },
+    {
+     "text": "una moto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir"
+    },
+    {
+     "text": "sentado",
+     "gap": true,
+     "accept": [
+      "sentado"
+     ]
+    },
+    {
+     "text": "en el sidecar"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vitorear junto a la"
+    },
+    {
+     "text": "verja",
+     "gap": true,
+     "accept": [
+      "verja",
+      "cancela"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se pone en"
+    },
+    {
+     "text": "camino",
+     "gap": true,
+     "accept": [
+      "camino",
+      "marcha"
+     ]
+    },
+    {
+     "text": "con su moto"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 'pilotar' (not 'saludar') because the rider and the family both wave. The gate is wooden; 'la verja' chosen as the widely known word, 'cancela' accepted in recall. Answer in simple present 'Se pone en camino' (more natural than 'se está poniendo en camino')."
+}

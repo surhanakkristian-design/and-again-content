@@ -1,0 +1,123 @@
+{
+ "mediaId": 5062,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Chef",
+ "taps": [
+  {
+   "phrase": "durch das Büro gehen",
+   "target": "die Frau in Rot",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Tablet halten",
+   "target": "die Frau in Rot",
+   "voice": "female"
+  },
+  {
+   "phrase": "an die Tafel zeichnen",
+   "target": "die Frau in Rot",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Computer",
+   "voice": "female"
+  },
+  {
+   "word": "das Telefon",
+   "voice": "female"
+  },
+  {
+   "word": "die Tasse",
+   "voice": "female"
+  }
+ ],
+ "question": "Wer zeichnet an die Tafel?",
+ "answer": [
+  "Die",
+  "Chefin",
+  "zeichnet",
+  "an",
+  "die",
+  "Tafel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch das"
+    },
+    {
+     "text": "Büro",
+     "gap": true,
+     "accept": [
+      "Büro"
+     ]
+    },
+    {
+     "text": "gehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein Tablet"
+    },
+    {
+     "text": "halten",
+     "gap": true,
+     "accept": [
+      "halten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an die"
+    },
+    {
+     "text": "Tafel",
+     "gap": true,
+     "accept": [
+      "Tafel",
+      "Whiteboard"
+     ]
+    },
+    {
+     "text": "zeichnen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeichnet",
+     "gap": true,
+     "accept": [
+      "zeichnet",
+      "malt"
+     ]
+    },
+    {
+     "text": "an die Tafel"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'der Chef' kept, but the boss is a woman: the answer uses 'die Chefin' (feminine form, contains 'Chef'). Proposal: owner may want 'die Chefin' as an accepted form. The key word is not a noun of the set and the answer row drops the subject, so no recall row contains the key word. Board = whiteboard: 'die Tafel' (A-level everyday word; 'das Whiteboard' accepted in recall). A man also walks in the far background at the end, small; phrase 1 targets the woman in red, who walks through the office in the first half."
+}

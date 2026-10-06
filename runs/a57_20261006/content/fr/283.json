@@ -1,0 +1,119 @@
+{
+ "mediaId": 283,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le tissu",
+ "taps": [
+  {
+   "phrase": "dérouler le tissu imprimé",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "découper le tissu aux ciseaux",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "serrer le tissu plié contre elle",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la boucle d'oreille",
+   "voice": "female"
+  },
+  {
+   "word": "le tissu",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  },
+  {
+   "word": "le mètre ruban",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "découpe",
+  "le",
+  "tissu",
+  "aux",
+  "ciseaux."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dérouler",
+     "gap": true,
+     "accept": [
+      "dérouler"
+     ]
+    },
+    {
+     "text": "le tissu imprimé"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "découper le tissu aux"
+    },
+    {
+     "text": "ciseaux",
+     "gap": true,
+     "accept": [
+      "ciseaux"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer",
+     "gap": true,
+     "accept": [
+      "serrer",
+      "presser"
+     ]
+    },
+    {
+     "text": "le tissu plié contre elle"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "découpe le"
+    },
+    {
+     "text": "tissu",
+     "gap": true,
+     "accept": [
+      "tissu"
+     ]
+    },
+    {
+     "text": "aux ciseaux"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the blue box also covers the woman reaching for and feeling the cloth; she hugs the folded piece only in the last frames (kept as English). Phrases 1 and 2 both target the man as in English."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 7069,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "arriver au volant",
+ "taps": [
+  {
+   "phrase": "soulever son chapeau de paille",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "se tenir sur le seuil",
+   "target": "la jeune femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "se pencher à la fenêtre",
+   "target": "la vieille dame",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le tracteur",
+   "voice": "male"
+  },
+  {
+   "word": "les tournesols",
+   "voice": "male"
+  },
+  {
+   "word": "le chapeau de paille",
+   "voice": "male"
+  },
+  {
+   "word": "le gravier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "arrive",
+  "au",
+  "volant",
+  "d'un",
+  "tracteur",
+  "rouge."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soulever",
+     "gap": true,
+     "accept": [
+      "soulever",
+      "lever"
+     ]
+    },
+    {
+     "text": "son chapeau de paille"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se tenir sur le"
+    },
+    {
+     "text": "seuil",
+     "gap": true,
+     "accept": [
+      "seuil",
+      "perron"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "pencher",
+     "gap": true,
+     "accept": [
+      "pencher"
+     ]
+    },
+    {
+     "text": "à la fenêtre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "arrive au"
+    },
+    {
+     "text": "volant",
+     "gap": true,
+     "accept": [
+      "volant"
+     ]
+    },
+    {
+     "text": "d'un tracteur rouge"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the man raises his hat only in the second half of the boxed frames; before that he just drives up - phrase written for the hat gesture (the English target). Phrase 3: the old woman leans out of the upstairs window and watches ('se pencher à la fenêtre' rather than 'épier', which implies secret spying). Key word 'arriver au volant' fits (a tractor has a steering wheel), though 'arriver en tracteur' would be the more spontaneous native phrasing; used in the model answer."
+}

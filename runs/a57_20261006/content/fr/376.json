@@ -1,0 +1,122 @@
+{
+ "mediaId": 376,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la nature sauvage",
+ "taps": [
+  {
+   "phrase": "s'engouffrer dans les gorges",
+   "target": "la rivière",
+   "voice": "female"
+  },
+  {
+   "phrase": "bouillonner entre les rochers",
+   "target": "la rivière",
+   "voice": "female"
+  },
+  {
+   "phrase": "se dresser au loin",
+   "target": "les montagnes",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la forêt",
+   "voice": "female"
+  },
+  {
+   "word": "la falaise",
+   "voice": "female"
+  },
+  {
+   "word": "les rapides",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la rivière ?",
+ "answer": [
+  "Elle",
+  "serpente",
+  "à",
+  "travers",
+  "la",
+  "nature",
+  "sauvage."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'engouffrer"
+    },
+    {
+     "text": "dans les"
+    },
+    {
+     "text": "gorges",
+     "gap": true,
+     "accept": [
+      "gorges"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bouillonner",
+     "gap": true,
+     "accept": [
+      "bouillonner",
+      "écumer"
+     ]
+    },
+    {
+     "text": "entre les rochers"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "dresser",
+     "gap": true,
+     "accept": [
+      "dresser"
+     ]
+    },
+    {
+     "text": "au loin"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "serpente à travers la"
+    },
+    {
+     "text": "nature",
+     "gap": true,
+     "accept": [
+      "nature"
+     ]
+    },
+    {
+     "text": "sauvage"
+    }
+   ]
+  }
+ ],
+ "notes": "The key word 'la nature sauvage' is not one of the nouns; it appears in the model answer. Phrase 1 uses 'les gorges' (the usual French plural for a gorge/canyon)."
+}

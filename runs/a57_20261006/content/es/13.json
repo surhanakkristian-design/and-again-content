@@ -1,0 +1,116 @@
+{
+ "mediaId": 13,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la servilleta",
+ "taps": [
+  {
+   "phrase": "doblar una servilleta",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "limpiarse la boca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "sentarse en una silla",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la servilleta",
+   "voice": "female"
+  },
+  {
+   "word": "la silla",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "doblando",
+  "una",
+  "servilleta."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "doblar una"
+    },
+    {
+     "text": "servilleta",
+     "gap": true,
+     "accept": [
+      "servilleta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "limpiarse",
+     "gap": true,
+     "accept": [
+      "limpiarse"
+     ]
+    },
+    {
+     "text": "la boca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sentarse en una"
+    },
+    {
+     "text": "silla",
+     "gap": true,
+     "accept": [
+      "silla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "doblando",
+     "gap": true,
+     "accept": [
+      "doblando"
+     ]
+    },
+    {
+     "text": "una servilleta"
+    }
+   ]
+  }
+ ],
+ "notes": "All three English tap boxes are the same woman over the whole clip; phrases follow the English order (folding, wiping her mouth, sitting at the end)."
+}

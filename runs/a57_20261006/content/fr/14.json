@@ -1,0 +1,125 @@
+{
+ "mediaId": 14,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la page",
+ "taps": [
+  {
+   "phrase": "ouvrir un carnet",
+   "target": "les mains",
+   "voice": "female"
+  },
+  {
+   "phrase": "être jaune vif",
+   "target": "la fleur",
+   "voice": "female"
+  },
+  {
+   "phrase": "passer sur les feuilles vertes",
+   "target": "le pinceau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la page",
+   "voice": "female"
+  },
+  {
+   "word": "la fleur",
+   "voice": "female"
+  },
+  {
+   "word": "le pinceau",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'est-ce qu'il y a sur la page ?",
+ "answer": [
+  "Il",
+  "y",
+  "a",
+  "une",
+  "fleur",
+  "jaune",
+  "sur",
+  "la",
+  "page."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir un"
+    },
+    {
+     "text": "carnet",
+     "gap": true,
+     "accept": [
+      "carnet",
+      "cahier"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "jaune",
+     "gap": true,
+     "accept": [
+      "jaune"
+     ]
+    },
+    {
+     "text": "vif"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer sur les"
+    },
+    {
+     "text": "feuilles",
+     "gap": true,
+     "accept": [
+      "feuilles"
+     ]
+    },
+    {
+     "text": "vertes"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Il y a une fleur jaune sur la"
+    },
+    {
+     "text": "page",
+     "gap": true,
+     "accept": [
+      "page"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box also covers frames where the fingers press the leaves and hold the notebook up; most boxed frames show the hands opening and flattening the small notebook ('un carnet'). Phrase 3: the brush spreads glue over the leaves ('passer sur'). Answer 'Il y a ...' has only the impersonal 'il': the answer row keeps the whole sentence (as es), key word gapped there. Question 8 words incl. 'Qu'est-ce'."
+}

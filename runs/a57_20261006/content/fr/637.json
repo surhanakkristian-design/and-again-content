@@ -1,0 +1,27 @@
+{
+  "mediaId": 637, "lang": "fr", "level": "B",
+  "keyWord": "la grenade",
+  "taps": [
+    { "phrase": "s'épanouir comme une fleur", "target": "la grenade dans les mains", "voice": "male" },
+    { "phrase": "former un gros tas", "target": "les grenades en dessous", "voice": "male" },
+    { "phrase": "s'étendre au-dessus des collines", "target": "le ciel", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "male" },
+    { "word": "le couteau", "voice": "male" },
+    { "word": "le pouce", "voice": "male" },
+    { "word": "la grenade", "voice": "male" }
+  ],
+  "question": "Qu'arrive-t-il à la grenade ?",
+  "answer": ["Elle", "s'épanouit", "comme", "une", "fleur."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'épanouir comme une" }, { "text": "fleur", "gap": true, "accept": ["fleur"] } ] },
+    { "from": "taps", "parts": [ { "text": "former un gros" }, { "text": "tas", "gap": true, "accept": ["tas"] } ] },
+    { "from": "taps", "parts": [ { "text": "s'étendre au-dessus des" }, { "text": "collines", "gap": true, "accept": ["collines"] } ] },
+    { "from": "nouns", "parts": [ { "text": "la" }, { "text": "grenade", "gap": true, "accept": ["grenade"] } ] },
+    { "from": "answer", "parts": [ { "text": "s'épanouit comme une" }, { "text": "fleur", "gap": true, "accept": ["fleur"] } ] }
+  ],
+  "notes": "Phrase 1: in the first boxed frames the fruit is still being scored with the knife; it opens like a flower in most later frames. Answer subject 'Elle' = la grenade (feminine); voice stays male (the narrator voice, no person speaks). 'S'épanouit' is elided so it is never a gap; gaps are fleur / tas / collines / grenade / fleur. Verifier: answer changed from 'entre ses mains' (possessor unclear) to 'comme une fleur'."
+}

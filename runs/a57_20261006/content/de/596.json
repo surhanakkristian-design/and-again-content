@@ -1,0 +1,118 @@
+{
+ "mediaId": 596,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Rennen",
+ "taps": [
+  {
+   "phrase": "das Rennen gewinnen",
+   "target": "die Läuferin in Gelb",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein gelbes Trikot tragen",
+   "target": "die Läuferin in Gelb",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein lila Trikot tragen",
+   "target": "die Läuferin in Lila",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Läufer",
+   "voice": "female"
+  },
+  {
+   "word": "der Rasen",
+   "voice": "female"
+  },
+  {
+   "word": "die Laufbahn",
+   "voice": "female"
+  }
+ ],
+ "question": "Wer gewinnt das Rennen?",
+ "answer": [
+  "Die",
+  "Läuferin",
+  "in",
+  "Gelb",
+  "gewinnt",
+  "das",
+  "Rennen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Rennen",
+     "gap": true,
+     "accept": [
+      "Rennen"
+     ]
+    },
+    {
+     "text": "gewinnen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein gelbes"
+    },
+    {
+     "text": "Trikot",
+     "gap": true,
+     "accept": [
+      "Trikot"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein lila Trikot"
+    },
+    {
+     "text": "tragen",
+     "gap": true,
+     "accept": [
+      "tragen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "gewinnt",
+     "gap": true,
+     "accept": [
+      "gewinnt"
+     ]
+    },
+    {
+     "text": "das Rennen"
+    }
+   ]
+  }
+ ],
+ "notes": "Both targets are women (Läuferin). English 'grass' = stadium lawn -> 'der Rasen' (more natural than 'das Gras' here). 'lila' stays uninflected (standard). 'die Laufbahn' for the track (A2/B1, the plain right word)."
+}

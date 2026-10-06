@@ -1,0 +1,27 @@
+{
+  "mediaId": 203, "lang": "de", "level": "B",
+  "keyWord": "die Kreuzfahrt",
+  "taps": [
+    { "phrase": "ein gelbes Sommerkleid tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein geblümtes Hemd tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "aus dem Wasser schnellen", "target": "die Delfine", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Kreuzfahrtschiff", "voice": "male" },
+    { "word": "die Delfine", "voice": "male" },
+    { "word": "die Inseln", "voice": "male" },
+    { "word": "das Meer", "voice": "male" }
+  ],
+  "question": "Was macht das Kreuzfahrtschiff?",
+  "answer": ["Es", "fährt", "an", "tropischen", "Inseln", "vorbei."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein gelbes" }, { "text": "Sommerkleid", "gap": true, "accept": ["Sommerkleid", "Kleid"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "geblümtes", "gap": true, "accept": ["geblümtes", "buntes"] }, { "text": "Hemd tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "aus dem Wasser" }, { "text": "schnellen", "gap": true, "accept": ["schnellen", "springen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "das" }, { "text": "Kreuzfahrtschiff", "gap": true, "accept": ["Kreuzfahrtschiff", "Schiff"] } ] },
+    { "from": "answer", "parts": [ { "text": "fährt an tropischen" }, { "text": "Inseln", "gap": true, "accept": ["Inseln"] }, { "text": "vorbei" } ] }
+  ],
+  "notes": "Phrase 3: 'aus dem Wasser schnellen' (B2 collocation for dolphins) instead of a literal 'über die Wellen springen'; the sea is calm, the dolphins leap out of the water. Noun row added: the key word die Kreuzfahrt is in the noun set only as the compound das Kreuzfahrtschiff (owner decision 404) and in no other row."
+}

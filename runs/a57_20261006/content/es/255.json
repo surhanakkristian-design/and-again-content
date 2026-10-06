@@ -1,0 +1,115 @@
+{
+  "mediaId": 255,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el este",
+  "taps": [
+    {
+      "phrase": "señalar el horizonte",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "salir por el este",
+      "target": "el sol",
+      "voice": "female"
+    },
+    {
+      "phrase": "levantar las tazas",
+      "target": "la gente",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cielo",
+      "voice": "female"
+    },
+    {
+      "word": "el sol",
+      "voice": "female"
+    },
+    {
+      "word": "la gente",
+      "voice": "female"
+    },
+    {
+      "word": "las rocas",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué hace el sol?",
+  "answer": [
+    "El",
+    "sol",
+    "sale",
+    "sobre",
+    "las",
+    "nubes."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "señalar",
+          "gap": true,
+          "accept": [
+            "señalar"
+          ]
+        },
+        {
+          "text": "el horizonte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "salir por el"
+        },
+        {
+          "text": "este",
+          "gap": true,
+          "accept": [
+            "este"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "levantar las"
+        },
+        {
+          "text": "tazas",
+          "gap": true,
+          "accept": [
+            "tazas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sale",
+          "gap": true,
+          "accept": [
+            "sale"
+          ]
+        },
+        {
+          "text": "sobre las nubes"
+        }
+      ]
+    }
+  ],
+  "notes": "The woman points at the red stripe on the horizon, not up at the sky: 'señalar el horizonte'. The people's box covers the whole group standing and watching; they raise their mugs only at the end, but standing/watching is not distinctive, so the English action is kept ('las tazas' = mugs). 'people' -> 'la gente' (collective singular, the everyday word). Key word 'el este' in tap 2 ('salir por el este', the natural Spanish collocation)."
+}

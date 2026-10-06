@@ -1,0 +1,121 @@
+{
+  "mediaId": 98,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la hamaca",
+  "taps": [
+    {
+      "phrase": "taparse la boca de asombro",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "estrechar el libro contra el pecho",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener las tapas granates",
+      "target": "el libro",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la hamaca",
+      "voice": "female"
+    },
+    {
+      "word": "la cúpula",
+      "voice": "female"
+    },
+    {
+      "word": "la trenza",
+      "voice": "female"
+    },
+    {
+      "word": "las flores",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la chica?",
+  "answer": [
+    "Está",
+    "leyendo",
+    "un",
+    "libro",
+    "en",
+    "una",
+    "hamaca."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "taparse la boca de"
+        },
+        {
+          "text": "asombro",
+          "gap": true,
+          "accept": [
+            "asombro"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estrechar",
+          "gap": true,
+          "accept": [
+            "estrechar",
+            "apretar",
+            "abrazar"
+          ]
+        },
+        {
+          "text": "el libro contra el pecho"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener las"
+        },
+        {
+          "text": "tapas",
+          "gap": true,
+          "accept": [
+            "tapas"
+          ]
+        },
+        {
+          "text": "granates"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está leyendo un libro en una"
+        },
+        {
+          "text": "hamaca",
+          "gap": true,
+          "accept": [
+            "hamaca"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: English 'gasp in astonishment'; she covers her mouth with her hand in astonishment (visible). Phrase 2: English 'squeeze her eyes shut', but in the clip her eyes close only gently / one-eye wink while she hugs the book to her chest; I wrote the hug ('estrechar el libro contra el pecho'), visible in the later boxed frames; the box also covers reading frames. Answer drops the subject (natural in Spanish); 'tumbada' could in theory move ('Está tumbada...' needs other chips), but the order with these chips is effectively unique. No noun row: the answer row already contains 'hamaca'."
+}

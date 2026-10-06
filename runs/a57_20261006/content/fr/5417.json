@@ -1,0 +1,123 @@
+{
+ "mediaId": 5417,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le dépôt",
+ "taps": [
+  {
+   "phrase": "monter dans un vieux tramway",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "prendre une passagère",
+   "target": "le vieux tramway",
+   "voice": "female"
+  },
+  {
+   "phrase": "parcourir le dépôt du regard",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les caténaires",
+   "voice": "female"
+  },
+  {
+   "word": "les rails",
+   "voice": "female"
+  },
+  {
+   "word": "le sac en toile",
+   "voice": "female"
+  },
+  {
+   "word": "la tresse",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait-elle à la fin ?",
+ "answer": [
+  "Elle",
+  "regarde",
+  "autour",
+  "d'elle",
+  "dans",
+  "le",
+  "dépôt."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "monter dans un vieux"
+    },
+    {
+     "text": "tramway",
+     "gap": true,
+     "accept": [
+      "tramway",
+      "tram"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre une"
+    },
+    {
+     "text": "passagère",
+     "gap": true,
+     "accept": [
+      "passagère"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "parcourir le"
+    },
+    {
+     "text": "dépôt",
+     "gap": true,
+     "accept": [
+      "dépôt"
+     ]
+    },
+    {
+     "text": "du regard"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde",
+     "gap": true,
+     "accept": [
+      "regarde"
+     ]
+    },
+    {
+     "text": "autour d'elle"
+    },
+    {
+     "text": "dans le dépôt"
+    }
+   ]
+  }
+ ],
+ "notes": "English tap boxes 1 and 3 both follow the woman through the whole clip (street, boarding, window, depot): phrase 1 fits the boarding frames, phrase 3 the depot frames at the end. Box 2 (tram) also covers the depot frames where the tram just stands; 'prendre une passagère' fits the opening. 'les caténaires' = overhead wires of a tram line (B2); everyday alternative 'les fils électriques'."
+}

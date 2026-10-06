@@ -1,0 +1,113 @@
+{
+ "mediaId": 7809,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le dollar",
+ "taps": [
+  {
+   "phrase": "prendre un dollar",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "payer la tarte",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "sourire à l'homme",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "la boisson",
+   "voice": "female"
+  },
+  {
+   "word": "la tarte",
+   "voice": "female"
+  },
+  {
+   "word": "les dollars",
+   "voice": "female"
+  }
+ ],
+ "question": "Que prend la femme ?",
+ "answer": [
+  "Elle",
+  "prend",
+  "un",
+  "dollar."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre un"
+    },
+    {
+     "text": "dollar",
+     "gap": true,
+     "accept": [
+      "dollar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "payer",
+     "gap": true,
+     "accept": [
+      "payer"
+     ]
+    },
+    {
+     "text": "la tarte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à l'homme"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend",
+     "gap": true,
+     "accept": [
+      "prend"
+     ]
+    },
+    {
+     "text": "un dollar"
+    }
+   ]
+  }
+ ],
+ "notes": "'la boisson' for English 'a drink' (it is a milkshake; 'le milk-shake' would also work)."
+}

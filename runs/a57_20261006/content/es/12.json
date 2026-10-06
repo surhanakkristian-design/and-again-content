@@ -1,0 +1,121 @@
+{
+ "mediaId": 12,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "abrazar",
+ "taps": [
+  {
+   "phrase": "tener el pelo corto",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener el pelo largo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "brillar en el cielo",
+   "target": "el sol",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sol",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están haciendo el hombre y la mujer?",
+ "answer": [
+  "Se",
+  "están",
+  "abrazando",
+  "en",
+  "la",
+  "hierba."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el pelo"
+    },
+    {
+     "text": "corto",
+     "gap": true,
+     "accept": [
+      "corto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el"
+    },
+    {
+     "text": "pelo",
+     "gap": true,
+     "accept": [
+      "pelo"
+     ]
+    },
+    {
+     "text": "largo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar",
+     "gap": true,
+     "accept": [
+      "brillar"
+     ]
+    },
+    {
+     "text": "en el cielo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se están"
+    },
+    {
+     "text": "abrazando",
+     "gap": true,
+     "accept": [
+      "abrazando"
+     ]
+    },
+    {
+     "text": "en la hierba"
+    }
+   ]
+  }
+ ],
+ "notes": "Rows 1 and 2 gap different words ('corto' / 'pelo') so they do not look the same once blanked. Answer has no subject (natural es); key word gapped in the answer row."
+}

@@ -1,0 +1,128 @@
+{
+  "mediaId": 5282,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Lied",
+  "taps": [
+    {
+      "phrase": "Gitarre spielen",
+      "target": "der Mann mit der Gitarre",
+      "voice": "male"
+    },
+    {
+      "phrase": "in einen Kochlöffel singen",
+      "target": "die Frau in der Küche",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf einer Bühne stehen",
+      "target": "der Mann im weißen Anzug",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "die Kirche",
+      "voice": "female"
+    },
+    {
+      "word": "das Mikrofon",
+      "voice": "female"
+    },
+    {
+      "word": "die Gitarre",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht der ältere Mann?",
+  "answer": [
+    "Er",
+    "singt",
+    "ein",
+    "Lied",
+    "mit",
+    "seiner",
+    "Gitarre."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Gitarre"
+        },
+        {
+          "text": "spielen",
+          "gap": true,
+          "accept": [
+            "spielen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in einen"
+        },
+        {
+          "text": "Kochlöffel",
+          "gap": true,
+          "accept": [
+            "Kochlöffel",
+            "Löffel",
+            "Holzlöffel"
+          ]
+        },
+        {
+          "text": "singen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf einer"
+        },
+        {
+          "text": "Bühne",
+          "gap": true,
+          "accept": [
+            "Bühne"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "singt ein"
+        },
+        {
+          "text": "Lied",
+          "gap": true,
+          "accept": [
+            "Lied",
+            "Liedchen"
+          ]
+        },
+        {
+          "text": "mit seiner Gitarre"
+        }
+      ]
+    }
+  ],
+  "notes": "German also allows 'Er singt mit seiner Gitarre ein Lied' (second chip order). Spoon = wooden spoon: 'der Kochlöffel' (A2), 'Löffel'/'Holzlöffel' accepted. No noun row: 'das Lied' is not a noun of the set; the answer row gaps it."
+}

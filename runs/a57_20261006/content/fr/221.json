@@ -1,0 +1,121 @@
+{
+ "mediaId": 221,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le diplôme universitaire",
+ "taps": [
+  {
+   "phrase": "fêter sa remise de diplôme",
+   "target": "la jeune femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un sceau doré",
+   "target": "le diplôme",
+   "voice": "female"
+  },
+  {
+   "phrase": "voltiger dans les airs",
+   "target": "les confettis",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le diplôme universitaire",
+   "voice": "female"
+  },
+  {
+   "word": "la toque",
+   "voice": "female"
+  },
+  {
+   "word": "le pompon",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fête la jeune femme ?",
+ "answer": [
+  "Elle",
+  "fête",
+  "l'obtention",
+  "de",
+  "son",
+  "diplôme",
+  "universitaire."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fêter",
+     "gap": true,
+     "accept": [
+      "fêter",
+      "célébrer"
+     ]
+    },
+    {
+     "text": "sa remise de diplôme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "sceau",
+     "gap": true,
+     "accept": [
+      "sceau"
+     ]
+    },
+    {
+     "text": "doré"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voltiger",
+     "gap": true,
+     "accept": [
+      "voltiger",
+      "virevolter",
+      "tourbillonner"
+     ]
+    },
+    {
+     "text": "dans les airs"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fête"
+    },
+    {
+     "text": "l'obtention de son"
+    },
+    {
+     "text": "diplôme universitaire",
+     "gap": true,
+     "accept": [
+      "diplôme universitaire"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Graduation cap = 'la toque' (also 'la toque de diplômé'); French ceremonies rarely use it, but it is the usual word. Key word used in noun 1 (the certificate) and in the answer, so no extra noun row."
+}

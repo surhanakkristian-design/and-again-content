@@ -1,0 +1,135 @@
+{
+  "mediaId": 457,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le maquillage",
+  "taps": [
+    {
+      "phrase": "fermer les yeux",
+      "target": "la femme devant",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter un haut vert",
+      "target": "la femme en vert",
+      "voice": "female"
+    },
+    {
+      "phrase": "être couché derrière les femmes",
+      "target": "le chien",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'ampoule",
+      "voice": "female"
+    },
+    {
+      "word": "le miroir",
+      "voice": "female"
+    },
+    {
+      "word": "le chien",
+      "voice": "female"
+    },
+    {
+      "word": "le maquillage",
+      "voice": "female"
+    }
+  ],
+  "question": "Où est couché le chien ?",
+  "answer": [
+    "Le",
+    "chien",
+    "est",
+    "couché",
+    "derrière",
+    "les",
+    "femmes."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "fermer les"
+        },
+        {
+          "text": "yeux",
+          "gap": true,
+          "accept": [
+            "yeux"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter",
+          "gap": true,
+          "accept": [
+            "porter"
+          ]
+        },
+        {
+          "text": "un haut vert"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "couché",
+          "gap": true,
+          "accept": [
+            "couché",
+            "allongé"
+          ]
+        },
+        {
+          "text": "derrière les femmes"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "le"
+        },
+        {
+          "text": "maquillage",
+          "gap": true,
+          "accept": [
+            "maquillage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "est couché derrière les"
+        },
+        {
+          "text": "femmes",
+          "gap": true,
+          "accept": [
+            "femmes"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: the dog lies on a cushion in the background, behind the women as seen in the mirror. Light = bulb of the mirror: 'l'ampoule' (verifier: the usual word for a single bulb; 'la lampe' would be the whole lamp). Key word 'le maquillage' appears only in the noun row (palette at the bottom slot)."
+}

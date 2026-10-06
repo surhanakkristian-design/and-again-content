@@ -1,0 +1,119 @@
+{
+ "mediaId": 5673,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "ambos",
+ "taps": [
+  {
+   "phrase": "sostener dos trozos de tarta",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "sostener un plato vacío",
+   "target": "la pastelera",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar de pie junto a la ventana",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "female"
+  },
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el pan",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué sostiene la mujer de rojo?",
+ "answer": [
+  "Sostiene",
+  "ambos",
+  "trozos",
+  "de",
+  "tarta."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener",
+     "gap": true,
+     "accept": [
+      "sostener",
+      "sujetar"
+     ]
+    },
+    {
+     "text": "dos trozos de tarta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener un plato"
+    },
+    {
+     "text": "vacío",
+     "gap": true,
+     "accept": [
+      "vacío"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar de pie junto a la"
+    },
+    {
+     "text": "ventana",
+     "gap": true,
+     "accept": [
+      "ventana"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Sostiene"
+    },
+    {
+     "text": "ambos",
+     "gap": true,
+     "accept": [
+      "ambos",
+      "los dos"
+     ]
+    },
+    {
+     "text": "trozos de tarta"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'ambos' used in the answer ('Sostiene ambos trozos de tarta'); in everyday Spain Spanish 'los dos' is more common, so the recall row also accepts 'los dos'. Phrase 2: the woman in red also holds plates, but with cake; 'vacío' makes it fit only the baker. 'bread' -> 'el pan' (the trays show buns/bollos). Answer subjectless (Spanish drops 'ella'), so the answer row is the whole sentence."
+}

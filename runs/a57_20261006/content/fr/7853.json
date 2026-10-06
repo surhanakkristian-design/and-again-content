@@ -1,0 +1,26 @@
+{
+  "mediaId": 7853, "lang": "fr", "level": "A",
+  "keyWord": "croître",
+  "taps": [
+    { "phrase": "sourire devant le vase", "target": "la femme", "voice": "female" },
+    { "phrase": "être assis sur une étagère", "target": "le chat", "voice": "female" },
+    { "phrase": "porter des bagues en argent", "target": "les mains", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la lampe", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "le chat", "voice": "female" },
+    { "word": "le vase", "voice": "female" }
+  ],
+  "question": "Qu'est-ce qui arrive au vase ?",
+  "answer": ["Le", "vase", "grandit", "très", "vite."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sourire", "gap": true, "accept": ["sourire"] }, { "text": "devant le vase" } ] },
+    { "from": "taps", "parts": [ { "text": "être assis sur une" }, { "text": "étagère", "gap": true, "accept": ["étagère"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "bagues", "gap": true, "accept": ["bagues"] }, { "text": "en argent" } ] },
+    { "from": "answer", "parts": [ { "text": "grandit", "gap": true, "accept": ["grandit", "monte"] }, { "text": "très vite" } ] }
+  ],
+  "notes": "Key word: 'croître' is formal/literary in France (B2+, written register) and no French speaker says a vase 'croît' while it is thrown on the wheel; the natural everyday words are 'grandir' / 'monter'. Kept croître as the database word and did not force it into the texts (answer uses 'grandit'). Proposal: map this concept to 'grandir' for fr (owner decides). Tap 1: the woman also gasps in some frames; she smiles/grins at the vase in most boxed frames."
+}

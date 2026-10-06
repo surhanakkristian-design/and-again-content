@@ -1,0 +1,125 @@
+{
+ "mediaId": 201,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le crocodile",
+ "taps": [
+  {
+   "phrase": "nager dans la rivière",
+   "target": "le crocodile",
+   "voice": "male"
+  },
+  {
+   "phrase": "sortir de l'eau",
+   "target": "le crocodile",
+   "voice": "male"
+  },
+  {
+   "phrase": "ouvrir grand la gueule",
+   "target": "le crocodile",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le crocodile",
+   "voice": "male"
+  },
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "la rivière",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le crocodile ?",
+ "answer": [
+  "Il",
+  "ouvre",
+  "grand",
+  "la",
+  "gueule."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nager dans la"
+    },
+    {
+     "text": "rivière",
+     "gap": true,
+     "accept": [
+      "rivière"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sortir",
+     "gap": true,
+     "accept": [
+      "sortir"
+     ]
+    },
+    {
+     "text": "de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir grand la"
+    },
+    {
+     "text": "gueule",
+     "gap": true,
+     "accept": [
+      "gueule"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "crocodile",
+     "gap": true,
+     "accept": [
+      "crocodile"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ouvre",
+     "gap": true,
+     "accept": [
+      "ouvre"
+     ]
+    },
+    {
+     "text": "grand la gueule"
+    }
+   ]
+  }
+ ],
+ "notes": "'la gueule' (animal mouth) is the natural word for a crocodile, slightly above A2; 'la bouche' would be wrong for an animal."
+}

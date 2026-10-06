@@ -1,0 +1,125 @@
+{
+ "mediaId": 7016,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la ferme laitière",
+ "taps": [
+  {
+   "phrase": "tapoter le dos d'une vache",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "longer la clôture",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "avancer en file indienne",
+   "target": "les vaches",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la barrière",
+   "voice": "female"
+  },
+  {
+   "word": "l'étable",
+   "voice": "female"
+  },
+  {
+   "word": "les bidons de lait",
+   "voice": "female"
+  },
+  {
+   "word": "les vaches",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "fait",
+  "sortir",
+  "les",
+  "vaches",
+  "de",
+  "la",
+  "ferme",
+  "laitière."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tapoter",
+     "gap": true,
+     "accept": [
+      "tapoter",
+      "caresser"
+     ]
+    },
+    {
+     "text": "le dos d'une vache"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "longer la"
+    },
+    {
+     "text": "clôture",
+     "gap": true,
+     "accept": [
+      "clôture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avancer en"
+    },
+    {
+     "text": "file",
+     "gap": true,
+     "accept": [
+      "file"
+     ]
+    },
+    {
+     "text": "indienne"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait sortir les vaches de la"
+    },
+    {
+     "text": "ferme",
+     "gap": true,
+     "accept": [
+      "ferme"
+     ]
+    },
+    {
+     "text": "laitière"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la ferme laitière in the model answer (she lets go of the gate and the cows follow her out). Barn = 'l'étable' (the cows' building), not 'la grange' (hay)."
+}

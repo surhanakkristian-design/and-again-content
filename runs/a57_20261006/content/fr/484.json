@@ -1,0 +1,26 @@
+{
+  "mediaId": 484, "lang": "fr", "level": "A",
+  "keyWord": "la serpillière",
+  "taps": [
+    { "phrase": "nettoyer le sol", "target": "la femme", "voice": "female" },
+    { "phrase": "glisser sur le sol mouillé", "target": "la femme", "voice": "female" },
+    { "phrase": "être plein d'eau", "target": "le seau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la femme", "voice": "female" },
+    { "word": "la serpillière", "voice": "female" },
+    { "word": "le seau", "voice": "female" },
+    { "word": "le sol", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "nettoie", "le", "sol", "avec", "une", "serpillière."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "nettoyer", "gap": true, "accept": ["nettoyer", "laver"] }, { "text": "le sol" } ] },
+    { "from": "taps", "parts": [ { "text": "glisser", "gap": true, "accept": ["glisser"] }, { "text": "sur le sol mouillé" } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "plein", "gap": true, "accept": ["plein", "rempli"] }, { "text": "d'eau" } ] },
+    { "from": "answer", "parts": [ { "text": "nettoie le sol avec une" }, { "text": "serpillière", "gap": true, "accept": ["serpillière"] } ] }
+  ],
+  "notes": "Phrase 2: English 'to almost fall down'; 'glisser sur le sol mouillé' is the A2 way to say what she does (her shoe slips in the puddle, she nearly falls), 'faillir tomber' would be B1. Key word: in France 'la serpillière' is strictly the floor cloth; a string mop on a stick is a 'balai à franges' or loosely 'balai serpillière'. Everyday speech also calls it 'serpillière', so the database word is kept; proposal if the owner wants precision: 'le balai à franges'. Key noun is in the answer row, so no noun row."
+}

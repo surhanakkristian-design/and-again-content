@@ -1,0 +1,124 @@
+{
+ "mediaId": 190,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la galleta",
+ "taps": [
+  {
+   "phrase": "comer una galleta grande",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener una cuchara en la mano",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar tumbado junto a la ventana",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "las galletas",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está comiendo la chica?",
+ "answer": [
+  "Está",
+  "comiendo",
+  "una",
+  "galleta",
+  "grande."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer",
+     "gap": true,
+     "accept": [
+      "comer"
+     ]
+    },
+    {
+     "text": "una galleta grande"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener una"
+    },
+    {
+     "text": "cuchara",
+     "gap": true,
+     "accept": [
+      "cuchara"
+     ]
+    },
+    {
+     "text": "en la mano"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "junto a la ventana"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está comiendo una"
+    },
+    {
+     "text": "galleta",
+     "gap": true,
+     "accept": [
+      "galleta"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  }
+ ],
+ "notes": "'la chica' / 'el chico' for the young woman and man (everyday Spain usage). Phrase 1: the woman's box also covers her taking the tray out and dunking the cookie; she eats it in the later frames. Phrase 2: the man holds the spoon in the late frames only."
+}

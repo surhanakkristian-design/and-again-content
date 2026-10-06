@@ -1,0 +1,26 @@
+{
+  "mediaId": 291, "lang": "fr", "level": "A",
+  "keyWord": "le champ",
+  "taps": [
+    { "phrase": "ouvrir grand les bras", "target": "la femme", "voice": "female" },
+    { "phrase": "courir derrière la femme", "target": "l'homme", "voice": "male" },
+    { "phrase": "être alignés", "target": "les arbres", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "les arbres", "voice": "female" },
+    { "word": "le champ", "voice": "female" },
+    { "word": "le chemin", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "court", "dans", "un", "champ."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ouvrir grand les" }, { "text": "bras", "gap": true, "accept": ["bras"] } ] },
+    { "from": "taps", "parts": [ { "text": "courir", "gap": true, "accept": ["courir"] }, { "text": "derrière la femme" } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "alignés", "gap": true, "accept": ["alignés"] } ] },
+    { "from": "answer", "parts": [ { "text": "court dans un" }, { "text": "champ", "gap": true, "accept": ["champ"] } ] }
+  ],
+  "notes": "The woman's and man's boxes also cover the opening frames where the couple walk side by side on the path (arms not open, man not running behind); phrases 1 and 2 say what they do in most boxed frames (the running part). The key word 'le champ' is in the answer row, so no extra noun row."
+}

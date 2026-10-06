@@ -1,0 +1,122 @@
+{
+ "mediaId": 292,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la pelea",
+ "taps": [
+  {
+   "phrase": "levantar una almohada en alto",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta gris",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener barba",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la almohada",
+   "voice": "female"
+  },
+  {
+   "word": "la planta",
+   "voice": "female"
+  },
+  {
+   "word": "la cama",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hacen en la cama?",
+ "answer": [
+  "Tienen",
+  "una",
+  "pelea",
+  "de",
+  "almohadas."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar",
+     "gap": true,
+     "accept": [
+      "levantar",
+      "subir"
+     ]
+    },
+    {
+     "text": "una almohada en alto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Tienen una"
+    },
+    {
+     "text": "pelea",
+     "gap": true,
+     "accept": [
+      "pelea",
+      "guerra"
+     ]
+    },
+    {
+     "text": "de almohadas"
+    }
+   ]
+  }
+ ],
+ "notes": "In Spain 'guerra de almohadas' is the most common term; 'pelea de almohadas' is also natural and uses the key word, so the answer uses it and the recall accepts 'guerra'. Phrase 1: she lifts the pillow high in several, not all, boxed frames."
+}

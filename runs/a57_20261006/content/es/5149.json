@@ -1,0 +1,123 @@
+{
+ "mediaId": 5149,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la farmacia",
+ "taps": [
+  {
+   "phrase": "llevar una bolsa de papel",
+   "target": "el hombre de la bufanda",
+   "voice": "male"
+  },
+  {
+   "phrase": "subir una escalera alta",
+   "target": "el hombre de blanco",
+   "voice": "male"
+  },
+  {
+   "phrase": "brillar con luz verde",
+   "target": "la cruz verde",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cruz",
+   "voice": "male"
+  },
+  {
+   "word": "los frascos",
+   "voice": "male"
+  },
+  {
+   "word": "la bufanda",
+   "voice": "male"
+  },
+  {
+   "word": "la caja",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre de blanco?",
+ "answer": [
+  "Está",
+  "subiendo",
+  "una",
+  "escalera",
+  "alta."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    },
+    {
+     "text": "de papel"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir una"
+    },
+    {
+     "text": "escalera",
+     "gap": true,
+     "accept": [
+      "escalera"
+     ]
+    },
+    {
+     "text": "alta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar",
+     "gap": true,
+     "accept": [
+      "brillar"
+     ]
+    },
+    {
+     "text": "con luz verde"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "subiendo",
+     "gap": true,
+     "accept": [
+      "subiendo"
+     ]
+    },
+    {
+     "text": "una escalera alta"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la farmacia' is not a noun of the set, so no noun row. Phrase 1: the English box also covers the first scene where he holds no bag (bag only in the queue scene). 'los frascos' = the medicine bottles on the pharmacy shelves (more natural than 'botellas' here)."
+}

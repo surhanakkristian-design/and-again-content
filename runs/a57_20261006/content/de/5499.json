@@ -1,0 +1,133 @@
+{
+  "mediaId": 5499,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Frau",
+  "taps": [
+    {
+      "phrase": "ein rotes Kleid tragen",
+      "target": "die Frau in Rot",
+      "voice": "female"
+    },
+    {
+      "phrase": "durch die Straße joggen",
+      "target": "die Frau in Gelb",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Blumen gießen",
+      "target": "die alte Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Blumen",
+      "voice": "female"
+    },
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "die Wand",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die alte Frau?",
+  "answer": [
+    "Sie",
+    "gießt",
+    "die",
+    "Blumen."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein rotes"
+        },
+        {
+          "text": "Kleid",
+          "gap": true,
+          "accept": [
+            "Kleid"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die Straße"
+        },
+        {
+          "text": "joggen",
+          "gap": true,
+          "accept": [
+            "joggen",
+            "laufen",
+            "rennen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Blumen"
+        },
+        {
+          "text": "gießen",
+          "gap": true,
+          "accept": [
+            "gießen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Frau",
+          "gap": true,
+          "accept": [
+            "Frau"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "gießt die"
+        },
+        {
+          "text": "Blumen",
+          "gap": true,
+          "accept": [
+            "Blumen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 2 'joggen' rather than 'die Straße entlanglaufen' because other people walk down the street too. Key word die Frau is noun 1 and gets its own recall row."
+}

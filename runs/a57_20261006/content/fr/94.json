@@ -1,0 +1,26 @@
+{
+  "mediaId": 94, "lang": "fr", "level": "B",
+  "keyWord": "cligner des yeux",
+  "taps": [
+    { "phrase": "verser une larme", "target": "l'homme", "voice": "male" },
+    { "phrase": "serrer les dents", "target": "l'homme", "voice": "male" },
+    { "phrase": "sourire d'un air triomphant", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les lunettes de soleil", "voice": "male" },
+    { "word": "la créole", "voice": "male" },
+    { "word": "les milk-shakes", "voice": "male" },
+    { "word": "les clés de voiture", "voice": "male" }
+  ],
+  "question": "Qu'est-ce que l'homme essaie d'éviter ?",
+  "answer": ["Il", "essaie", "d'éviter", "de", "cligner", "des", "yeux."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "verser", "gap": true, "accept": ["verser"] }, { "text": "une larme" } ] },
+    { "from": "taps", "parts": [ { "text": "serrer les" }, { "text": "dents", "gap": true, "accept": ["dents"] } ] },
+    { "from": "taps", "parts": [ { "text": "sourire d'un air" }, { "text": "triomphant", "gap": true, "accept": ["triomphant"] } ] },
+    { "from": "answer", "parts": [ { "text": "essaie d'éviter de" }, { "text": "cligner", "gap": true, "accept": ["cligner"] }, { "text": "des yeux" } ] }
+  ],
+  "notes": "'la créole' = hoop earring (one visible, standard French word). The tear and gritted teeth are in the man's close-ups; the woman grins and points in triumph after he blinks. Some boxed frames for phrases 1-2 show the man before the tear appears (staring); phrase written for most boxed frames."
+}

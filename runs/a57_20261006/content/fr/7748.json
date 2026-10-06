@@ -1,0 +1,120 @@
+{
+ "mediaId": 7748,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "jour et nuit",
+ "taps": [
+  {
+   "phrase": "peindre une sculpture de dragon",
+   "target": "la femme en salopette",
+   "voice": "female"
+  },
+  {
+   "phrase": "bâiller en buvant un café",
+   "target": "la femme au pull vert",
+   "voice": "female"
+  },
+  {
+   "phrase": "somnoler sur un coussin bleu",
+   "target": "l'homme sur le coussin bleu",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le dragon",
+   "voice": "female"
+  },
+  {
+   "word": "les pots de peinture",
+   "voice": "female"
+  },
+  {
+   "word": "la boîte à pizza",
+   "voice": "female"
+  },
+  {
+   "word": "la couverture",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en salopette ?",
+ "answer": [
+  "Elle",
+  "peint",
+  "une",
+  "sculpture",
+  "de",
+  "dragon."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "peindre une"
+    },
+    {
+     "text": "sculpture",
+     "gap": true,
+     "accept": [
+      "sculpture",
+      "statue"
+     ]
+    },
+    {
+     "text": "de dragon"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bâiller",
+     "gap": true,
+     "accept": [
+      "bâiller"
+     ]
+    },
+    {
+     "text": "en buvant un café"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "somnoler",
+     "gap": true,
+     "accept": [
+      "somnoler",
+      "dormir"
+     ]
+    },
+    {
+     "text": "sur un coussin bleu"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "peint",
+     "gap": true,
+     "accept": [
+      "peint"
+     ]
+    },
+    {
+     "text": "une sculpture de dragon"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'jour et nuit' (around the clock) is an adverbial the clip only suggests (sleeping workers, coffee, dawn light); like the English set, no exercise uses it. Another worker also sleeps on the floor (left), but not on a blue cushion, so tap 3 stays unique."
+}

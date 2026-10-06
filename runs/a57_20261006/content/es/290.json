@@ -1,0 +1,113 @@
+{
+ "mediaId": 290,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el sentimiento",
+ "taps": [
+  {
+   "phrase": "tocarse el pecho",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "cerrar los ojos",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camisa gris",
+   "target": "el hombre del pelo largo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la bandera",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el vaso",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Se",
+  "está",
+  "tocando",
+  "el",
+  "pecho."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarse",
+     "gap": true,
+     "accept": [
+      "tocarse"
+     ]
+    },
+    {
+     "text": "el pecho"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cerrar los"
+    },
+    {
+     "text": "ojos",
+     "gap": true,
+     "accept": [
+      "ojos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camisa",
+     "gap": true,
+     "accept": [
+      "camisa"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se está tocando el"
+    },
+    {
+     "text": "pecho",
+     "gap": true,
+     "accept": [
+      "pecho"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the English box covers the woman for most of the clip, but her eyes are closed only in a few frames (tense moment before the goal). Key word 'el sentimiento' does not appear in any exercise (abstract word, nothing to name); kept unchanged."
+}

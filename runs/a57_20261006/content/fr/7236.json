@@ -1,0 +1,26 @@
+{
+  "mediaId": 7236, "lang": "fr", "level": "B",
+  "keyWord": "un ouragan",
+  "taps": [
+    { "phrase": "déferler par-dessus la digue", "target": "la vague", "voice": "female" },
+    { "phrase": "se courber sous le vent", "target": "les palmiers", "voice": "female" },
+    { "phrase": "avoir une toile à rayures", "target": "le transat", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le palmier", "voice": "female" },
+    { "word": "le transat", "voice": "female" },
+    { "word": "le seau", "voice": "female" },
+    { "word": "les tongs", "voice": "female" }
+  ],
+  "question": "Que font les vagues ?",
+  "answer": ["Les", "vagues", "déferlent", "par-dessus", "la", "digue."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "déferler", "gap": true, "accept": ["déferler"] }, { "text": "par-dessus la digue" } ] },
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "courber", "gap": true, "accept": ["courber", "plier"] }, { "text": "sous le vent" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir une toile à" }, { "text": "rayures", "gap": true, "accept": ["rayures"] } ] },
+    { "from": "answer", "parts": [ { "text": "déferlent par-dessus la" }, { "text": "digue", "gap": true, "accept": ["digue"] } ] }
+  ],
+  "notes": "keyWord 'un ouragan' copied unchanged (indefinite article in the source, unlike the other key words which use the definite one); it names the whole storm, not a noun of the set, so no noun row. 'La digue' = the sea wall the waves break over (same word in phrase 1 and the answer). Noun 1 kept singular 'le palmier' like English 'a palm tree' although several palms are visible; phrase 2 target is 'les palmiers'. In the last frames the wave box shows water spilling over the wall rather than a big crashing wave."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 207,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la tasse",
+ "taps": [
+  {
+   "phrase": "porter une boucle d'oreille verte",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter des lunettes",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un t-shirt bleu",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chat",
+   "voice": "female"
+  },
+  {
+   "word": "la tasse",
+   "voice": "female"
+  },
+  {
+   "word": "les fleurs",
+   "voice": "female"
+  },
+  {
+   "word": "la théière",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "boit",
+  "du",
+  "thé",
+  "dans",
+  "une",
+  "tasse."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "boucle d'oreille",
+     "gap": true,
+     "accept": [
+      "boucle d'oreille"
+     ]
+    },
+    {
+     "text": "verte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter des"
+    },
+    {
+     "text": "lunettes",
+     "gap": true,
+     "accept": [
+      "lunettes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "t-shirt",
+     "gap": true,
+     "accept": [
+      "t-shirt",
+      "tee-shirt"
+     ]
+    },
+    {
+     "text": "bleu"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "boit du thé dans une"
+    },
+    {
+     "text": "tasse",
+     "gap": true,
+     "accept": [
+      "tasse"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The man's top is a short-sleeved blue T-shirt, so 'un t-shirt bleu' (English 'shirt'). The cups are small handleless tea bowls; la tasse is still the natural word. No noun row: la tasse is in the answer row."
+}

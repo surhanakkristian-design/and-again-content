@@ -1,0 +1,120 @@
+{
+ "mediaId": 602,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la lectura",
+ "taps": [
+  {
+   "phrase": "leer un libro gordo",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "taparse la boca",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber de una taza",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "el libro",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "leyendo",
+  "un",
+  "libro",
+  "en",
+  "la",
+  "mesa."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "leer",
+     "gap": true,
+     "accept": [
+      "leer"
+     ]
+    },
+    {
+     "text": "un libro gordo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taparse",
+     "gap": true,
+     "accept": [
+      "taparse",
+      "cubrirse"
+     ]
+    },
+    {
+     "text": "la boca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber de una"
+    },
+    {
+     "text": "taza",
+     "gap": true,
+     "accept": [
+      "taza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está leyendo un"
+    },
+    {
+     "text": "libro",
+     "gap": true,
+     "accept": [
+      "libro"
+     ]
+    },
+    {
+     "text": "en la mesa"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la lectura' (abstract noun 'reading') is not natural in level-A phrases about the clip, so it is not used; the verb 'leer' carries the meaning in tap 1 and the answer. All three taps have the same single target (only one person in the clip), as in English. 'libro gordo' = thick book (everyday Spain usage)."
+}

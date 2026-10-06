@@ -1,0 +1,115 @@
+{
+ "mediaId": 528,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "aparcar",
+ "taps": [
+  {
+   "phrase": "aparcar el coche",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado en un muro",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir la puerta del coche",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el coche",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Aparca",
+  "su",
+  "coche."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aparcar",
+     "gap": true,
+     "accept": [
+      "aparcar",
+      "estacionar"
+     ]
+    },
+    {
+     "text": "el coche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "sentado",
+     "gap": true,
+     "accept": [
+      "sentado"
+     ]
+    },
+    {
+     "text": "en un muro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir la"
+    },
+    {
+     "text": "puerta",
+     "gap": true,
+     "accept": [
+      "puerta"
+     ]
+    },
+    {
+     "text": "del coche"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Aparca su"
+    },
+    {
+     "text": "coche",
+     "gap": true,
+     "accept": [
+      "coche"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 3 blue box also covers the driving and key frames where she does not open the door yet; the phrase describes the moment she gets out. The man sits on a low wall (muro)."
+}

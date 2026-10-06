@@ -1,0 +1,136 @@
+{
+ "mediaId": 680,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Sänger",
+ "taps": [
+  {
+   "phrase": "ein Lied singen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich an den Kopfhörer fassen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Computer sitzen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Sängerin",
+   "voice": "female"
+  },
+  {
+   "word": "der Kopfhörer",
+   "voice": "female"
+  },
+  {
+   "word": "das Mikrofon",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "singt",
+  "in",
+  "ein",
+  "Mikrofon."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Lied",
+     "gap": true,
+     "accept": [
+      "Lied",
+      "Song"
+     ]
+    },
+    {
+     "text": "singen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich an den"
+    },
+    {
+     "text": "Kopfhörer",
+     "gap": true,
+     "accept": [
+      "Kopfhörer"
+     ]
+    },
+    {
+     "text": "fassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Computer"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Sängerin",
+     "gap": true,
+     "accept": [
+      "Sängerin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "singt in ein"
+    },
+    {
+     "text": "Mikrofon",
+     "gap": true,
+     "accept": [
+      "Mikrofon"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'der Sänger' kept; the singer is a woman, so noun 1 is 'die Sängerin' (feminine form of the key word). Proposal: accept 'die Sängerin' as a form of the concept. 'headphones' -> 'der Kopfhörer' (one pair; German everyday singular). Phrase 3: the man sits at a mixing desk; 'am Mischpult sitzen' is above level A, so 'am Computer sitzen' (screens visible in front of him). Phrase 2: hand on the headphones in most boxed frames; at the very end she takes them off."
+}

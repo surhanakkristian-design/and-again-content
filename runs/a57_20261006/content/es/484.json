@@ -1,0 +1,117 @@
+{
+ "mediaId": 484,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la fregona",
+ "taps": [
+  {
+   "phrase": "fregar el suelo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar a punto de caerse",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar lleno de agua",
+   "target": "el cubo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la fregona",
+   "voice": "female"
+  },
+  {
+   "word": "el cubo",
+   "voice": "female"
+  },
+  {
+   "word": "el suelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "fregando",
+  "el",
+  "suelo",
+  "con",
+  "una",
+  "fregona."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fregar",
+     "gap": true,
+     "accept": [
+      "fregar",
+      "limpiar"
+     ]
+    },
+    {
+     "text": "el suelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar a punto de"
+    },
+    {
+     "text": "caerse",
+     "gap": true,
+     "accept": [
+      "caerse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar lleno de"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está fregando el suelo con una"
+    },
+    {
+     "text": "fregona",
+     "gap": true,
+     "accept": [
+      "fregona"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'fregar el suelo' is the Spain collocation with la fregona. The near-slip (phrase 2) is short; the English box also covers mopping frames. The water inside the bucket is hardly visible (mop head sits in it); phrase 3 kept as in English."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 284,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Gesichtsmaske",
+ "taps": [
+  {
+   "phrase": "ein flauschiges Haarband tragen",
+   "target": "die Frau in Lila",
+   "voice": "female"
+  },
+  {
+   "phrase": "mit dem Finger auf ihre Freundin zeigen",
+   "target": "die Frau in Grau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Kissen ruhen",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Haarband",
+   "voice": "female"
+  },
+  {
+   "word": "die Gesichtsmaske",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "die Schüssel",
+   "voice": "female"
+  }
+ ],
+ "question": "Was tragen die Frauen?",
+ "answer": [
+  "Sie",
+  "tragen",
+  "grüne",
+  "Gesichtsmasken."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein flauschiges"
+    },
+    {
+     "text": "Haarband",
+     "gap": true,
+     "accept": [
+      "Haarband"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit dem Finger auf ihre Freundin"
+    },
+    {
+     "text": "zeigen",
+     "gap": true,
+     "accept": [
+      "zeigen",
+      "deuten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Kissen",
+     "gap": true,
+     "accept": [
+      "Kissen"
+     ]
+    },
+    {
+     "text": "ruhen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tragen grüne"
+    },
+    {
+     "text": "Gesichtsmasken",
+     "gap": true,
+     "accept": [
+      "Gesichtsmasken",
+      "Masken"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word noun row skipped: the answer row contains Gesichtsmasken (plural)."
+}

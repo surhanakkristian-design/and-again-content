@@ -1,0 +1,117 @@
+{
+ "mediaId": 694,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "couper en tranches",
+ "taps": [
+  {
+   "phrase": "couper une tomate en tranches",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "montrer une tranche",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être sur la planche",
+   "target": "la tomate",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la veste",
+   "voice": "male"
+  },
+  {
+   "word": "le couteau",
+   "voice": "male"
+  },
+  {
+   "word": "la tomate",
+   "voice": "male"
+  },
+  {
+   "word": "la planche",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "coupe",
+  "la",
+  "tomate",
+  "en",
+  "tranches."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "couper une tomate en"
+    },
+    {
+     "text": "tranches",
+     "gap": true,
+     "accept": [
+      "tranches",
+      "rondelles"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer",
+     "gap": true,
+     "accept": [
+      "montrer",
+      "lever"
+     ]
+    },
+    {
+     "text": "une tranche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être sur la"
+    },
+    {
+     "text": "planche",
+     "gap": true,
+     "accept": [
+      "planche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "coupe",
+     "gap": true,
+     "accept": [
+      "coupe"
+     ]
+    },
+    {
+     "text": "la tomate en tranches"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: he holds up the slice only in the last seconds (box covers the whole clip). 'la veste' = the white chef's jacket. 'Il coupe en tranches la tomate' is possible but marked; the natural order is the model one."
+}

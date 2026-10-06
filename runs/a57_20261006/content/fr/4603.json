@@ -1,0 +1,119 @@
+{
+ "mediaId": 4603,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la route",
+ "taps": [
+  {
+   "phrase": "faire du vélo",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un casque blanc",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "descendre la route",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la route",
+   "voice": "male"
+  },
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le casque",
+   "voice": "male"
+  },
+  {
+   "word": "le vélo",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "fait",
+  "du",
+  "vélo",
+  "sur",
+  "la",
+  "route."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire du"
+    },
+    {
+     "text": "vélo",
+     "gap": true,
+     "accept": [
+      "vélo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "casque",
+     "gap": true,
+     "accept": [
+      "casque"
+     ]
+    },
+    {
+     "text": "blanc"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descendre",
+     "gap": true,
+     "accept": [
+      "descendre"
+     ]
+    },
+    {
+     "text": "la route"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait du vélo sur la"
+    },
+    {
+     "text": "route",
+     "gap": true,
+     "accept": [
+      "route"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes are the same man for the whole clip. Phrase 3: English 'open his arms wide' happens only in about 3 of the boxed frames; in most frames he rides down the winding road, so 'descendre la route' (also puts the key word in a row)."
+}

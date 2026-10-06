@@ -1,0 +1,122 @@
+{
+ "mediaId": 773,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el termómetro",
+ "taps": [
+  {
+   "phrase": "tomarle la temperatura",
+   "target": "la enfermera",
+   "voice": "female"
+  },
+  {
+   "phrase": "ponerse rojo como un tomate",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "marcar una temperatura alta",
+   "target": "el termómetro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "el termómetro",
+   "voice": "female"
+  },
+  {
+   "word": "la enfermera",
+   "voice": "female"
+  },
+  {
+   "word": "el cuenco",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la enfermera?",
+ "answer": [
+  "Le",
+  "está",
+  "tomando",
+  "la",
+  "temperatura",
+  "con",
+  "un",
+  "termómetro."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomarle la"
+    },
+    {
+     "text": "temperatura",
+     "gap": true,
+     "accept": [
+      "temperatura"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ponerse"
+    },
+    {
+     "text": "rojo",
+     "gap": true,
+     "accept": [
+      "rojo",
+      "colorado"
+     ]
+    },
+    {
+     "text": "como un tomate"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcar",
+     "gap": true,
+     "accept": [
+      "marcar",
+      "indicar"
+     ]
+    },
+    {
+     "text": "una temperatura alta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le está tomando la temperatura con un"
+    },
+    {
+     "text": "termómetro",
+     "gap": true,
+     "accept": [
+      "termómetro"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (la enfermera), as natives do; the answer row is the whole sentence without the full stop. Tap 2 idiom 'ponerse rojo como un tomate' = turn bright red (B1 collocation). The man's tap box also covers the mouth close-ups and the start (face not yet red); the phrase describes his red face in the later boxed frames (also the ice/bucket part)."
+}

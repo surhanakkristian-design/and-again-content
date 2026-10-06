@@ -1,0 +1,116 @@
+{
+ "mediaId": 195,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la toux",
+ "taps": [
+  {
+   "phrase": "tousser très fort",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "apporter du thé chaud",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "marcher sur la couverture",
+   "target": "le chat",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les plantes",
+   "voice": "female"
+  },
+  {
+   "word": "la tasse",
+   "voice": "female"
+  },
+  {
+   "word": "la couverture",
+   "voice": "female"
+  },
+  {
+   "word": "le chat",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme malade ?",
+ "answer": [
+  "Elle",
+  "tousse",
+  "très",
+  "fort."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tousser",
+     "gap": true,
+     "accept": [
+      "tousser"
+     ]
+    },
+    {
+     "text": "très fort"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apporter du"
+    },
+    {
+     "text": "thé",
+     "gap": true,
+     "accept": [
+      "thé"
+     ]
+    },
+    {
+     "text": "chaud"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcher sur la"
+    },
+    {
+     "text": "couverture",
+     "gap": true,
+     "accept": [
+      "couverture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tousse très"
+    },
+    {
+     "text": "fort",
+     "gap": true,
+     "accept": [
+      "fort"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: 'tousser très fort' instead of 'dans sa main' - she mostly holds her throat while coughing, and coughs into her fist only briefly; box 1 also covers later frames where she sips the tea. Key word 'la toux' (noun) is not in the noun set, so it appears in no exercise (only the verb tousser)."
+}

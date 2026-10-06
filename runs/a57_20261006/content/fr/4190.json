@@ -1,0 +1,120 @@
+{
+  "mediaId": 4190,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "se rencontrer",
+  "taps": [
+    {
+      "phrase": "être assis sur un petit mur",
+      "target": "le chat",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir une grande crinière",
+      "target": "le lion",
+      "voice": "female"
+    },
+    {
+      "phrase": "être roux et blanc",
+      "target": "le chat",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les arbres",
+      "voice": "female"
+    },
+    {
+      "word": "le lion",
+      "voice": "female"
+    },
+    {
+      "word": "l'herbe",
+      "voice": "female"
+    },
+    {
+      "word": "le chat",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le chat ?",
+  "answer": [
+    "Il",
+    "rencontre",
+    "un",
+    "gros",
+    "lion."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "assis",
+          "gap": true,
+          "accept": [
+            "assis"
+          ]
+        },
+        {
+          "text": "sur un petit mur"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir une grande"
+        },
+        {
+          "text": "crinière",
+          "gap": true,
+          "accept": [
+            "crinière"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "roux",
+          "gap": true,
+          "accept": [
+            "roux"
+          ]
+        },
+        {
+          "text": "et blanc"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "rencontre",
+          "gap": true,
+          "accept": [
+            "rencontre"
+          ]
+        },
+        {
+          "text": "un gros lion"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'se rencontrer' is reciprocal (the cat and the lion meet each other); with the cat as subject French uses transitive 'rencontrer' ('Il rencontre un gros lion'), so the reflexive form does not appear. Proposal: keep the database word; a learner sees the same verb. 'la crinière' is the only natural word for the lion's long dark hair (above A2; plain right word, noted). The low concrete ledge is 'un petit mur' (a native might say 'un muret', avoided as less basic). A ginger cat is 'roux' in French, not 'orange'. Lioness also visible but has no mane, so phrase 2 fits only the male lion. 'gros lion' is the natural French for a big lion."
+}

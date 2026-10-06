@@ -1,0 +1,117 @@
+{
+ "mediaId": 226,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la desesperación",
+ "taps": [
+  {
+   "phrase": "tocar el acordeón",
+   "target": "el músico",
+   "voice": "male"
+  },
+  {
+   "phrase": "agacharse junto al estuche",
+   "target": "el músico",
+   "voice": "male"
+  },
+  {
+   "phrase": "permanecer abierto y vacío",
+   "target": "el estuche",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el acordeón",
+   "voice": "male"
+  },
+  {
+   "word": "el grafiti",
+   "voice": "male"
+  },
+  {
+   "word": "el estuche",
+   "voice": "male"
+  },
+  {
+   "word": "el tablón de anuncios",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está tocando el músico?",
+ "answer": [
+  "Está",
+  "tocando",
+  "el",
+  "acordeón."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocar el"
+    },
+    {
+     "text": "acordeón",
+     "gap": true,
+     "accept": [
+      "acordeón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agacharse",
+     "gap": true,
+     "accept": [
+      "agacharse",
+      "acuclillarse"
+     ]
+    },
+    {
+     "text": "junto al estuche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "permanecer abierto y"
+    },
+    {
+     "text": "vacío",
+     "gap": true,
+     "accept": [
+      "vacío"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "tocando",
+     "gap": true,
+     "accept": [
+      "tocando"
+     ]
+    },
+    {
+     "text": "el acordeón"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the same English box (the musician); he crouches toward the case in only some boxed frames and ends sitting on the tunnel floor. Phrase 2 is 'agacharse junto al estuche' (he bends down at the case), not 'en el suelo', to fit what he does. Key word 'la desesperación' is not shown in any text (no noun of the set)."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 7739,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la maduración",
+ "taps": [
+  {
+   "phrase": "hacer rodar una rueda de queso",
+   "target": "el ratón de la gorra",
+   "voice": "male"
+  },
+  {
+   "phrase": "dar golpecitos con un martillo",
+   "target": "el ratón del chaleco verde",
+   "voice": "male"
+  },
+  {
+   "phrase": "trepar por la escalera",
+   "target": "el ratón de la escalera",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el farol",
+   "voice": "male"
+  },
+  {
+   "word": "la ventana",
+   "voice": "male"
+  },
+  {
+   "word": "la escalera",
+   "voice": "male"
+  },
+  {
+   "word": "el cubo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace rodar el ratón?",
+ "answer": [
+  "El",
+  "ratón",
+  "hace",
+  "rodar",
+  "una",
+  "rueda",
+  "de",
+  "queso."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer rodar una"
+    },
+    {
+     "text": "rueda",
+     "gap": true,
+     "accept": [
+      "rueda"
+     ]
+    },
+    {
+     "text": "de queso"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar golpecitos con un"
+    },
+    {
+     "text": "martillo",
+     "gap": true,
+     "accept": [
+      "martillo",
+      "mazo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "trepar",
+     "gap": true,
+     "accept": [
+      "trepar",
+      "subir"
+     ]
+    },
+    {
+     "text": "por la escalera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hace"
+    },
+    {
+     "text": "rodar",
+     "gap": true,
+     "accept": [
+      "rodar"
+     ]
+    },
+    {
+     "text": "una rueda de queso"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la maduración' (cheese aging) is the topic of the cellar but no natural visible phrase uses it; in Spain 'la curación' (queso curado) is also common for cheese - owner may consider. The ladder mouse climbs up and then stands on the shelf. Verifier: 'pesada' dropped from the answer (chips allowed both 'una pesada rueda' and 'una rueda de queso pesada')."
+}

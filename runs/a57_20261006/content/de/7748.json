@@ -1,0 +1,118 @@
+{
+ "mediaId": 7748,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "rund um die Uhr",
+ "taps": [
+  {
+   "phrase": "eine Drachenskulptur bemalen",
+   "target": "die Frau in der Latzhose",
+   "voice": "female"
+  },
+  {
+   "phrase": "beim Kaffeetrinken gähnen",
+   "target": "die Frau im grünen Pullover",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem blauen Kissen dösen",
+   "target": "der Mann auf dem blauen Kissen",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Drache",
+   "voice": "female"
+  },
+  {
+   "word": "die Farbdosen",
+   "voice": "female"
+  },
+  {
+   "word": "der Pizzakarton",
+   "voice": "female"
+  },
+  {
+   "word": "die Decke",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau in der Latzhose?",
+ "answer": [
+  "Sie",
+  "bemalt",
+  "eine",
+  "Drachenskulptur."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Drachenskulptur"
+    },
+    {
+     "text": "bemalen",
+     "gap": true,
+     "accept": [
+      "bemalen",
+      "anmalen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beim Kaffeetrinken"
+    },
+    {
+     "text": "gähnen",
+     "gap": true,
+     "accept": [
+      "gähnen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem blauen"
+    },
+    {
+     "text": "Kissen",
+     "gap": true,
+     "accept": [
+      "Kissen"
+     ]
+    },
+    {
+     "text": "dösen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bemalt eine"
+    },
+    {
+     "text": "Drachenskulptur",
+     "gap": true,
+     "accept": [
+      "Drachenskulptur",
+      "Drachenfigur"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'rund um die Uhr' is not used in any text: the clip only hints at all-night work (sleepers, coffee, dawn light), as the English texts also do not use 'around the clock'. The man sanding the sculpture does not paint, so phrase 1 fits only the woman in dungarees."
+}

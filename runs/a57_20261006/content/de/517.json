@@ -1,0 +1,117 @@
+{
+  "mediaId": 517,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "überholen",
+  "taps": [
+    {
+      "phrase": "ein Wohnmobil überholen",
+      "target": "das rote Cabrio",
+      "voice": "male"
+    },
+    {
+      "phrase": "vor dem Wohnmobil einscheren",
+      "target": "das rote Cabrio",
+      "voice": "male"
+    },
+    {
+      "phrase": "hinter das Cabrio zurückfallen",
+      "target": "das Wohnmobil",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Wohnmobil",
+      "voice": "male"
+    },
+    {
+      "word": "das Cabrio",
+      "voice": "male"
+    },
+    {
+      "word": "die Sanddünen",
+      "voice": "male"
+    },
+    {
+      "word": "die Landstraße",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht das rote Cabrio?",
+  "answer": [
+    "Es",
+    "überholt",
+    "ein",
+    "Wohnmobil."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Wohnmobil"
+        },
+        {
+          "text": "überholen",
+          "gap": true,
+          "accept": [
+            "überholen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "vor dem Wohnmobil"
+        },
+        {
+          "text": "einscheren",
+          "gap": true,
+          "accept": [
+            "einscheren"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hinter das"
+        },
+        {
+          "text": "Cabrio",
+          "gap": true,
+          "accept": [
+            "Cabrio",
+            "Auto"
+          ]
+        },
+        {
+          "text": "zurückfallen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "überholt ein"
+        },
+        {
+          "text": "Wohnmobil",
+          "gap": true,
+          "accept": [
+            "Wohnmobil"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "'a highway' here is a two-lane desert road: 'die Landstraße' (die Autobahn would be wrong). Answer subject 'es' = das Auto (neuter); voice kept male as English."
+}

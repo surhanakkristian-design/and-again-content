@@ -1,0 +1,26 @@
+{
+  "mediaId": 93, "lang": "de", "level": "B",
+  "keyWord": "der Mixer",
+  "taps": [
+    { "phrase": "das Obst pürieren", "target": "der Mixer", "voice": "male" },
+    { "phrase": "sich den Finger ablecken", "target": "der Mann", "voice": "male" },
+    { "phrase": "den Daumen hochhalten", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Mixer", "voice": "male" },
+    { "word": "der Krug", "voice": "male" },
+    { "word": "die Erdbeeren", "voice": "male" },
+    { "word": "das Stirnband", "voice": "male" }
+  ],
+  "question": "Was bereitet der Mann zu?",
+  "answer": ["Er", "bereitet", "im", "Mixer", "einen", "Smoothie", "zu."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "das Obst" }, { "text": "pürieren", "gap": true, "accept": ["pürieren", "zerkleinern", "mixen"] } ] },
+    { "from": "taps", "parts": [ { "text": "sich den Finger" }, { "text": "ablecken", "gap": true, "accept": ["ablecken"] } ] },
+    { "from": "taps", "parts": [ { "text": "den" }, { "text": "Daumen", "gap": true, "accept": ["Daumen"] }, { "text": "hochhalten" } ] },
+    { "from": "answer", "parts": [ { "text": "bereitet im" }, { "text": "Mixer", "gap": true, "accept": ["Mixer", "Standmixer"] }, { "text": "einen Smoothie zu" } ] }
+  ],
+  "notes": "The English tap boxes for phrases 2 and 3 (both the man) cover the whole clip; licking the finger happens only in the close-up near the end, the thumbs up in the last shot. The red box also covers frames where the blender is still empty; phrase 1 describes what it does while running. German also allows 'Er bereitet einen Smoothie im Mixer zu' (second word order with the same chips). No noun row: the answer row contains the key word."
+}

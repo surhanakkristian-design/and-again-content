@@ -1,0 +1,125 @@
+{
+ "mediaId": 282,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le fard à paupières",
+ "taps": [
+  {
+   "phrase": "appliquer du fard doré",
+   "target": "le pinceau",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un foulard noué sur la tête",
+   "target": "la femme au foulard",
+   "voice": "female"
+  },
+  {
+   "phrase": "se faire maquiller les paupières",
+   "target": "la femme en chemise",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le foulard",
+   "voice": "female"
+  },
+  {
+   "word": "le fard à paupières",
+   "voice": "female"
+  },
+  {
+   "word": "le col",
+   "voice": "female"
+  },
+  {
+   "word": "le bouton",
+   "voice": "female"
+  }
+ ],
+ "question": "Que prend le pinceau ?",
+ "answer": [
+  "Il",
+  "prend",
+  "du",
+  "fard",
+  "à",
+  "paupières",
+  "doré."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "appliquer",
+     "gap": true,
+     "accept": [
+      "appliquer",
+      "étaler",
+      "mettre"
+     ]
+    },
+    {
+     "text": "du fard doré"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "foulard",
+     "gap": true,
+     "accept": [
+      "foulard",
+      "turban"
+     ]
+    },
+    {
+     "text": "noué sur la tête"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se faire maquiller les"
+    },
+    {
+     "text": "paupières",
+     "gap": true,
+     "accept": [
+      "paupières"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend du"
+    },
+    {
+     "text": "fard",
+     "gap": true,
+     "accept": [
+      "fard"
+     ]
+    },
+    {
+     "text": "à paupières doré"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box covers the palette shots but mostly the brush on the eyelid, so the phrase says what it does in most boxed frames (applying); the question/answer keep the English 'picking up' (first frames). Phrase 3: the blue box mostly covers close-ups of her lid being made up, only the last frames show her showing off the golden lids, so 'se faire maquiller les paupières'. 'le foulard' for the wrapped headscarf (looks like a turban; 'turban' accepted in recall)."
+}

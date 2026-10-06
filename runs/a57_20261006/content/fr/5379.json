@@ -1,0 +1,26 @@
+{
+  "mediaId": 5379, "lang": "fr", "level": "B",
+  "keyWord": "modifier",
+  "taps": [
+    { "phrase": "prendre les mesures d'un client", "target": "le tailleur", "voice": "male" },
+    { "phrase": "marquer le tissu à la craie", "target": "le tailleur", "voice": "male" },
+    { "phrase": "enfiler une veste", "target": "le jeune homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ventilateur de plafond", "voice": "male" },
+    { "word": "les tissus", "voice": "male" },
+    { "word": "la veste", "voice": "male" },
+    { "word": "le mètre ruban", "voice": "male" }
+  ],
+  "question": "Que fait le tailleur ?",
+  "answer": ["Il", "retouche", "la", "veste", "d'un", "client."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "prendre les" }, { "text": "mesures", "gap": true, "accept": ["mesures"] }, { "text": "d'un client" } ] },
+    { "from": "taps", "parts": [ { "text": "marquer le tissu à la" }, { "text": "craie", "gap": true, "accept": ["craie"] } ] },
+    { "from": "taps", "parts": [ { "text": "enfiler", "gap": true, "accept": ["enfiler", "mettre"] }, { "text": "une veste" } ] },
+    { "from": "answer", "parts": [ { "text": "retouche", "gap": true, "accept": ["retouche", "modifie"] }, { "text": "la veste" }, { "text": "d'un client" } ] }
+  ],
+  "notes": "Key word: for clothes a French native says 'retoucher une veste' (the tailor's verb); 'modifier' is the general verb and sounds unnatural here, so the answer uses 'retouche' and the recall row accepts 'modifie'. Proposal: a word_localizations alternative 'retoucher' for clothing clips, or keep 'modifier' (owner decides). The noun 'les tissus' = the stacks of cloth on the shelves (plural, several bolts); the phrase 'le tissu' = the piece on the table. Tailor boxes also cover the sewing-machine shots."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 9, "lang": "de", "level": "B",
+  "keyWord": "das Labor",
+  "taps": [
+    { "phrase": "lila Handschuhe überstreifen", "target": "die Wissenschaftlerin", "voice": "female" },
+    { "phrase": "ein kleines Röhrchen begutachten", "target": "die Wissenschaftlerin", "voice": "female" },
+    { "phrase": "die Proben tiefgekühlt halten", "target": "der Gefrierschrank", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Schutzbrille", "voice": "female" },
+    { "word": "die Röhrchen", "voice": "female" },
+    { "word": "der Laborkittel", "voice": "female" },
+    { "word": "der Gefrierschrank", "voice": "female" }
+  ],
+  "question": "Was macht die Wissenschaftlerin?",
+  "answer": ["Sie", "stellt", "die", "Röhrchen", "in", "den", "Gefrierschrank."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lila" }, { "text": "Handschuhe", "gap": true, "accept": ["Handschuhe"] }, { "text": "überstreifen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein kleines Röhrchen" }, { "text": "begutachten", "gap": true, "accept": ["begutachten", "betrachten", "untersuchen", "prüfen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Proben" }, { "text": "tiefgekühlt", "gap": true, "accept": ["tiefgekühlt", "gefroren"] }, { "text": "halten" } ] },
+    { "from": "answer", "parts": [ { "text": "stellt die Röhrchen in den" }, { "text": "Gefrierschrank", "gap": true, "accept": ["Gefrierschrank", "Tiefkühlschrank"] } ] }
+  ],
+  "notes": "Taps 1 and 2 share one box over the whole clip (only one person), so each phrase is true of her somewhere in it, not in every boxed frame. The English 'test tubes' are small capped plastic sample tubes: 'die Röhrchen' (same word in tap 2, noun 2 and answer) rather than 'Reagenzgläser'. Key word 'das Labor' is not a noun of the set (as in English), so no noun row; it names the setting only."
+}

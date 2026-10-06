@@ -1,0 +1,116 @@
+{
+ "mediaId": 7180,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "partir en vacances",
+ "taps": [
+  {
+   "phrase": "sauter dans la piscine",
+   "target": "l'homme aux lunettes de soleil",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une boisson",
+   "target": "le serveur",
+   "voice": "male"
+  },
+  {
+   "phrase": "tomber par terre",
+   "target": "la valise",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la valise",
+   "voice": "male"
+  },
+  {
+   "word": "les palmiers",
+   "voice": "male"
+  },
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le serveur",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme aux lunettes de soleil ?",
+ "answer": [
+  "Il",
+  "saute",
+  "dans",
+  "la",
+  "piscine."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sauter dans la"
+    },
+    {
+     "text": "piscine",
+     "gap": true,
+     "accept": [
+      "piscine"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "boisson",
+     "gap": true,
+     "accept": [
+      "boisson",
+      "verre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomber",
+     "gap": true,
+     "accept": [
+      "tomber"
+     ]
+    },
+    {
+     "text": "par terre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "saute",
+     "gap": true,
+     "accept": [
+      "saute",
+      "plonge"
+     ]
+    },
+    {
+     "text": "dans la piscine"
+    }
+   ]
+  }
+ ],
+ "notes": "Key phrase 'partir en vacances' not natural in any text (not forced). Noun 2: English 'trees' are palm trees; 'les palmiers' is the everyday French word (A2). Phrase 1: the man jumps in the first frames and then floats on his back for most boxed frames; kept 'sauter dans la piscine'."
+}

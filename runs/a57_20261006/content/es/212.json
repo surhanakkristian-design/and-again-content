@@ -1,0 +1,129 @@
+{
+ "mediaId": 212,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el bailarín",
+ "taps": [
+  {
+   "phrase": "estirar la pierna",
+   "target": "la bailarina",
+   "voice": "female"
+  },
+  {
+   "phrase": "bailar en un estudio",
+   "target": "la bailarina",
+   "voice": "female"
+  },
+  {
+   "phrase": "sonreír a la cámara",
+   "target": "la bailarina",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la bailarina",
+   "voice": "female"
+  },
+  {
+   "word": "el espejo",
+   "voice": "female"
+  },
+  {
+   "word": "el altavoz",
+   "voice": "female"
+  },
+  {
+   "word": "el suelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la bailarina?",
+ "answer": [
+  "Está",
+  "bailando",
+  "en",
+  "un",
+  "estudio."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estirar la"
+    },
+    {
+     "text": "pierna",
+     "gap": true,
+     "accept": [
+      "pierna"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bailar",
+     "gap": true,
+     "accept": [
+      "bailar"
+     ]
+    },
+    {
+     "text": "en un estudio"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "bailarina",
+     "gap": true,
+     "accept": [
+      "bailarina"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está bailando en un"
+    },
+    {
+     "text": "estudio",
+     "gap": true,
+     "accept": [
+      "estudio"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el bailarín': the dancer is a woman, so the noun pill and question use the feminine 'la bailarina' (same concept). Answer drops the subject (natural in Spain) to avoid 'la bailarina está bailando'."
+}

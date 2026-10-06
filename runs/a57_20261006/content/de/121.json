@@ -1,0 +1,129 @@
+{
+ "mediaId": 121,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "verbrennen",
+ "taps": [
+  {
+   "phrase": "einen Pfannkuchen verbrennen lassen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein Geschirrtuch halten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf einem Teller liegen",
+   "target": "der Pfannkuchen",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Pfanne",
+   "voice": "male"
+  },
+  {
+   "word": "das Feuer",
+   "voice": "male"
+  },
+  {
+   "word": "der Pfannkuchen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was hat der Mann verbrennen lassen?",
+ "answer": [
+  "Er",
+  "hat",
+  "einen",
+  "Pfannkuchen",
+  "verbrennen",
+  "lassen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Pfannkuchen"
+    },
+    {
+     "text": "verbrennen",
+     "gap": true,
+     "accept": [
+      "verbrennen",
+      "anbrennen"
+     ]
+    },
+    {
+     "text": "lassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Geschirrtuch",
+     "gap": true,
+     "accept": [
+      "Geschirrtuch",
+      "Tuch"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Teller",
+     "gap": true,
+     "accept": [
+      "Teller"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hat einen"
+    },
+    {
+     "text": "Pfannkuchen",
+     "gap": true,
+     "accept": [
+      "Pfannkuchen"
+     ]
+    },
+    {
+     "text": "verbrennen lassen"
+    }
+   ]
+  }
+ ],
+ "notes": "For burnt food German natives say 'etwas verbrennen lassen' (or colloquial transitive 'den Pfannkuchen verbrennen', or 'anbrennen lassen'); I used 'verbrennen lassen' so the key word stays as the infinitive. Past English question -> Perfekt."
+}

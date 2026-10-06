@@ -1,0 +1,118 @@
+{
+ "mediaId": 285,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Familie",
+ "taps": [
+  {
+   "phrase": "ein Familienfoto machen",
+   "target": "der Mann mit der Kamera",
+   "voice": "male"
+  },
+  {
+   "phrase": "mit beiden Händen winken",
+   "target": "der Mann mit der Kamera",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Treppe hochlaufen",
+   "target": "der Hund",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  },
+  {
+   "word": "die Familie",
+   "voice": "male"
+  },
+  {
+   "word": "die Treppe",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Familie?",
+ "answer": [
+  "Sie",
+  "macht",
+  "ein",
+  "Familienfoto."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Familienfoto",
+     "gap": true,
+     "accept": [
+      "Familienfoto"
+     ]
+    },
+    {
+     "text": "machen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit beiden Händen"
+    },
+    {
+     "text": "winken",
+     "gap": true,
+     "accept": [
+      "winken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Treppe"
+    },
+    {
+     "text": "hochlaufen",
+     "gap": true,
+     "accept": [
+      "hochlaufen",
+      "hochrennen",
+      "hinauflaufen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "macht",
+     "gap": true,
+     "accept": [
+      "macht"
+     ]
+    },
+    {
+     "text": "ein Familienfoto"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'steps' = die Treppe (everyday word for porch steps, same word in phrase 3 and noun 3). 'Sie macht' agrees with die Familie (singular). Red box also covers the grandpa setting up the camera; he is taking the family photo in most boxed frames. No noun row: Familienfoto contains the key word (compound rule)."
+}

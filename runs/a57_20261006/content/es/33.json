@@ -1,0 +1,122 @@
+{
+ "mediaId": 33,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el dolor",
+ "taps": [
+  {
+   "phrase": "sujetarse la mejilla hinchada",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "echar vapor",
+   "target": "la taza",
+   "voice": "male"
+  },
+  {
+   "phrase": "crecer en una maceta de barro",
+   "target": "la planta",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la planta",
+   "voice": "male"
+  },
+  {
+   "word": "el bigote",
+   "voice": "male"
+  },
+  {
+   "word": "la bolsa de hielo",
+   "voice": "male"
+  },
+  {
+   "word": "la taza",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "Se",
+  "sujeta",
+  "la",
+  "mejilla",
+  "hinchada",
+  "con",
+  "cara",
+  "de",
+  "dolor."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetarse",
+     "gap": true,
+     "accept": [
+      "sujetarse",
+      "agarrarse"
+     ]
+    },
+    {
+     "text": "la mejilla hinchada"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar"
+    },
+    {
+     "text": "vapor",
+     "gap": true,
+     "accept": [
+      "vapor"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crecer en una"
+    },
+    {
+     "text": "maceta",
+     "gap": true,
+     "accept": [
+      "maceta"
+     ]
+    },
+    {
+     "text": "de barro"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se sujeta la mejilla hinchada con cara de"
+    },
+    {
+     "text": "dolor",
+     "gap": true,
+     "accept": [
+      "dolor"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (9 words); 'con cara de dolor' carries the key word and is gapped in the answer row; it could only move to the front with a comma, so the chip order is unique. 'la planta' for the potted plant (the pot is named in tap 3). Tap 1: in two boxed frames he sips from the mug instead of holding his cheek; he holds it in most. No noun row: el dolor is not a noun of the set."
+}

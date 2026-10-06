@@ -1,0 +1,125 @@
+{
+ "mediaId": 7845,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "suavemente",
+ "taps": [
+  {
+   "phrase": "elevar la cesta suavemente",
+   "target": "el globo",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrarse a la cesta de mimbre",
+   "target": "la mujer de la cesta",
+   "voice": "female"
+  },
+  {
+   "phrase": "corretear por la hierba",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el globo aerostático",
+   "voice": "female"
+  },
+  {
+   "word": "la cesta de mimbre",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer de azul?",
+ "answer": [
+  "Está",
+  "despegando",
+  "en",
+  "una",
+  "cesta",
+  "de",
+  "mimbre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "elevar la cesta"
+    },
+    {
+     "text": "suavemente",
+     "gap": true,
+     "accept": [
+      "suavemente",
+      "lentamente",
+      "despacio"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrarse",
+     "gap": true,
+     "accept": [
+      "agarrarse",
+      "sujetarse"
+     ]
+    },
+    {
+     "text": "a la cesta de mimbre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "corretear por la"
+    },
+    {
+     "text": "hierba",
+     "gap": true,
+     "accept": [
+      "hierba",
+      "césped"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "despegando",
+     "gap": true,
+     "accept": [
+      "despegando",
+      "subiendo",
+      "ascendiendo"
+     ]
+    },
+    {
+     "text": "en una cesta de mimbre"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: English 'dash' rendered 'corretear' because in the boxed frames the dog jumps at the basket and then runs about rather than sprinting across. Answer uses 'despegar' (lift off) for English 'riding in', which is what she visibly does."
+}

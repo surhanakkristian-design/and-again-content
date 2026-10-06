@@ -1,0 +1,135 @@
+{
+ "mediaId": 22,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el científico",
+ "taps": [
+  {
+   "phrase": "pasar por delante del póster",
+   "target": "el estudiante",
+   "voice": "male"
+  },
+  {
+   "phrase": "tomar notas",
+   "target": "el científico",
+   "voice": "male"
+  },
+  {
+   "phrase": "señalar una línea",
+   "target": "el científico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el científico",
+   "voice": "male"
+  },
+  {
+   "word": "las gafas",
+   "voice": "male"
+  },
+  {
+   "word": "el bolígrafo",
+   "voice": "male"
+  },
+  {
+   "word": "el póster",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el científico?",
+ "answer": [
+  "El",
+  "científico",
+  "está",
+  "tomando",
+  "notas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar por delante del"
+    },
+    {
+     "text": "póster",
+     "gap": true,
+     "accept": [
+      "póster",
+      "cartel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomar"
+    },
+    {
+     "text": "notas",
+     "gap": true,
+     "accept": [
+      "notas",
+      "apuntes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar",
+     "gap": true,
+     "accept": [
+      "señalar"
+     ]
+    },
+    {
+     "text": "una línea"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "científico",
+     "gap": true,
+     "accept": [
+      "científico"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "tomando",
+     "gap": true,
+     "accept": [
+      "tomando",
+      "escribiendo"
+     ]
+    },
+    {
+     "text": "notas"
+    }
+   ]
+  }
+ ],
+ "notes": "'tomar notas' is the natural collocation for English 'write some notes' (he writes on a clipboard). 'las gafas' = his safety glasses on the forehead."
+}

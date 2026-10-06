@@ -1,0 +1,124 @@
+{
+  "mediaId": 7773,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "avec précaution",
+  "taps": [
+    {
+      "phrase": "porter les tasses avec précaution",
+      "target": "l'ours",
+      "voice": "female"
+    },
+    {
+      "phrase": "être assise à une table",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "lever les mains",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les tasses",
+      "voice": "female"
+    },
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "la table",
+      "voice": "female"
+    },
+    {
+      "word": "l'ours",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait l'ours ?",
+  "answer": [
+    "Il",
+    "porte",
+    "des",
+    "tasses",
+    "jusqu'à",
+    "la",
+    "table."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter les tasses avec"
+        },
+        {
+          "text": "précaution",
+          "gap": true,
+          "accept": [
+            "précaution",
+            "prudence",
+            "soin"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "assise",
+          "gap": true,
+          "accept": [
+            "assise"
+          ]
+        },
+        {
+          "text": "à une table"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lever",
+          "gap": true,
+          "accept": [
+            "lever"
+          ]
+        },
+        {
+          "text": "les mains"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "porte des"
+        },
+        {
+          "text": "tasses",
+          "gap": true,
+          "accept": [
+            "tasses"
+          ]
+        },
+        {
+          "text": "jusqu'à la table"
+        }
+      ]
+    }
+  ],
+  "notes": "answerVoice kept female as in English although the subject is 'l'ours' (il); the voice reads the sentence, not the bear. 'avec précaution' is natural but slightly formal; 'avec prudence'/'avec soin' accepted in the recall row."
+}

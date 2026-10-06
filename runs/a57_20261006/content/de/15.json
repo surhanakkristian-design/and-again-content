@@ -1,0 +1,119 @@
+{
+ "mediaId": 15,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Tablette",
+ "taps": [
+  {
+   "phrase": "Wasser trinken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "Wasser eingießen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "in der Hand liegen",
+   "target": "die Tablette",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Tablette",
+   "voice": "male"
+  },
+  {
+   "word": "die Hand",
+   "voice": "male"
+  },
+  {
+   "word": "der Baum",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "nimmt",
+  "eine",
+  "Tablette",
+  "mit",
+  "Wasser",
+  "ein."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Wasser",
+     "gap": true,
+     "accept": [
+      "Wasser"
+     ]
+    },
+    {
+     "text": "trinken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Wasser"
+    },
+    {
+     "text": "eingießen",
+     "gap": true,
+     "accept": [
+      "eingießen",
+      "einschenken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in der"
+    },
+    {
+     "text": "Hand",
+     "gap": true,
+     "accept": [
+      "Hand"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "nimmt eine"
+    },
+    {
+     "text": "Tablette",
+     "gap": true,
+     "accept": [
+      "Tablette"
+     ]
+    },
+    {
+     "text": "mit Wasser ein"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer: 'mit Wasser' could also stand before 'eine Tablette' (less natural). Phrase 3: the pill lies in the woman's hand."
+}

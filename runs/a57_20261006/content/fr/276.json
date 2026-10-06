@@ -1,0 +1,124 @@
+{
+ "mediaId": 276,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "une excursion",
+ "taps": [
+  {
+   "phrase": "brouter à flanc de colline",
+   "target": "les moutons",
+   "voice": "female"
+  },
+  {
+   "phrase": "se jeter du haut d'une falaise",
+   "target": "la cascade",
+   "voice": "female"
+  },
+  {
+   "phrase": "être calé sur un rocher",
+   "target": "le téléphone",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cascade",
+   "voice": "female"
+  },
+  {
+   "word": "l'arc-en-ciel",
+   "voice": "female"
+  },
+  {
+   "word": "le téléphone",
+   "voice": "female"
+  },
+  {
+   "word": "le rocher",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les amis ?",
+ "answer": [
+  "Ils",
+  "posent",
+  "pour",
+  "une",
+  "photo",
+  "de",
+  "groupe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brouter",
+     "gap": true,
+     "accept": [
+      "brouter",
+      "paître"
+     ]
+    },
+    {
+     "text": "à flanc de colline"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se jeter"
+    },
+    {
+     "text": "du haut d'une"
+    },
+    {
+     "text": "falaise",
+     "gap": true,
+     "accept": [
+      "falaise"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "calé",
+     "gap": true,
+     "accept": [
+      "calé",
+      "posé"
+     ]
+    },
+    {
+     "text": "sur un rocher"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "posent",
+     "gap": true,
+     "accept": [
+      "posent"
+     ]
+    },
+    {
+     "text": "pour une photo de groupe"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord copied as in the source ('une excursion', indefinite article, unlike the other fr key words with the definite article); proposal 'l'excursion'. The key word is not a noun of the set, so no noun row and it appears in no row. Phrase 3: the phone propped up on the boulder for the group photo ('être calé sur un rocher'). Answer kept without 'devant la cascade' to keep one word order."
+}

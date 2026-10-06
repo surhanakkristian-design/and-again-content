@@ -1,0 +1,113 @@
+{
+ "mediaId": 300,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le drapeau",
+ "taps": [
+  {
+   "phrase": "tirer sur la corde",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "flotter au vent",
+   "target": "le drapeau",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever les yeux vers le drapeau",
+   "target": "la fille",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le drapeau",
+   "voice": "female"
+  },
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "les montagnes",
+   "voice": "female"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  }
+ ],
+ "question": "Que regarde la fille ?",
+ "answer": [
+  "Elle",
+  "regarde",
+  "le",
+  "drapeau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer sur la"
+    },
+    {
+     "text": "corde",
+     "gap": true,
+     "accept": [
+      "corde"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotter au"
+    },
+    {
+     "text": "vent",
+     "gap": true,
+     "accept": [
+      "vent"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever les yeux vers le"
+    },
+    {
+     "text": "drapeau",
+     "gap": true,
+     "accept": [
+      "drapeau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde",
+     "gap": true,
+     "accept": [
+      "regarde"
+     ]
+    },
+    {
+     "text": "le drapeau"
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

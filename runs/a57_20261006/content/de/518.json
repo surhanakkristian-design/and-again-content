@@ -1,0 +1,129 @@
+{
+ "mediaId": 518,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Eule",
+ "taps": [
+  {
+   "phrase": "auf einem Ast sitzen",
+   "target": "die Eule",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Kopf drehen",
+   "target": "die Eule",
+   "voice": "female"
+  },
+  {
+   "phrase": "durch den Wald fliegen",
+   "target": "die Eule",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Eule",
+   "voice": "female"
+  },
+  {
+   "word": "der Ast",
+   "voice": "female"
+  },
+  {
+   "word": "der Baum",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Eule?",
+ "answer": [
+  "Die",
+  "Eule",
+  "sitzt",
+  "auf",
+  "einem",
+  "Ast."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem Ast"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Kopf",
+     "gap": true,
+     "accept": [
+      "Kopf"
+     ]
+    },
+    {
+     "text": "drehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch den Wald"
+    },
+    {
+     "text": "fliegen",
+     "gap": true,
+     "accept": [
+      "fliegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Eule",
+     "gap": true,
+     "accept": [
+      "Eule"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzt auf einem"
+    },
+    {
+     "text": "Ast",
+     "gap": true,
+     "accept": [
+      "Ast"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'fly through the trees' rendered naturally as 'durch den Wald fliegen'. Tap boxes are OFF in the plain forest frames (owl out of shot)."
+}

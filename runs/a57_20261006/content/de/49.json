@@ -1,0 +1,128 @@
+{
+ "mediaId": 49,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Pfeil",
+ "taps": [
+  {
+   "phrase": "ihren Pfeil aus der Zielscheibe ziehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Gestell stehen",
+   "target": "die Zielscheibe",
+   "voice": "female"
+  },
+  {
+   "phrase": "hinter der Bogenschützin stehen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "der Pfeil",
+   "voice": "female"
+  },
+  {
+   "word": "die Zielscheibe",
+   "voice": "female"
+  },
+  {
+   "word": "das Gras",
+   "voice": "female"
+  }
+ ],
+ "question": "Was hat der Pfeil getroffen?",
+ "answer": [
+  "Der",
+  "Pfeil",
+  "hat",
+  "die",
+  "Mitte",
+  "der",
+  "Zielscheibe",
+  "getroffen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ihren"
+    },
+    {
+     "text": "Pfeil",
+     "gap": true,
+     "accept": [
+      "Pfeil"
+     ]
+    },
+    {
+     "text": "aus der Zielscheibe ziehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Gestell",
+     "gap": true,
+     "accept": [
+      "Gestell",
+      "Ständer"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter der"
+    },
+    {
+     "text": "Bogenschützin",
+     "gap": true,
+     "accept": [
+      "Bogenschützin",
+      "Frau"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hat die Mitte der Zielscheibe"
+    },
+    {
+     "text": "getroffen",
+     "gap": true,
+     "accept": [
+      "getroffen"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 boxes also cover the frames where she holds the arrow up before shooting; written for the retrieval (pulling it out of the target) seen in the later boxed frames."
+}

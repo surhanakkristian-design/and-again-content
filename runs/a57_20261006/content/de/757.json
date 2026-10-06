@@ -1,0 +1,119 @@
+{
+  "mediaId": 757,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Überraschung",
+  "taps": [
+    {
+      "phrase": "ihr einen Karton geben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Karton öffnen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen kleinen Hund halten",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "der Hund",
+      "voice": "female"
+    },
+    {
+      "word": "der Karton",
+      "voice": "female"
+    },
+    {
+      "word": "der Tisch",
+      "voice": "female"
+    }
+  ],
+  "question": "Was hält die Frau?",
+  "answer": [
+    "Sie",
+    "hält",
+    "einen",
+    "kleinen",
+    "Hund."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ihr einen"
+        },
+        {
+          "text": "Karton",
+          "gap": true,
+          "accept": [
+            "Karton"
+          ]
+        },
+        {
+          "text": "geben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Karton"
+        },
+        {
+          "text": "öffnen",
+          "gap": true,
+          "accept": [
+            "öffnen",
+            "aufmachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen kleinen Hund"
+        },
+        {
+          "text": "halten",
+          "gap": true,
+          "accept": [
+            "halten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält einen kleinen"
+        },
+        {
+          "text": "Hund",
+          "gap": true,
+          "accept": [
+            "Hund",
+            "Welpen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'die Überraschung' is abstract and not one of the nouns; not forced into the exercises (no noun row). 'puppy' = 'der Welpe' (B1), so the level A texts use 'der Hund' / 'einen kleinen Hund'; 'Welpen' accepted in the answer row. 'der Karton' for the cardboard box (Kiste accepted). Phrase 1 'ihr einen Karton geben' only at the start of the clip."
+}

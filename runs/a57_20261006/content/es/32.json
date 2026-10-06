@@ -1,0 +1,114 @@
+{
+ "mediaId": 32,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la palabra",
+ "taps": [
+  {
+   "phrase": "tocarse la barba",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener el pelo largo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser grande y blanca",
+   "target": "la letra",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la letra",
+   "voice": "female"
+  },
+  {
+   "word": "la barba",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué se toca el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "se",
+  "toca",
+  "la",
+  "barba."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarse",
+     "gap": true,
+     "accept": [
+      "tocarse"
+     ]
+    },
+    {
+     "text": "la barba"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el"
+    },
+    {
+     "text": "pelo",
+     "gap": true,
+     "accept": [
+      "pelo"
+     ]
+    },
+    {
+     "text": "largo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser grande y"
+    },
+    {
+     "text": "blanca",
+     "gap": true,
+     "accept": [
+      "blanca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se toca la"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la palabra is not a visible thing (the clip shows the letter B; words are only spoken); no exercise text contains it, same as English. Tap 1: the man touches his beard only in the thinking moments (about 4.5 s, 8-10 s, 11-12 s); the box covers him the whole clip. At the still (3.5 s) he is not touching his beard; question follows the English one."
+}

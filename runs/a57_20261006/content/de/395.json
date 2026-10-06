@@ -1,0 +1,26 @@
+{
+  "mediaId": 395, "lang": "de", "level": "A",
+  "keyWord": "das Haus",
+  "taps": [
+    { "phrase": "einen Karton tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "den Schlüssel halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein gestreiftes T-Shirt tragen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Haus", "voice": "male" },
+    { "word": "der Himmel", "voice": "male" },
+    { "word": "das Gras", "voice": "male" },
+    { "word": "der Weg", "voice": "male" }
+  ],
+  "question": "Was trägt die Frau ins Haus?",
+  "answer": ["Sie", "trägt", "einen", "Karton", "ins", "Haus."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Karton", "gap": true, "accept": ["Karton", "Kiste"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "den Schlüssel" }, { "text": "halten", "gap": true, "accept": ["halten"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein gestreiftes" }, { "text": "T-Shirt", "gap": true, "accept": ["T-Shirt", "Shirt"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "trägt einen Karton ins" }, { "text": "Haus", "gap": true, "accept": ["Haus"] } ] }
+  ],
+  "notes": "Question says 'ins Haus' because 'Was trägt die Frau?' would be ambiguous in German (tragen = carry and wear). Phrases 1-2 are true while she walks up the path; the woman's tap boxes also cover the end, where she waves from the upstairs window (no box, no key visible). The man's box at the window still shows the striped shirt. 'Kiste' accepted for the moving box."
+}

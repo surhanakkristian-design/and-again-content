@@ -1,0 +1,140 @@
+{
+ "mediaId": 730,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la plantilla",
+ "taps": [
+  {
+   "phrase": "pasar un paño por la encimera",
+   "target": "el cocinero",
+   "voice": "male"
+  },
+  {
+   "phrase": "extender un mantel",
+   "target": "la camarera",
+   "voice": "female"
+  },
+  {
+   "phrase": "servir un capuchino en la barra",
+   "target": "el camarero de la barra",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la plantilla",
+   "voice": "female"
+  },
+  {
+   "word": "los comensales",
+   "voice": "female"
+  },
+  {
+   "word": "el mantel",
+   "voice": "female"
+  },
+  {
+   "word": "las lámparas colgantes",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la camarera?",
+ "answer": [
+  "La",
+  "camarera",
+  "está",
+  "extendiendo",
+  "un",
+  "mantel",
+  "blanco."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar un"
+    },
+    {
+     "text": "paño",
+     "gap": true,
+     "accept": [
+      "paño",
+      "trapo"
+     ]
+    },
+    {
+     "text": "por la encimera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "extender",
+     "gap": true,
+     "accept": [
+      "extender",
+      "poner"
+     ]
+    },
+    {
+     "text": "un mantel"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "servir",
+     "gap": true,
+     "accept": [
+      "servir"
+     ]
+    },
+    {
+     "text": "un capuchino en la barra"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "plantilla",
+     "gap": true,
+     "accept": [
+      "plantilla",
+      "personal"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está extendiendo un"
+    },
+    {
+     "text": "mantel",
+     "gap": true,
+     "accept": [
+      "mantel"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 box also covers the final group pose where the chef only stands arm in arm; the phrase describes the opening frames where he wipes the pass with a cloth. 'la plantilla' is fine for restaurant staff in Spain; 'el personal' is equally common (accepted in the noun row). The 'staff' pill sits on the waitress inside the posing group. Barman = 'el camarero de la barra' (Spain says camarero, not barman)."
+}

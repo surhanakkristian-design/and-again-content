@@ -1,0 +1,127 @@
+{
+ "mediaId": 155,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le fromage",
+ "taps": [
+  {
+   "phrase": "couper du fromage",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "faire cuire un sandwich à la poêle",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être couché par terre",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le fromage",
+   "voice": "female"
+  },
+  {
+   "word": "le chien",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'est-ce que l'homme fait cuire ?",
+ "answer": [
+  "Il",
+  "fait",
+  "cuire",
+  "un",
+  "sandwich",
+  "au",
+  "fromage."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "couper du"
+    },
+    {
+     "text": "fromage",
+     "gap": true,
+     "accept": [
+      "fromage"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire cuire un"
+    },
+    {
+     "text": "sandwich",
+     "gap": true,
+     "accept": [
+      "sandwich"
+     ]
+    },
+    {
+     "text": "à la poêle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "couché",
+     "gap": true,
+     "accept": [
+      "couché",
+      "allongé"
+     ]
+    },
+    {
+     "text": "par terre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait"
+    },
+    {
+     "text": "cuire",
+     "gap": true,
+     "accept": [
+      "cuire",
+      "griller"
+     ]
+    },
+    {
+     "text": "un sandwich au fromage"
+    }
+   ]
+  }
+ ],
+ "notes": "'faire frire' avoided: a grilled cheese in a pan is 'faire cuire' (or 'faire griller') in France. Phrase 1 box also covers frames where the woman bites, grates and stretches the cheese; cutting is what she does most clearly. Dog lies (asleep) on a rug on the floor."
+}

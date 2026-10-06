@@ -1,0 +1,124 @@
+{
+  "mediaId": 246,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "conduire",
+  "taps": [
+    {
+      "phrase": "conduire la voiture",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter un bonnet gris",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "sourire à la conductrice",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le rétroviseur",
+      "voice": "female"
+    },
+    {
+      "word": "la mer",
+      "voice": "female"
+    },
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "conduit",
+    "une",
+    "voiture",
+    "au",
+    "bord",
+    "de",
+    "la",
+    "mer."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "conduire",
+          "gap": true,
+          "accept": [
+            "conduire"
+          ]
+        },
+        {
+          "text": "la voiture"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un"
+        },
+        {
+          "text": "bonnet",
+          "gap": true,
+          "accept": [
+            "bonnet"
+          ]
+        },
+        {
+          "text": "gris"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sourire",
+          "gap": true,
+          "accept": [
+            "sourire"
+          ]
+        },
+        {
+          "text": "à la conductrice"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "conduit une voiture"
+        },
+        {
+          "text": "au bord de la"
+        },
+        {
+          "text": "mer",
+          "gap": true,
+          "accept": [
+            "mer"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'conduire' is a verb while English 'driving' is a noun (the activity); kept unchanged, it reads naturally in phrase 1 and the answer (owner may prefer 'la conduite'). The grey hat is a knitted beanie: 'un bonnet' is the everyday French word. Mirror = the rear-view mirror: 'le rétroviseur' is the only natural word (slightly above A2, plain right word). In the first box frames only hands on the wheel are visible (still the woman driving)."
+}

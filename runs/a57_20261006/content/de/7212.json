@@ -1,0 +1,26 @@
+{
+  "mediaId": 7212, "lang": "de", "level": "A",
+  "keyWord": "frühstücken",
+  "taps": [
+    { "phrase": "über den Wolken frühstücken", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine Gabel halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf ihr Essen schauen", "target": "der schwarze Vogel", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Vogel", "voice": "female" },
+    { "word": "die Tasse", "voice": "female" },
+    { "word": "der Teller", "voice": "female" },
+    { "word": "die Mütze", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "frühstückt", "über", "den", "Wolken."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über den Wolken" }, { "text": "frühstücken", "gap": true, "accept": ["frühstücken", "essen"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Gabel", "gap": true, "accept": ["Gabel"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "auf ihr" }, { "text": "Essen", "gap": true, "accept": ["Essen", "Frühstück"] }, { "text": "schauen" } ] },
+    { "from": "answer", "parts": [ { "text": "frühstückt über den" }, { "text": "Wolken", "gap": true, "accept": ["Wolken"] } ] }
+  ],
+  "notes": "Phrase 1 extended to 'über den Wolken frühstücken' (the bare key word would be a one-word phrase). Noun 1 'der Vogel' = the raven (A-level word; 'der Rabe' would be more exact). The cup is an enamel mug; 'die Tasse' is the everyday A1 word. Answer row gaps 'Wolken' so it does not mirror tap row 1."
+}

@@ -1,0 +1,120 @@
+{
+ "mediaId": 285,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la famille",
+ "taps": [
+  {
+   "phrase": "prendre une photo de famille",
+   "target": "l'homme à l'appareil photo",
+   "voice": "male"
+  },
+  {
+   "phrase": "agiter les deux mains",
+   "target": "l'homme à l'appareil photo",
+   "voice": "male"
+  },
+  {
+   "phrase": "monter les marches en courant",
+   "target": "le chien",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  },
+  {
+   "word": "la famille",
+   "voice": "male"
+  },
+  {
+   "word": "les marches",
+   "voice": "male"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la famille ?",
+ "answer": [
+  "Elle",
+  "prend",
+  "une",
+  "photo",
+  "de",
+  "famille."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre une photo de"
+    },
+    {
+     "text": "famille",
+     "gap": true,
+     "accept": [
+      "famille"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agiter",
+     "gap": true,
+     "accept": [
+      "agiter",
+      "lever"
+     ]
+    },
+    {
+     "text": "les deux mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "monter les"
+    },
+    {
+     "text": "marches",
+     "gap": true,
+     "accept": [
+      "marches"
+     ]
+    },
+    {
+     "text": "en courant"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend",
+     "gap": true,
+     "accept": [
+      "prend",
+      "fait"
+     ]
+    },
+    {
+     "text": "une photo de famille"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the green box covers the grandpa at the camera and posing; he waves both hands only in a few frames (kept as English). Phrase 3: the dog runs up the steps in two frames, in most blue frames it sits on the grandmother's lap. Answer subject 'Elle' = la famille; answerVoice kept male."
+}

@@ -1,0 +1,123 @@
+{
+  "mediaId": 251,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la mancuerna",
+  "taps": [
+    {
+      "phrase": "entrenar los bíceps",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "tomarse el café a sorbos",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "estar sentada con las piernas cruzadas",
+      "target": "la mujer",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la mancuerna",
+      "voice": "male"
+    },
+    {
+      "word": "la palmera",
+      "voice": "male"
+    },
+    {
+      "word": "el sillón",
+      "voice": "male"
+    },
+    {
+      "word": "la ventana",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "Está",
+    "entrenando",
+    "los",
+    "bíceps",
+    "con",
+    "una",
+    "mancuerna."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "entrenar",
+          "gap": true,
+          "accept": [
+            "entrenar",
+            "ejercitar",
+            "trabajar"
+          ]
+        },
+        {
+          "text": "los bíceps"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tomarse el café a"
+        },
+        {
+          "text": "sorbos",
+          "gap": true,
+          "accept": [
+            "sorbos",
+            "sorbitos"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar sentada con las"
+        },
+        {
+          "text": "piernas",
+          "gap": true,
+          "accept": [
+            "piernas"
+          ]
+        },
+        {
+          "text": "cruzadas"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está entrenando los bíceps con una"
+        },
+        {
+          "text": "mancuerna",
+          "gap": true,
+          "accept": [
+            "mancuerna",
+            "pesa"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "'entrenar los bíceps' instead of the gym anglicism 'hacer curl de bíceps'; phrase 1 box also covers picking up the dumbbell and the overhead press (all training). Woman's box includes a few clapping frames; she sips coffee in most."
+}

@@ -1,0 +1,121 @@
+{
+  "mediaId": 5215,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Radfahren",
+  "taps": [
+    {
+      "phrase": "vor den anderen fahren",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "über eine Brücke fahren",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein buntes Trikot tragen",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Berg",
+      "voice": "female"
+    },
+    {
+      "word": "der Helm",
+      "voice": "female"
+    },
+    {
+      "word": "das Fahrrad",
+      "voice": "female"
+    },
+    {
+      "word": "die Straße",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "fährt",
+    "schnell",
+    "Rad."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "vor den anderen"
+        },
+        {
+          "text": "fahren",
+          "gap": true,
+          "accept": [
+            "fahren"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über eine"
+        },
+        {
+          "text": "Brücke",
+          "gap": true,
+          "accept": [
+            "Brücke"
+          ]
+        },
+        {
+          "text": "fahren"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein buntes"
+        },
+        {
+          "text": "Trikot",
+          "gap": true,
+          "accept": [
+            "Trikot",
+            "Shirt"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fährt schnell"
+        },
+        {
+          "text": "Rad",
+          "gap": true,
+          "accept": [
+            "Rad",
+            "Fahrrad"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "All three English tap boxes are the same woman. Phrase 1: the other riders are behind her on the road (the camera faces her), so 'vor den anderen fahren'; in the last frames (bridge) no other riders are visible. Phrase 2 is only true at the end (bridge). 'das Trikot' is the everyday word for a cycling shirt (known from football, A2). Key word 'das Radfahren' is a nominalised verb; the answer uses it as 'Rad fahren' ('Sie fährt schnell Rad.'). No noun row: the key word is not one of the nouns."
+}

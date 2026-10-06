@@ -1,0 +1,121 @@
+{
+  "mediaId": 25,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Tacker",
+  "taps": [
+    {
+      "phrase": "einen roten Tacker benutzen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "das Papier hochheben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Tacker öffnen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Mann",
+      "voice": "male"
+    },
+    {
+      "word": "die Pflanze",
+      "voice": "male"
+    },
+    {
+      "word": "der Tacker",
+      "voice": "male"
+    },
+    {
+      "word": "das Papier",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "benutzt",
+    "einen",
+    "roten",
+    "Tacker."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen roten"
+        },
+        {
+          "text": "Tacker",
+          "gap": true,
+          "accept": [
+            "Tacker",
+            "Hefter"
+          ]
+        },
+        {
+          "text": "benutzen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "das Papier"
+        },
+        {
+          "text": "hochheben",
+          "gap": true,
+          "accept": [
+            "hochheben",
+            "hochhalten",
+            "heben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Tacker"
+        },
+        {
+          "text": "öffnen",
+          "gap": true,
+          "accept": [
+            "öffnen",
+            "aufmachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "benutzt",
+          "gap": true,
+          "accept": [
+            "benutzt"
+          ]
+        },
+        {
+          "text": "einen roten Tacker"
+        }
+      ]
+    }
+  ],
+  "notes": "'der Tacker' is the everyday word in Germany ('der Hefter' also accepted in the recall). Key word in tap rows, so no noun row."
+}

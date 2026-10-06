@@ -1,0 +1,26 @@
+{
+  "mediaId": 12, "lang": "de", "level": "A",
+  "keyWord": "umarmen",
+  "taps": [
+    { "phrase": "kurze Haare haben", "target": "der Mann", "voice": "male" },
+    { "phrase": "lange Haare haben", "target": "die Frau", "voice": "female" },
+    { "phrase": "am Himmel scheinen", "target": "die Sonne", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Sonne", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "das Gras", "voice": "female" }
+  ],
+  "question": "Was machen der Mann und die Frau?",
+  "answer": ["Sie", "umarmen", "sich", "im", "Gras."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "kurze" }, { "text": "Haare", "gap": true, "accept": ["Haare"] }, { "text": "haben" } ] },
+    { "from": "taps", "parts": [ { "text": "lange", "gap": true, "accept": ["lange"] }, { "text": "Haare haben" } ] },
+    { "from": "taps", "parts": [ { "text": "am Himmel" }, { "text": "scheinen", "gap": true, "accept": ["scheinen", "leuchten"] } ] },
+    { "from": "answer", "parts": [ { "text": "umarmen", "gap": true, "accept": ["umarmen"] }, { "text": "sich im Gras" } ] }
+  ],
+  "notes": "Rows 1 and 2 gap different words so they do not look alike once blanked ('kurze ___ haben' vs '___ Haare haben'). The sun sits low over the hills, but 'am Himmel scheinen' is still true and A-level."
+}

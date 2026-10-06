@@ -1,0 +1,118 @@
+{
+ "mediaId": 275,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "discutir",
+ "taps": [
+  {
+   "phrase": "señalar con el dedo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "mirar hacia arriba y pensar",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír al hombre",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las cortinas",
+   "voice": "male"
+  },
+  {
+   "word": "el sofá",
+   "voice": "male"
+  },
+  {
+   "word": "la mesa",
+   "voice": "male"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hacen el hombre y la mujer?",
+ "answer": [
+  "El",
+  "hombre",
+  "y",
+  "la",
+  "mujer",
+  "discuten",
+  "en",
+  "el",
+  "salón."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar con el"
+    },
+    {
+     "text": "dedo",
+     "gap": true,
+     "accept": [
+      "dedo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar hacia arriba y"
+    },
+    {
+     "text": "pensar",
+     "gap": true,
+     "accept": [
+      "pensar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "al hombre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "discuten",
+     "gap": true,
+     "accept": [
+      "discuten"
+     ]
+    },
+    {
+     "text": "en el salón"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer subject 'El hombre y la mujer' is mixed; voice kept male as in English."
+}

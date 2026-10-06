@@ -1,0 +1,124 @@
+{
+ "mediaId": 246,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Fahren",
+ "taps": [
+  {
+   "phrase": "Auto fahren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "das Lenkrad halten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Fahrerin anlächeln",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Spiegel",
+   "voice": "female"
+  },
+  {
+   "word": "das Meer",
+   "voice": "female"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "fährt",
+  "mit",
+  "dem",
+  "Auto",
+  "am",
+  "Meer",
+  "entlang."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Auto"
+    },
+    {
+     "text": "fahren",
+     "gap": true,
+     "accept": [
+      "fahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Lenkrad",
+     "gap": true,
+     "accept": [
+      "Lenkrad"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Fahrerin"
+    },
+    {
+     "text": "anlächeln",
+     "gap": true,
+     "accept": [
+      "anlächeln",
+      "anlachen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt mit dem Auto am"
+    },
+    {
+     "text": "Meer",
+     "gap": true,
+     "accept": [
+      "Meer"
+     ]
+    },
+    {
+     "text": "entlang"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the English tap box 2 ('to wear a grey hat') is the same box as phrase 1 and shows only her hands on the steering wheel in most boxed frames (the hat is visible only in the last seconds), so the phrase says what she does there: 'das Lenkrad halten'. Noun 1 is the rear-view mirror: 'der Spiegel' (A-level) rather than 'der Rückspiegel'. Key word 'das Fahren' is the noun; the phrase uses the verb 'Auto fahren' and the answer 'fährt'; not a noun of the set, so no noun row. Answer: German also allows 'Sie fährt am Meer mit dem Auto entlang' (less natural)."
+}

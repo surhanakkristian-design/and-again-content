@@ -1,0 +1,124 @@
+{
+ "mediaId": 233,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "dislocar",
+ "taps": [
+  {
+   "phrase": "agarrarse el hombro lesionado",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "arrodillarse junto al escalador",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar enrollada sobre la hierba",
+   "target": "la cuerda",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el casco",
+   "voice": "male"
+  },
+  {
+   "word": "el hombro",
+   "voice": "male"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "se",
+  "está",
+  "agarrando",
+  "el",
+  "hombro",
+  "lesionado."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrarse el"
+    },
+    {
+     "text": "hombro",
+     "gap": true,
+     "accept": [
+      "hombro"
+     ]
+    },
+    {
+     "text": "lesionado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arrodillarse",
+     "gap": true,
+     "accept": [
+      "arrodillarse"
+     ]
+    },
+    {
+     "text": "junto al escalador"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "enrollada",
+     "gap": true,
+     "accept": [
+      "enrollada"
+     ]
+    },
+    {
+     "text": "sobre la hierba"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se está agarrando el hombro"
+    },
+    {
+     "text": "lesionado",
+     "gap": true,
+     "accept": [
+      "lesionado",
+      "herido"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'dislocar' is not shown as such (fall + clutching the shoulder); not forced into the phrases. Phrase 1 box also covers the opening frames of the fall/landing; written for what the man does in most boxed frames."
+}

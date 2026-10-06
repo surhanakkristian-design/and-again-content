@@ -1,0 +1,120 @@
+{
+ "mediaId": 11,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la biblioteca",
+ "taps": [
+  {
+   "phrase": "llevar un bolso grande",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "caminar entre las estanterías",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser alta y redonda",
+   "target": "la torre de libros",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los libros",
+   "voice": "female"
+  },
+  {
+   "word": "el pelo",
+   "voice": "female"
+  },
+  {
+   "word": "el abrigo",
+   "voice": "female"
+  },
+  {
+   "word": "el bolso",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "mirando",
+  "los",
+  "libros."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "bolso",
+     "gap": true,
+     "accept": [
+      "bolso"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar entre las"
+    },
+    {
+     "text": "estanterías",
+     "gap": true,
+     "accept": [
+      "estanterías"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser alta y"
+    },
+    {
+     "text": "redonda",
+     "gap": true,
+     "accept": [
+      "redonda"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "mirando",
+     "gap": true,
+     "accept": [
+      "mirando",
+      "observando"
+     ]
+    },
+    {
+     "text": "los libros"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la biblioteca' is not among the nouns and fits no tap target, so no recall row can gap it. Answer simplifies 'looking up at' to 'mirando' (A level); she looks up at the shelves. 'estanterías' is A2."
+}

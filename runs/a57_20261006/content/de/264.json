@@ -1,0 +1,125 @@
+{
+  "mediaId": 264,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Emotion",
+  "taps": [
+    {
+      "phrase": "einen Blumenstrauß umklammern",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "sich an das Geländer lehnen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Gepäckwagen schieben",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Blumenstrauß",
+      "voice": "female"
+    },
+    {
+      "word": "die Strickjacke",
+      "voice": "female"
+    },
+    {
+      "word": "das Geländer",
+      "voice": "female"
+    },
+    {
+      "word": "die Jeans",
+      "voice": "female"
+    }
+  ],
+  "question": "Was hält die Frau in den Händen?",
+  "answer": [
+    "Sie",
+    "umklammert",
+    "einen",
+    "gelben",
+    "Blumenstrauß."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Blumenstrauß"
+        },
+        {
+          "text": "umklammern",
+          "gap": true,
+          "accept": [
+            "umklammern",
+            "festhalten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich an das"
+        },
+        {
+          "text": "Geländer",
+          "gap": true,
+          "accept": [
+            "Geländer"
+          ]
+        },
+        {
+          "text": "lehnen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Gepäckwagen",
+          "gap": true,
+          "accept": [
+            "Gepäckwagen",
+            "Kofferkuli"
+          ]
+        },
+        {
+          "text": "schieben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "umklammert einen"
+        },
+        {
+          "text": "gelben",
+          "gap": true,
+          "accept": [
+            "gelben"
+          ]
+        },
+        {
+          "text": "Blumenstrauß"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word die Emotion is not a pill or phrase (same as English). Gepäckwagen/Kofferkuli both accepted. 'sich an das Geländer lehnen': she stands at the railing with hands/bouquet resting on it."
+}

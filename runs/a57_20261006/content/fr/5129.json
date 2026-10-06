@@ -1,0 +1,130 @@
+{
+ "mediaId": 5129,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la bâche",
+ "taps": [
+  {
+   "phrase": "peindre un mur",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "retirer le ruban adhésif",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "devenir orange",
+   "target": "le mur",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le casque",
+   "voice": "male"
+  },
+  {
+   "word": "la bâche",
+   "voice": "male"
+  },
+  {
+   "word": "le mur",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "peint",
+  "le",
+  "mur",
+  "en",
+  "orange."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "peindre",
+     "gap": true,
+     "accept": [
+      "peindre"
+     ]
+    },
+    {
+     "text": "un mur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "retirer",
+     "gap": true,
+     "accept": [
+      "retirer",
+      "enlever"
+     ]
+    },
+    {
+     "text": "le ruban adhésif"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "devenir"
+    },
+    {
+     "text": "orange",
+     "gap": true,
+     "accept": [
+      "orange"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "bâche",
+     "gap": true,
+     "accept": [
+      "bâche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "peint le"
+    },
+    {
+     "text": "mur",
+     "gap": true,
+     "accept": [
+      "mur"
+     ]
+    },
+    {
+     "text": "en orange"
+    }
+   ]
+  }
+ ],
+ "notes": "'la bâche' fits the plastic sheeting over the furniture well. The green box 2 covers the whole clip but the man only pulls off the tape in the last frames; phrase written for the action shown. 'headphones' -> 'le casque' (over-ear headphones)."
+}

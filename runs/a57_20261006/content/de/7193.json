@@ -1,0 +1,27 @@
+{
+  "mediaId": 7193, "lang": "de", "level": "A",
+  "keyWord": "die Oma",
+  "taps": [
+    { "phrase": "einen roten Traktor fahren", "target": "die Oma", "voice": "female" },
+    { "phrase": "ein weißes Kleid tragen", "target": "die Braut", "voice": "female" },
+    { "phrase": "dem Traktor hinterherlaufen", "target": "der Hund", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "die Oma", "voice": "female" },
+    { "word": "der Traktor", "voice": "female" },
+    { "word": "der Hund", "voice": "female" }
+  ],
+  "question": "Was macht die Oma?",
+  "answer": ["Sie", "fährt", "einen", "roten", "Traktor."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen roten Traktor" }, { "text": "fahren", "gap": true, "accept": ["fahren", "lenken"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein weißes" }, { "text": "Kleid", "gap": true, "accept": ["Kleid", "Brautkleid"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "dem Traktor" }, { "text": "hinterherlaufen", "gap": true, "accept": ["hinterherlaufen", "hinterherrennen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Oma", "gap": true, "accept": ["Oma", "Großmutter"] } ] },
+    { "from": "answer", "parts": [ { "text": "fährt einen roten" }, { "text": "Traktor", "gap": true, "accept": ["Traktor", "Trecker"] } ] }
+  ],
+  "notes": "The dog appears only in the last frames (running behind/beside the tractor in the dust); 'hinterherlaufen' fits what is shown. Target 'die Braut' is for the verifier only. Noun row 'die Oma' added because the key word is in no other row."
+}

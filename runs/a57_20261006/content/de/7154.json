@@ -1,0 +1,124 @@
+{
+ "mediaId": 7154,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "herumkommen",
+ "taps": [
+  {
+   "phrase": "auf einem Einrad balancieren",
+   "target": "der Mann im Anzug",
+   "voice": "male"
+  },
+  {
+   "phrase": "an seinem Kaffee nippen",
+   "target": "der Mann im Anzug",
+   "voice": "male"
+  },
+  {
+   "phrase": "hinter dem Einradfahrer herradeln",
+   "target": "der Radfahrer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Doppeldeckerbus",
+   "voice": "male"
+  },
+  {
+   "word": "das Taxi",
+   "voice": "male"
+  },
+  {
+   "word": "die Aktentasche",
+   "voice": "male"
+  },
+  {
+   "word": "das Einrad",
+   "voice": "male"
+  }
+ ],
+ "question": "Wie bewegt sich der Geschäftsmann fort?",
+ "answer": [
+  "Er",
+  "fährt",
+  "mit",
+  "einem",
+  "Einrad",
+  "durch",
+  "den",
+  "dichten",
+  "Verkehr."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Einrad",
+     "gap": true,
+     "accept": [
+      "Einrad"
+     ]
+    },
+    {
+     "text": "balancieren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an seinem Kaffee"
+    },
+    {
+     "text": "nippen",
+     "gap": true,
+     "accept": [
+      "nippen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter dem Einradfahrer"
+    },
+    {
+     "text": "herradeln",
+     "gap": true,
+     "accept": [
+      "herradeln",
+      "herfahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt mit einem Einrad durch den dichten"
+    },
+    {
+     "text": "Verkehr",
+     "gap": true,
+     "accept": [
+      "Verkehr",
+      "Stadtverkehr",
+      "Berufsverkehr"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'herumkommen' means 'to travel widely' (Er kommt viel herum), not 'to get from place to place'; it does not fit the clip and is not used. Proposal: 'sich fortbewegen' (used in the question). Answer chips: 'durch den Berufsverkehr' could marginally move before 'mit einem Einrad'. 'Berufsverkehr' inferred from busy morning traffic. Verifier: 'Berufsverkehr' replaced by 'dichten Verkehr' (rush hour not shown)."
+}

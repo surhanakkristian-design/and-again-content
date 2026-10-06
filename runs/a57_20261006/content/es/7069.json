@@ -1,0 +1,120 @@
+{
+  "mediaId": 7069,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "llegar conduciendo",
+  "taps": [
+    {
+      "phrase": "quitarse el sombrero de paja",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "estar de pie en el umbral",
+      "target": "la joven",
+      "voice": "female"
+    },
+    {
+      "phrase": "asomarse a la ventana",
+      "target": "la anciana",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el tractor",
+      "voice": "male"
+    },
+    {
+      "word": "los girasoles",
+      "voice": "male"
+    },
+    {
+      "word": "el sombrero de paja",
+      "voice": "male"
+    },
+    {
+      "word": "la grava",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hace el hombre?",
+  "answer": [
+    "Llega",
+    "conduciendo",
+    "un",
+    "tractor",
+    "rojo."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "quitarse el"
+        },
+        {
+          "text": "sombrero",
+          "gap": true,
+          "accept": [
+            "sombrero"
+          ]
+        },
+        {
+          "text": "de paja"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar de pie en el"
+        },
+        {
+          "text": "umbral",
+          "gap": true,
+          "accept": [
+            "umbral"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "asomarse",
+          "gap": true,
+          "accept": [
+            "asomarse"
+          ]
+        },
+        {
+          "text": "a la ventana"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Llega"
+        },
+        {
+          "text": "conduciendo",
+          "gap": true,
+          "accept": [
+            "conduciendo"
+          ]
+        },
+        {
+          "text": "un tractor rojo"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'llegar conduciendo' is a paraphrase, not a dictionary entry; used naturally in the answer. Answer drops the subject; question in simple present (natural es for an ongoing action). 'quitarse el sombrero' = lifting the hat off in greeting, as shown."
+}

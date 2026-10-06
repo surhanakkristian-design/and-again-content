@@ -1,0 +1,140 @@
+{
+ "mediaId": 6849,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "une automobile",
+ "taps": [
+  {
+   "phrase": "descendre lentement la ruelle pavée",
+   "target": "la voiture rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "serrer un panier rempli de pain",
+   "target": "la vieille dame",
+   "voice": "female"
+  },
+  {
+   "phrase": "retenir son vélo",
+   "target": "le jeune homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la vieille automobile",
+   "voice": "female"
+  },
+  {
+   "word": "le panier",
+   "voice": "female"
+  },
+  {
+   "word": "le linge",
+   "voice": "female"
+  },
+  {
+   "word": "les pavés",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'automobile rouge ?",
+ "answer": [
+  "L'automobile",
+  "descend",
+  "les",
+  "marches",
+  "en",
+  "pierre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descendre lentement la"
+    },
+    {
+     "text": "ruelle",
+     "gap": true,
+     "accept": [
+      "ruelle",
+      "rue"
+     ]
+    },
+    {
+     "text": "pavée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer",
+     "gap": true,
+     "accept": [
+      "serrer",
+      "tenir"
+     ]
+    },
+    {
+     "text": "un panier rempli de pain"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "retenir son"
+    },
+    {
+     "text": "vélo",
+     "gap": true,
+     "accept": [
+      "vélo",
+      "bicyclette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la vieille"
+    },
+    {
+     "text": "automobile",
+     "gap": true,
+     "accept": [
+      "automobile",
+      "voiture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "descend les"
+    },
+    {
+     "text": "marches",
+     "gap": true,
+     "accept": [
+      "marches"
+     ]
+    },
+    {
+     "text": "en pierre"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 is 'la vieille automobile' (vintage car) instead of plain 'l'automobile': the key word needs its own noun recall row and the elided 'l'automobile' cannot be cut into parts. If the verifier prefers 'l'automobile', the noun row must change. keyWord copied as 'une automobile' (indefinite in the database)."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 6949,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el chocolate caliente",
+ "taps": [
+  {
+   "phrase": "servir chocolate caliente",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un vestido dorado",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber de una taza",
+   "target": "el hombre del gorro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el chocolate caliente",
+   "voice": "female"
+  },
+  {
+   "word": "el vestido",
+   "voice": "female"
+  },
+  {
+   "word": "la mano",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "sirviendo",
+  "chocolate",
+  "caliente",
+  "en",
+  "una",
+  "taza."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "servir"
+    },
+    {
+     "text": "chocolate",
+     "gap": true,
+     "accept": [
+      "chocolate"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "vestido",
+     "gap": true,
+     "accept": [
+      "vestido"
+     ]
+    },
+    {
+     "text": "dorado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber",
+     "gap": true,
+     "accept": [
+      "beber"
+     ]
+    },
+    {
+     "text": "de una taza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "sirviendo",
+     "gap": true,
+     "accept": [
+      "sirviendo",
+      "echando"
+     ]
+    },
+    {
+     "text": "chocolate caliente en una taza"
+    }
+   ]
+  }
+ ],
+ "notes": "'servir' (not 'verter', which is formal) is how a Spaniard says it at A level. Target 3: the man wears a knitted cap, so 'el hombre del gorro'. The glass cup has a handle, so 'la taza'. Some people in the crowd also hold cups; in the boxed frames only he drinks."
+}

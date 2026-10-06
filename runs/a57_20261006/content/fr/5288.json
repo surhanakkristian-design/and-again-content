@@ -1,0 +1,122 @@
+{
+  "mediaId": 5288,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le ski",
+  "taps": [
+    {
+      "phrase": "descendre la piste à ski",
+      "target": "le skieur en rouge",
+      "voice": "male"
+    },
+    {
+      "phrase": "être habillé en rouge",
+      "target": "le skieur en rouge",
+      "voice": "male"
+    },
+    {
+      "phrase": "sauter en l'air",
+      "target": "le skieur en rouge",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les skis",
+      "voice": "male"
+    },
+    {
+      "word": "les montagnes",
+      "voice": "male"
+    },
+    {
+      "word": "le ciel",
+      "voice": "male"
+    },
+    {
+      "word": "la neige",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait le skieur en rouge ?",
+  "answer": [
+    "Il",
+    "descend",
+    "la",
+    "piste",
+    "à",
+    "ski."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "descendre la piste à"
+        },
+        {
+          "text": "ski",
+          "gap": true,
+          "accept": [
+            "ski"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "habillé",
+          "gap": true,
+          "accept": [
+            "habillé"
+          ]
+        },
+        {
+          "text": "en rouge"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sauter",
+          "gap": true,
+          "accept": [
+            "sauter"
+          ]
+        },
+        {
+          "text": "en l'air"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "descend la"
+        },
+        {
+          "text": "piste",
+          "gap": true,
+          "accept": [
+            "piste",
+            "pente"
+          ]
+        },
+        {
+          "text": "à ski"
+        }
+      ]
+    }
+  ],
+  "notes": "Level A: 'combinaison' (suit) is above A2, so phrase 2 says 'être habillé en rouge' (A2 words, fits only the skier in red). 'piste' used for the slope (A2 in a ski context); answer row also accepts 'pente'. Phrase 3 'sauter en l'air' is only visible in the jump frames (box_04); in the other boxed frames he carves down the piste. Other skiers in the background also ski, as in English. No noun row: the key word 'ski' is already in tap row 1 and the answer row."
+}

@@ -1,0 +1,135 @@
+{
+ "mediaId": 267,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el ingeniero",
+ "taps": [
+  {
+   "phrase": "montar un robot",
+   "target": "el chico de negro",
+   "voice": "male"
+  },
+  {
+   "phrase": "coger un cubo blanco",
+   "target": "el robot",
+   "voice": "male"
+  },
+  {
+   "phrase": "aplaudir con alegría",
+   "target": "el hombre de la bata blanca",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el ingeniero",
+   "voice": "male"
+  },
+  {
+   "word": "el robot",
+   "voice": "male"
+  },
+  {
+   "word": "el portátil",
+   "voice": "male"
+  },
+  {
+   "word": "la caja",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el ingeniero?",
+ "answer": [
+  "Está",
+  "montando",
+  "un",
+  "robot."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montar un"
+    },
+    {
+     "text": "robot",
+     "gap": true,
+     "accept": [
+      "robot"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger un"
+    },
+    {
+     "text": "cubo",
+     "gap": true,
+     "accept": [
+      "cubo"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aplaudir",
+     "gap": true,
+     "accept": [
+      "aplaudir"
+     ]
+    },
+    {
+     "text": "con alegría"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "ingeniero",
+     "gap": true,
+     "accept": [
+      "ingeniero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "montando",
+     "gap": true,
+     "accept": [
+      "montando",
+      "construyendo"
+     ]
+    },
+    {
+     "text": "un robot"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'a box' is a clear plastic tray; 'la caja' kept at level A ('la bandeja' would be more exact, B1). 'montar' = assemble, the action shown; English phrase-1 box also covers frames where he types on the laptop. 'cubo blanco' so it is not read as a bucket."
+}

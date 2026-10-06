@@ -1,0 +1,26 @@
+{
+  "mediaId": 8, "lang": "de", "level": "B",
+  "keyWord": "die Schlüsselkarte",
+  "taps": [
+    { "phrase": "eine Schlüsselkarte in der Hand halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "grün aufleuchten", "target": "das Kartenlesegerät", "voice": "female" },
+    { "phrase": "sich einen Spalt breit öffnen", "target": "die Tür", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Tür", "voice": "female" },
+    { "word": "das Kartenlesegerät", "voice": "female" },
+    { "word": "die Schlüsselkarte", "voice": "female" },
+    { "word": "die Türklinke", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "schließt", "die", "Tür", "mit", "der", "Schlüsselkarte", "auf."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Schlüsselkarte", "gap": true, "accept": ["Schlüsselkarte", "Karte"] }, { "text": "in der Hand halten" } ] },
+    { "from": "taps", "parts": [ { "text": "grün" }, { "text": "aufleuchten", "gap": true, "accept": ["aufleuchten", "leuchten"] } ] },
+    { "from": "taps", "parts": [ { "text": "sich einen" }, { "text": "Spalt", "gap": true, "accept": ["Spalt"] }, { "text": "breit öffnen" } ] },
+    { "from": "answer", "parts": [ { "text": "schließt", "gap": true, "accept": ["schließt"] }, { "text": "die Tür mit der Schlüsselkarte auf" } ] }
+  ],
+  "notes": "Tap 1: the woman's box covers mostly frames where she holds the card up, taps it or presses the handle; she wheels the suitcase only in the first frames, so the phrase says what she does in most boxed frames (holding the keycard). Tap 3: the door box also covers frames where the door is still closed; it opens only partly, hence 'einen Spalt breit'. 'das Kartenlesegerät' is used for target and noun (consistent). Answer: German also allows 'Sie schließt mit der Schlüsselkarte die Tür auf' with the same chips. No noun row: the key word is in tap row 1."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 166, "lang": "fr", "level": "A",
+  "keyWord": "le cercle",
+  "taps": [
+    { "phrase": "tracer un grand cercle", "target": "la femme au bâton", "voice": "female" },
+    { "phrase": "tenir un long bâton", "target": "la femme au bâton", "voice": "female" },
+    { "phrase": "former un cercle", "target": "le groupe", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la femme", "voice": "female" },
+    { "word": "le ciel", "voice": "female" },
+    { "word": "le cercle", "voice": "female" },
+    { "word": "la mer", "voice": "female" }
+  ],
+  "question": "Que dessine la femme ?",
+  "answer": ["Elle", "dessine", "un", "cercle", "dans", "le", "sable."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tracer un grand" }, { "text": "cercle", "gap": true, "accept": ["cercle", "rond"] } ] },
+    { "from": "taps", "parts": [ { "text": "tenir un long" }, { "text": "bâton", "gap": true, "accept": ["bâton"] } ] },
+    { "from": "taps", "parts": [ { "text": "former", "gap": true, "accept": ["former", "faire"] }, { "text": "un cercle" } ] },
+    { "from": "answer", "parts": [ { "text": "dessine", "gap": true, "accept": ["dessine", "trace"] }, { "text": "un cercle dans le sable" } ] }
+  ],
+  "notes": "'tracer' (to draw a line in sand) is the natural verb for phrase 1 and common at A2; the question/answer use the plainer 'dessiner' as in English. Key noun 'le cercle' is in tap rows 1 and 3, so no noun row. Group phrase 'former un cercle' = the people standing in a ring (English 'to stand in a circle')."
+}

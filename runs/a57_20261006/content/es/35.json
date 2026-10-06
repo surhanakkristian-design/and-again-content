@@ -1,0 +1,119 @@
+{
+ "mediaId": 35,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el actor",
+ "taps": [
+  {
+   "phrase": "llorar y gritar",
+   "target": "el joven",
+   "voice": "male"
+  },
+  {
+   "phrase": "grabar con la cámara",
+   "target": "el hombre de la cámara",
+   "voice": "male"
+  },
+  {
+   "phrase": "aplaudir al actor",
+   "target": "el hombre de la gorra",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el micrófono",
+   "voice": "male"
+  },
+  {
+   "word": "la cámara",
+   "voice": "male"
+  },
+  {
+   "word": "el actor",
+   "voice": "male"
+  },
+  {
+   "word": "la silla",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el actor?",
+ "answer": [
+  "Está",
+  "llorando",
+  "delante",
+  "de",
+  "la",
+  "cámara."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llorar y"
+    },
+    {
+     "text": "gritar",
+     "gap": true,
+     "accept": [
+      "gritar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "grabar con la"
+    },
+    {
+     "text": "cámara",
+     "gap": true,
+     "accept": [
+      "cámara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aplaudir al"
+    },
+    {
+     "text": "actor",
+     "gap": true,
+     "accept": [
+      "actor"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "llorando",
+     "gap": true,
+     "accept": [
+      "llorando",
+      "gritando"
+     ]
+    },
+    {
+     "text": "delante de la cámara"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap box 1 also covers the make-up, walking to the mark and the final laughing/bowing; the phrase describes the main scene. Phrase 2: the camera stands on a tripod, so 'grabar con la cámara' instead of holding a big camera. The man in the cap sits in most boxed frames and claps at the end. No noun row: 'el actor' is in tap row 3 (gap). Answer has no subject (natural Spanish), so the answer row is the whole sentence."
+}

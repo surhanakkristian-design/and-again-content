@@ -1,0 +1,26 @@
+{
+  "mediaId": 807, "lang": "de", "level": "A",
+  "keyWord": "das Laufband",
+  "taps": [
+    { "phrase": "auf dem Laufband laufen", "target": "die Frau vorne", "voice": "female" },
+    { "phrase": "einen Knopf drücken", "target": "die Frau vorne", "voice": "female" },
+    { "phrase": "sich die Stirn abwischen", "target": "die Frau vorne", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Laufband", "voice": "female" },
+    { "word": "das T-Shirt", "voice": "female" },
+    { "word": "die Fenster", "voice": "female" },
+    { "word": "die Haare", "voice": "female" }
+  ],
+  "question": "Was macht die Frau vorne?",
+  "answer": ["Sie", "läuft", "auf", "dem", "Laufband."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf dem" }, { "text": "Laufband", "gap": true, "accept": ["Laufband"] }, { "text": "laufen" } ] },
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Knopf", "gap": true, "accept": ["Knopf"] }, { "text": "drücken" } ] },
+    { "from": "taps", "parts": [ { "text": "sich die Stirn" }, { "text": "abwischen", "gap": true, "accept": ["abwischen", "wischen"] } ] },
+    { "from": "answer", "parts": [ { "text": "läuft", "gap": true, "accept": ["läuft", "rennt"] }, { "text": "auf dem Laufband" } ] }
+  ],
+  "notes": "She wipes her forehead, so 'sich die Stirn abwischen' (English 'wipe her face'). All three boxes cover her for the whole clip; pressing the button and wiping happen only in the last frames. A woman in the background also trains, but not on a visible treadmill in front."
+}

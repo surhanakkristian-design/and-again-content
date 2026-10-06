@@ -1,0 +1,119 @@
+{
+  "mediaId": 612,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "rechts",
+  "taps": [
+    {
+      "phrase": "nach rechts zeigen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen großen Rucksack tragen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "zum Abschied winken",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Lichter",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "das Essen",
+      "voice": "female"
+    },
+    {
+      "word": "das Rad",
+      "voice": "female"
+    }
+  ],
+  "question": "Wohin zeigt die Frau?",
+  "answer": [
+    "Sie",
+    "zeigt",
+    "nach",
+    "rechts."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "nach"
+        },
+        {
+          "text": "rechts",
+          "gap": true,
+          "accept": [
+            "rechts"
+          ]
+        },
+        {
+          "text": "zeigen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen großen"
+        },
+        {
+          "text": "Rucksack",
+          "gap": true,
+          "accept": [
+            "Rucksack"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "zum Abschied"
+        },
+        {
+          "text": "winken",
+          "gap": true,
+          "accept": [
+            "winken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "zeigt",
+          "gap": true,
+          "accept": [
+            "zeigt"
+          ]
+        },
+        {
+          "text": "nach rechts"
+        }
+      ]
+    }
+  ],
+  "notes": "Taps 1 and 3 share the same box (the woman); in many boxed frames she points, she waves only at the end. Tap 1's box also covers frames where she holds a cloth or turns the man around."
+}

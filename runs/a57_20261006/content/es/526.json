@@ -1,0 +1,127 @@
+{
+ "mediaId": 526,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "paralizar",
+ "taps": [
+  {
+   "phrase": "observar al hombre paralizado",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar una taza blanca",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "quedarse tieso como un palo",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas protectoras",
+   "voice": "female"
+  },
+  {
+   "word": "el cactus",
+   "voice": "female"
+  },
+  {
+   "word": "el chándal",
+   "voice": "female"
+  },
+  {
+   "word": "la tubería",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Lo",
+  "paraliza",
+  "con",
+  "una",
+  "pistola",
+  "de",
+  "rayos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "observar",
+     "gap": true,
+     "accept": [
+      "observar",
+      "mirar"
+     ]
+    },
+    {
+     "text": "al hombre paralizado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "taza",
+     "gap": true,
+     "accept": [
+      "taza"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse"
+    },
+    {
+     "text": "tieso",
+     "gap": true,
+     "accept": [
+      "tieso",
+      "rígido"
+     ]
+    },
+    {
+     "text": "como un palo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Lo"
+    },
+    {
+     "text": "paraliza",
+     "gap": true,
+     "accept": [
+      "paraliza"
+     ]
+    },
+    {
+     "text": "con una pistola de rayos"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman fires the ray gun only in the first boxed frames; in most frames she watches, touches and waves at the frozen man, so 'observar al hombre paralizado' (key word inside, allowed). Phrase 3: he topples backwards only in the last frames; in most frames he stands frozen rigid, so 'quedarse tieso como un palo' (covers the stiff fall too). Answer subject dropped (es); 'Lo' is the object clitic, the subject is la mujer."
+}

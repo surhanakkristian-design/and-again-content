@@ -1,0 +1,122 @@
+{
+ "mediaId": 383,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la randonnée",
+ "taps": [
+  {
+   "phrase": "porter un sac à dos bleu",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un sac à dos jaune",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "voler au-dessus des montagnes",
+   "target": "les oiseaux",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "les montagnes",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font les deux personnes ?",
+ "answer": [
+  "Ils",
+  "font",
+  "de",
+  "la",
+  "randonnée",
+  "en",
+  "montagne."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "sac",
+     "gap": true,
+     "accept": [
+      "sac"
+     ]
+    },
+    {
+     "text": "à dos bleu"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un sac à dos"
+    },
+    {
+     "text": "jaune",
+     "gap": true,
+     "accept": [
+      "jaune"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voler",
+     "gap": true,
+     "accept": [
+      "voler"
+     ]
+    },
+    {
+     "text": "au-dessus des montagnes"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "font de la"
+    },
+    {
+     "text": "randonnée",
+     "gap": true,
+     "accept": [
+      "randonnée"
+     ]
+    },
+    {
+     "text": "en montagne"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 changed: the man drinks from a bottle only in the last boxed frame; in most boxed frames he hikes with a yellow backpack, so 'porter un sac à dos jaune'. The woman's phrase is also true of the blue backpack only (his is yellow)."
+}

@@ -1,0 +1,126 @@
+{
+ "mediaId": 7997,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "être la vedette",
+ "taps": [
+  {
+   "phrase": "être la vedette du spectacle",
+   "target": "la femme en robe dorée",
+   "voice": "female"
+  },
+  {
+   "phrase": "poser un genou à terre",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "danser en talons hauts",
+   "target": "la femme en noir",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les rideaux",
+   "voice": "female"
+  },
+  {
+   "word": "le projecteur",
+   "voice": "female"
+  },
+  {
+   "word": "la robe de soirée",
+   "voice": "female"
+  },
+  {
+   "word": "les feux de la rampe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en robe dorée ?",
+ "answer": [
+  "Elle",
+  "est",
+  "la",
+  "vedette",
+  "du",
+  "spectacle."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être la"
+    },
+    {
+     "text": "vedette",
+     "gap": true,
+     "accept": [
+      "vedette",
+      "star"
+     ]
+    },
+    {
+     "text": "du spectacle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "poser un"
+    },
+    {
+     "text": "genou",
+     "gap": true,
+     "accept": [
+      "genou"
+     ]
+    },
+    {
+     "text": "à terre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "danser en"
+    },
+    {
+     "text": "talons",
+     "gap": true,
+     "accept": [
+      "talons"
+     ]
+    },
+    {
+     "text": "hauts"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "est la vedette du"
+    },
+    {
+     "text": "spectacle",
+     "gap": true,
+     "accept": [
+      "spectacle",
+      "show"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2: in the first two box frames the man is still dancing; he kneels in all later frames, so the phrase describes the kneeling. Noun 4 'les feux de la rampe' is the theatre term for footlights (alternative: 'la rampe')."
+}

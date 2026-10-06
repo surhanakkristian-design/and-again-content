@@ -1,0 +1,16 @@
+{"mediaId": 5499, "lang": "fr", "level": "A", "keyWord": "la femme",
+ "taps": [{"phrase": "porter une robe rouge", "target": "la femme en rouge", "voice": "female"},
+          {"phrase": "courir dans la rue", "target": "la femme en jaune", "voice": "female"},
+          {"phrase": "arroser les fleurs", "target": "la vieille dame", "voice": "female"}],
+ "nouns": [{"word": "la femme", "voice": "female"}, {"word": "les fleurs", "voice": "female"}, {"word": "la fenêtre", "voice": "female"}, {"word": "le mur", "voice": "female"}],
+ "question": "Que fait la vieille dame ?",
+ "answer": ["Elle", "arrose", "les", "fleurs."],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {"from": "taps", "parts": [{"text": "porter une"}, {"text": "robe", "gap": true, "accept": ["robe"]}, {"text": "rouge"}]},
+  {"from": "taps", "parts": [{"text": "courir", "gap": true, "accept": ["courir"]}, {"text": "dans la rue"}]},
+  {"from": "taps", "parts": [{"text": "arroser", "gap": true, "accept": ["arroser"]}, {"text": "les fleurs"}]},
+  {"from": "nouns", "parts": [{"text": "la"}, {"text": "femme", "gap": true, "accept": ["femme", "dame"]}]},
+  {"from": "answer", "parts": [{"text": "arrose les"}, {"text": "fleurs", "gap": true, "accept": ["fleurs"]}]}],
+ "notes": "'la vieille dame' (polite everyday French) for the old woman in the question; the noun pill uses the key word 'la femme'. The woman in yellow jogs towards the camera along the market street: 'courir dans la rue'."}

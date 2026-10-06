@@ -1,0 +1,128 @@
+{
+  "mediaId": 526,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "paralyser",
+  "taps": [
+    {
+      "phrase": "faire feu avec un pistolet à rayons",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "serrer une tasse blanche",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "basculer en arrière",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les lunettes de protection",
+      "voice": "female"
+    },
+    {
+      "word": "le cactus",
+      "voice": "female"
+    },
+    {
+      "word": "le survêtement",
+      "voice": "female"
+    },
+    {
+      "word": "le tuyau",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "le",
+    "paralyse",
+    "avec",
+    "un",
+    "pistolet",
+    "à",
+    "rayons."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "faire feu avec un"
+        },
+        {
+          "text": "pistolet",
+          "gap": true,
+          "accept": [
+            "pistolet"
+          ]
+        },
+        {
+          "text": "à rayons"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "serrer une"
+        },
+        {
+          "text": "tasse",
+          "gap": true,
+          "accept": [
+            "tasse",
+            "mug"
+          ]
+        },
+        {
+          "text": "blanche"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "basculer",
+          "gap": true,
+          "accept": [
+            "basculer",
+            "tomber"
+          ]
+        },
+        {
+          "text": "en arrière"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "le"
+        },
+        {
+          "text": "paralyse",
+          "gap": true,
+          "accept": [
+            "paralyse"
+          ]
+        },
+        {
+          "text": "avec un pistolet à rayons"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: she fires only at the start (box_01); in most red-boxed frames she holds the gun, then waves at and catches the frozen man - phrase kept as English. Phrase 3: the man only tips over backwards at the end (box_05-06); in most blue-boxed frames he stands frozen. The mug ('la tasse', 'mug' also accepted) is visible in his hand until he falls. 'pistolet à rayons' = sci-fi ray gun."
+}

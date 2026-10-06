@@ -1,0 +1,123 @@
+{
+ "mediaId": 196,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la valentía",
+ "taps": [
+  {
+   "phrase": "mantener el equilibrio sobre una tabla",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrarse al cable de acero",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llegar a la plataforma de madera",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el casco",
+   "voice": "female"
+  },
+  {
+   "word": "el arnés",
+   "voice": "female"
+  },
+  {
+   "word": "la tabla",
+   "voice": "female"
+  },
+  {
+   "word": "los árboles",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Mantiene",
+  "el",
+  "equilibrio",
+  "sobre",
+  "una",
+  "tabla",
+  "estrecha."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mantener el"
+    },
+    {
+     "text": "equilibrio",
+     "gap": true,
+     "accept": [
+      "equilibrio"
+     ]
+    },
+    {
+     "text": "sobre una tabla"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrarse",
+     "gap": true,
+     "accept": [
+      "agarrarse",
+      "sujetarse"
+     ]
+    },
+    {
+     "text": "al cable de acero"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llegar a la"
+    },
+    {
+     "text": "plataforma",
+     "gap": true,
+     "accept": [
+      "plataforma"
+     ]
+    },
+    {
+     "text": "de madera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Mantiene el equilibrio sobre una tabla"
+    },
+    {
+     "text": "estrecha",
+     "gap": true,
+     "accept": [
+      "estrecha"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la valentía' is abstract and not shown as a thing or action; it is not used in any exercise (not forced). All three boxes cover the whole clip (one girl); phrase 3 happens only at the end (platform). Answer has no subject, so the answer row is the whole sentence."
+}

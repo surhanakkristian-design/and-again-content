@@ -1,0 +1,26 @@
+{
+  "mediaId": 11, "lang": "de", "level": "A",
+  "keyWord": "die Bibliothek",
+  "taps": [
+    { "phrase": "eine große Tasche tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "zwischen den Regalen gehen", "target": "die Frau", "voice": "female" },
+    { "phrase": "hoch und rund sein", "target": "der Bücherturm", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Bücher", "voice": "female" },
+    { "word": "die Haare", "voice": "female" },
+    { "word": "der Mantel", "voice": "female" },
+    { "word": "die Tasche", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "schaut", "zu", "den", "Büchern", "hoch."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine große" }, { "text": "Tasche", "gap": true, "accept": ["Tasche"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "zwischen den Regalen" }, { "text": "gehen", "gap": true, "accept": ["gehen", "laufen"] } ] },
+    { "from": "taps", "parts": [ { "text": "hoch und" }, { "text": "rund", "gap": true, "accept": ["rund"] }, { "text": "sein" } ] },
+    { "from": "answer", "parts": [ { "text": "schaut zu den" }, { "text": "Büchern", "gap": true, "accept": ["Büchern"] }, { "text": "hoch" } ] }
+  ],
+  "notes": "Taps 1 and 2 share one box; in the second half of her frames she stands at the book tower and looks up rather than walking between the shelves. Key word 'die Bibliothek' is not a noun of the set (as in English), so no noun row."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 296,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Fisch",
+ "taps": [
+  {
+   "phrase": "einen Fisch grillen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "mit einer Gabel essen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Holzbrett liegen",
+   "target": "der Fisch",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Meer",
+   "voice": "female"
+  },
+  {
+   "word": "das Boot",
+   "voice": "female"
+  },
+  {
+   "word": "der Fisch",
+   "voice": "female"
+  },
+  {
+   "word": "das Feuer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was isst die Frau?",
+ "answer": [
+  "Sie",
+  "isst",
+  "Fisch",
+  "mit",
+  "einer",
+  "Gabel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Fisch",
+     "gap": true,
+     "accept": [
+      "Fisch"
+     ]
+    },
+    {
+     "text": "grillen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit einer Gabel"
+    },
+    {
+     "text": "essen",
+     "gap": true,
+     "accept": [
+      "essen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Holzbrett",
+     "gap": true,
+     "accept": [
+      "Holzbrett",
+      "Brett",
+      "Schneidebrett"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "isst Fisch mit einer"
+    },
+    {
+     "text": "Gabel",
+     "gap": true,
+     "accept": [
+      "Gabel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: English 'hold half a lemon' is true only in 2-3 boxed frames; in most boxed frames the man holds the grill basket over the fire, brushes and squeezes lemon on the fish, so 'einen Fisch grillen' (fits only him). Phrase 3: the fish lies over the fire in ~9 boxed frames and on a wooden board in ~12, so 'auf einem Holzbrett liegen' (most boxed frames); 'über dem Feuer liegen' would be the alternative. Key word noun is in rows 1 and answer, so no noun row."
+}

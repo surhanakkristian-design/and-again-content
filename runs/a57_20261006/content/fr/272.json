@@ -1,0 +1,120 @@
+{
+ "mediaId": 272,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "s'évaporer",
+ "taps": [
+  {
+   "phrase": "incliner la poêle vide",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'évaporer de la poêle",
+   "target": "l'eau",
+   "voice": "female"
+  },
+  {
+   "phrase": "produire une flamme bleue",
+   "target": "le réchaud",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lunettes de protection",
+   "voice": "female"
+  },
+  {
+   "word": "la vapeur",
+   "voice": "female"
+  },
+  {
+   "word": "la poêle",
+   "voice": "female"
+  },
+  {
+   "word": "le réchaud",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'arrive-t-il à l'eau ?",
+ "answer": [
+  "L'eau",
+  "s'évapore",
+  "de",
+  "la",
+  "poêle",
+  "chaude."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "incliner",
+     "gap": true,
+     "accept": [
+      "incliner",
+      "pencher"
+     ]
+    },
+    {
+     "text": "la poêle vide"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'évaporer de la"
+    },
+    {
+     "text": "poêle",
+     "gap": true,
+     "accept": [
+      "poêle"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "produire une"
+    },
+    {
+     "text": "flamme",
+     "gap": true,
+     "accept": [
+      "flamme"
+     ]
+    },
+    {
+     "text": "bleue"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "s'évapore de la poêle"
+    },
+    {
+     "text": "chaude",
+     "gap": true,
+     "accept": [
+      "chaude",
+      "brûlante"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The key word 's'évaporer' is elided, so by the rule it is never a gap; it stands in tap 2 and the answer. 'le réchaud' used for the camping stove (everyday word; 'le réchaud de camping' also possible)."
+}

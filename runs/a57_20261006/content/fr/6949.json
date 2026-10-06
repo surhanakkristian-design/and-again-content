@@ -1,0 +1,119 @@
+{
+ "mediaId": 6949,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le chocolat chaud",
+ "taps": [
+  {
+   "phrase": "verser du chocolat chaud",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter une robe dorée",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "boire dans une tasse",
+   "target": "l'homme au bonnet",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chocolat chaud",
+   "voice": "female"
+  },
+  {
+   "word": "la robe",
+   "voice": "female"
+  },
+  {
+   "word": "la main",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "verse",
+  "du",
+  "chocolat",
+  "chaud",
+  "dans",
+  "une",
+  "tasse."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "verser du"
+    },
+    {
+     "text": "chocolat",
+     "gap": true,
+     "accept": [
+      "chocolat"
+     ]
+    },
+    {
+     "text": "chaud"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "robe",
+     "gap": true,
+     "accept": [
+      "robe"
+     ]
+    },
+    {
+     "text": "dorée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "dans une tasse"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "verse",
+     "gap": true,
+     "accept": [
+      "verse"
+     ]
+    },
+    {
+     "text": "du chocolat chaud dans une tasse"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'the man in the hat' wears a knitted beanie: target named 'l'homme au bonnet'. Many people in the crowd hold cups; the boxed man is the one drinking. The cup is a glass mug; 'tasse' is the natural word."
+}

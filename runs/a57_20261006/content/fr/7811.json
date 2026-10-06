@@ -1,0 +1,122 @@
+{
+  "mediaId": 7811,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "les dizaines",
+  "taps": [
+    {
+      "phrase": "donner un coup de raquette",
+      "target": "la femme en blanc",
+      "voice": "female"
+    },
+    {
+      "phrase": "s'emparer du lance-balles",
+      "target": "l'homme en vert",
+      "voice": "male"
+    },
+    {
+      "phrase": "projeter des dizaines de balles",
+      "target": "le lance-balles",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les nuages",
+      "voice": "female"
+    },
+    {
+      "word": "le lance-balles",
+      "voice": "female"
+    },
+    {
+      "word": "la raquette",
+      "voice": "female"
+    },
+    {
+      "word": "les balles de tennis",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le lance-balles ?",
+  "answer": [
+    "Il",
+    "projette",
+    "des",
+    "dizaines",
+    "de",
+    "balles",
+    "de",
+    "tennis."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "donner un coup de"
+        },
+        {
+          "text": "raquette",
+          "gap": true,
+          "accept": [
+            "raquette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "s'emparer du"
+        },
+        {
+          "text": "lance-balles",
+          "gap": true,
+          "accept": [
+            "lance-balles"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "projeter des"
+        },
+        {
+          "text": "dizaines",
+          "gap": true,
+          "accept": [
+            "dizaines"
+          ]
+        },
+        {
+          "text": "de balles"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "projette",
+          "gap": true,
+          "accept": [
+            "projette",
+            "lance",
+            "envoie"
+          ]
+        },
+        {
+          "text": "des dizaines de balles de tennis"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: the woman swings her racket at the balls in the early boxed frames; later she only holds it and laughs. Other players at the far fence carry rackets but do not swing them. 'le lance-balles' is the usual French word for a tennis ball machine. Answer subject 'Il' = le lance-balles; answerVoice kept female as in English (thing, not a person)."
+}

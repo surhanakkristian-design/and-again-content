@@ -1,0 +1,140 @@
+{
+ "mediaId": 5272,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Wanderer",
+ "taps": [
+  {
+   "phrase": "auf ihren Begleiter zeigen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen buschigen Bart haben",
+   "target": "der Mann mit Bart",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen breitkrempigen Hut tragen",
+   "target": "der Mann mit Hut",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Wanderin",
+   "voice": "female"
+  },
+  {
+   "word": "der Rucksack",
+   "voice": "female"
+  },
+  {
+   "word": "der Canyon",
+   "voice": "female"
+  },
+  {
+   "word": "das Geländer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen die Wanderer?",
+ "answer": [
+  "Die",
+  "Wanderer",
+  "jubeln",
+  "am",
+  "Rand",
+  "des",
+  "Canyons."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf ihren"
+    },
+    {
+     "text": "Begleiter",
+     "gap": true,
+     "accept": [
+      "Begleiter",
+      "Freund"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen buschigen"
+    },
+    {
+     "text": "Bart",
+     "gap": true,
+     "accept": [
+      "Bart",
+      "Vollbart"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen breitkrempigen Hut"
+    },
+    {
+     "text": "tragen",
+     "gap": true,
+     "accept": [
+      "tragen",
+      "aufhaben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Wanderin",
+     "gap": true,
+     "accept": [
+      "Wanderin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "jubeln",
+     "gap": true,
+     "accept": [
+      "jubeln"
+     ]
+    },
+    {
+     "text": "am Rand des Canyons"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 'a hiker' sits on the woman, so German needs the feminine 'die Wanderin' (the key word's female form); the key word 'der Wanderer' appears as the plural subject of the question and answer. Noun row 'die Wanderin' added so the key word family gets a recall row (it is not literally 'der Wanderer'; drop if the validator objects). Answer avoids 'über dem Canyon' (ambiguous with 'jubeln über' = rejoice about). Phrase 1 is true only in some boxed frames (she mostly shouts and cheers); kept as English."
+}

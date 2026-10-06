@@ -1,0 +1,121 @@
+{
+ "mediaId": 248,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Pipette",
+ "taps": [
+  {
+   "phrase": "die Tropfen genau abmessen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Medizin einnehmen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "Dampf abgeben",
+   "target": "der Kupferkessel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Pipette",
+   "voice": "female"
+  },
+  {
+   "word": "der Holzlöffel",
+   "voice": "female"
+  },
+  {
+   "word": "die Schürze",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "misst",
+  "mit",
+  "der",
+  "Pipette",
+  "die",
+  "Tropfen",
+  "ab."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Tropfen genau"
+    },
+    {
+     "text": "abmessen",
+     "gap": true,
+     "accept": [
+      "abmessen",
+      "abzählen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Medizin",
+     "gap": true,
+     "accept": [
+      "Medizin",
+      "Arznei"
+     ]
+    },
+    {
+     "text": "einnehmen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Dampf",
+     "gap": true,
+     "accept": [
+      "Dampf"
+     ]
+    },
+    {
+     "text": "abgeben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "misst mit der"
+    },
+    {
+     "text": "Pipette",
+     "gap": true,
+     "accept": [
+      "Pipette"
+     ]
+    },
+    {
+     "text": "die Tropfen ab"
+    }
+   ]
+  }
+ ],
+ "notes": "Target 3 is the copper kettle ('der Kupferkessel'; a native could also say 'der Wasserkessel'). Answer: German also allows 'Sie misst die Tropfen mit der Pipette ab' (two orders). Key word 'die Pipette' is in the answer row, so no separate noun row."
+}

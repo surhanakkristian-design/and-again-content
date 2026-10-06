@@ -1,0 +1,110 @@
+{
+ "mediaId": 28,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la matière",
+ "taps": [
+  {
+   "phrase": "sourire à la caméra",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être sur la table",
+   "target": "les livres",
+   "voice": "female"
+  },
+  {
+   "phrase": "jouer du piano",
+   "target": "les mains",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les cheveux",
+   "voice": "female"
+  },
+  {
+   "word": "la veste",
+   "voice": "female"
+  },
+  {
+   "word": "les livres",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "sourit",
+  "à",
+  "la",
+  "caméra."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire à la"
+    },
+    {
+     "text": "caméra",
+     "gap": true,
+     "accept": [
+      "caméra"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être sur la"
+    },
+    {
+     "text": "table",
+     "gap": true,
+     "accept": [
+      "table"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "jouer du"
+    },
+    {
+     "text": "piano",
+     "gap": true,
+     "accept": [
+      "piano"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sourit",
+     "gap": true,
+     "accept": [
+      "sourit"
+     ]
+    },
+    {
+     "text": "à la caméra"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la matière is not shown as a noun or phrase (school subjects only in quick cuts); not forced into the set. Books: she holds the stack lying on the table."
+}

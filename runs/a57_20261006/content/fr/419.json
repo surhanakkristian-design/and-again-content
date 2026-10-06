@@ -1,0 +1,121 @@
+{
+ "mediaId": 419,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "donner un coup de pied",
+ "taps": [
+  {
+   "phrase": "porter un tee-shirt orange",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un tee-shirt violet",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "voler dans les airs",
+   "target": "le ballon",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "les immeubles",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le ballon",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font-ils ?",
+ "answer": [
+  "Ils",
+  "donnent",
+  "des",
+  "coups",
+  "de",
+  "pied",
+  "dans",
+  "le",
+  "ballon."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter",
+     "gap": true,
+     "accept": [
+      "porter"
+     ]
+    },
+    {
+     "text": "un tee-shirt orange"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un tee-shirt"
+    },
+    {
+     "text": "violet",
+     "gap": true,
+     "accept": [
+      "violet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voler dans les"
+    },
+    {
+     "text": "airs",
+     "gap": true,
+     "accept": [
+      "airs"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "donnent des coups de"
+    },
+    {
+     "text": "pied",
+     "gap": true,
+     "accept": [
+      "pied"
+     ]
+    },
+    {
+     "text": "dans le ballon"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word as plural 'des coups de pied' in the answer (repeated kicks). 'Ils' = mixed pair, male voice kept."
+}

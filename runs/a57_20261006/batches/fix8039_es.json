@@ -1,0 +1,26 @@
+{
+ "batch": "fix8039_es",
+ "lang": "es",
+ "ids": [
+  8039
+ ],
+ "sql": [
+  "out/fix8039_es.sql"
+ ],
+ "rollback": "out/fix8039_es_rollback.sql",
+ "objects": [
+  "sets/8039/a57_es_tap1_monica_d5c5de8d.m4a",
+  "sets/8039/a57_es_tap2_monica_89af531d.m4a",
+  "sets/8039/a57_es_tap3_jorge_476e83ae.m4a",
+  "sets/8039/a57_es_noun1_monica_c5dae563.m4a",
+  "sets/8039/a57_es_noun2_monica_09eba6c1.m4a",
+  "sets/8039/a57_es_noun3_monica_fd15934d.m4a",
+  "sets/8039/a57_es_noun4_monica_565d0444.m4a",
+  "sets/8039/a57_es_answer_monica_8a26a336.m4a",
+  "sets/8039/a57_es_caption1_monica_1e0f119c.m4a",
+  "sets/8039/a57_es_caption2_monica_743e7fa6.m4a",
+  "sets/8039/a57_es_caption3_monica_860c0366.m4a"
+ ],
+ "kind": "update",
+ "verify_sql": "select count(*) from public.media_exercise_sets_l10n where media_id = 8039 and learning_language = 'es' and key_word = 'el camino'"
+}

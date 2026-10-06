@@ -1,0 +1,125 @@
+{
+ "mediaId": 302,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la farine",
+ "taps": [
+  {
+   "phrase": "être couché par terre",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "toucher le nez de la femme",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un foulard gris",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la farine",
+   "voice": "male"
+  },
+  {
+   "word": "les œufs",
+   "voice": "male"
+  },
+  {
+   "word": "le chien",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'y a-t-il sur le visage de l'homme ?",
+ "answer": [
+  "Il",
+  "a",
+  "de",
+  "la",
+  "farine",
+  "sur",
+  "le",
+  "visage."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "couché",
+     "gap": true,
+     "accept": [
+      "couché"
+     ]
+    },
+    {
+     "text": "par terre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toucher le"
+    },
+    {
+     "text": "nez",
+     "gap": true,
+     "accept": [
+      "nez"
+     ]
+    },
+    {
+     "text": "de la femme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "foulard",
+     "gap": true,
+     "accept": [
+      "foulard"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "a de la"
+    },
+    {
+     "text": "farine",
+     "gap": true,
+     "accept": [
+      "farine"
+     ]
+    },
+    {
+     "text": "sur le visage"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the dog lies on the floor behind the table (only head visible in some frames). Answer uses the natural French 'Il a de la farine sur le visage' (English 'There is flour on his face')."
+}

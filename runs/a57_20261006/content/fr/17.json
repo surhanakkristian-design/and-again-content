@@ -1,0 +1,120 @@
+{
+ "mediaId": 17,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le projet",
+ "taps": [
+  {
+   "phrase": "porter une casquette",
+   "target": "l'homme à la casquette",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir les cheveux longs",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir un toit en bois",
+   "target": "la cabane",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le toit",
+   "voice": "male"
+  },
+  {
+   "word": "la porte",
+   "voice": "male"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que construisent les gens ?",
+ "answer": [
+  "Ils",
+  "construisent",
+  "une",
+  "cabane",
+  "en",
+  "bois."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "casquette",
+     "gap": true,
+     "accept": [
+      "casquette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir les"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    },
+    {
+     "text": "longs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir un toit en"
+    },
+    {
+     "text": "bois",
+     "gap": true,
+     "accept": [
+      "bois"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "construisent",
+     "gap": true,
+     "accept": [
+      "construisent",
+      "bâtissent",
+      "montent"
+     ]
+    },
+    {
+     "text": "une cabane en bois"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word le projet is not shown as a thing and appears in no exercise (as in English). 'la cabane' used for the shed (A-level everyday word; 'l'abri de jardin' is the more technical term)."
+}

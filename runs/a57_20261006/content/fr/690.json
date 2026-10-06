@@ -1,0 +1,26 @@
+{
+  "mediaId": 690, "lang": "fr", "level": "A",
+  "keyWord": "le ciel",
+  "taps": [
+    { "phrase": "porter une chemise blanche", "target": "la femme", "voice": "female" },
+    { "phrase": "porter une chemise bleue", "target": "l'homme", "voice": "male" },
+    { "phrase": "avoir les cheveux longs", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "l'herbe", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'homme", "voice": "male" }
+  ],
+  "question": "Que regardent-ils ?",
+  "answer": ["Ils", "regardent", "le", "ciel", "bleu."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter une chemise" }, { "text": "blanche", "gap": true, "accept": ["blanche"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "chemise", "gap": true, "accept": ["chemise"] }, { "text": "bleue" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir les" }, { "text": "cheveux", "gap": true, "accept": ["cheveux"] }, { "text": "longs" } ] },
+    { "from": "answer", "parts": [ { "text": "regardent le" }, { "text": "ciel", "gap": true, "accept": ["ciel"] }, { "text": "bleu" } ] }
+  ],
+  "notes": "The man's shirt is a blue denim shirt ('une chemise bleue'). Rows 1 and 2 gap different words so they do not look identical once blanked. Answer voice female as in English (mixed couple, 'ils')."
+}

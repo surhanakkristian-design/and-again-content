@@ -1,0 +1,26 @@
+{
+  "mediaId": 196, "lang": "de", "level": "B",
+  "keyWord": "der Mut",
+  "taps": [
+    { "phrase": "auf einem schmalen Brett balancieren", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "sich am Stahlseil festhalten", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "die Holzplattform erreichen", "target": "das Mädchen", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Helm", "voice": "female" },
+    { "word": "der Klettergurt", "voice": "female" },
+    { "word": "das Brett", "voice": "female" },
+    { "word": "die Bäume", "voice": "female" }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": ["Sie", "balanciert", "auf", "einem", "schmalen", "Brett."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf einem schmalen Brett" }, { "text": "balancieren", "gap": true, "accept": ["balancieren"] } ] },
+    { "from": "taps", "parts": [ { "text": "sich am" }, { "text": "Stahlseil", "gap": true, "accept": ["Stahlseil", "Seil", "Drahtseil"] }, { "text": "festhalten" } ] },
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Holzplattform", "gap": true, "accept": ["Holzplattform", "Plattform"] }, { "text": "erreichen" } ] },
+    { "from": "answer", "parts": [ { "text": "balanciert auf einem schmalen" }, { "text": "Brett", "gap": true, "accept": ["Brett"] } ] }
+  ],
+  "notes": "Key word 'der Mut' (abstract) does not occur in any text: the fixed frame (balancing / cable / platform) leaves no natural place for it, and it is not in the noun set, so no noun row. Possible owner option: phrase 'all ihren Mut zusammennehmen' would replace a fixed tap. Pronoun 'sie' for das Mädchen (what natives say), used consistently. B1/B2 words: balancieren, Stahlseil, festhalten, Holzplattform, Klettergurt."
+}

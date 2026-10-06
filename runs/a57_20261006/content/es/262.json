@@ -1,0 +1,138 @@
+{
+ "mediaId": 262,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el elefante",
+ "taps": [
+  {
+   "phrase": "beber con la trompa",
+   "target": "el elefante",
+   "voice": "female"
+  },
+  {
+   "phrase": "levantar la trompa",
+   "target": "el elefante",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener plumas blancas",
+   "target": "los pájaros blancos",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el árbol",
+   "voice": "female"
+  },
+  {
+   "word": "el elefante",
+   "voice": "female"
+  },
+  {
+   "word": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "word": "el agua",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el elefante?",
+ "answer": [
+  "Está",
+  "bebiendo",
+  "agua",
+  "con",
+  "la",
+  "trompa."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber con la"
+    },
+    {
+     "text": "trompa",
+     "gap": true,
+     "accept": [
+      "trompa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar",
+     "gap": true,
+     "accept": [
+      "levantar",
+      "alzar",
+      "subir"
+     ]
+    },
+    {
+     "text": "la trompa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener"
+    },
+    {
+     "text": "plumas",
+     "gap": true,
+     "accept": [
+      "plumas"
+     ]
+    },
+    {
+     "text": "blancas"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "elefante",
+     "gap": true,
+     "accept": [
+      "elefante"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "bebiendo",
+     "gap": true,
+     "accept": [
+      "bebiendo"
+     ]
+    },
+    {
+     "text": "agua con la trompa"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share one box (the elephant) as in English; the elephant also splashes and sprays itself in several boxed frames. 'el agua' keeps the masculine article (feminine noun with stressed a-)."
+}

@@ -1,0 +1,25 @@
+{
+  "mediaId": 528, "lang": "de", "level": "A",
+  "keyWord": "parken",
+  "taps": [
+    { "phrase": "das Auto parken", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf einer Mauer sitzen", "target": "der Mann", "voice": "male" },
+    { "phrase": "die Autotür öffnen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Frau", "voice": "female" },
+    { "word": "das Auto", "voice": "female" },
+    { "word": "der Himmel", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "parkt", "ihr", "Auto."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "das Auto" }, { "text": "parken", "gap": true, "accept": ["parken", "einparken"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf einer" }, { "text": "Mauer", "gap": true, "accept": ["Mauer"] }, { "text": "sitzen" } ] },
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Autotür", "gap": true, "accept": ["Autotür", "Tür"] }, { "text": "öffnen" } ] },
+    { "from": "answer", "parts": [ { "text": "parkt ihr" }, { "text": "Auto", "gap": true, "accept": ["Auto"] } ] }
+  ],
+  "notes": "The phrase 3 box also covers the driving and key frames; the phrase describes her opening the door and getting out near the end. Several cars are visible, but only the woman parks and opens a door."
+}

@@ -1,0 +1,116 @@
+{
+ "mediaId": 429,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "aterrizar",
+ "taps": [
+  {
+   "phrase": "aterrizar en la hierba",
+   "target": "la mujer del casco",
+   "voice": "female"
+  },
+  {
+   "phrase": "levantar las dos manos",
+   "target": "la mujer del casco",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una chaqueta morada",
+   "target": "la mujer de la chaqueta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el casco",
+   "voice": "female"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer de rosa?",
+ "answer": [
+  "Aterriza",
+  "en",
+  "la",
+  "hierba."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aterrizar",
+     "gap": true,
+     "accept": [
+      "aterrizar"
+     ]
+    },
+    {
+     "text": "en la hierba"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar las dos"
+    },
+    {
+     "text": "manos",
+     "gap": true,
+     "accept": [
+      "manos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta"
+     ]
+    },
+    {
+     "text": "morada"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Aterriza en la"
+    },
+    {
+     "text": "hierba",
+     "gap": true,
+     "accept": [
+      "hierba"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (natural). At the high-five the friend raises one hand only, so 'levantar las dos manos' fits only the woman in the helmet."
+}

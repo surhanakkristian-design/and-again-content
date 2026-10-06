@@ -1,0 +1,126 @@
+{
+ "mediaId": 4360,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el bolso",
+ "taps": [
+  {
+   "phrase": "echar un vistazo dentro de una bolsa",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "cargar con varias bolsas de la compra",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "presumir de su bolso",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las bolsas de papel",
+   "voice": "female"
+  },
+  {
+   "word": "el bolso",
+   "voice": "female"
+  },
+  {
+   "word": "la bolsa de viaje",
+   "voice": "female"
+  },
+  {
+   "word": "la escalera mecánica",
+   "voice": "female"
+  }
+ ],
+ "question": "¿De qué está presumiendo la mujer?",
+ "answer": [
+  "Está",
+  "presumiendo",
+  "de",
+  "su",
+  "bolso",
+  "en",
+  "la",
+  "escalera",
+  "mecánica."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar un"
+    },
+    {
+     "text": "vistazo",
+     "gap": true,
+     "accept": [
+      "vistazo",
+      "ojo"
+     ]
+    },
+    {
+     "text": "dentro de una bolsa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cargar",
+     "gap": true,
+     "accept": [
+      "cargar"
+     ]
+    },
+    {
+     "text": "con varias bolsas de la compra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "presumir de su"
+    },
+    {
+     "text": "bolso",
+     "gap": true,
+     "accept": [
+      "bolso"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "presumiendo",
+     "gap": true,
+     "accept": [
+      "presumiendo",
+      "fardando"
+     ]
+    },
+    {
+     "text": "de su bolso en la escalera mecánica"
+    }
+   ]
+  }
+ ],
+ "notes": "Spanish distinguishes 'la bolsa' (shopping/paper bag) from 'el bolso' (handbag): kept strictly apart. Key word 'el bolso' fits the brown leather handbag. 'presumir de' = B1 collocation for 'show off'. No subject in the model answer (natural in Spanish)."
+}

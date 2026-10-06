@@ -1,0 +1,124 @@
+{
+  "mediaId": 293,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "das Filmemachen",
+  "taps": [
+    {
+      "phrase": "die Augen mit der Hand abschirmen",
+      "target": "die Frau mit dem Schal",
+      "voice": "female"
+    },
+    {
+      "phrase": "hinter der Kamera hocken",
+      "target": "die Frau mit der Kappe",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf der Brüstung sitzen",
+      "target": "die Taube",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Mikrofon",
+      "voice": "female"
+    },
+    {
+      "word": "der Reflektor",
+      "voice": "female"
+    },
+    {
+      "word": "die Taube",
+      "voice": "female"
+    },
+    {
+      "word": "das Stativ",
+      "voice": "female"
+    }
+  ],
+  "question": "Worauf ist die Kamera montiert?",
+  "answer": [
+    "Die",
+    "Kamera",
+    "ist",
+    "auf",
+    "einem",
+    "Stativ",
+    "montiert."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Augen mit der Hand"
+        },
+        {
+          "text": "abschirmen",
+          "gap": true,
+          "accept": [
+            "abschirmen",
+            "schützen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hinter der Kamera"
+        },
+        {
+          "text": "hocken",
+          "gap": true,
+          "accept": [
+            "hocken",
+            "kauern"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf der"
+        },
+        {
+          "text": "Brüstung",
+          "gap": true,
+          "accept": [
+            "Brüstung"
+          ]
+        },
+        {
+          "text": "sitzen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "ist auf einem"
+        },
+        {
+          "text": "Stativ",
+          "gap": true,
+          "accept": [
+            "Stativ"
+          ]
+        },
+        {
+          "text": "montiert"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Filmemachen' is an activity, not a visible noun; not forced. Tap 1: the woman in the scarf shields her eyes only in some boxed frames, otherwise she stands posing/smiling; phrase written for the shielding moment. Tap 3: pigeon box is OFF in a few frames."
+}

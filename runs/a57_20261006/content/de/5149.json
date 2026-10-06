@@ -1,0 +1,122 @@
+{
+ "mediaId": 5149,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Apotheke",
+ "taps": [
+  {
+   "phrase": "eine rote Nase haben",
+   "target": "der Mann mit dem Schal",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf eine hohe Leiter klettern",
+   "target": "der Mann in Weiß",
+   "voice": "male"
+  },
+  {
+   "phrase": "hellgrün leuchten",
+   "target": "das grüne Kreuz",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Kreuz",
+   "voice": "male"
+  },
+  {
+   "word": "die Flaschen",
+   "voice": "male"
+  },
+  {
+   "word": "der Schal",
+   "voice": "male"
+  },
+  {
+   "word": "die Packung",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann in Weiß?",
+ "answer": [
+  "Er",
+  "klettert",
+  "auf",
+  "eine",
+  "hohe",
+  "Leiter."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Nase",
+     "gap": true,
+     "accept": [
+      "Nase"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf eine hohe"
+    },
+    {
+     "text": "Leiter",
+     "gap": true,
+     "accept": [
+      "Leiter"
+     ]
+    },
+    {
+     "text": "klettern"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hellgrün"
+    },
+    {
+     "text": "leuchten",
+     "gap": true,
+     "accept": [
+      "leuchten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "klettert",
+     "gap": true,
+     "accept": [
+      "klettert",
+      "steigt"
+     ]
+    },
+    {
+     "text": "auf eine hohe Leiter"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: English 'carry a paper bag' is true only in the middle scene (about 7 of 19 boxed frames); his red nose is visible in every boxed frame and only on him, so 'eine rote Nase haben'. Noun 4 (box of medicine) -> 'die Packung', the usual word for a medicine box. Key word 'die Apotheke' is not a noun of the set and is not forced into the rows."
+}

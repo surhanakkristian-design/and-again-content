@@ -1,0 +1,123 @@
+{
+ "mediaId": 25,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la grapadora",
+ "taps": [
+  {
+   "phrase": "usar una grapadora roja",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar los papeles",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir la grapadora",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la planta",
+   "voice": "male"
+  },
+  {
+   "word": "la grapadora",
+   "voice": "male"
+  },
+  {
+   "word": "los papeles",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "está",
+  "usando",
+  "una",
+  "grapadora",
+  "roja."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "usar una"
+    },
+    {
+     "text": "grapadora",
+     "gap": true,
+     "accept": [
+      "grapadora"
+     ]
+    },
+    {
+     "text": "roja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar",
+     "gap": true,
+     "accept": [
+      "levantar"
+     ]
+    },
+    {
+     "text": "los papeles"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "la grapadora"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "usando",
+     "gap": true,
+     "accept": [
+      "usando",
+      "utilizando"
+     ]
+    },
+    {
+     "text": "una grapadora roja"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'paper' is a stack of sheets, so the plural 'los papeles' (more natural than mass 'el papel' for a pile) in both the phrase and the noun."
+}

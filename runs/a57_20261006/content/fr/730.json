@@ -1,0 +1,27 @@
+{
+  "mediaId": 730, "lang": "fr", "level": "B",
+  "keyWord": "le personnel",
+  "taps": [
+    { "phrase": "essuyer le comptoir de la cuisine", "target": "le chef", "voice": "male" },
+    { "phrase": "étendre une nappe", "target": "la serveuse", "voice": "female" },
+    { "phrase": "servir un cappuccino", "target": "le barman", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le personnel", "voice": "female" },
+    { "word": "les clients", "voice": "female" },
+    { "word": "la nappe", "voice": "female" },
+    { "word": "les suspensions", "voice": "female" }
+  ],
+  "question": "Que fait la serveuse ?",
+  "answer": ["Elle", "étend", "une", "nappe", "blanche."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "essuyer le" }, { "text": "comptoir", "gap": true, "accept": ["comptoir"] }, { "text": "de la cuisine" } ] },
+    { "from": "taps", "parts": [ { "text": "étendre", "gap": true, "accept": ["étendre", "déplier"] }, { "text": "une nappe" } ] },
+    { "from": "taps", "parts": [ { "text": "servir", "gap": true, "accept": ["servir"] }, { "text": "un cappuccino" } ] },
+    { "from": "nouns", "parts": [ { "text": "le" }, { "text": "personnel", "gap": true, "accept": ["personnel"] } ] },
+    { "from": "answer", "parts": [ { "text": "étend une" }, { "text": "nappe", "gap": true, "accept": ["nappe"] }, { "text": "blanche" } ] }
+  ],
+  "notes": "The chef's box also covers the final group shot (arms open, posing), where he is not wiping; phrase 1 says what he does in the kitchen frames. 'les suspensions' = the pendant lamps (usual French interior word); 'les lampes suspendues' would also work. 'le personnel' pill sits on the waitress inside the posing team, as in English."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 365, "lang": "fr", "level": "A",
+  "keyWord": "le casque",
+  "taps": [
+    { "phrase": "tenir une cuillère en bois", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un T-shirt bleu", "target": "l'homme", "voice": "male" },
+    { "phrase": "être couché sur le frigo", "target": "le chat", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le chat", "voice": "female" },
+    { "word": "le casque", "voice": "female" },
+    { "word": "la cuillère", "voice": "female" },
+    { "word": "les pommes", "voice": "female" }
+  ],
+  "question": "Que porte la femme ?",
+  "answer": ["Elle", "porte", "un", "grand", "casque", "blanc."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir une" }, { "text": "cuillère", "gap": true, "accept": ["cuillère", "cuiller"] }, { "text": "en bois" } ] },
+    { "from": "taps", "parts": [ { "text": "porter", "gap": true, "accept": ["porter", "avoir"] }, { "text": "un T-shirt bleu" } ] },
+    { "from": "taps", "parts": [ { "text": "être couché sur le" }, { "text": "frigo", "gap": true, "accept": ["frigo", "réfrigérateur"] } ] },
+    { "from": "answer", "parts": [ { "text": "porte un grand" }, { "text": "casque", "gap": true, "accept": ["casque"] }, { "text": "blanc" } ] }
+  ],
+  "notes": "Tap 1's box also covers the first frames where she holds the headphones and has no spoon yet; the phrase says what she does in most boxed frames (as English). The woman wears an orange T-shirt, so 'porter un T-shirt bleu' fits only the man. English 'headphones' (plural) = French 'le casque' (singular), the database word."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 243,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "s'habiller",
+ "taps": [
+  {
+   "phrase": "mettre un pull",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "aider la femme à s'habiller",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "se regarder dans le miroir",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bonnet",
+   "voice": "female"
+  },
+  {
+   "word": "le sac",
+   "voice": "female"
+  },
+  {
+   "word": "la porte",
+   "voice": "female"
+  },
+  {
+   "word": "le jean",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "aide",
+  "la",
+  "femme",
+  "à",
+  "s'habiller."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre un"
+    },
+    {
+     "text": "pull",
+     "gap": true,
+     "accept": [
+      "pull"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aider",
+     "gap": true,
+     "accept": [
+      "aider"
+     ]
+    },
+    {
+     "text": "la femme à s'habiller"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "regarder",
+     "gap": true,
+     "accept": [
+      "regarder"
+     ]
+    },
+    {
+     "text": "dans le miroir"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "aide la"
+    },
+    {
+     "text": "femme",
+     "gap": true,
+     "accept": [
+      "femme",
+      "fille"
+     ]
+    },
+    {
+     "text": "à s'habiller"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the English red box covers the woman in almost every frame (sweater, scarf, boots, mirror, door); 'mettre un pull' is what she does in the first frames, the rest is her getting dressed. 'aider la femme à s'habiller' instead of the more idiomatic 'l'aider à s'habiller' so that the gap words are not elided; the key word s'habiller (elided) is never a gap. 'le bonnet' = the beanie; 'le jean' singular as in everyday French."
+}

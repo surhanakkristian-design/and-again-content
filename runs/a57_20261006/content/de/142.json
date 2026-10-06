@@ -1,0 +1,122 @@
+{
+  "mediaId": 142,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Burg",
+  "taps": [
+    {
+      "phrase": "auf dem Thron sitzen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen gelben Schal tragen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine schwarze Lederjacke tragen",
+      "target": "der Mann in der Lederjacke",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "die Burg",
+      "voice": "female"
+    },
+    {
+      "word": "die Brücke",
+      "voice": "female"
+    },
+    {
+      "word": "das Wasser",
+      "voice": "female"
+    }
+  ],
+  "question": "Was besichtigen die beiden?",
+  "answer": [
+    "Sie",
+    "besichtigen",
+    "eine",
+    "große",
+    "Burg."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem Thron"
+        },
+        {
+          "text": "sitzen",
+          "gap": true,
+          "accept": [
+            "sitzen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen gelben"
+        },
+        {
+          "text": "Schal",
+          "gap": true,
+          "accept": [
+            "Schal"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine schwarze"
+        },
+        {
+          "text": "Lederjacke",
+          "gap": true,
+          "accept": [
+            "Lederjacke",
+            "Jacke"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "besichtigen eine große"
+        },
+        {
+          "text": "Burg",
+          "gap": true,
+          "accept": [
+            "Burg",
+            "Schloss"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "The 'chair' is a throne, so phrase 1 says 'auf dem Thron sitzen' (Thron is roughly A2/B1 but the only natural word here). The castle with spires could also be called 'Schloss'; key word 'die Burg' fits (stone walls, towers, on a rock), Schloss accepted in the answer row. No noun row: the answer row already contains Burg. The English tap box for phrases 1 and 2 also covers frames (bridge, courtyard, tower) where she is not sitting; phrase 1 describes the throne moment, the one sitting action in the clip."
+}

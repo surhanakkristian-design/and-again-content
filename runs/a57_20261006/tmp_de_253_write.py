@@ -1,0 +1,61 @@
+import json
+def g(t,acc=None): return {"text":t,"gap":True,"accept":acc or [t]}
+def p(t): return {"text":t}
+D={}
+D[253]=dict(mediaId=253,lang="de",level="A",keyWord="das Staubwischen",
+ taps=[dict(phrase="über der Tür Staub wischen",target="der Mann",voice="male"),
+       dict(phrase="ein graues Kopftuch tragen",target="die Frau",voice="female"),
+       dict(phrase="durch das Regal laufen",target="die Katze",voice="male")],
+ nouns=[dict(word="die Katze",voice="male"),dict(word="die Bücher",voice="male"),dict(word="das Regal",voice="male"),dict(word="die Lampe",voice="male")],
+ question="Was macht der Mann?",answer=["Er","wischt","über","der","Tür","Staub."],answerVoice="male",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("über der Tür Staub"),g("wischen")]),
+         dict(**{"from":"taps"},parts=[p("ein graues"),g("Kopftuch",["Kopftuch","Tuch"]),p("tragen")]),
+         dict(**{"from":"taps"},parts=[p("durch das Regal"),g("laufen",["laufen","gehen"])]),
+         dict(**{"from":"answer"},parts=[p("wischt über der Tür"),g("Staub")])],
+ notes="Key word das Staubwischen is taught through the verb phrase 'Staub wischen' (tap 1 + answer). The man's box also covers the shocked opening, the dust cloud and the thumbs-up ending; there his actions (reacting, pointing, thumbs up) are shared with the woman, so the distinctive door moment from English is kept. Grey scarf = headscarf -> 'Kopftuch'. Cat walks along the inside of the open shelf unit -> 'durch das Regal laufen'. Answer: 'Er wischt Staub über der Tür.' is a possible but less natural second order. No noun row: key word is not a noun of the set.")
+D[254]=dict(mediaId=254,lang="de",level="A",keyWord="die Erde",
+ taps=[dict(phrase="den Globus anhalten",target="die Frau",voice="female"),
+       dict(phrase="dunkle Locken haben",target="der Mann",voice="male"),
+       dict(phrase="am Fenster schlafen",target="die Katze",voice="female")],
+ nouns=[dict(word="die Sonne",voice="female"),dict(word="das Meer",voice="female"),dict(word="die Katze",voice="female"),dict(word="der Globus",voice="female")],
+ question="Was macht die Katze?",answer=["Die","Katze","schläft","am","Fenster."],answerVoice="female",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("den Globus"),g("anhalten",["anhalten","stoppen"])]),
+         dict(**{"from":"taps"},parts=[p("dunkle"),g("Locken"),p("haben")]),
+         dict(**{"from":"taps"},parts=[p("am"),g("Fenster"),p("schlafen")]),
+         dict(**{"from":"answer"},parts=[g("schläft"),p("am Fenster")])],
+ notes="Key word die Erde does not appear in any exercise: the clip shows a globe (der Globus), and no English noun or phrase names the planet; proposal: owner may accept as is. The woman's box mostly shows her pointing at the globe, but the man points too, so the distinctive 'den Globus anhalten' (her hand stopping the spinning globe) is kept. No noun row: key word is not a noun of the set.")
+D[255]=dict(mediaId=255,lang="de",level="A",keyWord="der Osten",
+ taps=[dict(phrase="zum Horizont zeigen",target="die Frau",voice="female"),
+       dict(phrase="im Osten aufgehen",target="die Sonne",voice="female"),
+       dict(phrase="die Becher hochheben",target="die Menschen",voice="female")],
+ nouns=[dict(word="der Himmel",voice="female"),dict(word="die Sonne",voice="female"),dict(word="die Menschen",voice="female"),dict(word="die Felsen",voice="female")],
+ question="Was macht die Sonne?",answer=["Die","Sonne","geht","über","den","Wolken","auf."],answerVoice="female",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("zum Horizont"),g("zeigen")]),
+         dict(**{"from":"taps"},parts=[p("im"),g("Osten"),p("aufgehen")]),
+         dict(**{"from":"taps"},parts=[p("die Becher"),g("hochheben",["hochheben","heben"])]),
+         dict(**{"from":"answer"},parts=[p("geht über den"),g("Wolken"),p("auf")])],
+ notes="The woman points at the red stripe on the horizon, not up at the sky: 'zum Horizont zeigen' (Horizont is A2). The people's box covers the whole group standing and watching; they raise their mugs only at the end, but standing/watching is not distinctive, so the English action is kept ('Becher' for the mugs). 'rocks' on the summit -> 'die Felsen'.")
+D[256]=dict(mediaId=256,lang="de",level="A",keyWord="das Essen",
+ taps=[dict(phrase="an der heißen Nudelsuppe riechen",target="die Frau",voice="female"),
+       dict(phrase="einen dunklen Bart haben",target="der Mann",voice="male"),
+       dict(phrase="auf der Straße kochen",target="die Köchin",voice="female")],
+ nouns=[dict(word="das Schild",voice="female"),dict(word="der Bart",voice="female"),dict(word="die Schüsseln",voice="female"),dict(word="die Jeans",voice="female")],
+ question="Was essen der Mann und die Frau?",answer=["Sie","essen","heiße","Nudelsuppe."],answerVoice="female",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("an der heißen Nudelsuppe"),g("riechen")]),
+         dict(**{"from":"taps"},parts=[p("einen dunklen"),g("Bart"),p("haben")]),
+         dict(**{"from":"taps"},parts=[p("auf der"),g("Straße"),p("kochen")]),
+         dict(**{"from":"answer"},parts=[g("essen"),p("heiße Nudelsuppe")])],
+ notes="Key word das Essen (noun) is taught via the verb 'essen' in the answer and its recall row. The woman smells the soup only at the start; for most of her box she eats, but the man eats too, so the English action is kept. Soup is called 'Nudelsuppe' in both tap 1 and the answer. The cook is a woman -> 'die Köchin'.")
+D[258]=dict(mediaId=258,lang="de",level="B",keyWord="der Rand",
+ taps=[dict(phrase="über schmale Bretter balancieren",target="die Person mit den blauen Haaren",voice="female"),
+       dict(phrase="einen roten Vollbart haben",target="der Mann",voice="male"),
+       dict(phrase="den Rasen bedecken",target="die Plane",voice="female")],
+ nouns=[dict(word="die Kiefern",voice="female"),dict(word="die Felsbrocken",voice="female"),dict(word="der See",voice="female"),dict(word="die Bretter",voice="female")],
+ question="Was macht die Person mit den blauen Haaren?",answer=["Die","Person","balanciert","über","schmale","Bretter."],answerVoice="female",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("über schmale Bretter"),g("balancieren")]),
+         dict(**{"from":"taps"},parts=[p("einen roten"),g("Vollbart",["Vollbart","Bart"]),p("haben")]),
+         dict(**{"from":"taps"},parts=[p("den Rasen"),g("bedecken",["bedecken","abdecken"])]),
+         dict(**{"from":"answer"},parts=[p("balanciert über schmale"),g("Bretter",["Bretter","Planken"])])],
+ notes="Key word der Rand appears in no exercise: no English noun or phrase names the edge (the clip shows a finger on the table edge = 'der Tischrand', and the end of the dock, which German calls 'das Ende des Stegs' rather than 'Rand'); proposal: owner may accept as is. The person's box also covers the opening shots of the plaid-sleeved hand on the table edge and the rope; balancing on the dock is most of the boxed frames and kept. Answer: German also allows 'Über schmale Bretter balanciert die Person.' (topicalised, marked). Ginger beard -> 'roter Vollbart'. Level B words: balancieren, Vollbart, bedecken, Plane, Felsbrocken, Kiefern.")
+for k,v in D.items():
+    json.dump(v,open(f"content/de/{k}.json","w"),ensure_ascii=False,indent=2)

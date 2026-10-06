@@ -1,0 +1,119 @@
+{
+ "mediaId": 122,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un arrêt de bus",
+ "taps": [
+  {
+   "phrase": "s'asseoir sur le banc",
+   "target": "la femme en rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir un chariot de courses",
+   "target": "la vieille dame",
+   "voice": "female"
+  },
+  {
+   "phrase": "arriver à l'arrêt",
+   "target": "le bus",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'arrêt de bus",
+   "voice": "female"
+  },
+  {
+   "word": "le banc",
+   "voice": "female"
+  },
+  {
+   "word": "le bus",
+   "voice": "female"
+  },
+  {
+   "word": "la rue",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les gens ?",
+ "answer": [
+  "Ils",
+  "attendent",
+  "à",
+  "l'arrêt",
+  "de",
+  "bus."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'asseoir sur le"
+    },
+    {
+     "text": "banc",
+     "gap": true,
+     "accept": [
+      "banc"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "chariot",
+     "gap": true,
+     "accept": [
+      "chariot",
+      "caddie"
+     ]
+    },
+    {
+     "text": "de courses"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arriver",
+     "gap": true,
+     "accept": [
+      "arriver"
+     ]
+    },
+    {
+     "text": "à l'arrêt"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "attendent",
+     "gap": true,
+     "accept": [
+      "attendent"
+     ]
+    },
+    {
+     "text": "à l'arrêt de bus"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 4: English 'road' is a town street here, so 'la rue'. Phrase 1: the woman in red sits on the bench in about half the boxed frames and stands bent forward in the others; 'sit on the bench' kept. Phrase 3: the bus arrives and stops at the stop in most of its boxed frames, so 'arriver à l'arrêt' (keeps the key word) instead of 'drive down the road'. The key word is elided ('l'arrêt'), so it cannot be a gap; it appears in two rows."
+}

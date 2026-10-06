@@ -1,0 +1,120 @@
+{
+  "mediaId": 251,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "un haltère",
+  "taps": [
+    {
+      "phrase": "muscler ses biceps",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "siroter son café",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être assise en tailleur",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'haltère",
+      "voice": "male"
+    },
+    {
+      "word": "le palmier",
+      "voice": "male"
+    },
+    {
+      "word": "le fauteuil",
+      "voice": "male"
+    },
+    {
+      "word": "la fenêtre",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "muscle",
+    "ses",
+    "biceps",
+    "avec",
+    "un",
+    "haltère."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "muscler",
+          "gap": true,
+          "accept": [
+            "muscler",
+            "travailler"
+          ]
+        },
+        {
+          "text": "ses biceps"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "siroter son"
+        },
+        {
+          "text": "café",
+          "gap": true,
+          "accept": [
+            "café"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être assise en"
+        },
+        {
+          "text": "tailleur",
+          "gap": true,
+          "accept": [
+            "tailleur"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "muscle ses biceps"
+        },
+        {
+          "text": "avec un"
+        },
+        {
+          "text": "haltère",
+          "gap": true,
+          "accept": [
+            "haltère"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Source keyWord.fr 'un haltère' carries the indefinite article (other key-word nouns carry the definite one); kept unchanged, proposal: 'l'haltère' (masculine, h muet), which is the noun pill. English 'to do biceps curls' -> 'muscler ses biceps' (natural French; 'faire des curls' is gym jargon); the box also covers the overhead press, still working his arms. B1/B2: muscler, siroter, en tailleur."
+}

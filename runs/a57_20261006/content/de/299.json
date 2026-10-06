@@ -1,0 +1,118 @@
+{
+ "mediaId": 299,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "wecken",
+ "taps": [
+  {
+   "phrase": "im Bett schlafen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Bett herumlaufen",
+   "target": "der Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich die Hände vors Gesicht halten",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Kissen",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "die Decke",
+   "voice": "female"
+  },
+  {
+   "word": "die Tür",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Der",
+  "Hund",
+  "weckt",
+  "die",
+  "Frau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Bett"
+    },
+    {
+     "text": "schlafen",
+     "gap": true,
+     "accept": [
+      "schlafen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Bett"
+    },
+    {
+     "text": "herumlaufen",
+     "gap": true,
+     "accept": [
+      "herumlaufen",
+      "laufen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die Hände vors"
+    },
+    {
+     "text": "Gesicht",
+     "gap": true,
+     "accept": [
+      "Gesicht"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "weckt",
+     "gap": true,
+     "accept": [
+      "weckt"
+     ]
+    },
+    {
+     "text": "die Frau"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 3 have the same box (the woman) for the whole clip, as in English: she sleeps in most frames and covers her face only at the end. Answer uses 'die Frau' instead of 'sie' so 'wecken' (not 'aufwecken') stays the key word without a trailing 'auf'. 'die Tür' = the closet door."
+}

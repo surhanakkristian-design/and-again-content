@@ -1,0 +1,26 @@
+{
+  "mediaId": 795, "lang": "de", "level": "A",
+  "keyWord": "das Handtuch",
+  "taps": [
+    { "phrase": "aus dem Pool steigen", "target": "der Mann", "voice": "male" },
+    { "phrase": "sich die Haare abtrocknen", "target": "der Mann", "voice": "male" },
+    { "phrase": "den nassen Kopf schütteln", "target": "der Hund", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Mann", "voice": "male" },
+    { "word": "das Handtuch", "voice": "male" },
+    { "word": "der Hund", "voice": "male" },
+    { "word": "der Baum", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "trocknet", "sich", "die", "Haare", "mit", "einem", "Handtuch", "ab."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "aus dem Pool" }, { "text": "steigen", "gap": true, "accept": ["steigen", "klettern"] } ] },
+    { "from": "taps", "parts": [ { "text": "sich die" }, { "text": "Haare", "gap": true, "accept": ["Haare"] }, { "text": "abtrocknen" } ] },
+    { "from": "taps", "parts": [ { "text": "den nassen Kopf" }, { "text": "schütteln", "gap": true, "accept": ["schütteln"] } ] },
+    { "from": "answer", "parts": [ { "text": "trocknet sich die Haare mit einem" }, { "text": "Handtuch", "gap": true, "accept": ["Handtuch"] }, { "text": "ab" } ] }
+  ],
+  "notes": "Phrase 1 and 2 boxes cover the same man through the whole clip; each phrase is true of him in most of its frames (climbing out early, drying hair in the middle). German also allows 'Er trocknet sich mit einem Handtuch die Haare ab.' (two chip orders). No noun row: Handtuch is in the answer row."
+}

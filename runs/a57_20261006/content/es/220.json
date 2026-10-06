@@ -1,0 +1,117 @@
+{
+ "mediaId": 220,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "descongelar",
+ "taps": [
+  {
+   "phrase": "descongelar un pescado",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estampar un pescado contra la encimera",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar en remojo en un bol",
+   "target": "el pescado",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el filete",
+   "voice": "male"
+  },
+  {
+   "word": "el grifo",
+   "voice": "male"
+  },
+  {
+   "word": "el bol",
+   "voice": "male"
+  },
+  {
+   "word": "el armario",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "descongelando",
+  "un",
+  "pescado."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descongelar",
+     "gap": true,
+     "accept": [
+      "descongelar"
+     ]
+    },
+    {
+     "text": "un pescado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estampar un pescado contra la"
+    },
+    {
+     "text": "encimera",
+     "gap": true,
+     "accept": [
+      "encimera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en"
+    },
+    {
+     "text": "remojo",
+     "gap": true,
+     "accept": [
+      "remojo"
+     ]
+    },
+    {
+     "text": "en un bol"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está descongelando un"
+    },
+    {
+     "text": "pescado",
+     "gap": true,
+     "accept": [
+      "pescado",
+      "filete"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the target (the man), as in English. Phrase 3 box also covers frames where the fish is in his hand or under the tap; written for the soaking frames."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 124, "lang": "fr", "level": "B",
+  "keyWord": "étaler",
+  "taps": [
+    { "phrase": "croquer dans sa tartine", "target": "la fille", "voice": "female" },
+    { "phrase": "porter un tablier rayé", "target": "la fille", "voice": "female" },
+    { "phrase": "fondre sur la tartine", "target": "le beurre", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le beurre", "voice": "female" },
+    { "word": "le couteau", "voice": "female" },
+    { "word": "le tablier", "voice": "female" },
+    { "word": "les poêles", "voice": "female" }
+  ],
+  "question": "Que fait la fille ?",
+  "answer": ["Elle", "étale", "du", "beurre", "sur", "sa", "tartine."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "croquer dans sa" }, { "text": "tartine", "gap": true, "accept": ["tartine"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "tablier", "gap": true, "accept": ["tablier"] }, { "text": "rayé" } ] },
+    { "from": "taps", "parts": [ { "text": "fondre", "gap": true, "accept": ["fondre"] }, { "text": "sur la tartine" } ] },
+    { "from": "answer", "parts": [ { "text": "étale", "gap": true, "accept": ["étale"] }, { "text": "du beurre sur sa tartine" } ] }
+  ],
+  "notes": "Red box (phrase 1) also covers the girl holding the butter and frowning at it; she bites into her bread only in the last frames, which is the only moment of 'croquer'. Blue box (phrase 3) also covers the butter block on the plate at the start and end; the melting happens in the close-up frames in the middle. 'la tartine' (slice of bread with something spread on it) is used for the bread throughout. The hanging copper pans are 'les poêles' (round, shallow, long handles)."
+}

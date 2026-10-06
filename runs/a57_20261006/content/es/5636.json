@@ -1,0 +1,123 @@
+{
+ "mediaId": 5636,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "depender de ti",
+ "taps": [
+  {
+   "phrase": "inclinarse sobre el mostrador",
+   "target": "la chica del jersey",
+   "voice": "female"
+  },
+  {
+   "phrase": "echarse a reír",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "sostener un cucurucho",
+   "target": "la chica del delantal",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara de araña",
+   "voice": "female"
+  },
+  {
+   "word": "la vitrina",
+   "voice": "female"
+  },
+  {
+   "word": "el delantal",
+   "voice": "female"
+  },
+  {
+   "word": "el helado",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la clienta?",
+ "answer": [
+  "Se",
+  "inclina",
+  "sobre",
+  "el",
+  "mostrador",
+  "de",
+  "los",
+  "helados."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "inclinarse sobre el"
+    },
+    {
+     "text": "mostrador",
+     "gap": true,
+     "accept": [
+      "mostrador"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echarse a"
+    },
+    {
+     "text": "reír",
+     "gap": true,
+     "accept": [
+      "reír"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener un"
+    },
+    {
+     "text": "cucurucho",
+     "gap": true,
+     "accept": [
+      "cucurucho"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "inclina",
+     "gap": true,
+     "accept": [
+      "inclina"
+     ]
+    },
+    {
+     "text": "sobre el mostrador"
+    },
+    {
+     "text": "de los helados"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'depender de ti' is not shown or said in the clip (it is a decision phrase); not forced into the exercises. Answer drops the subject (natural in Spain); answer row = whole sentence without full stop."
+}

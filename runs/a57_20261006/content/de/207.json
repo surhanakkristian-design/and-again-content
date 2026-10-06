@@ -1,0 +1,26 @@
+{
+  "mediaId": 207, "lang": "de", "level": "A",
+  "keyWord": "die Tasse",
+  "taps": [
+    { "phrase": "einen grünen Ohrring tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine Brille tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "ein blaues Hemd tragen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Katze", "voice": "female" },
+    { "word": "die Tasse", "voice": "female" },
+    { "word": "die Blumen", "voice": "female" },
+    { "word": "die Teekanne", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "trinkt", "Tee", "aus", "einer", "Tasse."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen grünen" }, { "text": "Ohrring", "gap": true, "accept": ["Ohrring"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Brille", "gap": true, "accept": ["Brille"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "blaues", "gap": true, "accept": ["blaues"] }, { "text": "Hemd tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "trinkt Tee aus einer" }, { "text": "Tasse", "gap": true, "accept": ["Tasse", "Schale"] } ] }
+  ],
+  "notes": "The cups are small handleless tea bowls (strictly 'die Teeschale'); 'die Tasse' kept as the key word, it is what most Germans say for them. The man also drinks tea at the end, but the question asks about the woman. No noun row: Tasse is in the answer row."
+}

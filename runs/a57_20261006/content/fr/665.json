@@ -1,0 +1,126 @@
+{
+  "mediaId": 665,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le mouton",
+  "taps": [
+    {
+      "phrase": "manger de l'herbe",
+      "target": "le gros mouton",
+      "voice": "male"
+    },
+    {
+      "phrase": "ouvrir grand la bouche",
+      "target": "le gros mouton",
+      "voice": "male"
+    },
+    {
+      "phrase": "marcher dans le champ",
+      "target": "le gros mouton",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le mouton",
+      "voice": "male"
+    },
+    {
+      "word": "le mur",
+      "voice": "male"
+    },
+    {
+      "word": "le ciel",
+      "voice": "male"
+    },
+    {
+      "word": "l'herbe",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait le mouton ?",
+  "answer": [
+    "Il",
+    "va",
+    "vers",
+    "les",
+    "autres",
+    "moutons."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "manger",
+          "gap": true,
+          "accept": [
+            "manger",
+            "brouter"
+          ]
+        },
+        {
+          "text": "de l'herbe"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir grand"
+        },
+        {
+          "text": "la"
+        },
+        {
+          "text": "bouche",
+          "gap": true,
+          "accept": [
+            "bouche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "marcher dans"
+        },
+        {
+          "text": "le"
+        },
+        {
+          "text": "champ",
+          "gap": true,
+          "accept": [
+            "champ",
+            "pré"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "va vers"
+        },
+        {
+          "text": "les autres"
+        },
+        {
+          "text": "moutons",
+          "gap": true,
+          "accept": [
+            "moutons"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Answer describes the end of the clip (the sheep trots toward the flock in the distance), the key word appears there as the plural 'moutons', so no noun row. 'le mur' = the low dry-stone wall (muret would be more exact but above level A)."
+}

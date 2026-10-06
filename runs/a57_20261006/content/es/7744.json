@@ -1,0 +1,124 @@
+{
+ "mediaId": 7744,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "de repente",
+ "taps": [
+  {
+   "phrase": "saltar de repente fuera del agua",
+   "target": "la ballena",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrar el remo con fuerza",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse con la boca abierta",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ballena",
+   "voice": "female"
+  },
+  {
+   "word": "el cobertizo de barcas",
+   "voice": "female"
+  },
+  {
+   "word": "el remo",
+   "voice": "female"
+  },
+  {
+   "word": "el chaleco salvavidas",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la ballena?",
+ "answer": [
+  "Se",
+  "estrella",
+  "contra",
+  "el",
+  "agua."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saltar",
+     "gap": true,
+     "accept": [
+      "saltar",
+      "salir"
+     ]
+    },
+    {
+     "text": "de repente fuera del agua"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar el"
+    },
+    {
+     "text": "remo",
+     "gap": true,
+     "accept": [
+      "remo"
+     ]
+    },
+    {
+     "text": "con fuerza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse con la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    },
+    {
+     "text": "abierta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "estrella",
+     "gap": true,
+     "accept": [
+      "estrella"
+     ]
+    },
+    {
+     "text": "contra el agua"
+    }
+   ]
+  }
+ ],
+ "notes": "The whale is boxed only in the first frame, mid-leap out of the water, so phrase 1 says 'saltar de repente fuera del agua' (carries the key word) instead of the crash; the answer keeps English 'crash into the water'. Key word is an adverbial, kept out of the answer to avoid a free word order. Kayak paddle = 'el remo' (also 'la pala')."
+}

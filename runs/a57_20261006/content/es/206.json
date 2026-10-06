@@ -1,0 +1,115 @@
+{
+ "mediaId": 206,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el pepino",
+ "taps": [
+  {
+   "phrase": "cortar un pepino",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "comer un trozo de pepino",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "mirar por encima de la mesa",
+   "target": "el perro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "male"
+  },
+  {
+   "word": "el pepino",
+   "voice": "male"
+  },
+  {
+   "word": "la camisa",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "corta",
+  "un",
+  "pepino."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cortar un"
+    },
+    {
+     "text": "pepino",
+     "gap": true,
+     "accept": [
+      "pepino"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer",
+     "gap": true,
+     "accept": [
+      "comer"
+     ]
+    },
+    {
+     "text": "un trozo de pepino"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar por encima de la"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "corta",
+     "gap": true,
+     "accept": [
+      "corta",
+      "pela"
+     ]
+    },
+    {
+     "text": "un pepino"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers the man snapping and peeling the cucumber; 'cortar un pepino' fits most boxed frames (snapping in half, slicing). Answer row accepts 'pela' as he peels it too."
+}

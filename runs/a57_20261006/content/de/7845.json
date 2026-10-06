@@ -1,0 +1,123 @@
+{
+ "mediaId": 7845,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "sanft",
+ "taps": [
+  {
+   "phrase": "den Weidenkorb sanft anheben",
+   "target": "der Heißluftballon",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich am Weidenkorb festhalten",
+   "target": "die Frau im Korb",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Gras herumtollen",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Heißluftballon",
+   "voice": "female"
+  },
+  {
+   "word": "der Weidenkorb",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "das Gras",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau in Blau?",
+ "answer": [
+  "Sie",
+  "fährt",
+  "im",
+  "Weidenkorb",
+  "mit."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Weidenkorb"
+    },
+    {
+     "text": "sanft",
+     "gap": true,
+     "accept": [
+      "sanft",
+      "langsam"
+     ]
+    },
+    {
+     "text": "anheben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich am Weidenkorb"
+    },
+    {
+     "text": "festhalten",
+     "gap": true,
+     "accept": [
+      "festhalten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Gras"
+    },
+    {
+     "text": "herumtollen",
+     "gap": true,
+     "accept": [
+      "herumtollen",
+      "herumspringen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt im"
+    },
+    {
+     "text": "Weidenkorb",
+     "gap": true,
+     "accept": [
+      "Weidenkorb",
+      "Korb"
+     ]
+    },
+    {
+     "text": "mit"
+    }
+   ]
+  }
+ ],
+ "notes": "Dog phrase 'herumtollen' rather than 'flitzen': in most boxed frames the dog jumps up at the basket and romps about rather than dashing across. 'mitfahren' in a balloon basket is the natural German for riding along."
+}

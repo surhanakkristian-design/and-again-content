@@ -1,0 +1,120 @@
+{
+ "mediaId": 4760,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "teilen",
+ "taps": [
+  {
+   "phrase": "eine blaue Jacke tragen",
+   "target": "die Person in der Jacke",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein buntes Kleid tragen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich am Wasser umarmen",
+   "target": "die Freunde",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "die Jacke",
+   "voice": "female"
+  },
+  {
+   "word": "das Eis",
+   "voice": "female"
+  },
+  {
+   "word": "das Kleid",
+   "voice": "female"
+  }
+ ],
+ "question": "Was teilen die beiden?",
+ "answer": [
+  "Sie",
+  "teilen",
+  "ein",
+  "Eis."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine blaue"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke",
+      "Jeansjacke"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "buntes",
+     "gap": true,
+     "accept": [
+      "buntes"
+     ]
+    },
+    {
+     "text": "Kleid tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich am Wasser"
+    },
+    {
+     "text": "umarmen",
+     "gap": true,
+     "accept": [
+      "umarmen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "teilen",
+     "gap": true,
+     "accept": [
+      "teilen"
+     ]
+    },
+    {
+     "text": "ein Eis"
+    }
+   ]
+  }
+ ],
+ "notes": "Question uses 'die beiden' to avoid choosing a gender for the jacket person (the source calls them 'he', the clip is ambiguous). The two on the street also hug briefly in the first scene, but 'am Wasser' keeps phrase 3 on the friends on the jetty. Gap in row 2 is the adjective 'buntes' to vary gaps (Jacke is gapped in row 1)."
+}

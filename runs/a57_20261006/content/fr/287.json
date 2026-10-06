@@ -1,0 +1,120 @@
+{
+ "mediaId": 287,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "loin",
+ "taps": [
+  {
+   "phrase": "montrer un village du doigt",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "se retourner vers elle",
+   "target": "l'homme en vert",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une veste rouge",
+   "target": "la personne en rouge",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "le village",
+   "voice": "female"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que montre la femme du doigt ?",
+ "answer": [
+  "Elle",
+  "montre",
+  "un",
+  "village",
+  "au",
+  "loin."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer un"
+    },
+    {
+     "text": "village",
+     "gap": true,
+     "accept": [
+      "village"
+     ]
+    },
+    {
+     "text": "du doigt"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "retourner",
+     "gap": true,
+     "accept": [
+      "retourner"
+     ]
+    },
+    {
+     "text": "vers elle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "veste",
+     "gap": true,
+     "accept": [
+      "veste"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "montre un village au"
+    },
+    {
+     "text": "loin",
+     "gap": true,
+     "accept": [
+      "loin"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer: 'au loin' could also stand before the object ('Elle montre au loin un village'), marked but possible. Phrases 1 and 2: in the wide shots the three just stand; the woman points and the man looks back only in the close frames (kept as English). Key word 'loin' sits in the answer as 'au loin'."
+}

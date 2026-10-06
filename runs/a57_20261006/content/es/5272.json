@@ -1,0 +1,146 @@
+{
+  "mediaId": 5272,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "el senderista",
+  "taps": [
+    {
+      "phrase": "hacer bocina con las manos",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener una barba poblada",
+      "target": "el chico con barba",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar un sombrero de ala ancha",
+      "target": "el chico del sombrero",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la senderista",
+      "voice": "female"
+    },
+    {
+      "word": "la mochila",
+      "voice": "female"
+    },
+    {
+      "word": "el cañón",
+      "voice": "female"
+    },
+    {
+      "word": "la barandilla",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué están haciendo los senderistas?",
+  "answer": [
+    "Los",
+    "senderistas",
+    "están",
+    "gritando",
+    "de",
+    "alegría",
+    "junto",
+    "al",
+    "cañón."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hacer"
+        },
+        {
+          "text": "bocina",
+          "gap": true,
+          "accept": [
+            "bocina"
+          ]
+        },
+        {
+          "text": "con las manos"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener una"
+        },
+        {
+          "text": "barba",
+          "gap": true,
+          "accept": [
+            "barba"
+          ]
+        },
+        {
+          "text": "poblada"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "sombrero",
+          "gap": true,
+          "accept": [
+            "sombrero"
+          ]
+        },
+        {
+          "text": "de ala ancha"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "la"
+        },
+        {
+          "text": "senderista",
+          "gap": true,
+          "accept": [
+            "senderista",
+            "excursionista"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "están gritando de"
+        },
+        {
+          "text": "alegría",
+          "gap": true,
+          "accept": [
+            "alegría"
+          ]
+        },
+        {
+          "text": "junto al cañón"
+        }
+      ]
+    }
+  ],
+  "notes": "Noun 1 points at the woman, so 'la senderista' (feminine form of the database word 'el senderista'). Phrase 1: English 'point at her companion' happens only in a few boxed frames; in most of them she shouts with her hands cupped round her mouth ('hacer bocina con las manos', only she does it). Two men = 'chico' (early 20s)."
+}

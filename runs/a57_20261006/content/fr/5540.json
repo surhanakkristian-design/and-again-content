@@ -1,0 +1,126 @@
+{
+ "mediaId": 5540,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "l'aide",
+ "taps": [
+  {
+   "phrase": "escalader la paroi",
+   "target": "la femme aux tresses",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'accroupir sur le tapis",
+   "target": "la femme à la queue-de-cheval",
+   "voice": "female"
+  },
+  {
+   "phrase": "agripper une grosse prise",
+   "target": "la femme aux tresses",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les tresses",
+   "voice": "female"
+  },
+  {
+   "word": "la queue-de-cheval",
+   "voice": "female"
+  },
+  {
+   "word": "le tapis",
+   "voice": "female"
+  },
+  {
+   "word": "le sac à magnésie",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme aux tresses ?",
+ "answer": [
+  "Elle",
+  "escalade",
+  "la",
+  "paroi",
+  "avec",
+  "l'aide",
+  "d'une",
+  "autre",
+  "femme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "escalader la"
+    },
+    {
+     "text": "paroi",
+     "gap": true,
+     "accept": [
+      "paroi"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'accroupir"
+    },
+    {
+     "text": "sur le"
+    },
+    {
+     "text": "tapis",
+     "gap": true,
+     "accept": [
+      "tapis"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agripper",
+     "gap": true,
+     "accept": [
+      "agripper",
+      "saisir"
+     ]
+    },
+    {
+     "text": "une grosse prise"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "escalade",
+     "gap": true,
+     "accept": [
+      "escalade",
+      "gravit"
+     ]
+    },
+    {
+     "text": "la paroi"
+    },
+    {
+     "text": "avec l'aide d'une autre femme"
+    }
+   ]
+  }
+ ],
+ "notes": "The key word 'l'aide' is in the model answer (the ponytail woman pushes her up from below), but elided, so it cannot be a gap. 'Avec l'aide d'une autre femme' could also open the sentence (with a comma; chips have none). The ponytail woman crouches only in the first frames of her box, then stands and reaches up."
+}

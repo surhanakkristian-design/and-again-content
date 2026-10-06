@@ -1,0 +1,123 @@
+{
+ "mediaId": 7040,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el dado",
+ "taps": [
+  {
+   "phrase": "rodar por el tablero",
+   "target": "el dado blanco",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevarse las manos a la cabeza",
+   "target": "el chico de negro",
+   "voice": "male"
+  },
+  {
+   "phrase": "tirar un dado",
+   "target": "la chica del pelo rizado",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el dado",
+   "voice": "female"
+  },
+  {
+   "word": "las palomitas",
+   "voice": "female"
+  },
+  {
+   "word": "el tablero",
+   "voice": "female"
+  },
+  {
+   "word": "los collares",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está rodando por el tablero?",
+ "answer": [
+  "Un",
+  "dado",
+  "blanco",
+  "está",
+  "rodando",
+  "por",
+  "el",
+  "tablero."
+ ],
+ "answerVoice": "female",
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rodar por el"
+    },
+    {
+     "text": "tablero",
+     "gap": true,
+     "accept": [
+      "tablero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevarse las"
+    },
+    {
+     "text": "manos",
+     "gap": true,
+     "accept": [
+      "manos"
+     ]
+    },
+    {
+     "text": "a la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirar un"
+    },
+    {
+     "text": "dado",
+     "gap": true,
+     "accept": [
+      "dado"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "rodando",
+     "gap": true,
+     "accept": [
+      "rodando"
+     ]
+    },
+    {
+     "text": "por el tablero"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 3: English 'a board game'; the pill sits on the board itself, and phrase 1, the question and the answer call it 'el tablero', so noun 3 is 'el tablero' too (same thing, same word). Phrase 1 and 3: the die rolls and the woman throws only in the first half; in the second half the die lies still and she holds her chest. Phrase 2: the man in grey covers his face with one hand, he does not put both hands on his head.",
+ "carousel": []
+}

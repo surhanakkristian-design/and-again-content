@@ -1,0 +1,128 @@
+{
+  "mediaId": 7088,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "ebnen",
+  "taps": [
+    {
+      "phrase": "eine lange Latte durch den Beton ziehen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine schwere Last in der Luft halten",
+      "target": "der Kran",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Dach knien",
+      "target": "der kniende Arbeiter",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Kran",
+      "voice": "female"
+    },
+    {
+      "word": "der Schutzhelm",
+      "voice": "female"
+    },
+    {
+      "word": "das Stativ",
+      "voice": "female"
+    },
+    {
+      "word": "der Beton",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "zieht",
+    "den",
+    "nassen",
+    "Beton",
+    "glatt."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine lange"
+        },
+        {
+          "text": "Latte",
+          "gap": true,
+          "accept": [
+            "Latte",
+            "Abziehlatte"
+          ]
+        },
+        {
+          "text": "durch den Beton"
+        },
+        {
+          "text": "ziehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine schwere"
+        },
+        {
+          "text": "Last",
+          "gap": true,
+          "accept": [
+            "Last"
+          ]
+        },
+        {
+          "text": "in der Luft halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem Dach"
+        },
+        {
+          "text": "knien",
+          "gap": true,
+          "accept": [
+            "knien"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "zieht den nassen"
+        },
+        {
+          "text": "Beton",
+          "gap": true,
+          "accept": [
+            "Beton"
+          ]
+        },
+        {
+          "text": "glatt"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'ebnen' kept, but for wet concrete natives say 'glattziehen' or 'abziehen' ('ebnen' is mostly 'den Boden ebnen' or figurative 'den Weg ebnen'); proposal: key word 'glattziehen' (or 'abziehen'). So the answer uses 'zieht ... glatt', not 'ebnet'. The kneeling worker's gender is unclear: target written as 'der kniende Arbeiter' (verifier only). 'die Latte' for the straightedge (technical: Abziehlatte, accepted in recall)."
+}

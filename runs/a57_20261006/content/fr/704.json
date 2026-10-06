@@ -1,0 +1,114 @@
+{
+ "mediaId": 704,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "éternuer",
+ "taps": [
+  {
+   "phrase": "éternuer très fort",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'essuyer le nez",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un panier",
+   "target": "la fille",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'arbre",
+   "voice": "male"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  },
+  {
+   "word": "le chapeau",
+   "voice": "male"
+  },
+  {
+   "word": "le panier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le jeune homme ?",
+ "answer": [
+  "Il",
+  "éternue",
+  "très",
+  "fort."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "éternuer",
+     "gap": true,
+     "accept": [
+      "éternuer"
+     ]
+    },
+    {
+     "text": "très fort"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'essuyer le"
+    },
+    {
+     "text": "nez",
+     "gap": true,
+     "accept": [
+      "nez"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter",
+     "gap": true,
+     "accept": [
+      "porter",
+      "tenir"
+     ]
+    },
+    {
+     "text": "un panier"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "éternue très"
+    },
+    {
+     "text": "fort",
+     "gap": true,
+     "accept": [
+      "fort"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'the man' is clearly a young man in the clip -> 'le jeune homme'. The answer row gaps 'fort' so it does not look like the tap row 'éternuer très fort' once blanked."
+}

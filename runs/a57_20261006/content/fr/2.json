@@ -1,0 +1,115 @@
+{
+  "mediaId": 2,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le certificat",
+  "taps": [
+    {
+      "phrase": "présenter un certificat encadré",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "serrer plusieurs certificats contre soi",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "rayonner de fierté",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les cheveux bouclés",
+      "voice": "female"
+    },
+    {
+      "word": "le certificat",
+      "voice": "female"
+    },
+    {
+      "word": "le haut",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "montre",
+    "fièrement",
+    "ses",
+    "certificats",
+    "encadrés."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "présenter",
+          "gap": true,
+          "accept": [
+            "présenter",
+            "montrer"
+          ]
+        },
+        {
+          "text": "un certificat encadré"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "serrer",
+          "gap": true,
+          "accept": [
+            "serrer"
+          ]
+        },
+        {
+          "text": "plusieurs certificats contre soi"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "rayonner de"
+        },
+        {
+          "text": "fierté",
+          "gap": true,
+          "accept": [
+            "fierté"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "montre fièrement ses"
+        },
+        {
+          "text": "certificats",
+          "gap": true,
+          "accept": [
+            "certificats"
+          ]
+        },
+        {
+          "text": "encadrés"
+        }
+      ]
+    }
+  ],
+  "notes": "'fièrement' could in theory also stand at the end ('Elle montre ses certificats encadrés fièrement'), but that order is unnatural; the chips have one natural order."
+}

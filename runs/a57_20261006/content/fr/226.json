@@ -1,0 +1,116 @@
+{
+ "mediaId": 226,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le désespoir",
+ "taps": [
+  {
+   "phrase": "faire la manche à l'accordéon",
+   "target": "le musicien",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'accroupir sur le sol",
+   "target": "le musicien",
+   "voice": "male"
+  },
+  {
+   "phrase": "rester ouvert et vide",
+   "target": "l'étui",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'accordéon",
+   "voice": "male"
+  },
+  {
+   "word": "les graffitis",
+   "voice": "male"
+  },
+  {
+   "word": "l'étui",
+   "voice": "male"
+  },
+  {
+   "word": "le panneau d'affichage",
+   "voice": "male"
+  }
+ ],
+ "question": "De quoi joue le musicien ?",
+ "answer": [
+  "Il",
+  "joue",
+  "de",
+  "l'accordéon."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire la"
+    },
+    {
+     "text": "manche",
+     "gap": true,
+     "accept": [
+      "manche"
+     ]
+    },
+    {
+     "text": "à l'accordéon"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'accroupir sur le"
+    },
+    {
+     "text": "sol",
+     "gap": true,
+     "accept": [
+      "sol"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rester ouvert et"
+    },
+    {
+     "text": "vide",
+     "gap": true,
+     "accept": [
+      "vide"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "joue",
+     "gap": true,
+     "accept": [
+      "joue"
+     ]
+    },
+    {
+     "text": "de l'accordéon"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 'faire la manche à l'accordéon' (B2 collocation) instead of 'jouer de l'accordéon' so it does not duplicate the answer row. Model answer's B-level word is 'l'accordéon' (B1); the clip allows no richer short answer to this question. Key word 'le désespoir' not in the set (no noun row). Phrase 2: in the last frames the musician sits slumped rather than crouching; phrase written for the crouching moments."
+}

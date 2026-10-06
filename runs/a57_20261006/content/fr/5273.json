@@ -1,0 +1,133 @@
+{
+ "mediaId": 5273,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le mannequin",
+ "taps": [
+  {
+   "phrase": "défiler sur le podium",
+   "target": "le mannequin",
+   "voice": "male"
+  },
+  {
+   "phrase": "ajuster ses lunettes de soleil",
+   "target": "le mannequin",
+   "voice": "male"
+  },
+  {
+   "phrase": "mettre sa veste en valeur",
+   "target": "le mannequin",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le mannequin",
+   "voice": "male"
+  },
+  {
+   "word": "les spectateurs",
+   "voice": "male"
+  },
+  {
+   "word": "le podium",
+   "voice": "male"
+  },
+  {
+   "word": "le plafond",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le mannequin ?",
+ "answer": [
+  "Il",
+  "défile",
+  "sur",
+  "le",
+  "podium."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "défiler sur le"
+    },
+    {
+     "text": "podium",
+     "gap": true,
+     "accept": [
+      "podium"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ajuster",
+     "gap": true,
+     "accept": [
+      "ajuster",
+      "mettre"
+     ]
+    },
+    {
+     "text": "ses lunettes de soleil"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre sa"
+    },
+    {
+     "text": "veste",
+     "gap": true,
+     "accept": [
+      "veste"
+     ]
+    },
+    {
+     "text": "en valeur"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "mannequin",
+     "gap": true,
+     "accept": [
+      "mannequin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "défile",
+     "gap": true,
+     "accept": [
+      "défile"
+     ]
+    },
+    {
+     "text": "sur le podium"
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the model, as in English. Catwalk = le podium (usual French word). Tap 3: he opens the jacket to show the lining, hence 'mettre sa veste en valeur'."
+}

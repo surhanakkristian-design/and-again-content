@@ -1,0 +1,119 @@
+{
+ "mediaId": 42,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el examen",
+ "taps": [
+  {
+   "phrase": "mirar su examen",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar encima de los papeles",
+   "target": "el bolígrafo",
+   "voice": "male"
+  },
+  {
+   "phrase": "cubrir la mesa",
+   "target": "los papeles",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la puerta",
+   "voice": "male"
+  },
+  {
+   "word": "la silla",
+   "voice": "male"
+  },
+  {
+   "word": "la pared",
+   "voice": "male"
+  },
+  {
+   "word": "los papeles",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está mirando el chico?",
+ "answer": [
+  "Está",
+  "mirando",
+  "su",
+  "examen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar su"
+    },
+    {
+     "text": "examen",
+     "gap": true,
+     "accept": [
+      "examen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar encima de los"
+    },
+    {
+     "text": "papeles",
+     "gap": true,
+     "accept": [
+      "papeles",
+      "folios"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cubrir",
+     "gap": true,
+     "accept": [
+      "cubrir",
+      "tapar"
+     ]
+    },
+    {
+     "text": "la mesa"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "mirando",
+     "gap": true,
+     "accept": [
+      "mirando",
+      "viendo"
+     ]
+    },
+    {
+     "text": "su examen"
+    }
+   ]
+  }
+ ],
+ "notes": "Target 'el chico' (young man; 'el hombre' also possible). Tap box 1 also covers frames where he walks to/away from the table; phrase written for the frames where he sits and looks at the papers. No noun row: 'el examen' is not a noun of the set and is gapped in tap row 1."
+}

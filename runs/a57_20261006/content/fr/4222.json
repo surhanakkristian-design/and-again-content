@@ -1,0 +1,122 @@
+{
+ "mediaId": 4222,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "saluer de la main",
+ "taps": [
+  {
+   "phrase": "saluer la caméra de la main",
+   "target": "le gecko",
+   "voice": "female"
+  },
+  {
+   "phrase": "croiser les bras sur la poitrine",
+   "target": "le gecko",
+   "voice": "female"
+  },
+  {
+   "phrase": "se pencher vers l'objectif",
+   "target": "le gecko",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les yeux",
+   "voice": "female"
+  },
+  {
+   "word": "la langue",
+   "voice": "female"
+  },
+  {
+   "word": "le ventre",
+   "voice": "female"
+  },
+  {
+   "word": "la queue",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le gecko ?",
+ "answer": [
+  "Il",
+  "salue",
+  "la",
+  "caméra",
+  "de",
+  "la",
+  "main."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saluer",
+     "gap": true,
+     "accept": [
+      "saluer"
+     ]
+    },
+    {
+     "text": "la caméra de la main"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "croiser les"
+    },
+    {
+     "text": "bras",
+     "gap": true,
+     "accept": [
+      "bras"
+     ]
+    },
+    {
+     "text": "sur la poitrine"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "pencher",
+     "gap": true,
+     "accept": [
+      "pencher"
+     ]
+    },
+    {
+     "text": "vers l'objectif"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "salue la caméra de la"
+    },
+    {
+     "text": "main",
+     "gap": true,
+     "accept": [
+      "main"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Only one character; all three boxes are the gecko. Chips 'Il salue de la main la caméra' is a possible but marked second order."
+}

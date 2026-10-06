@@ -1,0 +1,122 @@
+{
+ "mediaId": 10,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la hoja",
+ "taps": [
+  {
+   "phrase": "sostener una hoja grande",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "brillar de color verde",
+   "target": "la hoja",
+   "voice": "female"
+  },
+  {
+   "phrase": "caer sobre la hoja",
+   "target": "el agua",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas",
+   "voice": "female"
+  },
+  {
+   "word": "la camisa",
+   "voice": "female"
+  },
+  {
+   "word": "la hoja",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Dónde está cayendo el agua?",
+ "answer": [
+  "El",
+  "agua",
+  "está",
+  "cayendo",
+  "sobre",
+  "la",
+  "hoja."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener una"
+    },
+    {
+     "text": "hoja",
+     "gap": true,
+     "accept": [
+      "hoja"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar",
+     "gap": true,
+     "accept": [
+      "brillar"
+     ]
+    },
+    {
+     "text": "de color verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caer",
+     "gap": true,
+     "accept": [
+      "caer"
+     ]
+    },
+    {
+     "text": "sobre la hoja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "cayendo",
+     "gap": true,
+     "accept": [
+      "cayendo"
+     ]
+    },
+    {
+     "text": "sobre la hoja"
+    }
+   ]
+  }
+ ],
+ "notes": "Target 'la persona' in English: the botanist looks female (earrings, female voice), so 'la mujer'. Phrase 2: the leaf glows only in some boxed frames; 'brillar de color verde' describes its bright green shine."
+}

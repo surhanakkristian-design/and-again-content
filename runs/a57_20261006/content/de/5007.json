@@ -1,0 +1,119 @@
+{
+ "mediaId": 5007,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Schloss",
+ "taps": [
+  {
+   "phrase": "ihre Schlüssel suchen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ins Haus gehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich im Schloss drehen",
+   "target": "die Schlüssel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Schloss",
+   "voice": "female"
+  },
+  {
+   "word": "die Hand",
+   "voice": "female"
+  },
+  {
+   "word": "die Schlüssel",
+   "voice": "female"
+  },
+  {
+   "word": "die Tür",
+   "voice": "female"
+  }
+ ],
+ "question": "Was sucht die Frau?",
+ "answer": [
+  "Sie",
+  "sucht",
+  "ihre",
+  "Schlüssel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ihre Schlüssel"
+    },
+    {
+     "text": "suchen",
+     "gap": true,
+     "accept": [
+      "suchen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ins"
+    },
+    {
+     "text": "Haus",
+     "gap": true,
+     "accept": [
+      "Haus"
+     ]
+    },
+    {
+     "text": "gehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich im"
+    },
+    {
+     "text": "Schloss",
+     "gap": true,
+     "accept": [
+      "Schloss"
+     ]
+    },
+    {
+     "text": "drehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sucht ihre"
+    },
+    {
+     "text": "Schlüssel",
+     "gap": true,
+     "accept": [
+      "Schlüssel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The red and green boxes both cover the woman in the same frames (as in English), so phrases 1 and 2 share one target; 'ihre Schlüssel suchen' fits the opening frames, 'ins Haus gehen' the last ones. Key word das Schloss sits in phrase 3 (gapped), so no noun row. 'das Schloss' is the right everyday word for the door lock."
+}

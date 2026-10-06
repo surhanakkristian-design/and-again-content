@@ -1,0 +1,121 @@
+{
+ "mediaId": 330,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la puerta",
+ "taps": [
+  {
+   "phrase": "correr hacia la puerta de embarque",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "enseñar su billete",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar la puerta",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la puerta de embarque",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "la maleta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Adónde corre la chica?",
+ "answer": [
+  "Corre",
+  "hacia",
+  "la",
+  "puerta",
+  "de",
+  "embarque."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr hacia la"
+    },
+    {
+     "text": "puerta",
+     "gap": true,
+     "accept": [
+      "puerta"
+     ]
+    },
+    {
+     "text": "de embarque"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "enseñar su"
+    },
+    {
+     "text": "billete",
+     "gap": true,
+     "accept": [
+      "billete",
+      "tarjeta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar",
+     "gap": true,
+     "accept": [
+      "sujetar",
+      "aguantar"
+     ]
+    },
+    {
+     "text": "la puerta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Corre",
+     "gap": true,
+     "accept": [
+      "Corre",
+      "Va"
+     ]
+    },
+    {
+     "text": "hacia la puerta de embarque"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la puerta' alone does not name an airport gate; in Spain it is 'la puerta de embarque' (used for the noun and phrase 1; it contains the key word). Proposal: database word 'la puerta de embarque'. Phrase 3: the man holds the gate door / plane door with his hand in the wide shots; in the counter close-ups he holds the scanner instead. 'enseñar su billete' = the boarding pass (Spain: 'tarjeta de embarque', but 'billete' is the A-level word)."
+}

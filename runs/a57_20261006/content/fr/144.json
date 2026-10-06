@@ -1,0 +1,26 @@
+{
+  "mediaId": 144, "lang": "fr", "level": "A",
+  "keyWord": "attraper",
+  "taps": [
+    { "phrase": "attraper un ballon rouge", "target": "le garçon", "voice": "male" },
+    { "phrase": "voler dans les airs", "target": "le ballon", "voice": "male" },
+    { "phrase": "courir dans l'herbe", "target": "le garçon", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ballon", "voice": "male" },
+    { "word": "le nuage", "voice": "male" },
+    { "word": "le garçon", "voice": "male" },
+    { "word": "l'herbe", "voice": "male" }
+  ],
+  "question": "Que fait le garçon ?",
+  "answer": ["Il", "attrape", "un", "ballon", "rouge."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "attraper un" }, { "text": "ballon", "gap": true, "accept": ["ballon"] }, { "text": "rouge" } ] },
+    { "from": "taps", "parts": [ { "text": "voler", "gap": true, "accept": ["voler"] }, { "text": "dans les airs" } ] },
+    { "from": "taps", "parts": [ { "text": "courir", "gap": true, "accept": ["courir"] }, { "text": "dans l'herbe" } ] },
+    { "from": "answer", "parts": [ { "text": "attrape", "gap": true, "accept": ["attrape"] }, { "text": "un ballon rouge" } ] }
+  ],
+  "notes": "'le ballon' (not 'la balle'): the ball is held with both hands, a play ball; 'balle' not accepted in the recall row (it would need 'une')."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 9,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el laboratorio",
+ "taps": [
+  {
+   "phrase": "enfundarse los guantes morados",
+   "target": "la científica",
+   "voice": "female"
+  },
+  {
+   "phrase": "examinar un tubo de ensayo",
+   "target": "la científica",
+   "voice": "female"
+  },
+  {
+   "phrase": "mantener congeladas las muestras",
+   "target": "el congelador",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas de protección",
+   "voice": "female"
+  },
+  {
+   "word": "los tubos de ensayo",
+   "voice": "female"
+  },
+  {
+   "word": "la bata de laboratorio",
+   "voice": "female"
+  },
+  {
+   "word": "el congelador",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la científica?",
+ "answer": [
+  "Está",
+  "guardando",
+  "los",
+  "tubos",
+  "de",
+  "ensayo",
+  "en",
+  "el",
+  "congelador."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "enfundarse los"
+    },
+    {
+     "text": "guantes",
+     "gap": true,
+     "accept": [
+      "guantes"
+     ]
+    },
+    {
+     "text": "morados"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "examinar",
+     "gap": true,
+     "accept": [
+      "examinar",
+      "observar",
+      "mirar"
+     ]
+    },
+    {
+     "text": "un tubo de ensayo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mantener congeladas las"
+    },
+    {
+     "text": "muestras",
+     "gap": true,
+     "accept": [
+      "muestras"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está guardando los tubos de ensayo en el"
+    },
+    {
+     "text": "congelador",
+     "gap": true,
+     "accept": [
+      "congelador"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the green box also covers pipetting, writing and freezer frames; 'examinar un tubo de ensayo' is the close-up where she looks at the tube. Key word 'el laboratorio' is not one of the four nouns; it appears inside 'la bata de laboratorio', so no noun recall row. Answer subject dropped (natural es)."
+}

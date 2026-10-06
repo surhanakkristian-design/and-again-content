@@ -1,0 +1,136 @@
+{
+ "mediaId": 680,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el cantante",
+ "taps": [
+  {
+   "phrase": "cantar una canción",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tocarse los auriculares",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado frente a una mesa",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cantante",
+   "voice": "female"
+  },
+  {
+   "word": "los auriculares",
+   "voice": "female"
+  },
+  {
+   "word": "el micrófono",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "está",
+  "cantando",
+  "delante",
+  "de",
+  "un",
+  "micrófono."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cantar una"
+    },
+    {
+     "text": "canción",
+     "gap": true,
+     "accept": [
+      "canción"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarse los"
+    },
+    {
+     "text": "auriculares",
+     "gap": true,
+     "accept": [
+      "auriculares",
+      "cascos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado frente a una"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "cantante",
+     "gap": true,
+     "accept": [
+      "cantante"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "cantando",
+     "gap": true,
+     "accept": [
+      "cantando"
+     ]
+    },
+    {
+     "text": "delante de un micrófono"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'el cantante': the singer is a woman, so noun 1 is 'la cantante' (same word, feminine article). Phrase 3: the 'desk' is the mixing desk behind the glass; 'una mesa' kept simple for level A."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 4361, "lang": "fr", "level": "B",
+  "keyWord": "faire du shopping",
+  "taps": [
+    { "phrase": "montrer fièrement ses achats", "target": "la femme", "voice": "female" },
+    { "phrase": "flâner devant les vitrines", "target": "la femme", "voice": "female" },
+    { "phrase": "prendre l'escalier mécanique", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le gratte-ciel", "voice": "female" },
+    { "word": "le feu tricolore", "voice": "female" },
+    { "word": "le sac en papier", "voice": "female" },
+    { "word": "la robe", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "fait", "du", "shopping", "et", "montre", "fièrement", "ses", "achats."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "montrer fièrement ses" }, { "text": "achats", "gap": true, "accept": ["achats"] } ] },
+    { "from": "taps", "parts": [ { "text": "flâner", "gap": true, "accept": ["flâner"] }, { "text": "devant les vitrines" } ] },
+    { "from": "taps", "parts": [ { "text": "prendre", "gap": true, "accept": ["prendre"] }, { "text": "l'escalier mécanique" } ] },
+    { "from": "answer", "parts": [ { "text": "fait du" }, { "text": "shopping", "gap": true, "accept": ["shopping"] }, { "text": "et montre fièrement ses achats" } ] }
+  ],
+  "notes": "All three English boxes are the same woman box over the whole clip: phrase 1 fits the street shots (bags held up), phrase 2 the shopping-centre walk, phrase 3 the escalator at the end. 'L'escalier mécanique' is elided, so row 3 gaps the verb. Noun 2 'le feu tricolore' = the traffic light (amber housing visible). The key word is gapped in the answer row."
+}

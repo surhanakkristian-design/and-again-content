@@ -1,0 +1,25 @@
+{
+  "mediaId": 221, "lang": "de", "level": "B",
+  "keyWord": "der Hochschulabschluss",
+  "taps": [
+    { "phrase": "ihren Hochschulabschluss feiern", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein goldenes Siegel tragen", "target": "die Urkunde", "voice": "female" },
+    { "phrase": "durch die Luft wirbeln", "target": "das Konfetti", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Abschlussurkunde", "voice": "female" },
+    { "word": "der Absolventenhut", "voice": "female" },
+    { "word": "die Quaste", "voice": "female" }
+  ],
+  "question": "Was feiert die Frau?",
+  "answer": ["Sie", "feiert", "ihren", "Hochschulabschluss."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ihren" }, { "text": "Hochschulabschluss", "gap": true, "accept": ["Hochschulabschluss", "Abschluss", "Uniabschluss"] }, { "text": "feiern" } ] },
+    { "from": "taps", "parts": [ { "text": "ein goldenes" }, { "text": "Siegel", "gap": true, "accept": ["Siegel"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "durch die Luft" }, { "text": "wirbeln", "gap": true, "accept": ["wirbeln", "fliegen", "flattern"] } ] },
+    { "from": "answer", "parts": [ { "text": "feiert", "gap": true, "accept": ["feiert"] }, { "text": "ihren Hochschulabschluss" } ] }
+  ],
+  "notes": "Key word 'der Hochschulabschluss' names the qualification, not the paper: noun 1 (English 'a degree certificate') is 'die Abschlussurkunde' (the document); the key word is used in tap 1 and the answer instead. 'die Urkunde' as tap-2 target = same object. 'der Absolventenhut' chosen over colloquial 'der Doktorhut' (she is not getting a doctorate). Confetti only falls in the last boxed frames, where tap 3 is on. No noun row: the key word is not a noun of the set."
+}

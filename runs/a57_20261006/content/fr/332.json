@@ -1,0 +1,137 @@
+{
+  "mediaId": 332,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la girafe",
+  "taps": [
+    {
+      "phrase": "manger des feuilles vertes",
+      "target": "la girafe",
+      "voice": "female"
+    },
+    {
+      "phrase": "baisser la tête",
+      "target": "la girafe",
+      "voice": "female"
+    },
+    {
+      "phrase": "boire de l'eau",
+      "target": "la girafe",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la girafe",
+      "voice": "female"
+    },
+    {
+      "word": "les zèbres",
+      "voice": "female"
+    },
+    {
+      "word": "l'eau",
+      "voice": "female"
+    },
+    {
+      "word": "le ciel",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la girafe ?",
+  "answer": [
+    "La",
+    "girafe",
+    "baisse",
+    "la",
+    "tête",
+    "pour",
+    "boire."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "manger des"
+        },
+        {
+          "text": "feuilles",
+          "gap": true,
+          "accept": [
+            "feuilles"
+          ]
+        },
+        {
+          "text": "vertes"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "baisser",
+          "gap": true,
+          "accept": [
+            "baisser"
+          ]
+        },
+        {
+          "text": "la tête"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "boire",
+          "gap": true,
+          "accept": [
+            "boire"
+          ]
+        },
+        {
+          "text": "de l'eau"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "la"
+        },
+        {
+          "text": "girafe",
+          "gap": true,
+          "accept": [
+            "girafe"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "baisse la"
+        },
+        {
+          "text": "tête",
+          "gap": true,
+          "accept": [
+            "tête"
+          ]
+        },
+        {
+          "text": "pour boire"
+        }
+      ]
+    }
+  ],
+  "notes": "Noun 2 plural 'les zèbres' (several zebras in the background; English has 'a zebra'). Answer 'baisse la tête pour boire' instead of 'boit de l'eau' because that tail would look identical to the phrase-3 row once the gap is blanked ('___ de l'eau')."
+}

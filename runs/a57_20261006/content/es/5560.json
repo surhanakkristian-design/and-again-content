@@ -1,0 +1,121 @@
+{
+ "mediaId": 5560,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "agradecer",
+ "taps": [
+  {
+   "phrase": "llevarse la mano al pecho",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber té caliente",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentado en el escalón",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "el coche",
+   "voice": "female"
+  },
+  {
+   "word": "la nieve",
+   "voice": "female"
+  },
+  {
+   "word": "la farola",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué bebe el chico?",
+ "answer": [
+  "El",
+  "chico",
+  "bebe",
+  "té",
+  "caliente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevarse la"
+    },
+    {
+     "text": "mano",
+     "gap": true,
+     "accept": [
+      "mano"
+     ]
+    },
+    {
+     "text": "al pecho"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber",
+     "gap": true,
+     "accept": [
+      "beber",
+      "tomar"
+     ]
+    },
+    {
+     "text": "té caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en el"
+    },
+    {
+     "text": "escalón",
+     "gap": true,
+     "accept": [
+      "escalón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bebe"
+    },
+    {
+     "text": "té",
+     "gap": true,
+     "accept": [
+      "té"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman hands over the tea only in the first two frames; in most boxed frames she holds her hand on her chest, so 'llevarse la mano al pecho'. Key word agradecer is not used: the clip does not show clearly who thanks whom, so it was not forced. 'la farola' = street lamp (everyday word; 'la lámpara' would be wrong), perhaps A2/B1."
+}

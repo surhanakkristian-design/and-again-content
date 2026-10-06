@@ -1,0 +1,26 @@
+{
+  "mediaId": 7239, "lang": "de", "level": "B",
+  "keyWord": "der Idiot",
+  "taps": [
+    { "phrase": "an einem schaumigen Getränk nippen", "target": "der Mann", "voice": "male" },
+    { "phrase": "eine Regenjacke tragen", "target": "der Hund", "voice": "male" },
+    { "phrase": "gegen den Kopf des Mannes drücken", "target": "die blaue Bürste", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Bürste", "voice": "male" },
+    { "word": "der Hund", "voice": "male" },
+    { "word": "der Pappbecher", "voice": "male" },
+    { "word": "die Windschutzscheibe", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "nippt", "an", "einem", "schaumigen", "Getränk."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "an einem schaumigen Getränk" }, { "text": "nippen", "gap": true, "accept": ["nippen", "trinken"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Regenjacke", "gap": true, "accept": ["Regenjacke", "Regenmantel"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "gegen den Kopf des Mannes" }, { "text": "drücken", "gap": true, "accept": ["drücken", "pressen"] } ] },
+    { "from": "answer", "parts": [ { "text": "nippt an einem schaumigen" }, { "text": "Getränk", "gap": true, "accept": ["Getränk"] } ] }
+  ],
+  "notes": "The key word 'der Idiot' is a judgement, not a thing in the clip, so it is not used in the exercises (no noun row). Phrase 3 names the man ('des Mannes') because 'gegen seinen Kopf' would refer to the brush itself in a German infinitive phrase. The dog's yellow coat is a rain jacket ('Regenjacke'); 'Regenmantel' accepted."
+}

@@ -1,0 +1,113 @@
+{
+ "mediaId": 5456,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el permiso",
+ "taps": [
+  {
+   "phrase": "abrir el pasaporte",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "pasar por el arco",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar uniforme",
+   "target": "el policía",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "las gafas",
+   "voice": "male"
+  },
+  {
+   "word": "las manos",
+   "voice": "male"
+  },
+  {
+   "word": "el pasaporte",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué enseña el chico?",
+ "answer": [
+  "Enseña",
+  "su",
+  "pasaporte."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "el pasaporte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar por el"
+    },
+    {
+     "text": "arco",
+     "gap": true,
+     "accept": [
+      "arco"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "uniforme",
+     "gap": true,
+     "accept": [
+      "uniforme"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Enseña",
+     "gap": true,
+     "accept": [
+      "Enseña",
+      "Muestra"
+     ]
+    },
+    {
+     "text": "su pasaporte"
+    }
+   ]
+  }
+ ],
+ "notes": "Boxes 1 and 2 (the young man) cover the whole clip, also the counter moments (hands together); phrase 1 written for the passport part, phrase 2 for the walk through the metal-detector arch at the end ('el arco' = the detector frame, plain A word). Officer = 'el policía' (police-style uniform and badge). Question uses 'enseñar' (he holds the passport up to the camera) instead of a literal 'sostener'. Key word 'el permiso' is not a noun of the set and is not forced; the card he holds up is a visa ('el visado')."
+}

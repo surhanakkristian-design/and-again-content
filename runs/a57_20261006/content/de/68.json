@@ -1,0 +1,128 @@
+{
+ "mediaId": 68,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Verband",
+ "taps": [
+  {
+   "phrase": "ein rot-weißes Trikot tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine Brille tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "um die Hand gewickelt werden",
+   "target": "der Verband",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Brille",
+   "voice": "female"
+  },
+  {
+   "word": "der Daumen",
+   "voice": "female"
+  },
+  {
+   "word": "der Verband",
+   "voice": "female"
+  },
+  {
+   "word": "die Bank",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "wickelt",
+  "einen",
+  "Verband",
+  "um",
+  "ihre",
+  "Hand."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein rot-weißes"
+    },
+    {
+     "text": "Trikot",
+     "gap": true,
+     "accept": [
+      "Trikot"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Brille",
+     "gap": true,
+     "accept": [
+      "Brille"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "um die Hand"
+    },
+    {
+     "text": "gewickelt",
+     "gap": true,
+     "accept": [
+      "gewickelt"
+     ]
+    },
+    {
+     "text": "werden"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "wickelt einen"
+    },
+    {
+     "text": "Verband",
+     "gap": true,
+     "accept": [
+      "Verband"
+     ]
+    },
+    {
+     "text": "um ihre Hand"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: English 'smile at the camera' is true only in the last frames; in most boxed frames she looks down at her hand, so the phrase names her red-and-white checked shirt (true in every frame, only her). Phrase 3: 'wickeln' is B1 but the plain right word ('um die Hand gehen' is not German). Key word: the wrap is elastic sports tape; 'der Verband' is fine, some natives would say 'das Tape'. Answer: 'Er wickelt um ihre Hand einen Verband' possible but marked."
+}

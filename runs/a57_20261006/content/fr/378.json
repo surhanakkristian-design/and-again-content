@@ -1,0 +1,123 @@
+{
+ "mediaId": 378,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le lever du soleil",
+ "taps": [
+  {
+   "phrase": "être perché sur une rambarde",
+   "target": "l'oiseau",
+   "voice": "female"
+  },
+  {
+   "phrase": "survoler les toits",
+   "target": "l'oiseau",
+   "voice": "female"
+  },
+  {
+   "phrase": "projeter de longs rayons dorés",
+   "target": "le soleil",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'oiseau",
+   "voice": "female"
+  },
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "les toits",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'oiseau ?",
+ "answer": [
+  "Il",
+  "survole",
+  "les",
+  "toits",
+  "au",
+  "lever",
+  "du",
+  "soleil."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "perché",
+     "gap": true,
+     "accept": [
+      "perché",
+      "posé"
+     ]
+    },
+    {
+     "text": "sur une rambarde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "survoler les"
+    },
+    {
+     "text": "toits",
+     "gap": true,
+     "accept": [
+      "toits"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "projeter de longs"
+    },
+    {
+     "text": "rayons",
+     "gap": true,
+     "accept": [
+      "rayons"
+     ]
+    },
+    {
+     "text": "dorés"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "survole les toits au"
+    },
+    {
+     "text": "lever",
+     "gap": true,
+     "accept": [
+      "lever"
+     ]
+    },
+    {
+     "text": "du soleil"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1/2 boxes share the bird; phrase 1 true in the first half (on the rail), phrase 2 in the second half. Answer subject 'Il' (l'oiseau); voice kept female as in English."
+}

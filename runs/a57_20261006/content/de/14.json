@@ -1,0 +1,26 @@
+{
+  "mediaId": 14, "lang": "de", "level": "A",
+  "keyWord": "die Seite",
+  "taps": [
+    { "phrase": "ein Notizbuch öffnen", "target": "die Hände", "voice": "female" },
+    { "phrase": "gelb leuchten", "target": "die Blume", "voice": "female" },
+    { "phrase": "über die grünen Blätter streichen", "target": "der Pinsel", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Seite", "voice": "female" },
+    { "word": "die Blume", "voice": "female" },
+    { "word": "der Pinsel", "voice": "female" },
+    { "word": "der Tisch", "voice": "female" }
+  ],
+  "question": "Was ist auf der Seite?",
+  "answer": ["Eine", "gelbe", "Blume", "liegt", "auf", "der", "Seite."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein Notizbuch" }, { "text": "öffnen", "gap": true, "accept": ["öffnen", "aufschlagen", "aufmachen"] } ] },
+    { "from": "taps", "parts": [ { "text": "gelb", "gap": true, "accept": ["gelb"] }, { "text": "leuchten" } ] },
+    { "from": "taps", "parts": [ { "text": "über die grünen" }, { "text": "Blätter", "gap": true, "accept": ["Blätter"] }, { "text": "streichen" } ] },
+    { "from": "answer", "parts": [ { "text": "liegt auf der" }, { "text": "Seite", "gap": true, "accept": ["Seite"] } ] }
+  ],
+  "notes": "Tap 1: the hands' box also covers later frames where they press the leaves down or hold the open notebook; they open it at the start. Answer written subject first ('Eine gelbe Blume liegt auf der Seite.') for the recall rule; the more common 'Auf der Seite liegt eine gelbe Blume.' uses the same chips except for capitalisation. No noun row: the key word is in the answer row."
+}

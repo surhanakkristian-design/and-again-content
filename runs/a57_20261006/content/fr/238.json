@@ -1,0 +1,119 @@
+{
+  "mediaId": 238,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "voler",
+  "taps": [
+    {
+      "phrase": "voler une canette",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "porter un sac blanc",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "avoir des fleurs roses",
+      "target": "le buisson",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "male"
+    },
+    {
+      "word": "les fleurs",
+      "voice": "male"
+    },
+    {
+      "word": "l'herbe",
+      "voice": "male"
+    },
+    {
+      "word": "les canettes",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "vole",
+    "une",
+    "canette."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "voler une"
+        },
+        {
+          "text": "canette",
+          "gap": true,
+          "accept": [
+            "canette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un"
+        },
+        {
+          "text": "sac",
+          "gap": true,
+          "accept": [
+            "sac"
+          ]
+        },
+        {
+          "text": "blanc"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir des"
+        },
+        {
+          "text": "fleurs",
+          "gap": true,
+          "accept": [
+            "fleurs"
+          ]
+        },
+        {
+          "text": "roses"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "vole",
+          "gap": true,
+          "accept": [
+            "vole"
+          ]
+        },
+        {
+          "text": "une canette"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 2's box covers frames after he has put the white bag down next to the cans (he then carries a can); he carries the bag on the way in. Phrase 1's box includes the approach frames before the theft."
+}

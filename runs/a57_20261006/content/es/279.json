@@ -1,0 +1,114 @@
+{
+ "mediaId": 279,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "ejercer fuerza",
+ "taps": [
+  {
+   "phrase": "ejercer mucha fuerza",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "alzar el puño",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "rodar por un charco",
+   "target": "el carro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los sacos",
+   "voice": "male"
+  },
+  {
+   "word": "la rueda",
+   "voice": "male"
+  },
+  {
+   "word": "el charco",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "empuja",
+  "el",
+  "carro",
+  "con",
+  "todas",
+  "sus",
+  "fuerzas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ejercer mucha"
+    },
+    {
+     "text": "fuerza",
+     "gap": true,
+     "accept": [
+      "fuerza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar el"
+    },
+    {
+     "text": "puño",
+     "gap": true,
+     "accept": [
+      "puño"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rodar por un"
+    },
+    {
+     "text": "charco",
+     "gap": true,
+     "accept": [
+      "charco"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "empuja",
+     "gap": true,
+     "accept": [
+      "empuja"
+     ]
+    },
+    {
+     "text": "el carro con todas sus fuerzas"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the man raises his clenched fist ('alzar el puño', visible) rather than only clenching it. Model answer uses 'empujar el carro con todas sus fuerzas' (natural B1 collocation); the key word is in phrase 1."
+}

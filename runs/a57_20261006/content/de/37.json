@@ -1,0 +1,127 @@
+{
+ "mediaId": 37,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "vorrücken",
+ "taps": [
+  {
+   "phrase": "im Wind flattern",
+   "target": "die Fahne",
+   "voice": "male"
+  },
+  {
+   "phrase": "nach der Fahnenstange greifen",
+   "target": "die Bergsteigerin in Rot",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Vollbart tragen",
+   "target": "der Bergsteiger in Blau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Fahne",
+   "voice": "male"
+  },
+  {
+   "word": "die Berggipfel",
+   "voice": "male"
+  },
+  {
+   "word": "die Schneebrille",
+   "voice": "male"
+  },
+  {
+   "word": "das Seil",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die drei Bergsteiger?",
+ "answer": [
+  "Sie",
+  "arbeiten",
+  "sich",
+  "zum",
+  "Gipfel",
+  "vor."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Wind"
+    },
+    {
+     "text": "flattern",
+     "gap": true,
+     "accept": [
+      "flattern",
+      "wehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nach der"
+    },
+    {
+     "text": "Fahnenstange",
+     "gap": true,
+     "accept": [
+      "Fahnenstange",
+      "Stange"
+     ]
+    },
+    {
+     "text": "greifen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Vollbart",
+     "gap": true,
+     "accept": [
+      "Vollbart",
+      "Bart"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "arbeiten sich zum"
+    },
+    {
+     "text": "Gipfel",
+     "gap": true,
+     "accept": [
+      "Gipfel"
+     ]
+    },
+    {
+     "text": "vor"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: 'vorrücken' is mostly military/ranking German ('Truppen rücken vor', 'auf Platz 2 vorrücken'); for climbers a native says 'sich (zum Gipfel) vorarbeiten' or 'vorankommen'. Kept the key word, did not force it into the answer; proposal: 'vorankommen' or 'sich vorarbeiten'. The red climber looks female (target 'die Bergsteigerin in Rot'); voice stays male as in English. She grasps the flagpole only in the last boxed frames; earlier she climbs. 'die Bergsteiger' in the question as the generic plural for the mixed group."
+}

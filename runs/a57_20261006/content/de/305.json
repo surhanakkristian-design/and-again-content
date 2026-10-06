@@ -1,0 +1,136 @@
+{
+ "mediaId": 305,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Fliege",
+ "taps": [
+  {
+   "phrase": "auf dem Brot landen",
+   "target": "die Fliege",
+   "voice": "male"
+  },
+  {
+   "phrase": "über den Tisch fliegen",
+   "target": "die Fliege",
+   "voice": "male"
+  },
+  {
+   "phrase": "mit einer Serviette wedeln",
+   "target": "die Hand",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Fliege",
+   "voice": "male"
+  },
+  {
+   "word": "das Marmeladenglas",
+   "voice": "male"
+  },
+  {
+   "word": "der Tee",
+   "voice": "male"
+  },
+  {
+   "word": "das Brot",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Fliege?",
+ "answer": [
+  "Sie",
+  "sitzt",
+  "auf",
+  "dem",
+  "Brot."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Brot"
+    },
+    {
+     "text": "landen",
+     "gap": true,
+     "accept": [
+      "landen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über den"
+    },
+    {
+     "text": "Tisch",
+     "gap": true,
+     "accept": [
+      "Tisch"
+     ]
+    },
+    {
+     "text": "fliegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit einer"
+    },
+    {
+     "text": "Serviette",
+     "gap": true,
+     "accept": [
+      "Serviette"
+     ]
+    },
+    {
+     "text": "wedeln"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Fliege",
+     "gap": true,
+     "accept": [
+      "Fliege"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzt auf dem"
+    },
+    {
+     "text": "Brot",
+     "gap": true,
+     "accept": [
+      "Brot",
+      "Toast"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 2 share identical boxes (the fly); phrase 1 is true while it lands/sits on the toast, phrase 2 while it flies around - in the boxed frames the fly also sits on the tea glass and the jar. 'a jar' -> 'das Marmeladenglas' (plain 'das Glas' would clash with the tea glass). The bread is toast; 'das Brot' kept throughout, 'Toast' accepted. answerVoice kept male (a fly has no natural gender; 'sie' is only grammatical)."
+}

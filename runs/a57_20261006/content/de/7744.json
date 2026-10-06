@@ -1,0 +1,132 @@
+{
+ "mediaId": 7744,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "plötzlich",
+ "taps": [
+  {
+   "phrase": "plötzlich aus dem Wasser schießen",
+   "target": "der Wal",
+   "voice": "female"
+  },
+  {
+   "phrase": "das Paddel umklammern",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "vor Schreck den Mund aufreißen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Wal",
+   "voice": "female"
+  },
+  {
+   "word": "das Bootshaus",
+   "voice": "female"
+  },
+  {
+   "word": "das Paddel",
+   "voice": "female"
+  },
+  {
+   "word": "die Schwimmweste",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Wal?",
+ "answer": [
+  "Er",
+  "taucht",
+  "plötzlich",
+  "aus",
+  "dem",
+  "Wasser",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plötzlich",
+     "gap": true,
+     "accept": [
+      "plötzlich"
+     ]
+    },
+    {
+     "text": "aus dem Wasser"
+    },
+    {
+     "text": "schießen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Paddel"
+    },
+    {
+     "text": "umklammern",
+     "gap": true,
+     "accept": [
+      "umklammern",
+      "festhalten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor"
+    },
+    {
+     "text": "Schreck",
+     "gap": true,
+     "accept": [
+      "Schreck"
+     ]
+    },
+    {
+     "text": "den Mund aufreißen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "taucht",
+     "gap": true,
+     "accept": [
+      "taucht"
+     ]
+    },
+    {
+     "text": "plötzlich aus dem"
+    },
+    {
+     "text": "Wasser"
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "The whale is visible only in the first frame (0.2 s, the still), mid-breach coming OUT of the water; the splash follows. So phrase 1 and the answer describe it bursting out, not crashing in. Answer: 'Er taucht aus dem Wasser plötzlich auf' is a marginal second order."
+}

@@ -1,0 +1,122 @@
+{
+  "mediaId": 253,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "quitar el polvo",
+  "taps": [
+    {
+      "phrase": "quitar el polvo de la puerta",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar un pañuelo gris",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "andar por la estantería",
+      "target": "el gato",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el gato",
+      "voice": "male"
+    },
+    {
+      "word": "los libros",
+      "voice": "male"
+    },
+    {
+      "word": "la estantería",
+      "voice": "male"
+    },
+    {
+      "word": "la lámpara",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hace el hombre?",
+  "answer": [
+    "Quita",
+    "el",
+    "polvo",
+    "de",
+    "la",
+    "puerta."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "quitar el"
+        },
+        {
+          "text": "polvo",
+          "gap": true,
+          "accept": [
+            "polvo"
+          ]
+        },
+        {
+          "text": "de la puerta"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "pañuelo",
+          "gap": true,
+          "accept": [
+            "pañuelo"
+          ]
+        },
+        {
+          "text": "gris"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "andar por la"
+        },
+        {
+          "text": "estantería",
+          "gap": true,
+          "accept": [
+            "estantería"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Quita",
+          "gap": true,
+          "accept": [
+            "Quita",
+            "Limpia"
+          ]
+        },
+        {
+          "text": "el polvo de la puerta"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'quitar el polvo' used in tap 1 and the answer. The man wipes the top of the door frame ('de la puerta' kept simple for level A instead of 'del marco'). The man's box also covers the gasp, dust cloud and thumbs-up moments, which the woman shares; the door moment is the distinctive one. Grey hijab -> 'pañuelo gris'. Answer drops the subject, so the answer row is the whole sentence; it differs from tap 1 by the gapped word (verb vs noun). No noun row: key word is not a noun."
+}

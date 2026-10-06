@@ -1,0 +1,124 @@
+{
+  "mediaId": 4361,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "einkaufen",
+  "taps": [
+    {
+      "phrase": "stolz ihre Einkaufstüten hochhalten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "an Schaufenstern vorbeischlendern",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "mit der Rolltreppe hochfahren",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Wolkenkratzer",
+      "voice": "female"
+    },
+    {
+      "word": "die Ampel",
+      "voice": "female"
+    },
+    {
+      "word": "die Einkaufstüte",
+      "voice": "female"
+    },
+    {
+      "word": "das Kleid",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "kauft",
+    "ein",
+    "und",
+    "präsentiert",
+    "ihre",
+    "Einkäufe."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "stolz ihre Einkaufstüten"
+        },
+        {
+          "text": "hochhalten",
+          "gap": true,
+          "accept": [
+            "hochhalten",
+            "hochheben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an"
+        },
+        {
+          "text": "Schaufenstern",
+          "gap": true,
+          "accept": [
+            "Schaufenstern",
+            "Geschäften"
+          ]
+        },
+        {
+          "text": "vorbeischlendern"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit der"
+        },
+        {
+          "text": "Rolltreppe",
+          "gap": true,
+          "accept": [
+            "Rolltreppe"
+          ]
+        },
+        {
+          "text": "hochfahren"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "kauft",
+          "gap": true,
+          "accept": [
+            "kauft"
+          ]
+        },
+        {
+          "text": "ein und präsentiert ihre Einkäufe"
+        }
+      ]
+    }
+  ],
+  "notes": "All three English tap boxes cover the woman for the whole clip (only person): phrase 1 = street scene (she holds both bags up), phrase 2 = shopping centre, phrase 3 = escalator. Answer avoids 'stolz' so the chips have one word order. Answer gap = the key word's verb 'kauft' (separable 'ein' stays visible)."
+}

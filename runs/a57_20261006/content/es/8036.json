@@ -1,0 +1,125 @@
+{
+ "mediaId": 8036,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el volumen",
+ "taps": [
+  {
+   "phrase": "apretujarse contra la pared",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "ocupar toda la habitación",
+   "target": "el flamenco",
+   "voice": "female"
+  },
+  {
+   "phrase": "colgar de una maceta",
+   "target": "la planta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la claraboya",
+   "voice": "female"
+  },
+  {
+   "word": "la pantalla de la lámpara",
+   "voice": "female"
+  },
+  {
+   "word": "el flamenco",
+   "voice": "female"
+  },
+  {
+   "word": "las tablas del suelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el flamenco?",
+ "answer": [
+  "El",
+  "flamenco",
+  "ocupa",
+  "casi",
+  "todo",
+  "el",
+  "volumen",
+  "de",
+  "la",
+  "habitación."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apretujarse",
+     "gap": true,
+     "accept": [
+      "apretujarse",
+      "apretarse"
+     ]
+    },
+    {
+     "text": "contra la pared"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ocupar toda la"
+    },
+    {
+     "text": "habitación",
+     "gap": true,
+     "accept": [
+      "habitación",
+      "cuarto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colgar de una"
+    },
+    {
+     "text": "maceta",
+     "gap": true,
+     "accept": [
+      "maceta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ocupa casi todo el"
+    },
+    {
+     "text": "volumen",
+     "gap": true,
+     "accept": [
+      "volumen",
+      "espacio"
+     ]
+    },
+    {
+     "text": "de la habitación"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses 'casi todo' because the flamingo fills almost the whole room (English: 'the entire volume'). Question in simple present ('¿Qué hace...?') because 'ocupar' is stative; 'está ocupando' would sound unnatural."
+}

@@ -1,0 +1,119 @@
+{
+  "mediaId": 254,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la Terre",
+  "taps": [
+    {
+      "phrase": "arrêter le globe qui tourne",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir les cheveux bouclés",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "dormir près de la fenêtre",
+      "target": "le chat",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le soleil",
+      "voice": "female"
+    },
+    {
+      "word": "la mer",
+      "voice": "female"
+    },
+    {
+      "word": "le chat",
+      "voice": "female"
+    },
+    {
+      "word": "le globe",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le chat ?",
+  "answer": [
+    "Le",
+    "chat",
+    "dort",
+    "près",
+    "de",
+    "la",
+    "fenêtre."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "arrêter le"
+        },
+        {
+          "text": "globe",
+          "gap": true,
+          "accept": [
+            "globe"
+          ]
+        },
+        {
+          "text": "qui tourne"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir les cheveux"
+        },
+        {
+          "text": "bouclés",
+          "gap": true,
+          "accept": [
+            "bouclés"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dormir",
+          "gap": true,
+          "accept": [
+            "dormir"
+          ]
+        },
+        {
+          "text": "près de la fenêtre"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "dort près de la"
+        },
+        {
+          "text": "fenêtre",
+          "gap": true,
+          "accept": [
+            "fenêtre"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'la Terre' (the planet) is not named in any exercise: the clip shows a desk globe ('le globe'), not the planet itself; not forced. The woman's hair is dark and straight, the man's dark and curly, so 'les cheveux bouclés' fits only him. No noun row: the key word is not one of the nouns."
+}

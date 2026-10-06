@@ -1,0 +1,26 @@
+{
+  "mediaId": 223, "lang": "de", "level": "A",
+  "keyWord": "die Lieferung",
+  "taps": [
+    { "phrase": "auf dem Sofa liegen", "target": "die Katze", "voice": "male" },
+    { "phrase": "das Essen liefern", "target": "der Mann mit dem Helm", "voice": "male" },
+    { "phrase": "ein orangefarbenes Oberteil tragen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Lampe", "voice": "male" },
+    { "word": "das Fenster", "voice": "male" },
+    { "word": "die Katze", "voice": "male" },
+    { "word": "das Sofa", "voice": "male" }
+  ],
+  "question": "Wer liefert das Essen?",
+  "answer": ["Ein", "Mann", "mit", "Helm", "liefert", "das", "Essen."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf dem" }, { "text": "Sofa", "gap": true, "accept": ["Sofa", "Couch"] }, { "text": "liegen" } ] },
+    { "from": "taps", "parts": [ { "text": "das Essen" }, { "text": "liefern", "gap": true, "accept": ["liefern", "bringen"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein orangefarbenes" }, { "text": "Oberteil", "gap": true, "accept": ["Oberteil", "Shirt", "T-Shirt"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "liefert das" }, { "text": "Essen", "gap": true, "accept": ["Essen"] } ] }
+  ],
+  "notes": "Tap 1: the cat lies on the sofa at the start; in the last boxed frames it walks along the sofa back (phrase written for most boxed frames). 'orangefarben' is the standard inflectable form; plain 'orange' would be uninflected in careful German. Key word 'die Lieferung' is not a noun of the set (no noun row); the verb 'liefern' carries it in tap 2 and the answer."
+}

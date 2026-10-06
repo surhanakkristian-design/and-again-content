@@ -1,0 +1,123 @@
+{
+  "mediaId": 72,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le basketball",
+  "taps": [
+    {
+      "phrase": "faire rebondir un ballon",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "sauter très haut",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter des lunettes",
+      "target": "l'homme à lunettes",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "female"
+    },
+    {
+      "word": "le ballon de basket",
+      "voice": "female"
+    },
+    {
+      "word": "le filet",
+      "voice": "female"
+    },
+    {
+      "word": "la fille",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la fille ?",
+  "answer": [
+    "Elle",
+    "joue",
+    "au",
+    "basketball",
+    "avec",
+    "deux",
+    "hommes."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "faire"
+        },
+        {
+          "text": "rebondir",
+          "gap": true,
+          "accept": [
+            "rebondir"
+          ]
+        },
+        {
+          "text": "un ballon"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sauter",
+          "gap": true,
+          "accept": [
+            "sauter"
+          ]
+        },
+        {
+          "text": "très haut"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter des"
+        },
+        {
+          "text": "lunettes",
+          "gap": true,
+          "accept": [
+            "lunettes"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "joue au"
+        },
+        {
+          "text": "basketball",
+          "gap": true,
+          "accept": [
+            "basketball",
+            "basket"
+          ]
+        },
+        {
+          "text": "avec deux hommes"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'le basketball' is the sport in French; English noun 2 'a basketball' (the ball) is 'le ballon de basket', so the key word appears in the answer ('joue au basketball'), not as the noun pill. Box 3 is OFF in two dunk frames (fine). 'deux hommes' copies the English 'two men' (they look like young men)."
+}

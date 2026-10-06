@@ -1,0 +1,123 @@
+{
+ "mediaId": 49,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la flecha",
+ "taps": [
+  {
+   "phrase": "recuperar su flecha",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "descansar sobre un soporte",
+   "target": "la diana",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse detrás de la arquera",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la flecha",
+   "voice": "female"
+  },
+  {
+   "word": "la diana",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Dónde se ha clavado la flecha?",
+ "answer": [
+  "La",
+  "flecha",
+  "se",
+  "ha",
+  "clavado",
+  "en",
+  "el",
+  "centro",
+  "de",
+  "la",
+  "diana."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recuperar su"
+    },
+    {
+     "text": "flecha",
+     "gap": true,
+     "accept": [
+      "flecha"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descansar sobre un"
+    },
+    {
+     "text": "soporte",
+     "gap": true,
+     "accept": [
+      "soporte"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse detrás de la"
+    },
+    {
+     "text": "arquera",
+     "gap": true,
+     "accept": [
+      "arquera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se ha"
+    },
+    {
+     "text": "clavado",
+     "gap": true,
+     "accept": [
+      "clavado"
+     ]
+    },
+    {
+     "text": "en el centro de la diana"
+    }
+   ]
+  }
+ ],
+ "notes": "Question 'What has the arrow hit?' rendered as '¿Dónde se ha clavado la flecha?' (natural; '¿En qué ha dado?' sounds odd). The man is only visible in the last frames."
+}

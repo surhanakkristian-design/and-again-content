@@ -1,0 +1,114 @@
+{
+  "mediaId": 4210,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "tenir",
+  "taps": [
+    {
+      "phrase": "agripper deux bâtonnets en bois",
+      "target": "le hamster",
+      "voice": "female"
+    },
+    {
+      "phrase": "dissimuler son visage",
+      "target": "le hamster",
+      "voice": "female"
+    },
+    {
+      "phrase": "sourire de toutes ses dents",
+      "target": "le hamster",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'esquimau",
+      "voice": "female"
+    },
+    {
+      "word": "le hamster",
+      "voice": "female"
+    },
+    {
+      "word": "le plan de travail",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le hamster ?",
+  "answer": [
+    "Il",
+    "tient",
+    "deux",
+    "esquimaux",
+    "par",
+    "leurs",
+    "bâtonnets."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "agripper",
+          "gap": true,
+          "accept": [
+            "agripper",
+            "serrer",
+            "tenir"
+          ]
+        },
+        {
+          "text": "deux bâtonnets en bois"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dissimuler son"
+        },
+        {
+          "text": "visage",
+          "gap": true,
+          "accept": [
+            "visage"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sourire de toutes ses"
+        },
+        {
+          "text": "dents",
+          "gap": true,
+          "accept": [
+            "dents"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "tient",
+          "gap": true,
+          "accept": [
+            "tient"
+          ]
+        },
+        {
+          "text": "deux esquimaux par leurs bâtonnets"
+        }
+      ]
+    }
+  ],
+  "notes": "'l'esquimau' = the usual French (France) word for a chocolate-coated ice cream on a stick (B1). B words: agripper, dissimuler, sourire de toutes ses dents, esquimau. Answer voice kept female as in English although le hamster -> il. Phrase 2 holds in the first ~14 boxed frames (bars in front of the face); phrase 3 in the last frames."
+}

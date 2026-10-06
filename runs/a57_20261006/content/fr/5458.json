@@ -1,0 +1,26 @@
+{
+  "mediaId": 5458, "lang": "fr", "level": "B",
+  "keyWord": "la vitamine",
+  "taps": [
+    { "phrase": "écarquiller les yeux", "target": "la femme", "voice": "female" },
+    { "phrase": "se teinter d'orange", "target": "le verre", "voice": "female" },
+    { "phrase": "porter une étiquette de vitamines", "target": "le pot", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le placard", "voice": "female" },
+    { "word": "le comprimé de vitamines", "voice": "female" },
+    { "word": "la coupe de fruits", "voice": "female" },
+    { "word": "le verre", "voice": "female" }
+  ],
+  "question": "Que met-elle dans le verre ?",
+  "answer": ["Elle", "met", "un", "comprimé", "de", "vitamines", "dans", "l'eau."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "écarquiller", "gap": true, "accept": ["écarquiller"] }, { "text": "les yeux" } ] },
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "teinter", "gap": true, "accept": ["teinter", "colorer"] }, { "text": "d'orange" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une étiquette de" }, { "text": "vitamines", "gap": true, "accept": ["vitamines"] } ] },
+    { "from": "answer", "parts": [ { "text": "met un" }, { "text": "comprimé", "gap": true, "accept": ["comprimé", "cachet"] }, { "text": "de vitamines dans l'eau" } ] }
+  ],
+  "notes": "The woman's tap box covers the whole clip, she drinks only at the end; phrase 1 is 'écarquiller les yeux' (she stares wide-eyed at the glass in many boxed frames) instead of a gulping phrase. Phrase 2: the water in the glass turns orange ('pétiller' would suit champagne better than an effervescent tablet). Key word appears as plural 'vitamines' in phrase 3, the noun pill and the answer; no separate noun row because phrase 3 already contains it."
+}

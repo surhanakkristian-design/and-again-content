@@ -1,0 +1,26 @@
+{
+  "mediaId": 617, "lang": "fr", "level": "A",
+  "keyWord": "les rollers",
+  "taps": [
+    { "phrase": "porter des rollers violets", "target": "la femme", "voice": "female" },
+    { "phrase": "rouler sur le chemin", "target": "la femme", "voice": "female" },
+    { "phrase": "être assis sur un banc", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les rollers", "voice": "female" },
+    { "word": "la boisson", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "le banc", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "fait", "du", "roller", "dans", "le", "parc."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "rollers", "gap": true, "accept": ["rollers"] }, { "text": "violets" } ] },
+    { "from": "taps", "parts": [ { "text": "rouler", "gap": true, "accept": ["rouler", "patiner"] }, { "text": "sur le chemin" } ] },
+    { "from": "taps", "parts": [ { "text": "être assis sur un" }, { "text": "banc", "gap": true, "accept": ["banc"] } ] },
+    { "from": "answer", "parts": [ { "text": "fait du" }, { "text": "roller", "gap": true, "accept": ["roller"] }, { "text": "dans le parc" } ] }
+  ],
+  "notes": "Answer uses the native 'faire du roller' (singular activity noun) instead of copying 'patiner sur des rollers violets'. The first frames show only her buckling the skates (boxes 1-2 on the boots)."
+}

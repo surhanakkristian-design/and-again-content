@@ -1,0 +1,122 @@
+{
+  "mediaId": 4058,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el viaje",
+  "taps": [
+    {
+      "phrase": "hacer la maleta marrón",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar una gorra roja",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "empujar muchas maletas",
+      "target": "la mujer",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el hombre",
+      "voice": "male"
+    },
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "las maletas",
+      "voice": "male"
+    },
+    {
+      "word": "el cielo",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer?",
+  "answer": [
+    "La",
+    "mujer",
+    "está",
+    "empujando",
+    "muchas",
+    "maletas."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hacer",
+          "gap": true,
+          "accept": [
+            "hacer",
+            "preparar"
+          ]
+        },
+        {
+          "text": "la maleta marrón"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "gorra",
+          "gap": true,
+          "accept": [
+            "gorra"
+          ]
+        },
+        {
+          "text": "roja"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "empujar muchas"
+        },
+        {
+          "text": "maletas",
+          "gap": true,
+          "accept": [
+            "maletas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está"
+        },
+        {
+          "text": "empujando",
+          "gap": true,
+          "accept": [
+            "empujando"
+          ]
+        },
+        {
+          "text": "muchas maletas"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: the red box also covers frames where the man carries the case to the car and stares at the tower; he packs it in the first frames (same as English). Key word 'el viaje' is not shown as a thing and is not forced into the texts. The woman pushes a trolley loaded with the suitcases."
+}

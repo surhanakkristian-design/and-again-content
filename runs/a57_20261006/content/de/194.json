@@ -1,0 +1,26 @@
+{
+  "mediaId": 194, "lang": "de", "level": "A",
+  "keyWord": "die Baumwolle",
+  "taps": [
+    { "phrase": "ein Stück Baumwolle halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Baumwolle wegpusten", "target": "die Frau", "voice": "female" },
+    { "phrase": "ein weißes T-Shirt tragen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Sonne", "voice": "female" },
+    { "word": "der Hut", "voice": "female" },
+    { "word": "die Baumwolle", "voice": "female" },
+    { "word": "das T-Shirt", "voice": "female" }
+  ],
+  "question": "Was hält die Frau in der Hand?",
+  "answer": ["Sie", "hält", "ein", "Stück", "Baumwolle."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein Stück" }, { "text": "Baumwolle", "gap": true, "accept": ["Baumwolle"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "die Baumwolle" }, { "text": "wegpusten", "gap": true, "accept": ["wegpusten", "wegblasen"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein weißes" }, { "text": "T-Shirt", "gap": true, "accept": ["T-Shirt", "Shirt"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "hält", "gap": true, "accept": ["hält"] }, { "text": "ein Stück Baumwolle" } ] }
+  ],
+  "notes": "No noun row: Baumwolle is already in tap rows 1 and 2. Answer row gaps the verb so it differs from tap row 1 ('ein Stück ___ halten' vs '___ ein Stück Baumwolle')."
+}

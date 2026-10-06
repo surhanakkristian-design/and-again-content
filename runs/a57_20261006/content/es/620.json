@@ -1,0 +1,118 @@
+{
+  "mediaId": 620,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la rosa",
+  "taps": [
+    {
+      "phrase": "oler una rosa",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "cerrar los ojos",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "brillar en el cielo",
+      "target": "el sol",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "la rosa",
+      "voice": "female"
+    },
+    {
+      "word": "la cesta",
+      "voice": "female"
+    },
+    {
+      "word": "el sol",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer?",
+  "answer": [
+    "La",
+    "mujer",
+    "está",
+    "oliendo",
+    "una",
+    "rosa."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "oler una"
+        },
+        {
+          "text": "rosa",
+          "gap": true,
+          "accept": [
+            "rosa"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cerrar los"
+        },
+        {
+          "text": "ojos",
+          "gap": true,
+          "accept": [
+            "ojos"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "brillar",
+          "gap": true,
+          "accept": [
+            "brillar"
+          ]
+        },
+        {
+          "text": "en el cielo"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está"
+        },
+        {
+          "text": "oliendo",
+          "gap": true,
+          "accept": [
+            "oliendo"
+          ]
+        },
+        {
+          "text": "una rosa"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrases 1 and 2 share one tap box; it also covers the later frames where she holds the stem and points at the thorns (not smelling, eyes open). 'pink' dropped from phrase 1 ('una rosa rosa' sounds clumsy in Spanish)."
+}

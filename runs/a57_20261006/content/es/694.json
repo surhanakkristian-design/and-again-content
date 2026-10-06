@@ -1,0 +1,117 @@
+{
+ "mediaId": 694,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "cortar en rodajas",
+ "taps": [
+  {
+   "phrase": "cortar un tomate en rodajas",
+   "target": "el cocinero",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar una rodaja",
+   "target": "el cocinero",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sobre la tabla",
+   "target": "el tomate",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la chaqueta",
+   "voice": "male"
+  },
+  {
+   "word": "el cuchillo",
+   "voice": "male"
+  },
+  {
+   "word": "el tomate",
+   "voice": "male"
+  },
+  {
+   "word": "la tabla",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el cocinero?",
+ "answer": [
+  "Corta",
+  "un",
+  "tomate",
+  "en",
+  "rodajas",
+  "con",
+  "un",
+  "cuchillo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cortar un tomate en"
+    },
+    {
+     "text": "rodajas",
+     "gap": true,
+     "accept": [
+      "rodajas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar",
+     "gap": true,
+     "accept": [
+      "levantar"
+     ]
+    },
+    {
+     "text": "una rodaja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sobre la"
+    },
+    {
+     "text": "tabla",
+     "gap": true,
+     "accept": [
+      "tabla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Corta un tomate en rodajas con un"
+    },
+    {
+     "text": "cuchillo",
+     "gap": true,
+     "accept": [
+      "cuchillo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'el cocinero' for English 'the man' (animated young chef). Answer chips: 'Corta en rodajas un tomate con un cuchillo' is also grammatical (less usual); the main order is the natural one. Phrase 3 target 'el tomate' (the tomato and its slices lie on the board)."
+}

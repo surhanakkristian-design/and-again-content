@@ -1,0 +1,114 @@
+{
+ "mediaId": 43,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "girar",
+ "taps": [
+  {
+   "phrase": "tirar de una cuerda",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "girar muy rápido",
+   "target": "la bola dorada",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar una bola dorada",
+   "target": "la mano",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la impresora",
+   "voice": "male"
+  },
+  {
+   "word": "la bola",
+   "voice": "male"
+  },
+  {
+   "word": "el escritorio",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la bola dorada?",
+ "answer": [
+  "Está",
+  "girando",
+  "muy",
+  "rápido."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirar de una"
+    },
+    {
+     "text": "cuerda",
+     "gap": true,
+     "accept": [
+      "cuerda",
+      "cordel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "girar",
+     "gap": true,
+     "accept": [
+      "girar",
+      "dar vueltas"
+     ]
+    },
+    {
+     "text": "muy rápido"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar",
+     "gap": true,
+     "accept": [
+      "sujetar",
+      "sostener",
+      "coger"
+     ]
+    },
+    {
+     "text": "una bola dorada"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está girando muy"
+    },
+    {
+     "text": "rápido",
+     "gap": true,
+     "accept": [
+      "rápido",
+      "deprisa"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Strictly the ring spins around the golden ball; like the English, the whole gyroscope is called 'la bola dorada'. Tap box 1 also covers frames where the hand only places the gyroscope on the stand; phrase written for the string-pulling frames, as in English. Subject is a thing; answerVoice kept male. Key word gapped in tap row 2."
+}

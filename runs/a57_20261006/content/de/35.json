@@ -1,0 +1,133 @@
+{
+ "mediaId": 35,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Schauspieler",
+ "taps": [
+  {
+   "phrase": "weinen und schreien",
+   "target": "der junge Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "hinter der Kamera stehen",
+   "target": "der Mann mit der Kamera",
+   "voice": "male"
+  },
+  {
+   "phrase": "in die Hände klatschen",
+   "target": "der Mann mit der Kappe",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Mikrofon",
+   "voice": "male"
+  },
+  {
+   "word": "die Kamera",
+   "voice": "male"
+  },
+  {
+   "word": "der Schauspieler",
+   "voice": "male"
+  },
+  {
+   "word": "der Stuhl",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Schauspieler?",
+ "answer": [
+  "Er",
+  "weint",
+  "vor",
+  "der",
+  "Kamera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "weinen und"
+    },
+    {
+     "text": "schreien",
+     "gap": true,
+     "accept": [
+      "schreien"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter der"
+    },
+    {
+     "text": "Kamera",
+     "gap": true,
+     "accept": [
+      "Kamera"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Hände"
+    },
+    {
+     "text": "klatschen",
+     "gap": true,
+     "accept": [
+      "klatschen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Schauspieler",
+     "gap": true,
+     "accept": [
+      "Schauspieler"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "weint",
+     "gap": true,
+     "accept": [
+      "weint",
+      "schreit"
+     ]
+    },
+    {
+     "text": "vor der Kamera"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap box 1 also covers the make-up and the final laughing/bowing; the phrase describes the main scene (crying and shouting into the lens). Phrase 2: the camera stands on a tripod, so 'hinter der Kamera stehen' instead of 'eine große Kamera halten'. Man in the cap claps mainly at the end; he sits in the earlier boxed frames. Noun row added: der Schauspieler is in no other row."
+}

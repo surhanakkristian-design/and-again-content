@@ -1,0 +1,124 @@
+{
+ "mediaId": 484,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Mopp",
+ "taps": [
+  {
+   "phrase": "den Boden wischen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "fast hinfallen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "voller Wasser sein",
+   "target": "der Eimer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Mopp",
+   "voice": "female"
+  },
+  {
+   "word": "der Eimer",
+   "voice": "female"
+  },
+  {
+   "word": "der Boden",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "wischt",
+  "den",
+  "Boden",
+  "mit",
+  "dem",
+  "Mopp."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Boden",
+     "gap": true,
+     "accept": [
+      "Boden"
+     ]
+    },
+    {
+     "text": "wischen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fast"
+    },
+    {
+     "text": "hinfallen",
+     "gap": true,
+     "accept": [
+      "hinfallen",
+      "ausrutschen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voller"
+    },
+    {
+     "text": "Wasser",
+     "gap": true,
+     "accept": [
+      "Wasser"
+     ]
+    },
+    {
+     "text": "sein"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "wischt den Boden mit dem"
+    },
+    {
+     "text": "Mopp",
+     "gap": true,
+     "accept": [
+      "Mopp",
+      "Wischmopp"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: 'der Mopp' fits; many Germans say 'der Wischmopp' (compound, counts per decision 404). Answer: German also allows 'Sie wischt mit dem Mopp den Boden' (two orders). Phrase 2 is true only in the slip frames, as in English."
+}

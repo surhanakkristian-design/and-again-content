@@ -1,0 +1,120 @@
+{
+ "mediaId": 191,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le tire-bouchon",
+ "taps": [
+  {
+   "phrase": "renifler le bouchon",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'enfoncer dans le bouchon",
+   "target": "le tire-bouchon",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une chemise à manches longues",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le tire-bouchon",
+   "voice": "male"
+  },
+  {
+   "word": "le bouchon",
+   "voice": "male"
+  },
+  {
+   "word": "la bouteille",
+   "voice": "male"
+  },
+  {
+   "word": "la marmite",
+   "voice": "male"
+  }
+ ],
+ "question": "Comment l'homme ouvre-t-il la bouteille ?",
+ "answer": [
+  "Il",
+  "ouvre",
+  "la",
+  "bouteille",
+  "avec",
+  "un",
+  "tire-bouchon."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "renifler",
+     "gap": true,
+     "accept": [
+      "renifler",
+      "sentir"
+     ]
+    },
+    {
+     "text": "le bouchon"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'enfoncer dans le"
+    },
+    {
+     "text": "bouchon",
+     "gap": true,
+     "accept": [
+      "bouchon"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une chemise à"
+    },
+    {
+     "text": "manches",
+     "gap": true,
+     "accept": [
+      "manches"
+     ]
+    },
+    {
+     "text": "longues"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ouvre la bouteille avec un"
+    },
+    {
+     "text": "tire-bouchon",
+     "gap": true,
+     "accept": [
+      "tire-bouchon"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: 's'enfoncer dans' (screw going into the cork) is the natural French for 'twist into'."
+}

@@ -1,0 +1,118 @@
+{
+ "mediaId": 205,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el llanto",
+ "taps": [
+  {
+   "phrase": "secarse los ojos",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "abrazar a la mujer",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "coger un pañuelo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la manta",
+   "voice": "female"
+  },
+  {
+   "word": "los pañuelos",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "llora",
+  "y",
+  "se",
+  "seca",
+  "los",
+  "ojos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "secarse los"
+    },
+    {
+     "text": "ojos",
+     "gap": true,
+     "accept": [
+      "ojos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrazar",
+     "gap": true,
+     "accept": [
+      "abrazar"
+     ]
+    },
+    {
+     "text": "a la mujer"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger un"
+    },
+    {
+     "text": "pañuelo",
+     "gap": true,
+     "accept": [
+      "pañuelo",
+      "clínex"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "llora",
+     "gap": true,
+     "accept": [
+      "llora"
+     ]
+    },
+    {
+     "text": "y se seca los ojos"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el llanto' is B1 and rather formal for a level A video; it is not used in the texts, the A-level verb 'llorar' carries the meaning in the answer. Proposal: keep the concept but consider 'llorar' as the taught form for level A."
+}

@@ -1,0 +1,125 @@
+{
+  "mediaId": 788,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "in der Mikrowelle erhitzen",
+  "taps": [
+    {
+      "phrase": "seine Nudeln in der Mikrowelle erhitzen",
+      "target": "der Junge",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Jungen angrinsen",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "innen aufleuchten",
+      "target": "die Mikrowelle",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Mikrowelle",
+      "voice": "male"
+    },
+    {
+      "word": "die Nudeln",
+      "voice": "male"
+    },
+    {
+      "word": "das Regal",
+      "voice": "male"
+    },
+    {
+      "word": "der Kapuzenpullover",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Junge?",
+  "answer": [
+    "Er",
+    "erhitzt",
+    "eine",
+    "Schüssel",
+    "Nudeln",
+    "in",
+    "der",
+    "Mikrowelle."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "seine Nudeln in der Mikrowelle"
+        },
+        {
+          "text": "erhitzen",
+          "gap": true,
+          "accept": [
+            "erhitzen",
+            "erwärmen",
+            "aufwärmen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Jungen"
+        },
+        {
+          "text": "angrinsen",
+          "gap": true,
+          "accept": [
+            "angrinsen",
+            "anlächeln"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "innen"
+        },
+        {
+          "text": "aufleuchten",
+          "gap": true,
+          "accept": [
+            "aufleuchten",
+            "leuchten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "erhitzt eine"
+        },
+        {
+          "text": "Schüssel",
+          "gap": true,
+          "accept": [
+            "Schüssel",
+            "Schale"
+          ]
+        },
+        {
+          "text": "Nudeln in der Mikrowelle"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word used in tap phrase 1 and the answer. No noun row (key word is a verb phrase). Answer: 'Er erhitzt in der Mikrowelle eine Schüssel Nudeln.' is also possible German word order. The girl appears only in the last two frames; she grins/smiles while pointing at the boy."
+}

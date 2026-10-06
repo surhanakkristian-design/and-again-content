@@ -1,0 +1,121 @@
+{
+ "mediaId": 4755,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la fracture",
+ "taps": [
+  {
+   "phrase": "montrer la radiographie du doigt",
+   "target": "la médecin",
+   "voice": "female"
+  },
+  {
+   "phrase": "grimacer de douleur",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "révéler une fracture",
+   "target": "la radiographie",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la radiographie",
+   "voice": "male"
+  },
+  {
+   "word": "la médecin",
+   "voice": "female"
+  },
+  {
+   "word": "le plâtre",
+   "voice": "male"
+  },
+  {
+   "word": "l'écharpe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que montre la médecin ?",
+ "answer": [
+  "Elle",
+  "montre",
+  "une",
+  "fracture",
+  "sur",
+  "la",
+  "radiographie."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer la"
+    },
+    {
+     "text": "radiographie",
+     "gap": true,
+     "accept": [
+      "radiographie",
+      "radio"
+     ]
+    },
+    {
+     "text": "du doigt"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "grimacer",
+     "gap": true,
+     "accept": [
+      "grimacer"
+     ]
+    },
+    {
+     "text": "de douleur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "révéler une"
+    },
+    {
+     "text": "fracture",
+     "gap": true,
+     "accept": [
+      "fracture"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "montre",
+     "gap": true,
+     "accept": [
+      "montre",
+      "désigne"
+     ]
+    },
+    {
+     "text": "une fracture sur la radiographie"
+    }
+   ]
+  }
+ ],
+ "notes": "Doctor is a woman: 'la médecin' (current standard French; 'la docteure' also possible). Sling = 'l'écharpe' (medical term, 'le bras en écharpe'). In the late boxed frames of phrase 2 the young man looks down with a pained face rather than an explicit wince; phrase fits most frames."
+}

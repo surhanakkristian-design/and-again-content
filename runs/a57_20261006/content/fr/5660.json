@@ -1,0 +1,27 @@
+{
+  "mediaId": 5660, "lang": "fr", "level": "A",
+  "keyWord": "le pâté de maisons",
+  "taps": [
+    { "phrase": "traverser la rue", "target": "le chien", "voice": "female" },
+    { "phrase": "éclairer le mur", "target": "le lampadaire", "voice": "female" },
+    { "phrase": "passer devant un lampadaire", "target": "le chien", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le pâté de maisons", "voice": "female" },
+    { "word": "l'arbre", "voice": "female" },
+    { "word": "le chien", "voice": "female" },
+    { "word": "le ciel", "voice": "female" }
+  ],
+  "question": "Que fait le chien ?",
+  "answer": ["Le", "chien", "traverse", "la", "rue."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "traverser la" }, { "text": "rue", "gap": true, "accept": ["rue", "route"] } ] },
+    { "from": "taps", "parts": [ { "text": "éclairer", "gap": true, "accept": ["éclairer"] }, { "text": "le mur" } ] },
+    { "from": "taps", "parts": [ { "text": "passer devant un" }, { "text": "lampadaire", "gap": true, "accept": ["lampadaire", "réverbère"] } ] },
+    { "from": "nouns", "parts": [ { "text": "le" }, { "text": "pâté de maisons", "gap": true, "accept": ["pâté de maisons"] } ] },
+    { "from": "answer", "parts": [ { "text": "traverse", "gap": true, "accept": ["traverse"] }, { "text": "la rue" } ] }
+  ],
+  "notes": "'le pâté de maisons' is B1-ish but is the database word and names the block naturally; the noun row gaps the whole multi-word noun 'pâté de maisons'. 'la rue' rather than 'la route' (a cobbled city street). The dog boxes (red and blue) cover both the crossing and the walk along the wall: the crossing happens in box_01, the walk past the lamp in box_02; the first frames show no lamp. 'lampadaire' is A2/B1 but the plain right word."
+}

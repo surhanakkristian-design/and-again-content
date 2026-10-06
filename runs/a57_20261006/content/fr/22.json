@@ -1,0 +1,134 @@
+{
+ "mediaId": 22,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le scientifique",
+ "taps": [
+  {
+   "phrase": "passer devant l'affiche",
+   "target": "l'étudiant",
+   "voice": "male"
+  },
+  {
+   "phrase": "prendre des notes",
+   "target": "le scientifique",
+   "voice": "male"
+  },
+  {
+   "phrase": "montrer une ligne du doigt",
+   "target": "le scientifique",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le scientifique",
+   "voice": "male"
+  },
+  {
+   "word": "les lunettes",
+   "voice": "male"
+  },
+  {
+   "word": "le stylo",
+   "voice": "male"
+  },
+  {
+   "word": "l'affiche",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le scientifique ?",
+ "answer": [
+  "Le",
+  "scientifique",
+  "prend",
+  "des",
+  "notes."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer",
+     "gap": true,
+     "accept": [
+      "passer"
+     ]
+    },
+    {
+     "text": "devant l'affiche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre des"
+    },
+    {
+     "text": "notes",
+     "gap": true,
+     "accept": [
+      "notes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer une"
+    },
+    {
+     "text": "ligne",
+     "gap": true,
+     "accept": [
+      "ligne",
+      "courbe"
+     ]
+    },
+    {
+     "text": "du doigt"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "scientifique",
+     "gap": true,
+     "accept": [
+      "scientifique"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend",
+     "gap": true,
+     "accept": [
+      "prend",
+      "écrit"
+     ]
+    },
+    {
+     "text": "des notes"
+    }
+   ]
+  }
+ ],
+ "notes": "'les lunettes' are safety glasses pushed up on his head (A-level word kept plain). 'l'affiche' for the research poster ('le poster' is also used in France)."
+}

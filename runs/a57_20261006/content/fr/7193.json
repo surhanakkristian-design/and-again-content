@@ -1,0 +1,27 @@
+{
+  "mediaId": 7193, "lang": "fr", "level": "A",
+  "keyWord": "la grand-mère",
+  "taps": [
+    { "phrase": "conduire un tracteur rouge", "target": "la grand-mère", "voice": "female" },
+    { "phrase": "porter une robe blanche", "target": "la mariée", "voice": "female" },
+    { "phrase": "courir derrière le tracteur", "target": "le chien", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "la grand-mère", "voice": "female" },
+    { "word": "le tracteur", "voice": "female" },
+    { "word": "le chien", "voice": "female" }
+  ],
+  "question": "Que fait la grand-mère ?",
+  "answer": ["Elle", "conduit", "un", "tracteur", "rouge."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "conduire", "gap": true, "accept": ["conduire"] }, { "text": "un tracteur rouge" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "robe", "gap": true, "accept": ["robe"] }, { "text": "blanche" } ] },
+    { "from": "taps", "parts": [ { "text": "courir", "gap": true, "accept": ["courir"] }, { "text": "derrière le tracteur" } ] },
+    { "from": "nouns", "parts": [ { "text": "la" }, { "text": "grand-mère", "gap": true, "accept": ["grand-mère", "mamie"] } ] },
+    { "from": "answer", "parts": [ { "text": "conduit un" }, { "text": "tracteur", "gap": true, "accept": ["tracteur"] }, { "text": "rouge" } ] }
+  ],
+  "notes": "'la mariée' (the bride) is the plain right word, common in French. Noun row added because the key word 'la grand-mère' is in no other row. Answer row gaps 'tracteur' so it does not look like tap row 1 once blanked."
+}

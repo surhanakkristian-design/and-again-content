@@ -1,0 +1,122 @@
+{
+ "mediaId": 207,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la taza",
+ "taps": [
+  {
+   "phrase": "llevar un pendiente verde",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar gafas",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una camisa azul",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "las flores",
+   "voice": "female"
+  },
+  {
+   "word": "la tetera",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "bebe",
+  "té",
+  "de",
+  "una",
+  "taza."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "pendiente",
+     "gap": true,
+     "accept": [
+      "pendiente"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camisa",
+     "gap": true,
+     "accept": [
+      "camisa"
+     ]
+    },
+    {
+     "text": "azul"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bebe té de una"
+    },
+    {
+     "text": "taza",
+     "gap": true,
+     "accept": [
+      "taza"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 2 and 3 both describe the man, as in English. The answer row gaps the key word 'taza'."
+}

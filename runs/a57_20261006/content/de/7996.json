@@ -1,0 +1,127 @@
+{
+ "mediaId": 7996,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "auffallen",
+ "taps": [
+  {
+   "phrase": "deutlich auffallen",
+   "target": "die rote Tulpe",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich in der Brise drehen",
+   "target": "die Windmühle",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Geländer lehnen",
+   "target": "das Fahrrad",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bäume",
+   "voice": "female"
+  },
+  {
+   "word": "die Windmühle",
+   "voice": "female"
+  },
+  {
+   "word": "das Fahrrad",
+   "voice": "female"
+  },
+  {
+   "word": "die Tulpen",
+   "voice": "female"
+  }
+ ],
+ "question": "Welche Tulpe fällt auf?",
+ "answer": [
+  "Die",
+  "rote",
+  "Tulpe",
+  "fällt",
+  "zwischen",
+  "den",
+  "weißen",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "deutlich"
+    },
+    {
+     "text": "auffallen",
+     "gap": true,
+     "accept": [
+      "auffallen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich in der"
+    },
+    {
+     "text": "Brise",
+     "gap": true,
+     "accept": [
+      "Brise",
+      "Wind"
+     ]
+    },
+    {
+     "text": "drehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Geländer",
+     "gap": true,
+     "accept": [
+      "Geländer"
+     ]
+    },
+    {
+     "text": "lehnen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fällt",
+     "gap": true,
+     "accept": [
+      "fällt"
+     ]
+    },
+    {
+     "text": "zwischen den weißen"
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word used in phrase 1 and the answer. Question shortened to the natural 'Welche Tulpe fällt auf?' (English 'in the field'); the answer says 'zwischen den weißen' instead."
+}

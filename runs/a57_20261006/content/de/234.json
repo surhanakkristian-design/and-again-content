@@ -1,0 +1,125 @@
+{
+ "mediaId": 234,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "sich auflösen",
+ "taps": [
+  {
+   "phrase": "sich im Wasser auflösen",
+   "target": "der Zuckerwürfel",
+   "voice": "female"
+  },
+  {
+   "phrase": "mit einem Löffel umrühren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Zuckerwürfel ins Glas fallen lassen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Löffel",
+   "voice": "female"
+  },
+  {
+   "word": "die Schürze",
+   "voice": "female"
+  },
+  {
+   "word": "das Glas",
+   "voice": "female"
+  },
+  {
+   "word": "der Zuckerwürfel",
+   "voice": "female"
+  }
+ ],
+ "question": "Was passiert mit dem Zuckerwürfel?",
+ "answer": [
+  "Der",
+  "Zuckerwürfel",
+  "löst",
+  "sich",
+  "im",
+  "Wasser",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich im Wasser"
+    },
+    {
+     "text": "auflösen",
+     "gap": true,
+     "accept": [
+      "auflösen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit einem"
+    },
+    {
+     "text": "Löffel",
+     "gap": true,
+     "accept": [
+      "Löffel"
+     ]
+    },
+    {
+     "text": "umrühren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Zuckerwürfel",
+     "gap": true,
+     "accept": [
+      "Zuckerwürfel"
+     ]
+    },
+    {
+     "text": "ins Glas fallen lassen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "löst sich im"
+    },
+    {
+     "text": "Wasser",
+     "gap": true,
+     "accept": [
+      "Wasser"
+     ]
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer: 'Im Wasser löst sich der Zuckerwürfel auf.' is a possible second order (marked)."
+}

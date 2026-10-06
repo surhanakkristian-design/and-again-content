@@ -1,0 +1,137 @@
+{
+ "mediaId": 262,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Elefant",
+ "taps": [
+  {
+   "phrase": "mit dem Rüssel trinken",
+   "target": "der Elefant",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Rüssel heben",
+   "target": "der Elefant",
+   "voice": "female"
+  },
+  {
+   "phrase": "weiße Federn haben",
+   "target": "die weißen Vögel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Baum",
+   "voice": "female"
+  },
+  {
+   "word": "der Elefant",
+   "voice": "female"
+  },
+  {
+   "word": "der Vogel",
+   "voice": "female"
+  },
+  {
+   "word": "das Wasser",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Elefant?",
+ "answer": [
+  "Er",
+  "trinkt",
+  "Wasser",
+  "mit",
+  "dem",
+  "Rüssel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit dem"
+    },
+    {
+     "text": "Rüssel",
+     "gap": true,
+     "accept": [
+      "Rüssel"
+     ]
+    },
+    {
+     "text": "trinken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Rüssel"
+    },
+    {
+     "text": "heben",
+     "gap": true,
+     "accept": [
+      "heben",
+      "hochheben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "weiße"
+    },
+    {
+     "text": "Federn",
+     "gap": true,
+     "accept": [
+      "Federn"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Elefant",
+     "gap": true,
+     "accept": [
+      "Elefant"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trinkt",
+     "gap": true,
+     "accept": [
+      "trinkt"
+     ]
+    },
+    {
+     "text": "Wasser mit dem Rüssel"
+    }
+   ]
+  }
+ ],
+ "notes": "German allows two chip orders: 'Er trinkt Wasser mit dem Rüssel.' and 'Er trinkt mit dem Rüssel Wasser.' answerVoice kept female (copied from English) although the subject is 'er' (der Elefant). Phrase 2: the trunk is raised only in the last few frames of its box."
+}

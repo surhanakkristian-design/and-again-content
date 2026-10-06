@@ -1,0 +1,125 @@
+{
+ "mediaId": 219,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le cerf",
+ "taps": [
+  {
+   "phrase": "regarder la caméra",
+   "target": "le cerf",
+   "voice": "male"
+  },
+  {
+   "phrase": "ouvrir la bouche",
+   "target": "le cerf",
+   "voice": "male"
+  },
+  {
+   "phrase": "partir en courant",
+   "target": "le cerf",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le cerf",
+   "voice": "male"
+  },
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "les plantes",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le cerf ?",
+ "answer": [
+  "Le",
+  "cerf",
+  "part",
+  "en",
+  "courant."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder",
+     "gap": true,
+     "accept": [
+      "regarder"
+     ]
+    },
+    {
+     "text": "la caméra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir la"
+    },
+    {
+     "text": "bouche",
+     "gap": true,
+     "accept": [
+      "bouche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "partir",
+     "gap": true,
+     "accept": [
+      "partir"
+     ]
+    },
+    {
+     "text": "en courant"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "cerf",
+     "gap": true,
+     "accept": [
+      "cerf"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "part en"
+    },
+    {
+     "text": "courant",
+     "gap": true,
+     "accept": [
+      "courant"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'partir en courant' (A level) instead of 's'enfuir' (B). 'les plantes' for the ferns (A level). All three phrases have the same target, as in English."
+}

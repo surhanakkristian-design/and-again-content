@@ -1,0 +1,131 @@
+{
+ "mediaId": 472,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el mecánico",
+ "taps": [
+  {
+   "phrase": "arreglar un coche",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "usar una herramienta",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír a la cámara",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el mecánico",
+   "voice": "male"
+  },
+  {
+   "word": "el coche",
+   "voice": "male"
+  },
+  {
+   "word": "la herramienta",
+   "voice": "male"
+  },
+  {
+   "word": "el suelo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "mecánico",
+  "está",
+  "arreglando",
+  "un",
+  "coche."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arreglar",
+     "gap": true,
+     "accept": [
+      "arreglar",
+      "reparar"
+     ]
+    },
+    {
+     "text": "un coche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "usar una"
+    },
+    {
+     "text": "herramienta",
+     "gap": true,
+     "accept": [
+      "herramienta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "mecánico",
+     "gap": true,
+     "accept": [
+      "mecánico"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está arreglando un"
+    },
+    {
+     "text": "coche",
+     "gap": true,
+     "accept": [
+      "coche"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three English boxes cover the whole clip; he smiles at the camera only at the end (phrase 3). Phrase 2 'usar una herramienta' (English 'hold a tool'): he holds and uses a wrench and an impact driver."
+}

@@ -1,0 +1,119 @@
+{
+ "mediaId": 228,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la cena",
+ "taps": [
+  {
+   "phrase": "llevar una olla caliente",
+   "target": "la mujer de la olla",
+   "voice": "female"
+  },
+  {
+   "phrase": "encender una vela",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentado en el muro",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "la olla",
+   "voice": "female"
+  },
+  {
+   "word": "la ensalada",
+   "voice": "female"
+  },
+  {
+   "word": "el pan",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la gente?",
+ "answer": [
+  "Están",
+  "cenando",
+  "juntos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "olla",
+     "gap": true,
+     "accept": [
+      "olla"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "encender",
+     "gap": true,
+     "accept": [
+      "encender"
+     ]
+    },
+    {
+     "text": "una vela"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en el"
+    },
+    {
+     "text": "muro",
+     "gap": true,
+     "accept": [
+      "muro"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "cenando",
+     "gap": true,
+     "accept": [
+      "cenando",
+      "comiendo"
+     ]
+    },
+    {
+     "text": "juntos"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the man lights the candle only in the first frames; in most later boxed frames he passes bread, pours water, toasts and eats. Key word la cena appears only as the verb cenar (answer); it is not one of the four nouns, so no noun row."
+}

@@ -1,0 +1,139 @@
+{
+ "mediaId": 353,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Gast",
+ "taps": [
+  {
+   "phrase": "die Tür öffnen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "im Regen stehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "Wasser eingießen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Gast",
+   "voice": "female"
+  },
+  {
+   "word": "die Blume",
+   "voice": "female"
+  },
+  {
+   "word": "die Kerze",
+   "voice": "female"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  }
+ ],
+ "question": "Was bringt der Gast mit?",
+ "answer": [
+  "Der",
+  "Gast",
+  "bringt",
+  "eine",
+  "Blume",
+  "mit."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Tür",
+     "gap": true,
+     "accept": [
+      "Tür"
+     ]
+    },
+    {
+     "text": "öffnen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Regen"
+    },
+    {
+     "text": "stehen",
+     "gap": true,
+     "accept": [
+      "stehen",
+      "warten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Wasser"
+    },
+    {
+     "text": "eingießen",
+     "gap": true,
+     "accept": [
+      "eingießen",
+      "einschenken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Gast",
+     "gap": true,
+     "accept": [
+      "Gast"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bringt eine"
+    },
+    {
+     "text": "Blume",
+     "gap": true,
+     "accept": [
+      "Blume",
+      "Pflanze"
+     ]
+    },
+    {
+     "text": "mit"
+    }
+   ]
+  }
+ ],
+ "notes": "The woman stands in the rain only at the door (first half); later she is indoors, but no one else is in the rain. 'die Blume' = the potted flower she brings (accept 'Pflanze' in the answer row). Noun row 'der Gast' added because the answer row loses its subject 'Der Gast'. Red and blue boxes are both the man (as in English)."
+}

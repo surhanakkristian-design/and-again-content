@@ -1,0 +1,114 @@
+{
+ "mediaId": 5069,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "disfrutar",
+ "taps": [
+  {
+   "phrase": "disfrutar de un masaje",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentado en un sillón",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "darle un masaje en los hombros",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las plantas",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el sillón",
+   "voice": "male"
+  }
+ ],
+ "question": "¿De qué está disfrutando el hombre?",
+ "answer": [
+  "Está",
+  "disfrutando",
+  "de",
+  "un",
+  "masaje."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "disfrutar",
+     "gap": true,
+     "accept": [
+      "disfrutar"
+     ]
+    },
+    {
+     "text": "de un masaje"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en un"
+    },
+    {
+     "text": "sillón",
+     "gap": true,
+     "accept": [
+      "sillón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "darle un masaje en los"
+    },
+    {
+     "text": "hombros",
+     "gap": true,
+     "accept": [
+      "hombros"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está disfrutando de un"
+    },
+    {
+     "text": "masaje",
+     "gap": true,
+     "accept": [
+      "masaje"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'a chair' is a leather armchair: 'el sillón'. Phrases 1 and 3 both contain 'masaje' (receiving vs giving); gaps differ. Answer without subject, so the answer row is the whole sentence."
+}

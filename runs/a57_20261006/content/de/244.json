@@ -1,0 +1,26 @@
+{
+  "mediaId": 244, "lang": "de", "level": "A",
+  "keyWord": "das Getränk",
+  "taps": [
+    { "phrase": "Orangensaft trinken", "target": "der Mann", "voice": "male" },
+    { "phrase": "Orangensaft machen", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf einer Stange sitzen", "target": "der Papagei", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Papagei", "voice": "male" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "der Saft", "voice": "male" },
+    { "word": "die Orangen", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "trinkt", "ein", "Glas", "Orangensaft."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "Orangensaft" }, { "text": "trinken", "gap": true, "accept": ["trinken"] } ] },
+    { "from": "taps", "parts": [ { "text": "Orangensaft", "gap": true, "accept": ["Orangensaft", "Saft"] }, { "text": "machen" } ] },
+    { "from": "taps", "parts": [ { "text": "auf einer" }, { "text": "Stange", "gap": true, "accept": ["Stange"] }, { "text": "sitzen" } ] },
+    { "from": "answer", "parts": [ { "text": "trinkt ein" }, { "text": "Glas", "gap": true, "accept": ["Glas"] }, { "text": "Orangensaft" } ] }
+  ],
+  "notes": "The parrot sits on a wooden perch: 'auf einer Stange sitzen' is the natural German ('auf einem Stock' would be odd); 'Stange' may be slightly above A2. The key word 'das Getränk' is not forced into the texts; the juice is named concretely (der Saft, Orangensaft)."
+}

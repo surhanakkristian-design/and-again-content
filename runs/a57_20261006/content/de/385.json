@@ -1,0 +1,25 @@
+{
+  "mediaId": 385, "lang": "de", "level": "A",
+  "keyWord": "schlagen",
+  "taps": [
+    { "phrase": "den Ball schlagen", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "einen Schläger halten", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "durch die Luft fliegen", "target": "der Ball", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Ball", "voice": "female" },
+    { "word": "der Schläger", "voice": "female" },
+    { "word": "die Kappe", "voice": "female" }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": ["Sie", "schlägt", "den", "Ball", "mit", "einem", "Schläger."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "den Ball" }, { "text": "schlagen", "gap": true, "accept": ["schlagen", "treffen"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen" }, { "text": "Schläger", "gap": true, "accept": ["Schläger", "Baseballschläger"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "durch die Luft" }, { "text": "fliegen", "gap": true, "accept": ["fliegen"] } ] },
+    { "from": "answer", "parts": [ { "text": "schlägt den" }, { "text": "Ball", "gap": true, "accept": ["Ball"] }, { "text": "mit einem Schläger" } ] }
+  ],
+  "notes": "Pronoun for das Mädchen: 'Sie' (what natives and teachers say). German also allows 'Sie schlägt mit einem Schläger den Ball.' (two chip orders). 'der Schläger' (not 'Baseballschläger') keeps it A-level and matches the noun pill."
+}

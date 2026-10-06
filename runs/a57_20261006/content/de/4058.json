@@ -1,0 +1,123 @@
+{
+ "mediaId": 4058,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Reise",
+ "taps": [
+  {
+   "phrase": "zu den Koffern hochschauen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine rote Kappe tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "viele Koffer schieben",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "die Koffer",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "schiebt",
+  "viele",
+  "Koffer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zu den Koffern"
+    },
+    {
+     "text": "hochschauen",
+     "gap": true,
+     "accept": [
+      "hochschauen",
+      "hochsehen",
+      "aufschauen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Kappe",
+     "gap": true,
+     "accept": [
+      "Kappe",
+      "Mütze",
+      "Cap"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "viele"
+    },
+    {
+     "text": "Koffer",
+     "gap": true,
+     "accept": [
+      "Koffer"
+     ]
+    },
+    {
+     "text": "schieben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schiebt",
+     "gap": true,
+     "accept": [
+      "schiebt"
+     ]
+    },
+    {
+     "text": "viele Koffer"
+    }
+   ]
+  }
+ ],
+ "notes": "English phrase 1 'to pack a brown suitcase' is true only in the first frames of the man's box (plus carrying it to the car); most boxed frames show him staring up at the tower of suitcases, so phrase 1 = 'zu den Koffern hochschauen'. Key word die Reise is not shown as a thing and is not used in any text (not forced); the answer would need an invented 'für die Reise'."
+}

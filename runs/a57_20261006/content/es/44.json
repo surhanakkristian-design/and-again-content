@@ -1,0 +1,124 @@
+{
+ "mediaId": 44,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la ira",
+ "taps": [
+  {
+   "phrase": "apretar los puños",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevarse las manos a la cabeza",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar esparcidas por la mesa",
+   "target": "las flores",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las trenzas",
+   "voice": "female"
+  },
+  {
+   "word": "el delantal",
+   "voice": "female"
+  },
+  {
+   "word": "el puño",
+   "voice": "female"
+  },
+  {
+   "word": "las flores",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Aprieta",
+  "los",
+  "puños",
+  "llena",
+  "de",
+  "ira."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apretar",
+     "gap": true,
+     "accept": [
+      "apretar",
+      "cerrar"
+     ]
+    },
+    {
+     "text": "los puños"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevarse las manos a la"
+    },
+    {
+     "text": "cabeza",
+     "gap": true,
+     "accept": [
+      "cabeza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "esparcidas",
+     "gap": true,
+     "accept": [
+      "esparcidas",
+      "tiradas",
+      "desperdigadas",
+      "dispersas"
+     ]
+    },
+    {
+     "text": "por la mesa"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Aprieta los puños llena de"
+    },
+    {
+     "text": "ira",
+     "gap": true,
+     "accept": [
+      "ira",
+      "rabia",
+      "furia"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'la rabia' is the more colloquial word in Spain; 'la ira' (database word) used in the answer with 'llena de ira' (B1). Taps 1 and 2 share one box (same woman) as in English; boxes also cover the kick and bag-throw frames - phrases written for the frames where she does them. Flowers lie on the market table (as in the description). No noun row: 'la ira' is not a noun of the set and is gapped in the answer row."
+}

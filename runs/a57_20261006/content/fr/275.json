@@ -1,0 +1,128 @@
+{
+ "mediaId": 275,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "se disputer",
+ "taps": [
+  {
+   "phrase": "montrer l'homme du doigt",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever les yeux et réfléchir",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "sourire à l'homme",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les rideaux",
+   "voice": "male"
+  },
+  {
+   "word": "le canapé",
+   "voice": "male"
+  },
+  {
+   "word": "la table",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font l'homme et la femme ?",
+ "answer": [
+  "Ils",
+  "se",
+  "disputent",
+  "dans",
+  "le",
+  "salon."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer"
+    },
+    {
+     "text": "l'homme"
+    },
+    {
+     "text": "du"
+    },
+    {
+     "text": "doigt",
+     "gap": true,
+     "accept": [
+      "doigt"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever les yeux"
+    },
+    {
+     "text": "et"
+    },
+    {
+     "text": "réfléchir",
+     "gap": true,
+     "accept": [
+      "réfléchir",
+      "penser"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à l'homme"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "disputent",
+     "gap": true,
+     "accept": [
+      "disputent"
+     ]
+    },
+    {
+     "text": "dans le salon"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: she points at him with her finger ('montrer l'homme du doigt'). Key word 'se disputer' gapped in the answer row (gap 'disputent', 'se' kept as plain part)."
+}

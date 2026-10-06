@@ -1,0 +1,26 @@
+{
+  "mediaId": 204, "lang": "de", "level": "B",
+  "keyWord": "die Krücke",
+  "taps": [
+    { "phrase": "an Krücken gehen", "target": "der Junge", "voice": "male" },
+    { "phrase": "ein Klemmbrett halten", "target": "die Krankenschwester", "voice": "female" },
+    { "phrase": "die Faust ballen", "target": "der Junge", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Krankenschwester", "voice": "female" },
+    { "word": "die Krücke", "voice": "male" },
+    { "word": "die Orthese", "voice": "male" },
+    { "word": "der Türgriff", "voice": "male" }
+  ],
+  "question": "Was macht der Junge?",
+  "answer": ["Er", "geht", "an", "zwei", "Krücken."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "an Krücken" }, { "text": "gehen", "gap": true, "accept": ["gehen", "laufen"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "Klemmbrett", "gap": true, "accept": ["Klemmbrett"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "die Faust" }, { "text": "ballen", "gap": true, "accept": ["ballen", "heben", "recken"] } ] },
+    { "from": "answer", "parts": [ { "text": "geht an zwei" }, { "text": "Krücken", "gap": true, "accept": ["Krücken"] } ] }
+  ],
+  "notes": "Tap 3 box covers the whole clip, but the boy only clenches and raises his fist at the very end (last ~1 s); phrase written for that moment. 'die Orthese' for the medical boot (B2, the usual German term; laypeople also say 'der Spezialschuh'); the boy actually wears a boot on both feet. No noun row: Krücken is in tap row 1 and the answer row."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 4,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Kurs",
+ "taps": [
+  {
+   "phrase": "kalten Kaffee trinken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Laptop arbeiten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Topf wachsen",
+   "target": "die Pflanze",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Laptop",
+   "voice": "female"
+  },
+  {
+   "word": "das Glas",
+   "voice": "female"
+  },
+  {
+   "word": "die Pflanze",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "trinkt",
+  "kalten",
+  "Kaffee."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "kalten Kaffee"
+    },
+    {
+     "text": "trinken",
+     "gap": true,
+     "accept": [
+      "trinken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Laptop",
+     "gap": true,
+     "accept": [
+      "Laptop",
+      "Computer"
+     ]
+    },
+    {
+     "text": "arbeiten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Topf",
+     "gap": true,
+     "accept": [
+      "Topf",
+      "Blumentopf"
+     ]
+    },
+    {
+     "text": "wachsen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trinkt kalten"
+    },
+    {
+     "text": "Kaffee",
+     "gap": true,
+     "accept": [
+      "Kaffee"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer is 'Sie trinkt kalten Kaffee.' instead of the English 'at the table' version, to keep one word order ('am Tisch' could stand in two places). Verifier: 'Eiskaffee' replaced by 'kalten Kaffee' (in Germany Eiskaffee = coffee with ice cream and cream; the clip shows coffee with ice cubes). 'der Kurs' is not a noun of the set (the online course is not visible), so no noun row."
+}

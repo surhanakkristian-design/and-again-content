@@ -1,0 +1,121 @@
+{
+ "mediaId": 8028,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "betragen",
+ "taps": [
+  {
+   "phrase": "auf den Tellerstapel zeigen",
+   "target": "der Koch",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Hände vors Gesicht schlagen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich auf der Theke türmen",
+   "target": "die Tellerstapel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Lampion",
+   "voice": "female"
+  },
+  {
+   "word": "das Stirnband",
+   "voice": "female"
+  },
+  {
+   "word": "die Teller",
+   "voice": "female"
+  },
+  {
+   "word": "die Essstäbchen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Koch?",
+ "answer": [
+  "Er",
+  "zeigt",
+  "auf",
+  "den",
+  "hohen",
+  "Tellerstapel."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf den Tellerstapel"
+    },
+    {
+     "text": "zeigen",
+     "gap": true,
+     "accept": [
+      "zeigen",
+      "deuten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Hände vors"
+    },
+    {
+     "text": "Gesicht",
+     "gap": true,
+     "accept": [
+      "Gesicht"
+     ]
+    },
+    {
+     "text": "schlagen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich auf der Theke"
+    },
+    {
+     "text": "türmen",
+     "gap": true,
+     "accept": [
+      "türmen",
+      "stapeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeigt auf den hohen"
+    },
+    {
+     "text": "Tellerstapel",
+     "gap": true,
+     "accept": [
+      "Tellerstapel",
+      "Stapel"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'betragen' (to total) is not visible as an action and is not used (English does not use 'to total' either). Phrase 2: she first waves her hands, then covers her face in the later boxed frames."
+}

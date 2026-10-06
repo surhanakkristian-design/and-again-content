@@ -1,0 +1,126 @@
+{
+  "mediaId": 270,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la goma",
+  "taps": [
+    {
+      "phrase": "tener la goma en la mano",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "parecer una montaña",
+      "target": "la goma",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener un sol rojo",
+      "target": "la caja",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la caja",
+      "voice": "female"
+    },
+    {
+      "word": "la mano",
+      "voice": "female"
+    },
+    {
+      "word": "la goma",
+      "voice": "female"
+    },
+    {
+      "word": "el papel",
+      "voice": "female"
+    }
+  ],
+  "question": "¿A qué se parece la goma?",
+  "answer": [
+    "La",
+    "goma",
+    "se",
+    "parece",
+    "a",
+    "una",
+    "montaña",
+    "pequeña."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener la"
+        },
+        {
+          "text": "goma",
+          "gap": true,
+          "accept": [
+            "goma"
+          ]
+        },
+        {
+          "text": "en la mano"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "parecer una"
+        },
+        {
+          "text": "montaña",
+          "gap": true,
+          "accept": [
+            "montaña"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener un"
+        },
+        {
+          "text": "sol",
+          "gap": true,
+          "accept": [
+            "sol"
+          ]
+        },
+        {
+          "text": "rojo"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "parece",
+          "gap": true,
+          "accept": [
+            "parece"
+          ]
+        },
+        {
+          "text": "a una montaña pequeña"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: English 'smile at the camera' is true only in the face frames; most boxed frames of the girl show only her hand rubbing out the scribbles or holding the eraser, so I wrote 'tener la goma en la mano' (the face frames she holds the box, not the eraser). 'la goma' is the everyday Spain word for eraser (= la goma de borrar). No noun row: tap row 1 already contains 'goma'."
+}

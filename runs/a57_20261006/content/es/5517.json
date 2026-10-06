@@ -1,0 +1,125 @@
+{
+ "mediaId": 5517,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "aceptar",
+ "taps": [
+  {
+   "phrase": "aceptar una propuesta de matrimonio",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar de rodillas sobre una manta",
+   "target": "el chico de blanco",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una caña de pescar",
+   "target": "el hombre de la orilla",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el estuche del anillo",
+   "voice": "male"
+  },
+  {
+   "word": "la cesta de pícnic",
+   "voice": "male"
+  },
+  {
+   "word": "la manta",
+   "voice": "male"
+  },
+  {
+   "word": "las huellas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "aceptando",
+  "su",
+  "propuesta",
+  "de",
+  "matrimonio."
+ ],
+ "answerVoice": "female",
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aceptar",
+     "gap": true,
+     "accept": [
+      "aceptar"
+     ]
+    },
+    {
+     "text": "una propuesta de matrimonio"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar de"
+    },
+    {
+     "text": "rodillas",
+     "gap": true,
+     "accept": [
+      "rodillas"
+     ]
+    },
+    {
+     "text": "sobre una manta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "caña",
+     "gap": true,
+     "accept": [
+      "caña"
+     ]
+    },
+    {
+     "text": "de pescar"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está aceptando su"
+    },
+    {
+     "text": "propuesta",
+     "gap": true,
+     "accept": [
+      "propuesta",
+      "petición"
+     ]
+    },
+    {
+     "text": "de matrimonio"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the man kneels in the first half only; then he jumps up and hugs her. Phrase 3: the fisherman is visible only in the first frames (box off later). Answer drops the subject (native usage).",
+ "carousel": []
+}

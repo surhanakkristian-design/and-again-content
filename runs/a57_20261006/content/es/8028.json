@@ -1,0 +1,123 @@
+{
+ "mediaId": 8028,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "sumar",
+ "taps": [
+  {
+   "phrase": "señalar la pila de platos",
+   "target": "el cocinero",
+   "voice": "male"
+  },
+  {
+   "phrase": "agitar las manos",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "alzarse sobre la barra",
+   "target": "las pilas de platos",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el farolillo",
+   "voice": "female"
+  },
+  {
+   "word": "la cinta",
+   "voice": "female"
+  },
+  {
+   "word": "los platos",
+   "voice": "female"
+  },
+  {
+   "word": "los palillos",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el cocinero?",
+ "answer": [
+  "Está",
+  "señalando",
+  "la",
+  "pila",
+  "de",
+  "platos."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar la"
+    },
+    {
+     "text": "pila",
+     "gap": true,
+     "accept": [
+      "pila",
+      "torre"
+     ]
+    },
+    {
+     "text": "de platos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agitar",
+     "gap": true,
+     "accept": [
+      "agitar",
+      "mover"
+     ]
+    },
+    {
+     "text": "las manos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzarse sobre la"
+    },
+    {
+     "text": "barra",
+     "gap": true,
+     "accept": [
+      "barra"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "señalando",
+     "gap": true,
+     "accept": [
+      "señalando"
+     ]
+    },
+    {
+     "text": "la pila de platos"
+    }
+   ]
+  }
+ ],
+ "notes": "The woman covers her face only in the last frames of her box; in most boxed frames she waves her hands and laughs (English phrase kept for the same target). 'la cinta' = the chef's white headband (cinta para la cabeza). Key word 'sumar' (the chef adds up the plates) is not used: no natural visible phrase for it. Verifier: phrase 2 changed to 'agitar las manos' (true in most boxed frames; she covers her face only at the end)."
+}

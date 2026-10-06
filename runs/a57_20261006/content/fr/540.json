@@ -1,0 +1,113 @@
+{
+  "mediaId": 540,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le penalty",
+  "taps": [
+    {
+      "phrase": "accorder un penalty",
+      "target": "l'arbitre",
+      "voice": "male"
+    },
+    {
+      "phrase": "tirer un penalty",
+      "target": "l'attaquante",
+      "voice": "female"
+    },
+    {
+      "phrase": "plonger vers le ballon",
+      "target": "la gardienne",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les palmiers",
+      "voice": "female"
+    },
+    {
+      "word": "le but",
+      "voice": "female"
+    },
+    {
+      "word": "la gardienne",
+      "voice": "female"
+    },
+    {
+      "word": "le ballon",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait l'attaquante ?",
+  "answer": [
+    "Elle",
+    "tire",
+    "un",
+    "penalty."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "accorder un"
+        },
+        {
+          "text": "penalty",
+          "gap": true,
+          "accept": [
+            "penalty"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tirer",
+          "gap": true,
+          "accept": [
+            "tirer"
+          ]
+        },
+        {
+          "text": "un penalty"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "plonger",
+          "gap": true,
+          "accept": [
+            "plonger"
+          ]
+        },
+        {
+          "text": "vers le ballon"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "tire un"
+        },
+        {
+          "text": "penalty",
+          "gap": true,
+          "accept": [
+            "penalty"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Goalkeeper follows the English female voice: 'la gardienne' (tap target and noun 3). The keeper dives but does not reach the ball, so phrase 3 is 'plonger vers le ballon' (not 'arrêter'). Box 2 also covers placing the ball and the run-up; 'tirer un penalty' describes the action of the box as a whole. Gaps: row 1 and the answer row gap the key word 'penalty', row 2 gaps 'tirer' so no two rows look the same blanked."
+}

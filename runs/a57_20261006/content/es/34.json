@@ -1,0 +1,122 @@
+{
+ "mediaId": 34,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la actividad",
+ "taps": [
+  {
+   "phrase": "llevar una camiseta blanca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener la barba corta",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "correr por el césped",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el césped",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hacen el hombre y la mujer?",
+ "answer": [
+  "Juegan",
+  "al",
+  "bádminton",
+  "en",
+  "el",
+  "césped."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener la"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    },
+    {
+     "text": "corta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr",
+     "gap": true,
+     "accept": [
+      "correr"
+     ]
+    },
+    {
+     "text": "por el césped"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Juegan al bádminton en el"
+    },
+    {
+     "text": "césped",
+     "gap": true,
+     "accept": [
+      "césped",
+      "jardín"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la actividad' is not a visible thing and not a noun of the set, so no noun row; the activity shown is badminton. Garden lawn = 'el césped' (noun and answer). The man wears a light blue T-shirt, so the white T-shirt fits only the woman. The dog appears only in the last frames (blue box OFF before)."
+}

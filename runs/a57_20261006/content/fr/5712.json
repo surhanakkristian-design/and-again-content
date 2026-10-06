@@ -1,0 +1,119 @@
+{
+ "mediaId": 5712,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "une affaire judiciaire",
+ "taps": [
+  {
+   "phrase": "désigner la pièce à conviction",
+   "target": "l'avocat",
+   "voice": "male"
+  },
+  {
+   "phrase": "laisser tomber une feuille",
+   "target": "l'avocat",
+   "voice": "male"
+  },
+  {
+   "phrase": "reposer sur un support",
+   "target": "le vélo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'avocat",
+   "voice": "male"
+  },
+  {
+   "word": "le vélo",
+   "voice": "male"
+  },
+  {
+   "word": "la boue",
+   "voice": "male"
+  },
+  {
+   "word": "les cartons",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'avocat ?",
+ "answer": [
+  "Il",
+  "désigne",
+  "le",
+  "vélo",
+  "boueux."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "désigner",
+     "gap": true,
+     "accept": [
+      "désigner",
+      "montrer"
+     ]
+    },
+    {
+     "text": "la pièce à conviction"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "laisser tomber une"
+    },
+    {
+     "text": "feuille",
+     "gap": true,
+     "accept": [
+      "feuille"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposer sur un"
+    },
+    {
+     "text": "support",
+     "gap": true,
+     "accept": [
+      "support"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "désigne le"
+    },
+    {
+     "text": "vélo",
+     "gap": true,
+     "accept": [
+      "vélo",
+      "bicyclette"
+     ]
+    },
+    {
+     "text": "boueux"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'une affaire judiciaire' (with indefinite article, copied unchanged) is not shown as a thing and is not used in any exercise: the clip shows a courtroom scene, not a nameable 'affaire'. Phrase 2: the sheet falls in the last frames only; the box covers the whole clip."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 50,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Glas",
+ "taps": [
+  {
+   "phrase": "den Spritzbeutel halten",
+   "target": "die Hand",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen schwarzen Handschuh tragen",
+   "target": "die Hand",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich mit Creme füllen",
+   "target": "das Glas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Handschuh",
+   "voice": "female"
+  },
+  {
+   "word": "der Spritzbeutel",
+   "voice": "female"
+  },
+  {
+   "word": "das Glas",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Hand?",
+ "answer": [
+  "Sie",
+  "füllt",
+  "ein",
+  "Glas",
+  "mit",
+  "Creme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Spritzbeutel"
+    },
+    {
+     "text": "halten",
+     "gap": true,
+     "accept": [
+      "halten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schwarzen"
+    },
+    {
+     "text": "Handschuh",
+     "gap": true,
+     "accept": [
+      "Handschuh"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich mit"
+    },
+    {
+     "text": "Creme",
+     "gap": true,
+     "accept": [
+      "Creme"
+     ]
+    },
+    {
+     "text": "füllen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "füllt ein"
+    },
+    {
+     "text": "Glas",
+     "gap": true,
+     "accept": [
+      "Glas"
+     ]
+    },
+    {
+     "text": "mit Creme"
+    }
+   ]
+  }
+ ],
+ "notes": "'der Spritzbeutel' (piping bag) is above level A but is the only right word; 'die Tüte' would be wrong. The jars may be clear plastic; 'das Glas' still names a jar naturally in German. Answer word order: 'mit Creme' could also stand before 'ein Glas' only unnaturally, so one order."
+}

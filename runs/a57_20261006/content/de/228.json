@@ -1,0 +1,26 @@
+{
+  "mediaId": 228, "lang": "de", "level": "A",
+  "keyWord": "das Abendessen",
+  "taps": [
+    { "phrase": "einen heißen Topf tragen", "target": "die Frau mit dem Topf", "voice": "female" },
+    { "phrase": "eine Kerze anzünden", "target": "der Mann", "voice": "male" },
+    { "phrase": "auf der Mauer sitzen", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Katze", "voice": "female" },
+    { "word": "der Topf", "voice": "female" },
+    { "word": "der Salat", "voice": "female" },
+    { "word": "das Brot", "voice": "female" }
+  ],
+  "question": "Was machen die Leute?",
+  "answer": ["Sie", "essen", "zusammen", "zu", "Abend."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen heißen" }, { "text": "Topf", "gap": true, "accept": ["Topf"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine Kerze" }, { "text": "anzünden", "gap": true, "accept": ["anzünden", "anmachen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf der" }, { "text": "Mauer", "gap": true, "accept": ["Mauer"] }, { "text": "sitzen" } ] },
+    { "from": "answer", "parts": [ { "text": "essen", "gap": true, "accept": ["essen"] }, { "text": "zusammen zu Abend" } ] }
+  ],
+  "notes": "Green box (the man): he lights the candle only in the first frames; later he passes bread, pours water, toasts and eats, which the others do too, so the only phrase unique to him is 'eine Kerze anzünden' (kept, box covers other moments). Key word das Abendessen is not a noun of the set; the answer uses the native verb form 'zu Abend essen' instead of the noun. 'Sie essen zu Abend zusammen' is a marginal second order of the chips."
+}

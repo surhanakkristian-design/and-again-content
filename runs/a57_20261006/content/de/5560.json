@@ -1,0 +1,120 @@
+{
+ "mediaId": 5560,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "zu schätzen wissen",
+ "taps": [
+  {
+   "phrase": "sich bei ihm bedanken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "heißen Tee trinken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf der Stufe sitzen",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "das Auto",
+   "voice": "female"
+  },
+  {
+   "word": "der Schnee",
+   "voice": "female"
+  },
+  {
+   "word": "die Laterne",
+   "voice": "female"
+  }
+ ],
+ "question": "Was trinkt der Mann?",
+ "answer": [
+  "Er",
+  "trinkt",
+  "heißen",
+  "Tee."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich bei ihm"
+    },
+    {
+     "text": "bedanken",
+     "gap": true,
+     "accept": [
+      "bedanken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "heißen"
+    },
+    {
+     "text": "Tee",
+     "gap": true,
+     "accept": [
+      "Tee"
+     ]
+    },
+    {
+     "text": "trinken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf der"
+    },
+    {
+     "text": "Stufe",
+     "gap": true,
+     "accept": [
+      "Stufe",
+      "Treppe"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trinkt",
+     "gap": true,
+     "accept": [
+      "trinkt"
+     ]
+    },
+    {
+     "text": "heißen Tee"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: English 'to give him some tea' is true only in the first 2 of 8 boxed frames; in most frames she stands with her hand on her chest thanking him, so 'sich bei ihm bedanken' (visible gesture). Key word 'zu schätzen wissen' (B1 multi-word verb on a level A video) is not used in any row: no phrase shows it without forcing; the gratitude is shown by the woman, the definition 'to be thankful' fits 'dankbar sein' / 'sich bedanken' better for this clip. Proposal: owner may consider 'dankbar sein' as the German word. 'die Lampe' = the street lamp (A1; 'die Laterne' would be more precise). Verifier: 'die Lampe' -> 'die Laterne' (the usual word for this street lantern)."
+}

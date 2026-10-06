@@ -1,0 +1,136 @@
+{
+  "mediaId": 119,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la bombilla",
+  "taps": [
+    {
+      "phrase": "dar una luz cálida",
+      "target": "la bombilla",
+      "voice": "male"
+    },
+    {
+      "phrase": "sujetar una taza",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener el pelo gris",
+      "target": "el gato",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la bombilla",
+      "voice": "male"
+    },
+    {
+      "word": "el gato",
+      "voice": "male"
+    },
+    {
+      "word": "el cuenco",
+      "voice": "male"
+    },
+    {
+      "word": "los libros",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está sujetando la mujer?",
+  "answer": [
+    "La",
+    "mujer",
+    "está",
+    "sujetando",
+    "una",
+    "taza."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dar una"
+        },
+        {
+          "text": "luz",
+          "gap": true,
+          "accept": [
+            "luz"
+          ]
+        },
+        {
+          "text": "cálida"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sujetar una"
+        },
+        {
+          "text": "taza",
+          "gap": true,
+          "accept": [
+            "taza"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener el pelo"
+        },
+        {
+          "text": "gris",
+          "gap": true,
+          "accept": [
+            "gris"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "la"
+        },
+        {
+          "text": "bombilla",
+          "gap": true,
+          "accept": [
+            "bombilla"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está"
+        },
+        {
+          "text": "sujetando",
+          "gap": true,
+          "accept": [
+            "sujetando"
+          ]
+        },
+        {
+          "text": "una taza"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1 box also covers the middle frames where the bulb is off (being unscrewed / screwed in); written for the lit bulb at start and end. Cat fur = 'el pelo' (usual in Spain). Bowl of tea = 'el cuenco'."
+}

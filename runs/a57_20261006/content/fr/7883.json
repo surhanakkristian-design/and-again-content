@@ -1,0 +1,26 @@
+{
+  "mediaId": 7883, "lang": "fr", "level": "B",
+  "keyWord": "la joie",
+  "taps": [
+    { "phrase": "être à genoux dans l'allée", "target": "la femme à genoux", "voice": "female" },
+    { "phrase": "lécher la joue de la femme", "target": "le chiot", "voice": "female" },
+    { "phrase": "tenir la laisse du chiot", "target": "la femme en veste kaki", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le chiot", "voice": "female" },
+    { "word": "le vélo", "voice": "female" },
+    { "word": "le banc", "voice": "female" },
+    { "word": "le lampadaire", "voice": "female" }
+  ],
+  "question": "Que fait la femme à genoux ?",
+  "answer": ["Elle", "rayonne", "de", "joie", "en", "câlinant", "le", "chiot."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "être à" }, { "text": "genoux", "gap": true, "accept": ["genoux"] }, { "text": "dans l'allée" } ] },
+    { "from": "taps", "parts": [ { "text": "lécher", "gap": true, "accept": ["lécher"] }, { "text": "la joue de la femme" } ] },
+    { "from": "taps", "parts": [ { "text": "tenir la" }, { "text": "laisse", "gap": true, "accept": ["laisse"] }, { "text": "du chiot" } ] },
+    { "from": "answer", "parts": [ { "text": "rayonne de" }, { "text": "joie", "gap": true, "accept": ["joie"] }, { "text": "en câlinant le chiot" } ] }
+  ],
+  "notes": "English 'hugging the puppy with joy' becomes 'rayonner de joie en câlinant le chiot' (fixed B2 collocation, one word order with a capitalised first chip; 'avec joie' could stand in two places). The woman's olive jacket is 'veste kaki' (target only). The second woman holds the lead in the first frames; the lead is not clearly visible in her hands in the last frames."
+}

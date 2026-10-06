@@ -1,0 +1,123 @@
+{
+ "mediaId": 287,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "weit",
+ "taps": [
+  {
+   "phrase": "auf ein Dorf zeigen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "zu ihr zurückschauen",
+   "target": "der Mann in Grün",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine rote Jacke tragen",
+   "target": "die Person in Rot",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "das Dorf",
+   "voice": "female"
+  },
+  {
+   "word": "das Gras",
+   "voice": "female"
+  }
+ ],
+ "question": "Worauf zeigt die Frau?",
+ "answer": [
+  "Sie",
+  "zeigt",
+  "auf",
+  "ein",
+  "weit",
+  "entferntes",
+  "Dorf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf ein"
+    },
+    {
+     "text": "Dorf",
+     "gap": true,
+     "accept": [
+      "Dorf"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zu ihr"
+    },
+    {
+     "text": "zurückschauen",
+     "gap": true,
+     "accept": [
+      "zurückschauen",
+      "zurückblicken",
+      "zurücksehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeigt auf ein"
+    },
+    {
+     "text": "weit",
+     "gap": true,
+     "accept": [
+      "weit"
+     ]
+    },
+    {
+     "text": "entferntes Dorf"
+    }
+   ]
+  }
+ ],
+ "notes": "'weit entfernt' is the natural German for 'far away' (entfernt slightly above A2, but it is the plain right word with the key word weit)."
+}

@@ -1,0 +1,126 @@
+{
+ "mediaId": 47,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el pabellón deportivo",
+ "taps": [
+  {
+   "phrase": "alzar el puño",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "lanzar las palomitas al aire",
+   "target": "el niño",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar suspendido sobre la pista",
+   "target": "el marcador",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el marcador",
+   "voice": "male"
+  },
+  {
+   "word": "los espectadores",
+   "voice": "male"
+  },
+  {
+   "word": "la pista",
+   "voice": "male"
+  },
+  {
+   "word": "las palomitas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Dónde están el hombre y el niño?",
+ "answer": [
+  "Están",
+  "en",
+  "un",
+  "pabellón",
+  "deportivo",
+  "abarrotado."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar",
+     "gap": true,
+     "accept": [
+      "alzar",
+      "levantar"
+     ]
+    },
+    {
+     "text": "el puño"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lanzar las"
+    },
+    {
+     "text": "palomitas",
+     "gap": true,
+     "accept": [
+      "palomitas"
+     ]
+    },
+    {
+     "text": "al aire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "suspendido",
+     "gap": true,
+     "accept": [
+      "suspendido",
+      "colgado"
+     ]
+    },
+    {
+     "text": "sobre la pista"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están en un"
+    },
+    {
+     "text": "pabellón",
+     "gap": true,
+     "accept": [
+      "pabellón"
+     ]
+    },
+    {
+     "text": "deportivo abarrotado"
+    }
+   ]
+  }
+ ],
+ "notes": "Court = 'la pista' (usual in Spain for basketball). At the end the boy also raises his arms, but while throwing popcorn; only the man raises a clenched fist. Tap boxes 1-2 cover the whole clip; the fist and the popcorn throw happen only in the last frames (phrases kept as in English)."
+}

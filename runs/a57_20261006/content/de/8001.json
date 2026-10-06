@@ -1,0 +1,127 @@
+{
+ "mediaId": 8001,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "sich fernhalten",
+ "taps": [
+  {
+   "phrase": "die Flügel ausbreiten",
+   "target": "die Gans",
+   "voice": "female"
+  },
+  {
+   "phrase": "an der Gans vorbeiradeln",
+   "target": "der Mann auf dem Fahrrad",
+   "voice": "male"
+  },
+  {
+   "phrase": "lachend zur Seite springen",
+   "target": "die Frau in Shorts",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Gans",
+   "voice": "female"
+  },
+  {
+   "word": "das Fahrrad",
+   "voice": "female"
+  },
+  {
+   "word": "der Efeu",
+   "voice": "female"
+  },
+  {
+   "word": "der Kiesweg",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau in Shorts?",
+ "answer": [
+  "Sie",
+  "hält",
+  "sich",
+  "von",
+  "der",
+  "Gans",
+  "fern."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Flügel",
+     "gap": true,
+     "accept": [
+      "Flügel"
+     ]
+    },
+    {
+     "text": "ausbreiten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an der Gans"
+    },
+    {
+     "text": "vorbeiradeln",
+     "gap": true,
+     "accept": [
+      "vorbeiradeln",
+      "vorbeifahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lachend zur"
+    },
+    {
+     "text": "Seite"
+    },
+    {
+     "text": "springen",
+     "gap": true,
+     "accept": [
+      "springen",
+      "hüpfen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hält"
+    },
+    {
+     "text": "sich von der Gans"
+    },
+    {
+     "text": "fern",
+     "gap": true,
+     "accept": [
+      "fern"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 'lachend zur Seite springen' instead of 'auf den Rasen springen' because the cyclist also rides on the grass edge. Answer gap = 'fern' (the key-word particle)."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 7369,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "herumgehen",
+ "taps": [
+  {
+   "phrase": "um einen Wal herumpaddeln",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine Fontäne ausstoßen",
+   "target": "der nahe Wal",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Schwanzflosse aus dem Wasser heben",
+   "target": "der ferne Wal",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Paddleboard",
+   "voice": "female"
+  },
+  {
+   "word": "der Wal",
+   "voice": "female"
+  },
+  {
+   "word": "das Boot",
+   "voice": "female"
+  },
+  {
+   "word": "die Berge",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "paddelt",
+  "um",
+  "den",
+  "gewaltigen",
+  "Wal",
+  "herum."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "um einen Wal"
+    },
+    {
+     "text": "herumpaddeln",
+     "gap": true,
+     "accept": [
+      "herumpaddeln",
+      "herumfahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Fontäne",
+     "gap": true,
+     "accept": [
+      "Fontäne"
+     ]
+    },
+    {
+     "text": "ausstoßen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Schwanzflosse",
+     "gap": true,
+     "accept": [
+      "Schwanzflosse",
+      "Flosse"
+     ]
+    },
+    {
+     "text": "aus dem Wasser heben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "paddelt",
+     "gap": true,
+     "accept": [
+      "paddelt",
+      "fährt"
+     ]
+    },
+    {
+     "text": "um den gewaltigen Wal herum"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'herumgehen' implies walking; she paddles, so 'herumgehen' is not used. Phrase and answer use 'um ... herumpaddeln' (same 'herum' pattern). Proposal for the concept: 'umrunden' or 'herumfahren um'. 'das Paddleboard' could also be 'das SUP-Board'."
+}

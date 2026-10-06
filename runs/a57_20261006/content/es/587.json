@@ -1,0 +1,119 @@
+{
+  "mediaId": 587,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "el disco",
+  "taps": [
+    {
+      "phrase": "soltar el disco",
+      "target": "el árbitro",
+      "voice": "male"
+    },
+    {
+      "phrase": "celebrar su gol",
+      "target": "la jugadora de amarillo",
+      "voice": "female"
+    },
+    {
+      "phrase": "colarse en la portería",
+      "target": "el disco",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el disco",
+      "voice": "female"
+    },
+    {
+      "word": "el guante",
+      "voice": "female"
+    },
+    {
+      "word": "el casco",
+      "voice": "female"
+    },
+    {
+      "word": "la camiseta",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la jugadora de amarillo?",
+  "answer": [
+    "Está",
+    "celebrando",
+    "su",
+    "gol."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "soltar el"
+        },
+        {
+          "text": "disco",
+          "gap": true,
+          "accept": [
+            "disco"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "celebrar su"
+        },
+        {
+          "text": "gol",
+          "gap": true,
+          "accept": [
+            "gol"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "colarse",
+          "gap": true,
+          "accept": [
+            "colarse",
+            "meterse",
+            "entrar"
+          ]
+        },
+        {
+          "text": "en la portería"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está"
+        },
+        {
+          "text": "celebrando",
+          "gap": true,
+          "accept": [
+            "celebrando",
+            "festejando"
+          ]
+        },
+        {
+          "text": "su gol"
+        }
+      ]
+    }
+  ],
+  "notes": "Spain hockey usage: el disco (puck), la portería (net/goal). Answer drops the subject (Está celebrando...). Tap 1 box also covers close-ups where the referee only holds the puck up; phrase written for the drop (face-off). The puck box (tap 3) also covers moments where the puck is held, slides or is held up, and the tap-2 box covers her skating: phrases written for the goal/celebration as in English."
+}

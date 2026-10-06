@@ -1,0 +1,127 @@
+{
+  "mediaId": 5652,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "groß",
+  "taps": [
+    {
+      "phrase": "am großen Ball riechen",
+      "target": "der Hund",
+      "voice": "female"
+    },
+    {
+      "phrase": "der größere Ball sein",
+      "target": "der große Ball",
+      "voice": "female"
+    },
+    {
+      "phrase": "der kleinere Ball sein",
+      "target": "der kleine Ball",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Bäume",
+      "voice": "female"
+    },
+    {
+      "word": "der Ball",
+      "voice": "female"
+    },
+    {
+      "word": "der Hund",
+      "voice": "female"
+    },
+    {
+      "word": "das Gras",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht der Hund?",
+  "answer": [
+    "Er",
+    "riecht",
+    "an",
+    "einem",
+    "großen",
+    "Ball."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am"
+        },
+        {
+          "text": "großen",
+          "gap": true,
+          "accept": [
+            "großen",
+            "riesigen"
+          ]
+        },
+        {
+          "text": "Ball riechen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "der größere"
+        },
+        {
+          "text": "Ball",
+          "gap": true,
+          "accept": [
+            "Ball"
+          ]
+        },
+        {
+          "text": "sein"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "kleinere",
+          "gap": true,
+          "accept": [
+            "kleinere"
+          ]
+        },
+        {
+          "text": "Ball sein"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "riecht",
+          "gap": true,
+          "accept": [
+            "riecht",
+            "schnuppert",
+            "schnüffelt"
+          ]
+        },
+        {
+          "text": "an einem großen Ball"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer pronoun 'er' (der Hund); answerVoice kept female as in English. Tap rows 2/3 gap different words so they do not look the same once blanked. The dog also looks straight ahead at the end of the tap-1 box."
+}

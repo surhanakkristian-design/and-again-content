@@ -1,0 +1,114 @@
+{
+ "mediaId": 202,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "traverser",
+ "taps": [
+  {
+   "phrase": "traverser la rue",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "regarder son téléphone",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever le pouce",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la voiture",
+   "voice": "male"
+  },
+  {
+   "word": "les immeubles",
+   "voice": "male"
+  },
+  {
+   "word": "la rue",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "traverse",
+  "la",
+  "rue."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "traverser",
+     "gap": true,
+     "accept": [
+      "traverser"
+     ]
+    },
+    {
+     "text": "la rue"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder son"
+    },
+    {
+     "text": "téléphone",
+     "gap": true,
+     "accept": [
+      "téléphone",
+      "portable"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "pouce",
+     "gap": true,
+     "accept": [
+      "pouce"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "traverse la"
+    },
+    {
+     "text": "rue",
+     "gap": true,
+     "accept": [
+      "rue"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

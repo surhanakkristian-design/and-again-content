@@ -1,0 +1,127 @@
+{
+ "mediaId": 7756,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "automotriz",
+ "taps": [
+  {
+   "phrase": "montar la rueda delantera",
+   "target": "el oso",
+   "voice": "female"
+  },
+  {
+   "phrase": "empuñar una llave inglesa",
+   "target": "el mapache",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar subido al elevador",
+   "target": "el coche rojo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el oso",
+   "voice": "female"
+  },
+  {
+   "word": "el mapache",
+   "voice": "female"
+  },
+  {
+   "word": "los neumáticos",
+   "voice": "female"
+  },
+  {
+   "word": "el coche deportivo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el oso?",
+ "answer": [
+  "Está",
+  "montando",
+  "una",
+  "rueda",
+  "en",
+  "el",
+  "coche",
+  "deportivo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montar la"
+    },
+    {
+     "text": "rueda",
+     "gap": true,
+     "accept": [
+      "rueda"
+     ]
+    },
+    {
+     "text": "delantera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "empuñar",
+     "gap": true,
+     "accept": [
+      "empuñar",
+      "sujetar",
+      "agarrar"
+     ]
+    },
+    {
+     "text": "una llave inglesa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar subido al"
+    },
+    {
+     "text": "elevador",
+     "gap": true,
+     "accept": [
+      "elevador"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "montando",
+     "gap": true,
+     "accept": [
+      "montando",
+      "colocando",
+      "poniendo"
+     ]
+    },
+    {
+     "text": "una rueda en el coche deportivo"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'automotriz' is an adjective and does not fit a phrase or noun pill here; in Spain 'automovilístico' / 'de automoción' (sector) is more usual than 'automotriz' (more Latin American) - proposal: keep 'automotriz' or switch to 'automovilístico'. The red car is lifted on a two-post lift ('el elevador'). The raccoon holds the spanner in most boxed frames, also after getting up."
+}

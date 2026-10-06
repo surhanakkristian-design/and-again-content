@@ -1,0 +1,124 @@
+{
+ "mediaId": 4658,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "fahren",
+ "taps": [
+  {
+   "phrase": "ein altes Auto fahren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Straße entlanggehen",
+   "target": "die Leute",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine dunkle Sonnenbrille tragen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "das Meer",
+   "voice": "female"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "das Lenkrad",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "fährt",
+  "am",
+  "Meer",
+  "entlang."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein altes Auto"
+    },
+    {
+     "text": "fahren",
+     "gap": true,
+     "accept": [
+      "fahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Straße",
+     "gap": true,
+     "accept": [
+      "Straße",
+      "Gasse"
+     ]
+    },
+    {
+     "text": "entlanggehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine dunkle"
+    },
+    {
+     "text": "Sonnenbrille",
+     "gap": true,
+     "accept": [
+      "Sonnenbrille"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt am"
+    },
+    {
+     "text": "Meer",
+     "gap": true,
+     "accept": [
+      "Meer"
+     ]
+    },
+    {
+     "text": "entlang"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 3 (Sonnenbrille): the English box also covers the POV street/coast frames where only her hands show and the sunglasses are not visible; phrase written for the frames where she is seen. Answer chips have one natural order."
+}

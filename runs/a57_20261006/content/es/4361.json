@@ -1,0 +1,123 @@
+{
+ "mediaId": 4361,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "ir de compras",
+ "taps": [
+  {
+   "phrase": "presumir de sus compras",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "pasear por delante de los escaparates",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "subir por la escalera mecánica",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el rascacielos",
+   "voice": "female"
+  },
+  {
+   "word": "el semáforo",
+   "voice": "female"
+  },
+  {
+   "word": "la bolsa de papel",
+   "voice": "female"
+  },
+  {
+   "word": "el vestido",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "está",
+  "de",
+  "compras",
+  "y",
+  "presume",
+  "de",
+  "sus",
+  "bolsas."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "presumir",
+     "gap": true,
+     "accept": [
+      "presumir",
+      "fardar"
+     ]
+    },
+    {
+     "text": "de sus compras"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasear por delante de los"
+    },
+    {
+     "text": "escaparates",
+     "gap": true,
+     "accept": [
+      "escaparates"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir por la"
+    },
+    {
+     "text": "escalera mecánica",
+     "gap": true,
+     "accept": [
+      "escalera mecánica"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está de"
+    },
+    {
+     "text": "compras",
+     "gap": true,
+     "accept": [
+      "compras"
+     ]
+    },
+    {
+     "text": "y presume de sus bolsas"
+    }
+   ]
+  }
+ ],
+ "notes": "Only one person, so all three boxes cover the whole clip; each phrase holds in its own part (street, mall, escalator). The answer uses 'estar de compras' (same expression family as the key word 'ir de compras') to avoid repeating 'compras' twice."
+}

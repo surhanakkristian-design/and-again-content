@@ -1,0 +1,122 @@
+{
+  "mediaId": 401,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "les patins à glace",
+  "taps": [
+    {
+      "phrase": "lacer ses patins à glace",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "écarter les bras",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter une veste verte",
+      "target": "la personne en vert",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le bonnet",
+      "voice": "female"
+    },
+    {
+      "word": "les arbres",
+      "voice": "female"
+    },
+    {
+      "word": "l'écharpe",
+      "voice": "female"
+    },
+    {
+      "word": "les patins à glace",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "patine",
+    "sur",
+    "la",
+    "glace."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lacer ses"
+        },
+        {
+          "text": "patins",
+          "gap": true,
+          "accept": [
+            "patins"
+          ]
+        },
+        {
+          "text": "à glace"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "écarter",
+          "gap": true,
+          "accept": [
+            "écarter",
+            "ouvrir"
+          ]
+        },
+        {
+          "text": "les bras"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter une"
+        },
+        {
+          "text": "veste",
+          "gap": true,
+          "accept": [
+            "veste",
+            "doudoune"
+          ]
+        },
+        {
+          "text": "verte"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "patine",
+          "gap": true,
+          "accept": [
+            "patine"
+          ]
+        },
+        {
+          "text": "sur la glace"
+        }
+      ]
+    }
+  ],
+  "notes": "Box 3 is OFF in most frames; the person in green is only visible at the end (far left)."
+}

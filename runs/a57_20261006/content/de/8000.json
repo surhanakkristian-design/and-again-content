@@ -1,0 +1,126 @@
+{
+ "mediaId": 8000,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "wohnen",
+ "taps": [
+  {
+   "phrase": "sich auf den Tresen stützen",
+   "target": "der Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Hund angrinsen",
+   "target": "die Frau im hellen Anzug",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen schweren Koffer schleppen",
+   "target": "der Mann mit dem Koffer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Kronleuchter",
+   "voice": "female"
+  },
+  {
+   "word": "die Säule",
+   "voice": "female"
+  },
+  {
+   "word": "der Koffer",
+   "voice": "female"
+  },
+  {
+   "word": "der Empfangstresen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Der",
+  "Hund",
+  "stützt",
+  "sich",
+  "auf",
+  "den",
+  "Marmortresen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich auf den"
+    },
+    {
+     "text": "Tresen",
+     "gap": true,
+     "accept": [
+      "Tresen",
+      "Empfangstresen"
+     ]
+    },
+    {
+     "text": "stützen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Hund"
+    },
+    {
+     "text": "angrinsen",
+     "gap": true,
+     "accept": [
+      "angrinsen",
+      "anlächeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schweren"
+    },
+    {
+     "text": "Koffer"
+    },
+    {
+     "text": "schleppen",
+     "gap": true,
+     "accept": [
+      "schleppen",
+      "tragen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stützt",
+     "gap": true,
+     "accept": [
+      "stützt",
+      "lehnt"
+     ]
+    },
+    {
+     "text": "sich auf den Marmortresen"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'wohnen' (to stay at) is not shown as an action: the clip is a hotel lobby with arriving guests, nobody visibly 'wohnt'. Not forced into the exercises. Proposal: for this sense 'übernachten' or 'absteigen' fits better than 'wohnen' (which mostly means to live permanently), though 'im Hotel wohnen' is natural. 'Tresen'/'Empfangstresen'/'Marmortresen' kept consistent. Accept 'lehnt' in the answer row: 'lehnt sich auf den Marmortresen' is natural too."
+}

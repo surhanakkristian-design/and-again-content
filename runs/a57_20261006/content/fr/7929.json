@@ -1,0 +1,130 @@
+{
+ "mediaId": 7929,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le stationnement",
+ "taps": [
+  {
+   "phrase": "écraser deux petites voitures",
+   "target": "le monster truck",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever les deux poings",
+   "target": "l'homme sur le camion",
+   "voice": "male"
+  },
+  {
+   "phrase": "croiser les bras",
+   "target": "la femme devant",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le monster truck",
+   "voice": "male"
+  },
+  {
+   "word": "la voiture rouge",
+   "voice": "male"
+  },
+  {
+   "word": "la place de stationnement",
+   "voice": "male"
+  },
+  {
+   "word": "les bottes",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le monster truck ?",
+ "answer": [
+  "Il",
+  "écrase",
+  "deux",
+  "petites",
+  "voitures."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "écraser deux petites"
+    },
+    {
+     "text": "voitures",
+     "gap": true,
+     "accept": [
+      "voitures"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever les deux"
+    },
+    {
+     "text": "poings",
+     "gap": true,
+     "accept": [
+      "poings"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "croiser",
+     "gap": true,
+     "accept": [
+      "croiser"
+     ]
+    },
+    {
+     "text": "les bras"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la place de"
+    },
+    {
+     "text": "stationnement",
+     "gap": true,
+     "accept": [
+      "stationnement",
+      "parking"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "écrase",
+     "gap": true,
+     "accept": [
+      "écrase"
+     ]
+    },
+    {
+     "text": "deux petites voitures"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 3 uses the key word: 'la place de stationnement' (everyday speech also says 'la place de parking', accepted in the recall gap). 'le monster truck' is the usual French term (anglicism, masculine). The woman's footwear are short work boots; 'les bottes' kept as the everyday word ('les bottines' also possible)."
+}

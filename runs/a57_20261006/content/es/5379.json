@@ -1,0 +1,124 @@
+{
+ "mediaId": 5379,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "modificar",
+ "taps": [
+  {
+   "phrase": "tomarle las medidas a un cliente",
+   "target": "el sastre",
+   "voice": "male"
+  },
+  {
+   "phrase": "marcar la tela con tiza",
+   "target": "el sastre",
+   "voice": "male"
+  },
+  {
+   "phrase": "probarse una chaqueta",
+   "target": "el chico de la chaqueta",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el ventilador de techo",
+   "voice": "male"
+  },
+  {
+   "word": "la tela",
+   "voice": "male"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "male"
+  },
+  {
+   "word": "la cinta métrica",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el sastre?",
+ "answer": [
+  "Está",
+  "modificando",
+  "una",
+  "chaqueta",
+  "para",
+  "un",
+  "cliente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomarle las"
+    },
+    {
+     "text": "medidas",
+     "gap": true,
+     "accept": [
+      "medidas"
+     ]
+    },
+    {
+     "text": "a un cliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcar la tela con"
+    },
+    {
+     "text": "tiza",
+     "gap": true,
+     "accept": [
+      "tiza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "probarse",
+     "gap": true,
+     "accept": [
+      "probarse"
+     ]
+    },
+    {
+     "text": "una chaqueta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "modificando",
+     "gap": true,
+     "accept": [
+      "modificando",
+      "arreglando",
+      "retocando"
+     ]
+    },
+    {
+     "text": "una chaqueta para un cliente"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'modificar' is correct but for tailoring a Spaniard would more often say 'arreglar una chaqueta'; used 'modificar' as the database word, recall accepts 'arreglando'/'retocando'. Phrase 3: the young man already wears the jacket in the first boxed frames and the tailor eases it back on at the end, so 'probarse una chaqueta' (try on) describes most boxed frames; box also active during frames where he only stands."
+}

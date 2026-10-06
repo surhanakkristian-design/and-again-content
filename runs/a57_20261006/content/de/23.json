@@ -1,0 +1,119 @@
+{
+  "mediaId": 23,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Rede",
+  "taps": [
+    {
+      "phrase": "eine Rede halten",
+      "target": "die Frau in Grün",
+      "voice": "female"
+    },
+    {
+      "phrase": "etwas Wasser trinken",
+      "target": "die Frau in Grün",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen grauen Anzug tragen",
+      "target": "der Mann in Grau",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "das Mikrofon",
+      "voice": "female"
+    },
+    {
+      "word": "das Glas",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau in Grün?",
+  "answer": [
+    "Sie",
+    "hält",
+    "eine",
+    "Rede."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Rede",
+          "gap": true,
+          "accept": [
+            "Rede"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "etwas Wasser"
+        },
+        {
+          "text": "trinken",
+          "gap": true,
+          "accept": [
+            "trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen grauen"
+        },
+        {
+          "text": "Anzug",
+          "gap": true,
+          "accept": [
+            "Anzug"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält",
+          "gap": true,
+          "accept": [
+            "hält"
+          ]
+        },
+        {
+          "text": "eine Rede"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word in tap row 1, so no noun row."
+}

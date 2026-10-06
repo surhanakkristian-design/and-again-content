@@ -1,0 +1,120 @@
+{
+  "mediaId": 292,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Kampf",
+  "taps": [
+    {
+      "phrase": "ein Kissen über den Kopf heben",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein graues T-Shirt tragen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Bart haben",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "das Kissen",
+      "voice": "female"
+    },
+    {
+      "word": "die Pflanze",
+      "voice": "female"
+    },
+    {
+      "word": "das Bett",
+      "voice": "female"
+    }
+  ],
+  "question": "Was machen sie auf dem Bett?",
+  "answer": [
+    "Sie",
+    "machen",
+    "eine",
+    "Kissenschlacht."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "Kissen",
+          "gap": true,
+          "accept": [
+            "Kissen"
+          ]
+        },
+        {
+          "text": "über den Kopf heben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein graues T-Shirt"
+        },
+        {
+          "text": "tragen",
+          "gap": true,
+          "accept": [
+            "tragen",
+            "anhaben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Bart",
+          "gap": true,
+          "accept": [
+            "Bart"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "machen eine"
+        },
+        {
+          "text": "Kissenschlacht",
+          "gap": true,
+          "accept": [
+            "Kissenschlacht"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'der Kampf': a pillow fight is 'die Kissenschlacht' in German ('Kissenkampf' is not used), so the answer uses Kissenschlacht; the key word itself does not appear naturally. Proposal: owner may consider 'die Schlacht'/'Kissenschlacht' for this video. Tap 1 (verifier): 'hochheben' (= pick up) replaced by 'über den Kopf heben'; the woman swings the pillow over her head in most boxed frames, the man holds his at chest height. Tap 3 box frame 1 has the man off screen."
+}

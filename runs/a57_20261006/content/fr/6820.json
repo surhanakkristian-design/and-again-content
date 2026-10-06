@@ -1,0 +1,119 @@
+{
+ "mediaId": 6820,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un adulte",
+ "taps": [
+  {
+   "phrase": "caresser le dos de l'éléphanteau",
+   "target": "l'éléphant adulte",
+   "voice": "female"
+  },
+  {
+   "phrase": "trottiner aux côtés de l'adulte",
+   "target": "l'éléphanteau",
+   "voice": "female"
+  },
+  {
+   "phrase": "dresser sa petite trompe",
+   "target": "l'éléphanteau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'adulte",
+   "voice": "female"
+  },
+  {
+   "word": "l'acacia",
+   "voice": "female"
+  },
+  {
+   "word": "les défenses",
+   "voice": "female"
+  },
+  {
+   "word": "l'éléphanteau",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'éléphant adulte ?",
+ "answer": [
+  "Il",
+  "caresse",
+  "le",
+  "dos",
+  "de",
+  "l'éléphanteau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caresser",
+     "gap": true,
+     "accept": [
+      "caresser"
+     ]
+    },
+    {
+     "text": "le dos de l'éléphanteau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "trottiner",
+     "gap": true,
+     "accept": [
+      "trottiner",
+      "marcher"
+     ]
+    },
+    {
+     "text": "aux côtés de l'adulte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dresser sa petite"
+    },
+    {
+     "text": "trompe",
+     "gap": true,
+     "accept": [
+      "trompe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "caresse le"
+    },
+    {
+     "text": "dos",
+     "gap": true,
+     "accept": [
+      "dos"
+     ]
+    },
+    {
+     "text": "de l'éléphanteau"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'un adulte' appears as the noun 'l'adulte' (pill + phrase 2); it is elided, so no recall gap on it (rule: no gap inside an elided word). In the answer the subject is 'l'éléphant adulte' (adjective use). Phrase 3 'petite trompe' distinguishes the calf: the adult also raises its trunk once."
+}

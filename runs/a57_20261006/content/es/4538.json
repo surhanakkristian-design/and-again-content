@@ -1,0 +1,128 @@
+{
+ "mediaId": 4538,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el descanso",
+ "taps": [
+  {
+   "phrase": "frotar la mesa de cristal",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "atar la bolsa de basura",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "recostarse en el sofá",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sofá",
+   "voice": "female"
+  },
+  {
+   "word": "el radiador",
+   "voice": "female"
+  },
+  {
+   "word": "la bombilla",
+   "voice": "female"
+  },
+  {
+   "word": "la estantería",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Dónde descansa la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "se",
+  "toma",
+  "un",
+  "descanso",
+  "en",
+  "el",
+  "sofá."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "frotar",
+     "gap": true,
+     "accept": [
+      "frotar",
+      "limpiar"
+     ]
+    },
+    {
+     "text": "la mesa de cristal"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "atar la"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    },
+    {
+     "text": "de basura"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recostarse",
+     "gap": true,
+     "accept": [
+      "recostarse",
+      "tumbarse",
+      "echarse"
+     ]
+    },
+    {
+     "text": "en el sofá"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se toma un"
+    },
+    {
+     "text": "descanso",
+     "gap": true,
+     "accept": [
+      "descanso",
+      "respiro"
+     ]
+    },
+    {
+     "text": "en el sofá"
+    }
+   ]
+  }
+ ],
+ "notes": "All three English boxes follow the woman through the whole clip (scrubbing, then tying the bag, then reclining), so each phrase is true only in its own part of the clip. Answer uses the key word via 'tomarse un descanso' (B1 collocation). Key word is not a noun of the set, so no noun row."
+}

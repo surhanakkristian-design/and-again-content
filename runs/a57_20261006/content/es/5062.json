@@ -1,0 +1,116 @@
+{
+ "mediaId": 5062,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el jefe",
+ "taps": [
+  {
+   "phrase": "caminar por la oficina",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una tableta",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "dibujar en la pizarra",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el ordenador",
+   "voice": "female"
+  },
+  {
+   "word": "el teléfono",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Quién dibuja en la pizarra?",
+ "answer": [
+  "La",
+  "jefa",
+  "dibuja",
+  "en",
+  "la",
+  "pizarra."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar por la"
+    },
+    {
+     "text": "oficina",
+     "gap": true,
+     "accept": [
+      "oficina"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "tableta",
+     "gap": true,
+     "accept": [
+      "tableta",
+      "tablet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dibujar",
+     "gap": true,
+     "accept": [
+      "dibujar"
+     ]
+    },
+    {
+     "text": "en la pizarra"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "dibuja en la"
+    },
+    {
+     "text": "pizarra",
+     "gap": true,
+     "accept": [
+      "pizarra"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'el jefe': the boss is a woman, so the answer uses the feminine form 'la jefa' (same entry). Key word appears only in the answer subject, which the recall tail removes; no noun of the set is the key word, so no recall row has it. All three English boxes cover all frames: 'caminar' fits the first part, 'dibujar' the whiteboard part. A man walks in the far background in a few frames (phrase 1)."
+}

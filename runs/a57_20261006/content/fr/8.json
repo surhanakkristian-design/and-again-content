@@ -1,0 +1,120 @@
+{
+ "mediaId": 8,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la carte-clé",
+ "taps": [
+  {
+   "phrase": "passer la carte-clé devant le lecteur",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "passer au vert",
+   "target": "le lecteur de cartes",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'ouvrir sur la chambre",
+   "target": "la porte",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la porte",
+   "voice": "female"
+  },
+  {
+   "word": "le lecteur de cartes",
+   "voice": "female"
+  },
+  {
+   "word": "la carte-clé",
+   "voice": "female"
+  },
+  {
+   "word": "la poignée",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "déverrouille",
+  "la",
+  "porte",
+  "avec",
+  "sa",
+  "carte-clé."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer la"
+    },
+    {
+     "text": "carte-clé",
+     "gap": true,
+     "accept": [
+      "carte-clé"
+     ]
+    },
+    {
+     "text": "devant le lecteur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer",
+     "gap": true,
+     "accept": [
+      "passer"
+     ]
+    },
+    {
+     "text": "au vert"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'ouvrir sur la"
+    },
+    {
+     "text": "chambre",
+     "gap": true,
+     "accept": [
+      "chambre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "déverrouille",
+     "gap": true,
+     "accept": [
+      "déverrouille",
+      "ouvre"
+     ]
+    },
+    {
+     "text": "la porte avec sa carte-clé"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box covers the walk with the suitcase only in the first two frames; in most boxed frames the woman holds the card to the reader, so 'passer la carte-clé devant le lecteur' instead of 'tirer sa valise'. Phrase 2 'passer au vert': the reader flashes red first, then turns green. Phrase 3: the door opens onto the lit room behind it. Noun 2 'le lecteur de cartes' (also 'le lecteur' in phrase 1). Answer: 'avec sa carte-clé' could also stand first ('Avec sa carte-clé, elle...'), but only with a comma, so one chip order."
+}

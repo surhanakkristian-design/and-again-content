@@ -1,0 +1,114 @@
+{
+ "mediaId": 299,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "réveiller",
+ "taps": [
+  {
+   "phrase": "dormir dans son lit",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "marcher sur le lit",
+   "target": "le chien",
+   "voice": "female"
+  },
+  {
+   "phrase": "se cacher le visage",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'oreiller",
+   "voice": "female"
+  },
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "la couette",
+   "voice": "female"
+  },
+  {
+   "word": "la porte",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le chien ?",
+ "answer": [
+  "Le",
+  "chien",
+  "réveille",
+  "la",
+  "femme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormir",
+     "gap": true,
+     "accept": [
+      "dormir"
+     ]
+    },
+    {
+     "text": "dans son lit"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcher sur le"
+    },
+    {
+     "text": "lit",
+     "gap": true,
+     "accept": [
+      "lit"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se cacher le"
+    },
+    {
+     "text": "visage",
+     "gap": true,
+     "accept": [
+      "visage"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "réveille",
+     "gap": true,
+     "accept": [
+      "réveille"
+     ]
+    },
+    {
+     "text": "la femme"
+    }
+   ]
+  }
+ ],
+ "notes": "'a blanket' is a duvet in the clip: 'la couette' is the everyday French word. Phrase 3: she hides her face in her hands, so 'se cacher le visage' (English 'cover')."
+}

@@ -1,0 +1,132 @@
+{
+  "mediaId": 21,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Schule",
+  "taps": [
+    {
+      "phrase": "die Tür öffnen",
+      "target": "die Hand",
+      "voice": "male"
+    },
+    {
+      "phrase": "an den Tischen sitzen",
+      "target": "die Schüler",
+      "voice": "male"
+    },
+    {
+      "phrase": "viele Fenster haben",
+      "target": "das Schulgebäude",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "male"
+    },
+    {
+      "word": "die Schule",
+      "voice": "male"
+    },
+    {
+      "word": "das Gras",
+      "voice": "male"
+    }
+  ],
+  "question": "Was machen die Schüler?",
+  "answer": [
+    "Sie",
+    "sitzen",
+    "an",
+    "den",
+    "Tischen."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Tür"
+        },
+        {
+          "text": "öffnen",
+          "gap": true,
+          "accept": [
+            "öffnen",
+            "aufmachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an den"
+        },
+        {
+          "text": "Tischen",
+          "gap": true,
+          "accept": [
+            "Tischen"
+          ]
+        },
+        {
+          "text": "sitzen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "viele"
+        },
+        {
+          "text": "Fenster",
+          "gap": true,
+          "accept": [
+            "Fenster"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Schule",
+          "gap": true,
+          "accept": [
+            "Schule"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sitzen",
+          "gap": true,
+          "accept": [
+            "sitzen"
+          ]
+        },
+        {
+          "text": "an den Tischen"
+        }
+      ]
+    }
+  ],
+  "notes": "Target 3 'das Schulgebäude' (compound with the key word, verifier only). Noun row 'die Schule' added: no tap/answer row contains the key word. 'die Schüler' as generic masculine for the mixed group."
+}

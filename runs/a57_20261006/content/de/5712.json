@@ -1,0 +1,126 @@
+{
+ "mediaId": 5712,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Rechtsfall",
+ "taps": [
+  {
+   "phrase": "auf das Beweisstück zeigen",
+   "target": "der Anwalt",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein loses Blatt fallen lassen",
+   "target": "der Anwalt",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf einem Holzgestell stehen",
+   "target": "das Fahrrad",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Anwalt",
+   "voice": "male"
+  },
+  {
+   "word": "das Fahrrad",
+   "voice": "male"
+  },
+  {
+   "word": "der Schlamm",
+   "voice": "male"
+  },
+  {
+   "word": "die Kartons",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Anwalt?",
+ "answer": [
+  "Er",
+  "zeigt",
+  "auf",
+  "das",
+  "schlammige",
+  "Fahrrad."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf das"
+    },
+    {
+     "text": "Beweisstück",
+     "gap": true,
+     "accept": [
+      "Beweisstück"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein loses"
+    },
+    {
+     "text": "Blatt",
+     "gap": true,
+     "accept": [
+      "Blatt"
+     ]
+    },
+    {
+     "text": "fallen lassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Holzgestell",
+     "gap": true,
+     "accept": [
+      "Holzgestell",
+      "Gestell"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeigt",
+     "gap": true,
+     "accept": [
+      "zeigt",
+      "deutet"
+     ]
+    },
+    {
+     "text": "auf das schlammige Fahrrad"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word der Rechtsfall (B2) is the topic of the whole clip but is not a visible thing, so it appears in no phrase, noun or row; no natural place to force it. 'das Beweisstück' is the B-level word for the evidence bike. Phrase 2: the sheet falls only at the end of the boxed time; written for that moment as in English."
+}

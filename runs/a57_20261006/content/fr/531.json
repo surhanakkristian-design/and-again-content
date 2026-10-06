@@ -1,0 +1,26 @@
+{
+  "mediaId": 531, "lang": "fr", "level": "A",
+  "keyWord": "la fête",
+  "taps": [
+    { "phrase": "danser à une fête", "target": "les gens", "voice": "male" },
+    { "phrase": "courir sur l'herbe", "target": "le chien", "voice": "male" },
+    { "phrase": "voler dans le ciel", "target": "les ballons", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ballon", "voice": "male" },
+    { "word": "l'arbre", "voice": "male" },
+    { "word": "les gens", "voice": "male" },
+    { "word": "le chien", "voice": "male" }
+  ],
+  "question": "Que font les gens ?",
+  "answer": ["Ils", "dansent", "à", "une", "fête", "dans", "le", "jardin."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "danser à une" }, { "text": "fête", "gap": true, "accept": ["fête"] } ] },
+    { "from": "taps", "parts": [ { "text": "courir", "gap": true, "accept": ["courir"] }, { "text": "sur l'herbe" } ] },
+    { "from": "taps", "parts": [ { "text": "voler", "gap": true, "accept": ["voler", "flotter"] }, { "text": "dans le ciel" } ] },
+    { "from": "answer", "parts": [ { "text": "dansent", "gap": true, "accept": ["dansent"] }, { "text": "à une fête dans le jardin" } ] }
+  ],
+  "notes": "Noun 1 is singular 'le ballon' (the pill sits on one yellow balloon); in context it means a party balloon (ballon de baudruche). The model answer adds 'dans le jardin' (the garden is shown) because 'Ils dansent à une fête.' alone sounds thin in French; the adverbials could in theory swap order ('dans le jardin à une fête'), but only the given order is natural. In the first boxed frames the people sit at the snack table and drink rather than dance."
+}

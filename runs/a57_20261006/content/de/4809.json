@@ -1,0 +1,124 @@
+{
+  "mediaId": 4809,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Korridor",
+  "taps": [
+    {
+      "phrase": "einen Wäschekorb tragen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein Fahrrad schieben",
+      "target": "der Mann im Kapuzenpulli",
+      "voice": "male"
+    },
+    {
+      "phrase": "dichte Locken haben",
+      "target": "der Mann mit den Locken",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Jacken",
+      "voice": "female"
+    },
+    {
+      "word": "der Wäschekorb",
+      "voice": "female"
+    },
+    {
+      "word": "der Korridor",
+      "voice": "female"
+    },
+    {
+      "word": "die Schuhe",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "trägt",
+    "einen",
+    "Wäschekorb",
+    "durch",
+    "den",
+    "Korridor."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Wäschekorb",
+          "gap": true,
+          "accept": [
+            "Wäschekorb"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Fahrrad"
+        },
+        {
+          "text": "schieben",
+          "gap": true,
+          "accept": [
+            "schieben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dichte"
+        },
+        {
+          "text": "Locken",
+          "gap": true,
+          "accept": [
+            "Locken"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "trägt einen Wäschekorb durch den"
+        },
+        {
+          "text": "Korridor",
+          "gap": true,
+          "accept": [
+            "Korridor",
+            "Flur",
+            "Gang"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word kept: in a flat 'der Flur' is the more everyday German word; 'der Korridor' is correct and B-level (accepted in the answer gap together with Flur/Gang). English 'coats' -> 'die Jacken': the things on the hooks are jackets/parkas, the natural German word. German also allows 'Sie trägt durch den Korridor einen Wäschekorb.' (marked, but grammatical). No noun row: Korridor is in the answer row."
+}

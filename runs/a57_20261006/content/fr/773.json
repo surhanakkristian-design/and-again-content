@@ -1,0 +1,119 @@
+{
+ "mediaId": 773,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le thermomètre",
+ "taps": [
+  {
+   "phrase": "prendre sa température",
+   "target": "l'infirmière",
+   "voice": "female"
+  },
+  {
+   "phrase": "devenir écarlate",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "indiquer une température élevée",
+   "target": "le thermomètre",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "le thermomètre",
+   "voice": "female"
+  },
+  {
+   "word": "l'infirmière",
+   "voice": "female"
+  },
+  {
+   "word": "le bol",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'infirmière ?",
+ "answer": [
+  "Elle",
+  "prend",
+  "sa",
+  "température",
+  "avec",
+  "un",
+  "thermomètre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre",
+     "gap": true,
+     "accept": [
+      "prendre",
+      "mesurer"
+     ]
+    },
+    {
+     "text": "sa température"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "devenir"
+    },
+    {
+     "text": "écarlate",
+     "gap": true,
+     "accept": [
+      "écarlate",
+      "rouge"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "indiquer",
+     "gap": true,
+     "accept": [
+      "indiquer",
+      "afficher"
+     ]
+    },
+    {
+     "text": "une température élevée"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend sa température avec un"
+    },
+    {
+     "text": "thermomètre",
+     "gap": true,
+     "accept": [
+      "thermomètre"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'devenir écarlate' (B2) for 'turn bright red'; the man is red only in part of his boxed frames (he is red in the middle of the clip, normal at start and after the ice). 'sa température' = his temperature (the man's). Key word 'thermomètre' gapped in the answer row, so no noun row."
+}

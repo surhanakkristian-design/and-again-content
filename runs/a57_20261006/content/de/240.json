@@ -1,0 +1,25 @@
+{
+  "mediaId": 240, "lang": "de", "level": "B",
+  "keyWord": "das Unentschieden",
+  "taps": [
+    { "phrase": "ein türkisfarbenes T-Shirt tragen", "target": "die Frau im türkisfarbenen T-Shirt", "voice": "female" },
+    { "phrase": "einen dichten Vollbart haben", "target": "der kräftige Mann", "voice": "male" },
+    { "phrase": "ein Geschirrtuch hochhalten", "target": "die Großmutter", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Geschirrtuch", "voice": "female" },
+    { "word": "der Tisch", "voice": "female" },
+    { "word": "die Großmutter", "voice": "female" }
+  ],
+  "question": "Wie endet das Armdrücken?",
+  "answer": ["Das", "Armdrücken", "endet", "mit", "einem", "Unentschieden."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein türkisfarbenes T-Shirt" }, { "text": "tragen", "gap": true, "accept": ["tragen", "anhaben"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen dichten" }, { "text": "Vollbart", "gap": true, "accept": ["Vollbart", "Bart"] }, { "text": "haben" } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "Geschirrtuch", "gap": true, "accept": ["Geschirrtuch", "Küchentuch", "Tuch"] }, { "text": "hochhalten" } ] },
+    { "from": "answer", "parts": [ { "text": "endet mit einem" }, { "text": "Unentschieden", "gap": true, "accept": ["Unentschieden", "Remis"] } ] }
+  ],
+  "notes": "Phrase 3: in most boxed frames the grandmother holds the tea towel up behind the hands; she lays it over the fists only at the very end, so 'hochhalten' instead of English 'drape'. 'die Großmutter' for 'an elderly woman' (verifier: same word as the tap target; 'die Seniorin' was too formal). B1/B2 items: türkisfarben, Vollbart, Geschirrtuch, mit einem Unentschieden enden. German also allows 'Mit einem Unentschieden endet das Armdrücken.' (marked order) with the same chips."
+}

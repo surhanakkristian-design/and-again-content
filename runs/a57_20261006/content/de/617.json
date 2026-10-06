@@ -1,0 +1,26 @@
+{
+  "mediaId": 617, "lang": "de", "level": "A",
+  "keyWord": "die Inlineskates",
+  "taps": [
+    { "phrase": "lila Inlineskates tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "den Weg entlangfahren", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf einer Bank sitzen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Inlineskates", "voice": "female" },
+    { "word": "das Getränk", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "die Bank", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "fährt", "auf", "lila", "Inlineskates."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lila" }, { "text": "Inlineskates", "gap": true, "accept": ["Inlineskates", "Inliner"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "den Weg" }, { "text": "entlangfahren", "gap": true, "accept": ["entlangfahren", "entlangskaten"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf einer" }, { "text": "Bank", "gap": true, "accept": ["Bank"] }, { "text": "sitzen" } ] },
+    { "from": "answer", "parts": [ { "text": "fährt", "gap": true, "accept": ["fährt", "skatet"] }, { "text": "auf lila Inlineskates" } ] }
+  ],
+  "notes": "'lila' is the standard uninflected colour adjective. Phrase 2 is not yet true in the first boxed frames (she is buckling the skates). Everyday Germans also say 'die Inliner'; accepted in recall. The drink is in a cup; 'das Getränk' names it at A level."
+}

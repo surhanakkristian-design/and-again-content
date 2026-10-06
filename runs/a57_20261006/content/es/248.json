@@ -1,0 +1,115 @@
+{
+  "mediaId": 248,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "el cuentagotas",
+  "taps": [
+    {
+      "phrase": "dosificar las gotas",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "tragarse la medicina",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "desprender vapor",
+      "target": "la tetera de cobre",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cuentagotas",
+      "voice": "female"
+    },
+    {
+      "word": "la cuchara de madera",
+      "voice": "female"
+    },
+    {
+      "word": "el delantal",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer?",
+  "answer": [
+    "Está",
+    "dosificando",
+    "gotas",
+    "con",
+    "un",
+    "cuentagotas."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dosificar",
+          "gap": true,
+          "accept": [
+            "dosificar",
+            "medir"
+          ]
+        },
+        {
+          "text": "las gotas"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tragarse la"
+        },
+        {
+          "text": "medicina",
+          "gap": true,
+          "accept": [
+            "medicina",
+            "medicamento"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "desprender",
+          "gap": true,
+          "accept": [
+            "desprender",
+            "echar",
+            "soltar"
+          ]
+        },
+        {
+          "text": "vapor"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está dosificando gotas con un"
+        },
+        {
+          "text": "cuentagotas",
+          "gap": true,
+          "accept": [
+            "cuentagotas"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1 box also covers close-ups of the hand squeezing the bulb; 'dosificar las gotas' fits the drop-counting frames. The man drinks the dose from the wooden spoon: 'tragarse la medicina'."
+}

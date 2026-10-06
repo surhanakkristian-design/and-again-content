@@ -1,0 +1,118 @@
+{
+  "mediaId": 558,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "spielen",
+  "taps": [
+    {
+      "phrase": "über das Netz fliegen",
+      "target": "der Ball",
+      "voice": "male"
+    },
+    {
+      "phrase": "im Gras liegen",
+      "target": "der Mann mit dem Hut",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Ball hochhalten",
+      "target": "der Mann in Blau",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Ball",
+      "voice": "male"
+    },
+    {
+      "word": "das Netz",
+      "voice": "male"
+    },
+    {
+      "word": "die Bäume",
+      "voice": "male"
+    },
+    {
+      "word": "das Gras",
+      "voice": "male"
+    }
+  ],
+  "question": "Was machen die Leute?",
+  "answer": [
+    "Sie",
+    "spielen",
+    "Volleyball."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über das Netz"
+        },
+        {
+          "text": "fliegen",
+          "gap": true,
+          "accept": [
+            "fliegen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im"
+        },
+        {
+          "text": "Gras",
+          "gap": true,
+          "accept": [
+            "Gras"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Ball",
+          "gap": true,
+          "accept": [
+            "Ball"
+          ]
+        },
+        {
+          "text": "hochhalten"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "spielen",
+          "gap": true,
+          "accept": [
+            "spielen"
+          ]
+        },
+        {
+          "text": "Volleyball"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer 'Sie spielen Volleyball.' is the natural German for 'They are playing with a ball' here (the game is clearly volleyball). Phrase 3: the man in blue holds the ball up only in one moment; in the other boxed frames he stands and laughs."
+}

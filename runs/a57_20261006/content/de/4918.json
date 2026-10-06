@@ -1,0 +1,124 @@
+{
+ "mediaId": 4918,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Treppe",
+ "taps": [
+  {
+   "phrase": "die Treppe hinaufeilen",
+   "target": "der junge Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich mit schweren Tüten abmühen",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Daumen hochhalten",
+   "target": "der junge Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Treppe",
+   "voice": "male"
+  },
+  {
+   "word": "der Kapuzenpullover",
+   "voice": "male"
+  },
+  {
+   "word": "die Jeans",
+   "voice": "male"
+  },
+  {
+   "word": "die Papiertüte",
+   "voice": "male"
+  }
+ ],
+ "question": "Was trägt der junge Mann die Treppe hinauf?",
+ "answer": [
+  "Er",
+  "schleppt",
+  "die",
+  "Papiertüten",
+  "die",
+  "Treppe",
+  "hinauf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Treppe",
+     "gap": true,
+     "accept": [
+      "Treppe"
+     ]
+    },
+    {
+     "text": "hinaufeilen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich mit schweren Tüten"
+    },
+    {
+     "text": "abmühen",
+     "gap": true,
+     "accept": [
+      "abmühen",
+      "abplagen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schleppt",
+     "gap": true,
+     "accept": [
+      "schleppt",
+      "trägt"
+     ]
+    },
+    {
+     "text": "die Papiertüten die Treppe hinauf"
+    }
+   ]
+  }
+ ],
+ "notes": "Question says 'die Treppe hinauf' because 'Was trägt er?' alone could mean 'what is he wearing'. Tap 2 box also covers frames where the woman stands on the porch without bags. Tap 1/3 boxes cover the whole sequence of the young man (jogging, carrying, thumbs-up)."
+}

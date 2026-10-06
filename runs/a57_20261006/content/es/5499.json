@@ -1,0 +1,137 @@
+{
+  "mediaId": 5499,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la mujer",
+  "taps": [
+    {
+      "phrase": "llevar un vestido rojo",
+      "target": "la mujer de rojo",
+      "voice": "female"
+    },
+    {
+      "phrase": "correr por la calle",
+      "target": "la mujer de amarillo",
+      "voice": "female"
+    },
+    {
+      "phrase": "regar las flores",
+      "target": "la mujer mayor",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "las flores",
+      "voice": "female"
+    },
+    {
+      "word": "la ventana",
+      "voice": "female"
+    },
+    {
+      "word": "la pared",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer mayor?",
+  "answer": [
+    "La",
+    "mujer",
+    "mayor",
+    "está",
+    "regando",
+    "las",
+    "flores."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "vestido",
+          "gap": true,
+          "accept": [
+            "vestido"
+          ]
+        },
+        {
+          "text": "rojo"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "correr",
+          "gap": true,
+          "accept": [
+            "correr"
+          ]
+        },
+        {
+          "text": "por la calle"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "regar las"
+        },
+        {
+          "text": "flores",
+          "gap": true,
+          "accept": [
+            "flores"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "la"
+        },
+        {
+          "text": "mujer",
+          "gap": true,
+          "accept": [
+            "mujer"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está"
+        },
+        {
+          "text": "regando",
+          "gap": true,
+          "accept": [
+            "regando"
+          ]
+        },
+        {
+          "text": "las flores"
+        }
+      ]
+    }
+  ],
+  "notes": "'the old woman' = 'la mujer mayor' (polite, A-level, keeps the key word) rather than 'la anciana'."
+}

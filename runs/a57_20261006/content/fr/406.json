@@ -1,0 +1,122 @@
+{
+ "mediaId": 406,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le fer",
+ "taps": [
+  {
+   "phrase": "brandir un lourd marteau",
+   "target": "le forgeron",
+   "voice": "male"
+  },
+  {
+   "phrase": "fixer une spirale en fer",
+   "target": "le forgeron",
+   "voice": "male"
+  },
+  {
+   "phrase": "être hérissé de pointes",
+   "target": "le portail",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'enclume",
+   "voice": "male"
+  },
+  {
+   "word": "la barre de fer",
+   "voice": "male"
+  },
+  {
+   "word": "les lunettes de protection",
+   "voice": "male"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le forgeron ?",
+ "answer": [
+  "Il",
+  "martèle",
+  "du",
+  "fer",
+  "chaud",
+  "sur",
+  "une",
+  "enclume."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brandir un lourd"
+    },
+    {
+     "text": "marteau",
+     "gap": true,
+     "accept": [
+      "marteau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fixer",
+     "gap": true,
+     "accept": [
+      "fixer",
+      "accrocher"
+     ]
+    },
+    {
+     "text": "une spirale en fer"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être hérissé de"
+    },
+    {
+     "text": "pointes",
+     "gap": true,
+     "accept": [
+      "pointes",
+      "piques"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "martèle du"
+    },
+    {
+     "text": "fer",
+     "gap": true,
+     "accept": [
+      "fer"
+     ]
+    },
+    {
+     "text": "chaud sur une enclume"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers frames where the blacksmith only holds the bar or the spiral; he holds/swings the hammer in most boxed frames. Key word 'le fer' used in phrase 2, noun 2 (la barre de fer) and the answer."
+}

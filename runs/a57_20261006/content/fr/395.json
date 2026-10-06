@@ -1,0 +1,26 @@
+{
+  "mediaId": 395, "lang": "fr", "level": "A",
+  "keyWord": "la maison",
+  "taps": [
+    { "phrase": "porter un carton", "target": "la femme", "voice": "female" },
+    { "phrase": "tenir les clés", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un tee-shirt rayé", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la maison", "voice": "male" },
+    { "word": "le ciel", "voice": "male" },
+    { "word": "l'herbe", "voice": "male" },
+    { "word": "l'allée", "voice": "male" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "porte", "un", "carton", "dans", "la", "maison."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "carton", "gap": true, "accept": ["carton"] } ] },
+    { "from": "taps", "parts": [ { "text": "tenir les" }, { "text": "clés", "gap": true, "accept": ["clés"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un tee-shirt" }, { "text": "rayé", "gap": true, "accept": ["rayé"] } ] },
+    { "from": "answer", "parts": [ { "text": "porte un carton dans la" }, { "text": "maison", "gap": true, "accept": ["maison"] } ] }
+  ],
+  "notes": "Question is 'Que fait la femme ?' instead of 'Que porte la femme ?' because 'porter' is ambiguous (she also wears dungarees). Phrases 1 and 3 both use 'porter' (carry / wear), both natural. Box and keys are not visible in the last window frames (the boxes stay on the couple at the upstairs window). Path = 'l'allée' (the garden path to the house)."
+}

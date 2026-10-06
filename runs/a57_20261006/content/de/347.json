@@ -1,0 +1,125 @@
+{
+ "mediaId": 347,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Klatsch",
+ "taps": [
+  {
+   "phrase": "Klatsch ins Ohr flüstern",
+   "target": "die junge Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich die Hände vor den Mund schlagen",
+   "target": "der junge Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein gestreiftes Hemd tragen",
+   "target": "der junge Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Markise",
+   "voice": "male"
+  },
+  {
+   "word": "die Locken",
+   "voice": "male"
+  },
+  {
+   "word": "der Zopf",
+   "voice": "male"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Frau mit der Brille?",
+ "answer": [
+  "Sie",
+  "flüstert",
+  "ihm",
+  "Klatsch",
+  "ins",
+  "Ohr."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Klatsch ins Ohr"
+    },
+    {
+     "text": "flüstern",
+     "gap": true,
+     "accept": [
+      "flüstern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die Hände vor den"
+    },
+    {
+     "text": "Mund",
+     "gap": true,
+     "accept": [
+      "Mund"
+     ]
+    },
+    {
+     "text": "schlagen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein gestreiftes"
+    },
+    {
+     "text": "Hemd",
+     "gap": true,
+     "accept": [
+      "Hemd"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "flüstert ihm"
+    },
+    {
+     "text": "Klatsch",
+     "gap": true,
+     "accept": [
+      "Klatsch",
+      "Tratsch"
+     ]
+    },
+    {
+     "text": "ins Ohr"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: in the last frame (box_05) the woman also holds one hand at her mouth; the man claps both hands over his mouth in most boxed frames. 'curly hair' -> 'die Locken' (the usual noun for curly hair). Phrases 2 and 3 share the target as in English. No noun row: 'Klatsch' is not a noun of the set and is in two rows."
+}

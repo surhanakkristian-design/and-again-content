@@ -1,0 +1,25 @@
+{
+  "mediaId": 4710, "lang": "fr", "level": "A",
+  "keyWord": "le bras",
+  "taps": [
+    { "phrase": "se tenir au milieu", "target": "la femme âgée", "voice": "female" },
+    { "phrase": "porter une veste verte", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "porter des lunettes", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les arbres", "voice": "female" },
+    { "word": "le bras", "voice": "female" },
+    { "word": "l'homme", "voice": "male" }
+  ],
+  "question": "Que font les trois personnes ?",
+  "answer": ["Elles", "bougent", "les", "bras."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se tenir au" }, { "text": "milieu", "gap": true, "accept": ["milieu"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "verte" } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "lunettes", "gap": true, "accept": ["lunettes"] } ] },
+    { "from": "answer", "parts": [ { "text": "bougent les" }, { "text": "bras", "gap": true, "accept": ["bras"] } ] }
+  ],
+  "notes": "Answer subject 'Elles' agrees with 'les trois personnes' (mixed group, grammatical feminine). The young woman's jacket is mint green: 'verte' as in English. The 'le bras' pill sits on the older woman's raised right arm (singular fits)."
+}

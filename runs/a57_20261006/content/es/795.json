@@ -1,0 +1,116 @@
+{
+ "mediaId": 795,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la toalla",
+ "taps": [
+  {
+   "phrase": "salir de la piscina",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "secarse el pelo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sacudirse el agua",
+   "target": "el perro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la toalla",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el árbol",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "Se",
+  "seca",
+  "el",
+  "pelo",
+  "con",
+  "una",
+  "toalla."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "salir de la"
+    },
+    {
+     "text": "piscina",
+     "gap": true,
+     "accept": [
+      "piscina"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "secarse",
+     "gap": true,
+     "accept": [
+      "secarse"
+     ]
+    },
+    {
+     "text": "el pelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sacudirse",
+     "gap": true,
+     "accept": [
+      "sacudirse"
+     ]
+    },
+    {
+     "text": "el agua"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se seca el pelo con una"
+    },
+    {
+     "text": "toalla",
+     "gap": true,
+     "accept": [
+      "toalla"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la toalla appears in noun 2 and the answer row (gap), so no extra noun row. Tap 1 red box covers the whole clip although the man leaves the pool only at the start. Tap 3: the dog shakes the water off its head (sacudirse el agua); the blue box also covers the end where it is wrapped in the towel."
+}

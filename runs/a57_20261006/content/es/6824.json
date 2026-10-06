@@ -1,0 +1,120 @@
+{
+ "mediaId": 6824,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el aire acondicionado",
+ "taps": [
+  {
+   "phrase": "secarse el sudor de la frente",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "marcar la presión",
+   "target": "los manómetros",
+   "voice": "male"
+  },
+  {
+   "phrase": "recoger el agua que gotea",
+   "target": "el cubo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el aire acondicionado",
+   "voice": "male"
+  },
+  {
+   "word": "el cubo",
+   "voice": "male"
+  },
+  {
+   "word": "la gorra",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "está",
+  "revisando",
+  "el",
+  "aire",
+  "acondicionado."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "secarse el"
+    },
+    {
+     "text": "sudor",
+     "gap": true,
+     "accept": [
+      "sudor"
+     ]
+    },
+    {
+     "text": "de la frente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcar la"
+    },
+    {
+     "text": "presión",
+     "gap": true,
+     "accept": [
+      "presión"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recoger el agua que"
+    },
+    {
+     "text": "gotea",
+     "gap": true,
+     "accept": [
+      "gotea",
+      "cae"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está revisando el"
+    },
+    {
+     "text": "aire acondicionado",
+     "gap": true,
+     "accept": [
+      "aire acondicionado"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 points at the outdoor unit; 'el aire acondicionado' is how Spaniards name the unit too (more precisely 'el aparato de aire acondicionado'). Key word is in the answer row, so no separate noun row; its gap is the two-word key word 'aire acondicionado'. Phrase 2 uses 'marcar' (a gauge 'marca' the pressure), the natural Spanish verb. Phrase 3: the bucket box goes OFF in later frames; water drips into it in the boxed frames."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 4365,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "frisch",
+ "taps": [
+  {
+   "phrase": "frische Brötchen aus dem Ofen holen",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Obstkuchen halten",
+   "target": "die junge Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine rote Schürze tragen",
+   "target": "die junge Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Obstkuchen",
+   "voice": "female"
+  },
+  {
+   "word": "die Brötchen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was holt die alte Frau aus dem Ofen?",
+ "answer": [
+  "Sie",
+  "holt",
+  "frische",
+  "Brötchen",
+  "aus",
+  "dem",
+  "Ofen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "frische",
+     "gap": true,
+     "accept": [
+      "frische"
+     ]
+    },
+    {
+     "text": "Brötchen aus dem Ofen holen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Obstkuchen",
+     "gap": true,
+     "accept": [
+      "Obstkuchen",
+      "Kuchen"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Schürze",
+     "gap": true,
+     "accept": [
+      "Schürze"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "holt",
+     "gap": true,
+     "accept": [
+      "holt",
+      "nimmt"
+     ]
+    },
+    {
+     "text": "frische Brötchen aus dem Ofen"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the old woman takes the tray out of the oven, so 'aus dem Ofen holen' (truer than a literal 'tragen'); the question keeps English 'carrying' = 'tragen'. In the final boxed frames (both women cheering at the table) neither woman carries rolls or holds the pie; phrases 1-2 describe most boxed frames. 'eine rote Schürze tragen' fits only the young woman (the old woman's apron is floral). Pie with berries = 'der Obstkuchen' in phrase and noun. VERIFIER: question/answer changed from 'tragen' (ambiguous: 'Was trägt die alte Frau?' reads as 'what is she wearing' -> 'eine Schürze') to 'aus dem Ofen holen', consistent with phrase 1."
+}

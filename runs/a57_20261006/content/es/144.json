@@ -1,0 +1,121 @@
+{
+ "mediaId": 144,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "atrapar",
+ "taps": [
+  {
+   "phrase": "atrapar una pelota roja",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "volar por el aire",
+   "target": "la pelota",
+   "voice": "male"
+  },
+  {
+   "phrase": "correr por la hierba",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la pelota",
+   "voice": "male"
+  },
+  {
+   "word": "la nube",
+   "voice": "male"
+  },
+  {
+   "word": "el chico",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el chico?",
+ "answer": [
+  "El",
+  "chico",
+  "atrapa",
+  "una",
+  "pelota",
+  "roja."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "atrapar una"
+    },
+    {
+     "text": "pelota",
+     "gap": true,
+     "accept": [
+      "pelota",
+      "bola"
+     ]
+    },
+    {
+     "text": "roja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar",
+     "gap": true,
+     "accept": [
+      "volar"
+     ]
+    },
+    {
+     "text": "por el aire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr por la"
+    },
+    {
+     "text": "hierba",
+     "gap": true,
+     "accept": [
+      "hierba",
+      "césped"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "atrapa",
+     "gap": true,
+     "accept": [
+      "atrapa",
+      "coge"
+     ]
+    },
+    {
+     "text": "una pelota roja"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 3 share the same boxes (the boy), as in English. In the last boxes the boy holds the ball up rather than running; 'correr por la hierba' fits the earlier boxed frames."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 7, "lang": "fr", "level": "B",
+  "keyWord": "la remise des diplômes",
+  "taps": [
+    { "phrase": "brandir son diplôme", "target": "l'homme", "voice": "male" },
+    { "phrase": "sourire jusqu'aux oreilles", "target": "l'homme", "voice": "male" },
+    { "phrase": "serrer un autre diplômé dans ses bras", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le diplôme", "voice": "male" },
+    { "word": "le stade", "voice": "male" },
+    { "word": "la toque", "voice": "male" },
+    { "word": "l'écharpe", "voice": "male" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "brandit", "son", "diplôme", "à", "la", "remise", "des", "diplômes."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "brandir", "gap": true, "accept": ["brandir", "lever"] }, { "text": "son diplôme" } ] },
+    { "from": "taps", "parts": [ { "text": "sourire", "gap": true, "accept": ["sourire"] }, { "text": "jusqu'aux oreilles" } ] },
+    { "from": "taps", "parts": [ { "text": "serrer un autre" }, { "text": "diplômé", "gap": true, "accept": ["diplômé"] }, { "text": "dans ses bras" } ] },
+    { "from": "answer", "parts": [ { "text": "brandit son diplôme à la" }, { "text": "remise", "gap": true, "accept": ["remise"] }, { "text": "des diplômes" } ] }
+  ],
+  "notes": "Phrase 2 = the natural idiom for English 'grin' (he grins into the camera). All three tap boxes cover the whole clip; the hug happens only in the last frames, the diploma raise in the middle. Graduation cap = 'la toque' (everyday French; the academic term 'le mortier' is rare), sash = 'l'écharpe'. 'diplôme' appears both as noun and inside the key word 'la remise des diplômes' - natural, not forced."
+}

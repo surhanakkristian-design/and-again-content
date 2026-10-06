@@ -1,0 +1,124 @@
+{
+ "mediaId": 232,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "déçu",
+ "taps": [
+  {
+   "phrase": "se frotter les mains d'impatience",
+   "target": "l'homme à l'imperméable",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir l'air profondément déçu",
+   "target": "l'homme à l'imperméable",
+   "voice": "male"
+  },
+  {
+   "phrase": "contenir une portion minuscule",
+   "target": "la barquette de l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bonnet",
+   "voice": "male"
+  },
+  {
+   "word": "la barbe",
+   "voice": "male"
+  },
+  {
+   "word": "l'imperméable",
+   "voice": "male"
+  },
+  {
+   "word": "la barquette",
+   "voice": "male"
+  }
+ ],
+ "question": "Quel air a l'homme au premier plan ?",
+ "answer": [
+  "Il",
+  "a",
+  "l'air",
+  "déçu",
+  "par",
+  "sa",
+  "barquette",
+  "vide."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "frotter",
+     "gap": true,
+     "accept": [
+      "frotter"
+     ]
+    },
+    {
+     "text": "les mains d'impatience"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir l'air profondément"
+    },
+    {
+     "text": "déçu",
+     "gap": true,
+     "accept": [
+      "déçu"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "contenir une portion"
+    },
+    {
+     "text": "minuscule",
+     "gap": true,
+     "accept": [
+      "minuscule",
+      "toute petite"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "a l'air déçu par sa"
+    },
+    {
+     "text": "barquette",
+     "gap": true,
+     "accept": [
+      "barquette"
+     ]
+    },
+    {
+     "text": "vide"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the same target (as in English). He rubs his hands only in the first boxed frames. The tray is a disposable street-food tray: 'la barquette' (the everyday French word), used for the noun, phrase 3 and the answer. Raincoat noun 'l'imperméable' (it is the shiny 'ciré' type; target named 'l'homme à l'imperméable' for the verifier only - could be unified to 'l'imperméable')."
+}

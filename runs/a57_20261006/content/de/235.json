@@ -1,0 +1,123 @@
+{
+ "mediaId": 235,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "apportieren",
+ "taps": [
+  {
+   "phrase": "einen roten Ball apportieren",
+   "target": "der Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "dem Hund den Bauch kraulen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "voller reifer Äpfel hängen",
+   "target": "der Baum",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Apfelbaum",
+   "voice": "female"
+  },
+  {
+   "word": "der Zaun",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "der Rasen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Der",
+  "Hund",
+  "apportiert",
+  "einen",
+  "roten",
+  "Ball."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen roten"
+    },
+    {
+     "text": "Ball",
+     "gap": true,
+     "accept": [
+      "Ball"
+     ]
+    },
+    {
+     "text": "apportieren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dem Hund den Bauch"
+    },
+    {
+     "text": "kraulen",
+     "gap": true,
+     "accept": [
+      "kraulen",
+      "streicheln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voller reifer"
+    },
+    {
+     "text": "Äpfel",
+     "gap": true,
+     "accept": [
+      "Äpfel"
+     ]
+    },
+    {
+     "text": "hängen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "apportiert",
+     "gap": true,
+     "accept": [
+      "apportiert",
+      "holt"
+     ]
+    },
+    {
+     "text": "einen roten Ball"
+    }
+   ]
+  }
+ ],
+ "notes": "Box 1 also covers the opening frames where the dog waits and the closing belly-rub frames; phrase written for the fetch. 'voller reifer Äpfel hängen' = idiomatic 'der Baum hängt voller Äpfel'."
+}

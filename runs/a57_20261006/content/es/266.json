@@ -1,0 +1,117 @@
+{
+ "mediaId": 266,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la energía",
+ "taps": [
+  {
+   "phrase": "subir las escaleras corriendo",
+   "target": "la mujer de blanco",
+   "voice": "female"
+  },
+  {
+   "phrase": "dar saltos",
+   "target": "la mujer de blanco",
+   "voice": "female"
+  },
+  {
+   "phrase": "apoyar las manos en las rodillas",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las escaleras",
+   "voice": "female"
+  },
+  {
+   "word": "la farola",
+   "voice": "female"
+  },
+  {
+   "word": "el muro",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer de blanco?",
+ "answer": [
+  "Sube",
+  "las",
+  "escaleras",
+  "corriendo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir las"
+    },
+    {
+     "text": "escaleras",
+     "gap": true,
+     "accept": [
+      "escaleras"
+     ]
+    },
+    {
+     "text": "corriendo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "saltos",
+     "gap": true,
+     "accept": [
+      "saltos",
+      "brincos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apoyar las manos en las"
+    },
+    {
+     "text": "rodillas",
+     "gap": true,
+     "accept": [
+      "rodillas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Sube",
+     "gap": true,
+     "accept": [
+      "Sube"
+     ]
+    },
+    {
+     "text": "las escaleras corriendo"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la energía' is not a visible thing, so it appears in no exercise. Answer chips also allow 'Sube corriendo las escaleras' (equally natural); both orders are right. English 'steps' -> 'las escaleras' (everyday word for an outdoor flight of steps), used in phrase, noun and answer."
+}

@@ -1,0 +1,114 @@
+{
+ "mediaId": 29,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le télescope",
+ "taps": [
+  {
+   "phrase": "regarder dans le télescope",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir sur trois pieds",
+   "target": "le télescope",
+   "voice": "female"
+  },
+  {
+   "phrase": "briller dans le ciel",
+   "target": "la lune",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le télescope",
+   "voice": "female"
+  },
+  {
+   "word": "le bonnet",
+   "voice": "female"
+  },
+  {
+   "word": "la veste",
+   "voice": "female"
+  },
+  {
+   "word": "le ciel",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "regarde",
+  "dans",
+  "un",
+  "télescope."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder dans le"
+    },
+    {
+     "text": "télescope",
+     "gap": true,
+     "accept": [
+      "télescope"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir sur trois"
+    },
+    {
+     "text": "pieds",
+     "gap": true,
+     "accept": [
+      "pieds"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "briller",
+     "gap": true,
+     "accept": [
+      "briller"
+     ]
+    },
+    {
+     "text": "dans le ciel"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde",
+     "gap": true,
+     "accept": [
+      "regarde"
+     ]
+    },
+    {
+     "text": "dans un télescope"
+    }
+   ]
+  }
+ ],
+ "notes": "'le bonnet' for the knitted hat (natural word in France); 'la veste' for the puffer jacket (A-level; 'la doudoune' would be more precise). Tap 1: red box also covers close-ups where she looks at the camera after looking through the eyepiece."
+}

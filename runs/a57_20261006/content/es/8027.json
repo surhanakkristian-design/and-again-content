@@ -1,0 +1,123 @@
+{
+ "mediaId": 8027,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "los montones",
+ "taps": [
+  {
+   "phrase": "montar en patinete",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "alzar los brazos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "asomarse por detrás del cristal",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sombrero de paja",
+   "voice": "male"
+  },
+  {
+   "word": "la lámpara de techo",
+   "voice": "male"
+  },
+  {
+   "word": "el patinete",
+   "voice": "male"
+  },
+  {
+   "word": "las bolas de plástico",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "montando",
+  "en",
+  "patinete",
+  "entre",
+  "montones",
+  "de",
+  "bolas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montar en"
+    },
+    {
+     "text": "patinete",
+     "gap": true,
+     "accept": [
+      "patinete"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar",
+     "gap": true,
+     "accept": [
+      "alzar",
+      "levantar"
+     ]
+    },
+    {
+     "text": "los brazos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomarse",
+     "gap": true,
+     "accept": [
+      "asomarse"
+     ]
+    },
+    {
+     "text": "por detrás del cristal"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está montando en patinete entre"
+    },
+    {
+     "text": "montones",
+     "gap": true,
+     "accept": [
+      "montones",
+      "miles",
+      "cientos"
+     ]
+    },
+    {
+     "text": "de bolas"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the woman covers her mouth only in the first two boxed frames; in most frames she leans out from behind the glass laughing, so 'asomarse por detrás del cristal' (laughing alone would fit the man too)."
+}

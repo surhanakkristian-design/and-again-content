@@ -1,0 +1,116 @@
+{
+  "mediaId": 704,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "estornudar",
+  "taps": [
+    {
+      "phrase": "estornudar muy fuerte",
+      "target": "el chico",
+      "voice": "male"
+    },
+    {
+      "phrase": "limpiarse la nariz",
+      "target": "el chico",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar una cesta",
+      "target": "la chica",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el árbol",
+      "voice": "male"
+    },
+    {
+      "word": "la chica",
+      "voice": "female"
+    },
+    {
+      "word": "el sombrero",
+      "voice": "male"
+    },
+    {
+      "word": "la cesta",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el chico?",
+  "answer": [
+    "Está",
+    "estornudando",
+    "muy",
+    "fuerte."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estornudar",
+          "gap": true,
+          "accept": [
+            "estornudar"
+          ]
+        },
+        {
+          "text": "muy fuerte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "limpiarse la"
+        },
+        {
+          "text": "nariz",
+          "gap": true,
+          "accept": [
+            "nariz"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "cesta",
+          "gap": true,
+          "accept": [
+            "cesta"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está"
+        },
+        {
+          "text": "estornudando",
+          "gap": true,
+          "accept": [
+            "estornudando"
+          ]
+        },
+        {
+          "text": "muy fuerte"
+        }
+      ]
+    }
+  ],
+  "notes": "English 'the man' looks like a teenager/young man in this anime clip; 'el chico' is the natural Spanish word. Continuous answer chosen so the answer row differs from the first tap row once blanked."
+}

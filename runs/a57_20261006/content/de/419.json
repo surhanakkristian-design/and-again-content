@@ -1,0 +1,126 @@
+{
+ "mediaId": 419,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "kicken",
+ "taps": [
+  {
+   "phrase": "ein orangefarbenes T-Shirt tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein lila T-Shirt tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "durch die Luft fliegen",
+   "target": "der Ball",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "die Gebäude",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Ball",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die beiden?",
+ "answer": [
+  "Sie",
+  "kicken",
+  "den",
+  "Ball",
+  "hin",
+  "und",
+  "her."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein orangefarbenes"
+    },
+    {
+     "text": "T-Shirt",
+     "gap": true,
+     "accept": [
+      "T-Shirt",
+      "Shirt",
+      "Top"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein lila T-Shirt"
+    },
+    {
+     "text": "tragen",
+     "gap": true,
+     "accept": [
+      "tragen",
+      "anhaben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch die Luft"
+    },
+    {
+     "text": "fliegen",
+     "gap": true,
+     "accept": [
+      "fliegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "kicken",
+     "gap": true,
+     "accept": [
+      "kicken",
+      "schießen"
+     ]
+    },
+    {
+     "text": "den Ball"
+    },
+    {
+     "text": "hin und her"
+    }
+   ]
+  }
+ ],
+ "notes": "The woman wears an orange crop top: 'T-Shirt' kept as in English (accept Shirt/Top). 'lila' stays uninflected (standard). Answer: 'hin und her' only natural at the end, one word order. Key word 'kicken' is used in the answer and its recall gap."
+}

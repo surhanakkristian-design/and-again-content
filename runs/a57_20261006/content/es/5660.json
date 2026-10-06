@@ -1,0 +1,127 @@
+{
+ "mediaId": 5660,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la manzana",
+ "taps": [
+  {
+   "phrase": "cruzar la calle",
+   "target": "el perro",
+   "voice": "female"
+  },
+  {
+   "phrase": "iluminar la pared",
+   "target": "la farola",
+   "voice": "female"
+  },
+  {
+   "phrase": "pasar junto a una farola",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la manzana",
+   "voice": "female"
+  },
+  {
+   "word": "el árbol",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el perro?",
+ "answer": [
+  "Cruza",
+  "la",
+  "calle."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzar",
+     "gap": true,
+     "accept": [
+      "cruzar"
+     ]
+    },
+    {
+     "text": "la calle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "iluminar",
+     "gap": true,
+     "accept": [
+      "iluminar"
+     ]
+    },
+    {
+     "text": "la pared"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar junto a una"
+    },
+    {
+     "text": "farola",
+     "gap": true,
+     "accept": [
+      "farola"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "manzana",
+     "gap": true,
+     "accept": [
+      "manzana"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Cruza la"
+    },
+    {
+     "text": "calle",
+     "gap": true,
+     "accept": [
+      "calle"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la manzana' (manzana de casas, Spain) is correct but a learner may first think of the fruit; the pill sits on the corner building, which is one building of the block. Phrase 3: the dog walks past the lamp in the boxed frames; in the first frames the lamp is not yet visible."
+}

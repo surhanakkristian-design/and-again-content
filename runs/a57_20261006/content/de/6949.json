@@ -1,0 +1,123 @@
+{
+ "mediaId": 6949,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die heiße Schokolade",
+ "taps": [
+  {
+   "phrase": "heiße Schokolade eingießen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein goldenes Kleid tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "aus einer Tasse trinken",
+   "target": "der Mann mit der Mütze",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Schokolade",
+   "voice": "female"
+  },
+  {
+   "word": "das Kleid",
+   "voice": "female"
+  },
+  {
+   "word": "die Hand",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "gießt",
+  "heiße",
+  "Schokolade",
+  "in",
+  "eine",
+  "Tasse."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "heiße"
+    },
+    {
+     "text": "Schokolade",
+     "gap": true,
+     "accept": [
+      "Schokolade",
+      "Trinkschokolade"
+     ]
+    },
+    {
+     "text": "eingießen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein goldenes"
+    },
+    {
+     "text": "Kleid",
+     "gap": true,
+     "accept": [
+      "Kleid"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus einer Tasse"
+    },
+    {
+     "text": "trinken",
+     "gap": true,
+     "accept": [
+      "trinken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "gießt",
+     "gap": true,
+     "accept": [
+      "gießt",
+      "schüttet"
+     ]
+    },
+    {
+     "text": "heiße Schokolade"
+    },
+    {
+     "text": "in eine Tasse"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'the man in the hat' wears a dark knit cap: target 'der Mann mit der Mütze'. Noun 1 = 'die Schokolade' (the validator rejects the lower-case adjective of the key word 'die heiße Schokolade' in a noun pill; the key word stays in tap row 1 and the answer). The cups are glass mugs; 'Tasse' used everywhere. Answer: 'Sie gießt in eine Tasse heiße Schokolade' is also possible German but marked; the given order is the natural one. No noun row: the key word is in tap row 1."
+}

@@ -1,0 +1,127 @@
+{
+  "mediaId": 50,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le pot",
+  "taps": [
+    {
+      "phrase": "tenir la poche à douille",
+      "target": "la main",
+      "voice": "female"
+    },
+    {
+      "phrase": "porter un gant noir",
+      "target": "la main",
+      "voice": "female"
+    },
+    {
+      "phrase": "se remplir de crème",
+      "target": "le pot",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le gant",
+      "voice": "female"
+    },
+    {
+      "word": "la poche à douille",
+      "voice": "female"
+    },
+    {
+      "word": "le pot",
+      "voice": "female"
+    },
+    {
+      "word": "la table",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la main ?",
+  "answer": [
+    "Elle",
+    "remplit",
+    "un",
+    "pot",
+    "de",
+    "crème."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir la"
+        },
+        {
+          "text": "poche",
+          "gap": true,
+          "accept": [
+            "poche"
+          ]
+        },
+        {
+          "text": "à douille"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un"
+        },
+        {
+          "text": "gant",
+          "gap": true,
+          "accept": [
+            "gant"
+          ]
+        },
+        {
+          "text": "noir"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "remplir",
+          "gap": true,
+          "accept": [
+            "remplir"
+          ]
+        },
+        {
+          "text": "de crème"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "remplit un"
+        },
+        {
+          "text": "pot",
+          "gap": true,
+          "accept": [
+            "pot"
+          ]
+        },
+        {
+          "text": "de crème"
+        }
+      ]
+    }
+  ],
+  "notes": "English 'bag' = piping bag: the natural French word is 'la poche à douille' (above A level, but 'le sac' would be wrong); used in noun 2 and phrase 1. Phrases 1 and 2 share the target 'la main' as in English."
+}

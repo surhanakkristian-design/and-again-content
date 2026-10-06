@@ -1,0 +1,141 @@
+{
+ "mediaId": 368,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Hubschrauber",
+ "taps": [
+  {
+   "phrase": "über die Berge fliegen",
+   "target": "der Hubschrauber",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen schwarzen Bart haben",
+   "target": "der alte Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "lange graue Haare haben",
+   "target": "die alte Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hubschrauber",
+   "voice": "female"
+  },
+  {
+   "word": "das Haus",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Kiste",
+   "voice": "female"
+  }
+ ],
+ "question": "Was fliegt über die Berge?",
+ "answer": [
+  "Ein",
+  "roter",
+  "Hubschrauber",
+  "fliegt",
+  "über",
+  "die",
+  "Berge."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über die"
+    },
+    {
+     "text": "Berge",
+     "gap": true,
+     "accept": [
+      "Berge"
+     ]
+    },
+    {
+     "text": "fliegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schwarzen"
+    },
+    {
+     "text": "Bart",
+     "gap": true,
+     "accept": [
+      "Bart"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lange"
+    },
+    {
+     "text": "graue",
+     "gap": true,
+     "accept": [
+      "graue"
+     ]
+    },
+    {
+     "text": "Haare haben"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Hubschrauber",
+     "gap": true,
+     "accept": [
+      "Hubschrauber",
+      "Helikopter"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fliegt",
+     "gap": true,
+     "accept": [
+      "fliegt"
+     ]
+    },
+    {
+     "text": "über die Berge"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'a box' -> 'die Kiste' (wooden crate, the everyday word). The old man's beard is dark/black-grey; 'schwarz' as in English."
+}

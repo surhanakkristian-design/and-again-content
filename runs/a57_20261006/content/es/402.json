@@ -1,0 +1,120 @@
+{
+ "mediaId": 402,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el hielo",
+ "taps": [
+  {
+   "phrase": "deslizarse sobre el hielo",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un gorro verde",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una chaqueta roja",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "el hielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Se",
+  "desliza",
+  "sobre",
+  "el",
+  "hielo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "deslizarse sobre el"
+    },
+    {
+     "text": "hielo",
+     "gap": true,
+     "accept": [
+      "hielo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "gorro",
+     "gap": true,
+     "accept": [
+      "gorro"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una chaqueta"
+    },
+    {
+     "text": "roja",
+     "gap": true,
+     "accept": [
+      "roja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "desliza",
+     "gap": true,
+     "accept": [
+      "desliza"
+     ]
+    },
+    {
+     "text": "sobre el hielo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers the first half where the woman crouches and touches the ice; she slides in the last frames (written for the slide, as in English). Answer drops the subject, so the answer row is the whole sentence."
+}

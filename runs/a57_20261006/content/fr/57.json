@@ -1,0 +1,25 @@
+{
+  "mediaId": 57, "lang": "fr", "level": "A",
+  "keyWord": "le fond",
+  "taps": [
+    { "phrase": "monter les marches en premier", "target": "la femme", "voice": "female" },
+    { "phrase": "lever un doigt", "target": "l'homme en chemise bleue", "voice": "male" },
+    { "phrase": "marcher derrière les autres", "target": "l'homme au tee-shirt rouge", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le mur", "voice": "male" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "les sièges", "voice": "male" }
+  ],
+  "question": "Où sont assis les trois amis ?",
+  "answer": ["Ils", "sont", "assis", "au", "fond."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "monter", "gap": true, "accept": ["monter", "grimper"] }, { "text": "les marches en premier" } ] },
+    { "from": "taps", "parts": [ { "text": "lever un" }, { "text": "doigt", "gap": true, "accept": ["doigt"] } ] },
+    { "from": "taps", "parts": [ { "text": "marcher", "gap": true, "accept": ["marcher", "monter"] }, { "text": "derrière les autres" } ] },
+    { "from": "answer", "parts": [ { "text": "sont assis" }, { "text": "au" }, { "text": "fond", "gap": true, "accept": ["fond"] } ] }
+  ],
+  "notes": "Question uses 'les trois amis' (not 'les trois personnes', which would force 'Elles sont assises' for two men and a woman). Tap 2: the green box also covers the climb, where the man only follows; he raises one finger only once seated. Kept 'lever un doigt' because 'monter/suivre' would also fit the other two. Tap 1: the woman leads the climb in most boxed frames; in the last boxed frames she is seated."
+}

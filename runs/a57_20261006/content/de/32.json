@@ -1,0 +1,120 @@
+{
+  "mediaId": 32,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Wort",
+  "taps": [
+    {
+      "phrase": "seinen Bart anfassen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "lange Haare haben",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "groß und weiß sein",
+      "target": "der Buchstabe",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Buchstabe",
+      "voice": "female"
+    },
+    {
+      "word": "der Bart",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "question": "Was fasst der Mann an?",
+  "answer": [
+    "Er",
+    "fasst",
+    "seinen",
+    "Bart",
+    "an."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "seinen Bart"
+        },
+        {
+          "text": "anfassen",
+          "gap": true,
+          "accept": [
+            "anfassen",
+            "berühren"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lange"
+        },
+        {
+          "text": "Haare",
+          "gap": true,
+          "accept": [
+            "Haare"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "groß und"
+        },
+        {
+          "text": "weiß",
+          "gap": true,
+          "accept": [
+            "weiß"
+          ]
+        },
+        {
+          "text": "sein"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fasst seinen"
+        },
+        {
+          "text": "Bart",
+          "gap": true,
+          "accept": [
+            "Bart"
+          ]
+        },
+        {
+          "text": "an"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word das Wort is not a visible thing (the clip shows the letter B; words are only spoken), no text contains it, same as English. Tap 1: the man touches his beard only in the thinking moments (about 4.5 s, 8-10 s, 11-12 s); the box covers him the whole clip. At the still (3.5 s) he is not touching his beard; the question follows the English one."
+}

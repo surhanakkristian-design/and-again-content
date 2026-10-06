@@ -1,0 +1,137 @@
+{
+ "mediaId": 197,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la vaca",
+ "taps": [
+  {
+   "phrase": "comer hierba verde",
+   "target": "la vaca",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber la leche",
+   "target": "el ternero",
+   "voice": "female"
+  },
+  {
+   "phrase": "echar la leche",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la vaca",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el cencerro",
+   "voice": "female"
+  },
+  {
+   "word": "la leche",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está comiendo la vaca?",
+ "answer": [
+  "La",
+  "vaca",
+  "está",
+  "comiendo",
+  "hierba",
+  "verde."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer"
+    },
+    {
+     "text": "hierba",
+     "gap": true,
+     "accept": [
+      "hierba"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber la"
+    },
+    {
+     "text": "leche",
+     "gap": true,
+     "accept": [
+      "leche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar",
+     "gap": true,
+     "accept": [
+      "echar",
+      "verter"
+     ]
+    },
+    {
+     "text": "la leche"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "vaca",
+     "gap": true,
+     "accept": [
+      "vaca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "comiendo",
+     "gap": true,
+     "accept": [
+      "comiendo"
+     ]
+    },
+    {
+     "text": "hierba verde"
+    }
+   ]
+  }
+ ],
+ "notes": "'el cencerro' is the exact Spanish word for a cowbell but above A2 (plain 'la campana' would be wrong for a cowbell); kept. Phrase 2: the calf only stands in the background in the early boxed frames and drinks the milk at the end. 'echar la leche' (Spain, A-level) for pouring."
+}

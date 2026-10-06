@@ -1,0 +1,116 @@
+{
+  "mediaId": 416,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le ketchup",
+  "taps": [
+    {
+      "phrase": "secouer une bouteille de ketchup",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "regarder l'homme",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être dans une assiette",
+      "target": "les frites",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'homme",
+      "voice": "male"
+    },
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "les frites",
+      "voice": "male"
+    },
+    {
+      "word": "le ketchup",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "secoue",
+    "une",
+    "bouteille",
+    "de",
+    "ketchup."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "secouer",
+          "gap": true,
+          "accept": [
+            "secouer"
+          ]
+        },
+        {
+          "text": "une bouteille de ketchup"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "regarder",
+          "gap": true,
+          "accept": [
+            "regarder",
+            "observer"
+          ]
+        },
+        {
+          "text": "l'homme"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être dans une"
+        },
+        {
+          "text": "assiette",
+          "gap": true,
+          "accept": [
+            "assiette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "secoue une bouteille de"
+        },
+        {
+          "text": "ketchup",
+          "gap": true,
+          "accept": [
+            "ketchup"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: like the English 'lie on a plate', the ketchup also ends up in the plate in the later frames; the fries are in it in every boxed frame. French says 'dans une assiette'. In the last frames the woman also holds the bottle, but the man shakes it in most boxed frames."
+}

@@ -1,0 +1,112 @@
+{
+ "mediaId": 268,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el sobre",
+ "taps": [
+  {
+   "phrase": "besar el sobre",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar una vela",
+   "target": "la mujer de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "dormir detrás de la lámpara",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "la vela",
+   "voice": "female"
+  },
+  {
+   "word": "el sobre",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué besa la mujer de rojo?",
+ "answer": [
+  "Besa",
+  "el",
+  "sobre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "besar el"
+    },
+    {
+     "text": "sobre",
+     "gap": true,
+     "accept": [
+      "sobre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "vela",
+     "gap": true,
+     "accept": [
+      "vela"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormir",
+     "gap": true,
+     "accept": [
+      "dormir"
+     ]
+    },
+    {
+     "text": "detrás de la lámpara"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Besa",
+     "gap": true,
+     "accept": [
+      "Besa"
+     ]
+    },
+    {
+     "text": "el sobre"
+    }
+   ]
+  }
+ ],
+ "notes": "English phrase-1 box also covers frames of folding the letter and sealing; phrase written for the kiss as in English. Key word noun 'el sobre' already in tap row 1, so no noun row."
+}

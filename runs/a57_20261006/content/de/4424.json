@@ -1,0 +1,126 @@
+{
+ "mediaId": 4424,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Grenze",
+ "taps": [
+  {
+   "phrase": "über einen aufgemalten Streifen steigen",
+   "target": "der Mann mit Mütze",
+   "voice": "male"
+  },
+  {
+   "phrase": "in die Kamera grinsen",
+   "target": "der Mann mit Mütze",
+   "voice": "male"
+  },
+  {
+   "phrase": "durch das Fenster greifen",
+   "target": "der Grenzbeamte",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Reisepass",
+   "voice": "male"
+  },
+  {
+   "word": "das Kontrollhäuschen",
+   "voice": "male"
+  },
+  {
+   "word": "das Geländer",
+   "voice": "male"
+  },
+  {
+   "word": "die Mütze",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Reisende?",
+ "answer": [
+  "Er",
+  "überquert",
+  "die",
+  "Grenze",
+  "zu",
+  "Fuß."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über einen aufgemalten"
+    },
+    {
+     "text": "Streifen",
+     "gap": true,
+     "accept": [
+      "Streifen",
+      "Strich"
+     ]
+    },
+    {
+     "text": "steigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Kamera"
+    },
+    {
+     "text": "grinsen",
+     "gap": true,
+     "accept": [
+      "grinsen",
+      "lächeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch das"
+    },
+    {
+     "text": "Fenster",
+     "gap": true,
+     "accept": [
+      "Fenster"
+     ]
+    },
+    {
+     "text": "greifen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "überquert die"
+    },
+    {
+     "text": "Grenze",
+     "gap": true,
+     "accept": [
+      "Grenze"
+     ]
+    },
+    {
+     "text": "zu Fuß"
+    }
+   ]
+  }
+ ],
+ "notes": "German also allows 'Er überquert zu Fuß die Grenze.' (two chip orders possible). Phrase 1 uses 'über ... steigen' (he steps over the stripe) rather than a literal 'überqueren', which is kept for the answer."
+}

@@ -1,0 +1,117 @@
+{
+  "mediaId": 4721,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "s'estomper",
+  "taps": [
+    {
+      "phrase": "montrer l'arc-en-ciel du doigt",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "s'estomper dans le ciel gris",
+      "target": "l'arc-en-ciel",
+      "voice": "female"
+    },
+    {
+      "phrase": "contempler le paysage",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'arc-en-ciel",
+      "voice": "female"
+    },
+    {
+      "word": "le lac",
+      "voice": "female"
+    },
+    {
+      "word": "l'imperméable",
+      "voice": "female"
+    },
+    {
+      "word": "la flaque",
+      "voice": "female"
+    }
+  ],
+  "question": "Qu'arrive-t-il à l'arc-en-ciel ?",
+  "answer": [
+    "L'arc-en-ciel",
+    "s'estompe",
+    "dans",
+    "le",
+    "ciel."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "montrer",
+          "gap": true,
+          "accept": [
+            "montrer",
+            "désigner"
+          ]
+        },
+        {
+          "text": "l'arc-en-ciel du doigt"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "s'estomper dans le ciel"
+        },
+        {
+          "text": "gris",
+          "gap": true,
+          "accept": [
+            "gris"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "contempler",
+          "gap": true,
+          "accept": [
+            "contempler",
+            "regarder",
+            "admirer"
+          ]
+        },
+        {
+          "text": "le paysage"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "s'estompe dans le"
+        },
+        {
+          "text": "ciel",
+          "gap": true,
+          "accept": [
+            "ciel"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Boxes 1 and 3 both cover the woman over the whole clip. She points only in box_01-02 (about 9 frames) and grins at the camera only in box_01-02 (8 frames); in most boxed frames (box_03-07) she has turned away and looks out at the lake and the sky. Phrase 1 keeps the pointing (English event, the only gesture shown); phrase 3 says what she does in most boxed frames ('contempler le paysage') instead of the grin. Key word 's'estomper' is elided, so it is never the gap (gaps: 'gris' in tap row 2, 'ciel' in the answer row). Raincoat = 'l'imperméable' ('le ciré' also possible)."
+}

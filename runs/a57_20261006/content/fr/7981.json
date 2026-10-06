@@ -1,0 +1,25 @@
+{
+  "mediaId": 7981, "lang": "fr", "level": "B",
+  "keyWord": "le partage",
+  "taps": [
+    { "phrase": "croquer une fraise", "target": "la femme aux locks", "voice": "female" },
+    { "phrase": "avoir les manches retroussées", "target": "l'homme", "voice": "male" },
+    { "phrase": "tendre une fraise", "target": "la femme en veste", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le store", "voice": "male" },
+    { "word": "la coupe glacée", "voice": "male" },
+    { "word": "la carafe", "voice": "male" }
+  ],
+  "question": "Que font les trois amis ?",
+  "answer": ["Ils", "partagent", "une", "coupe", "glacée."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "croquer", "gap": true, "accept": ["croquer"] }, { "text": "une fraise" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir les" }, { "text": "manches", "gap": true, "accept": ["manches"] }, { "text": "retroussées" } ] },
+    { "from": "taps", "parts": [ { "text": "tendre une" }, { "text": "fraise", "gap": true, "accept": ["fraise"] } ] },
+    { "from": "answer", "parts": [ { "text": "partagent", "gap": true, "accept": ["partagent"] }, { "text": "une coupe glacée" } ] }
+  ],
+  "notes": "Key word is the noun 'le partage', but the clip is naturally described with the verb 'partager' ('Ils partagent une coupe glacée'); 'le partage' is not a noun of the set, so no noun row; the answer row gaps 'partagent' (same family). Proposal: none needed, the noun fits the concept. Tap rows 1 and 3 both end in 'une fraise', so row 1 gaps the verb and row 3 the noun to keep them distinct once blanked. 'le store' = the terrace awning (everyday word)."
+}

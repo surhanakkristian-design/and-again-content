@@ -1,0 +1,120 @@
+{
+ "mediaId": 204,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la béquille",
+ "taps": [
+  {
+   "phrase": "se déplacer à l'aide de béquilles",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir un porte-bloc",
+   "target": "l'infirmière",
+   "voice": "female"
+  },
+  {
+   "phrase": "brandir le poing",
+   "target": "le garçon",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'infirmière",
+   "voice": "female"
+  },
+  {
+   "word": "la béquille",
+   "voice": "male"
+  },
+  {
+   "word": "la botte orthopédique",
+   "voice": "male"
+  },
+  {
+   "word": "la poignée de porte",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le garçon ?",
+ "answer": [
+  "Il",
+  "se",
+  "déplace",
+  "avec",
+  "deux",
+  "béquilles."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "déplacer",
+     "gap": true,
+     "accept": [
+      "déplacer",
+      "marcher"
+     ]
+    },
+    {
+     "text": "à l'aide de béquilles"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "porte-bloc",
+     "gap": true,
+     "accept": [
+      "porte-bloc"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brandir",
+     "gap": true,
+     "accept": [
+      "brandir",
+      "lever"
+     ]
+    },
+    {
+     "text": "le poing"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se déplace avec deux"
+    },
+    {
+     "text": "béquilles",
+     "gap": true,
+     "accept": [
+      "béquilles"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "No noun row: the key word (béquilles) is already in tap row 1 and the answer row. 'Medical boot' rendered as la botte orthopédique (also called botte de marche in France). Several nurses are visible behind the boy; the clipboard is held by the nurse on the left."
+}

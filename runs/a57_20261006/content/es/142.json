@@ -1,0 +1,121 @@
+{
+ "mediaId": 142,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el castillo",
+ "taps": [
+  {
+   "phrase": "sentarse en una silla",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una bufanda amarilla",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una chaqueta negra",
+   "target": "el hombre de la chaqueta",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el castillo",
+   "voice": "female"
+  },
+  {
+   "word": "el puente",
+   "voice": "female"
+  },
+  {
+   "word": "el agua",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué visitan las dos personas?",
+ "answer": [
+  "Están",
+  "visitando",
+  "un",
+  "castillo",
+  "grande."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sentarse",
+     "gap": true,
+     "accept": [
+      "sentarse"
+     ]
+    },
+    {
+     "text": "en una silla"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una bufanda"
+    },
+    {
+     "text": "amarilla",
+     "gap": true,
+     "accept": [
+      "amarilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta",
+      "cazadora"
+     ]
+    },
+    {
+     "text": "negra"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están visitando un"
+    },
+    {
+     "text": "castillo",
+     "gap": true,
+     "accept": [
+      "castillo"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  }
+ ],
+ "notes": "The 'chair' is a throne; 'una silla' kept for level A ('el trono' is above A). Tap 1 box also covers frames where she is not sitting (courtyard, tower); phrase follows the throne frames as in English. Answer drops the subject (natural in Spanish). Chips force 'castillo grande' (no 'gran' chip)."
+}

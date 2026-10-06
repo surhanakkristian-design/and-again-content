@@ -1,0 +1,26 @@
+{
+  "mediaId": 94, "lang": "de", "level": "B",
+  "keyWord": "blinzeln",
+  "taps": [
+    { "phrase": "eine Träne vergießen", "target": "der Mann", "voice": "male" },
+    { "phrase": "die Zähne zusammenbeißen", "target": "der Mann", "voice": "male" },
+    { "phrase": "triumphierend grinsen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Sonnenbrille", "voice": "male" },
+    { "word": "die Kreole", "voice": "male" },
+    { "word": "die Milchshakes", "voice": "male" },
+    { "word": "die Autoschlüssel", "voice": "male" }
+  ],
+  "question": "Was versucht der Mann zu vermeiden?",
+  "answer": ["Er", "versucht,", "das", "Blinzeln", "zu", "vermeiden."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Träne", "gap": true, "accept": ["Träne"] }, { "text": "vergießen" } ] },
+    { "from": "taps", "parts": [ { "text": "die Zähne" }, { "text": "zusammenbeißen", "gap": true, "accept": ["zusammenbeißen"] } ] },
+    { "from": "taps", "parts": [ { "text": "triumphierend", "gap": true, "accept": ["triumphierend", "siegessicher"] }, { "text": "grinsen" } ] },
+    { "from": "answer", "parts": [ { "text": "versucht, das" }, { "text": "Blinzeln", "gap": true, "accept": ["Blinzeln"] }, { "text": "zu vermeiden" } ] }
+  ],
+  "notes": "Answer uses the nominalised key word 'das Blinzeln' (same lemma as 'blinzeln'). Only one hoop earring is visible, hence singular 'die Kreole'. In the last boxed frames of phrase 3 both people laugh; the triumphant grin is hers in most boxed frames."
+}

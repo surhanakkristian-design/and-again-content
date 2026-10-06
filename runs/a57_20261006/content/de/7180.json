@@ -1,0 +1,124 @@
+{
+ "mediaId": 7180,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "in den Urlaub fahren",
+ "taps": [
+  {
+   "phrase": "in den Pool springen",
+   "target": "der Mann mit der Sonnenbrille",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein Getränk halten",
+   "target": "der Kellner",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf dem Boden liegen",
+   "target": "der Koffer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Koffer",
+   "voice": "male"
+  },
+  {
+   "word": "die Palmen",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "der Kellner",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann mit der Sonnenbrille?",
+ "answer": [
+  "Er",
+  "springt",
+  "in",
+  "den",
+  "Pool."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in den"
+    },
+    {
+     "text": "Pool",
+     "gap": true,
+     "accept": [
+      "Pool",
+      "Swimmingpool"
+     ]
+    },
+    {
+     "text": "springen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Getränk",
+     "gap": true,
+     "accept": [
+      "Getränk"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Boden",
+     "gap": true,
+     "accept": [
+      "Boden"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "springt",
+     "gap": true,
+     "accept": [
+      "springt"
+     ]
+    },
+    {
+     "text": "in den Pool"
+    }
+   ]
+  }
+ ],
+ "notes": "English noun 'trees' are palm trees: 'die Palmen' is the natural German word. English phrase 3 'to fall on the ground': the suitcase falls only in the first boxed frame and lies on the ground in the rest, so 'auf dem Boden liegen'. Phrase 1: the jump is in the first frames, then he is in the water; kept the jump (it is the question's action). Key phrase 'in den Urlaub fahren' not used in the texts (not forced)."
+}

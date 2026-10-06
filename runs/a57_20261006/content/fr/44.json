@@ -1,0 +1,124 @@
+{
+ "mediaId": 44,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la colère",
+ "taps": [
+  {
+   "phrase": "serrer les poings",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "se prendre la tête à deux mains",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être éparpillées sur la table",
+   "target": "les fleurs",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les tresses",
+   "voice": "female"
+  },
+  {
+   "word": "le tablier",
+   "voice": "female"
+  },
+  {
+   "word": "le poing",
+   "voice": "female"
+  },
+  {
+   "word": "les fleurs",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "serre",
+  "les",
+  "poings",
+  "de",
+  "colère."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer les"
+    },
+    {
+     "text": "poings",
+     "gap": true,
+     "accept": [
+      "poings"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se prendre la"
+    },
+    {
+     "text": "tête",
+     "gap": true,
+     "accept": [
+      "tête"
+     ]
+    },
+    {
+     "text": "à deux mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "éparpillées",
+     "gap": true,
+     "accept": [
+      "éparpillées",
+      "dispersées",
+      "étalées"
+     ]
+    },
+    {
+     "text": "sur la table"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "serre les poings de"
+    },
+    {
+     "text": "colère",
+     "gap": true,
+     "accept": [
+      "colère",
+      "rage"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 2 share one box (same woman) as in English; the box also covers the bag-throw and kick frames - phrases written for the frames where she does them. Flowers lie on the market table. No noun row: 'la colère' is not a noun of the set and is gapped in the answer row."
+}

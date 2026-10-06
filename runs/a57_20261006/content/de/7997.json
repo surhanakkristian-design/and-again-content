@@ -1,0 +1,128 @@
+{
+ "mediaId": 7997,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Hauptrolle spielen",
+ "taps": [
+  {
+   "phrase": "in einer Show die Hauptrolle spielen",
+   "target": "die Frau in Gold",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Knie knien",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf hohen Absätzen tanzen",
+   "target": "die Frau in Schwarz",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Vorhänge",
+   "voice": "female"
+  },
+  {
+   "word": "der Scheinwerfer",
+   "voice": "female"
+  },
+  {
+   "word": "das Abendkleid",
+   "voice": "female"
+  },
+  {
+   "word": "die Rampenlichter",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau in Gold?",
+ "answer": [
+  "Sie",
+  "spielt",
+  "die",
+  "Hauptrolle",
+  "in",
+  "der",
+  "Show."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in einer Show"
+    },
+    {
+     "text": "die"
+    },
+    {
+     "text": "Hauptrolle",
+     "gap": true,
+     "accept": [
+      "Hauptrolle"
+     ]
+    },
+    {
+     "text": "spielen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Knie",
+     "gap": true,
+     "accept": [
+      "Knie"
+     ]
+    },
+    {
+     "text": "knien"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf hohen Absätzen"
+    },
+    {
+     "text": "tanzen",
+     "gap": true,
+     "accept": [
+      "tanzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "spielt",
+     "gap": true,
+     "accept": [
+      "spielt"
+     ]
+    },
+    {
+     "text": "die Hauptrolle"
+    },
+    {
+     "text": "in der Show"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer chips allow a second German order: 'Sie spielt in der Show die Hauptrolle.' (also correct). The man dances in the first frames and kneels from about the middle on; phrase 2 describes the kneeling (most boxed frames). 'die Rampenlichter' = footlights (B2, literal stage term); alternative 'die Bühnenlichter'."
+}

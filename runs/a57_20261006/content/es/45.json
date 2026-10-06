@@ -1,0 +1,123 @@
+{
+ "mediaId": 45,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "enfadado",
+ "taps": [
+  {
+   "phrase": "gritarle al hombre",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar en el suelo",
+   "target": "la ropa",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una chaqueta gris",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las botellas",
+   "voice": "female"
+  },
+  {
+   "word": "la lavadora",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la ropa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer enfadada?",
+ "answer": [
+  "Le",
+  "está",
+  "gritando",
+  "al",
+  "hombre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "gritarle",
+     "gap": true,
+     "accept": [
+      "gritarle",
+      "chillarle"
+     ]
+    },
+    {
+     "text": "al hombre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en el"
+    },
+    {
+     "text": "suelo",
+     "gap": true,
+     "accept": [
+      "suelo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta",
+      "sudadera"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le está"
+    },
+    {
+     "text": "gritando",
+     "gap": true,
+     "accept": [
+      "gritando",
+      "chillando"
+     ]
+    },
+    {
+     "text": "al hombre"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's grey top looks like a sweatshirt jacket; 'chaqueta' kept as in English, 'sudadera' accepted. Tap box 1 also covers the opening frames where the woman walks in and picks up the clothes; phrase written for the shouting frames (most boxed frames). Key word 'enfadado' (adjective) appears in the question only ('la mujer enfadada'); no recall row can carry it naturally."
+}

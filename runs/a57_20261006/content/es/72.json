@@ -1,0 +1,120 @@
+{
+ "mediaId": 72,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el baloncesto",
+ "taps": [
+  {
+   "phrase": "botar el balón",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "saltar muy alto",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar gafas",
+   "target": "el chico de las gafas",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el balón",
+   "voice": "female"
+  },
+  {
+   "word": "la red",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "jugando",
+  "al",
+  "baloncesto",
+  "con",
+  "dos",
+  "chicos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "botar el"
+    },
+    {
+     "text": "balón",
+     "gap": true,
+     "accept": [
+      "balón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saltar",
+     "gap": true,
+     "accept": [
+      "saltar"
+     ]
+    },
+    {
+     "text": "muy alto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está jugando al"
+    },
+    {
+     "text": "baloncesto",
+     "gap": true,
+     "accept": [
+      "baloncesto",
+      "básquet"
+     ]
+    },
+    {
+     "text": "con dos chicos"
+    }
+   ]
+  }
+ ],
+ "notes": "English noun 'a basketball' (the ball) = 'el balón'; the key word 'el baloncesto' is the sport, so it appears in the answer, not in the nouns. Phrase 1 box also covers the dunk frames (girl holds the ball, not bouncing); she bounces it in most boxed frames. 'Dos chicos' for English 'two men' (young players)."
+}

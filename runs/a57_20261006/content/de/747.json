@@ -1,0 +1,127 @@
+{
+ "mediaId": 747,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Stress",
+ "taps": [
+  {
+   "phrase": "am Telefon in Stress geraten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich auf dem Schreibtisch türmen",
+   "target": "der Papierstapel",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Uhrzeit anzeigen",
+   "target": "die Uhr",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Tasse",
+   "voice": "female"
+  },
+  {
+   "word": "das Klemmbrett",
+   "voice": "female"
+  },
+  {
+   "word": "der Papierstapel",
+   "voice": "female"
+  },
+  {
+   "word": "die Uhr",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "rauft",
+  "sich",
+  "vor",
+  "Stress",
+  "die",
+  "Haare."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Telefon in"
+    },
+    {
+     "text": "Stress",
+     "gap": true,
+     "accept": [
+      "Stress"
+     ]
+    },
+    {
+     "text": "geraten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich auf dem Schreibtisch"
+    },
+    {
+     "text": "türmen",
+     "gap": true,
+     "accept": [
+      "türmen",
+      "stapeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Uhrzeit",
+     "gap": true,
+     "accept": [
+      "Uhrzeit",
+      "Zeit"
+     ]
+    },
+    {
+     "text": "anzeigen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rauft",
+     "gap": true,
+     "accept": [
+      "rauft"
+     ]
+    },
+    {
+     "text": "sich vor Stress"
+    },
+    {
+     "text": "die Haare"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the red box spans the whole clip; she clutches her head only at about 3.5-4.5 s, in most boxed frames she is on the phone getting stressed, so phrase 1 says that (and carries the key word); the answer keeps the head-clutching of the still. 'sich die Haare raufen' = clutching/tearing at her hair (she grabs her hair at the still). Answer: 'Sie rauft sich die Haare vor Stress' is a second, less natural order. Paperwork noun = 'der Papierstapel' (same word as target 2)."
+}

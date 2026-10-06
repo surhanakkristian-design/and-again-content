@@ -1,0 +1,140 @@
+{
+ "mediaId": 852,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Kellner",
+ "taps": [
+  {
+   "phrase": "Teller mit Essen bringen",
+   "target": "der Kellner",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine weiße Kette tragen",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "durch das Restaurant rennen",
+   "target": "der Kellner",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lampe",
+   "voice": "male"
+  },
+  {
+   "word": "der Kellner",
+   "voice": "male"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "male"
+  },
+  {
+   "word": "der Stuhl",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Kellner?",
+ "answer": [
+  "Er",
+  "bringt",
+  "das",
+  "Essen",
+  "an",
+  "den",
+  "Tisch."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Teller mit Essen"
+    },
+    {
+     "text": "bringen",
+     "gap": true,
+     "accept": [
+      "bringen",
+      "tragen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine weiße"
+    },
+    {
+     "text": "Kette",
+     "gap": true,
+     "accept": [
+      "Kette",
+      "Perlenkette"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch das Restaurant"
+    },
+    {
+     "text": "rennen",
+     "gap": true,
+     "accept": [
+      "rennen",
+      "laufen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Kellner",
+     "gap": true,
+     "accept": [
+      "Kellner"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bringt das"
+    },
+    {
+     "text": "Essen",
+     "gap": true,
+     "accept": [
+      "Essen"
+     ]
+    },
+    {
+     "text": "an den Tisch"
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 3 boxes also cover the end where the waiter stands still at the table and bows; phrases written for most boxed frames (he runs in with the plates and brings them to the table). 'bringen' chosen over 'tragen' so it differs from tap 2 'tragen' (wear). The white necklace is a pearl necklace; 'Kette' kept at level A, 'Perlenkette' accepted."
+}

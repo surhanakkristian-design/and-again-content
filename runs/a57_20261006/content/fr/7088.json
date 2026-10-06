@@ -1,0 +1,122 @@
+{
+  "mediaId": 7088,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "niveler",
+  "taps": [
+    {
+      "phrase": "tirer une longue règle",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "maintenir une lourde charge en l'air",
+      "target": "la grue",
+      "voice": "female"
+    },
+    {
+      "phrase": "travailler à genoux sur le toit",
+      "target": "l'ouvrier à genoux",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la grue",
+      "voice": "female"
+    },
+    {
+      "word": "le casque de chantier",
+      "voice": "female"
+    },
+    {
+      "word": "le trépied",
+      "voice": "female"
+    },
+    {
+      "word": "le béton",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "nivelle",
+    "le",
+    "béton",
+    "frais."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tirer une longue"
+        },
+        {
+          "text": "règle",
+          "gap": true,
+          "accept": [
+            "règle"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "maintenir une lourde"
+        },
+        {
+          "text": "charge",
+          "gap": true,
+          "accept": [
+            "charge"
+          ]
+        },
+        {
+          "text": "en l'air"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "travailler à"
+        },
+        {
+          "text": "genoux",
+          "gap": true,
+          "accept": [
+            "genoux"
+          ]
+        },
+        {
+          "text": "sur le toit"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "nivelle",
+          "gap": true,
+          "accept": [
+            "nivelle",
+            "égalise",
+            "lisse"
+          ]
+        },
+        {
+          "text": "le béton frais"
+        }
+      ]
+    }
+  ],
+  "notes": "'la règle' = the straightedge (in the trade 'la règle de maçon'; plain 'règle' is the natural short form). The kneeling worker looks male; target written 'l'ouvrier à genoux', voice copied (female). Key word 'niveler' used in the model answer and gapped there."
+}

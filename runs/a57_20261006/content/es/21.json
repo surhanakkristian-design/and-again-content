@@ -1,0 +1,130 @@
+{
+ "mediaId": 21,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la escuela",
+ "taps": [
+  {
+   "phrase": "abrir la puerta",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sentados a las mesas",
+   "target": "los estudiantes",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener muchas ventanas",
+   "target": "el edificio de la escuela",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "la escuela",
+   "voice": "male"
+  },
+  {
+   "word": "el césped",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están haciendo los estudiantes?",
+ "answer": [
+  "Los",
+  "estudiantes",
+  "están",
+  "sentados",
+  "a",
+  "las",
+  "mesas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "la puerta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "sentados",
+     "gap": true,
+     "accept": [
+      "sentados"
+     ]
+    },
+    {
+     "text": "a las mesas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener muchas"
+    },
+    {
+     "text": "ventanas",
+     "gap": true,
+     "accept": [
+      "ventanas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "escuela",
+     "gap": true,
+     "accept": [
+      "escuela"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "están sentados a las"
+    },
+    {
+     "text": "mesas",
+     "gap": true,
+     "accept": [
+      "mesas"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'grass' is a mowed lawn, so 'el césped' (the everyday word in Spain). In Spain a school building is often called 'el colegio'; the database word 'la escuela' is kept and 'colegio' is accepted in the noun row. Phrase 2 uses 'estar sentados' because the students are already seated in every boxed frame. Verifier: 'colegio' removed from the noun-row accept list (the row reads 'la ___', and 'la colegio' is wrong)."
+}

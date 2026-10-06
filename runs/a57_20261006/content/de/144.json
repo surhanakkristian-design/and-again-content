@@ -1,0 +1,118 @@
+{
+  "mediaId": 144,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "fangen",
+  "taps": [
+    {
+      "phrase": "einen roten Ball fangen",
+      "target": "der Junge",
+      "voice": "male"
+    },
+    {
+      "phrase": "durch die Luft fliegen",
+      "target": "der Ball",
+      "voice": "male"
+    },
+    {
+      "phrase": "über das Gras laufen",
+      "target": "der Junge",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Ball",
+      "voice": "male"
+    },
+    {
+      "word": "die Wolke",
+      "voice": "male"
+    },
+    {
+      "word": "der Junge",
+      "voice": "male"
+    },
+    {
+      "word": "das Gras",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Junge?",
+  "answer": [
+    "Er",
+    "fängt",
+    "einen",
+    "roten",
+    "Ball."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen roten Ball"
+        },
+        {
+          "text": "fangen",
+          "gap": true,
+          "accept": [
+            "fangen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die"
+        },
+        {
+          "text": "Luft",
+          "gap": true,
+          "accept": [
+            "Luft"
+          ]
+        },
+        {
+          "text": "fliegen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über das Gras"
+        },
+        {
+          "text": "laufen",
+          "gap": true,
+          "accept": [
+            "laufen",
+            "rennen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fängt einen roten"
+        },
+        {
+          "text": "Ball",
+          "gap": true,
+          "accept": [
+            "Ball"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word fangen fits. The boy runs barefoot on the grassy slope in the boxed frames."
+}

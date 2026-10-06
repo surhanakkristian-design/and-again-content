@@ -1,0 +1,116 @@
+{
+ "mediaId": 263,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "emerger",
+ "taps": [
+  {
+   "phrase": "emerger del lago",
+   "target": "la nadadora",
+   "voice": "female"
+  },
+  {
+   "phrase": "subirse las gafas de natación",
+   "target": "la nadadora",
+   "voice": "female"
+  },
+  {
+   "phrase": "flotar cerca de la orilla",
+   "target": "la barca",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas de natación",
+   "voice": "female"
+  },
+  {
+   "word": "la barca de remos",
+   "voice": "female"
+  },
+  {
+   "word": "el reflejo",
+   "voice": "female"
+  },
+  {
+   "word": "las montañas",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la nadadora?",
+ "answer": [
+  "Está",
+  "emergiendo",
+  "del",
+  "lago."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "emerger",
+     "gap": true,
+     "accept": [
+      "emerger",
+      "salir"
+     ]
+    },
+    {
+     "text": "del lago"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subirse",
+     "gap": true,
+     "accept": [
+      "subirse",
+      "levantarse"
+     ]
+    },
+    {
+     "text": "las gafas de natación"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotar cerca de la"
+    },
+    {
+     "text": "orilla",
+     "gap": true,
+     "accept": [
+      "orilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está emergiendo del"
+    },
+    {
+     "text": "lago",
+     "gap": true,
+     "accept": [
+      "lago",
+      "agua"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers frames after she has surfaced (smiling, lifting goggles, arms up); the emerging itself is the splash frames. 'la barca' is the target name for the rowing boat."
+}

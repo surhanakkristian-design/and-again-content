@@ -1,0 +1,26 @@
+{
+  "mediaId": 4209, "lang": "fr", "level": "B",
+  "keyWord": "le sommeil",
+  "taps": [
+    { "phrase": "pianoter sur un ordinateur portable", "target": "le hamster à lunettes", "voice": "male" },
+    { "phrase": "être plongé dans un profond sommeil", "target": "le hamster masqué", "voice": "male" },
+    { "phrase": "jeter un coup d'œil à la caméra", "target": "le hamster à lunettes", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la tulipe", "voice": "male" },
+    { "word": "l'ordinateur portable", "voice": "male" },
+    { "word": "le masque", "voice": "male" },
+    { "word": "le sac à main", "voice": "male" }
+  ],
+  "question": "Que fait le hamster masqué ?",
+  "answer": ["Il", "dort", "d'un", "sommeil", "profond", "sous", "son", "masque."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "pianoter", "gap": true, "accept": ["pianoter", "taper"] }, { "text": "sur un ordinateur portable" } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "plongé", "gap": true, "accept": ["plongé"] }, { "text": "dans un profond sommeil" } ] },
+    { "from": "taps", "parts": [ { "text": "jeter un coup d'œil à la" }, { "text": "caméra", "gap": true, "accept": ["caméra"] } ] },
+    { "from": "answer", "parts": [ { "text": "dort d'un" }, { "text": "sommeil", "gap": true, "accept": ["sommeil"] }, { "text": "profond sous son masque" } ] }
+  ],
+  "notes": "Noun 3 'le masque' = the sheet face mask (everyday short word; 'le masque en tissu' would also do). Key word 'le sommeil' used in phrase 2 and the answer."
+}

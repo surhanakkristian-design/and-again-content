@@ -1,0 +1,120 @@
+{
+  "mediaId": 7929,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "das Einparken",
+  "taps": [
+    {
+      "phrase": "zwei kleine Autos zerquetschen",
+      "target": "der Monstertruck",
+      "voice": "male"
+    },
+    {
+      "phrase": "beide Fäuste in die Luft recken",
+      "target": "der Mann auf dem Truck",
+      "voice": "male"
+    },
+    {
+      "phrase": "die Arme verschränken",
+      "target": "die Frau vorne",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Monstertruck",
+      "voice": "male"
+    },
+    {
+      "word": "das Auto",
+      "voice": "male"
+    },
+    {
+      "word": "die Parklücke",
+      "voice": "male"
+    },
+    {
+      "word": "die Stiefel",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Monstertruck?",
+  "answer": [
+    "Er",
+    "zerquetscht",
+    "zwei",
+    "kleine",
+    "Autos."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "zwei kleine Autos"
+        },
+        {
+          "text": "zerquetschen",
+          "gap": true,
+          "accept": [
+            "zerquetschen",
+            "zerdrücken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "beide"
+        },
+        {
+          "text": "Fäuste",
+          "gap": true,
+          "accept": [
+            "Fäuste",
+            "Arme"
+          ]
+        },
+        {
+          "text": "in die Luft recken"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Arme"
+        },
+        {
+          "text": "verschränken",
+          "gap": true,
+          "accept": [
+            "verschränken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "zerquetscht zwei kleine"
+        },
+        {
+          "text": "Autos",
+          "gap": true,
+          "accept": [
+            "Autos",
+            "Wagen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Einparken' is the act of parking; the clip shows the truck already standing on two cars, so it names no noun of the set; English noun 'a parking space' = 'die Parklücke' (der Parkplatz would read as the car park). Kept, owner decides. Noun 2 'das Auto' (the pill sits on the red car; the validator does not accept an adjective in a noun pill). Tap 2: in box_01 frames 1-2 the man is only partly visible."
+}

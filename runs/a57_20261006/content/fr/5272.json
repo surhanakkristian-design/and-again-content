@@ -1,0 +1,146 @@
+{
+ "mediaId": 5272,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le randonneur",
+ "taps": [
+  {
+   "phrase": "mettre les mains en porte-voix",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter une barbe touffue",
+   "target": "l'homme barbu",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un chapeau à larges bords",
+   "target": "l'homme au chapeau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la randonneuse",
+   "voice": "female"
+  },
+  {
+   "word": "le sac à dos",
+   "voice": "female"
+  },
+  {
+   "word": "le canyon",
+   "voice": "female"
+  },
+  {
+   "word": "la rambarde",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les randonneurs ?",
+ "answer": [
+  "Les",
+  "randonneurs",
+  "poussent",
+  "des",
+  "cris",
+  "de",
+  "joie",
+  "au-dessus",
+  "du",
+  "canyon."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre les mains"
+    },
+    {
+     "text": "en"
+    },
+    {
+     "text": "porte-voix",
+     "gap": true,
+     "accept": [
+      "porte-voix"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    },
+    {
+     "text": "touffue"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "chapeau",
+     "gap": true,
+     "accept": [
+      "chapeau"
+     ]
+    },
+    {
+     "text": "à larges bords"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "randonneuse",
+     "gap": true,
+     "accept": [
+      "randonneuse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "poussent",
+     "gap": true,
+     "accept": [
+      "poussent"
+     ]
+    },
+    {
+     "text": "des cris de joie"
+    },
+    {
+     "text": "au-dessus du canyon"
+    }
+   ]
+  }
+ ],
+ "notes": "The 'hiker' pill sits on the woman, so noun 1 = 'la randonneuse' (feminine of the key word 'le randonneur'); answer uses 'les randonneurs'. Phrase 1: English 'point at her companion' happens in only a few boxed frames; she cups her hands around her mouth and calls out over the canyon in many frames and nobody else does, so 'mettre les mains en porte-voix'. 'au-dessus' is one chip."
+}

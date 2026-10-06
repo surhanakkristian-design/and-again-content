@@ -1,0 +1,121 @@
+{
+ "mediaId": 7883,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Freude",
+ "taps": [
+  {
+   "phrase": "auf dem Weg knien",
+   "target": "die kniende Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "der Frau die Wange lecken",
+   "target": "der Welpe",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Welpen an der Leine halten",
+   "target": "die Frau in der grünen Jacke",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Welpe",
+   "voice": "female"
+  },
+  {
+   "word": "das Fahrrad",
+   "voice": "female"
+  },
+  {
+   "word": "die Bank",
+   "voice": "female"
+  },
+  {
+   "word": "die Laterne",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die kniende Frau?",
+ "answer": [
+  "Sie",
+  "umarmt",
+  "den",
+  "Welpen",
+  "voller",
+  "Freude."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Weg"
+    },
+    {
+     "text": "knien",
+     "gap": true,
+     "accept": [
+      "knien"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "der Frau die"
+    },
+    {
+     "text": "Wange",
+     "gap": true,
+     "accept": [
+      "Wange"
+     ]
+    },
+    {
+     "text": "lecken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Welpen an der"
+    },
+    {
+     "text": "Leine",
+     "gap": true,
+     "accept": [
+      "Leine"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "umarmt den Welpen voller"
+    },
+    {
+     "text": "Freude",
+     "gap": true,
+     "accept": [
+      "Freude"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "German allows two chip orders: 'Sie umarmt den Welpen voller Freude.' and 'Sie umarmt voller Freude den Welpen.' (key word kept in the adverbial on purpose). The lead is visible only in the first frames of the blue box."
+}

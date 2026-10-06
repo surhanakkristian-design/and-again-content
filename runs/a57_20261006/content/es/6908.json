@@ -1,0 +1,134 @@
+{
+ "mediaId": 6908,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el bisonte",
+ "taps": [
+  {
+   "phrase": "sostener un sándwich",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "pasar lentamente junto al descapotable",
+   "target": "el bisonte grande",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar tirado en el asfalto",
+   "target": "el sombrero de paja",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el bisonte",
+   "voice": "female"
+  },
+  {
+   "word": "el sombrero de paja",
+   "voice": "female"
+  },
+  {
+   "word": "el descapotable",
+   "voice": "female"
+  },
+  {
+   "word": "las montañas",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el bisonte grande?",
+ "answer": [
+  "Está",
+  "pasando",
+  "lentamente",
+  "junto",
+  "al",
+  "descapotable."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener un"
+    },
+    {
+     "text": "sándwich",
+     "gap": true,
+     "accept": [
+      "sándwich"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar",
+     "gap": true,
+     "accept": [
+      "pasar",
+      "caminar",
+      "andar"
+     ]
+    },
+    {
+     "text": "lentamente junto al descapotable"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar tirado en el"
+    },
+    {
+     "text": "asfalto",
+     "gap": true,
+     "accept": [
+      "asfalto",
+      "suelo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "bisonte",
+     "gap": true,
+     "accept": [
+      "bisonte"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está pasando lentamente junto al"
+    },
+    {
+     "text": "descapotable",
+     "gap": true,
+     "accept": [
+      "descapotable",
+      "coche"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'buffalo' = 'el bisonte' (American bison; 'búfalo' would be the wrong animal). 'sándwich' (sliced bread), not 'bocadillo' (baguette in Spain). Other bison cross the road in the background but none passes the car."
+}

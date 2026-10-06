@@ -1,0 +1,123 @@
+{
+ "mediaId": 5502,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el almacenamiento",
+ "taps": [
+  {
+   "phrase": "apilar cajas de cartón",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "transportar un palé cargado",
+   "target": "la transpaleta",
+   "voice": "female"
+  },
+  {
+   "phrase": "envolver cajas con film",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las cajas de cartón",
+   "voice": "female"
+  },
+  {
+   "word": "la transpaleta",
+   "voice": "female"
+  },
+  {
+   "word": "el chaleco reflectante",
+   "voice": "female"
+  },
+  {
+   "word": "las estanterías",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Apila",
+  "cajas",
+  "de",
+  "cartón",
+  "sobre",
+  "un",
+  "palé."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apilar",
+     "gap": true,
+     "accept": [
+      "apilar",
+      "amontonar"
+     ]
+    },
+    {
+     "text": "cajas de cartón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "transportar un"
+    },
+    {
+     "text": "palé",
+     "gap": true,
+     "accept": [
+      "palé"
+     ]
+    },
+    {
+     "text": "cargado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "envolver",
+     "gap": true,
+     "accept": [
+      "envolver"
+     ]
+    },
+    {
+     "text": "cajas con film"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Apila cajas de"
+    },
+    {
+     "text": "cartón",
+     "gap": true,
+     "accept": [
+      "cartón"
+     ]
+    },
+    {
+     "text": "sobre un palé"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 (wrapping) is shown only briefly (film roll in her hand, wrapped boxes); the blue box mostly shows her stacking/pulling - same issue as English. Key word 'el almacenamiento' (abstract) does not appear naturally in any text and is not a noun of the set; the clip shows storage (racking, pallets) only implicitly."
+}

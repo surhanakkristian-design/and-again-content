@@ -1,0 +1,117 @@
+{
+ "mediaId": 517,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "adelantar",
+ "taps": [
+  {
+   "phrase": "adelantar a una autocaravana",
+   "target": "el coche rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "ponerse en cabeza",
+   "target": "el coche rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "quedarse atrás",
+   "target": "la autocaravana",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la autocaravana",
+   "voice": "male"
+  },
+  {
+   "word": "el descapotable",
+   "voice": "male"
+  },
+  {
+   "word": "las dunas de arena",
+   "voice": "male"
+  },
+  {
+   "word": "la carretera",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el coche rojo?",
+ "answer": [
+  "Está",
+  "adelantando",
+  "a",
+  "una",
+  "autocaravana."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "adelantar a una"
+    },
+    {
+     "text": "autocaravana",
+     "gap": true,
+     "accept": [
+      "autocaravana"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ponerse en"
+    },
+    {
+     "text": "cabeza",
+     "gap": true,
+     "accept": [
+      "cabeza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse",
+     "gap": true,
+     "accept": [
+      "quedarse"
+     ]
+    },
+    {
+     "text": "atrás"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "adelantando",
+     "gap": true,
+     "accept": [
+      "adelantando"
+     ]
+    },
+    {
+     "text": "a una autocaravana"
+    }
+   ]
+  }
+ ],
+ "notes": "'Highway' = 'la carretera': a two-lane desert road, not an 'autopista' in Spain. Phrase 2 'swing in front' rendered as 'ponerse en cabeza' (the red car pulls ahead in most frames)."
+}

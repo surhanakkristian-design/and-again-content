@@ -1,0 +1,119 @@
+{
+ "mediaId": 16,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la présentation",
+ "taps": [
+  {
+   "phrase": "faire une présentation devant la classe",
+   "target": "l'étudiante en rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "afficher les diapositives",
+   "target": "l'écran",
+   "voice": "female"
+  },
+  {
+   "phrase": "assister à la présentation",
+   "target": "les camarades de classe",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la présentation",
+   "voice": "female"
+  },
+  {
+   "word": "le pull",
+   "voice": "female"
+  },
+  {
+   "word": "le tableau blanc",
+   "voice": "female"
+  },
+  {
+   "word": "le public",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'étudiante en rouge ?",
+ "answer": [
+  "Elle",
+  "fait",
+  "une",
+  "présentation",
+  "devant",
+  "ses",
+  "camarades."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire",
+     "gap": true,
+     "accept": [
+      "faire"
+     ]
+    },
+    {
+     "text": "une présentation devant la classe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "afficher les"
+    },
+    {
+     "text": "diapositives",
+     "gap": true,
+     "accept": [
+      "diapositives"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "assister",
+     "gap": true,
+     "accept": [
+      "assister"
+     ]
+    },
+    {
+     "text": "à la présentation"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait une"
+    },
+    {
+     "text": "présentation",
+     "gap": true,
+     "accept": [
+      "présentation"
+     ]
+    },
+    {
+     "text": "devant ses camarades"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: in the last close-up frames she stands smiling at the class rather than pointing at the slides (same box as English). The key word is also used in tap 3 (assister à la présentation), allowed by the owner decision."
+}

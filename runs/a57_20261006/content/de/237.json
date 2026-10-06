@@ -1,0 +1,139 @@
+{
+ "mediaId": 237,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Esel",
+ "taps": [
+  {
+   "phrase": "das Maul weit aufmachen",
+   "target": "der Esel",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich auf dem Boden rollen",
+   "target": "der Esel",
+   "voice": "male"
+  },
+  {
+   "phrase": "nach Futter suchen",
+   "target": "die Vögel",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Orangen",
+   "voice": "male"
+  },
+  {
+   "word": "das Haus",
+   "voice": "male"
+  },
+  {
+   "word": "der Esel",
+   "voice": "male"
+  },
+  {
+   "word": "die Vögel",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Esel?",
+ "answer": [
+  "Der",
+  "Esel",
+  "rollt",
+  "sich",
+  "auf",
+  "dem",
+  "Boden."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Maul",
+     "gap": true,
+     "accept": [
+      "Maul"
+     ]
+    },
+    {
+     "text": "weit aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich auf dem Boden"
+    },
+    {
+     "text": "rollen",
+     "gap": true,
+     "accept": [
+      "rollen",
+      "wälzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nach"
+    },
+    {
+     "text": "Futter",
+     "gap": true,
+     "accept": [
+      "Futter",
+      "Nahrung"
+     ]
+    },
+    {
+     "text": "suchen"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Esel",
+     "gap": true,
+     "accept": [
+      "Esel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rollt sich auf dem"
+    },
+    {
+     "text": "Boden",
+     "gap": true,
+     "accept": [
+      "Boden"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Boxes 1 and 2 are identical and cover the whole clip (braying at the start, rolling in the middle); phrases written for the respective moments. 'sich rollen' chosen for level A; the more idiomatic 'sich wälzen' (B1) is accepted in recall. 'das Maul' is the correct word for an animal's mouth."
+}

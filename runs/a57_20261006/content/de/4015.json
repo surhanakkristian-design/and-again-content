@@ -1,0 +1,26 @@
+{
+  "mediaId": 4015, "lang": "de", "level": "A",
+  "keyWord": "das Ufer",
+  "taps": [
+    { "phrase": "über das Wasser springen", "target": "das springende Schaf", "voice": "male" },
+    { "phrase": "die Schafe beobachten", "target": "der Hund", "voice": "male" },
+    { "phrase": "hoch und dünn sein", "target": "der Baum", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Baum", "voice": "male" },
+    { "word": "der Hund", "voice": "male" },
+    { "word": "das Ufer", "voice": "male" },
+    { "word": "das Wasser", "voice": "male" }
+  ],
+  "question": "Was machen die Schafe?",
+  "answer": ["Sie", "springen", "ans", "andere", "Ufer."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über das Wasser" }, { "text": "springen", "gap": true, "accept": ["springen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Schafe" }, { "text": "beobachten", "gap": true, "accept": ["beobachten", "anschauen", "ansehen"] } ] },
+    { "from": "taps", "parts": [ { "text": "hoch und" }, { "text": "dünn", "gap": true, "accept": ["dünn", "schmal", "schlank"] }, { "text": "sein" } ] },
+    { "from": "answer", "parts": [ { "text": "springen ans andere" }, { "text": "Ufer", "gap": true, "accept": ["Ufer"] } ] }
+  ],
+  "notes": "Model answer uses the key word ('ans andere Ufer') instead of repeating phrase 1, so no extra noun row is needed. The water is a narrow stream (Bach); 'das Wasser' kept as in English noun 4. Tree is a birch; 'hoch und dünn' is the plain A-level description."
+}

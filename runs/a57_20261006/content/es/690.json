@@ -1,0 +1,124 @@
+{
+ "mediaId": 690,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el cielo",
+ "taps": [
+  {
+   "phrase": "llevar una camisa blanca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camisa azul",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener el pelo largo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están mirando?",
+ "answer": [
+  "Están",
+  "mirando",
+  "el",
+  "cielo",
+  "azul."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camisa",
+     "gap": true,
+     "accept": [
+      "camisa"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una camisa"
+    },
+    {
+     "text": "azul",
+     "gap": true,
+     "accept": [
+      "azul",
+      "vaquera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el"
+    },
+    {
+     "text": "pelo",
+     "gap": true,
+     "accept": [
+      "pelo"
+     ]
+    },
+    {
+     "text": "largo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están mirando el"
+    },
+    {
+     "text": "cielo",
+     "gap": true,
+     "accept": [
+      "cielo"
+     ]
+    },
+    {
+     "text": "azul"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's shirt is a denim shirt; 'camisa azul' kept to match English, 'vaquera' accepted in recall. Answer drops the subject (natural Spanish), so the answer row is the whole sentence."
+}

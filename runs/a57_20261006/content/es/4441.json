@@ -1,0 +1,124 @@
+{
+ "mediaId": 4441,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el aliento",
+ "taps": [
+  {
+   "phrase": "mantener los ojos cerrados",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "dominar el paisaje",
+   "target": "el pico",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un gorro de punto blanco",
+   "target": "la persona del gorro blanco",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el pico",
+   "voice": "female"
+  },
+  {
+   "word": "el aliento",
+   "voice": "female"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué se puede ver en el aire?",
+ "answer": [
+  "Se",
+  "puede",
+  "ver",
+  "el",
+  "aliento",
+  "de",
+  "la",
+  "mujer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mantener los ojos"
+    },
+    {
+     "text": "cerrados",
+     "gap": true,
+     "accept": [
+      "cerrados"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dominar",
+     "gap": true,
+     "accept": [
+      "dominar"
+     ]
+    },
+    {
+     "text": "el paisaje"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "gorro",
+     "gap": true,
+     "accept": [
+      "gorro"
+     ]
+    },
+    {
+     "text": "de punto blanco"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se puede ver el"
+    },
+    {
+     "text": "aliento",
+     "gap": true,
+     "accept": [
+      "aliento",
+      "vaho"
+     ]
+    },
+    {
+     "text": "de la mujer"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el aliento' kept; the visible white cloud of breath is most precisely 'el vaho' in Spain (accepted in the answer row). Impersonal 'se puede ver' has no subject, so the answer row is the whole sentence. Verifier: phrase 3 now 'llevar un gorro de punto blanco' (B1 'de punto') so the phrase carries a B-level word."
+}

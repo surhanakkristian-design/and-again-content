@@ -1,0 +1,119 @@
+{
+ "mediaId": 217,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el dardo",
+ "taps": [
+  {
+   "phrase": "apuntar a la diana",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "picar patatas fritas",
+   "target": "el chico de las patatas",
+   "voice": "male"
+  },
+  {
+   "phrase": "clavarse cerca del centro",
+   "target": "el dardo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el dardo",
+   "voice": "female"
+  },
+  {
+   "word": "la diana",
+   "voice": "female"
+  },
+  {
+   "word": "la pared de madera",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "lanzando",
+  "un",
+  "dardo",
+  "a",
+  "la",
+  "diana."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apuntar",
+     "gap": true,
+     "accept": [
+      "apuntar"
+     ]
+    },
+    {
+     "text": "a la diana"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "picar"
+    },
+    {
+     "text": "patatas",
+     "gap": true,
+     "accept": [
+      "patatas"
+     ]
+    },
+    {
+     "text": "fritas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "clavarse cerca del"
+    },
+    {
+     "text": "centro",
+     "gap": true,
+     "accept": [
+      "centro",
+      "blanco"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está lanzando un"
+    },
+    {
+     "text": "dardo",
+     "gap": true,
+     "accept": [
+      "dardo"
+     ]
+    },
+    {
+     "text": "a la diana"
+    }
+   ]
+  }
+ ],
+ "notes": "'la chica' used for the young woman (English 'the woman'). Answer uses 'lanzar' (she throws the dart in the clip) instead of 'apuntar con un dardo a la diana', which allows two orders of the complements. No noun row: the answer row already contains the key word dardo."
+}

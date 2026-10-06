@@ -1,0 +1,123 @@
+{
+ "mediaId": 137,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Schlucht",
+ "taps": [
+  {
+   "phrase": "die Felswand der Schlucht berühren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "durch die hohlen Hände rufen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "zwischen den Felsen hindurchscheinen",
+   "target": "die Sonne",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "die Sonne",
+   "voice": "male"
+  },
+  {
+   "word": "die Schlucht",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "ruft",
+  "durch",
+  "die",
+  "hohlen",
+  "Hände."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Felswand der"
+    },
+    {
+     "text": "Schlucht",
+     "gap": true,
+     "accept": [
+      "Schlucht"
+     ]
+    },
+    {
+     "text": "berühren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch die hohlen Hände"
+    },
+    {
+     "text": "rufen",
+     "gap": true,
+     "accept": [
+      "rufen",
+      "schreien"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zwischen den"
+    },
+    {
+     "text": "Felsen",
+     "gap": true,
+     "accept": [
+      "Felsen",
+      "Felswänden"
+     ]
+    },
+    {
+     "text": "hindurchscheinen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ruft durch die hohlen"
+    },
+    {
+     "text": "Hände",
+     "gap": true,
+     "accept": [
+      "Hände"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

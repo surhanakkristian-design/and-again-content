@@ -1,0 +1,121 @@
+{
+ "mediaId": 704,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "niesen",
+ "taps": [
+  {
+   "phrase": "sehr stark niesen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "sich die Nase abwischen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Korb tragen",
+   "target": "das Mädchen",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Baum",
+   "voice": "male"
+  },
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "word": "der Hut",
+   "voice": "male"
+  },
+  {
+   "word": "der Korb",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "niest",
+  "sehr",
+  "stark."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sehr stark"
+    },
+    {
+     "text": "niesen",
+     "gap": true,
+     "accept": [
+      "niesen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die"
+    },
+    {
+     "text": "Nase",
+     "gap": true,
+     "accept": [
+      "Nase"
+     ]
+    },
+    {
+     "text": "abwischen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Korb",
+     "gap": true,
+     "accept": [
+      "Korb"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "niest sehr"
+    },
+    {
+     "text": "stark",
+     "gap": true,
+     "accept": [
+      "stark",
+      "heftig",
+      "kräftig"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share one box (as in English): the sneeze dominates most boxed frames, the nose wiping comes at the end. 'sich die Nase abwischen' (he wipes with a handkerchief), not 'putzen' (= blow). The man is drawn young; 'der Mann' as in English."
+}

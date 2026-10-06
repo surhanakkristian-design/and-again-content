@@ -1,0 +1,138 @@
+{
+ "mediaId": 7450,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le potier",
+ "taps": [
+  {
+   "phrase": "façonner un grand vase",
+   "target": "la potière au premier plan",
+   "voice": "female"
+  },
+  {
+   "phrase": "plonger la main dans le vase",
+   "target": "la potière au premier plan",
+   "voice": "female"
+  },
+  {
+   "phrase": "travailler à l'arrière-plan",
+   "target": "la personne au fond",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le four",
+   "voice": "female"
+  },
+  {
+   "word": "la potière",
+   "voice": "female"
+  },
+  {
+   "word": "le vase",
+   "voice": "female"
+  },
+  {
+   "word": "l'éponge",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la potière au premier plan ?",
+ "answer": [
+  "Elle",
+  "façonne",
+  "un",
+  "grand",
+  "vase",
+  "en",
+  "argile."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "façonner",
+     "gap": true,
+     "accept": [
+      "façonner",
+      "modeler"
+     ]
+    },
+    {
+     "text": "un grand vase"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plonger la"
+    },
+    {
+     "text": "main",
+     "gap": true,
+     "accept": [
+      "main",
+      "bras"
+     ]
+    },
+    {
+     "text": "dans le vase"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "travailler",
+     "gap": true,
+     "accept": [
+      "travailler"
+     ]
+    },
+    {
+     "text": "à l'arrière-plan"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "potière",
+     "gap": true,
+     "accept": [
+      "potière",
+      "potier"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "façonne un grand vase en"
+    },
+    {
+     "text": "argile",
+     "gap": true,
+     "accept": [
+      "argile",
+      "terre"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word is 'le potier' but the potter shown is a woman, so the noun and question use 'la potière' (feminine of the key word); the noun row accepts 'potier' too. Proposal: owner may add 'la potière' as feminine form in word_localizations. Noun 1: 'le four' (a potter's kiln; 'le four à céramique' if a more specific term is wanted). Tap 3 is off in the early close-up frames (person not visible)."
+}

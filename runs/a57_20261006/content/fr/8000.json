@@ -1,0 +1,125 @@
+{
+ "mediaId": 8000,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "séjourner",
+ "taps": [
+  {
+   "phrase": "s'appuyer sur le comptoir",
+   "target": "le chien",
+   "voice": "female"
+  },
+  {
+   "phrase": "regarder le chien d'un air amusé",
+   "target": "la femme en tailleur crème",
+   "voice": "female"
+  },
+  {
+   "phrase": "hisser une lourde valise",
+   "target": "l'homme à la valise",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le lustre",
+   "voice": "female"
+  },
+  {
+   "word": "la colonne",
+   "voice": "female"
+  },
+  {
+   "word": "la valise",
+   "voice": "female"
+  },
+  {
+   "word": "le comptoir",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le chien ?",
+ "answer": [
+  "Le",
+  "chien",
+  "s'appuie",
+  "sur",
+  "le",
+  "comptoir",
+  "en",
+  "marbre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'appuyer sur le"
+    },
+    {
+     "text": "comptoir",
+     "gap": true,
+     "accept": [
+      "comptoir"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder le chien"
+    },
+    {
+     "text": "d'un air"
+    },
+    {
+     "text": "amusé",
+     "gap": true,
+     "accept": [
+      "amusé",
+      "réjoui"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hisser",
+     "gap": true,
+     "accept": [
+      "hisser",
+      "soulever"
+     ]
+    },
+    {
+     "text": "une lourde valise"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "s'appuie sur le comptoir"
+    },
+    {
+     "text": "en"
+    },
+    {
+     "text": "marbre",
+     "gap": true,
+     "accept": [
+      "marbre"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'séjourner' is not shown as such (hotel lobby arrival scene); not forced into any text. Noun 4 'reception desk' = 'le comptoir' (same word as phrase 1 and the answer; 'la réception' would also fit). Phrase 2: the woman laughs while looking at the dog; the man also smiles but at his suitcase, so 'regarder le chien d'un air amusé' fits only her."
+}

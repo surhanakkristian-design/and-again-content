@@ -1,0 +1,124 @@
+{
+  "mediaId": 4424,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la frontera",
+  "taps": [
+    {
+      "phrase": "cruzar una franja pintada",
+      "target": "el chico del gorro",
+      "voice": "male"
+    },
+    {
+      "phrase": "sonreír de oreja a oreja",
+      "target": "el chico del gorro",
+      "voice": "male"
+    },
+    {
+      "phrase": "asomar la mano por la ventanilla",
+      "target": "el agente",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el pasaporte",
+      "voice": "male"
+    },
+    {
+      "word": "la garita",
+      "voice": "male"
+    },
+    {
+      "word": "la barandilla",
+      "voice": "male"
+    },
+    {
+      "word": "el gorro",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el viajero?",
+  "answer": [
+    "El",
+    "viajero",
+    "está",
+    "cruzando",
+    "la",
+    "frontera",
+    "a",
+    "pie."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cruzar una"
+        },
+        {
+          "text": "franja",
+          "gap": true,
+          "accept": [
+            "franja"
+          ]
+        },
+        {
+          "text": "pintada"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sonreír",
+          "gap": true,
+          "accept": [
+            "sonreír"
+          ]
+        },
+        {
+          "text": "de oreja a oreja"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "asomar",
+          "gap": true,
+          "accept": [
+            "asomar",
+            "sacar"
+          ]
+        },
+        {
+          "text": "la mano por la ventanilla"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está cruzando la"
+        },
+        {
+          "text": "frontera",
+          "gap": true,
+          "accept": [
+            "frontera"
+          ]
+        },
+        {
+          "text": "a pie"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer: 'a pie' could also stand before 'la frontera' ('está cruzando a pie la frontera'), so two orders are grammatical; the given order is the natural one. Booth = 'la garita' (border control booth). Phrase 2: he grins broadly at the camera through the clip."
+}

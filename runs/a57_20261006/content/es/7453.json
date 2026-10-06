@@ -1,0 +1,116 @@
+{
+ "mediaId": 7453,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "preparar",
+ "taps": [
+  {
+   "phrase": "saltear los fideos",
+   "target": "la cocinera",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar un plato",
+   "target": "el hombre del plato",
+   "voice": "male"
+  },
+  {
+   "phrase": "arder bajo el wok",
+   "target": "las llamas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el wok",
+   "voice": "female"
+  },
+  {
+   "word": "las llamas",
+   "voice": "female"
+  },
+  {
+   "word": "el cucharón",
+   "voice": "female"
+  },
+  {
+   "word": "el pañuelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la cocinera?",
+ "answer": [
+  "Prepara",
+  "fideos",
+  "en",
+  "un",
+  "wok."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saltear",
+     "gap": true,
+     "accept": [
+      "saltear"
+     ]
+    },
+    {
+     "text": "los fideos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "plato",
+     "gap": true,
+     "accept": [
+      "plato"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arder",
+     "gap": true,
+     "accept": [
+      "arder"
+     ]
+    },
+    {
+     "text": "bajo el wok"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Prepara",
+     "gap": true,
+     "accept": [
+      "Prepara",
+      "Cocina",
+      "Saltea"
+     ]
+    },
+    {
+     "text": "fideos en un wok"
+    }
+   ]
+  }
+ ],
+ "notes": "Bandana = 'el pañuelo' (everyday word in Spain; 'la bandana' also exists). Subject dropped in the answer."
+}

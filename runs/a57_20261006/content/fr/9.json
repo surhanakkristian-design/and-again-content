@@ -1,0 +1,124 @@
+{
+ "mediaId": 9,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le laboratoire",
+ "taps": [
+  {
+   "phrase": "enfiler des gants violets",
+   "target": "la scientifique",
+   "voice": "female"
+  },
+  {
+   "phrase": "examiner un petit tube",
+   "target": "la scientifique",
+   "voice": "female"
+  },
+  {
+   "phrase": "conserver les échantillons au froid",
+   "target": "le congélateur",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lunettes de protection",
+   "voice": "female"
+  },
+  {
+   "word": "les tubes à essai",
+   "voice": "female"
+  },
+  {
+   "word": "la blouse",
+   "voice": "female"
+  },
+  {
+   "word": "le congélateur",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la scientifique ?",
+ "answer": [
+  "Elle",
+  "range",
+  "des",
+  "tubes",
+  "à",
+  "essai",
+  "dans",
+  "le",
+  "congélateur."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "enfiler",
+     "gap": true,
+     "accept": [
+      "enfiler",
+      "mettre"
+     ]
+    },
+    {
+     "text": "des gants violets"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "examiner un petit"
+    },
+    {
+     "text": "tube",
+     "gap": true,
+     "accept": [
+      "tube"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "conserver les"
+    },
+    {
+     "text": "échantillons",
+     "gap": true,
+     "accept": [
+      "échantillons"
+     ]
+    },
+    {
+     "text": "au froid"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "range",
+     "gap": true,
+     "accept": [
+      "range",
+      "met",
+      "place"
+     ]
+    },
+    {
+     "text": "des tubes à essai dans le congélateur"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le laboratoire' is the setting only; no noun of the set names it, so it appears in no text (same as English). Phrases 1 and 2 both have the scientist as target (as in English). 'la blouse' = lab coat (white coat visible). The green box (phrase 2) spans the whole frame in the opening frames where she puts on the coat."
+}

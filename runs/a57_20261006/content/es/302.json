@@ -1,0 +1,123 @@
+{
+ "mediaId": 302,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la harina",
+ "taps": [
+  {
+   "phrase": "estar tumbado en el suelo",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "tocarle la nariz a la mujer",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un pañuelo gris",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la harina",
+   "voice": "male"
+  },
+  {
+   "word": "los huevos",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué tiene el hombre en la cara?",
+ "answer": [
+  "Tiene",
+  "harina",
+  "en",
+  "la",
+  "cara."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "en el suelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarle la"
+    },
+    {
+     "text": "nariz",
+     "gap": true,
+     "accept": [
+      "nariz"
+     ]
+    },
+    {
+     "text": "a la mujer"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "pañuelo",
+     "gap": true,
+     "accept": [
+      "pañuelo"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Tiene"
+    },
+    {
+     "text": "harina",
+     "gap": true,
+     "accept": [
+      "harina"
+     ]
+    },
+    {
+     "text": "en la cara"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: most boxed frames show the man's floury face; he touches the woman's nose only near the end. The woman's grey 'scarf' is a headscarf, so 'pañuelo'. Answer drops the subject; recall answer row = whole sentence."
+}

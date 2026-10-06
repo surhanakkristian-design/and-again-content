@@ -1,0 +1,126 @@
+{
+ "mediaId": 20,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el horario",
+ "taps": [
+  {
+   "phrase": "agarrar la almohada",
+   "target": "la mano",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar abierto por la mitad",
+   "target": "el libro de texto",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener las dos correas sueltas",
+   "target": "la mochila",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el libro de texto",
+   "voice": "female"
+  },
+  {
+   "word": "el portátil",
+   "voice": "female"
+  },
+  {
+   "word": "la mochila",
+   "voice": "female"
+  },
+  {
+   "word": "la almohada",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mano?",
+ "answer": [
+  "Está",
+  "agarrando",
+  "la",
+  "almohada",
+  "del",
+  "suelo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar",
+     "gap": true,
+     "accept": [
+      "agarrar",
+      "coger"
+     ]
+    },
+    {
+     "text": "la almohada"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "abierto",
+     "gap": true,
+     "accept": [
+      "abierto"
+     ]
+    },
+    {
+     "text": "por la mitad"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener las dos"
+    },
+    {
+     "text": "correas",
+     "gap": true,
+     "accept": [
+      "correas",
+      "tiras"
+     ]
+    },
+    {
+     "text": "sueltas"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está agarrando la"
+    },
+    {
+     "text": "almohada",
+     "gap": true,
+     "accept": [
+      "almohada"
+     ]
+    },
+    {
+     "text": "del suelo"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el horario is not a visible thing (only implied by the labels Revise/Work/Gym/Sleep) and appears in no exercise; kept unchanged. Phrase 1: the hand hovers over the items in most boxed frames and grabs the pillow at the end; written for the grab. 'abierto de par en par' avoided (used for doors/windows); 'abierto por la mitad' is what natives say of a book. Answer has no subject, so the answer row is the whole sentence."
+}

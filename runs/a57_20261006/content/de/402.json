@@ -1,0 +1,26 @@
+{
+  "mediaId": 402, "lang": "de", "level": "A",
+  "keyWord": "das Eis",
+  "taps": [
+    { "phrase": "über das Eis rutschen", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine grüne Mütze tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "eine rote Jacke tragen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "die Bäume", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "das Eis", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "rutscht", "über", "das", "Eis."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über das" }, { "text": "Eis", "gap": true, "accept": ["Eis"] }, { "text": "rutschen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine grüne" }, { "text": "Mütze", "gap": true, "accept": ["Mütze"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine rote" }, { "text": "Jacke", "gap": true, "accept": ["Jacke"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "rutscht", "gap": true, "accept": ["rutscht", "schlittert", "gleitet"] }, { "text": "über das Eis" } ] }
+  ],
+  "notes": "Tap 1 box also covers the long opening where the couple crouch and touch the ice; the phrase follows the sliding at the end (the only thing the woman does that the man does not). 'rutschen' chosen as the A2 word; 'schlittern' (more exact) is accepted in the answer row. The jacket is dark red; 'rot' is what a native says. No noun row: Eis is in tap row 1."
+}

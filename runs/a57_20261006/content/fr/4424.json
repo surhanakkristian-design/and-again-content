@@ -1,0 +1,126 @@
+{
+ "mediaId": 4424,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la frontière",
+ "taps": [
+  {
+   "phrase": "enjamber une ligne peinte",
+   "target": "l'homme au bonnet",
+   "voice": "male"
+  },
+  {
+   "phrase": "faire un grand sourire à la caméra",
+   "target": "l'homme au bonnet",
+   "voice": "male"
+  },
+  {
+   "phrase": "tendre la main par la fenêtre",
+   "target": "le douanier",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le passeport",
+   "voice": "male"
+  },
+  {
+   "word": "la guérite",
+   "voice": "male"
+  },
+  {
+   "word": "la rambarde",
+   "voice": "male"
+  },
+  {
+   "word": "le bonnet",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le voyageur ?",
+ "answer": [
+  "Il",
+  "passe",
+  "la",
+  "frontière",
+  "à",
+  "pied."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "enjamber",
+     "gap": true,
+     "accept": [
+      "enjamber",
+      "franchir"
+     ]
+    },
+    {
+     "text": "une ligne peinte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire un grand"
+    },
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à la caméra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tendre la main"
+    },
+    {
+     "text": "par la"
+    },
+    {
+     "text": "fenêtre",
+     "gap": true,
+     "accept": [
+      "fenêtre",
+      "vitre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "passe la"
+    },
+    {
+     "text": "frontière",
+     "gap": true,
+     "accept": [
+      "frontière"
+     ]
+    },
+    {
+     "text": "à pied"
+    }
+   ]
+  }
+ ],
+ "notes": "Officer = 'le douanier' (target only). 'la guérite' for the glass control booth. 'à pied' is fixed at the end; 'Il passe à pied la frontière' is not natural, so one order."
+}

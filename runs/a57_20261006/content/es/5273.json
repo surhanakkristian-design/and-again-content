@@ -1,0 +1,139 @@
+{
+ "mediaId": 5273,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el modelo",
+ "taps": [
+  {
+   "phrase": "desfilar por la pasarela",
+   "target": "el modelo",
+   "voice": "male"
+  },
+  {
+   "phrase": "colocarse las gafas de sol",
+   "target": "el modelo",
+   "voice": "male"
+  },
+  {
+   "phrase": "lucir su chaqueta vaquera",
+   "target": "el modelo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el modelo",
+   "voice": "male"
+  },
+  {
+   "word": "los espectadores",
+   "voice": "male"
+  },
+  {
+   "word": "la pasarela",
+   "voice": "male"
+  },
+  {
+   "word": "el techo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el modelo?",
+ "answer": [
+  "El",
+  "modelo",
+  "está",
+  "desfilando",
+  "por",
+  "la",
+  "pasarela."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "desfilar por la"
+    },
+    {
+     "text": "pasarela",
+     "gap": true,
+     "accept": [
+      "pasarela"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colocarse las"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    },
+    {
+     "text": "de sol"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lucir",
+     "gap": true,
+     "accept": [
+      "lucir"
+     ]
+    },
+    {
+     "text": "su chaqueta vaquera"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "modelo",
+     "gap": true,
+     "accept": [
+      "modelo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "desfilando",
+     "gap": true,
+     "accept": [
+      "desfilando",
+      "caminando",
+      "andando"
+     ]
+    },
+    {
+     "text": "por la pasarela"
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the model over the whole clip (as in English). Tap 2: he puts on / adjusts his sunglasses near the end ('colocarse'). Tap 3: he opens the yellow denim jacket to show its lining. 'el modelo' is the natural word in Spain for a male fashion model ('maniquí' is the dummy)."
+}

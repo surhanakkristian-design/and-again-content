@@ -1,0 +1,124 @@
+{
+  "mediaId": 51,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "presser",
+  "taps": [
+    {
+      "phrase": "presser le slime",
+      "target": "la main",
+      "voice": "male"
+    },
+    {
+      "phrase": "saisir une poignée de perles",
+      "target": "la main",
+      "voice": "male"
+    },
+    {
+      "phrase": "se trouver à l'arrière-plan",
+      "target": "le mug",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le mug",
+      "voice": "male"
+    },
+    {
+      "word": "le pouce",
+      "voice": "male"
+    },
+    {
+      "word": "le poignet",
+      "voice": "male"
+    },
+    {
+      "word": "les perles",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait la main ?",
+  "answer": [
+    "Elle",
+    "presse",
+    "une",
+    "poignée",
+    "de",
+    "perles."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "presser",
+          "gap": true,
+          "accept": [
+            "presser",
+            "serrer",
+            "malaxer"
+          ]
+        },
+        {
+          "text": "le slime"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "saisir une"
+        },
+        {
+          "text": "poignée",
+          "gap": true,
+          "accept": [
+            "poignée"
+          ]
+        },
+        {
+          "text": "de perles"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "trouver",
+          "gap": true,
+          "accept": [
+            "trouver"
+          ]
+        },
+        {
+          "text": "à l'arrière-plan"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "presse",
+          "gap": true,
+          "accept": [
+            "presse",
+            "serre"
+          ]
+        },
+        {
+          "text": "une poignée de perles"
+        }
+      ]
+    }
+  ],
+  "notes": "'le slime' is the usual word in France for this toy. Answer voice male copied from English although 'la main' -> 'Elle' (the voice follows the English hand voice). Box 1 also covers the first frames where the hand only lies flat on the slime."
+}

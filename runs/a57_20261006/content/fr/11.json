@@ -1,0 +1,116 @@
+{
+ "mediaId": 11,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la bibliothèque",
+ "taps": [
+  {
+   "phrase": "porter un grand sac",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "marcher entre les étagères",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être grande et ronde",
+   "target": "la tour de livres",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les livres",
+   "voice": "female"
+  },
+  {
+   "word": "les cheveux",
+   "voice": "female"
+  },
+  {
+   "word": "le manteau",
+   "voice": "female"
+  },
+  {
+   "word": "le sac",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "lève",
+  "les",
+  "yeux",
+  "vers",
+  "les",
+  "livres."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un grand"
+    },
+    {
+     "text": "sac",
+     "gap": true,
+     "accept": [
+      "sac"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcher",
+     "gap": true,
+     "accept": [
+      "marcher"
+     ]
+    },
+    {
+     "text": "entre les étagères"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être grande et"
+    },
+    {
+     "text": "ronde",
+     "gap": true,
+     "accept": [
+      "ronde"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lève les yeux vers les"
+    },
+    {
+     "text": "livres",
+     "gap": true,
+     "accept": [
+      "livres"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the green box also covers the frames where she stands still and looks up at the tower; she walks between the shelves in the first half. Key word 'la bibliothèque' is the setting, not a noun of the set, so it appears in no text. 'la tour de livres' is the target name only."
+}

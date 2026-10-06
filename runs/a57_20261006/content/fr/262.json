@@ -1,0 +1,119 @@
+{
+ "mediaId": 262,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un éléphant",
+ "taps": [
+  {
+   "phrase": "boire avec sa trompe",
+   "target": "l'éléphant",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever sa trompe",
+   "target": "l'éléphant",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir des plumes blanches",
+   "target": "les oiseaux blancs",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'arbre",
+   "voice": "female"
+  },
+  {
+   "word": "l'éléphant",
+   "voice": "female"
+  },
+  {
+   "word": "l'oiseau",
+   "voice": "female"
+  },
+  {
+   "word": "l'eau",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'éléphant ?",
+ "answer": [
+  "Il",
+  "boit",
+  "de",
+  "l'eau",
+  "avec",
+  "sa",
+  "trompe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "avec sa trompe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever sa"
+    },
+    {
+     "text": "trompe",
+     "gap": true,
+     "accept": [
+      "trompe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir des"
+    },
+    {
+     "text": "plumes",
+     "gap": true,
+     "accept": [
+      "plumes"
+     ]
+    },
+    {
+     "text": "blanches"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "boit",
+     "gap": true,
+     "accept": [
+      "boit"
+     ]
+    },
+    {
+     "text": "de l'eau avec sa trompe"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer pronoun 'il' (l'éléphant is masculine); answerVoice kept female as in English. No noun row: 'l'éléphant' is one elided chip and cannot be split into 2 parts. Phrase 2 (raising the trunk) happens in the late boxed frames only; English box covers the whole clip."
+}

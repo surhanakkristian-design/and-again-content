@@ -1,0 +1,117 @@
+{
+ "mediaId": 670,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "hacer la compra",
+ "taps": [
+  {
+   "phrase": "empujar un carrito",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "comprar pan y leche",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "coger las monedas",
+   "target": "el cajero",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "la leche",
+   "voice": "female"
+  },
+  {
+   "word": "el carrito",
+   "voice": "female"
+  },
+  {
+   "word": "el pan",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "haciendo",
+  "la",
+  "compra."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "empujar",
+     "gap": true,
+     "accept": [
+      "empujar",
+      "llevar"
+     ]
+    },
+    {
+     "text": "un carrito"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comprar"
+    },
+    {
+     "text": "pan",
+     "gap": true,
+     "accept": [
+      "pan"
+     ]
+    },
+    {
+     "text": "y leche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger las"
+    },
+    {
+     "text": "monedas",
+     "gap": true,
+     "accept": [
+      "monedas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está haciendo la"
+    },
+    {
+     "text": "compra",
+     "gap": true,
+     "accept": [
+      "compra"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'hacer la compra' (verb phrase) for the English noun 'shopping'; it is the natural Spain expression and is used in the model answer. The model answer says what she does overall (doing the shopping) instead of repeating 'empujar un carrito' from tap 1. Tap 1 box also covers the checkout frames where she no longer pushes the cart; the phrase fits most boxed frames. 'coger' = take (Spain usage); target is the cashier (el cajero)."
+}

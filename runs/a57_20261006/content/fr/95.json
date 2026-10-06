@@ -1,0 +1,122 @@
+{
+ "mediaId": 95,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le fard à joues",
+ "taps": [
+  {
+   "phrase": "appliquer du fard à joues",
+   "target": "la fille à la tresse",
+   "voice": "female"
+  },
+  {
+   "phrase": "jeter un œil par-dessus son épaule",
+   "target": "la fille aux cheveux courts",
+   "voice": "female"
+  },
+  {
+   "phrase": "être perché sur une cage",
+   "target": "l'oiseau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la tresse",
+   "voice": "female"
+  },
+  {
+   "word": "le pinceau",
+   "voice": "female"
+  },
+  {
+   "word": "le fard à joues",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la fille en vert ?",
+ "answer": [
+  "Elle",
+  "applique",
+  "du",
+  "fard",
+  "à",
+  "joues",
+  "avec",
+  "un",
+  "pinceau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "appliquer",
+     "gap": true,
+     "accept": [
+      "appliquer",
+      "mettre"
+     ]
+    },
+    {
+     "text": "du fard à joues"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "jeter un œil par-dessus son"
+    },
+    {
+     "text": "épaule",
+     "gap": true,
+     "accept": [
+      "épaule"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "perché",
+     "gap": true,
+     "accept": [
+      "perché"
+     ]
+    },
+    {
+     "text": "sur une cage"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "applique du"
+    },
+    {
+     "text": "fard à joues",
+     "gap": true,
+     "accept": [
+      "fard à joues",
+      "blush"
+     ]
+    },
+    {
+     "text": "avec un pinceau"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le fard à joues' kept; in France 'le blush' is at least as common in everyday speech (accepted in the answer row). The bird in the small blue box at the top is barely visible in the frames; phrase 3 follows the English target. Gap of the answer row is the multi-word key word 'fard à joues'. In some later frames the girl with short hair also holds a blush brush near her own face; phrase 1 stays on the braided girl as in English."
+}

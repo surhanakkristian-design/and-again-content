@@ -1,0 +1,120 @@
+{
+ "mediaId": 48,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "ankommen",
+ "taps": [
+  {
+   "phrase": "die Tür öffnen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "weiße Laken haben",
+   "target": "das Bett",
+   "voice": "male"
+  },
+  {
+   "phrase": "kleine weiße Wellen haben",
+   "target": "das Meer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "das Meer",
+   "voice": "male"
+  },
+  {
+   "word": "der Sand",
+   "voice": "male"
+  },
+  {
+   "word": "die Palmen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "öffnet",
+  "die",
+  "Tür."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Tür"
+    },
+    {
+     "text": "öffnen",
+     "gap": true,
+     "accept": [
+      "öffnen",
+      "aufmachen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "weiße"
+    },
+    {
+     "text": "Laken",
+     "gap": true,
+     "accept": [
+      "Laken"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "kleine weiße"
+    },
+    {
+     "text": "Wellen",
+     "gap": true,
+     "accept": [
+      "Wellen"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "öffnet die"
+    },
+    {
+     "text": "Tür",
+     "gap": true,
+     "accept": [
+      "Tür"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'trees' are palm trees: 'die Palmen' is the natural German word (A2). Key word ankommen is shown by the whole clip but no exercise text uses it naturally."
+}

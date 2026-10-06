@@ -1,0 +1,25 @@
+{
+  "mediaId": 596, "lang": "fr", "level": "A",
+  "keyWord": "la course",
+  "taps": [
+    { "phrase": "gagner la course", "target": "la coureuse en jaune", "voice": "female" },
+    { "phrase": "porter un haut jaune", "target": "la coureuse en jaune", "voice": "female" },
+    { "phrase": "porter un haut violet", "target": "la coureuse en violet", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les coureurs", "voice": "female" },
+    { "word": "l'herbe", "voice": "female" },
+    { "word": "la piste", "voice": "female" }
+  ],
+  "question": "Qui gagne la course ?",
+  "answer": ["La", "coureuse", "en", "jaune", "gagne", "la", "course."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "gagner", "gap": true, "accept": ["gagner"] }, { "text": "la course" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "haut", "gap": true, "accept": ["haut", "maillot", "débardeur"] }, { "text": "jaune" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un haut" }, { "text": "violet", "gap": true, "accept": ["violet"] } ] },
+    { "from": "answer", "parts": [ { "text": "gagne la" }, { "text": "course", "gap": true, "accept": ["course"] } ] }
+  ],
+  "notes": "The runners in yellow and in purple are both women (female voice), so 'la coureuse'. 'les coureurs' (mixed group) is the correct masculine plural for noun 1. Rows 2 and 3 gap different words so they do not look identical once blanked; the answer row gaps 'course' so it differs from tap row 1."
+}

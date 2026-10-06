@@ -1,0 +1,118 @@
+{
+ "mediaId": 25,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "une agrafeuse",
+ "taps": [
+  {
+   "phrase": "utiliser une agrafeuse rouge",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "soulever le papier",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "ouvrir l'agrafeuse",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la plante",
+   "voice": "male"
+  },
+  {
+   "word": "l'agrafeuse",
+   "voice": "male"
+  },
+  {
+   "word": "le papier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "utilise",
+  "une",
+  "agrafeuse",
+  "rouge."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "utiliser une"
+    },
+    {
+     "text": "agrafeuse",
+     "gap": true,
+     "accept": [
+      "agrafeuse"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soulever",
+     "gap": true,
+     "accept": [
+      "soulever",
+      "lever"
+     ]
+    },
+    {
+     "text": "le papier"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir",
+     "gap": true,
+     "accept": [
+      "ouvrir"
+     ]
+    },
+    {
+     "text": "l'agrafeuse"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "utilise",
+     "gap": true,
+     "accept": [
+      "utilise"
+     ]
+    },
+    {
+     "text": "une agrafeuse rouge"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord 'une agrafeuse' copied unchanged (indefinite article); the noun pill uses 'l'agrafeuse'."
+}

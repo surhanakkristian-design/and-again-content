@@ -1,0 +1,131 @@
+{
+ "mediaId": 332,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Giraffe",
+ "taps": [
+  {
+   "phrase": "grüne Blätter fressen",
+   "target": "die Giraffe",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Kopf senken",
+   "target": "die Giraffe",
+   "voice": "female"
+  },
+  {
+   "phrase": "Wasser trinken",
+   "target": "die Giraffe",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Giraffe",
+   "voice": "female"
+  },
+  {
+   "word": "das Zebra",
+   "voice": "female"
+  },
+  {
+   "word": "das Wasser",
+   "voice": "female"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Giraffe?",
+ "answer": [
+  "Die",
+  "Giraffe",
+  "trinkt",
+  "Wasser."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "grüne"
+    },
+    {
+     "text": "Blätter",
+     "gap": true,
+     "accept": [
+      "Blätter"
+     ]
+    },
+    {
+     "text": "fressen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Kopf"
+    },
+    {
+     "text": "senken",
+     "gap": true,
+     "accept": [
+      "senken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Wasser"
+    },
+    {
+     "text": "trinken",
+     "gap": true,
+     "accept": [
+      "trinken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Giraffe",
+     "gap": true,
+     "accept": [
+      "Giraffe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trinkt"
+    },
+    {
+     "text": "Wasser",
+     "gap": true,
+     "accept": [
+      "Wasser"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'den Kopf senken' is the natural collocation (slightly above A2; nothing plainer is natural). Noun 2 kept singular 'das Zebra' because the pill sits on one zebra, though several zebras are visible."
+}

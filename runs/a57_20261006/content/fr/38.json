@@ -1,0 +1,121 @@
+{
+ "mediaId": 38,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un aéroport",
+ "taps": [
+  {
+   "phrase": "agiter deux bâtons orange",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "rouler vers l'homme",
+   "target": "l'avion au sol",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'envoler dans le ciel",
+   "target": "l'avion dans le ciel",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'avion",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la tour",
+   "voice": "male"
+  },
+  {
+   "word": "le ciel",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "agite",
+  "deux",
+  "bâtons",
+  "orange",
+  "à",
+  "l'aéroport."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agiter deux"
+    },
+    {
+     "text": "bâtons",
+     "gap": true,
+     "accept": [
+      "bâtons"
+     ]
+    },
+    {
+     "text": "orange"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rouler",
+     "gap": true,
+     "accept": [
+      "rouler",
+      "avancer"
+     ]
+    },
+    {
+     "text": "vers l'homme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'envoler dans le"
+    },
+    {
+     "text": "ciel",
+     "gap": true,
+     "accept": [
+      "ciel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "agite",
+     "gap": true,
+     "accept": [
+      "agite",
+      "remue"
+     ]
+    },
+    {
+     "text": "deux bâtons orange à l'aéroport"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'aéroport' appears only as elided 'l'aéroport' in the answer, so it cannot be a gap (no elided gaps); answer row gaps the verb. 'orange' is invariable (bâtons orange). Plane 3: another plane also takes off near the tower in some frames (same as English)."
+}

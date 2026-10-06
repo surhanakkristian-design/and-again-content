@@ -1,0 +1,114 @@
+{
+ "mediaId": 4055,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el dinosaurio",
+ "taps": [
+  {
+   "phrase": "levantar la cabeza",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "sentarse entre dos juguetes",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener los ojos rojos",
+   "target": "el dinosaurio gris",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el dinosaurio",
+   "voice": "male"
+  },
+  {
+   "word": "la cama",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Dónde está sentado el perro?",
+ "answer": [
+  "Está",
+  "sentado",
+  "entre",
+  "dos",
+  "dinosaurios."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar la"
+    },
+    {
+     "text": "cabeza",
+     "gap": true,
+     "accept": [
+      "cabeza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sentarse",
+     "gap": true,
+     "accept": [
+      "sentarse"
+     ]
+    },
+    {
+     "text": "entre dos juguetes"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener los"
+    },
+    {
+     "text": "ojos",
+     "gap": true,
+     "accept": [
+      "ojos"
+     ]
+    },
+    {
+     "text": "rojos"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está sentado entre dos"
+    },
+    {
+     "text": "dinosaurios",
+     "gap": true,
+     "accept": [
+      "dinosaurios",
+      "juguetes"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Subject dropped (answer row = whole sentence). No noun row: the answer row contains the key word (dinosaurios) and gaps it. Only the grey dinosaur has red eyes."
+}

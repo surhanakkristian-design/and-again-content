@@ -1,0 +1,126 @@
+{
+ "mediaId": 330,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Gate",
+ "taps": [
+  {
+   "phrase": "zum Gate rennen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "das Ticket zeigen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Tür aufhalten",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "das Gate",
+   "voice": "female"
+  },
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "word": "der Koffer",
+   "voice": "female"
+  }
+ ],
+ "question": "Wohin rennt das Mädchen?",
+ "answer": [
+  "Sie",
+  "rennt",
+  "zum",
+  "Gate."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zum"
+    },
+    {
+     "text": "Gate",
+     "gap": true,
+     "accept": [
+      "Gate",
+      "Flugsteig"
+     ]
+    },
+    {
+     "text": "rennen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Ticket",
+     "gap": true,
+     "accept": [
+      "Ticket",
+      "Flugticket",
+      "Bordkarte"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Tür",
+     "gap": true,
+     "accept": [
+      "Tür"
+     ]
+    },
+    {
+     "text": "aufhalten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rennt",
+     "gap": true,
+     "accept": [
+      "rennt",
+      "läuft"
+     ]
+    },
+    {
+     "text": "zum Gate"
+    }
+   ]
+  }
+ ],
+ "notes": "'das Gate' is the everyday German airport word (formal: der Flugsteig). Pronoun 'sie' for das Mädchen (what natives say). Tap boxes 1 and 2 are the same box on the girl (running most of the time, showing the ticket in the middle). Phrase 3: the man scans the pass at the desk in the middle frames and holds the plane door open at the end; English phrase kept. No noun row: Gate is in tap row 1."
+}

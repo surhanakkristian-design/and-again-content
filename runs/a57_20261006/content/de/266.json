@@ -1,0 +1,122 @@
+{
+  "mediaId": 266,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Energie",
+  "taps": [
+    {
+      "phrase": "die Treppe hinauflaufen",
+      "target": "die Frau in Weiß",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf und ab springen",
+      "target": "die Frau in Weiß",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Hände auf die Knie legen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Treppe",
+      "voice": "female"
+    },
+    {
+      "word": "die Straßenlaterne",
+      "voice": "female"
+    },
+    {
+      "word": "die Mauer",
+      "voice": "female"
+    },
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau in Weiß?",
+  "answer": [
+    "Sie",
+    "läuft",
+    "die",
+    "Treppe",
+    "hinauf."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Treppe",
+          "gap": true,
+          "accept": [
+            "Treppe"
+          ]
+        },
+        {
+          "text": "hinauflaufen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf und ab"
+        },
+        {
+          "text": "springen",
+          "gap": true,
+          "accept": [
+            "springen",
+            "hüpfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Hände auf die"
+        },
+        {
+          "text": "Knie",
+          "gap": true,
+          "accept": [
+            "Knie"
+          ]
+        },
+        {
+          "text": "legen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "läuft",
+          "gap": true,
+          "accept": [
+            "läuft",
+            "rennt"
+          ]
+        },
+        {
+          "text": "die Treppe hinauf"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word die Energie is not a pill or phrase (same as English). English 'steps' -> 'die Treppe' (the everyday word for a flight of steps; 'die Stufen' also possible). Phrase 3 'die Hände auf die Knie legen' chosen over 'sich auf die Knie stützen' (B1) for level A."
+}

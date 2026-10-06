@@ -1,0 +1,135 @@
+{
+  "mediaId": 659,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le shampooing",
+  "taps": [
+    {
+      "phrase": "laver les cheveux de l'homme",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "se tenir derrière le lavabo",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir les cheveux noirs",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le shampooing",
+      "voice": "female"
+    },
+    {
+      "word": "la bouteille",
+      "voice": "female"
+    },
+    {
+      "word": "la main",
+      "voice": "female"
+    },
+    {
+      "word": "le mur",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "lave",
+    "les",
+    "cheveux",
+    "de",
+    "l'homme."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "laver les"
+        },
+        {
+          "text": "cheveux",
+          "gap": true,
+          "accept": [
+            "cheveux"
+          ]
+        },
+        {
+          "text": "de l'homme"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se tenir derrière le"
+        },
+        {
+          "text": "lavabo",
+          "gap": true,
+          "accept": [
+            "lavabo",
+            "bac"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir les cheveux"
+        },
+        {
+          "text": "noirs",
+          "gap": true,
+          "accept": [
+            "noirs"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "le"
+        },
+        {
+          "text": "shampooing",
+          "gap": true,
+          "accept": [
+            "shampooing",
+            "shampoing"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "lave",
+          "gap": true,
+          "accept": [
+            "lave"
+          ]
+        },
+        {
+          "text": "les cheveux de l'homme"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3 changed from 'fermer les yeux' to 'avoir les cheveux noirs': the man's eyes are closed only at the start and open in the mirror and final frames, and most blue-boxed frames show only his foamy/black hair; black hair is true in every boxed frame and only for him (the stylist has green hair). Phrase 2: 'lavabo' is the plain A-level word; salon French also says 'le bac (à shampooing)', accepted in recall. 'Bouteille' kept (A1); 'flacon' would be more idiomatic but above level. Recall rows 1 and 3 both gap 'cheveux' but differ in text."
+}

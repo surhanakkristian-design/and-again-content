@@ -1,0 +1,27 @@
+{
+  "mediaId": 7119, "lang": "fr", "level": "B",
+  "keyWord": "le pêcheur",
+  "taps": [
+    { "phrase": "hisser un lourd filet", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un ciré jaune", "target": "l'homme", "voice": "male" },
+    { "phrase": "déborder de poissons argentés", "target": "le filet", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la mouette", "voice": "female" },
+    { "word": "le filet", "voice": "female" },
+    { "word": "la caisse", "voice": "female" },
+    { "word": "la pêcheuse", "voice": "female" }
+  ],
+  "question": "Que fait la pêcheuse en orange ?",
+  "answer": ["Elle", "hisse", "un", "lourd", "filet."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "hisser", "gap": true, "accept": ["hisser", "tirer", "remonter"] }, { "text": "un lourd filet" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "ciré", "gap": true, "accept": ["ciré"] }, { "text": "jaune" } ] },
+    { "from": "taps", "parts": [ { "text": "déborder", "gap": true, "accept": ["déborder"] }, { "text": "de poissons argentés" } ] },
+    { "from": "nouns", "parts": [ { "text": "la" }, { "text": "pêcheuse", "gap": true, "accept": ["pêcheuse"] } ] },
+    { "from": "answer", "parts": [ { "text": "hisse un lourd" }, { "text": "filet", "gap": true, "accept": ["filet"] } ] }
+  ],
+  "notes": "Key word: the fisher shown is a woman, so the noun pill and question use 'la pêcheuse' (database word 'le pêcheur' kept in keyWord). Proposal: accept the feminine form for this video. 'la caisse' singular as in English, though several crates are stacked."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 7059,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Hotdog",
+ "taps": [
+  {
+   "phrase": "einen Hotdog machen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "am Grill stehen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "neben den Brötchen sitzen",
+   "target": "die Katze",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "male"
+  },
+  {
+   "word": "die Katze",
+   "voice": "male"
+  },
+  {
+   "word": "der Hotdog",
+   "voice": "male"
+  },
+  {
+   "word": "die Brötchen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Der",
+  "Hund",
+  "macht",
+  "einen",
+  "Hotdog."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Hotdog",
+     "gap": true,
+     "accept": [
+      "Hotdog"
+     ]
+    },
+    {
+     "text": "machen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Grill",
+     "gap": true,
+     "accept": [
+      "Grill"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "neben den"
+    },
+    {
+     "text": "Brötchen",
+     "gap": true,
+     "accept": [
+      "Brötchen"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "macht",
+     "gap": true,
+     "accept": [
+      "macht"
+     ]
+    },
+    {
+     "text": "einen Hotdog"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'bread' = the tray of long rolls -> 'die Brötchen' (plural)."
+}

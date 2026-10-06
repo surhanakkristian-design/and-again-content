@@ -1,0 +1,126 @@
+{
+ "mediaId": 5580,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "assistierend",
+ "taps": [
+  {
+   "phrase": "dem Mann die Jacke zuknöpfen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einer Kiste stehen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein Tablett halten",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "die Jacke",
+   "voice": "female"
+  },
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "die Lampe",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "knöpft",
+  "dem",
+  "Mann",
+  "die",
+  "Jacke",
+  "zu."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dem Mann die Jacke"
+    },
+    {
+     "text": "zuknöpfen",
+     "gap": true,
+     "accept": [
+      "zuknöpfen",
+      "zumachen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einer"
+    },
+    {
+     "text": "Kiste",
+     "gap": true,
+     "accept": [
+      "Kiste"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Tablett",
+     "gap": true,
+     "accept": [
+      "Tablett"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "knöpft dem Mann die"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke"
+     ]
+    },
+    {
+     "text": "zu"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: 'assistierend' (adjective) is not a natural everyday German word and is above level A; it appears in none of the exercises (nothing in the clip can carry it naturally). Proposal: map the concept to 'der Assistent / die Assistentin' (noun) or 'helfend'; owner decides. 'Jacke' used for the suit jacket at level A ('das Sakko' / 'das Jackett' are B-level). The box is a low wooden platform; 'Kiste' is the plain A-level word. German also allows 'Sie knöpft die Jacke dem Mann zu' (marked order) - the dative-first order is the natural one."
+}

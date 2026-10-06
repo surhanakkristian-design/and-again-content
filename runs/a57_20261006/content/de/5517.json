@@ -1,0 +1,124 @@
+{
+ "mediaId": 5517,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "annehmen",
+ "taps": [
+  {
+   "phrase": "einen Heiratsantrag annehmen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einer Decke knien",
+   "target": "der Mann in Weiß",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine Angel tragen",
+   "target": "der Mann am Meer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Ringkästchen",
+   "voice": "male"
+  },
+  {
+   "word": "der Picknickkorb",
+   "voice": "male"
+  },
+  {
+   "word": "die Decke",
+   "voice": "male"
+  },
+  {
+   "word": "die Fußspuren",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "nimmt",
+  "seinen",
+  "Heiratsantrag",
+  "an."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Heiratsantrag"
+    },
+    {
+     "text": "annehmen",
+     "gap": true,
+     "accept": [
+      "annehmen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einer"
+    },
+    {
+     "text": "Decke",
+     "gap": true,
+     "accept": [
+      "Decke"
+     ]
+    },
+    {
+     "text": "knien"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Angel",
+     "gap": true,
+     "accept": [
+      "Angel",
+      "Angelrute"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "nimmt seinen"
+    },
+    {
+     "text": "Heiratsantrag",
+     "gap": true,
+     "accept": [
+      "Heiratsantrag"
+     ]
+    },
+    {
+     "text": "an"
+    }
+   ]
+  }
+ ],
+ "notes": "The man kneels in the first half and stands up in the second half of the green box; phrase 2 describes the kneeling (most boxed frames). Key word 'annehmen' appears separated in the answer ('nimmt ... an')."
+}

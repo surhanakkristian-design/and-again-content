@@ -1,0 +1,123 @@
+{
+  "mediaId": 18,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "la racine",
+  "taps": [
+    {
+      "phrase": "être à genoux dans la terre",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir de longues racines pâles",
+      "target": "le jeune plant",
+      "voice": "female"
+    },
+    {
+      "phrase": "avoir un long bec",
+      "target": "l'arrosoir",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les racines",
+      "voice": "female"
+    },
+    {
+      "word": "les feuilles",
+      "voice": "female"
+    },
+    {
+      "word": "l'arrosoir",
+      "voice": "female"
+    },
+    {
+      "word": "le mur en pierre",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la fille ?",
+  "answer": [
+    "Elle",
+    "soulève",
+    "un",
+    "jeune",
+    "plant",
+    "aux",
+    "longues",
+    "racines."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être à"
+        },
+        {
+          "text": "genoux",
+          "gap": true,
+          "accept": [
+            "genoux"
+          ]
+        },
+        {
+          "text": "dans la terre"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir de longues"
+        },
+        {
+          "text": "racines",
+          "gap": true,
+          "accept": [
+            "racines"
+          ]
+        },
+        {
+          "text": "pâles"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir un long"
+        },
+        {
+          "text": "bec",
+          "gap": true,
+          "accept": [
+            "bec"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "soulève",
+          "gap": true,
+          "accept": [
+            "soulève"
+          ]
+        },
+        {
+          "text": "un jeune plant aux longues racines"
+        }
+      ]
+    }
+  ],
+  "notes": "'le bec' = the spout of the watering can (bec verseur). The watering can is only partly visible at the frame edge in early boxes. No noun row: tap row 2 contains the key word 'racines'."
+}

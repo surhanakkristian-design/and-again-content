@@ -1,0 +1,120 @@
+{
+ "mediaId": 40,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Antwort",
+ "taps": [
+  {
+   "phrase": "eine Karte ziehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Tisch liegen",
+   "target": "die Karten",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine Karte hochhalten",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Haare",
+   "voice": "female"
+  },
+  {
+   "word": "der Pullover",
+   "voice": "female"
+  },
+  {
+   "word": "die Karte",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was hält die Frau hoch?",
+ "answer": [
+  "Sie",
+  "hält",
+  "eine",
+  "Karte",
+  "hoch."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Karte",
+     "gap": true,
+     "accept": [
+      "Karte"
+     ]
+    },
+    {
+     "text": "ziehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Tisch",
+     "gap": true,
+     "accept": [
+      "Tisch"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Karte"
+    },
+    {
+     "text": "hochhalten",
+     "gap": true,
+     "accept": [
+      "hochhalten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hält",
+     "gap": true,
+     "accept": [
+      "hält"
+     ]
+    },
+    {
+     "text": "eine Karte hoch"
+    }
+   ]
+  }
+ ],
+ "notes": "'eine Karte ziehen' is the native collocation for drawing a card (English 'pick one card'). Key word 'die Antwort' is not a noun of the set (the card shows the answer), so no noun row. Tap boxes 1 and 3 also cover the opening frames where only the table and the card stack are visible."
+}

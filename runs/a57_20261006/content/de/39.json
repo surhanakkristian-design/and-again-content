@@ -1,0 +1,121 @@
+{
+ "mediaId": 39,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Krankenwagen",
+ "taps": [
+  {
+   "phrase": "den Krankenwagen beobachten",
+   "target": "der Mann in Schwarz",
+   "voice": "male"
+  },
+  {
+   "phrase": "vor dem Café halten",
+   "target": "der Krankenwagen",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine rote Tasche tragen",
+   "target": "der Mann in Gelb",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "die Häuser",
+   "voice": "male"
+  },
+  {
+   "word": "der Krankenwagen",
+   "voice": "male"
+  },
+  {
+   "word": "die Tasche",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann in Schwarz?",
+ "answer": [
+  "Er",
+  "beobachtet",
+  "den",
+  "Krankenwagen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Krankenwagen",
+     "gap": true,
+     "accept": [
+      "Krankenwagen"
+     ]
+    },
+    {
+     "text": "beobachten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor dem Café"
+    },
+    {
+     "text": "halten",
+     "gap": true,
+     "accept": [
+      "halten",
+      "parken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Tasche",
+     "gap": true,
+     "accept": [
+      "Tasche"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "beobachtet",
+     "gap": true,
+     "accept": [
+      "beobachtet",
+      "sieht"
+     ]
+    },
+    {
+     "text": "den Krankenwagen"
+    }
+   ]
+  }
+ ],
+ "notes": "'der Mann in Gelb': the woman paramedic also wears yellow but carries nothing, so the red bag fits only him. Tap box 2 covers the ambulance driving up and standing parked; 'halten' covers both stopping and standing. No noun row: der Krankenwagen is in tap row 1 and the answer row. Answer row accepts 'sieht' only as a weak alternative ('sieht den Krankenwagen' is grammatical but less precise); can be dropped."
+}

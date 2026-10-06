@@ -1,0 +1,123 @@
+{
+ "mediaId": 5566,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la llegada",
+ "taps": [
+  {
+   "phrase": "cruzar la línea de meta",
+   "target": "la corredora",
+   "voice": "female"
+  },
+  {
+   "phrase": "recoger la cinta del suelo",
+   "target": "la chica de la sudadera",
+   "voice": "female"
+  },
+  {
+   "phrase": "aplaudir detrás de las vallas",
+   "target": "los espectadores",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la corredora",
+   "voice": "female"
+  },
+  {
+   "word": "los espectadores",
+   "voice": "female"
+  },
+  {
+   "word": "los banderines",
+   "voice": "female"
+  },
+  {
+   "word": "los vasos de papel",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la corredora?",
+ "answer": [
+  "La",
+  "corredora",
+  "está",
+  "cruzando",
+  "la",
+  "línea",
+  "de",
+  "meta."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzar",
+     "gap": true,
+     "accept": [
+      "cruzar",
+      "atravesar"
+     ]
+    },
+    {
+     "text": "la línea de meta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recoger la"
+    },
+    {
+     "text": "cinta",
+     "gap": true,
+     "accept": [
+      "cinta"
+     ]
+    },
+    {
+     "text": "del suelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aplaudir detrás de las"
+    },
+    {
+     "text": "vallas",
+     "gap": true,
+     "accept": [
+      "vallas",
+      "barreras"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está cruzando la línea de"
+    },
+    {
+     "text": "meta",
+     "gap": true,
+     "accept": [
+      "meta",
+      "llegada"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la llegada' names the arrival at the finish; in Spain the finish line is usually 'la línea de meta' ('línea de llegada' is also said), so the answer-row gap accepts 'llegada'. The key word is not a noun of the set, so no noun row. Phrase 3 uses 'aplaudir' (the spectators clap; the man in the rust T-shirt also claps, but in front of the barriers, so 'detrás de las vallas' keeps it unique)."
+}

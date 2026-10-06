@@ -1,0 +1,121 @@
+{
+  "mediaId": 5626,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "außer Betrieb sein",
+  "taps": [
+    {
+      "phrase": "neben dem Lieferroboter knien",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "es sich zwischen den Orangen gemütlich machen",
+      "target": "die Katze",
+      "voice": "male"
+    },
+    {
+      "phrase": "über den Gehweg kullern",
+      "target": "die Orange",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Katze",
+      "voice": "male"
+    },
+    {
+      "word": "die Straßenbahn",
+      "voice": "male"
+    },
+    {
+      "word": "der Lieferroboter",
+      "voice": "male"
+    },
+    {
+      "word": "die Windräder",
+      "voice": "male"
+    }
+  ],
+  "question": "Was ist im Lieferroboter?",
+  "answer": [
+    "Eine",
+    "Katze",
+    "hockt",
+    "zwischen",
+    "den",
+    "Orangen."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "neben dem Lieferroboter"
+        },
+        {
+          "text": "knien",
+          "gap": true,
+          "accept": [
+            "knien"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "es sich zwischen den Orangen"
+        },
+        {
+          "text": "gemütlich",
+          "gap": true,
+          "accept": [
+            "gemütlich",
+            "bequem"
+          ]
+        },
+        {
+          "text": "machen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über den Gehweg"
+        },
+        {
+          "text": "kullern",
+          "gap": true,
+          "accept": [
+            "kullern",
+            "rollen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hockt zwischen den"
+        },
+        {
+          "text": "Orangen",
+          "gap": true,
+          "accept": [
+            "Orangen",
+            "Apfelsinen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'außer Betrieb sein' is not visible: the robot is not shown broken, only open with a cat inside instead of a delivery; kept, owner decides. Tap 3: the orange rolls in the first boxed frames and then lies still on the pavement. Tap 1: in the last frame the man sits on the ground. Answer voice male (cat has no natural gender; 'Katze' grammatically feminine)."
+}

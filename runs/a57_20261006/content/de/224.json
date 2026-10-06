@@ -1,0 +1,25 @@
+{
+  "mediaId": 224, "lang": "de", "level": "B",
+  "keyWord": "entwerfen",
+  "taps": [
+    { "phrase": "einen Stuhl skizzieren", "target": "der Mann", "voice": "male" },
+    { "phrase": "auf die Skizze zeigen", "target": "die Frau", "voice": "female" },
+    { "phrase": "am Pappmodell schnuppern", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Skizze", "voice": "female" },
+    { "word": "das Glas", "voice": "female" },
+    { "word": "die Zimmerpflanze", "voice": "female" }
+  ],
+  "question": "Was entwerfen sie?",
+  "answer": ["Sie", "entwerfen", "einen", "Stuhl."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen Stuhl" }, { "text": "skizzieren", "gap": true, "accept": ["skizzieren", "zeichnen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf die" }, { "text": "Skizze", "gap": true, "accept": ["Skizze", "Zeichnung"] }, { "text": "zeigen" } ] },
+    { "from": "taps", "parts": [ { "text": "am" }, { "text": "Pappmodell", "gap": true, "accept": ["Pappmodell", "Modell", "Pappstuhl"] }, { "text": "schnuppern" } ] },
+    { "from": "answer", "parts": [ { "text": "entwerfen", "gap": true, "accept": ["entwerfen"] }, { "text": "einen Stuhl" } ] }
+  ],
+  "notes": "Key word 'entwerfen' is a verb while the English is 'designing' (noun concept); it reads naturally in the answer ('Sie entwerfen einen Stuhl.'); 'das Entwerfen' would be the noun form if the owner wants one. Tap 1: the man's box also covers cutting cardboard, gluing and the reactions; he sketches in most early frames. The woman also draws on a sheet in the first frames, as in English. 'das Glas' = the jar with the pencils. Gaps varied: verb, noun, noun, key word."
+}

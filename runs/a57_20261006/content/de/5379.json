@@ -1,0 +1,121 @@
+{
+  "mediaId": 5379,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "ändern",
+  "taps": [
+    {
+      "phrase": "bei einem Kunden Maß nehmen",
+      "target": "der Schneider",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Stoff mit Kreide anzeichnen",
+      "target": "der Schneider",
+      "voice": "male"
+    },
+    {
+      "phrase": "in ein Sakko schlüpfen",
+      "target": "der junge Mann im Sakko",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Deckenventilator",
+      "voice": "male"
+    },
+    {
+      "word": "die Stoffe",
+      "voice": "male"
+    },
+    {
+      "word": "das Sakko",
+      "voice": "male"
+    },
+    {
+      "word": "das Maßband",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Schneider?",
+  "answer": [
+    "Er",
+    "ändert",
+    "das",
+    "Sakko",
+    "des",
+    "Kunden."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "bei einem Kunden"
+        },
+        {
+          "text": "Maß",
+          "gap": true,
+          "accept": [
+            "Maß"
+          ]
+        },
+        {
+          "text": "nehmen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Stoff mit"
+        },
+        {
+          "text": "Kreide",
+          "gap": true,
+          "accept": [
+            "Kreide"
+          ]
+        },
+        {
+          "text": "anzeichnen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in ein Sakko"
+        },
+        {
+          "text": "schlüpfen",
+          "gap": true,
+          "accept": [
+            "schlüpfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "ändert",
+          "gap": true,
+          "accept": [
+            "ändert"
+          ]
+        },
+        {
+          "text": "das Sakko des Kunden"
+        }
+      ]
+    }
+  ],
+  "notes": "Jacket = 'das Sakko' (a suit jacket; 'die Jacke' would be wrong for it). English 'fabric' slot sits on the stacked bolts of cloth: plural 'die Stoffe'. The green tap box (mark fabric with chalk) covers the tailor also in the measuring frames, as in English; the chalk-marking happens in the table close-ups. No noun row: key word is a verb, gapped in the answer row."
+}

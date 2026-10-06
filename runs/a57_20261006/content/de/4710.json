@@ -1,0 +1,115 @@
+{
+ "mediaId": 4710,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Arm",
+ "taps": [
+  {
+   "phrase": "in der Mitte stehen",
+   "target": "die ältere Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine hellgrüne Jacke tragen",
+   "target": "die junge Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine Brille tragen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bäume",
+   "voice": "female"
+  },
+  {
+   "word": "der Arm",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die drei Leute?",
+ "answer": [
+  "Sie",
+  "bewegen",
+  "die",
+  "Arme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in der Mitte"
+    },
+    {
+     "text": "stehen",
+     "gap": true,
+     "accept": [
+      "stehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine hellgrüne"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Brille",
+     "gap": true,
+     "accept": [
+      "Brille"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bewegen die"
+    },
+    {
+     "text": "Arme",
+     "gap": true,
+     "accept": [
+      "Arme"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The young woman's jacket is mint, so 'hellgrüne Jacke' (light green). Key word der Arm appears in the answer row as the plural 'Arme' (gap), so no separate noun row. Answer has one natural word order."
+}

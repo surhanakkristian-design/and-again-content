@@ -1,0 +1,129 @@
+{
+ "mediaId": 201,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el cocodrilo",
+ "taps": [
+  {
+   "phrase": "nadar en el río",
+   "target": "el cocodrilo",
+   "voice": "male"
+  },
+  {
+   "phrase": "salir del agua",
+   "target": "el cocodrilo",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir mucho la boca",
+   "target": "el cocodrilo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cocodrilo",
+   "voice": "male"
+  },
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "el río",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el cocodrilo?",
+ "answer": [
+  "Está",
+  "abriendo",
+  "mucho",
+  "la",
+  "boca."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nadar",
+     "gap": true,
+     "accept": [
+      "nadar"
+     ]
+    },
+    {
+     "text": "en el río"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "salir del"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua",
+      "río"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir mucho la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "cocodrilo",
+     "gap": true,
+     "accept": [
+      "cocodrilo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "abriendo",
+     "gap": true,
+     "accept": [
+      "abriendo"
+     ]
+    },
+    {
+     "text": "mucho la boca"
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes cover the whole crocodile throughout, so each phrase is true only in part of the boxed frames (swimming early, on the mud later), same as English. Answer: 'mucho' before 'la boca' is the natural order."
+}

@@ -1,0 +1,123 @@
+{
+  "mediaId": 731,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Briefmarke",
+  "taps": [
+    {
+      "phrase": "viele Briefmarken halten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen Brief einwerfen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Briefkasten sitzen",
+      "target": "der Vogel",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Vogel",
+      "voice": "male"
+    },
+    {
+      "word": "der Mann",
+      "voice": "male"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Briefmarken",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "wirft",
+    "einen",
+    "Brief",
+    "ein."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "viele"
+        },
+        {
+          "text": "Briefmarken",
+          "gap": true,
+          "accept": [
+            "Briefmarken"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Brief"
+        },
+        {
+          "text": "einwerfen",
+          "gap": true,
+          "accept": [
+            "einwerfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Briefkasten",
+          "gap": true,
+          "accept": [
+            "Briefkasten"
+          ]
+        },
+        {
+          "text": "sitzen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "wirft einen"
+        },
+        {
+          "text": "Brief",
+          "gap": true,
+          "accept": [
+            "Brief"
+          ]
+        },
+        {
+          "text": "ein"
+        }
+      ]
+    }
+  ],
+  "notes": "The bird is a crow ('die Krähe' is above level A; 'der Vogel' kept as in English). The red pillar box = 'der Briefkasten'."
+}

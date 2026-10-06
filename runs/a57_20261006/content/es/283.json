@@ -1,0 +1,120 @@
+{
+  "mediaId": 283,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la tela",
+  "taps": [
+    {
+      "phrase": "desenrollar la tela estampada",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "cortar la tela con unas tijeras",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "abrazar la tela doblada",
+      "target": "la chica",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el pendiente",
+      "voice": "female"
+    },
+    {
+      "word": "la tela",
+      "voice": "female"
+    },
+    {
+      "word": "la mesa",
+      "voice": "female"
+    },
+    {
+      "word": "la cinta métrica",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "Está",
+    "cortando",
+    "la",
+    "tela",
+    "con",
+    "unas",
+    "tijeras."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "desenrollar",
+          "gap": true,
+          "accept": [
+            "desenrollar",
+            "extender"
+          ]
+        },
+        {
+          "text": "la tela estampada"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cortar la tela con unas"
+        },
+        {
+          "text": "tijeras",
+          "gap": true,
+          "accept": [
+            "tijeras"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "abrazar",
+          "gap": true,
+          "accept": [
+            "abrazar"
+          ]
+        },
+        {
+          "text": "la tela doblada"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está cortando la"
+        },
+        {
+          "text": "tela",
+          "gap": true,
+          "accept": [
+            "tela"
+          ]
+        },
+        {
+          "text": "con unas tijeras"
+        }
+      ]
+    }
+  ],
+  "notes": "B level: phrases carry desenrollar / estampada / tijeras / doblada; the answer's B-level word is 'tijeras' (and 'cortar la tela' collocation). Green box also covers frames where he measures with the tape before cutting. Earring: only one visible in most frames, singular as in English. No noun row: 'tela' is in every row."
+}

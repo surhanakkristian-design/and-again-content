@@ -1,0 +1,129 @@
+{
+  "mediaId": 5288,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Ski",
+  "taps": [
+    {
+      "phrase": "den Berg hinunterfahren",
+      "target": "der Skifahrer in Rot",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen roten Anzug tragen",
+      "target": "der Skifahrer in Rot",
+      "voice": "male"
+    },
+    {
+      "phrase": "in die Luft springen",
+      "target": "der Skifahrer in Rot",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Skier",
+      "voice": "male"
+    },
+    {
+      "word": "die Berge",
+      "voice": "male"
+    },
+    {
+      "word": "der Himmel",
+      "voice": "male"
+    },
+    {
+      "word": "der Schnee",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die Person in Rot?",
+  "answer": [
+    "Er",
+    "fährt",
+    "auf",
+    "Skiern",
+    "den",
+    "Berg",
+    "hinunter."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Berg",
+          "gap": true,
+          "accept": [
+            "Berg",
+            "Hang"
+          ]
+        },
+        {
+          "text": "hinunterfahren"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen roten"
+        },
+        {
+          "text": "Anzug",
+          "gap": true,
+          "accept": [
+            "Anzug",
+            "Skianzug"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in die Luft"
+        },
+        {
+          "text": "springen",
+          "gap": true,
+          "accept": [
+            "springen",
+            "hüpfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fährt auf"
+        },
+        {
+          "text": "Skiern",
+          "gap": true,
+          "accept": [
+            "Skiern",
+            "Ski"
+          ]
+        },
+        {
+          "text": "den Berg hinunter"
+        }
+      ]
+    }
+  ],
+  "notes": "Plural of der Ski: 'die Skier' (also 'die Ski' is standard; accept both). No noun row: the answer row contains the key word (Skiern) and gaps it. German also allows 'Er fährt den Berg auf Skiern hinunter' (second chip order, less natural). Other skiers in the background also ski, but only the red skier is boxed. 'Hang' would be more precise but is above A2, so 'Berg' is used."
+}

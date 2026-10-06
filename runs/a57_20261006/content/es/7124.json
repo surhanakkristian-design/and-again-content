@@ -1,0 +1,128 @@
+{
+ "mediaId": 7124,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el tramo de escaleras",
+ "taps": [
+  {
+   "phrase": "bajar un tramo de escaleras",
+   "target": "el hombre del esmoquin",
+   "voice": "male"
+  },
+  {
+   "phrase": "vitorear desde el balcón",
+   "target": "los invitados de la boda",
+   "voice": "male"
+  },
+  {
+   "phrase": "reposar sobre una bandeja de plata",
+   "target": "la tarta nupcial",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los invitados",
+   "voice": "male"
+  },
+  {
+   "word": "la tarta nupcial",
+   "voice": "male"
+  },
+  {
+   "word": "el esmoquin",
+   "voice": "male"
+  },
+  {
+   "word": "el tramo de escaleras",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está bajando el joven?",
+ "answer": [
+  "Está",
+  "bajando",
+  "un",
+  "tramo",
+  "de",
+  "escaleras",
+  "de",
+  "piedra."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bajar un"
+    },
+    {
+     "text": "tramo",
+     "gap": true,
+     "accept": [
+      "tramo"
+     ]
+    },
+    {
+     "text": "de escaleras"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vitorear",
+     "gap": true,
+     "accept": [
+      "vitorear",
+      "aclamar"
+     ]
+    },
+    {
+     "text": "desde el balcón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposar sobre una"
+    },
+    {
+     "text": "bandeja",
+     "gap": true,
+     "accept": [
+      "bandeja"
+     ]
+    },
+    {
+     "text": "de plata"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "bajando",
+     "gap": true,
+     "accept": [
+      "bajando",
+      "descendiendo"
+     ]
+    },
+    {
+     "text": "un tramo de escaleras de piedra"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el tramo de escaleras' used in tap 1, noun 4 (English 'a staircase') and the answer, so no extra noun row. Answer drops the subject, as natives do; the answer row is the whole sentence without the full stop."
+}

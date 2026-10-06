@@ -1,0 +1,57 @@
+import json
+def G(t, acc=None): return {"text": t, "gap": True, "accept": acc or [t]}
+def P(t): return {"text": t}
+def tap(p,t,v): return {"phrase":p,"target":t,"voice":v}
+def n(w,v): return {"word":w,"voice":v}
+docs = {
+193: dict(level="B", keyWord="corrompu",
+  taps=[tap("accepter un pot-de-vin","le fonctionnaire","male"), tap("tamponner le document","le fonctionnaire","male"), tap("glisser la main dans sa poche","la femme","female")],
+  nouns=[n("le tampon","male"),n("la moustache","male"),n("le document","male"),n("le tablier","male")],
+  question="Que fait l'homme ?", answer="Le fonctionnaire corrompu accepte un pot-de-vin.".split(), answerVoice="male",
+  recall=[{"from":"taps","parts":[P("accepter un"),G("pot-de-vin")]},
+          {"from":"taps","parts":[G("tamponner"),P("le document")]},
+          {"from":"taps","parts":[P("glisser la main dans sa"),G("poche")]},
+          {"from":"answer","parts":[G("accepte",["accepte","prend"]),P("un pot-de-vin")]}],
+  notes="Key word 'corrompu' (adjective) appears only in the model answer subject, so no recall row carries it. Phrase 3: she slips her hand into her apron pocket and pulls out the pouch; 'glisser la main' chosen as the B1 verb. Box 1 also covers frames before the bribe (refusing, open palm); phrase written for the bribe moment."),
+194: dict(level="A", keyWord="le coton",
+  taps=[tap("tenir du coton","la femme","female"), tap("souffler sur le coton","la femme","female"), tap("porter un tee-shirt blanc","l'homme","male")],
+  nouns=[n("le soleil","female"),n("le chapeau","female"),n("le coton","female"),n("le tee-shirt","female")],
+  question="Que tient la femme ?", answer="Elle tient du coton.".split(), answerVoice="female",
+  recall=[{"from":"taps","parts":[G("tenir"),P("du coton")]},
+          {"from":"taps","parts":[G("souffler"),P("sur le coton")]},
+          {"from":"taps","parts":[P("porter un"),G("tee-shirt",["tee-shirt","T-shirt"]),P("blanc")]},
+          {"from":"answer","parts":[P("tient du"),G("coton")]}],
+  notes="English boxes 1 and 2 are identical in every frame; she holds the cotton almost the whole clip and blows on it only in the last frames, so phrase 2 is true only at the end. No noun row: 'coton' is already in the tap rows."),
+195: dict(level="A", keyWord="la toux",
+  taps=[tap("tousser très fort","la femme","female"), tap("apporter du thé chaud","l'homme","male"), tap("marcher sur la couverture","le chat","female")],
+  nouns=[n("les plantes","female"),n("la tasse","female"),n("la couverture","female"),n("le chat","female")],
+  question="Que fait la femme malade ?", answer="Elle tousse très fort.".split(), answerVoice="female",
+  recall=[{"from":"taps","parts":[G("tousser"),P("très fort")]},
+          {"from":"taps","parts":[P("apporter du"),G("thé"),P("chaud")]},
+          {"from":"taps","parts":[P("marcher sur la"),G("couverture")]},
+          {"from":"answer","parts":[P("tousse très"),G("fort")]}],
+  notes="Phrase 1: 'tousser très fort' instead of 'dans sa main' - she mostly holds her throat while coughing, and coughs into her fist only briefly; box 1 also covers later frames where she sips the tea. Key word 'la toux' (noun) is not in the noun set, so it appears in no exercise (only the verb tousser)."),
+196: dict(level="B", keyWord="le courage",
+  taps=[tap("garder l'équilibre sur une planche","la fille","female"), tap("s'agripper au câble d'acier","la fille","female"), tap("atteindre la plateforme en bois","la fille","female")],
+  nouns=[n("le casque","female"),n("le baudrier","female"),n("la planche","female"),n("les arbres","female")],
+  question="Que fait la fille ?", answer="Elle garde l'équilibre sur une planche étroite.".split(), answerVoice="female",
+  recall=[{"from":"taps","parts":[G("garder"),P("l'équilibre sur une planche")]},
+          {"from":"taps","parts":[P("s'agripper au"),G("câble"),P("d'acier")]},
+          {"from":"taps","parts":[P("atteindre la"),G("plateforme",["plateforme","plate-forme"]),P("en bois")]},
+          {"from":"answer","parts":[P("garde l'équilibre sur une"),G("planche"),P("étroite")]}],
+  notes="All three English boxes cover the girl in every frame; she reaches the platform only in the last frames. Harness = 'le baudrier' (the climbing word in France; 'le harnais' also heard). Key word 'le courage' is not in the noun set and appears in no exercise."),
+197: dict(level="A", keyWord="la vache",
+  taps=[tap("manger de l'herbe verte","la vache","female"), tap("boire le lait","le veau","female"), tap("verser le lait","la femme","female")],
+  nouns=[n("la vache","female"),n("la femme","female"),n("la cloche","female"),n("le lait","female")],
+  question="Que mange la vache ?", answer="La vache mange de l'herbe verte.".split(), answerVoice="female",
+  recall=[{"from":"taps","parts":[G("manger"),P("de l'herbe verte")]},
+          {"from":"taps","parts":[P("boire le"),G("lait")]},
+          {"from":"taps","parts":[G("verser"),P("le lait")]},
+          {"from":"nouns","parts":[P("la"),G("vache")]},
+          {"from":"answer","parts":[P("mange de l'herbe"),G("verte")]}],
+  notes="Calf box: in the early frames the calf only stands in the background; it drinks the milk in the last frames. Cow box also covers the final frames where it nuzzles the woman."),
+}
+for i,d in docs.items():
+    out = {"mediaId": i, "lang": "fr", "level": d["level"], "keyWord": d["keyWord"], "taps": d["taps"], "nouns": d["nouns"],
+           "question": d["question"], "answer": d["answer"], "answerVoice": d["answerVoice"], "carousel": [], "recall": d["recall"], "notes": d["notes"]}
+    json.dump(out, open(f"content/fr/{i}.json","w"), ensure_ascii=False, indent=1)

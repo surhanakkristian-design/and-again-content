@@ -1,0 +1,119 @@
+{
+  "mediaId": 246,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "conducir",
+  "taps": [
+    {
+      "phrase": "conducir el coche",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar un gorro gris",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "sonreír a la conductora",
+      "target": "el hombre",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el retrovisor",
+      "voice": "female"
+    },
+    {
+      "word": "el mar",
+      "voice": "female"
+    },
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo la mujer?",
+  "answer": [
+    "Está",
+    "conduciendo",
+    "un",
+    "coche",
+    "junto",
+    "al",
+    "mar."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "conducir",
+          "gap": true,
+          "accept": [
+            "conducir"
+          ]
+        },
+        {
+          "text": "el coche"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "gorro",
+          "gap": true,
+          "accept": [
+            "gorro"
+          ]
+        },
+        {
+          "text": "gris"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sonreír",
+          "gap": true,
+          "accept": [
+            "sonreír"
+          ]
+        },
+        {
+          "text": "a la conductora"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está conduciendo un coche junto al"
+        },
+        {
+          "text": "mar",
+          "gap": true,
+          "accept": [
+            "mar"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Source keyWord.es is the verb 'conducir' for English noun 'driving'; fits the clip. English 'a grey hat' is a knitted beanie: 'un gorro gris'. Mirror = rear-view mirror: 'el retrovisor'."
+}

@@ -1,0 +1,127 @@
+{
+  "mediaId": 26,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Strohhalm",
+  "taps": [
+    {
+      "phrase": "einen langen Strohhalm halten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "Orangensaft trinken",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf der Theke stehen",
+      "target": "das Glas",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Sonnenbrille",
+      "voice": "male"
+    },
+    {
+      "word": "der Strohhalm",
+      "voice": "male"
+    },
+    {
+      "word": "das Glas",
+      "voice": "male"
+    },
+    {
+      "word": "das Hemd",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "trinkt",
+    "Saft",
+    "durch",
+    "einen",
+    "Strohhalm."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen langen"
+        },
+        {
+          "text": "Strohhalm",
+          "gap": true,
+          "accept": [
+            "Strohhalm"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Orangensaft"
+        },
+        {
+          "text": "trinken",
+          "gap": true,
+          "accept": [
+            "trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf der"
+        },
+        {
+          "text": "Theke",
+          "gap": true,
+          "accept": [
+            "Theke",
+            "Tresen",
+            "Bar"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "trinkt"
+        },
+        {
+          "text": "Saft",
+          "gap": true,
+          "accept": [
+            "Saft",
+            "Orangensaft"
+          ]
+        },
+        {
+          "text": "durch einen Strohhalm"
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 3: in the last boxed frames the man holds the empty glass upside down in the air; in most boxed frames it stands on the bar counter (die Theke). Answer: German also allows 'Er trinkt durch einen Strohhalm Saft.' (less natural; second order possible). No noun row: Strohhalm is in tap row 1."
+}

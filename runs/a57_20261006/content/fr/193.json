@@ -1,0 +1,116 @@
+{
+ "mediaId": 193,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "corrompu",
+ "taps": [
+  {
+   "phrase": "accepter un pot-de-vin",
+   "target": "le fonctionnaire",
+   "voice": "male"
+  },
+  {
+   "phrase": "tamponner le document",
+   "target": "le fonctionnaire",
+   "voice": "male"
+  },
+  {
+   "phrase": "glisser la main dans sa poche",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le tampon",
+   "voice": "male"
+  },
+  {
+   "word": "la moustache",
+   "voice": "male"
+  },
+  {
+   "word": "le document",
+   "voice": "male"
+  },
+  {
+   "word": "le tablier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Le",
+  "fonctionnaire",
+  "corrompu",
+  "accepte",
+  "un",
+  "pot-de-vin."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "accepter un"
+    },
+    {
+     "text": "pot-de-vin",
+     "gap": true,
+     "accept": [
+      "pot-de-vin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tamponner",
+     "gap": true,
+     "accept": [
+      "tamponner"
+     ]
+    },
+    {
+     "text": "le document"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "glisser la main dans sa"
+    },
+    {
+     "text": "poche",
+     "gap": true,
+     "accept": [
+      "poche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "accepte",
+     "gap": true,
+     "accept": [
+      "accepte",
+      "prend"
+     ]
+    },
+    {
+     "text": "un pot-de-vin"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'corrompu' (adjective) appears only in the model answer subject, so no recall row carries it. Phrase 3: she slips her hand into her apron pocket and pulls out the pouch; 'glisser la main' chosen as the B1 verb. Box 1 also covers frames before the bribe (refusing, open palm); phrase written for the bribe moment."
+}

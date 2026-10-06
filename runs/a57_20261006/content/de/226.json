@@ -1,0 +1,26 @@
+{
+  "mediaId": 226, "lang": "de", "level": "B",
+  "keyWord": "die Verzweiflung",
+  "taps": [
+    { "phrase": "in der Unterführung Akkordeon spielen", "target": "der Musiker", "voice": "male" },
+    { "phrase": "verzweifelt auf dem Boden zusammensacken", "target": "der Musiker", "voice": "male" },
+    { "phrase": "aufgeklappt und leer daliegen", "target": "der Instrumentenkoffer", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Akkordeon", "voice": "male" },
+    { "word": "das Graffiti", "voice": "male" },
+    { "word": "der Instrumentenkoffer", "voice": "male" },
+    { "word": "der Schaukasten", "voice": "male" }
+  ],
+  "question": "Was spielt der Musiker?",
+  "answer": ["Er", "spielt", "Akkordeon."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "in der" }, { "text": "Unterführung", "gap": true, "accept": ["Unterführung"] }, { "text": "Akkordeon spielen" } ] },
+    { "from": "taps", "parts": [ { "text": "verzweifelt", "gap": true, "accept": ["verzweifelt"] }, { "text": "auf dem Boden zusammensacken" } ] },
+    { "from": "taps", "parts": [ { "text": "aufgeklappt und" }, { "text": "leer", "gap": true, "accept": ["leer"] }, { "text": "daliegen" } ] },
+    { "from": "answer", "parts": [ { "text": "spielt" }, { "text": "Akkordeon", "gap": true, "accept": ["Akkordeon", "Ziehharmonika"] } ] }
+  ],
+  "notes": "Taps 1 and 2 share one box (same target, as in English); the box covers standing play, crouching at the case and the final slump on the tunnel floor. 'zusammensacken' fits the crouch and the final slump better than 'kauern' (he ends up sitting/lying, still holding the accordion). 'verzweifelt' brings the key word 'die Verzweiflung' in as its adjective. 'der Schaukasten' = the glazed noticeboard on the wall. Answer kept short ('Er spielt Akkordeon.'): 'Akkordeon' is the B-level word; adding 'in der Unterführung' would allow two word orders."
+}

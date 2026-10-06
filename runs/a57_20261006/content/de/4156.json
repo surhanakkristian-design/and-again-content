@@ -1,0 +1,121 @@
+{
+ "mediaId": 4156,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "sich nähern",
+ "taps": [
+  {
+   "phrase": "auf dem Oberkörper des Mannes stehen",
+   "target": "der Roboter",
+   "voice": "male"
+  },
+  {
+   "phrase": "nach dem Roboter hechten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "beide Hände ausstrecken",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Hecke",
+   "voice": "male"
+  },
+  {
+   "word": "der Zaun",
+   "voice": "male"
+  },
+  {
+   "word": "der Roboter",
+   "voice": "male"
+  },
+  {
+   "word": "der Rasen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Roboter am Anfang?",
+ "answer": [
+  "Er",
+  "nähert",
+  "sich",
+  "der",
+  "Kamera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Oberkörper",
+     "gap": true,
+     "accept": [
+      "Oberkörper",
+      "Bauch"
+     ]
+    },
+    {
+     "text": "des Mannes stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nach dem Roboter"
+    },
+    {
+     "text": "hechten",
+     "gap": true,
+     "accept": [
+      "hechten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beide Hände"
+    },
+    {
+     "text": "ausstrecken",
+     "gap": true,
+     "accept": [
+      "ausstrecken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "nähert",
+     "gap": true,
+     "accept": [
+      "nähert"
+     ]
+    },
+    {
+     "text": "sich"
+    },
+    {
+     "text": "der Kamera"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers the first half where the robot walks along the path; the phrase describes the second half, as the English. Key word in the answer ('nähert sich'). English 'along the path' left out to keep one word order."
+}

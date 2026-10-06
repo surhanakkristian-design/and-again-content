@@ -1,0 +1,135 @@
+{
+  "mediaId": 119,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Glühbirne",
+  "taps": [
+    {
+      "phrase": "warmes Licht geben",
+      "target": "die Glühbirne",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine Tasse halten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "graues Fell haben",
+      "target": "die Katze",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Glühbirne",
+      "voice": "male"
+    },
+    {
+      "word": "die Katze",
+      "voice": "male"
+    },
+    {
+      "word": "die Schüssel",
+      "voice": "male"
+    },
+    {
+      "word": "die Bücher",
+      "voice": "male"
+    }
+  ],
+  "question": "Was hält die Frau?",
+  "answer": [
+    "Sie",
+    "hält",
+    "eine",
+    "Tasse."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "warmes"
+        },
+        {
+          "text": "Licht",
+          "gap": true,
+          "accept": [
+            "Licht"
+          ]
+        },
+        {
+          "text": "geben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine Tasse"
+        },
+        {
+          "text": "halten",
+          "gap": true,
+          "accept": [
+            "halten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "graues"
+        },
+        {
+          "text": "Fell",
+          "gap": true,
+          "accept": [
+            "Fell"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Glühbirne",
+          "gap": true,
+          "accept": [
+            "Glühbirne",
+            "Birne"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält",
+          "gap": true,
+          "accept": [
+            "hält"
+          ]
+        },
+        {
+          "text": "eine Tasse"
+        }
+      ]
+    }
+  ],
+  "notes": "The phrase-1 box also covers the frames where the old bulb is dark and being changed; written for the lit frames (start and end). A small lamp on the shelf also glows in the background. Key word die Glühbirne is noun 1 and gets its own recall row."
+}

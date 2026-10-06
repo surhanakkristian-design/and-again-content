@@ -1,0 +1,118 @@
+{
+ "mediaId": 4858,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la spirale",
+ "taps": [
+  {
+   "phrase": "renverser le premier domino",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "serrer les poings",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "former une immense spirale",
+   "target": "les dominos",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la spirale",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le sol",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'est-ce que l'homme a construit ?",
+ "answer": [
+  "Il",
+  "a",
+  "construit",
+  "une",
+  "immense",
+  "spirale",
+  "de",
+  "dominos."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "renverser",
+     "gap": true,
+     "accept": [
+      "renverser",
+      "pousser"
+     ]
+    },
+    {
+     "text": "le premier domino"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer les"
+    },
+    {
+     "text": "poings",
+     "gap": true,
+     "accept": [
+      "poings"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "former une immense"
+    },
+    {
+     "text": "spirale",
+     "gap": true,
+     "accept": [
+      "spirale"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "a"
+    },
+    {
+     "text": "construit",
+     "gap": true,
+     "accept": [
+      "construit",
+      "fait"
+     ]
+    },
+    {
+     "text": "une immense spirale de dominos"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's box (phrases 1 and 2 share it) covers both the finger push on the first domino (start) and the raised clenched fists (end); each phrase is true in part of the boxed frames, as in English."
+}

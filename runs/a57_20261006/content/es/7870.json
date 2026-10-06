@@ -1,0 +1,119 @@
+{
+ "mediaId": 7870,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "con esperanza",
+ "taps": [
+  {
+   "phrase": "mirar la comida con esperanza",
+   "target": "el perro",
+   "voice": "female"
+  },
+  {
+   "phrase": "colgar del tenedor",
+   "target": "los espaguetis",
+   "voice": "female"
+  },
+  {
+   "phrase": "brillar en el olivo",
+   "target": "las luces",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "los espaguetis",
+   "voice": "female"
+  },
+  {
+   "word": "la pulsera",
+   "voice": "female"
+  },
+  {
+   "word": "el muro de piedra",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el perro?",
+ "answer": [
+  "Mira",
+  "fijamente",
+  "los",
+  "espaguetis",
+  "del",
+  "tenedor."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar la comida con"
+    },
+    {
+     "text": "esperanza",
+     "gap": true,
+     "accept": [
+      "esperanza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colgar",
+     "gap": true,
+     "accept": [
+      "colgar"
+     ]
+    },
+    {
+     "text": "del tenedor"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar en el"
+    },
+    {
+     "text": "olivo",
+     "gap": true,
+     "accept": [
+      "olivo",
+      "árbol"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Mira fijamente los"
+    },
+    {
+     "text": "espaguetis",
+     "gap": true,
+     "accept": [
+      "espaguetis"
+     ]
+    },
+    {
+     "text": "del tenedor"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 is not 'relamerse' (English 'lick its lips'): the dog only shows its tongue in the last frames, while it looks at the food hopefully in every boxed frame; this also carries the key word. Key word is an adverbial, used in phrase 1 only."
+}

@@ -1,0 +1,120 @@
+{
+ "mediaId": 202,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "überqueren",
+ "taps": [
+  {
+   "phrase": "die Straße überqueren",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf sein Handy schauen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Daumen hochhalten",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "das Auto",
+   "voice": "male"
+  },
+  {
+   "word": "die Häuser",
+   "voice": "male"
+  },
+  {
+   "word": "die Straße",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "überquert",
+  "die",
+  "Straße."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Straße"
+    },
+    {
+     "text": "überqueren",
+     "gap": true,
+     "accept": [
+      "überqueren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf sein"
+    },
+    {
+     "text": "Handy",
+     "gap": true,
+     "accept": [
+      "Handy",
+      "Smartphone"
+     ]
+    },
+    {
+     "text": "schauen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "überquert die"
+    },
+    {
+     "text": "Straße",
+     "gap": true,
+     "accept": [
+      "Straße"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three tap boxes cover the same man for the whole clip; phrase 2 (phone) is true in the WRONG part, phrase 3 (thumb up) only in the last frames. 'die Häuser' chosen as the A-level everyday word for English 'buildings' (die Gebäude is B1)."
+}

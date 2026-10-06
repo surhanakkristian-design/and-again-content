@@ -1,0 +1,126 @@
+{
+ "mediaId": 343,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "packen",
+ "taps": [
+  {
+   "phrase": "einen Tauchring packen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Beckenboden liegen",
+   "target": "der Ring",
+   "voice": "female"
+  },
+  {
+   "phrase": "im flachen Wasser waten",
+   "target": "der Mann in roten Shorts",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Stufen",
+   "voice": "female"
+  },
+  {
+   "word": "der Tauchring",
+   "voice": "female"
+  },
+  {
+   "word": "die Taucherbrille",
+   "voice": "female"
+  },
+  {
+   "word": "der Badeanzug",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau unter Wasser?",
+ "answer": [
+  "Sie",
+  "packt",
+  "einen",
+  "Tauchring",
+  "am",
+  "Beckenboden."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Tauchring"
+    },
+    {
+     "text": "packen",
+     "gap": true,
+     "accept": [
+      "packen",
+      "greifen",
+      "schnappen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Beckenboden",
+     "gap": true,
+     "accept": [
+      "Beckenboden",
+      "Boden",
+      "Grund"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im flachen Wasser"
+    },
+    {
+     "text": "waten",
+     "gap": true,
+     "accept": [
+      "waten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "packt einen"
+    },
+    {
+     "text": "Tauchring",
+     "gap": true,
+     "accept": [
+      "Tauchring",
+      "Ring"
+     ]
+    },
+    {
+     "text": "am Beckenboden"
+    }
+   ]
+  }
+ ],
+ "notes": "Question changed to 'Was macht die Frau unter Wasser?' because 'Was packt die Frau?' reads as 'pack'. German also allows 'Am Beckenboden packt sie einen Tauchring' with these chips. 'die Taucherbrille' is the everyday word for the diving mask. The man in red shorts is only partly visible (legs) at the top in some frames."
+}

@@ -1,0 +1,123 @@
+{
+  "mediaId": 798,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Trainingsanzug",
+  "taps": [
+    {
+      "phrase": "den Reißverschluss der Jacke hochziehen",
+      "target": "die junge Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Topfpflanzen gießen",
+      "target": "die ältere Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen dichten Schnurrbart tragen",
+      "target": "der Mann mit Schnurrbart",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Wäsche",
+      "voice": "female"
+    },
+    {
+      "word": "der Roller",
+      "voice": "female"
+    },
+    {
+      "word": "der Trainingsanzug",
+      "voice": "female"
+    },
+    {
+      "word": "die Gießkanne",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die junge Frau?",
+  "answer": [
+    "Sie",
+    "tanzt",
+    "in",
+    "einem",
+    "türkisfarbenen",
+    "Trainingsanzug."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Reißverschluss",
+          "gap": true,
+          "accept": [
+            "Reißverschluss"
+          ]
+        },
+        {
+          "text": "der Jacke hochziehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Topfpflanzen"
+        },
+        {
+          "text": "gießen",
+          "gap": true,
+          "accept": [
+            "gießen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen dichten"
+        },
+        {
+          "text": "Schnurrbart",
+          "gap": true,
+          "accept": [
+            "Schnurrbart",
+            "Schnauzbart",
+            "Schnauzer"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "tanzt in einem türkisfarbenen"
+        },
+        {
+          "text": "Trainingsanzug",
+          "gap": true,
+          "accept": [
+            "Trainingsanzug"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 1: the young woman zips the jacket only in the opening close-ups; in the later boxed frames she dances (same in English). Scooter = 'der Roller' (a Vespa-type motor scooter, everyday word). 'türkisfarbenen' chosen over uninflected/colloquial 'türkisen'. No noun row: Trainingsanzug is gapped in the answer row."
+}

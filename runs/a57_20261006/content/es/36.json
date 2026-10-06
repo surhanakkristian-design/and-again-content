@@ -1,0 +1,120 @@
+{
+ "mediaId": 36,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "adorar",
+ "taps": [
+  {
+   "phrase": "achuchar a su gato naranja",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse colgando en el aire",
+   "target": "el gato",
+   "voice": "female"
+  },
+  {
+   "phrase": "coger en brazos a su mascota",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la maceta",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "el cojín",
+   "voice": "female"
+  },
+  {
+   "word": "la rebeca",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Achucha",
+  "al",
+  "gato",
+  "que",
+  "adora."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "achuchar",
+     "gap": true,
+     "accept": [
+      "achuchar",
+      "abrazar"
+     ]
+    },
+    {
+     "text": "a su gato naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse"
+    },
+    {
+     "text": "colgando",
+     "gap": true,
+     "accept": [
+      "colgando"
+     ]
+    },
+    {
+     "text": "en el aire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "coger en brazos a su"
+    },
+    {
+     "text": "mascota",
+     "gap": true,
+     "accept": [
+      "mascota",
+      "gato"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Achucha al gato que"
+    },
+    {
+     "text": "adora",
+     "gap": true,
+     "accept": [
+      "adora",
+      "quiere"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject (natural in Spain); answer row = whole sentence. 'achuchar' (Spain, B2) for cuddle; 'la rebeca' = Spain word for cardigan."
+}

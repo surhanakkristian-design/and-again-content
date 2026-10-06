@@ -1,0 +1,26 @@
+{
+  "mediaId": 232, "lang": "de", "level": "B",
+  "keyWord": "enttäuscht",
+  "taps": [
+    { "phrase": "sich voller Vorfreude die Hände reiben", "target": "der Mann im Regenmantel", "voice": "male" },
+    { "phrase": "zutiefst enttäuscht aussehen", "target": "der Mann im Regenmantel", "voice": "male" },
+    { "phrase": "nur eine winzige Portion enthalten", "target": "die Schale des Mannes", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Mütze", "voice": "male" },
+    { "word": "der Bart", "voice": "male" },
+    { "word": "der Regenmantel", "voice": "male" },
+    { "word": "die Schale", "voice": "male" }
+  ],
+  "question": "Wie sieht der Mann vorne aus?",
+  "answer": ["Er", "sieht", "sehr", "enttäuscht", "aus."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich voller" }, { "text": "Vorfreude", "gap": true, "accept": ["Vorfreude"] }, { "text": "die Hände reiben" } ] },
+    { "from": "taps", "parts": [ { "text": "zutiefst" }, { "text": "enttäuscht", "gap": true, "accept": ["enttäuscht"] }, { "text": "aussehen" } ] },
+    { "from": "taps", "parts": [ { "text": "nur eine winzige" }, { "text": "Portion", "gap": true, "accept": ["Portion"] }, { "text": "enthalten" } ] },
+    { "from": "answer", "parts": [ { "text": "sieht", "gap": true, "accept": ["sieht"] }, { "text": "sehr enttäuscht aus" } ] }
+  ],
+  "notes": "Taps 1 and 2 share the same box over the whole clip (as in English): he rubs his hands only in the opening frames and looks disappointed at the end. The 'tray' is a paper takeaway dish: 'die Schale' (Pappschale) is the natural word, 'das Tablett' would be a serving tray."
+}

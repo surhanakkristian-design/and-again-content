@@ -1,0 +1,117 @@
+{
+ "mediaId": 731,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el sello",
+ "taps": [
+  {
+   "phrase": "sujetar muchos sellos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "echar una carta al buzón",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar encima del buzón",
+   "target": "el pájaro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pájaro",
+   "voice": "male"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "los sellos",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Echa",
+  "una",
+  "carta",
+  "al",
+  "buzón."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar muchos"
+    },
+    {
+     "text": "sellos",
+     "gap": true,
+     "accept": [
+      "sellos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar",
+     "gap": true,
+     "accept": [
+      "echar"
+     ]
+    },
+    {
+     "text": "una carta al buzón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar encima del"
+    },
+    {
+     "text": "buzón",
+     "gap": true,
+     "accept": [
+      "buzón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Echa una"
+    },
+    {
+     "text": "carta",
+     "gap": true,
+     "accept": [
+      "carta"
+     ]
+    },
+    {
+     "text": "al buzón"
+    }
+   ]
+  }
+ ],
+ "notes": "The bird is a crow ('el cuervo'), kept as 'el pájaro' for level A, as in English."
+}

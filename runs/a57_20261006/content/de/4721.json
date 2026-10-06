@@ -1,0 +1,120 @@
+{
+  "mediaId": 4721,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "verblassen",
+  "taps": [
+    {
+      "phrase": "über die Schulter deuten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "am Himmel verblassen",
+      "target": "der Regenbogen",
+      "voice": "female"
+    },
+    {
+      "phrase": "in die Ferne blicken",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Regenbogen",
+      "voice": "female"
+    },
+    {
+      "word": "der See",
+      "voice": "female"
+    },
+    {
+      "word": "die Regenjacke",
+      "voice": "female"
+    },
+    {
+      "word": "die Pfütze",
+      "voice": "female"
+    }
+  ],
+  "question": "Was passiert mit dem Regenbogen?",
+  "answer": [
+    "Der",
+    "Regenbogen",
+    "verblasst",
+    "am",
+    "Himmel."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über die"
+        },
+        {
+          "text": "Schulter",
+          "gap": true,
+          "accept": [
+            "Schulter"
+          ]
+        },
+        {
+          "text": "deuten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am Himmel"
+        },
+        {
+          "text": "verblassen",
+          "gap": true,
+          "accept": [
+            "verblassen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in die"
+        },
+        {
+          "text": "Ferne",
+          "gap": true,
+          "accept": [
+            "Ferne"
+          ]
+        },
+        {
+          "text": "blicken"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "verblasst",
+          "gap": true,
+          "accept": [
+            "verblasst"
+          ]
+        },
+        {
+          "text": "am Himmel"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrases 1 and 3 have the same target and the same box (the woman, whole clip). English 'point over her shoulder' (phrase 1) is true only in the first ~10 frames; kept as 'über die Schulter deuten' so the two phrases differ. English 'grin at the camera' (phrase 3) is true only in the first ~8 frames; for most boxed frames she looks away into the distance, so phrase 3 = 'in die Ferne blicken'. Rainbow box is OFF once the rainbow is gone. 'die Regenjacke' (hooded rain jacket) is the everyday word, not 'Regenmantel'."
+}

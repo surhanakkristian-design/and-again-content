@@ -1,0 +1,137 @@
+{
+ "mediaId": 284,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le masque visage",
+ "taps": [
+  {
+   "phrase": "porter un bandeau en éponge",
+   "target": "la femme en violet",
+   "voice": "female"
+  },
+  {
+   "phrase": "montrer son amie du doigt",
+   "target": "la femme en gris",
+   "voice": "female"
+  },
+  {
+   "phrase": "se reposer sur un coussin",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bandeau",
+   "voice": "female"
+  },
+  {
+   "word": "le masque visage",
+   "voice": "female"
+  },
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "le bol",
+   "voice": "female"
+  }
+ ],
+ "question": "Que portent les femmes ?",
+ "answer": [
+  "Elles",
+  "portent",
+  "des",
+  "masques",
+  "à",
+  "l'argile",
+  "verte."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "bandeau",
+     "gap": true,
+     "accept": [
+      "bandeau"
+     ]
+    },
+    {
+     "text": "en éponge"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer son amie du"
+    },
+    {
+     "text": "doigt",
+     "gap": true,
+     "accept": [
+      "doigt"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se reposer sur un"
+    },
+    {
+     "text": "coussin",
+     "gap": true,
+     "accept": [
+      "coussin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "masque",
+     "gap": true,
+     "accept": [
+      "masque"
+     ]
+    },
+    {
+     "text": "visage"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "portent",
+     "gap": true,
+     "accept": [
+      "portent"
+     ]
+    },
+    {
+     "text": "des masques à l'argile verte"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le masque visage' is product-label French; a native says 'le masque (pour le visage)' or 'le masque à l'argile'. Kept on the noun pill; proposal: 'le masque pour le visage'. Answer uses 'des masques à l'argile verte' (plural 'masques visage' sounds odd), hence the nouns recall row. Phrase 2: the green box covers mostly the woman in grey sitting with her mask (and the spatula in one frame); she points at her friend only in the last frames. Phrase 3: only the dog's head is visible behind the women; the cushion is not clearly shown."
+}

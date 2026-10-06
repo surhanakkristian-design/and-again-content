@@ -1,0 +1,127 @@
+{
+ "mediaId": 4538,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Ruhe",
+ "taps": [
+  {
+   "phrase": "den Glastisch schrubben",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Müllsack zubinden",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich auf dem Sofa zurücklehnen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Sofa",
+   "voice": "female"
+  },
+  {
+   "word": "die Heizung",
+   "voice": "female"
+  },
+  {
+   "word": "die Glühbirne",
+   "voice": "female"
+  },
+  {
+   "word": "das Bücherregal",
+   "voice": "female"
+  }
+ ],
+ "question": "Wo ruht sich die Frau aus?",
+ "answer": [
+  "Sie",
+  "gönnt",
+  "sich",
+  "auf",
+  "dem",
+  "Sofa",
+  "etwas",
+  "Ruhe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Glastisch"
+    },
+    {
+     "text": "schrubben",
+     "gap": true,
+     "accept": [
+      "schrubben",
+      "putzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Müllsack",
+     "gap": true,
+     "accept": [
+      "Müllsack",
+      "Müllbeutel"
+     ]
+    },
+    {
+     "text": "zubinden"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich auf dem"
+    },
+    {
+     "text": "Sofa",
+     "gap": true,
+     "accept": [
+      "Sofa",
+      "Couch"
+     ]
+    },
+    {
+     "text": "zurücklehnen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "gönnt sich auf dem Sofa etwas"
+    },
+    {
+     "text": "Ruhe",
+     "gap": true,
+     "accept": [
+      "Ruhe",
+      "Erholung"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three English tap boxes are the same box on the only person; each phrase is true only in part of the clip (scrubbing at the start, tying the bag in the close-ups, reclining at the end). Answer allows a second order 'Sie gönnt sich etwas Ruhe auf dem Sofa.'; the given order is the more natural one. 'die Heizung' = everyday word for the radiator (Heizkörper is the technical one)."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 232,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "decepcionado",
+ "taps": [
+  {
+   "phrase": "frotarse las manos con impaciencia",
+   "target": "el hombre del chubasquero",
+   "voice": "male"
+  },
+  {
+   "phrase": "parecer muy decepcionado",
+   "target": "el hombre del chubasquero",
+   "voice": "male"
+  },
+  {
+   "phrase": "contener una ración diminuta",
+   "target": "la bandeja del hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gorro",
+   "voice": "male"
+  },
+  {
+   "word": "la barba",
+   "voice": "male"
+  },
+  {
+   "word": "el chubasquero",
+   "voice": "male"
+  },
+  {
+   "word": "la bandeja",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué aspecto tiene el hombre de delante?",
+ "answer": [
+  "Parece",
+  "decepcionado",
+  "con",
+  "su",
+  "bandeja",
+  "vacía."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "frotarse las manos con"
+    },
+    {
+     "text": "impaciencia",
+     "gap": true,
+     "accept": [
+      "impaciencia",
+      "ganas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "parecer muy"
+    },
+    {
+     "text": "decepcionado",
+     "gap": true,
+     "accept": [
+      "decepcionado"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "contener una"
+    },
+    {
+     "text": "ración",
+     "gap": true,
+     "accept": [
+      "ración",
+      "porción"
+     ]
+    },
+    {
+     "text": "diminuta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Parece decepcionado con su"
+    },
+    {
+     "text": "bandeja",
+     "gap": true,
+     "accept": [
+      "bandeja"
+     ]
+    },
+    {
+     "text": "vacía"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the same target (as in English). Raincoat = 'el chubasquero' (everyday Spain word). Phrase 1: he rubs his hands only in the first boxed frames."
+}

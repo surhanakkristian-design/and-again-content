@@ -1,0 +1,127 @@
+{
+ "mediaId": 7563,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "se mettre en route",
+ "taps": [
+  {
+   "phrase": "piloter une moto",
+   "target": "le motard",
+   "voice": "male"
+  },
+  {
+   "phrase": "être installé dans le side-car",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "crier de joie près du portail",
+   "target": "la famille",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la maison en pierre",
+   "voice": "male"
+  },
+  {
+   "word": "le portail",
+   "voice": "male"
+  },
+  {
+   "word": "le sac de couchage",
+   "voice": "male"
+  },
+  {
+   "word": "le gravier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le motard ?",
+ "answer": [
+  "Il",
+  "se",
+  "met",
+  "en",
+  "route",
+  "à",
+  "moto."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "piloter",
+     "gap": true,
+     "accept": [
+      "piloter",
+      "conduire"
+     ]
+    },
+    {
+     "text": "une moto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "installé",
+     "gap": true,
+     "accept": [
+      "installé",
+      "assis"
+     ]
+    },
+    {
+     "text": "dans le side-car"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crier de"
+    },
+    {
+     "text": "joie",
+     "gap": true,
+     "accept": [
+      "joie"
+     ]
+    },
+    {
+     "text": "près du portail"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se met en"
+    },
+    {
+     "text": "route",
+     "gap": true,
+     "accept": [
+      "route"
+     ]
+    },
+    {
+     "text": "à moto"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 avoids 'dire au revoir / faire signe' because the rider waves too. 'cottage' rendered as 'la maison en pierre' (natural in France; 'cottage' is an anglicism). Phrase 1: dog box is off-screen in the first frame only."
+}

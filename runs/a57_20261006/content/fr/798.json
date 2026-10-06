@@ -1,0 +1,26 @@
+{
+  "mediaId": 798, "lang": "fr", "level": "B",
+  "keyWord": "le survêtement",
+  "taps": [
+    { "phrase": "remonter la fermeture éclair de sa veste", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "arroser les plantes en pot", "target": "la vieille dame", "voice": "female" },
+    { "phrase": "porter une épaisse moustache", "target": "l'homme à la moustache", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le linge", "voice": "female" },
+    { "word": "le scooter", "voice": "female" },
+    { "word": "le survêtement", "voice": "female" },
+    { "word": "l'arrosoir", "voice": "female" }
+  ],
+  "question": "Que fait la jeune femme ?",
+  "answer": ["Elle", "danse", "en", "survêtement", "turquoise."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "remonter", "gap": true, "accept": ["remonter"] }, { "text": "la fermeture éclair" }, { "text": "de sa veste" } ] },
+    { "from": "taps", "parts": [ { "text": "arroser les" }, { "text": "plantes", "gap": true, "accept": ["plantes", "fleurs"] }, { "text": "en pot" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une épaisse" }, { "text": "moustache", "gap": true, "accept": ["moustache"] } ] },
+    { "from": "answer", "parts": [ { "text": "danse en" }, { "text": "survêtement", "gap": true, "accept": ["survêtement", "jogging"] }, { "text": "turquoise" } ] }
+  ],
+  "notes": "Phrase 1's red box follows the young woman through the whole clip, but she zips up the jacket only in the first frames (close-up); the rest is dancing. The phrase is kept as the English target; verifier please check. 'jogging' is accepted in the answer row as the everyday French synonym for a tracksuit."
+}

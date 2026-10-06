@@ -1,0 +1,128 @@
+{
+ "mediaId": 5117,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la librería",
+ "taps": [
+  {
+   "phrase": "hojear un libro de tapa dura",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "quedarse boquiabierto",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar repletas de libros",
+   "target": "las estanterías",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas",
+   "voice": "male"
+  },
+  {
+   "word": "las estanterías",
+   "voice": "male"
+  },
+  {
+   "word": "la chaqueta vaquera",
+   "voice": "male"
+  },
+  {
+   "word": "el libro de tapa dura",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el chico?",
+ "answer": [
+  "El",
+  "chico",
+  "hojea",
+  "un",
+  "libro",
+  "en",
+  "la",
+  "librería."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hojear",
+     "gap": true,
+     "accept": [
+      "hojear"
+     ]
+    },
+    {
+     "text": "un libro"
+    },
+    {
+     "text": "de tapa dura"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse"
+    },
+    {
+     "text": "boquiabierto",
+     "gap": true,
+     "accept": [
+      "boquiabierto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "repletas",
+     "gap": true,
+     "accept": [
+      "repletas",
+      "llenas",
+      "abarrotadas"
+     ]
+    },
+    {
+     "text": "de libros"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hojea un libro"
+    },
+    {
+     "text": "en la"
+    },
+    {
+     "text": "librería",
+     "gap": true,
+     "accept": [
+      "librería"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'hardback' = 'el libro de tapa dura' (no single everyday word). 'young man' = 'el chico' (Spain). The answer could in theory start with 'En la librería', but the subject-first order is the natural one."
+}

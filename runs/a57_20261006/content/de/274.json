@@ -1,0 +1,118 @@
+{
+ "mediaId": 274,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "jeder",
+ "taps": [
+  {
+   "phrase": "einen Schal hochhalten",
+   "target": "der Mann mit dem Schal",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf den Schultern sitzen",
+   "target": "der Junge",
+   "voice": "male"
+  },
+  {
+   "phrase": "vom Dach leuchten",
+   "target": "die Lichter",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lichter",
+   "voice": "male"
+  },
+  {
+   "word": "der Junge",
+   "voice": "male"
+  },
+  {
+   "word": "der Schal",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen alle?",
+ "answer": [
+  "Alle",
+  "jubeln",
+  "im",
+  "Stadion."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Schal",
+     "gap": true,
+     "accept": [
+      "Schal"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf den"
+    },
+    {
+     "text": "Schultern",
+     "gap": true,
+     "accept": [
+      "Schultern"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vom Dach"
+    },
+    {
+     "text": "leuchten",
+     "gap": true,
+     "accept": [
+      "leuchten",
+      "strahlen",
+      "scheinen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "jubeln",
+     "gap": true,
+     "accept": [
+      "jubeln",
+      "schreien"
+     ]
+    },
+    {
+     "text": "im Stadion"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: English 'everyone' (all the people in a place) is 'alle' in natural German; 'jeder' (singular, each one) does not fit 'Was machen alle?' / 'Alle jubeln'. Kept 'jeder' as keyWord; proposal: database word 'alle'. 'jubeln' (cheer) used for the shouting with raised arms; 'schreien' accepted. Tap 2: 'auf jemandes Schultern' is above level A, so 'auf den Schultern sitzen'."
+}

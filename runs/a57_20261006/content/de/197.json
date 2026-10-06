@@ -1,0 +1,27 @@
+{
+  "mediaId": 197, "lang": "de", "level": "A",
+  "keyWord": "die Kuh",
+  "taps": [
+    { "phrase": "grünes Gras fressen", "target": "die Kuh", "voice": "female" },
+    { "phrase": "die Milch trinken", "target": "das Kalb", "voice": "female" },
+    { "phrase": "die Milch in die Kanne gießen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Kuh", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "die Glocke", "voice": "female" },
+    { "word": "die Milch", "voice": "female" }
+  ],
+  "question": "Was frisst die Kuh?",
+  "answer": ["Die", "Kuh", "frisst", "grünes", "Gras."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "grünes Gras" }, { "text": "fressen", "gap": true, "accept": ["fressen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Milch" }, { "text": "trinken", "gap": true, "accept": ["trinken"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Milch in die" }, { "text": "Kanne", "gap": true, "accept": ["Kanne", "Milchkanne"] }, { "text": "gießen" } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Kuh", "gap": true, "accept": ["Kuh"] } ] },
+    { "from": "answer", "parts": [ { "text": "frisst grünes" }, { "text": "Gras", "gap": true, "accept": ["Gras"] } ] }
+  ],
+  "notes": "'fressen' (animals) for the cow; 'trinken' for the calf is natural. Noun row 'die Kuh' added: the key word is in the noun set and no other row contains it (the answer row drops the subject). Phrase 3 names the jug ('in die Kanne') so the woman's action is specific; 'die Glocke' for the cowbell (A-level)."
+}

@@ -1,0 +1,123 @@
+{
+  "mediaId": 7,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Abschlussfeier",
+  "taps": [
+    {
+      "phrase": "sein Zeugnis in die Höhe recken",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "breit in die Kamera grinsen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen anderen Absolventen umarmen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Zeugnis",
+      "voice": "male"
+    },
+    {
+      "word": "das Stadion",
+      "voice": "male"
+    },
+    {
+      "word": "der Absolventenhut",
+      "voice": "male"
+    },
+    {
+      "word": "die Schärpe",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "jubelt",
+    "auf",
+    "seiner",
+    "Abschlussfeier."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sein"
+        },
+        {
+          "text": "Zeugnis",
+          "gap": true,
+          "accept": [
+            "Zeugnis",
+            "Diplom",
+            "Urkunde"
+          ]
+        },
+        {
+          "text": "in die Höhe recken"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "breit in die Kamera"
+        },
+        {
+          "text": "grinsen",
+          "gap": true,
+          "accept": [
+            "grinsen",
+            "lächeln"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen anderen"
+        },
+        {
+          "text": "Absolventen",
+          "gap": true,
+          "accept": [
+            "Absolventen"
+          ]
+        },
+        {
+          "text": "umarmen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "jubelt auf seiner"
+        },
+        {
+          "text": "Abschlussfeier",
+          "gap": true,
+          "accept": [
+            "Abschlussfeier"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Diploma = 'das Zeugnis' (everyday word; 'das Diplom' accepted in the recall gap). Graduation cap = 'der Absolventenhut' (colloquially also 'der Doktorhut', which is technically wrong for a graduate). Model answer uses 'jubeln' instead of a literal 'raising his diploma' so the key word fits in one fixed word order; the raising is in tap 1. Last boxed frame shows him hugging another graduate (tap 3). No noun row: the key word is not a noun of the set; it is gapped in the answer row."
+}

@@ -1,0 +1,127 @@
+{
+ "mediaId": 7744,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "tout à coup",
+ "taps": [
+  {
+   "phrase": "jaillir hors de l'eau",
+   "target": "la baleine",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir fermement sa pagaie",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "rester bouche bée",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la baleine",
+   "voice": "female"
+  },
+  {
+   "word": "le hangar à bateaux",
+   "voice": "female"
+  },
+  {
+   "word": "la pagaie",
+   "voice": "female"
+  },
+  {
+   "word": "le gilet de sauvetage",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la baleine ?",
+ "answer": [
+  "Elle",
+  "jaillit",
+  "tout",
+  "à",
+  "coup",
+  "hors",
+  "de",
+  "l'eau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "jaillir",
+     "gap": true,
+     "accept": [
+      "jaillir",
+      "sortir",
+      "bondir"
+     ]
+    },
+    {
+     "text": "hors de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir fermement sa"
+    },
+    {
+     "text": "pagaie",
+     "gap": true,
+     "accept": [
+      "pagaie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rester"
+    },
+    {
+     "text": "bouche",
+     "gap": true,
+     "accept": [
+      "bouche"
+     ]
+    },
+    {
+     "text": "bée"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "jaillit"
+    },
+    {
+     "text": "tout à coup",
+     "gap": true,
+     "accept": [
+      "tout à coup",
+      "soudain",
+      "brusquement"
+     ]
+    },
+    {
+     "text": "hors de l'eau"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the whale box is on only in the first frame, where it bursts out of the water; 'jaillir hors de l'eau' describes that frame better than 'crash into'. Model answer: 'tout à coup' could also stand at the end of the sentence (two orders possible). Answer-row gap is the multiword key word."
+}

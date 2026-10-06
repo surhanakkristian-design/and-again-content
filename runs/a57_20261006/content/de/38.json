@@ -1,0 +1,123 @@
+{
+ "mediaId": 38,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Flughafen",
+ "taps": [
+  {
+   "phrase": "mit zwei Stäben winken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf den Mann zurollen",
+   "target": "das Flugzeug am Boden",
+   "voice": "male"
+  },
+  {
+   "phrase": "in den Himmel fliegen",
+   "target": "das Flugzeug am Himmel",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Flugzeug",
+   "voice": "male"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "der Turm",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "winkt",
+  "am",
+  "Flughafen",
+  "mit",
+  "zwei",
+  "Stäben."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit zwei Stäben"
+    },
+    {
+     "text": "winken",
+     "gap": true,
+     "accept": [
+      "winken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf den Mann"
+    },
+    {
+     "text": "zurollen",
+     "gap": true,
+     "accept": [
+      "zurollen",
+      "zufahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in den"
+    },
+    {
+     "text": "Himmel",
+     "gap": true,
+     "accept": [
+      "Himmel"
+     ]
+    },
+    {
+     "text": "fliegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "winkt am"
+    },
+    {
+     "text": "Flughafen",
+     "gap": true,
+     "accept": [
+      "Flughafen"
+     ]
+    },
+    {
+     "text": "mit zwei Stäben"
+    }
+   ]
+  }
+ ],
+ "notes": "German allows two orders of the adverbials in the answer chips ('am Flughafen mit zwei Stäben' / 'mit zwei Stäben am Flughafen'); kept the airport first because it carries the key word. 'orange' left out of the phrase (orange/orangefarben is awkward to inflect at level A). Key word der Flughafen is not one of the nouns; it appears only in the answer."
+}

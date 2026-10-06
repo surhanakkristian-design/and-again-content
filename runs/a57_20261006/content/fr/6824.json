@@ -1,0 +1,127 @@
+{
+ "mediaId": 6824,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la climatisation",
+ "taps": [
+  {
+   "phrase": "s'essuyer le front en sueur",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "indiquer la pression",
+   "target": "les manomètres",
+   "voice": "male"
+  },
+  {
+   "phrase": "récupérer l'eau qui s'écoule",
+   "target": "le seau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la climatisation",
+   "voice": "male"
+  },
+  {
+   "word": "le seau",
+   "voice": "male"
+  },
+  {
+   "word": "la casquette",
+   "voice": "male"
+  },
+  {
+   "word": "le ciel",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "fait",
+  "l'entretien",
+  "de",
+  "la",
+  "climatisation."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'essuyer le"
+    },
+    {
+     "text": "front",
+     "gap": true,
+     "accept": [
+      "front"
+     ]
+    },
+    {
+     "text": "en sueur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "indiquer",
+     "gap": true,
+     "accept": [
+      "indiquer",
+      "afficher"
+     ]
+    },
+    {
+     "text": "la pression"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "récupérer",
+     "gap": true,
+     "accept": [
+      "récupérer",
+      "recueillir"
+     ]
+    },
+    {
+     "text": "l'eau qui s'écoule"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait"
+    },
+    {
+     "text": "l'entretien"
+    },
+    {
+     "text": "de la"
+    },
+    {
+     "text": "climatisation",
+     "gap": true,
+     "accept": [
+      "climatisation",
+      "clim"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 pill sits on an outdoor unit: the everyday word for the machine is 'le climatiseur' (or 'la clim'); kept the database word 'la climatisation' (the system), which French also uses for the installation. Proposal if the owner wants the object: 'le climatiseur'."
+}

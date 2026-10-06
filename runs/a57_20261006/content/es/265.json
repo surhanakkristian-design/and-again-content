@@ -1,0 +1,127 @@
+{
+ "mediaId": 265,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el empleado",
+ "taps": [
+  {
+   "phrase": "recibir un sobre",
+   "target": "el chico de gafas",
+   "voice": "male"
+  },
+  {
+   "phrase": "ponerse una chaqueta",
+   "target": "el chico de gafas",
+   "voice": "male"
+  },
+  {
+   "phrase": "tocarle el hombro",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el empleado",
+   "voice": "male"
+  },
+  {
+   "word": "los papeles",
+   "voice": "male"
+  },
+  {
+   "word": "el teclado",
+   "voice": "male"
+  },
+  {
+   "word": "la ventana",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué recibe el empleado?",
+ "answer": [
+  "Recibe",
+  "un",
+  "sobre."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recibir un"
+    },
+    {
+     "text": "sobre",
+     "gap": true,
+     "accept": [
+      "sobre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ponerse una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarle",
+     "gap": true,
+     "accept": [
+      "tocarle"
+     ]
+    },
+    {
+     "text": "el hombro"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "empleado",
+     "gap": true,
+     "accept": [
+      "empleado"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Recibe",
+     "gap": true,
+     "accept": [
+      "Recibe"
+     ]
+    },
+    {
+     "text": "un sobre"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'paper' = stacks of sheets: 'los papeles' is the natural Spanish word for them. Subject dropped in the answer, so the answer row is the whole sentence."
+}

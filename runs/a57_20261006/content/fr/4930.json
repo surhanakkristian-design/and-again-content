@@ -1,0 +1,25 @@
+{
+  "mediaId": 4930, "lang": "fr", "level": "B",
+  "keyWord": "la récompense",
+  "taps": [
+    { "phrase": "lever la main avec enthousiasme", "target": "la fille", "voice": "female" },
+    { "phrase": "montrer fièrement son cahier", "target": "la fille", "voice": "female" },
+    { "phrase": "scintiller sur la page", "target": "l'étoile dorée", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "l'étoile dorée", "voice": "female" },
+    { "word": "le cahier à spirale", "voice": "female" },
+    { "word": "le tableau blanc", "voice": "female" }
+  ],
+  "question": "Quelle récompense reçoit la fille ?",
+  "answer": ["Elle", "reçoit", "une", "étoile", "dorée", "en", "récompense."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lever", "gap": true, "accept": ["lever"] }, { "text": "la main avec enthousiasme" } ] },
+    { "from": "taps", "parts": [ { "text": "montrer fièrement son" }, { "text": "cahier", "gap": true, "accept": ["cahier"] } ] },
+    { "from": "taps", "parts": [ { "text": "scintiller", "gap": true, "accept": ["scintiller", "briller"] }, { "text": "sur la page" } ] },
+    { "from": "answer", "parts": [ { "text": "reçoit une étoile dorée en" }, { "text": "récompense", "gap": true, "accept": ["récompense"] } ] }
+  ],
+  "notes": "Taps 1 and 2 share one box (the girl) as in English; both boxes also cover writing frames. Phrase 1 = hand-up moment, phrase 2 = holding the notebook up at the end. Answer adds 'en récompense' so the key word appears; 'en récompense' could in theory move to the front, but the end position is the natural one."
+}

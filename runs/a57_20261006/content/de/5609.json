@@ -1,0 +1,118 @@
+{
+ "mediaId": 5609,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "Angst haben",
+ "taps": [
+  {
+   "phrase": "Angst vor Mäusen haben",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf dem Boden sitzen",
+   "target": "die Maus",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf der Seite liegen",
+   "target": "die Tasse",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Maus",
+   "voice": "male"
+  },
+  {
+   "word": "die Tasse",
+   "voice": "male"
+  },
+  {
+   "word": "der Stuhl",
+   "voice": "male"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  }
+ ],
+ "question": "Wovor hat der Mann Angst?",
+ "answer": [
+  "Er",
+  "hat",
+  "Angst",
+  "vor",
+  "der",
+  "Maus."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Angst",
+     "gap": true,
+     "accept": [
+      "Angst"
+     ]
+    },
+    {
+     "text": "vor Mäusen haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Boden",
+     "gap": true,
+     "accept": [
+      "Boden"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf der Seite"
+    },
+    {
+     "text": "liegen",
+     "gap": true,
+     "accept": [
+      "liegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hat Angst vor der"
+    },
+    {
+     "text": "Maus",
+     "gap": true,
+     "accept": [
+      "Maus"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English mouse pill at the still (0.7 s) sits on the floor where the mouse is barely visible; check slots. 'die Tasse' for the mug-like cup (Becher also possible). Key word Angst haben in phrase 1 and the answer."
+}

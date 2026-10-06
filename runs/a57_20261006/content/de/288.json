@@ -1,0 +1,26 @@
+{
+  "mediaId": 288, "lang": "de", "level": "A",
+  "keyWord": "die Mode",
+  "taps": [
+    { "phrase": "einen weißen Anzug tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "weiße Turnschuhe tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "einen grauen Pullover tragen", "target": "der Hund", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Bäume", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "der Hund", "voice": "female" }
+  ],
+  "question": "Was tragen die beiden?",
+  "answer": ["Sie", "tragen", "weite", "Anzüge."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen weißen" }, { "text": "Anzug", "gap": true, "accept": ["Anzug"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "weiße" }, { "text": "Turnschuhe", "gap": true, "accept": ["Turnschuhe", "Sneaker", "Schuhe"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "einen grauen" }, { "text": "Pullover", "gap": true, "accept": ["Pullover", "Pulli"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "tragen", "gap": true, "accept": ["tragen"] }, { "text": "weite Anzüge" } ] }
+  ],
+  "notes": "Phrase 2: the man takes photos only in the first ~4 boxed frames; in most boxed frames he walks/stands/poses, so the phrase says what is true of him throughout: white sneakers (the woman wears dark shoes, the dog none). 'Turnschuhe' is the everyday A2 word. Key word 'die Mode' is not a noun of the set and fits no phrase naturally (the clip shows fashion, no single thing is 'Mode'); no noun row. 'weite Anzüge' = oversized suits (more natural than 'große Anzüge'). 'die beiden' = the two people."
+}

@@ -1,0 +1,129 @@
+{
+  "mediaId": 4441,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Atem",
+  "taps": [
+    {
+      "phrase": "die Augen geschlossen halten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Landschaft überragen",
+      "target": "der Berggipfel",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine weiße Strickmütze tragen",
+      "target": "die Person mit der weißen Mütze",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "der Gipfel",
+      "voice": "female"
+    },
+    {
+      "word": "der Atem",
+      "voice": "female"
+    },
+    {
+      "word": "die Jacke",
+      "voice": "female"
+    }
+  ],
+  "question": "Was sieht man in der Luft?",
+  "answer": [
+    "Man",
+    "sieht",
+    "den",
+    "Atem",
+    "der",
+    "Frau."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Augen"
+        },
+        {
+          "text": "geschlossen",
+          "gap": true,
+          "accept": [
+            "geschlossen"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Landschaft",
+          "gap": true,
+          "accept": [
+            "Landschaft"
+          ]
+        },
+        {
+          "text": "überragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine weiße"
+        },
+        {
+          "text": "Strickmütze",
+          "gap": true,
+          "accept": [
+            "Strickmütze",
+            "Mütze",
+            "Wollmütze"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sieht den"
+        },
+        {
+          "text": "Atem",
+          "gap": true,
+          "accept": [
+            "Atem"
+          ]
+        },
+        {
+          "text": "der Frau"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'der Atem' is noun 3 and the answer's gap; no separate noun row since the answer row contains it. Woman box: in the last frames her face is hidden in the breath cloud. 'die Augen geschlossen halten' only for the woman (the walkers' eyes are not visible)."
+}

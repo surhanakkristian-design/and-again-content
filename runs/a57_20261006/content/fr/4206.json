@@ -1,0 +1,127 @@
+{
+ "mediaId": 4206,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un insigne",
+ "taps": [
+  {
+   "phrase": "bâiller à s'en décrocher la mâchoire",
+   "target": "le hamster",
+   "voice": "female"
+  },
+  {
+   "phrase": "faire couler un café",
+   "target": "la machine à café",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'allumer en vert vif",
+   "target": "le lecteur de badge",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le badge",
+   "voice": "female"
+  },
+  {
+   "word": "l'horloge",
+   "voice": "female"
+  },
+  {
+   "word": "le fauteuil de bureau",
+   "voice": "female"
+  },
+  {
+   "word": "les papiers",
+   "voice": "female"
+  }
+ ],
+ "question": "Que porte le hamster autour du cou ?",
+ "answer": [
+  "Le",
+  "hamster",
+  "porte",
+  "un",
+  "badge",
+  "au",
+  "bout",
+  "d'un",
+  "cordon."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bâiller",
+     "gap": true,
+     "accept": [
+      "bâiller"
+     ]
+    },
+    {
+     "text": "à s'en décrocher la mâchoire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire"
+    },
+    {
+     "text": "couler",
+     "gap": true,
+     "accept": [
+      "couler"
+     ]
+    },
+    {
+     "text": "un café"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'allumer en"
+    },
+    {
+     "text": "vert",
+     "gap": true,
+     "accept": [
+      "vert"
+     ]
+    },
+    {
+     "text": "vif"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "porte un"
+    },
+    {
+     "text": "badge",
+     "gap": true,
+     "accept": [
+      "badge"
+     ]
+    },
+    {
+     "text": "au bout d'un cordon"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD MISMATCH: the video shows a photo ID badge on a lanyard; in France that is 'un badge', never 'un insigne' (insigne = emblem / pin of rank or membership, which matches the definition but not the clip). I used 'le badge' in the noun and the answer. Proposal: fr word for this concept/video = 'le badge' (or keep 'un insigne' for the definition and map this video to a 'badge' concept). Answer subject 'Le hamster' (the hamster is a girl with a pink bow, voice stays female, no pronoun used)."
+}

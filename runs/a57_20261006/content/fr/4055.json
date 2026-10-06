@@ -1,0 +1,122 @@
+{
+  "mediaId": 4055,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le dinosaure",
+  "taps": [
+    {
+      "phrase": "lever la tête",
+      "target": "le chien",
+      "voice": "male"
+    },
+    {
+      "phrase": "s'asseoir entre deux jouets",
+      "target": "le chien",
+      "voice": "male"
+    },
+    {
+      "phrase": "avoir les yeux rouges",
+      "target": "le dinosaure gris",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le chien",
+      "voice": "male"
+    },
+    {
+      "word": "le dinosaure",
+      "voice": "male"
+    },
+    {
+      "word": "le lit",
+      "voice": "male"
+    }
+  ],
+  "question": "Où est assis le chien ?",
+  "answer": [
+    "Il",
+    "est",
+    "assis",
+    "entre",
+    "deux",
+    "dinosaures."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lever",
+          "gap": true,
+          "accept": [
+            "lever"
+          ]
+        },
+        {
+          "text": "la tête"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "s'asseoir"
+        },
+        {
+          "text": "entre deux"
+        },
+        {
+          "text": "jouets",
+          "gap": true,
+          "accept": [
+            "jouets",
+            "dinosaures"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir les"
+        },
+        {
+          "text": "yeux",
+          "gap": true,
+          "accept": [
+            "yeux"
+          ]
+        },
+        {
+          "text": "rouges"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "est assis"
+        },
+        {
+          "text": "entre deux"
+        },
+        {
+          "text": "dinosaures",
+          "gap": true,
+          "accept": [
+            "dinosaures",
+            "jouets"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrases 1 and 2 share the dog's box; 'lever la tête' = the howl with the head tipped back. Phrase 2: in the middle frames the dog lies/stands between the toys, it sits between them at the end. Key word appears in the answer row as the plural 'dinosaures', so no noun row."
+}

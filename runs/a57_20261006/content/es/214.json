@@ -1,0 +1,118 @@
+{
+ "mediaId": 214,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "peligroso",
+ "taps": [
+  {
+   "phrase": "caminar sobre el hielo",
+   "target": "el niño",
+   "voice": "male"
+  },
+  {
+   "phrase": "tirar de su amigo",
+   "target": "la niña",
+   "voice": "female"
+  },
+  {
+   "phrase": "romperse en pedazos",
+   "target": "el hielo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cartel",
+   "voice": "male"
+  },
+  {
+   "word": "el árbol",
+   "voice": "male"
+  },
+  {
+   "word": "el niño",
+   "voice": "male"
+  },
+  {
+   "word": "el hielo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el niño?",
+ "answer": [
+  "El",
+  "niño",
+  "está",
+  "caminando",
+  "sobre",
+  "hielo",
+  "peligroso."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar",
+     "gap": true,
+     "accept": [
+      "caminar",
+      "andar"
+     ]
+    },
+    {
+     "text": "sobre el hielo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirar",
+     "gap": true,
+     "accept": [
+      "tirar"
+     ]
+    },
+    {
+     "text": "de su amigo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "romperse en"
+    },
+    {
+     "text": "pedazos",
+     "gap": true,
+     "accept": [
+      "pedazos",
+      "trozos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está caminando sobre hielo"
+    },
+    {
+     "text": "peligroso",
+     "gap": true,
+     "accept": [
+      "peligroso"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 box also covers moments where the boy stands frozen on the floes; phrase describes him stepping onto the ice. Tap 2: the girl pulls the boy back to the dock."
+}

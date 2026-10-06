@@ -1,0 +1,126 @@
+{
+  "mediaId": 4143,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Tonne",
+  "taps": [
+    {
+      "phrase": "der Tonne entkommen wollen",
+      "target": "der Waschbär",
+      "voice": "male"
+    },
+    {
+      "phrase": "zerknüllt daliegen",
+      "target": "der grüne Müllsack",
+      "voice": "male"
+    },
+    {
+      "phrase": "im Hintergrund wachsen",
+      "target": "die Büsche",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Waschbär",
+      "voice": "male"
+    },
+    {
+      "word": "der Müllsack",
+      "voice": "male"
+    },
+    {
+      "word": "die Tonne",
+      "voice": "male"
+    },
+    {
+      "word": "die Büsche",
+      "voice": "male"
+    }
+  ],
+  "question": "Was versucht der Waschbär?",
+  "answer": [
+    "Er",
+    "versucht,",
+    "aus",
+    "der",
+    "Tonne",
+    "zu",
+    "entkommen."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "Tonne",
+          "gap": true,
+          "accept": [
+            "Tonne",
+            "Mülltonne"
+          ]
+        },
+        {
+          "text": "entkommen wollen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "zerknüllt"
+        },
+        {
+          "text": "daliegen",
+          "gap": true,
+          "accept": [
+            "daliegen",
+            "liegen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im"
+        },
+        {
+          "text": "Hintergrund",
+          "gap": true,
+          "accept": [
+            "Hintergrund"
+          ]
+        },
+        {
+          "text": "wachsen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "versucht, aus der Tonne zu"
+        },
+        {
+          "text": "entkommen",
+          "gap": true,
+          "accept": [
+            "entkommen",
+            "fliehen",
+            "klettern"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Raccoon box: in many frames the raccoon only sits or curls up and looks at the camera; the escape attempt (standing, paws up the wall, slipping back) is the clear action, as in English. 'der Tonne entkommen wollen' (dative) carries the key word; no noun row because 'Tonne' is already in tap row 1. Answer chip 'versucht,' carries the comma of the infinitive clause."
+}

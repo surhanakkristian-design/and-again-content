@@ -1,0 +1,134 @@
+{
+ "mediaId": 250,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Ente",
+ "taps": [
+  {
+   "phrase": "den Kopf unter Wasser stecken",
+   "target": "die Ente",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Flügel ausbreiten",
+   "target": "die Ente",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Schnabel aufmachen",
+   "target": "die Ente",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Ente",
+   "voice": "female"
+  },
+  {
+   "word": "die Bäume",
+   "voice": "female"
+  },
+  {
+   "word": "das Wasser",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Ente?",
+ "answer": [
+  "Die",
+  "Ente",
+  "schwimmt",
+  "auf",
+  "dem",
+  "Wasser."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Kopf",
+     "gap": true,
+     "accept": [
+      "Kopf"
+     ]
+    },
+    {
+     "text": "unter Wasser stecken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Flügel"
+    },
+    {
+     "text": "ausbreiten",
+     "gap": true,
+     "accept": [
+      "ausbreiten",
+      "öffnen",
+      "spreizen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Schnabel",
+     "gap": true,
+     "accept": [
+      "Schnabel"
+     ]
+    },
+    {
+     "text": "aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Ente",
+     "gap": true,
+     "accept": [
+      "Ente"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schwimmt",
+     "gap": true,
+     "accept": [
+      "schwimmt"
+     ]
+    },
+    {
+     "text": "auf dem Wasser"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'to open its mouth' -> 'den Schnabel aufmachen' (a duck has a beak in German). All three English boxes cover the whole duck for the whole clip; each phrase is true only in part of it (head under water early, wings in the middle, beak open at the end)."
+}

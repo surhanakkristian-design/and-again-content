@@ -1,0 +1,26 @@
+{
+  "mediaId": 807, "lang": "fr", "level": "A",
+  "keyWord": "le tapis de course",
+  "taps": [
+    { "phrase": "courir sur un tapis de course", "target": "la femme au premier plan", "voice": "female" },
+    { "phrase": "appuyer sur un bouton", "target": "la femme au premier plan", "voice": "female" },
+    { "phrase": "s'essuyer le front", "target": "la femme au premier plan", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le tapis de course", "voice": "female" },
+    { "word": "le tee-shirt", "voice": "female" },
+    { "word": "les fenêtres", "voice": "female" },
+    { "word": "les cheveux", "voice": "female" }
+  ],
+  "question": "Que fait la femme au premier plan ?",
+  "answer": ["Elle", "court", "sur", "un", "tapis", "de", "course."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "courir sur un" }, { "text": "tapis de course", "gap": true, "accept": ["tapis de course"] } ] },
+    { "from": "taps", "parts": [ { "text": "appuyer sur un" }, { "text": "bouton", "gap": true, "accept": ["bouton"] } ] },
+    { "from": "taps", "parts": [ { "text": "s'essuyer le" }, { "text": "front", "gap": true, "accept": ["front", "visage"] } ] },
+    { "from": "answer", "parts": [ { "text": "court", "gap": true, "accept": ["court"] }, { "text": "sur un tapis de course" } ] }
+  ],
+  "notes": "'s'essuyer le front' instead of 'le visage': she wipes her forehead with her forearm (accept 'visage' too). 'au premier plan' (B1) is the natural French way to single her out from the woman in the background; alternative 'la femme devant' is less idiomatic. All three boxes cover the same woman for the whole clip; the button press is in box_01/box_05, the wipe in box_05/box_06. The key word gap in tap row 1 is the whole compound 'tapis de course'."
+}

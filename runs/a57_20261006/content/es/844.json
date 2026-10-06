@@ -1,0 +1,120 @@
+{
+ "mediaId": 844,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el valle",
+ "taps": [
+  {
+   "phrase": "levantar los dos brazos",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "señalar el valle",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una chaqueta naranja",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el valle",
+   "voice": "female"
+  },
+  {
+   "word": "el río",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están mirando?",
+ "answer": [
+  "Están",
+  "mirando",
+  "un",
+  "valle",
+  "verde."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar los dos"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar",
+     "gap": true,
+     "accept": [
+      "señalar"
+     ]
+    },
+    {
+     "text": "el valle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta"
+     ]
+    },
+    {
+     "text": "naranja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "mirando",
+     "gap": true,
+     "accept": [
+      "mirando"
+     ]
+    },
+    {
+     "text": "un valle verde"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word appears in phrase 2 and the answer, so no extra noun row. The woman also raises her arms while dancing; the man points."
+}

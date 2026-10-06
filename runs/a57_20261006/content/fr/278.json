@@ -1,0 +1,26 @@
+{
+  "mediaId": 278, "lang": "fr", "level": "B",
+  "keyWord": "la flexion des jambes",
+  "taps": [
+    { "phrase": "s'élever au-dessus des arbres", "target": "le soleil", "voice": "female" },
+    { "phrase": "porter une longue tresse", "target": "la femme en lilas", "voice": "female" },
+    { "phrase": "porter un legging vert foncé", "target": "la femme en blanc", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le soleil", "voice": "female" },
+    { "word": "le palmier", "voice": "female" },
+    { "word": "la tresse", "voice": "female" },
+    { "word": "la pelouse", "voice": "female" }
+  ],
+  "question": "Quel exercice fait le groupe ?",
+  "answer": ["Ils", "font", "des", "flexions", "de", "jambes", "sur", "la", "pelouse."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'élever au-dessus des" }, { "text": "arbres", "gap": true, "accept": ["arbres", "palmiers"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une longue" }, { "text": "tresse", "gap": true, "accept": ["tresse", "natte"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "legging", "gap": true, "accept": ["legging", "leggings"] }, { "text": "vert foncé" } ] },
+    { "from": "answer", "parts": [ { "text": "font des" }, { "text": "flexions", "gap": true, "accept": ["flexions"] }, { "text": "de jambes sur la pelouse" } ] }
+  ],
+  "notes": "keyWord 'la flexion des jambes' is understood, but in France the exercise is usually 'le squat' (plural 'des flexions de jambes' with 'de', not 'des'); the answer uses 'des flexions de jambes' and accepts 'squats'. Proposal: 'le squat' as the fr word. The squats are only in the first seconds; later the group does lunges and arm raises. Subject 'Ils' (mixed group); answerVoice kept female as in English."
+}

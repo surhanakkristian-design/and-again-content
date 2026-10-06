@@ -1,0 +1,121 @@
+{
+ "mediaId": 194,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el algodón",
+ "taps": [
+  {
+   "phrase": "sostener un poco de algodón",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "soplar el algodón",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta blanca",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el sol",
+   "voice": "female"
+  },
+  {
+   "word": "el sombrero",
+   "voice": "female"
+  },
+  {
+   "word": "el algodón",
+   "voice": "female"
+  },
+  {
+   "word": "la camiseta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué tiene la chica en la mano?",
+ "answer": [
+  "Tiene",
+  "algodón",
+  "en",
+  "la",
+  "mano."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener",
+     "gap": true,
+     "accept": [
+      "sostener",
+      "coger"
+     ]
+    },
+    {
+     "text": "un poco de algodón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soplar",
+     "gap": true,
+     "accept": [
+      "soplar"
+     ]
+    },
+    {
+     "text": "el algodón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Tiene"
+    },
+    {
+     "text": "algodón",
+     "gap": true,
+     "accept": [
+      "algodón"
+     ]
+    },
+    {
+     "text": "en la mano"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 box (same box as phrase 1) covers mostly frames where she only holds the cotton; she blows it away only at the end. Kept 'soplar el algodón' because phrase 1 already says she holds it. 'la chica'/'el chico' for the young couple. Answer has no subject (natural Spanish), so the answer row is the whole sentence."
+}

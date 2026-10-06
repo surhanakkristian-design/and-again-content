@@ -1,0 +1,26 @@
+{
+  "mediaId": 206, "lang": "de", "level": "A",
+  "keyWord": "die Gurke",
+  "taps": [
+    { "phrase": "eine Gurke schneiden", "target": "der Mann", "voice": "male" },
+    { "phrase": "Gurkenscheiben auf den Augen haben", "target": "die Frau", "voice": "female" },
+    { "phrase": "über den Tisch schauen", "target": "der Hund", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Fenster", "voice": "male" },
+    { "word": "die Gurke", "voice": "male" },
+    { "word": "das Hemd", "voice": "male" },
+    { "word": "der Hund", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "schneidet", "eine", "Gurke."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Gurke", "gap": true, "accept": ["Gurke"] }, { "text": "schneiden" } ] },
+    { "from": "taps", "parts": [ { "text": "Gurkenscheiben auf den" }, { "text": "Augen", "gap": true, "accept": ["Augen"] }, { "text": "haben" } ] },
+    { "from": "taps", "parts": [ { "text": "über den Tisch" }, { "text": "schauen", "gap": true, "accept": ["schauen", "gucken", "sehen"] } ] },
+    { "from": "answer", "parts": [ { "text": "schneidet", "gap": true, "accept": ["schneidet"] }, { "text": "eine Gurke" } ] }
+  ],
+  "notes": "Tap 1 box also covers the man breaking the cucumber in half and peeling it; he cuts it into slices only in the last part of his box. Tap 2: the woman has cucumber slices on her eyes in most boxed frames and eats a slice only at the end, so the phrase says that instead of 'eat some cucumber'. No noun row: Gurke is in tap row 1 and the answer row."
+}

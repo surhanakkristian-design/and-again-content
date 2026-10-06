@@ -1,0 +1,62 @@
+import json
+def g(t,acc): return {"text":t,"gap":True,"accept":acc}
+def p(t): return {"text":t}
+D={}
+D[4365]={"mediaId":4365,"lang":"de","level":"A","keyWord":"frisch",
+"taps":[{"phrase":"frische Brötchen aus dem Ofen holen","target":"die alte Frau","voice":"female"},
+{"phrase":"einen Obstkuchen halten","target":"die junge Frau","voice":"female"},
+{"phrase":"eine rote Schürze tragen","target":"die junge Frau","voice":"female"}],
+"nouns":[{"word":"das Fenster","voice":"female"},{"word":"die Frau","voice":"female"},{"word":"der Obstkuchen","voice":"female"},{"word":"die Brötchen","voice":"female"}],
+"question":"Was trägt die alte Frau?","answer":["Sie","trägt","frische","Brötchen."],"answerVoice":"female","carousel":[],
+"recall":[{"from":"taps","parts":[g("frische",["frische"]),p("Brötchen aus dem Ofen holen")]},
+{"from":"taps","parts":[p("einen"),g("Obstkuchen",["Obstkuchen","Kuchen"]),p("halten")]},
+{"from":"taps","parts":[p("eine rote"),g("Schürze",["Schürze"]),p("tragen")]},
+{"from":"answer","parts":[g("trägt",["trägt","hält"]),p("frische Brötchen")]}],
+"notes":"Phrase 1: the old woman takes the tray out of the oven, so 'aus dem Ofen holen' (truer than a literal 'tragen'); the question keeps English 'carrying' = 'tragen'. In the final boxed frames (both women cheering at the table) neither woman carries rolls or holds the pie; phrases 1-2 describe most boxed frames. 'eine rote Schürze tragen' fits only the young woman (the old woman's apron is floral). Pie with berries = 'der Obstkuchen' in phrase and noun."}
+D[121]={"mediaId":121,"lang":"de","level":"A","keyWord":"verbrennen",
+"taps":[{"phrase":"einen Pfannkuchen verbrennen lassen","target":"der Mann","voice":"male"},
+{"phrase":"ein Geschirrtuch halten","target":"der Mann","voice":"male"},
+{"phrase":"auf einem Teller liegen","target":"der Pfannkuchen","voice":"male"}],
+"nouns":[{"word":"der Mann","voice":"male"},{"word":"die Pfanne","voice":"male"},{"word":"das Feuer","voice":"male"},{"word":"der Pfannkuchen","voice":"male"}],
+"question":"Was hat der Mann verbrennen lassen?","answer":["Er","hat","einen","Pfannkuchen","verbrennen","lassen."],"answerVoice":"male","carousel":[],
+"recall":[{"from":"taps","parts":[p("einen Pfannkuchen"),g("verbrennen",["verbrennen","anbrennen"]),p("lassen")]},
+{"from":"taps","parts":[p("ein"),g("Geschirrtuch",["Geschirrtuch","Tuch"]),p("halten")]},
+{"from":"taps","parts":[p("auf einem"),g("Teller",["Teller"]),p("liegen")]},
+{"from":"answer","parts":[p("hat einen"),g("Pfannkuchen",["Pfannkuchen"]),p("verbrennen lassen")]}],
+"notes":"For burnt food German natives say 'etwas verbrennen lassen' (or colloquial transitive 'den Pfannkuchen verbrennen', or 'anbrennen lassen'); I used 'verbrennen lassen' so the key word stays as the infinitive. Past English question -> Perfekt."}
+D[5069]={"mediaId":5069,"lang":"de","level":"A","keyWord":"genießen",
+"taps":[{"phrase":"eine Massage genießen","target":"der Mann","voice":"male"},
+{"phrase":"in einem Sessel sitzen","target":"der Mann","voice":"male"},
+{"phrase":"ihm die Schultern massieren","target":"die Frau","voice":"female"}],
+"nouns":[{"word":"die Pflanzen","voice":"male"},{"word":"die Frau","voice":"female"},{"word":"der Mann","voice":"male"},{"word":"der Sessel","voice":"male"}],
+"question":"Was genießt der Mann?","answer":["Er","genießt","eine","Massage."],"answerVoice":"male","carousel":[],
+"recall":[{"from":"taps","parts":[p("eine Massage"),g("genießen",["genießen"])]},
+{"from":"taps","parts":[p("in einem"),g("Sessel",["Sessel","Stuhl"]),p("sitzen")]},
+{"from":"taps","parts":[p("ihm die"),g("Schultern",["Schultern"]),p("massieren")]},
+{"from":"answer","parts":[p("genießt eine"),g("Massage",["Massage"])]}],
+"notes":"The chair is a leather armchair: 'der Sessel' in phrase and noun."}
+D[4788]={"mediaId":4788,"lang":"de","level":"A","keyWord":"schockiert",
+"taps":[{"phrase":"ihr ins Ohr flüstern","target":"die stehende Frau","voice":"female"},
+{"phrase":"ein Geheimnis hören","target":"die Frau im Umhang","voice":"female"},
+{"phrase":"am Computer sitzen","target":"die Frau am Empfang","voice":"female"}],
+"nouns":[{"word":"die Pflanze","voice":"female"},{"word":"die Frau","voice":"female"},{"word":"der Computer","voice":"female"},{"word":"die Theke","voice":"female"}],
+"question":"Wie sehen die Frauen aus?","answer":["Die","Frauen","sehen","sehr","schockiert","aus."],"answerVoice":"female","carousel":[],
+"recall":[{"from":"taps","parts":[p("ihr ins Ohr"),g("flüstern",["flüstern"])]},
+{"from":"taps","parts":[p("ein"),g("Geheimnis",["Geheimnis"]),p("hören")]},
+{"from":"taps","parts":[p("am"),g("Computer",["Computer"]),p("sitzen")]},
+{"from":"answer","parts":[p("sehen sehr"),g("schockiert",["schockiert","geschockt"]),p("aus")]}],
+"notes":"English 'a desk' is a white reception counter: 'die Theke'; phrase 3 uses 'am Computer sitzen' (only the receptionist sits at a computer) instead of 'am Schreibtisch sitzen'. Boxes 1-2 also cover the barber-shop shots where the two women only stare (no whispering) and later shots where the client is under the dryer; the phrases describe the whispering frames, which are most of the boxed time."}
+D[5129]={"mediaId":5129,"lang":"de","level":"A","keyWord":"die Abdeckung",
+"taps":[{"phrase":"eine Wand streichen","target":"der Mann","voice":"male"},
+{"phrase":"das Klebeband abziehen","target":"der Mann","voice":"male"},
+{"phrase":"orange werden","target":"die Wand","voice":"male"}],
+"nouns":[{"word":"die Kopfhörer","voice":"male"},{"word":"die Abdeckung","voice":"male"},{"word":"die Wand","voice":"male"}],
+"question":"Was macht der Mann?","answer":["Er","streicht","die","Wand","orange."],"answerVoice":"male","carousel":[],
+"recall":[{"from":"taps","parts":[p("eine Wand"),g("streichen",["streichen","anmalen"])]},
+{"from":"taps","parts":[p("das"),g("Klebeband",["Klebeband"]),p("abziehen")]},
+{"from":"taps","parts":[g("orange",["orange"]),p("werden")]},
+{"from":"nouns","parts":[p("die"),g("Abdeckung",["Abdeckung","Plane"])]},
+{"from":"answer","parts":[p("streicht die"),g("Wand",["Wand"]),p("orange")]}],
+"notes":"Key word 'die Abdeckung' (B1 word on a level A video) names the plastic sheeting over the furniture correctly; a native might say 'die Plane' or 'die Abdeckfolie' for this exact thing (proposal for the owner, not changed). Boxes 1-2 cover the whole clip: he paints in most boxed frames and pulls the tape only at the end."}
+for k,v in D.items():
+    json.dump(v,open(f"content/de/{k}.json","w"),ensure_ascii=False,indent=1)

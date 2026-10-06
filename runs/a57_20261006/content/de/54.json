@@ -1,0 +1,124 @@
+{
+  "mediaId": 54,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Geldautomat",
+  "taps": [
+    {
+      "phrase": "ihre PIN eingeben",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "das Bargeld auszahlen",
+      "target": "der Geldautomat",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Geldscheine zählen",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Lampe",
+      "voice": "female"
+    },
+    {
+      "word": "der Geldautomat",
+      "voice": "female"
+    },
+    {
+      "word": "die Geldscheine",
+      "voice": "female"
+    },
+    {
+      "word": "der Mantel",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "hebt",
+    "Bargeld",
+    "am",
+    "Geldautomaten",
+    "ab."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ihre PIN"
+        },
+        {
+          "text": "eingeben",
+          "gap": true,
+          "accept": [
+            "eingeben",
+            "eintippen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "das"
+        },
+        {
+          "text": "Bargeld",
+          "gap": true,
+          "accept": [
+            "Bargeld",
+            "Geld"
+          ]
+        },
+        {
+          "text": "auszahlen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Geldscheine"
+        },
+        {
+          "text": "zählen",
+          "gap": true,
+          "accept": [
+            "zählen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hebt Bargeld am"
+        },
+        {
+          "text": "Geldautomaten",
+          "gap": true,
+          "accept": [
+            "Geldautomaten",
+            "Automaten"
+          ]
+        },
+        {
+          "text": "ab"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 2 uses 'auszahlen', not 'ausgeben': 'das Bargeld ausgeben' would also read as 'spend the cash', which the woman does (she buys flowers). Phrase 1/3 boxes cover the woman for most of the clip; she types the PIN early and holds/fans the notes in the middle. German also allows 'Sie hebt am Geldautomaten Bargeld ab.' (two orders). No noun row: Geldautomat is in the answer row."
+}

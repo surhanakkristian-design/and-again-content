@@ -1,0 +1,124 @@
+{
+  "mediaId": 24,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Löffel",
+  "taps": [
+    {
+      "phrase": "eine Schublade öffnen",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Löffel nehmen",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "Suppe essen",
+      "target": "das Mädchen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "der Löffel",
+      "voice": "female"
+    },
+    {
+      "word": "die Schüssel",
+      "voice": "female"
+    },
+    {
+      "word": "der Tisch",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": [
+    "Sie",
+    "isst",
+    "Suppe",
+    "mit",
+    "einem",
+    "Löffel."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Schublade",
+          "gap": true,
+          "accept": [
+            "Schublade"
+          ]
+        },
+        {
+          "text": "öffnen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Löffel",
+          "gap": true,
+          "accept": [
+            "Löffel"
+          ]
+        },
+        {
+          "text": "nehmen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Suppe"
+        },
+        {
+          "text": "essen",
+          "gap": true,
+          "accept": [
+            "essen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "isst"
+        },
+        {
+          "text": "Suppe",
+          "gap": true,
+          "accept": [
+            "Suppe"
+          ]
+        },
+        {
+          "text": "mit einem Löffel"
+        }
+      ]
+    }
+  ],
+  "notes": "Pronoun 'Sie' for das Mädchen (what natives say). German also allows 'Sie isst mit einem Löffel Suppe' as a second chip order. Key word in tap row 2, so no noun row."
+}

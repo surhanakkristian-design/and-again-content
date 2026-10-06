@@ -1,0 +1,123 @@
+{
+ "mediaId": 5671,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Ermutigung",
+ "taps": [
+  {
+   "phrase": "die Faust in die Luft recken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "bergauf in die Pedale treten",
+   "target": "die Radfahrerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "neben der Radfahrerin herlaufen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Berggipfel",
+   "voice": "male"
+  },
+  {
+   "word": "der Helm",
+   "voice": "male"
+  },
+  {
+   "word": "die Steinmauer",
+   "voice": "male"
+  },
+  {
+   "word": "das Laub",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "ruft",
+  "der",
+  "Radfahrerin",
+  "Ermutigungen",
+  "zu."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Faust in die Luft"
+    },
+    {
+     "text": "recken",
+     "gap": true,
+     "accept": [
+      "recken",
+      "strecken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bergauf in die"
+    },
+    {
+     "text": "Pedale",
+     "gap": true,
+     "accept": [
+      "Pedale"
+     ]
+    },
+    {
+     "text": "treten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "neben der Radfahrerin"
+    },
+    {
+     "text": "herlaufen",
+     "gap": true,
+     "accept": [
+      "herlaufen",
+      "herrennen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ruft der Radfahrerin"
+    },
+    {
+     "text": "Ermutigungen",
+     "gap": true,
+     "accept": [
+      "Ermutigungen"
+     ]
+    },
+    {
+     "text": "zu"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Ermutigung' (en 'a boost') used in the plural in the answer ('Ermutigungen zurufen'); 'jemandem einen Boost geben' is not natural German. Fallen leaves -> 'das Laub' (mass noun). Second chip order 'Er ruft Ermutigungen der Radfahrerin zu' is marked, not natural."
+}

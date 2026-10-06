@@ -1,0 +1,114 @@
+{
+ "mediaId": 353,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un invité",
+ "taps": [
+  {
+   "phrase": "accueillir une invitée",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un bonnet",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "verser de l'eau",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'invitée",
+   "voice": "female"
+  },
+  {
+   "word": "la fleur",
+   "voice": "female"
+  },
+  {
+   "word": "la bougie",
+   "voice": "female"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'apporte l'invitée ?",
+ "answer": [
+  "L'invitée",
+  "apporte",
+  "une",
+  "fleur."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "accueillir une"
+    },
+    {
+     "text": "invitée",
+     "gap": true,
+     "accept": [
+      "invitée"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "bonnet",
+     "gap": true,
+     "accept": [
+      "bonnet"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "verser",
+     "gap": true,
+     "accept": [
+      "verser"
+     ]
+    },
+    {
+     "text": "de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "apporte",
+     "gap": true,
+     "accept": [
+      "apporte",
+      "offre"
+     ]
+    },
+    {
+     "text": "une fleur"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'un invité' is masculine; the guest is a woman, so the feminine 'l'invitée' / 'une invitée' is used (contains the key word). Phrase 1 (red box, the man): 'accueillir une invitée' instead of a literal 'ouvrir la porte' - he opens the door and welcomes her, and the red box runs on through the whole clip; it also puts the key word in a recall row (no noun row needed; 'l'invitée' alone could not be cut into 2 parts). Phrase 2 (green, the woman): the English 'stand in the rain' is true only in the first frames; 'porter un bonnet' is true in every boxed frame and only she wears one. She brings a potted plant with flowers; 'une fleur' kept as in English."
+}

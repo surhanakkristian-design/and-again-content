@@ -1,0 +1,26 @@
+{
+  "mediaId": 5382, "lang": "fr", "level": "A",
+  "keyWord": "discuter",
+  "taps": [
+    { "phrase": "discuter avec un jeune homme", "target": "la femme aux cheveux gris", "voice": "female" },
+    { "phrase": "répondre à une femme âgée", "target": "le jeune homme", "voice": "male" },
+    { "phrase": "être accrochée au mur", "target": "la lampe", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la maison", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "la table", "voice": "female" }
+  ],
+  "question": "Que font les gens ?",
+  "answer": ["Ils", "discutent", "autour", "d'une", "table."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "discuter", "gap": true, "accept": ["discuter", "parler"] }, { "text": "avec un jeune homme" } ] },
+    { "from": "taps", "parts": [ { "text": "répondre", "gap": true, "accept": ["répondre"] }, { "text": "à une femme âgée" } ] },
+    { "from": "taps", "parts": [ { "text": "être accrochée au" }, { "text": "mur", "gap": true, "accept": ["mur"] } ] },
+    { "from": "answer", "parts": [ { "text": "discutent autour d'une" }, { "text": "table", "gap": true, "accept": ["table"] } ] }
+  ],
+  "notes": "Tap 3 'accrochée' agrees with 'la lampe'. Later in the clip the whole table joins in and the young man and the woman talk with others too; phrases 1-2 describe the opening exchange that fills most boxed frames for the woman, and tap 2 uses 'répondre' so it does not mean the same as tap 1."
+}

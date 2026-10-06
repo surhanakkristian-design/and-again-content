@@ -1,0 +1,120 @@
+{
+ "mediaId": 775,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la réflexion",
+ "taps": [
+  {
+   "phrase": "déplacer une pièce d'échecs",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "taper dans ses mains",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "marcher sur la table",
+   "target": "l'oiseau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "l'oiseau",
+   "voice": "male"
+  },
+  {
+   "word": "la table",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "réfléchit",
+  "à",
+  "son",
+  "prochain",
+  "coup."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "déplacer une"
+    },
+    {
+     "text": "pièce",
+     "gap": true,
+     "accept": [
+      "pièce"
+     ]
+    },
+    {
+     "text": "d'échecs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taper",
+     "gap": true,
+     "accept": [
+      "taper",
+      "frapper"
+     ]
+    },
+    {
+     "text": "dans ses mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcher",
+     "gap": true,
+     "accept": [
+      "marcher"
+     ]
+    },
+    {
+     "text": "sur la table"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "réfléchit",
+     "gap": true,
+     "accept": [
+      "réfléchit",
+      "pense"
+     ]
+    },
+    {
+     "text": "à son prochain coup"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la réflexion' (noun) does not appear as such: the natural A-level answer uses the verb 'réfléchir'; 'Il est en pleine réflexion' would use the noun but is B1 and not a natural answer to 'Que fait l'homme ?'. Proposal: keep 'la réflexion' as database word, the clip teaches it via 'réfléchir'. The bird is a pigeon; 'l'oiseau' as in English."
+}

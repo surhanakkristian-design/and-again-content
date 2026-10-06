@@ -1,0 +1,121 @@
+{
+ "mediaId": 19,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la regla",
+ "taps": [
+  {
+   "phrase": "dibujar una línea",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener las tapas rojas",
+   "target": "el libro",
+   "voice": "male"
+  },
+  {
+   "phrase": "ser larga y recta",
+   "target": "la regla",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la regla",
+   "voice": "male"
+  },
+  {
+   "word": "las gafas",
+   "voice": "male"
+  },
+  {
+   "word": "el bolígrafo",
+   "voice": "male"
+  },
+  {
+   "word": "el papel",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "dibujando",
+  "una",
+  "línea",
+  "con",
+  "una",
+  "regla."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dibujar",
+     "gap": true,
+     "accept": [
+      "dibujar",
+      "trazar",
+      "hacer"
+     ]
+    },
+    {
+     "text": "una línea"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener las"
+    },
+    {
+     "text": "tapas",
+     "gap": true,
+     "accept": [
+      "tapas"
+     ]
+    },
+    {
+     "text": "rojas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser larga y"
+    },
+    {
+     "text": "recta",
+     "gap": true,
+     "accept": [
+      "recta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está dibujando una línea con una"
+    },
+    {
+     "text": "regla",
+     "gap": true,
+     "accept": [
+      "regla"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers frames where he searches (under the desk, with the book and calculator); written for the drawing. The book's cover is dark red. Answer has no subject, so the answer row is the whole sentence."
+}

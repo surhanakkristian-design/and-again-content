@@ -1,0 +1,26 @@
+{
+  "mediaId": 8036, "lang": "fr", "level": "B",
+  "keyWord": "le volume",
+  "taps": [
+    { "phrase": "se plaquer contre le mur", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "envahir toute la pièce", "target": "le flamant rose", "voice": "female" },
+    { "phrase": "retomber en cascade d'un pot", "target": "la plante", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la lucarne", "voice": "female" },
+    { "word": "l'abat-jour", "voice": "female" },
+    { "word": "le flamant rose", "voice": "female" },
+    { "word": "le plancher", "voice": "female" }
+  ],
+  "question": "Que fait le flamant rose ?",
+  "answer": ["Il", "occupe", "tout", "le", "volume", "de", "la", "pièce."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "plaquer", "gap": true, "accept": ["plaquer", "coller"] }, { "text": "contre le mur" } ] },
+    { "from": "taps", "parts": [ { "text": "envahir", "gap": true, "accept": ["envahir", "remplir", "occuper"] }, { "text": "toute la pièce" } ] },
+    { "from": "taps", "parts": [ { "text": "retomber en cascade d'un" }, { "text": "pot", "gap": true, "accept": ["pot"] } ] },
+    { "from": "answer", "parts": [ { "text": "occupe tout le" }, { "text": "volume", "gap": true, "accept": ["volume", "espace"] }, { "text": "de la pièce" } ] }
+  ],
+  "notes": "Skylight = 'la lucarne' (round roof window; 'la fenêtre de toit' would also do). Floorboards = 'le plancher' (singular mass noun, natural in French). The flamingo is masculine, so the answer pronoun is 'Il'; answerVoice kept female as in English (narrator voice)."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 98,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Hängematte",
+ "taps": [
+  {
+   "phrase": "vor Staunen nach Luft schnappen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Augen zukneifen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen weinroten Einband haben",
+   "target": "das Buch",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Hängematte",
+   "voice": "female"
+  },
+  {
+   "word": "die Kuppel",
+   "voice": "female"
+  },
+  {
+   "word": "der Zopf",
+   "voice": "female"
+  },
+  {
+   "word": "die Blumen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "liest",
+  "ein",
+  "Buch",
+  "in",
+  "der",
+  "Hängematte."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor"
+    },
+    {
+     "text": "Staunen",
+     "gap": true,
+     "accept": [
+      "Staunen",
+      "Erstaunen"
+     ]
+    },
+    {
+     "text": "nach Luft schnappen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Augen"
+    },
+    {
+     "text": "zukneifen",
+     "gap": true,
+     "accept": [
+      "zukneifen",
+      "schließen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen weinroten"
+    },
+    {
+     "text": "Einband",
+     "gap": true,
+     "accept": [
+      "Einband",
+      "Umschlag"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "liest ein Buch in der"
+    },
+    {
+     "text": "Hängematte",
+     "gap": true,
+     "accept": [
+      "Hängematte"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "German also allows 'Sie liest in der Hängematte ein Buch.' (two chip orders possible). Phrase 2: she closes her eyes dreamily rather than squeezing hard; 'zukneifen' follows the English tap; 'schließen' accepted in recall. She has two braids in some frames; English singular kept ('der Zopf'). Key word in the noun set and in the answer row, so no separate noun row."
+}

@@ -1,0 +1,120 @@
+{
+ "mediaId": 229,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le diplôme",
+ "taps": [
+  {
+   "phrase": "traverser l'estrade",
+   "target": "le diplômé",
+   "voice": "male"
+  },
+  {
+   "phrase": "féliciter le diplômé",
+   "target": "le monsieur âgé",
+   "voice": "male"
+  },
+  {
+   "phrase": "être noué d'un ruban",
+   "target": "le diplôme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le diplôme",
+   "voice": "male"
+  },
+  {
+   "word": "le chapeau de diplômé",
+   "voice": "male"
+  },
+  {
+   "word": "la toge",
+   "voice": "male"
+  },
+  {
+   "word": "l'étole",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le diplômé ?",
+ "answer": [
+  "Il",
+  "brandit",
+  "son",
+  "diplôme",
+  "au-dessus",
+  "de",
+  "sa",
+  "tête."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "traverser",
+     "gap": true,
+     "accept": [
+      "traverser"
+     ]
+    },
+    {
+     "text": "l'estrade"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "féliciter",
+     "gap": true,
+     "accept": [
+      "féliciter"
+     ]
+    },
+    {
+     "text": "le diplômé"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être noué d'un"
+    },
+    {
+     "text": "ruban",
+     "gap": true,
+     "accept": [
+      "ruban"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "brandit son"
+    },
+    {
+     "text": "diplôme",
+     "gap": true,
+     "accept": [
+      "diplôme"
+     ]
+    },
+    {
+     "text": "au-dessus de sa tête"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: in the last boxed frames the graduate stands on the stage lifting the diploma rather than crossing it. Phrase 2: the visible act is the handshake; 'serrer la main' avoided because the graduate does it too. Cap = 'le chapeau de diplômé' (formal: 'le mortier'); the gold band is a graduation stole, so 'l'étole' (not 'l'écharpe'). Key word in the answer, so no noun row."
+}

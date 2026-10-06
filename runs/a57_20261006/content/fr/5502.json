@@ -1,0 +1,120 @@
+{
+ "mediaId": 5502,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le stockage",
+ "taps": [
+  {
+   "phrase": "empiler des cartons",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "transporter une palette chargée",
+   "target": "le transpalette",
+   "voice": "female"
+  },
+  {
+   "phrase": "envelopper des cartons de film plastique",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les cartons",
+   "voice": "female"
+  },
+  {
+   "word": "le transpalette",
+   "voice": "female"
+  },
+  {
+   "word": "le gilet de sécurité",
+   "voice": "female"
+  },
+  {
+   "word": "les rayonnages",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "empile",
+  "des",
+  "cartons",
+  "sur",
+  "une",
+  "palette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "empiler",
+     "gap": true,
+     "accept": [
+      "empiler"
+     ]
+    },
+    {
+     "text": "des cartons"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "transporter",
+     "gap": true,
+     "accept": [
+      "transporter",
+      "porter"
+     ]
+    },
+    {
+     "text": "une palette chargée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "envelopper des cartons de"
+    },
+    {
+     "text": "film",
+     "gap": true,
+     "accept": [
+      "film"
+     ]
+    },
+    {
+     "text": "plastique"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "empile des cartons sur une"
+    },
+    {
+     "text": "palette",
+     "gap": true,
+     "accept": [
+      "palette"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le stockage' (the act of storing) is abstract and is not named naturally by any noun, phrase or the answer of this clip; nothing forced. Tap boxes 1 and 3 both cover the woman throughout; the wrapping itself is visible only in a few late frames (the pallet is already wrapped), so phrase 3 may be weak - verifier please check. 'les rayonnages' = warehouse racking (B2); 'les étagères' also possible."
+}

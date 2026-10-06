@@ -1,0 +1,129 @@
+{
+ "mediaId": 305,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la mosca",
+ "taps": [
+  {
+   "phrase": "posarse en el pan",
+   "target": "la mosca",
+   "voice": "male"
+  },
+  {
+   "phrase": "volar sobre la mesa",
+   "target": "la mosca",
+   "voice": "male"
+  },
+  {
+   "phrase": "agitar una servilleta",
+   "target": "la mano",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mosca",
+   "voice": "male"
+  },
+  {
+   "word": "el tarro",
+   "voice": "male"
+  },
+  {
+   "word": "el té",
+   "voice": "male"
+  },
+  {
+   "word": "el pan",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la mosca?",
+ "answer": [
+  "Está",
+  "posada",
+  "en",
+  "el",
+  "pan."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "posarse",
+     "gap": true,
+     "accept": [
+      "posarse"
+     ]
+    },
+    {
+     "text": "en el pan"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar sobre la"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agitar una"
+    },
+    {
+     "text": "servilleta",
+     "gap": true,
+     "accept": [
+      "servilleta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "mosca",
+     "gap": true,
+     "accept": [
+      "mosca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está posada en el"
+    },
+    {
+     "text": "pan",
+     "gap": true,
+     "accept": [
+      "pan"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'posarse'/'posada' (B1-ish) is the plain right verb for a fly landing/sitting; no A2 alternative is natural. Phrases 1 and 2 share the same box (the fly lands on the tea glass, bread and jar and flies between them)."
+}

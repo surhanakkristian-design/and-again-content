@@ -1,0 +1,137 @@
+{
+ "mediaId": 7119,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el pescador",
+ "taps": [
+  {
+   "phrase": "subir una red a bordo",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar ropa impermeable amarilla",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "rebosar de peces plateados",
+   "target": "la red",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la gaviota",
+   "voice": "female"
+  },
+  {
+   "word": "la red",
+   "voice": "female"
+  },
+  {
+   "word": "la caja",
+   "voice": "female"
+  },
+  {
+   "word": "la pescadora",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la pescadora de naranja?",
+ "answer": [
+  "La",
+  "pescadora",
+  "arrastra",
+  "una",
+  "red",
+  "llena",
+  "de",
+  "peces."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir",
+     "gap": true,
+     "accept": [
+      "subir",
+      "izar"
+     ]
+    },
+    {
+     "text": "una red a bordo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar ropa"
+    },
+    {
+     "text": "impermeable",
+     "gap": true,
+     "accept": [
+      "impermeable"
+     ]
+    },
+    {
+     "text": "amarilla"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rebosar",
+     "gap": true,
+     "accept": [
+      "rebosar"
+     ]
+    },
+    {
+     "text": "de peces plateados"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "pescadora",
+     "gap": true,
+     "accept": [
+      "pescadora"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "arrastra",
+     "gap": true,
+     "accept": [
+      "arrastra",
+      "sube"
+     ]
+    },
+    {
+     "text": "una red llena de peces"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: the fisher is a woman, so the noun and the answer use 'la pescadora' (feminine of the database word 'el pescador'); proposal: accept the female form for this concept."
+}

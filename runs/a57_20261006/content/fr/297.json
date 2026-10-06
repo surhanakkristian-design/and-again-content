@@ -1,0 +1,115 @@
+{
+ "mediaId": 297,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la pêche",
+ "taps": [
+  {
+   "phrase": "tenir une canne à pêche",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir un filet",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "nager dans le lac",
+   "target": "le poisson",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le poisson",
+   "voice": "male"
+  },
+  {
+   "word": "le filet",
+   "voice": "male"
+  },
+  {
+   "word": "la casquette",
+   "voice": "male"
+  },
+  {
+   "word": "les arbres",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font l'homme et la femme ?",
+ "answer": [
+  "Ils",
+  "pêchent",
+  "dans",
+  "le",
+  "lac."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une canne à"
+    },
+    {
+     "text": "pêche",
+     "gap": true,
+     "accept": [
+      "pêche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "filet",
+     "gap": true,
+     "accept": [
+      "filet",
+      "épuisette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nager",
+     "gap": true,
+     "accept": [
+      "nager"
+     ]
+    },
+    {
+     "text": "dans le lac"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "pêchent dans le"
+    },
+    {
+     "text": "lac",
+     "gap": true,
+     "accept": [
+      "lac"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The landing net is 'une épuisette' in precise French, but that is above level A; used the plain A word 'le filet' everywhere. Key word 'la pêche' appears inside 'canne à pêche' and as the verb 'pêcher' in the answer."
+}

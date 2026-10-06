@@ -1,0 +1,26 @@
+{
+  "mediaId": 844, "lang": "fr", "level": "A",
+  "keyWord": "la vallée",
+  "taps": [
+    { "phrase": "lever les deux bras", "target": "la femme", "voice": "female" },
+    { "phrase": "montrer la vallée du doigt", "target": "l'homme", "voice": "male" },
+    { "phrase": "porter une veste orange", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "la vallée", "voice": "female" },
+    { "word": "la rivière", "voice": "female" },
+    { "word": "la femme", "voice": "female" }
+  ],
+  "question": "Que regardent-ils ?",
+  "answer": ["Ils", "regardent", "une", "vallée", "verte."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lever les deux" }, { "text": "bras", "gap": true, "accept": ["bras"] } ] },
+    { "from": "taps", "parts": [ { "text": "montrer la" }, { "text": "vallée", "gap": true, "accept": ["vallée"] }, { "text": "du doigt" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "orange" } ] },
+    { "from": "answer", "parts": [ { "text": "regardent", "gap": true, "accept": ["regardent"] }, { "text": "une vallée verte" } ] }
+  ],
+  "notes": "Boxes of all three phrases also cover the opening run and the closing dance, where the woman does not raise her arms and the man does not point; at the end the man also spreads his arms (sideways, not up). In the still the woman's raised left hand also has a pointing finger."
+}

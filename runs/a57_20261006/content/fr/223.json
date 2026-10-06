@@ -1,0 +1,121 @@
+{
+ "mediaId": 223,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la livraison",
+ "taps": [
+  {
+   "phrase": "être allongé sur le canapé",
+   "target": "le chat",
+   "voice": "male"
+  },
+  {
+   "phrase": "livrer le repas",
+   "target": "l'homme avec le casque",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un haut orange",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lampe",
+   "voice": "male"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "male"
+  },
+  {
+   "word": "le chat",
+   "voice": "male"
+  },
+  {
+   "word": "le canapé",
+   "voice": "male"
+  }
+ ],
+ "question": "Qui livre le repas ?",
+ "answer": [
+  "Un",
+  "homme",
+  "avec",
+  "un",
+  "casque",
+  "livre",
+  "le",
+  "repas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être allongé sur le"
+    },
+    {
+     "text": "canapé",
+     "gap": true,
+     "accept": [
+      "canapé"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "livrer le"
+    },
+    {
+     "text": "repas",
+     "gap": true,
+     "accept": [
+      "repas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "haut",
+     "gap": true,
+     "accept": [
+      "haut"
+     ]
+    },
+    {
+     "text": "orange"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "livre",
+     "gap": true,
+     "accept": [
+      "livre",
+      "apporte"
+     ]
+    },
+    {
+     "text": "le repas"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la livraison' is not a noun of the set; the phrase and answer use the verb 'livrer'. Cat box: the cat is off screen in most middle frames."
+}

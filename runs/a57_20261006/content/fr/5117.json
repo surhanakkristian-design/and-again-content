@@ -1,0 +1,120 @@
+{
+ "mediaId": 5117,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la librairie",
+ "taps": [
+  {
+   "phrase": "feuilleter un livre relié",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "rester bouche bée",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "crouler sous les livres",
+   "target": "les étagères",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lunettes",
+   "voice": "male"
+  },
+  {
+   "word": "les étagères",
+   "voice": "male"
+  },
+  {
+   "word": "la veste en jean",
+   "voice": "male"
+  },
+  {
+   "word": "le livre relié",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le jeune homme ?",
+ "answer": [
+  "Il",
+  "feuillette",
+  "un",
+  "livre",
+  "relié",
+  "dans",
+  "une",
+  "librairie."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "feuilleter",
+     "gap": true,
+     "accept": [
+      "feuilleter"
+     ]
+    },
+    {
+     "text": "un livre relié"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rester"
+    },
+    {
+     "text": "bouche",
+     "gap": true,
+     "accept": [
+      "bouche"
+     ]
+    },
+    {
+     "text": "bée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crouler",
+     "gap": true,
+     "accept": [
+      "crouler"
+     ]
+    },
+    {
+     "text": "sous les livres"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "feuillette un livre relié dans une"
+    },
+    {
+     "text": "librairie",
+     "gap": true,
+     "accept": [
+      "librairie"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'le livre relié' for hardback (also 'livre cartonné'). In the last frames he holds a huge book above his head rather than flicking through it."
+}

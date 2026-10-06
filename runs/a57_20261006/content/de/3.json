@@ -1,0 +1,120 @@
+{
+ "mediaId": 3,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Klasse",
+ "taps": [
+  {
+   "phrase": "an die Tafel schreiben",
+   "target": "die Lehrerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "aus einer Tasse trinken",
+   "target": "die Lehrerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich zur Klasse umdrehen",
+   "target": "die Lehrerin",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lehrerin",
+   "voice": "female"
+  },
+  {
+   "word": "die Tasse",
+   "voice": "female"
+  },
+  {
+   "word": "die Brille",
+   "voice": "female"
+  },
+  {
+   "word": "die Tafel",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Lehrerin?",
+ "answer": [
+  "Sie",
+  "schreibt",
+  "an",
+  "die",
+  "Tafel."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "an die"
+    },
+    {
+     "text": "Tafel",
+     "gap": true,
+     "accept": [
+      "Tafel"
+     ]
+    },
+    {
+     "text": "schreiben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus einer Tasse"
+    },
+    {
+     "text": "trinken",
+     "gap": true,
+     "accept": [
+      "trinken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich zur"
+    },
+    {
+     "text": "Klasse",
+     "gap": true,
+     "accept": [
+      "Klasse"
+     ]
+    },
+    {
+     "text": "umdrehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schreibt",
+     "gap": true,
+     "accept": [
+      "schreibt"
+     ]
+    },
+    {
+     "text": "an die Tafel"
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the teacher (as in English). Phrase 3 'sich zur Klasse umdrehen' (she turns round towards the class / camera) carries the key word; the class itself is only visible in the untapped chaos shots. The three tap boxes cover the whole clip incl. the close-up end; each phrase is true of the teacher in part of it."
+}

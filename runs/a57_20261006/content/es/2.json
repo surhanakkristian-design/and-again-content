@@ -1,0 +1,119 @@
+{
+ "mediaId": 2,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el certificado",
+ "taps": [
+  {
+   "phrase": "mostrar un certificado enmarcado",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "abrazar un montón de certificados",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "sonreír con orgullo",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pelo rizado",
+   "voice": "female"
+  },
+  {
+   "word": "el certificado",
+   "voice": "female"
+  },
+  {
+   "word": "la camiseta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "presumiendo",
+  "de",
+  "sus",
+  "certificados",
+  "enmarcados."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mostrar un"
+    },
+    {
+     "text": "certificado",
+     "gap": true,
+     "accept": [
+      "certificado",
+      "diploma"
+     ]
+    },
+    {
+     "text": "enmarcado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrazar",
+     "gap": true,
+     "accept": [
+      "abrazar"
+     ]
+    },
+    {
+     "text": "un montón de certificados"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír con"
+    },
+    {
+     "text": "orgullo",
+     "gap": true,
+     "accept": [
+      "orgullo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "presumiendo",
+     "gap": true,
+     "accept": [
+      "presumiendo",
+      "fardando"
+     ]
+    },
+    {
+     "text": "de sus certificados enmarcados"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word noun 'el certificado' already appears in phrase rows and the answer, so no separate noun row. 'A top' rendered 'la camiseta' (the usual Spain word for this long-sleeved top)."
+}

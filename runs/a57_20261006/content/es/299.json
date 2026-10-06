@@ -1,0 +1,115 @@
+{
+ "mediaId": 299,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "despertar",
+ "taps": [
+  {
+   "phrase": "dormir en la cama",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "andar por la cama",
+   "target": "el perro",
+   "voice": "female"
+  },
+  {
+   "phrase": "taparse la cara",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la almohada",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "la manta",
+   "voice": "female"
+  },
+  {
+   "word": "la puerta",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el perro?",
+ "answer": [
+  "El",
+  "perro",
+  "la",
+  "está",
+  "despertando."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormir",
+     "gap": true,
+     "accept": [
+      "dormir"
+     ]
+    },
+    {
+     "text": "en la cama"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "andar",
+     "gap": true,
+     "accept": [
+      "andar",
+      "caminar"
+     ]
+    },
+    {
+     "text": "por la cama"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taparse la"
+    },
+    {
+     "text": "cara",
+     "gap": true,
+     "accept": [
+      "cara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "la está"
+    },
+    {
+     "text": "despertando",
+     "gap": true,
+     "accept": [
+      "despertando"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 'taparse la cara' only in the last frames; boxes 1 and 3 share the woman's region. Answer voice kept female as in English though 'el perro' is masculine."
+}

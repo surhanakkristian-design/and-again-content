@@ -1,0 +1,26 @@
+{
+  "mediaId": 242, "lang": "fr", "level": "A",
+  "keyWord": "la robe",
+  "taps": [
+    { "phrase": "pendre à un cintre", "target": "la robe", "voice": "female" },
+    { "phrase": "tourner sur elle-même", "target": "la femme", "voice": "female" },
+    { "phrase": "frapper dans ses mains", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les citrons", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "la robe", "voice": "female" },
+    { "word": "le miroir", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "tourne", "dans", "sa", "robe", "rouge."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "pendre", "gap": true, "accept": ["pendre"] }, { "text": "à un cintre" } ] },
+    { "from": "taps", "parts": [ { "text": "tourner", "gap": true, "accept": ["tourner"] }, { "text": "sur elle-même" } ] },
+    { "from": "taps", "parts": [ { "text": "frapper dans ses" }, { "text": "mains", "gap": true, "accept": ["mains"] } ] },
+    { "from": "answer", "parts": [ { "text": "tourne dans sa" }, { "text": "robe", "gap": true, "accept": ["robe"] }, { "text": "rouge" } ] }
+  ],
+  "notes": "'le cintre' is closer to B1 but is the only plain word for the hanger the clip shows. 'frapper dans ses mains' = clap (the man claps while holding a watering can in the later frames). The key word 'la robe' is in the answer row, so no extra noun row."
+}

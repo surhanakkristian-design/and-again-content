@@ -1,0 +1,123 @@
+{
+ "mediaId": 234,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "disolverse",
+ "taps": [
+  {
+   "phrase": "disolverse en el agua",
+   "target": "el terrón de azúcar",
+   "voice": "female"
+  },
+  {
+   "phrase": "remover con una cuchara",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "echar un terrón de azúcar",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cuchara",
+   "voice": "female"
+  },
+  {
+   "word": "el delantal",
+   "voice": "female"
+  },
+  {
+   "word": "el vaso",
+   "voice": "female"
+  },
+  {
+   "word": "el terrón de azúcar",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué le está pasando al terrón de azúcar?",
+ "answer": [
+  "El",
+  "terrón",
+  "de",
+  "azúcar",
+  "se",
+  "está",
+  "disolviendo",
+  "en",
+  "el",
+  "agua."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "disolverse en el"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "remover con una"
+    },
+    {
+     "text": "cuchara",
+     "gap": true,
+     "accept": [
+      "cuchara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar",
+     "gap": true,
+     "accept": [
+      "echar"
+     ]
+    },
+    {
+     "text": "un terrón de azúcar"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se está"
+    },
+    {
+     "text": "disolviendo",
+     "gap": true,
+     "accept": [
+      "disolviendo",
+      "deshaciendo"
+     ]
+    },
+    {
+     "text": "en el agua"
+    }
+   ]
+  }
+ ],
+ "notes": "Spain: 'remover' = to stir, 'el terrón de azúcar' = the sugar cube. Answer 9 chips with the noun subject; answer row = 'se está disolviendo en el agua' (key word gapped)."
+}

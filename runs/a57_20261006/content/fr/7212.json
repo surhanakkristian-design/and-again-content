@@ -1,0 +1,117 @@
+{
+  "mediaId": 7212,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "prendre le petit-déjeuner",
+  "taps": [
+    {
+      "phrase": "prendre le petit-déjeuner",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "tenir une fourchette",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "regarder l'assiette de la femme",
+      "target": "l'oiseau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'oiseau",
+      "voice": "female"
+    },
+    {
+      "word": "la tasse",
+      "voice": "female"
+    },
+    {
+      "word": "l'assiette",
+      "voice": "female"
+    },
+    {
+      "word": "le bonnet",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "prend",
+    "le",
+    "petit-déjeuner",
+    "au-dessus",
+    "des",
+    "nuages."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "prendre le"
+        },
+        {
+          "text": "petit-déjeuner",
+          "gap": true,
+          "accept": [
+            "petit-déjeuner",
+            "petit déjeuner"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir une"
+        },
+        {
+          "text": "fourchette",
+          "gap": true,
+          "accept": [
+            "fourchette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "regarder",
+          "gap": true,
+          "accept": [
+            "regarder"
+          ]
+        },
+        {
+          "text": "l'assiette de la femme"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "prend le petit-déjeuner au-dessus des"
+        },
+        {
+          "text": "nuages",
+          "gap": true,
+          "accept": [
+            "nuages"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word kept with the hyphen (petit-déjeuner, reformed spelling) everywhere; recall accepts 'petit déjeuner' too. The bird is a raven/crow; 'l'oiseau' kept at level A. Phrase 3 says 'l'assiette de la femme' because 'son assiette' would be ambiguous (its/her). 'le bonnet' = the bobble hat."
+}

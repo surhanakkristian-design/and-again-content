@@ -1,0 +1,114 @@
+{
+ "mediaId": 5456,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la permission",
+ "taps": [
+  {
+   "phrase": "ouvrir son passeport",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "passer le contrôle",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un uniforme",
+   "target": "l'agent",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "les lunettes",
+   "voice": "male"
+  },
+  {
+   "word": "les mains",
+   "voice": "male"
+  },
+  {
+   "word": "le passeport",
+   "voice": "male"
+  }
+ ],
+ "question": "Que tient le jeune homme ?",
+ "answer": [
+  "Il",
+  "tient",
+  "son",
+  "passeport."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir son"
+    },
+    {
+     "text": "passeport",
+     "gap": true,
+     "accept": [
+      "passeport"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer",
+     "gap": true,
+     "accept": [
+      "passer",
+      "franchir"
+     ]
+    },
+    {
+     "text": "le contrôle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "uniforme",
+     "gap": true,
+     "accept": [
+      "uniforme"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient",
+     "gap": true,
+     "accept": [
+      "tient"
+     ]
+    },
+    {
+     "text": "son passeport"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la permission' is abstract and not a noun of the set; it appears in no exercise (no noun row). Phrases 1 and 2 share one box over the whole clip: he opens the passport in the middle part, and passes the security check (walks through the metal-detector gate) only at the end; 'passer le contrôle' chosen over 'passer le portique' (B1+) for level A. 'l'agent' = the uniformed officer."
+}

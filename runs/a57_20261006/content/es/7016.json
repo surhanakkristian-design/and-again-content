@@ -1,0 +1,126 @@
+{
+ "mediaId": 7016,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la granja lechera",
+ "taps": [
+  {
+   "phrase": "dar palmaditas a una vaca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "pasear junto a la valla",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "caminar en fila india",
+   "target": "las vacas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cancela",
+   "voice": "female"
+  },
+  {
+   "word": "el establo",
+   "voice": "female"
+  },
+  {
+   "word": "los bidones de leche",
+   "voice": "female"
+  },
+  {
+   "word": "las vacas",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Le",
+  "da",
+  "palmaditas",
+  "a",
+  "una",
+  "vaca",
+  "en",
+  "la",
+  "granja",
+  "lechera."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "palmaditas",
+     "gap": true,
+     "accept": [
+      "palmaditas"
+     ]
+    },
+    {
+     "text": "a una vaca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasear junto a la"
+    },
+    {
+     "text": "valla",
+     "gap": true,
+     "accept": [
+      "valla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar",
+     "gap": true,
+     "accept": [
+      "caminar",
+      "andar"
+     ]
+    },
+    {
+     "text": "en fila india"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le da palmaditas a una vaca en la"
+    },
+    {
+     "text": "granja",
+     "gap": true,
+     "accept": [
+      "granja"
+     ]
+    },
+    {
+     "text": "lechera"
+    }
+   ]
+  }
+ ],
+ "notes": "Key-word mapping: English uses 'dairy' as an adjective ('a dairy cow'); the Spanish database word 'la granja lechera' is the farm, so the answer says 'en la granja lechera' (barn, churns, tanker are visible). 'en la granja lechera' could also open the sentence; the given order is the natural one. The woman holds the gate in the first frames and pats a cow from frame 2 on. 'la cancela' for the metal farm gate (Spain); 'la puerta' would also do."
+}

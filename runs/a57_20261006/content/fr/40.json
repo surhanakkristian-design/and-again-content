@@ -1,0 +1,115 @@
+{
+ "mediaId": 40,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la réponse",
+ "taps": [
+  {
+   "phrase": "tirer une carte",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être posées sur la table",
+   "target": "les cartes",
+   "voice": "female"
+  },
+  {
+   "phrase": "montrer une carte",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les cheveux",
+   "voice": "female"
+  },
+  {
+   "word": "le pull",
+   "voice": "female"
+  },
+  {
+   "word": "la carte",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que montre la femme ?",
+ "answer": [
+  "Elle",
+  "montre",
+  "une",
+  "carte."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer",
+     "gap": true,
+     "accept": [
+      "tirer",
+      "choisir",
+      "prendre"
+     ]
+    },
+    {
+     "text": "une carte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posées sur la"
+    },
+    {
+     "text": "table",
+     "gap": true,
+     "accept": [
+      "table"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer une"
+    },
+    {
+     "text": "carte",
+     "gap": true,
+     "accept": [
+      "carte"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "montre une"
+    },
+    {
+     "text": "carte",
+     "gap": true,
+     "accept": [
+      "carte"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'tirer une carte' is the native collocation for drawing a card. Key word 'la réponse' is not a noun of the set (the card is her answer), so no noun row. English 'hair' -> 'les cheveux' (French uses the plural). Tap boxes 1 and 3 also cover opening frames where only the table and the card stack are visible. Gaps chosen so tap row 1 and the answer row do not look the same once blanked."
+}

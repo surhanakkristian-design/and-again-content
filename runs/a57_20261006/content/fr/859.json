@@ -1,0 +1,26 @@
+{
+  "mediaId": 859, "lang": "fr", "level": "B",
+  "keyWord": "une armoire",
+  "taps": [
+    { "phrase": "fouiller parmi les manteaux", "target": "la fille", "voice": "female" },
+    { "phrase": "tenir une robe devant soi", "target": "la fille", "voice": "female" },
+    { "phrase": "refermer les portes de l'armoire", "target": "la fille", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "l'armoire", "voice": "female" },
+    { "word": "les pulls", "voice": "female" },
+    { "word": "le manteau", "voice": "female" },
+    { "word": "la robe", "voice": "female" }
+  ],
+  "question": "Que fait la fille ?",
+  "answer": ["Elle", "fouille", "dans", "une", "grande", "armoire."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "fouiller parmi les" }, { "text": "manteaux", "gap": true, "accept": ["manteaux"] } ] },
+    { "from": "taps", "parts": [ { "text": "tenir une" }, { "text": "robe", "gap": true, "accept": ["robe"] }, { "text": "devant soi" } ] },
+    { "from": "taps", "parts": [ { "text": "refermer", "gap": true, "accept": ["refermer", "fermer"] }, { "text": "les portes de l'armoire" } ] },
+    { "from": "answer", "parts": [ { "text": "fouille dans une grande" }, { "text": "armoire", "gap": true, "accept": ["armoire"] } ] }
+  ],
+  "notes": "keyWord 'une armoire' copied unchanged (indefinite article in the source). Noun 1 is 'l'armoire' (definite, elided); phrase 3 contains 'l'armoire', so no noun row; the key word is gapped in the answer row, which uses 'une grande armoire' so the word is not elided. All three English boxes are the same girl box over the whole clip: phrase 1 is true while she goes through the hangers (first half), phrase 2 while she holds the yellow coat and the red dress against herself, phrase 3 at the end."
+}

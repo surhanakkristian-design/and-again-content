@@ -1,0 +1,124 @@
+{
+ "mediaId": 4827,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la peinture",
+ "taps": [
+  {
+   "phrase": "peindre un coucher de soleil",
+   "target": "la main",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir un pinceau",
+   "target": "la main",
+   "voice": "male"
+  },
+  {
+   "phrase": "étaler de la peinture orange",
+   "target": "la main",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les nuages",
+   "voice": "male"
+  },
+  {
+   "word": "la peinture",
+   "voice": "male"
+  },
+  {
+   "word": "le pinceau",
+   "voice": "male"
+  },
+  {
+   "word": "la main",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la personne ?",
+ "answer": [
+  "La",
+  "personne",
+  "peint",
+  "avec",
+  "de",
+  "la",
+  "peinture",
+  "orange."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "peindre un"
+    },
+    {
+     "text": "coucher",
+     "gap": true,
+     "accept": [
+      "coucher"
+     ]
+    },
+    {
+     "text": "de soleil"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "un pinceau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "étaler",
+     "gap": true,
+     "accept": [
+      "étaler",
+      "mettre"
+     ]
+    },
+    {
+     "text": "de la peinture orange"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "peint avec de la"
+    },
+    {
+     "text": "peinture",
+     "gap": true,
+     "accept": [
+      "peinture"
+     ]
+    },
+    {
+     "text": "orange"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: in the first half of the boxed frames the hand holds a palette knife (le couteau à peindre), a brush only in the second half. Answer keeps the noun subject 'La personne' (pronoun 'elle' with a male voice would confuse). Phrase 3 'étaler' (spread) is what the knife and brush do; more native than 'utiliser'."
+}

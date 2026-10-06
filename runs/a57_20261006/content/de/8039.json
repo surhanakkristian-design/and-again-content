@@ -1,0 +1,200 @@
+{
+  "mediaId": 8039,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Weg",
+  "taps": [
+    {
+      "phrase": "einen schmalen Weg freischaufeln",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "den Weg entlangrennen",
+      "target": "der Hund",
+      "voice": "female"
+    },
+    {
+      "phrase": "hinter dem Fenster gestikulieren",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Schnee",
+      "voice": "female"
+    },
+    {
+      "word": "die Schaufel",
+      "voice": "female"
+    },
+    {
+      "word": "der Hund",
+      "voice": "female"
+    },
+    {
+      "word": "der Weg",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau draußen?",
+  "answer": [
+    "Sie",
+    "schaufelt",
+    "einen",
+    "Weg",
+    "durch",
+    "den",
+    "Schnee."
+  ],
+  "answerVoice": "female",
+  "carousel": [
+    {
+      "en": "to block the way",
+      "caption": "den Weg versperren",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "narrow way",
+      "caption": "der schmale Weg",
+      "type": "noun coll.",
+      "hasKeyWord": true,
+      "note": ""
+    },
+    {
+      "en": "to look for a way through",
+      "caption": "einen Weg suchen",
+      "type": "verb coll.",
+      "hasKeyWord": true,
+      "note": ""
+    }
+  ],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen schmalen Weg"
+        },
+        {
+          "text": "freischaufeln",
+          "gap": true,
+          "accept": [
+            "freischaufeln",
+            "schaufeln",
+            "graben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Weg",
+          "gap": true,
+          "accept": [
+            "Weg",
+            "Pfad"
+          ]
+        },
+        {
+          "text": "entlangrennen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hinter dem"
+        },
+        {
+          "text": "Fenster",
+          "gap": true,
+          "accept": [
+            "Fenster"
+          ]
+        },
+        {
+          "text": "gestikulieren"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schaufelt einen Weg"
+        },
+        {
+          "text": "durch den"
+        },
+        {
+          "text": "Schnee",
+          "gap": true,
+          "accept": [
+            "Schnee"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "den Weg"
+        },
+        {
+          "text": "versperren",
+          "gap": true,
+          "accept": [
+            "versperren",
+            "blockieren"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "schmale",
+          "gap": true,
+          "accept": [
+            "schmale",
+            "enge"
+          ]
+        },
+        {
+          "text": "Weg"
+        }
+      ]
+    },
+    {
+      "from": "carousel",
+      "parts": [
+        {
+          "text": "einen Weg"
+        },
+        {
+          "text": "suchen",
+          "gap": true,
+          "accept": [
+            "suchen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Owner decision 403: key word now 'der Weg' (was der Durchgang). 'Weg' is used in phrases 1+2, noun 4, the answer and all three captions. Phrase 3 uses 'gestikulieren' (B2) because the man waves and points behind the glass; the woman inside stands still. Carousel types inferred (verb coll., noun coll., verb coll.)."
+}

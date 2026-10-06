@@ -1,0 +1,121 @@
+{
+ "mediaId": 540,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Elfmeter",
+ "taps": [
+  {
+   "phrase": "einen Elfmeter geben",
+   "target": "der Schiedsrichter",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Elfmeter schießen",
+   "target": "die Stürmerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "nach dem Ball hechten",
+   "target": "die Torhüterin",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Palmen",
+   "voice": "female"
+  },
+  {
+   "word": "das Tor",
+   "voice": "female"
+  },
+  {
+   "word": "die Torhüterin",
+   "voice": "female"
+  },
+  {
+   "word": "der Ball",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Stürmerin?",
+ "answer": [
+  "Sie",
+  "schießt",
+  "einen",
+  "Elfmeter."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Elfmeter"
+    },
+    {
+     "text": "geben",
+     "gap": true,
+     "accept": [
+      "geben",
+      "pfeifen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Elfmeter",
+     "gap": true,
+     "accept": [
+      "Elfmeter",
+      "Strafstoß"
+     ]
+    },
+    {
+     "text": "schießen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "nach dem"
+    },
+    {
+     "text": "Ball",
+     "gap": true,
+     "accept": [
+      "Ball"
+     ]
+    },
+    {
+     "text": "hechten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schießt",
+     "gap": true,
+     "accept": [
+      "schießt"
+     ]
+    },
+    {
+     "text": "einen Elfmeter"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the referee's box covers his gesture (arm up, pointing to the spot) only in the first two boxed frames; afterwards he stands far back. 'einen Elfmeter geben' is the decision he makes, true for the scene; alternative 'auf den Elfmeterpunkt zeigen' would be literal but true in fewer frames. Players are women: 'die Stürmerin', 'die Torhüterin'. The key word 'der Elfmeter' is no noun of the set, so no noun row."
+}

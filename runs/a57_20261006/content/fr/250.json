@@ -1,0 +1,128 @@
+{
+  "mediaId": 250,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le canard",
+  "taps": [
+    {
+      "phrase": "mettre la tête sous l'eau",
+      "target": "le canard",
+      "voice": "female"
+    },
+    {
+      "phrase": "ouvrir les ailes",
+      "target": "le canard",
+      "voice": "female"
+    },
+    {
+      "phrase": "ouvrir le bec",
+      "target": "le canard",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le canard",
+      "voice": "female"
+    },
+    {
+      "word": "les arbres",
+      "voice": "female"
+    },
+    {
+      "word": "l'eau",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le canard ?",
+  "answer": [
+    "Le",
+    "canard",
+    "nage",
+    "sur",
+    "l'eau."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mettre la"
+        },
+        {
+          "text": "tête",
+          "gap": true,
+          "accept": [
+            "tête"
+          ]
+        },
+        {
+          "text": "sous l'eau"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir les"
+        },
+        {
+          "text": "ailes",
+          "gap": true,
+          "accept": [
+            "ailes"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir",
+          "gap": true,
+          "accept": [
+            "ouvrir"
+          ]
+        },
+        {
+          "text": "le bec"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "le"
+        },
+        {
+          "text": "canard",
+          "gap": true,
+          "accept": [
+            "canard"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "nage",
+          "gap": true,
+          "accept": [
+            "nage"
+          ]
+        },
+        {
+          "text": "sur l'eau"
+        }
+      ]
+    }
+  ],
+  "notes": "The only animal in the clip is the duck, so all three phrases are about it (as in English). Duck's mouth = 'le bec'."
+}

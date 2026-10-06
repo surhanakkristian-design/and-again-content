@@ -1,0 +1,127 @@
+{
+ "mediaId": 4190,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "encontrarse",
+ "taps": [
+  {
+   "phrase": "estar sentado en un muro",
+   "target": "el gato",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener una melena oscura",
+   "target": "el león",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser naranja y blanco",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "el león",
+   "voice": "female"
+  },
+  {
+   "word": "la hierba",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace el gato?",
+ "answer": [
+  "El",
+  "gato",
+  "se",
+  "encuentra",
+  "con",
+  "un",
+  "león",
+  "grande."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en un"
+    },
+    {
+     "text": "muro",
+     "gap": true,
+     "accept": [
+      "muro",
+      "murete"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener una"
+    },
+    {
+     "text": "melena",
+     "gap": true,
+     "accept": [
+      "melena"
+     ]
+    },
+    {
+     "text": "oscura"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser"
+    },
+    {
+     "text": "naranja",
+     "gap": true,
+     "accept": [
+      "naranja"
+     ]
+    },
+    {
+     "text": "y blanco"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "encuentra",
+     "gap": true,
+     "accept": [
+      "encuentra"
+     ]
+    },
+    {
+     "text": "con un león grande"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the cat sits on a low concrete ledge (murete) by the bars; 'muro' kept as the A-level word, 'murete' accepted. Phrase 2: the lioness is also in some frames but has no mane, so 'tener una melena oscura' fits only the male lion. keyWord 'encontrarse' (con) = meet face to face; used in the answer."
+}

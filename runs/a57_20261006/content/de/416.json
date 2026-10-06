@@ -1,0 +1,26 @@
+{
+  "mediaId": 416, "lang": "de", "level": "A",
+  "keyWord": "der Ketchup",
+  "taps": [
+    { "phrase": "eine Ketchupflasche schütteln", "target": "der Mann", "voice": "male" },
+    { "phrase": "den Mann beobachten", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf einem Teller liegen", "target": "die Pommes", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Mann", "voice": "male" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "die Pommes", "voice": "male" },
+    { "word": "der Ketchup", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Er", "schüttelt", "eine", "Ketchupflasche."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine Ketchupflasche" }, { "text": "schütteln", "gap": true, "accept": ["schütteln"] } ] },
+    { "from": "taps", "parts": [ { "text": "den Mann" }, { "text": "beobachten", "gap": true, "accept": ["beobachten", "ansehen", "anschauen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf einem" }, { "text": "Teller", "gap": true, "accept": ["Teller"] }, { "text": "liegen" } ] },
+    { "from": "answer", "parts": [ { "text": "schüttelt eine" }, { "text": "Ketchupflasche", "gap": true, "accept": ["Ketchupflasche", "Flasche"] } ] }
+  ],
+  "notes": "Tap 1 box also covers the later frames where the man pours, dips and eats; the phrase follows the shaking/smacking that fills most boxed frames. No noun row: the key word is in the compound 'Ketchupflasche' (owner decision 404). 'die Pommes' is the everyday plural word for fries."
+}

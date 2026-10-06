@@ -1,0 +1,26 @@
+{
+  "mediaId": 227, "lang": "de", "level": "B",
+  "keyWord": "der Diamant",
+  "taps": [
+    { "phrase": "eine Lupe halten", "target": "die Frau mit den Handschuhen", "voice": "female" },
+    { "phrase": "vor Staunen nach Luft schnappen", "target": "die rothaarige Frau", "voice": "female" },
+    { "phrase": "auf der Fensterbank liegen", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Diamant", "voice": "female" },
+    { "word": "das Kissen", "voice": "female" },
+    { "word": "die Katze", "voice": "female" },
+    { "word": "die Kette", "voice": "female" }
+  ],
+  "question": "Was starrt die rothaarige Frau an?",
+  "answer": ["Sie", "starrt", "einen", "funkelnden", "Diamanten", "an."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Lupe", "gap": true, "accept": ["Lupe"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "vor" }, { "text": "Staunen", "gap": true, "accept": ["Staunen"] }, { "text": "nach Luft schnappen" } ] },
+    { "from": "taps", "parts": [ { "text": "auf der" }, { "text": "Fensterbank", "gap": true, "accept": ["Fensterbank", "Fensterbrett"] }, { "text": "liegen" } ] },
+    { "from": "answer", "parts": [ { "text": "starrt einen funkelnden" }, { "text": "Diamanten", "gap": true, "accept": ["Diamanten"] }, { "text": "an" } ] }
+  ],
+  "notes": "Red box: the jeweller holds the loupe in most boxed frames; in the late frames she sets the ring down and holds the cushion. Lupe and Fensterbank are B1/B2. The cat lies on the windowsill, so 'liegen' rather than 'ruhen'. Noun 1 slot is the diamond set in the ring: 'der Diamant' (key word). No noun row: Diamant is already in the answer row (gap)."
+}

@@ -1,0 +1,118 @@
+{
+ "mediaId": 4222,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "winken",
+ "taps": [
+  {
+   "phrase": "in die Kamera winken",
+   "target": "der Gecko",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Arme verschränken",
+   "target": "der Gecko",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich zum Objektiv vorbeugen",
+   "target": "der Gecko",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Augen",
+   "voice": "female"
+  },
+  {
+   "word": "die Zunge",
+   "voice": "female"
+  },
+  {
+   "word": "der Bauch",
+   "voice": "female"
+  },
+  {
+   "word": "der Schwanz",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Gecko?",
+ "answer": [
+  "Er",
+  "winkt",
+  "in",
+  "die",
+  "Kamera."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Kamera"
+    },
+    {
+     "text": "winken",
+     "gap": true,
+     "accept": [
+      "winken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Arme"
+    },
+    {
+     "text": "verschränken",
+     "gap": true,
+     "accept": [
+      "verschränken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich zum"
+    },
+    {
+     "text": "Objektiv",
+     "gap": true,
+     "accept": [
+      "Objektiv",
+      "Kameraobjektiv"
+     ]
+    },
+    {
+     "text": "vorbeugen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "winkt in die"
+    },
+    {
+     "text": "Kamera",
+     "gap": true,
+     "accept": [
+      "Kamera"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Only one character, so all three phrases share the target (as in English). 'Objektiv' (camera lens) chosen over colloquial 'Linse'."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 192, "lang": "de", "level": "A",
+  "keyWord": "die Ecke",
+  "taps": [
+    { "phrase": "genau in die Ecke passen", "target": "das Brett", "voice": "female" },
+    { "phrase": "orange Kleidung tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine Brille tragen", "target": "der Mann", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "die Ecke", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" }
+  ],
+  "question": "Wohin legen sie das Brett?",
+  "answer": ["Sie", "legen", "das", "Brett", "in", "die", "Ecke."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "genau in die" }, { "text": "Ecke", "gap": true, "accept": ["Ecke"] }, { "text": "passen" } ] },
+    { "from": "taps", "parts": [ { "text": "orange" }, { "text": "Kleidung", "gap": true, "accept": ["Kleidung", "Sachen"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Brille", "gap": true, "accept": ["Brille"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "legen", "gap": true, "accept": ["legen", "stellen", "schieben"] }, { "text": "das Brett in die Ecke" } ] }
+  ],
+  "notes": "Tap 1: in the clip the board(s) sit at the edge of a concrete pillar (it may read as an outer corner, 'an der Ecke'); kept 'in die Ecke' as in the English and the description. 'orange' left uninflected (standard). Answer uses 'das Brett' instead of 'es' for clarity; subject 'Sie' = they. No noun row: Ecke is gapped in tap row 1."
+}

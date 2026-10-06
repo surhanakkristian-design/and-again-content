@@ -1,0 +1,121 @@
+{
+ "mediaId": 242,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el vestido",
+ "taps": [
+  {
+   "phrase": "colgar de una percha",
+   "target": "el vestido",
+   "voice": "female"
+  },
+  {
+   "phrase": "dar vueltas sin parar",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "aplaudir a la chica",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los limones",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el vestido",
+   "voice": "female"
+  },
+  {
+   "word": "el espejo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "Da",
+  "vueltas",
+  "con",
+  "un",
+  "vestido",
+  "rojo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colgar de una"
+    },
+    {
+     "text": "percha",
+     "gap": true,
+     "accept": [
+      "percha"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "vueltas",
+     "gap": true,
+     "accept": [
+      "vueltas"
+     ]
+    },
+    {
+     "text": "sin parar"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aplaudir",
+     "gap": true,
+     "accept": [
+      "aplaudir"
+     ]
+    },
+    {
+     "text": "a la chica"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Da vueltas con un"
+    },
+    {
+     "text": "vestido",
+     "gap": true,
+     "accept": [
+      "vestido"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: in the first boxed frames the woman walks out of the door before she spins; phrase written for the spinning (most boxed frames)."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 5566,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Ankunft",
+ "taps": [
+  {
+   "phrase": "die Ziellinie überqueren",
+   "target": "die Läuferin",
+   "voice": "female"
+  },
+  {
+   "phrase": "das Zielband aufheben",
+   "target": "die Frau im Kapuzenpulli",
+   "voice": "female"
+  },
+  {
+   "phrase": "hinter den Absperrungen jubeln",
+   "target": "die Zuschauer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Läuferin",
+   "voice": "female"
+  },
+  {
+   "word": "die Zuschauer",
+   "voice": "female"
+  },
+  {
+   "word": "die Wimpelketten",
+   "voice": "female"
+  },
+  {
+   "word": "die Pappbecher",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Läuferin?",
+ "answer": [
+  "Sie",
+  "überquert",
+  "die",
+  "Ziellinie."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Ziellinie",
+     "gap": true,
+     "accept": [
+      "Ziellinie"
+     ]
+    },
+    {
+     "text": "überqueren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das Zielband"
+    },
+    {
+     "text": "aufheben",
+     "gap": true,
+     "accept": [
+      "aufheben",
+      "aufsammeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter den"
+    },
+    {
+     "text": "Absperrungen",
+     "gap": true,
+     "accept": [
+      "Absperrungen",
+      "Absperrgittern"
+     ]
+    },
+    {
+     "text": "jubeln"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "überquert",
+     "gap": true,
+     "accept": [
+      "überquert"
+     ]
+    },
+    {
+     "text": "die Ziellinie"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Ankunft' appears in no exercise (as 'arrival' in the English); 'die Ankunft' is weak for crossing a finish line ('der Zieleinlauf' would fit better) - owner decides. Several strings of bunting -> plural 'die Wimpelketten'."
+}

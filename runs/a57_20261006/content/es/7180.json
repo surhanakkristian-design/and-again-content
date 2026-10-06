@@ -1,0 +1,119 @@
+{
+  "mediaId": 7180,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "irse de vacaciones",
+  "taps": [
+    {
+      "phrase": "saltar a la piscina",
+      "target": "el hombre de las gafas de sol",
+      "voice": "male"
+    },
+    {
+      "phrase": "llevar una bebida",
+      "target": "el camarero",
+      "voice": "male"
+    },
+    {
+      "phrase": "caerse al suelo",
+      "target": "la maleta",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la maleta",
+      "voice": "male"
+    },
+    {
+      "word": "las palmeras",
+      "voice": "male"
+    },
+    {
+      "word": "el cielo",
+      "voice": "male"
+    },
+    {
+      "word": "el camarero",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hace el hombre de las gafas de sol?",
+  "answer": [
+    "Está",
+    "saltando",
+    "a",
+    "la",
+    "piscina."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "saltar a la"
+        },
+        {
+          "text": "piscina",
+          "gap": true,
+          "accept": [
+            "piscina"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar",
+          "gap": true,
+          "accept": [
+            "llevar"
+          ]
+        },
+        {
+          "text": "una bebida"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "caerse",
+          "gap": true,
+          "accept": [
+            "caerse",
+            "caer"
+          ]
+        },
+        {
+          "text": "al suelo"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está"
+        },
+        {
+          "text": "saltando",
+          "gap": true,
+          "accept": [
+            "saltando",
+            "tirándose"
+          ]
+        },
+        {
+          "text": "a la piscina"
+        }
+      ]
+    }
+  ],
+  "notes": "English 'trees' are palm trees: 'las palmeras' is the everyday word. Question uses '¿Qué hace...?' to stay within 8 words. Phrase 1 box also covers the frames where the man floats in the pool after the jump (same as English). Key word 'irse de vacaciones' not forced into the texts."
+}

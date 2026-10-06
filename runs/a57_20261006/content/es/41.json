@@ -1,0 +1,118 @@
+{
+  "mediaId": 41,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la discusión",
+  "taps": [
+    {
+      "phrase": "sujetar un martillo",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener el pelo negro",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "estar colgado en la pared",
+      "target": "el cuadro",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cuadro",
+      "voice": "male"
+    },
+    {
+      "word": "el martillo",
+      "voice": "male"
+    },
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué están haciendo el hombre y la mujer?",
+  "answer": [
+    "Tienen",
+    "una",
+    "discusión."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sujetar un"
+        },
+        {
+          "text": "martillo",
+          "gap": true,
+          "accept": [
+            "martillo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener el"
+        },
+        {
+          "text": "pelo",
+          "gap": true,
+          "accept": [
+            "pelo"
+          ]
+        },
+        {
+          "text": "negro"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar"
+        },
+        {
+          "text": "colgado",
+          "gap": true,
+          "accept": [
+            "colgado"
+          ]
+        },
+        {
+          "text": "en la pared"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Tienen una"
+        },
+        {
+          "text": "discusión",
+          "gap": true,
+          "accept": [
+            "discusión"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Answer without subject (natural in Spanish) so the key word 'la discusión' stays in the sentence; 'Están discutiendo' would be equally natural but drops the key word. Phrase 3 box also covers frames where the picture is held in hands or lies on the floor; written for the hanging picture (start and end)."
+}

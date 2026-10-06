@@ -1,0 +1,120 @@
+{
+  "mediaId": 859,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Kleiderschrank",
+  "taps": [
+    {
+      "phrase": "in den Mänteln stöbern",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein Kleid vor sich halten",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Türen des Kleiderschranks zudrücken",
+      "target": "das Mädchen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Kleiderschrank",
+      "voice": "female"
+    },
+    {
+      "word": "die Pullover",
+      "voice": "female"
+    },
+    {
+      "word": "der Mantel",
+      "voice": "female"
+    },
+    {
+      "word": "das Kleid",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": [
+    "Sie",
+    "stöbert",
+    "im",
+    "Kleiderschrank."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in den Mänteln"
+        },
+        {
+          "text": "stöbern",
+          "gap": true,
+          "accept": [
+            "stöbern",
+            "wühlen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "Kleid",
+          "gap": true,
+          "accept": [
+            "Kleid"
+          ]
+        },
+        {
+          "text": "vor sich halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Türen des Kleiderschranks"
+        },
+        {
+          "text": "zudrücken",
+          "gap": true,
+          "accept": [
+            "zudrücken",
+            "schließen",
+            "zumachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "stöbert im"
+        },
+        {
+          "text": "Kleiderschrank",
+          "gap": true,
+          "accept": [
+            "Kleiderschrank",
+            "Schrank"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "All three English tap boxes cover the girl for the whole clip (only one person): each phrase is true in its part of the clip. 'ein Kleid vor sich halten' = she holds the red dress against herself. 'sie' for das Mädchen (what natives say), used consistently. No noun row: Kleiderschrank is in tap row 3 and the answer row."
+}

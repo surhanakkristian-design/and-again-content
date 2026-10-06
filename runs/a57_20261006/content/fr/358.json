@@ -1,0 +1,26 @@
+{
+  "mediaId": 358, "lang": "fr", "level": "A",
+  "keyWord": "le marteau",
+  "taps": [
+    { "phrase": "enfoncer un clou", "target": "l'homme à gauche", "voice": "male" },
+    { "phrase": "tenir un marteau", "target": "l'homme à gauche", "voice": "male" },
+    { "phrase": "être couché au soleil", "target": "le chien", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les arbres", "voice": "male" },
+    { "word": "le chien", "voice": "male" },
+    { "word": "le marteau", "voice": "male" },
+    { "word": "le nichoir", "voice": "male" }
+  ],
+  "question": "Sur quoi tape le marteau ?",
+  "answer": ["Le", "marteau", "tape", "sur", "un", "clou."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "enfoncer", "gap": true, "accept": ["enfoncer", "planter"] }, { "text": "un clou" } ] },
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "marteau", "gap": true, "accept": ["marteau"] } ] },
+    { "from": "taps", "parts": [ { "text": "être" }, { "text": "couché", "gap": true, "accept": ["couché", "allongé"] }, { "text": "au soleil" } ] },
+    { "from": "answer", "parts": [ { "text": "tape", "gap": true, "accept": ["tape", "frappe"] }, { "text": "sur un clou" } ] }
+  ],
+  "notes": "Taps 1 and 2 share the same target and box (the man on the left), as in English. 'le nichoir' is the standard French word for a birdhouse (everyday, but some speakers say 'la cabane à oiseaux'); kept as the plain right word. The dog sleeps or lies in the sun in all boxed frames ('être couché au soleil')."
+}

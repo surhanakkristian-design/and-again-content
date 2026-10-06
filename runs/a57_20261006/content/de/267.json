@@ -1,0 +1,133 @@
+{
+  "mediaId": 267,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Ingenieur",
+  "taps": [
+    {
+      "phrase": "einen Roboter bauen",
+      "target": "der Mann in Schwarz",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen Würfel hochheben",
+      "target": "der Roboter",
+      "voice": "male"
+    },
+    {
+      "phrase": "in die Hände klatschen",
+      "target": "der Mann im weißen Kittel",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Ingenieur",
+      "voice": "male"
+    },
+    {
+      "word": "der Roboter",
+      "voice": "male"
+    },
+    {
+      "word": "der Laptop",
+      "voice": "male"
+    },
+    {
+      "word": "die Schale",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Ingenieur?",
+  "answer": [
+    "Er",
+    "baut",
+    "einen",
+    "kleinen",
+    "Roboter."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Roboter"
+        },
+        {
+          "text": "bauen",
+          "gap": true,
+          "accept": [
+            "bauen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Würfel",
+          "gap": true,
+          "accept": [
+            "Würfel"
+          ]
+        },
+        {
+          "text": "hochheben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in die Hände"
+        },
+        {
+          "text": "klatschen",
+          "gap": true,
+          "accept": [
+            "klatschen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "Ingenieur",
+          "gap": true,
+          "accept": [
+            "Ingenieur"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "baut einen kleinen"
+        },
+        {
+          "text": "Roboter",
+          "gap": true,
+          "accept": [
+            "Roboter",
+            "Roboterarm"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "English 'box' is a clear plastic tray -> 'die Box' (everyday word for a plastic container; 'die Schale' would also fit). Phrase 1 box also covers typing frames; building is what he does in most of them."
+}

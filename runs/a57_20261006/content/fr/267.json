@@ -1,0 +1,118 @@
+{
+ "mediaId": 267,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un ingénieur",
+ "taps": [
+  {
+   "phrase": "construire un robot",
+   "target": "le garçon en noir",
+   "voice": "male"
+  },
+  {
+   "phrase": "prendre un cube blanc",
+   "target": "le robot",
+   "voice": "male"
+  },
+  {
+   "phrase": "taper dans ses mains",
+   "target": "l'homme en blouse blanche",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'ingénieur",
+   "voice": "male"
+  },
+  {
+   "word": "le robot",
+   "voice": "male"
+  },
+  {
+   "word": "l'ordinateur portable",
+   "voice": "male"
+  },
+  {
+   "word": "la boîte",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'ingénieur ?",
+ "answer": [
+  "Il",
+  "construit",
+  "un",
+  "petit",
+  "robot."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "construire",
+     "gap": true,
+     "accept": [
+      "construire",
+      "monter"
+     ]
+    },
+    {
+     "text": "un robot"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre un"
+    },
+    {
+     "text": "cube",
+     "gap": true,
+     "accept": [
+      "cube"
+     ]
+    },
+    {
+     "text": "blanc"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taper dans ses"
+    },
+    {
+     "text": "mains",
+     "gap": true,
+     "accept": [
+      "mains"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "construit un petit"
+    },
+    {
+     "text": "robot",
+     "gap": true,
+     "accept": [
+      "robot"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word noun 'l'ingénieur' is elided, so no noun row; it is in the nouns and the question. English 'a box' is a clear plastic tray: 'la boîte' kept for level A ('le bac' would be more exact). Phrase-1 box also covers frames where he types on the laptop. 'l'ordinateur portable' (not 'le portable' = phone in France)."
+}

@@ -1,0 +1,120 @@
+{
+  "mediaId": 82,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "une abeille",
+  "taps": [
+    {
+      "phrase": "se poser sur une fleur",
+      "target": "l'abeille",
+      "voice": "female"
+    },
+    {
+      "phrase": "voler au-dessus de l'herbe",
+      "target": "l'abeille",
+      "voice": "female"
+    },
+    {
+      "phrase": "entrer dans la ruche",
+      "target": "l'abeille",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'abeille",
+      "voice": "female"
+    },
+    {
+      "word": "la fleur",
+      "voice": "female"
+    },
+    {
+      "word": "la feuille",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait l'abeille ?",
+  "answer": [
+    "L'abeille",
+    "est",
+    "posée",
+    "sur",
+    "une",
+    "fleur."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "poser",
+          "gap": true,
+          "accept": [
+            "poser"
+          ]
+        },
+        {
+          "text": "sur une fleur"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "voler",
+          "gap": true,
+          "accept": [
+            "voler"
+          ]
+        },
+        {
+          "text": "au-dessus de l'herbe"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "entrer dans"
+        },
+        {
+          "text": "la"
+        },
+        {
+          "text": "ruche",
+          "gap": true,
+          "accept": [
+            "ruche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "est posée"
+        },
+        {
+          "text": "sur une"
+        },
+        {
+          "text": "fleur",
+          "gap": true,
+          "accept": [
+            "fleur"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key-word note: the database word 'une abeille' has the indefinite article; all other fr key words use the definite one - proposal: 'l'abeille'. The insect is a bumblebee (fr 'le bourdon'); kept abeille as the clip was made for it. No noun row: 'l'abeille' is elided and cannot be split into a gap part. Phrase 3 uses 'la ruche' (B1-ish, but the plain right word for the wooden hive; English said 'box'); at the end two other bees sit inside the entrance hole, but only our bee enters in the boxed frames."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 7053,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "abwaschen",
+ "taps": [
+  {
+   "phrase": "einen schmutzigen Teller spülen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Teller abtrocknen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein weißes Kleid tragen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Teller",
+   "voice": "male"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "die Spüle",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die beiden?",
+ "answer": [
+  "Sie",
+  "waschen",
+  "das",
+  "Geschirr",
+  "ab."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schmutzigen"
+    },
+    {
+     "text": "Teller",
+     "gap": true,
+     "accept": [
+      "Teller"
+     ]
+    },
+    {
+     "text": "spülen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Teller"
+    },
+    {
+     "text": "abtrocknen",
+     "gap": true,
+     "accept": [
+      "abtrocknen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein weißes"
+    },
+    {
+     "text": "Kleid",
+     "gap": true,
+     "accept": [
+      "Kleid",
+      "Brautkleid"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "waschen",
+     "gap": true,
+     "accept": [
+      "waschen",
+      "spülen"
+     ]
+    },
+    {
+     "text": "das Geschirr ab"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'abwaschen' appears separated in the answer ('waschen ... ab'); gapped there. 'Was machen die beiden?' = English 'What are they doing?'. Phrase 1 uses 'spülen' (rinse/wash a plate), the natural verb for one plate."
+}

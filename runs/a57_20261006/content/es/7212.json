@@ -1,0 +1,120 @@
+{
+ "mediaId": 7212,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "desayunar",
+ "taps": [
+  {
+   "phrase": "tomar el desayuno",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar un tenedor",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "mirar la comida",
+   "target": "el pájaro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "el plato",
+   "voice": "female"
+  },
+  {
+   "word": "el gorro",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Está",
+  "desayunando",
+  "por",
+  "encima",
+  "de",
+  "las",
+  "nubes."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomar el"
+    },
+    {
+     "text": "desayuno",
+     "gap": true,
+     "accept": [
+      "desayuno"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "tenedor",
+     "gap": true,
+     "accept": [
+      "tenedor"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar",
+     "gap": true,
+     "accept": [
+      "mirar",
+      "observar"
+     ]
+    },
+    {
+     "text": "la comida"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "desayunando",
+     "gap": true,
+     "accept": [
+      "desayunando"
+     ]
+    },
+    {
+     "text": "por encima de las nubes"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 uses 'tomar el desayuno' (a one-word phrase 'desayunar' cannot be cut into recall parts); the key word desayunar is in the answer and gapped there. Tap 3: the raven sits next to her and looks towards her mug, fork and plate; 'mirar la comida' is the closest fit. Bird = 'el pájaro' (A1) rather than 'el cuervo'."
+}

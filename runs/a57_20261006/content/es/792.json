@@ -1,0 +1,124 @@
+{
+ "mediaId": 792,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la pasta de dientes",
+ "taps": [
+  {
+   "phrase": "sujetar un cepillo de dientes amarillo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "salir del tubo",
+   "target": "la pasta de dientes",
+   "voice": "female"
+  },
+  {
+   "phrase": "lavarse los dientes",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pelo",
+   "voice": "female"
+  },
+  {
+   "word": "la nariz",
+   "voice": "female"
+  },
+  {
+   "word": "la pasta de dientes",
+   "voice": "female"
+  },
+  {
+   "word": "el cepillo de dientes",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "poniendo",
+  "pasta",
+  "de",
+  "dientes",
+  "en",
+  "el",
+  "cepillo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "cepillo",
+     "gap": true,
+     "accept": [
+      "cepillo"
+     ]
+    },
+    {
+     "text": "de dientes amarillo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "salir del"
+    },
+    {
+     "text": "tubo",
+     "gap": true,
+     "accept": [
+      "tubo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lavarse",
+     "gap": true,
+     "accept": [
+      "lavarse",
+      "cepillarse"
+     ]
+    },
+    {
+     "text": "los dientes"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está poniendo"
+    },
+    {
+     "text": "pasta",
+     "gap": true,
+     "accept": [
+      "pasta"
+     ]
+    },
+    {
+     "text": "de dientes en el cepillo"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses 'el cepillo' (natural short form of 'el cepillo de dientes', already named in phrase 1 and the noun) to avoid repeating 'de dientes' twice. Subject dropped as natives do, so the answer row is the whole sentence."
+}

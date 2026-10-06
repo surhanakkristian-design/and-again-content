@@ -1,0 +1,122 @@
+{
+ "mediaId": 378,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Sonnenaufgang",
+ "taps": [
+  {
+   "phrase": "auf einem Geländer hocken",
+   "target": "der Vogel",
+   "voice": "female"
+  },
+  {
+   "phrase": "über die Dächer hinwegfliegen",
+   "target": "der Vogel",
+   "voice": "female"
+  },
+  {
+   "phrase": "lange goldene Strahlen aussenden",
+   "target": "die Sonne",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Vogel",
+   "voice": "female"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "die Dächer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Vogel?",
+ "answer": [
+  "Er",
+  "fliegt",
+  "bei",
+  "Sonnenaufgang",
+  "über",
+  "die",
+  "Dächer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Geländer",
+     "gap": true,
+     "accept": [
+      "Geländer"
+     ]
+    },
+    {
+     "text": "hocken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über die Dächer"
+    },
+    {
+     "text": "hinwegfliegen",
+     "gap": true,
+     "accept": [
+      "hinwegfliegen",
+      "fliegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lange goldene"
+    },
+    {
+     "text": "Strahlen",
+     "gap": true,
+     "accept": [
+      "Strahlen"
+     ]
+    },
+    {
+     "text": "aussenden"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fliegt bei"
+    },
+    {
+     "text": "Sonnenaufgang",
+     "gap": true,
+     "accept": [
+      "Sonnenaufgang"
+     ]
+    },
+    {
+     "text": "über die Dächer"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer subject 'der Vogel' -> 'er'; voice kept female as in English (defaultVoice, the bird has no visible gender). German also allows 'Er fliegt über die Dächer bei Sonnenaufgang' (less natural; two orders). English boxes 1 and 2 both span the whole bird footage; each phrase is true in its own part."
+}

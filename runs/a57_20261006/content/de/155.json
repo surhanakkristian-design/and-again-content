@@ -1,0 +1,121 @@
+{
+  "mediaId": 155,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Käse",
+  "taps": [
+    {
+      "phrase": "ein Stück Käse abschneiden",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein Käsesandwich braten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf dem Boden liegen",
+      "target": "der Hund",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "der Mann",
+      "voice": "male"
+    },
+    {
+      "word": "der Käse",
+      "voice": "female"
+    },
+    {
+      "word": "der Hund",
+      "voice": "female"
+    }
+  ],
+  "question": "Was brät der Mann?",
+  "answer": [
+    "Er",
+    "brät",
+    "ein",
+    "Käsesandwich."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Stück"
+        },
+        {
+          "text": "Käse",
+          "gap": true,
+          "accept": [
+            "Käse"
+          ]
+        },
+        {
+          "text": "abschneiden"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Käsesandwich"
+        },
+        {
+          "text": "braten",
+          "gap": true,
+          "accept": [
+            "braten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Boden",
+          "gap": true,
+          "accept": [
+            "Boden"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "brät ein"
+        },
+        {
+          "text": "Käsesandwich",
+          "gap": true,
+          "accept": [
+            "Käsesandwich",
+            "Käsetoast",
+            "Sandwich"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 1 box (the woman) also covers frames where she bites the cheese, grates it and pulls the sandwich apart; the phrase describes the opening frames where she cuts the wedge (box_01). 'Käsesandwich' for a grilled cheese (also 'Käsetoast', accepted in recall). No noun row: 'Käse' is in tap row 1. The dog lies on a rug on the floor."
+}

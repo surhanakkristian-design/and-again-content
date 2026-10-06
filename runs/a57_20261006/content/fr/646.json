@@ -1,0 +1,26 @@
+{
+  "mediaId": 646, "lang": "fr", "level": "A",
+  "keyWord": "la science",
+  "taps": [
+    { "phrase": "porter des gants violets", "target": "la femme", "voice": "female" },
+    { "phrase": "sortir du verre", "target": "la mousse orange", "voice": "female" },
+    { "phrase": "ouvrir grand la bouche", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le gant", "voice": "female" },
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "la blouse", "voice": "female" },
+    { "word": "la table", "voice": "female" }
+  ],
+  "question": "Qu'est-ce que la femme a aux mains ?",
+  "answer": ["Elle", "a", "des", "gants", "violets", "aux", "mains."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "gants", "gap": true, "accept": ["gants"] }, { "text": "violets" } ] },
+    { "from": "taps", "parts": [ { "text": "sortir", "gap": true, "accept": ["sortir"] }, { "text": "du verre" } ] },
+    { "from": "taps", "parts": [ { "text": "ouvrir grand la" }, { "text": "bouche", "gap": true, "accept": ["bouche"] } ] },
+    { "from": "answer", "parts": [ { "text": "a des gants violets aux" }, { "text": "mains", "gap": true, "accept": ["mains"] } ] }
+  ],
+  "notes": "Key word 'la science' is not a visible thing; it appears in no exercise (as in English). 'le verre' used for the lab beaker (A-level word; 'le bécher' is technical); at the end the foam comes out of a tube. 'la blouse' = lab coat (blouse de laboratoire)."
+}

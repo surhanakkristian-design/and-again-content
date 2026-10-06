@@ -1,0 +1,122 @@
+{
+ "mediaId": 7124,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la volée de marches",
+ "taps": [
+  {
+   "phrase": "descendre les marches avec précaution",
+   "target": "l'homme en smoking",
+   "voice": "male"
+  },
+  {
+   "phrase": "acclamer depuis le balcon",
+   "target": "les invités",
+   "voice": "male"
+  },
+  {
+   "phrase": "reposer sur un plateau",
+   "target": "le gâteau de mariage",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les invités",
+   "voice": "male"
+  },
+  {
+   "word": "le gâteau de mariage",
+   "voice": "male"
+  },
+  {
+   "word": "le smoking",
+   "voice": "male"
+  },
+  {
+   "word": "l'escalier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que descend le jeune homme ?",
+ "answer": [
+  "Il",
+  "descend",
+  "une",
+  "volée",
+  "de",
+  "marches",
+  "en",
+  "pierre."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descendre les marches avec"
+    },
+    {
+     "text": "précaution",
+     "gap": true,
+     "accept": [
+      "précaution",
+      "prudence"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acclamer",
+     "gap": true,
+     "accept": [
+      "acclamer",
+      "applaudir"
+     ]
+    },
+    {
+     "text": "depuis le balcon"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposer sur un"
+    },
+    {
+     "text": "plateau",
+     "gap": true,
+     "accept": [
+      "plateau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "descend une"
+    },
+    {
+     "text": "volée",
+     "gap": true,
+     "accept": [
+      "volée"
+     ]
+    },
+    {
+     "text": "de marches en pierre"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word in the model answer (une volée de marches). Noun 4 'a staircase' = l'escalier (the whole staircase), not the key word. Tap 1: he walks carefully, hence 'avec précaution'."
+}

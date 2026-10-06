@@ -1,0 +1,118 @@
+{
+  "mediaId": 775,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "pensar",
+  "taps": [
+    {
+      "phrase": "mover una pieza de ajedrez",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "dar palmadas",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "caminar por la mesa",
+      "target": "el pájaro",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    },
+    {
+      "word": "el pájaro",
+      "voice": "male"
+    },
+    {
+      "word": "la mesa",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "Está",
+    "pensando",
+    "en",
+    "su",
+    "siguiente",
+    "movimiento."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mover",
+          "gap": true,
+          "accept": [
+            "mover"
+          ]
+        },
+        {
+          "text": "una pieza de ajedrez"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dar"
+        },
+        {
+          "text": "palmadas",
+          "gap": true,
+          "accept": [
+            "palmadas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "caminar por la"
+        },
+        {
+          "text": "mesa",
+          "gap": true,
+          "accept": [
+            "mesa"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está"
+        },
+        {
+          "text": "pensando",
+          "gap": true,
+          "accept": [
+            "pensando"
+          ]
+        },
+        {
+          "text": "en su siguiente movimiento"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word: the concept is the noun 'thinking' but keyWord.es is the verb 'pensar' (Spanish 'el pensamiento' = 'a thought', so the verb is the right teaching word; owner may want partOfSpeech noted). The bird is a pigeon; 'el pájaro' kept to match English 'bird'. 'dar palmadas' chosen over single-word 'aplaudir' so the recall row has two parts; 'movimiento' instead of B1 'jugada' for level A."
+}

@@ -1,0 +1,120 @@
+{
+  "mediaId": 253,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Staubwischen",
+  "taps": [
+    {
+      "phrase": "über der Tür Staub wischen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "ein graues Kopftuch tragen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "durch das Regal laufen",
+      "target": "die Katze",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Katze",
+      "voice": "male"
+    },
+    {
+      "word": "die Bücher",
+      "voice": "male"
+    },
+    {
+      "word": "das Regal",
+      "voice": "male"
+    },
+    {
+      "word": "die Lampe",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "wischt",
+    "über",
+    "der",
+    "Tür",
+    "Staub."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "über der Tür Staub"
+        },
+        {
+          "text": "wischen",
+          "gap": true,
+          "accept": [
+            "wischen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein graues"
+        },
+        {
+          "text": "Kopftuch",
+          "gap": true,
+          "accept": [
+            "Kopftuch",
+            "Tuch"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch das Regal"
+        },
+        {
+          "text": "laufen",
+          "gap": true,
+          "accept": [
+            "laufen",
+            "gehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "wischt über der Tür"
+        },
+        {
+          "text": "Staub",
+          "gap": true,
+          "accept": [
+            "Staub"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word das Staubwischen is taught through the verb phrase 'Staub wischen' (tap 1 + answer). The man's box also covers the shocked opening, the dust cloud and the thumbs-up ending; there his actions (reacting, pointing, thumbs up) are shared with the woman, so the distinctive door moment from English is kept. Grey scarf = headscarf -> 'Kopftuch'. Cat walks along the inside of the open shelf unit -> 'durch das Regal laufen'. Answer: 'Er wischt Staub über der Tür.' is a possible but less natural second order. No noun row: key word is not a noun of the set."
+}

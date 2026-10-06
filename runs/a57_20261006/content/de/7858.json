@@ -1,0 +1,26 @@
+{
+  "mediaId": 7858, "lang": "de", "level": "B",
+  "keyWord": "auf halbem Weg",
+  "taps": [
+    { "phrase": "auf einer Slackline balancieren", "target": "die Frau auf der Leine", "voice": "female" },
+    { "phrase": "die Augen mit der Hand abschirmen", "target": "der Mann", "voice": "male" },
+    { "phrase": "von der Klippe winken", "target": "die Frau auf der Klippe", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "die Klippe", "voice": "female" },
+    { "word": "der Fluss", "voice": "female" },
+    { "word": "die Fleecejacke", "voice": "female" }
+  ],
+  "question": "Wo balanciert die Frau in Orange?",
+  "answer": ["Sie", "balanciert", "auf", "halbem", "Weg", "über", "die", "Schlucht."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf einer Slackline" }, { "text": "balancieren", "gap": true, "accept": ["balancieren"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Augen mit der Hand" }, { "text": "abschirmen", "gap": true, "accept": ["abschirmen", "beschatten"] } ] },
+    { "from": "taps", "parts": [ { "text": "von der" }, { "text": "Klippe", "gap": true, "accept": ["Klippe", "Felswand"] }, { "text": "winken" } ] },
+    { "from": "answer", "parts": [ { "text": "balanciert auf" }, { "text": "halbem", "gap": true, "accept": ["halbem"] }, { "text": "Weg über die Schlucht" } ] }
+  ],
+  "notes": "Tap 2: the man shades his eyes only in the last frames; earlier in the box he crouches and watches. Answer: 'auf halbem Weg über die Schlucht' (accusative: the way across). The answer gap is 'halbem' (part of the key phrase; a gap covers one word)."
+}

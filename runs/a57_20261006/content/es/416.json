@@ -1,0 +1,120 @@
+{
+ "mediaId": 416,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el kétchup",
+ "taps": [
+  {
+   "phrase": "agitar una botella de kétchup",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "mirar al hombre",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar en un plato",
+   "target": "las patatas fritas",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "las patatas fritas",
+   "voice": "male"
+  },
+  {
+   "word": "el kétchup",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "agitando",
+  "una",
+  "botella",
+  "de",
+  "kétchup."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agitar una botella de"
+    },
+    {
+     "text": "kétchup",
+     "gap": true,
+     "accept": [
+      "kétchup"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar",
+     "gap": true,
+     "accept": [
+      "mirar",
+      "observar"
+     ]
+    },
+    {
+     "text": "al hombre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en un"
+    },
+    {
+     "text": "plato",
+     "gap": true,
+     "accept": [
+      "plato"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "agitando",
+     "gap": true,
+     "accept": [
+      "agitando",
+      "sacudiendo"
+     ]
+    },
+    {
+     "text": "una botella de kétchup"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the ketchup also ends up on the plate; 'estar en un plato' kept as in English (fries are the main thing on the plate). Answer drops the subject (Spain usage), so the answer recall row is the whole sentence."
+}

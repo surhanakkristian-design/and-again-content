@@ -1,0 +1,125 @@
+{
+ "mediaId": 238,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "robar",
+ "taps": [
+  {
+   "phrase": "robar una lata",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una bolsa blanca",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener flores rosas",
+   "target": "el arbusto",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "las flores",
+   "voice": "male"
+  },
+  {
+   "word": "el césped",
+   "voice": "male"
+  },
+  {
+   "word": "las latas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "está",
+  "robando",
+  "una",
+  "lata."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "robar una"
+    },
+    {
+     "text": "lata",
+     "gap": true,
+     "accept": [
+      "lata"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener"
+    },
+    {
+     "text": "flores",
+     "gap": true,
+     "accept": [
+      "flores"
+     ]
+    },
+    {
+     "text": "rosas"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "robando",
+     "gap": true,
+     "accept": [
+      "robando",
+      "cogiendo"
+     ]
+    },
+    {
+     "text": "una lata"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 3 'grass' = the front lawn, so 'el césped' (A2, usual in Spain). Phrase 1 box also covers the approach and the run away; written for the theft."
+}

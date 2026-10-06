@@ -1,0 +1,118 @@
+{
+ "mediaId": 354,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la guía turística",
+ "taps": [
+  {
+   "phrase": "hojear una guía turística",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un salacot",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "echar agua por la boca",
+   "target": "el león de piedra",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la estatua",
+   "voice": "female"
+  },
+  {
+   "word": "el salacot",
+   "voice": "female"
+  },
+  {
+   "word": "el pendiente",
+   "voice": "female"
+  },
+  {
+   "word": "la guía turística",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están haciendo los dos turistas?",
+ "answer": [
+  "Están",
+  "hojeando",
+  "una",
+  "guía",
+  "turística."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hojear",
+     "gap": true,
+     "accept": [
+      "hojear"
+     ]
+    },
+    {
+     "text": "una guía turística"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "salacot",
+     "gap": true,
+     "accept": [
+      "salacot"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar",
+     "gap": true,
+     "accept": [
+      "echar",
+      "escupir"
+     ]
+    },
+    {
+     "text": "agua por la boca"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están hojeando una"
+    },
+    {
+     "text": "guía",
+     "gap": true,
+     "accept": [
+      "guía"
+     ]
+    },
+    {
+     "text": "turística"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's hat is a pith helmet: Spanish 'el salacot' is the exact word ('sombrero de sol' is not natural); fallback would be 'el sombrero de explorador'. In the last boxed frames the tourists run off with the book (not flipping). Answer drops the subject."
+}

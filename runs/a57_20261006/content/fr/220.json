@@ -1,0 +1,120 @@
+{
+ "mediaId": 220,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "décongeler",
+ "taps": [
+  {
+   "phrase": "décongeler un poisson congelé",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "poser brutalement un poisson",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "tremper dans un saladier",
+   "target": "le poisson",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le filet",
+   "voice": "male"
+  },
+  {
+   "word": "le robinet",
+   "voice": "male"
+  },
+  {
+   "word": "le saladier",
+   "voice": "male"
+  },
+  {
+   "word": "le placard",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "décongèle",
+  "un",
+  "poisson",
+  "congelé."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "décongeler",
+     "gap": true,
+     "accept": [
+      "décongeler"
+     ]
+    },
+    {
+     "text": "un poisson congelé"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "poser"
+    },
+    {
+     "text": "brutalement",
+     "gap": true,
+     "accept": [
+      "brutalement",
+      "violemment"
+     ]
+    },
+    {
+     "text": "un poisson"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tremper dans un"
+    },
+    {
+     "text": "saladier",
+     "gap": true,
+     "accept": [
+      "saladier",
+      "bol"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "décongèle un poisson"
+    },
+    {
+     "text": "congelé",
+     "gap": true,
+     "accept": [
+      "congelé",
+      "surgelé"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 (slam the fish down) happens only in the first seconds; the green box covers the man later too. 'le saladier' for the big metal bowl in the sink."
+}

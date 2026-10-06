@@ -1,0 +1,26 @@
+{
+  "mediaId": 7835, "lang": "fr", "level": "B",
+  "keyWord": "le courant",
+  "taps": [
+    { "phrase": "dévaler la pente", "target": "la lave", "voice": "male" },
+    { "phrase": "rougeoyer au sommet", "target": "le cratère", "voice": "male" },
+    { "phrase": "rester suspendu au-dessus de l'horizon", "target": "le nuage", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la coulée de lave", "voice": "male" },
+    { "word": "le cratère", "voice": "male" },
+    { "word": "les arbres", "voice": "male" },
+    { "word": "le nuage", "voice": "male" }
+  ],
+  "question": "Que se passe-t-il sur le volcan ?",
+  "answer": ["Une", "coulée", "de", "lave", "dévale", "la", "pente", "enneigée."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "dévaler la" }, { "text": "pente", "gap": true, "accept": ["pente"] } ] },
+    { "from": "taps", "parts": [ { "text": "rougeoyer", "gap": true, "accept": ["rougeoyer", "briller"] }, { "text": "au sommet" } ] },
+    { "from": "taps", "parts": [ { "text": "rester" }, { "text": "suspendu", "gap": true, "accept": ["suspendu"] }, { "text": "au-dessus de l'horizon" } ] },
+    { "from": "answer", "parts": [ { "text": "dévale", "gap": true, "accept": ["dévale", "descend"] }, { "text": "la pente enneigée" } ] }
+  ],
+  "notes": "keyWord 'le courant' does not name a lava flow naturally in French: the standard word is 'la coulée (de lave)', used for noun 1 and the answer; 'un courant de lave' exists but sounds odd. Proposal: keep 'le courant' for the concept (motion of a liquid or gas) but this video teaches 'la coulée' better; owner decides. Key word therefore appears in no row."
+}

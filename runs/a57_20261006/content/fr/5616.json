@@ -1,0 +1,26 @@
+{
+  "mediaId": 5616, "lang": "fr", "level": "A",
+  "keyWord": "être plein de",
+  "taps": [
+    { "phrase": "lever les bras", "target": "l'homme", "voice": "male" },
+    { "phrase": "tenir les ficelles", "target": "l'homme", "voice": "male" },
+    { "phrase": "flotter dans le ciel", "target": "les ballons dans le ciel", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "male" },
+    { "word": "les ballons", "voice": "male" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "la voiture", "voice": "male" }
+  ],
+  "question": "De quoi la voiture est-elle pleine ?",
+  "answer": ["La", "voiture", "est", "pleine", "de", "ballons."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lever", "gap": true, "accept": ["lever"] }, { "text": "les bras" } ] },
+    { "from": "taps", "parts": [ { "text": "tenir les" }, { "text": "ficelles", "gap": true, "accept": ["ficelles", "fils"] } ] },
+    { "from": "taps", "parts": [ { "text": "flotter", "gap": true, "accept": ["flotter", "voler"] }, { "text": "dans le ciel" } ] },
+    { "from": "answer", "parts": [ { "text": "est" }, { "text": "pleine", "gap": true, "accept": ["pleine", "remplie"] }, { "text": "de ballons" } ] }
+  ],
+  "notes": "Key word 'être plein de' used in the answer with agreement ('pleine', la voiture). Tap 3 is 'flotter' (what balloons naturally do in French) for English 'to fly'; 'voler' accepted. The question 'De quoi la voiture est-elle pleine ?' is the formal inverted form a teacher writes."
+}

@@ -1,0 +1,114 @@
+{
+  "mediaId": 528,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "se garer",
+  "taps": [
+    {
+      "phrase": "se garer entre deux voitures",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être assis sur un mur",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "ouvrir la portière",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la femme",
+      "voice": "female"
+    },
+    {
+      "word": "la voiture",
+      "voice": "female"
+    },
+    {
+      "word": "le ciel",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "gare",
+    "sa",
+    "voiture."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "garer",
+          "gap": true,
+          "accept": [
+            "garer"
+          ]
+        },
+        {
+          "text": "entre deux voitures"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être assis sur un"
+        },
+        {
+          "text": "mur",
+          "gap": true,
+          "accept": [
+            "mur",
+            "muret"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir la"
+        },
+        {
+          "text": "portière",
+          "gap": true,
+          "accept": [
+            "portière",
+            "porte"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "gare sa"
+        },
+        {
+          "text": "voiture",
+          "gap": true,
+          "accept": [
+            "voiture"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'se garer' (intransitive) used in phrase 1; the answer uses transitive 'garer sa voiture', the most natural full sentence. Phrase 2: the man sits on a low wall ('muret' would be more exact but is above A2; 'mur' kept, recall accepts 'muret'). Phrase 3 box also covers frames where she just stands by the open door."
+}

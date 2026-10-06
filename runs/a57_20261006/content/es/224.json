@@ -1,0 +1,117 @@
+{
+ "mediaId": 224,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "diseñar",
+ "taps": [
+  {
+   "phrase": "hacer el boceto de una silla",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "señalar el boceto",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "olfatear la silla de cartón",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el boceto",
+   "voice": "female"
+  },
+  {
+   "word": "el tarro",
+   "voice": "female"
+  },
+  {
+   "word": "la planta de interior",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están diseñando?",
+ "answer": [
+  "Están",
+  "diseñando",
+  "una",
+  "silla."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer el"
+    },
+    {
+     "text": "boceto",
+     "gap": true,
+     "accept": [
+      "boceto",
+      "dibujo"
+     ]
+    },
+    {
+     "text": "de una silla"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "señalar",
+     "gap": true,
+     "accept": [
+      "señalar"
+     ]
+    },
+    {
+     "text": "el boceto"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "olfatear",
+     "gap": true,
+     "accept": [
+      "olfatear",
+      "oler"
+     ]
+    },
+    {
+     "text": "la silla de cartón"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "diseñando",
+     "gap": true,
+     "accept": [
+      "diseñando"
+     ]
+    },
+    {
+     "text": "una silla"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'diseñar' is a verb while English 'designing' is a gerund noun; the verb fits the clip and is used in the question and answer. Phrase 1: the man's box also covers model-building frames; he sketches in most of them."
+}

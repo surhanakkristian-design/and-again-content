@@ -1,0 +1,124 @@
+{
+  "mediaId": 284,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la mascarilla facial",
+  "taps": [
+    {
+      "phrase": "llevar una diadema esponjosa",
+      "target": "la chica de morado",
+      "voice": "female"
+    },
+    {
+      "phrase": "señalar a su amiga",
+      "target": "la chica de gris",
+      "voice": "female"
+    },
+    {
+      "phrase": "asomar la cabeza entre las dos",
+      "target": "el perro",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la diadema",
+      "voice": "female"
+    },
+    {
+      "word": "la mascarilla facial",
+      "voice": "female"
+    },
+    {
+      "word": "el perro",
+      "voice": "female"
+    },
+    {
+      "word": "el bol",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué llevan las chicas en la cara?",
+  "answer": [
+    "Llevan",
+    "una",
+    "mascarilla",
+    "facial",
+    "verde."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "diadema",
+          "gap": true,
+          "accept": [
+            "diadema",
+            "cinta"
+          ]
+        },
+        {
+          "text": "esponjosa"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "señalar",
+          "gap": true,
+          "accept": [
+            "señalar"
+          ]
+        },
+        {
+          "text": "a su amiga"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "asomar la"
+        },
+        {
+          "text": "cabeza",
+          "gap": true,
+          "accept": [
+            "cabeza"
+          ]
+        },
+        {
+          "text": "entre las dos"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Llevan una"
+        },
+        {
+          "text": "mascarilla",
+          "gap": true,
+          "accept": [
+            "mascarilla"
+          ]
+        },
+        {
+          "text": "facial verde"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 2: the woman in grey points at her friend only in the last frames; the green box also covers frames where she just sits (and the close-ups of the mask being spread). Phrase 3: English 'rest on a cushion', but only the dog's head is visible, peeking out between the two women; the cushion is not clearly visible, so I wrote 'asomar la cabeza entre las dos'. Answer uses the distributive singular ('Llevan una mascarilla'), the natural Spanish form. 'la mascarilla facial' is fine; in Spain plain 'la mascarilla' is the everyday word in this context."
+}

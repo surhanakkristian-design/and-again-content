@@ -1,0 +1,134 @@
+{
+ "mediaId": 4434,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la feria",
+ "taps": [
+  {
+   "phrase": "abrazar un oso de peluche",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "lamer un helado",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "quitarse la cazadora",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la feria",
+   "voice": "female"
+  },
+  {
+   "word": "el cucurucho",
+   "voice": "female"
+  },
+  {
+   "word": "el oso de peluche",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica en la feria?",
+ "answer": [
+  "Abraza",
+  "un",
+  "oso",
+  "de",
+  "peluche",
+  "gigante."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrazar",
+     "gap": true,
+     "accept": [
+      "abrazar"
+     ]
+    },
+    {
+     "text": "un oso de peluche"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lamer un"
+    },
+    {
+     "text": "helado",
+     "gap": true,
+     "accept": [
+      "helado"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quitarse la"
+    },
+    {
+     "text": "cazadora",
+     "gap": true,
+     "accept": [
+      "cazadora",
+      "chaqueta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "feria",
+     "gap": true,
+     "accept": [
+      "feria"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Abraza un oso de"
+    },
+    {
+     "text": "peluche",
+     "gap": true,
+     "accept": [
+      "peluche"
+     ]
+    },
+    {
+     "text": "gigante"
+    }
+   ]
+  }
+ ],
+ "notes": "'la cazadora' for the college jacket (Spain). Blue box also covers frames where the man stands, lays the jacket on her shoulders and holds his ice cream; the phrase describes him taking the jacket off. Answer drops the subject (es)."
+}

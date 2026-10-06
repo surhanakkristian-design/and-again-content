@@ -1,0 +1,122 @@
+{
+  "mediaId": 105,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "un arc",
+  "taps": [
+    {
+      "phrase": "tendre la corde de l'arc",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "remettre une flèche",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "viser la cible",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'arc",
+      "voice": "female"
+    },
+    {
+      "word": "la flèche",
+      "voice": "female"
+    },
+    {
+      "word": "la tresse",
+      "voice": "female"
+    },
+    {
+      "word": "la tunique",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "vise",
+    "le",
+    "centre",
+    "de",
+    "la",
+    "cible."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tendre la"
+        },
+        {
+          "text": "corde",
+          "gap": true,
+          "accept": [
+            "corde"
+          ]
+        },
+        {
+          "text": "de l'arc"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "remettre une"
+        },
+        {
+          "text": "flèche",
+          "gap": true,
+          "accept": [
+            "flèche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "viser",
+          "gap": true,
+          "accept": [
+            "viser"
+          ]
+        },
+        {
+          "text": "la cible"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "vise le"
+        },
+        {
+          "text": "centre",
+          "gap": true,
+          "accept": [
+            "centre"
+          ]
+        },
+        {
+          "text": "de la cible"
+        }
+      ]
+    }
+  ],
+  "notes": "keyWord copied unchanged as 'un arc' (indefinite article in the source; the noun pill uses 'l'arc'). The key word only appears elided ('l'arc'), so no row can gap it; no extra noun row because tap row 1 contains it. Answer 'vise le centre de la cible': she hits dead centre in the clip."
+}

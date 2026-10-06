@@ -1,0 +1,117 @@
+{
+ "mediaId": 531,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la fiesta",
+ "taps": [
+  {
+   "phrase": "bailar en una fiesta",
+   "target": "la gente",
+   "voice": "male"
+  },
+  {
+   "phrase": "correr por el césped",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "volar por el aire",
+   "target": "los globos",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el globo",
+   "voice": "male"
+  },
+  {
+   "word": "el árbol",
+   "voice": "male"
+  },
+  {
+   "word": "la gente",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace la gente?",
+ "answer": [
+  "La",
+  "gente",
+  "baila",
+  "en",
+  "una",
+  "fiesta."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bailar",
+     "gap": true,
+     "accept": [
+      "bailar"
+     ]
+    },
+    {
+     "text": "en una fiesta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr por el"
+    },
+    {
+     "text": "césped",
+     "gap": true,
+     "accept": [
+      "césped",
+      "hierba"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar",
+     "gap": true,
+     "accept": [
+      "volar",
+      "flotar"
+     ]
+    },
+    {
+     "text": "por el aire"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "baila en una"
+    },
+    {
+     "text": "fiesta",
+     "gap": true,
+     "accept": [
+      "fiesta"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'la gente' used throughout (noun, target, question, answer) with singular verb. Noun 1 singular 'el globo' because the English pill marks one balloon. 'el césped' = garden lawn (Spain)."
+}

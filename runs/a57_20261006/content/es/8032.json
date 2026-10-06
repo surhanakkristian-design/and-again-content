@@ -1,0 +1,128 @@
+{
+ "mediaId": 8032,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "inesperadamente",
+ "taps": [
+  {
+   "phrase": "tender su sombrero",
+   "target": "el hombre de bronce",
+   "voice": "male"
+  },
+  {
+   "phrase": "echarse hacia atrás del susto",
+   "target": "la chica de blanco",
+   "voice": "female"
+  },
+  {
+   "phrase": "agarrar a su amiga del brazo",
+   "target": "la chica de rosa",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la torre del reloj",
+   "voice": "male"
+  },
+  {
+   "word": "la fuente",
+   "voice": "male"
+  },
+  {
+   "word": "las palomas",
+   "voice": "male"
+  },
+  {
+   "word": "la falda",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre de bronce?",
+ "answer": [
+  "Inesperadamente,",
+  "le",
+  "ofrece",
+  "su",
+  "sombrero",
+  "a",
+  "una",
+  "chica."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tender",
+     "gap": true,
+     "accept": [
+      "tender",
+      "ofrecer"
+     ]
+    },
+    {
+     "text": "su sombrero"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echarse hacia atrás"
+    },
+    {
+     "text": "del"
+    },
+    {
+     "text": "susto",
+     "gap": true,
+     "accept": [
+      "susto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar",
+     "gap": true,
+     "accept": [
+      "agarrar",
+      "coger"
+     ]
+    },
+    {
+     "text": "a su amiga"
+    },
+    {
+     "text": "del brazo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Inesperadamente, le ofrece su"
+    },
+    {
+     "text": "sombrero",
+     "gap": true,
+     "accept": [
+      "sombrero"
+     ]
+    },
+    {
+     "text": "a una chica"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer opens with the key word plus comma so it stays first (one chip order). Woman in pink grabs her friend's arm only in the first boxed frames (box OFF later)."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 7845,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "doucement",
+ "taps": [
+  {
+   "phrase": "soulever doucement la nacelle",
+   "target": "la montgolfière",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'agripper à la nacelle",
+   "target": "la femme dans la nacelle",
+   "voice": "female"
+  },
+  {
+   "phrase": "gambader dans l'herbe",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la montgolfière",
+   "voice": "female"
+  },
+  {
+   "word": "la nacelle en osier",
+   "voice": "female"
+  },
+  {
+   "word": "le chien",
+   "voice": "female"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en bleu ?",
+ "answer": [
+  "Elle",
+  "s'élève",
+  "dans",
+  "une",
+  "nacelle",
+  "en",
+  "osier."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soulever"
+    },
+    {
+     "text": "doucement",
+     "gap": true,
+     "accept": [
+      "doucement",
+      "lentement"
+     ]
+    },
+    {
+     "text": "la nacelle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'agripper à la"
+    },
+    {
+     "text": "nacelle",
+     "gap": true,
+     "accept": [
+      "nacelle"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "gambader",
+     "gap": true,
+     "accept": [
+      "gambader",
+      "courir"
+     ]
+    },
+    {
+     "text": "dans l'herbe"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "s'élève dans une nacelle en"
+    },
+    {
+     "text": "osier",
+     "gap": true,
+     "accept": [
+      "osier"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the dog jumps at the basket and then runs about on the grass, so 'gambader' rather than a straight dash. Answer verb 's'élever' (the basket is rising) instead of a literal 'riding'."
+}

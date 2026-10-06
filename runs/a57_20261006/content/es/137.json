@@ -1,0 +1,123 @@
+{
+ "mediaId": 137,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el cañón",
+ "taps": [
+  {
+   "phrase": "tocar la pared del cañón",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "gritar haciendo bocina con las manos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "asomar entre las rocas",
+   "target": "el sol",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "el sol",
+   "voice": "male"
+  },
+  {
+   "word": "el cañón",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "gritando",
+  "haciendo",
+  "bocina",
+  "con",
+  "las",
+  "manos."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocar la pared del"
+    },
+    {
+     "text": "cañón",
+     "gap": true,
+     "accept": [
+      "cañón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "gritar haciendo"
+    },
+    {
+     "text": "bocina",
+     "gap": true,
+     "accept": [
+      "bocina"
+     ]
+    },
+    {
+     "text": "con las manos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomar",
+     "gap": true,
+     "accept": [
+      "asomar",
+      "brillar"
+     ]
+    },
+    {
+     "text": "entre las rocas"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "gritando",
+     "gap": true,
+     "accept": [
+      "gritando"
+     ]
+    },
+    {
+     "text": "haciendo bocina con las manos"
+    }
+   ]
+  }
+ ],
+ "notes": "The woman touches the wall only around 2.5-3 s; in many boxed frames she walks or looks up (the boxed early frames show both walking). 'hacer bocina con las manos' = cup hands around the mouth (B2 collocation). Answer drops the subject."
+}

@@ -1,0 +1,114 @@
+{
+ "mediaId": 247,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "laisser tomber",
+ "taps": [
+  {
+   "phrase": "laisser tomber une pomme rouge",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "tomber sur les pierres",
+   "target": "la pomme",
+   "voice": "male"
+  },
+  {
+   "phrase": "regarder le sol",
+   "target": "le garçon",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le garçon",
+   "voice": "male"
+  },
+  {
+   "word": "la pomme",
+   "voice": "male"
+  },
+  {
+   "word": "l'herbe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le garçon ?",
+ "answer": [
+  "Il",
+  "laisse",
+  "tomber",
+  "une",
+  "pomme",
+  "rouge."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "laisser",
+     "gap": true,
+     "accept": [
+      "laisser"
+     ]
+    },
+    {
+     "text": "tomber une pomme rouge"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomber",
+     "gap": true,
+     "accept": [
+      "tomber"
+     ]
+    },
+    {
+     "text": "sur les pierres"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder le"
+    },
+    {
+     "text": "sol",
+     "gap": true,
+     "accept": [
+      "sol"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "laisse tomber une"
+    },
+    {
+     "text": "pomme",
+     "gap": true,
+     "accept": [
+      "pomme"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  }
+ ],
+ "notes": "English tap box 1 also covers the frames where the boy still holds the apple up before letting go; phrase written for the drop. Stones = paving stones ('les pierres', A level; 'les pavés' would also fit)."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 7849,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "alcanzar para todos",
+ "taps": [
+  {
+   "phrase": "colgar sobre la azotea",
+   "target": "las guirnaldas de luces",
+   "voice": "male"
+  },
+  {
+   "phrase": "alzarse en el horizonte",
+   "target": "la montaña",
+   "voice": "male"
+  },
+  {
+   "phrase": "reposar sobre una tabla de madera",
+   "target": "la pizza",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las guirnaldas de luces",
+   "voice": "male"
+  },
+  {
+   "word": "la montaña",
+   "voice": "male"
+  },
+  {
+   "word": "la pizza",
+   "voice": "male"
+  },
+  {
+   "word": "la jarra",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hacen los amigos?",
+ "answer": [
+  "Comparten",
+  "una",
+  "pizza",
+  "que",
+  "alcanza",
+  "para",
+  "todos."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colgar sobre la"
+    },
+    {
+     "text": "azotea",
+     "gap": true,
+     "accept": [
+      "azotea"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzarse",
+     "gap": true,
+     "accept": [
+      "alzarse",
+      "elevarse"
+     ]
+    },
+    {
+     "text": "en el horizonte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposar sobre una"
+    },
+    {
+     "text": "tabla",
+     "gap": true,
+     "accept": [
+      "tabla"
+     ]
+    },
+    {
+     "text": "de madera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Comparten una pizza que"
+    },
+    {
+     "text": "alcanza",
+     "gap": true,
+     "accept": [
+      "alcanza",
+      "llega",
+      "da"
+     ]
+    },
+    {
+     "text": "para todos"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'alcanzar para todos': correct, but in Spain 'llegar para todos' / 'dar para todos' is the more common everyday form; proposal: keep, or switch the es word to 'llegar para todos' (owner decides). Used in the model answer. Answer drops the subject (es)."
+}

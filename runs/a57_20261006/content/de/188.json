@@ -1,0 +1,26 @@
+{
+  "mediaId": 188, "lang": "de", "level": "B",
+  "keyWord": "die Verfassung",
+  "taps": [
+    { "phrase": "sich über den Tisch beugen", "target": "der Politiker", "voice": "male" },
+    { "phrase": "eine gepuderte Perücke tragen", "target": "der Richter", "voice": "male" },
+    { "phrase": "mit zwei Wachssiegeln versehen sein", "target": "das Buch", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Perücke", "voice": "male" },
+    { "word": "die Verfassung", "voice": "male" },
+    { "word": "der Marmor", "voice": "male" }
+  ],
+  "question": "Was liest der Politiker?",
+  "answer": ["Er", "liest", "eine", "Seite", "der", "Verfassung."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich über den Tisch" }, { "text": "beugen", "gap": true, "accept": ["beugen", "lehnen"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine gepuderte" }, { "text": "Perücke", "gap": true, "accept": ["Perücke"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "mit zwei" }, { "text": "Wachssiegeln", "gap": true, "accept": ["Wachssiegeln", "Siegeln"] }, { "text": "versehen sein" } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Verfassung", "gap": true, "accept": ["Verfassung"] } ] },
+    { "from": "answer", "parts": [ { "text": "liest eine" }, { "text": "Seite", "gap": true, "accept": ["Seite"] }, { "text": "der Verfassung" } ] }
+  ],
+  "notes": "Tap 1: the red box also covers frames where the politician only sits and points at himself; the phrase describes his leaning over the table in the later boxed frames (end shots). Tap 3: 'mit zwei Wachssiegeln versehen sein' instead of word-for-word 'zwei Wachssiegel tragen' (tragen is unidiomatic for a book). The judge (braids, wig) is kept masculine 'der Richter' as in English (male voice). Noun row added because Verfassung is in no tap row; answer row gaps 'Seite' to vary."
+}

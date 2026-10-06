@@ -1,0 +1,116 @@
+{
+ "mediaId": 260,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un œuf",
+ "taps": [
+  {
+   "phrase": "manger du pain",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis à la fenêtre",
+   "target": "le chat",
+   "voice": "male"
+  },
+  {
+   "phrase": "tomber dans la poêle",
+   "target": "l'œuf",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le chat",
+   "voice": "male"
+  },
+  {
+   "word": "les tomates",
+   "voice": "male"
+  },
+  {
+   "word": "l'œuf",
+   "voice": "male"
+  }
+ ],
+ "question": "Que mange l'homme ?",
+ "answer": [
+  "Il",
+  "mange",
+  "du",
+  "pain",
+  "avec",
+  "un",
+  "œuf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger",
+     "gap": true,
+     "accept": [
+      "manger"
+     ]
+    },
+    {
+     "text": "du pain"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis à la"
+    },
+    {
+     "text": "fenêtre",
+     "gap": true,
+     "accept": [
+      "fenêtre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tomber dans la"
+    },
+    {
+     "text": "poêle",
+     "gap": true,
+     "accept": [
+      "poêle"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange du pain avec un"
+    },
+    {
+     "text": "œuf",
+     "gap": true,
+     "accept": [
+      "œuf"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The cat sits on the windowsill most of the time but stands in a few late frames; 'être assis à la fenêtre' describes most boxed frames. No noun row: the answer row already contains the key word (œuf)."
+}

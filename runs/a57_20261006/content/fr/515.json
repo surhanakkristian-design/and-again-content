@@ -1,0 +1,26 @@
+{
+  "mediaId": 515, "lang": "fr", "level": "B",
+  "keyWord": "surmonter",
+  "taps": [
+    { "phrase": "gravir un mur d'escalade", "target": "la grimpeuse", "voice": "female" },
+    { "phrase": "pendre au bout d'une corde", "target": "la grimpeuse", "voice": "female" },
+    { "phrase": "acclamer la grimpeuse", "target": "la foule", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la fenêtre", "voice": "female" },
+    { "word": "le mur d'escalade", "voice": "female" },
+    { "word": "la grimpeuse", "voice": "female" },
+    { "word": "les spectateurs", "voice": "female" }
+  ],
+  "question": "Que fait la grimpeuse ?",
+  "answer": ["Elle", "gravit", "un", "mur", "d'escalade."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "gravir", "gap": true, "accept": ["gravir", "escalader"] }, { "text": "un mur d'escalade" } ] },
+    { "from": "taps", "parts": [ { "text": "pendre au bout d'une" }, { "text": "corde", "gap": true, "accept": ["corde"] } ] },
+    { "from": "taps", "parts": [ { "text": "acclamer la" }, { "text": "grimpeuse", "gap": true, "accept": ["grimpeuse"] } ] },
+    { "from": "answer", "parts": [ { "text": "gravit un" }, { "text": "mur", "gap": true, "accept": ["mur"] }, { "text": "d'escalade" } ] }
+  ],
+  "notes": "Key word 'surmonter' (overcome) is not used in any text: like the English set, the exercises describe the climb; forcing 'surmonter le mur' would be unnatural. Phrase 3 'acclamer la grimpeuse' only fits the crowd. The crowd is out of frame in several boxed frames (as in English)."
+}

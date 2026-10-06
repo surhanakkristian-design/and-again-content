@@ -1,0 +1,27 @@
+{
+  "mediaId": 230, "lang": "fr", "level": "B",
+  "keyWord": "le réalisateur",
+  "taps": [
+    { "phrase": "lever les poings en signe de victoire", "target": "la réalisatrice", "voice": "female" },
+    { "phrase": "porter un costume de pirate", "target": "l'acteur", "voice": "male" },
+    { "phrase": "reposer sur un trépied", "target": "la caméra", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la réalisatrice", "voice": "female" },
+    { "word": "la caméra", "voice": "female" },
+    { "word": "la chaise pliante", "voice": "female" },
+    { "word": "le soleil", "voice": "female" }
+  ],
+  "question": "Que fait la réalisatrice ?",
+  "answer": ["Elle", "lève", "les", "poings", "en", "signe", "de", "victoire."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lever", "gap": true, "accept": ["lever"] }, { "text": "les poings en signe de victoire" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "costume", "gap": true, "accept": ["costume"] }, { "text": "de pirate" } ] },
+    { "from": "taps", "parts": [ { "text": "reposer sur un" }, { "text": "trépied", "gap": true, "accept": ["trépied"] } ] },
+    { "from": "nouns", "parts": [ { "text": "la" }, { "text": "réalisatrice", "gap": true, "accept": ["réalisatrice"] } ] },
+    { "from": "answer", "parts": [ { "text": "lève les" }, { "text": "poings", "gap": true, "accept": ["poings"] }, { "text": "en signe de victoire" } ] }
+  ],
+  "notes": "Key word: the director is a woman, so the noun pill, target and recall use the feminine 'la réalisatrice' (database word 'le réalisateur' kept in keyWord). Proposal: accept the feminine form for this video. The director's box also covers frames where she gestures, points or demonstrates (not raising fists); phrase 1 describes the final triumphant moment (the still)."
+}

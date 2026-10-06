@@ -1,0 +1,123 @@
+{
+  "mediaId": 45,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "wütend",
+  "taps": [
+    {
+      "phrase": "den Mann anschreien",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Boden liegen",
+      "target": "die Wäsche",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine graue Jacke tragen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Flaschen",
+      "voice": "female"
+    },
+    {
+      "word": "die Waschmaschine",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Wäsche",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die wütende Frau?",
+  "answer": [
+    "Sie",
+    "schreit",
+    "den",
+    "Mann",
+    "an."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Mann",
+          "gap": true,
+          "accept": [
+            "Mann"
+          ]
+        },
+        {
+          "text": "anschreien"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Boden",
+          "gap": true,
+          "accept": [
+            "Boden"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine graue"
+        },
+        {
+          "text": "Jacke",
+          "gap": true,
+          "accept": [
+            "Jacke"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schreit",
+          "gap": true,
+          "accept": [
+            "schreit"
+          ]
+        },
+        {
+          "text": "den Mann an"
+        }
+      ]
+    }
+  ],
+  "notes": "Clothes = 'die Wäsche' (natural word for laundry in a laundromat). Tap box 1 also covers the opening frames where the woman walks in and picks up the clothes; phrase written for the shouting frames (most boxed frames). Key word 'wütend' (adjective) appears in the question only; no recall row can carry it naturally."
+}

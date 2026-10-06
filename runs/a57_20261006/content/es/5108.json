@@ -1,0 +1,115 @@
+{
+ "mediaId": 5108,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el pueblo",
+ "taps": [
+  {
+   "phrase": "saludar desde una barca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "saludar desde una casa",
+   "target": "los niños",
+   "voice": "female"
+  },
+  {
+   "phrase": "bailar junto a los tambores",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la casa",
+   "voice": "female"
+  },
+  {
+   "word": "los niños",
+   "voice": "female"
+  },
+  {
+   "word": "el agua",
+   "voice": "female"
+  },
+  {
+   "word": "la barca",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hacen los niños?",
+ "answer": [
+  "Saludan",
+  "desde",
+  "una",
+  "casa",
+  "del",
+  "pueblo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saludar desde una"
+    },
+    {
+     "text": "barca",
+     "gap": true,
+     "accept": [
+      "barca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saludar",
+     "gap": true,
+     "accept": [
+      "saludar"
+     ]
+    },
+    {
+     "text": "desde una casa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bailar",
+     "gap": true,
+     "accept": [
+      "bailar"
+     ]
+    },
+    {
+     "text": "junto a los tambores"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Saludan desde una casa del"
+    },
+    {
+     "text": "pueblo",
+     "gap": true,
+     "accept": [
+      "pueblo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman's box also covers the market and drum scenes where she does not wave; phrase 3 likewise covers the boat scene. Phrases written for the boxed action as in English. Key word 'el pueblo' used in the model answer (casa del pueblo)."
+}

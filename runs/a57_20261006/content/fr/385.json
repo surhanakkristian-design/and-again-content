@@ -1,0 +1,113 @@
+{
+  "mediaId": 385,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "frapper",
+  "taps": [
+    {
+      "phrase": "frapper la balle",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "tenir une batte",
+      "target": "la fille",
+      "voice": "female"
+    },
+    {
+      "phrase": "voler dans les airs",
+      "target": "la balle",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la balle",
+      "voice": "female"
+    },
+    {
+      "word": "la batte",
+      "voice": "female"
+    },
+    {
+      "word": "la casquette",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la fille ?",
+  "answer": [
+    "Elle",
+    "frappe",
+    "la",
+    "balle",
+    "avec",
+    "une",
+    "batte."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "frapper",
+          "gap": true,
+          "accept": [
+            "frapper",
+            "taper"
+          ]
+        },
+        {
+          "text": "la balle"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir",
+          "gap": true,
+          "accept": [
+            "tenir"
+          ]
+        },
+        {
+          "text": "une batte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "voler",
+          "gap": true,
+          "accept": [
+            "voler"
+          ]
+        },
+        {
+          "text": "dans les airs"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "frappe la balle avec une"
+        },
+        {
+          "text": "batte",
+          "gap": true,
+          "accept": [
+            "batte"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": ""
+}

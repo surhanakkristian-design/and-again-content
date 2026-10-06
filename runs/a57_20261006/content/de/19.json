@@ -1,0 +1,123 @@
+{
+ "mediaId": 19,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Lineal",
+ "taps": [
+  {
+   "phrase": "eine Linie ziehen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "dick und rot sein",
+   "target": "das Buch",
+   "voice": "male"
+  },
+  {
+   "phrase": "lang und gerade sein",
+   "target": "das Lineal",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Lineal",
+   "voice": "male"
+  },
+  {
+   "word": "die Brille",
+   "voice": "male"
+  },
+  {
+   "word": "der Stift",
+   "voice": "male"
+  },
+  {
+   "word": "das Papier",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "zieht",
+  "eine",
+  "Linie",
+  "mit",
+  "einem",
+  "Lineal."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Linie"
+    },
+    {
+     "text": "ziehen",
+     "gap": true,
+     "accept": [
+      "ziehen",
+      "zeichnen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dick und"
+    },
+    {
+     "text": "rot",
+     "gap": true,
+     "accept": [
+      "rot"
+     ]
+    },
+    {
+     "text": "sein"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lang und"
+    },
+    {
+     "text": "gerade",
+     "gap": true,
+     "accept": [
+      "gerade"
+     ]
+    },
+    {
+     "text": "sein"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zieht eine Linie mit einem"
+    },
+    {
+     "text": "Lineal",
+     "gap": true,
+     "accept": [
+      "Lineal"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 avoids 'Einband' (above A level): the book is thick and dark red. Answer also allows 'Er zieht mit einem Lineal eine Linie.' Phrase 1 box covers searching frames too; written for the drawing."
+}

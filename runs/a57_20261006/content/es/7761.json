@@ -1,0 +1,121 @@
+{
+  "mediaId": 7761,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "el ser",
+  "taps": [
+    {
+      "phrase": "meterse en un tarro",
+      "target": "el pulpo",
+      "voice": "male"
+    },
+    {
+      "phrase": "sujetar un portapapeles",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "echarse a reír",
+      "target": "la mujer",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el pulpo",
+      "voice": "male"
+    },
+    {
+      "word": "el tarro",
+      "voice": "male"
+    },
+    {
+      "word": "los robots",
+      "voice": "male"
+    },
+    {
+      "word": "el portapapeles",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hace el pulpo?",
+  "answer": [
+    "Se",
+    "mete",
+    "en",
+    "un",
+    "tarro",
+    "de",
+    "cristal."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "meterse en un"
+        },
+        {
+          "text": "tarro",
+          "gap": true,
+          "accept": [
+            "tarro",
+            "bote"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sujetar un"
+        },
+        {
+          "text": "portapapeles",
+          "gap": true,
+          "accept": [
+            "portapapeles"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "echarse a"
+        },
+        {
+          "text": "reír",
+          "gap": true,
+          "accept": [
+            "reír"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Se"
+        },
+        {
+          "text": "mete",
+          "gap": true,
+          "accept": [
+            "mete",
+            "cuela"
+          ]
+        },
+        {
+          "text": "en un tarro de cristal"
+        }
+      ]
+    }
+  ],
+  "notes": "keyWord 'el ser' on its own mostly means 'being' in the abstract/philosophical sense; for 'a living thing that can act by itself' Spain says 'el ser vivo'. Proposal: keyWord 'el ser vivo'. The key word is not in the noun set and is not forced into the texts."
+}

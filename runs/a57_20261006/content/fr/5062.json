@@ -1,0 +1,114 @@
+{
+ "mediaId": 5062,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le chef",
+ "taps": [
+  {
+   "phrase": "traverser le bureau",
+   "target": "la femme en tailleur bordeaux",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir une tablette",
+   "target": "la femme en tailleur bordeaux",
+   "voice": "female"
+  },
+  {
+   "phrase": "dessiner au tableau",
+   "target": "la femme en tailleur bordeaux",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'ordinateur",
+   "voice": "female"
+  },
+  {
+   "word": "le téléphone",
+   "voice": "female"
+  },
+  {
+   "word": "la tasse",
+   "voice": "female"
+  }
+ ],
+ "question": "Qui dessine au tableau ?",
+ "answer": [
+  "La",
+  "cheffe",
+  "dessine",
+  "au",
+  "tableau."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "traverser le"
+    },
+    {
+     "text": "bureau",
+     "gap": true,
+     "accept": [
+      "bureau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une"
+    },
+    {
+     "text": "tablette",
+     "gap": true,
+     "accept": [
+      "tablette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dessiner",
+     "gap": true,
+     "accept": [
+      "dessiner"
+     ]
+    },
+    {
+     "text": "au tableau"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "dessine au"
+    },
+    {
+     "text": "tableau",
+     "gap": true,
+     "accept": [
+      "tableau"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The boss is a woman, so the answer uses the feminine 'la cheffe' (standard in France today; 'la chef' also heard) for keyWord 'le chef'. Proposal: accept 'cheffe' as the feminine form of the concept. The key word is not in any recall row (it is the answer's subject and not a noun of the set). Other people also walk in the office background, but only she walks through it in the boxed frames. 'le tableau' = the whiteboard."
+}

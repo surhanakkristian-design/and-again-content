@@ -1,0 +1,117 @@
+{
+ "mediaId": 449,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "l'écoute",
+ "taps": [
+  {
+   "phrase": "montrer du doigt",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "mettre les deux mains derrière les oreilles",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir les cheveux longs",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le chemin",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font l'homme et la femme ?",
+ "answer": [
+  "Ils",
+  "écoutent",
+  "sous",
+  "les",
+  "arbres."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer du"
+    },
+    {
+     "text": "doigt",
+     "gap": true,
+     "accept": [
+      "doigt"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre les deux"
+    },
+    {
+     "text": "mains",
+     "gap": true,
+     "accept": [
+      "mains"
+     ]
+    },
+    {
+     "text": "derrière les oreilles"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir les cheveux"
+    },
+    {
+     "text": "longs",
+     "gap": true,
+     "accept": [
+      "longs"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "écoutent",
+     "gap": true,
+     "accept": [
+      "écoutent"
+     ]
+    },
+    {
+     "text": "sous les arbres"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word l'écoute (noun) is abstract; the clip shows the verb écouter, used in the model answer and gapped there. Phrase 2: the woman often holds both hands at her ears, the man only one; in some boxed frames she has only one hand up. Phrase 3: the long braid is visible in most frames. Verifier: phrase 2 'se tenir les deux oreilles' -> 'mettre les deux mains derrière les oreilles' (cupping gesture; 'se tenir les oreilles' suggests pain)."
+}

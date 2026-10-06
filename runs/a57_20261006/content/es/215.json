@@ -1,0 +1,122 @@
+{
+ "mediaId": 215,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la oscuridad",
+ "taps": [
+  {
+   "phrase": "encender una cerilla",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un jersey de rayas",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "brillar en la oscuridad",
+   "target": "el farol",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el farol",
+   "voice": "female"
+  },
+  {
+   "word": "la cerilla",
+   "voice": "female"
+  },
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la sartén de cobre",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "encendiendo",
+  "un",
+  "farol",
+  "en",
+  "la",
+  "oscuridad."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "encender",
+     "gap": true,
+     "accept": [
+      "encender"
+     ]
+    },
+    {
+     "text": "una cerilla"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "jersey",
+     "gap": true,
+     "accept": [
+      "jersey"
+     ]
+    },
+    {
+     "text": "de rayas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brillar en la"
+    },
+    {
+     "text": "oscuridad",
+     "gap": true,
+     "accept": [
+      "oscuridad"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está encendiendo un"
+    },
+    {
+     "text": "farol",
+     "gap": true,
+     "accept": [
+      "farol"
+     ]
+    },
+    {
+     "text": "en la oscuridad"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers early frames (plates, blackout) where no match is struck; phrase written for the match-striking frames. Answer drops the subject (natural in Spain), so the answer recall row is the whole sentence."
+}

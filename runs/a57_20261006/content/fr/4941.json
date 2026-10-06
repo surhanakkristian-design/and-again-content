@@ -1,0 +1,27 @@
+{
+  "mediaId": 4941, "lang": "fr", "level": "A",
+  "keyWord": "le pompier",
+  "taps": [
+    { "phrase": "monter à l'échelle", "target": "la pompière", "voice": "female" },
+    { "phrase": "être assis dans un arbre", "target": "le chat", "voice": "female" },
+    { "phrase": "serrer le chat dans ses bras", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la pompière", "voice": "female" },
+    { "word": "le chat", "voice": "female" },
+    { "word": "l'échelle", "voice": "female" },
+    { "word": "l'arbre", "voice": "female" }
+  ],
+  "question": "Que fait la pompière ?",
+  "answer": ["Elle", "sauve", "un", "chat", "dans", "un", "arbre."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "monter", "gap": true, "accept": ["monter", "grimper"] }, { "text": "à" }, { "text": "l'échelle" } ] },
+    { "from": "taps", "parts": [ { "text": "être assis dans un" }, { "text": "arbre", "gap": true, "accept": ["arbre"] } ] },
+    { "from": "taps", "parts": [ { "text": "serrer le" }, { "text": "chat", "gap": true, "accept": ["chat"] }, { "text": "dans ses bras" } ] },
+    { "from": "nouns", "parts": [ { "text": "la" }, { "text": "pompière", "gap": true, "accept": ["pompière"] } ] },
+    { "from": "answer", "parts": [ { "text": "sauve", "gap": true, "accept": ["sauve"] }, { "text": "un chat dans un arbre" } ] }
+  ],
+  "notes": "Key word: the firefighter is clearly a young woman, so noun 1, the target and the question use the feminine 'la pompière' (common in France today, contains 'pompier'); the database word 'le pompier' is kept unchanged. Proposal: accept 'la pompière' as the feminine form of the concept (or use 'la femme pompier'). The red box (phrase 1) also covers the opening shots where she slides down the pole and puts on her jacket; the phrase describes the ladder climb in the later boxed frames. Phrase 2: the cat is later held in the arms (still boxed); 'être assis dans un arbre' describes the tree frames."
+}

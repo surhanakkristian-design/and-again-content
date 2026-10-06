@@ -1,0 +1,26 @@
+{
+  "mediaId": 7844, "lang": "fr", "level": "B",
+  "keyWord": "la génération",
+  "taps": [
+    { "phrase": "porter un haut court", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "porter un chemisier à col", "target": "la femme plus âgée", "voice": "female" },
+    { "phrase": "pendre au-dessus de la fenêtre", "target": "les casseroles en cuivre", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les casseroles en cuivre", "voice": "female" },
+    { "word": "le saladier", "voice": "female" },
+    { "word": "les pancakes", "voice": "female" },
+    { "word": "le plan de travail", "voice": "female" }
+  ],
+  "question": "Qui fait sauter des pancakes ?",
+  "answer": ["Deux", "générations", "de", "femmes", "font", "sauter", "des", "pancakes."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "haut", "gap": true, "accept": ["haut"] }, { "text": "court" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "chemisier", "gap": true, "accept": ["chemisier"] }, { "text": "à col" } ] },
+    { "from": "taps", "parts": [ { "text": "pendre", "gap": true, "accept": ["pendre"] }, { "text": "au-dessus de la fenêtre" } ] },
+    { "from": "answer", "parts": [ { "text": "font" }, { "text": "sauter", "gap": true, "accept": ["sauter"] }, { "text": "des pancakes" } ] }
+  ],
+  "notes": "Phrase 1: English 'to turn towards the stove' happens only in the last moment; in most boxed frames the younger woman laughs with the pan, which the older one does too, so I used what only she shows: her short crop top ('porter un haut court'). 'les pancakes' (not 'les crêpes'): these are thick pancakes, and 'pancakes' is the everyday word in France for them. Key word 'générations' appears only in the answer subject, so no recall row gaps it (the subject is cut from the answer row by rule)."
+}

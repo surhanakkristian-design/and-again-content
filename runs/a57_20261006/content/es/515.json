@@ -1,0 +1,118 @@
+{
+ "mediaId": 515,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "superar",
+ "taps": [
+  {
+   "phrase": "trepar por la pared de escalada",
+   "target": "la escaladora",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse colgando de la cuerda",
+   "target": "la escaladora",
+   "voice": "female"
+  },
+  {
+   "phrase": "vitorear desde abajo",
+   "target": "el público",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "la pared de escalada",
+   "voice": "female"
+  },
+  {
+   "word": "la escaladora",
+   "voice": "female"
+  },
+  {
+   "word": "los espectadores",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la escaladora?",
+ "answer": [
+  "La",
+  "escaladora",
+  "está",
+  "trepando",
+  "por",
+  "la",
+  "pared."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "trepar",
+     "gap": true,
+     "accept": [
+      "trepar",
+      "escalar"
+     ]
+    },
+    {
+     "text": "por la pared de escalada"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse colgando de la"
+    },
+    {
+     "text": "cuerda",
+     "gap": true,
+     "accept": [
+      "cuerda"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vitorear",
+     "gap": true,
+     "accept": [
+      "vitorear",
+      "aclamar"
+     ]
+    },
+    {
+     "text": "desde abajo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está trepando por la"
+    },
+    {
+     "text": "pared",
+     "gap": true,
+     "accept": [
+      "pared"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'superar' is not used in any text: the clip shows climbing, and 'superar la pared' would be forced. Phrases 1 and 2 share the same target (as in English). 'Pared de escalada' chosen over 'rocódromo' (rocódromo = the whole gym)."
+}

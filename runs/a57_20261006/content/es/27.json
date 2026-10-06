@@ -1,0 +1,128 @@
+{
+ "mediaId": 27,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el estudiante",
+ "taps": [
+  {
+   "phrase": "abrir la ventana",
+   "target": "la estudiante",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar encima de los libros",
+   "target": "la taza",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sobre el escritorio",
+   "target": "los libros",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la estudiante",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "los libros",
+   "voice": "female"
+  },
+  {
+   "word": "la ventana",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué sostiene la estudiante?",
+ "answer": [
+  "Sostiene",
+  "una",
+  "taza."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "la ventana"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar encima de los"
+    },
+    {
+     "text": "libros",
+     "gap": true,
+     "accept": [
+      "libros"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sobre el"
+    },
+    {
+     "text": "escritorio",
+     "gap": true,
+     "accept": [
+      "escritorio",
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "estudiante",
+     "gap": true,
+     "accept": [
+      "estudiante"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Sostiene una"
+    },
+    {
+     "text": "taza",
+     "gap": true,
+     "accept": [
+      "taza"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el estudiante: the clip shows a young woman, so the pill and target use 'la estudiante' (same word, common gender, feminine article); keyWord kept unchanged. Noun row added (la estudiante). Tap 1: the red box covers the whole clip; she opens the window only around 7-8 s (her defining action), phrase kept. Tap 2: in a few boxed frames she holds the cup instead of it standing on the books. At the still (11.5 s) she holds the cup."
+}

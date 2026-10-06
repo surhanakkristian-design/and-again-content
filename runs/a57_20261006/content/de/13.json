@@ -1,0 +1,121 @@
+{
+ "mediaId": 13,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Serviette",
+ "taps": [
+  {
+   "phrase": "eine Serviette falten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich den Mund abwischen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Stuhl sitzen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "die Serviette",
+   "voice": "female"
+  },
+  {
+   "word": "der Stuhl",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "faltet",
+  "eine",
+  "Serviette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Serviette",
+     "gap": true,
+     "accept": [
+      "Serviette"
+     ]
+    },
+    {
+     "text": "falten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich den Mund"
+    },
+    {
+     "text": "abwischen",
+     "gap": true,
+     "accept": [
+      "abwischen",
+      "abtupfen",
+      "abputzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Stuhl",
+     "gap": true,
+     "accept": [
+      "Stuhl"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "faltet",
+     "gap": true,
+     "accept": [
+      "faltet"
+     ]
+    },
+    {
+     "text": "eine Serviette"
+    }
+   ]
+  }
+ ],
+ "notes": "All three English targets are the same woman and the three boxes cover her through the whole clip (each phrase true only in part of it: folding first, wiping mid, sitting at the end). No noun row: Serviette is in tap row 1."
+}

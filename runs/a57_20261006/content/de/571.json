@@ -1,0 +1,27 @@
+{
+  "mediaId": 571, "lang": "de", "level": "A",
+  "keyWord": "der Topf",
+  "taps": [
+    { "phrase": "große Augen machen", "target": "der Mann", "voice": "male" },
+    { "phrase": "den Finger heben", "target": "die Frau", "voice": "female" },
+    { "phrase": "auf dem Feuer stehen", "target": "der Topf", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "das Fenster", "voice": "male" },
+    { "word": "der Tisch", "voice": "male" },
+    { "word": "der Topf", "voice": "male" },
+    { "word": "das Feuer", "voice": "male" }
+  ],
+  "question": "Was kochen sie?",
+  "answer": ["Sie", "kochen", "Kartoffeln."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "große" }, { "text": "Augen", "gap": true, "accept": ["Augen"] }, { "text": "machen" } ] },
+    { "from": "taps", "parts": [ { "text": "den Finger" }, { "text": "heben", "gap": true, "accept": ["heben", "hochheben"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf dem" }, { "text": "Feuer", "gap": true, "accept": ["Feuer"] }, { "text": "stehen" } ] },
+    { "from": "nouns", "parts": [ { "text": "der" }, { "text": "Topf", "gap": true, "accept": ["Topf"] } ] },
+    { "from": "answer", "parts": [ { "text": "kochen" }, { "text": "Kartoffeln", "gap": true, "accept": ["Kartoffeln"] } ] }
+  ],
+  "notes": "Phrase 1: the man's box covers him in many frames, but he holds the fork only at the end; in most boxed frames he stares wide-eyed at the pot, so 'große Augen machen' (English 'hold a fork'); fallback 'eine Gabel halten'. Phrase 2: she raises her finger only in two frames; in the rest she smiles at the pot (the man also smiles), so the English action is kept. Answer kept short ('Sie kochen Kartoffeln.') because 'in einem großen Topf' could stand in two places; the key word gets its own noun row instead."
+}

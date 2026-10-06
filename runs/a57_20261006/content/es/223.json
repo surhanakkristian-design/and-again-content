@@ -1,0 +1,128 @@
+{
+ "mediaId": 223,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la entrega",
+ "taps": [
+  {
+   "phrase": "estar tumbado en el sofá",
+   "target": "el gato",
+   "voice": "male"
+  },
+  {
+   "phrase": "entregar la comida",
+   "target": "el hombre del casco",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una camiseta naranja",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "male"
+  },
+  {
+   "word": "la ventana",
+   "voice": "male"
+  },
+  {
+   "word": "el gato",
+   "voice": "male"
+  },
+  {
+   "word": "el sofá",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Quién está entregando la comida?",
+ "answer": [
+  "Un",
+  "hombre",
+  "con",
+  "casco",
+  "está",
+  "entregando",
+  "la",
+  "comida."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "en el sofá"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "entregar la"
+    },
+    {
+     "text": "comida",
+     "gap": true,
+     "accept": [
+      "comida"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "naranja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "entregando",
+     "gap": true,
+     "accept": [
+      "entregando",
+      "trayendo"
+     ]
+    },
+    {
+     "text": "la comida"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the cat lies on the sofa at the start; in late boxed frames it sits at the sofa's edge. 'Entregar' carries the key word 'la entrega' (verb form); no noun row since 'la entrega' is not a noun of the set."
+}

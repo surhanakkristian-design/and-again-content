@@ -1,0 +1,116 @@
+{
+  "mediaId": 5007,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "la cerradura",
+  "taps": [
+    {
+      "phrase": "buscar sus llaves",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "entrar en casa",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "girar en la cerradura",
+      "target": "las llaves",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la cerradura",
+      "voice": "female"
+    },
+    {
+      "word": "la mano",
+      "voice": "female"
+    },
+    {
+      "word": "las llaves",
+      "voice": "female"
+    },
+    {
+      "word": "la puerta",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está buscando la mujer?",
+  "answer": [
+    "Está",
+    "buscando",
+    "sus",
+    "llaves."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "buscar sus"
+        },
+        {
+          "text": "llaves",
+          "gap": true,
+          "accept": [
+            "llaves"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "entrar",
+          "gap": true,
+          "accept": [
+            "entrar"
+          ]
+        },
+        {
+          "text": "en casa"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "girar en la"
+        },
+        {
+          "text": "cerradura",
+          "gap": true,
+          "accept": [
+            "cerradura"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está"
+        },
+        {
+          "text": "buscando",
+          "gap": true,
+          "accept": [
+            "buscando"
+          ]
+        },
+        {
+          "text": "sus llaves"
+        }
+      ]
+    }
+  ],
+  "notes": "Taps 1 and 2 share the target (the woman) as in English; box 1 also covers the entering scene."
+}

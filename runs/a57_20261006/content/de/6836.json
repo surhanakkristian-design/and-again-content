@@ -1,0 +1,139 @@
+{
+ "mediaId": 6836,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Wohnhaus",
+ "taps": [
+  {
+   "phrase": "ein Sofa über das Geländer hieven",
+   "target": "die junge Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Balkon landen",
+   "target": "das Sofa",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Faust in die Luft recken",
+   "target": "die junge Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Wohnhaus",
+   "voice": "female"
+  },
+  {
+   "word": "der Grill",
+   "voice": "female"
+  },
+  {
+   "word": "das Sofa",
+   "voice": "female"
+  },
+  {
+   "word": "der Transporter",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die junge Frau?",
+ "answer": [
+  "Sie",
+  "hievt",
+  "ein",
+  "Sofa",
+  "auf",
+  "ihren",
+  "Balkon."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein Sofa über das"
+    },
+    {
+     "text": "Geländer",
+     "gap": true,
+     "accept": [
+      "Geländer"
+     ]
+    },
+    {
+     "text": "hieven"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Balkon"
+    },
+    {
+     "text": "landen",
+     "gap": true,
+     "accept": [
+      "landen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Faust",
+     "gap": true,
+     "accept": [
+      "Faust"
+     ]
+    },
+    {
+     "text": "in die Luft recken"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Wohnhaus",
+     "gap": true,
+     "accept": [
+      "Wohnhaus",
+      "Mehrfamilienhaus"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hievt",
+     "gap": true,
+     "accept": [
+      "hievt",
+      "zieht"
+     ]
+    },
+    {
+     "text": "ein Sofa auf ihren Balkon"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 (English 'to dangle from a rope'): the sofa dangles in only 2 of 7 boxed frames and stands on the balcony in the other 5, so the phrase is 'auf dem Balkon landen', which covers the whole box. Tap 3: the older women raise open hands, only the young woman raises a fist."
+}

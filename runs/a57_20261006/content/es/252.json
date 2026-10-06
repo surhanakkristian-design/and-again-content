@@ -1,0 +1,122 @@
+{
+  "mediaId": 252,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el polvo",
+  "taps": [
+    {
+      "phrase": "soplar sobre una maleta",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "levantar un dedo",
+      "target": "la mujer",
+      "voice": "female"
+    },
+    {
+      "phrase": "estar posado en lo alto",
+      "target": "el pájaro",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el polvo",
+      "voice": "female"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    },
+    {
+      "word": "la mujer",
+      "voice": "female"
+    },
+    {
+      "word": "la maleta",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "Está",
+    "soplando",
+    "el",
+    "polvo",
+    "de",
+    "una",
+    "maleta."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "soplar",
+          "gap": true,
+          "accept": [
+            "soplar"
+          ]
+        },
+        {
+          "text": "sobre una maleta"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "levantar un"
+        },
+        {
+          "text": "dedo",
+          "gap": true,
+          "accept": [
+            "dedo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar"
+        },
+        {
+          "text": "posado",
+          "gap": true,
+          "accept": [
+            "posado"
+          ]
+        },
+        {
+          "text": "en lo alto"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está soplando el"
+        },
+        {
+          "text": "polvo",
+          "gap": true,
+          "accept": [
+            "polvo"
+          ]
+        },
+        {
+          "text": "de una maleta"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1 box also covers frames where the man only holds/lifts the suitcase before and after blowing; written for the blow, as in English. 'posado' (perched) is slightly above A2 but it is the plain right word for a bird; 'sentado' would be wrong for a bird."
+}

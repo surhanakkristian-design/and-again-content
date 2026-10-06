@@ -1,0 +1,26 @@
+{
+  "mediaId": 7962, "lang": "de", "level": "B",
+  "keyWord": "der Rest",
+  "taps": [
+    { "phrase": "den Pizzakarton festhalten", "target": "die Person in Lila", "voice": "female" },
+    { "phrase": "die letzten Pizzastücke enthalten", "target": "der Pizzakarton", "voice": "female" },
+    { "phrase": "über der Dachterrasse hängen", "target": "die Lichterkette", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Lichterkette", "voice": "female" },
+    { "word": "der Schornstein", "voice": "female" },
+    { "word": "der Pizzakarton", "voice": "female" },
+    { "word": "der Teppich", "voice": "female" }
+  ],
+  "question": "Was enthält der Pizzakarton?",
+  "answer": ["Er", "enthält", "den", "Rest", "der", "Pizza."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "den Pizzakarton" }, { "text": "festhalten", "gap": true, "accept": ["festhalten", "halten"] } ] },
+    { "from": "taps", "parts": [ { "text": "die letzten" }, { "text": "Pizzastücke", "gap": true, "accept": ["Pizzastücke", "Stücke"] }, { "text": "enthalten" } ] },
+    { "from": "taps", "parts": [ { "text": "über der" }, { "text": "Dachterrasse", "gap": true, "accept": ["Dachterrasse"] }, { "text": "hängen" } ] },
+    { "from": "answer", "parts": [ { "text": "enthält den" }, { "text": "Rest", "gap": true, "accept": ["Rest"] }, { "text": "der Pizza" } ] }
+  ],
+  "notes": "English 'string lights' (plural) = one 'die Lichterkette' in German (the usual word). Tap 2 says 'die letzten Pizzastücke' so it does not repeat the answer 'den Rest der Pizza'. Key word 'der Rest' is not one of the four nouns, so no noun row. 'Er' = der Pizzakarton."
+}

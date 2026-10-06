@@ -1,0 +1,121 @@
+{
+ "mediaId": 46,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la pomme",
+ "taps": [
+  {
+   "phrase": "couper une pomme",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une barbe noire",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être posé sur une caisse",
+   "target": "l'oiseau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'oiseau",
+   "voice": "female"
+  },
+  {
+   "word": "la pomme",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "mange",
+  "une",
+  "pomme",
+  "rouge."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "couper",
+     "gap": true,
+     "accept": [
+      "couper",
+      "trancher"
+     ]
+    },
+    {
+     "text": "une pomme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    },
+    {
+     "text": "noire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posé sur une"
+    },
+    {
+     "text": "caisse",
+     "gap": true,
+     "accept": [
+      "caisse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange une"
+    },
+    {
+     "text": "pomme",
+     "gap": true,
+     "accept": [
+      "pomme"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap box 1 covers the whole clip (picking, polishing, biting, then cutting on the stump); 'couper une pomme' kept as in English - only her hand holds the knife. The bird is a magpie ('une pie'); 'l'oiseau' kept as in English. No noun row: 'pomme' is already in tap row 1 and gapped in the answer row."
+}

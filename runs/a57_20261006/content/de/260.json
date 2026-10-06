@@ -1,0 +1,123 @@
+{
+ "mediaId": 260,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Ei",
+ "taps": [
+  {
+   "phrase": "ein Brot essen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "am Fenster sitzen",
+   "target": "die Katze",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf dem Brot liegen",
+   "target": "das Ei",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Katze",
+   "voice": "male"
+  },
+  {
+   "word": "die Tomaten",
+   "voice": "male"
+  },
+  {
+   "word": "das Ei",
+   "voice": "male"
+  }
+ ],
+ "question": "Was isst der Mann?",
+ "answer": [
+  "Er",
+  "isst",
+  "ein",
+  "Brot",
+  "mit",
+  "Ei."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein Brot"
+    },
+    {
+     "text": "essen",
+     "gap": true,
+     "accept": [
+      "essen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Fenster",
+     "gap": true,
+     "accept": [
+      "Fenster"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Brot",
+     "gap": true,
+     "accept": [
+      "Brot",
+      "Toast"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "isst ein Brot mit"
+    },
+    {
+     "text": "Ei",
+     "gap": true,
+     "accept": [
+      "Ei",
+      "Spiegelei"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 (egg): the English box follows the egg from the hand, into the pan and onto the bread; in most boxed frames the fried egg lies on the bread, so 'auf dem Brot liegen' instead of 'in die Pfanne fallen' (the fall is only ~1 frame). Phrase 1 (man): in the first ~7 boxed frames he picks shell out of the bowl, eating only from the second half on. Phrase 2 (cat): in later frames the cat stands/walks on the windowsill rather than sits."
+}

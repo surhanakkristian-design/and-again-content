@@ -1,0 +1,119 @@
+{
+ "mediaId": 8001,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "mantenerse alejado",
+ "taps": [
+  {
+   "phrase": "extender las alas",
+   "target": "el ganso",
+   "voice": "female"
+  },
+  {
+   "phrase": "pedalear junto al ganso",
+   "target": "el hombre de la bicicleta",
+   "voice": "male"
+  },
+  {
+   "phrase": "saltar al césped",
+   "target": "la mujer de pantalón corto",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el ganso",
+   "voice": "female"
+  },
+  {
+   "word": "la bicicleta",
+   "voice": "female"
+  },
+  {
+   "word": "la hiedra",
+   "voice": "female"
+  },
+  {
+   "word": "el camino de grava",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer de pantalón corto?",
+ "answer": [
+  "Se",
+  "mantiene",
+  "alejada",
+  "del",
+  "ganso."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "extender las"
+    },
+    {
+     "text": "alas",
+     "gap": true,
+     "accept": [
+      "alas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pedalear",
+     "gap": true,
+     "accept": [
+      "pedalear"
+     ]
+    },
+    {
+     "text": "junto al ganso"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saltar al"
+    },
+    {
+     "text": "césped",
+     "gap": true,
+     "accept": [
+      "césped",
+      "hierba"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se mantiene"
+    },
+    {
+     "text": "alejada",
+     "gap": true,
+     "accept": [
+      "alejada",
+      "apartada"
+     ]
+    },
+    {
+     "text": "del ganso"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word agrees with the woman: 'alejada'. She leaps onto the grass in the first frames, then runs past the goose laughing in the last ones (still keeping off the path around it)."
+}

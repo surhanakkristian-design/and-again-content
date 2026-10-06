@@ -1,0 +1,123 @@
+{
+ "mediaId": 166,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Kreis",
+ "taps": [
+  {
+   "phrase": "einen großen Kreis zeichnen",
+   "target": "die Frau mit dem Stock",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen langen Stock halten",
+   "target": "die Frau mit dem Stock",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Kreis stehen",
+   "target": "die Gruppe",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "der Kreis",
+   "voice": "female"
+  },
+  {
+   "word": "das Meer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was zeichnet die Frau?",
+ "answer": [
+  "Sie",
+  "zeichnet",
+  "einen",
+  "Kreis",
+  "in",
+  "den",
+  "Sand."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen großen"
+    },
+    {
+     "text": "Kreis",
+     "gap": true,
+     "accept": [
+      "Kreis"
+     ]
+    },
+    {
+     "text": "zeichnen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen langen"
+    },
+    {
+     "text": "Stock",
+     "gap": true,
+     "accept": [
+      "Stock"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Kreis"
+    },
+    {
+     "text": "stehen",
+     "gap": true,
+     "accept": [
+      "stehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "zeichnet",
+     "gap": true,
+     "accept": [
+      "zeichnet",
+      "malt"
+     ]
+    },
+    {
+     "text": "einen Kreis in den Sand"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: in the later box frames (shell-laying scene) the woman only holds the stick; 'zeichnen' is true for most boxed frames. Answer: 'Sie zeichnet in den Sand einen Kreis' is possible but marked; the given order is the natural one."
+}

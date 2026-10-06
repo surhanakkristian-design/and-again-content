@@ -1,0 +1,124 @@
+{
+ "mediaId": 225,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el escritorio",
+ "taps": [
+  {
+   "phrase": "sentarse frente al escritorio",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta azul",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "andar por el escritorio",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los libros",
+   "voice": "female"
+  },
+  {
+   "word": "la planta",
+   "voice": "female"
+  },
+  {
+   "word": "el cuaderno",
+   "voice": "female"
+  },
+  {
+   "word": "el escritorio",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Dónde está sentada la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "está",
+  "sentada",
+  "frente",
+  "al",
+  "escritorio."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sentarse frente al"
+    },
+    {
+     "text": "escritorio",
+     "gap": true,
+     "accept": [
+      "escritorio"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "azul"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "andar",
+     "gap": true,
+     "accept": [
+      "andar",
+      "caminar",
+      "pasear"
+     ]
+    },
+    {
+     "text": "por el escritorio"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "sentada",
+     "gap": true,
+     "accept": [
+      "sentada"
+     ]
+    },
+    {
+     "text": "frente al escritorio"
+    }
+   ]
+  }
+ ],
+ "notes": "Early boxed frames of phrase 1 show the woman clearing and wiping the desk (not yet sitting); phrase written for most boxed frames, where she sits at it."
+}

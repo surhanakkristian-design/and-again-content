@@ -1,0 +1,124 @@
+{
+ "mediaId": 272,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "verdunsten",
+ "taps": [
+  {
+   "phrase": "die leere Pfanne kippen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "aus der Pfanne verdunsten",
+   "target": "das Wasser",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine blaue Flamme erzeugen",
+   "target": "der Campingkocher",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Schutzbrille",
+   "voice": "female"
+  },
+  {
+   "word": "der Dampf",
+   "voice": "female"
+  },
+  {
+   "word": "die Pfanne",
+   "voice": "female"
+  },
+  {
+   "word": "der Campingkocher",
+   "voice": "female"
+  }
+ ],
+ "question": "Was passiert mit dem Wasser?",
+ "answer": [
+  "Das",
+  "Wasser",
+  "verdunstet",
+  "in",
+  "der",
+  "heißen",
+  "Pfanne."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die leere Pfanne"
+    },
+    {
+     "text": "kippen",
+     "gap": true,
+     "accept": [
+      "kippen",
+      "neigen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus der Pfanne"
+    },
+    {
+     "text": "verdunsten",
+     "gap": true,
+     "accept": [
+      "verdunsten",
+      "verdampfen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine blaue"
+    },
+    {
+     "text": "Flamme",
+     "gap": true,
+     "accept": [
+      "Flamme"
+     ]
+    },
+    {
+     "text": "erzeugen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "verdunstet in der"
+    },
+    {
+     "text": "heißen",
+     "gap": true,
+     "accept": [
+      "heißen"
+     ]
+    },
+    {
+     "text": "Pfanne"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: water heated on a flame strictly 'verdampft'; 'verdunsten' is still acceptable everyday German for the puddle shrinking and vanishing, so kept; 'verdampfen' accepted in the recall row. Tap 1: the red box also covers the early frames where she only leans over the pan; phrase written for the tilt/show frames (end of clip, the still). 'frying pan' -> 'die Pfanne' everywhere for consistency. 'goggles' -> 'die Schutzbrille'."
+}

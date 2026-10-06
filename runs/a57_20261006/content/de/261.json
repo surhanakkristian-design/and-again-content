@@ -1,0 +1,136 @@
+{
+ "mediaId": 261,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Elektriker",
+ "taps": [
+  {
+   "phrase": "ein Kabel durchschneiden",
+   "target": "die Elektrikerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein rosa T-Shirt tragen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Bart haben",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Tür",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "word": "die Elektrikerin",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Elektrikerin?",
+ "answer": [
+  "Sie",
+  "schneidet",
+  "ein",
+  "Kabel",
+  "durch."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Kabel",
+     "gap": true,
+     "accept": [
+      "Kabel"
+     ]
+    },
+    {
+     "text": "durchschneiden"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein rosa T-Shirt"
+    },
+    {
+     "text": "tragen",
+     "gap": true,
+     "accept": [
+      "tragen",
+      "anhaben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Bart",
+     "gap": true,
+     "accept": [
+      "Bart"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Elektrikerin",
+     "gap": true,
+     "accept": [
+      "Elektrikerin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schneidet",
+     "gap": true,
+     "accept": [
+      "schneidet"
+     ]
+    },
+    {
+     "text": "ein Kabel durch"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'der Elektriker' kept, but the electrician is a woman, so noun, target and question use 'die Elektrikerin'; proposal: add/teach 'die Elektrikerin' for this video. Phrase 1: she cuts the wire only in the first ~6 boxed frames; afterwards she fits and switches the breaker and then smiles at the camera."
+}

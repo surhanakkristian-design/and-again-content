@@ -1,0 +1,119 @@
+{
+ "mediaId": 239,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "bezweifeln",
+ "taps": [
+  {
+   "phrase": "einen goldenen Ring begutachten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "über das ganze Gesicht strahlen",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "skeptisch die Stirn runzeln",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Ring",
+   "voice": "male"
+  },
+  {
+   "word": "das Kopftuch",
+   "voice": "male"
+  },
+  {
+   "word": "die Jacke",
+   "voice": "male"
+  },
+  {
+   "word": "die Wolken",
+   "voice": "male"
+  }
+ ],
+ "question": "Was begutachtet der Mann?",
+ "answer": [
+  "Er",
+  "begutachtet",
+  "einen",
+  "goldenen",
+  "Ring."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen goldenen Ring"
+    },
+    {
+     "text": "begutachten",
+     "gap": true,
+     "accept": [
+      "begutachten",
+      "prüfen",
+      "untersuchen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über das ganze Gesicht"
+    },
+    {
+     "text": "strahlen",
+     "gap": true,
+     "accept": [
+      "strahlen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "skeptisch die"
+    },
+    {
+     "text": "Stirn",
+     "gap": true,
+     "accept": [
+      "Stirn"
+     ]
+    },
+    {
+     "text": "runzeln"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "begutachtet einen goldenen"
+    },
+    {
+     "text": "Ring",
+     "gap": true,
+     "accept": [
+      "Ring"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'bezweifeln' does not appear in the exercises (the clip shows doubt through the frown; 'skeptisch' carries it). Boxes 1 and 3 also cover the last frames where he has put the ring down and talks; phrases written for the examining frames. Phrase 2: the old woman beams at him (English 'grin at the customer')."
+}

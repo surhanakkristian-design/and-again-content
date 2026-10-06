@@ -1,0 +1,121 @@
+{
+ "mediaId": 7999,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "im Hotel übernachten",
+ "taps": [
+  {
+   "phrase": "aufs Bett springen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf dem Rücken liegen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Koffer bringen",
+   "target": "die Katze",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "male"
+  },
+  {
+   "word": "die Katze",
+   "voice": "male"
+  },
+  {
+   "word": "das Bett",
+   "voice": "male"
+  },
+  {
+   "word": "das Fenster",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Hund?",
+ "answer": [
+  "Er",
+  "liegt",
+  "auf",
+  "dem",
+  "Bett."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aufs Bett"
+    },
+    {
+     "text": "springen",
+     "gap": true,
+     "accept": [
+      "springen",
+      "hüpfen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Rücken",
+     "gap": true,
+     "accept": [
+      "Rücken"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Koffer",
+     "gap": true,
+     "accept": [
+      "Koffer"
+     ]
+    },
+    {
+     "text": "bringen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "liegt",
+     "gap": true,
+     "accept": [
+      "liegt"
+     ]
+    },
+    {
+     "text": "auf dem Bett"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 'aufs Bett springen' happens only in the first boxed frame; the rest of the shared dog box shows it lying on its back, which is phrase 2, so phrase 1 keeps the jump (the only other action that differs). Key phrase 'im Hotel übernachten' is not used in the texts (not forced)."
+}

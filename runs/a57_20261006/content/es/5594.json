@@ -1,0 +1,125 @@
+{
+ "mediaId": 5594,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "impresionante",
+ "taps": [
+  {
+   "phrase": "posarse en la cresta rocosa",
+   "target": "el dragón",
+   "voice": "female"
+  },
+  {
+   "phrase": "plegar las alas",
+   "target": "el dragón",
+   "voice": "female"
+  },
+  {
+   "phrase": "agachar la cabeza",
+   "target": "el dragón",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los picos",
+   "voice": "female"
+  },
+  {
+   "word": "las nubes",
+   "voice": "female"
+  },
+  {
+   "word": "el dragón",
+   "voice": "female"
+  },
+  {
+   "word": "los pinos",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el dragón?",
+ "answer": [
+  "El",
+  "impresionante",
+  "dragón",
+  "se",
+  "posa",
+  "en",
+  "la",
+  "cresta."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "posarse en la"
+    },
+    {
+     "text": "cresta",
+     "gap": true,
+     "accept": [
+      "cresta"
+     ]
+    },
+    {
+     "text": "rocosa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plegar",
+     "gap": true,
+     "accept": [
+      "plegar",
+      "recoger"
+     ]
+    },
+    {
+     "text": "las alas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agachar",
+     "gap": true,
+     "accept": [
+      "agachar",
+      "bajar"
+     ]
+    },
+    {
+     "text": "la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "posa",
+     "gap": true,
+     "accept": [
+      "posa"
+     ]
+    },
+    {
+     "text": "en la cresta"
+    }
+   ]
+  }
+ ],
+ "notes": "Only one target (the dragon) for all three phrases, as in English. Key word 'impresionante' is an adjective, so it appears only in the model answer (removed from the recall row with the subject)."
+}

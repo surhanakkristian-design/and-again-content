@@ -1,0 +1,124 @@
+{
+ "mediaId": 8,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la tarjeta llave",
+ "taps": [
+  {
+   "phrase": "acercar la tarjeta al lector",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "encenderse en verde",
+   "target": "el lector de tarjetas",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse entreabierta",
+   "target": "la puerta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la puerta",
+   "voice": "female"
+  },
+  {
+   "word": "el lector de tarjetas",
+   "voice": "female"
+  },
+  {
+   "word": "la tarjeta llave",
+   "voice": "female"
+  },
+  {
+   "word": "la manilla",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "abriendo",
+  "la",
+  "puerta",
+  "con",
+  "la",
+  "tarjeta",
+  "llave."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acercar la"
+    },
+    {
+     "text": "tarjeta",
+     "gap": true,
+     "accept": [
+      "tarjeta"
+     ]
+    },
+    {
+     "text": "al lector"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "encenderse",
+     "gap": true,
+     "accept": [
+      "encenderse",
+      "ponerse"
+     ]
+    },
+    {
+     "text": "en verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse"
+    },
+    {
+     "text": "entreabierta",
+     "gap": true,
+     "accept": [
+      "entreabierta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está abriendo la"
+    },
+    {
+     "text": "puerta",
+     "gap": true,
+     "accept": [
+      "puerta"
+     ]
+    },
+    {
+     "text": "con la tarjeta llave"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the English red box ('to wheel a suitcase') shows the suitcase only in the corridor frames; in most boxed frames the woman's hand holds/taps the card at the reader, so 'acercar la tarjeta al lector'. Phrase 3: the door is shown opened part-way, hence 'quedarse entreabierta' (B2). Handle = 'la manilla' (Spain, lever handle). Answer subject dropped (natural es)."
+}

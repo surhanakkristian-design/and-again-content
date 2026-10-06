@@ -1,0 +1,26 @@
+{
+  "mediaId": 4658, "lang": "fr", "level": "A",
+  "keyWord": "conduire",
+  "taps": [
+    { "phrase": "conduire une vieille voiture", "target": "la femme", "voice": "female" },
+    { "phrase": "marcher dans la rue", "target": "les gens", "voice": "female" },
+    { "phrase": "porter des lunettes de soleil", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "la mer", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "le volant", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "conduit", "une", "voiture", "au", "bord", "de", "la", "mer."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "conduire", "gap": true, "accept": ["conduire"] }, { "text": "une vieille voiture" } ] },
+    { "from": "taps", "parts": [ { "text": "marcher dans la" }, { "text": "rue", "gap": true, "accept": ["rue"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter des" }, { "text": "lunettes", "gap": true, "accept": ["lunettes"] }, { "text": "de soleil" } ] },
+    { "from": "answer", "parts": [ { "text": "conduit une voiture au bord de la" }, { "text": "mer", "gap": true, "accept": ["mer"] } ] }
+  ],
+  "notes": "Phrase 3 (lunettes de soleil): the English blue box also covers the POV frames where only her hands are visible; the phrase fits the frames where she is shown (second half). 'foncées' dropped as unnatural filler."
+}

@@ -1,0 +1,119 @@
+{
+  "mediaId": 48,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "arriver",
+  "taps": [
+    {
+      "phrase": "ouvrir la porte",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "avoir des draps blancs",
+      "target": "le lit",
+      "voice": "male"
+    },
+    {
+      "phrase": "avoir de petites vagues blanches",
+      "target": "la mer",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "male"
+    },
+    {
+      "word": "la mer",
+      "voice": "male"
+    },
+    {
+      "word": "le sable",
+      "voice": "male"
+    },
+    {
+      "word": "les palmiers",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "ouvre",
+    "la",
+    "porte."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir",
+          "gap": true,
+          "accept": [
+            "ouvrir"
+          ]
+        },
+        {
+          "text": "la porte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir des"
+        },
+        {
+          "text": "draps",
+          "gap": true,
+          "accept": [
+            "draps"
+          ]
+        },
+        {
+          "text": "blancs"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "avoir de petites"
+        },
+        {
+          "text": "vagues",
+          "gap": true,
+          "accept": [
+            "vagues"
+          ]
+        },
+        {
+          "text": "blanches"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "ouvre la"
+        },
+        {
+          "text": "porte",
+          "gap": true,
+          "accept": [
+            "porte"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Box 1 (the man) also covers walking frames on the path and the selfie; phrase written for the door-opening frames (most boxed frames). English 'trees' -> 'les palmiers' (they are palm trees; A2 everyday word). Key word 'arriver' fits no visible-action row naturally, so it appears in no recall row."
+}

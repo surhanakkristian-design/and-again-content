@@ -1,0 +1,121 @@
+{
+ "mediaId": 46,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la manzana",
+ "taps": [
+  {
+   "phrase": "cortar una manzana",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener la barba negra",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar encima de una caja",
+   "target": "el pájaro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el pájaro",
+   "voice": "female"
+  },
+  {
+   "word": "la manzana",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "comiendo",
+  "una",
+  "manzana",
+  "roja."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cortar",
+     "gap": true,
+     "accept": [
+      "cortar",
+      "partir"
+     ]
+    },
+    {
+     "text": "una manzana"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener la"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    },
+    {
+     "text": "negra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar encima de una"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está comiendo una"
+    },
+    {
+     "text": "manzana",
+     "gap": true,
+     "accept": [
+      "manzana"
+     ]
+    },
+    {
+     "text": "roja"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap box 1 covers the whole clip (picking, polishing, biting, then cutting); kept 'cortar una manzana' as in English because the man never cuts (he also eats). The bird is a magpie; 'el pájaro' kept as in English. No noun row: 'la manzana' is already in tap row 1 and gapped in the answer row."
+}

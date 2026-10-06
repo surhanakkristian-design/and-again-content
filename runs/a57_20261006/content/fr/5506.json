@@ -1,0 +1,118 @@
+{
+ "mediaId": 5506,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la soirée dansante",
+ "taps": [
+  {
+   "phrase": "jouer avec un ballon",
+   "target": "la fille aux vêtements colorés",
+   "voice": "female"
+  },
+  {
+   "phrase": "faire du skate",
+   "target": "l'homme au bob bleu",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une casquette rouge",
+   "target": "la femme à la casquette rouge",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "le mur",
+   "voice": "female"
+  },
+  {
+   "word": "le ballon",
+   "voice": "female"
+  },
+  {
+   "word": "les gens",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les gens ?",
+ "answer": [
+  "Ils",
+  "dansent",
+  "dans",
+  "la",
+  "rue."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "jouer avec un"
+    },
+    {
+     "text": "ballon",
+     "gap": true,
+     "accept": [
+      "ballon"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire du"
+    },
+    {
+     "text": "skate",
+     "gap": true,
+     "accept": [
+      "skate",
+      "skateboard"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "casquette",
+     "gap": true,
+     "accept": [
+      "casquette"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "dansent",
+     "gap": true,
+     "accept": [
+      "dansent"
+     ]
+    },
+    {
+     "text": "dans la rue"
+    }
+   ]
+  }
+ ],
+ "notes": "Key-word mapping: 'la soirée dansante' is an organised evening dance event (usually indoors); the clip shows a spontaneous outdoor street dance at sunset. 'la soirée dansante' cannot name anything shown, so it is not in the rows. Proposal: keep it for the concept, or 'la fête' / 'le bal' (bal = closest to 'a dance'). Other people wear white caps; only the woman in phrase 3 wears a red one."
+}

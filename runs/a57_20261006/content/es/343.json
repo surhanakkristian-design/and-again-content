@@ -1,0 +1,123 @@
+{
+ "mediaId": 343,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "agarrar",
+ "taps": [
+  {
+   "phrase": "agarrar un aro de buceo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "reposar en el fondo",
+   "target": "el aro",
+   "voice": "female"
+  },
+  {
+   "phrase": "caminar por el agua poco profunda",
+   "target": "el hombre del bañador rojo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los escalones",
+   "voice": "female"
+  },
+  {
+   "word": "el aro de buceo",
+   "voice": "female"
+  },
+  {
+   "word": "las gafas de buceo",
+   "voice": "female"
+  },
+  {
+   "word": "el bañador",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está agarrando la mujer bajo el agua?",
+ "answer": [
+  "Está",
+  "agarrando",
+  "un",
+  "aro",
+  "de",
+  "buceo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar un"
+    },
+    {
+     "text": "aro",
+     "gap": true,
+     "accept": [
+      "aro"
+     ]
+    },
+    {
+     "text": "de buceo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reposar en el"
+    },
+    {
+     "text": "fondo",
+     "gap": true,
+     "accept": [
+      "fondo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar",
+     "gap": true,
+     "accept": [
+      "caminar",
+      "andar"
+     ]
+    },
+    {
+     "text": "por el agua poco profunda"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "agarrando",
+     "gap": true,
+     "accept": [
+      "agarrando",
+      "cogiendo"
+     ]
+    },
+    {
+     "text": "un aro de buceo"
+    }
+   ]
+  }
+ ],
+ "notes": "Red box for phrase 1 covers the whole clip; she grabs the ring only mid-clip (kept, as in English). 'Las gafas de buceo' is the everyday Spain word for the diving mask. Subject dropped in the answer, answer row = whole sentence."
+}

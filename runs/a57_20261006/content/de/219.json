@@ -1,0 +1,131 @@
+{
+ "mediaId": 219,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Hirsch",
+ "taps": [
+  {
+   "phrase": "in die Kamera schauen",
+   "target": "der Hirsch",
+   "voice": "male"
+  },
+  {
+   "phrase": "das Maul aufmachen",
+   "target": "der Hirsch",
+   "voice": "male"
+  },
+  {
+   "phrase": "schnell weglaufen",
+   "target": "der Hirsch",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hirsch",
+   "voice": "male"
+  },
+  {
+   "word": "die Bäume",
+   "voice": "male"
+  },
+  {
+   "word": "die Pflanzen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Hirsch?",
+ "answer": [
+  "Der",
+  "Hirsch",
+  "läuft",
+  "weg."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Kamera"
+    },
+    {
+     "text": "schauen",
+     "gap": true,
+     "accept": [
+      "schauen",
+      "sehen",
+      "gucken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Maul",
+     "gap": true,
+     "accept": [
+      "Maul"
+     ]
+    },
+    {
+     "text": "aufmachen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "schnell"
+    },
+    {
+     "text": "weglaufen",
+     "gap": true,
+     "accept": [
+      "weglaufen",
+      "wegrennen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Hirsch",
+     "gap": true,
+     "accept": [
+      "Hirsch"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "läuft",
+     "gap": true,
+     "accept": [
+      "läuft",
+      "rennt"
+     ]
+    },
+    {
+     "text": "weg"
+    }
+   ]
+  }
+ ],
+ "notes": "'das Maul' (animal mouth) is above A2 but the plain right word for an animal ('der Mund' would be wrong); 'aufmachen' kept as the A2 verb. 'schnell' added because a one-word phrase cannot be cut into recall parts; he clearly bounds away fast. All three phrases share one target and box, as in English. 'die Pflanzen' kept (ferns = 'der Farn', above level)."
+}

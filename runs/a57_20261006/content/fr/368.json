@@ -1,0 +1,126 @@
+{
+ "mediaId": 368,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un hélicoptère",
+ "taps": [
+  {
+   "phrase": "voler au-dessus des montagnes",
+   "target": "l'hélicoptère",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une barbe noire",
+   "target": "le vieil homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir de longs cheveux gris",
+   "target": "la vieille femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'hélicoptère",
+   "voice": "female"
+  },
+  {
+   "word": "la maison",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la caisse",
+   "voice": "female"
+  }
+ ],
+ "question": "Que voit-on au-dessus des montagnes ?",
+ "answer": [
+  "On",
+  "voit",
+  "un",
+  "hélicoptère",
+  "rouge",
+  "au-dessus",
+  "des",
+  "montagnes."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "voler",
+     "gap": true,
+     "accept": [
+      "voler"
+     ]
+    },
+    {
+     "text": "au-dessus des montagnes"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    },
+    {
+     "text": "noire"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir de longs"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "voit un"
+    },
+    {
+     "text": "hélicoptère",
+     "gap": true,
+     "accept": [
+      "hélicoptère"
+     ]
+    },
+    {
+     "text": "rouge au-dessus des montagnes"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord copied as given ('un hélicoptère', indefinite article, unlike the usual definite form). The key noun is elided ('l'hélicoptère') so a noun recall row cannot be cut; the question is therefore 'Que voit-on au-dessus des montagnes ?' and the answer 'On voit un hélicoptère rouge...' puts the key word in the answer row. The old man's beard is very dark brown/black. Noun 4 'la caisse' = the wooden crate (more natural than 'la boîte' for this size). Noun 2 is a wooden chalet; 'la maison' kept for level A."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 193, "lang": "de", "level": "B",
+  "keyWord": "korrupt",
+  "taps": [
+    { "phrase": "Bestechungsgeld annehmen", "target": "der Mann", "voice": "male" },
+    { "phrase": "das Dokument abstempeln", "target": "der Mann", "voice": "male" },
+    { "phrase": "in die Schürzentasche greifen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Stempel", "voice": "male" },
+    { "word": "der Schnurrbart", "voice": "male" },
+    { "word": "das Dokument", "voice": "male" },
+    { "word": "die Schürze", "voice": "male" }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": ["Der", "korrupte", "Beamte", "nimmt", "Bestechungsgeld", "an."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "Bestechungsgeld" }, { "text": "annehmen", "gap": true, "accept": ["annehmen", "nehmen", "kassieren"] } ] },
+    { "from": "taps", "parts": [ { "text": "das" }, { "text": "Dokument", "gap": true, "accept": ["Dokument", "Formular"] }, { "text": "abstempeln" } ] },
+    { "from": "taps", "parts": [ { "text": "in die" }, { "text": "Schürzentasche", "gap": true, "accept": ["Schürzentasche", "Tasche"] }, { "text": "greifen" } ] },
+    { "from": "answer", "parts": [ { "text": "nimmt" }, { "text": "Bestechungsgeld", "gap": true, "accept": ["Bestechungsgeld", "Schmiergeld"] }, { "text": "an" } ] }
+  ],
+  "notes": "Key word korrupt is an adjective: it appears only in the model answer subject ('Der korrupte Beamte'), so no recall row contains it (the answer row drops the subject by rule). The pocket she reaches into is the apron pocket: 'in die Schürzentasche greifen' (B1 compound, fits only her). Bestechungsgeld used without article (mass use, as natives say); 'Schmiergeld' accepted as colloquial synonym. Man = 'der Mann' in the question, 'der Beamte' in the answer, mirroring English man/official."
+}

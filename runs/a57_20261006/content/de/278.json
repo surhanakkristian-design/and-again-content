@@ -1,0 +1,26 @@
+{
+  "mediaId": 278, "lang": "de", "level": "B",
+  "keyWord": "die Kniebeuge",
+  "taps": [
+    { "phrase": "über den Baumkronen aufgehen", "target": "die Sonne", "voice": "female" },
+    { "phrase": "einen langen Zopf tragen", "target": "die Frau in Lila", "voice": "female" },
+    { "phrase": "dunkelgrüne Leggings tragen", "target": "die Frau in Weiß", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Sonne", "voice": "female" },
+    { "word": "die Palme", "voice": "female" },
+    { "word": "der Zopf", "voice": "female" },
+    { "word": "der Rasen", "voice": "female" }
+  ],
+  "question": "Welche Übung macht die Gruppe?",
+  "answer": ["Die", "Gruppe", "macht", "Kniebeugen", "auf", "dem", "Rasen."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über den Baumkronen" }, { "text": "aufgehen", "gap": true, "accept": ["aufgehen", "steigen"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen langen" }, { "text": "Zopf", "gap": true, "accept": ["Zopf"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "dunkelgrüne" }, { "text": "Leggings", "gap": true, "accept": ["Leggings"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "macht" }, { "text": "Kniebeugen", "gap": true, "accept": ["Kniebeugen"] }, { "text": "auf dem Rasen" } ] }
+  ],
+  "notes": "Kniebeugen are done in the first part of the clip; later the group does lunges and arm raises (the question asks about the exercise, fine). The woman in white wears a ponytail (Pferdeschwanz) at the end, not a braid, so phrase 2 fits only the woman in lilac; the woman in lilac wears dark grey leggings, so phrase 3 fits only the woman in white. German also allows 'Die Gruppe macht auf dem Rasen Kniebeugen' (second word order with the same chips). No noun row: the answer row contains the key word."
+}

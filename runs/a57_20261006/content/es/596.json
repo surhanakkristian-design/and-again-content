@@ -1,0 +1,116 @@
+{
+ "mediaId": 596,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la carrera",
+ "taps": [
+  {
+   "phrase": "ganar la carrera",
+   "target": "la corredora de amarillo",
+   "voice": "female"
+  },
+  {
+   "phrase": "ir de amarillo",
+   "target": "la corredora de amarillo",
+   "voice": "female"
+  },
+  {
+   "phrase": "ir de morado",
+   "target": "la corredora de morado",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los corredores",
+   "voice": "female"
+  },
+  {
+   "word": "el césped",
+   "voice": "female"
+  },
+  {
+   "word": "la pista",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Quién está ganando la carrera?",
+ "answer": [
+  "La",
+  "corredora",
+  "de",
+  "amarillo",
+  "está",
+  "ganando",
+  "la",
+  "carrera."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ganar la"
+    },
+    {
+     "text": "carrera",
+     "gap": true,
+     "accept": [
+      "carrera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir de"
+    },
+    {
+     "text": "amarillo",
+     "gap": true,
+     "accept": [
+      "amarillo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir",
+     "gap": true,
+     "accept": [
+      "ir"
+     ]
+    },
+    {
+     "text": "de morado"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "ganando",
+     "gap": true,
+     "accept": [
+      "ganando"
+     ]
+    },
+    {
+     "text": "la carrera"
+    }
+   ]
+  }
+ ],
+ "notes": "The runner in yellow read as female (English voice female, slim build, one-piece kit), so 'la corredora'; if the verifier sees a man, switch to 'el corredor' in target, answer and voice stays. 'ir de amarillo/morado' = native for wearing a colour (the yellow kit is a one-piece, not a 'camiseta'). Rows 2/3 gap different words so they do not look identical when blanked. 'el césped' for the stadium infield grass."
+}

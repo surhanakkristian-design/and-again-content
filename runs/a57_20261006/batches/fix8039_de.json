@@ -1,0 +1,26 @@
+{
+ "batch": "fix8039_de",
+ "lang": "de",
+ "ids": [
+  8039
+ ],
+ "sql": [
+  "out/fix8039_de.sql"
+ ],
+ "rollback": "out/fix8039_de_rollback.sql",
+ "objects": [
+  "sets/8039/a57_de_tap1_anna_cfee930f.m4a",
+  "sets/8039/a57_de_tap2_anna_381e1f4f.m4a",
+  "sets/8039/a57_de_tap3_yannick_5ca861da.m4a",
+  "sets/8039/a57_de_noun1_anna_816b9a3d.m4a",
+  "sets/8039/a57_de_noun2_anna_b8f95d42.m4a",
+  "sets/8039/a57_de_noun3_anna_4f77d5fd.m4a",
+  "sets/8039/a57_de_noun4_anna_8538c25a.m4a",
+  "sets/8039/a57_de_answer_anna_b25573e7.m4a",
+  "sets/8039/a57_de_caption1_anna_ab52c6b4.m4a",
+  "sets/8039/a57_de_caption2_anna_1ea9ed3f.m4a",
+  "sets/8039/a57_de_caption3_anna_846457d1.m4a"
+ ],
+ "kind": "update",
+ "verify_sql": "select count(*) from public.media_exercise_sets_l10n where media_id = 8039 and learning_language = 'de' and key_word = 'der Weg'"
+}

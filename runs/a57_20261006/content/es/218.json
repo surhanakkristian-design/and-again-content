@@ -1,0 +1,119 @@
+{
+ "mediaId": 218,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "declarar",
+ "taps": [
+  {
+   "phrase": "sostener en alto un pergamino",
+   "target": "la mujer del balcón",
+   "voice": "female"
+  },
+  {
+   "phrase": "tirar de la cuerda",
+   "target": "el campanero",
+   "voice": "male"
+  },
+  {
+   "phrase": "rodear a un niño con el brazo",
+   "target": "la mujer del pañuelo",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la campana",
+   "voice": "female"
+  },
+  {
+   "word": "el pergamino",
+   "voice": "female"
+  },
+  {
+   "word": "las palomas",
+   "voice": "female"
+  },
+  {
+   "word": "el pañuelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está pasando en el balcón?",
+ "answer": [
+  "Una",
+  "mujer",
+  "está",
+  "anunciando",
+  "algo",
+  "a",
+  "la",
+  "multitud."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener en alto un"
+    },
+    {
+     "text": "pergamino",
+     "gap": true,
+     "accept": [
+      "pergamino"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirar",
+     "gap": true,
+     "accept": [
+      "tirar"
+     ]
+    },
+    {
+     "text": "de la cuerda"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rodear",
+     "gap": true,
+     "accept": [
+      "rodear",
+      "abrazar"
+     ]
+    },
+    {
+     "text": "a un niño con el brazo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está anunciando algo a la"
+    },
+    {
+     "text": "multitud",
+     "gap": true,
+     "accept": [
+      "multitud",
+      "gente"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'declarar' kept, but 'declarar algo a la multitud' is not natural Spanish for a public announcement (declarar = testify / declare war / 'declarar abierto'); the answer uses 'anunciar'. Proposal: key word 'proclamar' or 'anunciar' for this sense. Phrase 3 box (blue) also covers crowd frames before the hug; written for the hug frames."
+}

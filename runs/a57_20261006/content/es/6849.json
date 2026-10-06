@@ -1,0 +1,141 @@
+{
+ "mediaId": 6849,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el automóvil",
+ "taps": [
+  {
+   "phrase": "bajar por el callejón empedrado",
+   "target": "el automóvil rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "asomarse con una cesta de pan",
+   "target": "la anciana",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar una bicicleta",
+   "target": "el joven",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el automóvil",
+   "voice": "female"
+  },
+  {
+   "word": "la cesta",
+   "voice": "female"
+  },
+  {
+   "word": "la ropa tendida",
+   "voice": "female"
+  },
+  {
+   "word": "los adoquines",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el automóvil rojo?",
+ "answer": [
+  "El",
+  "automóvil",
+  "está",
+  "bajando",
+  "por",
+  "el",
+  "callejón",
+  "empedrado."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bajar por el"
+    },
+    {
+     "text": "callejón",
+     "gap": true,
+     "accept": [
+      "callejón"
+     ]
+    },
+    {
+     "text": "empedrado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomarse",
+     "gap": true,
+     "accept": [
+      "asomarse"
+     ]
+    },
+    {
+     "text": "con una cesta de pan"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "bicicleta",
+     "gap": true,
+     "accept": [
+      "bicicleta",
+      "bici"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "automóvil",
+     "gap": true,
+     "accept": [
+      "automóvil",
+      "coche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "bajando",
+     "gap": true,
+     "accept": [
+      "bajando",
+      "descendiendo"
+     ]
+    },
+    {
+     "text": "por el callejón empedrado"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'laundry' -> 'la ropa tendida' (washing hung between the windows). Tap 1: the car drives down the cobbled alley and over a stone step; 'bajar por el callejón empedrado' describes what it does in all boxed frames. 'el automóvil' is formal in Spain ('el coche' is everyday); kept as the database word, 'coche' accepted in the noun row."
+}

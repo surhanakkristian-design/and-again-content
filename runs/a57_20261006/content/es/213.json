@@ -1,0 +1,120 @@
+{
+ "mediaId": 213,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el baile",
+ "taps": [
+  {
+   "phrase": "preparar la comida",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar a la mujer",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una falda larga",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la radio",
+   "voice": "female"
+  },
+  {
+   "word": "el suelo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué están haciendo el hombre y la mujer?",
+ "answer": [
+  "Están",
+  "bailando",
+  "en",
+  "la",
+  "cocina."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "preparar la"
+    },
+    {
+     "text": "comida",
+     "gap": true,
+     "accept": [
+      "comida"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar",
+     "gap": true,
+     "accept": [
+      "sujetar"
+     ]
+    },
+    {
+     "text": "a la mujer"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "falda",
+     "gap": true,
+     "accept": [
+      "falda"
+     ]
+    },
+    {
+     "text": "larga"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "bailando",
+     "gap": true,
+     "accept": [
+      "bailando"
+     ]
+    },
+    {
+     "text": "en la cocina"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el baile' (noun) is not one of the four pills, so no noun recall row; the answer uses the verb 'bailar'."
+}

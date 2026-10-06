@@ -1,0 +1,120 @@
+{
+ "mediaId": 5616,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "estar lleno de",
+ "taps": [
+  {
+   "phrase": "levantar los brazos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar los hilos de los globos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "flotar en el cielo",
+   "target": "los globos del cielo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "los globos",
+   "voice": "male"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el coche",
+   "voice": "male"
+  }
+ ],
+ "question": "¿De qué está lleno el coche?",
+ "answer": [
+  "El",
+  "coche",
+  "está",
+  "lleno",
+  "de",
+  "globos."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar los"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar",
+     "gap": true,
+     "accept": [
+      "sujetar",
+      "sostener"
+     ]
+    },
+    {
+     "text": "los hilos de los globos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotar",
+     "gap": true,
+     "accept": [
+      "flotar",
+      "volar"
+     ]
+    },
+    {
+     "text": "en el cielo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "lleno",
+     "gap": true,
+     "accept": [
+      "lleno"
+     ]
+    },
+    {
+     "text": "de globos"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 'flotar' instead of 'volar': the balloons are held on strings and float. In the first frames the man raises only one arm."
+}

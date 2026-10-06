@@ -1,0 +1,118 @@
+{
+ "mediaId": 82,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Biene",
+ "taps": [
+  {
+   "phrase": "auf einer Blume sitzen",
+   "target": "die Biene",
+   "voice": "female"
+  },
+  {
+   "phrase": "über die Wiese fliegen",
+   "target": "die Biene",
+   "voice": "female"
+  },
+  {
+   "phrase": "in den Bienenstock krabbeln",
+   "target": "die Biene",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Biene",
+   "voice": "female"
+  },
+  {
+   "word": "die Blume",
+   "voice": "female"
+  },
+  {
+   "word": "das Blatt",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Biene?",
+ "answer": [
+  "Die",
+  "Biene",
+  "sitzt",
+  "auf",
+  "einer",
+  "Blume."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einer Blume"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über die"
+    },
+    {
+     "text": "Wiese",
+     "gap": true,
+     "accept": [
+      "Wiese"
+     ]
+    },
+    {
+     "text": "fliegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in den"
+    },
+    {
+     "text": "Bienenstock",
+     "gap": true,
+     "accept": [
+      "Bienenstock",
+      "Bienenkasten"
+     ]
+    },
+    {
+     "text": "krabbeln"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzt auf einer"
+    },
+    {
+     "text": "Blume",
+     "gap": true,
+     "accept": [
+      "Blume"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: the insect is visibly a bumblebee; a German native would say 'die Hummel'. Kept 'die Biene' (owner may consider 'die Hummel'). Phrase 3 uses the compound 'Bienenkasten' (contains the key word, decision 404), so no separate noun row. 'over the grass' rendered as 'über die Wiese'. Verifier: phrase 3 'Bienenkasten' -> 'Bienenstock' (the everyday word for a hive; still a key-word compound), recall row updated, 'Bienenkasten' accepted."
+}

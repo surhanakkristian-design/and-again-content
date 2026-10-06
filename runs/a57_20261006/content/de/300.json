@@ -1,0 +1,124 @@
+{
+ "mediaId": 300,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Fahne",
+ "taps": [
+  {
+   "phrase": "am Seil ziehen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Wind wehen",
+   "target": "die Fahne",
+   "voice": "female"
+  },
+  {
+   "phrase": "zur Fahne hochschauen",
+   "target": "das Mädchen",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Fahne",
+   "voice": "female"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "die Berge",
+   "voice": "female"
+  },
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  }
+ ],
+ "question": "Wohin schaut das Mädchen?",
+ "answer": [
+  "Sie",
+  "schaut",
+  "zur",
+  "Fahne",
+  "hoch."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Seil",
+     "gap": true,
+     "accept": [
+      "Seil"
+     ]
+    },
+    {
+     "text": "ziehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Wind"
+    },
+    {
+     "text": "wehen",
+     "gap": true,
+     "accept": [
+      "wehen",
+      "flattern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zur"
+    },
+    {
+     "text": "Fahne",
+     "gap": true,
+     "accept": [
+      "Fahne",
+      "Flagge"
+     ]
+    },
+    {
+     "text": "hochschauen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schaut",
+     "gap": true,
+     "accept": [
+      "schaut",
+      "sieht",
+      "blickt"
+     ]
+    },
+    {
+     "text": "zur Fahne hoch"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses 'Sie' for das Mädchen (what natives say). In the last boxed frames of tap 1 the girl has let go of the rope (hands on hips); phrase written for the majority of boxed frames. 'Wohin schaut ...?' is the natural German question for 'What is the girl looking at?'."
+}

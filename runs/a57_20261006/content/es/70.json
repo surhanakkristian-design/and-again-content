@@ -1,0 +1,139 @@
+{
+ "mediaId": 70,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el barbero",
+ "taps": [
+  {
+   "phrase": "recortar una barba espesa",
+   "target": "el barbero",
+   "voice": "male"
+  },
+  {
+   "phrase": "admirar su nuevo corte de pelo",
+   "target": "el cliente",
+   "voice": "male"
+  },
+  {
+   "phrase": "reflejar la cara encantada del cliente",
+   "target": "el espejo de mano",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el barbero",
+   "voice": "male"
+  },
+  {
+   "word": "el cliente",
+   "voice": "male"
+  },
+  {
+   "word": "el espejo de mano",
+   "voice": "male"
+  },
+  {
+   "word": "las botellas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el barbero?",
+ "answer": [
+  "El",
+  "barbero",
+  "recorta",
+  "la",
+  "barba",
+  "espesa",
+  "del",
+  "cliente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "recortar una"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    },
+    {
+     "text": "espesa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "admirar",
+     "gap": true,
+     "accept": [
+      "admirar"
+     ]
+    },
+    {
+     "text": "su nuevo corte de pelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reflejar la"
+    },
+    {
+     "text": "cara",
+     "gap": true,
+     "accept": [
+      "cara"
+     ]
+    },
+    {
+     "text": "encantada del cliente"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "barbero",
+     "gap": true,
+     "accept": [
+      "barbero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "recorta",
+     "gap": true,
+     "accept": [
+      "recorta",
+      "corta"
+     ]
+    },
+    {
+     "text": "la barba espesa del cliente"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 (as in English): the customer box covers the whole haircut; he admires the new cut only at the end (mirror), most boxed frames show him being trimmed. Still S 9 is the mirror moment, so the phrase fits the still."
+}

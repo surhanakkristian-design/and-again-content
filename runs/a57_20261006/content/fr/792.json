@@ -1,0 +1,26 @@
+{
+  "mediaId": 792, "lang": "fr", "level": "A",
+  "keyWord": "le dentifrice",
+  "taps": [
+    { "phrase": "tenir une brosse à dents jaune", "target": "la femme", "voice": "female" },
+    { "phrase": "sortir du tube", "target": "le dentifrice", "voice": "female" },
+    { "phrase": "se brosser les dents", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les cheveux", "voice": "female" },
+    { "word": "le nez", "voice": "female" },
+    { "word": "le dentifrice", "voice": "female" },
+    { "word": "la brosse à dents", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "met", "du", "dentifrice", "sur", "sa", "brosse", "à", "dents."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir une brosse à dents" }, { "text": "jaune", "gap": true, "accept": ["jaune"] } ] },
+    { "from": "taps", "parts": [ { "text": "sortir", "gap": true, "accept": ["sortir"] }, { "text": "du tube" } ] },
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "brosser", "gap": true, "accept": ["brosser", "laver"] }, { "text": "les dents" } ] },
+    { "from": "answer", "parts": [ { "text": "met du" }, { "text": "dentifrice", "gap": true, "accept": ["dentifrice"] }, { "text": "sur sa brosse à dents" } ] }
+  ],
+  "notes": "Phrases 1 and 3 both target the woman (as in English). Tap 3's box also covers the early frames where she is not yet brushing; the phrase describes the end of the clip, as in English. Answer is 9 chips because 'brosse à dents' is three words."
+}

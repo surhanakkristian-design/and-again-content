@@ -1,0 +1,124 @@
+{
+ "mediaId": 670,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "faire les courses",
+ "taps": [
+  {
+   "phrase": "pousser un chariot",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "acheter du pain et du lait",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "prendre les pièces",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le lait",
+   "voice": "female"
+  },
+  {
+   "word": "le chariot",
+   "voice": "female"
+  },
+  {
+   "word": "le pain",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "fait",
+  "les",
+  "courses",
+  "avec",
+  "un",
+  "chariot."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pousser un"
+    },
+    {
+     "text": "chariot",
+     "gap": true,
+     "accept": [
+      "chariot",
+      "caddie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acheter du"
+    },
+    {
+     "text": "pain",
+     "gap": true,
+     "accept": [
+      "pain"
+     ]
+    },
+    {
+     "text": "et du lait"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre",
+     "gap": true,
+     "accept": [
+      "prendre",
+      "recevoir"
+     ]
+    },
+    {
+     "text": "les pièces"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait les"
+    },
+    {
+     "text": "courses",
+     "gap": true,
+     "accept": [
+      "courses"
+     ]
+    },
+    {
+     "text": "avec un chariot"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses the key word 'faire les courses' (natural for the whole clip) instead of a literal 'pousse un chariot', which is phrase 1. Phrase 3: the man takes the coins the woman hands him at the till; he appears only in the boxed checkout frames."
+}

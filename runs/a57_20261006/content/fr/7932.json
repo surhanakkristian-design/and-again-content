@@ -1,0 +1,25 @@
+{
+  "mediaId": 7932, "lang": "fr", "level": "B",
+  "keyWord": "le sommet",
+  "taps": [
+    { "phrase": "s'accrocher au cercle", "target": "l'homme en blanc", "voice": "male" },
+    { "phrase": "porter un maillot bleu marine", "target": "l'homme en bleu marine", "voice": "male" },
+    { "phrase": "crier de joie les bras levés", "target": "les amis", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ballon de basket", "voice": "male" },
+    { "word": "le filet", "voice": "male" },
+    { "word": "le débardeur", "voice": "male" }
+  ],
+  "question": "Que fait l'homme en blanc ?",
+  "answer": ["Il", "s'accroche", "au", "cercle", "du", "panier."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'accrocher au" }, { "text": "cercle", "gap": true, "accept": ["cercle", "arceau", "panier"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "maillot", "gap": true, "accept": ["maillot"] }, { "text": "bleu marine" } ] },
+    { "from": "taps", "parts": [ { "text": "crier de joie les" }, { "text": "bras", "gap": true, "accept": ["bras"] }, { "text": "levés" } ] },
+    { "from": "answer", "parts": [ { "text": "s'accroche au cercle du" }, { "text": "panier", "gap": true, "accept": ["panier"] } ] }
+  ],
+  "notes": "Phrase 1: the red box also covers the landing crouch at the end; 's'accrocher au cercle' describes the dunk/hang in most boxed frames. 'le cercle' is the usual French basketball word for the rim. Key word 'le sommet' (highest point of the jump) is not named in the exercises; nothing forced."
+}

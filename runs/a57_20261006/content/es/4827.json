@@ -1,0 +1,122 @@
+{
+ "mediaId": 4827,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la pintura",
+ "taps": [
+  {
+   "phrase": "pintar una puesta de sol",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar un pincel",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "usar pintura naranja",
+   "target": "la mano",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las nubes",
+   "voice": "male"
+  },
+  {
+   "word": "la pintura",
+   "voice": "male"
+  },
+  {
+   "word": "el pincel",
+   "voice": "male"
+  },
+  {
+   "word": "la mano",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la persona?",
+ "answer": [
+  "Está",
+  "pintando",
+  "el",
+  "cielo",
+  "con",
+  "pintura",
+  "naranja."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pintar",
+     "gap": true,
+     "accept": [
+      "pintar"
+     ]
+    },
+    {
+     "text": "una puesta de sol"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "pincel",
+     "gap": true,
+     "accept": [
+      "pincel"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "usar"
+    },
+    {
+     "text": "pintura",
+     "gap": true,
+     "accept": [
+      "pintura"
+     ]
+    },
+    {
+     "text": "naranja"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está pintando el"
+    },
+    {
+     "text": "cielo",
+     "gap": true,
+     "accept": [
+      "cielo"
+     ]
+    },
+    {
+     "text": "con pintura naranja"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 box also covers the first frames where the hand holds a palette knife (la espátula), not a brush; the brush is held in most boxed frames. Key word 'la pintura' used in tap 3, noun 2 and the answer."
+}

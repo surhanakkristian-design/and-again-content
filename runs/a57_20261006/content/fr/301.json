@@ -1,0 +1,113 @@
+{
+ "mediaId": 301,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "flotter",
+ "taps": [
+  {
+   "phrase": "flotter sur le lac",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever le pouce",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "se poser sur l'homme",
+   "target": "l'oiseau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'oiseau",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le lac",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "flotte",
+  "sur",
+  "le",
+  "lac."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "flotter",
+     "gap": true,
+     "accept": [
+      "flotter"
+     ]
+    },
+    {
+     "text": "sur le lac"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "pouce",
+     "gap": true,
+     "accept": [
+      "pouce"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "poser",
+     "gap": true,
+     "accept": [
+      "poser"
+     ]
+    },
+    {
+     "text": "sur l'homme"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "flotte sur le"
+    },
+    {
+     "text": "lac",
+     "gap": true,
+     "accept": [
+      "lac"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 3: English 'sit on the man'; the bird lands on his belly, then on his head, so 'se poser sur l'homme' (the natural French verb for a bird)."
+}

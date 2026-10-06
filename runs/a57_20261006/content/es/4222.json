@@ -1,0 +1,121 @@
+{
+ "mediaId": 4222,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "saludar con la mano",
+ "taps": [
+  {
+   "phrase": "saludar con la mano a la cámara",
+   "target": "el geco",
+   "voice": "female"
+  },
+  {
+   "phrase": "cruzarse de brazos",
+   "target": "el geco",
+   "voice": "female"
+  },
+  {
+   "phrase": "acercarse al objetivo",
+   "target": "el geco",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los ojos",
+   "voice": "female"
+  },
+  {
+   "word": "la lengua",
+   "voice": "female"
+  },
+  {
+   "word": "la barriga",
+   "voice": "female"
+  },
+  {
+   "word": "la cola",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el geco?",
+ "answer": [
+  "Está",
+  "saludando",
+  "con",
+  "la",
+  "mano",
+  "a",
+  "la",
+  "cámara."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saludar",
+     "gap": true,
+     "accept": [
+      "saludar"
+     ]
+    },
+    {
+     "text": "con la mano"
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzarse de"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acercarse",
+     "gap": true,
+     "accept": [
+      "acercarse",
+      "arrimarse"
+     ]
+    },
+    {
+     "text": "al objetivo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está saludando con la mano a la"
+    },
+    {
+     "text": "cámara",
+     "gap": true,
+     "accept": [
+      "cámara"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three phrases have the same target (the gecko), as in English; they are told apart by time. 'geco' is the RAE spelling. The gecko also dances; no phrase covers that."
+}

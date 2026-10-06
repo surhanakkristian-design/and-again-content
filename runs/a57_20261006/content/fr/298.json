@@ -1,0 +1,123 @@
+{
+ "mediaId": 298,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la cabine d'essayage",
+ "taps": [
+  {
+   "phrase": "essayer plusieurs tenues",
+   "target": "la femme blonde",
+   "voice": "female"
+  },
+  {
+   "phrase": "donner son avis avec le pouce",
+   "target": "la femme brune",
+   "voice": "female"
+  },
+  {
+   "phrase": "se prélasser sur le comptoir",
+   "target": "le chien",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le rideau",
+   "voice": "female"
+  },
+  {
+   "word": "la pile de vêtements",
+   "voice": "female"
+  },
+  {
+   "word": "les sandales",
+   "voice": "female"
+  },
+  {
+   "word": "le chien",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme blonde ?",
+ "answer": [
+  "Elle",
+  "essaie",
+  "des",
+  "tenues",
+  "dans",
+  "une",
+  "cabine",
+  "d'essayage."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "essayer",
+     "gap": true,
+     "accept": [
+      "essayer"
+     ]
+    },
+    {
+     "text": "plusieurs tenues"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "donner son"
+    },
+    {
+     "text": "avis",
+     "gap": true,
+     "accept": [
+      "avis"
+     ]
+    },
+    {
+     "text": "avec le pouce"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se prélasser sur le"
+    },
+    {
+     "text": "comptoir",
+     "gap": true,
+     "accept": [
+      "comptoir"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "essaie des tenues dans une"
+    },
+    {
+     "text": "cabine",
+     "gap": true,
+     "accept": [
+      "cabine"
+     ]
+    },
+    {
+     "text": "d'essayage"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the dark-haired woman gives thumbs down in most boxed frames and thumbs up only at the end, so 'donner son avis avec le pouce' (covers both) instead of 'lever le pouce'. No noun row: the key word is in the answer row."
+}

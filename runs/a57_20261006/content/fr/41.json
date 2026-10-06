@@ -1,0 +1,15 @@
+{"mediaId": 41, "lang": "fr", "level": "A", "keyWord": "la dispute",
+ "taps": [{"phrase": "tenir un marteau", "target": "la femme", "voice": "female"},
+          {"phrase": "avoir les cheveux noirs", "target": "l'homme", "voice": "male"},
+          {"phrase": "être accroché au mur", "target": "le tableau", "voice": "male"}],
+ "nouns": [{"word": "le tableau", "voice": "male"}, {"word": "le marteau", "voice": "male"}, {"word": "la femme", "voice": "female"}, {"word": "l'homme", "voice": "male"}],
+ "question": "Que font l'homme et la femme ?",
+ "answer": ["Ils", "se", "disputent."],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {"from": "taps", "parts": [{"text": "tenir un"}, {"text": "marteau", "gap": true, "accept": ["marteau"]}]},
+  {"from": "taps", "parts": [{"text": "avoir les"}, {"text": "cheveux", "gap": true, "accept": ["cheveux"]}, {"text": "noirs"}]},
+  {"from": "taps", "parts": [{"text": "être accroché au"}, {"text": "mur", "gap": true, "accept": ["mur"]}]},
+  {"from": "answer", "parts": [{"text": "se"}, {"text": "disputent", "gap": true, "accept": ["disputent"]}]}],
+ "notes": "Key word 'la dispute' appears as the verb 'se disputer' in the model answer: 'Ils se disputent.' is what a native says; 'Ils ont une dispute' is unnatural. Not a noun of the set. Phrase 3: the blue box also covers frames where the man holds the frame or it lies on the floor; at the start and end it hangs on the wall. 'le tableau' = the framed picture."}

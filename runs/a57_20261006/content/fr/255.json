@@ -1,0 +1,122 @@
+{
+  "mediaId": 255,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "l'est",
+  "taps": [
+    {
+      "phrase": "montrer le ciel du doigt",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "se lever à l'est",
+      "target": "le soleil",
+      "voice": "female"
+    },
+    {
+      "phrase": "lever les bras",
+      "target": "les gens",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le ciel",
+      "voice": "female"
+    },
+    {
+      "word": "le soleil",
+      "voice": "female"
+    },
+    {
+      "word": "les gens",
+      "voice": "female"
+    },
+    {
+      "word": "les rochers",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait le soleil ?",
+  "answer": [
+    "Le",
+    "soleil",
+    "se",
+    "lève",
+    "au-dessus",
+    "des",
+    "nuages."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "montrer le"
+        },
+        {
+          "text": "ciel",
+          "gap": true,
+          "accept": [
+            "ciel"
+          ]
+        },
+        {
+          "text": "du doigt"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "lever",
+          "gap": true,
+          "accept": [
+            "lever"
+          ]
+        },
+        {
+          "text": "à l'est"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lever les"
+        },
+        {
+          "text": "bras",
+          "gap": true,
+          "accept": [
+            "bras"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "se lève au-dessus des"
+        },
+        {
+          "text": "nuages",
+          "gap": true,
+          "accept": [
+            "nuages"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'l'est' used in tap 2 (elided, so the gap there is 'lever'). Tap 3: English 'raise their cups'; in the clip the group mainly cheers with raised arms (cups are hardly visible), so 'lever les bras'. No noun row: the key word is not one of the nouns and is already in tap row 2."
+}

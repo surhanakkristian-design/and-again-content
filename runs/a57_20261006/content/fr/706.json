@@ -1,0 +1,26 @@
+{
+  "mediaId": 706, "lang": "fr", "level": "A",
+  "keyWord": "la neige",
+  "taps": [
+    { "phrase": "porter une veste rouge", "target": "la femme", "voice": "female" },
+    { "phrase": "porter une veste verte", "target": "l'homme", "voice": "male" },
+    { "phrase": "attraper un gros flocon de neige", "target": "la moufle", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la neige", "voice": "female" },
+    { "word": "la moufle", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'homme", "voice": "male" }
+  ],
+  "question": "Que font-ils ?",
+  "answer": ["Ils", "sont", "allongés", "dans", "la", "neige."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "rouge" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une veste" }, { "text": "verte", "gap": true, "accept": ["verte"] } ] },
+    { "from": "taps", "parts": [ { "text": "attraper un gros" }, { "text": "flocon", "gap": true, "accept": ["flocon"] }, { "text": "de neige" } ] },
+    { "from": "answer", "parts": [ { "text": "sont allongés dans la" }, { "text": "neige", "gap": true, "accept": ["neige"] } ] }
+  ],
+  "notes": "The woman's jacket is dark red/burgundy and the man's olive green: 'rouge' and 'verte' as in English. The mitten box also covers the later lying-in-the-snow frames, where the mitten only rests (the snowflake on it is a printed star); phrase 3 kept for the catching shots at the start."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 4603,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la carretera",
+ "taps": [
+  {
+   "phrase": "montar en bici",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un casco blanco",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir los brazos",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la carretera",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "el casco",
+   "voice": "male"
+  },
+  {
+   "word": "la bici",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "va",
+  "en",
+  "bici",
+  "por",
+  "la",
+  "carretera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montar",
+     "gap": true,
+     "accept": [
+      "montar",
+      "ir"
+     ]
+    },
+    {
+     "text": "en bici"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "casco",
+     "gap": true,
+     "accept": [
+      "casco"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir los"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "va en bici por la"
+    },
+    {
+     "text": "carretera",
+     "gap": true,
+     "accept": [
+      "carretera"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes cover the whole clip; 'abrir los brazos' happens only near the end (about 3 boxed frames), as in English."
+}

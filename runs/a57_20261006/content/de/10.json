@@ -1,0 +1,26 @@
+{
+  "mediaId": 10, "lang": "de", "level": "A",
+  "keyWord": "das Blatt",
+  "taps": [
+    { "phrase": "ein großes Blatt halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "hellgrün leuchten", "target": "das Blatt", "voice": "female" },
+    { "phrase": "auf das Blatt fallen", "target": "das Wasser", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Brille", "voice": "female" },
+    { "word": "das Hemd", "voice": "female" },
+    { "word": "das Blatt", "voice": "female" },
+    { "word": "der Tisch", "voice": "female" }
+  ],
+  "question": "Wohin fällt das Wasser?",
+  "answer": ["Das", "Wasser", "fällt", "auf", "das", "Blatt."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ein großes" }, { "text": "Blatt", "gap": true, "accept": ["Blatt"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "hellgrün" }, { "text": "leuchten", "gap": true, "accept": ["leuchten", "glänzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf das Blatt" }, { "text": "fallen", "gap": true, "accept": ["fallen", "fließen"] } ] },
+    { "from": "answer", "parts": [ { "text": "fällt", "gap": true, "accept": ["fällt", "fließt"] }, { "text": "auf das Blatt" } ] }
+  ],
+  "notes": "English target 'the person' is a woman (earrings, female voice): target 'die Frau'. 'auf das Blatt' (accusative, direction) matches the question 'Wohin'. No noun row: Blatt is in the tap rows. Answer row gaps the verb so it does not look like tap row 3 ('auf das Blatt ___' vs '___ auf das Blatt')."
+}

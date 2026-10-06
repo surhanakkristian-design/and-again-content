@@ -1,0 +1,123 @@
+{
+  "mediaId": 255,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Osten",
+  "taps": [
+    {
+      "phrase": "zum Horizont zeigen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "im Osten aufgehen",
+      "target": "die Sonne",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Becher hochheben",
+      "target": "die Menschen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "die Sonne",
+      "voice": "female"
+    },
+    {
+      "word": "die Menschen",
+      "voice": "female"
+    },
+    {
+      "word": "die Steine",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Sonne?",
+  "answer": [
+    "Die",
+    "Sonne",
+    "geht",
+    "über",
+    "den",
+    "Wolken",
+    "auf."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "zum Horizont"
+        },
+        {
+          "text": "zeigen",
+          "gap": true,
+          "accept": [
+            "zeigen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im"
+        },
+        {
+          "text": "Osten",
+          "gap": true,
+          "accept": [
+            "Osten"
+          ]
+        },
+        {
+          "text": "aufgehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Becher"
+        },
+        {
+          "text": "hochheben",
+          "gap": true,
+          "accept": [
+            "hochheben",
+            "heben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "geht über den"
+        },
+        {
+          "text": "Wolken",
+          "gap": true,
+          "accept": [
+            "Wolken"
+          ]
+        },
+        {
+          "text": "auf"
+        }
+      ]
+    }
+  ],
+  "notes": "The woman points at the red stripe on the horizon, not up at the sky: 'zum Horizont zeigen' (Horizont is A2). The people's box covers the whole group standing and watching; they raise their mugs only at the end, but standing/watching is not distinctive, so the English action is kept ('Becher' for the mugs). 'rocks' on the summit -> 'die Felsen'."
+}

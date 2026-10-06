@@ -1,0 +1,119 @@
+{
+ "mediaId": 95,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Rouge",
+ "taps": [
+  {
+   "phrase": "Rouge auftragen",
+   "target": "das Mädchen mit dem Zopf",
+   "voice": "female"
+  },
+  {
+   "phrase": "ihr über die Schulter schauen",
+   "target": "das Mädchen mit den kurzen Haaren",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Käfig hocken",
+   "target": "der Vogel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Zopf",
+   "voice": "female"
+  },
+  {
+   "word": "der Pinsel",
+   "voice": "female"
+  },
+  {
+   "word": "das Rouge",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht das Mädchen in Grün?",
+ "answer": [
+  "Sie",
+  "trägt",
+  "mit",
+  "einem",
+  "Pinsel",
+  "Rouge",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Rouge",
+     "gap": true,
+     "accept": [
+      "Rouge"
+     ]
+    },
+    {
+     "text": "auftragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ihr über die"
+    },
+    {
+     "text": "Schulter",
+     "gap": true,
+     "accept": [
+      "Schulter"
+     ]
+    },
+    {
+     "text": "schauen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem Käfig"
+    },
+    {
+     "text": "hocken",
+     "gap": true,
+     "accept": [
+      "hocken",
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trägt mit einem"
+    },
+    {
+     "text": "Pinsel",
+     "gap": true,
+     "accept": [
+      "Pinsel"
+     ]
+    },
+    {
+     "text": "Rouge auf"
+    }
+   ]
+  }
+ ],
+ "notes": "'Sie' for das Mädchen (what natives say). Answer: 'Sie trägt Rouge mit einem Pinsel auf.' is a second possible chip order. The bird is tiny at the top edge."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 4603,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Straße",
+ "taps": [
+  {
+   "phrase": "Fahrrad fahren",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen weißen Helm tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Arme ausbreiten",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Straße",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "der Helm",
+   "voice": "male"
+  },
+  {
+   "word": "das Fahrrad",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "fährt",
+  "mit",
+  "dem",
+  "Fahrrad",
+  "auf",
+  "der",
+  "Straße."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Fahrrad",
+     "gap": true,
+     "accept": [
+      "Fahrrad",
+      "Rad"
+     ]
+    },
+    {
+     "text": "fahren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen weißen"
+    },
+    {
+     "text": "Helm",
+     "gap": true,
+     "accept": [
+      "Helm"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Arme"
+    },
+    {
+     "text": "ausbreiten",
+     "gap": true,
+     "accept": [
+      "ausbreiten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt mit dem Fahrrad auf der"
+    },
+    {
+     "text": "Straße",
+     "gap": true,
+     "accept": [
+      "Straße"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes are the same man over the whole clip (as in English); 'die Arme ausbreiten' is visible only in about 3 of the 19 boxed frames near the end. German also allows 'Er fährt auf der Straße mit dem Fahrrad' (less natural second order). No noun row: Straße is in the answer row."
+}

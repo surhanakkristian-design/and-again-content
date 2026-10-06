@@ -1,0 +1,133 @@
+{
+ "mediaId": 353,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el invitado",
+ "taps": [
+  {
+   "phrase": "abrir la puerta",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un gorro de lana",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "servir agua",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la invitada",
+   "voice": "female"
+  },
+  {
+   "word": "la flor",
+   "voice": "female"
+  },
+  {
+   "word": "la vela",
+   "voice": "female"
+  },
+  {
+   "word": "la ventana",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué trae la invitada?",
+ "answer": [
+  "La",
+  "invitada",
+  "trae",
+  "una",
+  "flor."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "la puerta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "gorro",
+     "gap": true,
+     "accept": [
+      "gorro"
+     ]
+    },
+    {
+     "text": "de lana"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "servir"
+    },
+    {
+     "text": "agua",
+     "gap": true,
+     "accept": [
+      "agua"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "invitada",
+     "gap": true,
+     "accept": [
+      "invitada"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trae",
+     "gap": true,
+     "accept": [
+      "trae",
+      "lleva"
+     ]
+    },
+    {
+     "text": "una flor"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el invitado: the guest is a woman, so the noun pill and the answer use the feminine 'la invitada' (same lemma). Phrase 2 changed from 'stand in the rain' (she stands under the door, and later indoors) to 'llevar un gorro de lana', true of only her in every boxed frame. The gift is a potted flower: 'una flor' kept for the pill on the blossoms."
+}

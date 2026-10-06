@@ -1,0 +1,136 @@
+{
+ "mediaId": 203,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el crucero",
+ "taps": [
+  {
+   "phrase": "lucir un vestido amarillo de verano",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camisa estampada",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "brincar entre las olas",
+   "target": "los delfines",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el crucero",
+   "voice": "male"
+  },
+  {
+   "word": "los delfines",
+   "voice": "male"
+  },
+  {
+   "word": "las islas",
+   "voice": "male"
+  },
+  {
+   "word": "el mar",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el crucero?",
+ "answer": [
+  "El",
+  "crucero",
+  "navega",
+  "junto",
+  "a",
+  "islas",
+  "tropicales."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lucir",
+     "gap": true,
+     "accept": [
+      "lucir",
+      "llevar"
+     ]
+    },
+    {
+     "text": "un vestido amarillo de verano"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camisa",
+     "gap": true,
+     "accept": [
+      "camisa"
+     ]
+    },
+    {
+     "text": "estampada"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brincar entre las"
+    },
+    {
+     "text": "olas",
+     "gap": true,
+     "accept": [
+      "olas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "crucero",
+     "gap": true,
+     "accept": [
+      "crucero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "navega",
+     "gap": true,
+     "accept": [
+      "navega",
+      "pasa"
+     ]
+    },
+    {
+     "text": "junto a islas tropicales"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1 'a cruise ship' = el crucero (key word; in Spain 'crucero' names the ship itself). Phrase 3: the dolphins leap in and out of the waves; 'brincar' as the B1 verb."
+}

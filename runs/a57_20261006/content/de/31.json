@@ -1,0 +1,121 @@
+{
+ "mediaId": 31,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Universität",
+ "taps": [
+  {
+   "phrase": "einen schwarzen Rucksack halten",
+   "target": "die Hand",
+   "voice": "male"
+  },
+  {
+   "phrase": "am Laptop arbeiten",
+   "target": "die Frau mit dem Laptop",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Kappe verkehrt herum tragen",
+   "target": "der Mann mit der Kappe",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Lampen",
+   "voice": "male"
+  },
+  {
+   "word": "die Studenten",
+   "voice": "male"
+  },
+  {
+   "word": "die Kappe",
+   "voice": "male"
+  },
+  {
+   "word": "die Sitze",
+   "voice": "male"
+  }
+ ],
+ "question": "Wo sitzen die Studenten?",
+ "answer": [
+  "Sie",
+  "sitzen",
+  "in",
+  "der",
+  "Universität."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen schwarzen Rucksack"
+    },
+    {
+     "text": "halten",
+     "gap": true,
+     "accept": [
+      "halten",
+      "festhalten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Laptop"
+    },
+    {
+     "text": "arbeiten",
+     "gap": true,
+     "accept": [
+      "arbeiten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Kappe",
+     "gap": true,
+     "accept": [
+      "Kappe",
+      "Mütze",
+      "Cap"
+     ]
+    },
+    {
+     "text": "verkehrt herum tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzen in der"
+    },
+    {
+     "text": "Universität",
+     "gap": true,
+     "accept": [
+      "Universität",
+      "Uni"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The English 'black bag' is clearly a backpack (straps visible) -> 'einen schwarzen Rucksack'. 'lights' -> 'die Lampen' (ceiling lights). The room is a lecture hall (der Hörsaal, B1); the answer keeps the key word 'in der Universität'."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 16,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Präsentation",
+ "taps": [
+  {
+   "phrase": "eine Präsentation halten",
+   "target": "die Schülerin im roten Pullover",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Folien zeigen",
+   "target": "die Leinwand",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Publikum sitzen",
+   "target": "die Mitschüler",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Präsentation",
+   "voice": "female"
+  },
+  {
+   "word": "der Pullover",
+   "voice": "female"
+  },
+  {
+   "word": "das Whiteboard",
+   "voice": "female"
+  },
+  {
+   "word": "das Publikum",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Schülerin in Rot?",
+ "answer": [
+  "Sie",
+  "hält",
+  "eine",
+  "Präsentation",
+  "vor",
+  "ihren",
+  "Mitschülern."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Präsentation",
+     "gap": true,
+     "accept": [
+      "Präsentation"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Folien",
+     "gap": true,
+     "accept": [
+      "Folien"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Publikum",
+     "gap": true,
+     "accept": [
+      "Publikum"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hält",
+     "gap": true,
+     "accept": [
+      "hält"
+     ]
+    },
+    {
+     "text": "eine Präsentation vor ihren Mitschülern"
+    }
+   ]
+  }
+ ],
+ "notes": "German also allows 'Sie hält vor ihren Mitschülern eine Präsentation.' (second chip order). Schülerin (school class) rather than Studentin."
+}

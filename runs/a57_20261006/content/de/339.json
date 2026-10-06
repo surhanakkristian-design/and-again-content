@@ -1,0 +1,121 @@
+{
+ "mediaId": 339,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "gehen",
+ "taps": [
+  {
+   "phrase": "die Straße hinuntergehen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine große Tasche tragen",
+   "target": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Haus bleiben",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Häuser",
+   "voice": "female"
+  },
+  {
+   "word": "das Auto",
+   "voice": "female"
+  },
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "word": "die Straße",
+   "voice": "female"
+  }
+ ],
+ "question": "Wohin geht das Mädchen?",
+ "answer": [
+  "Sie",
+  "geht",
+  "die",
+  "Straße",
+  "hinunter."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Straße",
+     "gap": true,
+     "accept": [
+      "Straße"
+     ]
+    },
+    {
+     "text": "hinuntergehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine große"
+    },
+    {
+     "text": "Tasche",
+     "gap": true,
+     "accept": [
+      "Tasche"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im Haus"
+    },
+    {
+     "text": "bleiben",
+     "gap": true,
+     "accept": [
+      "bleiben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "geht",
+     "gap": true,
+     "accept": [
+      "geht",
+      "läuft"
+     ]
+    },
+    {
+     "text": "die Straße hinunter"
+    }
+   ]
+  }
+ ],
+ "notes": "Pronoun 'sie' for das Mädchen (what natives say), used consistently. Phrase 3 target: the English says 'the woman' (the mother per description), but the figure in the doorway looks rather like a man with a bun and a little beard; I kept 'die Frau' as target and a gender-neutral phrase 'im Haus bleiben'. Phrase 3 is OFF in most frames; it fits the first two frames where the person stays in the doorway."
+}

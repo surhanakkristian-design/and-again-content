@@ -1,0 +1,120 @@
+{
+ "mediaId": 195,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la tos",
+ "taps": [
+  {
+   "phrase": "toser en la mano",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "traer un té caliente",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "andar sobre la manta",
+   "target": "el gato",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las plantas",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "la manta",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica enferma?",
+ "answer": [
+  "Está",
+  "tosiendo",
+  "en",
+  "la",
+  "mano."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toser en la"
+    },
+    {
+     "text": "mano",
+     "gap": true,
+     "accept": [
+      "mano"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "traer un"
+    },
+    {
+     "text": "té",
+     "gap": true,
+     "accept": [
+      "té"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "andar sobre la"
+    },
+    {
+     "text": "manta",
+     "gap": true,
+     "accept": [
+      "manta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "tosiendo",
+     "gap": true,
+     "accept": [
+      "tosiendo"
+     ]
+    },
+    {
+     "text": "en la mano"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la tos' (noun) is not a thing of the noun set; the clip shows the verb 'toser' (phrase 1, answer). Phrase 1 box covers the whole clip: she coughs in the first half, later sips the tea; phrase written for the coughing. Phrase 3: the cat steps onto her lap/blanket only in the last frames."
+}

@@ -1,0 +1,119 @@
+{
+ "mediaId": 100,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "las botas",
+ "taps": [
+  {
+   "phrase": "atarse la bota",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener cuatro patas",
+   "target": "el perro",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una chaqueta gris",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "la bota",
+   "voice": "female"
+  },
+  {
+   "word": "el agua",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué lleva la mujer?",
+ "answer": [
+  "Lleva",
+  "unas",
+  "botas",
+  "marrones."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "atarse",
+     "gap": true,
+     "accept": [
+      "atarse"
+     ]
+    },
+    {
+     "text": "la bota"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener cuatro"
+    },
+    {
+     "text": "patas",
+     "gap": true,
+     "accept": [
+      "patas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Lleva unas"
+    },
+    {
+     "text": "botas",
+     "gap": true,
+     "accept": [
+      "botas"
+     ]
+    },
+    {
+     "text": "marrones"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 3 is singular 'la bota' (one boot at the slot); the key word 'las botas' is used in the answer."
+}

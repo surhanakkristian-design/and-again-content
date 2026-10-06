@@ -1,0 +1,116 @@
+{
+ "mediaId": 245,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "boire",
+ "taps": [
+  {
+   "phrase": "avoir des tresses",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "remplir la bouteille",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis sur les rochers",
+   "target": "la marmotte",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "les montagnes",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font les deux personnes ?",
+ "answer": [
+  "Ils",
+  "boivent",
+  "de",
+  "l'eau",
+  "à",
+  "la",
+  "bouteille."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir des"
+    },
+    {
+     "text": "tresses",
+     "gap": true,
+     "accept": [
+      "tresses"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "remplir",
+     "gap": true,
+     "accept": [
+      "remplir"
+     ]
+    },
+    {
+     "text": "la bouteille"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis sur les"
+    },
+    {
+     "text": "rochers",
+     "gap": true,
+     "accept": [
+      "rochers"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "boivent",
+     "gap": true,
+     "accept": [
+      "boivent"
+     ]
+    },
+    {
+     "text": "de l'eau à la bouteille"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: English 'to wash her hands' is true only in the 2-3 fountain frames; in most boxed frames the woman drinks, which the man does too, so the phrase names what fits only her in all boxed frames: her two braids ('avoir des tresses'). Phrase 2: the man fills the bottle at the stone fountain. Phrase 3: the small animal is a marmot ('la marmotte', target only); it sits up on the rocks."
+}

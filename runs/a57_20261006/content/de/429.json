@@ -1,0 +1,123 @@
+{
+  "mediaId": 429,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "landen",
+  "taps": [
+    {
+      "phrase": "im Gras landen",
+      "target": "die Frau mit dem Helm",
+      "voice": "female"
+    },
+    {
+      "phrase": "beide Hände hochheben",
+      "target": "die Frau mit dem Helm",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine lila Jacke tragen",
+      "target": "die Frau in der Jacke",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    },
+    {
+      "word": "der Helm",
+      "voice": "female"
+    },
+    {
+      "word": "die Jacke",
+      "voice": "female"
+    },
+    {
+      "word": "das Gras",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau in Pink?",
+  "answer": [
+    "Sie",
+    "landet",
+    "im",
+    "Gras."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im"
+        },
+        {
+          "text": "Gras",
+          "gap": true,
+          "accept": [
+            "Gras"
+          ]
+        },
+        {
+          "text": "landen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "beide"
+        },
+        {
+          "text": "Hände",
+          "gap": true,
+          "accept": [
+            "Hände",
+            "Arme"
+          ]
+        },
+        {
+          "text": "hochheben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine lila"
+        },
+        {
+          "text": "Jacke",
+          "gap": true,
+          "accept": [
+            "Jacke"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "landet",
+          "gap": true,
+          "accept": [
+            "landet"
+          ]
+        },
+        {
+          "text": "im Gras"
+        }
+      ]
+    }
+  ],
+  "notes": "'lila' stays undeclined (standard). The clip's still moment shows the high five after landing; the question/answer follow the English (landing). Phrase 2 box also covers the descent with hands on the brakes; the fists-up cheer is the clear moment."
+}

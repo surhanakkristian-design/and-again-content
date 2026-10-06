@@ -1,0 +1,141 @@
+{
+  "mediaId": 6908,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Bison",
+  "taps": [
+    {
+      "phrase": "ein Sandwich umklammern",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "am Cabrio vorbeitrotten",
+      "target": "der große Bison",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Asphalt liegen",
+      "target": "der Strohhut",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Bison",
+      "voice": "female"
+    },
+    {
+      "word": "der Strohhut",
+      "voice": "female"
+    },
+    {
+      "word": "das Cabrio",
+      "voice": "female"
+    },
+    {
+      "word": "die Berge",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht der große Bison?",
+  "answer": [
+    "Er",
+    "trottet",
+    "am",
+    "Cabrio",
+    "vorbei."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein Sandwich"
+        },
+        {
+          "text": "umklammern",
+          "gap": true,
+          "accept": [
+            "umklammern",
+            "festhalten",
+            "halten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am"
+        },
+        {
+          "text": "Cabrio",
+          "gap": true,
+          "accept": [
+            "Cabrio",
+            "Auto"
+          ]
+        },
+        {
+          "text": "vorbeitrotten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Asphalt",
+          "gap": true,
+          "accept": [
+            "Asphalt"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "Bison",
+          "gap": true,
+          "accept": [
+            "Bison",
+            "Büffel"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "trottet",
+          "gap": true,
+          "accept": [
+            "trottet",
+            "läuft",
+            "geht"
+          ]
+        },
+        {
+          "text": "am Cabrio vorbei"
+        }
+      ]
+    }
+  ],
+  "notes": "English 'buffalo' = the American bison; German 'der Bison' (keyWord) is the correct everyday word, 'Büffel' accepted in the noun row. The car is 'das Cabrio' in phrase, noun and answer (English used 'car' and 'convertible' for the same thing). The other bison cross the road behind but do not pass the car, so phrase 2 fits only the big one. Noun row added: 'Bison' appears in no other row. Bison -> 'er'; answerVoice female copied from English."
+}

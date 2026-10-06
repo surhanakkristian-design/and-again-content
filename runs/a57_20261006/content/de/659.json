@@ -1,0 +1,136 @@
+{
+ "mediaId": 659,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Shampoo",
+ "taps": [
+  {
+   "phrase": "dem Mann die Haare waschen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "hinter dem Waschbecken stehen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Augen schließen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Shampoo",
+   "voice": "female"
+  },
+  {
+   "word": "die Flasche",
+   "voice": "female"
+  },
+  {
+   "word": "die Hand",
+   "voice": "female"
+  },
+  {
+   "word": "die Wand",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "wäscht",
+  "dem",
+  "Mann",
+  "die",
+  "Haare."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dem Mann die"
+    },
+    {
+     "text": "Haare",
+     "gap": true,
+     "accept": [
+      "Haare"
+     ]
+    },
+    {
+     "text": "waschen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hinter dem"
+    },
+    {
+     "text": "Waschbecken",
+     "gap": true,
+     "accept": [
+      "Waschbecken"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Augen"
+    },
+    {
+     "text": "schließen",
+     "gap": true,
+     "accept": [
+      "schließen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Shampoo",
+     "gap": true,
+     "accept": [
+      "Shampoo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "wäscht",
+     "gap": true,
+     "accept": [
+      "wäscht"
+     ]
+    },
+    {
+     "text": "dem Mann die Haare"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 share the target (same box, as in English). The man's eyes are closed at the sink but open in the foam-tower and final frames inside the blue box; phrase 3 describes most sink frames. Key word noun row added because no other row contains Shampoo."
+}

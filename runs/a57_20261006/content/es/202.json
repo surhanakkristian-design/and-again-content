@@ -1,0 +1,118 @@
+{
+ "mediaId": 202,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "cruzar",
+ "taps": [
+  {
+   "phrase": "cruzar la calle",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "mirar el móvil",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar el pulgar",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el coche",
+   "voice": "male"
+  },
+  {
+   "word": "los edificios",
+   "voice": "male"
+  },
+  {
+   "word": "la calle",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Está",
+  "cruzando",
+  "la",
+  "calle."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzar la"
+    },
+    {
+     "text": "calle",
+     "gap": true,
+     "accept": [
+      "calle"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar el"
+    },
+    {
+     "text": "móvil",
+     "gap": true,
+     "accept": [
+      "móvil",
+      "teléfono"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar el"
+    },
+    {
+     "text": "pulgar",
+     "gap": true,
+     "accept": [
+      "pulgar"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "cruzando",
+     "gap": true,
+     "accept": [
+      "cruzando",
+      "atravesando"
+     ]
+    },
+    {
+     "text": "la calle"
+    }
+   ]
+  }
+ ],
+ "notes": "Only one person in the boxes, so each phrase fits only him; boxes also cover frames where he does something else (phone, thumbs up only in parts)."
+}

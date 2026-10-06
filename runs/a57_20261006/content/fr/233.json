@@ -1,0 +1,120 @@
+{
+  "mediaId": 233,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "luxer",
+  "taps": [
+    {
+      "phrase": "se tenir l'épaule blessée",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "s'agenouiller à côté du grimpeur",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être enroulée dans l'herbe",
+      "target": "la corde",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le casque",
+      "voice": "male"
+    },
+    {
+      "word": "l'épaule",
+      "voice": "male"
+    },
+    {
+      "word": "la veste",
+      "voice": "male"
+    },
+    {
+      "word": "l'herbe",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "se",
+    "tient",
+    "l'épaule",
+    "blessée."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se tenir l'épaule"
+        },
+        {
+          "text": "blessée",
+          "gap": true,
+          "accept": [
+            "blessée"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "s'agenouiller à côté du"
+        },
+        {
+          "text": "grimpeur",
+          "gap": true,
+          "accept": [
+            "grimpeur"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être"
+        },
+        {
+          "text": "enroulée",
+          "gap": true,
+          "accept": [
+            "enroulée"
+          ]
+        },
+        {
+          "text": "dans l'herbe"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "tient",
+          "gap": true,
+          "accept": [
+            "tient"
+          ]
+        },
+        {
+          "text": "l'épaule blessée"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'luxer' is not used in the texts: the clip shows the injury but 'luxer' is medical and the man's action is holding his shoulder; 'se luxer l'épaule' would be the natural collocation if the owner wants it in. The red box also covers the opening frames (jump, fall, on all fours) where he does not yet hold his shoulder; phrase 1 is what he does in most boxed frames. The elided key-part words (l'épaule, s'agenouiller, l'herbe) are never gaps."
+}

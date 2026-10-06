@@ -1,0 +1,117 @@
+{
+ "mediaId": 4209,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Schlaf",
+ "taps": [
+  {
+   "phrase": "auf dem Laptop tippen",
+   "target": "der Hamster mit Brille",
+   "voice": "male"
+  },
+  {
+   "phrase": "tief und fest schlafen",
+   "target": "der Hamster mit Maske",
+   "voice": "male"
+  },
+  {
+   "phrase": "kurz in die Kamera blicken",
+   "target": "der Hamster mit Brille",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Tulpe",
+   "voice": "male"
+  },
+  {
+   "word": "der Laptop",
+   "voice": "male"
+  },
+  {
+   "word": "die Gesichtsmaske",
+   "voice": "male"
+  },
+  {
+   "word": "die Handtasche",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Hamster mit Maske?",
+ "answer": [
+  "Er",
+  "liegt",
+  "in",
+  "tiefem",
+  "Schlaf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Laptop"
+    },
+    {
+     "text": "tippen",
+     "gap": true,
+     "accept": [
+      "tippen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tief und fest"
+    },
+    {
+     "text": "schlafen",
+     "gap": true,
+     "accept": [
+      "schlafen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "kurz in die"
+    },
+    {
+     "text": "Kamera",
+     "gap": true,
+     "accept": [
+      "Kamera"
+     ]
+    },
+    {
+     "text": "blicken"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "liegt in tiefem"
+    },
+    {
+     "text": "Schlaf",
+     "gap": true,
+     "accept": [
+      "Schlaf"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word in the answer ('in tiefem Schlaf liegen'). The face mask is not repeated in the answer (it is a noun pill)."
+}

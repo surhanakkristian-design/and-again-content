@@ -1,0 +1,26 @@
+{
+  "mediaId": 5108, "lang": "fr", "level": "A",
+  "keyWord": "le village",
+  "taps": [
+    { "phrase": "saluer depuis un bateau", "target": "la femme", "voice": "female" },
+    { "phrase": "saluer depuis une maison", "target": "les enfants", "voice": "female" },
+    { "phrase": "danser au milieu des tambours", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la maison", "voice": "female" },
+    { "word": "les enfants", "voice": "female" },
+    { "word": "l'eau", "voice": "female" },
+    { "word": "le bateau", "voice": "female" }
+  ],
+  "question": "Que font les enfants ?",
+  "answer": ["Ils", "saluent", "depuis", "une", "maison", "du", "village."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "saluer", "gap": true, "accept": ["saluer"] }, { "text": "depuis un bateau" } ] },
+    { "from": "taps", "parts": [ { "text": "saluer depuis une" }, { "text": "maison", "gap": true, "accept": ["maison"] } ] },
+    { "from": "taps", "parts": [ { "text": "danser au milieu des" }, { "text": "tambours", "gap": true, "accept": ["tambours"] } ] },
+    { "from": "answer", "parts": [ { "text": "saluent depuis une maison du" }, { "text": "village", "gap": true, "accept": ["village"] } ] }
+  ],
+  "notes": "Key word 'le village' is not one of the four nouns; it is used in the model answer ('une maison du village', the stilt houses are the village). The red and blue boxes (the woman) also cover the market scene, where she neither waves nor is in a boat nor near drums; phrases describe what she does in the boat / drum scenes. 'saluer' = wave a greeting (hand raised), kept short instead of 'saluer de la main'. 'le bateau' kept plain (it is a pirogue) for level A."
+}

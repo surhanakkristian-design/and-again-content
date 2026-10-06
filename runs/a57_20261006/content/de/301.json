@@ -1,0 +1,114 @@
+{
+ "mediaId": 301,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "treiben",
+ "taps": [
+  {
+   "phrase": "auf dem See treiben",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Daumen hochhalten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf dem Mann sitzen",
+   "target": "der Vogel",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Vogel",
+   "voice": "male"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "der See",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "treibt",
+  "auf",
+  "dem",
+  "See."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem See"
+    },
+    {
+     "text": "treiben",
+     "gap": true,
+     "accept": [
+      "treiben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Mann"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "treibt auf dem"
+    },
+    {
+     "text": "See",
+     "gap": true,
+     "accept": [
+      "See",
+      "Wasser"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 box covers the whole clip; the thumbs up only comes at the end (earlier he waves). Key word 'treiben' fits; a native might also say 'sich auf dem See treiben lassen', kept the plain A-level form. In the first boxed frames of tap 3 the bird is still flying towards the man."
+}

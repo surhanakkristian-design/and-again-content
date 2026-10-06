@@ -1,0 +1,120 @@
+{
+ "mediaId": 302,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Mehl",
+ "taps": [
+  {
+   "phrase": "auf dem Boden liegen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "der Frau an die Nase tippen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein graues Kopftuch tragen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Mehl",
+   "voice": "male"
+  },
+  {
+   "word": "die Eier",
+   "voice": "male"
+  },
+  {
+   "word": "der Hund",
+   "voice": "male"
+  }
+ ],
+ "question": "Was hat der Mann im Gesicht?",
+ "answer": [
+  "Er",
+  "hat",
+  "Mehl",
+  "im",
+  "Gesicht."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem Boden"
+    },
+    {
+     "text": "liegen",
+     "gap": true,
+     "accept": [
+      "liegen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "der Frau an die"
+    },
+    {
+     "text": "Nase",
+     "gap": true,
+     "accept": [
+      "Nase"
+     ]
+    },
+    {
+     "text": "tippen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein graues"
+    },
+    {
+     "text": "Kopftuch",
+     "gap": true,
+     "accept": [
+      "Kopftuch",
+      "Tuch"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hat"
+    },
+    {
+     "text": "Mehl",
+     "gap": true,
+     "accept": [
+      "Mehl"
+     ]
+    },
+    {
+     "text": "im Gesicht"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'to touch her nose' -> 'der Frau an die Nase tippen' (noun instead of an unanchored 'ihr'); the man touches her nose only in the last boxed frames, before that he stands surprised with flour on his face. The woman's grey scarf is worn on the head -> 'Kopftuch'. Question rephrased natively ('Was hat der Mann im Gesicht?') instead of a genitive."
+}

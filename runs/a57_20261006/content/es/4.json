@@ -1,0 +1,120 @@
+{
+ "mediaId": 4,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el curso",
+ "taps": [
+  {
+   "phrase": "beber café con hielo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "escribir en el portátil",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "crecer en una maceta",
+   "target": "la planta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el portátil",
+   "voice": "female"
+  },
+  {
+   "word": "el vaso",
+   "voice": "female"
+  },
+  {
+   "word": "la planta",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "bebiendo",
+  "café",
+  "en",
+  "la",
+  "mesa."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber café con"
+    },
+    {
+     "text": "hielo",
+     "gap": true,
+     "accept": [
+      "hielo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "escribir en el"
+    },
+    {
+     "text": "portátil",
+     "gap": true,
+     "accept": [
+      "portátil",
+      "ordenador"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crecer",
+     "gap": true,
+     "accept": [
+      "crecer"
+     ]
+    },
+    {
+     "text": "en una maceta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "bebiendo",
+     "gap": true,
+     "accept": [
+      "bebiendo",
+      "tomando"
+     ]
+    },
+    {
+     "text": "café en la mesa"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el curso' is not visible as a thing (only via the voiceover); not among the nouns, so no noun row. Phrase 1 box (drinking) also covers frames where she types or opens the laptop; the phrase describes the drinking moments. Phrase 3 box is off in the later frames."
+}

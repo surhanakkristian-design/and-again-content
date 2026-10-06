@@ -1,0 +1,116 @@
+{
+  "mediaId": 5609,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "tener miedo",
+  "taps": [
+    {
+      "phrase": "tener miedo de los ratones",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "moverse por el suelo",
+      "target": "el ratón",
+      "voice": "male"
+    },
+    {
+      "phrase": "estar de lado",
+      "target": "la taza",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el ratón",
+      "voice": "male"
+    },
+    {
+      "word": "la taza",
+      "voice": "male"
+    },
+    {
+      "word": "la silla",
+      "voice": "male"
+    },
+    {
+      "word": "la ventana",
+      "voice": "male"
+    }
+  ],
+  "question": "¿De qué tiene miedo el hombre?",
+  "answer": [
+    "Tiene",
+    "miedo",
+    "del",
+    "ratón."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener miedo de los"
+        },
+        {
+          "text": "ratones",
+          "gap": true,
+          "accept": [
+            "ratones"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "moverse por el"
+        },
+        {
+          "text": "suelo",
+          "gap": true,
+          "accept": [
+            "suelo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar de"
+        },
+        {
+          "text": "lado",
+          "gap": true,
+          "accept": [
+            "lado"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Tiene"
+        },
+        {
+          "text": "miedo",
+          "gap": true,
+          "accept": [
+            "miedo"
+          ]
+        },
+        {
+          "text": "del ratón"
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 2: English 'sit on the floor', but the cup is on the floor too; 'moverse por el suelo' fits only the mouse (it moves around and sits up only briefly)."
+}

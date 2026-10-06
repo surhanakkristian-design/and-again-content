@@ -1,0 +1,26 @@
+{
+  "mediaId": 205, "lang": "de", "level": "A",
+  "keyWord": "das Weinen",
+  "taps": [
+    { "phrase": "sich die Augen abwischen", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Frau umarmen", "target": "der Mann", "voice": "male" },
+    { "phrase": "ein Taschentuch nehmen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" },
+    { "word": "die Decke", "voice": "female" },
+    { "word": "die Taschentücher", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "weint", "und", "wischt", "sich", "die", "Augen", "ab."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich die" }, { "text": "Augen", "gap": true, "accept": ["Augen", "Tränen"] }, { "text": "abwischen" } ] },
+    { "from": "taps", "parts": [ { "text": "die Frau" }, { "text": "umarmen", "gap": true, "accept": ["umarmen"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein" }, { "text": "Taschentuch", "gap": true, "accept": ["Taschentuch"] }, { "text": "nehmen" } ] },
+    { "from": "answer", "parts": [ { "text": "weint", "gap": true, "accept": ["weint"] }, { "text": "und wischt sich die Augen ab" } ] }
+  ],
+  "notes": "Key word das Weinen is not in the noun set, so no noun row; the answer row gaps 'weint' (the verb of the key word). 'abwischen' used in phrase 1 and the answer for the same action (A2; 'trocknen' would also be right)."
+}

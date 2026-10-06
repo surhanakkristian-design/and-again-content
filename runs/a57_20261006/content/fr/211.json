@@ -1,0 +1,116 @@
+{
+ "mediaId": 211,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la douane",
+ "taps": [
+  {
+   "phrase": "fouiller une valise",
+   "target": "le douanier",
+   "voice": "male"
+  },
+  {
+   "phrase": "joindre les mains",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "être couvert de piquants",
+   "target": "le durian",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le durian",
+   "voice": "female"
+  },
+  {
+   "word": "la valise",
+   "voice": "female"
+  },
+  {
+   "word": "la poubelle",
+   "voice": "female"
+  },
+  {
+   "word": "le douanier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le douanier ?",
+ "answer": [
+  "Le",
+  "douanier",
+  "fouille",
+  "une",
+  "valise."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fouiller",
+     "gap": true,
+     "accept": [
+      "fouiller",
+      "inspecter"
+     ]
+    },
+    {
+     "text": "une valise"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "joindre",
+     "gap": true,
+     "accept": [
+      "joindre"
+     ]
+    },
+    {
+     "text": "les mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être couvert de"
+    },
+    {
+     "text": "piquants",
+     "gap": true,
+     "accept": [
+      "piquants",
+      "épines"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fouille une"
+    },
+    {
+     "text": "valise",
+     "gap": true,
+     "accept": [
+      "valise"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord la douane is not shown as a noun of the set; the English noun 'customs officer' is 'le douanier' (derived from douane), so no noun recall row. 'le durian' is above B level but the only word for the fruit."
+}

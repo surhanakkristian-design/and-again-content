@@ -1,0 +1,26 @@
+{
+  "mediaId": 30, "lang": "fr", "level": "A",
+  "keyWord": "le manuel",
+  "taps": [
+    { "phrase": "tourner les pages", "target": "la femme", "voice": "female" },
+    { "phrase": "dormir sur le manuel", "target": "la femme", "voice": "female" },
+    { "phrase": "avoir beaucoup de pages", "target": "le manuel", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les cheveux", "voice": "female" },
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "le manuel", "voice": "female" },
+    { "word": "le bureau", "voice": "female" }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": ["Elle", "tourne", "les", "pages", "du", "manuel."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tourner", "gap": true, "accept": ["tourner"] }, { "text": "les pages" } ] },
+    { "from": "taps", "parts": [ { "text": "dormir", "gap": true, "accept": ["dormir"] }, { "text": "sur le manuel" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir beaucoup de" }, { "text": "pages", "gap": true, "accept": ["pages"] } ] },
+    { "from": "answer", "parts": [ { "text": "tourne les pages du" }, { "text": "manuel", "gap": true, "accept": ["manuel"] } ] }
+  ],
+  "notes": "The green box (phrase 2) is the same as the red one through the whole page-turning part; she only sleeps on the book in the last boxed frames. Phrase 2 uses the key word ('le manuel') instead of 'un livre' so the same thing has the same word throughout. 'le bureau' for the small wooden desk."
+}

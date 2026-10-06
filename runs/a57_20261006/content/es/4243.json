@@ -1,0 +1,118 @@
+{
+ "mediaId": 4243,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "pagar",
+ "taps": [
+  {
+   "phrase": "preparar un perrito caliente",
+   "target": "el gato",
+   "voice": "male"
+  },
+  {
+   "phrase": "asar unas salchichas",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "pagar con tarjeta",
+   "target": "la mano",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gato",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el perrito caliente",
+   "voice": "male"
+  },
+  {
+   "word": "las salchichas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el gato?",
+ "answer": [
+  "Está",
+  "haciendo",
+  "un",
+  "perrito",
+  "caliente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "preparar",
+     "gap": true,
+     "accept": [
+      "preparar",
+      "hacer"
+     ]
+    },
+    {
+     "text": "un perrito caliente"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asar unas"
+    },
+    {
+     "text": "salchichas",
+     "gap": true,
+     "accept": [
+      "salchichas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pagar",
+     "gap": true,
+     "accept": [
+      "pagar"
+     ]
+    },
+    {
+     "text": "con tarjeta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está haciendo un"
+    },
+    {
+     "text": "perrito",
+     "gap": true,
+     "accept": [
+      "perrito"
+     ]
+    },
+    {
+     "text": "caliente"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: English 'hold up a hot dog', but in most boxed frames the cat is preparing the hot dog (bun, sausage, ketchup); it lifts it only at the end, so 'preparar un perrito caliente'. Subject dropped in the answer; answer row = whole sentence."
+}

@@ -1,0 +1,136 @@
+{
+ "mediaId": 852,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el camarero",
+ "taps": [
+  {
+   "phrase": "llevar platos de comida",
+   "target": "el camarero",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un collar blanco",
+   "target": "la señora mayor",
+   "voice": "female"
+  },
+  {
+   "phrase": "correr por el restaurante",
+   "target": "el camarero",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "male"
+  },
+  {
+   "word": "el camarero",
+   "voice": "male"
+  },
+  {
+   "word": "la mesa",
+   "voice": "male"
+  },
+  {
+   "word": "la silla",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el camarero?",
+ "answer": [
+  "Está",
+  "llevando",
+  "comida",
+  "a",
+  "la",
+  "mesa."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "platos",
+     "gap": true,
+     "accept": [
+      "platos"
+     ]
+    },
+    {
+     "text": "de comida"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "collar",
+     "gap": true,
+     "accept": [
+      "collar"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr",
+     "gap": true,
+     "accept": [
+      "correr"
+     ]
+    },
+    {
+     "text": "por el restaurante"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "camarero",
+     "gap": true,
+     "accept": [
+      "camarero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está llevando comida a la"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The necklace is a pearl necklace; 'collar blanco' kept at level A (alt. 'collar de perlas'). Phrases 1 and 2 both use 'llevar' (carry / wear), natural in Spanish."
+}

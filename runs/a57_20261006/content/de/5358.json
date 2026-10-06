@@ -1,0 +1,26 @@
+{
+  "mediaId": 5358, "lang": "de", "level": "B",
+  "keyWord": "spähen",
+  "taps": [
+    { "phrase": "durch eine Lücke spähen", "target": "die Frau in der Strickjacke", "voice": "female" },
+    { "phrase": "schwere Bücher stapeln", "target": "die Frau in der Strickjacke", "voice": "female" },
+    { "phrase": "das Kinn auf die Hand stützen", "target": "die Frau links", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Bücherregale", "voice": "female" },
+    { "word": "die Brille", "voice": "female" },
+    { "word": "die Strickjacke", "voice": "female" },
+    { "word": "das Lehrbuch", "voice": "female" }
+  ],
+  "question": "Was macht die versteckte Frau?",
+  "answer": ["Sie", "späht", "durch", "eine", "Lücke", "zwischen", "den", "Büchern."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "durch eine" }, { "text": "Lücke", "gap": true, "accept": ["Lücke"] }, { "text": "spähen" } ] },
+    { "from": "taps", "parts": [ { "text": "schwere Bücher" }, { "text": "stapeln", "gap": true, "accept": ["stapeln", "aufstapeln"] } ] },
+    { "from": "taps", "parts": [ { "text": "das Kinn auf die" }, { "text": "Hand", "gap": true, "accept": ["Hand"] }, { "text": "stützen" } ] },
+    { "from": "answer", "parts": [ { "text": "späht", "gap": true, "accept": ["späht", "lugt", "guckt"] }, { "text": "durch eine Lücke zwischen den Büchern" } ] }
+  ],
+  "notes": "Taps 1 and 2 share the same box (the woman in the cardigan); she writes first, stacks the books, and peeks out only at the end. The woman on the left rests her chin on her hand ('das Kinn auf die Hand stützen' is more exact than the English 'lean on her hand'). German allows 'Sie späht zwischen den Büchern durch eine Lücke' only awkwardly; the given order is the natural one."
+}

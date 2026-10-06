@@ -1,0 +1,120 @@
+{
+ "mediaId": 279,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "Kraft aufwenden",
+ "taps": [
+  {
+   "phrase": "seine ganze Kraft aufwenden",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "die Faust ballen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "durch eine Pfütze rollen",
+   "target": "der Karren",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Säcke",
+   "voice": "male"
+  },
+  {
+   "word": "das Rad",
+   "voice": "male"
+  },
+  {
+   "word": "die Pfütze",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "wendet",
+  "seine",
+  "ganze",
+  "Kraft",
+  "auf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "seine ganze"
+    },
+    {
+     "text": "Kraft",
+     "gap": true,
+     "accept": [
+      "Kraft"
+     ]
+    },
+    {
+     "text": "aufwenden"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Faust"
+    },
+    {
+     "text": "ballen",
+     "gap": true,
+     "accept": [
+      "ballen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch eine"
+    },
+    {
+     "text": "Pfütze",
+     "gap": true,
+     "accept": [
+      "Pfütze"
+     ]
+    },
+    {
+     "text": "rollen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "wendet",
+     "gap": true,
+     "accept": [
+      "wendet"
+     ]
+    },
+    {
+     "text": "seine ganze Kraft"
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 2 share the target 'der Mann', as in English."
+}

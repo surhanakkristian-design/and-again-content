@@ -1,0 +1,122 @@
+{
+ "mediaId": 198,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la crampe",
+ "taps": [
+  {
+   "phrase": "avoir une crampe au mollet",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'agenouiller sur la piste",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever le pouce",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "les gratte-ciel",
+   "voice": "female"
+  },
+  {
+   "word": "la piste d'athlétisme",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'est-ce que la femme agrippe ?",
+ "answer": [
+  "Elle",
+  "agrippe",
+  "son",
+  "mollet",
+  "douloureux."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "crampe",
+     "gap": true,
+     "accept": [
+      "crampe"
+     ]
+    },
+    {
+     "text": "au mollet"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'agenouiller sur la"
+    },
+    {
+     "text": "piste",
+     "gap": true,
+     "accept": [
+      "piste"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "pouce",
+     "gap": true,
+     "accept": [
+      "pouce"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "agrippe",
+     "gap": true,
+     "accept": [
+      "agrippe",
+      "serre",
+      "tient"
+     ]
+    },
+    {
+     "text": "son mollet"
+    },
+    {
+     "text": "douloureux"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 uses the key word (avoir une crampe au mollet) instead of a translation of 'clutch her aching calf'; the clutching is in the answer (agripper, douloureux = B1/B2). Phrase 3 'lever le pouce' is a fixed collocation with no B1/B2 word; no natural B-level alternative for a thumbs up. Phrase 1 boxes also include the running frames before the cramp."
+}

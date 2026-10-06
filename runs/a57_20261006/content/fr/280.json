@@ -1,0 +1,129 @@
+{
+ "mediaId": 280,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le chaton",
+ "taps": [
+  {
+   "phrase": "regarder la caméra",
+   "target": "le chaton",
+   "voice": "female"
+  },
+  {
+   "phrase": "être assis sur un lit",
+   "target": "le chaton",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'approcher tout près",
+   "target": "le chaton",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chaton",
+   "voice": "female"
+  },
+  {
+   "word": "le lit",
+   "voice": "female"
+  },
+  {
+   "word": "le téléphone",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait le chaton ?",
+ "answer": [
+  "Il",
+  "regarde",
+  "la",
+  "caméra."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder la"
+    },
+    {
+     "text": "caméra",
+     "gap": true,
+     "accept": [
+      "caméra"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "assis",
+     "gap": true,
+     "accept": [
+      "assis"
+     ]
+    },
+    {
+     "text": "sur un lit"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'approcher",
+     "gap": true,
+     "accept": [
+      "s'approcher",
+      "s'avancer"
+     ]
+    },
+    {
+     "text": "tout près"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "chaton",
+     "gap": true,
+     "accept": [
+      "chaton"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde",
+     "gap": true,
+     "accept": [
+      "regarde",
+      "fixe"
+     ]
+    },
+    {
+     "text": "la caméra"
+    }
+   ]
+  }
+ ],
+ "notes": "'la caméra' = the phone's camera the kitten looks into (the phone is noun 3, 'le téléphone'). Noun row added for the key word 'le chaton'. All three phrases have the kitten as target, as in English."
+}

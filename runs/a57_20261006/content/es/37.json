@@ -1,0 +1,123 @@
+{
+ "mediaId": 37,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "avanzar",
+ "taps": [
+  {
+   "phrase": "ondear en la cumbre",
+   "target": "la bandera",
+   "voice": "male"
+  },
+  {
+   "phrase": "agarrar el mástil de la bandera",
+   "target": "la alpinista de rojo",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener una barba poblada",
+   "target": "el alpinista de azul",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la bandera",
+   "voice": "male"
+  },
+  {
+   "word": "los picos",
+   "voice": "male"
+  },
+  {
+   "word": "las gafas de nieve",
+   "voice": "male"
+  },
+  {
+   "word": "la cuerda",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están haciendo los tres alpinistas?",
+ "answer": [
+  "Están",
+  "avanzando",
+  "hacia",
+  "la",
+  "cumbre."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ondear",
+     "gap": true,
+     "accept": [
+      "ondear"
+     ]
+    },
+    {
+     "text": "en la cumbre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar el"
+    },
+    {
+     "text": "mástil",
+     "gap": true,
+     "accept": [
+      "mástil",
+      "asta"
+     ]
+    },
+    {
+     "text": "de la bandera"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener una barba"
+    },
+    {
+     "text": "poblada",
+     "gap": true,
+     "accept": [
+      "poblada",
+      "espesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "avanzando",
+     "gap": true,
+     "accept": [
+      "avanzando",
+      "subiendo"
+     ]
+    },
+    {
+     "text": "hacia la cumbre"
+    }
+   ]
+  }
+ ],
+ "notes": "The red climber looks female (target 'la alpinista de rojo'); voice stays male as in English. She grasps the flagpole only in the last boxed frames; earlier she climbs. Goggles = 'las gafas de ventisca' (mountaineering term, B level); plainer alternative 'las gafas'. Key word 'avanzar' fits naturally and is the answer gap."
+}

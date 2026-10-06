@@ -1,0 +1,121 @@
+{
+ "mediaId": 339,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "ir",
+ "taps": [
+  {
+   "phrase": "ir por la calle",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una bolsa grande",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "quedarse en casa",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las casas",
+   "voice": "female"
+  },
+  {
+   "word": "el coche",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "la calle",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Por dónde va la chica?",
+ "answer": [
+  "La",
+  "chica",
+  "va",
+  "por",
+  "la",
+  "calle."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ir",
+     "gap": true,
+     "accept": [
+      "ir",
+      "andar",
+      "caminar"
+     ]
+    },
+    {
+     "text": "por la calle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    },
+    {
+     "text": "grande"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quedarse",
+     "gap": true,
+     "accept": [
+      "quedarse",
+      "estar"
+     ]
+    },
+    {
+     "text": "en casa"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "va por la"
+    },
+    {
+     "text": "calle",
+     "gap": true,
+     "accept": [
+      "calle"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Woman at the door: English 'the woman' (the mother in the description), kept as 'la mujer'. Phrase 3 boxes only the first second, where she stays inside at the door. English 'Where is she going?' -> '¿Por dónde va?' so that 'por la calle' answers it."
+}

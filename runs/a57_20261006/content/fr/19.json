@@ -1,0 +1,120 @@
+{
+ "mediaId": 19,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la règle",
+ "taps": [
+  {
+   "phrase": "tracer une ligne",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir une couverture rouge",
+   "target": "le livre",
+   "voice": "male"
+  },
+  {
+   "phrase": "être longue et droite",
+   "target": "la règle",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la règle",
+   "voice": "male"
+  },
+  {
+   "word": "les lunettes",
+   "voice": "male"
+  },
+  {
+   "word": "le stylo",
+   "voice": "male"
+  },
+  {
+   "word": "la feuille",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "trace",
+  "une",
+  "ligne",
+  "avec",
+  "une",
+  "règle."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tracer",
+     "gap": true,
+     "accept": [
+      "tracer",
+      "dessiner"
+     ]
+    },
+    {
+     "text": "une ligne"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "couverture",
+     "gap": true,
+     "accept": [
+      "couverture"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être longue et"
+    },
+    {
+     "text": "droite",
+     "gap": true,
+     "accept": [
+      "droite"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trace une ligne avec une"
+    },
+    {
+     "text": "règle",
+     "gap": true,
+     "accept": [
+      "règle"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the man's box covers the whole clip; in most frames he tries the book, the calculator or searches under the desk, and he only draws the line with the ruler at the end (same box as English). English 'paper' = the sheet on the desk -> 'la feuille'."
+}

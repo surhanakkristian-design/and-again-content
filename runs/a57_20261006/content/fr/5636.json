@@ -1,0 +1,26 @@
+{
+  "mediaId": 5636, "lang": "fr", "level": "B",
+  "keyWord": "dépendre de toi",
+  "taps": [
+    { "phrase": "se pencher au-dessus du comptoir", "target": "la cliente au pull", "voice": "female" },
+    { "phrase": "éclater de rire", "target": "le jeune homme", "voice": "male" },
+    { "phrase": "tenir un cornet de glace", "target": "la serveuse au tablier", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le lustre", "voice": "female" },
+    { "word": "le vaisselier", "voice": "female" },
+    { "word": "le tablier", "voice": "female" },
+    { "word": "la glace", "voice": "female" }
+  ],
+  "question": "Que fait la cliente ?",
+  "answer": ["Elle", "se", "penche", "au-dessus", "du", "comptoir."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "pencher", "gap": true, "accept": ["pencher"] }, { "text": "au-dessus du comptoir" } ] },
+    { "from": "taps", "parts": [ { "text": "éclater de" }, { "text": "rire", "gap": true, "accept": ["rire"] } ] },
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "cornet", "gap": true, "accept": ["cornet"] }, { "text": "de glace" } ] },
+    { "from": "answer", "parts": [ { "text": "se penche au-dessus du" }, { "text": "comptoir", "gap": true, "accept": ["comptoir"] } ] }
+  ],
+  "notes": "Key word 'dépendre de toi' is a phrase, not shown in any exercise (the clip shows a choice, not the phrase). It is acceptable; 'c'est à toi de décider/choisir' would be the closer everyday equivalent of 'to be up to you' (owner decides). 'Cornet de glace': the server holds a cone only in the later frames (box_02); earlier she works behind the counter. 'Le vaisselier' = the tall glass-fronted wooden cabinet (avoided 'la vitrine', which could be confused with the ice-cream display counter)."
+}

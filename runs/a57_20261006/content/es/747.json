@@ -1,0 +1,123 @@
+{
+ "mediaId": 747,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el estrés",
+ "taps": [
+  {
+   "phrase": "llevarse las manos a la cabeza",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "amontonarse sobre la mesa",
+   "target": "la pila de papeles",
+   "voice": "female"
+  },
+  {
+   "phrase": "marcar la hora",
+   "target": "el reloj",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "el portapapeles",
+   "voice": "female"
+  },
+  {
+   "word": "los papeles",
+   "voice": "female"
+  },
+  {
+   "word": "el reloj",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "Se",
+  "lleva",
+  "las",
+  "manos",
+  "a",
+  "la",
+  "cabeza",
+  "por",
+  "el",
+  "estrés."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevarse las"
+    },
+    {
+     "text": "manos",
+     "gap": true,
+     "accept": [
+      "manos"
+     ]
+    },
+    {
+     "text": "a la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "amontonarse",
+     "gap": true,
+     "accept": [
+      "amontonarse",
+      "acumularse"
+     ]
+    },
+    {
+     "text": "sobre la mesa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcar",
+     "gap": true,
+     "accept": [
+      "marcar"
+     ]
+    },
+    {
+     "text": "la hora"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se lleva las manos a la cabeza por el"
+    },
+    {
+     "text": "estrés",
+     "gap": true,
+     "accept": [
+      "estrés"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The woman's box covers many frames where she is still on the phone; she only puts her hands to her head near the end (phrase written for the key moment, as English). 'por el estrés' in the answer brings in the key word; the stress is clearly shown (sweat, paper towers, collapse). Answer starts without subject (es). 'el papeleo' kept for English 'paperwork' (pill on the paper stack); 'los papeles' would be the concrete alternative."
+}

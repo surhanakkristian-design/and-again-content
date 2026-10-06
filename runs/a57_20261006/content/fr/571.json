@@ -1,0 +1,123 @@
+{
+  "mediaId": 571,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la casserole",
+  "taps": [
+    {
+      "phrase": "tenir une fourchette",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "lever le doigt",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "être sur le feu",
+      "target": "la marmite",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la fenêtre",
+      "voice": "male"
+    },
+    {
+      "word": "la table",
+      "voice": "male"
+    },
+    {
+      "word": "la marmite",
+      "voice": "male"
+    },
+    {
+      "word": "le feu",
+      "voice": "male"
+    }
+  ],
+  "question": "Que font-ils cuire ?",
+  "answer": [
+    "Ils",
+    "font",
+    "cuire",
+    "des",
+    "pommes",
+    "de",
+    "terre",
+    "dans",
+    "une",
+    "marmite."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir une"
+        },
+        {
+          "text": "fourchette",
+          "gap": true,
+          "accept": [
+            "fourchette"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lever",
+          "gap": true,
+          "accept": [
+            "lever"
+          ]
+        },
+        {
+          "text": "le doigt"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être sur le"
+        },
+        {
+          "text": "feu",
+          "gap": true,
+          "accept": [
+            "feu"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "font cuire des pommes de terre"
+        },
+        {
+          "text": "dans une"
+        },
+        {
+          "text": "marmite",
+          "gap": true,
+          "accept": [
+            "marmite",
+            "casserole"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "KEY WORD: the database word 'la casserole' is a saucepan with one long handle in France; the clip shows a big two-handled pot, which a French native calls 'une marmite' (or 'un faitout'). Noun 3 and the answer use 'la marmite'; the answer row also accepts 'casserole'. Proposal: make the fr word for this concept 'la marmite'. Tap 3 box covers the pot also while it is being filled at the tap (box_01), before it is on the fire. The man's box also covers frames where he lifts the lid (box_03); he holds the fork in box_05/box_06."
+}

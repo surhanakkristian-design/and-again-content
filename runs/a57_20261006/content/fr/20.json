@@ -1,0 +1,121 @@
+{
+ "mediaId": 20,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un emploi du temps",
+ "taps": [
+  {
+   "phrase": "saisir l'oreiller",
+   "target": "la main",
+   "voice": "female"
+  },
+  {
+   "phrase": "être grand ouvert",
+   "target": "le manuel",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir deux bretelles qui traînent",
+   "target": "le sac à dos",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le manuel",
+   "voice": "female"
+  },
+  {
+   "word": "l'ordinateur portable",
+   "voice": "female"
+  },
+  {
+   "word": "le sac à dos",
+   "voice": "female"
+  },
+  {
+   "word": "l'oreiller",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la main ?",
+ "answer": [
+  "Elle",
+  "saisit",
+  "l'oreiller",
+  "sur",
+  "le",
+  "sol."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "saisir",
+     "gap": true,
+     "accept": [
+      "saisir",
+      "attraper"
+     ]
+    },
+    {
+     "text": "l'oreiller"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être grand"
+    },
+    {
+     "text": "ouvert",
+     "gap": true,
+     "accept": [
+      "ouvert"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir deux"
+    },
+    {
+     "text": "bretelles",
+     "gap": true,
+     "accept": [
+      "bretelles",
+      "sangles"
+     ]
+    },
+    {
+     "text": "qui traînent"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "saisit l'oreiller sur le"
+    },
+    {
+     "text": "sol",
+     "gap": true,
+     "accept": [
+      "sol",
+      "parquet"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord copied unchanged but it carries the indefinite article 'un'; proposal: 'l'emploi du temps' (definite, like the other database words). The schedule itself is not shown as a thing and appears in no exercise (as in English). Tap 1: in most boxed frames the hand hovers over the items; it grabs the pillow near the end."
+}

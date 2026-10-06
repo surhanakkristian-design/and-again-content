@@ -1,0 +1,138 @@
+{
+ "mediaId": 210,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el cliente",
+ "taps": [
+  {
+   "phrase": "probarse unos auriculares",
+   "target": "la clienta",
+   "voice": "female"
+  },
+  {
+   "phrase": "meter una caja en una bolsa",
+   "target": "el dependiente",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar dos cajas",
+   "target": "la clienta",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la clienta",
+   "voice": "female"
+  },
+  {
+   "word": "la bolsa",
+   "voice": "female"
+  },
+  {
+   "word": "la tarjeta",
+   "voice": "female"
+  },
+  {
+   "word": "los auriculares",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la clienta?",
+ "answer": [
+  "Se",
+  "está",
+  "probando",
+  "unos",
+  "auriculares",
+  "blancos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "probarse",
+     "gap": true,
+     "accept": [
+      "probarse"
+     ]
+    },
+    {
+     "text": "unos auriculares"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "meter una caja en una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar"
+    },
+    {
+     "text": "dos"
+    },
+    {
+     "text": "cajas",
+     "gap": true,
+     "accept": [
+      "cajas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "clienta",
+     "gap": true,
+     "accept": [
+      "clienta",
+      "cliente"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se está probando unos"
+    },
+    {
+     "text": "auriculares",
+     "gap": true,
+     "accept": [
+      "auriculares",
+      "cascos"
+     ]
+    },
+    {
+     "text": "blancos"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el cliente': the customer is a woman, so the noun pill uses the feminine 'la clienta' (same database concept). Tap 2: the man (shop assistant) puts the boxed headphones into the paper bag; 'meter una caja en una bolsa' says what he visibly does."
+}

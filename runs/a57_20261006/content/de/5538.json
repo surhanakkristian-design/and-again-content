@@ -1,0 +1,122 @@
+{
+ "mediaId": 5538,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Landwirtschaft",
+ "taps": [
+  {
+   "phrase": "einen beladenen Anhänger ziehen",
+   "target": "der Traktor",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Horizont stehen",
+   "target": "die Getreidesilos",
+   "voice": "female"
+  },
+  {
+   "phrase": "in Orange und Rosa leuchten",
+   "target": "der Himmel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Silos",
+   "voice": "female"
+  },
+  {
+   "word": "der Mähdrescher",
+   "voice": "female"
+  },
+  {
+   "word": "der Traktor",
+   "voice": "female"
+  },
+  {
+   "word": "der Weizen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen die Maschinen?",
+ "answer": [
+  "Sie",
+  "ernten",
+  "den",
+  "reifen",
+  "Weizen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen beladenen"
+    },
+    {
+     "text": "Anhänger",
+     "gap": true,
+     "accept": [
+      "Anhänger"
+     ]
+    },
+    {
+     "text": "ziehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Horizont",
+     "gap": true,
+     "accept": [
+      "Horizont"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in Orange und Rosa"
+    },
+    {
+     "text": "leuchten",
+     "gap": true,
+     "accept": [
+      "leuchten",
+      "glühen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "ernten",
+     "gap": true,
+     "accept": [
+      "ernten",
+      "mähen"
+     ]
+    },
+    {
+     "text": "den reifen Weizen"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word die Landwirtschaft names the whole scene but no single thing in the set, so it appears in no text (not forced). A second, small tractor far back also pulls a trailer; the boxed near tractor is the clear one (same as English)."
+}

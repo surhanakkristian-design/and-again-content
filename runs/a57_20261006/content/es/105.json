@@ -1,0 +1,119 @@
+{
+ "mediaId": 105,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el arco",
+ "taps": [
+  {
+   "phrase": "tensar el arco",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "observar con asombro",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "apuntar a la diana",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el arco",
+   "voice": "female"
+  },
+  {
+   "word": "la flecha",
+   "voice": "female"
+  },
+  {
+   "word": "la trenza",
+   "voice": "female"
+  },
+  {
+   "word": "la túnica",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "apuntando",
+  "a",
+  "la",
+  "diana",
+  "con",
+  "una",
+  "flecha."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tensar el"
+    },
+    {
+     "text": "arco",
+     "gap": true,
+     "accept": [
+      "arco"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "observar con"
+    },
+    {
+     "text": "asombro",
+     "gap": true,
+     "accept": [
+      "asombro",
+      "admiración"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apuntar",
+     "gap": true,
+     "accept": [
+      "apuntar",
+      "disparar"
+     ]
+    },
+    {
+     "text": "a la diana"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está apuntando a la diana con una"
+    },
+    {
+     "text": "flecha",
+     "gap": true,
+     "accept": [
+      "flecha"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the man hands over an arrow only in the last two boxed frames; in most boxed frames he watches open-mouthed, grins or cheers, so \"observar con asombro\". Answer: \"con una flecha\" could also stand after \"apuntando\"; the given order is the natural one."
+}

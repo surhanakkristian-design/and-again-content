@@ -1,0 +1,119 @@
+{
+ "mediaId": 199,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "estrellarse",
+ "taps": [
+  {
+   "phrase": "conducir un coche rojo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar los dos brazos",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una camiseta amarilla",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el coche rojo",
+   "voice": "male"
+  },
+  {
+   "word": "el coche amarillo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está conduciendo el hombre?",
+ "answer": [
+  "Está",
+  "conduciendo",
+  "un",
+  "coche",
+  "rojo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "conducir un"
+    },
+    {
+     "text": "coche",
+     "gap": true,
+     "accept": [
+      "coche"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar los dos"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "amarilla"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "conduciendo",
+     "gap": true,
+     "accept": [
+      "conduciendo"
+     ]
+    },
+    {
+     "text": "un coche rojo"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: for bumper cars a native in Spain says 'chocar' ('chocar con los coches'), 'estrellarse' (crash and wreck) does not fit the clip; proposal: chocar. The cars are 'coches de choque'; kept 'coche' at level A. Shirt shown is a T-shirt, so 'camiseta'."
+}

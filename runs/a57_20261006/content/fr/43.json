@@ -1,0 +1,111 @@
+{
+ "mediaId": 43,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "tourner sur soi-même",
+ "taps": [
+  {
+   "phrase": "tirer sur une ficelle",
+   "target": "la main",
+   "voice": "male"
+  },
+  {
+   "phrase": "tourner sur soi-même très vite",
+   "target": "la boule dorée",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir une boule dorée",
+   "target": "la main",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'imprimante",
+   "voice": "male"
+  },
+  {
+   "word": "la boule",
+   "voice": "male"
+  },
+  {
+   "word": "le bureau",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la boule dorée ?",
+ "answer": [
+  "Elle",
+  "tourne",
+  "très",
+  "vite."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer sur une"
+    },
+    {
+     "text": "ficelle",
+     "gap": true,
+     "accept": [
+      "ficelle",
+      "corde"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tourner",
+     "gap": true,
+     "accept": [
+      "tourner"
+     ]
+    },
+    {
+     "text": "sur soi-même très vite"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "une boule dorée"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tourne très"
+    },
+    {
+     "text": "vite",
+     "gap": true,
+     "accept": [
+      "vite",
+      "rapidement"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Strictly the ring spins around the golden ball; like the English, the whole gyroscope is called 'la boule dorée'. Tap box 1 also covers frames where the hand only places the gyroscope on the stand; phrase written for the string-pulling frames. Subject 'la boule' is feminine (pronoun 'elle'); answerVoice kept male as in English (thing, defaultVoice). Key word used in tap 2."
+}

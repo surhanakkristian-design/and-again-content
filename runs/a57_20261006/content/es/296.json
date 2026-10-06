@@ -1,0 +1,120 @@
+{
+ "mediaId": 296,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el pescado",
+ "taps": [
+  {
+   "phrase": "sujetar medio limón",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "comer con tenedor",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar en una tabla de madera",
+   "target": "el pescado",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el mar",
+   "voice": "female"
+  },
+  {
+   "word": "la barca",
+   "voice": "female"
+  },
+  {
+   "word": "el pescado",
+   "voice": "female"
+  },
+  {
+   "word": "el fuego",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está comiendo la mujer?",
+ "answer": [
+  "Está",
+  "comiendo",
+  "pescado",
+  "con",
+  "tenedor."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar medio"
+    },
+    {
+     "text": "limón",
+     "gap": true,
+     "accept": [
+      "limón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer",
+     "gap": true,
+     "accept": [
+      "comer"
+     ]
+    },
+    {
+     "text": "con tenedor"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en una"
+    },
+    {
+     "text": "tabla",
+     "gap": true,
+     "accept": [
+      "tabla"
+     ]
+    },
+    {
+     "text": "de madera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está comiendo"
+    },
+    {
+     "text": "pescado",
+     "gap": true,
+     "accept": [
+      "pescado"
+     ]
+    },
+    {
+     "text": "con tenedor"
+    }
+   ]
+  }
+ ],
+ "notes": "Blue box (fish): about 9 frames over the fire, about 12 on the wooden board after cooking, so phrase 3 = 'estar en una tabla de madera' (English 'to lie over the fire' fits fewer boxed frames). The half lemon also sits on the board in two frames. Answer drops the subject (natural in es)."
+}

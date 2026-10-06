@@ -1,0 +1,117 @@
+{
+ "mediaId": 121,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "brûler",
+ "taps": [
+  {
+   "phrase": "brûler une crêpe",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir un torchon",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être dans une assiette",
+   "target": "la crêpe",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la poêle",
+   "voice": "male"
+  },
+  {
+   "word": "le feu",
+   "voice": "male"
+  },
+  {
+   "word": "la crêpe",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'est-ce que l'homme a brûlé ?",
+ "answer": [
+  "Il",
+  "a",
+  "brûlé",
+  "une",
+  "crêpe."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brûler une"
+    },
+    {
+     "text": "crêpe",
+     "gap": true,
+     "accept": [
+      "crêpe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "torchon",
+     "gap": true,
+     "accept": [
+      "torchon"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être dans une"
+    },
+    {
+     "text": "assiette",
+     "gap": true,
+     "accept": [
+      "assiette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "a"
+    },
+    {
+     "text": "brûlé",
+     "gap": true,
+     "accept": [
+      "brûlé"
+     ]
+    },
+    {
+     "text": "une crêpe"
+    }
+   ]
+  }
+ ],
+ "notes": "'pancake' -> 'la crêpe' (the thin French pancake; the clip shows a flat round one). Phrase 3 'être dans une assiette' (French eats 'dans l'assiette'; avoids the agreement of 'posé(e)'); the crêpe is only on the plate in the last frames of box 3."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 343, "lang": "fr", "level": "B",
+  "keyWord": "attraper",
+  "taps": [
+    { "phrase": "attraper un anneau de plongée", "target": "la femme", "voice": "female" },
+    { "phrase": "reposer au fond de la piscine", "target": "l'anneau", "voice": "female" },
+    { "phrase": "patauger dans le petit bain", "target": "l'homme en short rouge", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les marches", "voice": "female" },
+    { "word": "l'anneau de plongée", "voice": "female" },
+    { "word": "le masque de plongée", "voice": "female" },
+    { "word": "le maillot de bain", "voice": "female" }
+  ],
+  "question": "Qu'attrape la femme sous l'eau ?",
+  "answer": ["Elle", "attrape", "un", "anneau", "de", "plongée."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "attraper un" }, { "text": "anneau", "gap": true, "accept": ["anneau"] }, { "text": "de plongée" } ] },
+    { "from": "taps", "parts": [ { "text": "reposer au" }, { "text": "fond", "gap": true, "accept": ["fond"] }, { "text": "de la piscine" } ] },
+    { "from": "taps", "parts": [ { "text": "patauger", "gap": true, "accept": ["patauger"] }, { "text": "dans le petit bain" } ] },
+    { "from": "answer", "parts": [ { "text": "attrape", "gap": true, "accept": ["attrape", "saisit", "ramasse"] }, { "text": "un anneau de plongée" } ] }
+  ],
+  "notes": "Phrase 3: the man in red shorts stands/walks on the steps at the shallow end: 'patauger dans le petit bain' (native for wading in the shallow part). In the first boxed frames the woman only puts on her mask; she grabs the ring mid-clip."
+}

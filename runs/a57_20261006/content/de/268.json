@@ -1,0 +1,117 @@
+{
+  "mediaId": 268,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Umschlag",
+  "taps": [
+    {
+      "phrase": "den Umschlag küssen",
+      "target": "die Frau in Rot",
+      "voice": "female"
+    },
+    {
+      "phrase": "eine Kerze halten",
+      "target": "die Frau in Rot",
+      "voice": "female"
+    },
+    {
+      "phrase": "hinter der Lampe schlafen",
+      "target": "die Katze",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Lampe",
+      "voice": "female"
+    },
+    {
+      "word": "die Katze",
+      "voice": "female"
+    },
+    {
+      "word": "die Kerze",
+      "voice": "female"
+    },
+    {
+      "word": "der Umschlag",
+      "voice": "female"
+    }
+  ],
+  "question": "Was küsst die Frau in Rot?",
+  "answer": [
+    "Sie",
+    "küsst",
+    "den",
+    "Umschlag."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Umschlag"
+        },
+        {
+          "text": "küssen",
+          "gap": true,
+          "accept": [
+            "küssen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine"
+        },
+        {
+          "text": "Kerze",
+          "gap": true,
+          "accept": [
+            "Kerze"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "hinter der Lampe"
+        },
+        {
+          "text": "schlafen",
+          "gap": true,
+          "accept": [
+            "schlafen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "küsst den"
+        },
+        {
+          "text": "Umschlag",
+          "gap": true,
+          "accept": [
+            "Umschlag",
+            "Briefumschlag"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word appears in phrase 1 and the answer, so no noun row. The kiss is only briefly visible; verifier please check the boxed frames."
+}

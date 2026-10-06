@@ -1,0 +1,139 @@
+{
+ "mediaId": 7450,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Töpfer",
+ "taps": [
+  {
+   "phrase": "eine hohe Vase aus Ton formen",
+   "target": "die Töpferin vorne",
+   "voice": "female"
+  },
+  {
+   "phrase": "in die Vase greifen",
+   "target": "die Töpferin vorne",
+   "voice": "female"
+  },
+  {
+   "phrase": "im Hintergrund arbeiten",
+   "target": "die Person hinten",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Brennofen",
+   "voice": "female"
+  },
+  {
+   "word": "die Töpferin",
+   "voice": "female"
+  },
+  {
+   "word": "die Vase",
+   "voice": "female"
+  },
+  {
+   "word": "der Schwamm",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Töpferin vorne?",
+ "answer": [
+  "Sie",
+  "formt",
+  "eine",
+  "hohe",
+  "Vase",
+  "aus",
+  "Ton."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine hohe Vase aus"
+    },
+    {
+     "text": "Ton",
+     "gap": true,
+     "accept": [
+      "Ton"
+     ]
+    },
+    {
+     "text": "formen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Vase"
+    },
+    {
+     "text": "greifen",
+     "gap": true,
+     "accept": [
+      "greifen",
+      "fassen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Hintergrund",
+     "gap": true,
+     "accept": [
+      "Hintergrund"
+     ]
+    },
+    {
+     "text": "arbeiten"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Töpferin",
+     "gap": true,
+     "accept": [
+      "Töpferin",
+      "Töpfer"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "formt",
+     "gap": true,
+     "accept": [
+      "formt"
+     ]
+    },
+    {
+     "text": "eine hohe Vase aus Ton"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word is 'der Töpfer' but the potter shown is a woman, so the noun pill, question and target use 'die Töpferin' (natural German); the recall noun row accepts both. Proposal: add 'die Töpferin' as the feminine form of the concept. The person at the back is off screen in the first close-up frames."
+}

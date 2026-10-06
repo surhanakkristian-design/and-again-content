@@ -1,0 +1,119 @@
+{
+ "mediaId": 95,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el colorete",
+ "taps": [
+  {
+   "phrase": "ponerse colorete en las mejillas",
+   "target": "la chica de la trenza",
+   "voice": "female"
+  },
+  {
+   "phrase": "asomarse por encima de su hombro",
+   "target": "la chica del pelo corto",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar posado en la jaula",
+   "target": "el periquito",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la trenza",
+   "voice": "female"
+  },
+  {
+   "word": "la brocha",
+   "voice": "female"
+  },
+  {
+   "word": "el colorete",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica de verde?",
+ "answer": [
+  "Se",
+  "está",
+  "poniendo",
+  "colorete",
+  "con",
+  "una",
+  "brocha."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ponerse"
+    },
+    {
+     "text": "colorete",
+     "gap": true,
+     "accept": [
+      "colorete"
+     ]
+    },
+    {
+     "text": "en las mejillas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomarse",
+     "gap": true,
+     "accept": [
+      "asomarse",
+      "mirar"
+     ]
+    },
+    {
+     "text": "por encima de su hombro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "posado",
+     "gap": true,
+     "accept": [
+      "posado"
+     ]
+    },
+    {
+     "text": "en la jaula"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se está poniendo colorete con una"
+    },
+    {
+     "text": "brocha",
+     "gap": true,
+     "accept": [
+      "brocha"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "In a few frames (about 3-4 s) the short-haired girl also brushes her own cheek, so tap 1 is not strictly unique to the braid girl in those frames; the braid girl does it in most boxed frames. The bird is a budgie (el periquito) sitting on top of a cage. Answer drops the subject."
+}

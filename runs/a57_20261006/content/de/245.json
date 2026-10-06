@@ -1,0 +1,26 @@
+{
+  "mediaId": 245, "lang": "de", "level": "A",
+  "keyWord": "das Trinken",
+  "taps": [
+    { "phrase": "sich die Hände waschen", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Flasche füllen", "target": "der Mann", "voice": "male" },
+    { "phrase": "auf den Steinen sitzen", "target": "das Murmeltier", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "male" },
+    { "word": "die Berge", "voice": "male" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" }
+  ],
+  "question": "Was machen die beiden?",
+  "answer": ["Sie", "trinken", "Wasser", "aus", "ihren", "Flaschen."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich die" }, { "text": "Hände", "gap": true, "accept": ["Hände"] }, { "text": "waschen" } ] },
+    { "from": "taps", "parts": [ { "text": "die Flasche" }, { "text": "füllen", "gap": true, "accept": ["füllen", "auffüllen"] } ] },
+    { "from": "taps", "parts": [ { "text": "auf den" }, { "text": "Steinen", "gap": true, "accept": ["Steinen", "Felsen"] }, { "text": "sitzen" } ] },
+    { "from": "answer", "parts": [ { "text": "trinken", "gap": true, "accept": ["trinken"] }, { "text": "Wasser aus ihren Flaschen" } ] }
+  ],
+  "notes": "Taps 1 and 2: the woman's and the man's boxes mostly show them drinking from the bottle, which both do (not unique), so the English actions are kept: she washes her hands and he fills the bottle at the stone fountain (only a few boxed frames). Target of tap 3 is a marmot; the phrase avoids the animal's name. 'Steine' (A2) instead of 'Felsen' (B1). German also allows 'Sie trinken aus ihren Flaschen Wasser.' with the same chips."
+}

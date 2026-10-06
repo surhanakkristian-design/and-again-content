@@ -1,0 +1,113 @@
+{
+ "mediaId": 13,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la serviette",
+ "taps": [
+  {
+   "phrase": "plier une serviette",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'essuyer la bouche",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'asseoir sur une chaise",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "la serviette",
+   "voice": "female"
+  },
+  {
+   "word": "la chaise",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "plie",
+  "une",
+  "serviette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plier une"
+    },
+    {
+     "text": "serviette",
+     "gap": true,
+     "accept": [
+      "serviette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'essuyer la"
+    },
+    {
+     "text": "bouche",
+     "gap": true,
+     "accept": [
+      "bouche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'asseoir sur une"
+    },
+    {
+     "text": "chaise",
+     "gap": true,
+     "accept": [
+      "chaise"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "plie",
+     "gap": true,
+     "accept": [
+      "plie"
+     ]
+    },
+    {
+     "text": "une serviette"
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the same woman with the same boxes (as in English); each phrase is true only at its own moment. 'la serviette' = table napkin here (also means towel; the clip makes the sense clear)."
+}

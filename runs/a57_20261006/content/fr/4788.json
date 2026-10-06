@@ -1,0 +1,118 @@
+{
+ "mediaId": 4788,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "choqué",
+ "taps": [
+  {
+   "phrase": "lui chuchoter à l'oreille",
+   "target": "la femme debout",
+   "voice": "female"
+  },
+  {
+   "phrase": "entendre un secret",
+   "target": "la femme sous la cape",
+   "voice": "female"
+  },
+  {
+   "phrase": "être assise à un bureau",
+   "target": "la femme au bureau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la plante",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'ordinateur",
+   "voice": "female"
+  },
+  {
+   "word": "le bureau",
+   "voice": "female"
+  }
+ ],
+ "question": "Comment sont les femmes ?",
+ "answer": [
+  "Les",
+  "femmes",
+  "sont",
+  "très",
+  "choquées."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lui"
+    },
+    {
+     "text": "chuchoter",
+     "gap": true,
+     "accept": [
+      "chuchoter",
+      "murmurer"
+     ]
+    },
+    {
+     "text": "à l'oreille"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "entendre un"
+    },
+    {
+     "text": "secret",
+     "gap": true,
+     "accept": [
+      "secret"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assise à un"
+    },
+    {
+     "text": "bureau",
+     "gap": true,
+     "accept": [
+      "bureau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sont très"
+    },
+    {
+     "text": "choquées",
+     "gap": true,
+     "accept": [
+      "choquées"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3 keeps the feminine agreement 'assise' because the target is a woman. Key word 'choqué' used as 'choquées' (feminine plural) in the answer. The red box also covers later frames where the standing woman reacts or makes a 'shh' gesture instead of whispering."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 8032, "lang": "fr", "level": "B",
+  "keyWord": "à l'improviste",
+  "taps": [
+    { "phrase": "tendre son chapeau", "target": "l'homme en bronze", "voice": "male" },
+    { "phrase": "reculer sous le choc", "target": "la femme en blanc", "voice": "female" },
+    { "phrase": "agripper le bras de son amie", "target": "la femme en rose", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le clocher", "voice": "male" },
+    { "word": "la fontaine", "voice": "male" },
+    { "word": "les pigeons", "voice": "male" },
+    { "word": "la jupe", "voice": "male" }
+  ],
+  "question": "Que fait l'homme en bronze ?",
+  "answer": ["Il", "tend", "son", "chapeau", "à", "une", "jeune", "femme."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tendre son" }, { "text": "chapeau", "gap": true, "accept": ["chapeau"] } ] },
+    { "from": "taps", "parts": [ { "text": "reculer", "gap": true, "accept": ["reculer", "sursauter"] }, { "text": "sous le choc" } ] },
+    { "from": "taps", "parts": [ { "text": "agripper", "gap": true, "accept": ["agripper", "attraper", "saisir"] }, { "text": "le bras de son amie" } ] },
+    { "from": "answer", "parts": [ { "text": "tend", "gap": true, "accept": ["tend"] }, { "text": "son chapeau à une jeune femme" } ] }
+  ],
+  "notes": "keyWord 'à l'improviste' means 'unannounced / without warning' (arriver à l'improviste); for a statue that suddenly moves a native would say 'soudain' or 'de façon inattendue'. It is not used in any text because it would sound forced; proposal: 'de façon inattendue' (or 'soudain') as the fr word for 'unexpectedly'. The English 'clock tower' is a church tower with a clock: 'le clocher' is the everyday French word. The woman in pink is out of frame (OFF) in the last boxed frames."
+}

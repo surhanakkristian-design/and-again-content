@@ -1,0 +1,27 @@
+{
+  "mediaId": 457, "lang": "de", "level": "A",
+  "keyWord": "das Make-up",
+  "taps": [
+    { "phrase": "die Augen schließen", "target": "die Frau vorne", "voice": "female" },
+    { "phrase": "ein grünes T-Shirt tragen", "target": "die Frau in Grün", "voice": "female" },
+    { "phrase": "hinter den Frauen liegen", "target": "der Hund", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Lampe", "voice": "female" },
+    { "word": "der Spiegel", "voice": "female" },
+    { "word": "der Hund", "voice": "female" },
+    { "word": "das Make-up", "voice": "female" }
+  ],
+  "question": "Wo liegt der Hund?",
+  "answer": ["Der", "Hund", "liegt", "hinter", "den", "Frauen."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Augen" }, { "text": "schließen", "gap": true, "accept": ["schließen", "zumachen"] } ] },
+    { "from": "taps", "parts": [ { "text": "ein grünes" }, { "text": "T-Shirt", "gap": true, "accept": ["T-Shirt", "Oberteil", "Shirt"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "hinter den Frauen" }, { "text": "liegen", "gap": true, "accept": ["liegen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "das" }, { "text": "Make-up", "gap": true, "accept": ["Make-up"] } ] },
+    { "from": "answer", "parts": [ { "text": "liegt hinter den" }, { "text": "Frauen", "gap": true, "accept": ["Frauen"] } ] }
+  ],
+  "notes": "Tap 1: the red box also covers the last mirror frames where her eyes are open; the phrase describes the close-up frames (eyes closed while blush and eyeshadow go on). Green top looks like a T-shirt, so 'T-Shirt' (A1) rather than 'Oberteil'. Light = 'die Lampe' (the bulb on the mirror)."
+}

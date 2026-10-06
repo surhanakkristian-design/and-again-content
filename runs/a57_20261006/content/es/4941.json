@@ -1,0 +1,132 @@
+{
+ "mediaId": 4941,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el bombero",
+ "taps": [
+  {
+   "phrase": "subir por una escalera",
+   "target": "la bombera",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado en una rama",
+   "target": "el gato",
+   "voice": "female"
+  },
+  {
+   "phrase": "abrazar al gato",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la bombera",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "la escalera",
+   "voice": "female"
+  },
+  {
+   "word": "el árbol",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la bombera?",
+ "answer": [
+  "Rescata",
+  "a",
+  "un",
+  "gato",
+  "de",
+  "un",
+  "árbol."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "subir por una"
+    },
+    {
+     "text": "escalera",
+     "gap": true,
+     "accept": [
+      "escalera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en una"
+    },
+    {
+     "text": "rama",
+     "gap": true,
+     "accept": [
+      "rama"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrazar",
+     "gap": true,
+     "accept": [
+      "abrazar"
+     ]
+    },
+    {
+     "text": "al gato"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "bombera",
+     "gap": true,
+     "accept": [
+      "bombera"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Rescata",
+     "gap": true,
+     "accept": [
+      "Rescata",
+      "Salva"
+     ]
+    },
+    {
+     "text": "a un gato de un árbol"
+    }
+   ]
+  }
+ ],
+ "notes": "The firefighter is a woman: noun 1 and the target use 'la bombera' (RAE standard feminine of the key word 'el bombero'); noun recall row accepts both. Owner may prefer the masculine database form."
+}

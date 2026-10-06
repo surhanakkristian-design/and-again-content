@@ -1,0 +1,26 @@
+{
+  "mediaId": 706, "lang": "de", "level": "A",
+  "keyWord": "der Schnee",
+  "taps": [
+    { "phrase": "eine rote Jacke tragen", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine grüne Jacke tragen", "target": "der Mann", "voice": "male" },
+    { "phrase": "eine große Schneeflocke fangen", "target": "der Handschuh", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Schnee", "voice": "female" },
+    { "word": "der Handschuh", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Mann", "voice": "male" }
+  ],
+  "question": "Was machen die beiden?",
+  "answer": ["Sie", "liegen", "im", "Schnee."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine rote" }, { "text": "Jacke", "gap": true, "accept": ["Jacke"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "eine grüne Jacke" }, { "text": "tragen", "gap": true, "accept": ["tragen", "anhaben"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine große" }, { "text": "Schneeflocke", "gap": true, "accept": ["Schneeflocke"] }, { "text": "fangen" } ] },
+    { "from": "answer", "parts": [ { "text": "liegen im" }, { "text": "Schnee", "gap": true, "accept": ["Schnee"] } ] }
+  ],
+  "notes": "Mitten: the exact word is 'der Fäustling' (B1, rare in speech); 'der Handschuh' is the everyday A-level word. The woman's jacket is dark red / burgundy; 'rot' fits. Phrase 3 (mitten) is only true in the early frames; later boxed frames show the mitten resting while they lie in the snow. 'anhaben' accepted in row 2 (colloquial synonym of tragen). No noun row: the answer row contains Schnee (Schneeflocke also counts as a compound)."
+}

@@ -1,0 +1,126 @@
+{
+ "mediaId": 51,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "zusammendrücken",
+ "taps": [
+  {
+   "phrase": "den Schleim zusammendrücken",
+   "target": "die Hand",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine Handvoll packen",
+   "target": "die Hand",
+   "voice": "male"
+  },
+  {
+   "phrase": "im Hintergrund stehen",
+   "target": "die Tasse",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Tasse",
+   "voice": "male"
+  },
+  {
+   "word": "der Daumen",
+   "voice": "male"
+  },
+  {
+   "word": "das Handgelenk",
+   "voice": "male"
+  },
+  {
+   "word": "die Perlen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht die Hand?",
+ "answer": [
+  "Sie",
+  "drückt",
+  "eine",
+  "Handvoll",
+  "Perlen",
+  "zusammen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Schleim"
+    },
+    {
+     "text": "zusammendrücken",
+     "gap": true,
+     "accept": [
+      "zusammendrücken",
+      "zusammenquetschen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Handvoll",
+     "gap": true,
+     "accept": [
+      "Handvoll"
+     ]
+    },
+    {
+     "text": "packen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Hintergrund",
+     "gap": true,
+     "accept": [
+      "Hintergrund"
+     ]
+    },
+    {
+     "text": "stehen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "drückt eine Handvoll"
+    },
+    {
+     "text": "Perlen",
+     "gap": true,
+     "accept": [
+      "Perlen",
+      "Schleim"
+     ]
+    },
+    {
+     "text": "zusammen"
+    }
+   ]
+  }
+ ],
+ "notes": "Mug with a handle = 'die Tasse' (more natural than 'der Becher'). Slime = 'der Schleim' (young speakers also say 'der Slime')."
+}

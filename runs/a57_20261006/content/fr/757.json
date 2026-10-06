@@ -1,0 +1,118 @@
+{
+ "mediaId": 757,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la surprise",
+ "taps": [
+  {
+   "phrase": "donner une boîte",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "ouvrir la boîte",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir un chiot",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "le chiot",
+   "voice": "female"
+  },
+  {
+   "word": "la boîte",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient la femme ?",
+ "answer": [
+  "Elle",
+  "tient",
+  "un",
+  "chiot",
+  "dans",
+  "ses",
+  "bras."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "donner",
+     "gap": true,
+     "accept": [
+      "donner",
+      "offrir",
+      "tendre"
+     ]
+    },
+    {
+     "text": "une boîte"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir la"
+    },
+    {
+     "text": "boîte",
+     "gap": true,
+     "accept": [
+      "boîte"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "chiot",
+     "gap": true,
+     "accept": [
+      "chiot"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient",
+     "gap": true,
+     "accept": [
+      "tient"
+     ]
+    },
+    {
+     "text": "un chiot dans ses bras"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la surprise' is abstract and not a noun of the set, so it appears in no exercise (no noun row). 'le chiot' is the everyday word for puppy (A2). Phrase 3: she holds the puppy only in the last part of the clip; phrase 1: the man hands over the box only at the start."
+}

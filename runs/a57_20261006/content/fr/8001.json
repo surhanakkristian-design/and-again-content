@@ -1,0 +1,123 @@
+{
+ "mediaId": 8001,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "se tenir à l'écart",
+ "taps": [
+  {
+   "phrase": "déployer ses ailes",
+   "target": "l'oie",
+   "voice": "female"
+  },
+  {
+   "phrase": "passer à vélo près de l'oie",
+   "target": "l'homme à vélo",
+   "voice": "male"
+  },
+  {
+   "phrase": "bondir sur la pelouse",
+   "target": "la femme en short",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'oie",
+   "voice": "female"
+  },
+  {
+   "word": "le vélo",
+   "voice": "female"
+  },
+  {
+   "word": "le lierre",
+   "voice": "female"
+  },
+  {
+   "word": "l'allée de gravier",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en short ?",
+ "answer": [
+  "Elle",
+  "se",
+  "tient",
+  "à",
+  "l'écart",
+  "de",
+  "l'oie."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "déployer ses"
+    },
+    {
+     "text": "ailes",
+     "gap": true,
+     "accept": [
+      "ailes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "passer à"
+    },
+    {
+     "text": "vélo",
+     "gap": true,
+     "accept": [
+      "vélo"
+     ]
+    },
+    {
+     "text": "près de l'oie"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bondir",
+     "gap": true,
+     "accept": [
+      "bondir",
+      "sauter"
+     ]
+    },
+    {
+     "text": "sur la pelouse"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "tient",
+     "gap": true,
+     "accept": [
+      "tient"
+     ]
+    },
+    {
+     "text": "à l'écart de l'oie"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word se tenir à l'écart in the model answer. Tap 3: in the later boxed frames the woman runs off along the path; phrase written for the leap in most frames."
+}

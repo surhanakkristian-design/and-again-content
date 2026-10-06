@@ -1,0 +1,26 @@
+{
+  "mediaId": 36, "lang": "de", "level": "B",
+  "keyWord": "vergöttern",
+  "taps": [
+    { "phrase": "ihre getigerte Katze knuddeln", "target": "die Frau", "voice": "female" },
+    { "phrase": "in der Luft baumeln", "target": "die Katze", "voice": "female" },
+    { "phrase": "ihr Haustier auf den Arm nehmen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Blumentopf", "voice": "female" },
+    { "word": "die Katze", "voice": "female" },
+    { "word": "das Kissen", "voice": "female" },
+    { "word": "die Strickjacke", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "knuddelt", "ihre", "Katze,", "die", "sie", "vergöttert."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "ihre getigerte Katze" }, { "text": "knuddeln", "gap": true, "accept": ["knuddeln", "drücken", "umarmen"] } ] },
+    { "from": "taps", "parts": [ { "text": "in der Luft" }, { "text": "baumeln", "gap": true, "accept": ["baumeln"] } ] },
+    { "from": "taps", "parts": [ { "text": "ihr" }, { "text": "Haustier", "gap": true, "accept": ["Haustier"] }, { "text": "auf den Arm nehmen" } ] },
+    { "from": "answer", "parts": [ { "text": "knuddelt ihre Katze," }, { "text": "die sie" }, { "text": "vergöttert", "gap": true, "accept": ["vergöttert", "liebt", "anbetet"] } ] }
+  ],
+  "notes": "Ginger cat = 'getigerte Katze' (orange tabby; 'rote Katze' would also do). Taps 1 and 3 are both the woman (as in English) but differ: hugging vs picking up. Answer chip 'Katze,' carries the comma of the relative clause. 'knuddeln' is everyday B1 German; used in tap 1 and the answer for consistency."
+}

@@ -1,0 +1,117 @@
+{
+ "mediaId": 731,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le timbre",
+ "taps": [
+  {
+   "phrase": "tenir beaucoup de timbres",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "poster une lettre",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être posé sur la boîte aux lettres",
+   "target": "l'oiseau",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'oiseau",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "les timbres",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "poste",
+  "une",
+  "lettre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir beaucoup de"
+    },
+    {
+     "text": "timbres",
+     "gap": true,
+     "accept": [
+      "timbres"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "poster",
+     "gap": true,
+     "accept": [
+      "poster",
+      "envoyer"
+     ]
+    },
+    {
+     "text": "une lettre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posé sur la"
+    },
+    {
+     "text": "boîte",
+     "gap": true,
+     "accept": [
+      "boîte"
+     ]
+    },
+    {
+     "text": "aux lettres"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "poste une"
+    },
+    {
+     "text": "lettre",
+     "gap": true,
+     "accept": [
+      "lettre"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The bird is a crow ('le corbeau'), kept as 'l'oiseau' like the English 'bird'. 'boîte aux lettres' = the red pillar postbox."
+}

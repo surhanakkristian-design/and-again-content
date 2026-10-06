@@ -1,0 +1,119 @@
+{
+ "mediaId": 268,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "une enveloppe",
+ "taps": [
+  {
+   "phrase": "embrasser l'enveloppe",
+   "target": "la femme en rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir une bougie",
+   "target": "la femme en rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "dormir derrière la lampe",
+   "target": "le chat",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lampe",
+   "voice": "female"
+  },
+  {
+   "word": "le chat",
+   "voice": "female"
+  },
+  {
+   "word": "la bougie",
+   "voice": "female"
+  },
+  {
+   "word": "l'enveloppe",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en rouge ?",
+ "answer": [
+  "Elle",
+  "donne",
+  "un",
+  "bisou",
+  "à",
+  "l'enveloppe."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "embrasser",
+     "gap": true,
+     "accept": [
+      "embrasser"
+     ]
+    },
+    {
+     "text": "l'enveloppe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une"
+    },
+    {
+     "text": "bougie",
+     "gap": true,
+     "accept": [
+      "bougie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormir",
+     "gap": true,
+     "accept": [
+      "dormir"
+     ]
+    },
+    {
+     "text": "derrière la lampe"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "donne un"
+    },
+    {
+     "text": "bisou",
+     "gap": true,
+     "accept": [
+      "bisou",
+      "baiser"
+     ]
+    },
+    {
+     "text": "à l'enveloppe"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'l'enveloppe' is elided, so it is never a gap; it stands in tap row 1 and the answer row. Answer uses 'donner un bisou' so its row differs from tap row 1. Phrase-1 box also covers folding the letter and sealing; written for the kiss, as in English. Question asks 'Que fait' (English asks what she kisses)."
+}

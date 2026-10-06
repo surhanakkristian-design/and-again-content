@@ -1,0 +1,135 @@
+{
+ "mediaId": 210,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le client",
+ "taps": [
+  {
+   "phrase": "essayer un casque",
+   "target": "la cliente",
+   "voice": "female"
+  },
+  {
+   "phrase": "remplir un sac en papier",
+   "target": "le vendeur",
+   "voice": "male"
+  },
+  {
+   "phrase": "tenir deux boîtes",
+   "target": "la cliente",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cliente",
+   "voice": "female"
+  },
+  {
+   "word": "le sac",
+   "voice": "female"
+  },
+  {
+   "word": "la carte",
+   "voice": "female"
+  },
+  {
+   "word": "le casque",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la cliente ?",
+ "answer": [
+  "Elle",
+  "essaie",
+  "un",
+  "casque",
+  "blanc."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "essayer",
+     "gap": true,
+     "accept": [
+      "essayer"
+     ]
+    },
+    {
+     "text": "un casque"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "remplir un"
+    },
+    {
+     "text": "sac",
+     "gap": true,
+     "accept": [
+      "sac"
+     ]
+    },
+    {
+     "text": "en papier"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir deux"
+    },
+    {
+     "text": "boîtes",
+     "gap": true,
+     "accept": [
+      "boîtes"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "cliente",
+     "gap": true,
+     "accept": [
+      "cliente"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "essaie un"
+    },
+    {
+     "text": "casque",
+     "gap": true,
+     "accept": [
+      "casque"
+     ]
+    },
+    {
+     "text": "blanc"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord le client: the customer is a woman, so the noun pill and question use the feminine 'la cliente' (same entry). Tap 2: the man puts the box into the paper bag at the counter."
+}

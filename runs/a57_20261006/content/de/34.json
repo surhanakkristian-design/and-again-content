@@ -1,0 +1,125 @@
+{
+ "mediaId": 34,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Aktivität",
+ "taps": [
+  {
+   "phrase": "ein weißes T-Shirt tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen kurzen Bart haben",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf vier Beinen laufen",
+   "target": "der Hund",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Rasen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen der Mann und die Frau?",
+ "answer": [
+  "Sie",
+  "spielen",
+  "Badminton",
+  "auf",
+  "dem",
+  "Rasen."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein weißes"
+    },
+    {
+     "text": "T-Shirt",
+     "gap": true,
+     "accept": [
+      "T-Shirt"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen kurzen"
+    },
+    {
+     "text": "Bart",
+     "gap": true,
+     "accept": [
+      "Bart"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf vier"
+    },
+    {
+     "text": "Beinen",
+     "gap": true,
+     "accept": [
+      "Beinen",
+      "Pfoten"
+     ]
+    },
+    {
+     "text": "laufen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "spielen",
+     "gap": true,
+     "accept": [
+      "spielen"
+     ]
+    },
+    {
+     "text": "Badminton auf dem Rasen"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Aktivität' is not shown as a thing and not in the noun set, so no noun row; the activity shown is badminton. Grass of a garden lawn = 'der Rasen' (natural German), used in noun and answer. German also allows 'Sie spielen auf dem Rasen Badminton.' (second chip order). The dog appears only at the end; the man in a light blue T-shirt, so the white T-shirt fits only the woman."
+}

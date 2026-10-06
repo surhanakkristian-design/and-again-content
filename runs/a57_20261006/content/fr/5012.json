@@ -1,0 +1,26 @@
+{
+  "mediaId": 5012, "lang": "fr", "level": "A",
+  "keyWord": "la romance",
+  "taps": [
+    { "phrase": "rire avec son amie", "target": "la femme à l'écharpe", "voice": "female" },
+    { "phrase": "embrasser une vieille dame", "target": "le vieil homme", "voice": "male" },
+    { "phrase": "serrer une femme blonde dans ses bras", "target": "le jeune homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le béret", "voice": "female" },
+    { "word": "l'écharpe", "voice": "female" },
+    { "word": "le verre", "voice": "female" },
+    { "word": "la table", "voice": "female" }
+  ],
+  "question": "Que fait le vieil homme ?",
+  "answer": ["Il", "embrasse", "une", "vieille", "dame."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "rire", "gap": true, "accept": ["rire"] }, { "text": "avec son amie" } ] },
+    { "from": "taps", "parts": [ { "text": "embrasser une vieille" }, { "text": "dame", "gap": true, "accept": ["dame", "femme"] } ] },
+    { "from": "taps", "parts": [ { "text": "serrer", "gap": true, "accept": ["serrer"] }, { "text": "une femme blonde" }, { "text": "dans ses bras" } ] },
+    { "from": "answer", "parts": [ { "text": "embrasse", "gap": true, "accept": ["embrasse"] }, { "text": "une vieille dame" } ] }
+  ],
+  "notes": "Key word: 'la romance' in France first means a sentimental song or a (fictional) love story; for a loving relationship natives say 'une histoire d'amour' (romance in this sense is an anglicism, though understood). Kept as the database word; proposal: 'l'histoire d'amour' for fr. Noun 1: the English 'hat' is a red beret, so 'le béret' (the everyday word; 'chapeau' would sound wrong for it). Tap 3: in most boxed frames the young man dips and kisses the woman, ending in a hug; 'serrer ... dans ses bras' kept (holding her in his arms is true throughout) so it does not mean the same as tap 2 'embrasser'."
+}

@@ -1,0 +1,128 @@
+{
+  "mediaId": 8027,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Unmengen",
+  "taps": [
+    {
+      "phrase": "mit dem Tretroller fahren",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "die Arme hochreißen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "sich vor Lachen biegen",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Strohhut",
+      "voice": "male"
+    },
+    {
+      "word": "die Deckenlampe",
+      "voice": "male"
+    },
+    {
+      "word": "der Tretroller",
+      "voice": "male"
+    },
+    {
+      "word": "die Plastikbälle",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "fährt",
+    "mit",
+    "dem",
+    "Tretroller",
+    "durch",
+    "Unmengen",
+    "von",
+    "Bällen."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit dem"
+        },
+        {
+          "text": "Tretroller",
+          "gap": true,
+          "accept": [
+            "Tretroller",
+            "Roller"
+          ]
+        },
+        {
+          "text": "fahren"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Arme"
+        },
+        {
+          "text": "hochreißen",
+          "gap": true,
+          "accept": [
+            "hochreißen",
+            "hochwerfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich vor Lachen"
+        },
+        {
+          "text": "biegen",
+          "gap": true,
+          "accept": [
+            "biegen",
+            "krümmen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "fährt mit dem Tretroller durch"
+        },
+        {
+          "text": "Unmengen",
+          "gap": true,
+          "accept": [
+            "Unmengen",
+            "Massen"
+          ]
+        },
+        {
+          "text": "von Bällen"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: the woman covers her mouth only in the first frames; in most boxed frames she leans out and bends over laughing, so 'sich vor Lachen biegen' replaces 'to giggle behind her hands'. Key word 'die Unmengen' is not a noun of the set (no noun row); it is gapped in the answer row. German also allows 'Er fährt durch Unmengen von Bällen mit dem Tretroller' (marked second order)."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 6820,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el adulto",
+ "taps": [
+  {
+   "phrase": "acariciar el lomo de la cría",
+   "target": "el elefante adulto",
+   "voice": "female"
+  },
+  {
+   "phrase": "trotar junto al adulto",
+   "target": "la cría",
+   "voice": "female"
+  },
+  {
+   "phrase": "alzar su corta trompa",
+   "target": "la cría",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el adulto",
+   "voice": "female"
+  },
+  {
+   "word": "la acacia",
+   "voice": "female"
+  },
+  {
+   "word": "los colmillos",
+   "voice": "female"
+  },
+  {
+   "word": "la cría",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el elefante adulto?",
+ "answer": [
+  "Está",
+  "acariciando",
+  "el",
+  "lomo",
+  "de",
+  "la",
+  "cría."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acariciar el"
+    },
+    {
+     "text": "lomo",
+     "gap": true,
+     "accept": [
+      "lomo"
+     ]
+    },
+    {
+     "text": "de la cría"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "trotar junto al"
+    },
+    {
+     "text": "adulto",
+     "gap": true,
+     "accept": [
+      "adulto"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar su corta"
+    },
+    {
+     "text": "trompa",
+     "gap": true,
+     "accept": [
+      "trompa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "acariciando",
+     "gap": true,
+     "accept": [
+      "acariciando"
+     ]
+    },
+    {
+     "text": "el lomo de la cría"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el adulto' used as the noun at the adult elephant's slot and in phrase 2. Phrase 3 says 'corta trompa' because the adult elephant also curls its trunk up in some frames; only the calf's trunk is short. Answer drops the subject (natural in Spain)."
+}

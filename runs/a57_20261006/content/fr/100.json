@@ -1,0 +1,26 @@
+{
+  "mediaId": 100, "lang": "fr", "level": "A",
+  "keyWord": "les bottes",
+  "taps": [
+    { "phrase": "lacer sa botte", "target": "la femme", "voice": "female" },
+    { "phrase": "avoir quatre pattes", "target": "le chien", "voice": "female" },
+    { "phrase": "porter une veste grise", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "le chien", "voice": "female" },
+    { "word": "la botte", "voice": "female" },
+    { "word": "l'eau", "voice": "female" }
+  ],
+  "question": "Que porte la femme ?",
+  "answer": ["Elle", "porte", "des", "bottes", "marron."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "lacer", "gap": true, "accept": ["lacer"] }, { "text": "sa botte" } ] },
+    { "from": "taps", "parts": [ { "text": "avoir quatre" }, { "text": "pattes", "gap": true, "accept": ["pattes"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "grise" } ] },
+    { "from": "answer", "parts": [ { "text": "porte des" }, { "text": "bottes", "gap": true, "accept": ["bottes"] }, { "text": "marron" } ] }
+  ],
+  "notes": "The red box (phrase 1) covers the lacing at the start and then her boots walking through the mud and onto the rocks; 'lacer sa botte' is true of the opening frames only (the man also wears boots, so a walking phrase would not fit only her). Noun 3 is singular 'la botte' (English 'a boot', one boot at the slot); the key word 'les bottes' is in the answer. 'marron' is invariable."
+}

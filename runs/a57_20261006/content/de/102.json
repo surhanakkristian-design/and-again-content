@@ -1,0 +1,123 @@
+{
+  "mediaId": 102,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Langeweile",
+  "taps": [
+    {
+      "phrase": "sich im Plastikstuhl lümmeln",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "durch die Luft wirbeln",
+      "target": "die Socke",
+      "voice": "male"
+    },
+    {
+      "phrase": "sich auf seiner Fingerspitze drehen",
+      "target": "der Wäschesack",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Socke",
+      "voice": "male"
+    },
+    {
+      "word": "die Waschmaschinen",
+      "voice": "male"
+    },
+    {
+      "word": "der Trainingsanzug",
+      "voice": "male"
+    },
+    {
+      "word": "der Turnschuh",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "lümmelt",
+    "sich",
+    "im",
+    "Plastikstuhl."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich im"
+        },
+        {
+          "text": "Plastikstuhl"
+        },
+        {
+          "text": "lümmeln",
+          "gap": true,
+          "accept": [
+            "lümmeln",
+            "fläzen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch die Luft"
+        },
+        {
+          "text": "wirbeln",
+          "gap": true,
+          "accept": [
+            "wirbeln",
+            "fliegen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich auf seiner"
+        },
+        {
+          "text": "Fingerspitze",
+          "gap": true,
+          "accept": [
+            "Fingerspitze"
+          ]
+        },
+        {
+          "text": "drehen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "lümmelt sich im"
+        },
+        {
+          "text": "Plastikstuhl",
+          "gap": true,
+          "accept": [
+            "Plastikstuhl",
+            "Stuhl"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'die Langeweile' (boredom) is not a thing in the noun set and appears in no exercise, as in English; no noun row. Sock box (phrase 2): English 'dangle from his fingers' is true only in box_05 (3 frames); in most boxed frames the sock tumbles through the air (box_01), so 'durch die Luft wirbeln'; it also lies in the drum (box_04) and on his head (box_05/06). The feather also floats, but only in frames where the sock box is OFF. Man box (phrase 1) also covers floor/feet/finger/running frames; the slumped sitting is the majority."
+}

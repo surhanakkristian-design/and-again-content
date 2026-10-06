@@ -1,0 +1,26 @@
+{
+  "mediaId": 5108, "lang": "de", "level": "A",
+  "keyWord": "das Dorf",
+  "taps": [
+    { "phrase": "vom Boot aus winken", "target": "die Frau", "voice": "female" },
+    { "phrase": "aus einem Haus winken", "target": "die Kinder", "voice": "female" },
+    { "phrase": "zwischen den Trommeln tanzen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Haus", "voice": "female" },
+    { "word": "die Kinder", "voice": "female" },
+    { "word": "das Wasser", "voice": "female" },
+    { "word": "das Boot", "voice": "female" }
+  ],
+  "question": "Was machen die Kinder?",
+  "answer": ["Sie", "winken", "aus", "einem", "Haus."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "vom" }, { "text": "Boot", "gap": true, "accept": ["Boot"] }, { "text": "aus winken" } ] },
+    { "from": "taps", "parts": [ { "text": "aus einem Haus" }, { "text": "winken", "gap": true, "accept": ["winken"] } ] },
+    { "from": "taps", "parts": [ { "text": "zwischen den Trommeln" }, { "text": "tanzen", "gap": true, "accept": ["tanzen"] } ] },
+    { "from": "answer", "parts": [ { "text": "winken aus einem" }, { "text": "Haus", "gap": true, "accept": ["Haus"] } ] }
+  ],
+  "notes": "Key word 'das Dorf' is not among the nouns and not in any phrase (as in English, where 'village' is also absent); no noun row. The boxes for phrases 1 and 3 cover the woman for the whole clip (market, boat, drums); each phrase is true in its own scene. 'zwischen den Trommeln tanzen' = she dances in a ring of drums (English 'near the drums')."
+}

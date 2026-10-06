@@ -1,0 +1,117 @@
+{
+ "mediaId": 217,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la fléchette",
+ "taps": [
+  {
+   "phrase": "viser la cible",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "grignoter des chips",
+   "target": "l'homme aux chips",
+   "voice": "male"
+  },
+  {
+   "phrase": "se planter près du centre",
+   "target": "la fléchette",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fléchette",
+   "voice": "female"
+  },
+  {
+   "word": "la cible",
+   "voice": "female"
+  },
+  {
+   "word": "le mur en bois",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "vise",
+  "la",
+  "cible",
+  "avec",
+  "une",
+  "fléchette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "viser",
+     "gap": true,
+     "accept": [
+      "viser"
+     ]
+    },
+    {
+     "text": "la cible"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "grignoter",
+     "gap": true,
+     "accept": [
+      "grignoter",
+      "manger"
+     ]
+    },
+    {
+     "text": "des chips"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "planter",
+     "gap": true,
+     "accept": [
+      "planter",
+      "ficher"
+     ]
+    },
+    {
+     "text": "près du centre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "vise la cible avec une"
+    },
+    {
+     "text": "fléchette",
+     "gap": true,
+     "accept": [
+      "fléchette"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'la cible' = the dartboard (natural in context; 'la cible de fléchettes' would repeat the key word). 'le centre' for the bullseye (B-level everyday word; 'le mille' is rarer)."
+}

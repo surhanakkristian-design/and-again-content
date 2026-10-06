@@ -1,0 +1,126 @@
+{
+ "mediaId": 263,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "auftauchen",
+ "taps": [
+  {
+   "phrase": "aus dem See auftauchen",
+   "target": "die Schwimmerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Schwimmbrille hochschieben",
+   "target": "die Schwimmerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "in Ufernähe liegen",
+   "target": "das Ruderboot",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Schwimmbrille",
+   "voice": "female"
+  },
+  {
+   "word": "das Ruderboot",
+   "voice": "female"
+  },
+  {
+   "word": "das Spiegelbild",
+   "voice": "female"
+  },
+  {
+   "word": "die Berge",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Schwimmerin?",
+ "answer": [
+  "Sie",
+  "taucht",
+  "aus",
+  "dem",
+  "See",
+  "auf."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus dem See"
+    },
+    {
+     "text": "auftauchen",
+     "gap": true,
+     "accept": [
+      "auftauchen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Schwimmbrille",
+     "gap": true,
+     "accept": [
+      "Schwimmbrille",
+      "Brille"
+     ]
+    },
+    {
+     "text": "hochschieben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in"
+    },
+    {
+     "text": "Ufernähe",
+     "gap": true,
+     "accept": [
+      "Ufernähe"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "taucht aus dem"
+    },
+    {
+     "text": "See",
+     "gap": true,
+     "accept": [
+      "See",
+      "Wasser"
+     ]
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the rowing boat lies still near the shore (verifier: 'in Ufernähe liegen' instead of 'in Ufernähe treiben', since no drifting is visible; Ufernähe keeps the B-level word)."
+}

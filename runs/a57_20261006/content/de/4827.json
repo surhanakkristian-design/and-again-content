@@ -1,0 +1,120 @@
+{
+  "mediaId": 4827,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Farbe",
+  "taps": [
+    {
+      "phrase": "einen Sonnenuntergang malen",
+      "target": "die Hand",
+      "voice": "male"
+    },
+    {
+      "phrase": "einen Pinsel halten",
+      "target": "die Hand",
+      "voice": "male"
+    },
+    {
+      "phrase": "orange Farbe benutzen",
+      "target": "die Hand",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Wolken",
+      "voice": "male"
+    },
+    {
+      "word": "die Farbe",
+      "voice": "male"
+    },
+    {
+      "word": "der Pinsel",
+      "voice": "male"
+    },
+    {
+      "word": "die Hand",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die Person?",
+  "answer": [
+    "Die",
+    "Person",
+    "malt",
+    "einen",
+    "Sonnenuntergang."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Sonnenuntergang"
+        },
+        {
+          "text": "malen",
+          "gap": true,
+          "accept": [
+            "malen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Pinsel",
+          "gap": true,
+          "accept": [
+            "Pinsel"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "orange"
+        },
+        {
+          "text": "Farbe",
+          "gap": true,
+          "accept": [
+            "Farbe"
+          ]
+        },
+        {
+          "text": "benutzen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "malt einen"
+        },
+        {
+          "text": "Sonnenuntergang",
+          "gap": true,
+          "accept": [
+            "Sonnenuntergang"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 2 'einen Pinsel halten': in the first half of the boxed frames the hand holds a palette knife (der Spachtel), the brush only from box_02 frame 3 on; kept the English target thing. Answer: 'Die Person malt einen Sonnenuntergang' instead of 'mit oranger Farbe' (the inflected 'oranger' is colloquial); 'Farbe' stays in tap 3 and noun 2. No noun row: 'Farbe' is in tap row 3."
+}

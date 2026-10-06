@@ -1,0 +1,115 @@
+{
+ "mediaId": 395,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la casa",
+ "taps": [
+  {
+   "phrase": "llevar una caja",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "sostener las llaves",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta de rayas",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la casa",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  },
+  {
+   "word": "el camino",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué lleva la mujer?",
+ "answer": [
+  "Lleva",
+  "una",
+  "caja",
+  "a",
+  "la",
+  "casa."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener las"
+    },
+    {
+     "text": "llaves",
+     "gap": true,
+     "accept": [
+      "llaves"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una camiseta de"
+    },
+    {
+     "text": "rayas",
+     "gap": true,
+     "accept": [
+      "rayas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Lleva una caja a la"
+    },
+    {
+     "text": "casa",
+     "gap": true,
+     "accept": [
+      "casa"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Subject dropped in the answer (natural); answer row = whole sentence. 'llevar' is used for carrying (tap 1) and wearing (tap 3), both standard. No noun row: 'casa' is in the answer row."
+}

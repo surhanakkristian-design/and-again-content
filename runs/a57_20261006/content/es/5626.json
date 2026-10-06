@@ -1,0 +1,122 @@
+{
+  "mediaId": 5626,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "estar averiado",
+  "taps": [
+    {
+      "phrase": "estar arrodillado en la acera",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "estar sentado entre las naranjas",
+      "target": "el gato",
+      "voice": "male"
+    },
+    {
+      "phrase": "rodar por la acera",
+      "target": "la naranja suelta",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el gato",
+      "voice": "male"
+    },
+    {
+      "word": "el tranvía",
+      "voice": "male"
+    },
+    {
+      "word": "el robot de reparto",
+      "voice": "male"
+    },
+    {
+      "word": "los aerogeneradores",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué hay dentro del robot de reparto?",
+  "answer": [
+    "Hay",
+    "un",
+    "gato",
+    "sentado",
+    "entre",
+    "las",
+    "naranjas."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar"
+        },
+        {
+          "text": "arrodillado",
+          "gap": true,
+          "accept": [
+            "arrodillado"
+          ]
+        },
+        {
+          "text": "en la acera"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar sentado entre las"
+        },
+        {
+          "text": "naranjas",
+          "gap": true,
+          "accept": [
+            "naranjas"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "rodar",
+          "gap": true,
+          "accept": [
+            "rodar"
+          ]
+        },
+        {
+          "text": "por la acera"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Hay un"
+        },
+        {
+          "text": "gato",
+          "gap": true,
+          "accept": [
+            "gato"
+          ]
+        },
+        {
+          "text": "sentado entre las naranjas"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer is an existential 'Hay...' sentence (what a native says); it has no subject, so the recall row is the whole sentence. Key word 'estar averiado': the clip shows the robot with its lid open and a cat inside, not clearly a broken machine (same issue as English). Last tap-1 frame shows the man sitting down; phrase written for the kneeling in most boxes. Verifier: taps 1-2 changed from 'arrodillarse'/'sentarse' (the act of kneeling/sitting down) to the state the clip shows ('estar arrodillado', 'estar sentado'), matching 'sentado' in the answer."
+}

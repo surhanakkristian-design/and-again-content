@@ -1,0 +1,113 @@
+{
+  "mediaId": 28,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Fach",
+  "taps": [
+    {
+      "phrase": "in die Kamera lächeln",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Tisch liegen",
+      "target": "die Bücher",
+      "voice": "female"
+    },
+    {
+      "phrase": "Klavier spielen",
+      "target": "die Hände am Klavier",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Haare",
+      "voice": "female"
+    },
+    {
+      "word": "die Jacke",
+      "voice": "female"
+    },
+    {
+      "word": "die Bücher",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "lächelt",
+    "in",
+    "die",
+    "Kamera."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in die"
+        },
+        {
+          "text": "Kamera",
+          "gap": true,
+          "accept": [
+            "Kamera"
+          ]
+        },
+        {
+          "text": "lächeln"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem Tisch"
+        },
+        {
+          "text": "liegen",
+          "gap": true,
+          "accept": [
+            "liegen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Klavier",
+          "gap": true,
+          "accept": [
+            "Klavier"
+          ]
+        },
+        {
+          "text": "spielen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "lächelt",
+          "gap": true,
+          "accept": [
+            "lächelt"
+          ]
+        },
+        {
+          "text": "in die Kamera"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word das Fach is not shown as a thing in the clip (subjects only appear as quick cuts: maths, music, chemistry, art) and no exercise text contains it, same as English. 'die Jacke' for the cream blazer (A-level everyday word; der Blazer would be more exact). Tap 1: box also covers frames where she leans on the books and talks; she smiles into the camera in most of them."
+}

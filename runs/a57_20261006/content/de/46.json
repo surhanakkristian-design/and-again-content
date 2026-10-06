@@ -1,0 +1,123 @@
+{
+  "mediaId": 46,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Apfel",
+  "taps": [
+    {
+      "phrase": "einen Apfel aufschneiden",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen schwarzen Bart haben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf einer Kiste stehen",
+      "target": "der Vogel",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Mann",
+      "voice": "male"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "der Vogel",
+      "voice": "female"
+    },
+    {
+      "word": "der Apfel",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "isst",
+    "einen",
+    "roten",
+    "Apfel."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Apfel",
+          "gap": true,
+          "accept": [
+            "Apfel"
+          ]
+        },
+        {
+          "text": "aufschneiden"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen schwarzen"
+        },
+        {
+          "text": "Bart",
+          "gap": true,
+          "accept": [
+            "Bart"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf einer"
+        },
+        {
+          "text": "Kiste",
+          "gap": true,
+          "accept": [
+            "Kiste"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "isst",
+          "gap": true,
+          "accept": [
+            "isst"
+          ]
+        },
+        {
+          "text": "einen roten Apfel"
+        }
+      ]
+    }
+  ],
+  "notes": "Tap box 1 covers the whole clip (picking, polishing, biting, then cutting); kept 'aufschneiden' as in English because it is the only apple action the man never does (he also eats/bites). The bird is a magpie; 'der Vogel' kept as in English. No noun row: 'der Apfel' is already in tap row 1 and the answer row."
+}

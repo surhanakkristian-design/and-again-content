@@ -1,0 +1,123 @@
+{
+ "mediaId": 5626,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "être en panne",
+ "taps": [
+  {
+   "phrase": "être agenouillé sur le trottoir",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis parmi les oranges",
+   "target": "le chat",
+   "voice": "male"
+  },
+  {
+   "phrase": "rouler sur le trottoir",
+   "target": "l'orange tombée",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chat",
+   "voice": "male"
+  },
+  {
+   "word": "le tramway",
+   "voice": "male"
+  },
+  {
+   "word": "le robot de livraison",
+   "voice": "male"
+  },
+  {
+   "word": "les éoliennes",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'y a-t-il dans le robot de livraison ?",
+ "answer": [
+  "Un",
+  "chat",
+  "est",
+  "assis",
+  "parmi",
+  "les",
+  "oranges."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "agenouillé",
+     "gap": true,
+     "accept": [
+      "agenouillé",
+      "à genoux"
+     ]
+    },
+    {
+     "text": "sur le trottoir"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "assis",
+     "gap": true,
+     "accept": [
+      "assis"
+     ]
+    },
+    {
+     "text": "parmi les oranges"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rouler sur le"
+    },
+    {
+     "text": "trottoir",
+     "gap": true,
+     "accept": [
+      "trottoir"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "est assis parmi les"
+    },
+    {
+     "text": "oranges",
+     "gap": true,
+     "accept": [
+      "oranges"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'être en panne': the clip does not clearly show a broken robot (it opens normally, a cat sits inside instead of the delivery); the word appears in no exercise. Phrase 1: in the last frames the man sits down on the pavement; he kneels in most boxed frames. Phrase 3: the orange rolls in the early boxed frames and then lies still. Answer subject 'Un chat' (noun phrase), so the recall row starts at 'est'."
+}

@@ -1,0 +1,123 @@
+{
+ "mediaId": 264,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "une émotion",
+ "taps": [
+  {
+   "phrase": "serrer un bouquet contre son cœur",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'appuyer sur la rambarde",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "pousser un chariot à bagages",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bouquet",
+   "voice": "female"
+  },
+  {
+   "word": "le gilet",
+   "voice": "female"
+  },
+  {
+   "word": "la rambarde",
+   "voice": "female"
+  },
+  {
+   "word": "le jean",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient la femme ?",
+ "answer": [
+  "Elle",
+  "serre",
+  "un",
+  "bouquet",
+  "de",
+  "fleurs",
+  "jaunes."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "serrer",
+     "gap": true,
+     "accept": [
+      "serrer"
+     ]
+    },
+    {
+     "text": "un bouquet contre son cœur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'appuyer sur la"
+    },
+    {
+     "text": "rambarde",
+     "gap": true,
+     "accept": [
+      "rambarde",
+      "barrière"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pousser un"
+    },
+    {
+     "text": "chariot",
+     "gap": true,
+     "accept": [
+      "chariot"
+     ]
+    },
+    {
+     "text": "à bagages"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "serre un"
+    },
+    {
+     "text": "bouquet",
+     "gap": true,
+     "accept": [
+      "bouquet"
+     ]
+    },
+    {
+     "text": "de fleurs jaunes"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'une émotion' is not a visible thing, so it appears in no exercise. English 'jeans' -> 'le jean' (French singular). Phrase 1 written for the boxed frames where she holds the bouquet at her chest; in the hug frames she still holds it."
+}

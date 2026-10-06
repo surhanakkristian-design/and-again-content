@@ -1,0 +1,126 @@
+{
+ "mediaId": 4365,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "frais",
+ "taps": [
+  {
+   "phrase": "sortir des petits pains frais du four",
+   "target": "la vieille dame",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir une tarte aux fruits rouges",
+   "target": "la jeune femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un tablier rouge",
+   "target": "la jeune femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "la tarte",
+   "voice": "female"
+  },
+  {
+   "word": "les petits pains",
+   "voice": "female"
+  }
+ ],
+ "question": "Que sort la vieille dame du four ?",
+ "answer": [
+  "Elle",
+  "sort",
+  "des",
+  "petits",
+  "pains",
+  "frais",
+  "du",
+  "four."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sortir des petits pains"
+    },
+    {
+     "text": "frais",
+     "gap": true,
+     "accept": [
+      "frais"
+     ]
+    },
+    {
+     "text": "du four"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une"
+    },
+    {
+     "text": "tarte",
+     "gap": true,
+     "accept": [
+      "tarte"
+     ]
+    },
+    {
+     "text": "aux fruits rouges"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "tablier",
+     "gap": true,
+     "accept": [
+      "tablier"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sort",
+     "gap": true,
+     "accept": [
+      "sort"
+     ]
+    },
+    {
+     "text": "des petits pains frais du four"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: 'sortir ... du four' instead of 'porter' (English 'carry'), because 'porter' would clash with 'porter un tablier' and the old woman also wears an apron; the question 'Que porte la vieille dame ?' would be ambiguous (carry/wear). The red box 1 also covers the later frames where the old woman only cheers by the table; the phrase fits the first, oven frames. 'la femme' = the young woman at the slot."
+}

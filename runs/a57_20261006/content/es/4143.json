@@ -1,0 +1,123 @@
+{
+ "mediaId": 4143,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el cubo",
+ "taps": [
+  {
+   "phrase": "mirar fijamente hacia arriba",
+   "target": "el mapache",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar arrugada en el fondo",
+   "target": "la bolsa verde",
+   "voice": "male"
+  },
+  {
+   "phrase": "asomar por detrás del cubo",
+   "target": "los arbustos",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el mapache",
+   "voice": "male"
+  },
+  {
+   "word": "la bolsa de basura",
+   "voice": "male"
+  },
+  {
+   "word": "el cubo de basura",
+   "voice": "male"
+  },
+  {
+   "word": "los arbustos",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está intentando hacer el mapache?",
+ "answer": [
+  "Está",
+  "intentando",
+  "escaparse",
+  "del",
+  "cubo",
+  "de",
+  "basura."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar",
+     "gap": true,
+     "accept": [
+      "mirar"
+     ]
+    },
+    {
+     "text": "fijamente hacia arriba"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "arrugada",
+     "gap": true,
+     "accept": [
+      "arrugada"
+     ]
+    },
+    {
+     "text": "en el fondo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomar por detrás del"
+    },
+    {
+     "text": "cubo",
+     "gap": true,
+     "accept": [
+      "cubo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está intentando"
+    },
+    {
+     "text": "escaparse",
+     "gap": true,
+     "accept": [
+      "escaparse",
+      "salir"
+     ]
+    },
+    {
+     "text": "del cubo de basura"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 is not 'intentar escaparse' (that is the answer): in most boxed frames the raccoon sits and stares up at the camera; the escape attempt (paws up the wall) is only a few frames. Noun 3 is 'el cubo de basura' (contains the key word 'cubo'): 'el cubo' alone reads as 'bucket' in Spain; a big wheelie bin like this one is also called 'el contenedor' - proposal: keep 'el cubo' (de basura). No nouns recall row: tap 3 already contains 'cubo'."
+}

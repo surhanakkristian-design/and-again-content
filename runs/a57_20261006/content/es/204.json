@@ -1,0 +1,122 @@
+{
+ "mediaId": 204,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la muleta",
+ "taps": [
+  {
+   "phrase": "caminar con muletas",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "sostener una carpeta",
+   "target": "la enfermera",
+   "voice": "female"
+  },
+  {
+   "phrase": "alzar el puño cerrado",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la enfermera",
+   "voice": "female"
+  },
+  {
+   "word": "la muleta",
+   "voice": "male"
+  },
+  {
+   "word": "la bota ortopédica",
+   "voice": "male"
+  },
+  {
+   "word": "el picaporte",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el chico?",
+ "answer": [
+  "El",
+  "chico",
+  "camina",
+  "apoyado",
+  "en",
+  "dos",
+  "muletas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar con"
+    },
+    {
+     "text": "muletas",
+     "gap": true,
+     "accept": [
+      "muletas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sostener",
+     "gap": true,
+     "accept": [
+      "sostener",
+      "sujetar",
+      "llevar"
+     ]
+    },
+    {
+     "text": "una carpeta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar el"
+    },
+    {
+     "text": "puño",
+     "gap": true,
+     "accept": [
+      "puño"
+     ]
+    },
+    {
+     "text": "cerrado"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "camina",
+     "gap": true,
+     "accept": [
+      "camina",
+      "anda"
+     ]
+    },
+    {
+     "text": "apoyado en dos muletas"
+    }
+   ]
+  }
+ ],
+ "notes": "Clipboard = 'la carpeta' (carpeta con pinza); the nurse is only partly visible at the left edge in the boxed frames. Door handle = 'el picaporte' (Spain; 'la manilla' also used)."
+}

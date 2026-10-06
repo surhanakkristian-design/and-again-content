@@ -1,0 +1,134 @@
+{
+ "mediaId": 280,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Kätzchen",
+ "taps": [
+  {
+   "phrase": "in die Kamera schauen",
+   "target": "das Kätzchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf einem Bett sitzen",
+   "target": "das Kätzchen",
+   "voice": "female"
+  },
+  {
+   "phrase": "ganz nah herankommen",
+   "target": "das Kätzchen",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Kätzchen",
+   "voice": "female"
+  },
+  {
+   "word": "das Bett",
+   "voice": "female"
+  },
+  {
+   "word": "das Handy",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht das Kätzchen?",
+ "answer": [
+  "Es",
+  "schaut",
+  "in",
+  "die",
+  "Kamera."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die"
+    },
+    {
+     "text": "Kamera",
+     "gap": true,
+     "accept": [
+      "Kamera"
+     ]
+    },
+    {
+     "text": "schauen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Bett",
+     "gap": true,
+     "accept": [
+      "Bett"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ganz nah"
+    },
+    {
+     "text": "herankommen",
+     "gap": true,
+     "accept": [
+      "herankommen",
+      "rankommen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Kätzchen",
+     "gap": true,
+     "accept": [
+      "Kätzchen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schaut",
+     "gap": true,
+     "accept": [
+      "schaut",
+      "guckt",
+      "sieht"
+     ]
+    },
+    {
+     "text": "in die Kamera"
+    }
+   ]
+  }
+ ],
+ "notes": "All three taps target the kitten, as in English."
+}

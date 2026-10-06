@@ -1,0 +1,127 @@
+{
+  "mediaId": 33,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Schmerz",
+  "taps": [
+    {
+      "phrase": "sich die geschwollene Wange halten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "vor sich hin dampfen",
+      "target": "der Becher",
+      "voice": "male"
+    },
+    {
+      "phrase": "in einem Tontopf wachsen",
+      "target": "die Topfpflanze",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Topfpflanze",
+      "voice": "male"
+    },
+    {
+      "word": "der Schnurrbart",
+      "voice": "male"
+    },
+    {
+      "word": "das Kühlpack",
+      "voice": "male"
+    },
+    {
+      "word": "der Becher",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Mann?",
+  "answer": [
+    "Er",
+    "hält",
+    "sich",
+    "vor",
+    "Schmerzen",
+    "die",
+    "geschwollene",
+    "Wange."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich die"
+        },
+        {
+          "text": "geschwollene",
+          "gap": true,
+          "accept": [
+            "geschwollene",
+            "dicke"
+          ]
+        },
+        {
+          "text": "Wange halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "vor sich hin"
+        },
+        {
+          "text": "dampfen",
+          "gap": true,
+          "accept": [
+            "dampfen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in einem"
+        },
+        {
+          "text": "Tontopf",
+          "gap": true,
+          "accept": [
+            "Tontopf"
+          ]
+        },
+        {
+          "text": "wachsen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält sich vor"
+        },
+        {
+          "text": "Schmerzen",
+          "gap": true,
+          "accept": [
+            "Schmerzen"
+          ]
+        },
+        {
+          "text": "die geschwollene Wange"
+        }
+      ]
+    }
+  ],
+  "notes": "Answer chips allow a second German order ('Er hält sich die geschwollene Wange vor Schmerzen.' is also grammatical, though less natural); kept for the key word Schmerzen. Tap 1: in two boxed frames he sips from the mug instead of holding his cheek; he holds the cheek in most. No noun row: der Schmerz is not a noun of the set."
+}

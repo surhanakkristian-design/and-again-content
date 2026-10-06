@@ -1,0 +1,123 @@
+{
+ "mediaId": 5215,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el ciclismo",
+ "taps": [
+  {
+   "phrase": "pedalear con fuerza",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "cruzar un puente en bici",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta de colores",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la montaña",
+   "voice": "female"
+  },
+  {
+   "word": "el casco",
+   "voice": "female"
+  },
+  {
+   "word": "la bici",
+   "voice": "female"
+  },
+  {
+   "word": "la carretera",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "Va",
+  "en",
+  "bici",
+  "por",
+  "la",
+  "carretera."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pedalear",
+     "gap": true,
+     "accept": [
+      "pedalear"
+     ]
+    },
+    {
+     "text": "con fuerza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cruzar",
+     "gap": true,
+     "accept": [
+      "cruzar"
+     ]
+    },
+    {
+     "text": "un puente en bici"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta",
+      "maillot"
+     ]
+    },
+    {
+     "text": "de colores"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Va en"
+    },
+    {
+     "text": "bici",
+     "gap": true,
+     "accept": [
+      "bici",
+      "bicicleta"
+     ]
+    },
+    {
+     "text": "por la carretera"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: English 'ride at the front' is not true - other riders are ahead of her on the road - so 'pedalear con fuerza' (she pedals hard, fast; the riders far ahead are tiny and not boxed). All three boxes are the same woman. Key word 'el ciclismo' (the sport) is not a noun of the set and is not forced into the texts; the clip shows 'ir en bici'. 'Por la carretera va en bici' is possible but marked; one natural order."
+}

@@ -1,0 +1,128 @@
+{
+ "mediaId": 47,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Arena",
+ "taps": [
+  {
+   "phrase": "die Faust in die Luft recken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "sein Popcorn in die Luft werfen",
+   "target": "der Junge",
+   "voice": "male"
+  },
+  {
+   "phrase": "über dem Spielfeld hängen",
+   "target": "die Anzeigetafel",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Anzeigetafel",
+   "voice": "male"
+  },
+  {
+   "word": "die Zuschauer",
+   "voice": "male"
+  },
+  {
+   "word": "das Spielfeld",
+   "voice": "male"
+  },
+  {
+   "word": "das Popcorn",
+   "voice": "male"
+  }
+ ],
+ "question": "Wo sind der Mann und der Junge?",
+ "answer": [
+  "Sie",
+  "sind",
+  "in",
+  "einer",
+  "vollbesetzten",
+  "Arena."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Faust",
+     "gap": true,
+     "accept": [
+      "Faust"
+     ]
+    },
+    {
+     "text": "in die Luft recken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sein"
+    },
+    {
+     "text": "Popcorn",
+     "gap": true,
+     "accept": [
+      "Popcorn"
+     ]
+    },
+    {
+     "text": "in die Luft werfen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über dem"
+    },
+    {
+     "text": "Spielfeld",
+     "gap": true,
+     "accept": [
+      "Spielfeld"
+     ]
+    },
+    {
+     "text": "hängen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sind in einer"
+    },
+    {
+     "text": "vollbesetzten"
+    },
+    {
+     "text": "Arena",
+     "gap": true,
+     "accept": [
+      "Arena",
+      "Halle"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word die Arena (not among the nouns) appears in the model answer and is gapped there. The boy also raises his arm in the last frames, but only the man clenches a fist."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 7782,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "näher",
+ "taps": [
+  {
+   "phrase": "seinen Rüssel ausstrecken",
+   "target": "der Elefant",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich köstlich amüsieren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine Banane hinhalten",
+   "target": "die Hand mit der Banane",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Kronleuchter",
+   "voice": "female"
+  },
+  {
+   "word": "der Rüssel",
+   "voice": "female"
+  },
+  {
+   "word": "die Croissants",
+   "voice": "female"
+  },
+  {
+   "word": "die Tischdecke",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Elefant?",
+ "answer": [
+  "Er",
+  "streckt",
+  "seinen",
+  "Rüssel",
+  "immer",
+  "näher",
+  "zur",
+  "Banane."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "seinen Rüssel"
+    },
+    {
+     "text": "ausstrecken",
+     "gap": true,
+     "accept": [
+      "ausstrecken",
+      "strecken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich köstlich"
+    },
+    {
+     "text": "amüsieren",
+     "gap": true,
+     "accept": [
+      "amüsieren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Banane",
+     "gap": true,
+     "accept": [
+      "Banane"
+     ]
+    },
+    {
+     "text": "hinhalten"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "streckt seinen Rüssel immer"
+    },
+    {
+     "text": "näher",
+     "gap": true,
+     "accept": [
+      "näher"
+     ]
+    },
+    {
+     "text": "zur Banane"
+    }
+   ]
+  }
+ ],
+ "notes": "answerVoice kept female as in English (subject 'er' = der Elefant, grammatical gender only, English 'it'). Verifier: answer 'an die Banane heran' -> 'zur Banane' ('heranstrecken' is not idiomatic)."
+}

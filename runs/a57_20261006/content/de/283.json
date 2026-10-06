@@ -1,0 +1,125 @@
+{
+ "mediaId": 283,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Stoff",
+ "taps": [
+  {
+   "phrase": "den gemusterten Stoff ausrollen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Stoff mit einer Schere zuschneiden",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den gefalteten Stoff an sich drücken",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Ohrring",
+   "voice": "female"
+  },
+  {
+   "word": "der Stoff",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  },
+  {
+   "word": "das Maßband",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "schneidet",
+  "den",
+  "Stoff",
+  "mit",
+  "einer",
+  "Schere",
+  "zu."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den gemusterten Stoff"
+    },
+    {
+     "text": "ausrollen",
+     "gap": true,
+     "accept": [
+      "ausrollen",
+      "abrollen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Stoff mit einer Schere"
+    },
+    {
+     "text": "zuschneiden",
+     "gap": true,
+     "accept": [
+      "zuschneiden",
+      "schneiden"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den gefalteten"
+    },
+    {
+     "text": "Stoff",
+     "gap": true,
+     "accept": [
+      "Stoff"
+     ]
+    },
+    {
+     "text": "an sich drücken"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schneidet den Stoff mit einer"
+    },
+    {
+     "text": "Schere",
+     "gap": true,
+     "accept": [
+      "Schere"
+     ]
+    },
+    {
+     "text": "zu"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'cloth' and 'fabric' both = der Stoff (one thing, one word). Phrase 2 adds 'den Stoff' as object (zuschneiden needs one). German also allows 'Er schneidet mit einer Schere den Stoff zu.' (second chip order)."
+}

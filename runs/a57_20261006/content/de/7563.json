@@ -1,0 +1,122 @@
+{
+ "mediaId": 7563,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "aufbrechen",
+ "taps": [
+  {
+   "phrase": "mit dem Motorrad aufbrechen",
+   "target": "der Fahrer",
+   "voice": "male"
+  },
+  {
+   "phrase": "im Beiwagen sitzen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "am Gartentor jubeln",
+   "target": "die Familie",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Landhaus",
+   "voice": "male"
+  },
+  {
+   "word": "das Gartentor",
+   "voice": "male"
+  },
+  {
+   "word": "der Schlafsack",
+   "voice": "male"
+  },
+  {
+   "word": "der Kies",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Fahrer?",
+ "answer": [
+  "Er",
+  "bricht",
+  "mit",
+  "dem",
+  "Motorrad",
+  "auf."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit dem Motorrad"
+    },
+    {
+     "text": "aufbrechen",
+     "gap": true,
+     "accept": [
+      "aufbrechen",
+      "losfahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Beiwagen",
+     "gap": true,
+     "accept": [
+      "Beiwagen"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Gartentor"
+    },
+    {
+     "text": "jubeln",
+     "gap": true,
+     "accept": [
+      "jubeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bricht mit dem"
+    },
+    {
+     "text": "Motorrad",
+     "gap": true,
+     "accept": [
+      "Motorrad"
+     ]
+    },
+    {
+     "text": "auf"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 uses the key word instead of 'lenken' so the rider's phrase is unique and teaches 'aufbrechen'. Cottage = 'das Landhaus' (no everyday German word for a stone cottage)."
+}

@@ -1,0 +1,118 @@
+{
+  "mediaId": 4,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "le cours",
+  "taps": [
+    {
+      "phrase": "boire du café glacé",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "taper sur un ordinateur portable",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "pousser dans un pot",
+      "target": "la plante",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'ordinateur portable",
+      "voice": "female"
+    },
+    {
+      "word": "le verre",
+      "voice": "female"
+    },
+    {
+      "word": "la plante",
+      "voice": "female"
+    },
+    {
+      "word": "la table",
+      "voice": "female"
+    }
+  ],
+  "question": "Que fait la femme ?",
+  "answer": [
+    "Elle",
+    "boit",
+    "du",
+    "café",
+    "à",
+    "table."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "boire",
+          "gap": true,
+          "accept": [
+            "boire"
+          ]
+        },
+        {
+          "text": "du café glacé"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "taper",
+          "gap": true,
+          "accept": [
+            "taper"
+          ]
+        },
+        {
+          "text": "sur un ordinateur portable"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "pousser dans un"
+        },
+        {
+          "text": "pot",
+          "gap": true,
+          "accept": [
+            "pot"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "boit du"
+        },
+        {
+          "text": "café",
+          "gap": true,
+          "accept": [
+            "café"
+          ]
+        },
+        {
+          "text": "à table"
+        }
+      ]
+    }
+  ],
+  "notes": "The key word 'le cours' is not a visible thing (online course only in the transcript); no noun row. 'à table' is the natural French for 'at the table'."
+}

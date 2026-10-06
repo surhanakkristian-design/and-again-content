@@ -1,0 +1,123 @@
+{
+  "mediaId": 269,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la envidia",
+  "taps": [
+    {
+      "phrase": "mirar por la ventanilla con envidia",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "pasar pedaleando junto al autobús",
+      "target": "la ciclista",
+      "voice": "female"
+    },
+    {
+      "phrase": "descansar sobre su regazo",
+      "target": "el manillar oxidado",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "la ciclista",
+      "voice": "female"
+    },
+    {
+      "word": "el pelo rizado",
+      "voice": "female"
+    },
+    {
+      "word": "la camiseta sin mangas",
+      "voice": "female"
+    },
+    {
+      "word": "el manillar",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué está haciendo la chica del pelo rizado?",
+  "answer": [
+    "Está",
+    "mirando",
+    "a",
+    "la",
+    "ciclista",
+    "con",
+    "envidia."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mirar por la"
+        },
+        {
+          "text": "ventanilla",
+          "gap": true,
+          "accept": [
+            "ventanilla",
+            "ventana"
+          ]
+        },
+        {
+          "text": "con envidia"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "pasar"
+        },
+        {
+          "text": "pedaleando",
+          "gap": true,
+          "accept": [
+            "pedaleando"
+          ]
+        },
+        {
+          "text": "junto al autobús"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "descansar sobre su"
+        },
+        {
+          "text": "regazo",
+          "gap": true,
+          "accept": [
+            "regazo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Está mirando a la ciclista con"
+        },
+        {
+          "text": "envidia",
+          "gap": true,
+          "accept": [
+            "envidia"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "The cyclist is a woman (pink top, long hair): 'la ciclista'. Phrase 1 carries the key word 'con envidia' (B-level collocation). Answer: 'con envidia' could also stand before 'a la ciclista' ('Está mirando con envidia a la ciclista'), both natural; the given order is the default. No noun row: 'la envidia' is not a noun of the set."
+}

@@ -1,0 +1,129 @@
+{
+ "mediaId": 212,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le danseur",
+ "taps": [
+  {
+   "phrase": "étirer sa jambe",
+   "target": "la danseuse",
+   "voice": "female"
+  },
+  {
+   "phrase": "danser dans un studio",
+   "target": "la danseuse",
+   "voice": "female"
+  },
+  {
+   "phrase": "sourire à la caméra",
+   "target": "la danseuse",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la danseuse",
+   "voice": "female"
+  },
+  {
+   "word": "le miroir",
+   "voice": "female"
+  },
+  {
+   "word": "l'enceinte",
+   "voice": "female"
+  },
+  {
+   "word": "le sol",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la danseuse ?",
+ "answer": [
+  "Elle",
+  "danse",
+  "dans",
+  "un",
+  "studio."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "étirer sa"
+    },
+    {
+     "text": "jambe",
+     "gap": true,
+     "accept": [
+      "jambe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "danser",
+     "gap": true,
+     "accept": [
+      "danser"
+     ]
+    },
+    {
+     "text": "dans un studio"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sourire",
+     "gap": true,
+     "accept": [
+      "sourire"
+     ]
+    },
+    {
+     "text": "à la caméra"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "danseuse",
+     "gap": true,
+     "accept": [
+      "danseuse"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "danse dans un"
+    },
+    {
+     "text": "studio",
+     "gap": true,
+     "accept": [
+      "studio"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord le danseur: the dancer is a woman, so the pill and question use the feminine 'la danseuse' (same entry). Gaps of tap 2 and the answer row differ so the blanked rows are not identical."
+}

@@ -1,0 +1,119 @@
+{
+ "mediaId": 15,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le cachet",
+ "taps": [
+  {
+   "phrase": "boire un verre d'eau",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "verser de l'eau",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être dans la main",
+   "target": "le cachet",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le cachet",
+   "voice": "male"
+  },
+  {
+   "word": "la main",
+   "voice": "male"
+  },
+  {
+   "word": "l'arbre",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "prend",
+  "un",
+  "cachet",
+  "avec",
+  "de",
+  "l'eau."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire un"
+    },
+    {
+     "text": "verre",
+     "gap": true,
+     "accept": [
+      "verre"
+     ]
+    },
+    {
+     "text": "d'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "verser",
+     "gap": true,
+     "accept": [
+      "verser"
+     ]
+    },
+    {
+     "text": "de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être dans la"
+    },
+    {
+     "text": "main",
+     "gap": true,
+     "accept": [
+      "main"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend un"
+    },
+    {
+     "text": "cachet",
+     "gap": true,
+     "accept": [
+      "cachet",
+      "comprimé"
+     ]
+    },
+    {
+     "text": "avec de l'eau"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: the man's box also covers the opening frames where he holds his aching head; he drinks the glass of water later in the clip (same box as English)."
+}

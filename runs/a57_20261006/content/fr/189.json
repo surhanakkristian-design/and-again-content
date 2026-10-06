@@ -1,0 +1,115 @@
+{
+ "mediaId": 189,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le convoi",
+ "taps": [
+  {
+   "phrase": "mener le convoi",
+   "target": "la voiture grise",
+   "voice": "male"
+  },
+  {
+   "phrase": "se garer entre deux véhicules",
+   "target": "la voiture noire",
+   "voice": "male"
+  },
+  {
+   "phrase": "fermer la marche",
+   "target": "la voiture blanche",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le convoi",
+   "voice": "male"
+  },
+  {
+   "word": "les arbres",
+   "voice": "male"
+  },
+  {
+   "word": "l'asphalte",
+   "voice": "male"
+  },
+  {
+   "word": "le ciel",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font les trois voitures ?",
+ "answer": [
+  "Elles",
+  "roulent",
+  "en",
+  "convoi."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mener",
+     "gap": true,
+     "accept": [
+      "mener",
+      "diriger"
+     ]
+    },
+    {
+     "text": "le convoi"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se garer entre deux"
+    },
+    {
+     "text": "véhicules",
+     "gap": true,
+     "accept": [
+      "véhicules",
+      "voitures"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fermer",
+     "gap": true,
+     "accept": [
+      "fermer"
+     ]
+    },
+    {
+     "text": "la marche"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "roulent en"
+    },
+    {
+     "text": "convoi",
+     "gap": true,
+     "accept": [
+      "convoi"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Subject 'elles' (les voitures) is feminine; answerVoice kept male as in English (no speaker in the clip)."
+}

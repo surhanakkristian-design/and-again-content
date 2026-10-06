@@ -1,0 +1,122 @@
+{
+ "mediaId": 7946,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "postalisch",
+ "taps": [
+  {
+   "phrase": "den Briefkasten leeren",
+   "target": "der schwarze Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Postsack tragen",
+   "target": "der schwarze Hund",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Kopf aus dem Fenster strecken",
+   "target": "der Collie",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bäume",
+   "voice": "female"
+  },
+  {
+   "word": "der Briefkasten",
+   "voice": "female"
+  },
+  {
+   "word": "das Postauto",
+   "voice": "female"
+  },
+  {
+   "word": "der Postsack",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der schwarze Hund?",
+ "answer": [
+  "Er",
+  "leert",
+  "den",
+  "roten",
+  "Briefkasten."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Briefkasten",
+     "gap": true,
+     "accept": [
+      "Briefkasten"
+     ]
+    },
+    {
+     "text": "leeren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Postsack",
+     "gap": true,
+     "accept": [
+      "Postsack",
+      "Sack"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Kopf aus dem Fenster"
+    },
+    {
+     "text": "strecken",
+     "gap": true,
+     "accept": [
+      "strecken",
+      "herausstrecken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "leert",
+     "gap": true,
+     "accept": [
+      "leert"
+     ]
+    },
+    {
+     "text": "den roten Briefkasten"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD: 'postalisch' is a rare, official-register German adjective (postalische Anschrift) and cannot be used naturally in this clip; everyday German expresses the concept with Post- compounds. Used here: der Postsack, das Postauto (the everyday word for the red mail van). Proposal for the owner: keep 'postalisch' as the database word but accept that the exercises teach it through Post- compounds, or map the concept to 'Post-' / 'die Post'. Answer subject der Hund -> er; voice kept female as in English."
+}

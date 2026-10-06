@@ -1,0 +1,113 @@
+{
+ "mediaId": 3,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la clase",
+ "taps": [
+  {
+   "phrase": "escribir en la pizarra",
+   "target": "la profesora",
+   "voice": "female"
+  },
+  {
+   "phrase": "beber de una taza",
+   "target": "la profesora",
+   "voice": "female"
+  },
+  {
+   "phrase": "darse la vuelta",
+   "target": "la profesora",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la profesora",
+   "voice": "female"
+  },
+  {
+   "word": "la taza",
+   "voice": "female"
+  },
+  {
+   "word": "las gafas",
+   "voice": "female"
+  },
+  {
+   "word": "la pizarra",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la profesora?",
+ "answer": [
+  "Escribe",
+  "en",
+  "la",
+  "pizarra."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "escribir",
+     "gap": true,
+     "accept": [
+      "escribir"
+     ]
+    },
+    {
+     "text": "en la pizarra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber de una"
+    },
+    {
+     "text": "taza",
+     "gap": true,
+     "accept": [
+      "taza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "darse",
+     "gap": true,
+     "accept": [
+      "darse"
+     ]
+    },
+    {
+     "text": "la vuelta"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Escribe en la"
+    },
+    {
+     "text": "pizarra",
+     "gap": true,
+     "accept": [
+      "pizarra"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la clase' appears in no exercise (as in English; the class is only in the background and not a noun of the set). Phrase 3: in the blue boxes she turns to the camera; in the final close-up she looks shocked rather than smiling, so 'darse la vuelta' without 'y sonreír'."
+}

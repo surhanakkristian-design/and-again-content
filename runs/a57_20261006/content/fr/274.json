@@ -1,0 +1,116 @@
+{
+ "mediaId": 274,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "tout le monde",
+ "taps": [
+  {
+   "phrase": "lever une écharpe",
+   "target": "l'homme à l'écharpe",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis sur les épaules d'un homme",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "éclairer le stade",
+   "target": "les lumières",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lumières",
+   "voice": "male"
+  },
+  {
+   "word": "le garçon",
+   "voice": "male"
+  },
+  {
+   "word": "l'écharpe",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait tout le monde ?",
+ "answer": [
+  "Tout",
+  "le",
+  "monde",
+  "crie",
+  "dans",
+  "le",
+  "stade."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever une"
+    },
+    {
+     "text": "écharpe",
+     "gap": true,
+     "accept": [
+      "écharpe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis sur les"
+    },
+    {
+     "text": "épaules",
+     "gap": true,
+     "accept": [
+      "épaules"
+     ]
+    },
+    {
+     "text": "d'un homme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "éclairer",
+     "gap": true,
+     "accept": [
+      "éclairer"
+     ]
+    },
+    {
+     "text": "le stade"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "crie",
+     "gap": true,
+     "accept": [
+      "crie",
+      "hurle"
+     ]
+    },
+    {
+     "text": "dans le stade"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'tout le monde' is a pronoun phrase: it is the question and answer subject, so it is not in any recall row. Tap 3 'éclairer le stade' instead of a literal 'briller depuis le toit' (unnatural)."
+}

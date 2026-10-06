@@ -1,0 +1,119 @@
+{
+ "mediaId": 14,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la página",
+ "taps": [
+  {
+   "phrase": "abrir un cuaderno",
+   "target": "las manos",
+   "voice": "female"
+  },
+  {
+   "phrase": "ser amarilla",
+   "target": "la flor",
+   "voice": "female"
+  },
+  {
+   "phrase": "pasar sobre las hojas verdes",
+   "target": "el pincel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la página",
+   "voice": "female"
+  },
+  {
+   "word": "la flor",
+   "voice": "female"
+  },
+  {
+   "word": "el pincel",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hay en la página?",
+ "answer": [
+  "Hay",
+  "una",
+  "flor",
+  "amarilla",
+  "en",
+  "la",
+  "página."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir un"
+    },
+    {
+     "text": "cuaderno",
+     "gap": true,
+     "accept": [
+      "cuaderno"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ser"
+    },
+    {
+     "text": "amarilla",
+     "gap": true,
+     "accept": [
+      "amarilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar sobre las"
+    },
+    {
+     "text": "hojas",
+     "gap": true,
+     "accept": [
+      "hojas"
+     ]
+    },
+    {
+     "text": "verdes"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Hay una flor amarilla en la"
+    },
+    {
+     "text": "página",
+     "gap": true,
+     "accept": [
+      "página"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box also covers frames where the fingers press the leaves and where the hands hold the notebook up; most boxed frames are the opening at the start, so 'abrir un cuaderno'. Phrase 3: the brush spreads glue over the leaves, so 'pasar por' (not 'pintar'). Answer 'Hay ...' has no subject: the row is the whole sentence; key word gapped there."
+}

@@ -1,0 +1,125 @@
+{
+ "mediaId": 17,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Projekt",
+ "taps": [
+  {
+   "phrase": "eine Kappe tragen",
+   "target": "der Mann mit der Kappe",
+   "voice": "male"
+  },
+  {
+   "phrase": "lange Haare haben",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein Dach aus Holz haben",
+   "target": "die Hütte",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "das Dach",
+   "voice": "male"
+  },
+  {
+   "word": "die Tür",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  }
+ ],
+ "question": "Was bauen die Leute?",
+ "answer": [
+  "Sie",
+  "bauen",
+  "eine",
+  "Hütte",
+  "aus",
+  "Holz."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Kappe",
+     "gap": true,
+     "accept": [
+      "Kappe",
+      "Mütze"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lange"
+    },
+    {
+     "text": "Haare",
+     "gap": true,
+     "accept": [
+      "Haare"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Dach",
+     "gap": true,
+     "accept": [
+      "Dach"
+     ]
+    },
+    {
+     "text": "aus Holz haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "bauen",
+     "gap": true,
+     "accept": [
+      "bauen"
+     ]
+    },
+    {
+     "text": "eine Hütte aus Holz"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word das Projekt is abstract and appears in no exercise (it is only the transcript's word); kept unchanged. Shed = die Hütte (A-level; der Schuppen would be B)."
+}

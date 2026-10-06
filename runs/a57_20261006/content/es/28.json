@@ -1,0 +1,111 @@
+{
+ "mediaId": 28,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la asignatura",
+ "taps": [
+  {
+   "phrase": "sonreír a la cámara",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sobre la mesa",
+   "target": "los libros",
+   "voice": "female"
+  },
+  {
+   "phrase": "tocar el piano",
+   "target": "las manos",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pelo",
+   "voice": "female"
+  },
+  {
+   "word": "la chaqueta",
+   "voice": "female"
+  },
+  {
+   "word": "los libros",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "sonríe",
+  "a",
+  "la",
+  "cámara."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír a la"
+    },
+    {
+     "text": "cámara",
+     "gap": true,
+     "accept": [
+      "cámara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sobre la"
+    },
+    {
+     "text": "mesa",
+     "gap": true,
+     "accept": [
+      "mesa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocar el"
+    },
+    {
+     "text": "piano",
+     "gap": true,
+     "accept": [
+      "piano"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sonríe",
+     "gap": true,
+     "accept": [
+      "sonríe"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la asignatura is not a visible thing (subjects appear only as quick cuts: maths, art, music, chemistry); no exercise text contains it, same as English. 'la chaqueta' for the cream blazer (A-level word). Tap 1: the red box also covers frames where she leans on the books and talks; she smiles at the camera in most of them."
+}

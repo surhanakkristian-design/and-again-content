@@ -1,0 +1,26 @@
+{
+  "mediaId": 31, "lang": "fr", "level": "A",
+  "keyWord": "une université",
+  "taps": [
+    { "phrase": "tenir un sac noir", "target": "la main", "voice": "male" },
+    { "phrase": "utiliser un ordinateur portable", "target": "la femme à l'ordinateur", "voice": "female" },
+    { "phrase": "porter sa casquette à l'envers", "target": "l'homme à la casquette", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les lumières", "voice": "male" },
+    { "word": "les étudiants", "voice": "male" },
+    { "word": "la casquette", "voice": "male" },
+    { "word": "les sièges", "voice": "male" }
+  ],
+  "question": "Où les étudiants sont-ils assis ?",
+  "answer": ["Ils", "sont", "assis", "à", "l'université."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "sac", "gap": true, "accept": ["sac"] }, { "text": "noir" } ] },
+    { "from": "taps", "parts": [ { "text": "utiliser", "gap": true, "accept": ["utiliser"] }, { "text": "un ordinateur portable" } ] },
+    { "from": "taps", "parts": [ { "text": "porter sa" }, { "text": "casquette", "gap": true, "accept": ["casquette"] }, { "text": "à l'envers" } ] },
+    { "from": "answer", "parts": [ { "text": "sont" }, { "text": "assis", "gap": true, "accept": ["assis"] }, { "text": "à l'université" } ] }
+  ],
+  "notes": "Key word: the database word 'une université' carries the indefinite article; nouns elsewhere use the definite one. Proposal: 'l'université'. The key word only appears in the model answer as elided 'l'université', which cannot be a gap (no cutting inside an elided word), so the answer row gaps 'assis'. The setting is a lecture hall (un amphithéâtre); the answer keeps 'à l'université' for the key word."
+}

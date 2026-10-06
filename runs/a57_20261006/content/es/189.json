@@ -1,0 +1,114 @@
+{
+ "mediaId": 189,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el convoy",
+ "taps": [
+  {
+   "phrase": "encabezar el convoy",
+   "target": "el coche gris",
+   "voice": "male"
+  },
+  {
+   "phrase": "aparcar entre dos vehículos",
+   "target": "el coche negro",
+   "voice": "male"
+  },
+  {
+   "phrase": "cerrar la marcha",
+   "target": "el coche blanco",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el convoy",
+   "voice": "male"
+  },
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "el asfalto",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hacen los tres coches?",
+ "answer": [
+  "Circulan",
+  "en",
+  "convoy."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "encabezar",
+     "gap": true,
+     "accept": [
+      "encabezar",
+      "liderar"
+     ]
+    },
+    {
+     "text": "el convoy"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aparcar entre dos"
+    },
+    {
+     "text": "vehículos",
+     "gap": true,
+     "accept": [
+      "vehículos",
+      "coches"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cerrar",
+     "gap": true,
+     "accept": [
+      "cerrar"
+     ]
+    },
+    {
+     "text": "la marcha"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Circulan en"
+    },
+    {
+     "text": "convoy",
+     "gap": true,
+     "accept": [
+      "convoy"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the black car's box also covers the driving shots (it drives in the middle) and close-ups of its grille, wheel and spoiler; it is parked between the grey and the white car under the bridge. Question in simple present ('¿Qué hacen...?'), the natural Spanish form for an ongoing action; answer without subject. 'Van en convoy' would be equally natural."
+}

@@ -1,0 +1,117 @@
+{
+  "mediaId": 43,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "sich drehen",
+  "taps": [
+    {
+      "phrase": "an einer Schnur ziehen",
+      "target": "die Hand",
+      "voice": "male"
+    },
+    {
+      "phrase": "sich sehr schnell drehen",
+      "target": "die goldene Kugel",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine goldene Kugel halten",
+      "target": "die Hand",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Drucker",
+      "voice": "male"
+    },
+    {
+      "word": "die Kugel",
+      "voice": "male"
+    },
+    {
+      "word": "der Schreibtisch",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die goldene Kugel?",
+  "answer": [
+    "Sie",
+    "dreht",
+    "sich",
+    "sehr",
+    "schnell."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an einer"
+        },
+        {
+          "text": "Schnur",
+          "gap": true,
+          "accept": [
+            "Schnur",
+            "Leine"
+          ]
+        },
+        {
+          "text": "ziehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich sehr schnell"
+        },
+        {
+          "text": "drehen",
+          "gap": true,
+          "accept": [
+            "drehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine goldene"
+        },
+        {
+          "text": "Kugel",
+          "gap": true,
+          "accept": [
+            "Kugel"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "dreht sich sehr"
+        },
+        {
+          "text": "schnell",
+          "gap": true,
+          "accept": [
+            "schnell"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Strictly the ring spins around the golden ball; like the English, the whole gyroscope is called 'die goldene Kugel'. Tap box 1 ('an einer Schnur ziehen') also covers later frames where the hand only places the gyroscope on the stand; phrase written for the string-pulling frames, as in English. 'Sie' = die Kugel; answerVoice kept male (narrator voice, subject is a thing). Key word in tap row 2."
+}

@@ -1,0 +1,118 @@
+{
+ "mediaId": 298,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el probador",
+ "taps": [
+  {
+   "phrase": "probarse varios conjuntos",
+   "target": "la mujer rubia",
+   "voice": "female"
+  },
+  {
+   "phrase": "valorar los conjuntos con el pulgar",
+   "target": "la mujer morena",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar tumbado en el mostrador",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cortina",
+   "voice": "female"
+  },
+  {
+   "word": "el montón de ropa",
+   "voice": "female"
+  },
+  {
+   "word": "las sandalias",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer rubia?",
+ "answer": [
+  "Se",
+  "está",
+  "probando",
+  "conjuntos",
+  "en",
+  "el",
+  "probador."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "probarse varios"
+    },
+    {
+     "text": "conjuntos",
+     "gap": true,
+     "accept": [
+      "conjuntos",
+      "modelitos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "valorar",
+     "gap": true,
+     "accept": [
+      "valorar",
+      "juzgar"
+     ]
+    },
+    {
+     "text": "los conjuntos con el pulgar"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar tumbado en el"
+    },
+    {
+     "text": "mostrador",
+     "gap": true,
+     "accept": [
+      "mostrador"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se está probando conjuntos en el"
+    },
+    {
+     "text": "probador",
+     "gap": true,
+     "accept": [
+      "probador"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the dark-haired woman gives thumbs down to the first outfits and thumbs up to the last; most boxed frames show her bored or thumbs down, so 'valorar los conjuntos con el pulgar' instead of 'levantar el pulgar'. Answer drops the subject; clitic order 'Se está probando' (alternative 'Está probándose' needs different chips)."
+}

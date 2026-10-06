@@ -1,0 +1,118 @@
+{
+ "mediaId": 1,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el descanso",
+ "taps": [
+  {
+   "phrase": "reírse con el móvil",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "tocarse la cabeza",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir mucho la boca",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cortina",
+   "voice": "male"
+  },
+  {
+   "word": "el móvil",
+   "voice": "male"
+  },
+  {
+   "word": "el jersey",
+   "voice": "male"
+  },
+  {
+   "word": "los libros",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el chico?",
+ "answer": [
+  "Se",
+  "está",
+  "riendo",
+  "con",
+  "el",
+  "móvil."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "reírse con el"
+    },
+    {
+     "text": "móvil",
+     "gap": true,
+     "accept": [
+      "móvil"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tocarse",
+     "gap": true,
+     "accept": [
+      "tocarse"
+     ]
+    },
+    {
+     "text": "la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir mucho la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se está"
+    },
+    {
+     "text": "riendo",
+     "gap": true,
+     "accept": [
+      "riendo"
+     ]
+    },
+    {
+     "text": "con el móvil"
+    }
+   ]
+  }
+ ],
+ "notes": "All three targets are the same young man ('el chico', natural in Spain for a young man). Key word 'el descanso' is not one of the nouns, so no noun row; 'la pausa' would also fit, 'el descanso' is fine."
+}

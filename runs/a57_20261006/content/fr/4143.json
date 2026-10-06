@@ -1,0 +1,116 @@
+{
+  "mediaId": 4143,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "la poubelle",
+  "taps": [
+    {
+      "phrase": "être pris au piège",
+      "target": "le raton laveur",
+      "voice": "male"
+    },
+    {
+      "phrase": "traîner tout froissé",
+      "target": "le sac vert",
+      "voice": "male"
+    },
+    {
+      "phrase": "pousser à l'arrière-plan",
+      "target": "les buissons",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le raton laveur",
+      "voice": "male"
+    },
+    {
+      "word": "le sac-poubelle",
+      "voice": "male"
+    },
+    {
+      "word": "la poubelle",
+      "voice": "male"
+    },
+    {
+      "word": "les buissons",
+      "voice": "male"
+    }
+  ],
+  "question": "Qu'essaie de faire le raton laveur ?",
+  "answer": [
+    "Il",
+    "essaie",
+    "de",
+    "s'échapper",
+    "de",
+    "la",
+    "poubelle."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "être pris au"
+        },
+        {
+          "text": "piège",
+          "gap": true,
+          "accept": [
+            "piège"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "traîner tout"
+        },
+        {
+          "text": "froissé",
+          "gap": true,
+          "accept": [
+            "froissé"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "pousser",
+          "gap": true,
+          "accept": [
+            "pousser"
+          ]
+        },
+        {
+          "text": "à l'arrière-plan"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "essaie de s'échapper de la"
+        },
+        {
+          "text": "poubelle",
+          "gap": true,
+          "accept": [
+            "poubelle"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1 'être pris au piège' (is trapped) holds in every boxed frame; the raccoon actively tries to climb out only in a few frames (it mostly sits and stares up), so the escape attempt is kept for the question/answer. Key word 'la poubelle' is noun 3 and the gap of the answer row, so no separate noun row. 'le sac-poubelle' (rubbish bag) contains the key word."
+}

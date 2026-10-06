@@ -1,0 +1,120 @@
+{
+ "mediaId": 241,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le dessin",
+ "taps": [
+  {
+   "phrase": "être assis sur les marches",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "faire un dessin",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un chapeau jaune",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le dessin",
+   "voice": "male"
+  },
+  {
+   "word": "le chapeau",
+   "voice": "male"
+  },
+  {
+   "word": "les maisons",
+   "voice": "male"
+  },
+  {
+   "word": "la chemise",
+   "voice": "male"
+  }
+ ],
+ "question": "Que montre l'homme à la femme ?",
+ "answer": [
+  "Il",
+  "lui",
+  "montre",
+  "son",
+  "dessin."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis sur les"
+    },
+    {
+     "text": "marches",
+     "gap": true,
+     "accept": [
+      "marches"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire un"
+    },
+    {
+     "text": "dessin",
+     "gap": true,
+     "accept": [
+      "dessin"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "chapeau",
+     "gap": true,
+     "accept": [
+      "chapeau"
+     ]
+    },
+    {
+     "text": "jaune"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lui"
+    },
+    {
+     "text": "montre",
+     "gap": true,
+     "accept": [
+      "montre"
+     ]
+    },
+    {
+     "text": "son dessin"
+    }
+   ]
+  }
+ ],
+ "notes": "The woman's hat is a pale yellow straw hat. Key word 'le dessin' is in the tap row 'faire un dessin', so no extra noun row."
+}

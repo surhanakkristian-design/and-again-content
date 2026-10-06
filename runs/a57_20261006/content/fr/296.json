@@ -1,0 +1,120 @@
+{
+ "mediaId": 296,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le poisson",
+ "taps": [
+  {
+   "phrase": "tenir un demi-citron",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "manger avec une fourchette",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "griller au-dessus du feu",
+   "target": "le poisson",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la mer",
+   "voice": "female"
+  },
+  {
+   "word": "le bateau",
+   "voice": "female"
+  },
+  {
+   "word": "le poisson",
+   "voice": "female"
+  },
+  {
+   "word": "le feu",
+   "voice": "female"
+  }
+ ],
+ "question": "Que mange la femme ?",
+ "answer": [
+  "Elle",
+  "mange",
+  "du",
+  "poisson",
+  "avec",
+  "une",
+  "fourchette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "demi-citron",
+     "gap": true,
+     "accept": [
+      "demi-citron"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger avec une"
+    },
+    {
+     "text": "fourchette",
+     "gap": true,
+     "accept": [
+      "fourchette"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "griller",
+     "gap": true,
+     "accept": [
+      "griller",
+      "cuire"
+     ]
+    },
+    {
+     "text": "au-dessus du feu"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange du"
+    },
+    {
+     "text": "poisson",
+     "gap": true,
+     "accept": [
+      "poisson"
+     ]
+    },
+    {
+     "text": "avec une fourchette"
+    }
+   ]
+  }
+ ],
+ "notes": "Blue box (fish) also covers later frames where the grilled fish lies on a wooden board, not over the fire; phrase written for the grilling frames (majority). No noun row: 'poisson' is already in the answer row."
+}

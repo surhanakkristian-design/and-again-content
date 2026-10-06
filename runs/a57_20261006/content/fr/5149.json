@@ -1,0 +1,26 @@
+{
+  "mediaId": 5149, "lang": "fr", "level": "A",
+  "keyWord": "la pharmacie",
+  "taps": [
+    { "phrase": "avoir le nez rouge", "target": "l'homme à l'écharpe", "voice": "male" },
+    { "phrase": "grimper à une grande échelle", "target": "l'homme en blanc", "voice": "male" },
+    { "phrase": "briller d'un vert vif", "target": "la croix verte", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la croix", "voice": "male" },
+    { "word": "les bouteilles", "voice": "male" },
+    { "word": "l'écharpe", "voice": "male" },
+    { "word": "la boîte", "voice": "male" }
+  ],
+  "question": "Que fait l'homme en blanc ?",
+  "answer": ["Il", "grimpe", "à", "une", "grande", "échelle."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "avoir le" }, { "text": "nez", "gap": true, "accept": ["nez"] }, { "text": "rouge" } ] },
+    { "from": "taps", "parts": [ { "text": "grimper", "gap": true, "accept": ["grimper", "monter"] }, { "text": "à une grande échelle" } ] },
+    { "from": "taps", "parts": [ { "text": "briller d'un" }, { "text": "vert", "gap": true, "accept": ["vert"] }, { "text": "vif" } ] },
+    { "from": "answer", "parts": [ { "text": "grimpe à une grande" }, { "text": "échelle", "gap": true, "accept": ["échelle"] } ] }
+  ],
+  "notes": "Phrase 1: English 'to carry a paper bag', but the red box covers all three scenes and he holds the bag only in the middle scene (about 7 of 19 frames); 'avoir le nez rouge' is true of him in every boxed frame and of nobody else. The key word 'la pharmacie' names the setting and appears in no exercise (as in English). 'les bouteilles' = the medicine bottles on the shelves ('les flacons' would be more precise but is above A2)."
+}

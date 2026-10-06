@@ -1,0 +1,124 @@
+{
+ "mediaId": 406,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el hierro",
+ "taps": [
+  {
+   "phrase": "blandir un martillo pesado",
+   "target": "el herrero",
+   "voice": "male"
+  },
+  {
+   "phrase": "fijar una espiral de hierro",
+   "target": "el herrero",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener puntas afiladas",
+   "target": "la verja",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el yunque",
+   "voice": "male"
+  },
+  {
+   "word": "la barra de hierro",
+   "voice": "male"
+  },
+  {
+   "word": "las gafas protectoras",
+   "voice": "male"
+  },
+  {
+   "word": "la ventana",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el herrero?",
+ "answer": [
+  "Golpea",
+  "el",
+  "hierro",
+  "candente",
+  "sobre",
+  "el",
+  "yunque."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "blandir un"
+    },
+    {
+     "text": "martillo",
+     "gap": true,
+     "accept": [
+      "martillo"
+     ]
+    },
+    {
+     "text": "pesado"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "fijar una espiral de"
+    },
+    {
+     "text": "hierro",
+     "gap": true,
+     "accept": [
+      "hierro"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener puntas"
+    },
+    {
+     "text": "afiladas",
+     "gap": true,
+     "accept": [
+      "afiladas",
+      "puntiagudas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Golpea",
+     "gap": true,
+     "accept": [
+      "Golpea",
+      "Martillea"
+     ]
+    },
+    {
+     "text": "el hierro candente"
+    },
+    {
+     "text": "sobre el yunque"
+    }
+   ]
+  }
+ ],
+ "notes": "The English tap box for phrase 1 also covers frames where the blacksmith only holds the hammer up or works the bar; 'blandir un martillo pesado' fits most boxed frames (swinging/raising it). Phrase 2: he fixes the spiral to the gate. Key word used in phrase 2, noun 2 and the answer."
+}

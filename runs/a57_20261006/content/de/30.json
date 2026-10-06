@@ -1,0 +1,123 @@
+{
+ "mediaId": 30,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Lehrbuch",
+ "taps": [
+  {
+   "phrase": "die Seiten umblättern",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf dem Lehrbuch einschlafen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "viele Seiten haben",
+   "target": "das Lehrbuch",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Haare",
+   "voice": "female"
+  },
+  {
+   "word": "die Brille",
+   "voice": "female"
+  },
+  {
+   "word": "das Lehrbuch",
+   "voice": "female"
+  },
+  {
+   "word": "der Tisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "blättert",
+  "in",
+  "einem",
+  "dicken",
+  "Lehrbuch."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Seiten"
+    },
+    {
+     "text": "umblättern",
+     "gap": true,
+     "accept": [
+      "umblättern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf dem"
+    },
+    {
+     "text": "Lehrbuch",
+     "gap": true,
+     "accept": [
+      "Lehrbuch",
+      "Buch"
+     ]
+    },
+    {
+     "text": "einschlafen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "viele"
+    },
+    {
+     "text": "Seiten",
+     "gap": true,
+     "accept": [
+      "Seiten"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "blättert",
+     "gap": true,
+     "accept": [
+      "blättert",
+      "liest"
+     ]
+    },
+    {
+     "text": "in einem dicken Lehrbuch"
+    }
+   ]
+  }
+ ],
+ "notes": "'desk' -> 'der Tisch' (a small wooden table, A1). Tap box 2 (einschlafen) covers the whole clip; she falls asleep on the book at the end. 'die Seiten' appears in phrases 1 and 3 by design (same thing, same word)."
+}

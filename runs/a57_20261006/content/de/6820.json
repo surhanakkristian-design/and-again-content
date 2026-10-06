@@ -1,0 +1,128 @@
+{
+ "mediaId": 6820,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das ausgewachsene Tier",
+ "taps": [
+  {
+   "phrase": "dem Jungtier den Rücken streicheln",
+   "target": "das ausgewachsene Tier",
+   "voice": "female"
+  },
+  {
+   "phrase": "neben dem ausgewachsenen Tier hertrotten",
+   "target": "das Jungtier",
+   "voice": "female"
+  },
+  {
+   "phrase": "den kurzen Rüssel hochrecken",
+   "target": "das Jungtier",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Elefant",
+   "voice": "female"
+  },
+  {
+   "word": "die Akazie",
+   "voice": "female"
+  },
+  {
+   "word": "die Stoßzähne",
+   "voice": "female"
+  },
+  {
+   "word": "das Jungtier",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht das ausgewachsene Tier?",
+ "answer": [
+  "Es",
+  "streichelt",
+  "dem",
+  "Jungtier",
+  "den",
+  "Rücken."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dem"
+    },
+    {
+     "text": "Jungtier",
+     "gap": true,
+     "accept": [
+      "Jungtier",
+      "Kalb",
+      "Elefantenbaby",
+      "Elefantenkalb"
+     ]
+    },
+    {
+     "text": "den Rücken streicheln"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "neben dem"
+    },
+    {
+     "text": "ausgewachsenen",
+     "gap": true,
+     "accept": [
+      "ausgewachsenen",
+      "großen"
+     ]
+    },
+    {
+     "text": "Tier hertrotten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den kurzen"
+    },
+    {
+     "text": "Rüssel",
+     "gap": true,
+     "accept": [
+      "Rüssel"
+     ]
+    },
+    {
+     "text": "hochrecken"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "streichelt",
+     "gap": true,
+     "accept": [
+      "streichelt"
+     ]
+    },
+    {
+     "text": "dem Jungtier den Rücken"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'das ausgewachsene Tier' is an adjective + noun phrase, not a single noun (natives say 'der ausgewachsene Elefant' or 'das erwachsene Tier'); it fails the noun-pill capitalisation rule, so noun 1 (the adult at the English slot) is 'der Elefant' and the key word is taught in tap 2 ('neben dem ausgewachsenen Tier hertrotten', recall gap 'ausgewachsenen') and in the question. Proposal: give the concept a one-word German entry or accept the phrase as is. Calf = 'das Jungtier' throughout; pronoun for das Tier = 'es'."
+}

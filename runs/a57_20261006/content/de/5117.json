@@ -1,0 +1,123 @@
+{
+ "mediaId": 5117,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Buchhandlung",
+ "taps": [
+  {
+   "phrase": "in einem dicken Buch blättern",
+   "target": "der junge Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "vor Staunen den Mund aufreißen",
+   "target": "der junge Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "mit Büchern vollgestopft sein",
+   "target": "die Bücherregale",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Brille",
+   "voice": "male"
+  },
+  {
+   "word": "die Bücherregale",
+   "voice": "male"
+  },
+  {
+   "word": "die Jeansjacke",
+   "voice": "male"
+  },
+  {
+   "word": "das Buch",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der junge Mann?",
+ "answer": [
+  "Er",
+  "stöbert",
+  "in",
+  "einer",
+  "Buchhandlung."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in einem dicken Buch"
+    },
+    {
+     "text": "blättern",
+     "gap": true,
+     "accept": [
+      "blättern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor"
+    },
+    {
+     "text": "Staunen",
+     "gap": true,
+     "accept": [
+      "Staunen",
+      "Erstaunen"
+     ]
+    },
+    {
+     "text": "den Mund aufreißen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit Büchern"
+    },
+    {
+     "text": "vollgestopft",
+     "gap": true,
+     "accept": [
+      "vollgestopft",
+      "gefüllt"
+     ]
+    },
+    {
+     "text": "sein"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stöbert in einer"
+    },
+    {
+     "text": "Buchhandlung",
+     "gap": true,
+     "accept": [
+      "Buchhandlung",
+      "Buchladen"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English noun 'a hardback' rendered as the everyday 'das Buch' (das Hardcover is rare in speech); the phrase says 'dickes Buch'. Tap 2 is the visible gasp (mouth wide open), not the sound."
+}

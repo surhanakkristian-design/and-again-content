@@ -1,0 +1,120 @@
+{
+  "mediaId": 253,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "l'époussetage",
+  "taps": [
+    {
+      "phrase": "nettoyer le haut de la porte",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "porter un foulard gris",
+      "target": "la femme",
+      "voice": "female"
+    },
+    {
+      "phrase": "marcher sur l'étagère",
+      "target": "le chat",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le chat",
+      "voice": "male"
+    },
+    {
+      "word": "les livres",
+      "voice": "male"
+    },
+    {
+      "word": "l'étagère",
+      "voice": "male"
+    },
+    {
+      "word": "la lampe",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "nettoie",
+    "le",
+    "haut",
+    "de",
+    "la",
+    "porte."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "nettoyer",
+          "gap": true,
+          "accept": [
+            "nettoyer",
+            "essuyer"
+          ]
+        },
+        {
+          "text": "le haut de la porte"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "porter un"
+        },
+        {
+          "text": "foulard",
+          "gap": true,
+          "accept": [
+            "foulard"
+          ]
+        },
+        {
+          "text": "gris"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "marcher",
+          "gap": true,
+          "accept": [
+            "marcher"
+          ]
+        },
+        {
+          "text": "sur l'étagère"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "nettoie le haut de la"
+        },
+        {
+          "text": "porte",
+          "gap": true,
+          "accept": [
+            "porte"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'l'époussetage' is above level A and rare in everyday French; natives say 'faire la poussière' / 'épousseter'. Proposal: key word 'faire la poussière'. Not forced into the texts. The man wipes the top of the door frame with a cloth: 'le haut de la porte' kept simple for level A instead of 'le chambranle'. The man's box also covers gasp, dust cloud and thumbs-up moments shared with the woman; the door moment is the distinctive one. Grey hijab -> 'foulard gris'. No noun row: the key word is not one of the nouns."
+}

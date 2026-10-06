@@ -1,0 +1,119 @@
+{
+ "mediaId": 190,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le cookie",
+ "taps": [
+  {
+   "phrase": "manger un gros cookie",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir une cuillère",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être couché près de la fenêtre",
+   "target": "le chat",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "le chat",
+   "voice": "female"
+  },
+  {
+   "word": "les cookies",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que mange la femme ?",
+ "answer": [
+  "Elle",
+  "mange",
+  "un",
+  "gros",
+  "cookie."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger un gros"
+    },
+    {
+     "text": "cookie",
+     "gap": true,
+     "accept": [
+      "cookie",
+      "biscuit"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une"
+    },
+    {
+     "text": "cuillère",
+     "gap": true,
+     "accept": [
+      "cuillère"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "couché",
+     "gap": true,
+     "accept": [
+      "couché",
+      "allongé"
+     ]
+    },
+    {
+     "text": "près de la fenêtre"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange",
+     "gap": true,
+     "accept": [
+      "mange"
+     ]
+    },
+    {
+     "text": "un gros cookie"
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

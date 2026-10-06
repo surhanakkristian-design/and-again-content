@@ -1,0 +1,26 @@
+{
+  "mediaId": 7200, "lang": "fr", "level": "B",
+  "keyWord": "le golfe",
+  "taps": [
+    { "phrase": "piloter un parapente", "target": "l'homme à la veste rouge", "voice": "male" },
+    { "phrase": "soulever le pilote dans les airs", "target": "la voile orange", "voice": "male" },
+    { "phrase": "flotter au vent", "target": "la manche à air", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le parapente", "voice": "male" },
+    { "word": "la manche à air", "voice": "male" },
+    { "word": "le golfe", "voice": "male" },
+    { "word": "le rebord rocheux", "voice": "male" }
+  ],
+  "question": "Que fait le pilote ?",
+  "answer": ["Il", "plane", "au-dessus", "d'un", "golfe", "turquoise."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "piloter", "gap": true, "accept": ["piloter", "diriger"] }, { "text": "un parapente" } ] },
+    { "from": "taps", "parts": [ { "text": "soulever le" }, { "text": "pilote", "gap": true, "accept": ["pilote"] }, { "text": "dans les airs" } ] },
+    { "from": "taps", "parts": [ { "text": "flotter", "gap": true, "accept": ["flotter", "claquer"] }, { "text": "au vent" } ] },
+    { "from": "answer", "parts": [ { "text": "plane au-dessus d'un" }, { "text": "golfe", "gap": true, "accept": ["golfe", "baie"] }, { "text": "turquoise" } ] }
+  ],
+  "notes": "'le parapente' names the glider itself (the pill on the orange wing); the phrase-2 target is called 'la voile orange' for the verifier only. Rocky ledge = 'le rebord rocheux'. 'baie' accepted in the answer row since the bay shape could be read either way."
+}

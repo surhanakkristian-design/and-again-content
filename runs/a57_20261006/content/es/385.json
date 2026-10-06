@@ -1,0 +1,115 @@
+{
+ "mediaId": 385,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "golpear",
+ "taps": [
+  {
+   "phrase": "golpear la pelota",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "sujetar un bate",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "volar por el aire",
+   "target": "la pelota",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la pelota",
+   "voice": "female"
+  },
+  {
+   "word": "el bate",
+   "voice": "female"
+  },
+  {
+   "word": "la gorra",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "Golpea",
+  "la",
+  "pelota",
+  "con",
+  "un",
+  "bate."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "golpear",
+     "gap": true,
+     "accept": [
+      "golpear",
+      "batear"
+     ]
+    },
+    {
+     "text": "la pelota"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "bate",
+     "gap": true,
+     "accept": [
+      "bate"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar",
+     "gap": true,
+     "accept": [
+      "volar"
+     ]
+    },
+    {
+     "text": "por el aire"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Golpea la"
+    },
+    {
+     "text": "pelota",
+     "gap": true,
+     "accept": [
+      "pelota"
+     ]
+    },
+    {
+     "text": "con un bate"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1 red box also covers the swing-through and the start of her run; 'golpear la pelota' describes the main boxed action."
+}

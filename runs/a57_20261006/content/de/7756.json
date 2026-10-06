@@ -1,0 +1,127 @@
+{
+  "mediaId": 7756,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "automobil",
+  "taps": [
+    {
+      "phrase": "ein Vorderrad montieren",
+      "target": "der Bär",
+      "voice": "female"
+    },
+    {
+      "phrase": "einen Schraubenschlüssel umklammern",
+      "target": "der Waschbär",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf einer Hebebühne stehen",
+      "target": "der rote Sportwagen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Bär",
+      "voice": "female"
+    },
+    {
+      "word": "der Waschbär",
+      "voice": "female"
+    },
+    {
+      "word": "die Reifen",
+      "voice": "female"
+    },
+    {
+      "word": "der Sportwagen",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht der Bär?",
+  "answer": [
+    "Er",
+    "montiert",
+    "ein",
+    "Rad",
+    "an",
+    "den",
+    "Sportwagen."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "Vorderrad",
+          "gap": true,
+          "accept": [
+            "Vorderrad",
+            "Rad"
+          ]
+        },
+        {
+          "text": "montieren"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Schraubenschlüssel"
+        },
+        {
+          "text": "umklammern",
+          "gap": true,
+          "accept": [
+            "umklammern",
+            "festhalten",
+            "halten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf einer"
+        },
+        {
+          "text": "Hebebühne",
+          "gap": true,
+          "accept": [
+            "Hebebühne"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "montiert",
+          "gap": true,
+          "accept": [
+            "montiert",
+            "schraubt",
+            "befestigt"
+          ]
+        },
+        {
+          "text": "ein Rad an den Sportwagen"
+        }
+      ]
+    }
+  ],
+  "notes": "keyWord 'automobil' is an adjective that German hardly uses on its own (natives say 'Auto-'/'Kfz-' in compounds: die Autowerkstatt, die Kfz-Branche); nothing in the clip carries it, so it appears in no exercise. Proposal for the owner: 'die Autowerkstatt' or 'die Kfz-Werkstatt' as the German word for this clip. Bear box: in the last frames the bear has let go and stands back; 'ein Vorderrad montieren' describes most boxed frames. Answer: 'Er montiert an den Sportwagen ein Rad.' is also possible but marked; the given order is the natural one. Bear -> 'er' (der Bär); answerVoice female copied from English."
+}

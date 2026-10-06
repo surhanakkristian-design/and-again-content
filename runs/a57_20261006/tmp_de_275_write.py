@@ -1,0 +1,48 @@
+import json
+def g(t,acc=None): return {"text":t,"gap":True,"accept":acc or [t]}
+def p(t): return {"text":t}
+C={
+275:dict(level="A",keyWord="streiten",
+ taps=[("mit dem Finger zeigen","die Frau","female"),("nach oben schauen und nachdenken","der Mann","male"),("den Mann anlächeln","die Frau","female")],
+ nouns=[("die Vorhänge","male"),("das Sofa","male"),("der Tisch","male"),("der Mann","male")],
+ question="Was machen der Mann und die Frau?",answer="Sie streiten im Wohnzimmer.".split(),answerVoice="male",
+ recall=[("taps",[p("mit dem"),g("Finger"),p("zeigen")]),("taps",[p("nach oben schauen und"),g("nachdenken",["nachdenken","überlegen"])]),
+  ("taps",[p("den Mann"),g("anlächeln")]),("answer",[g("streiten"),p("im Wohnzimmer")])],
+ notes="Natives often say 'sie streiten sich'; the database word 'streiten' is used without 'sich', which is also correct."),
+276:dict(level="B",keyWord="der Ausflug",
+ taps=[("am Hang grasen","die Schafe","female"),("in die Tiefe stürzen","der Wasserfall","female"),("auf einem Felsbrocken stehen","das Handy","female")],
+ nouns=[("der Wasserfall","female"),("der Regenbogen","female"),("das Handy","female"),("der Felsbrocken","female")],
+ question="Was machen die Freunde?",answer="Sie posieren vor dem Wasserfall.".split(),answerVoice="female",
+ recall=[("taps",[p("am"),g("Hang"),p("grasen")]),("taps",[p("in die Tiefe"),g("stürzen",["stürzen","fallen"])]),
+  ("taps",[p("auf einem"),g("Felsbrocken",["Felsbrocken","Felsen"]),p("stehen")]),("answer",[g("posieren"),p("vor dem Wasserfall")])],
+ notes="Key word 'der Ausflug' appears in no exercise (not a noun of the set, as in English). The phone is propped upright on the boulder, hence 'stehen' rather than 'liegen'."),
+279:dict(level="B",keyWord="Kraft aufwenden",
+ taps=[("seine ganze Kraft aufwenden","der Mann","male"),("die Faust ballen","der Mann","male"),("durch eine Pfütze rollen","der Karren","male")],
+ nouns=[("die Säcke","male"),("das Rad","male"),("die Pfütze","male")],
+ question="Was macht der Mann?",answer="Er wendet seine ganze Kraft auf.".split(),answerVoice="male",
+ recall=[("taps",[p("seine ganze"),g("Kraft"),p("aufwenden")]),("taps",[p("die Faust"),g("ballen")]),
+  ("taps",[p("durch eine"),g("Pfütze"),p("rollen")]),("answer",[g("wendet"),p("seine ganze Kraft"),p("auf")])],
+ notes="Taps 1 and 2 share the target 'der Mann', as in English."),
+280:dict(level="A",keyWord="das Kätzchen",
+ taps=[("in die Kamera schauen","das Kätzchen","female"),("auf einem Bett sitzen","das Kätzchen","female"),("ganz nah herankommen","das Kätzchen","female")],
+ nouns=[("das Kätzchen","female"),("das Bett","female"),("das Handy","female")],
+ question="Was macht das Kätzchen?",answer="Es schaut in die Kamera.".split(),answerVoice="female",
+ recall=[("taps",[p("in die"),g("Kamera"),p("schauen")]),("taps",[p("auf einem"),g("Bett"),p("sitzen")]),
+  ("taps",[p("ganz nah"),g("herankommen",["herankommen","rankommen"])]),("nouns",[p("das"),g("Kätzchen")]),
+  ("answer",[g("schaut",["schaut","guckt","sieht"]),p("in die Kamera")])],
+ notes="All three taps target the kitten, as in English."),
+281:dict(level="B",keyWord="der Eyeliner",
+ taps=[("einen geschwungenen Lidstrich ziehen","die dunkelhaarige Frau","female"),("ein Wattestäbchen halten","die dunkelhaarige Frau","female"),("den Daumen hochhalten","die blonde Freundin","female")],
+ nouns=[("die Glühbirnen","female"),("der Spiegel","female"),("der Eyeliner","female"),("das Wattestäbchen","female")],
+ question="Was macht die dunkelhaarige Frau?",answer="Sie trägt Eyeliner auf.".split(),answerVoice="female",
+ recall=[("taps",[p("einen geschwungenen"),g("Lidstrich"),p("ziehen")]),("taps",[p("ein"),g("Wattestäbchen"),p("halten")]),
+  ("taps",[p("den Daumen"),g("hochhalten",["hochhalten","heben"])]),("answer",[p("trägt"),g("Eyeliner"),p("auf")])],
+ notes="Tap 1 uses 'Lidstrich' (the line drawn); 'der Eyeliner' (the pen) is noun 3 and the answer's gap. No noun row because the answer row contains the key word."),
+}
+for i,c in C.items():
+    o={"mediaId":i,"lang":"de","level":c["level"],"keyWord":c["keyWord"],
+       "taps":[{"phrase":a,"target":b,"voice":v} for a,b,v in c["taps"]],
+       "nouns":[{"word":w,"voice":v} for w,v in c["nouns"]],
+       "question":c["question"],"answer":c["answer"],"answerVoice":c["answerVoice"],"carousel":[],
+       "recall":[{"from":f,"parts":ps} for f,ps in c["recall"]],"notes":c["notes"]}
+    json.dump(o,open(f"content/de/{i}.json","w"),ensure_ascii=False,indent=1)

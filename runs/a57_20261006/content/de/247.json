@@ -1,0 +1,123 @@
+{
+ "mediaId": 247,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "fallen lassen",
+ "taps": [
+  {
+   "phrase": "einen roten Apfel fallen lassen",
+   "target": "der Junge",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf die Steine fallen",
+   "target": "der Apfel",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf den Boden schauen",
+   "target": "der Junge",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Junge",
+   "voice": "male"
+  },
+  {
+   "word": "der Apfel",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Junge?",
+ "answer": [
+  "Er",
+  "lässt",
+  "einen",
+  "roten",
+  "Apfel",
+  "fallen."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen roten Apfel"
+    },
+    {
+     "text": "fallen",
+     "gap": true,
+     "accept": [
+      "fallen"
+     ]
+    },
+    {
+     "text": "lassen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf die"
+    },
+    {
+     "text": "Steine",
+     "gap": true,
+     "accept": [
+      "Steine"
+     ]
+    },
+    {
+     "text": "fallen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf den Boden"
+    },
+    {
+     "text": "schauen",
+     "gap": true,
+     "accept": [
+      "schauen",
+      "sehen",
+      "gucken",
+      "blicken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lässt einen roten"
+    },
+    {
+     "text": "Apfel",
+     "gap": true,
+     "accept": [
+      "Apfel"
+     ]
+    },
+    {
+     "text": "fallen"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 3 share one box with the same target (as in English): holding/letting go in the first frames, bent over looking down in the last ones."
+}

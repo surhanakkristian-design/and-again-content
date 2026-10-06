@@ -1,0 +1,120 @@
+{
+ "mediaId": 51,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "apretar",
+ "taps": [
+  {
+   "phrase": "estrujar el slime",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "agarrar un puñado",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar en segundo plano",
+   "target": "la taza",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la taza",
+   "voice": "male"
+  },
+  {
+   "word": "el pulgar",
+   "voice": "male"
+  },
+  {
+   "word": "la muñeca",
+   "voice": "male"
+  },
+  {
+   "word": "las bolitas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la mano?",
+ "answer": [
+  "Está",
+  "apretando",
+  "un",
+  "puñado",
+  "de",
+  "bolitas."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estrujar",
+     "gap": true,
+     "accept": [
+      "estrujar",
+      "apretar"
+     ]
+    },
+    {
+     "text": "el slime"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agarrar un"
+    },
+    {
+     "text": "puñado",
+     "gap": true,
+     "accept": [
+      "puñado"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en segundo"
+    },
+    {
+     "text": "plano",
+     "gap": true,
+     "accept": [
+      "plano"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "apretando",
+     "gap": true,
+     "accept": [
+      "apretando",
+      "estrujando"
+     ]
+    },
+    {
+     "text": "un puñado de bolitas"
+    }
+   ]
+  }
+ ],
+ "notes": "Water beads = 'las bolitas' (everyday Spain; 'bolitas de gel'). 'el slime' is the usual word in Spain. Answer voice kept male (English), although 'la mano' is grammatically feminine."
+}

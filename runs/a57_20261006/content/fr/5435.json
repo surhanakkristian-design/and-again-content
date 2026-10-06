@@ -1,0 +1,122 @@
+{
+ "mediaId": 5435,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "semblable",
+ "taps": [
+  {
+   "phrase": "sortir un sachet bleu de sa banane",
+   "target": "la femme de gauche",
+   "voice": "female"
+  },
+  {
+   "phrase": "sortir un sachet rouge de sa banane",
+   "target": "la femme de droite",
+   "voice": "female"
+  },
+  {
+   "phrase": "ranger un sachet bleu dans sa banane",
+   "target": "la femme de droite",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "les arbres",
+   "voice": "female"
+  },
+  {
+   "word": "la pelouse",
+   "voice": "female"
+  },
+  {
+   "word": "le trottoir",
+   "voice": "female"
+  }
+ ],
+ "question": "Comment sont les deux femmes ?",
+ "answer": [
+  "Les",
+  "deux",
+  "femmes",
+  "sont",
+  "parfaitement",
+  "semblables."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sortir un sachet bleu de sa"
+    },
+    {
+     "text": "banane",
+     "gap": true,
+     "accept": [
+      "banane",
+      "sacoche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sortir un"
+    },
+    {
+     "text": "sachet",
+     "gap": true,
+     "accept": [
+      "sachet",
+      "paquet"
+     ]
+    },
+    {
+     "text": "rouge de sa banane"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ranger",
+     "gap": true,
+     "accept": [
+      "ranger"
+     ]
+    },
+    {
+     "text": "un sachet bleu dans sa banane"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sont parfaitement"
+    },
+    {
+     "text": "semblables",
+     "gap": true,
+     "accept": [
+      "semblables",
+      "identiques",
+      "pareilles"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The snacks come out of belt bags ('la banane' = sac banane, B2 everyday word); 'sachet' = the crisp packets. The two women swap packets, so phrase 3 (right woman puts the blue packet away) is distinct from phrase 1. Answer uses the key word 'semblables'; 'Elles se ressemblent comme deux gouttes d'eau' would be the most idiomatic alternative."
+}

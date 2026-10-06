@@ -1,0 +1,123 @@
+{
+ "mediaId": 5215,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le cyclisme",
+ "taps": [
+  {
+   "phrase": "faire du cyclisme",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "traverser un pont",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un maillot coloré",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la montagne",
+   "voice": "female"
+  },
+  {
+   "word": "le casque",
+   "voice": "female"
+  },
+  {
+   "word": "le vélo",
+   "voice": "female"
+  },
+  {
+   "word": "la route",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "roule",
+  "à",
+  "vélo",
+  "sur",
+  "la",
+  "route."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire du"
+    },
+    {
+     "text": "cyclisme",
+     "gap": true,
+     "accept": [
+      "cyclisme"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "traverser",
+     "gap": true,
+     "accept": [
+      "traverser",
+      "passer sur"
+     ]
+    },
+    {
+     "text": "un pont"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "maillot",
+     "gap": true,
+     "accept": [
+      "maillot"
+     ]
+    },
+    {
+     "text": "coloré"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "roule à"
+    },
+    {
+     "text": "vélo",
+     "gap": true,
+     "accept": [
+      "vélo"
+     ]
+    },
+    {
+     "text": "sur la route"
+    }
+   ]
+  }
+ ],
+ "notes": "English phrase 1 'to ride at the front' is doubtful (the other riders are AHEAD of her), so phrase 1 uses the key word: 'faire du cyclisme'; the tiny riders far ahead also cycle but are background specks. Phrase 2: the bridge appears only in the last seconds; the box covers the whole clip. 'maillot' is the normal word for a cycling shirt (A2-B1)."
+}

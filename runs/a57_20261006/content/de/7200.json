@@ -1,0 +1,121 @@
+{
+  "mediaId": 7200,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Golf",
+  "taps": [
+    {
+      "phrase": "einen Gleitschirm steuern",
+      "target": "der Mann in der roten Jacke",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Piloten in die Höhe tragen",
+      "target": "der orange Schirm",
+      "voice": "male"
+    },
+    {
+      "phrase": "im Wind flattern",
+      "target": "der Windsack",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Gleitschirm",
+      "voice": "male"
+    },
+    {
+      "word": "der Windsack",
+      "voice": "male"
+    },
+    {
+      "word": "der Golf",
+      "voice": "male"
+    },
+    {
+      "word": "der Felsvorsprung",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Pilot?",
+  "answer": [
+    "Er",
+    "gleitet",
+    "über",
+    "einen",
+    "türkisblauen",
+    "Golf."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Gleitschirm"
+        },
+        {
+          "text": "steuern",
+          "gap": true,
+          "accept": [
+            "steuern",
+            "lenken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Piloten",
+          "gap": true,
+          "accept": [
+            "Piloten",
+            "Mann"
+          ]
+        },
+        {
+          "text": "in die Höhe tragen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im Wind"
+        },
+        {
+          "text": "flattern",
+          "gap": true,
+          "accept": [
+            "flattern",
+            "wehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "gleitet über einen türkisblauen"
+        },
+        {
+          "text": "Golf",
+          "gap": true,
+          "accept": [
+            "Golf"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word: the water shown is a fairly small, almost closed bay; a German native would usually call it 'die Bucht'. 'der Golf' is used (noun and answer) as the database word and is correct by definition, but it sounds a little big for this view and is a homonym of the sport 'das Golf'. Proposal for the owner: keep 'der Golf' or map the concept to 'die Bucht'. No noun row: Golf is gapped in the answer row."
+}

@@ -1,0 +1,118 @@
+{
+  "mediaId": 7811,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Dutzende",
+  "taps": [
+    {
+      "phrase": "den Tennisschläger schwingen",
+      "target": "die Frau in Weiß",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Ballmaschine packen",
+      "target": "der Mann in Grün",
+      "voice": "male"
+    },
+    {
+      "phrase": "Dutzende Bälle abschießen",
+      "target": "die Ballmaschine",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Wolken",
+      "voice": "female"
+    },
+    {
+      "word": "die Ballmaschine",
+      "voice": "female"
+    },
+    {
+      "word": "der Tennisschläger",
+      "voice": "female"
+    },
+    {
+      "word": "die Tennisbälle",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Ballmaschine?",
+  "answer": [
+    "Sie",
+    "schießt",
+    "Dutzende",
+    "Tennisbälle",
+    "ab."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Tennisschläger"
+        },
+        {
+          "text": "schwingen",
+          "gap": true,
+          "accept": [
+            "schwingen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Ballmaschine",
+          "gap": true,
+          "accept": [
+            "Ballmaschine"
+          ]
+        },
+        {
+          "text": "packen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Dutzende",
+          "gap": true,
+          "accept": [
+            "Dutzende"
+          ]
+        },
+        {
+          "text": "Bälle abschießen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schießt",
+          "gap": true,
+          "accept": [
+            "schießt",
+            "feuert"
+          ]
+        },
+        {
+          "text": "Dutzende Tennisbälle ab"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'die Dutzende' is used as the plural quantifier 'Dutzende (Bälle)', its natural use; no noun row because it is not a noun of the set. The woman swings the racket in the first frames and later just laughs with it in her hand; phrase kept for the main action. Answer subject 'sie' = die Ballmaschine (feminine), voice female as English."
+}

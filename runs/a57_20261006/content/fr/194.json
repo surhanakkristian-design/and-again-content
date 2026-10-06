@@ -1,0 +1,117 @@
+{
+ "mediaId": 194,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le coton",
+ "taps": [
+  {
+   "phrase": "tenir du coton",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "souffler sur le coton",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un tee-shirt blanc",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le soleil",
+   "voice": "female"
+  },
+  {
+   "word": "le chapeau",
+   "voice": "female"
+  },
+  {
+   "word": "le coton",
+   "voice": "female"
+  },
+  {
+   "word": "le tee-shirt",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient la femme ?",
+ "answer": [
+  "Elle",
+  "tient",
+  "du",
+  "coton."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "du coton"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "souffler",
+     "gap": true,
+     "accept": [
+      "souffler"
+     ]
+    },
+    {
+     "text": "sur le coton"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "tee-shirt",
+     "gap": true,
+     "accept": [
+      "tee-shirt",
+      "T-shirt"
+     ]
+    },
+    {
+     "text": "blanc"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient du"
+    },
+    {
+     "text": "coton",
+     "gap": true,
+     "accept": [
+      "coton"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English boxes 1 and 2 are identical in every frame; she holds the cotton almost the whole clip and blows on it only in the last frames, so phrase 2 is true only at the end. No noun row: 'coton' is already in the tap rows."
+}

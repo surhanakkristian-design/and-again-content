@@ -1,0 +1,25 @@
+{
+  "mediaId": 7981, "lang": "de", "level": "B",
+  "keyWord": "das Teilen",
+  "taps": [
+    { "phrase": "in eine Erdbeere beißen", "target": "die Frau mit den Locs", "voice": "female" },
+    { "phrase": "die Ärmel hochgekrempelt haben", "target": "der Mann", "voice": "male" },
+    { "phrase": "dem Mann eine Erdbeere hinhalten", "target": "die Frau in der Jacke", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Markise", "voice": "male" },
+    { "word": "der Eisbecher", "voice": "male" },
+    { "word": "der Krug", "voice": "male" }
+  ],
+  "question": "Was machen die drei Freunde?",
+  "answer": ["Sie", "teilen", "sich", "einen", "Eisbecher."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "in eine" }, { "text": "Erdbeere", "gap": true, "accept": ["Erdbeere"] }, { "text": "beißen" } ] },
+    { "from": "taps", "parts": [ { "text": "die Ärmel" }, { "text": "hochgekrempelt", "gap": true, "accept": ["hochgekrempelt", "aufgekrempelt"] }, { "text": "haben" } ] },
+    { "from": "taps", "parts": [ { "text": "dem Mann eine Erdbeere" }, { "text": "hinhalten", "gap": true, "accept": ["hinhalten", "anbieten", "reichen"] } ] },
+    { "from": "answer", "parts": [ { "text": "teilen", "gap": true, "accept": ["teilen"] }, { "text": "sich einen Eisbecher" } ] }
+  ],
+  "notes": "Key word is the noun 'das Teilen'; the clip only allows the verb ('sie teilen sich einen Eisbecher'), so the answer row gaps 'teilen'. Phrase 3 names 'dem Mann' because in the last frame the man also holds out a strawberry (to the woman with locs); the jacket woman holds hers out to the man. Phrase 1: the man also eats from the sundae, but only the woman with locs bites a strawberry in the boxed frames."
+}

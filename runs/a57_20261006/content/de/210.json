@@ -1,0 +1,27 @@
+{
+  "mediaId": 210, "lang": "de", "level": "A",
+  "keyWord": "der Kunde",
+  "taps": [
+    { "phrase": "Kopfhörer anprobieren", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Kopfhörer einpacken", "target": "der Verkäufer", "voice": "male" },
+    { "phrase": "zwei Schachteln halten", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Kundin", "voice": "female" },
+    { "word": "die Tüte", "voice": "female" },
+    { "word": "die Karte", "voice": "female" },
+    { "word": "die Kopfhörer", "voice": "female" }
+  ],
+  "question": "Was macht die Kundin?",
+  "answer": ["Sie", "probiert", "weiße", "Kopfhörer", "an."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "Kopfhörer" }, { "text": "anprobieren", "gap": true, "accept": ["anprobieren", "aufsetzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Kopfhörer" }, { "text": "einpacken", "gap": true, "accept": ["einpacken", "verpacken"] } ] },
+    { "from": "taps", "parts": [ { "text": "zwei" }, { "text": "Schachteln", "gap": true, "accept": ["Schachteln", "Kartons", "Packungen"] }, { "text": "halten" } ] },
+    { "from": "nouns", "parts": [ { "text": "die" }, { "text": "Kundin", "gap": true, "accept": ["Kundin"] } ] },
+    { "from": "answer", "parts": [ { "text": "probiert weiße" }, { "text": "Kopfhörer", "gap": true, "accept": ["Kopfhörer"] }, { "text": "an" } ] }
+  ],
+  "notes": "Key word 'der Kunde', but the customer shown is a woman: noun 1 and the question use the natural feminine 'die Kundin' (proposal: keep der Kunde as the database word, show die Kundin for this clip). Tap 2 target is the cashier (der Verkäufer); he puts the headphone box into the paper bag, so 'die Kopfhörer einpacken' instead of a literal 'eine Papiertüte packen'. Tap 3 box also covers the frames where she already wears the headphones; the phrase describes the opening frames (two boxes). Noun row added: Kundin appears in no other row."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 122,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "die Bushaltestelle",
+ "taps": [
+  {
+   "phrase": "auf der Bank sitzen",
+   "target": "die Frau in Rot",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Einkaufswagen halten",
+   "target": "die alte Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "zur Bushaltestelle fahren",
+   "target": "der Bus",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bushaltestelle",
+   "voice": "female"
+  },
+  {
+   "word": "die Bank",
+   "voice": "female"
+  },
+  {
+   "word": "der Bus",
+   "voice": "female"
+  },
+  {
+   "word": "die Straße",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen die Leute?",
+ "answer": [
+  "Sie",
+  "warten",
+  "an",
+  "der",
+  "Bushaltestelle."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf der"
+    },
+    {
+     "text": "Bank",
+     "gap": true,
+     "accept": [
+      "Bank"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Einkaufswagen",
+     "gap": true,
+     "accept": [
+      "Einkaufswagen"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zur"
+    },
+    {
+     "text": "Bushaltestelle",
+     "gap": true,
+     "accept": [
+      "Bushaltestelle",
+      "Haltestelle"
+     ]
+    },
+    {
+     "text": "fahren"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "warten",
+     "gap": true,
+     "accept": [
+      "warten"
+     ]
+    },
+    {
+     "text": "an der Bushaltestelle"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 3: the bus comes up to the stop and stops there, so 'zur Bushaltestelle fahren' (truer than 'die Straße entlangfahren'; uses the key word). The woman in red sits in most boxed frames but stands bent forward in some (as in English). No noun row: Bushaltestelle is in tap row 3 and the answer row."
+}

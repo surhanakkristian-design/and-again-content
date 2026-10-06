@@ -1,0 +1,116 @@
+{
+ "mediaId": 23,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le discours",
+ "taps": [
+  {
+   "phrase": "faire un discours",
+   "target": "la femme en vert",
+   "voice": "female"
+  },
+  {
+   "phrase": "boire de l'eau",
+   "target": "la femme en vert",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un costume gris",
+   "target": "l'homme en gris",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les fenêtres",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "le micro",
+   "voice": "female"
+  },
+  {
+   "word": "le verre",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en vert ?",
+ "answer": [
+  "Elle",
+  "fait",
+  "un",
+  "discours."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire",
+     "gap": true,
+     "accept": [
+      "faire"
+     ]
+    },
+    {
+     "text": "un discours"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "costume",
+     "gap": true,
+     "accept": [
+      "costume"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fait un"
+    },
+    {
+     "text": "discours",
+     "gap": true,
+     "accept": [
+      "discours"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'le micro' is the everyday word for the microphone."
+}

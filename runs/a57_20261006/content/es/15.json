@@ -1,0 +1,116 @@
+{
+ "mediaId": 15,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la pastilla",
+ "taps": [
+  {
+   "phrase": "beber agua",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "echar agua en un vaso",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar en la mano",
+   "target": "la pastilla",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la pastilla",
+   "voice": "male"
+  },
+  {
+   "word": "la mano",
+   "voice": "male"
+  },
+  {
+   "word": "el árbol",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "Se",
+  "toma",
+  "una",
+  "pastilla",
+  "con",
+  "agua."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber",
+     "gap": true,
+     "accept": [
+      "beber",
+      "tomar"
+     ]
+    },
+    {
+     "text": "agua"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "echar",
+     "gap": true,
+     "accept": [
+      "echar",
+      "servir"
+     ]
+    },
+    {
+     "text": "agua en un vaso"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar en la"
+    },
+    {
+     "text": "mano",
+     "gap": true,
+     "accept": [
+      "mano"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se toma una"
+    },
+    {
+     "text": "pastilla",
+     "gap": true,
+     "accept": [
+      "pastilla"
+     ]
+    },
+    {
+     "text": "con agua"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the man's box also covers frames where he holds his head or takes the pill; written for the drinking. Phrase 3: the pill lies in the woman's open hand. Answer has no subject (natural Spanish), so the answer row is the whole sentence."
+}

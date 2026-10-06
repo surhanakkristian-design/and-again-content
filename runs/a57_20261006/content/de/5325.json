@@ -1,0 +1,123 @@
+{
+ "mediaId": 5325,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Ehepartner",
+ "taps": [
+  {
+   "phrase": "eine Einkaufstüte tragen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "den Autoschlüssel festhalten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf sein Dokument zeigen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Küchenschränke",
+   "voice": "male"
+  },
+  {
+   "word": "der Kühlschrank",
+   "voice": "male"
+  },
+  {
+   "word": "die Dokumente",
+   "voice": "male"
+  },
+  {
+   "word": "die Arbeitsplatte",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen die Ehepartner?",
+ "answer": [
+  "Sie",
+  "unterschreiben",
+  "die",
+  "Dokumente."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Einkaufstüte",
+     "gap": true,
+     "accept": [
+      "Einkaufstüte",
+      "Tüte",
+      "Einkaufstasche"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Autoschlüssel"
+    },
+    {
+     "text": "festhalten",
+     "gap": true,
+     "accept": [
+      "festhalten",
+      "halten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf sein"
+    },
+    {
+     "text": "Dokument",
+     "gap": true,
+     "accept": [
+      "Dokument"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "unterschreiben",
+     "gap": true,
+     "accept": [
+      "unterschreiben",
+      "unterzeichnen"
+     ]
+    },
+    {
+     "text": "die Dokumente"
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes cover the whole clip (hallway, signing, high-five, door). The bag and the keys are only in the first hallway frames; the woman points with her pen at the man's sheet only briefly (box_03). Signing, the high-five and holding hands are done by both, so no single action of one person fills most frames; the English phrases were kept and are true where shown. The answer is kept short ('Sie unterschreiben die Dokumente.') to keep one word order. 'die Ehepartner' (generic plural) in the question; 'das Ehepaar' would be the everyday collective."
+}

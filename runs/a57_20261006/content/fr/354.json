@@ -1,0 +1,121 @@
+{
+ "mediaId": 354,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le guide touristique",
+ "taps": [
+  {
+   "phrase": "feuilleter un guide touristique",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un casque colonial",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "cracher de l'eau",
+   "target": "le lion de pierre",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la statue",
+   "voice": "female"
+  },
+  {
+   "word": "le casque colonial",
+   "voice": "female"
+  },
+  {
+   "word": "la boucle d'oreille",
+   "voice": "female"
+  },
+  {
+   "word": "le guide touristique",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les deux touristes ?",
+ "answer": [
+  "Ils",
+  "feuillettent",
+  "un",
+  "guide",
+  "touristique."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "feuilleter",
+     "gap": true,
+     "accept": [
+      "feuilleter"
+     ]
+    },
+    {
+     "text": "un guide touristique"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "casque",
+     "gap": true,
+     "accept": [
+      "casque",
+      "chapeau"
+     ]
+    },
+    {
+     "text": "colonial"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cracher",
+     "gap": true,
+     "accept": [
+      "cracher"
+     ]
+    },
+    {
+     "text": "de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "feuillettent un"
+    },
+    {
+     "text": "guide",
+     "gap": true,
+     "accept": [
+      "guide"
+     ]
+    },
+    {
+     "text": "touristique"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'sun hat' is a pith helmet in the clip: French 'le casque colonial' (the usual name; 'chapeau de soleil' is not idiomatic), accepted 'chapeau' in the recall row. Answer subject 'Ils' = the woman and the man; voice kept female as in English."
+}

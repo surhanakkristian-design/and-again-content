@@ -1,0 +1,122 @@
+{
+ "mediaId": 7853,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "crecer",
+ "taps": [
+  {
+   "phrase": "sonreír mirando el jarrón",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado en una estantería",
+   "target": "el gato",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar anillos de plata",
+   "target": "las manos",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el gato",
+   "voice": "female"
+  },
+  {
+   "word": "el jarrón",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué le pasa al jarrón?",
+ "answer": [
+  "El",
+  "jarrón",
+  "está",
+  "creciendo",
+  "mucho."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "mirando el jarrón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en una"
+    },
+    {
+     "text": "estantería",
+     "gap": true,
+     "accept": [
+      "estantería",
+      "balda"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "anillos",
+     "gap": true,
+     "accept": [
+      "anillos"
+     ]
+    },
+    {
+     "text": "de plata"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "creciendo",
+     "gap": true,
+     "accept": [
+      "creciendo",
+      "subiendo"
+     ]
+    },
+    {
+     "text": "mucho"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the woman gasps in some boxed frames and grins in others; 'sonreír mirando el jarrón' describes most of them. The cat also looks at the vase, but only the woman smiles. Answer 'está creciendo mucho' is the natural Spanish for 'is growing very tall'."
+}

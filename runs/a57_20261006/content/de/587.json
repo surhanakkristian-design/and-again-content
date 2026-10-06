@@ -1,0 +1,120 @@
+{
+  "mediaId": 587,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "der Puck",
+  "taps": [
+    {
+      "phrase": "den Puck einwerfen",
+      "target": "der Schiedsrichter",
+      "voice": "male"
+    },
+    {
+      "phrase": "ihren Treffer bejubeln",
+      "target": "die Spielerin in Gelb",
+      "voice": "female"
+    },
+    {
+      "phrase": "im Netz landen",
+      "target": "der Puck",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Puck",
+      "voice": "female"
+    },
+    {
+      "word": "der Handschuh",
+      "voice": "female"
+    },
+    {
+      "word": "der Helm",
+      "voice": "female"
+    },
+    {
+      "word": "das Trikot",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Spielerin in Gelb?",
+  "answer": [
+    "Sie",
+    "bejubelt",
+    "ihren",
+    "Treffer."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den"
+        },
+        {
+          "text": "Puck",
+          "gap": true,
+          "accept": [
+            "Puck"
+          ]
+        },
+        {
+          "text": "einwerfen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ihren"
+        },
+        {
+          "text": "Treffer",
+          "gap": true,
+          "accept": [
+            "Treffer"
+          ]
+        },
+        {
+          "text": "bejubeln"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "im Netz"
+        },
+        {
+          "text": "landen",
+          "gap": true,
+          "accept": [
+            "landen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "bejubelt",
+          "gap": true,
+          "accept": [
+            "bejubelt",
+            "feiert"
+          ]
+        },
+        {
+          "text": "ihren Treffer"
+        }
+      ]
+    }
+  ],
+  "notes": "'den Puck einwerfen' = the referee's face-off drop in German hockey language (Bully). Tap 2: the English green box also covers frames where she skates with the puck and shoots (box_02/03); she celebrates in box_05/06; phrase follows English. Tap 3: the blue box also covers the puck in the referee's hand, on the ice and in her glove; 'im Netz landen' describes the goal moment (box_04). No noun row: Puck is in tap row 1."
+}

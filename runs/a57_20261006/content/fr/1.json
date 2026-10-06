@@ -1,0 +1,114 @@
+{
+  "mediaId": 1,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la pause",
+  "taps": [
+    {
+      "phrase": "rire devant son téléphone",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "se toucher la tête",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "ouvrir grand la bouche",
+      "target": "l'homme",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le rideau",
+      "voice": "male"
+    },
+    {
+      "word": "le téléphone",
+      "voice": "male"
+    },
+    {
+      "word": "le pull",
+      "voice": "male"
+    },
+    {
+      "word": "les livres",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "rit",
+    "devant",
+    "son",
+    "téléphone."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "rire devant son"
+        },
+        {
+          "text": "téléphone",
+          "gap": true,
+          "accept": [
+            "téléphone"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se toucher la"
+        },
+        {
+          "text": "tête",
+          "gap": true,
+          "accept": [
+            "tête"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir grand la"
+        },
+        {
+          "text": "bouche",
+          "gap": true,
+          "accept": [
+            "bouche"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "rit",
+          "gap": true,
+          "accept": [
+            "rit"
+          ]
+        },
+        {
+          "text": "devant son téléphone"
+        }
+      ]
+    }
+  ],
+  "notes": "All three boxes cover the whole man in every frame; phrases describe his action in most frames of each phase (laughing first, then hand on head, then mouth wide open)."
+}

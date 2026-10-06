@@ -1,0 +1,112 @@
+{
+ "mediaId": 32,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le mot",
+ "taps": [
+  {
+   "phrase": "toucher sa barbe",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "avoir les cheveux longs",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être grande et blanche",
+   "target": "la lettre",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lettre",
+   "voice": "female"
+  },
+  {
+   "word": "la barbe",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  }
+ ],
+ "question": "Que touche l'homme ?",
+ "answer": [
+  "Il",
+  "touche",
+  "sa",
+  "barbe."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toucher",
+     "gap": true,
+     "accept": [
+      "toucher"
+     ]
+    },
+    {
+     "text": "sa barbe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir les"
+    },
+    {
+     "text": "cheveux",
+     "gap": true,
+     "accept": [
+      "cheveux"
+     ]
+    },
+    {
+     "text": "longs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être grande et"
+    },
+    {
+     "text": "blanche",
+     "gap": true,
+     "accept": [
+      "blanche"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "touche sa"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word le mot is not a visible thing of the set (the game is about words, only the letter B is shown); not forced. Tap 1: red box covers the whole clip, he touches his beard only in the thinking frames (about half)."
+}

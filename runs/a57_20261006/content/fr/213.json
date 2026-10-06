@@ -1,0 +1,117 @@
+{
+ "mediaId": 213,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la danse",
+ "taps": [
+  {
+   "phrase": "faire la cuisine",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir la femme",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une jupe longue",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la radio",
+   "voice": "female"
+  },
+  {
+   "word": "le sol",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font l'homme et la femme ?",
+ "answer": [
+  "Ils",
+  "dansent",
+  "dans",
+  "la",
+  "cuisine."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire la"
+    },
+    {
+     "text": "cuisine",
+     "gap": true,
+     "accept": [
+      "cuisine"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "la femme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "jupe",
+     "gap": true,
+     "accept": [
+      "jupe"
+     ]
+    },
+    {
+     "text": "longue"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "dansent",
+     "gap": true,
+     "accept": [
+      "dansent"
+     ]
+    },
+    {
+     "text": "dans la cuisine"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord la danse (noun) is not a noun of the set; the answer uses the verb 'danser'. Answer subject 'Ils' is masculine plural (mixed couple); answerVoice kept female as in English."
+}

@@ -1,0 +1,25 @@
+{
+  "mediaId": 209, "lang": "fr", "level": "A",
+  "keyWord": "curieux",
+  "taps": [
+    { "phrase": "regarder dans le carton", "target": "le chat", "voice": "male" },
+    { "phrase": "mettre la patte dans le carton", "target": "le chat", "voice": "male" },
+    { "phrase": "renifler la caméra", "target": "le chat", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le chat", "voice": "male" },
+    { "word": "le carton", "voice": "male" },
+    { "word": "la caméra", "voice": "male" }
+  ],
+  "question": "Que fait le chat ?",
+  "answer": ["Le", "chat", "curieux", "regarde", "dans", "le", "carton."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "regarder", "gap": true, "accept": ["regarder"] }, { "text": "dans le carton" } ] },
+    { "from": "taps", "parts": [ { "text": "mettre la" }, { "text": "patte", "gap": true, "accept": ["patte"] }, { "text": "dans le carton" } ] },
+    { "from": "taps", "parts": [ { "text": "renifler", "gap": true, "accept": ["renifler", "sentir"] }, { "text": "la caméra" } ] },
+    { "from": "answer", "parts": [ { "text": "regarde dans le" }, { "text": "carton", "gap": true, "accept": ["carton"] } ] }
+  ],
+  "notes": "English 'box' = a cardboard box: 'le carton' (everyday word in France), used throughout. The key word 'curieux' is an adjective; it sits in the model answer's subject ('Le chat curieux'), so the subject-less answer recall row cannot contain it. The three tap boxes are identical (one cat); phrase 2 and 3 happen only in part of the boxed frames (paw at 3-4 s, nose on the lens from ~5 s)."
+}

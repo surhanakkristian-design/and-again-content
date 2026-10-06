@@ -1,0 +1,122 @@
+{
+ "mediaId": 30,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el libro de texto",
+ "taps": [
+  {
+   "phrase": "pasar las páginas",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "dormirse sobre un libro",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener muchas páginas",
+   "target": "el libro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el pelo",
+   "voice": "female"
+  },
+  {
+   "word": "las gafas",
+   "voice": "female"
+  },
+  {
+   "word": "el libro de texto",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "Pasa",
+  "las",
+  "páginas",
+  "de",
+  "un",
+  "libro",
+  "de",
+  "texto."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pasar",
+     "gap": true,
+     "accept": [
+      "pasar"
+     ]
+    },
+    {
+     "text": "las páginas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dormirse",
+     "gap": true,
+     "accept": [
+      "dormirse",
+      "dormir"
+     ]
+    },
+    {
+     "text": "sobre un libro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener muchas"
+    },
+    {
+     "text": "páginas",
+     "gap": true,
+     "accept": [
+      "páginas",
+      "hojas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Pasa las páginas de un"
+    },
+    {
+     "text": "libro",
+     "gap": true,
+     "accept": [
+      "libro"
+     ]
+    },
+    {
+     "text": "de texto"
+    }
+   ]
+  }
+ ],
+ "notes": "Target 'the woman' rendered 'la chica' (she is young). Phrases 1 and 3 both contain 'páginas' but mean different things."
+}

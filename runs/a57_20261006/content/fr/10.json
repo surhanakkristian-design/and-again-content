@@ -1,0 +1,26 @@
+{
+  "mediaId": 10, "lang": "fr", "level": "A",
+  "keyWord": "la feuille",
+  "taps": [
+    { "phrase": "tenir une grande feuille", "target": "la personne", "voice": "female" },
+    { "phrase": "briller d'un vert vif", "target": "la feuille", "voice": "female" },
+    { "phrase": "tomber sur la feuille", "target": "l'eau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les lunettes", "voice": "female" },
+    { "word": "la chemise", "voice": "female" },
+    { "word": "la feuille", "voice": "female" },
+    { "word": "la table", "voice": "female" }
+  ],
+  "question": "Où tombe l'eau ?",
+  "answer": ["L'eau", "tombe", "sur", "la", "feuille."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir une grande" }, { "text": "feuille", "gap": true, "accept": ["feuille"] } ] },
+    { "from": "taps", "parts": [ { "text": "briller", "gap": true, "accept": ["briller"] }, { "text": "d'un vert vif" } ] },
+    { "from": "taps", "parts": [ { "text": "tomber", "gap": true, "accept": ["tomber"] }, { "text": "sur la feuille" } ] },
+    { "from": "answer", "parts": [ { "text": "tombe sur la" }, { "text": "feuille", "gap": true, "accept": ["feuille"] } ] }
+  ],
+  "notes": "Target 1 kept neutral as 'la personne' (English 'the person'); the botanist looks female (earrings, female voice). The leaf only glows bright green in part of the boxed frames (first and last frames show a plain dark-green leaf); phrase 2 says what it does in most boxed frames. Answer row gaps 'feuille' so it does not look like tap row 3 ('tomber sur la feuille') once blanked. 'vif' is a common A2 colour word."
+}

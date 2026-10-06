@@ -1,0 +1,121 @@
+{
+  "mediaId": 5382,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "diskutieren",
+  "taps": [
+    {
+      "phrase": "mit einem jungen Mann diskutieren",
+      "target": "die Frau mit den grauen Haaren",
+      "voice": "female"
+    },
+    {
+      "phrase": "einer älteren Frau antworten",
+      "target": "der junge Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "an der Wand hängen",
+      "target": "die Lampe",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Haus",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "der Mann",
+      "voice": "male"
+    },
+    {
+      "word": "der Tisch",
+      "voice": "female"
+    }
+  ],
+  "question": "Was machen die Leute?",
+  "answer": [
+    "Sie",
+    "sitzen",
+    "am",
+    "Tisch",
+    "und",
+    "diskutieren."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "mit einem jungen"
+        },
+        {
+          "text": "Mann",
+          "gap": true,
+          "accept": [
+            "Mann"
+          ]
+        },
+        {
+          "text": "diskutieren"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einer älteren Frau"
+        },
+        {
+          "text": "antworten",
+          "gap": true,
+          "accept": [
+            "antworten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an der"
+        },
+        {
+          "text": "Wand",
+          "gap": true,
+          "accept": [
+            "Wand"
+          ]
+        },
+        {
+          "text": "hängen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sitzen am Tisch und"
+        },
+        {
+          "text": "diskutieren",
+          "gap": true,
+          "accept": [
+            "diskutieren"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word diskutieren fits and is used in phrase 1 and the answer. Phrase 2 says 'antworten' (he answers her back) instead of mirroring phrase 1, so the two phrases do not mean the same. In the later group frames the box of the young man sometimes falls on the woman next to him; phrase 2 follows the first frames where he answers the grey-haired woman."
+}

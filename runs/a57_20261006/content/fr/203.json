@@ -1,0 +1,119 @@
+{
+ "mediaId": 203,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la croisière",
+ "taps": [
+  {
+   "phrase": "être vêtue d'une robe d'été jaune",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "arborer une chemise à fleurs",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "bondir au-dessus des vagues",
+   "target": "les dauphins",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bateau de croisière",
+   "voice": "male"
+  },
+  {
+   "word": "les dauphins",
+   "voice": "male"
+  },
+  {
+   "word": "les îles",
+   "voice": "male"
+  },
+  {
+   "word": "la mer",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le bateau de croisière ?",
+ "answer": [
+  "Il",
+  "longe",
+  "des",
+  "îles",
+  "tropicales."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être vêtue d'une"
+    },
+    {
+     "text": "robe",
+     "gap": true,
+     "accept": [
+      "robe"
+     ]
+    },
+    {
+     "text": "d'été jaune"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arborer",
+     "gap": true,
+     "accept": [
+      "arborer",
+      "porter"
+     ]
+    },
+    {
+     "text": "une chemise à fleurs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "bondir au-dessus des"
+    },
+    {
+     "text": "vagues",
+     "gap": true,
+     "accept": [
+      "vagues"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "longe",
+     "gap": true,
+     "accept": [
+      "longe",
+      "passe devant"
+     ]
+    },
+    {
+     "text": "des îles tropicales"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word la croisière is not itself a noun of the set; it appears inside the noun le bateau de croisière (and the question). B-level words: vêtue de, arborer, bondir, longer. Phrase 1 is in the feminine (être vêtue) because its target is the woman."
+}

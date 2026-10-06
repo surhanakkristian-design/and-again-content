@@ -1,0 +1,114 @@
+{
+ "mediaId": 94,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "parpadear",
+ "taps": [
+  {
+   "phrase": "soltar una lágrima",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "apretar los dientes",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír con aire triunfal",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas de sol",
+   "voice": "male"
+  },
+  {
+   "word": "el pendiente de aro",
+   "voice": "male"
+  },
+  {
+   "word": "los batidos",
+   "voice": "male"
+  },
+  {
+   "word": "las llaves del coche",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué intenta evitar el chico?",
+ "answer": [
+  "El",
+  "chico",
+  "intenta",
+  "no",
+  "parpadear."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soltar una"
+    },
+    {
+     "text": "lágrima",
+     "gap": true,
+     "accept": [
+      "lágrima"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apretar",
+     "gap": true,
+     "accept": [
+      "apretar"
+     ]
+    },
+    {
+     "text": "los dientes"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "con aire triunfal"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "intenta no"
+    },
+    {
+     "text": "parpadear",
+     "gap": true,
+     "accept": [
+      "parpadear"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer phrased 'intenta no parpadear' (natural Spanish for 'trying to avoid blinking'); question keeps 'evitar'. Sunglasses are worn on his head; 'las gafas de sol' still the natural name."
+}

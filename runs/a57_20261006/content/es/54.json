@@ -1,0 +1,121 @@
+{
+ "mediaId": 54,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el cajero automático",
+ "taps": [
+  {
+   "phrase": "teclear su PIN",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "expulsar los billetes",
+   "target": "el cajero automático",
+   "voice": "female"
+  },
+  {
+   "phrase": "contar el dinero en efectivo",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lámpara",
+   "voice": "female"
+  },
+  {
+   "word": "el cajero automático",
+   "voice": "female"
+  },
+  {
+   "word": "los billetes",
+   "voice": "female"
+  },
+  {
+   "word": "el abrigo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "está",
+  "sacando",
+  "dinero",
+  "del",
+  "cajero",
+  "automático."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "teclear",
+     "gap": true,
+     "accept": [
+      "teclear",
+      "marcar",
+      "introducir"
+     ]
+    },
+    {
+     "text": "su PIN"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "expulsar",
+     "gap": true,
+     "accept": [
+      "expulsar",
+      "dispensar"
+     ]
+    },
+    {
+     "text": "los billetes"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "contar el dinero en"
+    },
+    {
+     "text": "efectivo",
+     "gap": true,
+     "accept": [
+      "efectivo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está sacando dinero del"
+    },
+    {
+     "text": "cajero automático",
+     "gap": true,
+     "accept": [
+      "cajero automático",
+      "cajero"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Boxes 1 and 3 (the woman) cover the whole clip incl. card insertion and the flower purchase; 'teclear su PIN' / 'contar el dinero en efectivo' describe what she does in the matching middle frames. Phrase 2 'expulsar los billetes' is what the ATM does while the tray slides out lit. Noun 1 'la lámpara' = the wall light above the ATM."
+}

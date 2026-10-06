@@ -1,0 +1,120 @@
+{
+  "mediaId": 237,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "un âne",
+  "taps": [
+    {
+      "phrase": "ouvrir grand la bouche",
+      "target": "l'âne",
+      "voice": "male"
+    },
+    {
+      "phrase": "se rouler par terre",
+      "target": "l'âne",
+      "voice": "male"
+    },
+    {
+      "phrase": "chercher à manger près de l'âne",
+      "target": "les oiseaux",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les oranges",
+      "voice": "male"
+    },
+    {
+      "word": "la maison",
+      "voice": "male"
+    },
+    {
+      "word": "l'âne",
+      "voice": "male"
+    },
+    {
+      "word": "les oiseaux",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'âne ?",
+  "answer": [
+    "L'âne",
+    "se",
+    "roule",
+    "par",
+    "terre."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ouvrir",
+          "gap": true,
+          "accept": [
+            "ouvrir"
+          ]
+        },
+        {
+          "text": "grand la bouche"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "rouler",
+          "gap": true,
+          "accept": [
+            "rouler"
+          ]
+        },
+        {
+          "text": "par terre"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "chercher à"
+        },
+        {
+          "text": "manger",
+          "gap": true,
+          "accept": [
+            "manger"
+          ]
+        },
+        {
+          "text": "près de l'âne"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "se roule par"
+        },
+        {
+          "text": "terre",
+          "gap": true,
+          "accept": [
+            "terre"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "keyWord copied as in the database ('un âne', indefinite article); the noun pill uses 'l'âne'. A separate noun row 'l'âne' cannot be cut into 2 parts without splitting the elision, so phrase 3 says 'près de l'âne' (the birds peck on the cobbles beside the donkey) and carries the key word; it cannot be the gap (elided). Phrase 1's box covers the whole clip; the donkey opens its mouth wide (braying) in the middle frames, in other boxed frames it stands, rolls or trots. Phrase 1 and 2 share the target, as in English."
+}

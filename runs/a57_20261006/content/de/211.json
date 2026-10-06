@@ -1,0 +1,27 @@
+{
+  "mediaId": 211, "lang": "de", "level": "B",
+  "keyWord": "der Zoll",
+  "taps": [
+    { "phrase": "den Koffer durchsuchen", "target": "der Zollbeamte", "voice": "male" },
+    { "phrase": "flehend die Hände falten", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "mit Stacheln bedeckt sein", "target": "die Durian", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Durian", "voice": "female" },
+    { "word": "der Koffer", "voice": "female" },
+    { "word": "der Mülleimer", "voice": "female" },
+    { "word": "der Zollbeamte", "voice": "male" }
+  ],
+  "question": "Was macht der Zollbeamte?",
+  "answer": ["Der", "Zollbeamte", "durchsucht", "den", "Koffer."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "den" }, { "text": "Koffer", "gap": true, "accept": ["Koffer"] }, { "text": "durchsuchen" } ] },
+    { "from": "taps", "parts": [ { "text": "flehend die Hände" }, { "text": "falten", "gap": true, "accept": ["falten"] } ] },
+    { "from": "taps", "parts": [ { "text": "mit" }, { "text": "Stacheln", "gap": true, "accept": ["Stacheln"] }, { "text": "bedeckt sein" } ] },
+    { "from": "nouns", "parts": [ { "text": "der" }, { "text": "Zollbeamte", "gap": true, "accept": ["Zollbeamte"] } ] },
+    { "from": "answer", "parts": [ { "text": "durchsucht", "gap": true, "accept": ["durchsucht", "kontrolliert"] }, { "text": "den Koffer" } ] }
+  ],
+  "notes": "Key word der Zoll appears as the compound 'der Zollbeamte' (owner decision 404), so a noun row of der Zollbeamte is added. B1/B2 words: durchsuchen, flehend, der Stachel, der Zollbeamte. Tap 2 box also covers the girl leaning on her suitcase at the start and walking out with her suitcases at the end; the phrase describes the clasped, pleading hands in the middle frames. 'die Durian' is the usual German name (also 'die Stinkfrucht')."
+}

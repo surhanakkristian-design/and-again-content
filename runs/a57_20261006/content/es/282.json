@@ -1,0 +1,128 @@
+{
+  "mediaId": 282,
+  "lang": "es",
+  "level": "B",
+  "keyWord": "la sombra de ojos",
+  "taps": [
+    {
+      "phrase": "aplicar sombra de ojos dorada",
+      "target": "la brocha",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar un turbante de satén",
+      "target": "la chica del turbante",
+      "voice": "female"
+    },
+    {
+      "phrase": "lucir los párpados dorados",
+      "target": "la chica de la camisa",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el turbante",
+      "voice": "female"
+    },
+    {
+      "word": "la sombra de ojos",
+      "voice": "female"
+    },
+    {
+      "word": "el cuello",
+      "voice": "female"
+    },
+    {
+      "word": "el botón",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué hace la brocha?",
+  "answer": [
+    "Aplica",
+    "sombra",
+    "de",
+    "ojos",
+    "dorada",
+    "en",
+    "el",
+    "párpado."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "aplicar",
+          "gap": true,
+          "accept": [
+            "aplicar",
+            "extender",
+            "poner"
+          ]
+        },
+        {
+          "text": "sombra de ojos dorada"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "turbante",
+          "gap": true,
+          "accept": [
+            "turbante"
+          ]
+        },
+        {
+          "text": "de satén"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "lucir",
+          "gap": true,
+          "accept": [
+            "lucir",
+            "enseñar",
+            "mostrar"
+          ]
+        },
+        {
+          "text": "los párpados dorados"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Aplica"
+        },
+        {
+          "text": "sombra de ojos",
+          "gap": true,
+          "accept": [
+            "sombra de ojos",
+            "sombra"
+          ]
+        },
+        {
+          "text": "dorada en el párpado"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: English 'pick up gold eyeshadow', but in most boxed frames the brush is applying/patting the eyeshadow on the eyelid (it picks it up only in the first two frames), so I wrote 'aplicar sombra de ojos dorada' and asked what the brush does. Headscarf: she wears a knotted satin head wrap; 'el turbante' is the natural Spanish word for this tied style (pañuelo would also be possible). Collar = 'el cuello' (of the shirt). No noun row: the key word is already in rows 1 and 4."
+}

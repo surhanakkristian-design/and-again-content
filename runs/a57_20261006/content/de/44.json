@@ -1,0 +1,122 @@
+{
+  "mediaId": 44,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "die Wut",
+  "taps": [
+    {
+      "phrase": "die Fäuste ballen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "sich an den Kopf fassen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "verstreut herumliegen",
+      "target": "die Blumen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Zöpfe",
+      "voice": "female"
+    },
+    {
+      "word": "die Schürze",
+      "voice": "female"
+    },
+    {
+      "word": "die Faust",
+      "voice": "female"
+    },
+    {
+      "word": "die Blumen",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "ballt",
+    "vor",
+    "Wut",
+    "die",
+    "Fäuste."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Fäuste"
+        },
+        {
+          "text": "ballen",
+          "gap": true,
+          "accept": [
+            "ballen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich an den"
+        },
+        {
+          "text": "Kopf",
+          "gap": true,
+          "accept": [
+            "Kopf"
+          ]
+        },
+        {
+          "text": "fassen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "verstreut",
+          "gap": true,
+          "accept": [
+            "verstreut"
+          ]
+        },
+        {
+          "text": "herumliegen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "ballt vor"
+        },
+        {
+          "text": "Wut",
+          "gap": true,
+          "accept": [
+            "Wut",
+            "Zorn"
+          ]
+        },
+        {
+          "text": "die Fäuste"
+        }
+      ]
+    }
+  ],
+  "notes": "German also allows 'Sie ballt die Fäuste vor Wut.' (both orders correct; chips allow two orders). Taps 1 and 2 share one box (same woman) as in English; tap boxes also cover the kick and bag-throw frames - phrases written for the frames where she does them. Braids are cornrows; 'die Zöpfe' is the everyday word. No noun row: 'die Wut' is not a noun of the set and is in the answer row."
+}

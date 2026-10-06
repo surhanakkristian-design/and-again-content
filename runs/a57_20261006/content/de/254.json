@@ -1,0 +1,121 @@
+{
+  "mediaId": 254,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Erde",
+  "taps": [
+    {
+      "phrase": "den Globus anhalten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "dunkle Locken haben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "am Fenster schlafen",
+      "target": "die Katze",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Sonne",
+      "voice": "female"
+    },
+    {
+      "word": "das Meer",
+      "voice": "female"
+    },
+    {
+      "word": "die Katze",
+      "voice": "female"
+    },
+    {
+      "word": "der Globus",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Katze?",
+  "answer": [
+    "Die",
+    "Katze",
+    "schläft",
+    "am",
+    "Fenster."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Globus"
+        },
+        {
+          "text": "anhalten",
+          "gap": true,
+          "accept": [
+            "anhalten",
+            "stoppen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "dunkle"
+        },
+        {
+          "text": "Locken",
+          "gap": true,
+          "accept": [
+            "Locken"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am"
+        },
+        {
+          "text": "Fenster",
+          "gap": true,
+          "accept": [
+            "Fenster"
+          ]
+        },
+        {
+          "text": "schlafen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schläft",
+          "gap": true,
+          "accept": [
+            "schläft"
+          ]
+        },
+        {
+          "text": "am Fenster"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word die Erde does not appear in any exercise: the clip shows a globe (der Globus), and no English noun or phrase names the planet; proposal: owner may accept as is. The woman's box mostly shows her pointing at the globe, but the man points too, so the distinctive 'den Globus anhalten' (her hand stopping the spinning globe) is kept. No noun row: key word is not a noun of the set."
+}

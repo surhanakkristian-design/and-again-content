@@ -1,0 +1,140 @@
+{
+ "mediaId": 457,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el maquillaje",
+ "taps": [
+  {
+   "phrase": "cerrar los ojos",
+   "target": "la mujer de delante",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camiseta verde",
+   "target": "la mujer de verde",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar tumbado detrás de las mujeres",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la luz",
+   "voice": "female"
+  },
+  {
+   "word": "el espejo",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  },
+  {
+   "word": "el maquillaje",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Dónde está tumbado el perro?",
+ "answer": [
+  "El",
+  "perro",
+  "está",
+  "tumbado",
+  "detrás",
+  "de",
+  "las",
+  "mujeres."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cerrar",
+     "gap": true,
+     "accept": [
+      "cerrar"
+     ]
+    },
+    {
+     "text": "los ojos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "tumbado",
+     "gap": true,
+     "accept": [
+      "tumbado",
+      "echado"
+     ]
+    },
+    {
+     "text": "detrás de las mujeres"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "maquillaje",
+     "gap": true,
+     "accept": [
+      "maquillaje"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está tumbado detrás de las"
+    },
+    {
+     "text": "mujeres",
+     "gap": true,
+     "accept": [
+      "mujeres",
+      "chicas"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2 box also covers the green woman's hand on the chin in close-ups; she wears the green top throughout. Noun 1 'la luz' = the vanity bulb (alternative 'la bombilla')."
+}

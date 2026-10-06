@@ -1,0 +1,126 @@
+{
+ "mediaId": 7124,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Treppe",
+ "taps": [
+  {
+   "phrase": "die Steintreppe hinabsteigen",
+   "target": "der Mann im Smoking",
+   "voice": "male"
+  },
+  {
+   "phrase": "vom Balkon aus jubeln",
+   "target": "die Hochzeitsgäste",
+   "voice": "male"
+  },
+  {
+   "phrase": "auf einem Tablett ruhen",
+   "target": "die Hochzeitstorte",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Gäste",
+   "voice": "male"
+  },
+  {
+   "word": "die Hochzeitstorte",
+   "voice": "male"
+  },
+  {
+   "word": "der Smoking",
+   "voice": "male"
+  },
+  {
+   "word": "die Treppe",
+   "voice": "male"
+  }
+ ],
+ "question": "Was steigt der junge Mann hinab?",
+ "answer": [
+  "Er",
+  "steigt",
+  "die",
+  "lange",
+  "Steintreppe",
+  "hinab."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die"
+    },
+    {
+     "text": "Steintreppe",
+     "gap": true,
+     "accept": [
+      "Steintreppe",
+      "Treppe"
+     ]
+    },
+    {
+     "text": "hinabsteigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vom Balkon aus"
+    },
+    {
+     "text": "jubeln",
+     "gap": true,
+     "accept": [
+      "jubeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einem"
+    },
+    {
+     "text": "Tablett",
+     "gap": true,
+     "accept": [
+      "Tablett"
+     ]
+    },
+    {
+     "text": "ruhen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "steigt",
+     "gap": true,
+     "accept": [
+      "steigt",
+      "geht"
+     ]
+    },
+    {
+     "text": "die lange Steintreppe"
+    },
+    {
+     "text": "hinab"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word die Treppe appears in the noun (staircase) and as the compound Steintreppe (decision 404), so no extra noun row. Answer: 'Die lange Steintreppe steigt er hinab.' is a possible but marked second order. The neighbours on the right also clap, but only the guests are on the balcony."
+}

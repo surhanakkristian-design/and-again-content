@@ -1,0 +1,118 @@
+{
+ "mediaId": 6824,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Klimaanlage",
+ "taps": [
+  {
+   "phrase": "sich den Schweiß von der Stirn wischen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Druck anzeigen",
+   "target": "die Manometer",
+   "voice": "male"
+  },
+  {
+   "phrase": "tropfendes Wasser auffangen",
+   "target": "der Eimer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Klimaanlage",
+   "voice": "male"
+  },
+  {
+   "word": "der Eimer",
+   "voice": "male"
+  },
+  {
+   "word": "die Kappe",
+   "voice": "male"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "wartet",
+  "die",
+  "Klimaanlage."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich den"
+    },
+    {
+     "text": "Schweiß",
+     "gap": true,
+     "accept": [
+      "Schweiß"
+     ]
+    },
+    {
+     "text": "von der Stirn wischen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Druck"
+    },
+    {
+     "text": "anzeigen",
+     "gap": true,
+     "accept": [
+      "anzeigen",
+      "messen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tropfendes Wasser"
+    },
+    {
+     "text": "auffangen",
+     "gap": true,
+     "accept": [
+      "auffangen",
+      "sammeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "wartet die"
+    },
+    {
+     "text": "Klimaanlage",
+     "gap": true,
+     "accept": [
+      "Klimaanlage"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 1: the pill sits on an outdoor unit; 'die Klimaanlage' is how Germans name such a unit in everyday speech (technically 'das Außengerät der Klimaanlage'). 'warten' (= service) is B2; 'repariert' would be the A2 alternative."
+}

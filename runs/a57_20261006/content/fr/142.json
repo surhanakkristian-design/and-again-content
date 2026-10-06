@@ -1,0 +1,26 @@
+{
+  "mediaId": 142, "lang": "fr", "level": "A",
+  "keyWord": "le château",
+  "taps": [
+    { "phrase": "s'asseoir sur le trône", "target": "la femme", "voice": "female" },
+    { "phrase": "porter une écharpe jaune", "target": "la femme", "voice": "female" },
+    { "phrase": "porter une veste noire", "target": "l'homme en veste noire", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "le château", "voice": "female" },
+    { "word": "le pont", "voice": "female" },
+    { "word": "l'eau", "voice": "female" }
+  ],
+  "question": "Que visitent l'homme et la femme ?",
+  "answer": ["Ils", "visitent", "un", "grand", "château."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'asseoir sur le" }, { "text": "trône", "gap": true, "accept": ["trône"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "écharpe", "gap": true, "accept": ["écharpe"] }, { "text": "jaune" } ] },
+    { "from": "taps", "parts": [ { "text": "porter", "gap": true, "accept": ["porter"] }, { "text": "une veste noire" } ] },
+    { "from": "answer", "parts": [ { "text": "visitent un grand" }, { "text": "château", "gap": true, "accept": ["château"] } ] }
+  ],
+  "notes": "Phrase 1: the 'chair' is a throne; 'le trône' is above A2 but the plain right word (English 'chair' would be wrong in French here). The woman's box also covers frames where she walks or looks out from the tower; she sits on the throne only around 8-9 s. The drawbridge = 'le pont' (A-level; 'le pont-levis' would be B). Question names 'l'homme et la femme' so the answer pronoun 'Ils' is unambiguous (with 'les deux personnes' grammar would force 'Elles'). answerVoice kept female as in English though the subject is a mixed pair."
+}

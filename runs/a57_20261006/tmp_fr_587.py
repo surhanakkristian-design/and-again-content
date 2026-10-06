@@ -1,0 +1,62 @@
+import json
+def g(t,acc=None): return {"text":t,"gap":True,"accept":acc or [t]}
+def p(t): return {"text":t}
+D={}
+D[587]=dict(mediaId=587,lang="fr",level="B",keyWord="le palet",
+ taps=[dict(phrase="lâcher le palet",target="l'arbitre",voice="male"),
+       dict(phrase="célébrer son but",target="la joueuse en jaune",voice="female"),
+       dict(phrase="finir au fond des filets",target="le palet",voice="female")],
+ nouns=[dict(word="le palet",voice="female"),dict(word="le gant",voice="female"),dict(word="le casque",voice="female"),dict(word="le maillot",voice="female")],
+ question="Que fait la joueuse en jaune ?",answer=["Elle","célèbre","son","but."],answerVoice="female",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("lâcher le"),g("palet")]),
+         dict(**{"from":"taps"},parts=[g("célébrer",["célébrer","fêter"]),p("son but")]),
+         dict(**{"from":"taps"},parts=[p("finir au fond des"),g("filets",["filets","filet"])]),
+         dict(**{"from":"answer"},parts=[p("célèbre son"),g("but")])],
+ notes="Phrase 3: the blue box follows the puck through the whole clip (held by the referee, dropped, pushed over the ice, held up at the end); the phrase describes its flight into the goal (most dynamic boxed moment, the English meaning). 'au fond des filets' is the fixed French sports idiom for a goal. Key word 'le palet' is the standard word in France (Québec: la rondelle).")
+D[7069]=dict(mediaId=7069,lang="fr",level="B",keyWord="arriver au volant",
+ taps=[dict(phrase="soulever son chapeau de paille",target="l'homme",voice="male"),
+       dict(phrase="se tenir sur le seuil",target="la jeune femme",voice="female"),
+       dict(phrase="se pencher à la fenêtre",target="la vieille dame",voice="female")],
+ nouns=[dict(word="le tracteur",voice="male"),dict(word="les tournesols",voice="male"),dict(word="le chapeau de paille",voice="male"),dict(word="le gravier",voice="male")],
+ question="Que fait l'homme ?",answer=["Il","arrive","au","volant","d'un","tracteur","rouge."],answerVoice="male",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[g("soulever",["soulever","lever"]),p("son chapeau de paille")]),
+         dict(**{"from":"taps"},parts=[p("se tenir sur le"),g("seuil",["seuil","perron"])]),
+         dict(**{"from":"taps"},parts=[p("se"),g("pencher"),p("à la fenêtre")]),
+         dict(**{"from":"answer"},parts=[p("arrive au"),g("volant"),p("d'un tracteur rouge")])],
+ notes="Phrase 1: the man raises his hat only in the second half of the boxed frames; before that he just drives up - phrase written for the hat gesture (the English target). Phrase 3: the old woman leans out of the upstairs window and watches ('se pencher à la fenêtre' rather than 'épier', which implies secret spying). Key word 'arriver au volant' fits (a tractor has a steering wheel), though 'arriver en tracteur' would be the more spontaneous native phrasing; used in the model answer.")
+D[7761]=dict(mediaId=7761,lang="fr",level="B",keyWord="un être",
+ taps=[dict(phrase="plonger ses tentacules dans un bocal",target="le poulpe",voice="male"),
+       dict(phrase="agripper un porte-bloc",target="l'homme",voice="male"),
+       dict(phrase="éclater de rire",target="la femme",voice="female")],
+ nouns=[dict(word="le poulpe",voice="male"),dict(word="le bocal",voice="male"),dict(word="les robots",voice="male"),dict(word="le porte-bloc",voice="male")],
+ question="Que fait le poulpe ?",answer=["Il","plonge","ses","tentacules","dans","un","bocal."],answerVoice="male",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("plonger ses"),g("tentacules",["tentacules","bras"]),p("dans un bocal")]),
+         dict(**{"from":"taps"},parts=[g("agripper",["agripper","serrer","tenir"]),p("un porte-bloc")]),
+         dict(**{"from":"taps"},parts=[p("éclater de"),g("rire")]),
+         dict(**{"from":"answer"},parts=[p("plonge ses tentacules dans un"),g("bocal")])],
+ notes="Key word: source gives 'un être' with the INDEFINITE article (brief asks for nouns with the definite one); proposal 'l'être vivant' (= 'a living thing', the definition; bare 'l'être' is philosophical/abstract in French). The key word appears in no exercise (not an English noun), so no recall row can gap it. 'le poulpe' chosen over 'la pieuvre' (both everyday in France) so the subject pronoun 'il' matches the English male answer/noun voice. The octopus opens the lid, puts its arms into the jar and pulls out a crab: 'plonger ses tentacules dans un bocal' covers the boxed frames.")
+D[5626]=dict(mediaId=5626,lang="fr",level="B",keyWord="être en panne",
+ taps=[dict(phrase="être agenouillé sur le trottoir",target="l'homme",voice="male"),
+       dict(phrase="être assis parmi les oranges",target="le chat",voice="male"),
+       dict(phrase="rouler sur le trottoir",target="l'orange tombée",voice="male")],
+ nouns=[dict(word="le chat",voice="male"),dict(word="le tramway",voice="male"),dict(word="le robot de livraison",voice="male"),dict(word="les éoliennes",voice="male")],
+ question="Qu'y a-t-il dans le robot de livraison ?",answer=["Un","chat","est","assis","parmi","les","oranges."],answerVoice="male",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("être"),g("agenouillé",["agenouillé","à genoux"]),p("sur le trottoir")]),
+         dict(**{"from":"taps"},parts=[p("être"),g("assis"),p("parmi les oranges")]),
+         dict(**{"from":"taps"},parts=[p("rouler sur le"),g("trottoir")]),
+         dict(**{"from":"answer"},parts=[p("est assis parmi les"),g("oranges")])],
+ notes="Key word 'être en panne': the clip does not clearly show a broken robot (it opens normally, a cat sits inside instead of the delivery); the word appears in no exercise. Phrase 1: in the last frames the man sits down on the pavement; he kneels in most boxed frames. Phrase 3: the orange rolls in the early boxed frames and then lies still. Answer subject 'Un chat' (noun phrase), so the recall row starts at 'est'.")
+D[7929]=dict(mediaId=7929,lang="fr",level="B",keyWord="le stationnement",
+ taps=[dict(phrase="écraser deux petites voitures",target="le monster truck",voice="male"),
+       dict(phrase="lever les deux poings",target="l'homme sur le camion",voice="male"),
+       dict(phrase="croiser les bras",target="la femme devant",voice="female")],
+ nouns=[dict(word="le monster truck",voice="male"),dict(word="la voiture rouge",voice="male"),dict(word="la place de stationnement",voice="male"),dict(word="les bottes",voice="male")],
+ question="Que fait le monster truck ?",answer=["Il","écrase","deux","petites","voitures."],answerVoice="male",carousel=[],
+ recall=[dict(**{"from":"taps"},parts=[p("écraser deux petites"),g("voitures")]),
+         dict(**{"from":"taps"},parts=[p("lever les deux"),g("poings")]),
+         dict(**{"from":"taps"},parts=[g("croiser"),p("les bras")]),
+         dict(**{"from":"nouns"},parts=[p("la place de"),g("stationnement",["stationnement","parking"])]),
+         dict(**{"from":"answer"},parts=[g("écrase"),p("deux petites voitures")])],
+ notes="Noun 3 uses the key word: 'la place de stationnement' (everyday speech also says 'la place de parking', accepted in the recall gap). 'le monster truck' is the usual French term (anglicism, masculine). The woman's footwear are short work boots; 'les bottes' kept as the everyday word ('les bottines' also possible).")
+for k,v in D.items():
+    json.dump(v,open(f"content/fr/{k}.json","w"),ensure_ascii=False,indent=1)

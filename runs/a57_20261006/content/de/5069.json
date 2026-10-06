@@ -1,0 +1,119 @@
+{
+ "mediaId": 5069,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "genießen",
+ "taps": [
+  {
+   "phrase": "eine Massage genießen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "in einem Sessel sitzen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ihm die Schultern massieren",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Pflanzen",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "der Sessel",
+   "voice": "male"
+  }
+ ],
+ "question": "Was genießt der Mann?",
+ "answer": [
+  "Er",
+  "genießt",
+  "eine",
+  "Massage."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Massage"
+    },
+    {
+     "text": "genießen",
+     "gap": true,
+     "accept": [
+      "genießen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in einem"
+    },
+    {
+     "text": "Sessel",
+     "gap": true,
+     "accept": [
+      "Sessel"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ihm die"
+    },
+    {
+     "text": "Schultern",
+     "gap": true,
+     "accept": [
+      "Schultern"
+     ]
+    },
+    {
+     "text": "massieren"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "genießt eine"
+    },
+    {
+     "text": "Massage",
+     "gap": true,
+     "accept": [
+      "Massage"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The chair is a leather armchair: 'der Sessel' in phrase and noun."
+}

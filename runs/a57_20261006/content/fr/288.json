@@ -1,0 +1,26 @@
+{
+  "mediaId": 288, "lang": "fr", "level": "A",
+  "keyWord": "la mode",
+  "taps": [
+    { "phrase": "porter un costume blanc", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un costume beige", "target": "l'homme", "voice": "male" },
+    { "phrase": "porter un pull gris", "target": "le chien", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les arbres", "voice": "female" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "le chien", "voice": "female" }
+  ],
+  "question": "Que portent les deux personnes ?",
+  "answer": ["Ils", "portent", "des", "costumes", "à", "la", "mode."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "costume", "gap": true, "accept": ["costume"] }, { "text": "blanc" } ] },
+    { "from": "taps", "parts": [ { "text": "porter", "gap": true, "accept": ["porter"] }, { "text": "un costume beige" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "pull", "gap": true, "accept": ["pull"] }, { "text": "gris" } ] },
+    { "from": "answer", "parts": [ { "text": "portent des costumes à la" }, { "text": "mode", "gap": true, "accept": ["mode"] } ] }
+  ],
+  "notes": "English phrase 2 'to take a photo' is true only in the first boxed frames; in most boxed frames the man walks, poses and adjusts his clothes, so phrase 2 says what he does throughout: 'porter un costume beige' (his suit is beige/taupe, hers cream-white, so phrases 1 and 2 fit only their own target). Key word 'la mode' is not a visible thing and no noun names it; it is used in the model answer ('des costumes à la mode') and gapped there. Answer subject 'Ils' (a woman and a man); voice kept female as in English."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 252,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Staub",
+ "taps": [
+  {
+   "phrase": "auf einen Koffer pusten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Finger hochhalten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "hoch oben sitzen",
+   "target": "der Vogel",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Staub",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Koffer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "pustet",
+  "den",
+  "Staub",
+  "vom",
+  "Koffer."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf einen Koffer"
+    },
+    {
+     "text": "pusten",
+     "gap": true,
+     "accept": [
+      "pusten",
+      "blasen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Finger",
+     "gap": true,
+     "accept": [
+      "Finger"
+     ]
+    },
+    {
+     "text": "hochhalten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hoch oben"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "pustet den"
+    },
+    {
+     "text": "Staub",
+     "gap": true,
+     "accept": [
+      "Staub"
+     ]
+    },
+    {
+     "text": "vom Koffer"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: the woman's box also covers the start (her finger drawing a line through the dust on the shelf) and the end (she laughs); she holds up one finger in most boxed frames. Key word 'der Staub' is in the answer row, so no separate noun row."
+}

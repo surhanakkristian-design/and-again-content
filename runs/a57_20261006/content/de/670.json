@@ -1,0 +1,119 @@
+{
+  "mediaId": 670,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Einkaufen",
+  "taps": [
+    {
+      "phrase": "einen Einkaufswagen schieben",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "Brot und Milch einkaufen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Münzen nehmen",
+      "target": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "die Milch",
+      "voice": "female"
+    },
+    {
+      "word": "der Einkaufswagen",
+      "voice": "female"
+    },
+    {
+      "word": "das Brot",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "schiebt",
+    "einen",
+    "Einkaufswagen."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Einkaufswagen"
+        },
+        {
+          "text": "schieben",
+          "gap": true,
+          "accept": [
+            "schieben"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "Brot und Milch"
+        },
+        {
+          "text": "einkaufen",
+          "gap": true,
+          "accept": [
+            "einkaufen",
+            "kaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Münzen",
+          "gap": true,
+          "accept": [
+            "Münzen",
+            "Geldstücke"
+          ]
+        },
+        {
+          "text": "nehmen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schiebt einen"
+        },
+        {
+          "text": "Einkaufswagen",
+          "gap": true,
+          "accept": [
+            "Einkaufswagen",
+            "Wagen"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Einkaufen' (noun) appears as the verb 'einkaufen' in tap 2 and inside the compound 'der Einkaufswagen' (tap 1, noun 3, answer); no row contains the noun 'das Einkaufen' itself and it is not a noun of the set, so no noun row. Noun 3 English 'a cart' = 'der Einkaufswagen' (plain 'der Wagen' would be ambiguous). Tap 3: the cashier takes the coins from her hand (boxed in box_03). Tap 1/2 boxes also cover the checkout frames where she no longer pushes the cart; phrases describe most boxed frames."
+}

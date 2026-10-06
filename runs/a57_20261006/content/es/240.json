@@ -1,0 +1,116 @@
+{
+ "mediaId": 240,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el empate",
+ "taps": [
+  {
+   "phrase": "llevar una camiseta turquesa",
+   "target": "la mujer de turquesa",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener una barba poblada",
+   "target": "el hombre corpulento",
+   "voice": "male"
+  },
+  {
+   "phrase": "cubrir las manos con un paño",
+   "target": "la abuela",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el paño",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  },
+  {
+   "word": "la anciana",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Cómo termina el pulso?",
+ "answer": [
+  "El",
+  "pulso",
+  "termina",
+  "en",
+  "empate."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "camiseta",
+     "gap": true,
+     "accept": [
+      "camiseta"
+     ]
+    },
+    {
+     "text": "turquesa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener una barba"
+    },
+    {
+     "text": "poblada",
+     "gap": true,
+     "accept": [
+      "poblada",
+      "espesa",
+      "tupida"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "cubrir",
+     "gap": true,
+     "accept": [
+      "cubrir",
+      "tapar"
+     ]
+    },
+    {
+     "text": "las manos con un paño"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "termina en"
+    },
+    {
+     "text": "empate",
+     "gap": true,
+     "accept": [
+      "empate"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: the grandmother holds up the tea towel in most boxed frames and lays it over the locked hands at the end; 'cubrir las manos con un paño' describes the drape. 'el pulso' = arm-wrestling (Spain)."
+}

@@ -1,0 +1,115 @@
+{
+ "mediaId": 224,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "concevoir",
+ "taps": [
+  {
+   "phrase": "esquisser une chaise",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "montrer le croquis du doigt",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "renifler la chaise en carton",
+   "target": "le chat",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le croquis",
+   "voice": "female"
+  },
+  {
+   "word": "le pot à crayons",
+   "voice": "female"
+  },
+  {
+   "word": "la plante verte",
+   "voice": "female"
+  }
+ ],
+ "question": "Que conçoivent-ils ?",
+ "answer": [
+  "Ils",
+  "conçoivent",
+  "une",
+  "chaise."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "esquisser une"
+    },
+    {
+     "text": "chaise",
+     "gap": true,
+     "accept": [
+      "chaise"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer le"
+    },
+    {
+     "text": "croquis",
+     "gap": true,
+     "accept": [
+      "croquis",
+      "dessin"
+     ]
+    },
+    {
+     "text": "du doigt"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "renifler",
+     "gap": true,
+     "accept": [
+      "renifler",
+      "sentir"
+     ]
+    },
+    {
+     "text": "la chaise en carton"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "conçoivent",
+     "gap": true,
+     "accept": [
+      "conçoivent",
+      "dessinent"
+     ]
+    },
+    {
+     "text": "une chaise"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'concevoir' (verb) is natural here and used in question and answer. Noun 2 (English 'a jar'): it holds pencils, so 'le pot à crayons' is the everyday word; 'le bocal' would also do. 'Ils' for the mixed pair; answerVoice female kept from English."
+}

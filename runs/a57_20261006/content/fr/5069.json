@@ -1,0 +1,113 @@
+{
+ "mediaId": 5069,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "apprécier",
+ "taps": [
+  {
+   "phrase": "apprécier un massage",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis dans un fauteuil",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "lui masser les épaules",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les plantes",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le fauteuil",
+   "voice": "male"
+  }
+ ],
+ "question": "Qu'est-ce que l'homme apprécie ?",
+ "answer": [
+  "Il",
+  "apprécie",
+  "le",
+  "massage."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "apprécier",
+     "gap": true,
+     "accept": [
+      "apprécier"
+     ]
+    },
+    {
+     "text": "un massage"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assis dans un"
+    },
+    {
+     "text": "fauteuil",
+     "gap": true,
+     "accept": [
+      "fauteuil"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lui masser les"
+    },
+    {
+     "text": "épaules",
+     "gap": true,
+     "accept": [
+      "épaules"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "apprécie le"
+    },
+    {
+     "text": "massage",
+     "gap": true,
+     "accept": [
+      "massage"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'apprécier' fits ('apprécier un massage' is natural), though 'profiter d'un massage' is the more everyday collocation. In some frames the woman taps his shoulders with her fists; 'masser' covers it. 'a chair' -> 'le fauteuil' (padded leather armchair)."
+}

@@ -1,0 +1,115 @@
+{
+ "mediaId": 811,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le trophée",
+ "taps": [
+  {
+   "phrase": "courir vers la coupe",
+   "target": "les joueuses",
+   "voice": "female"
+  },
+  {
+   "phrase": "soulever le trophée",
+   "target": "les joueuses",
+   "voice": "female"
+  },
+  {
+   "phrase": "regarder les joueuses",
+   "target": "le public",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les lumières",
+   "voice": "female"
+  },
+  {
+   "word": "le trophée",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  },
+  {
+   "word": "le sol",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font les joueuses ?",
+ "answer": [
+  "Elles",
+  "soulèvent",
+  "le",
+  "trophée",
+  "ensemble."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "courir",
+     "gap": true,
+     "accept": [
+      "courir"
+     ]
+    },
+    {
+     "text": "vers la coupe"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "soulever le"
+    },
+    {
+     "text": "trophée",
+     "gap": true,
+     "accept": [
+      "trophée"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder",
+     "gap": true,
+     "accept": [
+      "regarder"
+     ]
+    },
+    {
+     "text": "les joueuses"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "soulèvent",
+     "gap": true,
+     "accept": [
+      "soulèvent",
+      "lèvent"
+     ]
+    },
+    {
+     "text": "le trophée ensemble"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 both target the players (as in English). 'ensemble' could also stand before 'le trophée' (Elles soulèvent ensemble le trophée); the end position is the natural default. The stand is called 'la table' as in English."
+}

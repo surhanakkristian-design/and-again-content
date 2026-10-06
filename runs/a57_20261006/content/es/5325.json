@@ -1,0 +1,126 @@
+{
+ "mediaId": 5325,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el cónyuge",
+ "taps": [
+  {
+   "phrase": "llevar una blusa blanca",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una camisa celeste",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar una falda ajustada",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los armarios",
+   "voice": "male"
+  },
+  {
+   "word": "la nevera",
+   "voice": "male"
+  },
+  {
+   "word": "los documentos",
+   "voice": "male"
+  },
+  {
+   "word": "la encimera",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están haciendo los cónyuges?",
+ "answer": [
+  "Están",
+  "firmando",
+  "documentos",
+  "en",
+  "la",
+  "encimera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "blusa",
+     "gap": true,
+     "accept": [
+      "blusa",
+      "camisa"
+     ]
+    },
+    {
+     "text": "blanca"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una camisa"
+    },
+    {
+     "text": "celeste",
+     "gap": true,
+     "accept": [
+      "celeste",
+      "azul"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "falda",
+     "gap": true,
+     "accept": [
+      "falda"
+     ]
+    },
+    {
+     "text": "ajustada"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "firmando",
+     "gap": true,
+     "accept": [
+      "firmando"
+     ]
+    },
+    {
+     "text": "documentos en la encimera"
+    }
+   ]
+  }
+ ],
+ "notes": "All three boxes stay ON for the whole clip: the bag (phrase 1) and the keys (phrase 2) are visible only in the first frames, and both spouses sign and touch the documents (phrase 3 would not fit only her). So the phrases name what is true and unique in all boxed frames: her white blouse, his light-blue shirt, her tight skirt. Key word: \"el cónyuge\" is formal/legal Spanish (fits the signing of documents); everyday speech says \"el marido / la mujer\" or \"los esposos\"; kept and used in the question."
+}

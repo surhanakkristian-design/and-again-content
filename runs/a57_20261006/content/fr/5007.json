@@ -1,0 +1,26 @@
+{
+  "mediaId": 5007, "lang": "fr", "level": "A",
+  "keyWord": "la serrure",
+  "taps": [
+    { "phrase": "chercher ses clés", "target": "la femme", "voice": "female" },
+    { "phrase": "entrer dans la maison", "target": "la femme", "voice": "female" },
+    { "phrase": "tourner dans la serrure", "target": "les clés", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la serrure", "voice": "female" },
+    { "word": "la main", "voice": "female" },
+    { "word": "les clés", "voice": "female" },
+    { "word": "la porte", "voice": "female" }
+  ],
+  "question": "Que cherche la femme ?",
+  "answer": ["Elle", "cherche", "ses", "clés."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "chercher", "gap": true, "accept": ["chercher"] }, { "text": "ses clés" } ] },
+    { "from": "taps", "parts": [ { "text": "entrer", "gap": true, "accept": ["entrer"] }, { "text": "dans la maison" } ] },
+    { "from": "taps", "parts": [ { "text": "tourner dans la" }, { "text": "serrure", "gap": true, "accept": ["serrure"] } ] },
+    { "from": "answer", "parts": [ { "text": "cherche ses" }, { "text": "clés", "gap": true, "accept": ["clés", "clefs"] } ] }
+  ],
+  "notes": "Phrases 1 and 2 share the same target (the woman) and the same boxes, as in English; box frames for phrase 2 also cover the searching part. Strictly one key turns in the lock while the bunch hangs from it; 'les clés' kept as in English. Key word 'la serrure' fits the round lock exactly."
+}

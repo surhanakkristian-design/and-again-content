@@ -1,0 +1,124 @@
+{
+ "mediaId": 295,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "mezclar",
+ "taps": [
+  {
+   "phrase": "mezclar la pasta espesa",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "sujetar un mango negro",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar pegada al suelo",
+   "target": "la cinta adhesiva",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cinta adhesiva",
+   "voice": "male"
+  },
+  {
+   "word": "el cubo",
+   "voice": "male"
+  },
+  {
+   "word": "la mano",
+   "voice": "male"
+  },
+  {
+   "word": "el zapato",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la mano?",
+ "answer": [
+  "La",
+  "mano",
+  "está",
+  "mezclando",
+  "la",
+  "pasta",
+  "espesa."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mezclar",
+     "gap": true,
+     "accept": [
+      "mezclar",
+      "remover"
+     ]
+    },
+    {
+     "text": "la pasta espesa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar un"
+    },
+    {
+     "text": "mango",
+     "gap": true,
+     "accept": [
+      "mango"
+     ]
+    },
+    {
+     "text": "negro"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar pegada al"
+    },
+    {
+     "text": "suelo",
+     "gap": true,
+     "accept": [
+      "suelo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está mezclando la"
+    },
+    {
+     "text": "pasta",
+     "gap": true,
+     "accept": [
+      "pasta",
+      "masa"
+     ]
+    },
+    {
+     "text": "espesa"
+    }
+   ]
+  }
+ ],
+ "notes": "Two work boots are visible; 'el zapato' kept singular at the English slot (one boot)."
+}

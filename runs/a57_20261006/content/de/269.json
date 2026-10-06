@@ -1,0 +1,124 @@
+{
+ "mediaId": 269,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Neid",
+ "taps": [
+  {
+   "phrase": "sehnsüchtig aus dem Fenster blicken",
+   "target": "die Frau im Bus",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Bus vorbeiradeln",
+   "target": "die Radfahrerin",
+   "voice": "female"
+  },
+  {
+   "phrase": "quer auf ihrem Schoß liegen",
+   "target": "der rostige Lenker",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Radfahrerin",
+   "voice": "female"
+  },
+  {
+   "word": "die Locken",
+   "voice": "female"
+  },
+  {
+   "word": "das Top",
+   "voice": "female"
+  },
+  {
+   "word": "der Lenker",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau mit den Locken?",
+ "answer": [
+  "Sie",
+  "blickt",
+  "voller",
+  "Neid",
+  "auf",
+  "die",
+  "Radfahrerin."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sehnsüchtig",
+     "gap": true,
+     "accept": [
+      "sehnsüchtig",
+      "neidisch"
+     ]
+    },
+    {
+     "text": "aus dem Fenster blicken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Bus"
+    },
+    {
+     "text": "vorbeiradeln",
+     "gap": true,
+     "accept": [
+      "vorbeiradeln",
+      "vorbeifahren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "quer auf ihrem"
+    },
+    {
+     "text": "Schoß",
+     "gap": true,
+     "accept": [
+      "Schoß"
+     ]
+    },
+    {
+     "text": "liegen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "blickt voller"
+    },
+    {
+     "text": "Neid",
+     "gap": true,
+     "accept": [
+      "Neid"
+     ]
+    },
+    {
+     "text": "auf die Radfahrerin"
+    }
+   ]
+  }
+ ],
+ "notes": "The cyclist is a woman (pink top, shorts): 'die Radfahrerin' in tap 2, noun 1 and the answer. 'sleeveless top' -> 'das Top' (in German an ärmelloses Oberteil is simply ein Top). 'curly hair' -> 'die Locken' (B1, plural). Answer: 'voller Neid' could also stand after the object ('Sie blickt auf die Radfahrerin voller Neid'), but that order is marked; the chips give one natural order. Key word Neid is gapped in the answer row; no noun row (Neid is not a noun of the set)."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 741, "lang": "fr", "level": "A",
+  "keyWord": "la tempête",
+  "taps": [
+    { "phrase": "plier sous le vent", "target": "l'arbre", "voice": "male" },
+    { "phrase": "rouler sur la route", "target": "le tonneau", "voice": "male" },
+    { "phrase": "avoir une barbe courte", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "male" },
+    { "word": "l'arbre", "voice": "male" },
+    { "word": "la mer", "voice": "male" },
+    { "word": "la route", "voice": "male" }
+  ],
+  "question": "Que fait l'arbre ?",
+  "answer": ["L'arbre", "plie", "sous", "la", "tempête."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "plier", "gap": true, "accept": ["plier"] }, { "text": "sous le vent" } ] },
+    { "from": "taps", "parts": [ { "text": "rouler sur la" }, { "text": "route", "gap": true, "accept": ["route", "rue"] } ] },
+    { "from": "taps", "parts": [ { "text": "avoir une" }, { "text": "barbe", "gap": true, "accept": ["barbe"] }, { "text": "courte" } ] },
+    { "from": "answer", "parts": [ { "text": "plie sous la" }, { "text": "tempête", "gap": true, "accept": ["tempête"] } ] }
+  ],
+  "notes": "Road = 'la route' (seaside road), used in noun 4 and phrase 2 so the same thing gets the same word. In the later boxed frames the red tree box sits on a small spot by the pier (the tree seen through the window as it bends/breaks); the tree bends in the wind in most boxed frames. 'le tonneau' is the barrel (target only)."
+}

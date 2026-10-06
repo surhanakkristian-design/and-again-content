@@ -1,0 +1,26 @@
+{
+  "mediaId": 819, "lang": "fr", "level": "A",
+  "keyWord": "le parapluie",
+  "taps": [
+    { "phrase": "tenir un parapluie", "target": "la femme", "voice": "female" },
+    { "phrase": "se mettre sous le parapluie", "target": "l'homme", "voice": "male" },
+    { "phrase": "protéger de la pluie", "target": "le parapluie", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la fenêtre", "voice": "female" },
+    { "word": "le parapluie", "voice": "female" },
+    { "word": "la rue", "voice": "female" },
+    { "word": "la femme", "voice": "female" }
+  ],
+  "question": "Que tient la femme ?",
+  "answer": ["Elle", "tient", "un", "grand", "parapluie", "rouge."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tenir un" }, { "text": "parapluie", "gap": true, "accept": ["parapluie"] } ] },
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "mettre", "gap": true, "accept": ["mettre", "glisser"] }, { "text": "sous le parapluie" } ] },
+    { "from": "taps", "parts": [ { "text": "protéger", "gap": true, "accept": ["protéger"] }, { "text": "de la pluie" } ] },
+    { "from": "answer", "parts": [ { "text": "tient un grand parapluie" }, { "text": "rouge", "gap": true, "accept": ["rouge"] } ] }
+  ],
+  "notes": "English phrase 3 'to open over her head': the umbrella only opens in the first boxed frames and is already open over her head in most of them, so phrase 3 says what it does in most boxed frames ('protéger de la pluie'). The umbrella shelters both people at the end, but it is the only thing that protects from rain, so the phrase fits only that target."
+}

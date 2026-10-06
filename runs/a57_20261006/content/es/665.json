@@ -1,0 +1,134 @@
+{
+ "mediaId": 665,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la oveja",
+ "taps": [
+  {
+   "phrase": "comer hierba verde",
+   "target": "la oveja grande",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir mucho la boca",
+   "target": "la oveja grande",
+   "voice": "male"
+  },
+  {
+   "phrase": "caminar por el campo",
+   "target": "la oveja grande",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la oveja",
+   "voice": "male"
+  },
+  {
+   "word": "el muro",
+   "voice": "male"
+  },
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo la oveja?",
+ "answer": [
+  "Está",
+  "caminando",
+  "por",
+  "el",
+  "campo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer"
+    },
+    {
+     "text": "hierba",
+     "gap": true,
+     "accept": [
+      "hierba"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir mucho la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar",
+     "gap": true,
+     "accept": [
+      "caminar",
+      "andar"
+     ]
+    },
+    {
+     "text": "por el campo"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "oveja",
+     "gap": true,
+     "accept": [
+      "oveja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está caminando por el"
+    },
+    {
+     "text": "campo",
+     "gap": true,
+     "accept": [
+      "campo",
+      "prado"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Subject dropped. 'el muro' = the dry-stone wall in the background. Sheep trots at the end; 'caminar' kept at level A."
+}

@@ -1,0 +1,121 @@
+{
+  "mediaId": 209,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "neugierig",
+  "taps": [
+    {
+      "phrase": "in den Karton schauen",
+      "target": "die Katze",
+      "voice": "male"
+    },
+    {
+      "phrase": "die Pfote in den Karton stecken",
+      "target": "die Katze",
+      "voice": "male"
+    },
+    {
+      "phrase": "an der Kamera schnuppern",
+      "target": "die Katze",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Katze",
+      "voice": "male"
+    },
+    {
+      "word": "der Karton",
+      "voice": "male"
+    },
+    {
+      "word": "die Kamera",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht die Katze?",
+  "answer": [
+    "Die",
+    "Katze",
+    "schaut",
+    "neugierig",
+    "in",
+    "den",
+    "Karton."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in den Karton"
+        },
+        {
+          "text": "schauen",
+          "gap": true,
+          "accept": [
+            "schauen",
+            "gucken",
+            "sehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Pfote",
+          "gap": true,
+          "accept": [
+            "Pfote"
+          ]
+        },
+        {
+          "text": "in den Karton stecken"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an der Kamera"
+        },
+        {
+          "text": "schnuppern",
+          "gap": true,
+          "accept": [
+            "schnuppern",
+            "riechen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schaut"
+        },
+        {
+          "text": "neugierig",
+          "gap": true,
+          "accept": [
+            "neugierig"
+          ]
+        },
+        {
+          "text": "in den Karton"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word placed as adverb ('schaut neugierig') instead of the English attributive adjective so the answer recall row can gap it; word order is fixed. Answer voice stays male as in English (die Katze is grammatically feminine, no pronoun used). Phrase 3 uses 'schnuppern' (what a cat does at the lens; 'riechen' accepted in the row)."
+}

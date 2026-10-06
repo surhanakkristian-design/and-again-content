@@ -1,0 +1,119 @@
+{
+ "mediaId": 294,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le feu",
+ "taps": [
+  {
+   "phrase": "tenir un long bâton",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "mettre du bois dans le feu",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "brûler entre les pierres",
+   "target": "le feu",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les arbres",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le feu",
+   "voice": "female"
+  },
+  {
+   "word": "les pierres",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "met",
+  "du",
+  "bois",
+  "dans",
+  "le",
+  "feu."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un long"
+    },
+    {
+     "text": "bâton",
+     "gap": true,
+     "accept": [
+      "bâton"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mettre du bois dans le"
+    },
+    {
+     "text": "feu",
+     "gap": true,
+     "accept": [
+      "feu"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "brûler",
+     "gap": true,
+     "accept": [
+      "brûler"
+     ]
+    },
+    {
+     "text": "entre les pierres"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "met du"
+    },
+    {
+     "text": "bois",
+     "gap": true,
+     "accept": [
+      "bois"
+     ]
+    },
+    {
+     "text": "dans le feu"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 / answer: the man puts the log on the fire only in the first part of the clip (about 4 of the boxed frames); afterwards he sits and watches the sparks. Nothing else he does in most frames is his alone (the woman also sits and looks up), so the wood action is kept, as in English. No nouns recall row: 'le feu' already appears in the phrase-2 and answer rows."
+}

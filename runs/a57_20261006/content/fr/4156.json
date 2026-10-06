@@ -1,0 +1,26 @@
+{
+  "mediaId": 4156, "lang": "fr", "level": "B",
+  "keyWord": "s'approcher",
+  "taps": [
+    { "phrase": "se tenir debout sur sa poitrine", "target": "le robot", "voice": "male" },
+    { "phrase": "plonger pour rattraper le robot", "target": "l'homme", "voice": "male" },
+    { "phrase": "tendre les deux mains", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la haie", "voice": "male" },
+    { "word": "la clôture", "voice": "male" },
+    { "word": "le robot", "voice": "male" },
+    { "word": "la pelouse", "voice": "male" }
+  ],
+  "question": "Que fait le robot au début ?",
+  "answer": ["Il", "s'approche", "de", "la", "caméra", "dans", "l'allée."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "se tenir debout sur sa" }, { "text": "poitrine", "gap": true, "accept": ["poitrine"] } ] },
+    { "from": "taps", "parts": [ { "text": "plonger", "gap": true, "accept": ["plonger"] }, { "text": "pour rattraper le robot" } ] },
+    { "from": "taps", "parts": [ { "text": "tendre", "gap": true, "accept": ["tendre"] }, { "text": "les deux mains" } ] },
+    { "from": "answer", "parts": [ { "text": "s'approche de la" }, { "text": "caméra", "gap": true, "accept": ["caméra"] }, { "text": "dans l'allée" } ] }
+  ],
+  "notes": "Phrase 1: the red box also covers the first half where the robot walks towards the camera; 'se tenir debout sur sa poitrine' (as English) is true for the second half only. Phrase 2 and 3 share one box (the man); 'tendre les deux mains' fits the walking part, the dive is short. Key word 's'approcher' is in the answer but cannot be the gap (elided form 's'approche')."
+}

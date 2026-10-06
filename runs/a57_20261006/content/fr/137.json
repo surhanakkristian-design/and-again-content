@@ -1,0 +1,118 @@
+{
+ "mediaId": 137,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le canyon",
+ "taps": [
+  {
+   "phrase": "toucher la paroi du canyon",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "crier les mains en porte-voix",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "briller entre les parois rocheuses",
+   "target": "le soleil",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "le soleil",
+   "voice": "male"
+  },
+  {
+   "word": "le canyon",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "crie",
+  "en",
+  "faisant",
+  "porte-voix",
+  "avec",
+  "ses",
+  "mains."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toucher la paroi du"
+    },
+    {
+     "text": "canyon",
+     "gap": true,
+     "accept": [
+      "canyon"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crier les mains en"
+    },
+    {
+     "text": "porte-voix",
+     "gap": true,
+     "accept": [
+      "porte-voix"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "briller",
+     "gap": true,
+     "accept": [
+      "briller"
+     ]
+    },
+    {
+     "text": "entre les parois rocheuses"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "crie",
+     "gap": true,
+     "accept": [
+      "crie",
+      "hurle"
+     ]
+    },
+    {
+     "text": "en faisant porte-voix avec ses mains"
+    }
+   ]
+  }
+ ],
+ "notes": "In the first boxed frames the woman is walking through the canyon, she touches the wall in most of the later boxed frames. The man only cups his hands in the second half; phrase 2 kept as English."
+}

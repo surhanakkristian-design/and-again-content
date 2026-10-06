@@ -1,0 +1,128 @@
+{
+ "mediaId": 198,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Krampf",
+ "taps": [
+  {
+   "phrase": "sich die schmerzende Wade halten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "auf der Laufbahn knien",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Daumen nach oben strecken",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Frau",
+   "voice": "female"
+  },
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "die Hochhäuser",
+   "voice": "female"
+  },
+  {
+   "word": "die Laufbahn",
+   "voice": "female"
+  }
+ ],
+ "question": "Was umklammert die Frau?",
+ "answer": [
+  "Sie",
+  "umklammert",
+  "ihre",
+  "verkrampfte",
+  "Wade."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die schmerzende"
+    },
+    {
+     "text": "Wade",
+     "gap": true,
+     "accept": [
+      "Wade"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "auf der"
+    },
+    {
+     "text": "Laufbahn",
+     "gap": true,
+     "accept": [
+      "Laufbahn",
+      "Bahn"
+     ]
+    },
+    {
+     "text": "knien"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "nach oben strecken"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "umklammert ihre"
+    },
+    {
+     "text": "verkrampfte",
+     "gap": true,
+     "accept": [
+      "verkrampfte",
+      "schmerzende"
+     ]
+    },
+    {
+     "text": "Wade"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word der Krampf is not a noun of the set; it appears via the adjective 'verkrampfte' in the answer (B2) and is gapped there. Phrase 1 boxes also cover the opening running frames (no clutching yet); written for the sitting/clutching frames that dominate. Phrase 3 box covers the woman throughout; the thumbs up only happens at the end. 'die Hochhäuser' chosen over 'die Wolkenkratzer' as the everyday word for the lit city towers."
+}

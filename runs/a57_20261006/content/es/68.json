@@ -1,0 +1,121 @@
+{
+ "mediaId": 68,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la venda",
+ "taps": [
+  {
+   "phrase": "sonreír a la cámara",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar gafas",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "rodear la muñeca",
+   "target": "la venda",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas",
+   "voice": "female"
+  },
+  {
+   "word": "el pulgar",
+   "voice": "female"
+  },
+  {
+   "word": "la venda",
+   "voice": "female"
+  },
+  {
+   "word": "el banco",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "Le",
+  "está",
+  "poniendo",
+  "una",
+  "venda",
+  "en",
+  "la",
+  "muñeca."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "a la cámara"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rodear",
+     "gap": true,
+     "accept": [
+      "rodear",
+      "cubrir"
+     ]
+    },
+    {
+     "text": "la muñeca"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Le está poniendo una"
+    },
+    {
+     "text": "venda",
+     "gap": true,
+     "accept": [
+      "venda"
+     ]
+    },
+    {
+     "text": "en la muñeca"
+    }
+   ]
+  }
+ ],
+ "notes": "The bandage is wrapped around the wrist (not the whole hand), so 'rodear la muñeca' and 'en la muñeca'. The woman smiles at the camera only at the end; most boxed frames show her looking down. The man's glasses sit on his head. Answer without subject (natural in Spanish); 'Está poniéndole' would be the other clitic order, chips allow only 'Le está poniendo'."
+}

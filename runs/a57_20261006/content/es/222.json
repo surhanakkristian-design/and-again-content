@@ -1,0 +1,121 @@
+{
+ "mediaId": 222,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el retraso",
+ "taps": [
+  {
+   "phrase": "impedir el paso a los pasajeros",
+   "target": "el conductor",
+   "voice": "male"
+  },
+  {
+   "phrase": "desplomarse sobre su maleta",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "marcar la hora",
+   "target": "el reloj",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el reloj",
+   "voice": "female"
+  },
+  {
+   "word": "la maleta",
+   "voice": "female"
+  },
+  {
+   "word": "los rótulos de neón",
+   "voice": "female"
+  },
+  {
+   "word": "el conductor",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el conductor?",
+ "answer": [
+  "Está",
+  "bloqueando",
+  "la",
+  "puerta",
+  "del",
+  "autobús."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "impedir",
+     "gap": true,
+     "accept": [
+      "impedir",
+      "bloquear"
+     ]
+    },
+    {
+     "text": "el paso a los pasajeros"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "desplomarse",
+     "gap": true,
+     "accept": [
+      "desplomarse",
+      "derrumbarse"
+     ]
+    },
+    {
+     "text": "sobre su maleta"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "marcar la"
+    },
+    {
+     "text": "hora",
+     "gap": true,
+     "accept": [
+      "hora"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "bloqueando",
+     "gap": true,
+     "accept": [
+      "bloqueando",
+      "tapando"
+     ]
+    },
+    {
+     "text": "la puerta del autobús"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the driver's box also covers frames where he sits behind the windscreen (arms up, head on the wheel); the phrase describes him at the door, his main action. Key word 'el retraso' is not a noun of the set, so no noun row."
+}

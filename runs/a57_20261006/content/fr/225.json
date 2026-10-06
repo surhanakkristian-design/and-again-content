@@ -1,0 +1,26 @@
+{
+  "mediaId": 225, "lang": "fr", "level": "A",
+  "keyWord": "le bureau",
+  "taps": [
+    { "phrase": "s'asseoir au bureau", "target": "la femme", "voice": "female" },
+    { "phrase": "porter un t-shirt bleu", "target": "l'homme", "voice": "male" },
+    { "phrase": "marcher sur le bureau", "target": "le chat", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les livres", "voice": "female" },
+    { "word": "la plante", "voice": "female" },
+    { "word": "le cahier", "voice": "female" },
+    { "word": "le bureau", "voice": "female" }
+  ],
+  "question": "Où est assise la femme ?",
+  "answer": ["Elle", "est", "assise", "au", "bureau."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'asseoir au" }, { "text": "bureau", "gap": true, "accept": ["bureau"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "t-shirt", "gap": true, "accept": ["t-shirt", "tee-shirt"] }, { "text": "bleu" } ] },
+    { "from": "taps", "parts": [ { "text": "marcher", "gap": true, "accept": ["marcher"] }, { "text": "sur le bureau" } ] },
+    { "from": "answer", "parts": [ { "text": "est" }, { "text": "assise", "gap": true, "accept": ["assise"] }, { "text": "au bureau" } ] }
+  ],
+  "notes": "English tap box 1 also covers the first half where the woman clears, wipes and sets up the desk; she sits at it in the second half (the still moment), so phrase 1 keeps 'sitting at the desk'. A verifier may prefer 's'installer au bureau', which covers both halves. The spiral notebook = 'le cahier' (A1 everyday word). Key word 'le bureau' also means office; here the picture makes the desk sense clear."
+}

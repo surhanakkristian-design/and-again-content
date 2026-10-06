@@ -1,0 +1,26 @@
+{
+  "mediaId": 4364, "lang": "fr", "level": "B",
+  "keyWord": "la pâte",
+  "taps": [
+    { "phrase": "s'émerveiller devant les croissants", "target": "la jeune femme", "voice": "female" },
+    { "phrase": "porter un tablier à fleurs", "target": "la femme âgée", "voice": "female" },
+    { "phrase": "faire dorer les croissants", "target": "le four", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "la pâte", "voice": "female" },
+    { "word": "la farine", "voice": "female" },
+    { "word": "le tablier", "voice": "female" },
+    { "word": "la fenêtre", "voice": "female" }
+  ],
+  "question": "Que font les deux femmes ?",
+  "answer": ["Elles", "façonnent", "des", "boules", "de", "pâte."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "s'émerveiller devant les" }, { "text": "croissants", "gap": true, "accept": ["croissants"] } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "tablier", "gap": true, "accept": ["tablier"] }, { "text": "à fleurs" } ] },
+    { "from": "taps", "parts": [ { "text": "faire" }, { "text": "dorer", "gap": true, "accept": ["dorer", "cuire"] }, { "text": "les croissants" } ] },
+    { "from": "answer", "parts": [ { "text": "façonnent des boules de" }, { "text": "pâte", "gap": true, "accept": ["pâte"] } ] }
+  ],
+  "notes": "Red box (phrase 1) covers the young woman shaping dough in most frames, but the older woman shapes dough too, so only her open-mouthed wonder at the croissants (last frames) fits her alone. The English 'to glow with heat' has no natural French equivalent for an oven; the oven turns the raw dough golden, so phrase 3 is 'faire dorer les croissants' (the trays go in as dough balls and come out as croissants). Key word 'la pâte' is noun 1 and in the answer."
+}

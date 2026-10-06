@@ -1,0 +1,125 @@
+{
+ "mediaId": 33,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la douleur",
+ "taps": [
+  {
+   "phrase": "se tenir la joue enflée",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "dégager de la vapeur",
+   "target": "la tasse",
+   "voice": "male"
+  },
+  {
+   "phrase": "pousser dans un pot en terre cuite",
+   "target": "la plante",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la plante en pot",
+   "voice": "male"
+  },
+  {
+   "word": "la moustache",
+   "voice": "male"
+  },
+  {
+   "word": "la poche de glace",
+   "voice": "male"
+  },
+  {
+   "word": "la tasse",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "se",
+  "tient",
+  "la",
+  "joue",
+  "enflée",
+  "en",
+  "grimaçant",
+  "de",
+  "douleur."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "tenir",
+     "gap": true,
+     "accept": [
+      "tenir"
+     ]
+    },
+    {
+     "text": "la joue enflée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dégager de la"
+    },
+    {
+     "text": "vapeur",
+     "gap": true,
+     "accept": [
+      "vapeur"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pousser dans un"
+    },
+    {
+     "text": "pot",
+     "gap": true,
+     "accept": [
+      "pot"
+     ]
+    },
+    {
+     "text": "en terre cuite"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se tient la joue enflée en grimaçant de"
+    },
+    {
+     "text": "douleur",
+     "gap": true,
+     "accept": [
+      "douleur"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer carries the key word in 'en grimaçant de douleur' (gapped in the answer row); fronting it would need a comma, so the chip order is unique. 'la tasse' for the mug ('le mug' also common). Tap 1: in two boxed frames he sips from the mug instead of holding his cheek. No noun row: la douleur is not a noun of the set."
+}

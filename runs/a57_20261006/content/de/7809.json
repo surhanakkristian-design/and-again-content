@@ -1,0 +1,118 @@
+{
+  "mediaId": 7809,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Dollar",
+  "taps": [
+    {
+      "phrase": "einen Dollar nehmen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "für den Kuchen bezahlen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "den Mann anlächeln",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "das Getränk",
+      "voice": "female"
+    },
+    {
+      "word": "der Kuchen",
+      "voice": "female"
+    },
+    {
+      "word": "die Dollars",
+      "voice": "female"
+    }
+  ],
+  "question": "Was nimmt die Frau?",
+  "answer": [
+    "Sie",
+    "nimmt",
+    "einen",
+    "Dollar."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Dollar",
+          "gap": true,
+          "accept": [
+            "Dollar",
+            "Dollarschein"
+          ]
+        },
+        {
+          "text": "nehmen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "für den Kuchen"
+        },
+        {
+          "text": "bezahlen",
+          "gap": true,
+          "accept": [
+            "bezahlen",
+            "zahlen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "den Mann"
+        },
+        {
+          "text": "anlächeln",
+          "gap": true,
+          "accept": [
+            "anlächeln"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "nimmt",
+          "gap": true,
+          "accept": [
+            "nimmt"
+          ]
+        },
+        {
+          "text": "einen Dollar"
+        }
+      ]
+    }
+  ],
+  "notes": "Noun 4 'die Dollars' (colloquial plural for several bills; with numbers German uses 'Dollar'). Pie = 'der Kuchen' (cherry pie slice; 'Kirschkuchen' would be more exact but A-level 'Kuchen' is natural)."
+}

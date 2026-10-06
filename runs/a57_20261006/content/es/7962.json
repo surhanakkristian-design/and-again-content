@@ -1,0 +1,124 @@
+{
+ "mediaId": 7962,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el resto",
+ "taps": [
+  {
+   "phrase": "sujetar la caja de cartón",
+   "target": "la persona de lila",
+   "voice": "female"
+  },
+  {
+   "phrase": "contener el resto de la pizza",
+   "target": "la caja de pizza",
+   "voice": "female"
+  },
+  {
+   "phrase": "colgar sobre la azotea",
+   "target": "la guirnalda de luces",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la guirnalda de luces",
+   "voice": "female"
+  },
+  {
+   "word": "la chimenea",
+   "voice": "female"
+  },
+  {
+   "word": "la caja de pizza",
+   "voice": "female"
+  },
+  {
+   "word": "la alfombra",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué contiene la caja de pizza?",
+ "answer": [
+  "Contiene",
+  "el",
+  "resto",
+  "de",
+  "la",
+  "pizza."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar la"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    },
+    {
+     "text": "de cartón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "contener",
+     "gap": true,
+     "accept": [
+      "contener",
+      "tener",
+      "guardar"
+     ]
+    },
+    {
+     "text": "el resto de la pizza"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "colgar sobre la"
+    },
+    {
+     "text": "azotea",
+     "gap": true,
+     "accept": [
+      "azotea",
+      "terraza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Contiene el"
+    },
+    {
+     "text": "resto",
+     "gap": true,
+     "accept": [
+      "resto"
+     ]
+    },
+    {
+     "text": "de la pizza"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'string lights' = one visible strand -> singular 'la guirnalda de luces'. Answer drops the subject (la caja is in the question)."
+}

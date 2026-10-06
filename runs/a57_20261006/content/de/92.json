@@ -1,0 +1,122 @@
+{
+  "mediaId": 92,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "die Decke",
+  "taps": [
+    {
+      "phrase": "eine große Decke hochwerfen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "an der Decke ziehen",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "blonde Haare haben",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "das Sofa",
+      "voice": "female"
+    },
+    {
+      "word": "die Decke",
+      "voice": "female"
+    },
+    {
+      "word": "der Tisch",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "sitzt",
+    "unter",
+    "einer",
+    "großen",
+    "Decke."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine große"
+        },
+        {
+          "text": "Decke",
+          "gap": true,
+          "accept": [
+            "Decke",
+            "Wolldecke"
+          ]
+        },
+        {
+          "text": "hochwerfen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an der Decke"
+        },
+        {
+          "text": "ziehen",
+          "gap": true,
+          "accept": [
+            "ziehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "blonde"
+        },
+        {
+          "text": "Haare",
+          "gap": true,
+          "accept": [
+            "Haare"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "sitzt",
+          "gap": true,
+          "accept": [
+            "sitzt"
+          ]
+        },
+        {
+          "text": "unter einer großen Decke"
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 1: the red box also covers many frames where she already sits wrapped in the blanket; 'hochwerfen' describes her throwing the blanket up in the first frames. Answer follows the English (sitting under a big blanket)."
+}

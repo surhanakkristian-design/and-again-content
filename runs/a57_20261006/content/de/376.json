@@ -1,0 +1,116 @@
+{
+ "mediaId": 376,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Wildnis",
+ "taps": [
+  {
+   "phrase": "durch die Schlucht strömen",
+   "target": "der Fluss",
+   "voice": "female"
+  },
+  {
+   "phrase": "über die Felsen schäumen",
+   "target": "der Fluss",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich in der Ferne erheben",
+   "target": "die Berge in der Ferne",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Wald",
+   "voice": "female"
+  },
+  {
+   "word": "die Felswand",
+   "voice": "female"
+  },
+  {
+   "word": "die Stromschnellen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht der Fluss?",
+ "answer": [
+  "Er",
+  "strömt",
+  "durch",
+  "die",
+  "Wildnis."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "durch die"
+    },
+    {
+     "text": "Schlucht",
+     "gap": true,
+     "accept": [
+      "Schlucht"
+     ]
+    },
+    {
+     "text": "strömen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über die Felsen"
+    },
+    {
+     "text": "schäumen",
+     "gap": true,
+     "accept": [
+      "schäumen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich in der"
+    },
+    {
+     "text": "Ferne",
+     "gap": true,
+     "accept": [
+      "Ferne"
+     ]
+    },
+    {
+     "text": "erheben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "strömt durch die"
+    },
+    {
+     "text": "Wildnis",
+     "gap": true,
+     "accept": [
+      "Wildnis"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 1 and 2 both have the river as target, as in English. Answer row gaps the key word Wildnis."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 31,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la universidad",
+ "taps": [
+  {
+   "phrase": "sujetar una bolsa negra",
+   "target": "la mano",
+   "voice": "male"
+  },
+  {
+   "phrase": "usar un portátil",
+   "target": "la chica del portátil",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar la gorra al revés",
+   "target": "el chico de la gorra",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las luces",
+   "voice": "male"
+  },
+  {
+   "word": "los estudiantes",
+   "voice": "male"
+  },
+  {
+   "word": "la gorra",
+   "voice": "male"
+  },
+  {
+   "word": "los asientos",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Dónde están sentados los estudiantes?",
+ "answer": [
+  "Están",
+  "sentados",
+  "en",
+  "la",
+  "universidad."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "bolsa",
+     "gap": true,
+     "accept": [
+      "bolsa",
+      "mochila"
+     ]
+    },
+    {
+     "text": "negra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "usar un"
+    },
+    {
+     "text": "portátil",
+     "gap": true,
+     "accept": [
+      "portátil",
+      "ordenador"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar la"
+    },
+    {
+     "text": "gorra",
+     "gap": true,
+     "accept": [
+      "gorra"
+     ]
+    },
+    {
+     "text": "al revés"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están sentados en la"
+    },
+    {
+     "text": "universidad",
+     "gap": true,
+     "accept": [
+      "universidad"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Answer drops the subject, as natives do. The black bag may be a backpack; 'mochila' accepted in recall."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 4243, "lang": "de", "level": "A",
+  "keyWord": "bezahlen",
+  "taps": [
+    { "phrase": "eine rote Schürze tragen", "target": "die Katze", "voice": "male" },
+    { "phrase": "Würstchen grillen", "target": "der Hund", "voice": "male" },
+    { "phrase": "mit Karte bezahlen", "target": "die Hand", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "die Katze", "voice": "male" },
+    { "word": "der Hund", "voice": "male" },
+    { "word": "der Hotdog", "voice": "male" },
+    { "word": "die Würstchen", "voice": "male" }
+  ],
+  "question": "Was macht die Katze?",
+  "answer": ["Sie", "macht", "einen", "Hotdog."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine rote" }, { "text": "Schürze", "gap": true, "accept": ["Schürze"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "Würstchen" }, { "text": "grillen", "gap": true, "accept": ["grillen", "braten"] } ] },
+    { "from": "taps", "parts": [ { "text": "mit Karte" }, { "text": "bezahlen", "gap": true, "accept": ["bezahlen", "zahlen"] } ] },
+    { "from": "answer", "parts": [ { "text": "macht einen" }, { "text": "Hotdog", "gap": true, "accept": ["Hotdog", "Hot Dog"] } ] }
+  ],
+  "notes": "Phrase 1 changed from 'hold up a hot dog' to 'eine rote Schürze tragen': the cat only lifts the hot dog in the last frames, while the red box covers it the whole clip (holding the bun, squeezing ketchup); the apron is true in every boxed frame and only the cat wears it. Answer pronoun 'sie' agrees with die Katze; voice kept male as in English. 'Würstchen' plural (several on the grill)."
+}

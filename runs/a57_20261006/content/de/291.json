@@ -1,0 +1,26 @@
+{
+  "mediaId": 291, "lang": "de", "level": "A",
+  "keyWord": "das Feld",
+  "taps": [
+    { "phrase": "die Arme ausbreiten", "target": "die Frau", "voice": "female" },
+    { "phrase": "hinter der Frau laufen", "target": "der Mann", "voice": "male" },
+    { "phrase": "in einer Reihe stehen", "target": "die Bäume", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "die Bäume", "voice": "female" },
+    { "word": "das Feld", "voice": "female" },
+    { "word": "der Weg", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "läuft", "durch", "das", "Feld."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Arme" }, { "text": "ausbreiten", "gap": true, "accept": ["ausbreiten", "öffnen"] } ] },
+    { "from": "taps", "parts": [ { "text": "hinter der Frau" }, { "text": "laufen", "gap": true, "accept": ["laufen", "rennen", "herlaufen"] } ] },
+    { "from": "taps", "parts": [ { "text": "in einer" }, { "text": "Reihe", "gap": true, "accept": ["Reihe"] }, { "text": "stehen" } ] },
+    { "from": "answer", "parts": [ { "text": "läuft durch das" }, { "text": "Feld", "gap": true, "accept": ["Feld"] } ] }
+  ],
+  "notes": "Phrase 1: in the first three boxed frames (walking with the man) her arms are down; in most boxed frames (running) she spreads her arms. 'die Arme ausbreiten' is the natural collocation (possibly A2/B1 edge; plain right word). Phrase 2: in the early walking frames he walks beside/slightly behind her; later he runs behind her. 'laufen' used for both running people. No noun row: Feld is in the answer row."
+}

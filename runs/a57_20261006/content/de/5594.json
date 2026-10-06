@@ -1,0 +1,26 @@
+{
+  "mediaId": 5594, "lang": "de", "level": "B",
+  "keyWord": "überwältigend",
+  "taps": [
+    { "phrase": "auf einem Felsgrat hocken", "target": "der Drache", "voice": "female" },
+    { "phrase": "die ledrigen Flügel zusammenfalten", "target": "der Drache", "voice": "female" },
+    { "phrase": "den gehörnten Kopf senken", "target": "der Drache", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Gipfel", "voice": "female" },
+    { "word": "die Wolken", "voice": "female" },
+    { "word": "der Drache", "voice": "female" },
+    { "word": "die Kiefern", "voice": "female" }
+  ],
+  "question": "Was macht der Drache?",
+  "answer": ["Der", "überwältigende", "Drache", "hockt", "auf", "einem", "Felsgrat."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf einem Felsgrat" }, { "text": "hocken", "gap": true, "accept": ["hocken", "sitzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die ledrigen" }, { "text": "Flügel", "gap": true, "accept": ["Flügel", "Schwingen"] }, { "text": "zusammenfalten" } ] },
+    { "from": "taps", "parts": [ { "text": "den gehörnten Kopf" }, { "text": "senken", "gap": true, "accept": ["senken", "neigen"] } ] },
+    { "from": "answer", "parts": [ { "text": "hockt auf einem" }, { "text": "Felsgrat", "gap": true, "accept": ["Felsgrat", "Grat", "Bergkamm"] } ] }
+  ],
+  "notes": "Key word 'überwältigend' (adjective) sits in the subject of the answer, so the answer recall row (subject removed) cannot contain it; no row gaps the key word. 'Der überwältigende Drache' is grammatical but a native would more often say 'ein überwältigender Anblick'; kept because the English answer uses the adjective attributively. Phrase 3: the head is lowered in most boxed frames."
+}

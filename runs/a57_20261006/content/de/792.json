@@ -1,0 +1,26 @@
+{
+  "mediaId": 792, "lang": "de", "level": "A",
+  "keyWord": "die Zahnpasta",
+  "taps": [
+    { "phrase": "eine gelbe Zahnbürste halten", "target": "die Frau", "voice": "female" },
+    { "phrase": "aus der Tube kommen", "target": "die Zahnpasta", "voice": "female" },
+    { "phrase": "sich die Zähne putzen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Haare", "voice": "female" },
+    { "word": "die Nase", "voice": "female" },
+    { "word": "die Zahnpasta", "voice": "female" },
+    { "word": "die Zahnbürste", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "drückt", "Zahnpasta", "auf", "ihre", "Zahnbürste."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "eine gelbe" }, { "text": "Zahnbürste", "gap": true, "accept": ["Zahnbürste"] }, { "text": "halten" } ] },
+    { "from": "taps", "parts": [ { "text": "aus der" }, { "text": "Tube", "gap": true, "accept": ["Tube"] }, { "text": "kommen" } ] },
+    { "from": "taps", "parts": [ { "text": "sich die Zähne" }, { "text": "putzen", "gap": true, "accept": ["putzen"] } ] },
+    { "from": "answer", "parts": [ { "text": "drückt" }, { "text": "Zahnpasta", "gap": true, "accept": ["Zahnpasta", "Zahncreme"] }, { "text": "auf ihre Zahnbürste" } ] }
+  ],
+  "notes": "Answer uses 'drücken' (Zahnpasta auf die Zahnbürste drücken = the everyday collocation, A2). No noun row: Zahnpasta is gapped in the answer row. Hair noun as plural 'die Haare' (everyday German for head hair)."
+}

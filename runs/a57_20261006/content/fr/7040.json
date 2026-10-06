@@ -1,0 +1,124 @@
+{
+ "mediaId": 7040,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le dé",
+ "taps": [
+  {
+   "phrase": "rouler sur le plateau de jeu",
+   "target": "le dé blanc",
+   "voice": "female"
+  },
+  {
+   "phrase": "se tenir la tête à deux mains",
+   "target": "l'homme en noir",
+   "voice": "male"
+  },
+  {
+   "phrase": "lancer un dé",
+   "target": "la femme aux cheveux bouclés",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le dé",
+   "voice": "female"
+  },
+  {
+   "word": "le pop-corn",
+   "voice": "female"
+  },
+  {
+   "word": "le plateau de jeu",
+   "voice": "female"
+  },
+  {
+   "word": "les colliers",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'est-ce qui roule sur le plateau de jeu ?",
+ "answer": [
+  "Un",
+  "dé",
+  "blanc",
+  "roule",
+  "sur",
+  "le",
+  "plateau",
+  "de",
+  "jeu."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rouler",
+     "gap": true,
+     "accept": [
+      "rouler"
+     ]
+    },
+    {
+     "text": "sur le plateau de jeu"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se tenir la"
+    },
+    {
+     "text": "tête",
+     "gap": true,
+     "accept": [
+      "tête"
+     ]
+    },
+    {
+     "text": "à deux mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lancer un"
+    },
+    {
+     "text": "dé",
+     "gap": true,
+     "accept": [
+      "dé"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "roule sur le"
+    },
+    {
+     "text": "plateau",
+     "gap": true,
+     "accept": [
+      "plateau"
+     ]
+    },
+    {
+     "text": "de jeu"
+    }
+   ]
+  }
+ ],
+ "notes": "Noun 3 (English 'a board game') sits on the board itself, so it is 'le plateau de jeu', the same word as in tap 1 and the answer. Tap 2: 'à deux mains' keeps it unique (the man in grey covers his face with one hand). Tap 3: the woman throws the die in the first frames; in the later boxed frames she has thrown it and holds her chest."
+}

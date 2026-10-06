@@ -1,0 +1,124 @@
+{
+ "mediaId": 4408,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Geschmack",
+ "taps": [
+  {
+   "phrase": "einen Smoothie hinunterstürzen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "den Daumen nach oben strecken",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "randvoll mit Obst sein",
+   "target": "der Mixer",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mixer",
+   "voice": "male"
+  },
+  {
+   "word": "der Spinat",
+   "voice": "male"
+  },
+  {
+   "word": "der Smoothie",
+   "voice": "male"
+  },
+  {
+   "word": "der Schnurrbart",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "genießt",
+  "den",
+  "Geschmack",
+  "des",
+  "frischen",
+  "Smoothies."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen Smoothie"
+    },
+    {
+     "text": "hinunterstürzen",
+     "gap": true,
+     "accept": [
+      "hinunterstürzen",
+      "hinunterkippen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den"
+    },
+    {
+     "text": "Daumen",
+     "gap": true,
+     "accept": [
+      "Daumen"
+     ]
+    },
+    {
+     "text": "nach oben strecken"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "randvoll",
+     "gap": true,
+     "accept": [
+      "randvoll",
+      "voll"
+     ]
+    },
+    {
+     "text": "mit Obst sein"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "genießt den"
+    },
+    {
+     "text": "Geschmack",
+     "gap": true,
+     "accept": [
+      "Geschmack"
+     ]
+    },
+    {
+     "text": "des frischen Smoothies"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses the key word ('genießt den Geschmack') instead of the English 'tasting' (probieren), since he drinks and grins at how good it is. 'der Schnurrbart' = the orange smoothie moustache. Phrase 2 (thumbs up) is visible only at the end; boxed frames otherwise show him smiling."
+}

@@ -1,0 +1,124 @@
+{
+ "mediaId": 20,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Zeitplan",
+ "taps": [
+  {
+   "phrase": "sich das Kissen schnappen",
+   "target": "die Hand",
+   "voice": "female"
+  },
+  {
+   "phrase": "aufgeschlagen auf dem Boden liegen",
+   "target": "das Lehrbuch",
+   "voice": "female"
+  },
+  {
+   "phrase": "zwei lose Gurte haben",
+   "target": "der Rucksack",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Lehrbuch",
+   "voice": "female"
+  },
+  {
+   "word": "der Laptop",
+   "voice": "female"
+  },
+  {
+   "word": "der Rucksack",
+   "voice": "female"
+  },
+  {
+   "word": "das Kissen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Hand?",
+ "answer": [
+  "Sie",
+  "schnappt",
+  "sich",
+  "das",
+  "Kissen",
+  "vom",
+  "Boden."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich das Kissen"
+    },
+    {
+     "text": "schnappen",
+     "gap": true,
+     "accept": [
+      "schnappen",
+      "greifen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aufgeschlagen",
+     "gap": true,
+     "accept": [
+      "aufgeschlagen"
+     ]
+    },
+    {
+     "text": "auf dem Boden liegen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zwei lose"
+    },
+    {
+     "text": "Gurte",
+     "gap": true,
+     "accept": [
+      "Gurte",
+      "Riemen"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "schnappt sich das"
+    },
+    {
+     "text": "Kissen",
+     "gap": true,
+     "accept": [
+      "Kissen"
+     ]
+    },
+    {
+     "text": "vom Boden"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word der Zeitplan is not a visible thing (shown only through the labels Revise/Work/Gym/Sleep); appears in no exercise; kept unchanged."
+}

@@ -1,0 +1,112 @@
+{
+ "mediaId": 785,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "un horaire",
+ "taps": [
+  {
+   "phrase": "regarder sa montre",
+   "target": "le garçon",
+   "voice": "male"
+  },
+  {
+   "phrase": "montrer des trains et des horloges",
+   "target": "le tableau des horaires",
+   "voice": "male"
+  },
+  {
+   "phrase": "arriver à la gare",
+   "target": "le train",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le tableau des horaires",
+   "voice": "male"
+  },
+  {
+   "word": "le garçon",
+   "voice": "male"
+  },
+  {
+   "word": "le banc",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le garçon ?",
+ "answer": [
+  "Il",
+  "regarde",
+  "le",
+  "tableau",
+  "des",
+  "horaires."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder sa"
+    },
+    {
+     "text": "montre",
+     "gap": true,
+     "accept": [
+      "montre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "montrer des trains et des"
+    },
+    {
+     "text": "horloges",
+     "gap": true,
+     "accept": [
+      "horloges",
+      "pendules"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arriver",
+     "gap": true,
+     "accept": [
+      "arriver"
+     ]
+    },
+    {
+     "text": "à la gare"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde le tableau des"
+    },
+    {
+     "text": "horaires",
+     "gap": true,
+     "accept": [
+      "horaires"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: in France a single 'un horaire' for a printed timetable is unusual (Belgian/Swiss/Canadian use); France says 'les horaires' or 'le tableau des horaires' / 'la fiche horaire'. Proposal: keep the concept, consider 'les horaires' as the fr word. Noun 1 is 'le tableau des horaires' (contains the key word), so no separate noun row. Phrase 1: the boy looks at his watch only in part of the boxed frames (mostly he looks at the board, points, runs, boards); kept the English target."
+}

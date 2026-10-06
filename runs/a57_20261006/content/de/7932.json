@@ -1,0 +1,114 @@
+{
+ "mediaId": 7932,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Höhepunkt",
+ "taps": [
+  {
+   "phrase": "am Korbring hängen",
+   "target": "der Mann in Weiß",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein dunkelblaues Trikot tragen",
+   "target": "der Mann in Dunkelblau",
+   "voice": "male"
+  },
+  {
+   "phrase": "mit erhobenen Armen jubeln",
+   "target": "die Freunde",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Basketball",
+   "voice": "male"
+  },
+  {
+   "word": "das Netz",
+   "voice": "male"
+  },
+  {
+   "word": "das Tanktop",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann in Weiß?",
+ "answer": [
+  "Er",
+  "hängt",
+  "am",
+  "Korbring."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Korbring"
+    },
+    {
+     "text": "hängen",
+     "gap": true,
+     "accept": [
+      "hängen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein dunkelblaues"
+    },
+    {
+     "text": "Trikot",
+     "gap": true,
+     "accept": [
+      "Trikot"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mit erhobenen Armen"
+    },
+    {
+     "text": "jubeln",
+     "gap": true,
+     "accept": [
+      "jubeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hängt am"
+    },
+    {
+     "text": "Korbring",
+     "gap": true,
+     "accept": [
+      "Korbring",
+      "Ring",
+      "Korb"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'der Höhepunkt' (highest point of the jump) is not named in any exercise, as in English (no English text uses 'peak'); in German 'Höhepunkt' is mostly figurative, 'der höchste Punkt' would be the literal word for a jump. The tap box for phrase 1 also covers the landing in a crouch (about half the boxed frames); 'am Korbring hängen' describes the dunk frames, as the English. 'das Tanktop' = the white sleeveless top."
+}

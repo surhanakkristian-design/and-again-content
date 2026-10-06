@@ -1,0 +1,26 @@
+{
+  "mediaId": 7239, "lang": "fr", "level": "B",
+  "keyWord": "un idiot",
+  "taps": [
+    { "phrase": "siroter une boisson mousseuse", "target": "l'homme", "voice": "male" },
+    { "phrase": "porter un imperméable", "target": "le chien", "voice": "male" },
+    { "phrase": "frotter contre sa tête", "target": "la brosse bleue", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "la brosse", "voice": "male" },
+    { "word": "le chien", "voice": "male" },
+    { "word": "le gobelet en carton", "voice": "male" },
+    { "word": "le pare-brise", "voice": "male" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "sirote", "une", "boisson", "mousseuse."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "siroter une" }, { "text": "boisson", "gap": true, "accept": ["boisson"] }, { "text": "mousseuse" } ] },
+    { "from": "taps", "parts": [ { "text": "porter un" }, { "text": "imperméable", "gap": true, "accept": ["imperméable", "ciré"] } ] },
+    { "from": "taps", "parts": [ { "text": "frotter", "gap": true, "accept": ["frotter", "appuyer"] }, { "text": "contre sa tête" } ] },
+    { "from": "answer", "parts": [ { "text": "sirote", "gap": true, "accept": ["sirote", "boit"] }, { "text": "une boisson mousseuse" } ] }
+  ],
+  "notes": "keyWord 'un idiot' is copied unchanged (it carries the indefinite article, unlike other fr nouns: database may want 'l'idiot'); it is a judgement the clip implies (the women's reaction) and is not used in any text. In a French car wash the brush is often called 'le rouleau'; 'la brosse' is the plain word for what is shown. The brush is off screen in the later boxed frames."
+}

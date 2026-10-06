@@ -1,0 +1,26 @@
+{
+  "mediaId": 401, "lang": "de", "level": "A",
+  "keyWord": "die Schlittschuhe",
+  "taps": [
+    { "phrase": "die Schlittschuhe zubinden", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Arme ausbreiten", "target": "die Frau", "voice": "female" },
+    { "phrase": "eine grüne Jacke tragen", "target": "die Person in Grün", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Mütze", "voice": "female" },
+    { "word": "die Bäume", "voice": "female" },
+    { "word": "der Schal", "voice": "female" },
+    { "word": "die Schlittschuhe", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "läuft", "auf", "dem", "Eis", "Schlittschuh."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Schlittschuhe" }, { "text": "zubinden", "gap": true, "accept": ["zubinden", "schnüren"] } ] },
+    { "from": "taps", "parts": [ { "text": "die Arme" }, { "text": "ausbreiten", "gap": true, "accept": ["ausbreiten", "ausstrecken"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine grüne" }, { "text": "Jacke", "gap": true, "accept": ["Jacke"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "läuft auf dem Eis" }, { "text": "Schlittschuh", "gap": true, "accept": ["Schlittschuh"] } ] }
+  ],
+  "notes": "Tap 1 box (shared with tap 2) also covers the skating frames; tap 1 follows the lace-tying that fills the first boxed frames, tap 2 the arms-out skating. Tap 3 target kept neutral ('die Person in Grün', small and far away). No noun row: the key word is in tap row 1. 'Schlittschuh laufen' is fixed; German also allows 'Sie läuft Schlittschuh auf dem Eis.' in speech (second chip order)."
+}

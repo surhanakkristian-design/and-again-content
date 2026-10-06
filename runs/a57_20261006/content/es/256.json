@@ -1,0 +1,118 @@
+{
+  "mediaId": 256,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "comer",
+  "taps": [
+    {
+      "phrase": "oler la sopa de fideos",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "tener barba oscura",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "cocinar en la calle",
+      "target": "la cocinera",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cartel",
+      "voice": "female"
+    },
+    {
+      "word": "la barba",
+      "voice": "female"
+    },
+    {
+      "word": "los cuencos",
+      "voice": "female"
+    },
+    {
+      "word": "los vaqueros",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué comen el hombre y la chica?",
+  "answer": [
+    "Comen",
+    "sopa",
+    "de",
+    "fideos",
+    "caliente."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "oler",
+          "gap": true,
+          "accept": [
+            "oler"
+          ]
+        },
+        {
+          "text": "la sopa de fideos"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tener"
+        },
+        {
+          "text": "barba",
+          "gap": true,
+          "accept": [
+            "barba"
+          ]
+        },
+        {
+          "text": "oscura"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "cocinar en la"
+        },
+        {
+          "text": "calle",
+          "gap": true,
+          "accept": [
+            "calle"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Comen",
+          "gap": true,
+          "accept": [
+            "Comen",
+            "Toman"
+          ]
+        },
+        {
+          "text": "sopa de fideos caliente"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'comer' is in the question and the answer (gapped in the answer row). The young woman smells the soup only at the start; for most of her box she eats, but the man eats too, so the English action is kept. Soup = 'sopa de fideos' in tap 1 and the answer. The cook is a woman -> 'la cocinera'. 'young woman' -> 'la chica' (target and question). Answer drops the subject 'Ellos' as natives do, so the answer row is the whole sentence."
+}

@@ -1,0 +1,115 @@
+{
+ "mediaId": 303,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la fleur",
+ "taps": [
+  {
+   "phrase": "tenir un bouquet de fleurs",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être assise près de la fenêtre",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "toucher une fleur rose",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "les fleurs",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient la femme ?",
+ "answer": [
+  "Elle",
+  "tient",
+  "des",
+  "fleurs."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir un"
+    },
+    {
+     "text": "bouquet",
+     "gap": true,
+     "accept": [
+      "bouquet"
+     ]
+    },
+    {
+     "text": "de fleurs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être assise près de la"
+    },
+    {
+     "text": "fenêtre",
+     "gap": true,
+     "accept": [
+      "fenêtre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "toucher une"
+    },
+    {
+     "text": "fleur",
+     "gap": true,
+     "accept": [
+      "fleur"
+     ]
+    },
+    {
+     "text": "rose"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient",
+     "gap": true,
+     "accept": [
+      "tient"
+     ]
+    },
+    {
+     "text": "des fleurs"
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 2's box also covers close-ups of the flowers where the window is not visible; phrase written for the wide shots."
+}

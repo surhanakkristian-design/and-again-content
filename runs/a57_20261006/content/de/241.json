@@ -1,0 +1,26 @@
+{
+  "mediaId": 241, "lang": "de", "level": "A",
+  "keyWord": "das Zeichnen",
+  "taps": [
+    { "phrase": "auf der Treppe sitzen", "target": "der Mann", "voice": "male" },
+    { "phrase": "ein Bild zeichnen", "target": "der Mann", "voice": "male" },
+    { "phrase": "einen gelben Hut tragen", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Bild", "voice": "male" },
+    { "word": "der Hut", "voice": "male" },
+    { "word": "die Häuser", "voice": "male" },
+    { "word": "das Hemd", "voice": "male" }
+  ],
+  "question": "Was zeigt der Mann der Frau?",
+  "answer": ["Er", "zeigt", "ihr", "sein", "Bild."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "auf der" }, { "text": "Treppe", "gap": true, "accept": ["Treppe"] }, { "text": "sitzen" } ] },
+    { "from": "taps", "parts": [ { "text": "ein Bild" }, { "text": "zeichnen", "gap": true, "accept": ["zeichnen", "malen"] } ] },
+    { "from": "taps", "parts": [ { "text": "einen gelben" }, { "text": "Hut", "gap": true, "accept": ["Hut", "Strohhut"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "zeigt", "gap": true, "accept": ["zeigt"] }, { "text": "ihr sein Bild" } ] }
+  ],
+  "notes": "Key word 'das Zeichnen' is the activity; the English noun 'a drawing' (the object) is 'die Zeichnung' (B1), so the A-level noun is 'das Bild' and the key word appears as the verb 'zeichnen' in phrase 2. Proposal: if the owner wants the object noun, use 'die Zeichnung' (above level A). The woman's hat is a straw hat with a yellow tint, as in English."
+}

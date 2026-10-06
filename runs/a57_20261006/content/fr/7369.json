@@ -1,0 +1,122 @@
+{
+ "mediaId": 7369,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "contourner",
+ "taps": [
+  {
+   "phrase": "contourner une baleine en pagayant",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "projeter un jet de vapeur",
+   "target": "la baleine proche",
+   "voice": "female"
+  },
+  {
+   "phrase": "dresser sa queue hors de l'eau",
+   "target": "la baleine au loin",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le paddle",
+   "voice": "female"
+  },
+  {
+   "word": "la baleine",
+   "voice": "female"
+  },
+  {
+   "word": "le bateau",
+   "voice": "female"
+  },
+  {
+   "word": "les montagnes",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "contourne",
+  "la",
+  "grosse",
+  "baleine."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "contourner une"
+    },
+    {
+     "text": "baleine",
+     "gap": true,
+     "accept": [
+      "baleine"
+     ]
+    },
+    {
+     "text": "en pagayant"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "projeter",
+     "gap": true,
+     "accept": [
+      "projeter",
+      "souffler",
+      "lancer"
+     ]
+    },
+    {
+     "text": "un jet de vapeur"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dresser sa"
+    },
+    {
+     "text": "queue",
+     "gap": true,
+     "accept": [
+      "queue"
+     ]
+    },
+    {
+     "text": "hors de l'eau"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "contourne",
+     "gap": true,
+     "accept": [
+      "contourne"
+     ]
+    },
+    {
+     "text": "la grosse baleine"
+    }
+   ]
+  }
+ ],
+ "notes": "'le paddle' is the everyday French word for the stand-up paddle board. 'dresser sa queue' - a native might also say 'sortir la queue de l'eau'; zoologically 'la nageoire caudale'."
+}

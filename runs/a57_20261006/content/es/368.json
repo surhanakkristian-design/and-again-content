@@ -1,0 +1,137 @@
+{
+ "mediaId": 368,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el helicóptero",
+ "taps": [
+  {
+   "phrase": "volar sobre las montañas",
+   "target": "el helicóptero",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener barba negra",
+   "target": "el hombre mayor",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener el pelo largo y gris",
+   "target": "la mujer mayor",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el helicóptero",
+   "voice": "female"
+  },
+  {
+   "word": "la casa",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "la caja",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué vuela sobre las montañas?",
+ "answer": [
+  "Un",
+  "helicóptero",
+  "rojo",
+  "vuela",
+  "sobre",
+  "las",
+  "montañas."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar",
+     "gap": true,
+     "accept": [
+      "volar"
+     ]
+    },
+    {
+     "text": "sobre las montañas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    },
+    {
+     "text": "negra"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el"
+    },
+    {
+     "text": "pelo",
+     "gap": true,
+     "accept": [
+      "pelo"
+     ]
+    },
+    {
+     "text": "largo y gris"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "helicóptero",
+     "gap": true,
+     "accept": [
+      "helicóptero"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "vuela sobre las"
+    },
+    {
+     "text": "montañas",
+     "gap": true,
+     "accept": [
+      "montañas"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 box also covers the take-off from the pad; in most boxed frames the helicopter is in the air in front of the mountains. The man's beard is dark/black-grey."
+}

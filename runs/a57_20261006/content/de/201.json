@@ -1,0 +1,136 @@
+{
+ "mediaId": 201,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Krokodil",
+ "taps": [
+  {
+   "phrase": "im Fluss schwimmen",
+   "target": "das Krokodil",
+   "voice": "male"
+  },
+  {
+   "phrase": "aus dem Wasser kommen",
+   "target": "das Krokodil",
+   "voice": "male"
+  },
+  {
+   "phrase": "das Maul weit öffnen",
+   "target": "das Krokodil",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Krokodil",
+   "voice": "male"
+  },
+  {
+   "word": "die Bäume",
+   "voice": "male"
+  },
+  {
+   "word": "der Fluss",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht das Krokodil?",
+ "answer": [
+  "Es",
+  "öffnet",
+  "das",
+  "Maul",
+  "weit."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im"
+    },
+    {
+     "text": "Fluss",
+     "gap": true,
+     "accept": [
+      "Fluss",
+      "Wasser"
+     ]
+    },
+    {
+     "text": "schwimmen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "aus dem Wasser"
+    },
+    {
+     "text": "kommen",
+     "gap": true,
+     "accept": [
+      "kommen",
+      "kriechen",
+      "steigen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das Maul weit"
+    },
+    {
+     "text": "öffnen",
+     "gap": true,
+     "accept": [
+      "öffnen",
+      "aufmachen",
+      "aufreißen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "das"
+    },
+    {
+     "text": "Krokodil",
+     "gap": true,
+     "accept": [
+      "Krokodil"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "öffnet das"
+    },
+    {
+     "text": "Maul",
+     "gap": true,
+     "accept": [
+      "Maul"
+     ]
+    },
+    {
+     "text": "weit"
+    }
+   ]
+  }
+ ],
+ "notes": "All three tap boxes cover the same crocodile for the whole clip; each phrase is true in its part of the clip (swim at the start, come out mid, open mouth at the end). 'das Maul' is the correct word for an animal's mouth (slightly above A1 but the plain right word). Answer pronoun 'es' (das Krokodil); voice kept male as in English. Noun row added: Krokodil appears in no other row."
+}

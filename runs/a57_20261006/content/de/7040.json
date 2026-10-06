@@ -1,0 +1,121 @@
+{
+ "mediaId": 7040,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Würfel",
+ "taps": [
+  {
+   "phrase": "über das Spielbrett rollen",
+   "target": "der weiße Würfel",
+   "voice": "female"
+  },
+  {
+   "phrase": "sich die Haare raufen",
+   "target": "der Mann in Schwarz",
+   "voice": "male"
+  },
+  {
+   "phrase": "einen Würfel werfen",
+   "target": "die Frau mit den Locken",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Würfel",
+   "voice": "female"
+  },
+  {
+   "word": "das Popcorn",
+   "voice": "female"
+  },
+  {
+   "word": "das Brettspiel",
+   "voice": "female"
+  },
+  {
+   "word": "die Halsketten",
+   "voice": "female"
+  }
+ ],
+ "question": "Was rollt über das Spielbrett?",
+ "answer": [
+  "Ein",
+  "weißer",
+  "Würfel",
+  "rollt",
+  "über",
+  "das",
+  "Spielbrett."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über das Spielbrett"
+    },
+    {
+     "text": "rollen",
+     "gap": true,
+     "accept": [
+      "rollen",
+      "kullern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sich die Haare"
+    },
+    {
+     "text": "raufen",
+     "gap": true,
+     "accept": [
+      "raufen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Würfel",
+     "gap": true,
+     "accept": [
+      "Würfel"
+     ]
+    },
+    {
+     "text": "werfen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "rollt über das"
+    },
+    {
+     "text": "Spielbrett",
+     "gap": true,
+     "accept": [
+      "Spielbrett",
+      "Brett"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The man in grey covers his face (not his head), so phrase 2 fits only the man in black. The woman has already thrown the die in the first frame; phrase 3 describes her throw. Verifier: phrase 2 changed from 'sich an den Kopf fassen' (also the usual German for the grey man's facepalm) to 'sich die Haare raufen' (B2, both hands in his hair)."
+}

@@ -1,0 +1,118 @@
+{
+ "mediaId": 7053,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "faire la vaisselle",
+ "taps": [
+  {
+   "phrase": "laver une assiette sale",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "essuyer une assiette",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter une robe blanche",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les assiettes",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'évier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que font-ils ?",
+ "answer": [
+  "Ils",
+  "font",
+  "la",
+  "vaisselle."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "laver",
+     "gap": true,
+     "accept": [
+      "laver",
+      "nettoyer"
+     ]
+    },
+    {
+     "text": "une assiette sale"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "essuyer",
+     "gap": true,
+     "accept": [
+      "essuyer",
+      "sécher"
+     ]
+    },
+    {
+     "text": "une assiette"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "robe",
+     "gap": true,
+     "accept": [
+      "robe"
+     ]
+    },
+    {
+     "text": "blanche"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "font la"
+    },
+    {
+     "text": "vaisselle",
+     "gap": true,
+     "accept": [
+      "vaisselle"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Mixed couple -> 'ils', male answer voice as in English."
+}

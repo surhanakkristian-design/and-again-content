@@ -1,0 +1,26 @@
+{
+  "mediaId": 5671, "lang": "fr", "level": "B",
+  "keyWord": "un encouragement",
+  "taps": [
+    { "phrase": "brandir le poing", "target": "l'homme", "voice": "male" },
+    { "phrase": "gravir la côte à vélo", "target": "la cycliste", "voice": "female" },
+    { "phrase": "accompagner la cycliste en courant", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les sommets enneigés", "voice": "male" },
+    { "word": "le casque", "voice": "male" },
+    { "word": "le mur en pierre", "voice": "male" },
+    { "word": "les feuilles mortes", "voice": "male" }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": ["Il", "crie", "des", "encouragements", "à", "la", "cycliste."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "brandir le" }, { "text": "poing", "gap": true, "accept": ["poing"] } ] },
+    { "from": "taps", "parts": [ { "text": "gravir", "gap": true, "accept": ["gravir", "monter"] }, { "text": "la côte à vélo" } ] },
+    { "from": "taps", "parts": [ { "text": "accompagner", "gap": true, "accept": ["accompagner"] }, { "text": "la cycliste en courant" } ] },
+    { "from": "answer", "parts": [ { "text": "crie des" }, { "text": "encouragements", "gap": true, "accept": ["encouragements"] }, { "text": "à la cycliste" } ] }
+  ],
+  "notes": "Key word 'un encouragement' is used in the plural 'des encouragements' in the answer (crier des encouragements à qn is the natural collocation; the man shouts with his mouth open, visible without sound). The two women at the roadside clap but do not raise a fist or run, so phrases 1 and 3 fit only the man."
+}

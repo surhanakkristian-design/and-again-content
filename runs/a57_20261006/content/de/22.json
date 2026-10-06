@@ -1,0 +1,135 @@
+{
+  "mediaId": 22,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Wissenschaftler",
+  "taps": [
+    {
+      "phrase": "am Poster vorbeigehen",
+      "target": "der Student",
+      "voice": "male"
+    },
+    {
+      "phrase": "ein paar Notizen schreiben",
+      "target": "der Wissenschaftler",
+      "voice": "male"
+    },
+    {
+      "phrase": "auf eine Linie zeigen",
+      "target": "der Wissenschaftler",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Wissenschaftler",
+      "voice": "male"
+    },
+    {
+      "word": "die Brille",
+      "voice": "male"
+    },
+    {
+      "word": "der Stift",
+      "voice": "male"
+    },
+    {
+      "word": "das Poster",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Wissenschaftler?",
+  "answer": [
+    "Der",
+    "Wissenschaftler",
+    "schreibt",
+    "ein",
+    "paar",
+    "Notizen."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am Poster"
+        },
+        {
+          "text": "vorbeigehen",
+          "gap": true,
+          "accept": [
+            "vorbeigehen",
+            "vorbeilaufen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein paar"
+        },
+        {
+          "text": "Notizen",
+          "gap": true,
+          "accept": [
+            "Notizen"
+          ]
+        },
+        {
+          "text": "schreiben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf eine Linie"
+        },
+        {
+          "text": "zeigen",
+          "gap": true,
+          "accept": [
+            "zeigen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "Wissenschaftler",
+          "gap": true,
+          "accept": [
+            "Wissenschaftler"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schreibt",
+          "gap": true,
+          "accept": [
+            "schreibt",
+            "macht"
+          ]
+        },
+        {
+          "text": "ein paar Notizen"
+        }
+      ]
+    }
+  ],
+  "notes": "'die Brille' for the safety glasses on his forehead (level A; 'die Schutzbrille' would be more precise). Noun row added: answer row without its subject no longer contains the key word."
+}

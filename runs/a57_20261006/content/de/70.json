@@ -1,0 +1,27 @@
+{
+  "mediaId": 70, "lang": "de", "level": "B",
+  "keyWord": "der Barbier",
+  "taps": [
+    { "phrase": "einen dichten Bart stutzen", "target": "der Barbier", "voice": "male" },
+    { "phrase": "seinen neuen Haarschnitt bewundern", "target": "der Kunde", "voice": "male" },
+    { "phrase": "sein begeistertes Gesicht spiegeln", "target": "der Handspiegel", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Barbier", "voice": "male" },
+    { "word": "der Kunde", "voice": "male" },
+    { "word": "der Handspiegel", "voice": "male" },
+    { "word": "die Flaschen", "voice": "male" }
+  ],
+  "question": "Was macht der Barbier?",
+  "answer": ["Er", "stutzt", "den", "dichten", "Bart", "des", "Kunden."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "einen dichten Bart" }, { "text": "stutzen", "gap": true, "accept": ["stutzen", "trimmen", "schneiden"] } ] },
+    { "from": "taps", "parts": [ { "text": "seinen neuen" }, { "text": "Haarschnitt", "gap": true, "accept": ["Haarschnitt", "Schnitt"] }, { "text": "bewundern" } ] },
+    { "from": "taps", "parts": [ { "text": "sein begeistertes Gesicht" }, { "text": "spiegeln", "gap": true, "accept": ["spiegeln", "zeigen"] } ] },
+    { "from": "nouns", "parts": [ { "text": "der" }, { "text": "Barbier", "gap": true, "accept": ["Barbier"] } ] },
+    { "from": "answer", "parts": [ { "text": "stutzt den dichten" }, { "text": "Bart", "gap": true, "accept": ["Bart"] }, { "text": "des Kunden" } ] }
+  ],
+  "notes": "Phrase 1 box also covers the barber clipping the customer's hair and neck; trimming the beard is what he does in most boxed frames. Answer describes the trimming phase (the still moment at 9 s shows the mirror scene)."
+}

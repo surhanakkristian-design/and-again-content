@@ -1,0 +1,128 @@
+{
+ "mediaId": 518,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el búho",
+ "taps": [
+  {
+   "phrase": "estar posado en una rama",
+   "target": "el búho",
+   "voice": "female"
+  },
+  {
+   "phrase": "girar la cabeza",
+   "target": "el búho",
+   "voice": "female"
+  },
+  {
+   "phrase": "volar entre los árboles",
+   "target": "el búho",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el búho",
+   "voice": "female"
+  },
+  {
+   "word": "la rama",
+   "voice": "female"
+  },
+  {
+   "word": "el árbol",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el búho?",
+ "answer": [
+  "Está",
+  "posado",
+  "en",
+  "una",
+  "rama."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar"
+    },
+    {
+     "text": "posado",
+     "gap": true,
+     "accept": [
+      "posado"
+     ]
+    },
+    {
+     "text": "en una rama"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "girar la"
+    },
+    {
+     "text": "cabeza",
+     "gap": true,
+     "accept": [
+      "cabeza"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "volar entre los"
+    },
+    {
+     "text": "árboles",
+     "gap": true,
+     "accept": [
+      "árboles"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "búho",
+     "gap": true,
+     "accept": [
+      "búho"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está posado en una"
+    },
+    {
+     "text": "rama",
+     "gap": true,
+     "accept": [
+      "rama"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'posado' (A2/B1) is the plain natural word for a bird on a branch; 'sentado' would be wrong for a bird. Subject dropped."
+}

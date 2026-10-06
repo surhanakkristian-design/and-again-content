@@ -1,0 +1,118 @@
+{
+ "mediaId": 7059,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le hot-dog",
+ "taps": [
+  {
+   "phrase": "préparer un hot-dog",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "se tenir près du gril",
+   "target": "le chien",
+   "voice": "male"
+  },
+  {
+   "phrase": "être assis près du pain",
+   "target": "le chat",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le chien",
+   "voice": "male"
+  },
+  {
+   "word": "le chat",
+   "voice": "male"
+  },
+  {
+   "word": "le hot-dog",
+   "voice": "male"
+  },
+  {
+   "word": "le pain",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le chien ?",
+ "answer": [
+  "Le",
+  "chien",
+  "prépare",
+  "un",
+  "hot-dog."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "préparer un"
+    },
+    {
+     "text": "hot-dog",
+     "gap": true,
+     "accept": [
+      "hot-dog"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se tenir près du"
+    },
+    {
+     "text": "gril",
+     "gap": true,
+     "accept": [
+      "gril",
+      "grill"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "assis",
+     "gap": true,
+     "accept": [
+      "assis"
+     ]
+    },
+    {
+     "text": "près du pain"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prépare",
+     "gap": true,
+     "accept": [
+      "prépare"
+     ]
+    },
+    {
+     "text": "un hot-dog"
+    }
+   ]
+  }
+ ],
+ "notes": "'gril' is the dictionary spelling; 'grill' is also common in France and is accepted in the recall gap. Noun 4 'bread' = the tray of long rolls: 'le pain' as a mass noun."
+}

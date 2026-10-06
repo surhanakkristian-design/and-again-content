@@ -1,0 +1,26 @@
+{
+  "mediaId": 277, "lang": "de", "level": "A",
+  "keyWord": "der Sport",
+  "taps": [
+    { "phrase": "sich nach vorne beugen", "target": "die Frau", "voice": "female" },
+    { "phrase": "im Garten springen", "target": "die Frau", "voice": "female" },
+    { "phrase": "beide Daumen hochhalten", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das T-Shirt", "voice": "female" },
+    { "word": "die Beine", "voice": "female" },
+    { "word": "die Schuhe", "voice": "female" },
+    { "word": "die Blumen", "voice": "female" }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": ["Sie", "macht", "Sport."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "sich nach vorne" }, { "text": "beugen", "gap": true, "accept": ["beugen"] } ] },
+    { "from": "taps", "parts": [ { "text": "im" }, { "text": "Garten", "gap": true, "accept": ["Garten"] }, { "text": "springen" } ] },
+    { "from": "taps", "parts": [ { "text": "beide" }, { "text": "Daumen", "gap": true, "accept": ["Daumen"] }, { "text": "hochhalten" } ] },
+    { "from": "answer", "parts": [ { "text": "macht" }, { "text": "Sport", "gap": true, "accept": ["Sport"] } ] }
+  ],
+  "notes": "Phrase 1: in the frames she bends forward with her hands on her shins, not on her toes, so 'sich nach vorne beugen' instead of 'die Zehen berühren'. Answer kept short ('Sie macht Sport.') because 'Sie macht im Garten Sport' / 'Sie macht Sport im Garten' would allow two chip orders. Key word 'der Sport' is used in the answer and gapped there."
+}

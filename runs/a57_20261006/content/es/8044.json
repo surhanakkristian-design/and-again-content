@@ -1,0 +1,119 @@
+{
+ "mediaId": 8044,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "locamente",
+ "taps": [
+  {
+   "phrase": "pegar grandes saltos",
+   "target": "el chico de gris",
+   "voice": "male"
+  },
+  {
+   "phrase": "taparse la boca con asombro",
+   "target": "la chica de lila",
+   "voice": "female"
+  },
+  {
+   "phrase": "partirse de risa",
+   "target": "el chico de verde",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las guirnaldas de luces",
+   "voice": "male"
+  },
+  {
+   "word": "la novia",
+   "voice": "female"
+  },
+  {
+   "word": "el fardo de paja",
+   "voice": "male"
+  },
+  {
+   "word": "la corbata",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el chico de gris?",
+ "answer": [
+  "Está",
+  "pegando",
+  "saltos",
+  "como",
+  "un",
+  "loco."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pegar",
+     "gap": true,
+     "accept": [
+      "pegar",
+      "dar"
+     ]
+    },
+    {
+     "text": "grandes saltos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "taparse la boca con"
+    },
+    {
+     "text": "asombro",
+     "gap": true,
+     "accept": [
+      "asombro",
+      "sorpresa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "partirse",
+     "gap": true,
+     "accept": [
+      "partirse",
+      "morirse",
+      "troncharse"
+     ]
+    },
+    {
+     "text": "de risa"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está pegando saltos como un"
+    },
+    {
+     "text": "loco",
+     "gap": true,
+     "accept": [
+      "loco"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'locamente' is mostly used in Spain with 'enamorado'; for jumping a native says 'como un loco', so the answer uses 'como un loco' and 'locamente' appears nowhere (not forced). Proposal: accept 'como un loco' as the es rendering of 'wildly' here. Phrase 2: in the first boxed frames the woman in lilac just stands; she covers her mouth in most later frames, so the phrase describes that (the bride claps instead). 'Hay bale' rendered 'el fardo de paja' (the bales look like straw; the usual Spain word)."
+}

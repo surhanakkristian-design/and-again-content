@@ -1,0 +1,118 @@
+{
+ "mediaId": 2,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Zertifikat",
+ "taps": [
+  {
+   "phrase": "ein gerahmtes Zertifikat präsentieren",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "mehrere Zertifikate an sich drücken",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "vor Stolz strahlen",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Locken",
+   "voice": "female"
+  },
+  {
+   "word": "das Zertifikat",
+   "voice": "female"
+  },
+  {
+   "word": "das Oberteil",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "präsentiert",
+  "ihre",
+  "gerahmten",
+  "Zertifikate."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein gerahmtes"
+    },
+    {
+     "text": "Zertifikat",
+     "gap": true,
+     "accept": [
+      "Zertifikat"
+     ]
+    },
+    {
+     "text": "präsentieren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mehrere Zertifikate an sich"
+    },
+    {
+     "text": "drücken",
+     "gap": true,
+     "accept": [
+      "drücken",
+      "pressen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vor"
+    },
+    {
+     "text": "Stolz",
+     "gap": true,
+     "accept": [
+      "Stolz"
+     ]
+    },
+    {
+     "text": "strahlen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "präsentiert",
+     "gap": true,
+     "accept": [
+      "präsentiert",
+      "zeigt"
+     ]
+    },
+    {
+     "text": "ihre gerahmten Zertifikate"
+    }
+   ]
+  }
+ ],
+ "notes": "'curly hair' -> 'die Locken' (natural German noun for curly hair). For framed documents Germans also say 'die Urkunde'; 'das Zertifikat' fits the definition (proof of a finished course) and is kept. The noun row is skipped because the key word already appears in tap row 1."
+}

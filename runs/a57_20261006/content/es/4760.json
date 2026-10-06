@@ -1,0 +1,122 @@
+{
+  "mediaId": 4760,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "compartir",
+  "taps": [
+    {
+      "phrase": "llevar una chaqueta vaquera",
+      "target": "la persona de la chaqueta",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar un vestido de colores",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "abrazarse junto al agua",
+      "target": "los amigos",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el cielo",
+      "voice": "female"
+    },
+    {
+      "word": "la chaqueta",
+      "voice": "female"
+    },
+    {
+      "word": "el helado",
+      "voice": "female"
+    },
+    {
+      "word": "el vestido",
+      "voice": "female"
+    }
+  ],
+  "question": "¿Qué están compartiendo las dos amigas?",
+  "answer": [
+    "Están",
+    "compartiendo",
+    "un",
+    "helado."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "chaqueta",
+          "gap": true,
+          "accept": [
+            "chaqueta"
+          ]
+        },
+        {
+          "text": "vaquera"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar un"
+        },
+        {
+          "text": "vestido",
+          "gap": true,
+          "accept": [
+            "vestido"
+          ]
+        },
+        {
+          "text": "de colores"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "abrazarse",
+          "gap": true,
+          "accept": [
+            "abrazarse"
+          ]
+        },
+        {
+          "text": "junto al agua"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Están"
+        },
+        {
+          "text": "compartiendo",
+          "gap": true,
+          "accept": [
+            "compartiendo"
+          ]
+        },
+        {
+          "text": "un helado"
+        }
+      ]
+    }
+  ],
+  "notes": "The jacket is denim: 'chaqueta vaquera' (English says blue). Question uses 'las dos amigas' because both look like young women (English voice female for the jacket person); if the jacket person should read as male, use 'los dos amigos'."
+}

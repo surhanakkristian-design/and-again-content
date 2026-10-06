@@ -1,0 +1,136 @@
+{
+  "mediaId": 27,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Student",
+  "taps": [
+    {
+      "phrase": "das Fenster öffnen",
+      "target": "die Studentin",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf den Büchern stehen",
+      "target": "die Tasse",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf dem Schreibtisch liegen",
+      "target": "die Bücher",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Studentin",
+      "voice": "female"
+    },
+    {
+      "word": "die Tasse",
+      "voice": "female"
+    },
+    {
+      "word": "die Bücher",
+      "voice": "female"
+    },
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    }
+  ],
+  "question": "Was hält die Studentin?",
+  "answer": [
+    "Sie",
+    "hält",
+    "eine",
+    "Tasse."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "das Fenster"
+        },
+        {
+          "text": "öffnen",
+          "gap": true,
+          "accept": [
+            "öffnen",
+            "aufmachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf den"
+        },
+        {
+          "text": "Büchern",
+          "gap": true,
+          "accept": [
+            "Büchern"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf dem"
+        },
+        {
+          "text": "Schreibtisch",
+          "gap": true,
+          "accept": [
+            "Schreibtisch",
+            "Tisch"
+          ]
+        },
+        {
+          "text": "liegen"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "die"
+        },
+        {
+          "text": "Studentin",
+          "gap": true,
+          "accept": [
+            "Studentin"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "hält",
+          "gap": true,
+          "accept": [
+            "hält"
+          ]
+        },
+        {
+          "text": "eine Tasse"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word der Student: the clip shows a young woman, so the noun pill and target are the feminine 'die Studentin' (same entry, female form); proposal: keep der Student as database word, show Studentin for this clip. Noun row uses 'die Studentin' (gap Studentin). Tap 1: the red box covers the whole clip, she opens the window only around 7-8 s; phrase kept as in English (it is her defining action). At the still (11.5 s) she holds the cup."
+}

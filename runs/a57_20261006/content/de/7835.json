@@ -1,0 +1,26 @@
+{
+  "mediaId": 7835, "lang": "de", "level": "B",
+  "keyWord": "die Strömung",
+  "taps": [
+    { "phrase": "über die Felsen stürzen", "target": "die Lava", "voice": "male" },
+    { "phrase": "am Gipfel glühen", "target": "der Krater", "voice": "male" },
+    { "phrase": "über dem Horizont schweben", "target": "die Wolke", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Lavastrom", "voice": "male" },
+    { "word": "der Krater", "voice": "male" },
+    { "word": "die Bäume", "voice": "male" },
+    { "word": "die Wolke", "voice": "male" }
+  ],
+  "question": "Was passiert auf dem Vulkan?",
+  "answer": ["Die", "Lava", "strömt", "den", "Hang", "hinab."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "über die Felsen" }, { "text": "stürzen", "gap": true, "accept": ["stürzen", "fließen"] } ] },
+    { "from": "taps", "parts": [ { "text": "am" }, { "text": "Gipfel", "gap": true, "accept": ["Gipfel"] }, { "text": "glühen" } ] },
+    { "from": "taps", "parts": [ { "text": "über dem" }, { "text": "Horizont", "gap": true, "accept": ["Horizont"] }, { "text": "schweben" } ] },
+    { "from": "answer", "parts": [ { "text": "strömt", "gap": true, "accept": ["strömt", "fließt"] }, { "text": "den Hang hinab" } ] }
+  ],
+  "notes": "Key-word mapping issue: 'die Strömung' is the motion of water or air (Meeresströmung, Luftströmung); a native never calls flowing lava 'Strömung'. The natural word for English noun 1 'a lava flow' is 'der Lavastrom', used as noun 1. The key word's verb 'strömen' is used in the answer ('Die Lava strömt den Hang hinab.'). Proposal: for this sense the German word could be 'der Strom' (Lavastrom, Wasserstrom) or keep 'die Strömung' and accept that this clip only shows it via 'strömen'. No noun row: key word is not one of the nouns. The answer also allows 'Den Hang hinab strömt die Lava' (marked order, unlikely)."
+}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 244,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la boisson",
+ "taps": [
+  {
+   "phrase": "boire du jus d'orange",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "faire du jus d'orange",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être posé sur un bâton",
+   "target": "le perroquet",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le perroquet",
+   "voice": "male"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "le jus",
+   "voice": "male"
+  },
+  {
+   "word": "les oranges",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme ?",
+ "answer": [
+  "Il",
+  "boit",
+  "un",
+  "verre",
+  "de",
+  "jus",
+  "d'orange."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "boire",
+     "gap": true,
+     "accept": [
+      "boire"
+     ]
+    },
+    {
+     "text": "du jus d'orange"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "faire du"
+    },
+    {
+     "text": "jus",
+     "gap": true,
+     "accept": [
+      "jus"
+     ]
+    },
+    {
+     "text": "d'orange"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être posé sur un"
+    },
+    {
+     "text": "bâton",
+     "gap": true,
+     "accept": [
+      "bâton"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "boit un"
+    },
+    {
+     "text": "verre",
+     "gap": true,
+     "accept": [
+      "verre"
+     ]
+    },
+    {
+     "text": "de jus d'orange"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la boisson' appears in no text: the clip shows the drink as orange juice ('le jus'), and 'la boisson' is not a noun of the English set (English 'juice' -> 'le jus'). Proposal: owner may accept 'le jus' as the shown drink. In the last frames the woman pours juice from a jug and the man gets water poured over his head."
+}

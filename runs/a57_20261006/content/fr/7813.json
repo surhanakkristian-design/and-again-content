@@ -1,0 +1,26 @@
+{
+  "mediaId": 7813, "lang": "fr", "level": "B",
+  "keyWord": "le duo",
+  "taps": [
+    { "phrase": "tambouriner sur des seaux retournés", "target": "les deux batteurs", "voice": "male" },
+    { "phrase": "être vêtue d'un pull rose", "target": "la femme en rose", "voice": "female" },
+    { "phrase": "refléter le ciel nuageux", "target": "la flaque", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "les parasols", "voice": "male" },
+    { "word": "la fontaine", "voice": "male" },
+    { "word": "les seaux", "voice": "male" },
+    { "word": "la flaque", "voice": "male" }
+  ],
+  "question": "Que fait le duo ?",
+  "answer": ["Le", "duo", "tambourine", "sur", "des", "seaux", "bleus."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tambouriner", "gap": true, "accept": ["tambouriner"] }, { "text": "sur des seaux retournés" } ] },
+    { "from": "taps", "parts": [ { "text": "être vêtue d'un" }, { "text": "pull", "gap": true, "accept": ["pull"] }, { "text": "rose" } ] },
+    { "from": "taps", "parts": [ { "text": "refléter", "gap": true, "accept": ["refléter"] }, { "text": "le ciel nuageux" } ] },
+    { "from": "answer", "parts": [ { "text": "tambourine sur des" }, { "text": "seaux", "gap": true, "accept": ["seaux"] }, { "text": "bleus" } ] }
+  ],
+  "notes": "Phrase 1: in the last boxed frames (box_02) the drummers stand, laugh and tap their sticks together instead of drumming; they jump/crouch and drum in most box_01 frames. 'Les parasols' = the café umbrellas. The key word 'le duo' is the answer's subject, so the answer recall row (subject removed) does not contain it, and it is not a noun of the set (no noun row)."
+}

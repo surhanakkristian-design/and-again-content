@@ -1,0 +1,126 @@
+{
+ "mediaId": 4918,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un escalier",
+ "taps": [
+  {
+   "phrase": "monter l'escalier quatre à quatre",
+   "target": "le jeune homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "peiner à porter de lourds sacs",
+   "target": "la vieille dame",
+   "voice": "female"
+  },
+  {
+   "phrase": "lever le pouce",
+   "target": "le jeune homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'escalier",
+   "voice": "male"
+  },
+  {
+   "word": "le sweat à capuche",
+   "voice": "male"
+  },
+  {
+   "word": "le jean",
+   "voice": "male"
+  },
+  {
+   "word": "le sac en papier",
+   "voice": "male"
+  }
+ ],
+ "question": "Que transporte le jeune homme ?",
+ "answer": [
+  "Il",
+  "transporte",
+  "des",
+  "sacs",
+  "en",
+  "papier",
+  "dans",
+  "l'escalier."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "monter",
+     "gap": true,
+     "accept": [
+      "monter",
+      "grimper"
+     ]
+    },
+    {
+     "text": "l'escalier"
+    },
+    {
+     "text": "quatre à quatre"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "peiner à porter de lourds"
+    },
+    {
+     "text": "sacs",
+     "gap": true,
+     "accept": [
+      "sacs"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever le"
+    },
+    {
+     "text": "pouce",
+     "gap": true,
+     "accept": [
+      "pouce"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "transporte",
+     "gap": true,
+     "accept": [
+      "transporte",
+      "porte",
+      "monte"
+     ]
+    },
+    {
+     "text": "des sacs en papier"
+    },
+    {
+     "text": "dans l'escalier"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord in the database is 'un escalier' (indefinite article); the noun pill uses the definite 'l'escalier' as the rules ask. Because 'l'escalier' is elided it cannot be a gap, so no recall row gaps the key word (it appears in rows 1 and 4). Box 1 (young man) also covers jogging, the bag handover and the doorstep; 'monter l'escalier quatre à quatre' fits the steps frames. 'la vieille dame' is the natural polite French for the elderly woman."
+}

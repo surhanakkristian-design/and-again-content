@@ -1,0 +1,126 @@
+{
+ "mediaId": 7946,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "postal",
+ "taps": [
+  {
+   "phrase": "vaciar el buzón",
+   "target": "el perro negro",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar a cuestas una saca de correos",
+   "target": "el perro negro",
+   "voice": "female"
+  },
+  {
+   "phrase": "asomar la cabeza por la ventanilla",
+   "target": "el collie",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "el buzón",
+   "voice": "female"
+  },
+  {
+   "word": "la furgoneta",
+   "voice": "female"
+  },
+  {
+   "word": "la saca",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo el perro negro?",
+ "answer": [
+  "Vacía",
+  "el",
+  "buzón",
+  "rojo",
+  "en",
+  "la",
+  "saca."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "vaciar",
+     "gap": true,
+     "accept": [
+      "vaciar"
+     ]
+    },
+    {
+     "text": "el buzón"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar",
+     "gap": true,
+     "accept": [
+      "llevar",
+      "cargar"
+     ]
+    },
+    {
+     "text": "a cuestas"
+    },
+    {
+     "text": "una saca de correos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "asomar la cabeza"
+    },
+    {
+     "text": "por la"
+    },
+    {
+     "text": "ventanilla",
+     "gap": true,
+     "accept": [
+      "ventanilla"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Vacía el"
+    },
+    {
+     "text": "buzón",
+     "gap": true,
+     "accept": [
+      "buzón"
+     ]
+    },
+    {
+     "text": "rojo en la saca"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'postal' (adjective) is not used: 'la furgoneta postal' / 'la saca postal' would be possible but less natural than 'la furgoneta' / 'saca de correos' (not forced). Phrase 2: in the first boxed frames the dog fills the sack at the postbox, then carries it on its back."
+}

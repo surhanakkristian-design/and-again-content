@@ -1,0 +1,26 @@
+{
+  "mediaId": 8032, "lang": "de", "level": "B",
+  "keyWord": "unerwartet",
+  "taps": [
+    { "phrase": "seinen Hut hinhalten", "target": "der Bronzemann", "voice": "male" },
+    { "phrase": "vor Schreck zurückweichen", "target": "die Frau in Weiß", "voice": "female" },
+    { "phrase": "den Arm ihrer Freundin packen", "target": "die Frau in Rosa", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "der Kirchturm", "voice": "male" },
+    { "word": "der Brunnen", "voice": "male" },
+    { "word": "die Tauben", "voice": "male" },
+    { "word": "der Rock", "voice": "male" }
+  ],
+  "question": "Was macht der Bronzemann?",
+  "answer": ["Er", "bietet", "einer", "Frau", "seinen", "Hut", "an."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "seinen" }, { "text": "Hut", "gap": true, "accept": ["Hut"] }, { "text": "hinhalten" } ] },
+    { "from": "taps", "parts": [ { "text": "vor Schreck" }, { "text": "zurückweichen", "gap": true, "accept": ["zurückweichen", "zurückspringen", "zurückschrecken"] } ] },
+    { "from": "taps", "parts": [ { "text": "den Arm ihrer Freundin" }, { "text": "packen", "gap": true, "accept": ["packen", "fassen", "greifen"] } ] },
+    { "from": "answer", "parts": [ { "text": "bietet", "gap": true, "accept": ["bietet"] }, { "text": "einer Frau seinen Hut an" } ] }
+  ],
+  "notes": "Noun 1 (English 'a clock tower') is the church tower with a clock; Germans call it 'der Kirchturm' ('Uhrturm' is rare). The woman in white jumps back mostly in the first frames, then laughs; phrase 2 describes her shocked reaction. The key word 'unerwartet' is an adverb; it is not used because it would make the answer chips allow two orders (it could stand before or after 'einer Frau'). The answer chips also allow 'Er bietet seinen Hut einer Frau an' (possible but marked). Target name 'der Bronzemann' = the living statue painted in bronze."
+}

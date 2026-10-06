@@ -1,0 +1,127 @@
+{
+ "mediaId": 5435,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "ähnlich",
+ "taps": [
+  {
+   "phrase": "eine blaue Chipstüte hervorholen",
+   "target": "die Frau links",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine rote Chipstüte hervorholen",
+   "target": "die Frau rechts",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine blaue Chipstüte einstecken",
+   "target": "die Frau rechts",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "die Bäume",
+   "voice": "female"
+  },
+  {
+   "word": "der Rasen",
+   "voice": "female"
+  },
+  {
+   "word": "der Gehweg",
+   "voice": "female"
+  }
+ ],
+ "question": "Wie sehen die beiden Frauen aus?",
+ "answer": [
+  "Die",
+  "beiden",
+  "Frauen",
+  "sehen",
+  "sich",
+  "zum",
+  "Verwechseln",
+  "ähnlich."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine blaue Chipstüte"
+    },
+    {
+     "text": "hervorholen",
+     "gap": true,
+     "accept": [
+      "hervorholen",
+      "herausholen",
+      "herausziehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine rote"
+    },
+    {
+     "text": "Chipstüte",
+     "gap": true,
+     "accept": [
+      "Chipstüte",
+      "Tüte"
+     ]
+    },
+    {
+     "text": "hervorholen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine blaue"
+    },
+    {
+     "text": "Chipstüte",
+     "gap": true,
+     "accept": [
+      "Chipstüte",
+      "Tüte"
+     ]
+    },
+    {
+     "text": "einstecken"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sehen sich zum Verwechseln"
+    },
+    {
+     "text": "ähnlich",
+     "gap": true,
+     "accept": [
+      "ähnlich"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrases 1 and 2 differ only by the colour, as in English (left woman takes out a blue crisp packet, right one a red one); phrase 3 = right woman puts a blue packet into her belt bag. Alternative order 'Zum Verwechseln ähnlich sehen sich die beiden Frauen.' is possible but marked; the plain order is the expected one."
+}

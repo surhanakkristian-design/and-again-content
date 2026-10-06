@@ -1,0 +1,122 @@
+{
+ "mediaId": 297,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "das Angeln",
+ "taps": [
+  {
+   "phrase": "eine Angel halten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein Netz halten",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "im See schwimmen",
+   "target": "der Fisch",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Fisch",
+   "voice": "male"
+  },
+  {
+   "word": "das Netz",
+   "voice": "male"
+  },
+  {
+   "word": "die Kappe",
+   "voice": "male"
+  },
+  {
+   "word": "die Bäume",
+   "voice": "male"
+  }
+ ],
+ "question": "Was machen der Mann und die Frau?",
+ "answer": [
+  "Sie",
+  "angeln",
+  "im",
+  "See."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Angel",
+     "gap": true,
+     "accept": [
+      "Angel",
+      "Angelrute"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Netz",
+     "gap": true,
+     "accept": [
+      "Netz",
+      "Kescher"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "im See"
+    },
+    {
+     "text": "schwimmen",
+     "gap": true,
+     "accept": [
+      "schwimmen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "angeln",
+     "gap": true,
+     "accept": [
+      "angeln",
+      "fischen"
+     ]
+    },
+    {
+     "text": "im See"
+    }
+   ]
+  }
+ ],
+ "notes": "'das Netz' for the landing net (A-level; the exact word 'der Kescher' is above level, accepted in recall). Key word is the noun 'das Angeln'; the answer uses the verb 'angeln' (same lemma family). Phrase 1: in the last boxed frames the man holds the fish / high-fives instead of the rod; the rod is in most boxed frames. Phrase 2: the woman points/cheers in some boxed frames, holds the net in most."
+}

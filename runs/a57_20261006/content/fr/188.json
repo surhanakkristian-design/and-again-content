@@ -1,0 +1,121 @@
+{
+ "mediaId": 188,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la constitution",
+ "taps": [
+  {
+   "phrase": "se pencher au-dessus de la table",
+   "target": "le politicien",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter une perruque poudrée",
+   "target": "le juge",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter deux sceaux de cire",
+   "target": "le livre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la perruque",
+   "voice": "male"
+  },
+  {
+   "word": "la constitution",
+   "voice": "male"
+  },
+  {
+   "word": "le marbre",
+   "voice": "male"
+  }
+ ],
+ "question": "Que lit le politicien ?",
+ "answer": [
+  "Il",
+  "lit",
+  "une",
+  "page",
+  "de",
+  "la",
+  "constitution."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "pencher",
+     "gap": true,
+     "accept": [
+      "pencher"
+     ]
+    },
+    {
+     "text": "au-dessus de la table"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "perruque",
+     "gap": true,
+     "accept": [
+      "perruque"
+     ]
+    },
+    {
+     "text": "poudrée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter deux"
+    },
+    {
+     "text": "sceaux",
+     "gap": true,
+     "accept": [
+      "sceaux"
+     ]
+    },
+    {
+     "text": "de cire"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lit une page de la"
+    },
+    {
+     "text": "constitution",
+     "gap": true,
+     "accept": [
+      "constitution"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Tap 1: in many boxed frames the politician sits and gestures; the lean across the table is at the end (same box as English)."
+}

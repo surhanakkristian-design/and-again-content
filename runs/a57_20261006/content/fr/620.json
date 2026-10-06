@@ -1,0 +1,15 @@
+{"mediaId": 620, "lang": "fr", "level": "A", "keyWord": "la rose",
+ "taps": [{"phrase": "sentir une rose", "target": "la femme", "voice": "female"},
+          {"phrase": "fermer les yeux", "target": "la femme", "voice": "female"},
+          {"phrase": "briller dans le ciel", "target": "le soleil", "voice": "female"}],
+ "nouns": [{"word": "la femme", "voice": "female"}, {"word": "la rose", "voice": "female"}, {"word": "le panier", "voice": "female"}, {"word": "le soleil", "voice": "female"}],
+ "question": "Que fait la femme ?",
+ "answer": ["Elle", "sent", "une", "rose."],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {"from": "taps", "parts": [{"text": "sentir une"}, {"text": "rose", "gap": true, "accept": ["rose"]}]},
+  {"from": "taps", "parts": [{"text": "fermer", "gap": true, "accept": ["fermer"]}, {"text": "les yeux"}]},
+  {"from": "taps", "parts": [{"text": "briller dans le"}, {"text": "ciel", "gap": true, "accept": ["ciel"]}]},
+  {"from": "answer", "parts": [{"text": "sent", "gap": true, "accept": ["sent", "respire"]}, {"text": "une rose"}]}],
+ "notes": "English 'to smell a pink rose' -> 'sentir une rose' (une rose rose would sound clumsy; the colour is dropped). The red/green boxes for phrases 1 and 2 also cover the close-ups of the rose and the end where she shows the stem and thorns with open eyes; the phrases describe what she does in most boxed frames (smelling with closed eyes around 3-5 s)."}

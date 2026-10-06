@@ -1,0 +1,26 @@
+{
+  "mediaId": 195, "lang": "de", "level": "A",
+  "keyWord": "das Husten",
+  "taps": [
+    { "phrase": "in die Hand husten", "target": "die Frau", "voice": "female" },
+    { "phrase": "heißen Tee bringen", "target": "der Mann", "voice": "male" },
+    { "phrase": "über die Decke laufen", "target": "die Katze", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Pflanzen", "voice": "female" },
+    { "word": "die Tasse", "voice": "female" },
+    { "word": "die Decke", "voice": "female" },
+    { "word": "die Katze", "voice": "female" }
+  ],
+  "question": "Was macht die kranke Frau?",
+  "answer": ["Sie", "hustet", "in", "die", "Hand."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "in die Hand" }, { "text": "husten", "gap": true, "accept": ["husten"] } ] },
+    { "from": "taps", "parts": [ { "text": "heißen" }, { "text": "Tee", "gap": true, "accept": ["Tee"] }, { "text": "bringen" } ] },
+    { "from": "taps", "parts": [ { "text": "über die" }, { "text": "Decke", "gap": true, "accept": ["Decke"] }, { "text": "laufen" } ] },
+    { "from": "answer", "parts": [ { "text": "hustet in die" }, { "text": "Hand", "gap": true, "accept": ["Hand", "Faust"] } ] }
+  ],
+  "notes": "The woman's tap box also covers the second half where she sips tea and smiles; the phrase follows English (she coughs into her hand/fist in the first boxes). Key word 'das Husten' (nominalised verb) is not in the noun set, so no noun row; the verb 'husten' carries it in tap row 1 and the answer. 'in die Hand husten' is the native form (not 'in ihre Hand')."
+}

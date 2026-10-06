@@ -1,0 +1,122 @@
+{
+ "mediaId": 222,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le retard",
+ "taps": [
+  {
+   "phrase": "barrer la porte du bus",
+   "target": "le chauffeur",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'effondrer sur sa valise",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "indiquer l'heure",
+   "target": "l'horloge",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "l'horloge",
+   "voice": "female"
+  },
+  {
+   "word": "la valise",
+   "voice": "female"
+  },
+  {
+   "word": "les enseignes au néon",
+   "voice": "female"
+  },
+  {
+   "word": "le chauffeur",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le chauffeur ?",
+ "answer": [
+  "Il",
+  "barre",
+  "la",
+  "porte",
+  "du",
+  "bus."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "barrer",
+     "gap": true,
+     "accept": [
+      "barrer",
+      "bloquer"
+     ]
+    },
+    {
+     "text": "la porte du bus"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'effondrer sur sa"
+    },
+    {
+     "text": "valise",
+     "gap": true,
+     "accept": [
+      "valise"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "indiquer",
+     "gap": true,
+     "accept": [
+      "indiquer",
+      "afficher",
+      "montrer"
+     ]
+    },
+    {
+     "text": "l'heure"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "barre la"
+    },
+    {
+     "text": "porte",
+     "gap": true,
+     "accept": [
+      "porte",
+      "portière"
+     ]
+    },
+    {
+     "text": "du bus"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'le retard' is not a noun of the set and fits no phrase naturally; the delay is shown by the clock and the waiting. Phrase 2: the woman throws up her arms in some boxed frames and collapses at the end; phrase written for the collapse."
+}

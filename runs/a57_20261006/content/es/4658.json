@@ -1,0 +1,119 @@
+{
+ "mediaId": 4658,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "conducir",
+ "taps": [
+  {
+   "phrase": "conducir un coche antiguo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "caminar por la calle",
+   "target": "la gente",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar gafas de sol",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el mar",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  },
+  {
+   "word": "el volante",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la mujer?",
+ "answer": [
+  "Está",
+  "conduciendo",
+  "un",
+  "coche",
+  "junto",
+  "al",
+  "mar."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "conducir",
+     "gap": true,
+     "accept": [
+      "conducir"
+     ]
+    },
+    {
+     "text": "un coche antiguo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caminar por la"
+    },
+    {
+     "text": "calle",
+     "gap": true,
+     "accept": [
+      "calle"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    },
+    {
+     "text": "de sol"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está conduciendo un coche junto al"
+    },
+    {
+     "text": "mar",
+     "gap": true,
+     "accept": [
+      "mar"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Spanish drops the subject: answer has no subject, so the answer recall row is the whole sentence. 'la gente' = the people walking ahead in the street (only seen in the first POV frames)."
+}

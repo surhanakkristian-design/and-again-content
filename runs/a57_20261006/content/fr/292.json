@@ -1,0 +1,125 @@
+{
+ "mediaId": 292,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la bagarre",
+ "taps": [
+  {
+   "phrase": "lever un oreiller très haut",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un tee-shirt gris",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une barbe",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "l'oreiller",
+   "voice": "female"
+  },
+  {
+   "word": "la plante",
+   "voice": "female"
+  },
+  {
+   "word": "le lit",
+   "voice": "female"
+  }
+ ],
+ "question": "Que font-ils sur le lit ?",
+ "answer": [
+  "Ils",
+  "font",
+  "une",
+  "bataille",
+  "d'oreillers."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever un"
+    },
+    {
+     "text": "oreiller",
+     "gap": true,
+     "accept": [
+      "oreiller"
+     ]
+    },
+    {
+     "text": "très haut"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "tee-shirt",
+     "gap": true,
+     "accept": [
+      "tee-shirt",
+      "t-shirt"
+     ]
+    },
+    {
+     "text": "gris"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "font une"
+    },
+    {
+     "text": "bataille",
+     "gap": true,
+     "accept": [
+      "bataille",
+      "bagarre"
+     ]
+    },
+    {
+     "text": "d'oreillers"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: a pillow fight is 'une bataille d'oreillers' in France; 'une bagarre d'oreillers' is heard but less natural, so the answer uses 'bataille' (the recall row also accepts 'bagarre'). 'la bagarre' fits a real scuffle; proposal for this clip: 'la bataille' (owner decides). The man has a white T-shirt, so phrase 2 fits only the woman."
+}

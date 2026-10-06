@@ -1,0 +1,120 @@
+{
+  "mediaId": 795,
+  "lang": "fr",
+  "level": "A",
+  "keyWord": "la serviette",
+  "taps": [
+    {
+      "phrase": "sortir de la piscine",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "se sécher les cheveux",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "secouer la tête",
+      "target": "le chien",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "l'homme",
+      "voice": "male"
+    },
+    {
+      "word": "la serviette",
+      "voice": "male"
+    },
+    {
+      "word": "le chien",
+      "voice": "male"
+    },
+    {
+      "word": "l'arbre",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "se",
+    "sèche",
+    "les",
+    "cheveux",
+    "avec",
+    "une",
+    "serviette."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sortir de la"
+        },
+        {
+          "text": "piscine",
+          "gap": true,
+          "accept": [
+            "piscine"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "sécher",
+          "gap": true,
+          "accept": [
+            "sécher"
+          ]
+        },
+        {
+          "text": "les cheveux"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "secouer",
+          "gap": true,
+          "accept": [
+            "secouer"
+          ]
+        },
+        {
+          "text": "la tête"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "se sèche les cheveux avec une"
+        },
+        {
+          "text": "serviette",
+          "gap": true,
+          "accept": [
+            "serviette"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: the wet dog shakes its head (and body) only in part of the boxed frames; 'secouer la tête' is what it does in most of them. Answer contains the key word, so no noun row."
+}

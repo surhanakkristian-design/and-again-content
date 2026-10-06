@@ -1,0 +1,135 @@
+{
+ "mediaId": 7193,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la abuela",
+ "taps": [
+  {
+   "phrase": "conducir un tractor rojo",
+   "target": "la abuela",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar un vestido blanco",
+   "target": "la novia",
+   "voice": "female"
+  },
+  {
+   "phrase": "correr detrás del tractor",
+   "target": "el perro",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la abuela",
+   "voice": "female"
+  },
+  {
+   "word": "el tractor",
+   "voice": "female"
+  },
+  {
+   "word": "el perro",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la abuela?",
+ "answer": [
+  "Está",
+  "conduciendo",
+  "un",
+  "tractor",
+  "rojo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "conducir",
+     "gap": true,
+     "accept": [
+      "conducir"
+     ]
+    },
+    {
+     "text": "un tractor rojo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "vestido",
+     "gap": true,
+     "accept": [
+      "vestido"
+     ]
+    },
+    {
+     "text": "blanco"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr",
+     "gap": true,
+     "accept": [
+      "correr"
+     ]
+    },
+    {
+     "text": "detrás del tractor"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "la"
+    },
+    {
+     "text": "abuela",
+     "gap": true,
+     "accept": [
+      "abuela"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está conduciendo un"
+    },
+    {
+     "text": "tractor",
+     "gap": true,
+     "accept": [
+      "tractor"
+     ]
+    },
+    {
+     "text": "rojo"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word in no phrase or answer, so a noun row 'la abuela' was added. Subject dropped in the answer as natives do."
+}

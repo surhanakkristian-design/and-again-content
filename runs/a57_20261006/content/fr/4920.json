@@ -1,0 +1,123 @@
+{
+ "mediaId": 4920,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la communauté",
+ "taps": [
+  {
+   "phrase": "arroser les jeunes plants",
+   "target": "la femme blonde",
+   "voice": "female"
+  },
+  {
+   "phrase": "être rayé de toutes les couleurs",
+   "target": "l'arrosoir",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'élever au-dessus de la foule",
+   "target": "la pancarte",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "la pancarte",
+   "voice": "female"
+  },
+  {
+   "word": "le garçon",
+   "voice": "male"
+  },
+  {
+   "word": "le carré potager",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme blonde ?",
+ "answer": [
+  "Elle",
+  "arrose",
+  "les",
+  "jeunes",
+  "plants",
+  "du",
+  "jardin",
+  "partagé."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "arroser",
+     "gap": true,
+     "accept": [
+      "arroser"
+     ]
+    },
+    {
+     "text": "les jeunes plants"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être"
+    },
+    {
+     "text": "rayé",
+     "gap": true,
+     "accept": [
+      "rayé"
+     ]
+    },
+    {
+     "text": "de toutes les couleurs"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'élever au-dessus de la"
+    },
+    {
+     "text": "foule",
+     "gap": true,
+     "accept": [
+      "foule"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "arrose les jeunes plants du"
+    },
+    {
+     "text": "jardin",
+     "gap": true,
+     "accept": [
+      "jardin"
+     ]
+    },
+    {
+     "text": "partagé"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la communauté' does not fit naturally: the English answer's 'community garden' is 'le jardin partagé' in France ('jardin communautaire' is Canadian usage). Proposal: keep 'la communauté' for the concept but accept that this clip teaches it only through the sign; or map the concept's French word to 'le quartier'/'les habitants' if the owner prefers. Phrase 1: the red box also covers the planting at the start and the cheering at the end; phrase written for the watering."
+}

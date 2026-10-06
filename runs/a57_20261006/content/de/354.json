@@ -1,0 +1,122 @@
+{
+ "mediaId": 354,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "der Reiseführer",
+ "taps": [
+  {
+   "phrase": "in einem Reiseführer blättern",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "einen Sonnenhut tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "Wasser speien",
+   "target": "der steinerne Löwe",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Statue",
+   "voice": "female"
+  },
+  {
+   "word": "der Sonnenhut",
+   "voice": "female"
+  },
+  {
+   "word": "der Ohrring",
+   "voice": "female"
+  },
+  {
+   "word": "der Reiseführer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was machen die beiden Touristen?",
+ "answer": [
+  "Sie",
+  "blättern",
+  "in",
+  "einem",
+  "Reiseführer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in einem"
+    },
+    {
+     "text": "Reiseführer",
+     "gap": true,
+     "accept": [
+      "Reiseführer"
+     ]
+    },
+    {
+     "text": "blättern"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "einen"
+    },
+    {
+     "text": "Sonnenhut",
+     "gap": true,
+     "accept": [
+      "Sonnenhut",
+      "Hut"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Wasser"
+    },
+    {
+     "text": "speien",
+     "gap": true,
+     "accept": [
+      "speien",
+      "spucken"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "blättern",
+     "gap": true,
+     "accept": [
+      "blättern"
+     ]
+    },
+    {
+     "text": "in einem Reiseführer"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's hat looks like a safari/pith helmet (Tropenhelm); 'Sonnenhut' kept as the plain word matching English. The man also touches the book in some frames."
+}

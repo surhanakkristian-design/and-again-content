@@ -1,0 +1,26 @@
+{
+  "mediaId": 118, "lang": "fr", "level": "A",
+  "keyWord": "assembler",
+  "taps": [
+    { "phrase": "utiliser une perceuse", "target": "l'homme", "voice": "male" },
+    { "phrase": "avoir une barbe", "target": "l'homme", "voice": "male" },
+    { "phrase": "avoir les cheveux longs", "target": "la femme", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "l'homme", "voice": "male" },
+    { "word": "la femme", "voice": "female" },
+    { "word": "l'oiseau", "voice": "female" }
+  ],
+  "question": "Que font les deux personnes ?",
+  "answer": ["Ils", "assemblent", "une", "grande", "caisse", "en", "bois."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "utiliser une" }, { "text": "perceuse", "gap": true, "accept": ["perceuse"] } ] },
+    { "from": "taps", "parts": [ { "text": "avoir une" }, { "text": "barbe", "gap": true, "accept": ["barbe"] } ] },
+    { "from": "taps", "parts": [ { "text": "avoir les" }, { "text": "cheveux", "gap": true, "accept": ["cheveux"] }, { "text": "longs" } ] },
+    { "from": "answer", "parts": [ { "text": "assemblent", "gap": true, "accept": ["assemblent", "construisent", "montent", "fabriquent"] }, { "text": "une grande caisse en bois" } ] }
+  ],
+  "notes": "keyWord 'assembler' is a verb while the concept is the noun 'building' (the work of making something from parts); it fits the clip (they put a wooden planter together), used as the answer verb. 'perceuse' is above A2 but the plain right word for the drill. The man is out of frame in one boxed frame (wheelbarrow shot). The raised planter is called 'une grande caisse en bois' (as English 'a big wooden box')."
+}

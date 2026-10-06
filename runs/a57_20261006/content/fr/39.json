@@ -1,0 +1,117 @@
+{
+ "mediaId": 39,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "une ambulance",
+ "taps": [
+  {
+   "phrase": "regarder l'ambulance",
+   "target": "l'homme en noir",
+   "voice": "male"
+  },
+  {
+   "phrase": "s'arrêter près du café",
+   "target": "l'ambulance",
+   "voice": "male"
+  },
+  {
+   "phrase": "porter un sac rouge",
+   "target": "l'homme en jaune",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le ciel",
+   "voice": "male"
+  },
+  {
+   "word": "les maisons",
+   "voice": "male"
+  },
+  {
+   "word": "l'ambulance",
+   "voice": "male"
+  },
+  {
+   "word": "le sac",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'homme en noir ?",
+ "answer": [
+  "Il",
+  "regarde",
+  "l'ambulance",
+  "arriver."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "regarder",
+     "gap": true,
+     "accept": [
+      "regarder",
+      "observer"
+     ]
+    },
+    {
+     "text": "l'ambulance"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'arrêter près du"
+    },
+    {
+     "text": "café",
+     "gap": true,
+     "accept": [
+      "café"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un"
+    },
+    {
+     "text": "sac",
+     "gap": true,
+     "accept": [
+      "sac"
+     ]
+    },
+    {
+     "text": "rouge"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "regarde l'ambulance"
+    },
+    {
+     "text": "arriver",
+     "gap": true,
+     "accept": [
+      "arriver"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'arriver' added to the answer so its row differs from tap row 1 once the gap is blanked; he watches while it drives up. The woman paramedic also wears yellow but carries nothing, so the red bag fits only the man in yellow. Tap box 2 covers the ambulance driving up and standing parked. The key word is always elided ('l'ambulance'), so it cannot be a gap; no noun row because other rows contain it."
+}

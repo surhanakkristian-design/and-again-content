@@ -1,0 +1,26 @@
+{
+  "mediaId": 7453, "lang": "fr", "level": "B",
+  "keyWord": "préparer",
+  "taps": [
+    { "phrase": "faire sauter les nouilles", "target": "la cuisinière", "voice": "female" },
+    { "phrase": "tendre une assiette", "target": "l'homme à l'assiette", "voice": "male" },
+    { "phrase": "lécher le fond du wok", "target": "les flammes", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le wok", "voice": "female" },
+    { "word": "les flammes", "voice": "female" },
+    { "word": "la louche", "voice": "female" },
+    { "word": "le bandana", "voice": "female" }
+  ],
+  "question": "Que fait la cuisinière ?",
+  "answer": ["Elle", "prépare", "des", "nouilles", "sautées", "au", "wok."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "faire" }, { "text": "sauter", "gap": true, "accept": ["sauter"] }, { "text": "les nouilles" } ] },
+    { "from": "taps", "parts": [ { "text": "tendre une" }, { "text": "assiette", "gap": true, "accept": ["assiette"] } ] },
+    { "from": "taps", "parts": [ { "text": "lécher", "gap": true, "accept": ["lécher"] }, { "text": "le fond du wok" } ] },
+    { "from": "answer", "parts": [ { "text": "prépare", "gap": true, "accept": ["prépare", "cuisine"] }, { "text": "des nouilles sautées au wok" } ] }
+  ],
+  "notes": "Phrase 3 'lécher le fond du wok' is the natural French image for flames under a pan (English 'to burn beneath the wok'). The flames also shoot up above the wok in some frames, but in every boxed frame they touch the bottom of the wok."
+}

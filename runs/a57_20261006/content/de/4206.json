@@ -1,0 +1,125 @@
+{
+ "mediaId": 4206,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Abzeichen",
+ "taps": [
+  {
+   "phrase": "herzhaft gähnen",
+   "target": "der Hamster",
+   "voice": "female"
+  },
+  {
+   "phrase": "frischen Kaffee ausgeben",
+   "target": "die Kaffeemaschine",
+   "voice": "female"
+  },
+  {
+   "phrase": "hellgrün aufleuchten",
+   "target": "der Kartenleser",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Ausweis",
+   "voice": "female"
+  },
+  {
+   "word": "die Uhr",
+   "voice": "female"
+  },
+  {
+   "word": "der Bürostuhl",
+   "voice": "female"
+  },
+  {
+   "word": "die Unterlagen",
+   "voice": "female"
+  }
+ ],
+ "question": "Was trägt der Hamster um den Hals?",
+ "answer": [
+  "Der",
+  "Hamster",
+  "trägt",
+  "einen",
+  "Ausweis",
+  "um",
+  "den",
+  "Hals."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "herzhaft"
+    },
+    {
+     "text": "gähnen",
+     "gap": true,
+     "accept": [
+      "gähnen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "frischen"
+    },
+    {
+     "text": "Kaffee",
+     "gap": true,
+     "accept": [
+      "Kaffee"
+     ]
+    },
+    {
+     "text": "ausgeben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hellgrün"
+    },
+    {
+     "text": "aufleuchten",
+     "gap": true,
+     "accept": [
+      "aufleuchten",
+      "leuchten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "trägt einen"
+    },
+    {
+     "text": "Ausweis",
+     "gap": true,
+     "accept": [
+      "Ausweis",
+      "Mitarbeiterausweis"
+     ]
+    },
+    {
+     "text": "um den Hals"
+    }
+   ]
+  }
+ ],
+ "notes": "KEY WORD MISMATCH: the database word 'das Abzeichen' means a pin/emblem; the thing in the clip is a photo ID card on a lanyard, which German calls 'der Ausweis' (Mitarbeiterausweis). I used 'der Ausweis' in the noun and the answer; 'das Abzeichen' would be wrong for this picture. Proposal: owner decides (keep Abzeichen for the concept, or map this video to der Ausweis). Phrase 1: the English box 'yawn at the desk' also covers the copier, coffee machine, toilet and door shots, so I wrote 'herzhaft gähnen' (the hamster yawns at the desk and at the coffee machine). Answer: 'Der Hamster trägt um den Hals einen Ausweis.' is a possible, less natural second order."
+}

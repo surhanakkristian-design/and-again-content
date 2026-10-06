@@ -1,0 +1,114 @@
+{
+ "mediaId": 785,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Fahrplan",
+ "taps": [
+  {
+   "phrase": "zum Fahrplan hochschauen",
+   "target": "der Junge",
+   "voice": "male"
+  },
+  {
+   "phrase": "Züge und Uhren zeigen",
+   "target": "der Fahrplan",
+   "voice": "male"
+  },
+  {
+   "phrase": "am Bahnhof ankommen",
+   "target": "der Zug",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Fahrplan",
+   "voice": "male"
+  },
+  {
+   "word": "der Junge",
+   "voice": "male"
+  },
+  {
+   "word": "die Bank",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Junge?",
+ "answer": [
+  "Er",
+  "liest",
+  "den",
+  "Fahrplan."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zum Fahrplan"
+    },
+    {
+     "text": "hochschauen",
+     "gap": true,
+     "accept": [
+      "hochschauen",
+      "hochsehen",
+      "aufschauen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Züge und"
+    },
+    {
+     "text": "Uhren",
+     "gap": true,
+     "accept": [
+      "Uhren"
+     ]
+    },
+    {
+     "text": "zeigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Bahnhof"
+    },
+    {
+     "text": "ankommen",
+     "gap": true,
+     "accept": [
+      "ankommen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "liest den"
+    },
+    {
+     "text": "Fahrplan",
+     "gap": true,
+     "accept": [
+      "Fahrplan"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English phrase 1 is 'to look at his watch', but the boy's box mostly shows him looking up at the timetable (watch only in about 3 frames; later frames: pointing, running, boarding), so phrase 1 says what he does in most boxed frames: 'zum Fahrplan hochschauen'. Answer uses 'liest' to differ from phrase 1."
+}

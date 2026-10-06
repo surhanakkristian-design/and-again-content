@@ -1,0 +1,135 @@
+{
+  "mediaId": 265,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Angestellte",
+  "taps": [
+    {
+      "phrase": "einen Umschlag bekommen",
+      "target": "der Mann mit Brille",
+      "voice": "male"
+    },
+    {
+      "phrase": "eine Jacke anziehen",
+      "target": "der Mann mit Brille",
+      "voice": "male"
+    },
+    {
+      "phrase": "ihm die Hand auf die Schulter legen",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Angestellte",
+      "voice": "male"
+    },
+    {
+      "word": "das Papier",
+      "voice": "male"
+    },
+    {
+      "word": "die Tastatur",
+      "voice": "male"
+    },
+    {
+      "word": "das Fenster",
+      "voice": "male"
+    }
+  ],
+  "question": "Was bekommt der Angestellte?",
+  "answer": [
+    "Er",
+    "bekommt",
+    "einen",
+    "Umschlag."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen Umschlag"
+        },
+        {
+          "text": "bekommen",
+          "gap": true,
+          "accept": [
+            "bekommen",
+            "kriegen",
+            "erhalten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "eine Jacke"
+        },
+        {
+          "text": "anziehen",
+          "gap": true,
+          "accept": [
+            "anziehen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ihm die Hand auf die"
+        },
+        {
+          "text": "Schulter",
+          "gap": true,
+          "accept": [
+            "Schulter"
+          ]
+        },
+        {
+          "text": "legen"
+        }
+      ]
+    },
+    {
+      "from": "nouns",
+      "parts": [
+        {
+          "text": "der"
+        },
+        {
+          "text": "Angestellte",
+          "gap": true,
+          "accept": [
+            "Angestellte",
+            "Mitarbeiter"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "bekommt einen"
+        },
+        {
+          "text": "Umschlag",
+          "gap": true,
+          "accept": [
+            "Umschlag",
+            "Briefumschlag"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Phrase 3: the boss pats his shoulder -> 'ihm auf die Schulter klopfen' (more natural than 'seine Schulter berühren'). The boss is drawn silver-haired; target kept as English 'die Frau'."
+}

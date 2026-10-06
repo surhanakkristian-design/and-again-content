@@ -1,0 +1,117 @@
+{
+ "mediaId": 7,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la graduación",
+ "taps": [
+  {
+   "phrase": "alzar el diploma",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "sonreír de oreja a oreja",
+   "target": "el chico",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrazar a otro graduado",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el diploma",
+   "voice": "male"
+  },
+  {
+   "word": "el estadio",
+   "voice": "male"
+  },
+  {
+   "word": "el birrete",
+   "voice": "male"
+  },
+  {
+   "word": "la banda",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el chico?",
+ "answer": [
+  "Está",
+  "alzando",
+  "el",
+  "diploma",
+  "en",
+  "su",
+  "graduación."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "alzar el"
+    },
+    {
+     "text": "diploma",
+     "gap": true,
+     "accept": [
+      "diploma",
+      "título"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sonreír",
+     "gap": true,
+     "accept": [
+      "sonreír"
+     ]
+    },
+    {
+     "text": "de oreja a oreja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrazar",
+     "gap": true,
+     "accept": [
+      "abrazar"
+     ]
+    },
+    {
+     "text": "a otro graduado"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está alzando el diploma en su"
+    },
+    {
+     "text": "graduación",
+     "gap": true,
+     "accept": [
+      "graduación"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English 'the man' rendered as 'el chico' (young graduate, natural in Spain); used consistently. 'sonreír de oreja a oreja' for 'grin at the camera': he beams into the selfie camera in most frames. 'la banda' = graduation sash (estola also used). Key word 'la graduación' fits (ceremony)."
+}

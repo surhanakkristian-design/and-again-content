@@ -1,0 +1,121 @@
+{
+ "mediaId": 4568,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Kontinent",
+ "taps": [
+  {
+   "phrase": "von Kontinent zu Kontinent springen",
+   "target": "das Mädchen in Orange",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine orange Jacke tragen",
+   "target": "das Mädchen in Orange",
+   "voice": "female"
+  },
+  {
+   "phrase": "die Arme weit ausbreiten",
+   "target": "das Mädchen in Orange",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Mädchen",
+   "voice": "female"
+  },
+  {
+   "word": "der Himmel",
+   "voice": "female"
+  },
+  {
+   "word": "der Kontinent",
+   "voice": "female"
+  },
+  {
+   "word": "die Schuhe",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht das Mädchen in Orange?",
+ "answer": [
+  "Sie",
+  "hüpft",
+  "über",
+  "die",
+  "Weltkarte."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "von"
+    },
+    {
+     "text": "Kontinent",
+     "gap": true,
+     "accept": [
+      "Kontinent"
+     ]
+    },
+    {
+     "text": "zu Kontinent springen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine orange"
+    },
+    {
+     "text": "Jacke",
+     "gap": true,
+     "accept": [
+      "Jacke"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "die Arme weit"
+    },
+    {
+     "text": "ausbreiten",
+     "gap": true,
+     "accept": [
+      "ausbreiten"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "hüpft",
+     "gap": true,
+     "accept": [
+      "hüpft",
+      "springt"
+     ]
+    },
+    {
+     "text": "über die Weltkarte"
+    }
+   ]
+  }
+ ],
+ "notes": "'sie' for das Mädchen (what natives say). Phrase 1 uses the key word (she jumps from land mass to land mass)."
+}

@@ -1,0 +1,133 @@
+{
+ "mediaId": 472,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Mechaniker",
+ "taps": [
+  {
+   "phrase": "ein Auto reparieren",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein Werkzeug halten",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "in die Kamera lächeln",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mechaniker",
+   "voice": "male"
+  },
+  {
+   "word": "das Auto",
+   "voice": "male"
+  },
+  {
+   "word": "das Werkzeug",
+   "voice": "male"
+  },
+  {
+   "word": "der Boden",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "repariert",
+  "ein",
+  "Auto."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein Auto"
+    },
+    {
+     "text": "reparieren",
+     "gap": true,
+     "accept": [
+      "reparieren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Werkzeug",
+     "gap": true,
+     "accept": [
+      "Werkzeug"
+     ]
+    },
+    {
+     "text": "halten"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "in die Kamera"
+    },
+    {
+     "text": "lächeln",
+     "gap": true,
+     "accept": [
+      "lächeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "der"
+    },
+    {
+     "text": "Mechaniker",
+     "gap": true,
+     "accept": [
+      "Mechaniker",
+      "Automechaniker"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "repariert ein"
+    },
+    {
+     "text": "Auto",
+     "gap": true,
+     "accept": [
+      "Auto",
+      "Wagen"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "English tap box 3 ('smile at the camera') covers the whole clip; he smiles into the camera only at the end (last frames). English box 2 also covers frames where he holds no tool (bonnet, patting the car); phrase written for the boxed frames where he holds a wrench / impact driver."
+}

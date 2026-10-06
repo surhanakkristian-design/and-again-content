@@ -1,0 +1,119 @@
+{
+ "mediaId": 757,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la sorpresa",
+ "taps": [
+  {
+   "phrase": "darle una caja",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir la caja",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevarse una sorpresa",
+   "target": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "el cachorro",
+   "voice": "female"
+  },
+  {
+   "word": "la caja",
+   "voice": "female"
+  },
+  {
+   "word": "la mesa",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué tiene la mujer en brazos?",
+ "answer": [
+  "Tiene",
+  "un",
+  "cachorro",
+  "en",
+  "brazos."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "darle una"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "la caja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevarse una"
+    },
+    {
+     "text": "sorpresa",
+     "gap": true,
+     "accept": [
+      "sorpresa"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Tiene un"
+    },
+    {
+     "text": "cachorro",
+     "gap": true,
+     "accept": [
+      "cachorro",
+      "perrito",
+      "perro"
+     ]
+    },
+    {
+     "text": "en brazos"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: English 'to hold a puppy' -> 'llevarse una sorpresa' (same target, the woman; she gasps with her hands over her mouth, then lifts the puppy out) - uses the key word naturally; the puppy is covered by the question and answer. Answer chips: 'Tiene en brazos un cachorro' is also possible; 'Tiene un cachorro en brazos' is the usual order."
+}

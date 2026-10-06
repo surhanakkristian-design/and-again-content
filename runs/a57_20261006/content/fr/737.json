@@ -1,0 +1,122 @@
+{
+  "mediaId": 737,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le beau-père",
+  "taps": [
+    {
+      "phrase": "serrer un boulon",
+      "target": "l'homme",
+      "voice": "male"
+    },
+    {
+      "phrase": "se jeter dans ses bras",
+      "target": "le garçon",
+      "voice": "male"
+    },
+    {
+      "phrase": "observer depuis le seuil",
+      "target": "la femme",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les lunettes",
+      "voice": "male"
+    },
+    {
+      "word": "la roue",
+      "voice": "male"
+    },
+    {
+      "word": "la selle",
+      "voice": "male"
+    },
+    {
+      "word": "la pédale",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait l'homme ?",
+  "answer": [
+    "Il",
+    "serre",
+    "un",
+    "boulon",
+    "de",
+    "la",
+    "roue."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "serrer",
+          "gap": true,
+          "accept": [
+            "serrer"
+          ]
+        },
+        {
+          "text": "un boulon"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "jeter",
+          "gap": true,
+          "accept": [
+            "jeter"
+          ]
+        },
+        {
+          "text": "dans ses bras"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "observer",
+          "gap": true,
+          "accept": [
+            "observer"
+          ]
+        },
+        {
+          "text": "depuis le seuil"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "serre un"
+        },
+        {
+          "text": "boulon",
+          "gap": true,
+          "accept": [
+            "boulon"
+          ]
+        },
+        {
+          "text": "de la roue"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word note: French 'le beau-père' means both stepfather and father-in-law; the clip context (wife's son) makes stepfather clear, but the owner may want 'le beau-père (conjoint de la mère)' disambiguated elsewhere. Box 2 also covers the pancake scene, where the boy cooks rather than jumps; the phrase describes the hug at the end. Row 3 accepts only 'observer'."
+}

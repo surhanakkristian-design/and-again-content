@@ -1,0 +1,121 @@
+{
+ "mediaId": 199,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "krachen",
+ "taps": [
+  {
+   "phrase": "ein rotes Auto fahren",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "beide Arme hochheben",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "ein gelbes T-Shirt tragen",
+   "target": "der Mann",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Mann",
+   "voice": "male"
+  },
+  {
+   "word": "das Auto",
+   "voice": "male"
+  },
+  {
+   "word": "der Autoscooter",
+   "voice": "male"
+  }
+ ],
+ "question": "Was fährt der Mann?",
+ "answer": [
+  "Er",
+  "fährt",
+  "ein",
+  "rotes",
+  "Auto."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein rotes"
+    },
+    {
+     "text": "Auto",
+     "gap": true,
+     "accept": [
+      "Auto"
+     ]
+    },
+    {
+     "text": "fahren"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beide"
+    },
+    {
+     "text": "Arme",
+     "gap": true,
+     "accept": [
+      "Arme",
+      "Hände"
+     ]
+    },
+    {
+     "text": "hochheben"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein gelbes"
+    },
+    {
+     "text": "T-Shirt",
+     "gap": true,
+     "accept": [
+      "T-Shirt",
+      "Shirt"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "fährt",
+     "gap": true,
+     "accept": [
+      "fährt"
+     ]
+    },
+    {
+     "text": "ein rotes Auto"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word krachen does not appear in any exercise: the English frame (drive a red car / arms up / yellow shirt; question 'what is he driving') leaves no natural slot for it. Proposal for the owner: phrase 1 could become 'in andere Autos krachen' (the red car does bump the green one), but the question/answer are about driving. 'Auto' kept at level A; the native word is 'der Autoscooter' (above A level). All three tap boxes are the same man; phrase 2 'beide Arme hochheben' only happens in the last frames, phrase 1 is true in most boxed frames. Nouns: validate57 rejects adjective+noun pills ('das rote Auto' / 'das gelbe Auto', which would be the natural pair), so noun 2 = 'das Auto' (the man's red car, same word as phrase and answer) and noun 3 = 'der Autoscooter' (the yellow one) to keep the two pills distinct; owner may prefer the colour pair. The early POV/hand frames are the man's own hand on the wheel."
+}

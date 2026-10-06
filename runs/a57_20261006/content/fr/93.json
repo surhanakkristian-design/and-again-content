@@ -1,0 +1,26 @@
+{
+  "mediaId": 93, "lang": "fr", "level": "B",
+  "keyWord": "le mixeur",
+  "taps": [
+    { "phrase": "broyer les fruits", "target": "le mixeur", "voice": "male" },
+    { "phrase": "se lécher le doigt", "target": "l'homme", "voice": "male" },
+    { "phrase": "lever le pouce", "target": "l'homme", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le mixeur", "voice": "male" },
+    { "word": "le pichet", "voice": "male" },
+    { "word": "les fraises", "voice": "male" },
+    { "word": "le bandeau", "voice": "male" }
+  ],
+  "question": "Que prépare l'homme ?",
+  "answer": ["Il", "prépare", "un", "smoothie", "dans", "le", "mixeur."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "broyer", "gap": true, "accept": ["broyer", "mixer"] }, { "text": "les fruits" } ] },
+    { "from": "taps", "parts": [ { "text": "se" }, { "text": "lécher", "gap": true, "accept": ["lécher"] }, { "text": "le doigt" } ] },
+    { "from": "taps", "parts": [ { "text": "lever le" }, { "text": "pouce", "gap": true, "accept": ["pouce"] } ] },
+    { "from": "answer", "parts": [ { "text": "prépare un smoothie dans le" }, { "text": "mixeur", "gap": true, "accept": ["mixeur", "blender"] } ] }
+  ],
+  "notes": "The blender box covers the blender also while it stands still (fruit added, lid off, pouring); the phrase describes what it does while running. Taps 2 and 3 share the same box on the man (as in English). No noun row: the answer row already contains the key word."
+}

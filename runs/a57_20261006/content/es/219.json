@@ -1,0 +1,124 @@
+{
+ "mediaId": 219,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el ciervo",
+ "taps": [
+  {
+   "phrase": "mirar a la cámara",
+   "target": "el ciervo",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir la boca",
+   "target": "el ciervo",
+   "voice": "male"
+  },
+  {
+   "phrase": "salir corriendo",
+   "target": "el ciervo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el ciervo",
+   "voice": "male"
+  },
+  {
+   "word": "los árboles",
+   "voice": "male"
+  },
+  {
+   "word": "las plantas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el ciervo?",
+ "answer": [
+  "El",
+  "ciervo",
+  "sale",
+  "corriendo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar a la"
+    },
+    {
+     "text": "cámara",
+     "gap": true,
+     "accept": [
+      "cámara"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "salir",
+     "gap": true,
+     "accept": [
+      "salir"
+     ]
+    },
+    {
+     "text": "corriendo"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "ciervo",
+     "gap": true,
+     "accept": [
+      "ciervo"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sale"
+    },
+    {
+     "text": "corriendo",
+     "gap": true,
+     "accept": [
+      "corriendo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "All three tap boxes are on the same deer and cover most frames; each phrase is written for the frames where that action happens (bellow ~mid clip, running at the end). 'las plantas' kept at level A (helechos would be above A)."
+}

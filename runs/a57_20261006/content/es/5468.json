@@ -1,0 +1,140 @@
+{
+ "mediaId": 5468,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el cartel",
+ "taps": [
+  {
+   "phrase": "hacerse un selfi",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener una barba larga",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "abrir mucho los ojos",
+   "target": "la chica",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cartel",
+   "voice": "female"
+  },
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "Se",
+  "hace",
+  "un",
+  "selfi",
+  "con",
+  "el",
+  "hombre."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacerse un"
+    },
+    {
+     "text": "selfi",
+     "gap": true,
+     "accept": [
+      "selfi",
+      "selfie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener una"
+    },
+    {
+     "text": "barba",
+     "gap": true,
+     "accept": [
+      "barba"
+     ]
+    },
+    {
+     "text": "larga"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir",
+     "gap": true,
+     "accept": [
+      "abrir"
+     ]
+    },
+    {
+     "text": "mucho los ojos"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "cartel",
+     "gap": true,
+     "accept": [
+      "cartel",
+      "letrero",
+      "anuncio"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "hace",
+     "gap": true,
+     "accept": [
+      "hace"
+     ]
+    },
+    {
+     "text": "un selfi con el hombre"
+    }
+   ]
+  }
+ ],
+ "notes": "'la chica' for the young woman in all exercises (natural in Spain). She opens her eyes wide only in the second half of box 3; phrase written for that. Key word 'el cartel' names the huge advertising boards naturally (also 'el letrero', 'el anuncio' accepted). Answer has no subject (natural Spanish), so the answer recall row is the whole sentence."
+}

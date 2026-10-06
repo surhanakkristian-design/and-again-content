@@ -1,0 +1,119 @@
+{
+ "mediaId": 225,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Schreibtisch",
+ "taps": [
+  {
+   "phrase": "am Schreibtisch sitzen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "ein blaues T-Shirt tragen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "über den Schreibtisch laufen",
+   "target": "die Katze",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Bücher",
+   "voice": "female"
+  },
+  {
+   "word": "die Pflanze",
+   "voice": "female"
+  },
+  {
+   "word": "das Notizbuch",
+   "voice": "female"
+  },
+  {
+   "word": "der Schreibtisch",
+   "voice": "female"
+  }
+ ],
+ "question": "Wo sitzt die Frau?",
+ "answer": [
+  "Sie",
+  "sitzt",
+  "am",
+  "Schreibtisch."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Schreibtisch"
+    },
+    {
+     "text": "sitzen",
+     "gap": true,
+     "accept": [
+      "sitzen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein blaues"
+    },
+    {
+     "text": "T-Shirt",
+     "gap": true,
+     "accept": [
+      "T-Shirt",
+      "Shirt"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "über den Schreibtisch"
+    },
+    {
+     "text": "laufen",
+     "gap": true,
+     "accept": [
+      "laufen",
+      "gehen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzt am"
+    },
+    {
+     "text": "Schreibtisch",
+     "gap": true,
+     "accept": [
+      "Schreibtisch",
+      "Tisch"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1 boxes also cover the early frames where the woman wipes and sets up the desk standing; sitting at the desk dominates the later boxed frames (same as English)."
+}

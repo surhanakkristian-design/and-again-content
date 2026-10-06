@@ -1,0 +1,130 @@
+{
+ "mediaId": 7239,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "el idiota",
+ "taps": [
+  {
+   "phrase": "dar sorbos a una bebida espumosa",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "llevar un chubasquero amarillo",
+   "target": "el perro",
+   "voice": "male"
+  },
+  {
+   "phrase": "frotarle la cabeza",
+   "target": "el cepillo azul",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cepillo",
+   "voice": "male"
+  },
+  {
+   "word": "el perro",
+   "voice": "male"
+  },
+  {
+   "word": "el vaso de papel",
+   "voice": "male"
+  },
+  {
+   "word": "el parabrisas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el hombre?",
+ "answer": [
+  "Da",
+  "sorbos",
+  "a",
+  "su",
+  "bebida",
+  "con",
+  "los",
+  "ojos",
+  "cerrados."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "sorbos",
+     "gap": true,
+     "accept": [
+      "sorbos",
+      "tragos"
+     ]
+    },
+    {
+     "text": "a una bebida espumosa"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar un"
+    },
+    {
+     "text": "chubasquero",
+     "gap": true,
+     "accept": [
+      "chubasquero",
+      "impermeable"
+     ]
+    },
+    {
+     "text": "amarillo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "frotarle",
+     "gap": true,
+     "accept": [
+      "frotarle",
+      "rozarle"
+     ]
+    },
+    {
+     "text": "la cabeza"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Da sorbos a su"
+    },
+    {
+     "text": "bebida",
+     "gap": true,
+     "accept": [
+      "bebida"
+     ]
+    },
+    {
+     "text": "con los ojos cerrados"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el idiota' is not a visible thing and not used (never forced). Brush box is OFF after the first frames. Answer adds 'con los ojos cerrados' (visible) so it differs from tap row 1."
+}

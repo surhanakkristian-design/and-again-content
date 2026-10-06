@@ -1,0 +1,126 @@
+{
+  "mediaId": 38,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el aeropuerto",
+  "taps": [
+    {
+      "phrase": "agitar dos palos naranjas",
+      "target": "el hombre",
+      "voice": "male"
+    },
+    {
+      "phrase": "acercarse al hombre",
+      "target": "el avión en la pista",
+      "voice": "male"
+    },
+    {
+      "phrase": "volar hacia el cielo",
+      "target": "el avión en el cielo",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "el avión",
+      "voice": "male"
+    },
+    {
+      "word": "el hombre",
+      "voice": "male"
+    },
+    {
+      "word": "la torre",
+      "voice": "male"
+    },
+    {
+      "word": "el cielo",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué está haciendo el hombre?",
+  "answer": [
+    "El",
+    "hombre",
+    "está",
+    "agitando",
+    "dos",
+    "palos",
+    "naranjas",
+    "en",
+    "el",
+    "aeropuerto."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "agitar",
+          "gap": true,
+          "accept": [
+            "agitar",
+            "mover"
+          ]
+        },
+        {
+          "text": "dos palos naranjas"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "acercarse",
+          "gap": true,
+          "accept": [
+            "acercarse"
+          ]
+        },
+        {
+          "text": "al hombre"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "volar hacia el"
+        },
+        {
+          "text": "cielo",
+          "gap": true,
+          "accept": [
+            "cielo"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "está agitando"
+        },
+        {
+          "text": "dos palos naranjas"
+        },
+        {
+          "text": "en el"
+        },
+        {
+          "text": "aeropuerto",
+          "gap": true,
+          "accept": [
+            "aeropuerto"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "'en el aeropuerto' could also open the answer sentence (En el aeropuerto el hombre...); kept at the end as in English so the key word is in the answer. Phrase 3: a second plane in the background also takes off in some frames (same as English). 'naranjas' as plural colour adjective is accepted by the RAE ('naranja' invariable also correct)."
+}

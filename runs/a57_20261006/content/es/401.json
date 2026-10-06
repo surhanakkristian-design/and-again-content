@@ -1,0 +1,124 @@
+{
+ "mediaId": 401,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "los patines de hielo",
+ "taps": [
+  {
+   "phrase": "atarse los patines de hielo",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "abrir los brazos",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar una chaqueta verde",
+   "target": "la persona de verde",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gorro",
+   "voice": "female"
+  },
+  {
+   "word": "los árboles",
+   "voice": "female"
+  },
+  {
+   "word": "la bufanda",
+   "voice": "female"
+  },
+  {
+   "word": "los patines de hielo",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la chica?",
+ "answer": [
+  "Está",
+  "patinando",
+  "sobre",
+  "el",
+  "hielo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "atarse los"
+    },
+    {
+     "text": "patines",
+     "gap": true,
+     "accept": [
+      "patines"
+     ]
+    },
+    {
+     "text": "de hielo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir los"
+    },
+    {
+     "text": "brazos",
+     "gap": true,
+     "accept": [
+      "brazos"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "chaqueta",
+     "gap": true,
+     "accept": [
+      "chaqueta",
+      "cazadora"
+     ]
+    },
+    {
+     "text": "verde"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está"
+    },
+    {
+     "text": "patinando",
+     "gap": true,
+     "accept": [
+      "patinando"
+     ]
+    },
+    {
+     "text": "sobre el hielo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1/2 share one box covering the whole clip: the lacing happens only in the first seconds, arms out in most later frames. The person in green (background) looks like a man; voice kept female as in English."
+}

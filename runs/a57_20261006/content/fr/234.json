@@ -1,0 +1,123 @@
+{
+ "mediaId": 234,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "se dissoudre",
+ "taps": [
+  {
+   "phrase": "se dissoudre dans l'eau",
+   "target": "le morceau de sucre",
+   "voice": "female"
+  },
+  {
+   "phrase": "remuer l'eau avec une cuillère",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "laisser tomber un morceau de sucre",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la cuillère",
+   "voice": "female"
+  },
+  {
+   "word": "le tablier",
+   "voice": "female"
+  },
+  {
+   "word": "le verre",
+   "voice": "female"
+  },
+  {
+   "word": "le morceau de sucre",
+   "voice": "female"
+  }
+ ],
+ "question": "Qu'arrive-t-il au morceau de sucre ?",
+ "answer": [
+  "Le",
+  "morceau",
+  "de",
+  "sucre",
+  "se",
+  "dissout",
+  "complètement."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "dissoudre",
+     "gap": true,
+     "accept": [
+      "dissoudre"
+     ]
+    },
+    {
+     "text": "dans l'eau"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "remuer l'eau avec une"
+    },
+    {
+     "text": "cuillère",
+     "gap": true,
+     "accept": [
+      "cuillère",
+      "cuiller"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "laisser tomber un morceau de"
+    },
+    {
+     "text": "sucre",
+     "gap": true,
+     "accept": [
+      "sucre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "dissout",
+     "gap": true,
+     "accept": [
+      "dissout"
+     ]
+    },
+    {
+     "text": "complètement"
+    }
+   ]
+  }
+ ],
+ "notes": "Taps 2 and 3 both target the woman, as in English. Answer 'se dissout complètement' (the glass ends up clear) keeps the answer row different from tap row 1."
+}

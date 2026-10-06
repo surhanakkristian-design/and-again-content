@@ -1,0 +1,120 @@
+{
+ "mediaId": 24,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "la cuillère",
+ "taps": [
+  {
+   "phrase": "ouvrir un tiroir",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "prendre une cuillère",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "manger de la soupe",
+   "target": "la fille",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "la cuillère",
+   "voice": "female"
+  },
+  {
+   "word": "le bol",
+   "voice": "female"
+  },
+  {
+   "word": "la table",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la fille ?",
+ "answer": [
+  "Elle",
+  "mange",
+  "de",
+  "la",
+  "soupe",
+  "avec",
+  "une",
+  "cuillère."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir un"
+    },
+    {
+     "text": "tiroir",
+     "gap": true,
+     "accept": [
+      "tiroir"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre une"
+    },
+    {
+     "text": "cuillère",
+     "gap": true,
+     "accept": [
+      "cuillère"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "manger",
+     "gap": true,
+     "accept": [
+      "manger"
+     ]
+    },
+    {
+     "text": "de la soupe"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mange de la"
+    },
+    {
+     "text": "soupe",
+     "gap": true,
+     "accept": [
+      "soupe"
+     ]
+    },
+    {
+     "text": "avec une cuillère"
+    }
+   ]
+  }
+ ],
+ "notes": ""
+}

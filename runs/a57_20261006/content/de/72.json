@@ -1,0 +1,26 @@
+{
+  "mediaId": 72, "lang": "de", "level": "A",
+  "keyWord": "der Basketball",
+  "taps": [
+    { "phrase": "mit dem Basketball dribbeln", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "sehr hoch springen", "target": "das Mädchen", "voice": "female" },
+    { "phrase": "eine Brille tragen", "target": "der Mann mit Brille", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "der Himmel", "voice": "female" },
+    { "word": "der Basketball", "voice": "female" },
+    { "word": "das Netz", "voice": "female" },
+    { "word": "das Mädchen", "voice": "female" }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": ["Sie", "spielt", "mit", "zwei", "Männern", "Basketball."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "mit dem Basketball" }, { "text": "dribbeln", "gap": true, "accept": ["dribbeln"] } ] },
+    { "from": "taps", "parts": [ { "text": "sehr hoch" }, { "text": "springen", "gap": true, "accept": ["springen"] } ] },
+    { "from": "taps", "parts": [ { "text": "eine" }, { "text": "Brille", "gap": true, "accept": ["Brille"] }, { "text": "tragen" } ] },
+    { "from": "answer", "parts": [ { "text": "spielt mit zwei Männern" }, { "text": "Basketball", "gap": true, "accept": ["Basketball"] } ] }
+  ],
+  "notes": "Tap 1 and 2 share one box (the girl); tap 1 follows the dribbling that fills most boxed frames (the later frames show the dunk). 'dribbeln' is the everyday German word for bouncing a ball while running. Answer: 'sie' for das Mädchen (what natives say), used consistently. German also allows 'Sie spielt Basketball mit zwei Männern.' (two chip orders). 'mit dem Basketball' in tap 1 already carries the key word, so no noun row."
+}

@@ -1,0 +1,114 @@
+{
+ "mediaId": 800,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el entrenamiento",
+ "taps": [
+  {
+   "phrase": "correr con el balón",
+   "target": "el chico de amarillo",
+   "voice": "male"
+  },
+  {
+   "phrase": "dar palmas",
+   "target": "el hombre de negro",
+   "voice": "male"
+  },
+  {
+   "phrase": "levantar la mano",
+   "target": "el hombre de negro",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "el foco",
+   "voice": "male"
+  },
+  {
+   "word": "el balón",
+   "voice": "male"
+  },
+  {
+   "word": "el césped",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el chico de amarillo?",
+ "answer": [
+  "Corre",
+  "con",
+  "el",
+  "balón."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "correr con el"
+    },
+    {
+     "text": "balón",
+     "gap": true,
+     "accept": [
+      "balón"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "palmas",
+     "gap": true,
+     "accept": [
+      "palmas",
+      "palmadas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "levantar",
+     "gap": true,
+     "accept": [
+      "levantar"
+     ]
+    },
+    {
+     "text": "la mano"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Corre",
+     "gap": true,
+     "accept": [
+      "Corre"
+     ]
+    },
+    {
+     "text": "con el balón"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'el entrenamiento' appears in no exercise (as in English, 'training' is not used). Noun 2: English 'a light' is a floodlight on a pole; 'el foco' is the natural word ('la luz' would name the light itself). Noun 4: 'el césped' is what a native says for a football pitch's grass. 'el chico de amarillo' for the young player in the yellow bib."
+}

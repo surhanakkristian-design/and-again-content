@@ -1,0 +1,126 @@
+{
+ "mediaId": 17,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el proyecto",
+ "taps": [
+  {
+   "phrase": "llevar una gorra",
+   "target": "el hombre de la gorra",
+   "voice": "male"
+  },
+  {
+   "phrase": "tener el pelo largo",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "tener un tejado de madera",
+   "target": "la caseta",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "male"
+  },
+  {
+   "word": "el tejado",
+   "voice": "male"
+  },
+  {
+   "word": "la puerta",
+   "voice": "male"
+  },
+  {
+   "word": "la hierba",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué están construyendo los jóvenes?",
+ "answer": [
+  "Están",
+  "construyendo",
+  "una",
+  "caseta",
+  "de",
+  "madera."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar una"
+    },
+    {
+     "text": "gorra",
+     "gap": true,
+     "accept": [
+      "gorra"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener el"
+    },
+    {
+     "text": "pelo",
+     "gap": true,
+     "accept": [
+      "pelo"
+     ]
+    },
+    {
+     "text": "largo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tener un"
+    },
+    {
+     "text": "tejado",
+     "gap": true,
+     "accept": [
+      "tejado",
+      "techo"
+     ]
+    },
+    {
+     "text": "de madera"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están"
+    },
+    {
+     "text": "construyendo",
+     "gap": true,
+     "accept": [
+      "construyendo",
+      "haciendo"
+     ]
+    },
+    {
+     "text": "una caseta de madera"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word el proyecto is abstract (only in the transcript) and appears in no exercise; kept unchanged. Shed = la caseta (A-level; el cobertizo would be B). Answer has no subject, so the answer row is the whole sentence."
+}

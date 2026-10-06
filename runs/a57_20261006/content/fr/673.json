@@ -1,0 +1,26 @@
+{
+  "mediaId": 673, "lang": "fr", "level": "B",
+  "keyWord": "rétrécir",
+  "taps": [
+    { "phrase": "charger la machine à laver", "target": "la fille", "voice": "female" },
+    { "phrase": "ne pas en croire ses yeux", "target": "la fille", "voice": "female" },
+    { "phrase": "rétrécir au lavage", "target": "le pull", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "les taches de rousseur", "voice": "female" },
+    { "word": "le pull", "voice": "female" },
+    { "word": "la salopette", "voice": "female" },
+    { "word": "la machine à laver", "voice": "female" }
+  ],
+  "question": "Qu'est-il arrivé au pull ?",
+  "answer": ["Le", "pull", "a", "rétréci", "dans", "la", "machine", "à", "laver."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "charger", "gap": true, "accept": ["charger", "remplir"] }, { "text": "la machine à laver" } ] },
+    { "from": "taps", "parts": [ { "text": "ne pas en croire ses" }, { "text": "yeux", "gap": true, "accept": ["yeux"] } ] },
+    { "from": "taps", "parts": [ { "text": "rétrécir au" }, { "text": "lavage", "gap": true, "accept": ["lavage"] } ] },
+    { "from": "answer", "parts": [ { "text": "a" }, { "text": "rétréci", "gap": true, "accept": ["rétréci"] }, { "text": "dans la machine à laver" } ] }
+  ],
+  "notes": "Tap boxes 1 and 2 are the same girl box (as in English); 'charger la machine à laver' fits the loading frames, 'ne pas en croire ses yeux' the shrunk-sweater frames. Washing machine = 'la machine à laver' throughout ('le lave-linge' is also common in France)."
+}

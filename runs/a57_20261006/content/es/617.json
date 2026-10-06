@@ -1,0 +1,121 @@
+{
+ "mediaId": 617,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "los patines en línea",
+ "taps": [
+  {
+   "phrase": "llevar patines en línea morados",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "patinar por el camino",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentado en un banco",
+   "target": "el hombre",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "los patines en línea",
+   "voice": "female"
+  },
+  {
+   "word": "la bebida",
+   "voice": "female"
+  },
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el banco",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué hace la chica?",
+ "answer": [
+  "La",
+  "chica",
+  "patina",
+  "con",
+  "unos",
+  "patines",
+  "en",
+  "línea",
+  "morados."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "patines",
+     "gap": true,
+     "accept": [
+      "patines"
+     ]
+    },
+    {
+     "text": "en línea morados"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "patinar por el"
+    },
+    {
+     "text": "camino",
+     "gap": true,
+     "accept": [
+      "camino"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentado en un"
+    },
+    {
+     "text": "banco",
+     "gap": true,
+     "accept": [
+      "banco"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "patina",
+     "gap": true,
+     "accept": [
+      "patina"
+     ]
+    },
+    {
+     "text": "con unos patines en línea morados"
+    }
+   ]
+  }
+ ],
+ "notes": "English 'the woman' rendered 'la chica' (young adult, more natural in Spain). No noun row: the key word is in tap row 1 and the answer."
+}

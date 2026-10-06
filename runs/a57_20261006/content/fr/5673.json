@@ -1,0 +1,117 @@
+{
+ "mediaId": 5673,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "les deux",
+ "taps": [
+  {
+   "phrase": "tenir les deux gâteaux",
+   "target": "la femme en rouge",
+   "voice": "female"
+  },
+  {
+   "phrase": "tenir une assiette vide",
+   "target": "la boulangère",
+   "voice": "female"
+  },
+  {
+   "phrase": "se tenir près de la fenêtre",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la lampe",
+   "voice": "female"
+  },
+  {
+   "word": "la fenêtre",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  },
+  {
+   "word": "les petits pains",
+   "voice": "female"
+  }
+ ],
+ "question": "Que tient la femme en rouge ?",
+ "answer": [
+  "Elle",
+  "tient",
+  "les",
+  "deux",
+  "gâteaux."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir les"
+    },
+    {
+     "text": "deux",
+     "gap": true,
+     "accept": [
+      "deux"
+     ]
+    },
+    {
+     "text": "gâteaux"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir une assiette"
+    },
+    {
+     "text": "vide",
+     "gap": true,
+     "accept": [
+      "vide"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se tenir près de la"
+    },
+    {
+     "text": "fenêtre",
+     "gap": true,
+     "accept": [
+      "fenêtre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "tient les deux"
+    },
+    {
+     "text": "gâteaux",
+     "gap": true,
+     "accept": [
+      "gâteaux"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'les deux' (both) used in phrase 1 and the answer; gapped as 'deux' in row 1. The 'cakes' are two slices of cake; 'les deux gâteaux' is how natives say it. Noun 4 'bread' = trays of round buns -> les petits pains."
+}

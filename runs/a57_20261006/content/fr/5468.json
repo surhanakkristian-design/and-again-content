@@ -1,0 +1,131 @@
+{
+ "mediaId": 5468,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "le panneau",
+ "taps": [
+  {
+   "phrase": "prendre un selfie",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "avoir une longue barbe",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "ouvrir grand les yeux",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le panneau",
+   "voice": "female"
+  },
+  {
+   "word": "le ciel",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "prend",
+  "un",
+  "selfie",
+  "avec",
+  "l'homme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "prendre un"
+    },
+    {
+     "text": "selfie",
+     "gap": true,
+     "accept": [
+      "selfie"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "avoir une longue"
+    },
+    {
+     "text": "barbe",
+     "gap": true,
+     "accept": [
+      "barbe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ouvrir",
+     "gap": true,
+     "accept": [
+      "ouvrir"
+     ]
+    },
+    {
+     "text": "grand les yeux"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "le"
+    },
+    {
+     "text": "panneau",
+     "gap": true,
+     "accept": [
+      "panneau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "prend",
+     "gap": true,
+     "accept": [
+      "prend",
+      "fait"
+     ]
+    },
+    {
+     "text": "un selfie avec l'homme"
+    }
+   ]
+  }
+ ],
+ "notes": "'le panneau' = the big lit advertising boards on the buildings (panneau publicitaire), fits. Phrase 3: she opens her eyes wide only in the middle part of the clip (boxes cover the whole clip); at the start and end she just smiles."
+}

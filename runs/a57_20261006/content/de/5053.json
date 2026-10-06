@@ -1,0 +1,122 @@
+{
+ "mediaId": 5053,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "das Etikett",
+ "taps": [
+  {
+   "phrase": "ein Etikett am Koffer befestigen",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Koffer baumeln",
+   "target": "der pinke Plüschanhänger",
+   "voice": "female"
+  },
+  {
+   "phrase": "das Gepäck befördern",
+   "target": "das Gepäckband",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Brille",
+   "voice": "female"
+  },
+  {
+   "word": "das Kopftuch",
+   "voice": "female"
+  },
+  {
+   "word": "das Etikett",
+   "voice": "female"
+  },
+  {
+   "word": "der Koffer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "befestigt",
+  "ein",
+  "Etikett",
+  "an",
+  "ihrem",
+  "Koffer."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ein"
+    },
+    {
+     "text": "Etikett",
+     "gap": true,
+     "accept": [
+      "Etikett",
+      "Namensschild"
+     ]
+    },
+    {
+     "text": "am Koffer befestigen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am Koffer"
+    },
+    {
+     "text": "baumeln",
+     "gap": true,
+     "accept": [
+      "baumeln",
+      "hängen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "das Gepäck"
+    },
+    {
+     "text": "befördern",
+     "gap": true,
+     "accept": [
+      "befördern",
+      "transportieren"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "befestigt",
+     "gap": true,
+     "accept": [
+      "befestigt"
+     ]
+    },
+    {
+     "text": "ein Etikett an ihrem Koffer"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'das Etikett' fits the white paper tag with eyelet (Anhängeetikett), but for the leather ID holder at the noun slot natives usually say 'der Kofferanhänger' or 'das Namensschild'; kept 'das Etikett' for consistency, proposal: accept 'Kofferanhänger' as an alternative in this concept. Answer: German also allows 'Sie befestigt an ihrem Koffer ein Etikett.' (two chip orders). Tap 1 box also covers the airport frames where the woman only waits and lifts the case; phrase written for the kitchen frames (the majority)."
+}

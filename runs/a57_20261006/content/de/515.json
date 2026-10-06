@@ -1,0 +1,122 @@
+{
+ "mediaId": 515,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "überwinden",
+ "taps": [
+  {
+   "phrase": "eine Kletterwand erklimmen",
+   "target": "die Kletterin",
+   "voice": "female"
+  },
+  {
+   "phrase": "am Seil baumeln",
+   "target": "die Kletterin",
+   "voice": "female"
+  },
+  {
+   "phrase": "von unten anfeuern",
+   "target": "die Zuschauer",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "das Fenster",
+   "voice": "female"
+  },
+  {
+   "word": "die Kletterwand",
+   "voice": "female"
+  },
+  {
+   "word": "die Kletterin",
+   "voice": "female"
+  },
+  {
+   "word": "die Zuschauer",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "überwindet",
+  "eine",
+  "hohe",
+  "Kletterwand."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine Kletterwand"
+    },
+    {
+     "text": "erklimmen",
+     "gap": true,
+     "accept": [
+      "erklimmen",
+      "besteigen",
+      "hochklettern"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "am"
+    },
+    {
+     "text": "Seil",
+     "gap": true,
+     "accept": [
+      "Seil"
+     ]
+    },
+    {
+     "text": "baumeln"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "von unten"
+    },
+    {
+     "text": "anfeuern",
+     "gap": true,
+     "accept": [
+      "anfeuern",
+      "jubeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "überwindet",
+     "gap": true,
+     "accept": [
+      "überwindet",
+      "bezwingt",
+      "erklimmt"
+     ]
+    },
+    {
+     "text": "eine hohe Kletterwand"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer uses the key word: 'eine Kletterwand überwinden' (like 'ein Hindernis überwinden'). The crowd box is off in many frames; the crowd cheers in the last frames. Climber is female: 'die Kletterin'."
+}

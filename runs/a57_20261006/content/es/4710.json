@@ -1,0 +1,113 @@
+{
+  "mediaId": 4710,
+  "lang": "es",
+  "level": "A",
+  "keyWord": "el brazo",
+  "taps": [
+    {
+      "phrase": "estar en el centro",
+      "target": "la señora mayor",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar una chaqueta verde",
+      "target": "la chica",
+      "voice": "female"
+    },
+    {
+      "phrase": "llevar gafas",
+      "target": "el chico",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "los árboles",
+      "voice": "female"
+    },
+    {
+      "word": "el brazo",
+      "voice": "female"
+    },
+    {
+      "word": "el chico",
+      "voice": "male"
+    }
+  ],
+  "question": "¿Qué están haciendo las tres personas?",
+  "answer": [
+    "Están",
+    "moviendo",
+    "los",
+    "brazos."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "estar en el"
+        },
+        {
+          "text": "centro",
+          "gap": true,
+          "accept": [
+            "centro",
+            "medio"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar una"
+        },
+        {
+          "text": "chaqueta",
+          "gap": true,
+          "accept": [
+            "chaqueta"
+          ]
+        },
+        {
+          "text": "verde"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "llevar",
+          "gap": true,
+          "accept": [
+            "llevar"
+          ]
+        },
+        {
+          "text": "gafas"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "Están moviendo los"
+        },
+        {
+          "text": "brazos",
+          "gap": true,
+          "accept": [
+            "brazos"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "English 'a man' -> 'el chico' (he is young; same word as tap target). The jacket is mint, 'verde' kept as in English. No noun row: the answer row already contains the key word (brazos)."
+}

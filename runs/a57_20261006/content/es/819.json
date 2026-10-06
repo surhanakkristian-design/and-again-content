@@ -1,0 +1,119 @@
+{
+ "mediaId": 819,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el paraguas",
+ "taps": [
+  {
+   "phrase": "sujetar el paraguas",
+   "target": "la mujer",
+   "voice": "female"
+  },
+  {
+   "phrase": "meterse debajo del paraguas",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "proteger de la lluvia",
+   "target": "el paraguas",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la ventana",
+   "voice": "female"
+  },
+  {
+   "word": "el paraguas",
+   "voice": "female"
+  },
+  {
+   "word": "la calle",
+   "voice": "female"
+  },
+  {
+   "word": "la mujer",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué sujeta la mujer?",
+ "answer": [
+  "La",
+  "mujer",
+  "sujeta",
+  "un",
+  "gran",
+  "paraguas",
+  "rojo."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar el"
+    },
+    {
+     "text": "paraguas",
+     "gap": true,
+     "accept": [
+      "paraguas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "meterse",
+     "gap": true,
+     "accept": [
+      "meterse",
+      "ponerse"
+     ]
+    },
+    {
+     "text": "debajo del paraguas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "proteger de la"
+    },
+    {
+     "text": "lluvia",
+     "gap": true,
+     "accept": [
+      "lluvia"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sujeta",
+     "gap": true,
+     "accept": [
+      "sujeta",
+      "lleva",
+      "tiene"
+     ]
+    },
+    {
+     "text": "un gran paraguas rojo"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: in the later boxed frames the umbrella is already open over her head (the opening happens in the first seconds), as in English."
+}

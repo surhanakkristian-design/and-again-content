@@ -1,0 +1,117 @@
+{
+  "mediaId": 517,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "doubler",
+  "taps": [
+    {
+      "phrase": "doubler un camping-car",
+      "target": "le cabriolet rouge",
+      "voice": "male"
+    },
+    {
+      "phrase": "se rabattre devant le camping-car",
+      "target": "le cabriolet rouge",
+      "voice": "male"
+    },
+    {
+      "phrase": "se faire distancer par le cabriolet",
+      "target": "le camping-car",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "le camping-car",
+      "voice": "male"
+    },
+    {
+      "word": "le cabriolet",
+      "voice": "male"
+    },
+    {
+      "word": "les dunes",
+      "voice": "male"
+    },
+    {
+      "word": "la route",
+      "voice": "male"
+    }
+  ],
+  "question": "Que fait le cabriolet rouge ?",
+  "answer": [
+    "Il",
+    "double",
+    "un",
+    "camping-car."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "doubler",
+          "gap": true,
+          "accept": [
+            "doubler",
+            "dépasser"
+          ]
+        },
+        {
+          "text": "un camping-car"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se"
+        },
+        {
+          "text": "rabattre",
+          "gap": true,
+          "accept": [
+            "rabattre"
+          ]
+        },
+        {
+          "text": "devant le camping-car"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "se faire distancer par le"
+        },
+        {
+          "text": "cabriolet",
+          "gap": true,
+          "accept": [
+            "cabriolet"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "double un"
+        },
+        {
+          "text": "camping-car",
+          "gap": true,
+          "accept": [
+            "camping-car"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "The red car is called 'le cabriolet' everywhere (noun 2 = convertible) so the same thing keeps one word; question says 'le cabriolet rouge' instead of 'la voiture rouge'. 'la route' for the two-lane desert highway (not an autoroute). Phrase 2: in the early boxed frames the convertible is still alongside; it pulls in ahead in the later ones."
+}

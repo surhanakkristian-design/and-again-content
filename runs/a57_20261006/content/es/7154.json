@@ -1,0 +1,126 @@
+{
+ "mediaId": 7154,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "desplazarse",
+ "taps": [
+  {
+   "phrase": "mantener el equilibrio en un monociclo",
+   "target": "el hombre del traje",
+   "voice": "male"
+  },
+  {
+   "phrase": "dar sorbos a un café",
+   "target": "el hombre del traje",
+   "voice": "male"
+  },
+  {
+   "phrase": "pedalear detrás del monociclo",
+   "target": "el ciclista",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el autobús de dos pisos",
+   "voice": "male"
+  },
+  {
+   "word": "el taxi",
+   "voice": "male"
+  },
+  {
+   "word": "el maletín",
+   "voice": "male"
+  },
+  {
+   "word": "el monociclo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Cómo se desplaza el hombre de negocios?",
+ "answer": [
+  "Se",
+  "desplaza",
+  "montado",
+  "en",
+  "un",
+  "monociclo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mantener el"
+    },
+    {
+     "text": "equilibrio",
+     "gap": true,
+     "accept": [
+      "equilibrio"
+     ]
+    },
+    {
+     "text": "en un monociclo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "dar"
+    },
+    {
+     "text": "sorbos",
+     "gap": true,
+     "accept": [
+      "sorbos",
+      "sorbitos"
+     ]
+    },
+    {
+     "text": "a un café"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pedalear",
+     "gap": true,
+     "accept": [
+      "pedalear"
+     ]
+    },
+    {
+     "text": "detrás del monociclo"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Se"
+    },
+    {
+     "text": "desplaza",
+     "gap": true,
+     "accept": [
+      "desplaza",
+      "mueve"
+     ]
+    },
+    {
+     "text": "montado en un monociclo"
+    }
+   ]
+  }
+ ],
+ "notes": "Model answer drops the subject (natives do); the answer row is the whole sentence. Phrase 1 uses 'mantener el equilibrio' (B1 collocation)."
+}

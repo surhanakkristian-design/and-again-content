@@ -1,0 +1,119 @@
+{
+  "mediaId": 7962,
+  "lang": "fr",
+  "level": "B",
+  "keyWord": "le reste",
+  "taps": [
+    {
+      "phrase": "tenir le carton à pizza",
+      "target": "la personne au pull lilas",
+      "voice": "female"
+    },
+    {
+      "phrase": "contenir les restes de pizza",
+      "target": "le carton à pizza",
+      "voice": "female"
+    },
+    {
+      "phrase": "pendre au-dessus du toit",
+      "target": "les guirlandes lumineuses",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "les guirlandes lumineuses",
+      "voice": "female"
+    },
+    {
+      "word": "la cheminée",
+      "voice": "female"
+    },
+    {
+      "word": "le carton à pizza",
+      "voice": "female"
+    },
+    {
+      "word": "le tapis",
+      "voice": "female"
+    }
+  ],
+  "question": "Que contient le carton à pizza ?",
+  "answer": [
+    "Il",
+    "contient",
+    "le",
+    "reste",
+    "de",
+    "la",
+    "pizza."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "tenir",
+          "gap": true,
+          "accept": [
+            "tenir"
+          ]
+        },
+        {
+          "text": "le carton à pizza"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "contenir les"
+        },
+        {
+          "text": "restes",
+          "gap": true,
+          "accept": [
+            "restes"
+          ]
+        },
+        {
+          "text": "de pizza"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "pendre au-dessus du"
+        },
+        {
+          "text": "toit",
+          "gap": true,
+          "accept": [
+            "toit"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "contient",
+          "gap": true,
+          "accept": [
+            "contient"
+          ]
+        },
+        {
+          "text": "le reste de la pizza"
+        }
+      ]
+    }
+  ],
+  "notes": "Pizza box called 'le carton à pizza' everywhere (same word in phrase, noun and question). Phrase 2 uses 'les restes' (leftovers), the answer 'le reste' (the key word)."
+}

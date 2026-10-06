@@ -1,0 +1,132 @@
+{
+ "mediaId": 237,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el burro",
+ "taps": [
+  {
+   "phrase": "abrir mucho la boca",
+   "target": "el burro",
+   "voice": "male"
+  },
+  {
+   "phrase": "rodar por el suelo",
+   "target": "el burro",
+   "voice": "male"
+  },
+  {
+   "phrase": "buscar comida",
+   "target": "los pájaros",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las naranjas",
+   "voice": "male"
+  },
+  {
+   "word": "la casa",
+   "voice": "male"
+  },
+  {
+   "word": "el burro",
+   "voice": "male"
+  },
+  {
+   "word": "los pájaros",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el burro?",
+ "answer": [
+  "El",
+  "burro",
+  "está",
+  "rodando",
+  "por",
+  "el",
+  "suelo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "abrir mucho la"
+    },
+    {
+     "text": "boca",
+     "gap": true,
+     "accept": [
+      "boca"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rodar",
+     "gap": true,
+     "accept": [
+      "rodar",
+      "revolcarse"
+     ]
+    },
+    {
+     "text": "por el suelo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "buscar",
+     "gap": true,
+     "accept": [
+      "buscar"
+     ]
+    },
+    {
+     "text": "comida"
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el"
+    },
+    {
+     "text": "burro",
+     "gap": true,
+     "accept": [
+      "burro"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está rodando por el"
+    },
+    {
+     "text": "suelo",
+     "gap": true,
+     "accept": [
+      "suelo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: 'revolcarse' is the most natural verb but above A2; 'rodar por el suelo' used (revolcarse accepted in recall). Phrases 1 and 2 share the donkey as target as in English; the two boxes overlap, each phrase fits a different moment."
+}

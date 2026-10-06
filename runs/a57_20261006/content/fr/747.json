@@ -1,0 +1,129 @@
+{
+ "mediaId": 747,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "le stress",
+ "taps": [
+  {
+   "phrase": "se prendre la tête à deux mains",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "s'élever au-dessus du bureau",
+   "target": "la pile de papiers",
+   "voice": "female"
+  },
+  {
+   "phrase": "indiquer l'heure",
+   "target": "l'horloge",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la tasse",
+   "voice": "female"
+  },
+  {
+   "word": "le porte-bloc",
+   "voice": "female"
+  },
+  {
+   "word": "la paperasse",
+   "voice": "female"
+  },
+  {
+   "word": "l'horloge",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme ?",
+ "answer": [
+  "Elle",
+  "craque",
+  "sous",
+  "le",
+  "stress",
+  "du",
+  "travail."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "prendre",
+     "gap": true,
+     "accept": [
+      "prendre"
+     ]
+    },
+    {
+     "text": "la tête"
+    },
+    {
+     "text": "à deux mains"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "s'élever"
+    },
+    {
+     "text": "au-dessus du"
+    },
+    {
+     "text": "bureau",
+     "gap": true,
+     "accept": [
+      "bureau"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "indiquer",
+     "gap": true,
+     "accept": [
+      "indiquer",
+      "donner"
+     ]
+    },
+    {
+     "text": "l'heure"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "craque sous le"
+    },
+    {
+     "text": "stress",
+     "gap": true,
+     "accept": [
+      "stress"
+     ]
+    },
+    {
+     "text": "du travail"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word le stress is in the model answer ('craquer sous le stress', she cries out and collapses). Tap 1: she clutches her head only in the last boxed frames (on the phone before), phrase kept as in English. 'la paperasse' (B2, colloquial) for paperwork; 'la tasse' for the mug."
+}

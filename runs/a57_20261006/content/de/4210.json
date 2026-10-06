@@ -1,0 +1,25 @@
+{
+  "mediaId": 4210, "lang": "de", "level": "B",
+  "keyWord": "halten",
+  "taps": [
+    { "phrase": "zwei Holzstiele umklammern", "target": "der Hamster", "voice": "female" },
+    { "phrase": "sein Gesicht verbergen", "target": "der Hamster", "voice": "female" },
+    { "phrase": "in die Kamera grinsen", "target": "der Hamster", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "das Eis am Stiel", "voice": "female" },
+    { "word": "der Hamster", "voice": "female" },
+    { "word": "die Arbeitsplatte", "voice": "female" }
+  ],
+  "question": "Was macht der Hamster?",
+  "answer": ["Er", "hält", "zwei", "Eis", "am", "Stiel", "in", "die", "Höhe."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "zwei Holzstiele" }, { "text": "umklammern", "gap": true, "accept": ["umklammern", "festhalten"] } ] },
+    { "from": "taps", "parts": [ { "text": "sein" }, { "text": "Gesicht", "gap": true, "accept": ["Gesicht"] }, { "text": "verbergen" } ] },
+    { "from": "taps", "parts": [ { "text": "in die Kamera" }, { "text": "grinsen", "gap": true, "accept": ["grinsen", "lächeln"] } ] },
+    { "from": "answer", "parts": [ { "text": "hält", "gap": true, "accept": ["hält", "hebt", "streckt"] }, { "text": "zwei Eis am Stiel in die Höhe" } ] }
+  ],
+  "notes": "All three taps share one box (the hamster). Tap 2 box also covers the last frames where the face is visible; the phrase follows the hidden-face frames that fill most of the clip. Answer 'er' for der Hamster; answerVoice stays female as in English (voice of the clip, not the subject's sex). B1/B2 items: umklammern, verbergen, grinsen, 'in die Höhe halten'. 'das Eis am Stiel' is the everyday word for an ice cream bar (plural 'zwei Eis am Stiel')."
+}

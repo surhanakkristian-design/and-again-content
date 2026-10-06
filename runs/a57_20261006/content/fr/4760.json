@@ -1,0 +1,26 @@
+{
+  "mediaId": 4760, "lang": "fr", "level": "A",
+  "keyWord": "partager",
+  "taps": [
+    { "phrase": "porter une veste en jean", "target": "la personne en veste", "voice": "female" },
+    { "phrase": "porter une robe colorée", "target": "la fille", "voice": "female" },
+    { "phrase": "s'enlacer au bord de l'eau", "target": "les amis", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "le ciel", "voice": "female" },
+    { "word": "la veste", "voice": "female" },
+    { "word": "la glace", "voice": "female" },
+    { "word": "la robe", "voice": "female" }
+  ],
+  "question": "Que partagent les deux personnes ?",
+  "answer": ["Elles", "partagent", "une", "glace."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "veste", "gap": true, "accept": ["veste"] }, { "text": "en jean" } ] },
+    { "from": "taps", "parts": [ { "text": "porter une" }, { "text": "robe", "gap": true, "accept": ["robe"] }, { "text": "colorée" } ] },
+    { "from": "taps", "parts": [ { "text": "s'enlacer au" }, { "text": "bord", "gap": true, "accept": ["bord"] }, { "text": "de l'eau" } ] },
+    { "from": "answer", "parts": [ { "text": "partagent", "gap": true, "accept": ["partagent"] }, { "text": "une glace" } ] }
+  ],
+  "notes": "The jacket is a blue denim jacket: 'une veste en jean' (fits only that person). The jacket wearer's gender is unclear (source description says 'he', the clip looks like a young woman), so the question uses 'les deux personnes' -> 'Elles', grammatical whatever the gender. 'S'enlacer' may be slightly above A2 but is the natural verb; 'se faire un câlin au bord de l'eau' would exceed 6 words. The two friends also hug in the street, but the phrase says 'au bord de l'eau', which fits only the group on the jetty. Nobody visibly gives the ice cream away in a 'sharing' sense beyond the hand-over at the start; answer follows English."
+}

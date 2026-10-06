@@ -1,0 +1,124 @@
+{
+ "mediaId": 26,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la pajita",
+ "taps": [
+  {
+   "phrase": "sujetar una pajita larga",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "beber zumo de naranja",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar sobre la barra",
+   "target": "el vaso",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "las gafas de sol",
+   "voice": "male"
+  },
+  {
+   "word": "la pajita",
+   "voice": "male"
+  },
+  {
+   "word": "el vaso",
+   "voice": "male"
+  },
+  {
+   "word": "la camisa",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el hombre?",
+ "answer": [
+  "El",
+  "hombre",
+  "está",
+  "bebiendo",
+  "zumo",
+  "con",
+  "una",
+  "pajita."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "sujetar una"
+    },
+    {
+     "text": "pajita",
+     "gap": true,
+     "accept": [
+      "pajita"
+     ]
+    },
+    {
+     "text": "larga"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "beber",
+     "gap": true,
+     "accept": [
+      "beber",
+      "tomar"
+     ]
+    },
+    {
+     "text": "zumo de naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sobre la"
+    },
+    {
+     "text": "barra",
+     "gap": true,
+     "accept": [
+      "barra"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está bebiendo"
+    },
+    {
+     "text": "zumo",
+     "gap": true,
+     "accept": [
+      "zumo"
+     ]
+    },
+    {
+     "text": "con una pajita"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 3: in the last boxed frames the man holds the empty glass upside down in the air; in most boxed frames it stands on the bar. Glass is a stemmed glass ('vaso' is the everyday word in Spain for a drinking glass; 'copa' also possible)."
+}

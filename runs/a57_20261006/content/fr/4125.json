@@ -1,0 +1,118 @@
+{
+ "mediaId": 4125,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "la scène",
+ "taps": [
+  {
+   "phrase": "tirer sur un voile",
+   "target": "l'homme en costume",
+   "voice": "male"
+  },
+  {
+   "phrase": "exploser en pluie de pétales",
+   "target": "l'éléphant en fleurs",
+   "voice": "male"
+  },
+  {
+   "phrase": "lever la trompe",
+   "target": "l'éléphant gris",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le projecteur",
+   "voice": "male"
+  },
+  {
+   "word": "l'éléphant",
+   "voice": "male"
+  },
+  {
+   "word": "le costume",
+   "voice": "male"
+  },
+  {
+   "word": "la scène",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait l'éléphant gris ?",
+ "answer": [
+  "Il",
+  "lève",
+  "la",
+  "trompe",
+  "sur",
+  "la",
+  "scène."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tirer sur un"
+    },
+    {
+     "text": "voile",
+     "gap": true,
+     "accept": [
+      "voile",
+      "drap"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "exploser",
+     "gap": true,
+     "accept": [
+      "exploser",
+      "éclater"
+     ]
+    },
+    {
+     "text": "en pluie de pétales"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "lever la"
+    },
+    {
+     "text": "trompe",
+     "gap": true,
+     "accept": [
+      "trompe"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "lève la trompe sur la"
+    },
+    {
+     "text": "scène",
+     "gap": true,
+     "accept": [
+      "scène"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 1: the red box also covers frames where the man has let go of the sheet and walks/looks at the flower elephant; phrase written for the pull. 'le voile' = the big silk sheet (B2); 'drap' accepted. Noun 2 'l'éléphant' at the flower elephant's slot."
+}

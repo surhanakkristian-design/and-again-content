@@ -1,0 +1,121 @@
+{
+ "mediaId": 238,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "stehlen",
+ "taps": [
+  {
+   "phrase": "eine Dose stehlen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "eine weiße Tüte bringen",
+   "target": "der Mann",
+   "voice": "male"
+  },
+  {
+   "phrase": "rosa blühen",
+   "target": "der Busch",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Himmel",
+   "voice": "male"
+  },
+  {
+   "word": "die Blumen",
+   "voice": "male"
+  },
+  {
+   "word": "das Gras",
+   "voice": "male"
+  },
+  {
+   "word": "die Dosen",
+   "voice": "male"
+  }
+ ],
+ "question": "Was macht der Mann?",
+ "answer": [
+  "Er",
+  "stiehlt",
+  "eine",
+  "Dose."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine"
+    },
+    {
+     "text": "Dose",
+     "gap": true,
+     "accept": [
+      "Dose"
+     ]
+    },
+    {
+     "text": "stehlen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine weiße"
+    },
+    {
+     "text": "Tüte",
+     "gap": true,
+     "accept": [
+      "Tüte",
+      "Tasche"
+     ]
+    },
+    {
+     "text": "bringen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rosa"
+    },
+    {
+     "text": "blühen",
+     "gap": true,
+     "accept": [
+      "blühen"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stiehlt",
+     "gap": true,
+     "accept": [
+      "stiehlt",
+      "klaut"
+     ]
+    },
+    {
+     "text": "eine Dose"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2: box 2 also covers the frames after he has put the bag down, so 'eine weiße Tüte bringen' (delivers it) instead of 'tragen' (only the approach frames). Box 1 also covers his approach; phrase written for the theft. Noun 2 'die Blumen' kept at level A (botanically 'die Blüten', B1)."
+}

@@ -1,0 +1,121 @@
+{
+ "mediaId": 16,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la presentación",
+ "taps": [
+  {
+   "phrase": "hacer una presentación en clase",
+   "target": "la alumna de rojo",
+   "voice": "female"
+  },
+  {
+   "phrase": "proyectar las diapositivas",
+   "target": "la pantalla",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar sentados entre el público",
+   "target": "los compañeros de clase",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la presentación",
+   "voice": "female"
+  },
+  {
+   "word": "el jersey",
+   "voice": "female"
+  },
+  {
+   "word": "la pizarra blanca",
+   "voice": "female"
+  },
+  {
+   "word": "el público",
+   "voice": "female"
+  }
+ ],
+ "question": "¿Qué está haciendo la alumna de rojo?",
+ "answer": [
+  "Está",
+  "haciendo",
+  "una",
+  "presentación",
+  "ante",
+  "sus",
+  "compañeros."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "hacer una"
+    },
+    {
+     "text": "presentación",
+     "gap": true,
+     "accept": [
+      "presentación",
+      "exposición"
+     ]
+    },
+    {
+     "text": "en clase"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "proyectar",
+     "gap": true,
+     "accept": [
+      "proyectar",
+      "mostrar"
+     ]
+    },
+    {
+     "text": "las diapositivas"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar sentados entre el"
+    },
+    {
+     "text": "público",
+     "gap": true,
+     "accept": [
+      "público"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está haciendo una presentación ante sus"
+    },
+    {
+     "text": "compañeros",
+     "gap": true,
+     "accept": [
+      "compañeros"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'alumna' (school class) rather than 'estudiante'. B1/B2 items: presentación, proyectar, diapositivas, público, ante. Answer has no subject, so the answer row is the whole sentence."
+}

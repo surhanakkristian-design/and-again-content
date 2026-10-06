@@ -1,0 +1,15 @@
+{"mediaId": 5310, "lang": "fr", "level": "A", "keyWord": "le fils",
+ "taps": [{"phrase": "faire un câlin au garçon", "target": "la femme", "voice": "female"},
+          {"phrase": "porter un t-shirt gris", "target": "l'homme", "voice": "male"},
+          {"phrase": "voler devant le garage", "target": "le ballon", "voice": "male"}],
+ "nouns": [{"word": "le garçon", "voice": "male"}, {"word": "le ballon", "voice": "male"}, {"word": "l'homme", "voice": "male"}],
+ "question": "Que fait la femme ?",
+ "answer": ["Elle", "serre", "son", "fils", "dans", "ses", "bras."],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {"from": "taps", "parts": [{"text": "faire un"}, {"text": "câlin", "gap": true, "accept": ["câlin"]}, {"text": "au garçon"}]},
+  {"from": "taps", "parts": [{"text": "porter un"}, {"text": "t-shirt", "gap": true, "accept": ["t-shirt", "tee-shirt"]}, {"text": "gris"}]},
+  {"from": "taps", "parts": [{"text": "voler", "gap": true, "accept": ["voler", "passer"]}, {"text": "devant le garage"}]},
+  {"from": "answer", "parts": [{"text": "serre son"}, {"text": "fils", "gap": true, "accept": ["fils"]}, {"text": "dans ses bras"}]}],
+ "notes": "Key word 'le fils' is not a noun of the set (the pill is 'le garçon', the thing shown); it is used in the model answer 'Elle serre son fils dans ses bras.' (the clip shows a family: mother, father, boy). Phrase 3: the ball flies in front of the garage door (French 'voler devant le garage'). The green box for phrase 2 also covers the park shot where the man is small."}

@@ -1,0 +1,122 @@
+{
+ "mediaId": 7154,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "se déplacer",
+ "taps": [
+  {
+   "phrase": "tenir en équilibre sur un monocycle",
+   "target": "l'homme en costume",
+   "voice": "male"
+  },
+  {
+   "phrase": "siroter un café à emporter",
+   "target": "l'homme en costume",
+   "voice": "male"
+  },
+  {
+   "phrase": "pédaler derrière le monocycle",
+   "target": "le cycliste",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le bus à impériale",
+   "voice": "male"
+  },
+  {
+   "word": "le taxi",
+   "voice": "male"
+  },
+  {
+   "word": "la mallette",
+   "voice": "male"
+  },
+  {
+   "word": "le monocycle",
+   "voice": "male"
+  }
+ ],
+ "question": "Comment l'homme d'affaires se déplace-t-il ?",
+ "answer": [
+  "Il",
+  "se",
+  "déplace",
+  "en",
+  "monocycle."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "tenir en"
+    },
+    {
+     "text": "équilibre",
+     "gap": true,
+     "accept": [
+      "équilibre"
+     ]
+    },
+    {
+     "text": "sur un monocycle"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "siroter",
+     "gap": true,
+     "accept": [
+      "siroter",
+      "boire"
+     ]
+    },
+    {
+     "text": "un café à emporter"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "pédaler",
+     "gap": true,
+     "accept": [
+      "pédaler",
+      "rouler"
+     ]
+    },
+    {
+     "text": "derrière le monocycle"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "se"
+    },
+    {
+     "text": "déplace",
+     "gap": true,
+     "accept": [
+      "déplace"
+     ]
+    },
+    {
+     "text": "en monocycle"
+    }
+   ]
+  }
+ ],
+ "notes": "Answer kept short (one word order); 'dans la circulation' left out because it could stand in two places. 'le bus à impériale' = usual French term for a double-decker. Phrase 3 box is OFF for the first frames, the cyclist appears later."
+}

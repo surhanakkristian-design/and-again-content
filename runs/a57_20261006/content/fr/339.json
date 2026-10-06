@@ -1,0 +1,118 @@
+{
+ "mediaId": 339,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "aller",
+ "taps": [
+  {
+   "phrase": "descendre la rue",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter un grand sac",
+   "target": "la fille",
+   "voice": "female"
+  },
+  {
+   "phrase": "rester dans la maison",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les maisons",
+   "voice": "female"
+  },
+  {
+   "word": "la voiture",
+   "voice": "female"
+  },
+  {
+   "word": "la fille",
+   "voice": "female"
+  },
+  {
+   "word": "la rue",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la fille ?",
+ "answer": [
+  "Elle",
+  "s'en",
+  "va",
+  "avec",
+  "son",
+  "sac."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "descendre",
+     "gap": true,
+     "accept": [
+      "descendre"
+     ]
+    },
+    {
+     "text": "la rue"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter un grand"
+    },
+    {
+     "text": "sac",
+     "gap": true,
+     "accept": [
+      "sac"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rester dans la"
+    },
+    {
+     "text": "maison",
+     "gap": true,
+     "accept": [
+      "maison"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "s'en"
+    },
+    {
+     "text": "va",
+     "gap": true,
+     "accept": [
+      "va"
+     ]
+    },
+    {
+     "text": "avec son sac"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'aller' is used as 's'en aller' (to leave) in the model answer; the clip shows the girl leaving home (transcript 'Bye! See you!'). Question changed from 'Où va la fille ?' to 'Que fait la fille ?' because 'Elle descend la rue' would not contain the key word and a destination is not shown. 'descendre la rue': she walks along the cobbled street towards the camera, which pulls back; the near street slopes down, as in the English 'go down the street'."
+}

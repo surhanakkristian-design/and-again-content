@@ -1,0 +1,116 @@
+{
+ "mediaId": 4055,
+ "lang": "de",
+ "level": "A",
+ "keyWord": "der Dinosaurier",
+ "taps": [
+  {
+   "phrase": "den Kopf heben",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "zwischen zwei Dinosauriern sitzen",
+   "target": "der Hund",
+   "voice": "male"
+  },
+  {
+   "phrase": "rote Augen haben",
+   "target": "der graue Dinosaurier",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "der Hund",
+   "voice": "male"
+  },
+  {
+   "word": "der Dinosaurier",
+   "voice": "male"
+  },
+  {
+   "word": "das Bett",
+   "voice": "male"
+  }
+ ],
+ "question": "Wo sitzt der Hund?",
+ "answer": [
+  "Er",
+  "sitzt",
+  "zwischen",
+  "zwei",
+  "Dinosauriern."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "den Kopf"
+    },
+    {
+     "text": "heben",
+     "gap": true,
+     "accept": [
+      "heben"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "zwischen zwei"
+    },
+    {
+     "text": "Dinosauriern",
+     "gap": true,
+     "accept": [
+      "Dinosauriern"
+     ]
+    },
+    {
+     "text": "sitzen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "rote"
+    },
+    {
+     "text": "Augen",
+     "gap": true,
+     "accept": [
+      "Augen"
+     ]
+    },
+    {
+     "text": "haben"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "sitzt",
+     "gap": true,
+     "accept": [
+      "sitzt"
+     ]
+    },
+    {
+     "text": "zwischen zwei Dinosauriern"
+    }
+   ]
+  }
+ ],
+ "notes": "Phrase 2 uses 'zwei Dinosauriern' instead of 'two toys' so the key word appears (the toys are dinosaurs). Phrase 1: the dog lifts its head (howls) - fits only the dog."
+}

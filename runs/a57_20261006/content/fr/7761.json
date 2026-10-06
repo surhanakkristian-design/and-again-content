@@ -1,0 +1,122 @@
+{
+ "mediaId": 7761,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "un être",
+ "taps": [
+  {
+   "phrase": "plonger ses tentacules dans un bocal",
+   "target": "le poulpe",
+   "voice": "male"
+  },
+  {
+   "phrase": "agripper un porte-bloc",
+   "target": "l'homme",
+   "voice": "male"
+  },
+  {
+   "phrase": "éclater de rire",
+   "target": "la femme",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "le poulpe",
+   "voice": "male"
+  },
+  {
+   "word": "le bocal",
+   "voice": "male"
+  },
+  {
+   "word": "les robots",
+   "voice": "male"
+  },
+  {
+   "word": "le porte-bloc",
+   "voice": "male"
+  }
+ ],
+ "question": "Que fait le poulpe ?",
+ "answer": [
+  "Il",
+  "plonge",
+  "ses",
+  "tentacules",
+  "dans",
+  "un",
+  "bocal."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "plonger ses"
+    },
+    {
+     "text": "tentacules",
+     "gap": true,
+     "accept": [
+      "tentacules",
+      "bras"
+     ]
+    },
+    {
+     "text": "dans un bocal"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "agripper",
+     "gap": true,
+     "accept": [
+      "agripper",
+      "serrer",
+      "tenir"
+     ]
+    },
+    {
+     "text": "un porte-bloc"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "éclater de"
+    },
+    {
+     "text": "rire",
+     "gap": true,
+     "accept": [
+      "rire"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "plonge ses tentacules dans un"
+    },
+    {
+     "text": "bocal",
+     "gap": true,
+     "accept": [
+      "bocal"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "Key word: source gives 'un être' with the INDEFINITE article (brief asks for nouns with the definite one); proposal 'l'être vivant' (= 'a living thing', the definition; bare 'l'être' is philosophical/abstract in French). The key word appears in no exercise (not an English noun), so no recall row can gap it. 'le poulpe' chosen over 'la pieuvre' (both everyday in France) so the subject pronoun 'il' matches the English male answer/noun voice. The octopus opens the lid, puts its arms into the jar and pulls out a crab: 'plonger ses tentacules dans un bocal' covers the boxed frames."
+}

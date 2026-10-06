@@ -1,0 +1,120 @@
+{
+ "mediaId": 192,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "la esquina",
+ "taps": [
+  {
+   "phrase": "encajar en la esquina",
+   "target": "la tabla",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar ropa naranja",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "llevar gafas",
+   "target": "el chico",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el cielo",
+   "voice": "female"
+  },
+  {
+   "word": "la esquina",
+   "voice": "female"
+  },
+  {
+   "word": "la chica",
+   "voice": "female"
+  },
+  {
+   "word": "el chico",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Dónde están poniendo la tabla?",
+ "answer": [
+  "Están",
+  "poniendo",
+  "la",
+  "tabla",
+  "en",
+  "la",
+  "esquina."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "encajar",
+     "gap": true,
+     "accept": [
+      "encajar",
+      "caber"
+     ]
+    },
+    {
+     "text": "en la esquina"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "ropa",
+     "gap": true,
+     "accept": [
+      "ropa"
+     ]
+    },
+    {
+     "text": "naranja"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "llevar"
+    },
+    {
+     "text": "gafas",
+     "gap": true,
+     "accept": [
+      "gafas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Están poniendo la tabla en la"
+    },
+    {
+     "text": "esquina",
+     "gap": true,
+     "accept": [
+      "esquina"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "'encajar' is the plain right verb for the perfect fit (B1-ish; A2 alternative 'caber' accepted in recall). The corner shown is an outer corner (pillar edge, building edge), so 'la esquina' (not 'el rincón') fits the clip. 'la tabla' = the triangular wooden boards (two halves forming one triangle). Answer repeats 'la tabla' instead of the clitic so the chip order is unique."
+}

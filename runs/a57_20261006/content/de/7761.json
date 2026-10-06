@@ -1,0 +1,123 @@
+{
+  "mediaId": 7761,
+  "lang": "de",
+  "level": "B",
+  "keyWord": "das Lebewesen",
+  "taps": [
+    {
+      "phrase": "in ein Einmachglas greifen",
+      "target": "der Oktopus",
+      "voice": "male"
+    },
+    {
+      "phrase": "ein Klemmbrett halten",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "in Gelächter ausbrechen",
+      "target": "die Frau",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "der Oktopus",
+      "voice": "male"
+    },
+    {
+      "word": "das Einmachglas",
+      "voice": "male"
+    },
+    {
+      "word": "die Roboter",
+      "voice": "male"
+    },
+    {
+      "word": "das Klemmbrett",
+      "voice": "male"
+    }
+  ],
+  "question": "Was macht der Oktopus?",
+  "answer": [
+    "Er",
+    "greift",
+    "in",
+    "ein",
+    "Einmachglas."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in ein Einmachglas"
+        },
+        {
+          "text": "greifen",
+          "gap": true,
+          "accept": [
+            "greifen",
+            "fassen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein"
+        },
+        {
+          "text": "Klemmbrett",
+          "gap": true,
+          "accept": [
+            "Klemmbrett"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "in"
+        },
+        {
+          "text": "Gelächter",
+          "gap": true,
+          "accept": [
+            "Gelächter",
+            "Lachen"
+          ]
+        },
+        {
+          "text": "ausbrechen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "greift in ein"
+        },
+        {
+          "text": "Einmachglas",
+          "gap": true,
+          "accept": [
+            "Einmachglas",
+            "Glas"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Lebewesen' names no noun of the set and fits none of the exercises naturally (the clip contrasts a living octopus with lifeless robots); kept, owner decides. The man holds the clipboard loosely, so 'halten' not 'umklammern'. The octopus opens the jar and pulls a crab out of it; 'in ein Einmachglas greifen' covers the boxed frames."
+}

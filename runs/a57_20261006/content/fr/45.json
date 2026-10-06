@@ -1,0 +1,121 @@
+{
+ "mediaId": 45,
+ "lang": "fr",
+ "level": "A",
+ "keyWord": "en colère",
+ "taps": [
+  {
+   "phrase": "crier sur l'homme",
+   "target": "la femme",
+   "voice": "female"
+  },
+  {
+   "phrase": "être par terre",
+   "target": "les vêtements",
+   "voice": "female"
+  },
+  {
+   "phrase": "porter une veste grise",
+   "target": "l'homme",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "les bouteilles",
+   "voice": "female"
+  },
+  {
+   "word": "la machine à laver",
+   "voice": "female"
+  },
+  {
+   "word": "la femme",
+   "voice": "female"
+  },
+  {
+   "word": "les vêtements",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la femme en colère ?",
+ "answer": [
+  "Elle",
+  "crie",
+  "très",
+  "fort",
+  "sur",
+  "l'homme."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "crier",
+     "gap": true,
+     "accept": [
+      "crier",
+      "hurler"
+     ]
+    },
+    {
+     "text": "sur l'homme"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "être par"
+    },
+    {
+     "text": "terre",
+     "gap": true,
+     "accept": [
+      "terre"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "porter une"
+    },
+    {
+     "text": "veste",
+     "gap": true,
+     "accept": [
+      "veste",
+      "gilet"
+     ]
+    },
+    {
+     "text": "grise"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "crie",
+     "gap": true,
+     "accept": [
+      "crie",
+      "hurle"
+     ]
+    },
+    {
+     "text": "très fort sur l'homme"
+    }
+   ]
+  }
+ ],
+ "notes": "The man's grey top looks like a zip jacket; 'veste' kept as in English, 'gilet' accepted. Tap box 1 also covers the opening frames where the woman walks in and picks up the clothes; phrase written for the shouting frames (most boxed frames). Key word 'en colère' (adjectival phrase) appears in the question only. 'très fort' added to the answer so its recall row differs from tap row 1 once blanked (the elided 'l'homme' cannot be the gap); 'Elle crie sur l'homme très fort' is a less natural second order."
+}

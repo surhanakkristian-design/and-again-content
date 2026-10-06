@@ -1,0 +1,141 @@
+{
+ "mediaId": 211,
+ "lang": "es",
+ "level": "B",
+ "keyWord": "la aduana",
+ "taps": [
+  {
+   "phrase": "registrar una maleta",
+   "target": "el agente de aduanas",
+   "voice": "male"
+  },
+  {
+   "phrase": "juntar las manos",
+   "target": "la chica",
+   "voice": "female"
+  },
+  {
+   "phrase": "estar cubierto de pinchos",
+   "target": "el durián",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el durián",
+   "voice": "female"
+  },
+  {
+   "word": "la maleta",
+   "voice": "female"
+  },
+  {
+   "word": "la papelera",
+   "voice": "female"
+  },
+  {
+   "word": "el agente de aduanas",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está haciendo el agente de aduanas?",
+ "answer": [
+  "El",
+  "agente",
+  "de",
+  "aduanas",
+  "está",
+  "registrando",
+  "una",
+  "maleta."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "registrar"
+    },
+    {
+     "text": "una"
+    },
+    {
+     "text": "maleta",
+     "gap": true,
+     "accept": [
+      "maleta"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "juntar",
+     "gap": true,
+     "accept": [
+      "juntar"
+     ]
+    },
+    {
+     "text": "las manos"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar cubierto de"
+    },
+    {
+     "text": "pinchos",
+     "gap": true,
+     "accept": [
+      "pinchos",
+      "espinas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "nouns",
+   "parts": [
+    {
+     "text": "el agente de"
+    },
+    {
+     "text": "aduanas",
+     "gap": true,
+     "accept": [
+      "aduanas"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "está"
+    },
+    {
+     "text": "registrando",
+     "gap": true,
+     "accept": [
+      "registrando",
+      "inspeccionando",
+      "revisando"
+     ]
+    },
+    {
+     "text": "una maleta"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'la aduana' appears inside 'el agente de aduanas' (noun 4, question, answer). 'registrar una maleta' = B1 collocation for a customs search. Bin = 'la papelera' (metal bin, Spain usage)."
+}

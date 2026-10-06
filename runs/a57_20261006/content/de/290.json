@@ -1,0 +1,119 @@
+{
+  "mediaId": 290,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Gefühl",
+  "taps": [
+    {
+      "phrase": "die Hand auf die Brust legen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "die Augen schließen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "ein graues Hemd tragen",
+      "target": "der Mann mit den langen Haaren",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "die Fahne",
+      "voice": "female"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "das Glas",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "legt",
+    "die",
+    "Hand",
+    "auf",
+    "die",
+    "Brust."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Hand auf die"
+        },
+        {
+          "text": "Brust",
+          "gap": true,
+          "accept": [
+            "Brust"
+          ]
+        },
+        {
+          "text": "legen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "die Augen"
+        },
+        {
+          "text": "schließen",
+          "gap": true,
+          "accept": [
+            "schließen",
+            "zumachen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein graues"
+        },
+        {
+          "text": "Hemd",
+          "gap": true,
+          "accept": [
+            "Hemd"
+          ]
+        },
+        {
+          "text": "tragen"
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "legt",
+          "gap": true,
+          "accept": [
+            "legt"
+          ]
+        },
+        {
+          "text": "die Hand auf die Brust"
+        }
+      ]
+    }
+  ],
+  "notes": "Key word 'das Gefühl' is not a visible thing; not forced into the texts. Tap 2 box also covers frames where her eyes are open; she closes them in several boxed frames and nobody else does. 'die Fahne' chosen over 'die Flagge' (everyday word, A2). Tap 1 and answer gaps differ (Brust vs legt) so the rows do not look alike."
+}

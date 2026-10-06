@@ -1,0 +1,123 @@
+{
+  "mediaId": 29,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Teleskop",
+  "taps": [
+    {
+      "phrase": "durch das Teleskop schauen",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "auf drei Beinen stehen",
+      "target": "das Teleskop",
+      "voice": "female"
+    },
+    {
+      "phrase": "am Himmel leuchten",
+      "target": "der Mond",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Teleskop",
+      "voice": "female"
+    },
+    {
+      "word": "die Mütze",
+      "voice": "female"
+    },
+    {
+      "word": "die Jacke",
+      "voice": "female"
+    },
+    {
+      "word": "der Himmel",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht die Frau?",
+  "answer": [
+    "Sie",
+    "schaut",
+    "durch",
+    "ein",
+    "Teleskop."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "durch das"
+        },
+        {
+          "text": "Teleskop",
+          "gap": true,
+          "accept": [
+            "Teleskop"
+          ]
+        },
+        {
+          "text": "schauen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "auf drei"
+        },
+        {
+          "text": "Beinen",
+          "gap": true,
+          "accept": [
+            "Beinen"
+          ]
+        },
+        {
+          "text": "stehen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "am Himmel"
+        },
+        {
+          "text": "leuchten",
+          "gap": true,
+          "accept": [
+            "leuchten"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "schaut",
+          "gap": true,
+          "accept": [
+            "schaut",
+            "guckt",
+            "sieht",
+            "blickt"
+          ]
+        },
+        {
+          "text": "durch ein Teleskop"
+        }
+      ]
+    }
+  ],
+  "notes": "Tap 1: the red box also covers the close-up at the end where she looks up amazed beside the eyepiece; she looks through the telescope in the backyard frames. No noun row: the key word is already in tap row 1."
+}

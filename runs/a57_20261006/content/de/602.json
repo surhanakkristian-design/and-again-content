@@ -1,0 +1,120 @@
+{
+  "mediaId": 602,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "das Lesen",
+  "taps": [
+    {
+      "phrase": "ein dickes Buch lesen",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "sich die Hand vor den Mund halten",
+      "target": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "phrase": "aus einer Tasse trinken",
+      "target": "das Mädchen",
+      "voice": "female"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Fenster",
+      "voice": "female"
+    },
+    {
+      "word": "das Mädchen",
+      "voice": "female"
+    },
+    {
+      "word": "das Buch",
+      "voice": "female"
+    },
+    {
+      "word": "der Tisch",
+      "voice": "female"
+    }
+  ],
+  "question": "Was macht das Mädchen?",
+  "answer": [
+    "Sie",
+    "liest",
+    "ein",
+    "dickes",
+    "Buch."
+  ],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "ein dickes"
+        },
+        {
+          "text": "Buch",
+          "gap": true,
+          "accept": [
+            "Buch"
+          ]
+        },
+        {
+          "text": "lesen"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "sich die Hand vor den"
+        },
+        {
+          "text": "Mund",
+          "gap": true,
+          "accept": [
+            "Mund"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "aus einer Tasse"
+        },
+        {
+          "text": "trinken",
+          "gap": true,
+          "accept": [
+            "trinken"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "liest",
+          "gap": true,
+          "accept": [
+            "liest"
+          ]
+        },
+        {
+          "text": "ein dickes Buch"
+        }
+      ]
+    }
+  ],
+  "notes": "Pronoun 'sie' for 'das Mädchen' (what natives and most teachers say). Answer drops English 'at the table' so that only one chip order is possible ('am Tisch' could stand in two places). Key word 'das Lesen' is not a noun of the set; 'lesen/liest' appear as verbs (tap 1, answer). All three taps have the same target with identical boxes."
+}

@@ -1,0 +1,119 @@
+{
+ "mediaId": 5566,
+ "lang": "fr",
+ "level": "B",
+ "keyWord": "une arrivée",
+ "taps": [
+  {
+   "phrase": "franchir la ligne d'arrivée",
+   "target": "la coureuse",
+   "voice": "female"
+  },
+  {
+   "phrase": "ramasser le ruban",
+   "target": "la femme en sweat à capuche",
+   "voice": "female"
+  },
+  {
+   "phrase": "acclamer la coureuse derrière les barrières",
+   "target": "les spectateurs",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "la coureuse",
+   "voice": "female"
+  },
+  {
+   "word": "les spectateurs",
+   "voice": "female"
+  },
+  {
+   "word": "les fanions",
+   "voice": "female"
+  },
+  {
+   "word": "les gobelets en carton",
+   "voice": "female"
+  }
+ ],
+ "question": "Que fait la coureuse ?",
+ "answer": [
+  "Elle",
+  "franchit",
+  "la",
+  "ligne",
+  "d'arrivée."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "franchir",
+     "gap": true,
+     "accept": [
+      "franchir",
+      "passer"
+     ]
+    },
+    {
+     "text": "la ligne d'arrivée"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "ramasser le"
+    },
+    {
+     "text": "ruban",
+     "gap": true,
+     "accept": [
+      "ruban"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "acclamer",
+     "gap": true,
+     "accept": [
+      "acclamer",
+      "applaudir"
+     ]
+    },
+    {
+     "text": "la coureuse derrière les barrières"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "franchit la"
+    },
+    {
+     "text": "ligne",
+     "gap": true,
+     "accept": [
+      "ligne"
+     ]
+    },
+    {
+     "text": "d'arrivée"
+    }
+   ]
+  }
+ ],
+ "notes": "keyWord copied unchanged as 'une arrivée' (indefinite article, unlike other nouns); proposal: 'l'arrivée'. The key word only appears elided ('d'arrivée'), so it cannot be a gap; gaps are franchir / ruban / acclamer / ligne. Phrase 3 says 'acclamer ... derrière les barrières' because the man in the rust T-shirt also claps, but on the road, not behind the barriers."
+}

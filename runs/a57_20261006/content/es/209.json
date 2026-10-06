@@ -1,0 +1,117 @@
+{
+ "mediaId": 209,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "curioso",
+ "taps": [
+  {
+   "phrase": "mirar dentro de la caja",
+   "target": "el gato",
+   "voice": "male"
+  },
+  {
+   "phrase": "meter una pata por el agujero",
+   "target": "el gato",
+   "voice": "male"
+  },
+  {
+   "phrase": "oler la cámara",
+   "target": "el gato",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el gato",
+   "voice": "male"
+  },
+  {
+   "word": "la caja",
+   "voice": "male"
+  },
+  {
+   "word": "la cámara",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué hace el gato?",
+ "answer": [
+  "El",
+  "gato",
+  "curioso",
+  "mira",
+  "dentro",
+  "de",
+  "la",
+  "caja."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "mirar dentro de la"
+    },
+    {
+     "text": "caja",
+     "gap": true,
+     "accept": [
+      "caja"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "meter una"
+    },
+    {
+     "text": "pata",
+     "gap": true,
+     "accept": [
+      "pata"
+     ]
+    },
+    {
+     "text": "por el agujero"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "oler",
+     "gap": true,
+     "accept": [
+      "oler",
+      "olfatear"
+     ]
+    },
+    {
+     "text": "la cámara"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "mira",
+     "gap": true,
+     "accept": [
+      "mira"
+     ]
+    },
+    {
+     "text": "dentro de la caja"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'curioso' is an adjective inside the subject ('El gato curioso'), so the answer recall row (subject removed) cannot contain it; no recall row carries the key word. Tap 2 avoids 'meter la pata' (idiom = to blunder) by saying 'meter una pata por el agujero' (the cat reaches through the round hole). 'la cámara' = the device at the bottom of the box."
+}

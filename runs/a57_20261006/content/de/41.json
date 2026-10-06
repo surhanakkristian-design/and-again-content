@@ -1,0 +1,118 @@
+{
+  "mediaId": 41,
+  "lang": "de",
+  "level": "A",
+  "keyWord": "der Streit",
+  "taps": [
+    {
+      "phrase": "einen Hammer halten",
+      "target": "die Frau",
+      "voice": "female"
+    },
+    {
+      "phrase": "schwarze Haare haben",
+      "target": "der Mann",
+      "voice": "male"
+    },
+    {
+      "phrase": "an der Wand hängen",
+      "target": "das Bild",
+      "voice": "male"
+    }
+  ],
+  "nouns": [
+    {
+      "word": "das Bild",
+      "voice": "male"
+    },
+    {
+      "word": "der Hammer",
+      "voice": "male"
+    },
+    {
+      "word": "die Frau",
+      "voice": "female"
+    },
+    {
+      "word": "der Mann",
+      "voice": "male"
+    }
+  ],
+  "question": "Was machen der Mann und die Frau?",
+  "answer": [
+    "Sie",
+    "haben",
+    "Streit."
+  ],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "einen"
+        },
+        {
+          "text": "Hammer",
+          "gap": true,
+          "accept": [
+            "Hammer"
+          ]
+        },
+        {
+          "text": "halten"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "schwarze"
+        },
+        {
+          "text": "Haare",
+          "gap": true,
+          "accept": [
+            "Haare"
+          ]
+        },
+        {
+          "text": "haben"
+        }
+      ]
+    },
+    {
+      "from": "taps",
+      "parts": [
+        {
+          "text": "an der Wand"
+        },
+        {
+          "text": "hängen",
+          "gap": true,
+          "accept": [
+            "hängen"
+          ]
+        }
+      ]
+    },
+    {
+      "from": "answer",
+      "parts": [
+        {
+          "text": "haben"
+        },
+        {
+          "text": "Streit",
+          "gap": true,
+          "accept": [
+            "Streit"
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": "Answer 'Sie haben Streit.' (natural without article; 'Sie streiten sich' would drop the key word). True for the middle of the clip; at the end they make up. The phrase-3 box also covers frames where the picture is held or lies on the floor; written for the frames where it hangs on the wall."
+}

@@ -1,0 +1,127 @@
+{
+ "mediaId": 5502,
+ "lang": "de",
+ "level": "B",
+ "keyWord": "die Lagerung",
+ "taps": [
+  {
+   "phrase": "Kartons aufeinanderstapeln",
+   "target": "die Frau",
+   "voice": "female"
+  },
+  {
+   "phrase": "eine beladene Palette tragen",
+   "target": "der Hubwagen",
+   "voice": "female"
+  },
+  {
+   "phrase": "Kartons mit Folie umwickeln",
+   "target": "die Frau",
+   "voice": "female"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "die Kartons",
+   "voice": "female"
+  },
+  {
+   "word": "der Hubwagen",
+   "voice": "female"
+  },
+  {
+   "word": "die Warnweste",
+   "voice": "female"
+  },
+  {
+   "word": "die Regale",
+   "voice": "female"
+  }
+ ],
+ "question": "Was macht die Frau?",
+ "answer": [
+  "Sie",
+  "stapelt",
+  "Kartons",
+  "auf",
+  "einer",
+  "Holzpalette."
+ ],
+ "answerVoice": "female",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Kartons"
+    },
+    {
+     "text": "aufeinanderstapeln",
+     "gap": true,
+     "accept": [
+      "aufeinanderstapeln",
+      "stapeln"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "eine beladene"
+    },
+    {
+     "text": "Palette",
+     "gap": true,
+     "accept": [
+      "Palette"
+     ]
+    },
+    {
+     "text": "tragen"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "Kartons mit"
+    },
+    {
+     "text": "Folie",
+     "gap": true,
+     "accept": [
+      "Folie",
+      "Stretchfolie"
+     ]
+    },
+    {
+     "text": "umwickeln"
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "stapelt"
+    },
+    {
+     "text": "Kartons",
+     "gap": true,
+     "accept": [
+      "Kartons",
+      "Pappkartons"
+     ]
+    },
+    {
+     "text": "auf einer Holzpalette"
+    }
+   ]
+  }
+ ],
+ "notes": "Key word 'die Lagerung' (abstract act of storing) is not shown as a nameable thing and is not used; natural related words would be 'das Lager' / 'die Lagerhalle'. Proposal: map the concept to 'das Lager' or keep Lagerung for text-only use. Tap boxes 1 and 3 (same woman) cover the whole clip; wrapping is visible in the later frames."
+}

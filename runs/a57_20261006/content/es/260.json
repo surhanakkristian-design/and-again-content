@@ -1,0 +1,114 @@
+{
+ "mediaId": 260,
+ "lang": "es",
+ "level": "A",
+ "keyWord": "el huevo",
+ "taps": [
+  {
+   "phrase": "comer pan con huevo",
+   "target": "el hombre",
+   "voice": "male"
+  },
+  {
+   "phrase": "estar junto a la ventana",
+   "target": "el gato",
+   "voice": "male"
+  },
+  {
+   "phrase": "caer en la sartén",
+   "target": "el huevo",
+   "voice": "male"
+  }
+ ],
+ "nouns": [
+  {
+   "word": "el hombre",
+   "voice": "male"
+  },
+  {
+   "word": "el gato",
+   "voice": "male"
+  },
+  {
+   "word": "los tomates",
+   "voice": "male"
+  },
+  {
+   "word": "el huevo",
+   "voice": "male"
+  }
+ ],
+ "question": "¿Qué está comiendo el hombre?",
+ "answer": [
+  "Está",
+  "comiendo",
+  "pan",
+  "con",
+  "huevo."
+ ],
+ "answerVoice": "male",
+ "carousel": [],
+ "recall": [
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "comer",
+     "gap": true,
+     "accept": [
+      "comer"
+     ]
+    },
+    {
+     "text": "pan con huevo"
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "estar junto a la"
+    },
+    {
+     "text": "ventana",
+     "gap": true,
+     "accept": [
+      "ventana"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "taps",
+   "parts": [
+    {
+     "text": "caer en la"
+    },
+    {
+     "text": "sartén",
+     "gap": true,
+     "accept": [
+      "sartén"
+     ]
+    }
+   ]
+  },
+  {
+   "from": "answer",
+   "parts": [
+    {
+     "text": "Está comiendo pan con"
+    },
+    {
+     "text": "huevo",
+     "gap": true,
+     "accept": [
+      "huevo"
+     ]
+    }
+   ]
+  }
+ ],
+ "notes": "The man's tap box also covers the early frames where he picks shell out of the bowl; phrase 1 describes what he does in the eating frames (most of the boxed ones at the end). Spanish answer drops the subject, so the answer row is the whole sentence."
+}

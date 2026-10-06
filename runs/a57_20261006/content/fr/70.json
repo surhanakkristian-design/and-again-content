@@ -1,0 +1,27 @@
+{
+  "mediaId": 70, "lang": "fr", "level": "B",
+  "keyWord": "le barbier",
+  "taps": [
+    { "phrase": "tailler une barbe épaisse", "target": "le barbier", "voice": "male" },
+    { "phrase": "admirer sa nouvelle coupe", "target": "le client", "voice": "male" },
+    { "phrase": "refléter son visage ravi", "target": "le miroir à main", "voice": "male" }
+  ],
+  "nouns": [
+    { "word": "le barbier", "voice": "male" },
+    { "word": "le client", "voice": "male" },
+    { "word": "le miroir à main", "voice": "male" },
+    { "word": "les flacons", "voice": "male" }
+  ],
+  "question": "Que fait le barbier ?",
+  "answer": ["Il", "taille", "la", "barbe", "épaisse", "du", "client."],
+  "answerVoice": "male",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "tailler", "gap": true, "accept": ["tailler"] }, { "text": "une barbe épaisse" } ] },
+    { "from": "taps", "parts": [ { "text": "admirer sa nouvelle" }, { "text": "coupe", "gap": true, "accept": ["coupe"] } ] },
+    { "from": "taps", "parts": [ { "text": "refléter", "gap": true, "accept": ["refléter"] }, { "text": "son visage ravi" } ] },
+    { "from": "nouns", "parts": [ { "text": "le" }, { "text": "barbier", "gap": true, "accept": ["barbier"] } ] },
+    { "from": "answer", "parts": [ { "text": "taille la" }, { "text": "barbe", "gap": true, "accept": ["barbe"] }, { "text": "épaisse du client" } ] }
+  ],
+  "notes": "Phrase 1 boxes also cover haircut moments (clippers on the neck/hair); written for the beard trimming seen in most boxed frames. 'les flacons' = the bottles on the barbershop shelf. Phrase 2: the customer admires himself with his hand at his face in the mirror scene."
+}

@@ -1,0 +1,26 @@
+{
+  "mediaId": 7773, "lang": "de", "level": "A",
+  "keyWord": "vorsichtig",
+  "taps": [
+    { "phrase": "die Tassen vorsichtig tragen", "target": "der Bär", "voice": "female" },
+    { "phrase": "an einem Tisch sitzen", "target": "die Frau", "voice": "female" },
+    { "phrase": "die Hände heben", "target": "die Frau", "voice": "female" }
+  ],
+  "nouns": [
+    { "word": "die Tassen", "voice": "female" },
+    { "word": "die Frau", "voice": "female" },
+    { "word": "der Tisch", "voice": "female" },
+    { "word": "der Bär", "voice": "female" }
+  ],
+  "question": "Was macht der Bär?",
+  "answer": ["Er", "trägt", "die", "Tassen", "vorsichtig", "zum", "Tisch."],
+  "answerVoice": "female",
+  "carousel": [],
+  "recall": [
+    { "from": "taps", "parts": [ { "text": "die Tassen" }, { "text": "vorsichtig", "gap": true, "accept": ["vorsichtig", "langsam"] }, { "text": "tragen" } ] },
+    { "from": "taps", "parts": [ { "text": "an einem Tisch" }, { "text": "sitzen", "gap": true, "accept": ["sitzen"] } ] },
+    { "from": "taps", "parts": [ { "text": "die" }, { "text": "Hände", "gap": true, "accept": ["Hände"] }, { "text": "heben" } ] },
+    { "from": "answer", "parts": [ { "text": "trägt", "gap": true, "accept": ["trägt", "bringt"] }, { "text": "die Tassen vorsichtig zum Tisch" } ] }
+  ],
+  "notes": "Answer pronoun 'Er' (der Bär); answerVoice kept female as in English (the bear's sex is not shown). German also allows 'Er trägt vorsichtig die Tassen zum Tisch.' (two chip orders). The answer uses the key word vorsichtig where natural."
+}
