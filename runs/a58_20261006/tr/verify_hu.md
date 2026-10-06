@@ -1,0 +1,11 @@
+FIXED
+8055 phrases[1]: egy léggömbön lógni -> egy hőlégballonon lógni (key word = hőlégballon (hot-air), not party léggömb)
+8055 nouns[1]: egy léggömb -> egy hőlégballon (key word = hőlégballon)
+8055 story[0]: Egy férfi léggömbbel akart repülni. -> Egy férfi hőlégballonnal akart repülni. (key word = hőlégballon)
+8055 story[2]: Egész nap a léggömbön lógott, és senki sem tudta lehozni! -> Egész nap a hőlégballonon lógott, és senki sem tudott vele leszállni! (key word; "land it" = leszállni vele, as in the verified caption)
+461 story[0]: Két barát egy bolt előtt inget ad egy próbababára. -> Két barát egy bolt előtt inget húz egy próbababára. ("inget ad rá" is colloquial; "inget húz rá" = dress in a shirt)
+8039 phrases[0]: utat lapátolni -> átjárót lapátolni (key word = átjáró (verified caption word for "way"))
+8039 nouns[0]: egy út -> egy átjáró (key word = átjáró)
+8039 story[0]: Egy nagy havazás után egy nő keskeny utat lapátolt a ház mellett. -> Egy nagy havazás után egy nő keskeny átjárót lapátolt a ház mellett. (key word = átjáró)
+8039 story[1]: Aztán egy husky elfurakodott mellette, és elsőként használta. -> Aztán egy husky elfurakodott mellette, és elsőként ment végig rajta. ("elsőként használta" is unnatural for a path)
+8039 story[2]: Bent egy férfi csak kimutatott az ablakon, és megmutatta neki az utat! -> Bent egy férfi csak kimutatott az ablakon, és megmutatta neki az átjárót! (key word átjáró; joke kept (he shows her the path she dug))
