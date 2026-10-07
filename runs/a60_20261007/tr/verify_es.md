@@ -1,0 +1,3 @@
+PASS
+
+All 6 noun stories and both pilots (select, classical) checked: grammar and spelling correct (dónut/dónuts, se rio per RAE 2010), natural Spain Spanish, same meaning, forms as asked (infinitive phrases, labels with article, captions keep past / present continuous question / future), linking words at the start of sentence 2 (Pero, Luego, Mientras tanto, Así que) and Al final at the start of sentence 3. Key words: elegir used consistently for "select" (allowed by the brief; seleccionar would sound technical here), clásica/clásico in all classical texts, a59 key words kept (globo, delfín, quad/corona, banco, bolsa/manzana, camino).
