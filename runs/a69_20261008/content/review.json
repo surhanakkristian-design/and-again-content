@@ -1,0 +1,256 @@
+[
+ {
+  "mediaId": 8055,
+  "captions": [
+   "to fly in a balloon",
+   "to land a balloon",
+   "a balloon basket"
+  ],
+  "models": [
+   [
+    "to fly in a balloon",
+    "flying in a hot-air balloon",
+    "to wave from a balloon"
+   ],
+   [
+    "to land a balloon",
+    "to hold a balloon down",
+    "a balloon landing on the grass"
+   ],
+   [
+    "a balloon basket",
+    "the basket of a hot-air balloon",
+    "a big balloon basket"
+   ]
+  ],
+  "own_row": "to [hold] a balloon down",
+  "verdict": "ok",
+  "notes": [
+   "all captions, models and own row fine; 'hold' only fits its own box (chips with 'to' cannot enter it)"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 236,
+  "captions": [
+   "a pod of dolphins",
+   "to swim with a dolphin",
+   "to feed a dolphin"
+  ],
+  "models": [
+   [
+    "a pod of dolphins",
+    "a pod of jumping dolphins",
+    "a group of dolphins"
+   ],
+   [
+    "to swim with a dolphin",
+    "swimming next to a dolphin",
+    "to snorkel with a dolphin"
+   ],
+   [
+    "to feed a dolphin",
+    "feeding a dolphin a fish",
+    "to give a dolphin a fish"
+   ]
+  ],
+  "own_row": "a [group] of dolphins",
+  "verdict": "ok",
+  "notes": [
+   "all fine; 'pod of' cannot fill 'a [ ] of dolphins' (double 'of'), 'group' fits no other box"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 7071,
+  "captions": [
+   "a young king",
+   "a king and queen",
+   "to bow to the king"
+  ],
+  "models": [
+   [
+    "a young king",
+    "a young king on a quad bike",
+    "a young king having fun"
+   ],
+   [
+    "a king and queen",
+    "the king and queen on a quad bike",
+    "a king and queen having fun"
+   ],
+   [
+    "to bow to the king",
+    "people bowing to the king",
+    "a woman in a red coat bowing to the king"
+   ]
+  ],
+  "own_row": "a woman in a red [coat]",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: chip 'boots' also fits row 'to wear [a gold crown]' ('to wear boots'); 'coat' (no article) fits no other box",
+   "model 3 of picture 3 changed so the new own row is a contiguous part of a model caption"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 8056,
+  "captions": [
+   "a weight bench",
+   "to paint a bench",
+   "to share a bench"
+  ],
+  "models": [
+   [
+    "a weight bench",
+    "reading on a weight bench",
+    "a dog with a dumbbell in its mouth"
+   ],
+   [
+    "to paint a bench",
+    "painting a bench orange",
+    "to paint a park bench"
+   ],
+   [
+    "to share a bench",
+    "sharing a bench with a dog",
+    "a man and his dog on a bench"
+   ]
+  ],
+  "own_row": "a dog with a dumbbell in its [mouth]",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: map chip 'weight' fits 'a dog holding a [ ]' ('a dog holding a weight'); 'mouth' fits no other box",
+   "model 3 of picture 1 changed to carry the new own row"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 62,
+  "captions": [
+   "to drop a bag",
+   "a beach bag",
+   "a gym bag"
+  ],
+  "models": [
+   [
+    "to drop a bag",
+    "dropping a picnic bag",
+    "to drop a bag of food"
+   ],
+   [
+    "a beach bag",
+    "a striped beach bag",
+    "packing a beach bag"
+   ],
+   [
+    "a gym bag",
+    "a gym bag with a basketball and a towel",
+    "packing a gym bag"
+   ]
+  ],
+  "own_row": "a basketball and a [towel]",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: chip 'racket' fits the map bubble 'gym' ('a racket bag' is a common product name); 'towel' fits no other box naturally",
+   "model 2 of picture 3 changed to carry the new own row"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 8039,
+  "captions": [
+   "to block the way",
+   "the way out",
+   "to lose your way"
+  ],
+  "models": [
+   [
+    "to block the way",
+    "a moose blocking the way",
+    "to stand in the way"
+   ],
+   [
+    "the way out",
+    "the way out of a snow tunnel",
+    "a woman and her dog in a long snow tunnel"
+   ],
+   [
+    "to lose your way",
+    "to look for the way back",
+    "trying to find the way back"
+   ]
+  ],
+  "own_row": "a long snow [tunnel]",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: 'to dig a way through the snow' is the same collocation as the map phrase 'to clear a way through the snow'",
+   "model 3 of picture 2 changed (old one duplicated the map phrase) to carry the new own row"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 900001,
+  "captions": [
+   "He selected a lot of doughnuts.",
+   "Are you selecting a croissant?",
+   "They will select a cake together."
+  ],
+  "models": [
+   [
+    "He selected a lot of doughnuts.",
+    "He selected way too many doughnuts.",
+    "He selected two big bags of doughnuts."
+   ],
+   [
+    "Are you selecting a croissant?",
+    "I'm selecting a croissant.",
+    "Are you selecting the biggest croissant?"
+   ],
+   [
+    "They will select a cake together.",
+    "He's going to select a cake from the window.",
+    "They're going to select a cake together."
+   ]
+  ],
+  "own_row": "two [big] bags of doughnuts",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: chip 'bags' also fits row 'to hold [the tongs]' ('to hold bags'); 'big' fits no other box"
+  ],
+  "ambiguous_pairs": []
+ },
+ {
+  "mediaId": 900002,
+  "captions": [
+   "classical piano",
+   "classical architecture",
+   "classical music"
+  ],
+  "models": [
+   [
+    "classical piano",
+    "to play classical piano",
+    "a bear playing classical piano"
+   ],
+   [
+    "classical architecture",
+    "admiring classical architecture",
+    "a room with classical architecture"
+   ],
+   [
+    "classical music",
+    "mice dancing to classical music",
+    "four dancing mice"
+   ]
+  ],
+  "own_row": "four [dancing] mice",
+  "verdict": "changed",
+  "notes": [
+   "own row changed: row chip 'sit' fits 'four mice [ ] on the floor' ('four mice sit on the floor'); 'four [dancing] mice' admits no other chip",
+   "model 3 of picture 3 changed to carry the new own row",
+   "'classical architecture' kept: what a native writes under an ornate palace interior, though strictly baroque"
+  ],
+  "ambiguous_pairs": []
+ }
+]
