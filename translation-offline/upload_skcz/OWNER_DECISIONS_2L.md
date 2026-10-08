@@ -845,3 +845,11 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 459. **"quad bike" in the main game (7071):** backup of the live media_exercise_sets row, one guarded UPDATE "ATV" -> "quad bike" in the English texts (article "a quad bike") with the A66 recordings, media_exercise_sets_l10n de / es / fr checked and fixed; Turkish keeps "ATV". Read-back: 0 "ATV" in en / de / es / fr.
 460. **Lighter pictures for 900001 / 900002:** webp q72 at 1080 px width, uploaded as NEW files (nothing overwritten), the lab file points at them.
 461. **Checker tense rule:** when the learner mixes tenses, the correction keeps the tense used by most of the learner's verbs (test: "Sam pack ... lay ... can not" -> a past-tense correction).
+
+## A68 brief (8 Oct 2026)
+
+462. **One branch line:** the lab branches a66 + a67 are merged into master and pushed (and-again-content A64-A67 commits pushed too); every brief from now on works on master (or a branch merged back into master at its end), and every live bundle is built from master.
+463. **The lab is set in Roboto** (the font of the Figma file 4evr-2.0: Regular + Medium, Bold for the few bold labels), loaded as a web font and preloaded so text does not jump while loading; nothing may overflow after the switch. Example: "The bear drives a car." fits on one row beside its buttons in exercise 3, as in Figma.
+464. **Exercise 3 carousel dots:** white on dark / normal pictures, black on pictures with a white borderless background (the existing white theme).
+465. **Exercise 5 page dots (between ‹ and ›):** the Figma colours stay (white on the light grey page); the empty (inactive) dot gets a thicker inner stroke so it is clearly visible (Figma 2150:30).
+466. **Exercise 5 swipe by where the finger starts** (replaces the brief's first part 3): the UPPER zone (page 1: the a) b) c) slots; page 2: the picture + phrase list) - a horizontal swipe switches between the two pages with a smooth slide and never changes the exercise. The LOWER zone (the ‹ dots › row, the white field / chip box, the blue arrow) - a horizontal swipe changes the exercise as everywhere in the lab (left = next exercise, right = exercise 4). A drag that starts on a story chip always moves the chip, in either zone; typing / scrolling in the writing field never switches anything; ‹ › keep switching the pages.
