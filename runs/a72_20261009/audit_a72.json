@@ -1,0 +1,40 @@
+{
+  "item": 8039,
+  "auditor": "separate video verifier",
+  "date": "2026-10-09",
+  "exercise_2_points": {
+    "a way (0.42,0.72) = px (208,622)": {
+      "0.32": "ON - trampled path floor in the gap between her legs, ~15 px clear of each leg",
+      "0.40": "ON - same",
+      "0.48": "ON - same",
+      "verdict": "pass"
+    },
+    "the shovel (0.45,0.49) = px (223,423)": {
+      "0.32": "ON - handle (tan pixels y~419-424 at x=223)",
+      "0.40": "ON but at the upper edge of the handle (handle y~424-434 at x=223)",
+      "0.48": "OFF - handle has swung down to y~436-446 at x=223; the point sits on her dark jacket ~12 px above it",
+      "verdict": "FAIL - the handle moves ~20 px vertically within +-0.08 s; no single handle point stays on in all three frames (left end near the glove also drifts ~10 px). Blade moves even more.",
+      "suggestion": "if one point must be kept, (0.45,0.497) is the centre at 0.40 s but still misses at 0.48; better use a static object instead (e.g. 'the window' on the left glass pane ~ (0.62,0.28)) or pin the seek exactly"
+    },
+    "the cottage (0.42,0.22) = px (208,190)": {
+      "0.32": "ON - dark timber wall under the eave",
+      "0.40": "ON",
+      "0.48": "ON",
+      "verdict": "pass"
+    }
+  },
+  "exercise_4": {
+    "dig_a_way_past_the_cottage": {
+      "true_of_video": true,
+      "natural": true,
+      "note": "she shovels a trench along the front of the cottage; 'past' is acceptable"
+    },
+    "chips_fitting_other_boxes_must_accept": [],
+    "borderline_not_required": [
+      "'to [dig] your way' in the 'lose' row - 'dig your way' needs 'out/through', so a teacher need not accept it"
+    ]
+  },
+  "problems": [
+    "Exercise 2: 'the shovel' point is off the shovel at 0.48 s (on the jacket); only at the handle's top edge at 0.40 s"
+  ]
+}
