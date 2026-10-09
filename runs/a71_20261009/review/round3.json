@@ -1,0 +1,196 @@
+{
+ "round": 3,
+ "video_truth": {
+  "8039": [
+   {
+    "text": "ex2 'the shovel' (0.31,0.60)",
+    "verdict": "mismatch",
+    "why": "dot is just left of the handle (on her dark trouser leg), not on the shovel",
+    "fix": "(0.33,0.60) or blade (0.45,0.85)"
+   },
+   {
+    "text": "ex2 'a way' (0.37,0.71)",
+    "verdict": "unclear",
+    "why": "thin snow strip; tap circle overlaps the shovel handle",
+    "fix": "(0.30,0.93) open trench floor"
+   }
+  ]
+ },
+ "naturalness": {
+  "236": [
+   {
+    "text": "A dolphin swims next to Mia's boat.",
+    "verdict": "ok"
+   },
+   {
+    "text": "Then it jumps out of the water.",
+    "verdict": "ok"
+   }
+  ],
+  "8056": [
+   {
+    "text": "a man and his dog on a bench",
+    "verdict": "ok"
+   },
+   {
+    "text": "a [man] and his dog on a bench",
+    "verdict": "ok"
+   }
+  ],
+  "8039": [
+   {
+    "text": "to dig a way past the cottage",
+    "verdict": "ok",
+    "why": "a native would say 'path', but 'way' is the key word; acceptable"
+   },
+   {
+    "text": "Anna dug a way past the cottage.",
+    "verdict": "ok"
+   },
+   {
+    "text": "Inside, Dad cheered, “The dog wins!”",
+    "verdict": "ok"
+   }
+  ],
+  "900001": [
+   {
+    "text": "They're going to select one from the display.",
+    "verdict": "ok",
+    "why": "'pick' is more everyday but 'select' is the key word"
+   },
+   {
+    "text": "to [raise] the tongs",
+    "verdict": "ok"
+   },
+   {
+    "text": "The clerk smiled at Max.",
+    "verdict": "ok"
+   }
+  ],
+  "900002": [
+   {
+    "text": "to sparkle with crystals",
+    "verdict": "ok"
+   },
+   {
+    "text": "crystals",
+    "verdict": "ok"
+   },
+   {
+    "text": "to sparkle with [crystals]",
+    "verdict": "ok"
+   },
+   {
+    "text": "to play [the violin]",
+    "verdict": "ok"
+   }
+  ],
+  "62": [
+   {
+    "text": "a blue sports bag",
+    "verdict": "ok"
+   }
+  ]
+ },
+ "ex4_ambiguity": {
+  "8056": {
+   "chips": [
+    "weight",
+    "park",
+    "paint",
+    "a book",
+    "a hat",
+    "man"
+   ],
+   "cases": [
+    {
+     "chip": "weight",
+     "box": "a [man] and his dog on a bench",
+     "makes": "a weight and his dog ...",
+     "verdict": "ok"
+    },
+    {
+     "chip": "man",
+     "box": "bubble a [ ] bench",
+     "makes": "a man bench",
+     "verdict": "ok"
+    }
+   ],
+   "note": "r2 'a weight on a bench' resolved; nothing a teacher must accept; no answer visible elsewhere."
+  },
+  "900001": {
+   "chips": [
+    "a lot of",
+    "a pastry",
+    "They're going to",
+    "the tray",
+    "raise",
+    "reach"
+   ],
+   "cases": [
+    {
+     "chip": "reach",
+     "box": "to [raise] the tongs",
+     "makes": "to reach the tongs",
+     "verdict": "ambiguous",
+     "why": "grammatical, natural phrase (= get hold of the tongs); a teacher would likely accept it out of context.",
+     "fix_hint": "any verb box before 'the tongs' takes 'reach'; box the object instead ('to raise [the tongs]') and make sure no other object chip can be raised (r2: 'the tray' could) - e.g. give the tray row a verb box that 'raise'/'reach' cannot fill"
+    },
+    {
+     "chip": "raise",
+     "box": "to [reach] over the display case",
+     "makes": "to raise over the display case",
+     "verdict": "ok"
+    },
+    {
+     "chip": "the tray",
+     "box": "I'm selecting [a pastry].",
+     "makes": "I'm selecting the tray.",
+     "verdict": "ok"
+    }
+   ],
+   "note": "r2 'display' visible + tray/display swaps resolved."
+  },
+  "900002": {
+   "chips": [
+    "pianist",
+    "interior",
+    "duet",
+    "crystals",
+    "the violin"
+   ],
+   "cases": [
+    {
+     "chip": "duet",
+     "box": "to play [the violin]",
+     "makes": "to play duet (no article)",
+     "verdict": "ok"
+    },
+    {
+     "chip": "crystals",
+     "box": "bubble a classical [ ]",
+     "makes": "a classical crystals",
+     "verdict": "ok"
+    }
+   ],
+   "note": "r2 'a classical play' resolved (play no longer a chip); clean."
+  }
+ },
+ "ex5_blind": {
+  "236": {
+   "sensible_orders": [
+    "abc"
+   ],
+   "notes": "b 'Then it' and c 'It lands' open with a pronoun and need a; acb has the landing before the jump."
+  },
+  "900001": {
+   "sensible_orders": [
+    "abc",
+    "acb",
+    "cab"
+   ],
+   "notes": "c now names Max, so it no longer depends on a or b. acb: Max can't decide - the clerk smiles at him - his friend reaches over to help him (coherent). cab: The clerk smiled at Max. Max couldn't decide ... His friend reached over ... (coherent). r2's 'them both' tied c to b.",
+   "fix_hint": "tie c to b again, e.g. 'The clerk smiled at them both.' (r2 text) or 'The clerk smiled at the two friends.'"
+  }
+ }
+}
