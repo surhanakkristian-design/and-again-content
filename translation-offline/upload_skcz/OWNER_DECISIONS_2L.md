@@ -911,3 +911,9 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 504. **Sound candidates:** 5 right (C1-C5) and 5 wrong (W1-W5) sounds, own work CC0, on 4evr.app/lab/sounds and in Drive AndAgain_reports/A74_sounds/; the live sounds stay until the owner picks one of each.
 505. **8056:** exercise 1 "to sit near the man" (the dog sits at the bench's far end, never next to the man), story part 2 "His dog sits near him.", exercise 4's own row "a dog [on] a park bench" (no chip gives a plausible but untrue sentence); new recordings and translations. 900001 "They're going to select a spectacular one." stays.
 
+
+## A75 brief (9 Oct 2026; lab, owner's choice from A74)
+
+506. **Answer sounds = C1 / W1 (replaces 497's files, chosen from 504):** right = C1 bell arpeggio (0.60 s, -19 LUFS), wrong = W1 soft falling minor third (0.34 s, -22 LUFS); the live files assets/sounds/lab-correct.mp3 / lab-wrong.mp3 are byte copies of the A74 candidates; the main game plays the same files; the queue stays sound -> 150 ms -> voice. 4evr.app/lab/sounds stays as it is.
+507. **Exercise 5 opens on the page the learner completed LAST (replaces 501's majority rule):** the story page or the ordering page, whichever completed the last round; no history = the story page; same storage (device + account, account wins). When one visit completes both pages, the later one counts.
+508. **No ↺ in exercises 1 and 2 (replaces 500 for them):** the round ↺ buttons are removed; exercises 3, 4 and 5 keep theirs.
