@@ -1015,3 +1015,10 @@ These apply to every exercise type (tap, place the nouns, carousel, question + m
 568. **Exercise 2:** pictures edge to edge with NO gap (the owner's words win over Figma's 2-3 px) and no side margin, square corners; small rounded blanks; placed chips green after Check; the bubbles on the page under the grid.
 569. **Exercises 3-5:** same shapes; exercise 3 keeps "Choose and write the caption." and the writing step; all A86 behaviour and the colours stay (right green, wrong magenta, blue only for the active Check / ▶).
 570. **Fast iteration mode applied to A88's tests:** 390 × 844 on 900003 + 4884 (all 5 exercises), one 375 × 667 fit check on 900003, the lab-wall smoke check; no full 5-item, two-size run.
+
+## A89 brief (12 Oct 2026; lab, 900003 "a date": square exercise 1 video in the owner's panel, a new wider clip)
+
+571. **Exercise 1's rounded corners in the owner's iPhone panel were an old bundle in the open Safari tab, not the code:** the A88 build has square corners on exercise 1's video and every element around it (measured in the Simulator after a reload: border-radius 0 everywhere). A tab opened before a deploy keeps the old app until it is reloaded. Rule: after a lab deploy, reload the tab before judging the look; check89 now asserts radius 0 on the whole chain.
+572. **900003 gets the new, wider clip of the same couple (hf_20261010_143255…), cut to 0.0-6.0 s with the A85 encode:** all 144 frames checked, clean (no extra hands, no warped faces, no cut); new files `date_900003_a89` + preview, thumbnail and poster from 3.333 s (the toast, both faces). The a78 / a85 files stay. The 6 s length of 557 stays for this item.
+573. **Exercise 1's tap box follows the man in the leather jacket over the whole new clip** (keys every 0.5 s); right / wrong taps checked at start, middle and end; the question box stays well above his face. Exercises 2, 3 and 5's pictures stay.
+574. **Fast iteration mode applied to A89's tests:** 390 × 844 on 900003 (all five exercises, local) + the live clip / wall / exercise 1 check + the lab-wall smoke check; no 375 × 667 or 5-item run.
