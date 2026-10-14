@@ -26,11 +26,11 @@
    "voice": "male"
   },
   {
-   "word": "das Auto",
+   "word": "das rote Auto",
    "voice": "male"
   },
   {
-   "word": "der Autoscooter",
+   "word": "das gelbe Auto",
    "voice": "male"
   }
  ],
@@ -73,8 +73,7 @@
      "text": "Arme",
      "gap": true,
      "accept": [
-      "Arme",
-      "Hände"
+      "Arme"
      ]
     },
     {
@@ -117,5 +116,5 @@
    ]
   }
  ],
- "notes": "Key word krachen does not appear in any exercise: the English frame (drive a red car / arms up / yellow shirt; question 'what is he driving') leaves no natural slot for it. Proposal for the owner: phrase 1 could become 'in andere Autos krachen' (the red car does bump the green one), but the question/answer are about driving. 'Auto' kept at level A; the native word is 'der Autoscooter' (above A level). All three tap boxes are the same man; phrase 2 'beide Arme hochheben' only happens in the last frames, phrase 1 is true in most boxed frames. Nouns: validate57 rejects adjective+noun pills ('das rote Auto' / 'das gelbe Auto', which would be the natural pair), so noun 2 = 'das Auto' (the man's red car, same word as phrase and answer) and noun 3 = 'der Autoscooter' (the yellow one) to keep the two pills distinct; owner may prefer the colour pair. The early POV/hand frames are the man's own hand on the wheel."
+ "notes": "Rewrite after verifier FAIL. Nouns 2/3 are now the colour pair 'das rote Auto' / 'das gelbe Auto' (as es 'el coche rojo/amarillo', fr 'la voiture rouge/jaune'): no single German noun tells the two bumper cars apart, and 'das Auto' / 'der Autoscooter' were both true of both cars. validate57.py flags these two pills ('German noun not capitalised') because its check reads the adjective as the noun; the pills are correct German noun phrases (owner: allow adjective+noun pills for de). 'Auto' kept at level A (native word 'der Autoscooter' is above A). Key word krachen appears in no exercise: the English frame (drive a red car / arms up / yellow shirt; question about what he drives) leaves no slot; the red car does bump the green one (box_03), so the owner could make phrase 1 'in andere Autos krachen', but other drivers bump too and the question/answer are about driving. Phrase 2 'beide Arme hochheben' only happens in the last frames (box_05); the boxes before show the man driving. Recall row 2 accepts only 'Arme' (he raises his arms; 'Hände' dropped)."
 }

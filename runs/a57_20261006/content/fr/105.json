@@ -5,12 +5,12 @@
   "keyWord": "un arc",
   "taps": [
     {
-      "phrase": "tendre la corde de l'arc",
+      "phrase": "tendre la corde de son arc",
       "target": "la femme",
       "voice": "female"
     },
     {
-      "phrase": "remettre une flèche",
+      "phrase": "passer une flèche",
       "target": "l'homme",
       "voice": "male"
     },
@@ -55,17 +55,14 @@
       "from": "taps",
       "parts": [
         {
-          "text": "tendre la"
+          "text": "tendre la corde de son"
         },
         {
-          "text": "corde",
+          "text": "arc",
           "gap": true,
           "accept": [
-            "corde"
+            "arc"
           ]
-        },
-        {
-          "text": "de l'arc"
         }
       ]
     },
@@ -73,7 +70,7 @@
       "from": "taps",
       "parts": [
         {
-          "text": "remettre une"
+          "text": "passer une"
         },
         {
           "text": "flèche",
@@ -109,7 +106,8 @@
           "text": "centre",
           "gap": true,
           "accept": [
-            "centre"
+            "centre",
+            "milieu"
           ]
         },
         {
@@ -118,5 +116,5 @@
       ]
     }
   ],
-  "notes": "keyWord copied unchanged as 'un arc' (indefinite article in the source; the noun pill uses 'l'arc'). The key word only appears elided ('l'arc'), so no row can gap it; no extra noun row because tap row 1 contains it. Answer 'vise le centre de la cible': she hits dead centre in the clip."
+  "notes": "keyWord copied unchanged as 'un arc' (indefinite article in the source; the noun pill uses 'l'arc'). Verifier: phrase 1 now 'tendre la corde de son arc' so row 1 gaps the key word 'arc'; no extra noun row. Phrase 2 'passer une flèche' (the man only holds out an arrow in the last boxed frames). Answer 'vise le centre de la cible': she hits dead centre in the clip."
 }
